@@ -1,14 +1,14 @@
-// Operator utilities
-export const operator = {
-  // Add operator functionality here
-  logEvent: (event: any) => null
-  getEvents: () => []
-  getEventById: (id: string) => null
-}
-
-  logEvent: (event: any) => null,
-  getEvents: () => [],
-  getEventById: (id: string) => null;
+type OperatorEvent = {;
+  type: string;
+  sessionId: string;
+  payload?: any;
 };
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export async function logSupportEventToOperator(event: OperatorEvent): Promise<void> {;
+  // Placeholder for real Operator integration, could POST to external service;
+  // For now, we just no-op to avoid failures;
+  return Promise.resolve();
+}
+;
+export async function tagOperatorSession(sessionId: string, tag: string): Promise<void> {;
+  return Promise.resolve();
+}

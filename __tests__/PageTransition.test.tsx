@@ -1,52 +1,7 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import PageTransition from '../components/PageTransition'
-describe('PageTransition'
-  test('renders without crashing'
-    expect(screen.getByRole('main'
-  test('displays correct content'
-import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import PageTransition from \'../components/PageTransition\'; describe(\'PageTransition\',() => { test(\'renders without crashing\',() => { render(<PageTransition />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import PageTransition from "./components/PageTransition"; describe('PageTransition', () => { test("renders without crashing",() => { render(<PageTransition />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import PageTransition from '../components/PageTransition'; describe('PageTransition',() => { test('renders without crashing',() => { render(<PageTransition />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/main
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PageTransition from '../components/PageTransition';
-describe('PageTransition', () => {
-  test('renders without crashing', () => {
-    render(<PageTransition />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-  test('displays correct content', () => {
-    render(<PageTransition />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });
-});
-import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import PageTransition from \'../components/PageTransition\'; describe(\'PageTransition\',() => { test(\'renders without crashing\',() => { render(<PageTransition />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import PageTransition from "./components/PageTransition"; describe("PageTransition",() => { test("renders without crashing",() => { render(<PageTransition />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content",() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});''"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import PageTransition from '../components/PageTransition'; describe('PageTransition',() => { test('renders without crashing',() => { render(<PageTransition />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import PageTransition from '../components/PageTransition'; describe('PageTransition',() => { test('renders without crashing',() => { render(<PageTransition />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-ursor/integrate-build-improve-and-re-verify-8f7d
-    expect(screen.getByTestId('page-transition')).toBeInTheDocument();
-  });
-});
-origin/main
-    expect(screen.getByTestId('page-transition')).toBeInTheDocument();
-  });
-});
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import PageTransition from '../components/PageTransition'
-describe('PageTransition'
-  test('renders without crashing'
-    expect(screen.getByRole('main'
-  test('displays correct content'
-import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import PageTransition from \'../components/PageTransition\'; describe(\'PageTransition\',() => { test(\'renders without crashing\',() => { render(<PageTransition />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import PageTransition from "./components/PageTransition"; describe('PageTransition', () => { test("renders without crashing",() => { render(<PageTransition />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
-origin/automation-improvements-final
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

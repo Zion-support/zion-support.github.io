@@ -1,16 +1,25 @@
 
-export function ReferralLink(): any ({;
-  referralLink,;
-  onCopy,;
-  onShare,;
-}: ReferralLinkProps) {;
-  const [copied, setCopied] = useState(false);
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 
-  const handleCopy = () => {;
-    onCopy();
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+interface ReferralLinkProps {
+  referralLink: string,
+  onCopy: () => void,
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
+}
+
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
+  const [copied, setCopied] = useState(false),
+  
+  const handleCopy = () => {
+    onCopy(),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+  },
+
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -35,147 +44,50 @@ export function ReferralLink(): any ({;
               <span className="sr-only">Copy</span>
             </Button>
           </div>
+          
           {copied && (
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
             </p>
           )}
         </div>
       </CardContent>
-      <CardFooter className='border-t bg-muted/50 p-4'>
-        <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>
-          <p className='text-sm text-muted-foreground'>
-            Share on social media:
-          </p>
-          <div className='flex space-x-2'>
-            <Button
-              variant='outline'
-              size='sm'
-              className='flex items-center gap-2'
-              onClick={() => onShare('twitter')}            <Button
-              variant="outline"
+      <CardFooter className="border-t bg-muted/50 p-4">
+        <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
+          <p className="text-sm text-muted-foreground">Share on social media:</p>
+          <div className="flex space-x-2">
+            <Button 
+              variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-              onClick = {() => onShare('twitter'),}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              onClick={() => onShare('twitter')}
             >
               <Twitter className="h-4 w-4" />
               Twitter
             </Button>
-            <Button
-              variant='outline'
-              size='sm'
-              className='flex items-center gap-2'              onClick={() => onShare('facebook')}
-            <Button
-              variant="outline"
-              size="sm"
-              className="flex items-center gap-2"
-              onClick = {() => onShare('facebook'),}
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
               onClick={() => onShare('facebook')}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               <Facebook className="h-4 w-4" />
               Facebook
             </Button>
-            <Button
-              variant='outline'
-              size='sm'
-              className='flex items-center gap-2'
-              onClick={() => onShare('linkedin')}            >
-              <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
-              LinkedIn
-            </Button>
-          </div>
-        </div>
-      </CardFooter>;
-    </Card>;
-  );
-};
-}
-}
-
-    <Card className="mt - 6">;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <Link className="h - 5 w - 5" />;
-
-          Your Referral Link;
-        </CardTitle>;
-        <CardDescription>;
-          Share this link with others to earn rewards when they join and complete onboarding;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-
-
-            <Input
-              value={referralLink}
-              readOnly
-              className="font-mono text-sm"
-
-
-          )}
-        </div>
-      </CardContent>
-      <CardFooter className='border-t bg-muted/50 p-4'>
-        <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>
-          <p className='text-sm text-muted-foreground'>
-            Share on social media:
-          </p>
-          <div className='flex space-x-2'>
-            <Button
-              variant='outline'
-              size='sm'
-              className='flex items-center gap-2'
-              onClick={() => onShare('twitter')}            <Button
-
-          )}
-        </div>
-      </CardContent>
-
-
-          {copied && (
-          
-          {copied && (
-
-            <p className="text-sm text-green-600 dark:text-green-500">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-              Copied to clipboard!
-            </p>
-          )}
-        </div>
-      </CardContent>
-
-            >
-              <Twitter className="h-4 w-4" />
-              Twitter
-            </Button>
-
-            <Button
-              variant="outline"
+            <Button 
+              variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-
+              onClick={() => onShare('linkedin')}
             >
-              <Facebook className="h-4 w-4" />
-              Facebook
-            </Button>
-
+              <Share className="h-4 w-4" />
               LinkedIn
             </Button>
           </div>
         </div>
-
-<<<<<<< HEAD
+      </CardFooter>
+    </Card>
+  )
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -248,20 +160,18 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               Facebook;
             </Button>;
             <Button;
-              variant='outline';
-              size='sm';
-              className='flex items - center gap - 2';
-              on_click={() => on_share ('linkedin')}            >;
-              <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;
-
-<<<<<<< HEAD
+              variant="outline";
+              size="sm";
+              className="flex items-center gap-2";
+              onClick={() => onShare('linkedin')}
+            >;
+              <Share className="h-4 w-4" />;
               LinkedIn;
             </Button>;
           </div>;
         </div>;
       </CardFooter>;
-
-
+    </Card>;
   );
 }
 ;

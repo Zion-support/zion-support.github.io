@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
   return (
     <div className={className || ''}>
@@ -6,5 +6,9 @@ import React from 'react';
       <p>This component is under development.</p>
     </div>
   );
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD:backup-problematic-files/pages_backup_conflicts/pricing.tsx
+}
+}
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup_conflicts/pricing.tsx
+}

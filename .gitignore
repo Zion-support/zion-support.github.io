@@ -114,6 +114,11 @@ automation/logs/*.runtime.log
 automation/data/*.json
 !automation/data/autonomous-config.json
 
+<<<<<<< HEAD
+# Test results
+test-results/
+coverage/
+=======
 # Generated reports
 automation-reports/
 health-check-report-*.json
@@ -169,5 +174,4 @@ backups/
 health-check-report.json
 performance-metrics.json
 security-scan-report.json
-
-core
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

@@ -1,63 +1,3 @@
-
-=======
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import { useAuth } from "@/context/auth/AuthProvider"
-import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router'
-
-import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function SignUpForm() {
-
-  const router = useRouter()
-  const { signUp, login, loginWithGoogle } = useAuth()
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
-    }
-    if (!formData.email.trim()) {
-      errors.email = 'Email is required'
-    } else if (!emailRegex.test(formData.email)) {
-      errors.email = 'Invalid email address'
-    }
-    if (!formData.password) {
-      errors.password = 'Password is required'
-    } else if (!strongPasswordRegex.test(formData.password)) {
-      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
-    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-  const [is_loading, setIsLoading] = useState (false);
-  const [signup_mode, setSignupMode] = useState (true);
-  const [error, set_error] = useState ("");
-  const [field_errors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
-  const [showVerificationMessage, setShowVerificationMessage] = useState (false);
-  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const { name, value } = e.target;
-    setFormData (prev => ({ ...prev, [name]: value }));
-    set_error ("");    setFieldErrors (prev => ({ ...prev, [name]: "" }));
-  }
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    set_error (""),
-    setFieldErrors ({});
-    setIsLoading (true);
-
-    const errors: { email?: string, password?: string, name?: string } = {}
-    const email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const strongPasswordRegex = /^(?=.*[a - z])(?=.*[A - Z])(?=.*\d).{8}$/;
-    if () {) {
-  $2
-}
-      errors.name = 'Full name is required';
-
-
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
@@ -75,49 +15,164 @@ export function SignUpForm() {
   const router = useRouter(),
   const { signUp, login, loginWithGoogle } = useAuth(),
   
-
-
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     name: ""}),
+  const [isLoading, setIsLoading] = useState(false),
+  const [signupMode, setSignupMode] = useState(true),
+  const [error, setError] = useState(""),
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
+    setError(""),
+    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+  },
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    setError(""),
+    setFieldErrors({}),
+    setIsLoading(true),
 
+    const errors: { email?: string, password?: string, name?: string } = {},
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,
 
+    if (signupMode && !formData.name.trim()) {
+      errors.name = 'Full name is required'
+import React, { useState } from "react",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",;
+import { useRouter } from 'next/router',;
+import Link from 'next/link',;
+import { useAuth } from "@/context/auth/AuthProvider",;
+import { AlertCircle } from 'lucide-react';
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+export function SignUpForm() {;
+  const router = useRouter(),;
+  const { signUp, login, loginWithGoogle } = useAuth(),;
+  const [formData, setFormData] = useState({;
+    email: "",;
+    password: "",;
+    name: ""}),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [signupMode, setSignupMode] = useState(true),;
+  const [error, setError] = useState(""),;
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),;
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target,;
+    setFormData(prev => ({ ...prev, [name]: value })),;
+    setError(""),;
+    setFieldErrors(prev => ({ ...prev, [name]: "" }));
+  },;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setError(""),;
+    setFieldErrors({}),;
+    setIsLoading(true),;
+    const errors: { email?: string, password?: string, name?: string } = {},;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,;
+    if (signupMode && !formData.name.trim()) {;
+      errors.name = 'Full name is required';
     }
-
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
-    if (Object.keys(errors).length > 0) {
-      setFieldErrors(errors)
-      setIsLoading(false)
+;
+    if (!formData.email.trim()) {;
+      errors.email = 'Email is required';
+    } else if (!emailRegex.test(formData.email)) {;
+      errors.email = 'Invalid email address';
+    }
+;
+    if (!formData.password) {;
+      errors.password = 'Password is required';
+    } else if (!strongPasswordRegex.test(formData.password)) {;
+      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.';
+    }
+;
+    if (Object.keys(errors).length > 0) {;
+      setFieldErrors(errors),;
+      setIsLoading(false),;
       return;
     }
-    try {
-      setShowVerificationMessage(false), // Reset verification message
-      if (signupMode) {
-        const result = await signUp(formData.email, formData.password, {
-          name: formData.name})
-        if (result?.error) {
-          throw new Error(result.error as any), // Cast to any if type is AuthError
+;
+    try {;
+      setShowVerificationMessage(false), // Reset verification message;
+      if (signupMode) {;
+        const result = await signUp(formData.email, formData.password, {;
+          name: formData.name}),;
+        if (result?.error) {;
+          throw new Error(result.error as any), // Cast to any if type is AuthError;
+        }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+        if (result?.emailVerificationRequired) {
+          setShowVerificationMessage(true)
+        } else {
+          // Only navigate if email verification is not required
+          router.push("/mobile")
+;
+        if (result?.emailVerificationRequired) {;
+          setShowVerificationMessage(true);
+        } else {;
+          // Only navigate if email verification is not required;
+          router.push("/mobile");
+        }
+      } else {;
+        const { error } = await login(formData.email, formData.password),;
+        if (error) {;
+          throw new Error(error);
+        }
+        
+        router.push("/mobile")
+;
+        router.push("/mobile");
       }
-    } catch (err: any) {
-      logErrorToProduction('Signup/Login error:', { data: err })
-      setError(err.message |'An unexpected error occurred. Please try again.')
-    } finally {
-      setIsLoading(false)
+    } catch (err: any) {;
+      logErrorToProduction('Signup/Login error:', { data: err }),;
+      setError(err.message || 'An unexpected error occurred. Please try again.');
+    } finally {;
+      setIsLoading(false);
     }
-
+  };
+  const handleGoogleLogin = async () => {;
+    try {;
+      await loginWithGoogle();
+    } catch (err: any) {;
+      setError(err.message);
+    }
+  },
+  
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
+      
+      <div className="space-y-2">
+        <Button 
+          variant="outline" 
+          className="w-full py-6 relative"
+          onClick={handleGoogleLogin}
+        >
+          <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+          </svg>
+          Continue with Google
+        </Button>
+
+        <Button 
+          variant="outline" 
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -126,14 +181,13 @@ export function SignUpForm() {
           Continue with Facebook
         </Button>
       </div>
+
       <div className="relative flex items-center">
         <div className="flex-grow border-t border-border"></div>
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
-
-=======
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
+      
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -141,16 +195,6 @@ export function SignUpForm() {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-<<<<<<< HEAD
-
-      {/* Verification Message */}
-      {showVerificationMessage && (
-        <Alert className="mb-4 border-blue-500 bg-blue-50">
-          <AlertCircle className="h-4 w-4" />
-          <AlertDescription>
-            Please check your email and click the verification link before signing in.
-          </AlertDescription>
-        </Alert>
 ;
       {/* Verification Message */}
       {showVerificationMessage && (;
@@ -160,57 +204,91 @@ export function SignUpForm() {
             Please check your email and click the verification link before signing in.;
           </AlertDescription>;
         </Alert>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      )}
+      
+      <form onSubmit={handleSubmit} className="space-y-4">
+        {signupMode && (
+          <div className="space-y-2">
+            <Label htmlFor="name">Full name</Label>
+            <Input
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required;
+              aria-invalid={!!fieldErrors.name}
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
               <p className="text-red-500 text-sm">{fieldErrors.name}</p>
             )}
-          </div>
+          </div>;
         )}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
+        <div className="space-y-2">
+          <Label htmlFor="email">Email address</Label>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required;
+            aria-invalid={!!fieldErrors.email}
             placeholder="Enter your email"
-          />;
-          {fieldErrors && fieldErrors.email && (;
-            <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.email}</p>;
+          />
+          {fieldErrors.email && (
+            <p className="text-red-500 text-sm">{fieldErrors.email}</p>
           )}
+        </div>
 
-        </div>;
-
-        <div className="space-y-2">;
-          <Label htmlFor="password">Password</Label>;
-
+        <div className="space-y-2">
+          <Label htmlFor="password">Password</Label>
           <Input
             id="password"
             name="password"
             type="password"
-            value = {formData.password,}
-            onChange = {handleInputChange,}
-            required
-            aria-invalid = {!!fieldErrors.password,}
             value={formData.password}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
-<<<<<<< HEAD
-
+            placeholder="Create a password"
+          />
+          <PasswordStrengthMeter password={formData.password} />
+          {fieldErrors.password && (
+            <p className="text-red-500 text-sm">{fieldErrors.password}</p>
+          )}
+        </div>
+        
         <Button
           type="submit"
           className="w-full py-6"
-          disabled = {isLoading,}>;
-          {isLoading ? (;
-            <>;
-              <LoadingSpinner size="sm" className="mr-2" />;
-              Please wait...;
-            </>;
-          ) : (;
-            signupMode ? "Create Account" : "Sign In";
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <>
+              <LoadingSpinner size="sm" className="mr-2" />
+              Please wait...
+            </>
+          ) : (
+            signupMode ? "Create Account" : "Sign In"
           )}
         </Button>
       </form>
       
-<<<<<<< HEAD
+      <p className="text-center text-sm">
+        {signupMode
+          ? "Already have an account? "
+          : "Don't have an account? "
+        }
+        <Link;
+          href="/login";
+          className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
+        >;
+          Sign In;
+        </Link>;
+      </p>;
+    </div>;
+  );
+}
+;

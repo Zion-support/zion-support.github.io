@@ -7,7 +7,11 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
       <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD:backup-problematic-files/tests/AddToCart.test.tsx
 }
+=======
 <<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:tests/AddToCart.test.tsx
+}
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

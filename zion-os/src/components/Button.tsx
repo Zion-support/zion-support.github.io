@@ -1,4 +1,3 @@
-
 'use client',;
 import React, { forwardRef } from 'react',;
 import Link from 'next/link',;
@@ -63,127 +62,75 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
-
-'use client',
-import React, { forward_ref } from 'react',
-import Link from 'next / link',
-import LoadingSpinner from './LoadingSpinner',
-interface ButtonProps {
-  children: React.ReactNode,
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost',
-  size?: 'sm' | 'md' | 'lg' | 'xl',
-  href?: string,
-  on_click?: () => void,
-  disabled?: boolean,
-  loading?: boolean,
-  icon?: React.ReactNode,
-  icon_position?: 'left' | 'right',
-  class_name?: string,
-  type?: 'button' | 'submit' | 'reset',
-  full_width?: boolean,
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
-}
-const Button = forward_ref < HTMLButtonElement ButtonProps>(({
-  children,
-  variant = 'primary',
-  size = 'md',
-  href,
-  on_click,
-  disabled = false,
-  loading = false,
-  icon,
-  icon_position = 'right',
-  class_name = '',
-  type = 'button',
-  full_width = false,
-  rounded = 'lg';
-
-  const content = (;
-    <>;
-      {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
-      {icon && iconPosition === 'left' && !loading && <span className="mr-2">{icon}</span>}
-      <span className={loading ? 'opacity-0' : ''}>{children}</span>;
-      {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
-    </>;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  ),;
+  if (href) {;
+    return (;
       <Link href={href} className={classes}>;
         {content}
-      </Link>);
+      </Link>;
+    );
   }
-
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  return (;
-
     <button;
       ref={ref}
       type={type}
       className={classes}
-
-      on_click={on_click}
+      onClick={onClick}
       disabled={disabled || loading}
-      aria - label={typeof children === 'string' ? children : undefined}
+      aria-label={typeof children === 'string' ? children : undefined}
     >;
       {content}
-=======
-    </button>);
-}),
-Button.display_name = 'Button',
-export default Button,
-
+    </button>;
+  );
+}),;
+Button.displayName = 'Button',;
+export default Button,;
 // Specialized button variants;
-export /**
- * PrimaryButton - Function description
- */
-function PrimaryButton() {
+export function PrimaryButton(props: Omit<ButtonProps 'variant'>) {;
   return <Button {...props} variant="primary" />;
 }
-export /**
- * SecondaryButton - Function description
- */
-function SecondaryButton() {
+;
+export function SecondaryButton(props: Omit<ButtonProps 'variant'>) {;
   return <Button {...props} variant="secondary" />;
 }
-export /**
- * OutlineButton - Function description
- */
-function OutlineButton() {
+;
+export function OutlineButton(props: Omit<ButtonProps 'variant'>) {;
   return <Button {...props} variant="outline" />;
 }
-export /**
- * GhostButton - Function description
- */
-function GhostButton() {
+;
+export function GhostButton(props: Omit<ButtonProps 'variant'>) {;
   return <Button {...props} variant="ghost" />;
 }
+;
 // Icon button variant;
-
-=======
 export function IconButton({;
   icon,;
   children,;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
-
       {children}
-    </Button>);
+    </Button>;
+  );
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+;
+// Floating action button;
+export function FloatingActionButton({;
+  icon,;
+  onClick;
+  className = '';
+  ...props;
+}: ButtonProps & { icon: React.ReactNode }) {;
+  return (;
     <Button;
       {...props}
       icon={icon}
-      on_click={on_click}
-      className={`fixed bottom - 8 right - 8 w - 16 h - 16 rounded - full shadow - 2xl hover:shadow - 3xl z - 50 ${class_name}`}
+      onClick={onClick}
+      className={`fixed bottom-8 right-8 w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl z-50 ${className}`}
       size="lg";
       rounded="full";
-    />);
+    />;
+  );
 }

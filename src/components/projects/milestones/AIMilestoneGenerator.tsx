@@ -1,40 +1,4 @@
-=======
-interface AIMilestoneGeneratorProps {;
-  scope: string;
-  startDate: string;
-  endDate: string | null;
-  projectType: string;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 
-  scope
-  startDate
-  endDate
-  projectType
-  onAddMilestones
-  onAddMilestone
-}: AIMilestoneGeneratorProps) {
-  const {
-    generateMilestones
-    generatedMilestones
-    isGenerating
-    clearGeneratedMilestones
-  } = useMilestoneGenerator()
-  const [selectedMilestones, setSelectedMilestones] = useState<
-    Record<string, boolean>
-  >({})
-  const handleGenerateMilestones = async () => {
-    if (!scope |!startDate |!projectType) {
-      return
-    if (!scope || !startDate || !projectType) {
-      return;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -53,7 +17,6 @@ interface AIMilestoneGeneratorProps {;
   endDate: string | null,;
   projectType: string,;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
-
   onAddMilestone: (milestone: GeneratedMilestone) => void;
 }
 ;
@@ -109,24 +72,20 @@ export function AIMilestoneGenerator({;
     } catch (error) {;
       return dateString;
     }
-
   },
 
-
-
-
   return (
-          disabled={isGenerating || !scope || !startDate || !projectType}        >
-
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-medium flex items-center">
+          <Sparkles className="w-5 h-5 mr-2 text-primary" />
+          AI Milestone Generator
+        </h3>
+        <Button
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
-
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -140,6 +99,7 @@ export function AIMilestoneGenerator({;
           )}
         </Button>
       </div>
+
       {generatedMilestones.length > 0 && (
         <Card>
           <CardContent className="pt-6">
@@ -147,22 +107,44 @@ export function AIMilestoneGenerator({;
               <p className="text-sm text-muted-foreground">
                 {generatedMilestones.length} milestones generated based on your project scope
               </p>
+              <Button 
+                onClick={handleAddToProject}
+                disabled={!Object.values(selectedMilestones).some(Boolean)}
+              >
+                Add Selected to Project
+              </Button>
+            </div>
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+            <Accordion type="multiple" className="w-full">
+              {generatedMilestones.map((milestone, index) => (
+                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center flex-1">
+                      <input
+                        type="checkbox"
+                        id={`milestone-${index}`}
+                        checked={selectedMilestones[index] || false}
+                        onChange={() => toggleMilestoneSelection(index)}
+                        className="mr-2 w-4 h-4 rounded text-primary"
+                      />
+                      <AccordionTrigger className="hover:no-underline flex-1 text-left">
+                        <div className="flex items-center">
+                          <span className="font-medium">{milestone.title}</span>
+                          <Badge variant="secondary" className="ml-2 flex items-center">
+                            <Sparkles className="w-3 h-3 mr-1" />
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-                      variant='ghost'
-                      size='sm'
-                      onClick={e => {
-                        e.stopPropagation()
-                        handleAddSingleMilestone(milestone) }}
-                      className='mr-2'
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation(),
+                        handleAddSingleMilestone(milestone)
+                      }}
+                      className="mr-2"
                     >
                       <Plus className="h-4 w-4" />
                     </Button>
@@ -180,37 +162,12 @@ export function AIMilestoneGenerator({;
                     </div>
                   </AccordionContent>
                 </AccordionItem>
-
-                      onClick={e => {;
-                        e && e.stopPropagation();
-                        handleAddSingleMilestone(milestone);                      }}
-                      className='mr-2';
-                    >;
-                      <Plus className='h-4 w-4' />;
-                    </Button>;
-                  </div>;
-                  <AccordionContent>;
-                    <div className='pl-6 space-y-2'>;
-                      <p className='text-sm'>{milestone && milestone.description}</p>;
-                      <div className='flex items-center text-sm text-muted-foreground'>;
-                        <Calendar className='w-4 h-4 mr-1' />;
-                        Due: {formatDate(milestone && milestone.dueDate)}
-                      </div>;
-                      <div className='text-sm text-muted-foreground'>;
-                        Estimated effort: {milestone && milestone.estimatedHours} hours;
-                      </div>;
-                    </div>;
-                  </AccordionContent>;
-                </AccordionItem>;
-
               ))}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+            </Accordion>;
+          </CardContent>;
+        </Card>;
+      )}
     </div>;
   );
 }
 ;
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

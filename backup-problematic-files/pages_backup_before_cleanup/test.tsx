@@ -1,5 +1,6 @@
+<<<<<<< HEAD:backup-problematic-files/pages_backup_before_cleanup/test.tsx
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );}; export default Test;
 const type { NextPage } from "next"; const Test: NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> );}; export default Test;'"'"
 import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup_before_cleanup/test.tsx

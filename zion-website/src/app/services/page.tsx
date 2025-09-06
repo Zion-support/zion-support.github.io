@@ -2,8 +2,8 @@
 import {
 
   UserGroupIcon,
-  LightBulbIcon,
-  CogIcon,
+  LightBulbIcon, 
+  CogIcon, 
   ShieldCheckIcon,
   ChartBarIcon,
   RocketLaunchIcon,
@@ -15,51 +15,95 @@ const professional_services = [;
     name: 'AI Strategy & Consulting',
     description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.',
     icon: LightBulbIcon,
-    features: [;
-      'Technology AssessmentROI AnalysisImplementation RoadmapChange Management Planning';
+    features: [
+      'Technology AssessmentROI AnalysisImplementation RoadmapChange Management Planning'
     ],
-    duration: '4 - 8 weeks'},
+    duration: '4-8 weeks'},
   {
     name: 'Custom AI Development',
     description: 'Tailored AI solutions built specifically for your business needs and objectives.',
     icon: CogIcon,
-    features: [;
-      'Custom Algorithm DevelopmentIntegration ServicesTesting & ValidationDocumentation & Training';
+    features: [
+      'Custom Algorithm DevelopmentIntegration ServicesTesting & ValidationDocumentation & Training'
     ],
-    duration: '8 - 24 weeks'},
+    duration: '8-24 weeks'},
   {
     name: 'AI Integration & Deployment',
     description: 'Seamless integration of AI solutions into your existing infrastructure and workflows.',
     icon: RocketLaunchIcon,
-    features: [;
-      'System IntegrationAPI DevelopmentPerformance OptimizationGo - live Support';
+    features: [
+      'System IntegrationAPI DevelopmentPerformance OptimizationGo-live Support'
     ],
-    duration: '4 - 12 weeks'},
+    duration: '4-12 weeks'},
   {
     name: 'AI Training & Education',
     description: 'Comprehensive training programs to ensure your team maximizes AI solution value.',
     icon: AcademicCapIcon,
-    features: [;
-      'Technical TrainingBest PracticesOngoing SupportCertification Programs';
+    features: [
+      'Technical TrainingBest PracticesOngoing SupportCertification Programs'
     ],
-    duration: '2 - 4 weeks'},
+    duration: '2-4 weeks'},
   {
     name: 'AI Maintenance & Support',
     description: 'Continuous monitoring, optimization, and support for your AI solutions.',
     icon: ShieldCheckIcon,
-    features: [;
-      '24 / 7 MonitoringPerformance OptimizationSecurity UpdatesTechnical Support';
+    features: [
+      '24/7 MonitoringPerformance OptimizationSecurity UpdatesTechnical Support'
     ],
     duration: 'Ongoing'},
   {
     name: 'AI Audit & Compliance',
     description: 'Comprehensive audits to ensure your AI systems meet regulatory and ethical standards.',
     icon: ChartBarIcon,
-    features: [;
-      'Compliance AssessmentEthical AI ReviewSecurity AuditsRisk Mitigation';
+    features: [
+      'Compliance AssessmentEthical AI ReviewSecurity AuditsRisk Mitigation'
     ],
-    duration: '2 - 6 weeks'}];
-const service_process = [;
+    duration: '2-6 weeks'}]
+
+const serviceProcess = [
+  {
+    step: '01',
+    title: 'Discovery & Assessment',
+    description: 'We begin by understanding your business challenges, current technology stack, and AI objectives.',
+    icon: LightBulbIcon},
+  {
+    step: '02',
+    title: 'Solution Design',
+    description: 'Our experts design a comprehensive solution that addresses your specific needs and goals.',
+    icon: CogIcon},
+  {
+    step: '03',
+    title: 'Development & Testing',
+    description: 'We develop and rigorously test your solution to ensure optimal performance and reliability.',
+    icon: RocketLaunchIcon},
+  {
+    step: '04',
+    title: 'Deployment & Training',
+    description: 'Seamless deployment with comprehensive training to maximize adoption and value.',
+    icon: AcademicCapIcon},
+  {
+    step: '05',
+    title: 'Ongoing Support',
+    description: 'Continuous monitoring, optimization, and support to ensure lasting success.',
+    icon: ShieldCheckIcon}]
+
+const reasonsToChoose = [
+  {
+    name: 'Expert Team',
+    description: 'World-class AI researchers and engineers with decades of combined experience.',
+    icon: UserGroupIcon},
+  {
+    name: 'Proven Track Record',
+    description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.',
+    icon: ChartBarIcon},
+  {
+    name: 'Cutting-Edge Technology',
+    description: 'Access to the latest AI research and technology innovations.',
+    icon: LightBulbIcon},
+  {
+    name: 'Global Support',
+    description: '24/7 support and maintenance services across multiple time zones.',
+    icon: GlobeAltIcon}]
 
   {
     step: '01'
@@ -231,13 +275,14 @@ export default function ServicesPage() {
                 AI Services
               </span>
             </h1>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              From strategy to implementation, our comprehensive AI services help you navigate
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              From strategy to implementation, our comprehensive AI services help you navigate 
               the complexities of artificial intelligence and achieve transformative results.
             </p>
           </div>
         </div>
       </div>
+
       {/* Professional Services */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -245,8 +290,8 @@ export default function ServicesPage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Comprehensive AI Solutions
           </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We offer end-to-end AI services designed to accelerate your digital transformation
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            We offer end-to-end AI services designed to accelerate your digital transformation 
             and drive measurable business outcomes.
           </p>
         </div>
@@ -278,61 +323,18 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>;
       </div>;
       {/* Service Process */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Process</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-            How We Deliver Results
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our proven methodology ensures successful project delivery and maximum value
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             How We Deliver Results
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our proven methodology ensures successful project delivery and maximum value 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-            from your AI investment.
-          </p>
-        </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5&quot;>
-            {serviceProcess.map((step, index) => (
-              <div key={step.step} className=&quot;relative&quot;>
-                {index < serviceProcess.length - 1 && (
-                  <div className=&quot;hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700&quot;></div>
-                )}
-                <div className=&quot;bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                  <div className=&quot;mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4&quot;>
-                    <step.icon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  </div>
-                  <div className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>{step.step}</div>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{step.title}</h3>
-                  <p className=&quot;text-sm text-gray-300&quot;>{step.description}</p>
-                </div>
-              </div>
-            ))}
-            How We Deliver Results
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our proven methodology ensures successful project delivery and maximum value 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             from your AI investment.
           </p>
         </div>
@@ -353,43 +355,14 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>;
       </div>;
       {/* Why Choose Us */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Why Choose Us</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-            The Zion Tech Group Advantage
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Discover what sets us apart and why leading organizations choose us for their AI transformation.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-            {reasonsToChoose.map((reason) => (
-              <div key={reason.name} className="flex flex-col group">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  {reason.name}
-                </dt>;
-                <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
-                  <p className=&quot;flex - auto & quot;>{reason.description}</p>;
-                </dd>;
-              </div>))}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             The Zion Tech Group Advantage
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -409,49 +382,29 @@ export default function ServicesPage() {
                 </dd>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </dl>;
         </div>;
       </div>;
       {/* CTA section */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Let's discuss how our AI services can transform your business and accelerate your growth.
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </p>
-        </div>
-        
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-          {services.map((service, index) => (
-            <div key={index} className="bg-gray-900 rounded-lg p-8 border border-gray-800">
-              <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-              <p className="text-gray-300 mb-6">{service.description}</p>
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300"
-                >
-                  Learn More <span className="ml-1">→</span>
-                </a>
-              </div>
-            </div>
-          ))}
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="/contact"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
+            >
+              Schedule Consultation
+            </Link>
+            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View Solutions <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

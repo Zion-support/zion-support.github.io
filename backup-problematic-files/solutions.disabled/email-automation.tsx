@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/solutions.disabled/email-automation.tsx
 import React from 'react';
 
 =======
@@ -13,6 +14,9 @@ const Email-automation: React.FC<Email-automationProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+}
+}
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:solutions.disabled/email-automation.tsx

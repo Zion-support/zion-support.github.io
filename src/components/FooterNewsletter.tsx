@@ -1,40 +1,42 @@
-
+import React, { useState, useRef } from 'react',
+import { Input } from '@/components/ui/input',
+import { Button } from '@/components/ui/button',
+import { useToast } from '@/hooks/use-toast',
 import { Loader2 } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import {logErrorToProduction} from '@/utils/productionLogger',
 export function FooterNewsletter(): React.ReactElement {
+  const [email, setEmail] = useState(''),
+  const [honeypot, setHoneypot] = useState(''),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [emailError, setEmailError] = useState(''),
+  const { toast } = useToast(),
 
-  const [email, setEmail] = useState('')
-  const [honeypot, setHoneypot] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [emailError, setEmailError] = useState('')
-  const { toast } = useToast()
-      // // // // // // // console.error('Newsletter subscription failed:', error)
-} finally {
-      setIsSubmitting(false)
-      // console.error('Newsletter subscription failed:', error)} finally {
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const lastSubmit = useRef(0);
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault();
-    if (honeypot) return; // ignore bots
-    const now = Date.now()
-    if (now - lastSubmit.current < 1000) return;
-    lastSubmit.current = now
-    const trimmedEmail = email.trim()
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+
+  const lastSubmit = useRef(0),
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    if (honeypot) return, // ignore bots
+    const now = Date.now(),
+    if (now - lastSubmit.current < 1000) return,
+    lastSubmit.current = now,
+
+    const trimmedEmail = email.trim(),
     if (!EMAIL_REGEX.test(trimmedEmail)) {
-      setEmailError('Please enter a valid email address.')
-      return;
+      setEmailError("Please enter a valid email address."),
+      return
     } else {
-      setEmailError('')
+      setEmailError("")
     }
-    setIsSubmitting(true)
-    const uniqueToastIdBase = `newsletter-toast-${Date.now()}`; // Generate a base for unique ID
+
+    setIsSubmitting(true),
+    const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID
 
     try {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-
         body: JSON.stringify({ email: trimmedEmail })
       }),
 
@@ -124,33 +126,14 @@ export function FooterNewsletter(): React.ReactElement {;
         onChange={(e) => setEmail(e.target.value)}
         autoComplete="email"
         required
-
       />
       {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
-
-        value={honeypot}
-        onChange={e => setHoneypot(e.target.value)}
-        tabIndex={-1}
-=======
-        autoComplete='off';
-        style={{ display: 'none' }}
-      />;
-
-      <Button
-        type="submit"
-        disabled={isSubmitting}
-
-        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
-
         type="text"
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         value={honeypot}
-        onChange={e => setHoneypot(e.target.value)}
+        onChange={(e) => setHoneypot(e.target.value)}
         tabIndex={-1}
-
-
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -162,7 +145,7 @@ export function FooterNewsletter(): React.ReactElement {;
       >;
         {isSubmitting ? (;
           <>;
-            <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
+            <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
             Subscribing...;
           </>;
         ) : (;
@@ -171,7 +154,4 @@ export function FooterNewsletter(): React.ReactElement {;
       </Button>;
     </form>;
   );
-
 } ;
-<<<<<<< HEAD
-<<<<<<< HEAD

@@ -1,31 +1,51 @@
-
+<<<<<<< HEAD
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AIChatbotSystemtest from "./components/AIChatbotSystem.test"; describe("AIChatbotSystemtest",() => { test("renders without crashing",() => { render(<AIChatbotSystemtest />); expect(screen.getByTestId("aichatbotsystem.test")).toBeInTheDocument()}); test("displays correct content",() => { render(<AIChatbotSystemtest />)}); test("handles user interactions",() => { render(<AIChatbotSystemtest />)}); test("applies correct styling",() => { render(<AIChatbotSystemtest />)})});''"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 describe('AIChatbotSystemtest', () => {
   test('renders without crashing', () => {
     render(<AIChatbotSystemtest />);
     expect(screen.getByTestId('aichatbotsystem.test')).toBeInTheDocument();
   });
-
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+  
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
   
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   test('displays correct content', () => {
     render(<AIChatbotSystemtest />);
   });
+  
   test('handles user interactions', () => {
     render(<AIChatbotSystemtest />);
   });
-
 <<<<<<< HEAD
-  test('displays correct content', () => {
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+  
+  test('applies correct styling', () => {
     render(<AIChatbotSystemtest />);
   });
-  test('handles user interactions', () => {
-    render(<AIChatbotSystemtest />);
-  });
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+});
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

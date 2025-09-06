@@ -1,10 +1,3 @@
-
-
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
   "reactStrictMode": true,
@@ -49,21 +42,6 @@ const nextConfig = {}
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
         ];
       },
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-      {
-        source: '/public/(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
-        ]
-      }
-    ]}
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {}
         "source": '/public/(.*)',
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
@@ -71,4 +49,6 @@ const nextConfig = {}
       };
     ]};
 };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+module.exports = nextConfig;
+

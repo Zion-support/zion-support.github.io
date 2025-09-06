@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/pages_backup_before_cleanup/_app.tsx
 import type { AppProps } from \'next/app\' import \'../styles/globals.css\' export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
 const type { AppProps } from "next/app" import "./styles/globals.css" export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} /> }''"
 import React from 'react';
@@ -15,6 +16,6 @@ const _app: React.FC<_appProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+}
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup_before_cleanup/_app.tsx

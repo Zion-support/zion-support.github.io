@@ -14,7 +14,11 @@ export default function Performance.test({ }: Performance.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:backup-problematic-files/tests/performance.test.js
 }
+=======
 <<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:tests/performance.test.js
+}
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

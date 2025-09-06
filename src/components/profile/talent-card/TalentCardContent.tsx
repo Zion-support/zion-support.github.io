@@ -1,40 +1,13 @@
 
-
+import React, { useState } from "react",
+import { MapPin } from 'lucide-react'
+import { TalentCardSkills } from "./TalentCardSkills",
 interface TalentCardContentProps {
-  summary: string | undefined;
-  bio: string;
-  timezone: string | undefined;
+  summary: string | undefined,
+  bio: string,
+  timezone: string | undefined,
   skills: string[] | undefined
-
-export function TalentCardContent({
-  summary
-  bio
-  timezone
-  skills
-}: TalentCardContentProps) {
-  const [isHovering, setIsHovering] = useState(false)
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      {/* Short bio or summary - longer on hover for desktop */}
-      <div 
-        className="overflow-hidden transition-all duration-300" 
-        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
-        onMouseEnter = {() => setIsHovering(true),}
-        onMouseLeave = {() => setIsHovering(false),}
-      >
-        <p className='text-zion-slate mb-4'>{summary || bio}</p>
-      </div>
-        <p className="text-zion-slate mb-4">
-          {summary || bio}
-        </p>
-      </div>
-      <TalentCardSkills skills={skills} />
-    </div>;
-  );
-};
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-      >
-        <p className="text-zion-slate mb-4">
+import React, { useState } from "react",;
 import { MapPin } from 'lucide-react';
 import { TalentCardSkills } from "./TalentCardSkills",;
 interface TalentCardContentProps {;
@@ -56,9 +29,14 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
         </div>
       )}
 ;
-
-=======
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
+      {/* Short bio or summary - longer on hover for desktop */}
+      <div 
+        className="overflow-hidden transition-all duration-300" 
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <p className="text-zion-slate mb-4">
           {summary || bio}
         </p>;
       </div>;

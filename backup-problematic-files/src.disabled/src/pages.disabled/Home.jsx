@@ -1,21 +1,14 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
+<<<<<<< HEAD:backup-merge-conflicts/Home.jsx.backup
+:backup-merge-conflicts/Home.jsx.backup
+import React from \'react\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import {}} from \'lucide-react\'; export default function Home() {}; return null} },; {}},; {}},; {}} ]; <HeroSection /> <QuickAccess /> <FeatureCTAs /> <FeatureHighlights /> <CategoriesSection /> <BenefitsSection /> <HowItWorksSection /> <FeaturedListingsSection /> <ServicesShowcase /> <NewsletterSection /> <ITServiceRequestHero /> <FloatingCTA /> ></div> );} ; export { Home }; export { Home }; export { Home }; export { Home }; export { Home };import _React from 'react'; import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import {}} from 'lucide-react'; export default function Home() {}; return null} },; {}},; {}},; {}} ]; <HeroSection /> <QuickAccess /> <FeatureCTAs /> <FeatureHighlights /> <CategoriesSection /> <BenefitsSection /> <HowItWorksSection /> <FeaturedListingsSection /> <ServicesShowcase /> <NewsletterSection /> <ITServiceRequestHero /> <FloatingCTA /> ></div> );} ; export { Home }; export { Home }; export { Home }; export { Home }; export { Home };
+
+import _React from 'react'; import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import {}} from 'lucide-react'; export default function Home() {}; return null} },; {}},; {}},; {}} ]; <HeroSection /> <QuickAccess /> <FeatureCTAs /> <FeatureHighlights /> <CategoriesSection /> <BenefitsSection /> <HowItWorksSection /> <FeaturedListingsSection /> <ServicesShowcase /> <NewsletterSection /> <ITServiceRequestHero /> <FloatingCTA /> ></div> );} ; export { Home }; export { Home }; export { Home }; export { Home }; export { Home };
+=======
+<<<<<<< HEAD
+import _React from 'react'; import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import {}} from 'lucide-react'; export default function Home() {}; return null} },; {}},; {}},; {}} ]; <HeroSection /> <QuickAccess /> <FeatureCTAs /> <FeatureHighlights /> <CategoriesSection /> <BenefitsSection /> <HowItWorksSection /> <FeaturedListingsSection /> <ServicesShowcase /> <NewsletterSection /> <ITServiceRequestHero /> <FloatingCTA /> ></div> );} ; export { Home }; export { Home }; export { Home }; export { Home }; export { Home };
+=======
 import React from \'react\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import {}} from \'lucide-react\'; export default function Home() {}; return null} },; {}},; {}},; {}} ]; <HeroSection /> <QuickAccess /> <FeatureCTAs /> <FeatureHighlights /> <CategoriesSection /> <BenefitsSection /> <HowItWorksSection /> <FeaturedListingsSection /> <ServicesShowcase /> <NewsletterSection /> <ITServiceRequestHero /> <FloatingCTA /> ></div> );} ; export { Home }; export { Home }; export { Home }; export { Home }; export { Home };
 const React from "react"; import { Link } from "react-router-dom"; import { motion } from "framer-motion"; import {}} from "lucide-react"; export default function Home() { return; }; return null} },; {}},; {}},; {}} ]; <HeroSection /> <QuickAccess /> <FeatureCTAs /> <FeatureHighlights /> <CategoriesSection /> <BenefitsSection /> <HowItWorksSection /> <FeaturedListingsSection /> <ServicesShowcase /> <NewsletterSection /> <ITServiceRequestHero /> <FloatingCTA /> ></div> );} ; export { Home }; export { Home }; export { Home }; export { Home }; export { Home };''"
-
+import _React from 'react'; import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import {}} from 'lucide-react'; export default function Home() {}; return null} },; {}},; {}},; {}} ]; <HeroSection /> <QuickAccess /> <FeatureCTAs /> <FeatureHighlights /> <CategoriesSection /> <BenefitsSection /> <HowItWorksSection /> <FeaturedListingsSection /> <ServicesShowcase /> <NewsletterSection /> <ITServiceRequestHero /> <FloatingCTA /> ></div> );} ; export { Home }; export { Home }; export { Home }; export { Home }; export { Home };
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/src/pages.disabled/Home.jsx

@@ -1,16 +1,20 @@
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
-
+=======
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {
   const smbServices = [;
@@ -46,13 +50,13 @@ export default function SMBSolutionsPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-
-  return (
-    <Layout
-      title="SMB Solutions - Zion Tech Group"
-      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
+<<<<<<< HEAD
+=======
+=======
+=======
 import React from 'react';
-import Layout from "../../components/Layout";";
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Building2, 
@@ -65,44 +69,8 @@ import {
 
 
 export default function SMBSolutionsPage() {
-ursor/fix-syntax-push-and-merge-to-main-40de
-import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-export default function SMBSolutionsPage() {
-  const smbServices = [;
-    {}
-      title: "Cost-Effective IT","
-      description: "Affordable technology solutions for small and medium businesses","
-      icon: DollarSign,
-      features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]"
-    },
-    {}
-      title: "Quick Setup","
-      description: "Rapid deployment of essential business systems","
-      icon: Zap,
-      features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]"
-    },
-    {}
-      title: "Team Collaboration","
-      description: "Tools and systems to enhance team productivity","
-      icon: Users,
-      features: ["Communication Tools", "Project Management", "File Sharing"]"
-    },
-    {}
-      title: "Business Growth","
-      description: "Technology solutions that grow with your business","
-      icon: Building2,
-      features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]"
-    }
-;  ];
-  return (;
-    <Layout );
-      title="SMB Solutions - Zion Tech Group"";
-      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."";
-    >;
-      <div className="min-h-screen bg-gray-50">";
-  ];
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
+=======
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
@@ -119,7 +87,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -132,15 +103,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </motion.div>;
           </div>;
         </section>;
-
+<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -153,6 +119,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -194,7 +164,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+=======
+=======
 
 
 =======
@@ -243,7 +216,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>
 <<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
+=======
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

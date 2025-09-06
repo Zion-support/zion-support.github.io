@@ -1,5 +1,4 @@
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud.tsx
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
@@ -44,6 +43,13 @@ export default function CloudServicesPage() {;
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."">;
       <div className="min-h-screen bg-gray-50">";
   ];
+=======
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
 
 =======
 interface CloudProps {
@@ -52,23 +58,23 @@ interface CloudProps {
 
 export default function CloudServicesPage() {
   return (
-    <Layout
-      title="Cloud Solutions - Zion Tech Group"
-      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-    >
+    <>
+      <Head>
+        <title>Cloud Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive cloud services including migration, infrastructure, database management, and security solutions." />
+      </Head>
+
       <div className="min-h-screen bg-gray-50">
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.">;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">";
-          <div className="container mx-auto px-4">";
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+              transition={{ duration: 0.8 }}
+<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud.tsx
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -100,18 +106,19 @@ export default function CloudServicesPage() {
             </motion && motion.div>;
           </div>;
         </section>;
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
               className="text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Cloud Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your business with our comprehensive cloud solutions.
-                From migration to optimization, we help you leverage the power of the cloud.
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Cloud Services</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Transform your business with our comprehensive cloud solutions designed for scalability, 
+                reliability, and security.
               </p>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud.tsx
         {/* Services Section */}
         <section className="py-20">";
           <div className="container mx-auto px-4">";
@@ -152,6 +159,11 @@ export default function CloudServicesPage() {
             </div>;
           </div>;
         </section>;
+            </div>
+          </div>
+        </section>
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
 
         {/* Services Grid */}
         <section className="py-16 px-4">;
@@ -187,25 +199,39 @@ export default function CloudServicesPage() {
                 </motion && motion.div>;
               ))}
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
-          <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,;
-            </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
-              Let our cloud experts help you transform your infrastructure and unlock new possibilities.;
-            </p>;
-            <motion&& motion.a
-              href="/contact""
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
-              whileHover={{ scale: 1 && 1.05 }}>,;
-              Get Started Today;
-              <ArrowRight className="w-5 h-5 ml-2" />";
-            </motion && motion.a>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-<<<<<<< HEAD
-
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Move to the Cloud?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our cloud services can transform your business infrastructure.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/it-services"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View IT Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}

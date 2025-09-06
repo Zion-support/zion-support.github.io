@@ -1,18 +1,21 @@
 #!/usr/bin/env node;
 /**
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
  * Syntax Error Fixer;
  * Automatically fixes common syntax errors in the codebase;
  */
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
   }
 
   log(message) {
@@ -61,9 +64,22 @@ const path = require('path')
     content = content.replace(/([^;}])\n/g, '$1;\n');
 
     
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    // Fix merge conflict markers
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
+    content = content.replace(/[\s\S]*?[\s\S]*?    
+=======
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+    
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     // Fix missing commas in objects
@@ -86,10 +102,6 @@ const path = require('path')
   }
   generateReport() {
     const report = {
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       "timestamp": new Date().toISOString(),
       "fixes": this.fixes,
       "errors": this.errors,
@@ -113,10 +125,7 @@ const path = require('path')
       await this.fixDirectory('components');
       await this.fixDirectory('pages');
       await this.fixDirectory('lib');
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      
       if ( {
         this.log('🎉 Syntax error fixing completed successfully!')} else {
         this.log('⚠️ Syntax error fixing completed with some issues')}
@@ -137,6 +146,13 @@ if (require.main === module) {
   });
 }
 module.exports = SyntaxErrorFixer;
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')
       this.log('Running ESLint auto-fix...')
@@ -144,7 +160,4 @@ module.exports = SyntaxErrorFixer;
       execSync('npm run type-check', { "stdio"})
       execSync('npm run format', { "stdio"})
       this.log(` Syntax fixing "failed"`)
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      this.log(`� Syntax error fixing "failed"`)

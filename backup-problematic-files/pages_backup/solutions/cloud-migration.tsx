@@ -1,10 +1,12 @@
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/cloud-migration.tsx
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/cloud-migration.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Cloud,
@@ -22,9 +24,7 @@ import { Cloud,
   Brain;
 } from 'lucide-react';
 import Layout from "../../components/Layout";";
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const phases = [;
   {}
     title: 'Assessment & Planning,',;
@@ -315,8 +315,8 @@ export default function CloudMigrationPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+              transition={{ duration: 0.8 }}
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/cloud-migration.tsx
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -338,6 +338,8 @@ export default function CloudMigrationPage() {;
         </section>;
       </div>;
     </Layout>;
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/cloud-migration.tsx
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?

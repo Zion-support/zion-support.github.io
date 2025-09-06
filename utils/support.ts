@@ -1,28 +1,51 @@
-// Support utilities
-export const support = {
-  // Add support functionality here
-  logEvent: (event: any) => null
-  getArticles: () => []
-  getArticleById: (id: string) => null
-}
-  logEvent: (event: any) => null,
-  getArticles: () => [],
-  getArticleById: (id: string) => null;
+export type HelpArticle = {;
+  id: string;
+  slug: string;
+  title: string;
+  body: string;
+  category: 'Getting Started' | 'Hiring' | 'Profile Setup' | 'Payments' | 'Disputes';
+  updatedAt: string;
+  keywords?: string[];
 };
-
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-export const logSupportEventToOperator = (event: any) => {
-  // Add support event logging functionality here;
-  return null;
-
+export type IntentResult = {;
+  intentMatched: boolean;
+  matchedArticleIds: string[];
+};
+export function matchIntent(query: string, articles: HelpArticle[]): IntentResult {;
+  const q = query.toLowerCase();
+  const matched = new Set<string>();
+  const keywordToArticle = new Map<string string[]>();
+  for (const art of articles) {;
+    for (const kw of art.keywords ?? []) {;
+      const list = keywordToArticle.get(kw) ?? [];
+      list.push(art.id);
+      keywordToArticle.set(kw, list);
+    }
+  }
+;
+  // Simple heuristics;
+  const heuristics: Array<[RegExp, string[]]> = [;
+    [/login|log in|sign in|password|2fa|otp|cannot.*sign/i, []];
+    [/hire|post job|find talent|contract/i, []];
+    [/match|matching|get matched/i, []];
+    [/bill|invoice|payment|refund|charge|card/i, []];
+    [/dispute|issue|complaint|chargeback/i, []];
+    [/profile|setup|verification|kyc|tax/i, []]];
+  let heuristicHit = false;
+  for (const [re] of heuristics) {;
+    if (re.test(q)) {;
+      heuristicHit = true;
+      for (const [kw, ids] of keywordToArticle.entries()) {;
+        if (q.includes(kw)) ids.forEach((id) => matched.add(id));
+      }
+    }
+  }
+;
+  // Keyword fallback;
+  for (const [kw, ids] of keywordToArticle.entries()) {;
+    if (q.includes(kw)) ids.forEach((id) => matched.add(id));
+  }
+;
+  const matchedIds = Array.from(matched);
+  return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) }
 }
-export const logSupportEventToOperator = (event: any) => {
-  // Add support event logging functionality here;
-  return null;
-}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

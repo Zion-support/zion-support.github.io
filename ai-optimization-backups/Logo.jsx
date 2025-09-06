@@ -1,13 +1,12 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
 =======
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
@@ -34,37 +33,26 @@ export function Logo({ customLogo, customColor }) {};
       <div
         className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"import React from 'react';
     </Link>;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+import React from 'react';
+import { Link } from 'react-router-dom';
+=======
+=======
+>>>>>>> origin/main
+import React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#22D3EE';
-  
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-  
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
   return (
     <Link to="/" className="flex items-center space-x-3 group">
       <div
@@ -83,70 +71,40 @@ origin/automation-improvements-final
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>
       </div>
     </Link>
+<<<<<<< HEAD
+=======
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+}
+<<<<<<< HEAD
+=======
+,
+import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
+<<<<<<< HEAD
+=======
+}
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+}
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   );
 }
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
 ,
 import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
+<<<<<<< HEAD
 import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
+=======
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 }
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-}
-,
-import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
-import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
-
-=======
-
->>>>>>> origin/automation-improvements-final
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-,
-import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
-import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',      >
-
-=======
-        style={{ backgroundColor: logoColor }}
-      >
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        {customLogo ? (
-          <img
-            src={customLogo}
-            alt="Zion Logo"
-            className="w-8 h-8 object-contain"
-          />
-        ) : (
-          <div className="text-white font-bold text-xl">Z</div>
-        )}
-      </div>
-      <div className="flex flex-col">
-        <span className="text-xl font-bold text-gray-900 group-hover:text-zion-cyan transition-colors duration-300">
-          Zion
-        </span>
-        <span className="text-sm text-gray-600 group-hover:text-zion-purple transition-colors duration-300">
-          Technology
-        </span>
-      </div>
-    </Link>
-  );
-=======
-}
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

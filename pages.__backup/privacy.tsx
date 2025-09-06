@@ -1,15 +1,24 @@
+<<<<<<< HEAD
 import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> main
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 import React from 'react';
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+import React from 'react';
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 interface PrivacyProps {
   // Add props here as needed
 }
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function Privacy({ }: PrivacyProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -46,9 +55,12 @@ export default function Privacy(): any ({ }: PrivacyProps) {;
   );
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 }
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

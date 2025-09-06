@@ -76,5 +76,4 @@
 [2025-09-05T14:29:59.640Z] 📊 Phase 2: Running Performance Monitor...
 [2025-09-05T14:29:59.640Z] 🚀 Running: Performance Monitor
 [2025-09-05T14:29:59.663Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-monitor-enhanced.cjs
-
 /workspace/scripts/performance-monitor-enhanced.cjs:1

@@ -1,19 +1,37 @@
-=======
 import { Pool, PoolClient } from 'pg';
-let pool:Pool | null = null;
-export function getPool():Pool {
-  if (!pool) {
-
+<<<<<<< HEAD
+let pool: Pool | null = null;
+export function getPool(): Pool {;
   if (!pool) {;
+=======
 
+let pool: Pool | null = null;
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-    pool = new Pool({ connectionString:process.env.DATABASE_URL });
+export function getPool(): Pool {
+  if (!pool) {
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+    pool = new Pool({ connectionString: process.env.DATABASE_URL });
   }
   return pool;
 }
-export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {
+<<<<<<< HEAD
+;
+export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
+  const client = await getPool().connect();
+  try {;
+    await client.query('BEGIN');
+    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
+    const result = await fn(client);
+    await client.query('COMMIT');
+    return result;
+  } catch (err) {;
+    await client.query('ROLLBACK');
+    throw err;
+  } finally {;
+    client.release();
+  }
+}
+=======
 
 export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -39,5 +57,4 @@ client.release();  }
     client.release();
   }
 }
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

@@ -1,33 +1,16 @@
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-  Download
-  FileImage
-  FileText
-  FileType
-  FileVideo
-  Link
-} from 'lucide-react'
-import { toast } from '@/hooks/use-toast'
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
+import { toast } from "@/hooks/use-toast",
 interface ResourceItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'image' | 'video' | 'document' | 'link';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  id: string,
+  title: string,
+  description: string,
+  type: 'image' | 'video' | 'document' | 'link',
+  icon: JSX.Element,
+  url: string
+}
+
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
@@ -75,59 +58,18 @@ export function PartnerResources() {
       title: 'Talking Points',
       description: 'Key messages and benefits to highlight',
       type: 'document',
-      icon: <FileText className='h-10 w-10 text-zion-cyan' />,
-      url: '#',
-    },
-  ]
-  const handleDownload = (resource: ResourceItem,) => {
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
-      url: '#'
-    }
-  ],
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
     }
   ],
 
   const handleDownload = (resource: ResourceItem) => {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // In a real app, this would download the actual resource
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       variant: "default"})
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
-  return (
-    <div className="space-y-6">
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle>Marketing Resources</CardTitle>
-          <CardDescription>
-            Download brand assets and marketing materials to promote Zion AI
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-
-  url: string;
 
   return (
     <div className="space-y-6">
@@ -226,20 +168,16 @@ export function PartnerResources() {;
       description: `Downloading ${resource.title}`;
       variant: "default"});
   };
-
-  return (
-
-    <div className='space - y-6'>;
-      <Card className='bg - zion - blue - dark border - zion - blue - light'>;
+  return (;
+    <div className="space-y-6">;
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
-          <CardTitle > Marketing Resources</CardTitle>;
-
+          <CardTitle>Marketing Resources</CardTitle>;
           <CardDescription>;
             Download brand assets and marketing materials to promote Zion AI;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">;
             {resources.map((resource) => (;
               <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">;
@@ -256,13 +194,16 @@ export function PartnerResources() {;
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
-=======
+                    {resource.type === 'link' ? 'Visit Link' : 'Download'}
+                  </Button>;
+                </CardContent>;
+              </Card>;
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Promotion Guidelines</CardTitle>
           <CardDescription>
@@ -280,16 +221,21 @@ export function PartnerResources() {;
               <li>Focus on how the platform can help your audience solve their AI talent needs</li>
             </ul>
           </div>
-          <div className='space-y-2'>
-            <h3 className='text-lg font-semibold text-white'>Don'ts</h3>
-            <ul className='list-disc pl-5 space-y-1 text-zion-slate-light'>
 
           <div className="space-y-2">
             <h3 className="text-lg font-semibold text-white">Don'ts</h3>
             <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">
-<<<<<<< HEAD
+              <li>Make unrealistic promises about earnings or results</li>
+              <li>Use manipulative or misleading marketing tactics</li>
+              <li>Spam your referral link across unrelated content</li>
+              <li>Modify or alter our brand assets in unauthorized ways</li>
+              <li>Create fake accounts or use bots to generate referrals</li>
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
 
-
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Partner Support</CardTitle>
           <CardDescription>
@@ -307,9 +253,57 @@ export function PartnerResources() {;
         </CardContent>
       </Card>
     </div>
-  );
-}</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Promotion Guidelines</CardTitle> <CardDescription> Best practices for promoting the Zion AI Marketplace </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Do's</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Use our official brand assets from the resources provided</li> <li>Share your unique referral link in your content</li> <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li> <li>Be transparent that you're a partner and may earn from referrals</li> <li>Focus on how the platform can help your audience solve their AI talent needs</li> </ul> </div> <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Don'ts</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Make unrealistic promises about earnings or results</li> <li>Use manipulative or misleading marketing tactics</li> <li>Spam your referral link across unrelated content</li> <li>Modify or alter our brand assets in unauthorized ways</li> <li>Create fake accounts or use bots to generate referrals</li> </ul> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Partner Support</CardTitle> <CardDescription> Need help with your affiliate marketing? Contact our partner support team. </CardDescription> </CardHeader> <CardContent className="flex flex-col items-center text-center py-6" > <p className="text-zion-slate-light mb-4" > Our partner success team is available to help you maximize your partnership with Zion AI Marketplace. Feel free to reach out if you have questions about promotions, resources, or payment. </p> Contact Partner Support </Button> </CardContent> </Card> </div>) ;
-}'"};
   )
-}</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Promotion Guidelines</CardTitle> <CardDescription> Best practices for promoting the Zion AI Marketplace </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Do's</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Use our official brand assets from the resources provided</li> <li>Share your unique referral link in your content</li> <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li> <li>Be transparent that you're a partner and may earn from referrals</li> <li>Focus on how the platform can help your audience solve their AI talent needs</li> </ul> </div> <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Don'ts</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Make unrealistic promises about earnings or results</li> <li>Use manipulative or misleading marketing tactics</li> <li>Spam your referral link across unrelated content</li> <li>Modify or alter our brand assets in unauthorized ways</li> <li>Create fake accounts or use bots to generate referrals</li> </ul> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Partner Support</CardTitle> <CardDescription> Need help with your affiliate marketing? Contact our partner support team. </CardDescription> </CardHeader> <CardContent className="flex flex-col items-center text-center py-6" > <p className="text-zion-slate-light mb-4" > Our partner success team is available to help you maximize your partnership with Zion AI Marketplace. Feel free to reach out if you have questions about promotions, resources, or payment. </p> Contact Partner Support </Button> </CardContent> </Card> </div>)
-}'"}
+          </div>;
+        </CardContent>;
+      </Card>;
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle>Promotion Guidelines</CardTitle>;
+          <CardDescription>;
+            Best practices for promoting the Zion AI Marketplace;
+          </CardDescription>;
+        </CardHeader>;
+        <CardContent className="space-y-4">;
+          <div className="space-y-2">;
+            <h3 className="text-lg font-semibold text-white">Do's</h3>;
+            <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">;
+              <li>Use our official brand assets from the resources provided</li>;
+              <li>Share your unique referral link in your content</li>;
+              <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li>;
+              <li>Be transparent that you're a partner and may earn from referrals</li>;
+              <li>Focus on how the platform can help your audience solve their AI talent needs</li>;
+            </ul>;
+          </div>;
+          <div className="space-y-2">;
+            <h3 className="text-lg font-semibold text-white">Don'ts</h3>;
+            <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">;
+              <li>Make unrealistic promises about earnings or results</li>;
+              <li>Use manipulative or misleading marketing tactics</li>;
+              <li>Spam your referral link across unrelated content</li>;
+              <li>Modify or alter our brand assets in unauthorized ways</li>;
+              <li>Create fake accounts or use bots to generate referrals</li>;
+            </ul>;
+          </div>;
+        </CardContent>;
+      </Card>;
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle>Partner Support</CardTitle>;
+          <CardDescription>;
+            Need help with your affiliate marketing? Contact our partner support team.;
+          </CardDescription>;
+        </CardHeader>;
+        <CardContent className="flex flex-col items-center text-center py-6">;
+          <p className="text-zion-slate-light mb-4">;
+            Our partner success team is available to help you maximize your partnership with Zion AI Marketplace.;
+            Feel free to reach out if you have questions about promotions, resources, or payment.;
+          </p>;
+          <Button className="bg-zion-purple hover: bg-zion-purple-dark">;
+            Contact Partner Support;
+          </Button>;
+        </CardContent>;
+      </Card>;
+    </div>;
+  );
+}

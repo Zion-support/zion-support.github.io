@@ -1,9 +1,11 @@
-
-=======
+<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import { describe, it, expect, vi } from 'vitest';
+=======
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+
 describe('AccessibilityEnhancer', () => {
   it('renders children correctly', () => {
     render(
@@ -14,6 +16,8 @@ describe('AccessibilityEnhancer', () => {
     expect(screen.getByTestId('test-child')).toBeInTheDocument();
     expect(screen.getByText('Test Content')).toBeInTheDocument();
   });
+
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/AccessibilityEnhancer.test.tsx
   it('applies accessibility props correctly', () => {
     render(
       <AccessibilityEnhancer
@@ -28,6 +32,9 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('aria-label', 'Test Button');
     expect(element).toHaveAttribute('tabindex', '0');
   });
+<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
+=======
+
   it('handles keyboard events correctly', () => {
     const handleClick = vi.fn();
     render(
@@ -41,6 +48,8 @@ describe('AccessibilityEnhancer', () => {
     fireEvent.keyDown(element, { "key": ' ' });
     expect(handleClick).toHaveBeenCalledTimes(2);
   });
+
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/AccessibilityEnhancer.test.tsx
   it('applies focus styles when focusable', () => {
     render(
       <AccessibilityEnhancer
@@ -58,6 +67,11 @@ describe('AccessibilityEnhancer', () => {
       'focus:ring-blue-500'
     );
   });
+
+<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
+});
+
+=======
   it('disables focus when not focusable', () => {
     render(
       <AccessibilityEnhancer role="button" tabIndex={-1}>
@@ -67,25 +81,11 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveAttribute('tabindex', '-1');
   });
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 });
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
 });
-});
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
-import { describe, it, expect, vi } from 'vitest'
-describe('AccessibilityEnhancer'
-  it('renders children correctly'
-    expect(screen.getByTestId('test-child'
-    expect(screen.getByText('Test Content'
-  it('applies accessibility props correctly'
-    const element = screen.getByRole('button'
-    expect(element).toHaveAttribute('aria-label', 'Test Button'
-    expect(element).toHaveAttribute('tabindex', '0'
-  it('handles keyboard events correctly'
-    const element = screen.getByRole('button'
-    fireEvent.keyDown(element, { "key"
-    fireEvent.keyDown(element, { "key"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/AccessibilityEnhancer.test.tsx

@@ -1,15 +1,48 @@
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
+import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import App from \'./App\'; describe(\'App\',() => { it(\'renders without crashing\',() => { render(<App />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<App />)}); it(\'handles user interactions\',() => { render(<App />)})});
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
+=======
+<<<<<<< HEAD
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './src/App';
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './src/App';
+
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+describe('App', () => {
+  it('renders without crashing', () => {
+    render(<App />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+<<<<<<< HEAD
+});
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
   it('displays correct content', () => {
     render(<App />);
   });
@@ -18,9 +51,17 @@ import React from 'react';
   });
 });
 =======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   it('displays correct content', () => {
     render(<App />);
     // Add specific content assertions here
@@ -29,15 +70,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     render(<App />);
     // Add interaction tests here
   });
-});
-});
 <<<<<<< HEAD
-
-const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
-ursor/automate-test-improve-and-merge-code-2480
-});
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+});
 =======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
+});
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+});
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+=======
+});
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

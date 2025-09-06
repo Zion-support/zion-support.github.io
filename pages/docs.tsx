@@ -1,15 +1,3 @@
-
-
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-export default function DocsPage() {
-	return (
 		<Layout>
 			<Head>
 				<title>Documentation | Zion Tech Group</title>
@@ -22,15 +10,24 @@ export default function DocsPage() {
 		</Layout>
 	)
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 ;
-<<<<<<< HEAD
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;

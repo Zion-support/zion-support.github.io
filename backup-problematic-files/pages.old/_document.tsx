@@ -1,7 +1,14 @@
+<<<<<<< HEAD:backup-problematic-files/pages.old/_document.tsx
 import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
 const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+=======
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages.old/_document.tsx
+import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

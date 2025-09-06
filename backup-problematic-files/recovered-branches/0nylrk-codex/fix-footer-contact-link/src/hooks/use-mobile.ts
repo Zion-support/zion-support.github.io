@@ -1,26 +1,24 @@
 
-<<<<<<< HEAD
-=======
-import { useState, useEffect } from 'react',;
+import { useState, useEffect } from 'react';
 ;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
     typeof window !== 'undefined' ? window.innerWidth < 768 :false;
-  ),;
+  );
 ;
   useEffect(() => {;
     const handleResize = () => {;
-      setIsMobile(window.innerWidth < 768),;
-    },;
+      setIsMobile(window.innerWidth < 768);
+    };
 ;
     if (typeof window !== 'undefined') {;
-      window.addEventListener('resize', handleResize),;
-      return () => window.removeEventListener('resize', handleResize),;
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
     }
-    return undefined,;
-  }, []),;
+    return undefined;
+  }, []);
 ;
-  return isMobile,;}
+  return isMobile;}
  export function useIsMobile () {
   const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
 return isMobile 

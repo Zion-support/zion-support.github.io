@@ -1,5 +1,3 @@
-
-import { describe, it, expect } from 'vitest';
 describe('Trust Score User API', () => {
   it('should work', () => {
     expect(true).toBe(true);
@@ -7,5 +5,13 @@ describe('Trust Score User API', () => {
 });
 const { describe,it,expect } from "vitest"; describe("Trust Score User API",() => { it("should work",() => { expect(true).toBe(true)})});''"
 import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() => { it('should work',() => { expect(true).toBe(true)})}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+});''
+<<<<<<< HEAD:backup-merge-conflicts/trust-score-user.test.ts.backup
+=======
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+});''
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/api/trust-score-user.test.ts

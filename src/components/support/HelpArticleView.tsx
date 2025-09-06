@@ -1,73 +1,19 @@
 
-
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { ThumbsUp, ThumbsDown } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast",
-
+import { HELP_CATEGORIES } from "./help-content",
 interface HelpArticleViewProps {
   articleId: string
 }
+
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
-
-
-export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-
-
-    year: "numeric",;
-    month: "long",;
-    day: "numeric", });
-};
-;
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;
-
-  // Find the article in all categories;
-  let article;
-  for (const category of HELP_CATEGORIES) {;
-    const found = category && category.articles.find(a => a && a.id === articleId);
-    if (found) {;
-      article = found;
-      break;
-    }
-  }
-
-  if (!article) {;
-    return <div>Article not found</div>;
-  }
-
-  const handleFeedback = (type: "helpful" | "not-helpful") => {;
-    setFeedbackGiven(type);
-
-  return new Date(date).toLocaleDateString("en-US", {;
-    year: "numeric",;
-    month: "long",;
-    day: "numeric", });
-}
-
-
-
-import React, { useState } from './react';
-import { Button  } from '@/components / ui / button';
-import { Card  } from '@/components / ui / card';
-import { ThumbsUp, ThumbsDown } from 'lucide-react'import { toast  } from '@/components / ui / use - toast';
-import { HELP_CATEGORIES  } from './help - content';
-interface HelpArticleViewProps {
-  article_id: string;
-}
-export /**
- * HelpArticleView - Function description
- */
-function HelpArticleView() {
-  const [feedback_given, setFeedbackGiven] = useState<"helpful" | "not - helpful" | null>(null);
-  // Find the article in all categories;
-  let article;
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
+  
+  // Find the article in all categories
+  let article,
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
@@ -245,9 +191,4 @@ function formatDate(date: string): string {;
     day: "numeric";
   });
 }
-
 ;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

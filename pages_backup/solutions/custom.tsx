@@ -1,29 +1,22 @@
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
-
 =======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const features = [;
   {}
     title: 'Tailored Solutions,',

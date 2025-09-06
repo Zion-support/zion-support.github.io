@@ -1,18 +1,11 @@
-// Error-monitor utility
-export const Error-monitor = () => {
-  // Implementation here
-  return null;
-};
-
+#!/usr/bin/env node
 /**
  * Error Monitor - PM2 Automation Script
  * Monitors the application for errors and automatically fixes common issues
  */
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class ErrorMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -35,52 +28,54 @@ class ErrorMonitor {
     this.checkInterval = 60000; // 1 minute
     this.alertThreshold = 10;
   }
-
   async start() {
     console.log('🔍 Starting Error Monitor...');
     this.isRunning = true;
-
     // Create logs directory
     const logsDir = path.join(this.projectRoot, 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     // Initial health check
     await this.performHealthCheck();
-
     // Start continuous monitoring
     this.startContinuousMonitoring();
-
     // Handle graceful shutdown
     process.on('SIGINT', () => this.shutdown());
     process.on('SIGTERM', () => this.shutdown());
   }
-
   async performHealthCheck() {
     console.log('🏥 Performing health check...');
-
     try {
       // Check TypeScript errors
       await this.checkTypeScriptErrors();
-
       // Check ESLint errors
       await this.checkESLintErrors();
-
       // Check build status
       await this.checkBuildStatus();
-
       // Check for critical files
       await this.checkCriticalFiles();
-
       // Update health status
       this.updateHealthStatus();
-
       // Log results
       this.logHealthStatus();
-
       // Trigger error fixer if needed
       if (this.monitoringReport.metrics.totalErrors > this.alertThreshold) {
         await this.triggerErrorFixer();
@@ -90,14 +85,26 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
         timestamp: new Date().toISOString()
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
         timestamp: new Date().toISOString(),
       });
     }
   }
-
   async checkTypeScriptErrors() {
     try {
       execSync('npx tsc --noEmit --pretty false', {
@@ -105,7 +112,6 @@ class ErrorMonitor {
         cwd: this.projectRoot,
         stdio: ['pipe', 'pipe', 'pipe'],
       });
-
       this.monitoringReport.metrics.typeCheckSuccess = true;
       console.log('✅ TypeScript check passed');
     } catch (error) {
@@ -118,7 +124,6 @@ class ErrorMonitor {
       }
     }
   }
-
   async checkESLintErrors() {
     try {
       execSync('npx eslint . --format=compact --no-eslintrc', {
@@ -126,7 +131,6 @@ class ErrorMonitor {
         cwd: this.projectRoot,
         stdio: ['pipe', 'pipe', 'pipe'],
       });
-
       this.monitoringReport.metrics.lintSuccess = true;
       console.log('✅ ESLint check passed');
     } catch (error) {
@@ -139,7 +143,6 @@ class ErrorMonitor {
       }
     }
   }
-
   async checkBuildStatus() {
     try {
       // Quick build check (without full build)
@@ -149,7 +152,6 @@ class ErrorMonitor {
         stdio: ['pipe', 'pipe', 'pipe'],
         timeout: 30000, // 30 second timeout
       });
-
       this.monitoringReport.metrics.buildSuccess = true;
       console.log('✅ Build check passed');
     } catch (error) {
@@ -163,7 +165,6 @@ class ErrorMonitor {
       console.log('❌ Build check failed');
     }
   }
-
   async checkCriticalFiles() {
     const criticalFiles = [
       'package.json',
@@ -172,52 +173,134 @@ class ErrorMonitor {
       'src/App.tsx',
       'src/pages/index.tsx',
     ];
-     is missing`,
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+    for (const file of criticalFiles) {
+      const filePath = path.join(this.projectRoot, file);
+      if (!fs.existsSync(filePath)) {
+        this.monitoringReport.errorsDetected.push({
+          type: 'missing_critical_file',
+          file: file,
+          message: `Critical file ${file} is missing`,
           timestamp: new Date().toISOString(),
         });
         this.monitoringReport.metrics.totalErrors += 1;
       }
     }
   }
-
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\n');
+    for (const line of lines) {
+      if (line.includes('error TS')) {
+        const match = line.match(
+          /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/
+        );
+        if (match) {
+          errors.push({
+            type: 'typescript_error',
+            file: match[1].trim(),
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            message: match[4].trim(),
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
             timestamp: new Date().toISOString()
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            timestamp: new Date().toISOString()
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
             timestamp: new Date().toISOString(),
           });
     );
         }
       }
     }
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     return errors;
   }
-
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
+    for (const line of lines) {
+      const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
+      if (match) {
+        errors.push({
+          type: 'eslint_error',
+          file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim(),
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
           timestamp: new Date().toISOString()
         });
       }
     }
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
           timestamp: new Date().toISOString(),
         });
       }
     }
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     return errors;
   }
-
   updateHealthStatus() {
     const totalErrors = this.monitoringReport.metrics.totalErrors;
     const totalWarnings = this.monitoringReport.metrics.totalWarnings;
-
     if (totalErrors === 0 && totalWarnings === 0) {
       this.monitoringReport.healthStatus = 'healthy';
     } else if (totalErrors <= this.alertThreshold) {
@@ -226,20 +309,33 @@ class ErrorMonitor {
       this.monitoringReport.healthStatus = 'critical';
     }
   }
-
   logHealthStatus() {
     const status = this.monitoringReport.healthStatus;
     const totalErrors = this.monitoringReport.metrics.totalErrors;
     const totalWarnings = this.monitoringReport.metrics.totalWarnings;
-
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -250,33 +346,62 @@ class ErrorMonitor {
       `🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`
     );
   }
-
   async triggerErrorFixer() {
     console.log('🚀 Triggering error fixer...');
-
     try {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
+      console.log('✅ Error fixer completed');
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      console.log('✅ Error fixer completed');
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
         timestamp: new Date().toISOString()
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
         timestamp: new Date().toISOString(),
       });
     }
   }
-
   startContinuousMonitoring() {
     console.log(
       `🔄 Starting continuous monitoring (checking every ${this.checkInterval / 1000} seconds)...`
     );
-
     setInterval(async () => {
       if (this.isRunning) {
         await this.performHealthCheck();
@@ -284,7 +409,6 @@ class ErrorMonitor {
       }
     }, this.checkInterval);
   }
-
   async saveReport() {
     const reportPath = path.join(
       this.projectRoot,
@@ -292,25 +416,35 @@ class ErrorMonitor {
       `error-monitor-report-${Date.now()}.json`
     );
     const reportDir = path.dirname(reportPath);
-
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
-
     fs.writeFileSync(
       reportPath,
       JSON.stringify(this.monitoringReport, null, 2)
     );
-
     // Keep only the latest 10 reports
     this.cleanupOldReports(reportDir);
   }
-
   cleanupOldReports(reportDir) {
     try {
       const files = fs
@@ -322,7 +456,6 @@ class ErrorMonitor {
           time: fs.statSync(path.join(reportDir, file)).mtime.getTime(),
         }))
         .sort((a, b) => b.time - a.time);
-
       // Remove old reports (keep only the latest 10)
       if (files.length > 10) {
         for (let i = 10; i < files.length; i++) {
@@ -333,23 +466,18 @@ class ErrorMonitor {
       console.error('Error cleaning up old reports:', error);
     }
   }
-
   async shutdown() {
     console.log('🛑 Shutting down Error Monitor...');
     this.isRunning = false;
-
     // Save final report
     await this.saveReport();
-
     console.log('✅ Error Monitor shutdown complete');
     process.exit(0);
   }
-<<<<<<< HEAD
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+}
+module.exports = ErrorMonitor;

@@ -19,29 +19,27 @@ jest.mock("next/router", () => ({
         off: jest.fn(),
         emit: jest.fn(),
       },
-      isFallback: false,
+      isFallback: false
     };
-  },
+  }
 }));
 
 // Mock Next.js Image component
-jest.mock("next/image", () => {
-  const React = require("react");
-  return function MockedImage({ src, alt, ...props }) {
-    return React.createElement("img", { src, alt, ...props });
-  };
-});
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props) => {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img {...props} />;
+  }
+}));
 
 // Mock Next.js Link component
-jest.mock("next/link", () => {
-  const React = require("react");
-  return {
-    _esModule: true,
-    default: ({ children, href, ...props }) => {
-      return React.createElement("a", { href, ...props }, children);
-    },
-  };
-});
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: ({ children, href, ...props }) => {
+    return <a href={href} {...props}>{children}</a>;
+  }
+}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {

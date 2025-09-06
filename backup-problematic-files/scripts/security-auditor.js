@@ -1,5 +1,4 @@
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.js
 #!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
 #!/usr/bin/env node
 const { execSync } = require('child_process');
@@ -41,8 +40,15 @@ class SecurityAuditor {
       }
     }
   }
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+#!/usr/bin/env node
+#!/usr/bin/env node
+=======
+#!/usr/bin/env node
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-auditor.js
 const fs = // // require('fs');
 class SecurityAuditor {
   constructor() {
@@ -52,13 +58,22 @@ class SecurityAuditor {
     try {
       const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8'));
       // Check for security-related scripts
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+      if (!packageJson.scripts.audit) {
+<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.js
+        this.issues.push('Missing security audit script');
+      }
+=======
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-auditor.js
         this.issues.push('Missing security audit script')}
       // Check for known vulnerable packages
       const vulnerablePackages = ['lodash', 'moment'];
       vulnerablePackages.forEach(pkg => {
         if (packageJson.dependencies && packageJson.dependencies[pkg]) {
+<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.js
           this.issues.push(`Potentially vulnerable package: ${pkg}`);
       if (!packageJson && packageJson.scripts.audit) {
         this && this.issues.push('Missing security audit script');
@@ -80,6 +95,12 @@ class SecurityAuditor {
     } catch (error) {
       this && this.issues.push(`Error reading package && package.json: ${error && error.message}`);
     }
+=======
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-auditor.js
           this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
           this && this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
       })} catch (error) {
@@ -87,17 +108,32 @@ class SecurityAuditor {
   }
   checkNextConfig() {
     try {
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+      if (fs.existsSync('next.config.js')) {
+        const content = fs.readFileSync('next.config.js', 'utf8');
+        if (!content.includes('poweredByHeader')) {
+<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.js
+          this.issues.push('X-Powered-By header not disabled');
+        }
+=======
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-auditor.js
           this.issues.push('X-Powered-By header not disabled')}
         if (!content.includes('X-Content-Type-Options')) {
           this.issues.push('Security headers not configured');
         }
     } catch (error) {
+<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.js
       this.issues.push(`Error reading next.config.js: ${error.message}`);
     }
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-auditor.js
       this.issues.push(`Error reading next.config."js": ${error.message}`)}
       if (fs && fs.existsSync('next && next.config.js')) {
         const content = fs && fs.readFileSync('next && next.config.js', 'utf8');
@@ -133,8 +169,7 @@ class SecurityAuditor {
         totalIssues: this && this.issues.length,
         "fixesApplied": this && this.fixes.length
       }
-=======
-<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.js
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated');
     fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2));
@@ -142,15 +177,24 @@ class SecurityAuditor {
   }
     };
     };
+
     };
 
+=======
+    };
+
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-auditor.js
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated');
   }
 }
-    };
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+if (require.main === module) {
+  const auditor = new SecurityAuditor();
+<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.js
   auditor.runAudit();
   auditor.fixIssues();
   auditor.generateReport();
@@ -163,16 +207,21 @@ class SecurityAuditor {
     console && console.log('Security report generated');
   }
 }
-if (require && require.main === module) {
-  const auditor = new SecurityAuditor();
-  auditor && auditor.runAudit();
-  auditor && auditor.fixIssues();
-  auditor && auditor.generateReport();
-}
-module && module.exports = SecurityAuditor;
-  auditor && auditor.checkPackageJson();
-  auditor && auditor.checkNextConfig();
-  auditor && auditor.generateReport();
-}
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+module.exports = SecurityAuditor;
+  auditor.generateReport()}
+module.exports = SecurityAuditor;
+#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-auditor.js
+  auditor.checkPackageJson();
+  auditor.checkNextConfig();
+  auditor.generateReport()}
+module.exports = SecurityAuditor;
+#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
+<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.js
+=======
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-auditor.js

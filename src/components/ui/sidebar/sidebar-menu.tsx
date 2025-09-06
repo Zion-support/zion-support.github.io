@@ -1,25 +1,4 @@
 
-
-<<<<<<< HEAD
-=======
-export { SidebarMenuItem, SidebarMenuGroup }
-export { SidebarMenuItem, SidebarMenuGroup }
-}
-export { SidebarMenuItem, SidebarMenuGroup }
-
-SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
-
-export { SidebarMenuItem, SidebarMenuGroup };
-export { SidebarMenuItem, SidebarMenuGroup };
-};
-export { SidebarMenuItem, SidebarMenuGroup };
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
-
-
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
-
-
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -133,4 +112,3 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
   );
 },;
 export { SidebarMenuItem, SidebarMenuGroup };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,172 +1,133 @@
-
-    });
+<<<<<<< HEAD
+// Analytics utilities
+export const trackEvent = (event: string, data?: any) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', event, data);
   }
-}
-=======
+};
+
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
-      page_path: url
-      page_path: url,;
-    });
-  }
-}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-// Track events
-export const trackEvent = (
-  eventName: string
-  properties?: Record<string, string | number | boolean>
-) => {
-  if (typeof window !== 'undefined' && window.gtag) {;
-    window.gtag('event', eventName, properties);
-  }
-}
-export const trackPageView = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_TRACKING_ID, {
-
-      page_path: url,;
       page_path: url,
     });
   }
 };
-
-export const measurePerformance = () => {
-
-export const measurePerformance = () => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    return {
-
-      loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
-      domContentLoaded: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.domContentLoadedEventStart,
-      firstPaint: performance && performance.getEntriesByName('first-paint')[0]?.startTime || 0,
-      firstContentfulPaint: performance && performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
-    };
-
   }
-  return null;
-}
-  }
-  return null;
-
-}
-;
-
-interface WebVitalMetric {
-  name: string;
-  value: number;
-  id: string;
-}
-export const trackWebVitals = (metric: WebVitalMetric) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', metric.name, {
-      value: Math.round(metric.value)
-      event_category: 'Web Vitals'
-      event_label: metric.id
-      non_interaction: true
-      value: Math.round(metric.value),
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      non_interaction: true,;
-      non_interaction: true,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-    });
-  }
-
-}
-;
+};
 // Track events;
-
-export const event = ({
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  action
-  category
-  label
-  value
-}: {
-=======
-  action,
-  category,
-  label,
-  value,
+export const event = ({;
+  action;
+  category;
+  label;
+  value;
 }: {;
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  action: string;
-  category: string;
+  actio: n: string;
+  categor: y: string;
   label?: string;
   value?: number;
-
-  if (typeof window !== 'undefined' && window && window.gtag) {
-    window && window.gtag('event', action, {
-}) =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-    window.gtag ('event', action, {
-
-      event_category: category,
-      event_label: label,
-      value: value,
+}) => {;
+  if (typeof window !== 'undefined' && window.gtag) {;
+    window.gtag('event', action, {;
+      event_categor: y: category;
+      event_labe: l: label;
+      valu: e: value;
     });
   }
-
+};
+// Initialize Google Analytics;
+export const initGA = () => {;
+  if (typeof window !== 'undefined' && !window.gtag) {;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `http: s://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+    document.head.appendChild(script);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function() {;
+      window.dataLayer.push(arguments);
+    };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_TRACKING_ID);
+  }
+};
+// Declare global types;
+declare global {;
+  interface Window {;
+    gta: g: (...arg: s: any[]) => void;
+    dataLaye: r: any[];
+  }
 }
-;
-export const measure_performance = () =>: any {
-  // Check condition
-if ( {') {
-  $2
-}
-    const navigation = performance.getEntriesByType (
-      'navigation'')[0] as PerformanceNavigationTiming;
-;
-    return {
-      load_time: navigation.loadEventEnd - navigation.loadEventStart;
 
+=======
+// Analytics and performance monitoring utilities;
+export const trackEvent = (;
+  eventName: string,;
+  properties?: Record<string, string | number | boolean>;
+) => {;
+  if (typeof window !== 'undefined' && window.gtag) {';
+    window.gtag('event', eventName, properties)}';,
+};
+;
+export const trackPageView = (url: string) => {;
+  if (typeof window !== 'undefined' && window.gtag) {';
+    window.gtag('config', 'GA_MEASUREMENT_ID', {';
+      page_path: url,;,
+})}
+};
+;
+export const measurePerformance = () => {;
+  if (typeof window !== 'undefined' && 'performance' in window) {';
+    const navigation = performance.getEntriesByType(;
+      'navigation'';
+    )[0] as PerformanceNavigationTiming;
+;
+    return {;
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart;
       domContentLoaded:;
-
-        navigation && navigation.domContentLoadedEventEnd -;
-        navigation && navigation.domContentLoadedEventStart,;
+        navigation.domContentLoadedEventEnd -;
+        navigation.domContentLoadedEventStart,;
       firstPaint:;
-        performance && performance.getEntriesByName('first-paint')[0]?.startTime || 0,';
+        performance.getEntriesByName('first-paint')[0]?.startTime || 0,';
       firstContentfulPaint:;
-        performance && performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||';
+        performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||';
         0;,
 }}
   return null};
-
-
+;
 // Web Vitals tracking;
-interface WebVitalMetric {name: string;
+interface WebVitalMetric {;
+  name: string;
   value: number;
   id: string}
-
-
+;
 export const trackWebVitals = (metric: WebVitalMetric) => {;
-  if (typeof window !== 'undefined' && window && window.gtag) {';
-    window && window.gtag('event', metric && metric.name, {';
-      value: Math && Math.round(metric && metric.value);
+  if (typeof window !== 'undefined' && window.gtag) {';
+    window.gtag('event', metric.name, {';
+      value: Math.round(metric.value);
       event_category: 'Web Vitals',';
-      event_label: metric && metric.id;
+      event_label: metric.id;
       non_interaction: true;,
-
 })}
+};
+;
+declare global {;
+  interface Window {;
+    gtag: (;
+      command: string,;
+      targetId: string,;
+      config?: Record<string, unknown>;
+    ) => void}
 }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const trackEvent = ( eventName: 'string',properties?: Record<string,string | number | boolean> ) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',eventName,properties)} }; export const trackPageView = (url: string) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('config','GA_MEASUREMENT_ID',{ page_path: 'url',})} }; export const measurePerformance = () => { if (typeof window !== 'undefined' && 'performance' in window) { const navigation = performance.getEntriesByType( 'navigation' )[0] as PerformanceNavigationTiming; return { loadTime: 'navigation.loadEventEnd - navigation.loadEventStart domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart',firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0 }} return null}; interface WebVitalMetric { name: 'string; value: number; id: string;' } } export const trackWebVitals = (metric: WebVitalMetric) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',metric.name,{ value: Math.round(metric.value) event_category: 'Web Vitals',event_label: 'metric.id non_interaction: true' })} }; declare global { interface Window { gtag: ( command: string,targetId: 'string',config?: Record<string,unknown> ) => void} } }
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const trackEvent = ( eventName: 'string',properties?: Record<string,string | number | boolean> ) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',eventName,properties)} }; export const trackPageView = (url: string) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('config','GA_MEASUREMENT_ID',{ page_path: 'url',})} }; export const measurePerformance = () => { if (typeof window !== 'undefined' && 'performance' in window) { const navigation = performance.getEntriesByType( 'navigation' )[0] as PerformanceNavigationTiming; return { loadTime: 'navigation.loadEventEnd - navigation.loadEventStart domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart',firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0 }} return null}; interface WebVitalMetric { name: 'string; value: number; id: string;' } } export const trackWebVitals = (metric: WebVitalMetric) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',metric.name,{ value: Math.round(metric.value) event_category: 'Web Vitals',event_label: 'metric.id non_interaction: true' })} }; declare global { interface Window { gtag: ( command: string,targetId: 'string',config?: Record<string,unknown> ) => void} } }
+export const trackEvent = ( eventName: 'string',properties?: Record<string,string | number | boolean> ) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',eventName,properties)} }; export const trackPageView = (url: string) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('config','GA_MEASUREMENT_ID',{ page_path: 'url',})} }; export const measurePerformance = () => { if (typeof window !== 'undefined' && 'performance' in window) { const navigation = performance.getEntriesByType( 'navigation' )[0] as PerformanceNavigationTiming; return { loadTime: 'navigation.loadEventEnd - navigation.loadEventStart domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart',firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0 }} return null}; interface WebVitalMetric { name: 'string; value: number; id: string;' } } export const trackWebVitals = (metric: WebVitalMetric) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',metric.name,{ value: Math.round(metric.value) event_category: 'Web Vitals',event_label: 'metric.id non_interaction: true' })} }; declare global { interface Window { gtag: ( command: string,targetId: 'string',config?: Record<string,unknown> ) => void} } }
 =======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+export const trackEvent = ( eventName: 'string',properties?: Record<string,string | number | boolean> ) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',eventName,properties)} }; export const trackPageView = (url: string) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('config','GA_MEASUREMENT_ID',{ page_path: 'url',})} }; export const measurePerformance = () => { if (typeof window !== 'undefined' && 'performance' in window) { const navigation = performance.getEntriesByType( 'navigation' )[0] as PerformanceNavigationTiming; return { loadTime: 'navigation.loadEventEnd - navigation.loadEventStart domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart',firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0 }} return null}; interface WebVitalMetric { name: 'string; value: number; id: string;' } } export const trackWebVitals = (metric: WebVitalMetric) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',metric.name,{ value: Math.round(metric.value) event_category: 'Web Vitals',event_label: 'metric.id non_interaction: true' })} }; declare global { interface Window { gtag: ( command: string,targetId: 'string',config?: Record<string,unknown> ) => void} } }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

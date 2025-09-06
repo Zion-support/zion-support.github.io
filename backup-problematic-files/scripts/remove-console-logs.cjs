@@ -68,6 +68,13 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   return results;
 }
 function main() {
+<<<<<<< HEAD:backup-problematic-files/scripts/remove-console-logs.cjs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/remove-console-logs.cjs
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
@@ -92,9 +99,15 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
+<<<<<<< HEAD:backup-problematic-files/scripts/remove-console-logs.cjs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/remove-console-logs.cjs
 }
 if (require.main === module) {
   main().catch(console.error)}
 <<<<<<< HEAD
 module.exports = { removeConsoleStatements, processFile };
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

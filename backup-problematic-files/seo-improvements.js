@@ -1,4 +1,14 @@
-const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ];
+<<<<<<<< HEAD:backup-problematic-files/seo-improvements.js
+========
+<<<<<<< HEAD
+<<<<<<< HEAD:seo-improvements.js
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/seo-improvements.js
+=======
+<<<<<<< HEAD
+>>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/seo-improvements.js
+const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ]; 
 // SEO Improvements
 const seoEnhancements = ['Added structured data (JSON-LD)',
   'Improved meta descriptions',
@@ -10,7 +20,21 @@ const seoEnhancements = ['Added structured data (JSON-LD)',
   'Optimized page titles'
 ];
 console.log('SEO improvements "applied": ', seoEnhancements.length);
+<<<<<<<< HEAD:backup-problematic-files/seo-improvements.js
+========
+<<<<<<< HEAD:seo-improvements.js
+const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ]; console.log('SEO improvements applied:',seoEnhancements.length);
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+<<<<<<< HEAD
+>>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/seo-improvements.js
 const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ]; console.log('SEO improvements applied:',seoEnhancements.length);
 const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ]; console.log('SEO improvements applied:',seoEnhancements.length);
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<<< HEAD:backup-problematic-files/seo-improvements.js
+========
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/seo-improvements.js
+>>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/seo-improvements.js

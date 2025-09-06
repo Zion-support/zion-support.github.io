@@ -1,18 +1,4 @@
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-;
-export default define_config ({,
-  e2e: {,
-
-import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
-
-import { defineConfig } from 'cypress';
-export default defineConfig({
-  e2e: {
-    baseUrl: 'http://localhost:5000',
-    supportFile: false,
-
+<<<<<<< HEAD:backup-problematic-files/cypress.config.ts
 import { defineConfig } from 'cypress;
 ;
 export default defineConfig({,";
@@ -78,53 +64,54 @@ import { define_config } from 'cypress'; export default define_config ({ e2e: { 
     }
   }
 }),
-
 =======
-}),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+>>>>>>> main
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-}),
-    specPattern: 'src/**/*.cy.{js,jsx,ts,tsx}',
-  },
-});
-origin/chore/fix-build-nav-links
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-import { defineConfig } from 'cypress;
-}),
-ursor/fix-lint-push-and-merge-to-main-ae4e
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+import { defineConfig } from 'cypress';
 export default defineConfig({
-  e2e: {
-  baseUrl: 'http://localhost:3000'
-supportFile: cypress/support/e2e.ts'
+  "e2e": {
+    baseUrl: 'http://localhost:3000',
+    "supportFile": 'cypress/support/e2e.ts',
+    "specPattern": 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
+    "viewportWidth": 1280,
+    "viewportHeight": 720,
+    "video": false,
+    "screenshotOnRunFailure": true,
+    "defaultCommandTimeout": 10000,
+    "requestTimeout": 10000,
+    "responseTimeout": 10000,
+    setupNodeEvents() {
+      // Add any custom setup here
+    }},
+  "component": {
+    devServer: {
+      framework: 'react',
+      "bundler": 'vite'}}});
+<<<<<<< HEAD
 import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
-    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}'
-    viewportWidth: 1280
-    viewportHeight: 720
-    video: false
-    screenshotOnRunFailure: true
-    defaultCommandTimeout: 10000
-    requestTimeout: 10000
-    responseTimeout: 10000
-    pageLoadTimeout: 30000
-    retries: {
-      runMode: 2
-      openMode: 0
-    }
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    }
-  }
-})
-origin/main
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
+<<<<<<< HEAD
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:cypress.config.ts

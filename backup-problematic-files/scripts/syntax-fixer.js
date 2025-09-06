@@ -1,5 +1,11 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/syntax-fixer.js
 #!/usr/bin/env node  module.exports = {};
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node console.log("scripts/syntax-fixer: noop"); module.exports = {};'"'"
 #!/usr/bin/env node _console.log('scripts/syntax-"fixer": noop'); module.exports = {};
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/syntax-fixer.js
