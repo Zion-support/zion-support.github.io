@@ -17,4 +17,8 @@ const DigitalTransformationInsights: NextPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default DigitalTransformationInsights;
+=======
+export default DigitalTransformationInsights;
+>>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783

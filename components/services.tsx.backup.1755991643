@@ -7,6 +7,7 @@ import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import AdvancedFuturisticCard from '../components/ui/AdvancedFuturisticCard';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+=======
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
@@ -575,3 +576,4 @@ export default function Placeholder() {
     </main>
   );
 }
+=======

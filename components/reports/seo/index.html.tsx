@@ -1,8 +1,10 @@
-import Head from 'next/head',
-import Link from 'next/link',
+import Head from 'next/head'
+import Link from 'next/link'
 export default function Placeholder() {
   return (
-    <main className=&quot;min-h-screen p-8&quot;>      <Head>
+    <main className="min-h-screen p-8">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+      <Head>
         <title>Reports • Seo • Index.html - Placeholder</title>
         <meta name=&quot;robots&quot; content=&quot;noindex&quot; />
       </Head>
@@ -14,3 +16,5 @@ export default function Placeholder() {
     </main>
   )
 }
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

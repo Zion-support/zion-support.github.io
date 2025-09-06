@@ -85,6 +85,7 @@ export default function HomePage() {
       price: 'Starting at $49/month',
       marketSize: '$50B+ global market',
       competitors: 'Stripe, PayPal, Square'
+=======
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Code Review Assistant',
       description: 'AI-powered code analysis with security, performance, and maintainability insights. Support for JavaScript, Python, and TypeScript.',

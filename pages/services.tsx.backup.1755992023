@@ -1110,6 +1110,7 @@ export default function ServicesPage() {
               ))}
             </div>
           )}
+=======
       {/* Individual Services */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1214,6 +1215,7 @@ export default function ServicesPage() {
                             </ul>
                           </div>
                         ))}
+=======
                     
                     {/* Pricing and Category */}
                     <div className="flex items-center justify-between">
@@ -1358,6 +1360,7 @@ export default function ServicesPage() {
         </div>
       </section>
     </UltraFuturisticBackground>
+=======
         {/* All Services */}
         <section className="py-16 px-4">
           <div className="container mx-auto">

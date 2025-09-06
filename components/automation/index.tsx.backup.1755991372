@@ -1,9 +1,11 @@
 export default function Automation(){
   return <div style={{padding:20}}>Automation</div>
 }
+=======
 export default function AutomationPage() {
   return <div className="py-10">Automation Dashboard Placeholder</div>;
 }
+=======
 import Link from 'next/link';
 
 export default function AutomationsIndex() {

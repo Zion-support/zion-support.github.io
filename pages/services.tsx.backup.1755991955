@@ -2,9 +2,20 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, LinkIcon, Building2 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import QuantumCard from '../components/ui/QuantumCard';
 import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
 import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/expanded-micro-saas-services';
+=======
+import Card from '../components/ui/Card';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+import AdvancedFuturisticCard from '../components/ui/AdvancedFuturisticCard';
+import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
+import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
+import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d522
+
 export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -75,7 +86,127 @@ export default function ServicesPage() {
 
   const popularServices = getPopularServices();
 
+<<<<<<< HEAD
     <EnhancedFuturisticBackground variant="quantum-holographic" intensity="high">
+=======
+  const contactSection = (
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 border border-purple-500/20 mb-12">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 animate-pulse"></div>
+      <div className="relative z-10">
+        <h3 className="text-2xl font-bold text-white mb-6 text-center">
+          <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            Ready to Get Started?
+          </span>
+        </h3>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="text-center p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+            <Phone className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+            <h4 className="font-semibold text-white mb-2">Call Us</h4>
+            <a href={`tel:${contactInfo.mobile}`} className="text-purple-300 hover:text-purple-200 transition-colors">
+              {contactInfo.mobile}
+            </a>
+          </div>
+          <div className="text-center p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+            <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+            <h4 className="font-semibold text-white mb-2">Email Us</h4>
+            <a href={`mailto:${contactInfo.email}`} className="text-cyan-300 hover:text-cyan-200 transition-colors">
+              {contactInfo.email}
+            </a>
+          </div>
+          <div className="text-center p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+            <MapPin className="w-8 h-8 text-green-400 mx-auto mb-3" />
+            <h4 className="font-semibold text-white mb-2">Visit Us</h4>
+            <p className="text-green-300 text-sm">
+              {contactInfo.address}
+            </p>
+          </div>
+        </div>
+        <div className="text-center mt-6">
+          <a 
+            href={contactInfo.website} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-full hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+          >
+            Visit Our Website
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+=======
+  // Enhanced service categories with better descriptions
+  const enhancedCategories = [
+    {
+      name: 'Quantum Computing & AI',
+      description: 'Revolutionary quantum AI solutions with unprecedented computing power',
+      icon: <Brain className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Quantum Computing' || s.category === 'AI & Machine Learning').length
+    },
+    {
+      name: 'Autonomous Systems & Robotics',
+      description: 'Next-generation autonomous manufacturing and robotics platforms',
+      icon: <Factory className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Manufacturing & Industry 4.0' || s.category === 'Robotics & Automation').length
+    },
+    {
+      name: 'Healthcare & Biotechnology',
+      description: 'AI-powered biomedical research and drug discovery platforms',
+      icon: <FlaskConical className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length
+    },
+    {
+      name: 'Financial Technology',
+      description: 'Quantum-powered financial optimization and risk assessment',
+      icon: <DollarSign className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Financial Technology').length
+    },
+    {
+      name: 'Space & Aerospace',
+      description: 'AI-powered space exploration and satellite management',
+      icon: <Rocket className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Aerospace & Space Technology').length
+    },
+    {
+      name: 'Environmental Technology',
+      description: 'Quantum AI for climate modeling and sustainability',
+      icon: <Leaf className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Environmental Technology').length
+    },
+    {
+      name: 'Cybersecurity & Legal',
+      description: 'Quantum-safe security and AI-powered legal solutions',
+      icon: <Shield className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Cybersecurity' || s.category === 'Legal Technology').length
+    },
+    {
+      name: 'Blockchain & Web3',
+      description: 'Decentralized quantum AI marketplace and blockchain solutions',
+      icon: <Globe2 className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Blockchain & Web3').length
+    },
+    {
+      name: 'Transportation & Mobility',
+      description: 'Autonomous vehicle AI and smart transportation systems',
+      icon: <Car className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Transportation & Mobility').length
+    },
+    {
+      name: 'Energy & Sustainability',
+      description: 'Smart energy AI and renewable energy management',
+      icon: <Zap className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Energy & Sustainability').length
+    },
+    {
+      name: 'Logistics & Supply Chain',
+      description: 'Quantum AI for global supply chain optimization',
+      icon: <Truck className="w-6 h-6" />,
+      count: enhancedMicroSaasServices.filter(s => s.category === 'Logistics & Supply Chain').length
+    }
+  ];
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d522
+
   const categoryIcons: { [key: string]: React.ReactNode } = {
     'AI & Machine Learning': <Brain className="w-6 h-6" />,
     'Blockchain & Web3': <Globe2 className="w-6 h-6" />,
@@ -784,6 +915,7 @@ import Link from 'next/link';
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">200+</div>
                 <div className="text-slate-300">Revolutionary Services</div>
+=======
         {/* Services Grid */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1301,6 +1433,7 @@ import Link from 'next/link';
         </section>
       </div>
     </EnhancedFuturisticBackground>
+=======
   );
 };
 

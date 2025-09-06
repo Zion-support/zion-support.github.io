@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -18,3 +19,7 @@ const Index: NextPage = () => {
 };
 
 export default Index;
+=======
+import React from 'react';
+export default function Products() { return null; }
+>>>>>>> origin/cursor/deploy-zion-omnichain-bridge-and-depin-integration-3253

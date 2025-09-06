@@ -44,6 +44,7 @@ function getAllServices(): Service[] {
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realServicesQ32025 as unknown as Service[]);
+=======
 		.concat(newVerifiedServicesQ22025 as unknown as Service[]);
 }
 
@@ -308,4 +309,5 @@ const ServiceDetail: NextPage = () => {
 };
 
 export default ServiceDetail;
+=======
 }

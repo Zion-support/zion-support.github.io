@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -27,3 +28,15 @@ export default function AboutPage() {
     </div>
   );
 }
+=======
+export default About;
+=======
+export default function About() {
+  return (
+    <div className="space-y-2">
+      <h1 className="text-3xl font-bold">About Zion</h1>
+      <p className="text-gray-600 dark:text-gray-300">Autonomous cloud automations and modern product engineering.</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a

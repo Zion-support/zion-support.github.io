@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -18,3 +19,6 @@ const Callback: NextPage = () => {
 };
 
 export default Callback;
+=======
+export default function Callback() { return null; }
+>>>>>>> origin/cursor/create-founder-onboarding-course-for-zion-launch-eb81

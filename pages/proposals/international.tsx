@@ -1,0 +1,64 @@
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout'
+type ProposalListItem = {
+  id: string,
+  title: string,
+  targetInstitution: string,
+  regionalScope: string,
+  type: string,
+  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
+  createdAt: string
+},
+
+export default function InternationalProposalsPage() {
+  const [items, setItems] = useState<ProposalListItem[]>([]),
+  const [filter, setFilter] = useState('All'),
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
+  useEffect__(() => {
+    fetch('/api/proposals')
+      .then((r) => r.json())
+      .then((d) => setItems(d.items || []))
+      .catch(() => setItems([]))
+  }, []),
+
+  const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
+
+  return (
+    <EnhancedLayout>
+      <div className=&quot;space-y-4&quot;>
+        <h1 className=&quot;text-2xl font-semibold&quot;>International Proposals</h1>
+        <div className=&quot;flex items-center gap-2 text-sm&quot;>
+          <span>Filter by region:</span>
+          <select className=&quot;border rounded px-2 py-1&quot; value={filter} onChange={(e) => setFilter(e.target.value)}>
+            <option>All</option>
+            <option>Global</option>
+            <option>Africa</option>
+            <option>LATAM</option>
+            <option>APAC</option>
+            <option>EU</option>
+          </select>
+        </div>
+        <div className=&quot;divide-y border rounded&quot;>
+          {filtered.map((i) => (
+            <div key={i.id} className=&quot;p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2&quot;>
+              <div>
+                <div className=&quot;font-medium&quot;>{i.title}</div>
+                <div className=&quot;text-sm text-gray-600&quot;>{i.targetInstitution} • {i.type} • {i.regionalScope}</div>
+                <div className=&quot;text-xs text-gray-500&quot;>Created {new Date(i.createdAt).toLocaleString()}</div>
+              </div>
+              <div className=&quot;flex items-center gap-4 text-sm&quot;>
+                <span className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{i.status}</span>
+                <a className=&quot;text-blue-600 underline&quot; href={`/api/proposals?id=${i.id}`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>JSON</Link>
+                <a className=&quot;text-blue-600 underline&quot; href={`/proposals/${i.id}.md`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Markdown</Link>
+                <a className=&quot;text-blue-600 underline&quot; href={`/proposals/${i.id}.pdf`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>PDF</Link>
+              </div>
+            </div>
+          ))}
+          {filtered.length === 0 && <div className=&quot;p-4 text-sm text-gray-600&quot;>No proposals yet.</div>}
+        </div>
+        <div className=&quot;text-sm text-gray-600&quot;>Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
+      </div>
+    </EnhancedLayout>
+  )
+}

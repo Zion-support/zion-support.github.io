@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -18,3 +19,13 @@ const Index: NextPage = () => {
 };
 
 export default Index;
+=======
+export default function ProductsIndex() {
+  return (
+    <div className="py-8">
+      <h1 className="text-xl font-semibold">Products</h1>
+      <p className="text-gray-600 dark:text-gray-300">Browse Zion product offerings.</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/create-zion-ai-dashboard-interfaces-6fb9

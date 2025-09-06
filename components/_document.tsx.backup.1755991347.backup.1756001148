@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
 class MyDocument extends Document {
@@ -5,6 +6,12 @@ class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
+
+=======
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+export default class MyDocument extends Document {
+>>>>>>> origin/cursor/create-and-automate-service-index-page-b746
   render() {
     return (
       <Html lang="en">
@@ -16,6 +23,10 @@ class MyDocument extends Document {
       </Html>
     );
   }
+<<<<<<< HEAD
 }
 
 export default MyDocument;
+=======
+}
+>>>>>>> origin/cursor/create-and-automate-service-index-page-b746

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -17,7 +19,19 @@ const CloudComputingStrategies: NextPage = () => {
   );
 };
 
-export default CloudComputingStrategies;export default function CloudComputingStrategiesPage() {
+export default CloudComputingStrategies;
+=======
+export default function CloudComputingStrategies() {
+  return (
+    <div className="space-y-2">
+      <h1 className="text-2xl font-bold">Cloud Computing Strategies</h1>
+      <p className="text-gray-600 dark:text-gray-300">Content coming soon.</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
+=======
+export default function CloudComputingStrategiesPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Cloud Computing Strategies</h1>
@@ -25,4 +39,7 @@ export default CloudComputingStrategies;export default function CloudComputingSt
     </div>
   );
 }
+=======
 export default function ChatContent2() { return <div className="py-10 text-white">Content coming soon.</div>; }
+>>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

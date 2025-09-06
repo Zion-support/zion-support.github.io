@@ -6,6 +6,7 @@ export default function ContactPage() {
     </div>
   );
 }
+=======
 export default function Contact() {
   return (
     <div className="py-10">
@@ -14,6 +15,7 @@ export default function Contact() {
     </div>
   );
 }
+=======
 export default function ContactPage() {
   return (
     <div className="prose dark:prose-invert">

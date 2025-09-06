@@ -297,6 +297,7 @@ export default function HomePage() {
               <UltraFuturisticBackground2029>
         {/* Ultra Advanced Navigation */}
         <UltraAdvancedNavigationV2 />
+=======
     <>
       <Head>
         <title>Zion Tech Group - Revolutionary 2029 Technology Services | AI, Quantum Computing, Space Tech</title>

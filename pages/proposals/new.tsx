@@ -1,0 +1,52 @@
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import React, { useMemo, useState } from 'react',
+import AIAssistant from '../../components/ui/AIAssistant'
+const NewProposal: NextPage = () => {
+  const [jobBrief, setJobBrief] = useState(''),
+  const [resumeSummary, setResumeSummary] = useState(''),
+  const [relevantExperience, setRelevantExperience] = useState(''),
+  const [coverLetter, setCoverLetter] = useState(''),
+
+  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN
+
+  const pitchPrompt = useMemo(() => (
+    `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
+  ), [jobBrief, relevantExperience, resumeSummary]),
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
+  return (
+    <div>
+      <Head>
+        <title>New Proposal - Zion AI Marketplace</title>
+      </Head>
+      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Create Proposal</h1>
+
+      <div className=&quot;grid gap-4&quot;>
+        <label className=&quot;text-sm&quot;>Job Description / Brief
+          <textarea value={jobBrief} onChange={e => setJobBrief(e.target.value)} rows={6} className=&quot;mt-1 w-full rounded-md border p-3&quot; />
+        </label>
+        <label className=&quot;text-sm&quot;>Your Resume Summary
+          <textarea value={resumeSummary} onChange={e => setResumeSummary(e.target.value)} rows={4} className=&quot;mt-1 w-full rounded-md border p-3&quot; />
+        </label>
+        <label className=&quot;text-sm&quot;>Relevant Experience Highlights
+          <textarea value={relevantExperience} onChange={e => setRelevantExperience(e.target.value)} rows={6} className=&quot;mt-1 w-full rounded-md border p-3&quot; />
+        </label>
+      </div>
+
+      <div className=&quot;mt-6 flex items-center justify-between&quot;>
+        <h2 className=&quot;text-lg font-semibold&quot;>Proposal / Cover Letter</h2>
+        <AIAssistant
+          buttonLabel=&quot;Generate Pitch Based on Profile & Job&quot;
+          title=&quot;Generate Proposal&quot;
+          defaultPrompt={pitchPrompt}
+          onAccept={setCoverLetter}
+          authorizationToken={operatorToken}
+        />
+      </div>
+      <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className=&quot;mt-2 w-full rounded-md border p-3&quot; />
+    </div>
+  )
+},
+
+export default NewProposal

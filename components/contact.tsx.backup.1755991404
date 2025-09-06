@@ -1,5 +1,7 @@
 export default function ContactPage() { return null }
+=======
 export default function Contact() { return <main className="p-10"><h1 className="text-2xl font-bold">Contact</h1></main>; }
+=======
 export default function ContactPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -8,10 +10,12 @@ export default function ContactPage() {
     </div>
   );
 }
+=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
 export default Contact;
+=======
 export default function Contact() {
   return (
     <div className="space-y-2">
@@ -20,6 +24,7 @@ export default function Contact() {
     </div>
   );
 }
+=======
 const Contact: NextPage = () => (
   <div className="py-10">
     <Head><title>Contact - Zion</title></Head>

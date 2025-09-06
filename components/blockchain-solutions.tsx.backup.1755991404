@@ -6,6 +6,7 @@ export default function BlockchainSolutions() {
     </div>
   );
 }
+=======
 export default function BlockchainSolutionsPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -14,6 +15,7 @@ export default function BlockchainSolutionsPage() {
     </div>
   );
 }
+=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 

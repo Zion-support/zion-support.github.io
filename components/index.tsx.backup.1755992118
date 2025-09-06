@@ -141,6 +141,7 @@ export default function HomePage() {
           <Homepage2025 showInternalNav={false} />
         </main>
       </Layout>
+=======
       <UltraFuturisticBackground2028>
         {/* Ultra Advanced Navigation */}
         <UltraAdvancedNavigation2026V2 />

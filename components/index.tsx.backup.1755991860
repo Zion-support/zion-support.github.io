@@ -210,6 +210,8 @@ export default function HomePage() {
     },
   ];
 
+
+
   const marketInsights = [
     {
       metric: '$4.2B',
@@ -977,6 +979,7 @@ export default function HomePage() {
         </section>
       </div>
     </EnhancedFuturisticBackground>
+=======
       icon: '📊',
       title: 'Advanced Analytics',
       description: 'Real-time data analytics and insights powered by AI and machine learning algorithms.',

@@ -18,6 +18,7 @@ const About: NextPage = () => {
 };
 
 export default About;
+=======
 export default function AboutPage() {
   return (
     <div className="py-8">

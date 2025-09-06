@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function AuthCallbackPage() {
@@ -8,3 +9,6 @@ export default function AuthCallbackPage() {
     </div>
   );
 }
+=======
+export default function Page(){return <div className="py-8 text-slate-300">callback</div>}
+>>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450

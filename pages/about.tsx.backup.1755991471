@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function AboutPage() {
   return (
     <div className="py-8">
@@ -6,3 +7,14 @@ export default function AboutPage() {
     </div>
   );
 }
+=======
+import React from 'react';
+
+export default function AboutPage() {
+  return <div>About Zion</div>;
+}
+=======
+export default function About(){
+  return <div style={{padding:20}}>About Zion</div>
+}
+>>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6

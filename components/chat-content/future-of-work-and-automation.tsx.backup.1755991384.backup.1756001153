@@ -17,4 +17,8 @@ const FutureOfWorkAndAutomation: NextPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default FutureOfWorkAndAutomation;
+=======
+export default FutureOfWorkAndAutomation;
+>>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783

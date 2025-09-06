@@ -108,6 +108,7 @@ import Head from 'next/head';
       pricing: '$64/month',
       link: 'https://hr.zion.app'
     }
+=======
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, 
@@ -815,6 +816,7 @@ export default function Services() {
         </section>
       </div>
     </>
+=======
     </UltraAdvancedQuantumBackground>
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 
 class MyDocument extends Document {
@@ -20,3 +21,6 @@ class MyDocument extends Document {
 }
 
 export default MyDocument;
+=======
+export default function Document() { return null; }
+>>>>>>> origin/cursor/create-founder-onboarding-course-for-zion-launch-eb81

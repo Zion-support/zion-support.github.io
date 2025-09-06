@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useMemo, useState } from 'react';
@@ -64,3 +65,6 @@ const EquipmentIndex: NextPage = () => {
 };
 
 export default EquipmentIndex;
+=======
+export default function ProductsPage() { return null; }
+>>>>>>> origin/cursor/create-founder-onboarding-course-for-zion-launch-eb81

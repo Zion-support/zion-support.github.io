@@ -1,5 +1,10 @@
 import React from 'react';
-import Homepage2037 from '../components/Homepage2037';import SEOOptimizer from '../components/SEOOptimizer';
+<<<<<<< HEAD
+import Homepage2037 from '../components/Homepage2037';
+=======
+import Homepage2036 from '../components/Homepage2036';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
+import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
@@ -19,6 +24,7 @@ const HomePage: React.FC = () => {
 
 export default function Home() {
   return (
+<<<<<<< HEAD
     <UltraFuturisticNeonBackground>
       <SEO 
         title="Zion Tech Group - Innovative AI, IT & Micro SAAS Solutions"
@@ -779,7 +785,15 @@ export default function Home() {
         </section>
 {/* AUTO-GENERATED: HOME_VISIONARY_END */}
 </main>
-    </div>  );
+    </div>
+=======
+    <ErrorBoundary>
+      <SEOOptimizer />
+      <AnalyticsTracker />
+      <Homepage2036 />
+    </ErrorBoundary>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
+  );
 };
 
       {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
