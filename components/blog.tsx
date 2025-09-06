@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,16 +29,15 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 =======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+
 export default function BlogPage() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 <<<<<<< HEAD
     <UltraFuturisticBackground intensity="high" variant="quantum">;
@@ -51,6 +51,12 @@ export default function BlogPage() {
       <SEO
         title='Blog | Zion Tech Group'
         description='Insights and updates on AI, cloud, and automation.'
+
+=======
+export default function BlogPage() {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
         canonical='https://ziontechgroup.com/blog/'
       />
       <div className='container mx-auto px-4 py-16 text-white'>
@@ -63,12 +69,11 @@ export default function BlogPage() {
           kleber@ziontechgroup.com.
         </p>
       </div>
-<<<<<<< HEAD
-    </UltraFuturisticBackground>;
-=======
+
     </UltraFuturisticBackground>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   );export default function BlogPage() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Blog | Zion Tech Group" description="Insights and updates on AI, cloud, and automation." canonical="https://ziontechgroup.com/blog/" />
@@ -79,9 +84,10 @@ export default function BlogPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </UltraFuturisticBackground>;
   );
-<<<<<<< HEAD
+
 }
-<<<<<<< HEAD
+
+=======
 import React from 'react';
 import SEO from '../components / SEO';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -119,17 +125,13 @@ function BlogPage() {
       </div>;
     </UltraFuturisticBackground>);
 }
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
+
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

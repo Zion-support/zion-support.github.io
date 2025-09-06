@@ -1,3 +1,5 @@
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,27 +24,8 @@ import Layout from "../components/Layout";
 export default function AIServices() {
   return (
 <Layout
+=======
 
-import React from 'react';
-import Layout from '../components/Layout';
-      title="AI Services - Zion Tech Group"
-      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-<h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions and
-              services.
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">
-              AI Services page is under construction.
-            </p>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
@@ -51,6 +34,13 @@ import Layout from '../components/Layout';
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
@@ -71,7 +61,7 @@ export default function AIServices() {
           </div>
         </div>
       </div>
-</Layout>
+
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -110,11 +100,19 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
+
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
+
+=======
+    </Layout>;
+  );
+
+
+=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -300,8 +298,10 @@ category: 'specialized',
           </section>
           {/* Category Filter */}
 
+=======
 }
 
+=======
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -348,26 +348,51 @@ export default function AIServices() {
   }
 }
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button
-key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-purple-600 text-white'
-                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                    }`}
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
-            </div>
-          </section>
-          {/* Services Grid */}
+
+
+                    key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
+                      selectedCategory === category.id;
+                        ? 'bg-purple-600 text-white';
+                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  >;
+                    {category.name} ({category.count});
+                  </button>;
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </div>;
+          </section>;
+          {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -393,9 +418,16 @@ key={category.id}
                       <div className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                         Popular
                       </div>
-)}
+
+
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
+
 
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h4>
@@ -403,43 +435,78 @@ key={category.id}
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 flex-shrink-0"></span>
-{feature}
-                          </li>
-                        ))}
+
+
+                            {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </li>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </ul>
                     </div>
+
 
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-green-400 mb-2">Use Cases:</h4>
                       <div className="flex flex-wrap gap-1">
                         {service.useCases.map((useCase, useCaseIndex) => (
                           <span key={useCaseIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
-{useCase}
-                          </span>
-                        ))}
+
+
+                            {useCase  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </span>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </div>
                     </div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
-                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>
+                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('-', ' ')}</span>
                     </div>
+
 
                     <button className="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                       Learn More
                     </button>
                   </div>
-))}
-              </div>
-            </div>
-          </section>
 
-{/* AI Capabilities Section */}
+
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </div>;
+          </section>;
+          {/* AI Capabilities Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
 
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                 Our AI Capabilities
               </h2>
+
+
+
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
@@ -452,6 +519,9 @@ key={category.id}
                   <p className="text-slate-400">Advanced ML algorithms for pattern recognition and predictive modeling</p>
                 </div>
 
+
+
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -463,6 +533,9 @@ key={category.id}
                   <p className="text-slate-400">Image and video analysis with object detection and recognition</p>
                 </div>
 
+
+
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -472,6 +545,9 @@ key={category.id}
                   <h3 className="text-xl font-bold mb-2">Natural Language</h3>
                   <p className="text-slate-400">Advanced NLP for text analysis, translation, and understanding</p>
                 </div>
+
+
+
 
                 <div className="text-center">
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -487,31 +563,59 @@ key={category.id}
           </section>
 {/* CTA Section */}
 
+
+          {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 Ready to Harness AI Power?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
-Contact our AI experts to discuss how our advanced artificial intelligence services 
+
+
+                Contact our AI experts to discuss how our advanced artificial intelligence services
                 can transform your business operations and drive innovation.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
+                <Link
                   href="/contact"
+
+
                   className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
                   Get AI Consultation
                 </Link>
-<a 
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
+
+
+                <a
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
                 >
-                  Call {contact.phone}
-                </a>
-                <a 
-                  href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+                  Call {contact.phone  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </Link>
+                <a
+                  href={`mailto:${contact.email}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+
+
                 >
                   Email Us
 </a>
@@ -521,55 +625,18 @@ className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold tra
         </main>
       </ErrorBoundary>
     </>
-)
+
+
 }
-import SEO from '../components/SEO';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Link from 'next/link';
-export default function AIServicesPage() {
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <SEO title="AI Services | Zion Tech Group" description="LLM apps, RAG, evaluation, guardrails, and automation with transparent pricing." canonical="https://ziontechgroup.com/ai-services/" />
-      <div className="container mx-auto px-4 py-24 text-white">
-        <div className="max-w-5xl mx-auto space-y-8">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services</h1>
-          <p className="text-gray-300 text-lg">Productized AI solutions: evaluation labs, safety & guardrails, chatbots, agents, search/RAG, and automation. See <Link className="text-cyan-400 underline" href="/market-pricing">Market Pricing</Link> for typical vendor benchmarks.</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: 'RAG & Vector Search', href: '/vector-search-starter' },
-              { title: 'AI Evaluation Lab', href: '/rag-evaluation-lab' },
-              { title: 'AI Guardrails', href: '/ai-powered-cybersecurity' },
-              { title: 'AI Content Generator', href: '/intelligent-content-automation-platform' },
-              { title: 'AI Customer Service', href: '/ai-customer-service' },
-              { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (
-<Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
-                <div className="text-xl font-semibold">{c.title}</div>
-                <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
-              </Link>
-            ))}
-          </div>
-          <div className="text-sm text-gray-400">Questions? <Link className="text-cyan-400 underline" href="/contact">Contact us</Link>.</div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  )
+
+=======
+
+>>>>>>> origin/automation-improvements-final
 }
 }
     </Layout>);
 }
-  );}
 
-}
-}
-
-}
-
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
@@ -707,3 +774,6 @@ export default function AIServicesPage(req, res) {
 }
 ;
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -961,9 +961,6 @@ h3 {
     display: none;
   }
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1037,11 +1034,6 @@ h3 {
     display: none;
   }
 <<<<<<< HEAD
-
-}
-}
-=======
-<<<<<<< HEAD
 }
 =======
 }
@@ -1058,7 +1050,6 @@ h3 {
 }
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 /* Additional Futuristic Styles */
 .text-gradient-green {
@@ -1450,4 +1441,3 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

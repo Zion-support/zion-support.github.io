@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Entry = { route: string, file: string },
-interface Report { generatedAt: string, totalPages: number, bySection: Record<string, number>, pages: Entry[] }
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationcontent-map.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 21600 }
-  } catch {
-    return { props: { report: null }, revalidate: 21600 }
-  }
-};
+
+
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
@@ -64,7 +49,8 @@ export default function ContentMap({ report }: Props) {
         <ul className="text-sm space-y-1">
           {sections.map(([sec, n]) => (
             <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
-<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
@@ -96,11 +82,14 @@ export default function ContentMap(): any ({ report }: Props) {;
           {report && report.pages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.route}</span><span className="text-gray-500 truncate">{p && p.file}</span></li>;
           ))}
+
         </ul>;
       </section>;
     </div>;
   );
 }
+
+=======
 }
 ) );
 }</ul> </section> <section>) );
@@ -185,12 +174,10 @@ export default function ContentMap({ report }: Props) {
   )
 
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-<<<<<<< HEAD
-);
-}
-=======
+
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

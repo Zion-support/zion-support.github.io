@@ -18,8 +18,4 @@ class ErrorBoundary extends React.Component {
 }
 import React from \"react\"; ); import { Header } from \"@/components/Header\";\";\" import { Footer } from \"@/components/Footer\";\";\" import SEO from \"@/components/SEO\";\";\" import { GradientHeading } from \"@/components/GradientHeading\";\";\" export default function About() {}; return null}
 const React from "react"; ); import { Header } from "@/components/Header";";" import { Footer } from "@/components/Footer";";" import SEO from "@/components/SEO";";" import { GradientHeading } from "@/components/GradientHeading";";" export default function About() { return; }; return null}""
-<<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/About.js.jsx
 import _React from "react"; ); import { Header } from "@/components/Header";";" import { Footer } from "@/components/Footer";";" import SEO from "@/components/SEO";";" import { GradientHeading } from "@/components/GradientHeading";";" export default function About() {}; return null}
-=======
-import _React from "react"; ); import { Header } from "@/components/Header";";" import { Footer } from "@/components/Footer";";" import SEO from "@/components/SEO";";" import { GradientHeading } from "@/components/GradientHeading";";" export default function About() {}; return null}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/src/pages.disabled/About.js.jsx

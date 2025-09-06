@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import {MilestonesList} from '../MilestonesList';
-import {PaymentSummary} from '../PaymentSummary';
-import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
-import { toast } from './sonner';
-interface MilestoneManagerProps {
-  project_id: string,
-  milestones: Milestone[],
-  activities: Record < string, MilestoneActivity[]>;
-  is_loading: boolean,
-  is_client: boolean,
-  is_talent: boolean,
-  payment_terms?: string;
-  is_submitting: boolean,
-  onCreateMilestone: (data: any) => Promise < Milestone | null>,
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise < boolean>;
-  onDeleteMilestone: (id: string) => Promise < boolean>,
-  onUploadDeliverable: (id: string, file: File) => Promise < any>,
-  refetch: () => Promise < void>;
-}
-export /**
- * MilestoneManager - Function description
- */
-function MilestoneManager() {
-  const handleMilestoneApproved = async (milestone_id: string) => {
-    try {
-      await onUpdateStatus (milestone_id, "completed" as MilestoneStatus);
-      toast.success ("Milestone approved");
-      await refetch ();
-    } catch (error) {
-      console.error ("Error approving milestone:", error);
-      toast.error ("Failed to approve milestone");
-    }
-  }
-;
-  const handleMilestoneRejected = async (milestone_id: string) => {
-    try {
-      await onUpdateStatus (milestone_id, "rejected" as MilestoneStatus);
-      toast.success ("Milestone rejected");
-      await refetch ();
-    } catch (error) {
-      console.error ("Error rejecting milestone:", error);
-      toast.error ("Failed to reject milestone");
-    }
-  }
-;
-  return (
-    <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
-      <div className="lg:col - span - 2">;
-        <MilestonesList;
-=======
 
 import React from 'react',;
 import { MilestonesList } from '../MilestonesList',;
@@ -114,22 +62,14 @@ export function MilestoneManager({;
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
       <div className="lg:col-span-2">;
         <MilestonesList ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           milestones={milestones}
           activities={activities}
-          is_loading={is_loading}
-          is_client={is_client}
+          isLoading={isLoading}
+          isClient={isClient}
           onCreateMilestone={onCreateMilestone}
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
           onUploadDeliverable={onUploadDeliverable}
-<<<<<<< HEAD
-        />;
-      </div>;
-      <div>;
-        <PaymentSummary
-          milestones={milestones} 
-=======
           isSubmitting={isSubmitting}
           onApprove={isClient ? handleMilestoneApproved :undefined}
           onReject={isClient ? handleMilestoneRejected :undefined}
@@ -138,27 +78,10 @@ export function MilestoneManager({;
       <div>;
         <PaymentSummary ;
           milestones={milestones} ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           paymentTerms={paymentTerms}
         />;
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-}
-          is_submitting={is_submitting}
-          on_approve={is_client ? handleMilestoneApproved : undefined}
-          on_reject={is_client ? handleMilestoneRejected : undefined}
-        />;
-      </div>;
-      <div>;
-        <PaymentSummary;
-          milestones={milestones}
-          payment_terms={payment_terms}
-        />;
-      </div>;
-    </div>);
-=======
   ),; interface MilestoneManagerProps {
   projectId: string;
 milestones: Milestone[];
@@ -212,5 +135,4 @@ grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <Miles
 }paymentTerms= {
   paymentTerms 
 }/> </div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

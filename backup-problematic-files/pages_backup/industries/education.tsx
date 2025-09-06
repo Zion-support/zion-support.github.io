@@ -624,32 +624,6 @@ export default function EducationPage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-            >;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">;
-                Ready to Transform Education?;
-              </h2>;
-              <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">;
-                Let our education technology experts help you implement solutions that improve;
-                learning outcomes and student engagement.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Start Your Education Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">;
-                  Learn About Our Expertise;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-  ),;
-}
-=======
 };
 
 export default Education;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

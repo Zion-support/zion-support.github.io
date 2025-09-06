@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
@@ -111,3 +112,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

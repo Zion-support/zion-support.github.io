@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,13 +18,15 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-type ProgressBarProps = { value: number },
-=======
-import React from 'react';
 
-<<<<<<< HEAD
-type ProgressBarProps = { value: number }
-=======
+
+  const pct = Math.max(0, Math.min(100, value));
+
+  return (
+    <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
+      <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
+    </div>
+
 type ProgressBarProps = { value: number };
 
 <<<<<<< HEAD
@@ -72,6 +74,8 @@ export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
     </div>;
   );
 }
+
+=======
 ;
 type ProgressBarProps = { value: number }
 ;
@@ -99,17 +103,14 @@ function ProgressBar() {
   )
 
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-<<<<<<< HEAD
-=======
+
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-}
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

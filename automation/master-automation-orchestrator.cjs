@@ -4,8 +4,6 @@ const path = require('path');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -321,8 +319,6 @@ async function runAllAutomations() {
   return { results, successCount, failureCount };
 }
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -369,9 +365,6 @@ async function main() {
     const report = generateReport(results);
     console.log('\n📊 AUTOMATION SUMMARY');
 <<<<<<< HEAD
-    console.log('======');
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
     console.log('====================');
 =======
@@ -381,7 +374,6 @@ async function main() {
     console.log('====================');
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
     console.log(`Failed: ${report.summary.failed}`);
@@ -392,6 +384,11 @@ async function main() {
         .filter(r => r.status === 'failed')
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -403,7 +400,6 @@ async function main() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
     console.log('\n✅ Master automation orchestration completed');
     console.log(
@@ -425,9 +421,6 @@ async function main() {
     process.exit(1);
   }
 }
-<<<<<<< HEAD
-main();
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -478,4 +471,3 @@ main();
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

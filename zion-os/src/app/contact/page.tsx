@@ -1,12 +1,13 @@
-<<<<<<< HEAD
-import Link from 'next / link';
-export default /**
- * ContactPage - Function description
- */
-function ContactPage() {
+
+import Link from 'next/link';
+export default function ContactPage() {
+
   return (
-    <div className=&quot;min - h-screen bg - white & quot;>;
+    <div className="min-h-screen bg-white">
+
+
       {/* Hero Section */}
+
       <section className=&quot;bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white py - 20 & quot;>;
         <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center & quot;>;
           <h1 className=&quot;text - 4xl md:text - 6xl font - bold mb - 6&quot;>;
@@ -17,11 +18,13 @@ function ContactPage() {
           </p>;
         </div>;
       </section>;
+
       {/* Contact Form & Info */}
       <section className=&quot;py - 20 & quot;>;
         <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
           <div className=&quot;grid grid - cols - 1 lg:grid - cols - 2 gap - 12 & quot;>;
             {/* Contact Form */}
+
             <div className=&quot;bg - gray - 50 p - 8 rounded - xl & quot;>;
               <h2 className=&quot;text - 2xl font - bold text - gray - 900 mb - 6&quot;>Send us a Message</h2>;
               <form className=&quot;space - y-6 & quot;>;
@@ -115,10 +118,12 @@ function ContactPage() {
                   <textarea;
                     id=&quot;message & quot;
                     name=&quot;message";
+
                     rows={5}
                     required;
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
                     placeholder=&quot;Tell us about your project or inquiry...&quot;
+
                   ></textarea>;
                 </div>;
                 <button;
@@ -186,6 +191,7 @@ function ContactPage() {
                   </div>;
                 </div>;
               </div>;
+
               {/* Social Media Links */}
               <div>;
                 <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;

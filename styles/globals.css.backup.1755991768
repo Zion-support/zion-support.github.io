@@ -39,11 +39,7 @@
   --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
 <<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
   --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
   --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);
@@ -77,8 +73,6 @@
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
 
 }
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 =======
@@ -132,7 +126,6 @@
   --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 /* Base styles */
 @layer base {

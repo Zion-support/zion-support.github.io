@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-export const getStaticProps: GetStaticProps < PageProps> = async () => {
+
+
   return {
     props: {
       docs: content as DocsContent,
@@ -21,47 +20,12 @@ type DocsContent = {
 }
 ;
 type PageProps = {
+
   docs: DocsContent;
 }
 ;
 export const getStaticProps: GetStaticProps < PageProps> = async () => {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- export const getStaticProps: GetStaticProps<PageProps> = async () => {
-=======
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
-=======
- export const getStaticProps: GetStaticProps<PageProps> = async () => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return {
-    props: {
-      docs: content as DocsContent,
-    },;
-  };};import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
-import content from '../../../data/docs/content.json';
-export type Section = {
-  id: string,
-  title: string,;
-  html?: string;
-  code?: { language?: string, content: string }[]
-};
 
-type DocsContent = {
-  title: string,
-  sections: Section[]
-};
-
-type PageProps = {
-  docs: DocsContent
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return {
     props: {
       docs: content as DocsContent
@@ -86,7 +50,17 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
-<<<<<<< HEAD
+
+
+
+
+
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {
+    const id = setTimeout(() => window.print(), 500);
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -160,12 +134,17 @@ export default function PrintDocs({ docs }: PageProps) {
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
+
+=======
 };
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id)
   }, []);
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   return (
     <div className="p-8 max-w-4xl mx-auto">;
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
@@ -177,12 +156,16 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
-          </section>
+
+
         ))}
+
       </div>;
     </div>;
   );
 }
+
+=======
   );
 }
 export default /**
@@ -259,20 +242,14 @@ export default function PrintDocs({ docs }: PageProps) {
   )
 
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-<<<<<<< HEAD
-);
-}
-<<<<<<< HEAD
-=======
+
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-}
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

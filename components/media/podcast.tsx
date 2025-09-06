@@ -1,8 +1,17 @@
-<<<<<<< HEAD
-useEffect ( () => {;
-  const load = async () => {;
-  try {;
+
+
   if (loading) return <div>Loading episodes…</div>;
+=======
+
+
+useEffect ( () => {
+  const load = async () => {
+  try {
+  if (loading) return <div>Loading episodes…</div>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
@@ -87,6 +96,8 @@ useEffect ( () => {;
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
           </li>;
+
+=======
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = {
@@ -234,69 +245,35 @@ useEffect ( () => {
               <div className="flex gap-3">
                 {ep.audio?.mp3Url && (
                   <a href={ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     MP3
                   </a>
                 )}
                 {ep.audio?.wavUrl && (
-<<<<<<< HEAD
-<a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
-=======
-                  <a
-                    href={ep.audio.wavUrl}
-                    className='px-3 py-2 bg-gray-700 text-white rounded'
-                    download
-                  >                    WAV
-                  </a>
-                )}
-                {ep.audio?.mp4Url && (                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
                     WAV
                   </a>
                 )}
                 {ep.audio?.mp4Url && (
-<<<<<<< HEAD
-<a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
-=======
-                  <a
-                    href={ep.audio.mp4Url}
-                    className='px-3 py-2 bg-purple-700 text-white rounded'
-                    download
-                  >                    MP4                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
                     MP4
                   </a>
                 )}
               </div>
             </div>
-<<<<<<< HEAD
-<div className="mt-3 flex gap-4">
-=======
-            <div className='mt-3 flex gap-4'>
-              <Link
-                href={`/media/podcast/${ep.id}`}
-                className='text-blue-600 underline'
-              >
-                View Transcript
-              </Link>            </div>            <div className="mt-3 flex gap-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            <div className="mt-3 flex gap-4">
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
             </div>
           </li>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
-<<<<<<< HEAD
       </ul>;
     </div>;
-=======
-      </ul>
-    </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 }
-<<<<<<< HEAD
+
+=======
   // Check condition
 if (return <div > Loading episodes…</div>) {
   $2
@@ -389,13 +366,9 @@ if (return <div > Loading episodes…</div>) {
       </ul>;
     </div>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-;
+
+
 }
-}
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

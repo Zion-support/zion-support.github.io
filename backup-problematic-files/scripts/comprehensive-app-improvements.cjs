@@ -125,8 +125,4 @@ class ComprehensiveAppImprover {
 }
 // Run the comprehensive app improver
 const improver = new ComprehensiveAppImprover();
-<<<<<<< HEAD
 improver.run().catch(console.error);
-=======
-improver.run().catch(console.error);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

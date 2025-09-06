@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Cache.test utility
 export const Cache.test = () => {
   // Implementation here

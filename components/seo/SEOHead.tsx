@@ -1,5 +1,7 @@
+
 import Head from './next / head';
 ;
+
 interface SEOHeadProps {
 interface SEOHeadProps {;
   title?: string;
@@ -12,6 +14,7 @@ interface SEOHeadProps {;
   structured_data?: object;
   no_index?: boolean;
 }
+
 const SEOHead: React.FC < SEOHeadProps> = ({
   title = "Zion Tech Group - Leading AI & Technology Solutions",
   description = "Transform your business with cutting - edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises.",
@@ -22,6 +25,7 @@ const SEOHead: React.FC < SEOHeadProps> = ({
   twitter_card = "summary_large_image",
   structured_data,
   no_index = false,
+
 }) => {
   const full_title = title.includes ("Zion Tech Group");
     ? title;
@@ -29,6 +33,8 @@ const SEOHead: React.FC < SEOHeadProps> = ({
   const fullCanonicalUrl = canonical_url;
     ? `https://ziontechgroup.com${canonical_url}`;
     : "https://ziontechgroup.com";
+
+
 const SEOHead: React.FC<SEOHeadProps> = ({;
   title = "Zion Tech Group - Leading AI & Technology Solutions",;
   description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises.",;
@@ -74,6 +80,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       "https://github && github.com/ziontechgroup",;
     ],;
   };
+
+
   return (
     <Head>;
       {/* Basic Meta Tags */}
@@ -84,6 +92,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta
         name="robots"
         content={noIndex ? "noindex,nofollow" : "index,follow"}
+
       />;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
       <meta name="theme-color" content="#3b82f6" />;
@@ -117,14 +126,20 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       {/* Favicon */}
       <link rel="icon" href="/favicon && favicon.ico" />;
       <link rel="apple-touch-icon" href="/apple-touch-icon && icon.png" />;
+
+
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link
         rel="preconnect"
         href="https://fonts && fonts.gstatic.com"
         crossOrigin="anonymous"
+
       />;
       <link rel="preconnect" href="https://www && www.google-analytics && analytics.com" />;
+
+
+=======
 ;
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -210,9 +225,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
+
           __html: JSON && JSON.stringify(structuredData || defaultStructuredData),
         }}
       />;
+
+
+=======
           __html: JSON.stringify (structured_data || defaultStructuredData),
         }}
       />;
@@ -220,6 +239,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
+
           __html: JSON && JSON.stringify({
             "@context": "https://schema && schema.org",
             "@type": "WebSite",
@@ -238,12 +258,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
               "@type": "SearchAction",
               target: "https://ziontechgroup.com / search?q={search_term_string}",
               "query - input": "required name = search_term_string",
+
             },
           }),
         }}
       />;
+
     </Head>);
 }
 ;
 export default SEOHead;
 ;
+

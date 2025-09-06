@@ -17,24 +17,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface ServicesShowcaseProps {
-  // Add props here as needed
-export default function ServicesShowcase({ }: ServicesShowcaseProps) {
-=======
 
 const ServicesShowcase = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>ServicesShowcase</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default ServicesShowcase;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -13,15 +13,19 @@
     "error": "Error",
     "explore": "Explore",
     "menu": "Menu",
+
     "saving": "Saving...",
     "open_main_menu": "Open main menu",
     "toggle_mobile_menu": "Toggle mobile menu";
 },
+
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
+
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
+
     "services": "Services",
     "services": "Services",
     "micro-saas": "Micro SAAS",
@@ -31,8 +35,12 @@
     "equipment": "Equipment",
     "dashboard": "Dashboard",
     "messages": "Messages",
+
     "faq": "FAQ",
     "help": "Help Center",
+
+=======
+>>>>>>> origin/chore/cleanup-and-build
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
@@ -41,10 +49,16 @@
     "green-it": "Green IT",
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
+
     "sitemap": "Sitemap"
   },
+
+
     "post_job": "Post Job"
   },
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
   "auth": {
     "login": "Login",
     "signup": "Sign Up",
@@ -54,8 +68,10 @@
     "forgot_password": "Forgot Password?",
     "remember_me": "Remember Me",
     "login_success": "Logged in successfully",
+
     "logout_success": "Logged out successfully";
 },
+
   "home": {
     "hero_title": "The Future of Tech & AI Marketplace",
     "hero_subtitle": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
@@ -77,6 +93,8 @@
     "tool_analytics": "Analytics",
     "tool_analytics_desc": "Insights and trends in the AI and tech industry",
     "tool_chat": "Chat Support",
+
+
     "tool_chat_desc": "Get instant assistance from our AI-powered chat";
 },
   "marketplace": {
@@ -96,6 +114,7 @@
     "city": "City",
     "country": "Country",
     "subtotal": "Subtotal",
+
     "tool_chat_desc": "Get instant assistance from our AI-powered chat"
   },
   "jobs": {
@@ -113,6 +132,9 @@
     "submitting": "Submitting...",
     "post_job_button": "Post Job"
   },
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
   "language": {
     "en": "English",
     "es": "Español",
@@ -140,6 +162,8 @@
     "missing_languages": "Missing in {{count}} languages",
     "edit": "Edit",
     "saved": "Saved",
+
+
     "changes_saved": "Translation changes have been saved";
 },
   "error_boundary": {
@@ -160,6 +184,11 @@
     "title_placeholder": "Enter job title",
     "description_placeholder": "Describe the job in detail"
   }
+>>>>>>> origin/chore/build-setup
+
     "changes_saved": "Translation changes have been saved"
   }
+=======
+
 }
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json

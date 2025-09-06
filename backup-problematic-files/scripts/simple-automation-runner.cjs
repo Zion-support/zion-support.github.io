@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-totalSize = getDirectorySize(buildDir);
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -290,7 +287,6 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     totalSize = getDirectorySize(buildDir);
     const recommendations = [];
     if ( { // > 1MB
@@ -316,8 +312,6 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -349,7 +343,6 @@ module.exports = { runSimpleAutomation }) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -379,12 +372,8 @@ const { execSync } = require('child_process')
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
 <<<<<<< HEAD
-        "status"
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        "status"
         "status"
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -413,4 +402,3 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,86 +20,18 @@ class ErrorBoundary extends React.Component {
 }
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../components / layout / EnhancedLayout';
-import type { GetServerSideProps } from 'next';
-import ModerationModal from '../../components / admin / ModerationModal';
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split (';').reduce (
-    (acc: any, part: string) => {
-      const [k, v] = part.trim ().split ('=');
-      if (acc[k] = decodeURIComponent (v || '')) {
-  $2
-}
-      return acc;
-    },
-    {} as Record < string, string>);
-  let role = 'guest';
-  try {
-    role = cookies['x - user'] ? JSON.parse (cookies['x - user']).role : 'guest';
-  } catch {}
-  // Check condition
-if (
-    return { redirect: { destination: '/', permanent: false } }) {
-  $2
-}
-  return { props: {} }
-}
-;
-export default /**
- * ContentReviewPage - Function description
- */
-function ContentReviewPage() {
-  const [filters, set_filters] = useState<{
-    status?: string;
-    reason?: string;
-    user_email?: string;
-    content_type?: string;
-  }>({ status: 'pending' });  const query = useMemo (() => {
-    const p = new URLSearchParams ();
-    if (p.set ('status', filters.status)) {
-  $2
-}
-    if (p.set ('reason', filters.reason)) {
-  $2
-}
-    if (p.set ('user_email', filters.user_email)) {
-  $2
-}
-    if (p.set ('content_type', filters.content_type)) {
-  $2
-}
-    return p.to_string ();
-  }, [filters]);
-  const { data, mutate } = useSWR (
-    `/api / admin / moderation / flags${query ? `?${query}` : ''}`,
-    fetcher);  const flags = data?.flags || [];
-;
-  const [selected, set_selected] = useState < any | null>(null);
-;
-  async /**
- * handle_action - Function description
- */
-function handle_action() {
-    // Check condition
-if (return) {
-  $2
-}
-    await fetch (
-      `/api / admin / moderation / flags/${encodeURIComponent (selected.id)}/action`,
-      {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ action, admin_notes }),
+
       }
     );
     set_selected (null);
     mutate ();  }
   return (
     <EnhancedLayout>;
+
             value={filters && filters.status || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
+
             }
             className='border rounded px-2 py-1';
       <div className='max - w-7xl mx - auto'>;
@@ -120,12 +53,14 @@ if (return) {
             <option value='warned'>Warned</option>;
             <option value='banned'>Banned</option>;
           </select>;
+
             value={filters && filters.contentType || ''}
             onChange={e =>;
               setFilters(f => ({;
                 ...f,;
                 contentType: e && e.target.value || undefined,;
               }));
+
             }
             className='border rounded px-2 py-1';
           <select;
@@ -144,20 +79,24 @@ if (return) {
             <option value='cv'>CV</option>;
             <option value='job'>Job Post</option>;
           </select>;
+
             value={filters && filters.reason || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, reason: e && e.target.value || undefined }));
+
             }
             className='border rounded px-2 py-1';
           />;
           <input
             placeholder='User email'
+
             value={filters && filters.userEmail || ''}
             onChange={e =>;
               setFilters(f => ({;
                 ...f,;
                 userEmail: e && e.target.value || undefined,;
               }));
+
             }
             className='border rounded px-2 py-1';
           />;
@@ -190,235 +129,16 @@ if (return) {
             Reset;
           </button>;
         </div>;
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {
-    const [k, v] = part.trim().split('=');
-    if (k) acc[k] = decodeURIComponent(v || '');
-    return acc
-  }, {} as Record<string, string>);
-  let role = 'guest';
-  try { role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest' } catch {}
-  if (role !== 'admin') return { redirect: { destination: '/', permanent: false } },
-  return { props: {} }
-};
-export default function ContentReviewPage() {
-  const [filters, setFilters] = useState<{ status?: string, reason?: string, userEmail?: string, contentType?: string }>({ status: 'pending' }),
-  const query = useMemo(() => {
-=======
-<<<<<<< HEAD
-import useSWR from 'swr',
-import React, { useMemo, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GetServerSideProps } from 'next';
-import ModerationModal from '../../components/admin/ModerationModal';
-<<<<<<< HEAD
 
-const fetcher = (url: string) => fetch(url).then(r => r.json())
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie |'').split(';').reduce(
-=======
-<<<<<<< HEAD
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
-  const cookies = (req.headers.cookie || '').split(';').reduce(
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    (acc: any, part: string) => {
-      const [k, v] = part.trim().split('=');
-      if (k) acc[k] = decodeURIComponent(v |'');
-      return acc;
-    }
-    {} as Record<string, string>
-  );
-  let role = 'guest';
-  try {
-    role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest';
-  } catch {}
-  if (role !== 'admin')
-    return { redirect: { destination: '/', permanent: false } }
-  return { props: {} }
-}
-export default function ContentReviewPage() {
-  const [filters, setFilters] = useState<{;
-    status?: string;
-    reason?: string;
-    userEmail?: string;
-    contentType?: string;
-  }>({ status: 'pending' });  const query = useMemo(() => {
-=======
-<<<<<<< HEAD
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GetServerSideProps } from 'next';
-import ModerationModal from '../../components/admin/ModerationModal';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
-  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
-    const [k, v] = part.trim().split('=');
-    if (k) acc[k] = decodeURIComponent(v || '');
-    return acc;
-  }, {} as Record<string, string>),;
-  let role = 'guest';
-  try { role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest' } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (role !== 'admin') return { redirect: { destination: '/', permanent: false } },;
-  return { props: {}   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-},;
-export default function ContentReviewPage(req, res) {
-  try {
-  const [filters, setFilters] = useState<{ status?: string, reason?: string, userEmail?: string, contentType?: string }>({ status: 'pending' }),;
-  const query = useMemo(() => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    const p = new URLSearchParams();
-    if (filters.status) p.set('status', filters.status);
-    if (filters.reason) p.set('reason', filters.reason);
-    if (filters.userEmail) p.set('userEmail', filters.userEmail);
-    if (filters.contentType) p.set('contentType', filters.contentType);
-<<<<<<< HEAD
-    return p.toString()
-  }, [filters]);
-  const { data, mutate } = useSWR(`/api/admin/moderation/flags${query ? `?${query}` : ''}`, fetcher);
-  const flags = data?.flags || [];
-  const [selected, setSelected] = useState<any | null>(null);
-  async function handleAction(action: 'approve'|'remove'|'warn'|'ban', adminNotes?: string) {
-    if (!selected) return;
-    await fetch(`/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`, {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action, adminNotes })
-    });
-    setSelected(null);
-    mutate()
-  }
-=======
-    return p.toString();
-<<<<<<< HEAD
-  }, [filters]);
-  const { data, mutate } = useSWR(
-    `/api/admin/moderation/flags${query ? `?${query}` : ''}`
-    fetcher
-  );  const flags = data?.flags |[];
-  const [selected, setSelected] = useState<any | null>(null);
-  async function handleAction(
-    action: 'approve' | 'remove' | 'warn' | 'ban'
-    adminNotes?: string
-  ) {
-    if (!selected) return;
-    await fetch(
-      `/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`
-      {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ action, adminNotes })
-      }
-    );
-    setSelected(null);
-    mutate();  }
-
-=======
-  }, [filters]),;
-  const { data, mutate } = useSWR(`/api/admin/moderation/flags${query ? `?${query}` : ''}`, fetcher);
-  const flags = data?.flags || [];
-  const [selected, setSelected] = useState<any | null>(null);
-  async function handleAction(action: 'approve'|'remove'|'warn'|'ban', adminNotes?: string) {;
-    if (!selected) return,;
-    await fetch(`/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`, {;
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action, adminNotes });
-    });
-    setSelected(null);
-    mutate();
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  return (
     <EnhancedLayout>
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Admin Content Review</h1>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <div className='mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm'>
-          <select
-            value={filters.status |''}
-            onChange={e =>
-              setFilters(f => ({ ...f, status: e.target.value |undefined }))
-            }
-            className='border rounded px-2 py-1'
-          >
-            <option value=''>All Statuses</option>
-            <option value='pending'>Pending</option>
-            <option value='approved'>Approved</option>
-            <option value='removed'>Removed</option>
-            <option value='warned'>Warned</option>
-            <option value='banned'>Banned</option>
-          </select>
-          <select
-            value={filters.contentType |''}
-            onChange={e =>
-              setFilters(f => ({
-                ...f
-                contentType: e.target.value |undefined
-              }))
-            }
-            className='border rounded px-2 py-1'
-          >
-            <option value=''>All Types</option>
-            <option value='listing'>Listing</option>
-            <option value='message'>Message</option>
-            <option value='cv'>CV</option>
-            <option value='job'>Job Post</option>
-          </select>
-          <input
-            placeholder='Reason contains...'
-            value={filters.reason |''}
-            onChange={e =>
-              setFilters(f => ({ ...f, reason: e.target.value |undefined }))
-            }
-            className='border rounded px-2 py-1'
-          />
-          <input
-            placeholder='User email'
-            value={filters.userEmail |''}
-            onChange={e =>
-              setFilters(f => ({
-                ...f
-                userEmail: e.target.value |undefined
-              }))
-            }
-            className='border rounded px-2 py-1'
-          />
-          <button
-            onClick={() => setFilters({ status: 'pending' })}
-            className='border rounded px-2 py-1'
-          >
-            Reset
-          </button>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
         <div className="mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm">
           <select value={filters.status || ''} onChange={e => setFilters(f => ({ ...f, status: e.target.value || undefined }))} className="border rounded px-2 py-1">
             <option value="">All Statuses</option>
@@ -438,10 +158,9 @@ export default function ContentReviewPage(req, res) {
           <input placeholder="Reason contains..." value={filters.reason || ''} onChange={e => setFilters(f => ({ ...f, reason: e.target.value || undefined }))} className="border rounded px-2 py-1" />
           <input placeholder="User email" value={filters.userEmail || ''} onChange={e => setFilters(f => ({ ...f, userEmail: e.target.value || undefined }))} className="border rounded px-2 py-1" />
           <button onClick={() => setFilters({ status: 'pending' })} className="border rounded px-2 py-1">Reset</button>
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -532,31 +251,21 @@ export default function ContentReviewPage(req, res) {
 <<<<<<< HEAD
               ))}
               {flags.length === 0 && (
-<tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
-              )}
+
+
 =======
-              ))  } catch (error) {
+
+
+}
+
+=======
+                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
+              )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              {flags.length === 0 && (
-<<<<<<< HEAD
-                <tr>
-                  <td
-                    colSpan={8}
-                    className='px-3 py-6 text-center text-gray-500'
-                  >
-                    No results
-                  </td>
-                </tr>              )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            </tbody>
-          </table>
-        </div>
-      </div>
-<<<<<<< HEAD
-{selected && (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </tbody>;
           </table>;
         </div>;
@@ -571,12 +280,9 @@ export default function ContentReviewPage(req, res) {
           onAction={handleAction}
         />;
       )}
-    </EnhancedLayout>;
-  );
-    </EnhancedLayout>
-<<<<<<< HEAD
-  )
-}
+
+
+=======
         <div className='overflow - auto border rounded'>;
           <table className='min - w-full text - sm'>;
             <thead className='bg - gray - 50 dark:bg - gray - 900'>;
@@ -653,40 +359,15 @@ export default function ContentReviewPage(req, res) {
         />)}
     </EnhancedLayout>);
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-      {selected && (;
-        <ModerationModal;
-          flag={selected  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          onClose={() => setSelected(null)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          onAction={handleAction  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        />;
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    </EnhancedLayout>;
-  );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

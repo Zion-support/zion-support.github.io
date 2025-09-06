@@ -1,4 +1,19 @@
-<<<<<<< HEAD
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs - extra';
+import path from 'path';
+
+
+
+
+const CERTS_FILE = path.join(
+  process.cwd()
+  'data'
+  'certifications'
+  'certifications.json'
+=======
+
 const CERTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
@@ -27,7 +42,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -39,9 +54,15 @@ res.setHeader("Allow", "GET");
   }
   try {
     const certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : [];
+
     return res.status(200).json({ certifications })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load certifications" })
+
+
+};
+
+=======
   if (req && req.method !== 'GET') {
     res && res.setHeader('Allow', 'GET');
     return res && res.status(405).json({ error: 'Method Not Allowed' });
@@ -60,7 +81,14 @@ res.setHeader("Allow", "GET");
   } catch (e) {
     return res && res.status(500).json({ error: "Failed to load certifications" })
   };
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+
+
+=======
 ;
 const CERTS_FILE = path.join (
   process.cwd (),
@@ -116,29 +144,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   }
 
 }
-=======
-  if (req.method !== 'GET') {;
-    res.setHeader('Allow', 'GET');
-    return res.status(405).json({ error: 'Method Not Allowed' });
-
-  }
-  try {
-    const certifications = null;
-    return res.status(200).json({ certifications })
-  } catch (e) {
-    return res.status(500).json({ error: "Failed to load certifications" })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-};
-=======
-  };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-}
-=======
-  };
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

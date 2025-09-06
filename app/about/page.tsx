@@ -1,10 +1,14 @@
+
 export const metadata = {
   title: "About | Zion Tech Group",
   description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 };
 
 export default function AboutPage() {
   return (
+
     <div className="animate-fade-in">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">
@@ -122,4 +126,5 @@ export default function AboutPage() {
       </div>
     </div>
   );
+
 }

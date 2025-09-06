@@ -214,9 +214,6 @@ h3 {
 /* Focus styles */
 :focus {
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -235,7 +232,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   outline: 2px solid var(--neon-blue);
   outline-offset: 2px;
 }
@@ -540,9 +536,6 @@ h3 {
 
 /* Quantum Matrix Grid */
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -551,7 +544,6 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .quantum-matrix {
   background-image: 
 
@@ -756,15 +748,11 @@ animation: matrixMove 30s linear infinite;
 @keyframes matrixMove {  0% {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     transform: translate(0, 0);
   }
   100% {
     transform: translate(50px, 50px);
   }
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -784,7 +772,6 @@ animation: matrixMove 30s linear infinite;
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* Holographic Scan Lines */
@@ -1432,9 +1419,6 @@ animation: matrixMove 30s linear infinite;
   *,
   *::before,
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1443,7 +1427,6 @@ animation: matrixMove 30s linear infinite;
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   *::after {
 
 <<<<<<< HEAD
@@ -1518,15 +1501,6 @@ animation: matrixMove 30s linear infinite;
     transition-duration: 0.01ms !important;
   }
   *::after {    animation-duration: 0.01ms !important;
-<<<<<<< HEAD
-
-    animation-duration: 0.01ms !important;
-
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-
-=======
 >>>>>>> main
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -1547,7 +1521,6 @@ animation: matrixMove 30s linear infinite;
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* Enhanced Print Styles */
@@ -1848,9 +1821,6 @@ animation: matrixMove 30s linear infinite;
     0 0 10px rgba(59, 130, 246, 0.3),
     0 0 15px rgba(59, 130, 246, 0.1);
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 }
 =======
 }
@@ -1879,4 +1849,3 @@ animation: matrixMove 30s linear infinite;
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -2,8 +2,6 @@
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,7 +20,6 @@ module.exports = { apps: [/ Main application { name: "bolt-app","" script: "npm"
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = {}
   "apps": [// Main application;]
     {}
@@ -502,7 +499,6 @@ module.exports = {}
     };
   };
 <<<<<<< HEAD
-};
 =======
 <<<<<<< HEAD
 =======
@@ -526,4 +522,3 @@ module.exports = {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

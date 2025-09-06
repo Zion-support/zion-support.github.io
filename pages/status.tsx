@@ -1,3 +1,5 @@
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,26 +18,21 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
 import React from "react";
 import Layout from "../components/Layout";
-<<<<<<< HEAD
+
 import React from 'react';
 import Layout from '../components/Layout';
-=======
-=======
-<<<<<<< HEAD
-import React from "react";
-import Layout from "../components/Layout";
-<<<<<<< HEAD
-=======
-import React from 'react';
-import Layout from '../components/Layout';
->>>>>>> origin/automation-improvements-final
+
+
+
 
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Status() {
   return (
     <Layout
@@ -45,23 +42,13 @@ export default function Status() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-<<<<<<< HEAD
+
             <h1 className="text-4xl font-bold text-gray-900 mb-4">System Status</h1>
+
 =======
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              System Status
-            </h1>
-=======
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              System Status
-            </h1>
-=======
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">System Status</h1>
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               All systems are operational.
             </p>

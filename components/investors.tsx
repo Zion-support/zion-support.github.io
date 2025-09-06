@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,12 +18,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-export default function InvestorsPage() {;
+
+
+export default function InvestorsPage() {
 =======
-import React from 'react';
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -81,8 +80,10 @@ export default function InvestorsPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>;
   );	return (
+
 export default function InvestorsPage() {
 	return (
+
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>
 				<title>Investors | Zion Tech Group</title>
@@ -116,11 +117,8 @@ export default function InvestorsPage() {
 
 			</div>
 		</div>
-<<<<<<< HEAD
-	)
-}
-<<<<<<< HEAD
-<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
+
+		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
 			<Head>;
 				<title>Investors | Zion Tech Group</title>;
 				<meta name="description" content="Investor relations and key metrics overview." />;
@@ -139,6 +137,10 @@ export default function InvestorsPage() {
 		</div>;
 	),;
 }
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import Head from 'next / head';
 export default /**
  * InvestorsPage - Function description
@@ -202,10 +204,10 @@ function InvestorsPage() {
   </div>;
   </div>),
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 
-=======
-=======
 	),
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

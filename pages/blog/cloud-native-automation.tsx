@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 import Head from 'next/head';
+
 import Link from 'next/link';
 import React from 'react';
 export default function CloudNativeAutomation() {
   return (
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <>
       <Head>
         <title>
@@ -32,11 +27,7 @@ content='A deep dive into our cloud-native approach to building scalable, reliab
         />
         <meta
           property='og:description'
-<<<<<<< HEAD
-content='A deep dive into our cloud-native approach to building scalable, reliable automation systems.'
-=======
           content='A deep dive into our cloud-native approach to building scalable, reliable automation systems.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
@@ -62,11 +53,7 @@ content='A deep dive into our cloud-native approach to building scalable, reliab
                     Infrastructure
                   </span>
                   <span className='text-white/60 text-sm'>
-<<<<<<< HEAD
-January 12, 2025
-=======
                     January 12, 2025
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </span>
                   <span className='text-white/60 text-sm'>•</span>
                   <span className='text-white/60 text-sm'>10 min read</span>
@@ -76,11 +63,7 @@ January 12, 2025
                 </h1>
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>
                   A deep dive into our cloud-native approach to building
-<<<<<<< HEAD
-scalable, reliable automation systems that can handle the
-=======
                   scalable, reliable automation systems that can handle the
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   demands of modern business operations.
                 </p>
               </header>
@@ -100,11 +83,7 @@ scalable, reliable automation systems that can handle the
                   <li>Cost-effective through efficient resource utilization</li>
                 </ul>
                 <p className='text-white/90 mb-4'>
-<<<<<<< HEAD
-Each automation service operates independently, communicating
-=======
                   Each automation service operates independently, communicating
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   through well-defined APIs and message queues. This decoupling
                   ensures that a failure in one service doesn&apos,t bring down
                   the entire system.
@@ -120,20 +99,12 @@ Each automation service operates independently, communicating
                 </h2>
                 <p className='text-white/90 mb-4'>
                   We leverage Docker containers and Kubernetes orchestration to
-<<<<<<< HEAD
-create a flexible, portable automation environment. This
-=======
                   create a flexible, portable automation environment. This
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   approach provides several key benefits:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
-<<<<<<< HEAD
-• Consistent runtime environments across development
-=======
                     • Consistent runtime environments across development
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     staging, and production
                   </li>
                   <li>
@@ -158,11 +129,7 @@ Our Kubernetes clusters automatically handle load balancing
                   Infrastructure as Code
                 </h2>
                 <p className='text-white/90 mb-4'>
-<<<<<<< HEAD
-We treat infrastructure as code, using tools like Terraform
-=======
                   We treat infrastructure as code, using tools like Terraform
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   and CloudFormation to define and manage our cloud resources.
                   This approach enables:
                 </p>
@@ -176,9 +143,6 @@ We treat infrastructure as code, using tools like Terraform
                   <li>Easy disaster recovery and environment replication</li>
                 </ul>
                 <p className='text-white/90 mb-4'>
-<<<<<<< HEAD
-By codifying our infrastructure, we can quickly spin up new
-=======
                   By codifying our infrastructure, we can quickly spin up new
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   environments, test changes safely, and maintain consistency
@@ -226,11 +190,7 @@ By codifying our infrastructure, we can quickly spin up new
                 </ul>
                 <p className='text-white/90 mb-4'>
                   We maintain compliance with industry standards and
-<<<<<<< HEAD
-regulations, ensuring that our automation systems meet the
-=======
                   regulations, ensuring that our automation systems meet the
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   highest security requirements.
                 </p>
               </section>
@@ -240,20 +200,13 @@ regulations, ensuring that our automation systems meet the
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
-<<<<<<< HEAD
-                  infrastructure, we&apos,re exploring emerging technologies
-=======
-                  infrastructure, we're exploring emerging technologies
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  like: </p>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+                  infrastructure, we're exploring emerging technologies
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>
                   <li>Edge computing for low-latency processing</li>
@@ -299,8 +252,11 @@ regulations, ensuring that our automation systems meet the
       </div>
     </>
   )
-<<<<<<< HEAD
+
+=======
 }
+
+=======
 import Head from 'next / head',
 import Link from 'next / link',
 import React from 'react',
@@ -309,6 +265,15 @@ export default /**
  */
 function CloudNativeAutomation() {
   return (
+=======
+
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+export default function CloudNativeAutomation(req, res) {
+  try {
+  return (;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <>;
       <Head>;
         <title>;
@@ -724,14 +689,6 @@ export default function CloudNativeAutomation(req, res) {
     </>);
 }
 
-=======
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+

@@ -1,3 +1,4 @@
+
 export const metadata = { 
   title: 'Contact | Zion Tech Group',
   description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
@@ -159,3 +160,6 @@ export default function ContactPage() {
     </div>
   );
 }
+
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

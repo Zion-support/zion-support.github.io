@@ -1,18 +1,16 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
+
 ;
-=======
-<<<<<<< HEAD
+
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -28,10 +26,12 @@ interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
 }
+
             </Link>;
             {/* Submenu */}
             {item && item.submenu && activeItem === item && item.name && (;
               <motion&& motion.div
+
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
@@ -57,18 +57,16 @@ interface NavigationItem {;
       </ul>;
     </nav>;
   );
-<<<<<<< HEAD
-}
-export default InteractiveNavigation;}
-ursor/automate-test-fix-improve-and-merge-code-99d1,";
-=======
+
+
 
 };
 
 export default InteractiveNavigation;};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -76,10 +74,12 @@ const InteractiveNavigation: React.FC: = () => {";
           <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>";";
           <div: className="hidden md:flex: space-x-8">",";
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
+
             <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
+
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
-<<<<<<< HEAD
+
 interface InteractiveNavigationProps {
   items: NavigationItem[], class_name?: string,
 }
@@ -157,13 +157,11 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/services" className="text - gray - 600 hover:text - gray - 900: transition - colors">Services</Link>", ",
             <Link: href = "/about" className="text - gray - 600 hover:text - gray - 900: transition - colors">About</Link>", ";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
-export default Component}
 
-=======
-<<<<<<< HEAD
 export default Component}
 =======
+
 export default Component}
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

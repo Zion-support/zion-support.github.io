@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -39,9 +39,13 @@ function CTAButton() {
   }
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;
   return (
+
     <Link;
       href={href}
 =======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -77,7 +81,7 @@ export function CTAButton({;
   return (;
     <Link;
       href={href} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       className={classes}
       on_click={on_click}
       role="button";

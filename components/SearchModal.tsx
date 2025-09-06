@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X, ArrowRight, Clock  } from './lucide-react';
 import Link from './next / link';
 ;
+
 interface SearchResult {
 interface SearchResult {;
   title: string;
@@ -9,10 +11,13 @@ interface SearchResult {;
   url: string;
   category: string;
 }
+
+
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
 }
+
 const search_data: SearchResult[] = [;
   // Services;
   {
@@ -39,6 +44,7 @@ const search_data: SearchResult[] = [;
     url: "/cloud - solutions",
     category: "Services",
   },
+
   {
     title: "Cybersecurity"
     description: "Security audits, penetration testing, and compliance"
@@ -46,6 +52,7 @@ const search_data: SearchResult[] = [;
     category: "Services"
   }
   {
+
     title: "Blockchain Solutions",
     description: "Smart contracts, DeFi, and blockchain development",
     url: "/blockchain - services",
@@ -96,6 +103,7 @@ const search_data: SearchResult[] = [;
     category: "Industries",
   },
   // Company;
+
   {
     title: "About Us"
     description: "Learn about Zion Tech Group and our mission"
@@ -127,9 +135,8 @@ const search_data: SearchResult[] = [;
     category: "Company"
   }
 ];
-<<<<<<< HEAD
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
-<<<<<<< HEAD
+
+
 interface SearchModalProps {;
   isOpen: boolean;
   onClose: () => void;
@@ -248,25 +255,20 @@ const searchData: SearchResult[] = [;
     category: "Company",;
   },;
 ];
-  useEffect(() => {;
-    if (isOpen && inputRef && inputRef.current) {;
-      inputRef && inputRef.current.focus();
-=======
-=======
 
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+  useEffect(() => {;
+    if (isOpen && inputRef && inputRef.current) {;
+      inputRef && inputRef.current.focus();
     }
   }, [isOpen]);
+
   useEffect(() => {;
     // Load recent searches from localStorage;
     const saved = localStorage && localStorage.getItem("recent-searches");
@@ -281,6 +283,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
           item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
+
       );
       setResults(filtered);
     } else {;
@@ -332,8 +335,11 @@ if ( {) {
     }
     setSelectedIndex (0);
   }, [query]);
+
+
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === "Escape") {;
+
       onClose();
     } else if (e && e.key === "ArrowDown") {;
       e && e.preventDefault();
@@ -344,6 +350,7 @@ if ( {) {
     } else if (e && e.key === "Enter" && results[selectedIndex]) {;
       handleResultClick(results[selectedIndex]);
     }
+
   };
   const handleResultClick = (result: SearchResult) => {;
     // Add to recent searches;
@@ -357,6 +364,7 @@ if ( {) {
     window && window.location.href = result && result.url;
   };
   const handleRecentClick = (search: string) => {;
+
     setQuery(search);
   }
   if (!isOpen) return null;
@@ -367,7 +375,10 @@ if ( {) {
         <div
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
+
         />;
+
+
         {/* Modal */}
         <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">;
           {/* Search Input */}
@@ -384,10 +395,13 @@ if ( {) {
             />;
             <button
               onClick={onClose}
+
               className="ml-3 p-1 hover:bg-gray-100 rounded">;
               <X className="w-5 h-5" />;
             </button>;
           </div>;
+
+
           {/* Results */}
           <div className="max-h-96 overflow-y-auto">;
             {query && query.trim() ? (;
@@ -485,6 +499,8 @@ if (return null) {
                           ? "bg - blue - 50 border border - blue - 200";
                           : "hover:bg - gray - 50";
                       }`}
+
+
                 <div>;
                   <div className="text-sm text-gray-500 mb-3">;
                     Popular Searches;
@@ -496,6 +512,7 @@ if (return null) {
                       "Cybersecurity",;
                       "Digital Transformation",;
                     ].map((term) => (;
+
                       <button
                         key={term}
                         onClick={() => setQuery(term)}

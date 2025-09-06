@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,28 +21,20 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import SEO from "../components/SEO";
 export default function AISustainabilityPlatformPage() {;
+
 =======
-<<<<<<< HEAD
-import React from 'react';
-import SEO from '../components/SEO';
-=======
+
 import React from "react";
 import SEO from "../components/SEO";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export default function AISustainabilityPlatformPage() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-[60vh] px-6 py-24">;
       <SEO
         title="AI Sustainability Platform | Zion Tech Group"
         description="Sustainability analytics and optimization"
-<<<<<<< HEAD
-      />;
-      <div className="max-w-3xl mx-auto">;
-        <h1 className="text-4xl font-bold text-white mb-4">;
-          AI Sustainability Platform;
-        </h1>;
-        <p className="text-gray-300">;
+
 import React from './react';
 import SEO from "../components / SEO";
 export default /**
@@ -59,11 +52,14 @@ function AISustainabilityPlatformPage() {
           AI Sustainability Platform;
         </h1>;
         <p className="text - gray - 300">;
+
           Measure and optimize sustainability metrics with AI. Details coming;
           soon.;
         </p>;
       </div>;
+
     </div>);
+
 }
 =======
       />
@@ -76,15 +72,11 @@ function AISustainabilityPlatformPage() {
           soon.
         </p>
       </div>
-<<<<<<< HEAD
-    </div>;
-=======
+
     </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,79 +1,30 @@
-<<<<<<< HEAD
+
 import { ServiceVariant } from '../types / service - variants';
+
 export interface ComprehensiveService {
+
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
-=======
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
-export interface ComprehensiveService {;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
 
-    website: string;
-  }
-
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   customers: number;
   rating: number;
   reviews: number;
+
 ;
 const contact = {
-<<<<<<< HEAD
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }
-;
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 =======
-<<<<<<< HEAD
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [
-=======
+
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -83,6 +34,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
+
+=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -109,24 +62,20 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com';
-}
-;
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
+
+
+export const comprehensiveServicesExpansion: ComprehensiveService[] = [
+  {  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
-    id: 'ai - powered - code - review - assistant',
-    name: 'AI - Powered Code Review Assistant',
-    tagline:;
-      'Automated code quality analysis, security scanning, and best practice recommendations',
-    price: '$199',
-    period: '/month',
-    description:;
-      'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
-    features: [;
-      'Automated security vulnerability detection',
-      'Code quality scoring and metrics',
-      'Best practice recommendations',
-      'Integration with GitHub / GitLab',
+
+
       'Custom rule configuration',
       'Team performance analytics',
       'Automated PR comments',
@@ -135,6 +84,33 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '🔍',
+
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-code-review-assistant',
+    marketPosition:;
+      'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
+    targetAudience: 'Development teams, DevOps engineers, CTOs',
+    trialDays: 14,
+    setupTime: '2 hours',
+    category: 'Development & DevOps',
+    realService: true,
+    technology: ['AI/ML, Static Analysis, Security Scanning'],
+    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
+
+
+    useCases: [
+      'Code quality improvement, Security compliance, Team productivity'
+    ]
+    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.'
+    competitors: ['SonarQube, CodeClimate, Snyk']
+    marketSize: '$8B code quality tools'
+    growthRate: '35% YoY'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails:
+
       'AI-powered analysis engine with custom rule sets and integration APIs.',
     launchDate: '2025-01-15',
     color: 'from - blue - 600 to - indigo - 700',
@@ -162,11 +138,13 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered analysis engine with custom rule sets and integration APIs.',
     launch_date: '2025 - 01 - 15',
+
     customers: 156,
     rating: 4 && 4.8,
     reviews: 89,
   },
   {
+
       'AI-powered anomaly detection',
     id: 'intelligent - incident - response - platform',
     name: 'Intelligent Incident Response Platform',
@@ -178,6 +156,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post - mortem reports.',
     features: [;
       'AI - powered anomaly detection',
+
       'Automated incident classification',
       'Smart escalation routing',
       'Real - time team coordination',
@@ -189,6 +168,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '🚨',
+
+=======
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / intelligent - incident - response',
@@ -210,6 +191,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
+
       'AI incident detection engine with automated response workflows and team coordination.',
     launch_date: '2025 - 02 - 01',
     customers: 89,
@@ -217,6 +199,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     reviews: 67,
   },
   {
+
       'Post-quantum cryptographic algorithms',
     id: 'quantum - resistant - cryptography - suite',
     name: 'Quantum - Resistant Cryptography Suite',
@@ -227,6 +210,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post - quantum algorithms, quantum key distribution, and hybrid encryption systems.',
     features: [;
       'Post - quantum cryptographic algorithms',
+
       'Quantum key distribution (QKD)',
       'Hybrid encryption systems',
       'Quantum - resistant digital signatures',
@@ -238,6 +222,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '🔐',
+
       'Post-quantum algorithm implementations with hybrid encryption and key management.',
     launchDate: '2025-01-20',
     color: 'from - purple - 600 to - violet - 700',
@@ -263,11 +248,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'Post - quantum algorithm implementations with hybrid encryption and key management.',
     launch_date: '2025 - 01 - 20',
+
     customers: 23,
     rating: 4 && 4.9,
     reviews: 18,
   },
   {
+
+=======
     id: 'autonomous - devops - orchestrator',
     name: 'Autonomous DevOps Orchestrator',
     tagline:;
@@ -277,6 +265,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'AI - powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.',
     features: [;
+
       'Autonomous infrastructure management',
       'Self - healing systems',
       'Intelligent deployment strategies',
@@ -289,6 +278,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '🤖',
+
       'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.',
     launchDate: '2025-02-10',
     color: 'from - green - 600 to - emerald - 700',
@@ -316,11 +306,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered orchestration engine with autonomous decision - making and self - healing capabilities.',
     launch_date: '2025 - 02 - 10',
+
     customers: 134,
     rating: 4 && 4.8,
     reviews: 92,
   },
   {
+
+=======
     id: 'edge - ai - inference - platform',
     name: 'Edge AI Inference Platform',
     tagline:;
@@ -330,6 +323,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'Platform for deploying, managing, and optimizing AI models at the edge, enabling real - time inference with minimal latency and bandwidth usage.',
     features: [;
+
       'Edge model deployment',
       'Real - time inference optimization',
       'Model versioning and updates',
@@ -342,6 +336,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '🌐',
+
+=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / edge - ai - inference - platform',
@@ -363,6 +359,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
+
       'Edge deployment framework with model optimization and device management capabilities.',
     launch_date: '2025 - 01 - 25',
     customers: 67,
@@ -370,6 +367,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     reviews: 41,
   },
   {
+
+=======
     id: 'blockchain - governance - automation',
     name: 'Blockchain Governance Automation',
     tagline:;
@@ -379,6 +378,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'Comprehensive governance platform for blockchain networks, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',
     features: [;
+
       'Automated compliance monitoring',
       'Risk assessment and scoring',
       'Regulatory reporting automation',
@@ -391,6 +391,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '⛓️',
+
       'Multi-chain governance engine with automated compliance and risk management.',
     launchDate: '2025-02-05',
     color: 'from - orange - 600 to - red - 700',
@@ -416,11 +417,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'Multi - chain governance engine with automated compliance and risk management.',
     launch_date: '2025 - 02 - 05',
+
     customers: 45,
     rating: 4 && 4.7,
     reviews: 33,
   },
   {
+
+=======
     id: 'ai - powered - customer - success - platform',
     name: 'AI - Powered Customer Success Platform',
     tagline:;
@@ -430,6 +434,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',
     features: [;
+
       'Predictive churn risk scoring',
       'Customer health monitoring',
       'Automated engagement workflows',
@@ -442,6 +447,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '🎯',
+
       'AI-powered predictive analytics engine with automated engagement workflows.',
     launchDate: '2025-01-30',
     color: 'from - emerald - 600 to - teal - 700',
@@ -467,11 +473,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered predictive analytics engine with automated engagement workflows.',
     launch_date: '2025 - 01 - 30',
+
     customers: 178,
     rating: 4 && 4.8,
     reviews: 124,
   },
   {
+
+=======
     id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
     tagline:;
@@ -481,6 +490,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',
     features: [;
+
       'Quantum algorithm implementations',
       'Hybrid quantum - classical ML',
       'Optimization problem solving',
@@ -493,6 +503,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '⚛️',
+
       'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',
     launchDate: '2025-02-15',
     color: 'from - violet - 600 to - purple - 700',
@@ -519,11 +530,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'Quantum algorithm library with hybrid classical - quantum optimization capabilities.',
     launch_date: '2025 - 02 - 15',
+
     customers: 28,
     rating: 4 && 4.9,
     reviews: 22,
   },
   {
+
+=======
     id: 'intelligent - supply - chain - optimizer',
     name: 'Intelligent Supply Chain Optimizer',
     tagline: 'AI - driven supply chain optimization and risk management',
@@ -532,6 +546,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',
     features: [;
+
       'Demand forecasting and planning',
       'Inventory optimization',
       'Risk assessment and mitigation',
@@ -544,6 +559,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '📦',
+
       'AI-powered optimization engine with real-time monitoring and predictive analytics.',
     launchDate: '2025-02-20',
     color: 'from - blue - 600 to - cyan - 700',
@@ -569,11 +585,13 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered optimization engine with real - time monitoring and predictive analytics.',
     launch_date: '2025 - 02 - 20',
+
     customers: 89,
     rating: 4 && 4.7,
     reviews: 67,
   },
   {
+
       'Real-time threat detection',
     id: 'cybersecurity - threat - intelligence - hub',
     name: 'Cybersecurity Threat Intelligence Hub',
@@ -584,6 +602,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Advanced cybersecurity platform that provides real - time threat intelligence, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',
     features: [;
       'Real - time threat detection',
+
       'Threat intelligence sharing',
       'Automated incident response',
       'Vulnerability assessment',
@@ -595,6 +614,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '🛡️',
+
       'AI-powered threat detection engine with automated response and intelligence sharing.',
     launchDate: '2025-02-25',
     color: 'from - red - 600 to - orange - 700',
@@ -620,11 +640,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered threat detection engine with automated response and intelligence sharing.',
     launch_date: '2025 - 02 - 25',
+
     customers: 156,
     rating: 4 && 4.8,
     reviews: 118,
   },
   {
+
+=======
     id: 'ai - powered - content - creation - suite',
     name: 'AI - Powered Content Creation Suite',
     tagline:;
@@ -634,6 +657,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',
     features: [;
+
       'AI content generation',
       'Multi - channel content optimization',
       'SEO optimization tools',
@@ -646,6 +670,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '✍️',
+
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - content - creation - suite',
@@ -654,10 +679,12 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     target_audience: 'Marketing teams, Content creators, Small businesses',
     trial_days: 7,
     setup_time: '1 day',
+
     category: 'Content & Marketing',
     real_service: true,
     technology: ['AI / ML, NLP, Content Generation'],
     integrations: ['WordPress, HubSpot, Mailchimp, Social media platforms'],
+
     use_cases: ['Content marketing, SEO optimization, Social media management'],
     roi: 'Increase content production by 300 - 500% and improve engagement by 25 - 40%.',
     competitors: ['Jasper, Copy.ai, Grammarly, Writesonic'],
@@ -667,6 +694,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
+
       'AI content generation engine with optimization and distribution capabilities.',
     launch_date: '2025 - 03 - 01',
     customers: 234,
@@ -674,6 +702,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     reviews: 167,
   },
   {
+
+=======
     id: 'intelligent - data - governance - platform',
     name: 'Intelligent Data Governance Platform',
     tagline: 'Automated data quality, compliance, and lifecycle management',
@@ -682,6 +712,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'Comprehensive data governance platform that automates data quality monitoring, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',
     features: [;
+
       'Automated data quality monitoring',
       'Compliance and governance rules',
       'Data lineage tracking',
@@ -694,6 +725,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '📊',
+
       'AI-powered data quality engine with automated compliance and governance workflows.',
     launchDate: '2025-03-05',
     color: 'from - teal - 600 to - cyan - 700',
@@ -719,11 +751,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered data quality engine with automated compliance and governance workflows.',
     launch_date: '2025 - 03 - 05',
+
     customers: 78,
     rating: 4 && 4.6,
     reviews: 56,
   },
   {
+
+=======
     id: 'quantum - financial - trading - engine',
     name: 'Quantum Financial Trading Engine',
     tagline:;
@@ -733,6 +768,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.',
     features: [;
+
       'Quantum portfolio optimization',
       'Risk assessment algorithms',
       'Market analysis tools',
@@ -745,6 +781,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '💰',
+
+=======
     color: 'from - yellow - 600 to - amber - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / quantum - financial - trading - engine',
@@ -766,6 +804,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
+
       'Quantum algorithm implementations for financial optimization and risk management.',
     launch_date: '2025 - 03 - 10',
     customers: 34,
@@ -773,6 +812,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     reviews: 28,
   },
   {
+
       'AI-powered candidate screening',
     id: 'ai - powered - hr - automation - suite',
     name: 'AI - Powered HR Automation Suite',
@@ -784,6 +824,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',
     features: [;
       'AI - powered candidate screening',
+
       'Automated interview scheduling',
       'Employee onboarding workflows',
       'Performance tracking and analytics',
@@ -795,6 +836,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '👥',
+
       'AI-powered HR automation engine with intelligent workflows and analytics.',
     launchDate: '2025-03-15',
     color: 'from - pink - 600 to - rose - 700',
@@ -822,11 +864,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered HR automation engine with intelligent workflows and analytics.',
     launch_date: '2025 - 03 - 15',
+
     customers: 189,
     rating: 4 && 4.7,
     reviews: 134,
   },
   {
+
+=======
     id: 'intelligent - iot - platform',
     name: 'Intelligent IoT Platform',
     tagline: 'AI - powered IoT device management, analytics, and automation',
@@ -835,6 +880,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'Comprehensive IoT platform that provides intelligent device management, real - time analytics, predictive maintenance, and automated workflows for connected devices.',
     features: [;
+
       'IoT device management',
       'Real - time data analytics',
       'Predictive maintenance',
@@ -847,6 +893,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '🌐',
+
       'IoT device management platform with AI-powered analytics and automation.',
     launchDate: '2025-03-20',
     color: 'from - green - 600 to - emerald - 700',
@@ -872,11 +919,13 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'IoT device management platform with AI - powered analytics and automation.',
     launch_date: '2025 - 03 - 20',
+
     customers: 67,
     rating: 4 && 4.6,
     reviews: 45,
   },
   {
+
       'Quantum-resistant algorithms',
       'Post-quantum cryptography',
     id: 'quantum - cybersecurity - platform',
@@ -889,6 +938,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     features: [;
       'Quantum - resistant algorithms',
       'Post - quantum cryptography',
+
       'Quantum key distribution',
       'Hybrid encryption systems',
       'Security assessment tools',
@@ -899,6 +949,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: false,
     icon: '🔒',
+
       'Quantum-resistant cryptographic implementations with hybrid security systems.',
     launchDate: '2025-03-25',
     color: 'from - violet - 600 to - purple - 700',
@@ -925,11 +976,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'Quantum - resistant cryptographic implementations with hybrid security systems.',
     launch_date: '2025 - 03 - 25',
+
     customers: 19,
     rating: 4 && 4.9,
     reviews: 15,
   },
   {
+
+=======
     id: 'ai - powered - sales - intelligence - platform',
     name: 'AI - Powered Sales Intelligence Platform',
     tagline:;
@@ -939,6 +993,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description:;
       'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data - driven insights.',
     features: [;
+
       'Predictive lead scoring',
       'Customer behavior analysis',
       'Sales process optimization',
@@ -951,6 +1006,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     ],
     popular: true,
     icon: '📈',
+
       'AI-powered sales analytics engine with predictive insights and automation.',
     launchDate: '2025-04-01',
     color: 'from - blue - 600 to - indigo - 700',
@@ -976,10 +1032,13 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details:;
       'AI - powered sales analytics engine with predictive insights and automation.',
     launch_date: '2025 - 04 - 01',
+
     customers: 234,
     rating: 4 && 4.8,
     reviews: 178,
   },
+
+=======
     id: 'ai-powered-code-review-assistant', name: 'AI-Powered Code Review Assistant',
     tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',
     price: '$199', period: '/month',
@@ -1504,13 +1563,17 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     description: 'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data-driven insights.',
     features: [
       'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Real-time insights dashboard'
     ];
     popular: true;
     icon: '📈';
     color: 'from-blue-600 to-indigo-700';
     textColor: 'text-blue-400';
+
     link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence-platform',
+
     marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';
     targetAudience: 'Sales teams, Sales managers, Revenue operations';
     trialDays: 14;
@@ -1548,14 +1611,29 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementation_details: 'AI - powered sales analytics engine with predictive insights and automation.';
     launch_date: '2025 - 04 - 01';
     customers: 234;
+
     rating: 4 && 4.8,
+
     reviews: 178
 <<<<<<< HEAD
   }
 ];
-<<<<<<< HEAD
+
+
+=======
+    rating: 4.8
+    reviews: 178
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
     rating: 4.8,
     reviews: 178;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;

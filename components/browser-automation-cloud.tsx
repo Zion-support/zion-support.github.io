@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,9 +18,73 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+
+
 import React from 'react';
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
+
+
+
+
+  const features = [
+    'Parallel Playwright/Puppeteer execution'
+    'Queued jobs with retries and rate limits'
+    'Artifacts: HAR, traces, screenshots, videos'
+    'Rotating proxies and geo targeting'
+    'Webhook callbacks and REST API'
+  ];
+  return (
+    <>;
+      <SEO
+        title='Browser Automation Cloud'
+        description='Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies.'
+      />;
+      <main id='main' className='container mx-auto px-4 py-24'>;
+        <section className='max-w-5xl mx-auto'>;
+          <h1 className='text-4xl font-extrabold tracking-tight'>;
+            Browser Automation Cloud;
+          </h1>;
+          <p className='mt-4 text-lg text-gray-300'>;
+            Scale Playwright/Puppeteer tasks for testing, scraping, and robotic;
+            process automation with enterprise-grade reliability.;
+          </p>;
+          <div className='mt-8 grid sm:grid-cols-2 gap-6'>;
+            {features && features.map(f => (;
+              <div
+                key={f}
+                className='flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10'>;
+                <Check className='w-5 h-5 text-cyan-400 mt-1' />;
+                <p className='text-gray-200'>{f}</p>;
+              </div>;
+            ))}
+          </div>;
+          <div className='mt-8 flex flex-wrap items-center gap-4'>;
+            <a
+              href='/contact'
+              className='px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200'>;
+              Start from $99/mo;
+            </a>;
+            <a
+              href='/market-pricing'
+              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'>;
+              Market Pricing;
+            </a>;
+            <a
+              href='https://playwright && playwright.dev/'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
+              <ExternalLink className='w-4 h-4' /> Playwright;
+            </a>;
+            <a
+              href='https://pptr && pptr.dev/'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
+              <ExternalLink className='w-4 h-4' /> Puppeteer;
+=======
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -89,175 +154,11 @@ function BrowserAutomationCloudPage() {
           </div>;
         </section>;
       </main>;
-	const features = [
-		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
-	];
-=======
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
-=======
-import React from 'react';
-import SEO from '../components/SEO';
-import {Check, ExternalLink} from 'lucide-react';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function BrowserAutomationCloudPage() {
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-export default function BrowserAutomationCloudPage() {
-  const features = [
-    'Parallel Playwright/Puppeteer execution',
-    'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
-    'Rotating proxies and geo targeting',
-    'Webhook callbacks and REST API',;
-  ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-  const features = [
-    'Parallel Playwright/Puppeteer execution'
-    'Queued jobs with retries and rate limits'
-    'Artifacts: HAR, traces, screenshots, videos'
-    'Rotating proxies and geo targeting'
-    'Webhook callbacks and REST API'
-  ];
-  return (
-    <>
-      <SEO
-        title='Browser Automation Cloud'
-        description='Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies.'
-      />
-      <main id='main' className='container mx-auto px-4 py-24'>
-        <section className='max-w-5xl mx-auto'>
-          <h1 className='text-4xl font-extrabold tracking-tight'>
-            Browser Automation Cloud
-          </h1>
-          <p className='mt-4 text-lg text-gray-300'>
-            Scale Playwright/Puppeteer tasks for testing, scraping, and robotic
-            process automation with enterprise-grade reliability.
-          </p>
-          <div className='mt-8 grid sm:grid-cols-2 gap-6'>
-            {features.map(f => (
-              <div
-                key={f}
-                className='flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10'
-              >
-                <Check className='w-5 h-5 text-cyan-400 mt-1' />
-                <p className='text-gray-200'>{f}</p>
-              </div>
-            ))}
-          </div>
-          <div className='mt-8 flex flex-wrap items-center gap-4'>
-            <a
-              href='/contact'
-              className='px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200'
-            >
-              Start from $99/mo
-            </a>
-            <a
-              href='/market-pricing'
-              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'
-            >
-              Market Pricing
-            </a>
-            <a
-              href='https://playwright.dev/'
-              target='_blank'
-              rel='noreferrer'
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
-            >
-              <ExternalLink className='w-4 h-4' /> Playwright
-            </a>
-            <a
-              href='https://pptr.dev/'
-              target='_blank'
-              rel='noreferrer'
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
-            >
-              <ExternalLink className='w-4 h-4' /> Puppeteer
-            </a>
-          </div>
-        </section>
-      </main>
-    </>
-  );	return (
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-		<>
-			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
-			<main id="main" className="container mx-auto px-4 py-24">
-				<section className="max-w-5xl mx-auto">
-					<h1 className="text-4xl font-extrabold tracking-tight">Browser Automation Cloud</h1>
-					<p className="mt-4 text-lg text-gray-300">Scale Playwright/Puppeteer tasks for testing, scraping, and robotic process automation with enterprise-grade reliability.</p>
-					<div className="mt-8 grid sm:grid-cols-2 gap-6">
-						{features.map((f) => (
-							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
-								<Check className="w-5 h-5 text-cyan-400 mt-1" />
-<<<<<<< HEAD
-<p className="text-gray-200">{f}</p>
 
 =======
-								<p className="text-gray-200">{f}</p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-							</div>
-						))}
-					</div>
-					<div className="mt-8 flex flex-wrap items-center gap-4">
-						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $99/mo</a>
-						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>
-						<a href="https://playwright.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-							<ExternalLink className="w-4 h-4" /> Playwright
-							</a>
-<<<<<<< HEAD
-<a href="https://pptr.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-						<a href="https://pptr.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-							<ExternalLink className="w-4 h-4" /> Puppeteer
-							</a>
-					</div>
-				</section>
-			</main>
-		</>
-<<<<<<< HEAD
-	)
-}
-<<<<<<< HEAD
-<>;
-			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />;
-			<main id="main" className="container mx-auto px-4 py-24">;
-				<section className="max-w-5xl mx-auto">;
-					<h1 className="text-4xl font-extrabold tracking-tight">Browser Automation Cloud</h1>;
-					<p className="mt-4 text-lg text-gray-300">Scale Playwright/Puppeteer tasks for testing, scraping, and robotic process automation with enterprise-grade reliability.</p>;
-					<div className="mt-8 grid sm:grid-cols-2 gap-6">;
-						{features && features.map((f) => (;
-							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">;
-								<Check className="w-5 h-5 text-cyan-400 mt-1" />;
-								<p className="text-gray-200">{f}</p>;
-							</div>;
-						))}
-					</div>;
-					<div className="mt-8 flex flex-wrap items-center gap-4">;
-						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $99/mo</a>;
-						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>;
-						<a href="https://playwright && playwright.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">;
-							<ExternalLink className="w-4 h-4" /> Playwright;
-							</a>;
-						<a href="https://pptr && pptr.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">;
-							<ExternalLink className="w-4 h-4" /> Puppeteer;
-							</a>;
-					</div>;
-				</section>;
-			</main>;
-		</>;
-	),;
-}
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -286,9 +187,10 @@ export default function BrowserAutomationCloudPage() {
   </main>;
   </>),
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-=======
+
 	),
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -5,9 +5,11 @@ interface UseIntersectionObserverProps {
   root_margin?: string;
   freezeOnceVisible?: boolean;
 }
+
     const hasIOSupport = !!window && window.IntersectionObserver;
     if (!hasIOSupport || frozen || !node) return;
     const observerParams = { threshold, root, rootMargin };
+
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
     observer && observer.current = currentObserver;
     currentObserver && currentObserver.observe(node);

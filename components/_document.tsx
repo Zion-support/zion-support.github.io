@@ -1,38 +1,5 @@
-<<<<<<< HEAD
-import Document, {;
-  Html,;
-  Head,;
-  Main,;
-  NextScript,;
-  DocumentContext,;
-} from 'next/document';
-export default function Document() {;
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import Document, {
-<<<<<<< HEAD
-  Html
-  Head
-  Main
-  NextScript
-  DocumentContext;
-=======
-  Html,
-  Head,
-  Main,
-  NextScript,;
-  DocumentContext,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from 'next/document';
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function Document() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <Html lang='en'>;
       <Head>;
@@ -101,7 +68,26 @@ function Document() {
         <Main />;
         <NextScript />;
       </body>;
+
+  );
+}
+=======
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+=======
+
+
+import Document, {
+
+  Html,
+  Head,
+  Main,
+  NextScript,;
+  DocumentContext,;
+
+} from 'next/document';
+
+
+
 export default function Document() {
   return (
     <Html lang="en">
@@ -112,29 +98,20 @@ export default function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />
-<<<<<<< HEAD
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0a0a0a" />
-
       </Head>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-<<<<<<< HEAD
-);
-}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+
     </Html>);
 }
+
 =======
-  );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

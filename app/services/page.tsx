@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Services | Zion Tech Group",
-  description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+description:
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 };
 
 export default function ServicesOverviewPage() {
@@ -34,14 +35,14 @@ export default function ServicesOverviewPage() {
           href="/services/ai-services"
           title="AI Services"
           description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines", "Custom AI solutions"]}
+bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines", "Custom AI solutions"]}
           icon="🤖"
         />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
           description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security", "Infrastructure management"]}
+bullets={["Cloud migration", "DevOps + SRE", "Security", "Infrastructure management"]}
           icon="⚙️"
         />
         <ServiceCard
@@ -61,8 +62,92 @@ export default function ServicesOverviewPage() {
         <ServiceCard
           href="/services/data-analytics"
           title="Data Analytics"
-          description="Business intelligence, data visualization, and machine learning"
-          bullets={["Data engineering", "BI dashboards", "Predictive analytics", "Data visualization"]}
+description="Advanced analytics and BI solutions that transform data into insights"
+          bullets={["Real-time dashboards", "Predictive analytics", "AI-powered insights"]}
+          icon="📊"
+        />
+        <ServiceCard
+          href="/services/cloud-migration"
+          title="Cloud Migration"
+          description="Seamless cloud migration with zero downtime and cost optimization"
+          bullets={["AWS/Azure/GCP", "Zero-downtime migration", "Cost optimization"]}
+          icon="☁️"
+        />
+        <ServiceCard
+          href="/services/ai-content-generation"
+          title="AI Content Generation"
+          description="Scale content marketing with AI-powered content creation and optimization"
+          bullets={["Content creation", "SEO optimization", "Social media automation"]}
+          icon="✍️"
+        />
+        <ServiceCard
+          href="/services/blockchain-development"
+          title="Blockchain Development"
+          description="Secure blockchain applications, smart contracts, and Web3 solutions"
+          bullets={["Smart contracts", "DeFi applications", "NFT marketplaces"]}
+          icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/email-automation-suite"
+          title="Email Automation Suite"
+          description="AI-powered email marketing with advanced segmentation and personalization"
+          bullets={["AI personalization", "Advanced analytics", "Smart segmentation"]}
+          icon="📧"
+        />
+        <ServiceCard
+          href="/services/social-media-scheduler"
+          title="Social Media Scheduler"
+          description="AI-powered social media management with intelligent scheduling and analytics"
+          bullets={["Smart scheduling", "Content creation", "Cross-platform publishing"]}
+          icon="📱"
+        />
+        <ServiceCard
+          href="/services/ai-chatbot-builder"
+          title="AI Chatbot Builder"
+          description="No-code AI chatbot platform with advanced NLP and multi-language support"
+          bullets={["No-code builder", "Advanced NLP", "Easy integrations"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/lead-generation-tool"
+          title="Lead Generation Tool"
+          description="AI-powered lead generation with automated prospecting and qualification"
+          bullets={["AI prospecting", "Automated outreach", "Lead scoring"]}
+          icon="🎯"
+        />
+        <ServiceCard
+          href="/services/ai-content-writer"
+          title="AI Content Writer"
+          description="Advanced AI-powered content creation with SEO optimization and brand voice training"
+          bullets={["Multi-format support", "SEO optimization", "Brand voice training"]}
+          icon="✍️"
+        />
+        <ServiceCard
+          href="/services/website-analyzer"
+          title="Website Analyzer"
+          description="Comprehensive website analysis with SEO audit and performance monitoring"
+          bullets={["SEO audit", "Performance monitoring", "Competitive intelligence"]}
+          icon="🔍"
+        />
+        <ServiceCard
+          href="/services/ai-video-generator"
+          title="AI Video Generator"
+          description="Create professional videos with AI-powered editing and voice synthesis"
+          bullets={["AI video editing", "Voice synthesis", "Multi-format export"]}
+          icon="🎬"
+        />
+        <ServiceCard
+          href="/services/cybersecurity-suite"
+          title="Cybersecurity Suite"
+          description="Enterprise-grade security solutions with threat detection and 24/7 monitoring"
+          bullets={["Threat detection", "Vulnerability assessment", "Compliance management"]}
+          icon="🛡️"
+        />
+        <ServiceCard
+          href="/services/ai-data-analytics"
+          title="AI Data Analytics"
+          description="Advanced AI-powered analytics with predictive modeling and real-time insights"
+          bullets={["Predictive modeling", "Real-time dashboards", "Business intelligence"]}
           icon="📊"
         />
       </div>
@@ -128,6 +213,10 @@ function CTA() {
         >
           Email Us
         </a>
+      </div>
+<div className="mt-4 text-sm text-gray-500">
+        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
     </div>
   );

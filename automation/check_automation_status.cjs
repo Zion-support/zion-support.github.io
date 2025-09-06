@@ -51,23 +51,17 @@ async function checkAutomationStatus() {
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
-<<<<<<< HEAD
-    } catch (error) {
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
@@ -99,12 +93,9 @@ async function checkAutomationStatus() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       statusReport.pm2Processes = [];
     }
     // Check automation scripts
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     console.log('📋 Checking automation scripts...');
@@ -132,9 +123,6 @@ async function checkAutomationStatus() {
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
 <<<<<<< HEAD
-      'automation/master-orchestrator.cjs',
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -142,7 +130,6 @@ async function checkAutomationStatus() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'automation/health-check.cjs',
       'automation/security-scanner.cjs',
       'automation/code-quality-monitor.cjs',
@@ -152,8 +139,6 @@ async function checkAutomationStatus() {
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -208,6 +193,7 @@ async function checkAutomationStatus() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
@@ -220,7 +206,6 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
     // Determine overall status
     const availableScripts = statusReport.automationScripts.filter(s => s.exists).length;
@@ -241,11 +226,6 @@ async function checkAutomationStatus() {
     console.log(`   Health Check: ${statusReport.systemHealth.healthCheck}`);
     console.log(`   Overall Status: ${statusReport.overallStatus.toUpperCase()}`);
     // Save report
-<<<<<<< HEAD
-    return statusReport;
-  } catch (error) {
-    console.error('❌ Error checking automation "status": ', error.message);
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
@@ -294,6 +274,7 @@ async function checkAutomationStatus() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
@@ -312,14 +293,11 @@ async function checkAutomationStatus() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     statusReport.overallStatus = 'error';
   }
   return statusReport;
 }
 if (require.main === module) {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   checkAutomationStatus().then(report => {
@@ -393,4 +371,3 @@ module.exports = checkAutomationStatus;
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

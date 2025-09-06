@@ -8,7 +8,6 @@ interface NewsletterSubscription.testProps {
 }
 
 const NewsletterSubscription.test: React.FC<NewsletterSubscription.testProps> = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>NewsletterSubscription.test</h1>

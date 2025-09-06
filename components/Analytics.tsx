@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,14 +17,16 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React, { useEffect } from 'react';
+
 import Head from 'next / head';
 ;
+
 interface AnalyticsProps {
   tracking_id?: string;
 }
+
+
 interface AnalyticsProps {;
   trackingId?: string;
 }
@@ -41,9 +43,11 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       window && window.dataLayer = window && window.dataLayer || [];
       function gtag(): any (...args: unknown[]) {;
         window && window.dataLayer.push(args),;
+
       }
       window && window.gtag = gtag;
       gtag('js', new Date());
+
       gtag('config', trackingId, {;
         page_title: document && document.title,;
         page_location: window && window.location.href,;
@@ -100,6 +104,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   };
   // Expose tracking functions globally for use in other components;
   if (typeof window !== 'undefined') {;
+
     (window as any).trackEvent = trackEvent;
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
@@ -203,6 +208,7 @@ if ( {) {
   }
   return (
     <Head>;
+
       <script;
         dangerouslySetInnerHTML={{
 <<<<<<< HEAD
@@ -227,6 +233,14 @@ if ( {) {
                       window.gtag ('event', 'timing_complete', {
                         name: 'load',
                         value: Math.round (load_time),
+
+=======
+
+                        name: 'load',
+                        value: Math.round(loadTime),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      });
 =======
           __html: `
             // Performance monitoring
@@ -258,33 +272,23 @@ if ( {) {
 <<<<<<< HEAD
                 }, 0)
               })
-}
-=======
-                }, 0);
-              });
             }
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          `
-=======
-          `,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-        }}
-<<<<<<< HEAD
-      />;
+
     </Head>);
 }
 ;
-export default Analytics;
+
 =======
+
+          `,
+
+        }}
       />
     </Head>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Analytics;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,61 +1,13 @@
-<<<<<<< HEAD
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import OpenAI from 'openai',;
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
-// In-memory simple rate limiter (per IP)
-const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000, // 5 minutes
-const RATE_LIMIT_MAX_REQUESTS = 15,
 
-const ipToRequests: Record<string, { timestamps: number[] }> = {},
+=======
 
-function isRateLimited(ip: string): boolean {
-  const now = Date.now(),
-  const bucket = ipToRequests[ip] || { timestamps: [] },
-  // Drop old timestamps
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS),
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-<<<<<<< HEAD
-=======
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-// In-memory simple rate limiter (per IP);
-const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
-const RATE_LIMIT_MAX_REQUESTS = 15;
-const ipToRequests: Record<string, { timestamps: number[] }> = {};
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const bucket = ipToRequests[ip] || { timestamps: [] };
-  // Drop old timestamps;
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS);
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   if (!limited) {
     bucket.timestamps.push(now);
   }
-<<<<<<< HEAD
-  ipToRequests[ip] = bucket;
-  return limited;
-=======
-<<<<<<< HEAD
-  ipToRequests[ip] = bucket,
-  return limited
-=======
-  ipToRequests[ip] = bucket;
-  return limited;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -63,8 +15,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000, // 5 minutes
@@ -74,13 +26,8 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
-<<<<<<< HEAD
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS);
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
-=======
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -92,15 +39,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
-<<<<<<< HEAD
-  const authHeader = req.headers.authorization || '';
-  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined;
-  if (!token || token !== process.env.OPERATOR_API_TOKEN) {
-=======
-const authHeader = req.headers.authorization |''
-  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
-  if (!token |token !== process.env.OPERATOR_API_TOKEN) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
@@ -125,13 +65,10 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     const text = completion.choices?.[0]?.message?.content ?? ''
     return res.status(200).json({ text })
   } catch (err: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.error('Operator error', err)
-    return res.status(500).json({ error: 'Internal Server Error' })
-<<<<<<< HEAD
-  }
+
 }
+
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -204,15 +141,17 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
     return res.status (500).json ({ error: 'Internal Server Error' });
   }
 }
+
 ;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
-=======
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   };
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
@@ -264,10 +203,8 @@ export default async function handler(req, res) {
   
 }
   
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

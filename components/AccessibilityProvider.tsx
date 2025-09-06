@@ -1,13 +1,13 @@
-<<<<<<< HEAD
+
+
 interface AccessibilityContextType {;
-=======
-import React, { createContext, useContext, useState, ReactNode } from "react";
-<<<<<<< HEAD
+
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 interface AccessibilityContextType {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -21,6 +21,26 @@ interface AccessibilityContextType {
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
+
+
+
+export const useAccessibility = () => {;
+
+
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error(
+      "useAccessibility must be used within an AccessibilityProvider"
+    );
+  }
+  return context;
+}
+interface AccessibilityProviderProps {
+  children: React.ReactNode;
+}
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+
+
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -49,25 +69,21 @@ interface AccessibilityProviderProps {;
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
   children,;
 }) => {;
+
 =======
-interface AccessibilityProviderProps {
-  children: React.ReactNode;
-}
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-<<<<<<< HEAD
-  children
-}) => {
-=======
+
   children,
 }) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+
+
   const value = {;
     highContrast,;
     largeText,;
@@ -76,6 +92,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     toggleLargeText,;
     toggleReducedMotion,;
   };
+
+
   return (
     <AccessibilityContext && AccessibilityContext.Provider value={value}>;
       <div
@@ -84,10 +102,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
       </div>;
     </AccessibilityContext && AccessibilityContext.Provider>;
   );
-<<<<<<< HEAD
-}
-export default AccessibilityProvider;
-<<<<<<< HEAD
+
 const AccessibilityContext = create_context<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -140,10 +155,11 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
 ;
 export default AccessibilityProvider;
 ;
+
 =======
-=======
+
 };
 
 export default AccessibilityProvider;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

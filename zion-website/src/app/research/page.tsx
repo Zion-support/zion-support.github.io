@@ -1,4 +1,5 @@
 import {
+
   LightBulbIcon,
   CpuChipIcon,
   AcademicCapIcon,
@@ -79,15 +80,18 @@ const research_impact = [;
     metric: 'Citations',
     value: '10, 000+',
     description: 'Academic citations demonstrating research influence'},
+
   {
     metric: 'Patents Filed'
     value: '25+'
     description: 'Intellectual property protecting our innovations'}
   {
+
     metric: 'Research Collaborations',
     value: '50+',
     description: 'Partnerships with leading academic institutions'}];
 const academic_partners = [;
+
   {
     name: 'Stanford University'
     location: 'Stanford, CA'
@@ -104,7 +108,7 @@ const academic_partners = [;
     focus: 'AI Ethics & Governance'
     collaboration: 'Policy research and ethical AI development'}
   {
-<<<<<<< HEAD
+
     name: 'University of Tokyo',
     location: 'Tokyo, Japan',
     focus: 'Robotics & Autonomous Systems',
@@ -113,14 +117,64 @@ export default /**
  * ResearchPage - Function description
  */
 function ResearchPage() {
+
   return (
     <div className=&quot;bg - black & quot;>;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Research &{' '}
+
+
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Pushing the boundaries of artificial intelligence through groundbreaking research, 
+
+
+              innovative discoveries, and academic collaboration.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* Research Focus Areas */}
+      <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Research</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+            Focus Areas
+          </p>
+
+
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our research spans the cutting edge of AI and technology, driving innovation 
+
+
+            and advancing the state of the art.
+          </p>
+        </div>
+        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
+          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
+            {researchAreas.map((area) => (
+              <div key={area.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
+                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
+                  <area.icon className=&quot;h-8 w-8 text-blue-400&quot; />
+                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{area.name}</h3>
+                </div>
+                <p className=&quot;text-gray-300 mb-6&quot;>{area.description}</p>
+                <div className=&quot;space-y-2&quot;>
+                  {area.topics.map((topic) => (
+                    <div key={topic} className=&quot;flex items-center gap-2&quot;>
+                      <div className=&quot;h-1.5 w-1.5 bg-blue-400 rounded-full&quot;></div>
+                      <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
+                    </div>
+                  ))}
+=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Innovation;
               </span>;
@@ -240,28 +294,32 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Recent Publications */}
-<<<<<<< HEAD
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Publications</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Recent Research;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Our latest research contributions to the field of artificial intelligence and technology.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {recent_publications.map ((publication) => (
-              <div key={publication.title} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
-                <div className=&quot;flex items - center gap - x-2 mb - 4&quot;>;
-                  <span className={`inline - flex items - center rounded - full px - 2.5 py - 0.5 text - xs font - medium ${
-                    publication.impact === 'High Impact' ? 'bg - blue - 600 / 20 text - blue - 400' :;
-                    publication.impact === 'Industry Leading' ? 'bg - green - 600 / 20 text - green - 400' :;
-                    publication.impact === 'Breakthrough' ? 'bg - purple - 600 / 20 text - purple - 400' :;
-                    'bg - gray - 600 / 20 text - gray - 400';
-                  }`}>;
+
+
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+            Recent Research
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our latest research contributions to the field of artificial intelligence and technology.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+            {recentPublications.map((publication) => (
+              <div key={publication.title} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-x-2 mb-4">
+                  <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                    publication.impact === 'High Impact' ? 'bg-blue-600/20 text-blue-400' :
+                    publication.impact === 'Industry Leading' ? 'bg-green-600/20 text-green-400' :
+                    publication.impact === 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :
+                    'bg-gray-600/20 text-gray-400'
+                  }`}>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {publication.impact}
                   </span>;
                   <span className=&quot;text - sm text - gray - 400 & quot;>{publication.year}</span>;
@@ -335,7 +393,36 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Research Impact */}
-<<<<<<< HEAD
+
+
+
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+
+            Research Influence
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our research has made significant contributions to the field, 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            influencing both academia and industry.
+          </p>
+        </div>
+        <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
+          <dl className=&quot;grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4&quot;>
+            {researchImpact.map((item) => (
+              <div key={item.metric} className=&quot;flex flex-col bg-white/5 p-8 backdrop-blur-sm&quot;>
+                <dt className=&quot;text-sm font-semibold leading-6 text-gray-300&quot;>{item.metric}</dt>
+                <dd className=&quot;order-first text-3xl font-bold tracking-tight text-white&quot;>{item.value}</dd>
+                <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
+              </div>
+            ))}
+=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
@@ -399,7 +486,38 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Academic Collaborations */}
-<<<<<<< HEAD
+
+
+
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+
+            Academic Partnerships
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            We collaborate with leading academic institutions worldwide to advance 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            the frontiers of AI research and innovation.
+          </p>
+        </div>
+        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
+          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
+            {academicPartners.map((partner) => (
+              <div key={partner.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
+                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
+                  <AcademicCapIcon className=&quot;h-8 w-8 text-blue-400&quot; />
+                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{partner.name}</h3>
+                </div>
+                <div className=&quot;space-y-3 text-gray-300&quot;>
+                  <p className=&quot;flex items-center gap-2&quot;>
+                    <GlobeAltIcon className=&quot;h-5 w-5 text-blue-400&quot; />
+=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Collaborations</h2>;
@@ -488,7 +606,41 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
+
+
+
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+
+            Join our research community
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            Interested in collaborating on cutting-edge AI research? 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            Let's explore opportunities to work together.
+          </p>
+          <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
+            <a
+              href=&quot;/contact&quot;
+              className=&quot;rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105&quot;
+            >
+              Get in Touch
+            </Link>
+            <a href=&quot;/careers&quot; className=&quot;text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200&quot;>
+              Research Careers <span aria-hidden=&quot;true&quot;>→</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
           <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;

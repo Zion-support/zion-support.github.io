@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-// This file re - exports all fraud detection functionality;
-// to maintain backward compatibility;
-export * from './analyze_content';
-export * from './analyze_email';
-export * from './flag_content';
-export * from './message_check';
-export * from './monitor_content';
-export * from './signup_check';
-;
-=======
 
 // This file re-exports all fraud detection functionality;
 // to maintain backward compatibility;
@@ -19,4 +8,3 @@ export * from './flagContent',;
 export * from './messageCheck',;
 export * from './monitorContent',;
 export * from './signupCheck',;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

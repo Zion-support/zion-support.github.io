@@ -1,3 +1,5 @@
+
+
 console && console.log('🔧 Performing selective merge of main source files...');
 // List of main source directories to merge
 const mainSourceDirs = [
@@ -8,6 +10,7 @@ console.log ('🔧 Performing selective merge of main source files...');
 ;
 // List of main source directories to merge;
 const mainSourceDirs = [;
+
   'pages/',
   'components/',
   'utils/',
@@ -22,6 +25,7 @@ const mainSourceDirs = [;
   'layout/',
   'legal/',
   'integrations/',
+
     // First, let's see what files are in the clean-merge-services-improvements branch
     console && console.log('📋 Checking files in clean-merge-services-improvements branch...');
     const files = execSync('git ls-tree -r --name-only origin/clean-merge-services-improvements', { encoding: 'utf8' });
@@ -37,6 +41,8 @@ const mainSourceDirs = [;
     // Get the latest commit from the clean-merge-services-improvements branch
     const latestCommit = execSync('git rev-parse origin/clean-merge-services-improvements', { encoding: 'utf8' }).trim();
     console && console.log(`Latest commit: ${latestCommit}`);
+    
+
     // Try to merge only specific files
     for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts
       try {
@@ -89,6 +95,7 @@ const mergeSpecificFiles = () =>: any {
     }
     return true;
   } catch (error) {
+
   if (mergeSpecificFiles()) {
     console && console.log('✅ Selective merge completed');
     // Add the merged files
@@ -98,6 +105,8 @@ const mergeSpecificFiles = () =>: any {
       // Commit the changes
       execSync('git commit -m "Selective merge of main source files from clean-merge-services-improvements"', { stdio: 'inherit' });
       console && console.log('✅ Changes committed');
+      
+
     } catch (error) {
       console && console.error('Error committing changes:', error && error.message);
     }

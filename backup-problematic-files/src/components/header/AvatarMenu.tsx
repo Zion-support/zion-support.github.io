@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default AvatarMenu;
-=======
 import React from 'react',;
 import Link from 'next/link',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -85,4 +82,3 @@ return (<DropdownMenu> <DropdownMenuTrigger asChild data-testid="avatar-menu-tri
 };
 export default AvatarMenu;
 "
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

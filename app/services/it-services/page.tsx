@@ -1,3 +1,4 @@
+
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, security, and infrastructure management for modern businesses.'
@@ -92,6 +93,7 @@ export default function ITServicesPage() {
         </div>
       </div>
 
+
       <Pricing />
     </section>
   );
@@ -99,6 +101,7 @@ export default function ITServicesPage() {
 
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
+
     <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <ul className="space-y-2">
@@ -132,12 +135,14 @@ function ServiceCard({ title, description, price, features }: {
           </li>
         ))}
       </ul>
+
     </div>
   );
 }
 
 function Pricing() {
   return (
+
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
       <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">IT Service Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -201,9 +206,11 @@ function Pricing() {
           </a>
         </div>
       </div>
+
     </div>
   );
 }
+
 
 function Plan({ name, price, duration, features }: { 
   name: string; 
@@ -227,3 +234,5 @@ function Plan({ name, price, duration, features }: {
     </div>
   );
 }
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

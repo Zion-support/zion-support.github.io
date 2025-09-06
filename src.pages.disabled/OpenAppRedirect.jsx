@@ -1,11 +1,14 @@
 import React from \'react\' export default OpenAppRedirect\';
-<<<<<<< HEAD:src.pages.disabled/OpenAppRedirect.jsx
-<<<<<<< HEAD
+
+
+
 import _React from 'react' export default OpenAppRedirect';
-<<<<<<< HEAD
+
 =======
+
 import _React from 'react' export default OpenAppRedirect';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 :src.pages.disabled/OpenAppRedirect.jsx

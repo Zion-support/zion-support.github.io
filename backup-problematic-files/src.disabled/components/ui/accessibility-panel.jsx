@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-"use client"; ","; "react";"; "framer-motion'''
-"use client"; ","; "react";"; "framer-motion'''
-=======
 import React from 'react';
 
 const Accessibility-panel = ({ className }) => {
@@ -14,4 +10,3 @@ const Accessibility-panel = ({ className }) => {
 };
 
 export default Accessibility-panel;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

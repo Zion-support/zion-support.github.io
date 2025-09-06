@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -48,6 +46,9 @@ async function checkCodeDuplication() {
     { file: 'pages/ai-services.tsx', line: 7, duplicateOf: 'pages/about.tsx' },
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -243,7 +244,6 @@ async function checkCodeStyle() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (duplications.length > 0) {}
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
@@ -267,8 +267,6 @@ async function checkCodeStyle() {}
     console.error(`[ERROR] Code style issues "found": ${error.message}`);
     return { "passed": false, "error": 'Code style issues detected' };
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -290,7 +288,6 @@ async function checkTypeScriptQuality() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   };
 };
 async function checkTypeScriptQuality() {}
@@ -303,8 +300,6 @@ async function checkTypeScriptQuality() {}
   } catch (error) {}
     console.error(`[ERROR] TypeScript quality issues "found": ${error.message}`);
     return { "passed": false, "error": 'TypeScript quality issues detected' };
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -332,7 +327,6 @@ async function checkTestCoverage() {
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {
     "cwd": process.cwd(),
     "ignore": 'node_modules/**'});
@@ -350,8 +344,6 @@ async function checkDocumentationCoverage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -366,7 +358,6 @@ async function checkDocumentationCoverage() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   };
 };
 async function checkTestCoverage() {}
@@ -411,6 +402,11 @@ async function runCodeQualityMonitor() {}
   const results = [
     complexityResult,
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const results = [
+    complexityResult,
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -418,7 +414,6 @@ async function runCodeQualityMonitor() {}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const results = [complexityResult,]
     duplicationResult,
     styleResult,
@@ -429,10 +424,6 @@ async function runCodeQualityMonitor() {}
   const issuesFound = results.filter(r => !r.passed);
   const endTime = Date.now();
   const duration = endTime - startTime;
-<<<<<<< HEAD
-    process.exit(1);
-  } else {
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -478,7 +469,6 @@ async function runCodeQualityMonitor() {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
@@ -496,8 +486,6 @@ async function runCodeQualityMonitor() {}
   } else {}
     console.log('[INFO] Code quality is high.');
     process.exit(0);
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -523,9 +511,18 @@ runCodeQualityMonitor();
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   };
 };
+<<<<<<< HEAD
 runCodeQualityMonitor();
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
+runCodeQualityMonitor();
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  };
+};
+runCodeQualityMonitor();
+=======
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
@@ -541,4 +538,3 @@ monitor.analyzeCodeQuality().then(metrics => {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

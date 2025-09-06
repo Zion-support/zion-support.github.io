@@ -617,56 +617,6 @@ export default function CloudDevOpsPage() {
 <<<<<<< HEAD
     </Layout>
   );
-                </ul>;
-              </div>;
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-700 p-8 rounded-xl text-white">;
-                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Your Infrastructure?</h3>;
-                <p className="text-lg mb-6">;
-                  Let our cloud and DevOps experts help you transform your infrastructure;
-                  and accelerate your development processes.;
-                </p>;
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
-                  Schedule Consultation;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20 bg-gray-900 text-white">;
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-              Ready to Transform Your Infrastructure?;
-            </h2>;
-            <p className="text-xl mb-8 max-w-3xl mx-auto">;
-              Contact our cloud and DevOps team to discuss your specific requirements;
-              and discover how we can help modernize your infrastructure.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
-                Contact Cloud Team;
-              </button>;
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">;
-                Download Cloud Brochure;
-              </button>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-    </Layout>;
-    </>;
-    </Layout>;
-    </>;
-    </Layout>;
-  );
-    </>;
-  ),;
-}
-=======
-  );
 };
 
 export default Cloud-devops;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

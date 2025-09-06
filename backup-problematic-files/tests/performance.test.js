@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Performance.test utility
 export const Performance.test = () => {
   // Implementation here

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-export default function IncubatorPage() {;
+
+
   return (
     <EnhancedLayout>;
       <div className='max-w-3xl'>;
@@ -29,8 +29,16 @@ export default function IncubatorPage() {;
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>;
       </div>;
     </EnhancedLayout>;
+
   );
 }
+=======
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
@@ -78,10 +86,7 @@ export default function IncubatorPage() {
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-  );
-}
-<<<<<<< HEAD
+
 import Link from 'next / link';
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 export default /**
@@ -122,12 +127,10 @@ function IncubatorPage() {
   )
 
 }
+
 =======
-=======
+
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

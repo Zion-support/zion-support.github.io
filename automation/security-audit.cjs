@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-}},
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -57,6 +54,12 @@ const securityChecks = [{
     },
   },
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      console.log(`Found ${foundEnvFiles} environment files`);
+    },
+  },
+=======
 
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -66,7 +69,6 @@ const securityChecks = [{
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }},
   {
     "name": 'API Security Check',
@@ -90,19 +92,20 @@ const securityChecks = [{
 <<<<<<< HEAD
             !content.includes('// Security: ')
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            !content.includes('// Security: ')
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             !content.includes('// "Security": ')
           ) {
             securityIssues++;
           }
         });
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,7 +132,6 @@ const securityChecks = [{
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     }},
   {
@@ -150,8 +152,6 @@ const securityChecks = [{
             cspFound++;
           }
         });
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -176,7 +176,6 @@ const securityChecks = [{
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     }},
   {
@@ -201,12 +200,16 @@ const securityChecks = [{
     },
   },
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    },
+  },
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }},
 ];
 // Run security checks
@@ -224,8 +227,6 @@ const report = {
   "timestamp": new Date().toISOString(),
   "checks": securityChecks.map(check => ({
     name: check.name,
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -251,14 +252,11 @@ const report = {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -271,7 +269,6 @@ const report = {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -301,7 +298,6 @@ console.log(`📄 Security report saved to: ${reportFile}`);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -318,9 +314,6 @@ console.log('� Security Audit Starting...\n')
     "status"
 =======
 <<<<<<< HEAD
-    "status"
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
     "status"
 =======
@@ -331,4 +324,3 @@ console.log('� Security Audit Starting...\n')
     "status"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

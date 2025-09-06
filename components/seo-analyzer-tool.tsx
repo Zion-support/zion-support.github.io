@@ -1,95 +1,45 @@
-<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
+
+} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
+
+=======
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-export default function SEOAnalyzerToolPage() {;
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const [url, setUrl] = useState('');
-      icon: <Search className="w-8 h-8 text-white" />,
-      title: 'Comprehensive SEO Analysis',
-      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',
-    color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500'},
-    {
-      icon: <Target className="w-8 h-8 text-white" />,
 
-  const _features = [
-    {
-      icon: <Search className=&quot;w-8 h-8 text-white&quot; />,
-      title: 'Comprehensive SEO Analysis',
-      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500'},
-    {
-      icon: <Target className=&quot;w-8 h-8 text-white&quot; />,
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-      title: 'Keyword Research',
-      description: 'Discover high-value keywords and analyze search intent to optimize your content strategy.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500'},
-    {
-icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: 'Competitive Analysis',
-      description: 'Analyze your competitors\' SEO strategies and identify opportunities to outperform them.',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'},
-    {
-icon: <Zap className="w-8 h-8 text-white" />,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent recommendations and actionable insights to improve your search rankings.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500'}],
-const seoFactors = [
-    {
-      category: 'On-Page SEO'
-      factors: [
-        'Title tags optimizationMeta descriptionsHeader structure (H1, H2, H3)Content quality and lengthInternal linking structureImage optimization (alt tags)'
-      ];
-      icon: '📝',
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
-  Search
-  TrendingUp
-  CheckCircle
-  AlertTriangle
-  ArrowRight
-  Target
-  BarChart3
-  Globe
-  Smartphone
-  Zap;
-} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-=======
+
   Search,
   TrendingUp,
   CheckCircle,
@@ -100,236 +50,20 @@ import {
   Globe,
   Smartphone,;
   Zap,;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-export default function SEOAnalyzerToolPage() {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-export default function SEOAnalyzerToolPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+export default function SEOAnalyzerToolPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
 
-  const features = [
-    {
-      icon: <Search className='w-8 h-8 text-white' />
-      description:
-        'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
-    }
-    {
-      icon: <Target className='w-8 h-8 text-white' />
-      title: 'Keyword Research'
-      description:
-        'Discover high-value keywords and analyze search intent to optimize your content strategy.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'
-    }
-    {
-      icon: <BarChart3 className='w-8 h-8 text-white' />
-      title: 'Competitive Analysis'
-      description:
-        "Analyze your competitors' SEO strategies and identify opportunities to outperform them."
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'
-    }
-    {
-      icon: <Zap className='w-8 h-8 text-white' />
-      title: 'AI-Powered Insights'
-      description:
-        'Get intelligent recommendations and actionable insights to improve your search rankings.'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'
-    }
-  ];      gradient: 'from-orange-400 to-red-500'}]
-  const seoFactors = [
-    {
-      category: 'On-Page SEO'
-      factors: [
-        'Title tags optimization'
-        'Meta descriptions'
-        'Header structure (H1, H2, H3)'
-        'Content quality and length'
-        'Internal linking structure'
-        'Image optimization (alt tags)'
-      ]
-      icon: '📝'
-      color: 'text-green-400',      icon: '📝'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      color: 'text-green-400'
-    }
-    {
-      category: 'Technical SEO'
-      factors: [
-        'Page load speedMobile responsivenessXML sitemapRobots.txt configurationSSL certificateCore Web Vitals'
-      ];
-      icon: '⚙️'
-      color: 'text-blue-400'
-    }
-    {
-      category: 'Content SEO'
-      factors: [
-        'Keyword densityContent relevanceReadability scoresContent freshnessMultimedia optimizationSchema markup'
-      ]
-      icon: '📊'
-      color: 'text-purple-400'
-    }
-    {
-      category: 'Local SEO'
-      factors: [
-        'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      ]
-      icon: '📍'
-      color: 'text-orange-400'
-    }
-<<<<<<< HEAD
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-  Search,
-  TrendingUp,
-  CheckCircle,
-  AlertTriangle,
-  ArrowRight,
-  Target,
-  BarChart3,
-  Globe,
-  Smartphone,
-  Zap,
-} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-export default /**
- * SEOAnalyzerToolPage - Function description
- */
-function SEOAnalyzerToolPage() {
-  const [is_analyzing, setIsAnalyzing] = useState (false);
-  const [analysis_results, setAnalysisResults] = useState (null);
-  const [url, set_url] = useState ('');
-;
-  const features = [;
-    {
-      icon: <Search className='w - 8 h - 8 text - white' />,
-      description:;
-        'Deep analysis of on - page SEO factors, technical issues, and content optimization opportunities.',
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
-      gradient: 'from - green - 400 to - emerald - 500',
-    },
-    {
-      icon: <Target className='w - 8 h - 8 text - white' />,
-      title: 'Keyword Research',
-      description:;
-        'Discover high - value keywords and analyze search intent to optimize your content strategy.',
-      color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600',
-      gradient: 'from - blue - 400 to - cyan - 500',
-    },
-    {
-      icon: <BarChart3 className='w - 8 h - 8 text - white' />,
-      title: 'Competitive Analysis',
-      description:;
-        "Analyze your competitors' SEO strategies and identify opportunities to outperform them.",
-      color: 'bg - gradient - to - br from - purple - 500 to - indigo - 600',
-      gradient: 'from - purple - 400 to - indigo - 500',
-    },
-    {
-      icon: <Zap className='w - 8 h - 8 text - white' />,
-      title: 'AI - Powered Insights',
-      description:;
-        'Get intelligent recommendations and actionable insights to improve your search rankings.',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-      gradient: 'from - orange - 400 to - red - 500',
-    },
-  ];      gradient: 'from - orange - 400 to - red - 500'}],
-  const seo_factors = [;
-    {
-      category: 'On - Page SEO',
-      factors: [;
-        'Title tags optimization',
-        'Meta descriptions',
-        'Header structure (H1, H2, H3)',
-        'Content quality and length',
-        'Internal linking structure',
-        'Image optimization (alt tags)',
-      ],
-      icon: '📝',
-      color: 'text - green - 400',      icon: '📝',
-      color: 'text - green - 400';
-    }
-    {
-      category: 'Technical SEO',
-      factors: [;
-        'Page load speed_mobile responsivenessXML sitemap_robots.txt configurationSSL certificate_core Web Vitals';
-      ];
-      icon: '⚙️',
-      color: 'text - blue - 400';
-    }
-    {
-      category: 'Content SEO',
-      factors: [;
-        'Keyword density_content relevance_readability scores_content freshness_multimedia optimization_schema markup';
-      ],
-      icon: '📊',
-      color: 'text - purple - 400';
-    }
-    {
-      category: 'Local SEO',
-      factors: [;
-        'Google My BusinessLocal citations_review management_local keyword targeting_location - based content_local link building';
-      ],
-      icon: '📍',
-      color: 'text - orange - 400',
-    },
-    {
-      category: 'Technical SEO',
-      factors: [;
-        'Page load speed',
-        'Mobile responsiveness',
-        'XML sitemap',
-        'Robots.txt configuration',
-        'SSL certificate',
-        'Core Web Vitals',
-      ],
-      icon: '⚙️',
-      color: 'text - blue - 400',
-    },
-    {
-      category: 'Content SEO',
-      factors: [;
-        'Keyword density',
-        'Content relevance',
-        'Readability scores',
-        'Content freshness',
-        'Multimedia optimization',
-        'Schema markup',
-      ],
-      icon: '📊',
-      color: 'text - purple - 400',
-    },
-    {
-      category: 'Local SEO',
-      factors: [;
-        'Google My Business',
-        'Local citations',
-        'Review management',
-        'Local keyword targeting',
-        'Location - based content',
-        'Local link building',
-      ],
-      icon: '📍',
-      color: 'text - orange - 400',
-    },  ];      color: 'text - orange - 400';
+
+
     }
   ];
+
+
   const features = [;
     {;
       icon: <Search className='w-8 h-8 text-white' />,;
@@ -454,7 +188,7 @@ function SEOAnalyzerToolPage() {
       price: '$39',
       period: '/month',
       description: 'Perfect for small businesses and bloggers',
-features: [;
+      features: [;
         '10 website analyses / month',
         'Basic SEO metrics',
         'Keyword research (100 keywords)',
@@ -467,11 +201,13 @@ features: [;
       ];
       popular: false;
     }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       name: 'Professional',
       price: '$89',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
-features: [;
+
+      features: [;
         '50 website analyses / month',
         'Advanced SEO metrics',
         'Keyword research (500 keywords)',
@@ -486,11 +222,13 @@ features: [;
       ];
       popular: true;
     }
+
       name: 'Enterprise',
       price: '$249',
       period: '/month',
       description: 'For large organizations and SEO agencies',
-features: [;
+
+      features: [;
         'Unlimited analyses',
         'Enterprise SEO metrics',
         'Unlimited keyword research',
@@ -610,9 +348,18 @@ features: [;
     if () return) {
   $2
 }        'Unlimited analyses_enterprise SEO metrics_unlimited keyword research_advanced competitive analysis24 / 7 dedicated support_custom reporting_white - label options_custom integrations';
+
       ];
       popular: false;
     }
+
+
+      ];
+      popular: false;
+    }
+
+    
+
     setIsAnalyzing(true);
     // Simulate SEO analysis
     setTimeout(() => {
@@ -624,6 +371,7 @@ features: [;
         contentScore: 80
         mobileScore: 85
         issues: [
+
   const handleAnalyzeSEO = async () => {
     if () return) {
   $2
@@ -639,6 +387,7 @@ features: [;
         content_score: 80,
         mobile_score: 85,
         issues: [;
+
           {
             type: 'error'
             message: 'Missing meta description'
@@ -650,6 +399,7 @@ features: [;
             priority: 'medium'
           }
           {
+
             type: 'info',
             message: 'Consider adding more internal links',
             priority: 'low',
@@ -662,6 +412,7 @@ features: [;
           'Implement schema markup for rich snippets',
         ],
         keywords: [;
+
           {
             keyword: 'website optimization'
             volume: '12K'
@@ -674,6 +425,9 @@ features: [;
             difficulty: 'high'
           }
         ]
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   const handleAnalyzeSEO = async () => {;
     if (!url && url.trim()) return;
     setIsAnalyzing(true);
@@ -723,41 +477,43 @@ features: [;
           },;
         ],;
       });
-<<<<<<< HEAD
+
           { type: 'error', message: 'Missing meta description', priority: 'high' },
           { type: 'warning', message: 'Title tag too long (65 characters)', priority: 'medium' },
           { type: 'info', message: 'Consider adding more internal links', priority: 'low' }
         ];
         recommendations: [
-=======
-      setIsAnalyzing(false);
-<<<<<<< HEAD
-    }, 4000);  };        recommendations: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
+
         ];
+
         keywords: [;
           { keyword: 'website optimization', volume: '12K', difficulty: 'medium' },;
           { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },;
+
           { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
         ];
       });
-<<<<<<< HEAD
+
       setIsAnalyzing(false);
     }, 4000);
   };
 =======
-      setIsAnalyzing(false)
-    }, 4000)
-  }
+
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+      setIsAnalyzing(false);
+
     }, 4000);  };
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+
       setIsAnalyzing (false);
     }, 4000);  }        recommendations: [;
           'Optimize meta descriptions for better click - through rates_improve page load speed by optimizing images_add more relevant internal links to improve site structure_implement schema markup for rich snippets';
@@ -773,12 +529,14 @@ features: [;
   }
 ;
   return (
+
     <>;
       <Head>;
         <title>;
           SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &;
           Optimization;
         </title>;
+
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -824,35 +582,14 @@ features: [;
             SEO Analyzer Tool;
           </h1>;
           <p className='text - responsive - md text - gray - 300 max - w-5xl mx - auto leading - relaxed mb - 12'>;
+
             Analyze your website's SEO performance with our comprehensive tool.;
             Get detailed insights, keyword research, and optimization;
             recommendations to improve your search rankings and drive more;
             organic traffic.;
           </p>;
-    <>
-      <Head>
-        <title>SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis & Optimization</title>
-        <meta name="description" content="Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve search rankings." />
-        <meta property="og:title" content="SEO Analyzer Tool - Zion Tech Group" />
-        <meta property="og:description" content="Professional SEO analysis tool with comprehensive insights and optimization recommendations." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      {/* Hero Section */}
-      <section className="relative section-padding bg-gradient-cursor overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
-        <div className="relative z-10 container-cursor text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
-            <Search className="w-4 h-4 mr-2" />
-            Professional SEO Analysis
-          </div>
-          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
-            SEO Analyzer Tool
-          </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
-          </p>
+
+
                 className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'                disabled={isAnalyzing || !url && url.trim()}>;
                 {isAnalyzing ? (;
                   <>;
@@ -891,50 +628,8 @@ features: [;
                 onClick={handleAnalyzeSEO}
                 size="lg"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap"
-                disabled={isAnalyzing || !url.trim()}
-              >
-                {isAnalyzing ? (
-                  <>
-<<<<<<< HEAD
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-=======
-                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                    Analyzing...
-                  </>
-                ) : (
-                  <>
-<<<<<<< HEAD
-<Search className="w-5 h-5 mr-2" />
-=======
-                    <Search className='w-5 h-5 mr-2' />                    <Search className="w-5 h-5 mr-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                    Analyze SEO
-                  </>
-                )}
-              </Button>
-            </div>
-          </div>
-<<<<<<< HEAD
-disabled={isAnalyzing || !url && url.trim()}>;
-                {isAnalyzing ? (;
-                  <>;
-                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />;
-                    Analyzing...;
-                  </>;
-                ) : (;
-                  <>;
-                    <Search className='w-5 h-5 mr-2' />                    <Search className="w-5 h-5 mr-2" />;
-                    Analyze SEO;
-                  </>;
-                )}
-              </Button>;
-            </div>;
-          </div>;
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
-=======
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
             <Button
               href='#pricing'
               variant='outline'
@@ -953,15 +648,9 @@ disabled={isAnalyzing || !url && url.trim()}>;
               View Pricing;
             </Button>;
             <Button
-<<<<<<< HEAD
-              href='/contact'
-              variant='outline'
-              size='lg'
-              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
-<<<<<<< HEAD
+
+=======
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               href="#pricing"
@@ -977,7 +666,10 @@ href="/contact"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
             >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo
+
             </Button>;
           </div>;
         </div>;
@@ -1101,15 +793,18 @@ href="/contact"
               Powerful SEO Features;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+
               Our SEO analyzer provides comprehensive insights and tools to help;
               you dominate search rankings.;
             </p>;
           </div>;
+
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Powerful SEO Features
+
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.
@@ -1135,60 +830,38 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover group border-gradient-green"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-            {features.map ((feature, index) => (
-              <Card;
-                key={index}
-                className='card - hover group border - gradient - green';
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className='flex items - start space - x-6'>;
-                  <div className='relative'>;
-                    <div;
-                      className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 3xl bg - gradient - to - br ${feature.color} shadow - xl group - hover:scale - 110 transition - transform duration - 300`}
-                    >;
-                      {feature.icon}
-                    </div>;
-                    <div;
-                      className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`}
-                    />;
-                  </div>;
-                  <div className='flex - 1'>;
-                    <h3 className='text - 2xl font - bold mb - 4 text - white'>;
-                      {feature.title}
-<<<<<<< HEAD
-                    </h3>;
-                    <p className='text - gray - 400 leading - relaxed'>                      {feature.description}              Powerful SEO Features;
-            </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-              Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-            {features.map ((feature, index) => (
-              <Card;
-                key={index}
-                className="card - hover group border - gradient - green";
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className="flex items - start space - x-6">;
-                  <div className="relative">;
-                    <div className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 3xl bg - gradient - to - br ${feature.color} shadow - xl group - hover:scale - 110 transition - transform duration - 300`}>;
-                      {feature.icon}
-                    </div>;
-                    <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`} />;
-                  </div>;
-                  <div className="flex - 1">;
-                    <h3 className="text - 2xl font - bold mb - 4 text - white">;
-                      {feature.title}
-                    </h3>;
-                    <p className="text - gray - 400 leading - relaxed">;
-                      {feature.description}
+
+
+                    </p>
+                  </div>
+                </div>
+              </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* SEO Factors Section */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              Comprehensive SEO Analysis
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              We analyze every aspect of your website's SEO to provide
+              actionable insights and recommendations.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {seoFactors.map((category, index) => (
+=======
           </div>;
         </div>;
       </section>;
@@ -1219,6 +892,7 @@ href="/contact"
               actionable insights and recommendations.;
             </p>;
           </div>;
+
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -1267,6 +941,7 @@ href="/contact"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Comprehensive SEO Analysis
+
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We analyze every aspect of your website's SEO to provide actionable insights and recommendations.
@@ -1286,23 +961,23 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover border-gradient-green"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-center mb-6">
-                  <div className="text-3xl mr-4">{category.icon}</div>
-                  <h3 className={`text-xl font-bold ${category.color}`}>{category.category}</h3>
-                </div>
-                <ul className="space-y-3">
-                  {category.factors.map((factor, factorIndex) => (
-                    <li key={factorIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+
+
                       {factor}
                     </li>;
                   ))}
                 </ul>;
               </Card>;
             ))}
-<<<<<<< HEAD
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Demo Analysis Results */}
+      {analysisResults && (
+
           </div>;
         </div>;
       </section>;
@@ -1384,15 +1059,18 @@ href="/contact"
                 SEO Analysis Results;
               </h2>;
               <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+
                 Here's a sample analysis of a website. Get comprehensive;
                 insights for your own website.;
               </p>;
             </div>;
+
         <section className="section-padding bg-gradient-cursor-accent">
           <div className="container-cursor">
             <div className="text-center mb-12">
               <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
                 SEO Analysis Results
+
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
                 Here's a sample analysis of a website. Get comprehensive insights for your own website.
@@ -1441,6 +1119,9 @@ href="/contact"
               </p>;
             </div>;
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Overall Score */}
               <Card className="border-gradient-green text-center">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall SEO Score</h3>;
@@ -1454,6 +1135,7 @@ href="/contact"
                       strokeWidth="2"
                       strokeDasharray={`${(analysisResults && analysisResults.overallScore / 100) * 100}, 100`}
                       className="text-green-500"
+
                     />;
                   </svg>;
                 </div>;
@@ -1481,6 +1163,8 @@ href="/contact"
                   </div>;
                 </div>;
               </Card>;
+
+
               {/* Issues */}
               <Card className='border-gradient-green'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
@@ -1515,6 +1199,9 @@ href="/contact"
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue && issue.priority}</div>;
                       </div>;
                     </div>;
+
+=======
+
               {/* Issues */}
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>
@@ -1541,21 +1228,49 @@ href="/contact"
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
 =======
+              {/* Issues */}
+              <Card className='border-gradient-green'>
+                <h3 className='text-2xl font-bold mb-6 text-white'>
+                  Issues Found
+                </h3>
+                <div className='space-y-3'>
+                  {analysisResults.issues.map((issue, index) => (
+                    <div key={index} className='flex items-start space-x-3'>
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className='w-5 h-5 text-red-400 mt-1 flex-shrink-0' />
+                      ) : issue.type === 'warning' ? (
+                        <AlertTriangle className='w-5 h-5 text-yellow-400 mt-1 flex-shrink-0' />
+                      ) : (
+                        <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
+                      )}
+                      <div>
+                        <span className='text-gray-300'>{issue.message}</span>
+                        <div className='text-xs text-gray-500 mt-1'>
+                          Priority: {issue.priority}
+
                         </div>                      </div>
 
                       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
-<<<<<<< HEAD
+
                 </div>;
               </Card>;
             </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
               <Card className='border-gradient-green'>;
@@ -1574,6 +1289,7 @@ href="/contact"
                     <div key={index} className="flex items-start space-x-3">;
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
                       <span className="text-gray-300">{rec}</span>;
+
 =======
                 </div>
               </Card>
@@ -1597,7 +1313,10 @@ href="/contact"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span className="text-gray-300">{rec}</span>
                     </div>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
+
                 </div>;
               </Card>;
               <Card className='border-gradient-green'>;
@@ -1605,6 +1324,7 @@ href="/contact"
                   Keyword Opportunities;
                 </h3>;
                 <div className='space-y-4'>;
+
                     <div
                       key={index}
                       className='border-b border-gray-700 pb-3 last:border-b-0'>;
@@ -1637,6 +1357,9 @@ href="/contact"
                         </span>;
                       </div>;
                     </div>;
+
+=======
+
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
                 <div className="space-y-4">
@@ -1653,23 +1376,12 @@ href="/contact"
                           keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                           'bg-red-500/20 text-red-400'
                         }`}>
-<<<<<<< HEAD
-                          {keyword.difficulty}
-=======
-<<<<<<< HEAD
-=======
 
-                          {keyword.difficulty}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         </span>
                       </div>
                     </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 <<<<<<< HEAD
 <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
@@ -1868,36 +1580,8 @@ href="/contact"
               </Card>;
             </div>;
           </div>;
-      <section id="pricing" className="section-padding bg-gradient-cursor">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-              Simple Pricing
-            </h2>
-=======
-                </div>
-              </Card>
-            </div>
-          </div>
-        </section>
-      )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      {/* Pricing Section */}
-      <section id='pricing' className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1914,6 +1598,8 @@ href="/contact"
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1934,6 +1620,7 @@ href="/contact"
               and goals.;
             </p>;
           </div>;
+
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            {pricing.map ((plan, index) => (              Simple Pricing;
             </h2>;
             <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
@@ -1958,61 +1645,33 @@ href="/contact"
                   </div>)}
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 4'>;
+
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
+
+=======
+
                 className={`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                    <span className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular
+                    </span>
+                  </div>
+                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+
                     <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-<div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
-                  </div>
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-white mb-4'>
-                    {plan.name}
-                  </h3>
-                  <div className='mb-6'>
-                    <span className='text-4xl font-bold text-white'>
-                      {plan.price}
-                    </span>
-                    <span className='text-gray-400'>{plan.period}</span>
-                  </div>
-                  <p className='text-gray-400'>{plan.description}</p>
-                </div>
-                <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -2037,24 +1696,28 @@ href="/contact"
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
+
                       {feature}
                     </li>;
+=======
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </li>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
+
                 </ul>;
+
+
                 <Button
                   href='/contact'
                   size='lg'
-                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
-                  Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
-                  size="lg";
-                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >;
-                  Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-              </Card>;
+
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {feature}
 =======
 <<<<<<< HEAD
@@ -2075,88 +1738,47 @@ href="/contact"
                   href="/contact"
 =======
                 <Button
-                  href='/contact'
-                  size='lg'
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-<<<<<<< HEAD
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                  href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD
                 </Button>
-              </Card>
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
-        <div className="container-cursor text-center relative z-10">
-          <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
-            Ready to Improve Your SEO Rankings?
-          </h2>
-          <p className="text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Join thousands of businesses using our SEO analyzer to improve their search rankings and drive more organic traffic.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              href="/contact"
-              size="lg"
-              className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
-            >
 =======
-=======
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >
+                  Get Started
+
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
                 </Button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
-<<<<<<< HEAD
-=======
+
 
             Ready to Improve Your SEO Rankings?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -2164,120 +1786,33 @@ href="/contact"
             search rankings and drive more organic traffic.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               size='lg'
-              className='bg-white text-green-600 hover:bg-gray-100 shadow-2xl'
-            >
-              Start Free Trial
-              <ArrowRight className='w-5 h-5 ml-2' />
-            </Button>
+              className='bg-white text-green-600 hover:bg-gray-100 shadow-2xl'>;
+              Start Free Trial;
+              <ArrowRight className='w-5 h-5 ml-2' />;
+            </Button>;
             <Button
               href='/contact'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'            >              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-<<<<<<< HEAD
-className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'>              href="/contact";
-              variant="outline";
-              size="lg";
-              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl";
-                    </span>;
-                    <span className='text - gray - 400'>{plan.period}</span>;
-                  </div>;
-                  <p className='text - gray - 400'>{plan.description}</p>;
-                </div>;
-                <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li;
-                      key={feature_index}
-                      className='flex items - center text - gray - 300';
-                    >;
-                      <CheckCircle className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />                      {feature}                  </div>;
-                  <p className="text - gray - 400">{plan.description}</p>;
-                </div>;
-                <ul className="space - y-4 mb - 8">;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - center text - gray - 300">;
-                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0" />;
-                      {feature}
-                    </li>))}
-                </ul>;
-                <Button;
-                  href='/contact';
-                  size='lg';
-                  className={`w - full ${plan.popular ? 'bg - gradient - to - r from - green - 500 to - emerald - 600 hover:from - green - 600 hover:to - emerald - 700' : 'bg - gray - 700 hover:bg - gray - 600'} text - white`}
-                >;
-                  Get Started;
-                  <ArrowRight className='w - 5 h - 5 ml - 2' />                </Button>                  href="/contact";
-                  size="lg";
-                  className={`w - full ${plan.popular ? 'bg - gradient - to - r from - green - 500 to - emerald - 600 hover:from - green - 600 hover:to - emerald - 700' : 'bg - gray - 700 hover:bg - gray - 600'} text - white`}
-                >;
-                  Get Started;
-                  <ArrowRight className="w - 5 h - 5 ml - 2" />;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='section - padding bg - gradient - to - r from - green - 600 to - emerald - 700 relative overflow - hidden'>;
-        <div className='absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:20px_20px] opacity - 10' />;
-        <div className='container - cursor text - center relative z - 10'>;
-          <h2 className='text - responsive - lg font - bold text - white mb - 8 text - shadow - lg'>;
-          </h2>;
-          <p className='text - responsive - md text - green - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'>;
-            Join thousands of businesses using our SEO analyzer to improve their;
-            search rankings and drive more organic traffic.;
-          </p>;
-          <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
-            <Button;
-              href='/contact';
-              size='lg';
-              className='bg - white text - green - 600 hover:bg - gray - 100 shadow - 2xl';
-            >;
-              Start Free Trial;
-              <ArrowRight className='w - 5 h - 5 ml - 2' />;
-            </Button>;
-            <Button;
-              href='/contact';
-              variant='outline';
-              size='lg';
-              className='border - white text - white hover:bg - white hover:text - green - 600 shadow - 2xl'            >              href="/contact";
-              variant="outline";
-              size="lg";
-              className="border - white text - white hover:bg - white hover:text - green - 600 shadow - 2xl";
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
+
+
+=======
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
     </>);
 }
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

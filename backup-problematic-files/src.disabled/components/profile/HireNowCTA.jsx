@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-'"export": function HireNowCTA({ talentName,hourlyRate,onHire }) {' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ "projectDescription": ',"budget": ',',"startDate": ',"message": '})' const handleSubmit = e => {''';''"";""}
-'"export": function HireNowCTA({ talentName,hourlyRate,onHire }) {' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ "projectDescription": ',"budget": ',',"startDate": ',"message": '})' const handleSubmit = e => {''';''"";""}
-=======
 import React from 'react';
 
 const HireNowCTA = ({ className }) => {
@@ -14,4 +10,3 @@ const HireNowCTA = ({ className }) => {
 };
 
 export default HireNowCTA;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

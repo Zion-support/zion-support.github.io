@@ -624,32 +624,6 @@ export default function RetailPage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-            >;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">;
-                Ready to Transform Retail?;
-              </h2>;
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">;
-                Let our retail technology experts help you implement solutions that drive sales;
-                and enhance customer experience.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Start Your Retail Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">;
-                  Learn About Our Expertise;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-  ),;
-}
-=======
 };
 
 export default Retail;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

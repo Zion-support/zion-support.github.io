@@ -7,8 +7,8 @@ import Footer from './src/components/Footer';
 import LandingPage from './src/pages/LandingPage';
 import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
-import ServicesPage from './src/pages/ServicesPage';
-import PricingPage from './src/pages/PricingPage';
+import ServicesPage from './src/pages/Services';
+import PricingPage from './src/pages/Pricing';
 
 export default function App() {
   return (

@@ -1,9 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -280,13 +277,16 @@ function runSecurityCheck(name, checkFunction) {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /**
  * Security Scanner
  * Comprehensive security scanning and enhancement automation
@@ -303,12 +303,9 @@ class SecurityScanner {
       authenticationSecurity: { success: false, checks: [], recommendations: [] }
     };
   }
-<<<<<<< HEAD
-=======
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
@@ -320,7 +317,6 @@ class SecurityScanner {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     try {
         const result = checkFunction();
         if (result.status === 'pass') {
@@ -352,8 +348,6 @@ class SecurityScanner {
         securityReport.summary.failed++;
         console.log(`❌ ${name}: Error - ${error.message}`);
     }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -408,30 +402,20 @@ runSecurityCheck('Dependency Security', () => {
 <<<<<<< HEAD
 =======
 =======
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   async auditDependencies() {
     this.log('\n🔍 AUDITING DEPENDENCIES');
-<<<<<<< HEAD
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     try {
-      // Run npm audit
-      const auditResult = await this.runCommand(
-        'npm audit --json',
-        'Dependency Security Audit'
-      );
-      let vulnerabilities = 0;
-      let fixes = [];
-      if (auditResult.success) {
-        try {
-          const auditData = JSON.parse(auditResult.output);
-          vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0;
-          if (vulnerabilities > 0) {
-            fixes.push('Run npm audit fix to fix vulnerabilities');
-            fixes.push('Update vulnerable packages to latest versions');
-            fixes.push('Consider using npm audit fix --force for automatic fixes');
-          }
-        } catch (parseError) {
-          this.log('Failed to parse audit results', 'WARNING');
+        if (!fs.existsSync('package.json')) {
+            return {
+                status: 'fail',
+                message: 'package.json not found'
+            };
         }
 =======
     
@@ -515,6 +499,7 @@ runSecurityCheck('Security Headers', () => {
 <<<<<<< HEAD
 =======
 =======
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
       // Try to fix vulnerabilities
@@ -536,15 +521,12 @@ runSecurityCheck('Security Headers', () => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } catch (error) {
         return {
             status: 'fail',
             message: 'Could not check security headers configuration'
         };
     }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -570,6 +552,7 @@ runSecurityCheck('Environment Security', () => {
                 issues.push(`Weak password detected in ${file}`);
             }
 <<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -604,7 +587,6 @@ runSecurityCheck('Environment Security', () => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         }
 <<<<<<< HEAD
 =======
@@ -806,9 +788,6 @@ export function securityHeaders(req, res, next) {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     });
 <<<<<<< HEAD
-    // Save detailed report
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -852,7 +831,6 @@ runSecurityCheck('HTTPS Configuration', () => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const report = {
       timestamp: new Date().toISOString(),
       totalDuration,
@@ -865,12 +843,6 @@ runSecurityCheck('HTTPS Configuration', () => {
         authChecked: this.results.authenticationSecurity.success
       }
     };
-<<<<<<< HEAD
-    const reportPath = path.join(this.reportsDir, 'security-scan-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
-    this.log(`🔒 Security Score: ${report.securityScore}% (${passedChecks}/${securityChecks.length} checks passed)`);
-=======
     
     fs.writeFileSync(
       'security-scanner-report.json',
@@ -898,7 +870,6 @@ const scanner = new SecurityScanner();
 scanner.runSecurityScan().catch(console.error);
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     try {
       await this.auditDependencies();
       await this.scanCodeSecurity();
@@ -909,15 +880,12 @@ scanner.runSecurityScan().catch(console.error);
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } catch (error) {
         return {
             status: 'fail',
             message: 'Could not check HTTPS configuration'
         };
     }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1035,6 +1003,8 @@ if (securityReport.status === 'vulnerable') {
 =======
 }
 =======
+}
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
@@ -1060,4 +1030,3 @@ scanner.runSecurityScan().catch(console.error);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

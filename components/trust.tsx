@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,9 +18,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
-export default function TrustPage() {
-  const [userId, setUserId] = useState<string>('demo-user'),
-  const [data, setData] = useState<any>(null),
+
+
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -50,32 +49,22 @@ export default function TrustPage() {;
   }, []);
   useEffect(() => {
     async function load() {
-<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const u = params.get('user');
-    if (u) setUserId(u)
+
+
+
   }, []);
   useEffect(() => {;
     async function load() {;
       setLoading(true);
-      const res = await fetch(`/api/trust/${encodeURIComponent(userId)}?analyze=true`);
-      const json = await res.json();
-      setData(json);
-      setLoading(false)
-    }
-    load()
-  }, [userId]);
-  async function submitPeer(): any (type: 'endorse' | 'flag') {;
-    await fetch('/api/trust/peer', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }),;
+
+
     });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
       setData(json);
@@ -91,13 +80,8 @@ export default function TrustPage() {;
     }
     load();
   }, [userId]);
-<<<<<<< HEAD
-  async function submitPeer(): any (type: 'endorse' | 'flag') {;
-    await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
-    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
-    alert('Appeal submitted');
-    form.reset()
+
+
   }
   async function submitAppeal(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
@@ -113,7 +97,9 @@ export default function TrustPage() {;
     alert('Appeal submitted');
     form && form.reset();  }
   return (
+
     form && form.reset();
+
   }
   return (
     <EnhancedLayout>;
@@ -122,81 +108,22 @@ export default function TrustPage() {;
           <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>;
           <div className='flex items-center gap-3'>;
             <label className='text-sm inline-flex items-center gap-2'>;
-=======
-  async function submitPeer(type: 'endorse' | 'flag') {
-    await fetch('/api/trust/peer', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type })
-    });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res.json();
-      setData(json);
-      setLoading(false)
-    }
-    load()
-  }, [userId]);
-  async function submitPeer(type: 'endorse' | 'flag') {
-    await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged')
-  }
-  async function submitAppeal(e: React.FormEvent) {
-    e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    const message = formData.get('message');
-    const contactEmail = formData.get('email');
-    await fetch('/api/trust/appeal', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId, message, contactEmail })
-    });
-    alert('Appeal submitted');
-    form.reset();  }
-  return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
-    alert('Appeal submitted');
-
-<<<<<<< HEAD
-    form.reset()
-<<<<<<< HEAD
-=======
-=======
-    <EnhancedLayout>
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
-  return (
-    <EnhancedLayout>
-<<<<<<< HEAD
-      <div className='space-y-6'>
-        <div className='flex items-center justify-between'>
-          <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>
-          <div className='flex items-center gap-3'>
-            <label className='text-sm inline-flex items-center gap-2'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <input
                 type='checkbox'
                 checked={showLogic}
                 onChange={() => setShowLogic(!showLogic)}
               />{' '}
-<<<<<<< HEAD
+
     <EnhancedLayout>
       <div className="space-y-6">
-=======
-              Transparent logic
-            </label>          </div>      <div className="space-y-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Trust & Reputation</h1>
           <div className="flex items-center gap-3">
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
-<<<<<<< HEAD
+
           </div>
+
         </div>
               Transparent logic;
             </label>          </div>      <div className="space-y-6">;
@@ -206,47 +133,14 @@ export default function TrustPage() {;
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
         </div>;
         {loading && <div>Loading...</div>}
+
         {!loading && data && (
           <div className="grid md:grid-cols-3 gap-6">
             <div className="md:col-span-2 space-y-4">
               <div className="flex items-center gap-3">
                 <TrustBadge score={data.total} reason={data.reasonSummary} communityVerified={data.communityVerified} />
                 <RiskIndicator status={data.riskLevel} />
-              </div>
-=======
-        </div>
-        {loading && <div>Loading...</div>}
-        {!loading && data && (
-          <div className='grid md:grid-cols-3 gap-6'>
-            <div className='md:col-span-2 space-y-4'>
-              <div className='flex items-center gap-3'>
-                <TrustBadge
-                  score={data.total}
-                  reason={data.reasonSummary}
-                  communityVerified={data.communityVerified}
-                />
-                <RiskIndicator status={data.riskLevel} />
-              </div>
-              <div className='bg-white dark:bg-gray-900 rounded border p-4'>
-                <h2 className='font-medium mb-2'>Trust Metrics</h2>
-                <TrustRadar
-                  metrics={(data.components |[]).map((c: any) => ({
-                    label: c.key
-                    value: Math.round(c.raw * 100)
-                  }))}
-                />
-              </div>
-              {showLogic && (
-                <div className='bg-white dark:bg-gray-900 rounded border p-4 text-sm'>
-                  <h3 className='font-medium mb-2'>Score Breakdown</h3>
-                  <ul className='space-y-1'>
-                    {data.components.map((c: any) => (
-                      <li key={c.key} className='flex justify-between'>
-                        <span>{c.key}</span>
-                        <span>
-                          {Math.round(c.raw * 100)} / weighted{' '}
-                          {c.weighted.toFixed(3)}
-                        </span>                      </li>                <RiskIndicator status={data.riskLevel} />
+
               </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
@@ -259,10 +153,10 @@ export default function TrustPage() {;
                   <ul className="space-y-1">
                     {data.components.map((c: any) => (
                       <li key={c.key} className="flex justify-between">
-<<<<<<< HEAD
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
+
                   metrics={(data && data.components || []).map((c: any) => ({;
                     label: c && c.key,;
                     value: Math && Math.round(c && c.raw * 100),;
@@ -294,6 +188,17 @@ export default function TrustPage() {;
                         <span>{c && c.key}</span>;
                         <span>{Math && Math.round(c && c.raw * 100)} / weighted {c && c.weighted.toFixed(3)}</span>;
                       </li>;
+
+=======
+
+
+  }
+  return (
+    <EnhancedLayout>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </ul>;
                 </div>;
@@ -302,106 +207,6 @@ export default function TrustPage() {;
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
                 </div>;
               )}
-            </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">;
-                  <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
-                </div>;
-              )}
-            </div>;
-            <div className='space-y-4'>;
-              <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>;
-                <h3 className='font-medium'>Peer Review</h3>;
-                <button
-                  className='text-sm px-3 py-1 rounded bg-green-600 text-white'
-                  onClick={() => submitPeer('endorse')}
-                >;
-                  Endorse;
-                </button>;
-                <button
-                  className='text-sm px-3 py-1 rounded bg-red-600 text-white'
-                  onClick={() => submitPeer('flag')}
-                >;
-                  Flag;
-                </button>;
-              </div>;
-              {data && data.total < 70 && (;
-                <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>;
-                  <h3 className='font-medium'>Appeal Score</h3>;
-                  <form onSubmit={submitAppeal} className='space-y-2'>;
-                    <input
-                      name='email'
-                      type='email'
-                      placeholder='Contact email'
-                      className='w-full border rounded px-2 py-1 text-sm'
-                    />;
-                    <textarea
-                      name='message'
-                      placeholder='Explain why your score should be reconsidered'
-                      className='w-full border rounded px-2 py-1 text-sm'
-                      rows={4}
-                      required
-                    />;
-                    <button
-                      className='text-sm px-3 py-1 rounded bg-blue-600 text-white'
-                      type='submit'>;
-                      Submit Appeal;
-                    </button>                  </form>                <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">;
-                  <h3 className="font-medium">Appeal Score</h3>;
-                  <form onSubmit={submitAppeal} className="space-y-2">;
-                    <input name="email" type="email" placeholder="Contact email" className="w-full border rounded px-2 py-1 text-sm" />;
-                    <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w-full border rounded px-2 py-1 text-sm" rows={4} required />;
-                    <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>;
-                </div>;
-    }
-    load()
-  }, [userId]),
-
-  async function submitPeer(type: 'endorse' | 'flag') {
-    await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) }),
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged')
-  }
-
-  async function submitAppeal(e: React.FormEvent) {
-    e.preventDefault(),
-    const form = e.target as HTMLFormElement
-    const formData = new FormData(form)
-    const message = formData.get('message')
-    const contactEmail = formData.get('email')
-    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) }),
-    alert('Appeal submitted'),
-    form.reset()
-  }
-
-  return (
-    <EnhancedLayout>
-      <div className=&quot;space-y-6&quot;>
-        <div className=&quot;flex items-center justify-between&quot;>
-          <h1 className=&quot;text-2xl font-semibold&quot;>Trust & Reputation</h1>
-          <div className=&quot;flex items-center gap-3&quot;>
-            <label className=&quot;text-sm inline-flex items-center gap-2&quot;><input type=&quot;checkbox&quot; checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
-          </div>
-        </div>
-
-        {loading && <div>Loading...</div>}
-        {!loading && data && (
-          <div className=&quot;grid md:grid-cols-3 gap-6&quot;>
-            <div className=&quot;md:col-span-2 space-y-4&quot;>
-              <div className=&quot;flex items-center gap-3&quot;>
-                <TrustBadge score={data.total} reason={data.reasonSummary} communityVerified={data.communityVerified} />
-                <RiskIndicator status={data.riskLevel} />
-              </div>
-              <div className=&quot;bg-white dark:bg-gray-900 rounded border p-4&quot;>
-                <h2 className=&quot;font-medium mb-2&quot;>Trust Metrics</h2>
-                <TrustRadar metrics={(data.components || []).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
-              </div>
-              {showLogic && (
-                <div className=&quot;bg-white dark:bg-gray-900 rounded border p-4 text-sm&quot;>
-                  <h3 className=&quot;font-medium mb-2&quot;>Score Breakdown</h3>
-                  <ul className=&quot;space-y-1&quot;>
-                    {data.components.map((c: any) => (
-                      <li key={c.key} className=&quot;flex justify-between&quot;>
-                        <span>{c.key}</span>
-                        <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
-                      </li>
 
 =======
                         <span>{c.key}</span>
@@ -429,88 +234,23 @@ export default function TrustPage() {;
                 </div>
               )}
               {data.reasonSummary && (
-<<<<<<< HEAD
-<div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
+                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
 =======
-                <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
-                </div>
-              )}
-<<<<<<< HEAD
-            </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+            </div>
+
+
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
             </div>
-<<<<<<< HEAD
-<div className="space-y-4">
-              <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">
-                <h3 className="font-medium">Peer Review</h3>
-                <button className="text-sm px-3 py-1 rounded bg-green-600 text-white" onClick={() => submitPeer('endorse')}>Endorse</button>
-                <button className="text-sm px-3 py-1 rounded bg-red-600 text-white" onClick={() => submitPeer('flag')}>Flag</button>
-              </div>
-              {data.total < 70 && (
-                <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">
-=======
-            <div className='space-y-4'>
-              <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>
-                <h3 className='font-medium'>Peer Review</h3>
-                <button
-                  className='text-sm px-3 py-1 rounded bg-green-600 text-white'
-                  onClick={() => submitPeer('endorse')}
-                >
-                  Endorse
-                </button>
-                <button
-                  className='text-sm px-3 py-1 rounded bg-red-600 text-white'
-                  onClick={() => submitPeer('flag')}
-                >
-                  Flag
-                </button>
-              </div>
-              {data.total < 70 && (
-                <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>
-                  <h3 className='font-medium'>Appeal Score</h3>
-                  <form onSubmit={submitAppeal} className='space-y-2'>
-                    <input
-                      name='email'
-                      type='email'
-                      placeholder='Contact email'
-                      className='w-full border rounded px-2 py-1 text-sm'
-                    />
-                    <textarea
-                      name='message'
-                      placeholder='Explain why your score should be reconsidered'
-                      className='w-full border rounded px-2 py-1 text-sm'
-                      rows={4}
-                      required
-                    />
-                    <button
-                      className='text-sm px-3 py-1 rounded bg-blue-600 text-white'
-                      type='submit'
-                    >
-                      Submit Appeal
-                    </button>                  </form>                <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                  <h3 className="font-medium">Appeal Score</h3>
-                  <form onSubmit={submitAppeal} className="space-y-2">
-                    <input name="email" type="email" placeholder="Contact email" className="w-full border rounded px-2 py-1 text-sm" />
-                    <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w-full border rounded px-2 py-1 text-sm" rows={4} required />
-                    <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>
-<<<<<<< HEAD
-                  </form>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                </div>
-              )}
-            </div>;
-          </div>;
-        )}
-<<<<<<< HEAD
+
       </div>;
     </EnhancedLayout>;
   );
 }
+
+=======
   );
 }
 import EnhancedLayout from '../components / layout / EnhancedLayout';
@@ -719,21 +459,8 @@ function submit_appeal() {
       </div>;
     </EnhancedLayout>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-      </div>
-    </EnhancedLayout>
-);
-}
-=======
-            </div>
 
-                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
-                </div>
-              )}
-            </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

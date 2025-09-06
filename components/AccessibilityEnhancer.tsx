@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 const AccessibilityEnhancer: React.FC = () => {;
   useEffect(() => {;
     // Add skip link for keyboard navigation;
@@ -78,6 +79,7 @@ const AccessibilityEnhancer: React.FC = () => {
       document && document.removeEventListener('keydown', handleKeyDown);
       if (skipLink && skipLink.parentNode) {;
         skipLink && skipLink.parentNode.removeChild(skipLink);
+
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -85,6 +87,7 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, []);
   return null;
+
 import React, { useEffect } from 'react';
 ;
 const AccessibilityEnhancer: React.FC = () => {
@@ -248,9 +251,11 @@ if ( {) {
   $2
 }
       root.class_list.add ('high - contrast');
+
     } else {
       root.class_list.remove ('high - contrast');
     }
+
     root.class_list.remove ('font - small', 'font - normal', 'font - large', 'font - extra - large');
     root.class_list.add (`font-${fontSizeValue}`);
 ;
@@ -259,10 +264,12 @@ if ( {) {
   $2
 }
       root.class_list.add ('reduced - motion');
+
     } else {
       root.class_list.remove ('reduced - motion');
     }
   }
+
 };
 // Add CSS for focus management;
 const focusStyles = `;
@@ -329,12 +336,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
   };
   const toggleHighContrast = () => {;
+
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage && localStorage.setItem('highContrast', newValue && newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
+
   };
   const changeFontSize = (newSize: string) => {;
+
     setFontSize(newSize);
     localStorage && localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
@@ -367,9 +377,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 {size && size.charAt(0).toUpperCase()}
               </button>;
             ))}
+
           </div>;
         </div>;
       </div>;
+=======
+
+
+export default AccessibilityEnhancer;
+=======
+};
+
+
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -390,6 +409,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   );
 <<<<<<< HEAD
 }
+export default AccessibilityEnhancer;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default AccessibilityEnhancer;
@@ -461,13 +481,4 @@ export default AccessibilityEnhancer;
 ;
 export default AccessibilityEnhancer;
 ;
-=======
-=======
-};
-
-export default AccessibilityEnhancer;
-=======
-export default AccessibilityEnhancer;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

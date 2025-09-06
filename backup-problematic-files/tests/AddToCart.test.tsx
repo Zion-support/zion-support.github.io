@@ -8,7 +8,6 @@ interface AddToCart.testProps {
 }
 
 const AddToCart.test: React.FC<AddToCart.testProps> = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>AddToCart.test</h1>

@@ -19,7 +19,6 @@ interface RatingStars.testProps {
 }
 
 const RatingStars.test: React.FC<RatingStars.testProps> = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>RatingStars.test</h1>

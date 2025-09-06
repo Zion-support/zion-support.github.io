@@ -881,9 +881,6 @@ export default function DigitalTransformationPage() {;
     </Layout>;
 <<<<<<< HEAD
   );
-=======
-  );
 };
 
 export default Digital-transformation;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Security.spec utility
 export const Security.spec = () => {
   // Implementation here

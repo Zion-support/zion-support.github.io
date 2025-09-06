@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,69 +19,15 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {;
-  FaRocket,;
-  FaBrain,;
-  FaCloud,;
-  FaShieldAlt,;
-  FaChartLine,;
-  FaCogs,;
-  FaLightbulb,;
-  FaGlobe,;
-  FaMobile,;
-  FaDatabase,;
-  FaNetworkWired,;
-  FaRobot,;
-  FaSearch,;
-import {;
-  SiNextdotjs,;
-  SiReact,;
-  SiTypescript,;
-  SiTailwindcss,;
-  SiPrisma,;
-  SiSupabase,;
-  SiVercel,;
-  SiDocker,;
-  SiKubernetes,;
-  SiAws,;
-  SiGooglecloud,;
-  SiMicrosoftazure,;
+
+
 } from 'react-icons/si';
+
 interface Service {;
 =======
-import React, { useState, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import {
-<<<<<<< HEAD
-  FaRocket
-  FaBrain
-  FaCloud
-  FaShieldAlt
-  FaChartLine
-  FaCogs
-  FaLightbulb
-  FaGlobe
-  FaMobile
-  FaDatabase
-  FaNetworkWired
-  FaRobot
-  FaSearch;
-import {
-  SiNextdotjs
-  SiReact
-  SiTypescript
-  SiTailwindcss
-  SiPrisma
-  SiSupabase
-  SiVercel
-  SiDocker
-  SiKubernetes
-  SiAws
-  SiGooglecloud
-  SiMicrosoftazure;
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   FaRocket,
   FaBrain,
   FaCloud,
@@ -95,11 +41,7 @@ import {
   FaNetworkWired,
 <<<<<<< HEAD
   FaRobot,
-FaSearch,
-=======
-  FaRobot,;
-  FaSearch,;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  FaSearch,
 import {
   SiNextdotjs,
   SiReact,
@@ -111,18 +53,13 @@ import {
   SiDocker,
   SiKubernetes,
   SiAws,
-<<<<<<< HEAD
-  SiGooglecloud,
-SiMicrosoftazure,
-} from 'react - icons / si';
-;
-=======
+
   SiGooglecloud,;
   SiMicrosoftazure,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'react-icons/si';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 interface Service {
   id: string;
   title: string;
@@ -147,16 +84,17 @@ interface Service {
   }
   technologies: string[];
   benefits: string[];
-<<<<<<< HEAD
+
 ;
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface ServiceCategory {
+
   id: string;
   name: string;
   description: string;
-<<<<<<< HEAD
+
 import { 
   FaRocket;
   FaBrain, 
@@ -186,29 +124,126 @@ import {
   SiGooglecloud;
   SiMicrosoftazure
 } from 'react-icons/si';
+
+
   color: string;  id: string
   name: string
   description: string
   icon: React.ReactNode
+
   color: string
 }
-const serviceCategories: ServiceCategory[] = [
-=======
-  icon: React.ReactNode;
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
   color: string;  id: string,
   name: string,
   description: string,
   icon: React.ReactNode,
-<<<<<<< HEAD
+  color: string
+}
+
+
+const serviceCategories: ServiceCategory[] = [
+  {
+
+    id: 'ai-ml'
+    name: 'AI & Machine Learning'
+    description:
+      'Cutting-edge artificial intelligence and machine learning solutions'
+    icon: <FaBrain className='w-8 h-8' />
+    color: 'from-purple-500 to-pink-500'
+  },  {
+    id: 'cloud'
+    name: 'Cloud & DevOps'
+    description: 'Scalable cloud infrastructure and development operations'
+    icon: <FaCloud className='w-8 h-8' />
+    color: 'from-blue-500 to-cyan-500'
+  },  {
+    id: 'security'
+    name: 'Cybersecurity'
+    description: 'Advanced security solutions for modern threats'
+    icon: <FaShieldAlt className='w-8 h-8' />
+    color: 'from-red-500 to-orange-500'
+  },  {
+    id: 'data'
+    name: 'Data & Analytics'
+    description: 'Comprehensive data management and analytics platforms'
+    icon: <FaDatabase className='w-8 h-8' />
+    color: 'from-green-500 to-emerald-500'
+  },  {
+    id: 'iot'
+    name: 'IoT & Edge Computing'
+    description: 'Internet of Things and edge computing solutions'
+    icon: <FaNetworkWired className='w-8 h-8' />
+    color: 'from-indigo-500 to-purple-500'
+  },  {
+    id: 'automation'
+    name: 'Process Automation'
+    description: 'Intelligent automation for business processes'
+    icon: <FaRobot className='w-8 h-8' />
+    color: 'from-yellow-500 to-orange-500'
+  },];    description: 'Cutting-edge artificial intelligence and machine learning solutions'
+    icon: <FaBrain className="w-8 h-8" />
+    color: 'from-purple-500 to-pink-500'
+  }
+    id: 'cloud'
+    name: 'Cloud & DevOps'
+    description: 'Scalable cloud infrastructure and development operations'
+    icon: <FaCloud className='w-8 h-8' />
+    color: 'from-blue-500 to-cyan-500'
+  },    icon: <FaCloud className="w-8 h-8" />
+    color: 'from-blue-500 to-cyan-500'
+  }
+  {
+    id: 'security'
+    name: 'Cybersecurity'
+    description: 'Advanced security solutions for modern threats'
+    icon: <FaShieldAlt className='w-8 h-8' />
+    color: 'from-red-500 to-orange-500'
+  },    icon: <FaShieldAlt className="w-8 h-8" />
+    color: 'from-red-500 to-orange-500'
+  }
+  {
+    id: 'data'
+    name: 'Data & Analytics'
+    description: 'Comprehensive data management and analytics platforms'
+    icon: <FaDatabase className='w-8 h-8' />
+    color: 'from-green-500 to-emerald-500'
+  },    icon: <FaDatabase className="w-8 h-8" />
+    color: 'from-green-500 to-emerald-500'
+  }
+  {
+    id: 'iot'
+    name: 'IoT & Edge Computing'
+    description: 'Internet of Things and edge computing solutions'
+    icon: <FaNetworkWired className='w-8 h-8' />
+    color: 'from-indigo-500 to-purple-500'
+  },    icon: <FaNetworkWired className="w-8 h-8" />
+    color: 'from-indigo-500 to-purple-500'
+  }
+  {
+    id: 'automation'
+    name: 'Process Automation'
+    description: 'Intelligent automation for business processes'
+    icon: <FaRobot className='w-8 h-8' />
+    color: 'from-yellow-500 to-orange-500'
+  },    icon: <FaRobot className="w-8 h-8" />
+=======
+
+const serviceCategories: ServiceCategory[] = [
+=======
+  color: string;  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
   color: string;
 }
 const service_categories: ServiceCategory[] = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'ai - ml',
     name: 'AI & Machine Learning',
+
     description:;
       'Cutting - edge artificial intelligence and machine learning solutions',
     icon: <FaBrain className='w - 8 h - 8' />,
@@ -255,37 +290,45 @@ const service_categories: ServiceCategory[] = [;
   },    icon: <FaCloud className="w - 8 h - 8" />,
     color: 'from - blue - 500 to - cyan - 500';
   }
+
   {
     id: 'security',
     name: 'Cybersecurity',
     description: 'Advanced security solutions for modern threats',
+
     icon: <FaShieldAlt className='w - 8 h - 8' />,
     color: 'from - red - 500 to - orange - 500',
   },    icon: <FaShieldAlt className="w - 8 h - 8" />,
     color: 'from - red - 500 to - orange - 500';
   }
+
   {
     id: 'data',
     name: 'Data & Analytics',
     description: 'Comprehensive data management and analytics platforms',
+
     icon: <FaDatabase className='w - 8 h - 8' />,
     color: 'from - green - 500 to - emerald - 500',
   },    icon: <FaDatabase className="w - 8 h - 8" />,
     color: 'from - green - 500 to - emerald - 500';
   }
+
   {
     id: 'iot',
     name: 'IoT & Edge Computing',
     description: 'Internet of Things and edge computing solutions',
+
     icon: <FaNetworkWired className='w - 8 h - 8' />,
     color: 'from - indigo - 500 to - purple - 500',
   },    icon: <FaNetworkWired className="w - 8 h - 8" />,
     color: 'from - indigo - 500 to - purple - 500';
   }
+
   {
     id: 'automation',
     name: 'Process Automation',
     description: 'Intelligent automation for business processes',
+
   icon: React && React.ReactNode;
   color: string;  id: string,;
   name: string,;
@@ -379,6 +422,7 @@ const serviceCategories: ServiceCategory[] = [;
   },    icon: <FaRobot className="w-8 h-8" />,;
     color: 'from-yellow-500 to-orange-500';
   }
+=======
     id: 'ai-automation-suite',
     title: 'AI-Powered Automation Suite',
     description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
@@ -387,6 +431,7 @@ const serviceCategories: ServiceCategory[] = [;
     features: [
       'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
     ];
+=======
     icon: <FaRobot className='w - 8 h - 8' />,
     color: 'from - yellow - 500 to - orange - 500',
   },    icon: <FaRobot className="w - 8 h - 8" />,
@@ -402,335 +447,23 @@ const services: Service[] = [;
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
     icon: <FaRobot className='w - 6 h - 6' />,
     features: [;
-      'Intelligent workflow automation',
-      'Natural language processing',
-      'Predictive analytics',
-      'Real - time decision making',
-      'Custom AI model training',
-      'Multi - platform integration',
-=======
-  color: string
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-  color: string;  id: string
-  name: string
-  description: string
-  icon: React.ReactNode
-
-  color: string
-}
-=======
-<<<<<<< HEAD
 =======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-const serviceCategories: ServiceCategory[] = [
-  {
 
-    id: 'ai-ml'
-    name: 'AI & Machine Learning'
-    description:
-      'Cutting-edge artificial intelligence and machine learning solutions'
-    icon: <FaBrain className='w-8 h-8' />
-    color: 'from-purple-500 to-pink-500'
-  },  {
-    id: 'cloud'
-    name: 'Cloud & DevOps'
-    description: 'Scalable cloud infrastructure and development operations'
-    icon: <FaCloud className='w-8 h-8' />
-    color: 'from-blue-500 to-cyan-500'
-  },  {
-    id: 'security'
-    name: 'Cybersecurity'
-    description: 'Advanced security solutions for modern threats'
-    icon: <FaShieldAlt className='w-8 h-8' />
-    color: 'from-red-500 to-orange-500'
-  },  {
-    id: 'data'
-    name: 'Data & Analytics'
-    description: 'Comprehensive data management and analytics platforms'
-    icon: <FaDatabase className='w-8 h-8' />
-    color: 'from-green-500 to-emerald-500'
-  },  {
-    id: 'iot'
-    name: 'IoT & Edge Computing'
-    description: 'Internet of Things and edge computing solutions'
-    icon: <FaNetworkWired className='w-8 h-8' />
-    color: 'from-indigo-500 to-purple-500'
-  },  {
-    id: 'automation'
-    name: 'Process Automation'
-    description: 'Intelligent automation for business processes'
-    icon: <FaRobot className='w-8 h-8' />
-    color: 'from-yellow-500 to-orange-500'
-  },];    description: 'Cutting-edge artificial intelligence and machine learning solutions'
-    icon: <FaBrain className="w-8 h-8" />
-    color: 'from-purple-500 to-pink-500'
-  }
-    id: 'cloud'
-    name: 'Cloud & DevOps'
-    description: 'Scalable cloud infrastructure and development operations'
-    icon: <FaCloud className='w-8 h-8' />
-    color: 'from-blue-500 to-cyan-500'
-  },    icon: <FaCloud className="w-8 h-8" />
-    color: 'from-blue-500 to-cyan-500'
-  }
-  {
-    id: 'security'
-    name: 'Cybersecurity'
-    description: 'Advanced security solutions for modern threats'
-    icon: <FaShieldAlt className='w-8 h-8' />
-    color: 'from-red-500 to-orange-500'
-  },    icon: <FaShieldAlt className="w-8 h-8" />
-    color: 'from-red-500 to-orange-500'
-  }
-  {
-    id: 'data'
-    name: 'Data & Analytics'
-    description: 'Comprehensive data management and analytics platforms'
-    icon: <FaDatabase className='w-8 h-8' />
-    color: 'from-green-500 to-emerald-500'
-  },    icon: <FaDatabase className="w-8 h-8" />
-    color: 'from-green-500 to-emerald-500'
-  }
-  {
-    id: 'iot'
-    name: 'IoT & Edge Computing'
-    description: 'Internet of Things and edge computing solutions'
-    icon: <FaNetworkWired className='w-8 h-8' />
-    color: 'from-indigo-500 to-purple-500'
-  },    icon: <FaNetworkWired className="w-8 h-8" />
-    color: 'from-indigo-500 to-purple-500'
-  }
-  {
-    id: 'automation'
-    name: 'Process Automation'
-    description: 'Intelligent automation for business processes'
-    icon: <FaRobot className='w-8 h-8' />
-    color: 'from-yellow-500 to-orange-500'
-  },    icon: <FaRobot className="w-8 h-8" />
-    color: 'from-yellow-500 to-orange-500'
-  }
-];
-const services: Service[] = [
-  {
-    id: 'ai-automation-suite'
-    title: 'AI-Powered Automation Suite'
-    description:
-      'Comprehensive automation platform leveraging artificial intelligence for business process optimization'
-    icon: <FaRobot className='w-6 h-6' />
-    features: [
-<<<<<<< HEAD
-      'Intelligent workflow automation'
-      'Natural language processing'
-      'Predictive analytics'
-      'Real-time decision making'
-      'Custom AI model training'
-      'Multi-platform integration'
-    ]
-    pricing: {
-      starter: 299
-      professional: 799
-      enterprise: 1999
-    }
-    technologies: [
-      'TensorFlow'
-      'PyTorch'
-      'OpenAI'
-      'LangChain'
-      'React'
-      'Node.js'
-    ]
-    benefits: [
-      'Reduce manual tasks by 80%'
-      'Improve accuracy by 95%'
-      '24/7 automated operations'
-      'Scalable AI infrastructure'
-    ]
-  }
-  {
-    id: 'quantum-computing-platform'
-    title: 'Quantum Computing Platform'
-    description:
-      'Next-generation quantum computing solutions for complex problem solving'
-    icon: <FaBrain className='w-6 h-6' />
-    category: 'ai-ml'
-    features: [
-      'Quantum algorithm optimization'
-      'Hybrid classical-quantum computing'
-      'Quantum machine learning'
-      'Cryptographic solutions'
-      'Quantum simulation tools'
-      'API access to quantum hardware'
-    ]
-    pricing: {
-      starter: 999
-      professional: 2499
-      enterprise: 4999
-    }
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA']
-    benefits: [
-      'Solve previously impossible problems'
-      'Exponential speed improvements'
-      'Future-proof technology'
-      'Research and development support'
-    ]
-  }
-  {
-    id: 'edge-ai-platform'
-    title: 'Edge AI Computing Platform'
-    description:
-      'Distributed artificial intelligence at the edge for real-time processing'
-    icon: <FaNetworkWired className='w-6 h-6' />
-    category: 'iot'
-    features: [
-      'Edge device optimization'
-      'Real-time AI inference'
-      'Distributed learning'
-      'Low-latency processing'
-      'Offline AI capabilities'
-      'Edge-to-cloud synchronization'
-    ]
-    pricing: {
-      starter: 199
-      professional: 599
-      enterprise: 1499
-    }
-    technologies: [
-      'TensorFlow Lite'
-      'ONNX Runtime'
-      'Edge TPU'
-      'Raspberry Pi'
-      'Arduino'
-    ]
-    benefits: [
-      'Reduced latency by 90%'
-      'Lower bandwidth costs'
-      'Enhanced privacy'
-      'Scalable edge deployment'
-    ]
-  }
-  {
-    id: 'quantum-cybersecurity'
-    title: 'Quantum Cybersecurity Suite'
-    description:
-      'Advanced security solutions leveraging quantum-resistant cryptography'
-    icon: <FaShieldAlt className='w-6 h-6' />
-    category: 'security'
-    features: [
-      'Post-quantum cryptography'
-      'Quantum key distribution'
-      'Advanced threat detection'
-      'Zero-trust architecture'
-      'Compliance frameworks'
-      'Real-time monitoring'
-    ]
-    pricing: {
-      starter: 399
-      professional: 999
-      enterprise: 2499
-    }
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR']
-    benefits: [
-      'Future-proof security'
-      'Quantum-resistant encryption'
-      'Comprehensive compliance'
-      'Advanced threat protection'
-    ]
-  }
-  {
-    id: 'data-fabric-platform'
-    title: 'Intelligent Data Fabric Platform'
-    description:
-      'Unified data management and analytics across all sources and formats'
-    icon: <FaDatabase className='w-6 h-6' />
-    category: 'data'
-    features: [
-      'Unified data access'
-      'Real-time analytics'
-      'Data governance'
-      'AI-powered insights'
-      'Multi-cloud support'
-      'Data lineage tracking'
-    ]
-    pricing: {
-      starter: 299
-      professional: 799
-      enterprise: 1999
-    }
-    technologies: [
-      'Apache Kafka'
-      'Apache Spark'
-      'Snowflake'
-      'Databricks'
-      'Airflow'
-    ]
-    benefits: [
-      'Unified data view'
-      'Real-time insights'
-      'Improved data quality'
-      'Reduced integration costs'
-    ]
-  },  {
-    id: 'cloud-native-platform'
-    title: 'Cloud-Native Development Platform'
-    description: 'Modern cloud-native development and deployment platform'
-    icon: <FaCloud className='w-6 h-6' />,      'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
-    ]
-  }
-  {
-    id: 'cloud-native-platform'
-    title: 'Cloud-Native Development Platform'
-    description: 'Modern cloud-native development and deployment platform'
-    icon: <FaCloud className='w-6 h-6' />
-    features: [
-      'Kubernetes orchestration'
-      'Microservices architecture'
-      'CI/CD pipelines'
-      'Auto-scaling'
-      'Multi-cloud deployment'
-      'DevOps automation'
-    ]
-    pricing: {
-      starter: 199
-      professional: 599
-      enterprise: 1499
-    }
-    technologies: [
-      'Kubernetes'
-      'Docker'
-      'Helm'
-      'ArgoCD'
-      'Prometheus'
-      'Grafana'
-    ]
-    benefits: [
-      'Faster deployment'
-      'Improved scalability'
-      'Better resource utilization'
-      'Enhanced reliability'
-    ]
-  },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
-    ]
-  }
-=======
       'Intelligent workflow automation',
       'Natural language processing',
       'Predictive analytics',
       'Real-time decision making',
       'Custom AI model training',
-      'Multi-platform integration',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      'Multi - platform integration',
     ],
     pricing: {
       starter: 299,
       professional: 799,
-<<<<<<< HEAD
       enterprise: 1999
+    
     },
+
     technologies: [;
 =======
       enterprise: 1999,
@@ -758,10 +491,12 @@ const services: Service[] = [
       'Scalable AI infrastructure',
     ],
   },
+
   {
 <<<<<<< HEAD
     id: 'quantum - computing - platform',
     title: 'Quantum Computing Platform',
+
     description:;
       'Next - generation quantum computing solutions for complex problem solving',
     icon: <FaBrain className='w - 6 h - 6' />,
@@ -785,13 +520,15 @@ const services: Service[] = [
       'Quantum simulation tools',
       'API access to quantum hardware',
     ],
+
     pricing: {
       starter: 999,
       professional: 2499,
-<<<<<<< HEAD
       enterprise: 4999
+    
     },
-technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
+
+    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
     benefits: [;
       'Solve previously impossible problems',
       'Exponential speed improvements',
@@ -808,10 +545,12 @@ technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
       'Research and development support',
     ],
   },
+
   {
 <<<<<<< HEAD
     id: 'edge - ai - platform',
     title: 'Edge AI Computing Platform',
+
     description:;
       'Distributed artificial intelligence at the edge for real - time processing',
     icon: <FaNetworkWired className='w - 6 h - 6' />,
@@ -823,34 +562,16 @@ technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
       'Low - latency processing',
       'Offline AI capabilities',
       'Edge - to - cloud synchronization',
-=======
-    id: 'edge-ai-platform',
-    title: 'Edge AI Computing Platform',
-    description:
-      'Distributed artificial intelligence at the edge for real-time processing',
-    icon: <FaNetworkWired className='w-6 h-6' />,
-    category: 'iot',
-    features: [
-      'Edge device optimization',
-      'Real-time AI inference',
-      'Distributed learning',
-      'Low-latency processing',
-      'Offline AI capabilities',
-      'Edge-to-cloud synchronization',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ],
+
     pricing: {
       starter: 199,
       professional: 599,
-<<<<<<< HEAD
       enterprise: 1499
+    
     },
-technologies: [;
-=======
-      enterprise: 1499,
-    },
-    technologies: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+    technologies: [;
       'TensorFlow Lite',
       'ONNX Runtime',
       'Edge TPU',
@@ -868,10 +589,12 @@ technologies: [;
       'Scalable edge deployment',
     ],
   },
+
   {
 <<<<<<< HEAD
     id: 'quantum - cybersecurity',
     title: 'Quantum Cybersecurity Suite',
+
     description:;
       'Advanced security solutions leveraging quantum - resistant cryptography',
     icon: <FaShieldAlt className='w - 6 h - 6' />,
@@ -899,13 +622,15 @@ technologies: [;
       'Real-time monitoring',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ],
+
     pricing: {
       starter: 399,
       professional: 999,
-<<<<<<< HEAD
       enterprise: 2499
+    
     },
-technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
+
+    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
     benefits: [;
       'Future - proof security',
       'Quantum - resistant encryption',
@@ -921,10 +646,12 @@ technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
       'Advanced threat protection',
     ],
   },
+
   {
 <<<<<<< HEAD
     id: 'data - fabric - platform',
     title: 'Intelligent Data Fabric Platform',
+
     description:;
       'Unified data management and analytics across all sources and formats',
     icon: <FaDatabase className='w - 6 h - 6' />,
@@ -951,18 +678,15 @@ technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Data lineage tracking',
     ],
+
     pricing: {
       starter: 299,
       professional: 799,
-<<<<<<< HEAD
       enterprise: 1999
+    
     },
-technologies: [;
-=======
-      enterprise: 1999,
-    },
-    technologies: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+    technologies: [;
       'Apache Kafka',
       'Apache Spark',
       'Snowflake',
@@ -990,74 +714,13 @@ technologies: [;
     ];
   }
   {
-    id: 'cloud - native - platform',
-    title: 'Cloud - Native Development Platform',
-    description: 'Modern cloud - native development and deployment platform',
-    icon: <FaCloud className='w - 6 h - 6' />,
-    features: [;
-      'Kubernetes orchestration',
-      'Microservices architecture',
-      'CI / CD pipelines',
-      'Auto - scaling',
-      'Multi - cloud deployment',
+
 =======
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
-    icon: <FaCloud className='w-6 h-6' />,
 
-  {
-    id: 'cloud-native-platform',
-    title: 'Cloud-Native Development Platform',
-    description: 'Modern cloud-native development and deployment platform',
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    icon: <FaCloud className='w-6 h-6' />,
-    features: [
-      'Kubernetes orchestration',
-      'Microservices architecture',
-      'CI/CD pipelines',
-      'Auto-scaling',
-      'Multi-cloud deployment',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      'DevOps automation',
-    ],
-    pricing: {
-      starter: 199,
-      professional: 599,
-<<<<<<< HEAD
-      enterprise: 1499
-    },
-technologies: [;
-=======
-      enterprise: 1499,
-    },
-    technologies: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      'Kubernetes',
-      'Docker',
-      'Helm',
-      'ArgoCD',
-      'Prometheus',
-      'Grafana',
-    ],
-<<<<<<< HEAD
-    benefits: [;
-=======
-    benefits: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      'Faster deployment',
-      'Improved scalability',
-      'Better resource utilization',
-      'Enhanced reliability',
-    ],
-<<<<<<< HEAD
-  }, ];      'Faster deployment_improved scalability_better resource utilization_enhanced reliability';
-    ];
-  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 const services: Service[] = [;
   {;
@@ -1260,13 +923,17 @@ const services: Service[] = [;
     ];
   }
 ];
+
+
   const filteredServices = useMemo(() => {;
     let filtered = services;
+
     if (selectedCategory !== 'all') {;
       filtered = filtered && filtered.filter(;
         service => service && service.category === selectedCategory;
       );
     }
+
     if (searchTerm) {;
       filtered = filtered && filtered.filter(;
         service =>;
@@ -1277,56 +944,20 @@ const services: Service[] = [;
           service && service.technologies.some(tech =>;
             tech && tech.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
           );
+
       );
     }    if (selectedCategory !== 'all') {;
       filtered = filtered && filtered.filter(service => service && service.category === selectedCategory);
+=======
+    
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
-=======
-  },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
-    ]
-  }
+
+    
+
 =======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-];
-const EnhancedServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-  const filteredServices = useMemo(() => {
-    let filtered = services;
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(
-        service => service.category === selectedCategory
-      );
-    }
-    if (searchTerm) {
-      filtered = filtered.filter(
-        service =>
-          service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-          service.description
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()) |
-          service.technologies.some(tech =>
-            tech.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-      );
-    }    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory)
-    }
-<<<<<<< HEAD
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-    }
-=======
     
     if (searchTerm) {
       filtered = filtered.filter(service => 
@@ -1335,24 +966,25 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     }
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
           return a.pricing.starter - b.pricing.starter;
         case 'category':
           return a.category.localeCompare(b.category);
-<<<<<<< HEAD
+
+
+
+
+
+  const handleServiceSelect = (service: Service) => {
+    setSelectedService(service);
+  }
+  const closeModal = () => {
+=======
+
     if (searchTerm) {;
       filtered = filtered && filtered.filter(service => ;
         service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -1386,6 +1018,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           transition={{ duration: 0 && 0.8 }}
           className='text-center mb-16'      }
     })
+
   }, [selectedCategory, searchTerm, sortBy])
   const handleServiceSelect = (service: Service) => {;
     setSelectedService(service);
@@ -1393,6 +1026,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   const closeModal = () => {;
     setSelectedService(null);
   };
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">;
       {/* Header */}
@@ -1400,6 +1035,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+
         default: return a.title.localeCompare(b.title)
       }
     })
@@ -1493,6 +1129,7 @@ if ( {) {
     setSelectedService (null);
   }
 ;
+
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white">;
       {/* Header */}
@@ -1501,6 +1138,7 @@ if ( {) {
           initial={{ opacity: 0, coordinate_y: 20 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8 }}
+
           transition={{ duration: 0 && 0.8 }}
           className='text-center mb-16'>;
           <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -1518,21 +1156,42 @@ if ( {) {
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.;
           </p>;
         </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+
+
+        >
+          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
+            <div className='relative flex-1 max-w-md'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <input
+                type='text'
+                placeholder='Search services, technologies, or features...'
+                value={searchTerm}
+
                 onChange={e => setSearchTerm(e && e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent';
               />;
               <FaSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400' />;
             </div>;
+
+
             <select
               value={sortBy}
               onChange={e =>;
                 setSortBy(e && e.target.value as 'name' | 'price' | 'category');
               }
-              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500';
+
           className='text - center mb - 16';
         >;
           <h1 className='text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
@@ -1574,24 +1233,42 @@ if ( {) {
                 setSortBy (e.target.value as 'name' | 'price' | 'category');
               }
               className='px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500';
+
             >;
               <option value='name'>Sort by Name</option>;
               <option value='price'>Sort by Price</option>;
               <option value='category'>Sort by Category</option>            </select>        >;
+
+=======
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 max-w-md">
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services, technologies, or features..."
                 value={searchTerm}
+
+              onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="name">Sort by Name</option>
+              <option value="price">Sort by Price</option>
+              <option value="category">Sort by Category</option>
+            </select>
+          </div>
+        </motion.div>
+=======
                 onChange={(e) => setSearchTerm(e && e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
               />;
               <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />;
             </div>;
+
+
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e && e.target.value as 'name' | 'price' | 'category')}
@@ -1617,40 +1294,111 @@ if ( {) {
               <option value="category">Sort by Category</option>;
             </select>;
           </div>;
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-12"
-        >
-          <div className="flex flex-wrap justify-center gap-4">
+
+              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500'
+            >
+              <option value='name'>Sort by Name</option>
+              <option value='price'>Sort by Price</option>
+
+              <option value='category'>Sort by Category</option>            </select>
+
+            </select>
+
+          </div>
+        </motion.div>
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Category Tabs */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+
+
             <button
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               }`}
-            >
-              All Services
-            </button>
-            {serviceCategories.map((category) => (
+
+
               <button
-                key={category && category.id}
-                onClick={() => setSelectedCategory(category && category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
-                  selectedCategory === category && category.id;
-                    ? `bg-gradient-to-r ${category && category.color} text-white shadow-lg`;
-                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
+
+
+
+
+
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+                  selectedCategory === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }`}
               >;
                 {category && category.icon}
                 {category && category.name}
               </button>;
             ))}
+
           </div>;
         </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+
+
+        >
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+              whileHover={{ y: -5, scale: 1 && 1.02 }}
+              className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              onClick={() => handleServiceSelect(service)}
+            >;
+              <div className='flex items-center gap-3 mb-4'>;
+                <div className='p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg'>;
+                  {service && service.icon}
+                </div>;
+                <div>;
+                  <h3 className='text-xl font-bold text-white'>;
+                    {service && service.title}
+                  </h3>;
+                  <p className='text-sm text-gray-400'>;
+                    {;
+                      serviceCategories && serviceCategories.find(c => c && c.id === service && service.category);
+                        ?.name;
+                    }
+
           transition={{ duration: 0.8, delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -1701,491 +1449,43 @@ if ( {) {
         >;
           {filtered_services.map ((service, index) => (
             <motion.div;
+
               key={service.id}
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+
                   </p>;
                 </div>;
               </div>;
+
               <p className='text-gray-300 mb-4 line-clamp-3'>;
                 {service && service.description}
               </p>;
+
               <div className='flex flex-wrap gap-2 mb-4'>;
                 {service && service.technologies.slice(0, 3).map(tech => (;
                   <span
                     key={tech}
-                    className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300"
-                  >
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {tech}
-                  </span>;
+                  </span>
                 ))}
+
                 {service.technologies.length > 3 && (
                   <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
-    
-    return filtered.sort(_(a, _b) => {_switch (sortBy) {
-        case 'price':
-          return a.pricing.starter - b.pricing.starter,
-        case 'category':
-          return a.category.localeCompare(b.category),
-        default: return a.title.localeCompare(b.title)
-      }
-    })
-  }, [selectedCategory, searchTerm, sortBy]),
 
-  const handleServiceSelect = (service: Service) => {
-    setSelectedService(service)
-  },
-
-  const closeModal = () => {
-    setSelectedService(null)
-  },
-
-  return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white&quot;>
-      {/* Header */}
-      <div className=&quot;container mx-auto px-4 py-16&quot;>
-=======
-        default:
-          return a.title.localeCompare(b.title);
-      }
-    });
-  }, [selectedCategory, searchTerm, sortBy]);
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const handleServiceSelect = (service: Service) => {
-    setSelectedService(service);
-  }
-  const closeModal = () => {
-    setSelectedService(null);
-  }
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white'>
-      {/* Header */}
-      <div className='container mx-auto px-4 py-16'>        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='text-center mb-16'      }
-    })
-  }, [selectedCategory, searchTerm, sortBy]);
-  const handleServiceSelect = (service: Service) => {
-    setSelectedService(service)
-  }
-  const closeModal = () => {
-    setSelectedService(null)
-  }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      {/* Header */}
-      <div className="container mx-auto px-4 py-16">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-          className=&quot;text-center mb-16&quot;
-          return a.category.localeCompare(b.category);
-        default:
-          return a.title.localeCompare(b.title);}
-    });
-  }, [selectedCategory, searchTerm, sortBy]);
-
-  const _handleServiceSelect = (_service: Service) => {_setSelectedService(service);};
-
-  const _closeModal = () => {_setSelectedService(null);};
-
-  return (_<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      {_/* Header */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={_{ opacity: 0, _y: 20}}
-          animate={_{ opacity: 1, _y: 0}}
-          transition={_{ duration: 0.8}}
-          className="text-center mb-16"
-
-        >
-          <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
-            2025 Services Showcase
-          </h1>
-          <p className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed&quot;>
-            Discover our cutting-edge technology solutions designed for the future. 
-            From AI-powered automation to quantum computing, _we're building tomorrow's innovations today.
-          </p>
-        </motion.div>
-
-        {_/* Search and Filters */}
-=======
-          className='text-center mb-16'
-        >
-          <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-            2025 Services Showcase
-          </h1>
-          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-            Discover our cutting-edge technology solutions designed for the
-            future. From AI-powered automation to quantum computing, we're
-            building tomorrow's innovations today.          </p>        >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            2025 Services Showcase
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our cutting-edge technology solutions designed for the future.
-            From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
-          </p>
-        </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {/* Search and Filters */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-          className=&quot;mb-12&quot;
-        >
-          <div className=&quot;flex flex-col md:flex-row gap-4 items-center justify-center&quot;>
-            <div className=&quot;relative flex-1 max-w-md&quot;>
-              <input
-                type=&quot;text&quot;
-                placeholder=&quot;Search services, technologies, or features...&quot;
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className=&quot;w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-              />
-              <FaSearch className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400&quot; />
-            </div>
-            
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
-              className=&quot;px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
-            >
-              <option value=&quot;name&quot;>Sort by Name</option>
-              <option value=&quot;price&quot;>Sort by Price</option>
-              <option value=&quot;category&quot;>Sort by Category</option>
-            </select>
-          </div>
-        </motion.div>
-
-        {_/* Category Tabs */}
-=======
-          className='mb-12'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        >
-          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
-            <div className='relative flex-1 max-w-md'>
-              <input
-                type='text'
-                placeholder='Search services, technologies, or features...'
-                value={searchTerm}
-                onChange={e => setSearchTerm(e.target.value)}
-                className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-              />
-              <FaSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400' />
-            </div>
-            <select
-              value={sortBy}
-              onChange={e =>
-                setSortBy(e.target.value as 'name' | 'price' | 'category')
-              }
-              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500'
-            >
-              <option value='name'>Sort by Name</option>
-              <option value='price'>Sort by Price</option>
-<<<<<<< HEAD
-              <option value='category'>Sort by Category</option>            </select>        >
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
-            <div className="relative flex-1 max-w-md">
-              <input
-                type="text"
-                placeholder="Search services, technologies, or features..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-            </div>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
-              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="name">Sort by Name</option>
-              <option value="price">Sort by Price</option>
-              <option value="category">Sort by Category</option>
-            </select>
-          </div>
-        </motion.div>
-=======
-              <option value='category'>Sort by Category</option>            </select>
-
-            </select>
-
-          </div>
-        </motion.div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {/* Category Tabs */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD
-          className=&quot;mb-12&quot;
-        >
-          <div className=&quot;flex flex-wrap justify-center gap-4&quot;>
-            <button
-              onClick={_() => setSelectedCategory('all')}
-              className={_`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                selectedCategory === 'all'
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
-                  : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'}`}
-            >
-              All Services
-            </button>
-            {_serviceCategories.map(_(category) => (_<button
-                key={category.id}
-                onClick={_() => setSelectedCategory(category.id)}
-                className={_`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
-=======
-          className='mb-12'
-        >
-          <div className='flex flex-wrap justify-center gap-4'>            <button          className="mb-12"
-        >
-          <div className="flex flex-wrap justify-center gap-4">
-            <button
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              onClick={() => setSelectedCategory('all')}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                selectedCategory === 'all'
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
-                  : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
-              }`}
-            >
-              All Services
-            </button>
-            {serviceCategories.map(category => (              <button            {serviceCategories.map((category) => (
-              <button
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                  selectedCategory === category.id
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-<<<<<<< HEAD
-                {_category.icon}
-                {_category.name}
-=======
-                {category.icon}
-                {category.name}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              </button>
-            ))}
-          </div>
-        </motion.div>
-<<<<<<< HEAD
-
-        {_/* Services Grid */}
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {/* Services Grid */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-          className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
-        >
-          {_filteredServices.map(_(service, _index) => (_<motion.div
-=======
-<<<<<<< HEAD
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        >
-          {filteredServices.map((service, index) => (
-            <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
-<<<<<<< HEAD
-              className=&quot;bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300&quot;
-              onClick={() => handleServiceSelect(service)}
-            >
-              <div className=&quot;flex items-center gap-3 mb-4&quot;>
-                <div className=&quot;p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg&quot;>
-                  {service.icon}
-                </div>
-                <div>
-                  <h3 className=&quot;text-xl font-bold text-white&quot;>{service.title}</h3>
-                  <p className=&quot;text-sm text-gray-400&quot;>{serviceCategories.find(c => c.id === service.category)?.name}</p>
-                </div>
-              </div>
-              
-              <p className=&quot;text-gray-300 mb-4 line-clamp-3&quot;>{service.description}</p>
-              
-              <div className=&quot;flex flex-wrap gap-2 mb-4&quot;>
-                {service.technologies.slice(0, 3).map((tech) => (
-                  <span
-                    key={tech}
-                    className=&quot;px-2 py-1 bg-white/10 rounded text-xs text-gray-300&quot;
-                  >
-                    {_tech}
-                  </span>
-                ))}
-                {service.technologies.length > 3 && (
-                  <span className=&quot;px-2 py-1 bg-white/10 rounded text-xs text-gray-300&quot;>
-
-=======
-              className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              onClick={() => handleServiceSelect(service)}
-            >
-              <div className='flex items-center gap-3 mb-4'>
-                <div className='p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg'>
-                  {service.icon}
-                </div>
-                <div>
-                  <h3 className='text-xl font-bold text-white'>
-                    {service.title}
-                  </h3>
-                  <p className='text-sm text-gray-400'>
-                    {
-                      serviceCategories.find(c => c.id === service.category)
-                        ?.name
-                    }
-                  </p>
-                </div>
-              </div>
-              <p className='text-gray-300 mb-4 line-clamp-3'>
-                {service.description}
-              </p>
-              <div className='flex flex-wrap gap-2 mb-4'>
-                {service.technologies.slice(0, 3).map(tech => (
-                  <span
-                    key={tech}
-<<<<<<< HEAD
-                    className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >              onClick={() => handleServiceSelect(service)}
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
-                  {service.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  <p className="text-sm text-gray-400">{serviceCategories.find(c => c.id === service.category)?.name}</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {service.technologies.slice(0, 3).map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300"
-                  >
-=======
-                    className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >
-
-                  >
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    {tech}
-                  </span>
-                ))}
-                {service.technologies.length > 3 && (
-                  <span className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'>                    +{service.technologies.length - 3} more
-                  </span>
-                )}
-              </div>
-              <div className='flex items-center justify-between'>
-                <div className='text-2xl font-bold text-blue-400'>                  <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     +{service.technologies.length - 3} more
                   </span>
                 )}
               </div>
-<<<<<<< HEAD
-<div className="flex items-center justify-between">
+
+              
+              <div className="flex items-center justify-between">
                 <div className="text-2xl font-bold text-blue-400">
                   ${service.pricing.starter}
-=======
-              <div className='flex items-center justify-between'>
-                <div className='text-2xl font-bold text-blue-400'>
-                  ${service.pricing.starter}
-                  <span className='text-sm text-gray-400 font-normal'>
-                    /month
-                  </span>
-                </div>
-                <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>                  Learn More                  ${service.pricing.starter}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                   <span className="text-sm text-gray-400 font-normal">/month</span>
                 </div>
                 <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
@@ -2195,8 +1495,9 @@ if ( {) {
             </motion.div>
           ))}
         </motion.div>
-<<<<<<< HEAD
-</div>;
+
+              </div>;
+
               <div className='flex items-center justify-between'>;
                 <div className='text-2xl font-bold text-blue-400'>                  <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">;
                     +{service && service.technologies.length - 3} more;
@@ -2224,39 +1525,32 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
-            className="text-center py-16"
-=======
-            className='text-center py-16'
-          >
-            <div className='text-6xl mb-4'>🔍</div>
-            <h3 className='text-2xl font-bold text-gray-300 mb-2'>
-              No services found
-            </h3>
-            <p className='text-gray-400'>
-              Try adjusting your search terms or category filters
-<<<<<<< HEAD
-            </p>          </motion.div>            className="text-center py-16"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          >
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-300 mb-2">No services found</h3>
-            <p className="text-gray-400">Try adjusting your search terms or category filters</p>
-          </motion.div>
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
-<<<<<<< HEAD
+
       </div>;
+
+
+=======
+      </div>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (;
@@ -2264,63 +1558,12 @@ if ( {) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'>;
-                  <span className='text-2xl'>×</span>;
-                </button>;
-              </div>;
-              <p className='text-gray-300 text-lg mb-8'>;
-                {selectedService && selectedService.description}
-              </p>;
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-                {/* Features */}
-                <div>;
-                  <h3 className='text-xl font-bold text-white mb-4'>;
-                    Key Features;
-                  </h3>;
-                  <ul className='space-y-2'>;
-                    {selectedService && selectedService.features.map((feature, index) => (;
-                      <li
-                        key={index}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-=======
-      </div>
-=======
-            </p>          </motion.div>
 
-          </motion.div>
 
-        )}
-      </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* Service Detail Modal */}
-      <AnimatePresence>
-        {selectedService && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-<<<<<<< HEAD
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            onClick={closeModal}
-=======
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
-
-            onClick={closeModal}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
 <<<<<<< HEAD
@@ -2329,15 +1572,12 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
             >
 =======
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
-              onClick={e => e.stopPropagation()}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              onClick={e => e.stopPropagation()}
+
+
+
+
             >
               <div className='flex items-start justify-between mb-6'>
                 <div className='flex items-center gap-4'>
@@ -2353,6 +1593,7 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
                         serviceCategories.find(
                           c => c.id === selectedService.category
                         )?.name
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }
                     </p>                  </div>
                 </div>
@@ -2372,20 +1613,18 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
                 </div>
                 <button
                   onClick={closeModal}
-<<<<<<< HEAD
-className="p-2 hover:bg-white/10 rounded-lg transition-colors"
-                >
-=======
-<<<<<<< HEAD
-                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'
-                >
-                  <span className='text-2xl'>×</span>
-                </button>
-              </div>
-              <p className='text-gray-300 text-lg mb-8'>
-                {selectedService.description}
-              </p>
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+
+                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'>;
+                  <span className='text-2xl'>×</span>;
+                </button>;
+              </div>;
+
+              <p className='text-gray-300 text-lg mb-8'>;
+                {selectedService && selectedService.description}
+              </p>;
+
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+
                 {/* Features */}
                 <div>
                   <h3 className='text-xl font-bold text-white mb-4'>
@@ -2395,15 +1634,8 @@ className="p-2 hover:bg-white/10 rounded-lg transition-colors"
                     {selectedService.features.map((feature, index) => (
                       <li
                         key={index}
-                        className='flex items-center gap-2 text-gray-300'
-                      >
-                        <div className='w-2 h-2 bg-blue-500 rounded-full'></div>                        {feature}                >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                  <span className="text-2xl">×</span>
-                </button>
-              </div>
-              <p className="text-gray-300 text-lg mb-8">{selectedService.description}</p>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+
                         className='flex items-center gap-2 text-gray-300'>;
                         <div className='w-2 h-2 bg-blue-500 rounded-full'></div>                        {feature}                >;
                   <span className="text-2xl">×</span>;
@@ -2412,194 +1644,94 @@ className="p-2 hover:bg-white/10 rounded-lg transition-colors"
               <p className="text-gray-300 text-lg mb-8">{selectedService && selectedService.description}</p>;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 {/* Features */}
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
-                  <ul className="space-y-2">
-                    {selectedService.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+
+
                         {feature}
 <<<<<<< HEAD
                       </li>;
-                    ))}
-                  </ul>;
-                </div>;
 =======
-=======
+
 
                         {feature}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
-                  </ul>
-                </div>
-<<<<<<< HEAD
+
+                  </ul>;
+                </div>;
+
+
 =======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Benefits */}
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Key Benefits</h3>
-                  <ul className="space-y-2">
-                    {selectedService.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-<<<<<<< HEAD
-                        {benefit}
-                      </li>
+
+
                     ))}
+
                   </ul>;
                 </div>;
               </div>;
-              {/* Technologies */}
-              <div className="mt-8">
-=======
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-<<<<<<< HEAD
+
+
 =======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Technologies */}
-              <div className='mt-8'>
-                <h3 className='text-xl font-bold text-white mb-4'>
-                  Technologies
-                </h3>
-                <div className='flex flex-wrap gap-3'>
-                  {selectedService.technologies.map(tech => (
-                    <span
-                      key={tech}
-<<<<<<< HEAD
-                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >              <div className="mt-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>
-                <div className="flex flex-wrap gap-3">
-                  {selectedService.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-2 bg-white/10 rounded-lg text-gray-300"
-<<<<<<< HEAD
-                    >
-                      {tech}
-                    </span>;
-                  ))}
-                </div>;
-              </div>;
-              {/* Pricing */}
-              <div className="mt-8">
-                <h3 className="text-xl font-bold text-white mb-4">Pricing Plans</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {Object.entries(selectedService.pricing).map(([plan, price]) => (
-                    <div
-                      key={plan}
-                      className="p-4 bg-white/5 border border-white/20 rounded-lg text-center"
-                    >
-                      <h4 className="text-lg font-bold text-white capitalize mb-2">{plan}</h4>
-                      <div className="text-3xl font-bold text-blue-400 mb-2">
-                        ${price}
-                        <span className="text-sm text-gray-400 font-normal">/month</span>
-                      </div>
-                      <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300">
+
+
 =======
-=======
+
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
 
                     >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {tech}
-                    </span>
+                    </span>;
                   ))}
-                </div>
-              </div>
-<<<<<<< HEAD
+
+                </div>;
+              </div>;
+
+
 =======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Pricing */}
-              <div className='mt-8'>
-                <h3 className='text-xl font-bold text-white mb-4'>
-                  Pricing Plans
-                </h3>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                  {Object.entries(selectedService.pricing).map(
-                    ([plan, price]) => (
-                      <div
-                        key={plan}
-                        className='p-4 bg-white/5 border border-white/20 rounded-lg text-center'
-                      >
-                        <h4 className='text-lg font-bold text-white capitalize mb-2'>
-                          {plan}
-                        </h4>
-                        <div className='text-3xl font-bold text-blue-400 mb-2'>
-                          ${price}
-                          <span className='text-sm text-gray-400 font-normal'>
-                            /month
-                          </span>
-                        </div>
-                        <button className='w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>
-                          Get Started
-                        </button>
-                      </div>
-                    )
-                  )}                </div>                      <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                        Get Started
-                      </button>
-                    </div>
-                  ))}
-<<<<<<< HEAD
-                </div>
-=======
-<<<<<<< HEAD
-=======
 
-                </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
             </motion.div>
           </motion.div>
         )}
-<<<<<<< HEAD
-</AnimatePresence>;
+
+      </AnimatePresence>;
     </div>;
   );
+
 };
 export default EnhancedServicesShowcase2025;  );
   )
 };
 export default EnhancedServicesShowcase2025;
+
+
+=======
               while_hover={{ coordinate_y: -5, scale: 1.02 }}
               className='bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl p - 6 cursor - pointer hover:bg - white / 20 transition - all duration - 300';
               on_click={() => handleServiceSelect (service)}
@@ -2856,29 +1988,11 @@ export default EnhancedServicesShowcase2025);
 ;
 export default EnhancedServicesShowcase2025;
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-      </AnimatePresence>
-    </div>
-);
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default EnhancedServicesShowcase2025;  )
-}
-export default EnhancedServicesShowcase2025;
 
-<<<<<<< HEAD
-=======
-export default EnhancedServicesShowcase2025;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default EnhancedServicesShowcase2025;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

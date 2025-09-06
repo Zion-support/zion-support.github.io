@@ -4,11 +4,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
-
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
+
   const { projectId } = req && req.query as { projectId: string };
+
   const project = getProject(projectId);
   if (!project) {
 if (req && req.method === "GET") {
@@ -29,9 +31,11 @@ return
     return res.status(500).json({ error: "Internal server error" });
   }
 
-  if (req.method === "GET") {
+    if (!isClient(project, user)) {
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 
-    res.status(200).json({ milestones: project.milestones });
+
+res.status(200).json({ milestones: project.milestones });
     return
   }
 if (req && req.method === "POST") {
@@ -64,7 +68,6 @@ if (
       dueDate: body && body.dueDate,
       amountUsd: body && body.amountUsd,
       attachments: body && body.attachments || [],
-
     });
     res && res.status(201).json({ milestone: created });
     return;
@@ -86,30 +89,12 @@ res.status(403).json({ error: 'Only client (or admin) can add milestones' });
   }
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 }
-import type { NextApiRequest, NextApiResponse } from './next';
-import { require_user  } from '../../../../utils / api / auth';
-import {
-  add_milestone,
-  get_project,
-  assertParticipantOrAdmin,
-  is_client,
-} from '../../../../utils / api / projects';
-import { Milestone  } from '../../../../utils / types / milestones';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const user = require_user (req, res);
-  // Check condition
-if (return) {
-  $2
-}
-  const { project_id } = req.query as { project_id: string }
-  const project = get_project (project_id);
-  // Check condition
-if ( {) {
-  $2
+
+
+
+
 }
     res.status (404).json ({ error: "Project not found" });
     return;
@@ -161,8 +146,6 @@ if ( {) {
   }
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
-  res.setHeader('AllowGET, POST'),
-  res.status(405).end('Method Not Allowed')
-
 }
 
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

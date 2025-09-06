@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-;,"});"})"; """
-;,"});"})"; """
-=======
 import React from 'react';
 
 const FeaturedListingsSection.js = ({ className }) => {
@@ -14,4 +10,3 @@ const FeaturedListingsSection.js = ({ className }) => {
 };
 
 export default FeaturedListingsSection.js;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

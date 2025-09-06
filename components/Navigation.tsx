@@ -1,8 +1,16 @@
-<<<<<<< HEAD
+
+
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+
 import React, { useState } from './react';
 import Link from './next / link';
 import { motion, AnimatePresence  } from './framer-motion';
+
 import {
+
 import {;
   Menu,;
   X,;
@@ -25,88 +33,20 @@ import {;
   Globe,;
   BarChart3,;
   Search,;
-} from "lucide-react";
-import SearchModal from "./SearchModal";
-  BarChart3
-} from 'lucide-react;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Phone, 
-  Mail, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-=======
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-<<<<<<< HEAD
-  Menu,
-  X,
-  ChevronDown,
-  ChevronRight,
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-  Instagram,
-  Github,
-  ArrowRight,
-  Building,
-  Users,
-  ShoppingCart,
-  Shield,
-  Zap,
-  Globe,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-  BarChart3,
-  Search,;
-} from "lucide-react";
-import SearchModal from "./SearchModal";
-=======
-<<<<<<< HEAD
-  BarChart3,
-  Search
-} from 'lucide-react';
-import SearchModal from './SearchModal';
-<<<<<<< HEAD
-=======
-=======
-  BarChart3
-} from 'lucide-react;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-<<<<<<< HEAD
+} from "lucide-react";
+import SearchModal from "./SearchModal";
 =======
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-=======
+
+  BarChart3
+} from 'lucide-react;
+
 >>>>>>> origin/automation-improvements-final
 
+
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
   Menu
   X
   ChevronDown
@@ -130,15 +70,11 @@ import {
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-<<<<<<< HEAD
-export default function Navigation() {
-export default function Navigation() {;
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Navigation() {
 =======
 export default function Navigation() {;
@@ -150,6 +86,7 @@ export default function Navigation() {;
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
 } from './lucide-react';
 import SearchModal from "./SearchModal";
 ;
@@ -183,6 +120,7 @@ function Navigation() {
       description: "Custom SaaS Solutions",
       icon: Zap,
     },
+
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -202,6 +140,7 @@ function Navigation() {
       icon: Shield
     }
   ];
+
 ;
   const solutions = [;
     {
@@ -210,6 +149,7 @@ function Navigation() {
       description: "Large - scale business solutions",
       icon: Building,
     },
+
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -217,6 +157,7 @@ function Navigation() {
       icon: Zap
     }
     {
+
       name: "E - commerce",
       href: "/ecommerce",
       description: "Online store solutions",
@@ -297,6 +238,7 @@ function Navigation() {
       href: "/tutorials",
       description: "Step - by - step guides",
     },
+
     {
       name: "Training"
       href: "/training"
@@ -309,6 +251,8 @@ function Navigation() {
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
+
+
   const services = [;
     {;
       name: "AI Services",;
@@ -458,12 +402,15 @@ function Navigation() {
     { name: "Contact", href: "/contact" },;
     { name: "Support", href: "/support" },;
     { name: "Status", href: "/status" },;
+
   ];
-<<<<<<< HEAD
 =======
+  ];
+
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       {/* Top Bar */}
@@ -480,6 +427,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <div className="flex items-center">;
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
+
                   href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                   className="hover:text-blue-300">;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -547,12 +495,14 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
                   <Instagram className="w - 4 h - 4" />;
+
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+
             <Link href="/" className="flex items-center space-x-2">;
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
                 <span className="text-white font-bold text-xl">Z</span>;
@@ -576,13 +526,17 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - gray - 500">;
+
                   Technology Solutions;
                 </div>;
               </div>;
             </Link>;
+
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
               </Link>;
+
+
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -640,8 +594,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           return (
                             <Link;
                               key={index}
+
                 </AnimatePresence>;
               </div>;
+
+
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -718,8 +675,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           return (
                             <Link;
                               key={index}
+
                 </AnimatePresence>;
               </div>;
+
+
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -757,8 +717,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       </div>;
                     </motion && motion.div>;
                   )}
+
                 </AnimatePresence>;
               </div>;
+
+
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -796,28 +759,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       </div>;
                     </motion && motion.div>;
                   )}
+
+
+=======
                 </AnimatePresence>;
               </div>;
-              <Link
-                href="/pricing"
-<<<<<<< HEAD
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
-                Pricing;
-              </Link>;
-            </div>;
-=======
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                Pricing
-              </Link>
-            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 >>>>>>> origin/main
@@ -841,20 +787,19 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </button>;
               <Link
                 href="/contact"
+
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
-<<<<<<< HEAD
+
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
+
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 Get Started
               </Link>
@@ -884,8 +829,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               ) : (;
                 <Menu className="w-6 h-6" />;
               )}
+
             </button>;
           </div>;
+
+
           {/* Mobile Menu */}
           <AnimatePresence>;
             {isMenuOpen && (;
@@ -899,9 +847,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     href="/"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
+
                   >;
                     Home;
                   </Link>;
+
+
                   {/* Mobile Services */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -918,8 +869,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           {service && service.name}
                         </Link>;
                       ))}
+
                     </div>;
                   </div>;
+
+
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -936,8 +890,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           {solution && solution.name}
                         </Link>;
                       ))}
+
                     </div>;
                   </div>;
+
+
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -954,8 +911,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           {industry && industry.name}
                         </Link>;
                       ))}
+
                     </div>;
                   </div>;
+
+
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -972,16 +932,21 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           {resource && resource.name}
                         </Link>;
                       ))}
+
                     </div>;
                   </div>;
+
+
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
+
                   >;
                     Pricing;
                   </Link>;
                   <div className="px-4 py-2 space-y-2">;
+
                     <Link
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -1244,9 +1209,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     </a>;
                   </div>;
                 </div>;
+
           </AnimatePresence>;
         </div>;
       </nav>;
+
+
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}

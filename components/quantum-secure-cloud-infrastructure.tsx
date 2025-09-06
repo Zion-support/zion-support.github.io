@@ -1,5 +1,15 @@
-<<<<<<< HEAD
-import React from 'react';
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+				"NIST PQC roadmap alignment]}
+			]}
+			industries={["Financial Services", "Healthcare", "Government"]}
+			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
+		/>
+	)
+
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -107,14 +117,9 @@ return (<ServiceLanding;
     url="https: //ziontechgroup.com / quantum - secure - cloud - infrastructure";
   />);
 }
-		/>
-	)
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 
-=======
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
