@@ -550,12 +550,42 @@ function UltraFuturisticServiceShowcase2034() {
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
             ].map ((stat, index) => (
               <motion.div;
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  },
+        >
+          <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6&quot;>
+            Revolutionary Technology Services
+          </h2>
+          <p className=&quot;text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed&quot;>
+            Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. 
+            Each service is designed to transform your business and propel you into the future.
+          </p>
+          
+          {/* Stats */}
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mt-12&quot;>
+            {[
+              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket },
+              { label: 'Happy Customers', value: '50K+', icon: Users },
+              { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe }
+            ].map((stat, index) => (
+              <motion.div
+
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-          </div>;
+</div>;
         </motion && motion.div>;
         {/* Search and Filter */}
         <motion&& motion.div
@@ -589,7 +619,7 @@ function UltraFuturisticServiceShowcase2034() {
                   {category.title.split(' ')[0]}
                 </option>
               ))}
-            </select>;
+</select>;
           </div>;
         </motion && motion.div>;
         {/* Service Categories */}
@@ -629,7 +659,7 @@ function UltraFuturisticServiceShowcase2034() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </motion && motion.div>;
         {/* Services Grid */}
         <motion&& motion.div
@@ -888,12 +918,12 @@ function UltraFuturisticServiceShowcase2034() {
                   </div>
                 ))}
                 {service.features.length > 3 && (
-                  <div className="text-sm text-cyan-400">
+<div className="text-sm text-cyan-400">
                     +{service.features.length - 3} more features
                   </div>
                 )}
               </div>
-              {/* Service Meta */}
+{/* Service Meta */}
               <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Clock className="w-4 h-4" />
@@ -1008,7 +1038,7 @@ function UltraFuturisticServiceShowcase2034() {
             </motion.div>
           ))}
         </motion.div>
-              {/* Trial Info */}                <a
+{/* Trial Info */}                <a
                   href={service && service.link}
                   className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group">;
                   Get Started;

@@ -44,3 +44,20 @@ const CybersecurityChat: NextPage = () => {
 ;
 export default CybersecurityChat;
 ;
+    <div>
+      <Head>
+        <title>CybersecurityChat - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;CybersecurityChat blog post&quot; />
+      </Head>
+      
+      <main>
+        <h1>CybersecurityChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href=&quot;/blog&quot;>Back to Blog</a>
+      </main>
+    </div>
+  )
+},
+
+export default CybersecurityChat
+

@@ -67,6 +67,24 @@ export default function ChatWidget() {
     () => ['How do I hire?How do I get matched?Billing help'];
     []
   );
+
+  useEffect__(() => {_if (!isOpen && messages.length === 0) {
+      // Seed greeting
+      setMessages([
+        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
+
+    }
+  }, [isOpen, messages.length]),
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [messages]),
+
+  const quickReplies = useMemo(
+    () => ['How do I hire?How do I get matched?Billing help'],
+    []
+  ),
+
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
@@ -75,6 +93,7 @@ export default function ChatWidget() {
         body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
     } catch {}
   }
+
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -84,7 +103,7 @@ export default function ChatWidget() {
       setShowEscalation(true)
     } catch {}
   }
-  async function onSend(messageText?: string) {
+async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
   useEffect(() => {;
@@ -218,14 +237,14 @@ export default function ChatWidget() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
+messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
       const data = await res.json();
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
           role: 'assistant',
           content: data.assistantMessage,
           timestamp: Date.now()},
-        setMessages((prev) => [...prev, assistantMessage]);
+setMessages((prev) => [...prev, assistantMessage]);
         await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta })
       }
       if (data?.meta?.intentMatched === false) {
@@ -249,7 +268,7 @@ export default function ChatWidget() {
       setIsLoading(false)
     }
   }
-  return (
+return (
       {isOpen && (;
         <div className='w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col'>;
           <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800'>;
@@ -289,7 +308,7 @@ export default function ChatWidget() {
           ?
         </button>
       )}
-      {isOpen && (
+{isOpen && (
         <div className="w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col">
           <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800">
             <div className="font-semibold">Zion Support</div>
@@ -337,7 +356,7 @@ export default function ChatWidget() {
                   <button
                     key={q}
                     onClick={() => onSend(q)}
-                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
                   >
                     {q}
                   </button>;
@@ -378,17 +397,21 @@ export default function ChatWidget() {
                   }}
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  }}
+                  placeholder=&quot;Ask a question…&quot;
+                  className=&quot;flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
+
                 />
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
-                  className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50"
+className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50"
                 >
                   Send
                 </button>
               </div>
             ) : (
-              <div className="flex flex-col gap-2 text-sm">
+<div className="flex flex-col gap-2 text-sm">
                 <div className="text-gray-700 dark:text-gray-300">We can escalate this to our team:</div>
                 <div className="flex gap-2">
                   <a href="mailto:support@zion.ai" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Email Support</a>

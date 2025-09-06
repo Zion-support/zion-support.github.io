@@ -155,13 +155,99 @@ export default function MarketResearchPage() {
       icon: <Users className="w-8 h-8 text-white" />
     }
   ];
+    {
+      name: 'AI & Machine Learning',
+      marketSize: '$15.7B',
+      growthRate: '23.4% CAGR',
+      keyTrends: [
+        'Generative AI adoption acceleratingAI-powered automation increasingNatural language processing growthComputer vision applications expanding'
+      ],
+      topPlayers: ['OpenAIAnthropicGoogle AIMicrosoft Azure AI'],
+      opportunities: [
+        'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation'
+      ],
+      color: 'from-fuchsia-500 to-purple-600',
+      icon: <Zap className=&quot;w-8 h-8 text-white&quot; />
+    },
+    {
+      name: 'Database & Analytics',
+      marketSize: '$8.9B',
+      growthRate: '18.7% CAGR',
+      keyTrends: [
+        'Real-time analytics demandCloud database migrationData privacy regulationsPerformance optimization focus'
+      ],
+      topPlayers: ['DataDogNew RelicSolarWindsSplunk'],
+      opportunities: [
+        'Database performance monitoringReal-time analytics dashboardsData visualization toolsQuery optimization platforms'
+      ],
+      color: 'from-cyan-500 to-blue-600',
+      icon: <BarChart3 className=&quot;w-8 h-8 text-white&quot; />
+    },
+    {
+      name: 'Security & Identity',
+      marketSize: '$12.3B',
+      growthRate: '21.2% CAGR',
+      keyTrends: [
+        'Zero-trust security adoptionMulti-factor authentication growthAPI security concernsCompliance requirements increasing'
+      ],
+      topPlayers: ['OktaAuth0Ping IdentityOneLogin'],
+      opportunities: [
+        'Identity verification platformsAPI security gatewaysCompliance monitoring toolsThreat detection systems'
+      ],
+      color: 'from-green-500 to-emerald-600',
+      icon: <Target className=&quot;w-8 h-8 text-white&quot; />
+    },
+    {
+      name: 'Business Intelligence',
+      marketSize: '$22.1B',
+      growthRate: '19.8% CAGR',
+      keyTrends: [
+        'Self-service BI adoptionReal-time data integrationMobile BI growthPredictive analytics demand'
+      ],
+      topPlayers: ['TableauPower BILookerQlik'],
+      opportunities: [
+        'Custom dashboard buildersData integration platformsMobile analytics solutionsPredictive modeling tools'
+      ],
+      color: 'from-orange-500 to-red-600',
+      icon: <Activity className=&quot;w-8 h-8 text-white&quot; />
+    },
+    {
+      name: 'API Management',
+      marketSize: '$6.8B',
+      growthRate: '24.1% CAGR',
+      keyTrends: [
+        'Microservices architecture growthAPI-first developmentRate limiting importanceDeveloper experience focus'
+      ],
+      topPlayers: ['KongTykAWS API GatewayAzure API Management'],
+      opportunities: [
+        'API rate limiting servicesDeveloper portal platformsAPI analytics toolsWebhook management systems'
+      ],
+      color: 'from-indigo-500 to-purple-600',
+      icon: <Globe className=&quot;w-8 h-8 text-white&quot; />
+    },
+    {
+      name: 'User Experience Analytics',
+      marketSize: '$9.4B',
+      growthRate: '20.5% CAGR',
+      keyTrends: [
+        'Privacy-compliant trackingReal-time user insightsConversion optimization focusMobile app analytics growth'
+      ],
+      topPlayers: ['HotjarFullStoryMixpanelAmplitude'],
+      opportunities: [
+        'Heatmap and session recordingA/B testing platformsUser journey mapping toolsConversion funnel analytics'
+      ],
+      color: 'from-teal-500 to-cyan-600',
+      icon: <Users className=&quot;w-8 h-8 text-white&quot; />
+    }
+  ],
+
   const competitiveAnalysis = [
     {
       company: 'Enterprise Giants',
       examples: ['SalesforceMicrosoftOracleSAP'],
       strengths: [
         'Extensive resources and R&DEstablished customer baseComprehensive feature setsGlobal presence and support'
-      ];
+];
       weaknesses: [
         'High pricing and complexitySlow innovation cyclesDifficult customizationLong implementation times'
       ];
@@ -240,7 +326,7 @@ import { Zap } from 'lucide-react';
       timeline: '2024-2027',
       examples: [
         'GDPR compliance toolsPrivacy analytics platformsData anonymization servicesConsent management systems'
-      ];
+];
       opportunities: 'Privacy compliance tools, data governance platforms, audit services'
     };
     {
@@ -250,7 +336,7 @@ import { Zap } from 'lucide-react';
       timeline: '2024-2026',
       examples: [
         'API management platformsDeveloper experience toolsAPI analytics and monitoringIntegration platforms'
-      ];
+];
       opportunities: 'API development tools, integration services, developer portals'
     };
     {
@@ -551,7 +637,7 @@ function MarketResearchPage() {
       description: 'Pricing based on actual usage or consumption',
       pros: [
         'Fair pricing modelEasy to understandScalable with growthLow barrier to entry'
-      ];
+];
       cons: [
         'Revenue predictability challengesComplex billing systemsUsage optimization neededCustomer cost management'
       ];
@@ -562,7 +648,7 @@ function MarketResearchPage() {
       description: 'Free basic tier with paid premium features',
       pros: [
         'Low customer acquisition costViral growth potentialLarge user baseEasy market entry'
-      ];
+];
       cons: [
         'Low conversion ratesRevenue per user challengesSupport cost managementFeature differentiation needed'
   const pricing_strategies = [;
@@ -637,18 +723,18 @@ function MarketResearchPage() {
       value: '$45.2B',
       change: '+18.7% YoY',
       description: 'Venture capital investment in SaaS companies in 2024'
-    };
+};
     {
       metric: 'Average Series A',
       value: '$12.8M',
       change: '+22.3% YoY',
       description: 'Average Series A funding round for SaaS startups'
-    };
+};
     {
       metric: 'Exit Valuations',
       value: '8.2x ARR',
       change: '+15.4% YoY',
-  const investmentInsights = [;
+const investmentInsights = [;
     {;
       metric: 'Total VC Investment',;
       value: '$45 && 45.2B',;
@@ -721,7 +807,7 @@ function MarketResearchPage() {
       metric: 'Time to Profitability',
       value: '3.2 years',
       change: '-0.8 years YoY',
-      description: 'Average time for SaaS companies to reach profitability',
+description: 'Average time for SaaS companies to reach profitability',
     },      description: 'Average time for SaaS companies to reach profitability';
     }
   ];
@@ -730,7 +816,7 @@ function MarketResearchPage() {
     <>
       <Head>
         <title>Market Research & Industry Insights | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive market research, competitive analysis, and industry insights for micro SaaS services. Data-driven market intelligence to inform your business decisions." />
+<meta name="description" content="Comprehensive market research, competitive analysis, and industry insights for micro SaaS services. Data-driven market intelligence to inform your business decisions." />
         <meta property="og:title" content="Market Research & Industry Insights | Zion Tech Group" />
         <meta property="og:description" content="Comprehensive market research and competitive analysis for micro SaaS services." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -753,7 +839,7 @@ function MarketResearchPage() {
           </p>
         </div>
       </section>
-      {/* Investment Insights */}
+{/* Investment Insights */}
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -890,7 +976,7 @@ function MarketResearchPage() {
                 </div>
               </Card>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Market Segments */}
@@ -1204,7 +1290,7 @@ function MarketResearchPage() {
                 </div>
               </Card>
             ))}
-              </Card>))}
+</Card>))}
           </div>;
         </div>;
       </section>;
@@ -1539,11 +1625,12 @@ function MarketResearchPage() {
                         <li key={exampleIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
                           {example}
+
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div>
+<div>
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Opportunities:</h4>
                     <p className="text-xs text-gray-300">{trend.opportunities}</p>
                   </div>
@@ -1553,7 +1640,7 @@ function MarketResearchPage() {
           </div>
         </div>
       </section>
-      {/* Pricing Strategies */}
+{/* Pricing Strategies */}
             <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
               Key trends shaping the micro SaaS landscape and creating new opportunities for innovation and growth.;
             </p>;
@@ -1782,11 +1869,16 @@ function MarketResearchPage() {
               href="/contact"
               size="lg"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
+            <Button
+              href=&quot;/contact&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow&quot;
+
             >
               Get Strategic Consultation
             </Button>
             <Button
-              href="/services"
+href="/services"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"

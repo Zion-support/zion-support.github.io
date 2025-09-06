@@ -38,7 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (usingPlaceholder) {
       return res.status(200).json({ saved: false, mock: true })
     }
-    const supabase = getServerSupabase();
+const supabase = getServerSupabase();
     const { error } = await supabase.from('referral_events').insert({
       partner_code: String(code).toLowerCase(), event: String(event),
       url: url || null, referrer: referrer || null,
@@ -92,5 +92,6 @@ if ( {) {
     return res.status (200).json ({ saved: true });
   } catch (e: any) {
     return res.status (200).json ({ saved: false, error: e?.message });
+
   }
 }

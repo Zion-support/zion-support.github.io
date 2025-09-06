@@ -170,12 +170,21 @@ function ServicesShowcase2026() {
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+
+  // Filter and sort services
+  const _filteredServices = allServices
+    .filter(service => {
+      const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory)
+
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
         default:;
           return a.name.locale_compare (b.name);      }      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
@@ -309,6 +318,13 @@ function ServicesShowcase2026() {
             Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+;
             Solutions;
           </title>;
+          return b.customers - a.customers,
+        default: return a.name.localeCompare(b.name)
+      }
+    }),
+
+  const categories = [
+
     { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
     { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
     { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
@@ -316,18 +332,18 @@ function ServicesShowcase2026() {
     { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
     { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
     { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
-  ];
+];
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+};
   return (
     <UltraAdvancedFuturisticBackground 
       intensity="extreme" 
       colorScheme="quantum-fusion"
-      particleCount={600}
+particleCount={600}
       animationSpeed={2.5}
       enableHolographic={true}
       enableQuantumEffects={true}
@@ -344,7 +360,7 @@ function ServicesShowcase2026() {
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
-            href='https://ziontechgroup && ziontechgroup.com/2026-services-showcase'
+href='https://ziontechgroup && ziontechgroup.com/2026-services-showcase'
           />        </Head>          <title>Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+ Solutions</title>;
           <meta;
             name='description';
@@ -432,7 +448,7 @@ function ServicesShowcase2026() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
+Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
               </p>
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -456,7 +472,7 @@ function ServicesShowcase2026() {
             </motion.div>
           </div>
         </section>
-                  </div>;
+</div>;
                   <div className='text-gray-400 text-sm'>Emerging Tech</div>                </div>                  2026 Revolutionary Services;
                 </span>;
               </h1>;
@@ -496,13 +512,13 @@ function ServicesShowcase2026() {
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* Search */}
+{/* Search */}
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search services..."
-                    value={searchTerm}
+value={searchTerm}
                     onChange={(e) => setSearchTerm(e && e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
                   />;
@@ -556,7 +572,7 @@ function ServicesShowcase2026() {
             </div>
           </div>
         </section>
-                    onChange={e => setSortBy(e && e.target.value)}
+onChange={e => setSortBy(e && e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none';
         <section className='relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
@@ -863,7 +879,7 @@ function ServicesShowcase2026() {
                   </div>
                 </motion.div>
               ))}
-            </div>;
+</div>;
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -876,7 +892,7 @@ function ServicesShowcase2026() {
                 <p className="text-gray-400">Try adjusting your search terms or filters</p>
               </motion.div>
             )}
-          </div>;
+</div>;
         </section>;
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
@@ -1019,7 +1035,7 @@ function ServicesShowcase2026() {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies already leveraging our revolutionary 2026 AI, quantum, and IT solutions
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3 text-cyan-300">
                   <span className="text-2xl">📱</span>
                   <span className="font-semibold">{contactInfo.mobile}</span>
@@ -1072,7 +1088,7 @@ function ServicesShowcase2026() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-                  className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">;
+className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">;
                   View Pricing;
                 </a>;
               </div>;

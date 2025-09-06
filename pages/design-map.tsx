@@ -12,7 +12,7 @@ export default function DesignMapPage() {
     setIsLoading(true)
     setSuggestion(null)
     try {
-      const res = await fetch('/api/figma/wireframe-suggest', {
+const res = await fetch('/api/figma/wireframe-suggest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ screenName, role })})
@@ -29,7 +29,7 @@ export default function DesignMapPage() {
       <Head>
         <title>Zion OS Design Map</title>
       </Head>
-      <section className="space-y-6">
+<section className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Zion OS Design Map</h1>
           <div className="flex gap-2">
@@ -211,7 +211,7 @@ if (return) {
             </button>
           </div>
           {suggestion && (
-            <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
+<pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
           )}
         </div>
       </section>
@@ -237,6 +237,7 @@ function MapColumn() {
             key={s.id}
                 <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
                   {i.title}
+
                 </span>
               ))}
             </div>

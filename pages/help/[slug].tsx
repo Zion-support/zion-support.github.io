@@ -134,6 +134,7 @@ function vote() {
         <div className="flex gap-2">
           <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
           <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
+
         </div>
       </div>
     </article>

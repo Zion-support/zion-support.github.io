@@ -53,7 +53,8 @@ export default function LinkedInRedirect() {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
 		}
-	}, []);
+}, []);
+
 	return (
 		<>
 			<Head>
@@ -64,7 +65,7 @@ export default function LinkedInRedirect() {
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
 				<a href="https: //www.linkedin.com/company/zion-tech-group" className="text-cyan-400 underline">
-					Continue to LinkedIn
+Continue to LinkedIn
 				</a>
 			</div>
 		</>
@@ -110,3 +111,10 @@ if ( {) {
       </div>;
     </>);
 ;
+					Continue to LinkedIn
+				</Link>
+			</div>
+		</>
+	)
+}
+

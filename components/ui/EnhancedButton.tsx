@@ -75,7 +75,7 @@ export default function EnhancedButton({
 }: EnhancedButtonProps) {
   return (
     <button
-      className={clsx(
+className={clsx(
         baseStyles
         sizeStyles[size]
         variantStyles[variant]

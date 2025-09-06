@@ -7,7 +7,7 @@ interface LazyImageProps {
   placeholder?: string;
   threshold?: number;
   width?: number;
-  height?: number
+height?: number
 }
 export const LazyImage: React.FC<LazyImageProps> = ({
   src;
@@ -161,11 +161,56 @@ if ( {) {
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
+
+  useEffect__(() => {
+    const _observer = new IntersectionObserver(_([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true),
+          observer.disconnect()
+        }
+      },
+      { threshold }
+    ),
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current)
+    }
+          setIsInView(true);
+          observer.disconnect();}
+      },
+      {_threshold}
+    );
+
+    return () => observer.disconnect()
+  }, [threshold]),
+
+    return () => observer.disconnect()
+  }, [threshold]),
+
+  const handleLoad = () => {
+    setIsLoaded(true)
+  },
+
+  return (
+    <div className={_`relative overflow-hidden ${className}`}>
+      {_/* Placeholder */}
+      <img
+        src={_placeholder}
+        alt=""
+        className={_`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+          isLoaded ? 'opacity-0' : 'opacity-100'}`}
+        style={_{ width, _height}}
+      />
+      
+      {_/* Actual Image */}
+      {_isInView && (
+        <motion.img
+
           ref={imgRef}
           src={src}
           alt={alt}
           onLoad={handleLoad}
-        alt=''        className={`absolute inset - 0 w - full h - full object - cover transition - opacity duration - 500 ${        alt="";
+alt=''        className={`absolute inset - 0 w - full h - full object - cover transition - opacity duration - 500 ${        alt="";
         className={`absolute inset - 0 w - full h - full object - cover transition - opacity duration - 500 ${
           is_loaded ? 'opacity - 0' : 'opacity - 100';
         }`}

@@ -179,7 +179,7 @@ import {
   CreditCard,
   Phone,
   Mail,
-  ExternalLink;
+ExternalLink;
 } from 'lucide-react';
 ;
 interface SidebarProps {

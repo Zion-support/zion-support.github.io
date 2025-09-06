@@ -1,5 +1,5 @@
 export interface NextGenInnovativeService {
-  real_implementation: boolean;
+real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
   customers: number;
@@ -254,7 +254,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
     reviews: 8;
   },
   // Space Technology Platform;
-  {
+{
     id: 'space - technology - platform',
     name: 'Space Technology Platform',
     tagline: 'Complete space mission management and satellite operations',

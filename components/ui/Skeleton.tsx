@@ -145,4 +145,10 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
   </div>"');
 }
 export default Component;
+
+        }
+      `}</style>
+    </div>
+  )
+
 }

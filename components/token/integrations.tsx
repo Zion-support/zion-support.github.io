@@ -42,7 +42,7 @@ export default function TokenIntegrationsPage() {
   const [suggestion, setSuggestion] = useState<any>(null);
   const [rewards, setRewards] = useState<DepinReward[] | null>(null);
   const [depinsSyncing, setDepinsSyncing] = useState(false);
-  async function syncDepin() {;
+async function syncDepin() {;
     if (!account) {;
       await connect();
       return;    }      return;
@@ -203,12 +203,32 @@ export default function TokenIntegrationsPage() {
               <div key={i} className="flex items-center justify-between">
                 <span>{r.network} — {r.reason}</span>
                 <span className="font-medium">+{r.points} ZION$</span>
+      </section>
+
+      <section className=&quot;space-y-4&quot;>
+        <ClientOnlyBridge />
+      </section>
+
+      <section className=&quot;space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800&quot;>
+        <h2 className=&quot;text-lg font-semibold&quot;>DePIN Hook</h2>
+        <p className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>
+        <div className=&quot;flex gap-2&quot;>
+          <button onClick={syncDepin} className=&quot;px-4 py-2 rounded bg-purple-600 text-white&quot;>{depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>
+          {!account && <button onClick={connect} className=&quot;px-4 py-2 rounded border&quot;>Connect Wallet</button>}
+        </div>
+        {rewards && (
+          <div className=&quot;mt-3 space-y-2 text-sm&quot;>
+            {rewards.map((r, i) => (
+              <div key={i} className=&quot;flex items-center justify-between&quot;>
+                <span>{r.network} — {r.reason}</span>
+                <span className=&quot;font-medium&quot;>+{r.points} ZION$</span>
+
               </div>
             ))}
           </div>
         )}
       </section>
-      <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
+<section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
         <h2 className="text-lg font-semibold">Operator AI Actions</h2>
         <p className="text-sm text-gray-600 dark:text-gray-300">Based on your region and stake, we suggest the best chain for ZION$.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -265,7 +285,7 @@ export default function TokenIntegrationsPage() {
         </ul>
       </section>
     </div>
-  );
+);
 }
 import dynamic from 'next / dynamic';
 import React, { useEffect, useState } from 'react';

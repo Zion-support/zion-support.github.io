@@ -1,5 +1,5 @@
 export interface InnovativeMicroSaasService2029V2 {
-        'AI-powered churn prediction',
+'AI-powered churn prediction',
   use_cases: string[];
 ;
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] =;

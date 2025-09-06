@@ -349,7 +349,7 @@ export default function EnhancedServicesShowcase() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+};
   // Combine all services for comprehensive showcase
   const allServices = [
     ...nextGenerationAIServices;
@@ -362,6 +362,20 @@ export default function EnhancedServicesShowcase() {
     ...realMarketServices;
     ...newVerifiedServicesQ22025
   ];
+
+  // Combine all services for comprehensive showcase
+  const _allServices = [
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+    ...enhancedRealMicroSaasServices,
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...enterpriseITServices,
+    ...realMarketServices,
+    ...newVerifiedServicesQ22025
+  ],
+
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     { id: 'next-gen-ai', name: 'ArrowRight-Gen AI', icon: '🧠', count: nextGenerationAIServices.length },
@@ -369,7 +383,7 @@ export default function EnhancedServicesShowcase() {
     { id: 'innovative-saas', name: 'Innovative SaaS', icon: '💻', count: innovativeMicroSaasV2Services.length },
     { id: 'quantum-space', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length }
-  ];
+];
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' },
     { id: 'price-low', name: 'Price Low to High' },
@@ -377,16 +391,16 @@ export default function EnhancedServicesShowcase() {
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customer Count' },
     { id: 'popularity', name: 'Popularity' }
-  ];
+];
   // Filter and sort services
   const filteredServices = React.useMemo(() => {
     let filtered = allServices.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || 
+      const matchesCategory = selectedCategory === 'all' ||
         (selectedCategory === 'next-gen-ai' && nextGenerationAIServices.includes(service)) ||
         (selectedCategory === 'cutting-edge-it' && cuttingEdgeITServices.includes(service)) ||
         (selectedCategory === 'innovative-saas' && innovativeMicroSaasV2Services.includes(service)) ||
         (selectedCategory === 'quantum-space' && quantumSpaceServices.includes(service)) ||
-        (selectedCategory === 'enterprise' && enterpriseITServices.includes(service));
+(selectedCategory === 'enterprise' && enterpriseITServices.includes(service));
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -417,6 +431,12 @@ export default function EnhancedServicesShowcase() {
     }
     return filtered
   }, [allServices, selectedCategory, searchTerm, sortBy]);
+    }
+  },
+
+    return filtered
+  }, [allServices, selectedCategory, searchTerm, sortBy]),
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -426,7 +446,7 @@ export default function EnhancedServicesShowcase() {
         delayChildren: 0.2
       }
     }
-  };
+};
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -434,15 +454,18 @@ export default function EnhancedServicesShowcase() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut" as const
+ease: "easeOut" as const
       }
     }
   };
+    }
+  },
+
   const featuredServices = [
     {
       title: '🚀 ArrowRight-Generation AI Services',
       description: 'Revolutionary AI platforms that push the boundaries of what\'s possible',
-      services: nextGenerationAIServices.slice(0, 3);
+services: nextGenerationAIServices.slice(0, 3);
       color: 'from-purple-500 to-pink-600'
     };
     {
@@ -505,7 +528,7 @@ export default function EnhancedServicesShowcase() {
             </motion.div>
           </div>
         </section>
-        {/* Featured Service Categories */}
+{/* Featured Service Categories */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -513,7 +536,7 @@ export default function EnhancedServicesShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
                 Featured Service Categories
@@ -530,7 +553,7 @@ export default function EnhancedServicesShowcase() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="relative"
+className="relative"
                 >
                   <div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-black/20"></div>
@@ -563,12 +586,12 @@ export default function EnhancedServicesShowcase() {
             </div>
           </div>
         </section>
-        {/* Filters and Search */}
+{/* Filters and Search */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6">
               <div className="flex flex-col lg:flex-row gap-6">
-                {/* Search */}
+{/* Search */}
                 <div className="flex-1">
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -581,7 +604,7 @@ export default function EnhancedServicesShowcase() {
                     />
                   </div>
                 </div>
-                {/* Category Filter */}
+{/* Category Filter */}
                 <div className="flex-shrink-0">
                   <select
                     value={selectedCategory}
@@ -595,7 +618,7 @@ export default function EnhancedServicesShowcase() {
                     ))}
                   </select>
                 </div>
-                {/* Sort Options */}
+{/* Sort Options */}
                 <div className="flex-shrink-0">
                   <select
                     value={sortBy}
@@ -609,7 +632,7 @@ export default function EnhancedServicesShowcase() {
                     ))}
                   </select>
                 </div>
-                {/* View Mode Toggle */}
+{/* View Mode Toggle */}
                 <div className="flex-shrink-0">
                   <div className="flex bg-gray-700/50 rounded-lg p-1">
                     <button
@@ -623,7 +646,7 @@ export default function EnhancedServicesShowcase() {
                       <Grid className="w-5 h-5" />
                     </button>
                     <button
-                      onClick={() => setViewMode('list')}
+onClick={() => setViewMode('list')}
                       className={`p-2 rounded-md transition-colors ${
                         viewMode === 'list' 
                           ? 'bg-cyan-500 text-white' 
@@ -638,7 +661,7 @@ export default function EnhancedServicesShowcase() {
             </div>
           </div>
         </section>
-        {/* Services Grid/List */}
+{/* Services Grid/List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -662,7 +685,7 @@ export default function EnhancedServicesShowcase() {
                         <div className="flex items-center space-x-2">
                           <span className="text-2xl">{service.icon}</span>
                           <div>
-                            <div className="text-sm text-gray-400">{service.category}</div>
+<div className="text-sm text-gray-400">{service.category}</div>
                             <div className="text-xs text-gray-500">{service.setupTime} setup</div>
                           </div>
                         </div>
@@ -679,13 +702,13 @@ export default function EnhancedServicesShowcase() {
                           <span className="text-gray-400">Rating:</span>
                           <div className="flex items-center space-x-1">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                            <span className="text-white">{service.rating}</span>
+<span className="text-white">{service.rating}</span>
                             <span className="text-gray-400">({service.reviews})</span>
                           </div>
                         </div>
                         <div className="flex items-center justify-between text-sm">
                           <span className="text-gray-400">Customers:</span>
-                          <span className="text-white">{service.customers.toLocaleString()}</span>
+<span className="text-white">{service.customers.toLocaleString()}</span>
                         </div>
                         <div className="flex items-center justify-between text-sm">
                           <span className="text-gray-400">Trial:</span>
@@ -694,7 +717,7 @@ export default function EnhancedServicesShowcase() {
                       </div>
                       <div className="flex gap-3">
                         <Button 
-                          href={service.link} 
+                          href={service.link}
                           variant="primary"
                           className="flex-1"
                         >
@@ -702,7 +725,7 @@ export default function EnhancedServicesShowcase() {
                           <ExternalLink className="ml-2 w-4 h-4" />
                         </Button>
                         <Button 
-                          href="/contact"
+href="/contact"
                           variant="secondary"
                           className="flex-1"
                         >
@@ -714,7 +737,7 @@ export default function EnhancedServicesShowcase() {
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
                         <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl">
-                          {service.icon}
+{service.icon}
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
@@ -738,12 +761,12 @@ export default function EnhancedServicesShowcase() {
                             <span className="text-gray-400">Rating:</span>
                             <div className="flex items-center space-x-1">
                               <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                              <span className="text-white">{service.rating}</span>
+<span className="text-white">{service.rating}</span>
                             </div>
                           </div>
                           <div>
                             <span className="text-gray-400">Customers:</span>
-                            <div className="text-white">{service.customers.toLocaleString()}</div>
+<div className="text-white">{service.customers.toLocaleString()}</div>
                           </div>
                           <div>
                             <span className="text-gray-400">Setup:</span>
@@ -760,7 +783,7 @@ export default function EnhancedServicesShowcase() {
                             <ExternalLink className="ml-2 w-4 h-4" />
                           </Button>
                           <Button 
-                            href="/contact"
+href="/contact"
                             variant="secondary"
                             size="sm"
                           >
@@ -773,18 +796,19 @@ export default function EnhancedServicesShowcase() {
                 </motion.div>
               ))}
             </motion.div>
-            {filteredServices.length === 0 && (
+{filteredServices.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories</p>
                 <Button 
-                  href="#"
+href="#"
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all')
                   }}
                   variant="primary"
+
                 >
                   View All Services
                 </Button>
@@ -792,7 +816,7 @@ export default function EnhancedServicesShowcase() {
             )}
           </div>
         </section>
-        {/* Contact Section */}
+{/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -807,7 +831,7 @@ export default function EnhancedServicesShowcase() {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies achieving breakthrough results with our revolutionary services
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3">
                   <Phone className="w-6 h-6 text-cyan-400" />
                   <span className="text-lg">{contactInfo.mobile}</span>
@@ -832,7 +856,7 @@ export default function EnhancedServicesShowcase() {
                   <Rocket className="ml-2 w-6 h-6" />
                 </Button>
                 <Button 
-                  href="/pricing"
+href="/pricing"
                   variant="secondary"
                   size="lg"
                   className="text-lg px-8 py-4"
@@ -846,7 +870,7 @@ export default function EnhancedServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticMatrixBackground>
-  );
+);
 }
 // Button component (if not imported)
 const Button = ({ 
@@ -952,3 +976,18 @@ if ( {) {
     </button>);
 }
 ;
+
+  if (href) {_return (
+      <a href={href} className={_classes}>
+        {_children}
+      </a>
+    )
+  }
+
+  return (
+    <button onClick={_onClick} className={_classes}>
+      {_children}
+    </button>
+  )
+},
+

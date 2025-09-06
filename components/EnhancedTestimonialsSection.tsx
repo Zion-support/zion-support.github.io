@@ -55,16 +55,19 @@ import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react
   content: string,
   rating: number,
   avatar: string,
-  category: string;
+category: string;
 }
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [;
+
+const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testimonial[] = [
+
     {
       id: '1',
       name: 'Dr. Sarah Chen',
       title: 'CTO',
       company: 'Quantum Dynamics Inc.',
-      content:;
+content:;
         'Zion Tech Group transformed our AI infrastructure completely. Their quantum cybersecurity solution prevented multiple sophisticated attacks and their AI business intelligence platform gave us insights we never had before. ROI exceeded 400% within 8 months.',
       rating: 5,
       avatar: 'SC',
@@ -78,7 +81,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       name: 'Marcus Rodriguez',
       title: 'VP of Engineering',
       company: 'SpaceTech Ventures',
-      content:;
+content:;
         'Working with Zion Tech Group on our space technology platform was game - changing. Their edge computing orchestration and AI - powered mission planning reduced our satellite deployment time by 60% and increased mission success rate to 98%.',
       rating: 5,
       avatar: 'MR',
@@ -92,7 +95,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       name: 'Dr. Emily Watson',
       title: 'Research Director',
       company: 'NeuralLink Research',
-      content:;
+content:;
         "Zion Tech Group's neural interface development tools are revolutionary. Their AI consciousness simulation platform accelerated our research by 3x and opened new possibilities we hadn't considered. The team's expertise is unmatched.",
       rating: 5,
       avatar: 'EW',
@@ -106,7 +109,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       name: 'James Thompson',
       title: 'CEO',
       company: 'EdgeFlow Systems',
-      content:;
+content:;
         'The edge computing orchestration solution from Zion Tech Group transformed our IoT infrastructure. We saw 50% latency reduction and 40% cost savings while improving reliability. Their support team is incredibly responsive.',
       rating: 5,
       avatar: 'JT',
@@ -120,7 +123,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       name: 'Dr. Lisa Park',
       title: 'Chief Innovation Officer',
       company: 'FutureTech Labs',
-      content:;
+content:;
         "Zion Tech Group's quantum AI neural networks are cutting - edge. We've achieved breakthroughs in consciousness simulation that seemed impossible. Their technology is truly ahead of its time.",
       rating: 5,
       avatar: 'LP',
@@ -134,7 +137,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       name: 'Robert Kim',
       title: 'Head of Digital Transformation',
       company: 'Global Innovations Corp',
-      content:;
+content:;
         "Implementing Zion Tech Group's AI business intelligence suite revolutionized our decision - making process. We now have real - time insights across all departments, leading to 35% faster market response and 28% cost optimization.",
       rating: 5,
       avatar: 'RK',
@@ -505,7 +508,7 @@ const EnhancedTestimonialsSection: React.FC = () => {;
                   </span>
                 </div>
               </div>
-                <div className="flex items-center gap-1 mb-4">;
+<div className="flex items-center gap-1 mb-4">;
                   {renderStars(testimonial && testimonial.rating)}
                 </div>;
                 {/* Testimonial Text */}
@@ -601,7 +604,7 @@ const EnhancedTestimonialsSection: React.FC = () => {;
                 Start Your Success Story
               </a>
               <a
-                href="tel:+13024640950"
+href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Schedule a Call
@@ -609,7 +612,7 @@ const EnhancedTestimonialsSection: React.FC = () => {;
             </div>
           </div>
         </div>
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
+className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                     </div>                  </div>;
                 </div>;
                 {/* Category Badge */}

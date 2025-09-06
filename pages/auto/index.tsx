@@ -4,7 +4,8 @@ const AutoIndex: NextPage = () => {
     <div>
       <Head>
         <title>Autonomous Cloud Agents - Zion</title>
-        <meta name="description" content="Autonomous agents that run in the cloud, no human needed." />
+<meta name="description" content="Autonomous agents that run in the cloud, no human needed." />
+
       </Head>
       <main className="space-y-6">
         <h1 className="text-2xl font-bold">Autonomous Cloud Agents</h1>
@@ -14,7 +15,7 @@ const AutoIndex: NextPage = () => {
             <h2 className="font-semibold text-lg"><Link href="/auto/language-sync">Global Language Sync Agent</Link></h2>
             <p className="text-sm text-gray-600">Backfills missing translations using AI and keeps locale files up to date.</p>
           </li>
-          <li className="border rounded p-4">
+<li className="border rounded p-4">
             <h2 className="font-semibold text-lg"><Link href="/auto/market-signals">AI Market Signals Agent</Link></h2>
             <p className="text-sm text-gray-600">Collects relevant AI/tech signals and saves curated insights daily.</p>
           </li>
@@ -44,3 +45,6 @@ import Link from 'next / link';
 ;
 export default AutoIndex;
 ;
+
+export default AutoIndex
+

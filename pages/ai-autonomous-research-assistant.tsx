@@ -25,4 +25,7 @@ return (
     industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
     canonical="https: //ziontechgroup.com / ai - autonomous - research - assistant";
   />);
+		/>
+	)
+
 }

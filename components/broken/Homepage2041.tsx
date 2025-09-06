@@ -42,7 +42,7 @@ import {
   Target,
   Users,
   Award,
-  Clock,} from 'lucide-react';import {
+Clock,} from 'lucide-react';import {
   ArrowRight;
   Star,
   Search;
@@ -277,12 +277,79 @@ const Homepage2041: React.FC = () => {
                     x: [0, 60, 0];
                     y: [0, -60, 0];
                     opacity: [0, 0.7, 0];
+    if (searchQuery.trim()) {
+      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`
+    }
+  },
+
+  const _featuredServices = [
+    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3),
+    ...innovative2041ITServices.filter(s => s.popular).slice(0, 2),
+    ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
+  ],
+
+  const testimonials = [
+    {
+      name: &quot;Dr. Sarah Chen&quot;,
+      role: &quot;Chief AI Officer, FutureTech Inc.&quot;,
+      company: &quot;FutureTech Inc.&quot;,
+      content: &quot;Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.&quot;,
+      rating: 5,
+      avatar: &quot;👩‍💼&quot;
+    },
+    {
+      name: &quot;Marcus Rodriguez&quot;,
+      role: &quot;VP Quantum Computing, QuantumCorp&quot;,
+      company: &quot;QuantumCorp&quot;,
+      content: &quot;Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.&quot;,
+      rating: 5,
+      avatar: &quot;👨‍💻&quot;
+    },
+    {
+      name: &quot;Dr. Emily Watson&quot;,
+      role: &quot;Research Director, SpaceLabs&quot;,
+      company: &quot;SpaceLabs&quot;,
+      content: &quot;The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.&quot;,
+      rating: 5,
+      avatar: &quot;👩‍🔬&quot;
+    }
+  ],
+
+  const stats = [
+  ];
+
+  return (
+    <Layout>
+      {/* Main Content */}
+      <main className=&quot;relative z-10&quot;>
+        {/* Hero Section */}
+        <section 
+          className=&quot;min-h-screen flex items-center justify-center px-4 relative overflow-hidden&quot;
+          aria-labelledby=&quot;hero-heading&quot;
+        >
+          {/* Optimized Background Elements */}
+          <div className=&quot;absolute inset-0 -z-10&quot;>
+            <div className=&quot;absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
+            <div className=&quot;absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
+            <div className=&quot;absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500&quot;></div>
+            
+            {/* Enhanced particle system */}
+            <div className=&quot;absolute inset-0&quot;>
+              {[...Array(12)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className=&quot;absolute w-2 h-2 bg-cyan-400/40 rounded-full&quot;
+                  animate={{
+                    x: [0, 60, 0],
+                    y: [0, -60, 0],
+                    opacity: [0, 0.7, 0],
+
                     scale: [0.5, 1, 0.5]}}
                   transition={{
                     duration: 5 + i * 0.3,
                     repeat: Infinity,
                     delay: i * 0.2,
-                    ease: "easeInOut"
+ease: "easeInOut"
                   }}
                   style={{
                     x: [0, 60, 0],
@@ -340,7 +407,7 @@ const Homepage2041: React.FC = () => {
               ))}
             </div>
           </div>
-          {/* Hero Content */}
+{/* Hero Content */}
           <div className="text-center max-w-7xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -387,7 +454,7 @@ const Homepage2041: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <form onSubmit={handleSearch} className="relative">
+<form onSubmit={handleSearch} className="relative">
                   <input
                     type="text"
                     placeholder="Search revolutionary 2041 services..."
@@ -427,7 +494,7 @@ const Homepage2041: React.FC = () => {
             </motion.div>
           </div>
         </section>
-        {/* Stats Section */}
+{/* Stats Section */}
                   className='px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3'>;
                   <Rocket className='w-6 h-6' />;
                   Explore 2041 Services;
@@ -630,7 +697,7 @@ const Homepage2041: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+<h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Revolutionary 2041 Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -715,7 +782,7 @@ const Homepage2041: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+<h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Leading the Future
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -908,7 +975,7 @@ const Homepage2041: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+<h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
                 Ready to Shape the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
@@ -986,6 +1053,21 @@ export default Homepage2041;  );
                   <Target className="w-6 h-6" />
                   Explore Services
                 </Link>
+                <Link
+                  href=&quot;/contact&quot;
+                  className=&quot;px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3&quot;
+                >
+                  <Sparkles className=&quot;w-6 h-6&quot; />
+                  Start Your Journey
+                </a>
+                <Link
+                  href=&quot;/2041-futuristic-services-showcase&quot;
+                  className=&quot;px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3&quot;
+                >
+                  <Target className=&quot;w-6 h-6&quot; />
+                  Explore Services
+                </a>
+
               </div>
             </motion.div>
           </div>

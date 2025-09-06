@@ -1,5 +1,5 @@
 export interface FuturisticInnovation2028 {
-    address: string;
+address: string;
   }
 ;
 export const futuristic2028Services: FuturisticInnovation2028[] = [;

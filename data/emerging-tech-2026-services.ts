@@ -98,7 +98,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     reviews: 100,
   },
   // DNA Computing Platform;
-  {
+{
     id: 'dna - computing - platform - 2026',
     name: 'DNA Computing Platform 2026',
     tagline: 'Molecular computing for complex problem solving and data storage',
@@ -434,7 +434,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
   },
       'Quantum-secured network',
   // Quantum Internet Platform;
-  {
+{
     id: 'quantum - internet - platform - 2026',
     name: 'Quantum Internet Platform 2026',
     tagline: 'Ultra - secure quantum communication network for the future',

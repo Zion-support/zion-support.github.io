@@ -25,3 +25,4 @@ export default /**
 function LaunchRedirect() {
   return null;
 }
+

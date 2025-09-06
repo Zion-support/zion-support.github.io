@@ -192,7 +192,7 @@ export default function UltraAdvancedNavigation2026V2() {;
     {
       name: 'Home',
       href: '/',
-      icon: <Zap className="w-4 h-4" />
+icon: <Zap className="w-4 h-4" />
     };
     {
       name: 'Services',
@@ -383,12 +383,12 @@ function UltraAdvancedNavigation2026V2() {
     {
       name: 'About',
       href: '/about',
-      icon: <Globe className='w - 4 h - 4' />,
+icon: <Globe className='w - 4 h - 4' />,
     },
     {
       name: 'Contact',
       href: '/contact',
-      icon: <Mail className='w - 4 h - 4' />,
+icon: <Mail className='w - 4 h - 4' />,
     },  ];      icon: <Mail className="w - 4 h - 4" />;
     }
   ];
@@ -402,7 +402,7 @@ function UltraAdvancedNavigation2026V2() {
             <div className="flex items-center space-x-6 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-purple-400" />
-                <span>{contactInfo.mobile}</span>
+<span>{contactInfo.mobile}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-blue-400" />
@@ -417,11 +417,18 @@ function UltraAdvancedNavigation2026V2() {
               <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors">
                 🚀 New 2026 Services
               </Link>
+              </div>
+            </div>
+            <div className=&quot;flex items-center space-x-4&quot;>
+              <Link href=&quot;/enhanced-services-showcase-2026-v2&quot; className=&quot;text-purple-400 hover:text-purple-300 transition-colors&quot;>
+                🚀 New 2026 Services
+              </a>
+
             </div>
           </div>
         </div>
       </div>
-                className='text-purple-400 hover:text-purple-300 transition-colors'>                🚀 New 2026 Services                <span>{contactInfo && contactInfo.mobile}</span>;
+className='text-purple-400 hover:text-purple-300 transition-colors'>                🚀 New 2026 Services                <span>{contactInfo && contactInfo.mobile}</span>;
               </div>;
               <div className="flex items-center space-x-2">;
                 <Mail className="w-4 h-4 text-blue-400" />;
@@ -505,7 +512,7 @@ function UltraAdvancedNavigation2026V2() {
           ? 'bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
           : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
@@ -549,7 +556,7 @@ function UltraAdvancedNavigation2026V2() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
                     >
                       {item.icon}
                       <span>{item.name}</span>
@@ -567,7 +574,7 @@ function UltraAdvancedNavigation2026V2() {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
+className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
                           >
                             <div className="text-purple-400 group-hover:text-purple-300 transition-colors">
                               {dropdownItem.icon}
@@ -723,7 +730,7 @@ function UltraAdvancedNavigation2026V2() {
           </div>
         </div>
       </nav>
-            {/* Mobile Menu Button */}
+{/* Mobile Menu Button */}
             <button;
               on_click={() => setIsOpen (!is_open)}
               className='lg:hidden p - 2 text - gray - 300 hover:text - white transition - colors';
@@ -801,7 +808,7 @@ function UltraAdvancedNavigation2026V2() {
                       <div>
                             <button
                               onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                              className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
+className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
                             >
                               <div className="flex items-center space-x-3">
                                 {item.icon}
@@ -818,7 +825,7 @@ function UltraAdvancedNavigation2026V2() {
                                     key={dropdownItem.name}
                                     href={dropdownItem.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white"
+className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white"
                                   >
                                     {dropdownItem.icon}
                                     <span>{dropdownItem.name}</span>
@@ -829,7 +836,7 @@ function UltraAdvancedNavigation2026V2() {
                           </div>
                     ) : (
                       <Link
-                        href={item && item.href}
+href={item && item.href}
                         onClick={() => setIsOpen(false)}
                         className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
                       >
@@ -866,7 +873,7 @@ function UltraAdvancedNavigation2026V2() {
           </motion.div>
         )}
       </AnimatePresence>
-                <div className='pt-6 border-t border-white/10'>;
+<div className='pt-6 border-t border-white/10'>;
                   <Link href='/contact' onClick={() => setIsOpen(false)}>;
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">;
                   <Link href="/contact" onClick={() => setIsOpen(false)}>;
@@ -1011,7 +1018,7 @@ function UltraAdvancedNavigation2026V2() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-      <div className='h-32'></div>;
+<div className='h-32'></div>;
     </>;
   );      <div className="h-32"></div>;
     </>;

@@ -131,7 +131,7 @@ interface ServiceCardProps {
     customers: number,
     rating: number,
     reviews: number,
-    marketSize?: string;
+marketSize?: string;
     growthRate?: string
   };
   index: number
@@ -326,11 +326,84 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
                 className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full"
               >
                 <Star className="w-3 h-3 fill-current" />
+}
+
+const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _index}) => {_const _getCategoryIcon = (_category: string) => {
+    switch (category.toLowerCase()) {
+      case 'ai & consciousness':
+        return <Zap className="w-5 h-5" />,
+      case 'quantum & emerging tech':
+        return <Rocket className="w-5 h-5" />,
+      case 'enterprise it':
+        return <Shield className="w-5 h-5" />,
+      case 'space & metaverse':
+        return <Globe className="w-5 h-5" />,
+      case 'micro saas':
+        return <TrendingUp className="w-5 h-5" />,
+      default:
+        return <Zap className="w-5 h-5" />
+
+    }
+  },
+
+  const getGradientClass = (color: string) => {
+    if (color.includes('from-') && color.includes('to-')) {
+      return color
+    }
+    return 'from-cyan-500 to-blue-500'
+  },
+
+  return (
+    <motion.div
+      initial={_{ opacity: 0, _y: 50, _scale: 0.9}}
+      animate={_{ opacity: 1, _y: 0, _scale: 1}}
+      transition={_{
+        duration: 0.6, _delay: index * 0.1, _ease: [0.25, _0.46, _0.45, _0.94]}}
+      whileHover={_{
+        y: -10, _scale: 1.02, _transition: { duration: 0.3}
+      }}
+      className=&quot;group relative&quot;
+    >
+      {/* Glow effect */}
+      <div className=&quot;absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200&quot;></div>
+      
+      {/* Main card */}
+      <div className=&quot;relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden&quot;>
+        {/* Background pattern */}
+        <div className=&quot;absolute inset-0 opacity-5&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400&quot;></div>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]&quot;></div>
+        </div>
+
+        {/* Header */}
+        <div className=&quot;relative z-10 mb-6&quot;>
+          <div className=&quot;flex items-start justify-between mb-4&quot;>
+            <div className=&quot;flex items-center space-x-3&quot;>
+              <div className=&quot;text-3xl&quot;>{service.icon}</div>
+              <div>
+                <div className=&quot;flex items-center space-x-2&quot;>
+                  {getCategoryIcon(service.category)}
+                  <span className=&quot;text-xs font-medium text-gray-400 uppercase tracking-wider&quot;>
+                    {service.category}
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            {_service.popular && (
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.5, type: &quot;spring&quot;, stiffness: 200 }}
+                className=&quot;flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full&quot;
+              >
+                <Star className=&quot;w-3 h-3 fill-current&quot; />
+
                 <span>POPULAR</span>
               </motion.div>
             )}
           </div>
-          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">
+<h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">
             {service.name}
           </h3>
           <p className="text-gray-300 text-sm leading-relaxed">
@@ -464,7 +537,7 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
                 </span>
               </div>
             )}
-          </div>;
+</div>;
         </div>;
         {/* Features preview */}
         <div className="relative z-10 mb-6">
@@ -617,7 +690,7 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             </div>
           </div>
         )}
-        {/* Market info */}
+{/* Market info */}
         {service && service.marketSize && service && service.growthRate && (;
           <div className='relative z-10 mb-6'>;
             <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>;
@@ -649,7 +722,7 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             href={service.link}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
+className="group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
           >
             <span className="relative z-10 flex items-center space-x-2">
               <span>Learn More</span>

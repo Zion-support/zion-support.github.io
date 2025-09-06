@@ -180,4 +180,25 @@ function submit() {
     </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
+                />
+                <span>{_opt}</span>
+              </label>
+            ))}
+          </div>
+          {submitted && (
+            <div className=&quot;mt-2 text-sm&quot;>
+              {answers[q.id] === q.answerIndex ? (
+                <span className=&quot;text-green-600&quot;>Correct</span>
+              ) : (
+                <span className=&quot;text-red-600&quot;>Incorrect</span>
+              )}
+            </div>
+          )}
+        </div>
+      ))}
+      <button onClick={submit} className=&quot;px-4 py-2 bg-blue-600 text-white rounded&quot;>Submit Quiz</button>
+      {submitted && <div className=&quot;text-sm&quot;>Score: {score} / {questions.length}</div>}
+    </div>
+  )
+
 }

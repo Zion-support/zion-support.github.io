@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .sort((a, b) => b.createdAt - a.createdAt);
     return res.status(200).json({ notes });
   }
-  if (req.method === 'POST') {
+if (req.method === 'POST') {
     const authorId = String(req.headers['x-admin-user'] || 'admin');
     const { targetType, targetId, text } = req.body || {};
     if (!targetType || !targetId || !text?.trim()) {

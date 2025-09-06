@@ -482,11 +482,57 @@ function InnovativeServicesShowcase2025() {
           <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+
+  const _filteredServices = serviceCategories.flatMap(category => 
+    category.services.filter(service =>
+      (selectedCategory === 'all' || category.id === selectedCategory) &&
+      (searchTerm === '' || 
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.category.toLowerCase().includes(searchTerm.toLowerCase()))
+    )
+  ),
+
+  const _sortedServices = [...filteredServices].sort(_(a, _b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name),
+      case 'price':
+        return a.pricing.starter.price - b.pricing.starter.price,
+      case 'category':
+        return a.category.localeCompare(b.category),
+      default: return 0
+    }
+  }),
+
+  return (_<Layout>
+      <Head>
+        <title>Innovative Services Showcase 2025 | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Discover our comprehensive collection of innovative micro SAAS, AI, healthcare, fintech, and emerging technology services for 2025 and beyond.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;innovative services, micro SAAS, AI services, healthcare technology, fintech, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Innovative Services Showcase 2025 - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Comprehensive collection of innovative technology services.&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/innovative-services-showcase-2025&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black&quot;></div>
+        
+        {/* Background Elements */}
+        <div className=&quot;absolute inset-0 overflow-hidden pointer-events-none&quot;>
+          <div className=&quot;absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
+          <div className=&quot;absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
+          <div className=&quot;absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500&quot;></div>
+        </div>
+
+        <div className=&quot;relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
@@ -599,7 +645,7 @@ function InnovativeServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'>;
             <div className='text-center'>;
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>;
@@ -684,7 +730,7 @@ function InnovativeServicesShowcase2025() {
                       {category.title}
                     </option>
                   ))}
-                </select>;
+</select>;
               </div>;
               {/* Sort By */}
               <div>;
@@ -702,7 +748,7 @@ function InnovativeServicesShowcase2025() {
           </div>
         </div>
       </section>
-                  onChange={e => setSortBy(e && e.target.value)}
+onChange={e => setSortBy(e && e.target.value)}
                   className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50';
                 >;
                   <option value='name'>Sort by Name</option>;
@@ -922,7 +968,7 @@ function InnovativeServicesShowcase2025() {
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className="group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -1100,7 +1146,7 @@ function InnovativeServicesShowcase2025() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
               initial={{ opacity: 0 }}
@@ -1224,7 +1270,7 @@ function InnovativeServicesShowcase2025() {
         </div>
       </section>
     </Layout>
-  );
+);
 }
                   </p>;
                 </div>;

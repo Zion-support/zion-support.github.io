@@ -311,6 +311,44 @@ const service_categories = [;
 const companyLinks = [
 ;
 const company_links = [;
+
+const _serviceCategories = [
+  {_title: 'AI & Automation', _services: [
+      { name: 'AI Autonomous Business Processor', _href: '/ai-autonomous-business-processor'},
+      {_name: 'AI Predictive Enterprise Analytics', _href: '/ai-predictive-enterprise-analytics'},
+      {_name: 'AI Autonomous Customer Success', _href: '/ai-autonomous-customer-success'},
+      {_name: 'AI Autonomous Marketing Orchestrator', _href: '/ai-autonomous-marketing-orchestrator'},
+      {_name: 'AI Autonomous Sales Intelligence', _href: '/ai-autonomous-sales-intelligence'}
+    ]
+  },
+  {_title: 'Cybersecurity & Quantum', _services: [
+      { name: 'Quantum Encryption Platform', _href: '/quantum-encryption-platform'},
+      {_name: 'AI Autonomous Threat Hunter', _href: '/ai-autonomous-threat-hunter'},
+      {_name: 'Quantum Zero Trust Security', _href: '/quantum-zero-trust-security'},
+      {_name: 'AI Autonomous Vulnerability Scanner', _href: '/ai-autonomous-vulnerability-scanner'},
+      {_name: 'Quantum Secure Communication', _href: '/quantum-secure-communication'}
+    ]
+  },
+  {_title: 'Fintech & Blockchain', _services: [
+      { name: 'Quantum Financial Trading Platform', _href: '/quantum-financial-trading-platform'},
+      {_name: 'AI Autonomous Wealth Management', _href: '/ai-autonomous-wealth-management'},
+      {_name: 'Quantum Blockchain Finance', _href: '/quantum-blockchain-finance'},
+      {_name: 'AI Autonomous Insurance Platform', _href: '/ai-autonomous-insurance-platform'},
+      {_name: 'Quantum Payment Processing', _href: '/quantum-payment-processing'}
+    ]
+  },
+  {_title: 'Healthcare & Biotech', _services: [
+      { name: 'AI Autonomous Medical Diagnostics', _href: '/ai-autonomous-medical-diagnostics'},
+      {_name: 'Quantum Drug Discovery Platform', _href: '/quantum-drug-discovery-platform'},
+      {_name: 'AI Autonomous Patient Care', _href: '/ai-autonomous-patient-care'},
+      {_name: 'Quantum Genomic Analysis', _href: '/quantum-genomic-analysis'},
+      {_name: 'AI Autonomous Clinical Trials', _href: '/ai-autonomous-clinical-trials'}
+    ]
+  }
+],
+
+const companyLinks = [
+
   { name: 'About Us', href: '/about' },
   { name: 'Leadership Team', href: '/leadership' },
   { name: 'Careers', href: '/careers' },
@@ -428,7 +466,7 @@ export default function UltraFuturisticFooter2026() {;
               </div>
             </motion.div>
           </div>
-              <div className='space-y-3'>;
+<div className='space-y-3'>;
                 <div className='flex items-center text-gray-300'>;
                   <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.mobile}</span>;
                 </div>;
@@ -733,7 +771,7 @@ function UltraFuturisticFooter2026() {
                 <Link
                   key={index}
                   href={social.href}
-                  className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
+className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
                 >
                   <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
                 </Link>
@@ -892,6 +930,23 @@ function UltraFuturisticFooter2026() {
               </div>
               <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
               <div className="text-cyan-400 text-sm font-semibold">
+              © 2026 Zion Tech Group. All rights reserved. | 
+              <Link href=&quot;/privacy&quot; className=&quot;hover:text-cyan-400 transition-colors duration-300 ml-2&quot;>
+                Privacy Policy
+              </a>
+              <span className=&quot;mx-2&quot;>|</span>
+              <Link href=&quot;/terms&quot; className=&quot;hover:text-cyan-400 transition-colors duration-300&quot;>
+                Terms of Service
+              </a>
+            </div>
+            <div className=&quot;flex items-center space-x-2&quot;>
+              <div className=&quot;flex items-center text-gray-400 text-sm&quot;>
+                <Star className=&quot;w-4 h-4 text-yellow-400 mr-1&quot; />
+                Trusted by 2500+ Companies
+              </div>
+              <div className=&quot;w-2 h-2 bg-cyan-400 rounded-full animate-pulse&quot;></div>
+              <div className=&quot;text-cyan-400 text-sm font-semibold&quot;>
+
                 99.9% Uptime
               </div>
             </div>
@@ -899,7 +954,7 @@ function UltraFuturisticFooter2026() {
         </motion.div>
       </div>
     </footer>
-                className='hover:text-cyan-400 transition-colors duration-300'>;
+className='hover:text-cyan-400 transition-colors duration-300'>;
                 Terms of Service;
               </Link>;
             </div>;

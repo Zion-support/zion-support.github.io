@@ -47,3 +47,20 @@ const NetworkEngineeringChat: NextPage = () => {
 ;
 export default NetworkEngineeringChat;
 ;
+    <div>
+      <Head>
+        <title>NetworkEngineeringChat - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;NetworkEngineeringChat blog post&quot; />
+      </Head>
+      
+      <main>
+        <h1>NetworkEngineeringChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href=&quot;/blog&quot;>Back to Blog</a>
+      </main>
+    </div>
+  )
+},
+
+export default NetworkEngineeringChat
+

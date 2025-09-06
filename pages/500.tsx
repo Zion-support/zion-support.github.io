@@ -60,3 +60,60 @@ function Custom500() {
       </div>;
     </>);
 }
+    <>
+      <Head>
+        <title>500 - Server Error | Zion Tech Group</title>
+        <meta name="description" content="Something went wrong on our end. We're working to fix it." />
+        <meta property="og: title" content="500 - Server Error" />
+        <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />
+      </Head>
+      
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center px-4&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;mb-8&quot;>
+            <h1 className=&quot;text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400 mb-4&quot;>
+              500
+            </h1>
+            <h2 className=&quot;text-3xl font-semibold text-white mb-4&quot;>
+              Server Error
+            </h2>
+            <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
+              Please try again in a few moments.
+            </p>
+          </div>
+          
+          <div className=&quot;space-y-4&quot;>
+            <Link 
+              href=&quot;/&quot; 
+              className=&quot;inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105&quot;
+            >
+              Go Home
+            </Link>
+            
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <Link 
+                href=&quot;/about&quot; 
+                className=&quot;px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200&quot;
+              >
+                About Us
+              </Link>
+              <Link 
+                href=&quot;/services&quot; 
+                className=&quot;px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200&quot;
+              >
+                Services
+              </Link>
+              <Link 
+                href=&quot;/contact&quot; 
+                className=&quot;px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200&quot;
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+

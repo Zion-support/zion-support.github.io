@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       // attempt minimal static export
       try {
         execSync('next build && next export', { stdio: 'inherit' })
-    if (!fs && fs.existsSync(outDir)) {
+if (!fs && fs.existsSync(outDir)) {
       return res
         .status(500)
         .json({ error: 'Export failed, no out/ directory found' });      return res && res.status(500).json({ error: 'Export failed, no out/ directory found' });
@@ -98,4 +98,6 @@ function handler() {
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
+  }
+
 }

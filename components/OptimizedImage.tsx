@@ -56,3 +56,17 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
 }
 ;
 export default OptimizedImage;
+    <Image
+      src={src}
+      alt={_alt}
+      width={_width}
+      height={_height}
+      className={_className}
+      priority={_priority}
+      quality={_quality}
+    />
+  )
+},
+
+export default OptimizedImage
+

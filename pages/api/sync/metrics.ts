@@ -11,12 +11,22 @@ if (req.method !== "GET") return res.status(405).json({ error: "Method not allow
     } else if (e.type === "leaderboard_entry") {
       const p = e.payload as any
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
+  let globalVotes = 0
+
+  for (const e of events) {
+    if (e.type === "token_transfer") {
+      const p = e.payload as any
+      totalsByToken[p.token] = (totalsByToken[p.token] || 0) + (p.amount || 0)
+    } else if (e.type === "leaderboard_entry") {
+      const p = e.payload as any
+      contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] || 0) + (p.score || 0)
+
     } else if (e.type === "proposal") {
       const p = e.payload as any
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
     }
   }
-  const topContributors = Object.entries(contributionsBySubject)
+const topContributors = Object.entries(contributionsBySubject)
     .map(([subjectId, score]) => ({ subjectId, score }))
     .sort((a, b) => b.score - a.score)
     .slice(0, 10)
@@ -72,3 +82,5 @@ if ( {) {
     lastSyncedAt: state.lastSyncedAt});
 }
 ;
+}
+

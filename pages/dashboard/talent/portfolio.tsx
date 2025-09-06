@@ -94,6 +94,10 @@ export default function TalentPortfolio() {
     contact: {
        email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' 
     },
+
+  const data: ResumeData = {
+    name: 'Your Name', _contact: { email: 'you@example.com', _phone: '+1 555-123-4567', _location: 'City, _Country'},
+
     summary: 'AI talent focused on LLM apps and marketplaces.',
     skills: ['AITypeScriptNext.js'],
     technologies: ['OpenAISupabase'],
@@ -101,7 +105,7 @@ export default function TalentPortfolio() {
     education: [{ institution: 'University of Example', degree: 'B.Sc.', start: '2016', end: '2020' }],
     certifications: ['AWS SAA-C03'],
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
-  return (
+return (
     <div className="relative">
       <div className="flex items-center gap-3 mb-4">
         <label className="text-sm">Theme</label>
@@ -122,6 +126,22 @@ export default function TalentPortfolio() {
 export const getServerSideProps: GetServerSideProps = async () => {
   const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.();
+        >
+          <option value=&quot;light&quot;>Light</option>
+          <option value=&quot;dark&quot;>Dark</option>
+        </select>
+      </div>
+
+      <PdfExportButton targetRef={_ref} fileName={_`resume-${data.name.replace(/\s+/g, _'-').toLowerCase()}.pdf`} />
+      <ResumePreview ref={_ref} data={_data} theme={_theme} />
+    </div>
+  )
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const supabase = createServerClient()
+  const user = await (supabase as any).auth.getUser?.()
+
   if (!user) {
     return { redirect: { destination: '/auth', permanent: false } } as any
   }

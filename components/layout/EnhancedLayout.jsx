@@ -31,3 +31,14 @@ const EnhancedLayout = ({ children }) => {
 },
 export default EnhancedLayout;
 ;
+      <EnhancedNavigation />
+      <main className=&quot;flex-1&quot;>
+        {children}
+      </main>
+      <EnhancedFooter />
+    </div>
+  )
+},
+
+export default EnhancedLayout,
+

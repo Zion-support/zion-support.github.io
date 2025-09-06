@@ -631,6 +631,65 @@ const quick_links = [;
 ];
 ;
 const company_links = [;
+
+const _serviceCategories = [
+  {_title: '🧠 Revolutionary AI Services', _icon: BrainIcon, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and creativity', _services: [
+      { name: 'AI Business Intelligence Pro', _href: '/ai-business-intelligence-pro', _description: 'Transform data into actionable insights', _price: '$299/month'},
+      {_name: 'AI Video Generation Platform', _href: '/ai-video-generation-platform', _description: 'Create professional videos with AI', _price: '$499/month'},
+      {_name: 'AI-Powered Cybersecurity', _href: '/ai-cybersecurity-platform', _description: 'Next-generation threat detection', _price: '$799/month'},
+      {_name: 'AI Drug Discovery Platform', _href: '/ai-drug-discovery-platform', _description: 'Accelerate drug discovery with AI', _price: '$3, _999/month'}
+    ]
+  },
+  {_title: '⚛️ Quantum & Emerging Tech', _icon: AtomIcon, _color: 'from-indigo-600 via-blue-600 to-cyan-600', _description: 'Quantum computing and beyond', _services: [
+      { name: 'Quantum Machine Learning', _href: '/quantum-machine-learning-platform', _description: 'Harness quantum computing for ML', _price: '$1, _999/month'},
+      {_name: 'Blockchain AI Platform', _href: '/blockchain-ai-platform', _description: 'Decentralized AI for the future', _price: '$899/month'},
+      {_name: 'Edge AI Computing', _href: '/edge-ai-computing-platform', _description: 'AI at the edge for real-time processing', _price: '$599/month'},
+      {_name: 'AI Climate Modeling', _href: '/ai-climate-modeling-platform', _description: 'Predict climate change with AI', _price: '$1, _299/month'}
+    ]
+  },
+  {_title: '🏙️ Enterprise IT Solutions', _icon: CpuIcon, _color: 'from-blue-600 via-cyan-600 to-teal-600', _description: 'Autonomous enterprise infrastructure', _services: [
+      { name: 'API Security & Monitoring', _href: '/api-security-monitoring-suite', _description: 'Protect and monitor your APIs', _price: '$399/month'},
+      {_name: 'Customer Success Automation', _href: '/customer-success-automation', _description: 'Automate customer success workflows', _price: '$199/month'},
+      {_name: 'HR Automation Suite', _href: '/hr-automation-suite', _description: 'Streamline HR processes with AI', _price: '$179/month'},
+      {_name: 'Project Management AI', _href: '/project-management-ai-platform', _description: 'AI-powered project management', _price: '$199/month'}
+    ]
+  },
+  {_title: '🛒 Business Automation', _icon: ShoppingCart, _color: 'from-teal-600 via-emerald-600 to-green-600', _description: 'Streamline business operations', _services: [
+      { name: 'E-commerce Automation', _href: '/ecommerce-automation-platform', _description: 'Automate your entire e-commerce operation', _price: '$249/month'},
+      {_name: 'Marketing Automation Suite', _href: '/marketing-automation-suite', _description: 'Automate your entire marketing operation', _price: '$279/month'},
+      {_name: 'Financial Analytics Platform', _href: '/financial-analytics-platform', _description: 'Real-time financial insights', _price: '$349/month'},
+      {_name: 'Legal Document Automation', _href: '/legal-document-automation', _description: 'Automate legal document creation', _price: '$399/month'}
+    ]
+  },
+  {_title: '🤖 Robotics & Automation', _icon: RocketIcon, _color: 'from-green-600 via-yellow-600 to-orange-600', _description: 'Intelligent automation solutions', _services: [
+      { name: 'Autonomous Robotics Platform', _href: '/autonomous-robotics-platform', _description: 'Build and deploy intelligent robots', _price: '$2, _499/month'},
+      {_name: 'AI Content Generator Elite', _href: '/ai-content-generator-elite', _description: 'Professional AI content creation', _price: '$49/month'},
+      {_name: 'AI Guardrails Suite', _href: '/ai-guardrails-suite', _description: 'Policy and safety for LLM apps', _price: '$199/month'},
+      {_name: 'AI Business Intelligence', _href: '/ai-business-intelligence-suite', _description: 'Intelligent business insights', _price: '$299/month'}
+    ]
+  },
+  {_title: '🔬 Research & Development', _icon: MicroscopeIcon, _color: 'from-orange-600 via-red-600 to-pink-600', _description: 'Breakthrough research solutions', _services: [
+      { name: 'Quantum DNA Computing', _href: '/quantum-dna-computing-platform', _description: 'DNA-based quantum computation', _price: '$35, _999/month'},
+      {_name: 'Space Mining Automation', _href: '/space-mining-automation-platform', _description: 'Automated asteroid mining', _price: '$45, _999/month'},
+      {_name: 'Metaverse AI Development', _href: '/metaverse-ai-development-platform', _description: 'Build immersive virtual worlds', _price: '$2, _999/month'},
+      {_name: 'Holographic Event Platform', _href: '/holographic-event-platform', _description: 'Immersive holographic experiences', _price: '$2, _999/month'}
+    ]
+  }
+],
+
+const quickLinks = [
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case-studies', icon: FileText },
+  { name: 'Blog', href: '/blog', icon: MessageCircle },
+  { name: 'Contact', href: '/contact', icon: MessageCircle }
+],
+
+const companyLinks = [
+
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Careers', href: '/careers', icon: Briefcase },
   { name: 'News', href: '/news', icon: FileText },
@@ -766,7 +825,7 @@ export default function UltraFuturisticNavigation2034() {;
           </div>
         </div>
       </div>
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
+<div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
           <div className='flex items-center space-x-6'>;
             <div className='flex items-center space-x-2'>;
@@ -831,14 +890,14 @@ export default function UltraFuturisticNavigation2034() {;
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex items-center space-x-3"
+className="flex items-center space-x-3"
             >
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
@@ -889,7 +948,7 @@ export default function UltraFuturisticNavigation2034() {;
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
                 >
                   {link.name}
                 </Link>
@@ -1235,7 +1294,7 @@ function UltraFuturisticNavigation2034() {
             </div>
           </div>
         </div>
-            {/* Mobile Menu Button */}
+{/* Mobile Menu Button */}
             <div className='lg:hidden'>;
               <button;
                 on_click={() => setIsOpen (!is_open)}
@@ -1261,7 +1320,7 @@ function UltraFuturisticNavigation2034() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
                   >
                     {link.name}
                   </Link>
@@ -1281,7 +1340,7 @@ function UltraFuturisticNavigation2034() {
                     <AnimatePresence>
                       {activeDropdown === category.title && (
                         <motion.div
-        {/* Mobile Menu */}
+{/* Mobile Menu */}
         <AnimatePresence>;
           {is_open && (
             <motion.div;
@@ -1344,7 +1403,7 @@ function UltraFuturisticNavigation2034() {
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
-                          className='mt - 3 ml - 4 space - y-2';
+className='mt - 3 ml - 4 space - y-2';
                         >;
                           {category.services.map (service => (                            <Link;
                               key={service.name}

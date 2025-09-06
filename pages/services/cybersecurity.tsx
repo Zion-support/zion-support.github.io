@@ -160,7 +160,7 @@ export default function CybersecurityServicesPage() {
     { number: "24/7", label: "Security Monitoring", icon: Eye },
     { number: "0", label: "Security Breaches", icon: Lock },
     { number: "500+", label: "Protected Systems", icon: CheckCircle }
-  ];
+];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -174,11 +174,28 @@ export default function CybersecurityServicesPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
+
+  return (
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
+      <Head>
+        <title>Cybersecurity Services - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Advanced cybersecurity solutions from Zion Tech Group. AI-powered threat detection, quantum-resistant encryption, and comprehensive security services.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Cybersecurity Services - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Advanced cybersecurity solutions for comprehensive protection.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/services/cybersecurity&quot; />
+      </Head>
+
+      <EnhancedNavigation />
+
+      {/* Hero Section */}
+      <section className=&quot;relative pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6">
               Cybersecurity
@@ -191,7 +208,7 @@ export default function CybersecurityServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6'>;
               Cybersecurity;
@@ -235,7 +252,7 @@ export default function CybersecurityServicesPage() {
           </motion.div>
         </div>
       </section>
-      {/* Stats Section */}
+{/* Stats Section */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -244,7 +261,7 @@ export default function CybersecurityServicesPage() {
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -311,7 +328,7 @@ export default function CybersecurityServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                     Get Started
@@ -319,7 +336,7 @@ export default function CybersecurityServicesPage() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* CTA Section */}
@@ -339,16 +356,20 @@ export default function CybersecurityServicesPage() {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-                Security Assessment
+Security Assessment
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+                Security Assessment
+              </button>
+              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
+
                 Learn More
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-      <EnhancedFooter />
+<EnhancedFooter />
     </div>
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;

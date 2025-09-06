@@ -26,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // In a real implementation, validate and insert review into Supabase
     return res.status(201).json({ ok: true })
   }
-  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 ;
 export default async /**
@@ -68,4 +68,6 @@ return res;
     .end ('Method Not Allowed');    return res.status (201).json ({ ok: true });
   }
   return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
+  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
+
 }

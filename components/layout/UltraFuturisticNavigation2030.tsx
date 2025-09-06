@@ -394,12 +394,60 @@ const mainNavigation = [
     ];
   }
 const main_navigation = [;
+
+const _serviceCategories = [
+  {_title: '🚀 2030 Ultra-Futuristic AI Services', _icon: Brain, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and creativity', _services: [
+      { name: 'AI Consciousness Evolution Platform', _href: '/ai-consciousness-evolution-platform', _description: 'Develop genuine AI consciousness', _price: '$19, _999/month'},
+      {_name: 'AI Emotional Intelligence Platform', _href: '/ai-emotion-intelligence-platform', _description: 'Real-time emotion analysis and response', _price: '$1, _299/month'},
+      {_name: 'AI Creativity Orchestrator', _href: '/ai-creativity-orchestrator', _description: 'Multi-model creativity fusion', _price: '$1, _799/month'},
+      {_name: 'AI Autonomous Business Manager', _href: '/ai-autonomous-business-manager', _description: 'Fully autonomous business operations', _price: '$3, _999/month'}
+    ]
+  },
+  {_title: '⚛️ 2030 Quantum & Emerging Tech', _icon: Atom, _color: 'from-indigo-600 via-blue-600 to-cyan-600', _description: 'Quantum computing and beyond', _services: [
+      { name: 'Quantum Internet Security Gateway', _href: '/quantum-internet-security-gateway', _description: 'Unbreakable quantum encryption', _price: '$3, _999/month'},
+      {_name: 'Quantum Learning Accelerator', _href: '/quantum-learning-accelerator', _description: 'Quantum-enhanced learning paths', _price: '$899/month'},
+      {_name: 'Quantum Financial Trading Platform', _href: '/quantum-financial-trading-platform', _description: 'Quantum-powered trading algorithms', _price: '$4, _999/month'},
+      {_name: 'Quantum Cloud Infrastructure', _href: '/quantum-cloud-infrastructure', _description: 'Quantum-enhanced cloud performance', _price: '$4, _999/month'}
+    ]
+  },
+  {_title: '🧬 2030 Biotech & DNA Computing', _icon: Microscope, _color: 'from-green-600 via-emerald-600 to-teal-600', _description: 'Biological computing and genetic engineering', _services: [
+      { name: 'Biotech DNA Computing Platform', _href: '/biotech-dna-computing-platform', _description: 'DNA-based computation', _price: '$5, _999/month'},
+      {_name: 'Biotech Personalized Nutrition', _href: '/biotech-personalized-nutrition', _description: 'DNA-based nutrition plans', _price: '$599/month'},
+      {_name: 'AI Predictive Health Analytics', _href: '/ai-predictive-health-analytics', _description: 'Predictive health outcomes', _price: '$1, _599/month'},
+      {_name: 'Advanced Research Automation', _href: '/advanced-research-automation', _description: 'Automated research workflows', _price: '$1, _999/month'}
+    ]
+  },
+  {_title: '🏙️ 2030 Enterprise IT Solutions', _icon: Cpu, _color: 'from-blue-600 via-cyan-600 to-teal-600', _description: 'Autonomous enterprise infrastructure', _services: [
+      { name: 'Autonomous DevOps Platform', _href: '/autonomous-devops-platform', _description: 'Fully autonomous DevOps', _price: '$2, _999/month'},
+      {_name: 'Autonomous IT Operations Center', _href: '/autonomous-it-operations-center', _description: 'Self-managing IT infrastructure', _price: '$6, _999/month'},
+      {_name: 'AI-Powered Enterprise Security', _href: '/ai-powered-enterprise-security', _description: 'AI-driven threat detection', _price: '$2, _999/month'},
+      {_name: 'Intelligent Data Governance', _href: '/intelligent-data-governance', _description: 'AI-powered data management', _price: '$7, _999/month'}
+    ]
+  },
+  {_title: '🌌 2030 Space & Metaverse Tech', _icon: Rocket, _color: 'from-teal-600 via-emerald-600 to-green-600', _description: 'Space exploration and digital reality', _services: [
+      { name: 'Space Mining Automation Platform', _href: '/space-mining-automation-platform', _description: 'Automated asteroid mining', _price: '$8, _999/month'},
+      {_name: 'Metaverse Digital Reality Platform', _href: '/metaverse-digital-reality-platform', _description: 'Immersive virtual worlds', _price: '$2, _499/month'},
+      {_name: 'Quantum Research Platform', _href: '/quantum-research-platform', _description: 'Quantum computing research', _price: '$3, _999/month'},
+      {_name: 'AI Research Assistant', _href: '/ai-research-assistant', _description: 'Intelligent research support', _price: '$899/month'}
+    ]
+  },
+  {_title: '🎯 2030 Innovative Micro SAAS', _icon: Target, _color: 'from-green-600 via-yellow-600 to-orange-600', _description: 'Cutting-edge micro solutions', _services: [
+      { name: 'AI Business Intelligence Suite 2030', _href: '/ai-business-intelligence-suite-2030', _description: 'AI-powered business analytics and insights', _price: '$299/month'},
+      {_name: 'AI Customer Experience Platform 2030', _href: '/ai-customer-experience-platform-2030', _description: 'AI-powered customer experience management', _price: '$199/month'},
+      {_name: 'AI Marketing Automation Suite 2030', _href: '/ai-marketing-automation-2030', _description: 'Intelligent marketing automation powered by AI', _price: '$179/month'},
+      {_name: 'AI HR Management Suite 2030', _href: '/ai-hr-management-suite-2030', _description: 'Intelligent human resources management powered by AI', _price: '$149/month'}
+    ]
+  }
+],
+
+const mainNavigation = [
+
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Layers },
   { name: 'Pricing', href: '/pricing', icon: DollarSign },
   { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'Case Studies', href: '/case - studies', icon: BarChart3 },
+{ name: 'Case Studies', href: '/case - studies', icon: BarChart3 },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
@@ -511,7 +559,7 @@ export default function UltraFuturisticNavigation2030() {;
           </div>
         </div>
       </div>
-                href={contactInfo && contactInfo.website}
+href={contactInfo && contactInfo.website}
                 className='hover:text-cyan-400 transition-colors'>                {contactInfo && contactInfo.website.replace('https://', '')}              <span>{contactInfo && contactInfo.mobile}</span>;
             </div>;
             <div className="flex items-center space-x-2">;
@@ -642,7 +690,7 @@ function UltraFuturisticNavigation2030() {
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
           : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className='flex items-center space-x-4'>;
@@ -719,7 +767,7 @@ function UltraFuturisticNavigation2030() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
+className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
                 >
                   <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
                   <span>{item.name}</span>
@@ -752,7 +800,7 @@ function UltraFuturisticNavigation2030() {
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
-                                className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group"
+className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group"
                               >
                                 <div className="flex items-center justify-between">
                                   <div>
@@ -956,7 +1004,7 @@ function UltraFuturisticNavigation2030() {
             </div>
           </div>
         </div>
-            {/* CTA Buttons */}
+{/* CTA Buttons */}
             <div className='hidden lg:flex items - center space - x-4'>;
               <Link;
                 href='/contact';
@@ -1154,7 +1202,7 @@ function UltraFuturisticNavigation2030() {
               </div>
             </motion.div>
           )}
-        </AnimatePresence>;
+</AnimatePresence>;
       </nav>;
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>;

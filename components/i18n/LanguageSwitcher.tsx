@@ -224,4 +224,15 @@ function LanguageSwitcher() {
             </li>))}
         </ul>)}
     </div>);
+              >
+                <span className={_`fi fi-${localeToFlag[lng]}`}></span>
+                <span>{_t(localeLabelKey[lng])}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+
 }

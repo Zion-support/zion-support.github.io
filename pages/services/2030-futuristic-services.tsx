@@ -36,12 +36,15 @@ function FuturisticServices2030Page() {
     website: 'https://ziontechgroup.com';
   },
   const all2030Services = [;
+
+  const _all2030Services = [
+
     ...futuristicAIServices2030,
     ...quantumEmergingTechServices2030,
     ...enterpriseITSolutions2030,
     ...spaceMetaverseTechServices2030,
     ...innovativeMicroSaasServices2030,
-    ...researchDevelopmentServices2030;
+...researchDevelopmentServices2030;
   ],
   const service_categories = [;
     {
@@ -54,35 +57,35 @@ function FuturisticServices2030Page() {
     {
       title: '⚛️ Quantum & Emerging Tech 2030',
       icon: Atom,
-      color: 'from - purple - 500 to - indigo - 500',
+color: 'from - purple - 500 to - indigo - 500',
       services: quantumEmergingTechServices2030,
       description: 'Quantum computing and breakthrough technologies';
     },
     {
       title: '🏢 Enterprise IT Solutions 2030',
       icon: Globe,
-      color: 'from - blue - 500 to - cyan - 500',
+color: 'from - blue - 500 to - cyan - 500',
       services: enterpriseITSolutions2030,
       description: 'Autonomous enterprise infrastructure and operations';
     },
     {
       title: '🌌 Space & Metaverse Tech 2030',
       icon: Rocket,
-      color: 'from - emerald - 500 to - green - 500',
+color: 'from - emerald - 500 to - green - 500',
       services: spaceMetaverseTechServices2030,
       description: 'Space exploration and digital reality platforms';
     },
     {
       title: '🎯 Innovative Micro SAAS 2030',
       icon: Target,
-      color: 'from - yellow - 500 to - orange - 500',
+color: 'from - yellow - 500 to - orange - 500',
       services: innovativeMicroSaasServices2030,
       description: 'Cutting - edge micro solutions and platforms';
     },
     {
       title: '🔬 Research & Development 2030',
       icon: Microscope,
-      color: 'from - red - 500 to - pink - 500',
+color: 'from - red - 500 to - pink - 500',
       services: researchDevelopmentServices2030,
       description: 'Breakthrough research and development solutions';
     }
@@ -239,7 +242,7 @@ function FuturisticServices2030Page() {
             </div>
           </section>
         ))}
-                    while_hover={{ coordinate_y: -5 }} className="group cursor - pointer">;
+while_hover={{ coordinate_y: -5 }} className="group cursor - pointer">;
                     <div className="p - 6 rounded - 2xl bg - gradient - to - br from - gray - 900 / 60 to - gray - 800 / 60 border border - cyan - 500 / 30 hover:border - cyan - 400 / 50 transition - all duration - 300 backdrop - blur - sm">;
                       <div className="text - 4xl mb - 4">{service.icon}</div>;
                       <h3 className="text - xl font - semibold text - white mb - 3">{service.name}</h3>;
@@ -300,7 +303,7 @@ function FuturisticServices2030Page() {
             </motion.div>
           </div>
         </section>
-        {/* Footer */}
+{/* Footer */}
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2031>
     </>

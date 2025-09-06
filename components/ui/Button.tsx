@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
   size = 'md',
-  className = '',
+className = '',
   onClick,
   disabled = false,
   type = 'button'

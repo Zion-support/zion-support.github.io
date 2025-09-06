@@ -36,7 +36,7 @@ const LoadingFallback = () => (
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="text-center"
+className="text-center"
     >
       <div className="relative">
         <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" />
@@ -190,12 +190,47 @@ const Homepage2035: React.FC = () => {;
       }
     }
   };
+    >
+      <div className=&quot;relative&quot;>
+        <Loader2 className=&quot;w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4&quot; />
+        <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse&quot;></div>
+      </div>
+      <p className=&quot;text-xl text-gray-300 mb-2&quot;>Loading Zion Tech Group...</p>
+      <p className=&quot;text-sm text-gray-500&quot;>Preparing your digital transformation journey</p>
+    </motion.div>
+  </div>
+),
+
+const Homepage2035: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true),
+  const [isVisible, setIsVisible] = useState(false),
+  const [activeCategory, setActiveCategory] = useState('all'),
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false),
+      setIsVisible(true)
+    }, 800),
+
+    return () => clearTimeout(timer)
+  }, []),
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+
+  const _staggerContainer = {_animate: {
+      transition: {
+        staggerChildren: 0.1, _delayChildren: 0.2}
+    }
+  },
+
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { 
       opacity: 1,
       scale: 1,
-      transition: { duration: 1.5, ease: "easeOut" as const }
+transition: { duration: 1.5, ease: "easeOut" as const }
     }
   }
   const categories = [
@@ -506,11 +541,37 @@ if ( {) {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
+
+  const _allServices = [
+    ...innovative2025MicroSaasBatch,
+    ...innovative2025ITEnterpriseBatch,
+    ...innovative2025AIServicesBatch
+  ],
+
+  const _filteredServices = activeCategory === 'all' 
+    ? allServices 
+    : allServices.filter(service => {
+        if (activeCategory === 'ai') return service.category.includes('AI') || service.category.includes('Machine Learning'),
+        if (activeCategory === 'it') return service.category.includes('IT') || service.category.includes('Enterprise'),
+        if (activeCategory === 'quantum') return service.name.includes('Quantum'),
+        if (activeCategory === 'space') return service.category.includes('Space'),
+        if (activeCategory === 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity'),
+        if (activeCategory === 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps'),
+        if (activeCategory === 'fintech') return service.category.includes('Financial') || service.category.includes('Trading'),
+        return true
+      }),
+
+  return (_<Layout>
+      <UltraFuturisticBackground2035>
+        {/* Hero Section */}
+        <section className=&quot;relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="mb-8"
+className="mb-8"
             >
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -532,14 +593,14 @@ if ( {) {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
+className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
                 >
                   <Play className="w-5 h-5" />
                   <span>Watch Demo</span>
                 </motion.button>
               </div>
             </motion.div>
-              transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
               className='mb-8'>;
               <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -716,7 +777,7 @@ if ( {) {
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-            </motion && motion.div>;
+</motion && motion.div>;
           </div>;
         </section>;
         {/* Services Section */}
@@ -828,7 +889,7 @@ if ( {) {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              className='text-center mt-16'>;
+className='text-center mt-16'>;
               <motion&& motion.button
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}
@@ -861,7 +922,7 @@ if ( {) {
             </motion.div>
           </div>
         </section>
-        {/* Features Section */}
+{/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -978,7 +1039,7 @@ if ( {) {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
                   className="text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
@@ -1131,7 +1192,8 @@ export default Homepage2035;  );
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
+className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
+
                 >
                   Schedule a Demo
                 </motion.button>

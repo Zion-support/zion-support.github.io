@@ -44,6 +44,7 @@ if (!userId) return;
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
           {message && <div>{message}</div>}
+
         </div>
       </div>
     </div>

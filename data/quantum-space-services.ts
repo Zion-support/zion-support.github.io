@@ -1,5 +1,5 @@
 export interface QuantumSpaceService {
-    address: string;
+address: string;
   }
 ;
 export const quantumSpaceServices: QuantumSpaceService[] = [;

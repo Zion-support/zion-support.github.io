@@ -106,5 +106,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       payload: { error: e?.message || "unknown" },
     });
     return res.status (500).json ({ error: "Router failure" });
+
   }
 }

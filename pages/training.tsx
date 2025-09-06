@@ -19,7 +19,7 @@ export default function TrainingPage() {
     { id: 'quantum-computing', name: 'Quantum Computing', count: 6 },
     { id: 'autonomous-ops', name: 'Autonomous Operations', count: 5 },
     { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
-  ];
+];
   const featuredPrograms = [
     {
       id: 1,
@@ -29,7 +29,7 @@ export default function TrainingPage() {
       duration: '12 weeks',
       level: 'Intermediate to Advanced',
       price: '$2,999',
-    rating: 4.9,
+rating: 4.9,
       students: '1,247',
     featured: true,
       icon: <Brain className="w-12 h-12" />,
@@ -45,7 +45,7 @@ export default function TrainingPage() {
       duration: '16 weeks',
       level: 'Advanced',
       price: '$3,499',
-    rating: 4.8,
+rating: 4.8,
       students: '892',
       featured: true,
       icon: <Atom className="w-12 h-12" />,
@@ -61,7 +61,7 @@ export default function TrainingPage() {
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,499',
-    rating: 4.9,
+rating: 4.9,
       students: '1,156',
     featured: true,
       icon: <Rocket className="w-12 h-12" />,
@@ -69,8 +69,11 @@ export default function TrainingPage() {
         'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
       ]
     }
-  ];
+];
   const allPrograms = [
+
+  const _allPrograms = [
+
     // AI Consciousness Programs
     {
       id: 4,
@@ -80,7 +83,7 @@ export default function TrainingPage() {
       duration: '6 weeks',
       level: 'Beginner',
       price: '$1,299',
-    rating: 4.7,
+rating: 4.7,
       students: '2,341',
     icon: <Brain className="w-8 h-8" />
     };
@@ -92,7 +95,7 @@ export default function TrainingPage() {
       duration: '14 weeks',
       level: 'Advanced',
       price: '$3,999',
-    rating: 4.9,
+rating: 4.9,
       students: '567',
       icon: <Brain className="w-8 h-8" />
     };
@@ -104,7 +107,7 @@ export default function TrainingPage() {
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,899',
-    rating: 4.8,
+rating: 4.8,
       students: '1,023',
     icon: <Shield className="w-8 h-8" />
     };
@@ -116,7 +119,7 @@ export default function TrainingPage() {
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,199',
-    rating: 4.7,
+rating: 4.7,
       students: '789',
       icon: <Code className="w-8 h-8" />
     };
@@ -129,7 +132,7 @@ export default function TrainingPage() {
       duration: '8 weeks',
       level: 'Beginner',
       price: '$1,599',
-    rating: 4.6,
+rating: 4.6,
       students: '1,456',
     icon: <Atom className="w-8 h-8" />
     };
@@ -141,7 +144,7 @@ export default function TrainingPage() {
       duration: '12 weeks',
       level: 'Advanced',
       price: '$3,299',
-    rating: 4.8,
+rating: 4.8,
       students: '423',
       icon: <Atom className="w-8 h-8" />
     };
@@ -153,7 +156,7 @@ export default function TrainingPage() {
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,399',
-    rating: 4.7,
+rating: 4.7,
       students: '678',
       icon: <Shield className="w-8 h-8" />
     };
@@ -166,7 +169,7 @@ export default function TrainingPage() {
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,999',
-    rating: 4.8,
+rating: 4.8,
       students: '945',
       icon: <Zap className="w-8 h-8" />
     };
@@ -178,7 +181,7 @@ export default function TrainingPage() {
       duration: '12 weeks',
       level: 'Advanced',
       price: '$2,999',
-    rating: 4.9,
+rating: 4.9,
       students: '567',
       icon: <Target className="w-8 h-8" />
     };
@@ -191,7 +194,7 @@ export default function TrainingPage() {
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,299',
-    rating: 4.7,
+rating: 4.7,
       students: '823',
       icon: <Building className="w-8 h-8" />
     };
@@ -203,7 +206,7 @@ export default function TrainingPage() {
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,899',
-    rating: 4.6,
+rating: 4.6,
       students: '1,134',
     icon: <Server className="w-8 h-8" />
     };
@@ -215,7 +218,7 @@ export default function TrainingPage() {
       duration: '6 weeks',
       level: 'Intermediate',
       price: '$1,599',
-    rating: 4.8,
+rating: 4.8,
       students: '756',
       icon: <Zap className="w-8 h-8" />
     }
@@ -274,13 +277,55 @@ export default function TrainingPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="w-5 h-5" />
+
+  const getCategoryColor = (category: string) => {
+    const colors = {
+      'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
+    },
+    return colors[category as keyof typeof colors] || 'gray'
+  },
+
+  return (_<Layout>
+      <SEO 
+        title=&quot;Training & Certification - Zion Tech Group&quot;
+        description=&quot;Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career.&quot;
+      />
+      
+      <div className=&quot;min-h-screen&quot;>
+        {/* Hero Section */}
+        <section className=&quot;relative py-20 lg:py-32 overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10&quot; />
+          <div className=&quot;relative z-10 container mx-auto px-4 text-center&quot;>
+            <motion.div
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+            >
+              <h1 className=&quot;text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6&quot;>
+                Training & Certification
+              </h1>
+              <p className=&quot;text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8&quot;>
+                Master the future of technology with our comprehensive training programs in AI consciousness, quantum computing, and autonomous operations.
+              </p>
+              <div className=&quot;flex flex-wrap justify-center gap-4 text-gray-400&quot;>
+                <div className=&quot;flex items-center gap-2&quot;>
+                  <GraduationCap className=&quot;w-5 h-5&quot; />
+                  <span>Expert-Led Training</span>
+                </div>
+                <div className=&quot;flex items-center gap-2&quot;>
+                  <Award className=&quot;w-5 h-5&quot; />
+                  <span>Industry Certifications</span>
+                </div>
+                <div className=&quot;flex items-center gap-2&quot;>
+                  <Users className=&quot;w-5 h-5&quot; />
+
                   <span>Global Community</span>
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
-        {/* Category Filters */}
+{/* Category Filters */}
         <section className="py-10">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-3">
@@ -300,7 +345,7 @@ export default function TrainingPage() {
             </div>
           </div>
         </section>
-        {/* Featured Programs */}
+{/* Featured Programs */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -308,7 +353,7 @@ export default function TrainingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Featured Programs
@@ -325,7 +370,7 @@ export default function TrainingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
+className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
                 >
                   <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
                     {program.icon}
@@ -370,7 +415,7 @@ export default function TrainingPage() {
                         </div>
                       ))}
                     </div>
-                    <a
+<a
                       href="#"
                       className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
                     >
@@ -383,7 +428,7 @@ export default function TrainingPage() {
             </div>
           </div>
         </section>
-        {/* All Programs */}
+{/* All Programs */}
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -391,7 +436,7 @@ export default function TrainingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 All Training Programs
@@ -408,7 +453,7 @@ export default function TrainingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
+className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
                 >
                   <div className="p-6">
                     <div className="flex items-start gap-4">
@@ -447,11 +492,18 @@ export default function TrainingPage() {
                       </div>
                       <div className="text-right flex-shrink-0">
                         <div className="text-2xl font-bold text-cyan-400 mb-2">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className=&quot;text-right flex-shrink-0&quot;>
+                        <div className=&quot;text-2xl font-bold text-cyan-400 mb-2&quot;>
+
                           {program.price}
                         </div>
                         <button
                           onClick={() => toggleProgram(program.id)}
-                          className="text-gray-400 hover:text-white transition-colors duration-300"
+className="text-gray-400 hover:text-white transition-colors duration-300"
                         >
                           {expandedProgram === program.id ? (
                             <ChevronUp className="w-5 h-5" />
@@ -461,13 +513,13 @@ export default function TrainingPage() {
                         </button>
                       </div>
                     </div>
-                    {expandedProgram === program.id && (
+{expandedProgram === program.id && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="mt-4 pt-4 border-t border-gray-700"
+className="mt-4 pt-4 border-t border-gray-700"
                       >
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
@@ -491,7 +543,7 @@ export default function TrainingPage() {
                               </li>
                             </ul>
                           </div>
-                          <div>
+<div>
                             <h4 className="text-white font-semibold mb-3">Program Details</h4>
                             <div className="space-y-2 text-sm text-gray-300">
                               <div className="flex justify-between">
@@ -513,7 +565,7 @@ export default function TrainingPage() {
                             </div>
                           </div>
                         </div>
-                        <div className="mt-6 flex gap-3">
+<div className="mt-6 flex gap-3">
                           <a
                             href="#"
                             className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
@@ -536,7 +588,7 @@ export default function TrainingPage() {
             </div>
           </div>
         </section>
-        {/* Learning Paths */}
+{/* Learning Paths */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -544,7 +596,7 @@ export default function TrainingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Learning Paths
@@ -561,31 +613,31 @@ export default function TrainingPage() {
                   duration: '6-12 months',
                   courses: 8,
                   level: 'Beginner to Expert',
-                  icon: <Brain className="w-12 h-12" />,
+icon: <Brain className="w-12 h-12" />,
                   color: 'cyan',
                   path: [
                     'AI Consciousness FundamentalsConsciousness Architecture DesignAdvanced ImplementationEthics and GovernanceAPI DevelopmentSystem OptimizationReal-world ApplicationsExpert Certification'
                   ]
-                };
+};
                 {
                   title: 'Quantum Computing Specialist',
                   description: 'Master quantum computing from basic principles to enterprise implementation.',
                   duration: '8-16 months',
                   courses: 6,
                   level: 'Intermediate to Expert',
-                  icon: <Atom className="w-12 h-12" />,
+icon: <Atom className="w-12 h-12" />,
                   color: 'purple',
                   path: [
                     'Quantum Computing BasicsQuantum AlgorithmsMachine Learning IntegrationSecurity ImplementationEnterprise SolutionsAdvanced Applications'
                   ]
-                };
+};
                 {
                   title: 'Autonomous Operations Leader',
                   description: 'Lead the transformation to fully autonomous business operations.',
                   duration: '6-10 months',
                   courses: 5,
                   level: 'Intermediate to Advanced',
-                  icon: <Rocket className="w-12 h-12" />,
+icon: <Rocket className="w-12 h-12" />,
                   color: 'green',
                   path: [
                     'Business Process AnalysisAutomation StrategySystem ImplementationChange ManagementPerformance Optimization'
@@ -598,7 +650,7 @@ export default function TrainingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
+className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="text-center mb-6">
                     <div className={`w-20 h-20 bg-${path.color}-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -621,7 +673,7 @@ export default function TrainingPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="space-y-3 mb-6">
+<div className="space-y-3 mb-6">
                     {path.path.map((step, stepIndex) => (
                       <div key={stepIndex} className="flex items-center gap-3 text-sm">
                         <div className="w-6 h-6 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center text-xs font-bold">
@@ -643,7 +695,7 @@ export default function TrainingPage() {
             </div>
           </div>
         </section>
-        {/* CTA Section */}
+{/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -671,6 +723,19 @@ export default function TrainingPage() {
                 >
                   Explore Free Resources
                 </a>
+                <a
+                  href=&quot;/contact&quot;
+                  className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;
+                >
+                  Get Personalized Guidance
+                </Link>
+                <a
+                  href=&quot;/resources&quot;
+                  className=&quot;px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300&quot;
+                >
+                  Explore Free Resources
+                </Link>
+
               </div>
             </motion.div>
           </div>

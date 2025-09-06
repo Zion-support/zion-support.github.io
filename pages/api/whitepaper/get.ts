@@ -23,3 +23,5 @@ function handler() {
   res.status (200).json ({ markdown: entry.markdown, public: entry.public, created_at: entry.created_at });
 }
 ;
+}
+

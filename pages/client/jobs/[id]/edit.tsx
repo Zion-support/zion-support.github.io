@@ -14,11 +14,24 @@ export default function EditJobPage() {;
       setCategory(job.category || '')
     }
   }, [job]);
+
+  const [title, setTitle] = useState(''),
+  const [description, setDescription] = useState(''),
+  const [category, setCategory] = useState(''),
+
+  useEffect(() => {
+    if (job) {
+      setTitle(job.title || ''),
+      setDescription(job.description || ''),
+      setCategory(job.category || '')
+    }
+  }, [job]),
+
   async function save() {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, description, category })});
+body: JSON.stringify({ title, description, category })});
     router.push('/client/dashboard')
   }
   useEffect(() => {;

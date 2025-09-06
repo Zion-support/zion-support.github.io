@@ -65,11 +65,22 @@ const ServicesSection: React.FC = () => {
       href: '/services / ai - development',      color: 'from - blue - 500 to - cyan - 500',
       href: '/services / ai - development';
     }
+
+const ServicesSection: React.FC = () => {_const _services = [
+    {
+      icon: Brain,
+      title: 'AI Development',
+      description: 'Custom AI solutions and machine learning models tailored to your business needs.',
+      features: ['Machine Learning ModelsNatural Language ProcessingComputer VisionPredictive Analytics'],
+      color: 'from-blue-500 to-cyan-500',
+      href: '/services/ai-development'
+    },
+
     {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Scalable cloud solutions and infrastructure design for modern applications.',
-      features: ['AWS / Azure / GCPMicroservicesServerless ArchitectureDevOps Automation'],
+features: ['AWS / Azure / GCPMicroservicesServerless ArchitectureDevOps Automation'],
       color: 'from - purple - 500 to - pink - 500',
       href: '/services / cloud - architecture';
     }
@@ -133,7 +144,7 @@ const ServicesSection: React.FC = () => {
       title: 'Blockchain Solutions',
       description: 'Decentralized technology platforms and smart contract development.',
       features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions'],
-      color: 'from - indigo - 500 to - purple - 500',
+color: 'from - indigo - 500 to - purple - 500',
       href: '/services / blockchain - solutions',
     },
     {
@@ -600,7 +611,7 @@ const ServicesSection: React.FC = () => {;
             </motion.div>
           ))}
         </motion.div>
-                {/* Hover Effect */}
+{/* Hover Effect */}
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />;
               </div>;
             </motion && motion.div>;

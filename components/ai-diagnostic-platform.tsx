@@ -83,7 +83,7 @@ const pricing_plans = [;
     name: 'Starter',
     price: 299,
     period: 'month',
-    features: [;
+features: [;
       'Basic diagnostic tools',
       '3 medical specialties',
       'Standard reporting',
@@ -100,7 +100,7 @@ const pricing_plans = [;
     name: 'Professional',
     price: 799,
     period: 'month',
-    features: [;
+features: [;
       'Advanced AI diagnostics',
       'All specialties',
       'Custom reporting',
@@ -118,7 +118,7 @@ const pricing_plans = [;
     name: 'Enterprise',
     price: 1999,
     period: 'month',
-    <Layout>
+<Layout>
       <Head>
         <title>AI Diagnostic Pro Platform | Zion Tech Group</title>
         <meta name="description" content="Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations." />
@@ -137,11 +137,35 @@ const pricing_plans = [;
           <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+
+export default function AIDiagnosticPlatform() {_return (_<Layout>
+      <Head>
+        <title>AI Diagnostic Pro Platform | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI diagnostics, medical AI, healthcare technology, medical imaging, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;AI Diagnostic Pro Platform - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Advanced medical diagnostic platform with AI integration.&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/ai-diagnostic-platform&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black&quot;></div>
+        
+        {/* Background Elements */}
+        <div className=&quot;absolute inset-0 overflow-hidden pointer-events-none&quot;>
+          <div className=&quot;absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
+          <div className=&quot;absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
+          <div className=&quot;absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-500&quot;></div>
+        </div>
+
+        <div className=&quot;relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <Stethoscope className="w-4 h-4 mr-2" />
@@ -551,7 +575,7 @@ function AIDiagnosticPlatform() {
                     </span>
                   </div>
                 )}
-                  <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
+<div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
                     <span className='bg - gradient - to - r from - blue - 500 to - indigo - 500 text - white px - 4 py - 2 rounded - full text - sm font - semibold'>                  <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
                     <span className="bg - gradient - to - r from - blue - 500 to - indigo - 500 text - white px - 4 py - 2 rounded - full text - sm font - semibold">;
                       Most Popular;
@@ -616,7 +640,7 @@ function AIDiagnosticPlatform() {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">
+<button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">
                   Get Started
                 </button>
               </motion.div>
@@ -624,7 +648,7 @@ function AIDiagnosticPlatform() {
           </div>
         </div>
       </section>
-                </ul>;
+</ul>;
                 <button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300'>                  Get Started                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">;
                   Get Started;
                 </button>;
@@ -739,7 +763,7 @@ function AIDiagnosticPlatform() {
         </div>
       </section>
     </Layout>
-              className='text-center'>;
+className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <MapPin className='w-8 h-8 text-white' />;
               </div>;

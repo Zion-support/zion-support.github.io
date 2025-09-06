@@ -870,7 +870,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     reviews: 98,
   },
   // Quantum Machine Learning Platform;
-  {
+{
     id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
     tagline: 'Unlock quantum advantage in machine learning',

@@ -137,7 +137,7 @@ interface Service {
     email: string,
     address: string,
     website: string
-    },
+},
     realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -186,20 +186,20 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
     { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
-  ];
+];
     { id: 'all', name: 'All Prices' },
     { id: 'low', name: 'Under $1K/month' },
     { id: 'medium', name: '$1K - $5K/month' },
     { id: 'high', name: '$5K - $20K/month' },
     { id: 'premium', name: '$20K+/month' }
-  ];
+];
   const sortOptions = [
     { id: 'popular', name: 'Most Popular' },
     { id: 'rating', name: 'Highest Rated' },
     { id: 'roi', name: 'Best ROI' },
     { id: 'price-low', name: 'Price Low to High' },
     { id: 'price-high', name: 'Price High to Low' }
-  ];
+];
   const filteredServices = useMemo(() => {
     const filtered = services.filter(service => {
       const matchesCategory = selectedCategory === 'all' |
@@ -553,11 +553,59 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
         <div className="text-center mb-16">
+                             (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
+                             (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
+                             (selectedCategory === 'blockchain' && (service.category.includes('Blockchain') || service.category.includes('DeFi') || service.category.includes('NFT'))) ||
+                             (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
+                             (selectedCategory === 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech'))),
+
+      const matchesPrice = selectedPriceRange === 'all' ||
+                          (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 1000) ||
+                          (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
+                          (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) ||
+                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000),
+
+      return matchesCategory && matchesPrice
+    }),
+
+    // Sort services
+    switch (sortBy) {
+      case 'popular':
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        break,
+      case 'rating':
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0)),
+        break,
+      case 'roi':
+        filtered.sort((a, b) => {
+          const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0')
+          const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0')
+          return bROI - aROI
+        }),
+        break,
+    }
+
+    return filtered.slice(0, maxServices)
+  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]),
+
+  const stats = [
+    { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' },
+    { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers || 0), 0), icon: Users, color: 'text-green-400' },
+    { label: 'Average Rating', value: (services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },
+    { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
+  ],
+
+  return (
+    <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
+      <div className=&quot;max-w-7xl mx-auto&quot;>
+        {/* Header */}
+        <div className=&quot;text-center mb-16&quot;>
+
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
+className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
           >
             {title}
           </motion && motion.h2>;
@@ -1008,7 +1056,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                 </div>
               </motion.div>
             ))}
-          </AnimatePresence>;
+</AnimatePresence>;
         </motion && motion.div>;
         {/* Call to Action */}
         <motion&& motion.div
@@ -1027,7 +1075,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" className="text-lg px-8 py-4">
-                Schedule a Consultation
+Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button href="/pricing" variant="secondary" className="text-lg px-8 py-4">
@@ -1039,6 +1087,19 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
               <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
               <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
               <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
+                Schedule a Consultation
+                <ArrowRight className=&quot;ml-2 w-5 h-5&quot; />
+              </Button>
+              <Button href=&quot;/pricing&quot; variant=&quot;secondary&quot; className=&quot;text-lg px-8 py-4&quot;>
+                View Pricing Plans
+                <DollarSign className=&quot;ml-2 w-5 h-5&quot; />
+              </Button>
+            </div>
+            <div className=&quot;mt-6 text-sm text-gray-400&quot;>
+              <p>📞 Call us: <span className=&quot;text-cyan-400&quot;>+1 302 464 0950</span></p>
+              <p>📧 Email: <span className=&quot;text-cyan-400&quot;>kleber@ziontechgroup.com</span></p>
+              <p>🌐 Visit: <span className=&quot;text-cyan-400&quot;>https://ziontechgroup.com</span></p>
+
             </div>
           </div>
         </motion.div>

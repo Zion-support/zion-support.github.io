@@ -71,6 +71,28 @@ e.preventDefault();
         </div>
         <div className="pt-2">
           <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
+        </div>
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+          <div>
+            <label className=&quot;block text-sm font-medium&quot;>Budget Min (USD)</label>
+            <input type=&quot;number&quot; className=&quot;mt-1 w-full border rounded p-2&quot; value={budgetMinUsd} onChange={(e) => setBudgetMinUsd(e.target.value)} />
+          </div>
+          <div>
+            <label className=&quot;block text-sm font-medium&quot;>Budget Max (USD)</label>
+            <input type=&quot;number&quot; className=&quot;mt-1 w-full border rounded p-2&quot; value={budgetMaxUsd} onChange={(e) => setBudgetMaxUsd(e.target.value)} />
+          </div>
+        </div>
+        <div>
+          <label className=&quot;block text-sm font-medium&quot;>Delivery Deadline (ISO or YYYY-MM-DD)</label>
+          <input className=&quot;mt-1 w-full border rounded p-2&quot; value={deliveryDeadlineIso} onChange={(e) => setDeliveryDeadlineIso(e.target.value)} placeholder=&quot;2025-09-30&quot; />
+        </div>
+        <div>
+          <label className=&quot;block text-sm font-medium&quot;>Email *</label>
+          <input type=&quot;email&quot; className=&quot;mt-1 w-full border rounded p-2&quot; value={clientEmail} onChange={(e) => setClientEmail(e.target.value)} placeholder=&quot;you@example.com&quot; />
+        </div>
+        <div className=&quot;pt-2&quot;>
+          <button type=&quot;submit&quot; className=&quot;px-4 py-2 rounded bg-black text-white disabled:opacity-50&quot; disabled={isSubmitting}>
+
             {isSubmitting ? 'Posting…' : 'Post Job'}
           </button>
         </div>

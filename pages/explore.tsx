@@ -39,11 +39,42 @@ import React, { useState } from 'react';
       service_count: 22,
       featured: true,
     },    {
+
+  const _categories = [
+    {
+      id: 'ai',
+      name: 'AI & Machine Learning',
+      icon: Brain,
+      description: 'Revolutionary AI consciousness and machine learning solutions',
+      color: 'from-purple-500 to-pink-500',
+      serviceCount: 25,
+      featured: true
+    },
+    {
+      id: 'quantum',
+      name: 'Quantum Computing',
+      icon: Atom,
+      description: 'Quantum-powered computing and consciousness simulation',
+      color: 'from-blue-500 to-cyan-500',
+      serviceCount: 18,
+      featured: true
+    },
+    {
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      icon: Shield,
+      description: 'Quantum-resistant security and AI threat detection',
+      color: 'from-red-500 to-orange-500',
+      serviceCount: 22,
+      featured: true
+    },
+    {
+
       id: 'cloud',
       name: 'Cloud & DevOps',
       icon: Cloud,
       description: 'Autonomous DevOps and cloud infrastructure',
-      color: 'from - emerald - 500 to - teal - 500',
+color: 'from - emerald - 500 to - teal - 500',
       service_count: 20,
       featured: false,
     },    {
@@ -51,7 +82,7 @@ import React, { useState } from 'react';
       name: 'Edge Computing',
       icon: Network,
       description: 'Edge computing orchestration and IoT management',
-      color: 'from - yellow - 500 to - orange - 500',
+color: 'from - yellow - 500 to - orange - 500',
       service_count: 15,
       featured: false,
     },    {
@@ -59,7 +90,7 @@ import React, { useState } from 'react';
       name: 'Space Technology',
       icon: Rocket,
       description: 'Space exploration and resource optimization',
-      color: 'from - indigo - 500 to - purple - 500',
+color: 'from - indigo - 500 to - purple - 500',
       service_count: 12,
       featured: true,
     },    {
@@ -67,7 +98,7 @@ import React, { useState } from 'react';
       name: 'Biotechnology',
       icon: ZapIcon,
       description: 'Neural interfaces and biomedical innovations',
-      color: 'from - pink - 500 to - rose - 500',
+color: 'from - pink - 500 to - rose - 500',
       service_count: 16,
       featured: false,
     },    {
@@ -83,7 +114,7 @@ import React, { useState } from 'react';
       name: 'Automation',
       icon: Zap,
       description: 'Business process automation and AI agents',
-      color: 'from - cyan - 500 to - blue - 500',
+color: 'from - cyan - 500 to - blue - 500',
       service_count: 19,
       featured: false,
     },    {
@@ -91,7 +122,7 @@ import React, { useState } from 'react';
       name: 'Financial Technology',
       icon: TrendingUp,
       description: 'Quantum financial trading and AI analytics',
-      color: 'from - emerald - 500 to - green - 500',
+color: 'from - emerald - 500 to - green - 500',
       service_count: 17,
       featured: false,
     },  ];
@@ -313,13 +344,39 @@ import React, { useState } from 'react';
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+      </Head>
+
+      <SmartHeader />
+
+      {/* Hero Section */}
+      <section className=&quot;pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+          >
+            <h1 className=&quot;text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6&quot;>
+              Explore Technology Categories
+            </h1>
+            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8&quot;>
+              Discover our comprehensive range of cutting-edge technology solutions across AI, 
+              quantum computing, cybersecurity, space technology, and more
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <button className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105&quot;>
+                Start Exploring
+                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+              </button>
+              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
+
                 View All Services
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-            transition={{ duration: 0 && 0.8 }}>;
+transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
               Explore Technology Categories;
             </h1>;
@@ -377,7 +434,7 @@ import React, { useState } from 'react';
           </div>
         </div>
       </section>
-                  onChange={e => setSortBy(e && e.target.value)}
+onChange={e => setSortBy(e && e.target.value)}
                   className='px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all';
       price: '$2, 499 / month',
       icon: Rocket,
@@ -489,7 +546,7 @@ import React, { useState } from 'react';
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+className="mb-12"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
@@ -649,7 +706,7 @@ import React, { useState } from 'react';
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+className="mb-12"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
@@ -814,20 +871,20 @@ import React, { useState } from 'react';
                 </p>
                 <button
                   onClick={() => setSearchTerm('')}
-                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
+className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
                 >
                   Clear Search
                 </button>
               </motion.div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {sortedCategories.map((category, index) => (
                   <motion.div
                     key={category.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
+className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
                     onClick={() => window.location.href = `/category/${category.id}`}
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -840,7 +897,7 @@ import React, { useState } from 'react';
                           </span>
                         </div>
                       )}
-                      {/* Category Icon */}
+{/* Category Icon */}
                       <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                         <category.icon className="w-10 h-10 text-white" />
                       </div>
@@ -866,7 +923,7 @@ import React, { useState } from 'react';
                           </div>
                         </div>
                       </div>
-                      {/* CTA */}
+{/* CTA */}
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
                           Explore Category
@@ -876,7 +933,7 @@ import React, { useState } from 'react';
                     </div>
                   </motion.div>
                 ))}
-              </div>;
+</div>;
             )}
           </AnimatePresence>;
         </div>;
@@ -1125,7 +1182,7 @@ import React, { useState } from 'react';
                     trend.trend === 'Critical' ? 'bg-red-500/20 text-red-300' :
                     trend.trend === 'Emerging' ? 'bg-yellow-500/20 text-yellow-300' :
                     trend.trend === 'Experimental' ? 'bg-purple-500/20 text-purple-300' :
-                    'bg-cyan-500/20 text-cyan-300'
+'bg-cyan-500/20 text-cyan-300'
                   }`}>
                     {trend.trend}
                   </span>
@@ -1136,7 +1193,7 @@ import React, { useState } from 'react';
           </div>
         </div>
       </section>
-                    }`}>;
+}`}>;
                     {trend && trend.trend}
                   </span>;
                 </div>;
@@ -1198,11 +1255,31 @@ import React, { useState } from 'react';
               >
                 Get Expert Guidance
               </a>
+              Ready to Explore?
+            </h2>
+            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
+              Dive deep into our technology categories and discover the perfect solutions for your business needs.
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <a
+                href=&quot;/services&quot;
+                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
+              >
+                View All Services
+                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+              </Link>
+              <a
+                href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;
+              >
+                Get Expert Guidance
+              </Link>
+
             </div>
           </motion.div>
         </div>
       </section>
-      <SmartFooter />
+<SmartFooter />
     </div>
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;

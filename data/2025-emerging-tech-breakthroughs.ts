@@ -139,7 +139,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     reviews: 10,
   },
   // Space Mining Operations Platform;
-  {
+{
     id: 'space - mining - operations - platform',
     name: 'Space Mining Operations Platform',
     tagline: 'Asteroid mining and space resource extraction platform',
@@ -266,7 +266,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     reviews: 8,
   },
   // Autonomous Vehicle AI Platform;
-  {
+{
     id: 'autonomous - vehicle - ai - platform',
     name: 'Autonomous Vehicle AI Platform',
     tagline: 'Next - generation AI for fully autonomous vehicles',

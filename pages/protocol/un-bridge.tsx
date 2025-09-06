@@ -25,7 +25,7 @@ import React, { useState } from 'react';
     supportingMultiverses: 'Digital Labor, AI Ethics',
     promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en'}),
-  const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -110,7 +110,7 @@ export default function UNBridge() {;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id: result.meta.id })}),
       // Refresh meta
-      const list = await fetch('/api/proposals/list');
+const list = await fetch('/api/proposals/list');
       const { proposals } = await list.json();
       const updated = proposals.find((p: any) => p.id === result.meta.id),
       setResult((r: any) => ({ ...r, meta: updated }))
@@ -333,7 +333,7 @@ export default function UNBridge() {;
         <div className="space-y-3">
           <label className="block">
             <span className="text-sm">Title</span>
-            <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
+<input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
           </label>
           <label className="block">
             <span className="text-sm">Target institution</span>
@@ -342,13 +342,14 @@ export default function UNBridge() {;
           <label className="block">
             <span className="text-sm">Type</span>
             <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
+
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
               <option>Digital ID</option>
               <option>Education</option>
             </select>
           </label>
-          <label className="block">
+<label className="block">
             <span className="text-sm">Regional scope</span>
             <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
           </label>

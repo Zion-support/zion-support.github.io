@@ -118,7 +118,7 @@ interface QuantumHolographicCardProps {
     customers: number,
     rating: number,
     reviews: number
-  };
+};
   className?: string
 }
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className = '' }) => {
@@ -242,12 +242,19 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
       {/* Main card */}
       <div className='relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden'>;
         {/* Quantum particle effect background */}
+    }
+  },
+
+  const glowVariants = {
+    initial: { opacity: 0.5, scale: 1 },
+    animate: {
+
       opacity: [0.5, 1, 0.5],
       scale: [1, 1.05, 1],
       transition: {
         duration: 3,
         repeat: Infinity,
-        ease: 'easeInOut' as const,
+ease: 'easeInOut' as const,
       },
     },  }      opacity: [0.5, 1, 0.5];
       scale: [1, 1.05, 1];
@@ -377,7 +384,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
               </motion.div>
             )}
           </div>
-          {/* Price and trial */}
+{/* Price and trial */}
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
@@ -638,7 +645,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
               </div>
             </div>
           </div>
-          {/* Contact information */}
+{/* Contact information */}
           <div className="bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Shield className="w-4 h-4 text-blue-400" />

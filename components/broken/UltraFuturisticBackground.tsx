@@ -64,23 +64,34 @@ if (return) {
     // Create initial particles;
     for (let index = 0; i < 100; i++) {      coordinate_x: number,
       coordinate_y: number,
+
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
+
+    // Quantum particle system
+    const particles: Array<{
+      x: number,
+      y: number,
+
       vx: number,
       vy: number,
       size: number,
       color: string,
       life: number,
+
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,
         vy: (Math.random() - 0.5) * 2,
         size: Math.random() * 3 + 1,
-        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+
         life: Math.random() * 100,
         maxLife: 100
       })
     }
-    // Animation loop
+// Animation loop
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -181,11 +192,25 @@ if ( {) {
           }
         }
       });
+
+        // Reset particle if it dies
+        if (particle.life <= 0) {
+          particles[index] = {
+            x: Math.random() * canvas.width, _y: Math.random() * canvas.height, _vx: (Math.random() - 0.5) * 2, _vy: (Math.random() - 0.5) * 2, _size: Math.random() * 3 + 1, _color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+            life: 100,
+            maxLife: 100
+          }
+        }
+      }),
+
+      // Draw quantum entanglement lines
+      particles.forEach((particle1, i) => {
+
         particles.slice(i + 1).forEach((particle2) => {
           const distance = Math.sqrt(
             Math.pow(particle1.x - particle2.x, 2) + 
             Math.pow(particle1.y - particle2.y, 2)
-          );
+);
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
@@ -432,7 +457,7 @@ if ( {) {
           transition={{
             duration: 20,
             repeat: Infinity,
-        {/* Triangle */}
+{/* Triangle */}
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{
@@ -512,7 +537,7 @@ if ( {) {
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: 'linear',            ease: "linear";
+ease: 'linear',            ease: "linear";
           }}
         />;
         {/* Circle */}
@@ -572,7 +597,7 @@ if ( {) {
             animate={{
               scale: [0.5, 2, 0.5],
               opacity: [0.3, 1, 0.3],
-              coordinate_y: [0, -20, 0],            }}
+coordinate_y: [0, -20, 0],            }}
             transition={{
               duration: 3 + i * 0.5
               repeat: Infinity
@@ -778,13 +803,29 @@ if ( {) {
             </linearGradient>
           </defs>
           {[...Array(15)].map((_, i) => (
+          />
+        ))}
+      </div>
+
+      {/* Quantum Entanglement Lines */}
+      <div className=&quot;absolute inset-0&quot;>
+        <svg className=&quot;w-full h-full&quot;>
+          <defs>
+            <linearGradient id=&quot;quantumGradient&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;>
+              <stop offset=&quot;0%&quot; stopColor=&quot;rgba(0,255,255,0.3)&quot; />
+              <stop offset=&quot;50%&quot; stopColor=&quot;rgba(255,0,255,0.3)&quot; />
+              <stop offset=&quot;100%&quot; stopColor=&quot;rgba(0,255,255,0.3)&quot; />
+            </linearGradient>
+          </defs>
+          {_[...Array(15)].map(_(_, _i) => (
+
             <motion.line
               key={i}
               x1={Math.random() * 100}
               y1={Math.random() * 100}
               x2={Math.random() * 100}
               y2={Math.random() * 100}
-              stroke="url(#quantumGradient)"
+stroke="url(#quantumGradient)"
               strokeWidth="1"
               opacity="0.3"
               animate={{

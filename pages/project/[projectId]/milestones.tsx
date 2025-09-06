@@ -164,13 +164,25 @@ if (return) {
   }) => {;
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+    } catch {}
+  }, [role]),
+
+  useEffect(() => {
+    if (!projectId) return,
+    let cancelled = false
+    (async () => {
+      setLoading(true),
+      setError(null),
+      try {
+        const data = await fetchMilestones(projectId as string)
+
         if (!cancelled) setMilestones(data.milestones || [])
       } catch (e: any) {
         if (!cancelled) setError(e?.message || 'Failed to load milestones')
       } finally {
         if (!cancelled) setLoading(false)
       }
-    })();
+})();
     return () => {
       cancelled = true
     }
@@ -224,7 +236,7 @@ if (return) {
     <div>
       <Head>
         <title>Project Milestones</title>
-        <meta name="description" content="Track project deliverables and milestone payments" />
+<meta name="description" content="Track project deliverables and milestone payments" />
       </Head>
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="mb-6">

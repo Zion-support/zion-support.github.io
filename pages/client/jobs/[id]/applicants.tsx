@@ -91,7 +91,7 @@ function JobApplicantsPage() {
         <h1 className="text-2xl font-semibold">Applicants</h1>
         <Link href="/client/dashboard"><a className="text-sm underline">Back to Dashboard</a></Link>
       </div>
-      {job && <p className="text-sm text-gray-600">For job: {job.title}</p>}
+{job && <p className="text-sm text-gray-600">For job: {job.title}</p>}
       <div className="grid gap-3">
         {applications.length === 0 && <p className="text-sm text-gray-500">No applicants yet.</p>}
         {applications.map((a) => {
@@ -104,6 +104,15 @@ function JobApplicantsPage() {
                   <p className="text-xs text-gray-500">Status: {a.status} • Applied: {new Date(a.createdAtIso).toLocaleString()}</p>
                 </div>
                 <button className="px-2 py-1 text-sm border rounded">Message</button>
+          return (
+            <div key={a.id} className=&quot;border rounded p-4 bg-white dark:bg-gray-900&quot;>
+              <div className=&quot;flex items-center justify-between&quot;>
+                <div>
+                  <p className=&quot;font-medium&quot;>{talent?.name || a.talentSlug}</p>
+                  <p className=&quot;text-xs text-gray-500&quot;>Status: {a.status} • Applied: {new Date(a.createdAtIso).toLocaleString()}</p>
+                </div>
+                <button className=&quot;px-2 py-1 text-sm border rounded&quot;>Message</button>
+
               </div>
             </div>
           )

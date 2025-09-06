@@ -38,4 +38,5 @@ function Seo() {
  */
 function Seo() {
   return <NextSeo {...props} />;
+
 }

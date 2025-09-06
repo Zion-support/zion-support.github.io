@@ -1,5 +1,5 @@
 export interface NewOperationalService2025 {
-    address: string;
+address: string;
   }
 ;
 export const newOperationalServices2025: NewOperationalService2025[] = [;

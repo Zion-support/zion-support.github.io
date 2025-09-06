@@ -156,11 +156,19 @@ function MilestoneForm() {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Phase 1 – Backend Setup"
+      <div>
+        <label className=&quot;block text-sm font-medium&quot;>Title</label>
+        <input
+          className=&quot;mt-1 w-full rounded border px-3 py-2&quot;
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder=&quot;Phase 1 – Backend Setup&quot;
+
           required
         />
       </div>
       <div>
-        <label className="block text-sm font-medium" htmlFor="input-Description">Description</label>
+<label className="block text-sm font-medium" htmlFor="input-Description">Description</label>
         <textarea
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
@@ -221,7 +229,7 @@ function MilestoneForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium" htmlFor="input-Amount (USD)">Amount (USD)</label>
+<label className="block text-sm font-medium" htmlFor="input-Amount (USD)">Amount (USD)</label>
           <input
             type="number"
             min={0}
@@ -255,7 +263,7 @@ function MilestoneForm() {
         </div>
       </div>
       <button
-        type="submit"
+type="submit"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
         disabled={loading}
       >

@@ -24,7 +24,7 @@ export default function VerifyPage() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg })}),
-    const data = await res.json();
+const data = await res.json();
     if (data.ok) {
       setProfile(data.profile);
       setRequiredDocs(data.requiredDocuments);
@@ -34,7 +34,7 @@ export default function VerifyPage() {
     }
     setBusy(false)
   }
-  async function upload(kind: KycDocumentMeta['kind']) {
+async function upload(kind: KycDocumentMeta['kind']) {
     const filename = prompt(`Enter filename for ${kind}`) |'';
     if (!filename) return;
     setBusy(true);
@@ -158,13 +158,13 @@ if ( {) {
     }
     setBusy(false)
   }
-  async function submit() {
+async function submit() {
     setBusy(true);
     const res = await fetch('/api/kyc/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId })}),
-    const data = await res.json();
+const data = await res.json();
     if (data.ok) {
       setProfile(data.profile);
       setMessage('Submitted. AML check performed.')
@@ -173,7 +173,7 @@ if ( {) {
     }
     setBusy(false)
   }
-  async function upload(): any (kind: KycDocumentMeta['kind']) {;
+async function upload(): any (kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
     if (!filename) return;
     setBusy(true);
@@ -346,11 +346,12 @@ if ( {) {
                 <div;
                   className='bg - blue - 600 h - 3';
                   style={{ width: `${progress}%` }}
+
   return (
     <>
       <Head>
         <title>Verify Identity - Zion</title>
-        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
+<meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className="max-w-3xl mx-auto px-4 py-8">
@@ -391,7 +392,7 @@ if ( {) {
             </>
           )}
         </div>
-        <div className="mb-6">
+<div className="mb-6">
           <button disabled={busy} onClick={start} className="rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>
         </div>
         {profile && (
@@ -465,12 +466,13 @@ if ( {) {
                         <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
                       </div>
                       <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled: opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
+
                     </div>
                   )
                 })}
               </div>
             </section>
-            {optionalDocs.length > 0 && (
+{optionalDocs.length > 0 && (
               <section>
               </div>;
             </section>;
@@ -535,7 +537,7 @@ if ( {) {
                 </div>
               </section>
             )}
-            <div>
+<div>
               <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
             {message && <div className="text-sm text-blue-700">{message}</div>}

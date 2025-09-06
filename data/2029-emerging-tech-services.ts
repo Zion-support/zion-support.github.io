@@ -1,5 +1,5 @@
 export interface EmergingTechService2029 {
-    address: string;
+address: string;
   }
 ;
 export const emergingTechServices2029: EmergingTechService2029[] = [;

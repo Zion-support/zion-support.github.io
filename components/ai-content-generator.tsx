@@ -97,18 +97,27 @@ export default function AIContentGeneratorPage() {
       gradient: 'from-purple-400 to-indigo-500'},
     {
       icon: <Zap className="w-8 h-8 text-white" />,
+    {
+      icon: <Brain className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'AI-Powered Content Creation',
+      description: 'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+      gradient: 'from-purple-400 to-indigo-500'},
+    {
+      icon: <Zap className=&quot;w-8 h-8 text-white&quot; />,
+
       title: 'Real-time Generation',
       description: 'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.',
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       gradient: 'from-yellow-400 to-orange-500'},
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
+icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Plagiarism-Free Content',
       description: 'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
+icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'SEO Optimization',
       description: 'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.',
     color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
@@ -120,7 +129,7 @@ export default function AIContentGeneratorPage() {
       color: 'bg-gradient-to-br from-red-500 to-pink-600',
       gradient: 'from-red-400 to-pink-500'},
     {
-      icon: <Clock className="w-8 h-8 text-white" />,
+icon: <Clock className="w-8 h-8 text-white" />,
       title: '24/7 Availability',
       description: 'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',
     color: 'bg-gradient-to-br from-teal-500 to-blue-600',
@@ -203,7 +212,7 @@ import {
       price: '$29',
       period: '/month',
       description: 'Perfect for individuals and small blogs',
-    {
+{
       features: [;
         '1, 000 words per month',
         '5 content templates',
@@ -225,7 +234,7 @@ import {
       price: '$99',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
-    {
+{
       features: [;
         '10, 000 words per month',
         '25+ content templates',
@@ -249,7 +258,7 @@ import {
       price: '$299',
       period: '/month',
       description: 'For large organizations and enterprises',
-      popular: false,;
+popular: false,;
       color: 'border-purple-600',;
       buttonColor: 'bg-purple-600 hover:bg-purple-700';
     }
@@ -453,7 +462,7 @@ import {
     {
       title: 'Blog Writing',
       description: 'Generate engaging blog posts, articles, and long-form content in minutes.',
-    icon: '📝',
+icon: '📝',
       examples: ['Tech reviewsHow-to guidesIndustry insightsProduct comparisons']
     };
     {
@@ -482,12 +491,12 @@ import {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-  ];
+];
   return (
     <>
       <Head>
         <title>AI Content Generator | Zion Tech Group - Advanced AI-Powered Content Creation</title>
-        <meta name="description" content="Generate high-quality, SEO-optimized content in seconds with our advanced AI content generator. Support for 50+ languages, plagiarism-free writing, and real-time generation." />
+<meta name="description" content="Generate high-quality, SEO-optimized content in seconds with our advanced AI content generator. Support for 50+ languages, plagiarism-free writing, and real-time generation." />
         <meta property="og:title" content="AI Content Generator | Zion Tech Group" />
         <meta property="og:description" content="Advanced AI-powered content creation with real-time generation, SEO optimization, and multi-language support." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -565,7 +574,7 @@ import {
           </div>
         </div>
       </section>
-      {/* Features Section */}
+{/* Features Section */}
       <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -1117,7 +1126,7 @@ import {
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-white mb-2">
                     {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
@@ -1170,7 +1179,7 @@ import {
                     </li>
                   ))}
                 </ul>
-                <Button
+<Button
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
                   size="lg"
@@ -1420,7 +1429,7 @@ import {
         </div>
       </section>
     </>
-  );
+);
 }
     </>);
 }

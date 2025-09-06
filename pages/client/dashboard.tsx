@@ -72,6 +72,11 @@ export default function ClientDashboard() {
                 </button>              </div>;
             </div>;
           </div>;
+  const jobs = data.jobs as any[]
+
+  async function closeJob(id: string) {
+    await fetch(`/api/jobs/${id}`, {
+
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ status: 'Closed' })}),

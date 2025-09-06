@@ -43,11 +43,22 @@ if (return) {
     const particles: Array<{
       coordinate_x: number,
       coordinate_y: number,
+
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
+
+    let animationFrameId: number
+
+    const particles: Array<{
+      x: number,
+      y: number,
+
       vx: number,
       vy: number,
       size: number,
       color: string,
       opacity: number,
+
     for (let i = 0, i < 50, i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -60,7 +71,7 @@ if (return) {
         life: Math.random() * 100 + 50
       })
     }
-    const animate = () => {
+const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
       particles.forEach((particle, index) => {
@@ -78,7 +89,7 @@ if (return) {
             opacity: Math.random() * 0.8 + 0.2,
             life: Math.random() * 100 + 50
           }
-        }
+}
         // Draw particle with glow effect
         ctx.save();
         ctx.globalCompositeOperation = 'screen';
@@ -403,11 +414,93 @@ if ( {) {
             background: [;
               'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)';
             ];
+        }
+
+        // Draw particle with glow effect
+        ctx.save(),
+        ctx.globalCompositeOperation = 'screen',
+        
+        // Outer glow
+        ctx.shadowColor = particle.color,
+        ctx.shadowBlur = 20,
+        ctx.fillStyle = particle.color,
+        ctx.globalAlpha = particle.opacity * 0.3,
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2),
+        ctx.fill(),
+
+        // Inner particle
+        ctx.globalAlpha = particle.opacity,
+        ctx.shadowBlur = 10,
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fill(),
+        ctx.restore()
+      }),
+
+      // Draw connecting lines between nearby particles
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)',
+      ctx.lineWidth = 0.5,
+      ctx.globalCompositeOperation = 'screen',
+
+      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
+          const dx = particles[i].x - particles[j].x
+          const dy = particles[i].y - particles[j].y
+          const distance = Math.sqrt(dx * dx + dy * dy)
+
+          if (distance < 100) {
+            ctx.globalAlpha = (100 - distance) / 100 * 0.3,
+            ctx.beginPath(),
+            ctx.moveTo(particles[i].x, particles[i].y),
+            ctx.lineTo(particles[j].x, particles[j].y),
+            ctx.stroke()
+          }
+
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(animate)
+    },
+
+    animate(),
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight
+    },
+
+    window.addEventListener('resize', handleResize),
+
+    return () => {
+      window.removeEventListener('resize', handleResize),
+      cancelAnimationFrame(animationFrameId)
+    }
+  }, []),
+
+  return (
+    <div className=&quot;fixed inset-0 pointer-events-none overflow-hidden z-0&quot;>
+      {/* Canvas for particle effects */}
+      <canvas
+        ref={canvasRef}
+        className=&quot;absolute inset-0 w-full h-full&quot;
+        style={{ background: 'transparent' }}
+      />
+      
+      {/* Animated gradient background */}
+      <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black&quot;>
+        <motion.div
+          className=&quot;absolute inset-0 opacity-30&quot;
+          animate={{
+            background: [
+              'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
+            ]
+
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "easeInOut",
+ease: "easeInOut",
           }}
             duration: 20,
             repeat: Infinity,
@@ -513,7 +606,7 @@ if ( {) {
           transition={{
             duration: 30,
             repeat: Infinity,
-              'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)',
+'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)',
           }}
           animate={{
             scale: [1, 1 && 1.5, 1],
@@ -536,7 +629,7 @@ if ( {) {
           transition={{
             duration: 8,
             repeat: Infinity,
-        />;
+/>;
       </div>;
       {/* Holographic elements */}
             ease: 'easeInOut',            ease: "easeInOut";
@@ -564,7 +657,7 @@ if ( {) {
         transition={{
           duration: 25,
           repeat: Infinity,
-          ease: "linear"
+ease: "linear"
         }}
       />
       <motion.div        className="absolute top-1/2 left-1/2 w-64 h-64 border border-cyan-400/20 rounded-full"
@@ -617,7 +710,7 @@ if ( {) {
         transition={{
           duration: 20,
           repeat: Infinity,
-          ease: "linear"
+ease: "linear"
         }}
       />
           scale: [1 && 1.2, 1, 1 && 1.2];
@@ -670,7 +763,7 @@ if ( {) {
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
-              ease: "easeInOut"
+ease: "easeInOut"
             }}
           />;
         ))}
@@ -692,7 +785,7 @@ if ( {) {
             }}
             animate={{
               y: [0, window.innerHeight + 20]
-              delay: i * 0.3,
+delay: i * 0.3,
               ease: 'easeInOut',            }}              ease: "easeInOut";
             }}
           />))}
@@ -723,7 +816,7 @@ if ( {) {
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,
-              ease: "linear"
+ease: "linear"
             }}
           />;
         ))}

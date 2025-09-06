@@ -130,11 +130,39 @@ export default function AutomationPage() {;
     'Real - time monitoring',
     'Custom integration support',  ];
 ;
+
+export default function AutomationPage() {_const _features = [
+    {
+      icon: <Workflow className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Workflow Automation',
+      description: 'Create complex workflows with drag-and-drop interface'
+    },
+    {
+      icon: <Bot className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'AI-Powered Bots',
+      description: 'Intelligent automation agents that learn and adapt'
+    },
+    {
+      icon: <BarChart3 className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Process Analytics',
+      description: 'Real-time insights into your automation performance'
+    },
+    {
+      icon: <Zap className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Smart Triggers',
+      description: 'Automated responses based on events and conditions'
+    }
+  ],
+
+  const benefits = [
+    'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
+  ],
+
   return (
     <>
       <Head>
         <title>Automation Hub - Zion Tech Group</title>
-        <meta name="description" content="AI-powered workflow automation platform that streamlines your business processes and increases efficiency." />
+<meta name="description" content="AI-powered workflow automation platform that streamlines your business processes and increases efficiency." />
       </Head>
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
@@ -254,7 +282,7 @@ export default function AutomationPage() {;
                   </p>
                 </div>
               ))}
-            </div>;
+</div>;
           </div>;
         </section>;
         {/* Benefits Section */}
@@ -309,7 +337,7 @@ export default function AutomationPage() {;
             </div>
           </div>
         </section>
-                </div>;
+</div>;
               </div>;
               <div className='relative'>;
                 <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>;
@@ -455,7 +483,7 @@ export default function AutomationPage() {;
         </section>
       </div>
     </>
-                className='border-white text-white hover:bg-white hover:text-blue-600'>                Schedule Demo;
+className='border-white text-white hover:bg-white hover:text-blue-600'>                Schedule Demo;
         {/* CTA Section */}
         <section className='py - 24 bg - gradient - to - r from - blue - 600 to - blue - 700'>;
           <div className='max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center'>;

@@ -73,7 +73,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import { 
   Brain, 
-  Eye, 
+Eye, 
   MessageSquare, 
   BarChart3, 
   CheckCircle, 
@@ -105,7 +105,7 @@ const aiServices = [
     title: "AI Security",
     description: "Advanced threat detection and security solutions powered by artificial intelligence",
     icon: Shield,
-    category: "Security",
+category: "Security",
     features: ["Threat Detection", "Anomaly Detection", "Fraud Prevention", "Security Monitoring"],
     pricing: "Starting at $3,200/month",
     setupTime: "2-4 weeks",
@@ -128,7 +128,7 @@ export default function AIServices() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                AI Services
+AI Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
                 Transform your business with cutting-edge artificial intelligence solutions

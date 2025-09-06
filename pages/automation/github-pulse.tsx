@@ -33,4 +33,23 @@ function Metric() {
       <div className="text - xs text - gray - 500 dark:text - gray - 400">{label}</div>;
       <div className="text - lg font - semibold">{value ?? '—'}</div>;
     </div>);
+        </div>
+      </div>
+    </EnhancedLayout>
+  )
+}
+
+function Metric({ label, value }: { label: string, value: any }) {
+  return (
+    <div className=&quot;p-4 border border-gray-200 dark:border-gray-800 rounded-lg&quot;>
+      <div className=&quot;text-xs text-gray-500 dark:text-gray-400&quot;>{label}</div>
+      <div className=&quot;text-lg font-semibold&quot;>{value ?? '—'}</div>
+function Metric(_{_label, _value}: {_label: string; value: unknown}) {_return (
+    <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
+      <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
+      <div className="text-lg font-semibold">{_value ?? '—'}</div>
+
+    </div>
+  )
+
 }

@@ -44,3 +44,20 @@ const AiConsultingChat: NextPage = () => {
 ;
 export default AiConsultingChat;
 ;
+    <div>
+      <Head>
+        <title>AiConsultingChat - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;AiConsultingChat blog post&quot; />
+      </Head>
+      
+      <main>
+        <h1>AiConsultingChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href=&quot;/blog&quot;>Back to Blog</a>
+      </main>
+    </div>
+  )
+},
+
+export default AiConsultingChat
+

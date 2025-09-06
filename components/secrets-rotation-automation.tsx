@@ -227,7 +227,8 @@ function SecretsRotationAutomationPage() {
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
-								<p className="text-gray-200">{f}</p>
+<p className="text-gray-200">{f}</p>
+
 							</div>
 						))}
 					</div>
@@ -237,14 +238,14 @@ function SecretsRotationAutomationPage() {
 						<a href="https://developer.hashicorp.com/vault" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
 							<ExternalLink className="w-4 h-4" /> HashiCorp Vault Docs
 							</a>
-						<a href="https://cloud.google.com/kms" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
+<a href="https://cloud.google.com/kms" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
 							<ExternalLink className="w-4 h-4" /> Google Cloud KMS
 							</a>
 					</div>
 				</section>
 			</main>
 		</>
-	);
+);
 }
     </>);
 }

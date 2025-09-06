@@ -61,6 +61,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const table = type;
       let query = client && client.from(table).select('*', { count: 'exact' });
       if (params && params.search) {
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const type = (req.query.type as AdminType) || ''
+  if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' }),
+
+  const useSupabase = isSupabaseConfigured()
+
+  if (req.method === 'GET') {
+    const params = parseListParams(req)
+    if (useSupabase) {
+      const table = type
+      let query = client.from(table).select('*', { count: 'exact' }),
+      if (params.search) {
+
         // heuristic: search name/title/email
         query = query.or('name.ilike.%' + params.search + '%,title.ilike.%' + params.search + '%,email.ilike.%' + params.search + '%')
       }
@@ -69,7 +84,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           if (v !== undefined) query = query.eq(k, v)
         }
       }
-      if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
+if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
       const from = params && params.page * params && params.pageSize;
       const to = from + params && params.pageSize - 1;
       const { data, error, count } = await query && query.range(from, to);
@@ -94,6 +109,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       let filtered = all;
       if (params.search) {
         const s = params.search.toLowerCase();
+      return res.status(200).json({ items: data || [], total: count || 0 })
+    } else {
+      // fallback
+      const all = (MOCK_DATA[type] || []).slice()
+      let filtered = all
+      if (params.search) {
+        const s = params.search.toLowerCase()
+
         filtered = filtered.filter((r) => JSON.stringify(r).toLowerCase().includes(s))
       }
       if (params.filters) {
@@ -463,4 +486,10 @@ return res.status (405).json ({ error: 'Method not allowed' });
 ;
 }return res.status (200) .send (to_csv (data || []) );
 }return res.status (200) .send (to_csv (page_items) );
+      return res.status(200).json({ items: pageItems, total })
+    }
+  }
+
+  if (req.method === 'PATCH') {
+
 }

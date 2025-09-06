@@ -97,6 +97,7 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 ];
+
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -106,7 +107,7 @@ const serviceCategories = [
     color: 'from-violet-500 to-purple-600',
     gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
     count: cuttingEdgeAIServices2025.length
-  };
+};
   website: 'https://ziontechgroup.com',
 }
 ;
@@ -163,7 +164,7 @@ const service_categories = [;
     description: 'Breakthrough quantum computing and space technology solutions',
     services: cuttingEdgeQuantumServices2025,
     icon: Atom,
-    color: 'from - indigo - 500 to - blue - 600',
+color: 'from - indigo - 500 to - blue - 600',
     gradient: 'bg - gradient - to - r from - indigo - 500 to - blue - 600',
     count: cuttingEdgeQuantumServices2025.length,
   },    count: cuttingEdgeQuantumServices2025.length;
@@ -173,7 +174,7 @@ const service_categories = [;
     description: 'Advanced enterprise infrastructure and security solutions',
     services: cuttingEdgeEnterpriseITServices2025,
     icon: Shield,
-    color: 'from - blue - 500 to - cyan - 600',
+color: 'from - blue - 500 to - cyan - 600',
     gradient: 'bg - gradient - to - r from - blue - 500 to - cyan - 600',
     count: cuttingEdgeEnterpriseITServices2025.length,
   },  {    count: cuttingEdgeEnterpriseITServices2025.length;
@@ -183,7 +184,7 @@ const service_categories = [;
     description: 'Innovative business solutions for modern enterprises',
     services: cuttingEdgeMicroSaasServices2025,
     icon: Rocket,
-    color: 'from - teal - 500 to - emerald - 600',
+color: 'from - teal - 500 to - emerald - 600',
     gradient: 'bg - gradient - to - r from - teal - 500 to - emerald - 600',
     count: cuttingEdgeMicroSaasServices2025.length,
   }, ];    count: cuttingEdgeMicroSaasServices2025.length;
@@ -411,11 +412,39 @@ export default function CuttingEdgeServicesShowcase2025() {;
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { y: 20, _opacity: 0},
+    visible: {_y: 0, _opacity: 1, _transition: {
+        duration: 0.5}
+    }
+  },
+
+  return (_<>
+      <Head>
+        <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
+        <link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; />
+      </Head>
+
+      <Layout>
+        {/* Hero Section */}
+        <section className=&quot;relative overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black&quot;></div>
+          <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32&quot;>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+className="text-center"
             >
               <motion.h1
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
@@ -424,7 +453,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 transition={{ duration: 1, delay: 0.2 }}
               >
                 Cutting-Edge Services
-                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
+<span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
                   Showcase 2025
                 </span>
               </motion.h1>
@@ -435,7 +464,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 Discover revolutionary technology solutions that are reshaping industries and defining the future. 
-                From AI consciousness to space mining, experience the cutting edge of innovation.
+From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion.p>
               {/* Hero Stats */}
               <motion.div
@@ -480,7 +509,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {heroStats.map((stat, index) => (
-                  <div key={index} className="text-center">
+<div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
                         {stat.icon}
@@ -601,7 +630,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
             </motion.div>
           </div>
         </section>
-                >;
+>;
                   <List className='w-5 h-5' />                </button>                  <List className="w-5 h-5" />;
                 </button>;
               </div>;
@@ -992,7 +1021,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         ))}
                       </ul>
                     </div>
-                              className='flex items-start text-sm text-white/80'>;
+className='flex items-start text-sm text-white/80'>;
                               <CheckCircle className='w-4 h-4 text-cyan-400 mt-0 && 0.5 mr-2 flex-shrink-0' />;
                               <span>{feature}</span>;
                             </li>;
@@ -1148,7 +1177,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </button>
               </motion.div>
             )}
-          </div>;
+</div>;
         </section>;
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
@@ -1242,7 +1271,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>
       </Layout>
     </>
-                    href={`mailto:${contactInfo && contactInfo.email}`}
+href={`mailto:${contactInfo && contactInfo.email}`}
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>;
                     {contactInfo && contactInfo.email}
                   </a>;

@@ -104,3 +104,20 @@ function moderate() {
     </main>);
 },
 export default AdminReviewsPage,
+              </div>
+            </div>
+          ))}
+          {_!pending.length && <div>No pending reviews.</div>}
+        </div>
+      </section>
+
+      <section className=&quot;enhanced-card&quot;>
+        <h2 className=&quot;text-xl font-semibold mb-2&quot;>All Reviews</h2>
+        <pre className=&quot;text-xs whitespace-pre-wrap&quot;>{JSON.stringify(all, null, 2)}</pre>
+      </section>
+    </main>
+  )
+},
+
+export default AdminReviewsPage
+

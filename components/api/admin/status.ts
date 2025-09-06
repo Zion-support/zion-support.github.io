@@ -57,4 +57,14 @@ if ( {) {
     : { items: [], updated_at: null }
 ;
 res.status (200).json ({ status, insights });  res.status (200).json ({ status, insights });
+
+  const _status = fs.existsSync(statusPath)
+    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
+    : { agents: [], updatedAt: null },
+  const insights = fs.existsSync(insightsPath)
+    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
+    : { items: [], updatedAt: null },
+
+  res.status(200).json({ status, insights })
+
 }

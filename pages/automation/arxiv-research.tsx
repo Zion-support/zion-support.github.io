@@ -24,4 +24,11 @@ function ArxivResearchPage() {
         </ul>;
       </div>;
     </EnhancedLayout>);
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  )
+
 }

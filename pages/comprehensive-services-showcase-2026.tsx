@@ -132,7 +132,7 @@ interface Service {
     email: string,
     address: string,
     website: string
-    },
+},
     realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -190,7 +190,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     { value: '200-400', label: '$200 - $400' },
     { value: '400-600', label: '$400 - $600' },
     { value: '600+', label: '$600+' }
-  ];
+];
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -880,11 +880,63 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+
+  const _filteredServices = allServices.filter(service => {_const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+    
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    
+    const matchesPrice = selectedPriceRange === 'all' || (() => {
+      const price = parseInt(service.price.replace('$', '')),
+      switch (selectedPriceRange) {
+        case '0-100': return price <= 100,
+        case '100-200': return price > 100 && price <= 200,
+        case '200-400': return price > 200 && price <= 400,
+        case '400-600': return price > 400 && price <= 600,
+        case '600+': return price > 600,
+        default: return true
+      }
+    })(),
+
+    return matchesSearch && matchesCategory && matchesPrice
+  }),
+
+  const _sortedServices = [...filteredServices].sort(_(a, _b) => {_switch (sortBy) {
+      case 'popularity':
+        return b.popular ? 1 : -1,
+      case 'price-low':
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),
+      case 'price-high':
+        return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', '')),
+      case 'rating':
+        return b.rating - a.rating,
+      case 'customers':
+      case 'rating':
+        return b.rating - a.rating,
+      case 'customers':
+
+        return b.customers - a.customers,
+      default: return 0
+    }
+  }),
+
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: React.ReactNode } = {
+  };
+
+  return (
+    <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900&quot;>
+        {/* Hero Section */}
+        <div className=&quot;relative overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;></div>
+          <div className=&quot;relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24&quot;>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 ZionTech Group
@@ -912,7 +964,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             </motion.div>
           </div>
         </div>
-        {/* Search and Filters */}
+{/* Search and Filters */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -932,7 +984,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 >
                   {categories.map(category => (
                     <option key={category} value={category} className="bg-gray-800 text-white">
@@ -941,12 +993,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   ))}
                 </select>
               </div>
-              {/* Price Range Filter */}
+{/* Price Range Filter */}
               <div>
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 >
                   {priceRanges.map(range => (
                     <option key={range.value} value={range.value} className="bg-gray-800 text-white">
@@ -955,12 +1007,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   ))}
                 </select>
               </div>
-              {/* Sort By */}
+{/* Sort By */}
               <div>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 >
                   <option value="popularity" className="bg-gray-800 text-white">Sort by Popularity</option>
                   <option value="price-low" className="bg-gray-800 text-white">Price: Low to High</option>
@@ -972,7 +1024,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Services Grid */}
+{/* Services Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
@@ -989,7 +1041,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
+className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -998,7 +1050,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                       {service.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
+<h3 className="text-xl font-bold text-white">{service.name}</h3>
                       <p className="text-sm text-gray-300">{service.category}</p>
                     </div>
                   </div>
@@ -1008,7 +1060,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                     </div>
                   )}
                 </div>
-                {/* Service Details */}
+{/* Service Details */}
                 <p className="text-gray-300 mb-4">{service.tagline}</p>
                 {/* Price and Trial */}
                 <div className="flex items-center justify-between mb-4">
@@ -1031,7 +1083,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                {/* Stats */}
+{/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mb-4 text-center">
                   <div>
                     <div className="text-lg font-bold text-white">{service.rating}</div>
@@ -1073,7 +1125,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-        {/* Contact Section */}
+{/* Contact Section */}
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
             <div className="text-center">
@@ -1119,6 +1171,48 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 >
                   Call Us
                 </a>
+                Ready to Transform Your Business?
+              </h2>
+              <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
+                Get in touch with our team to discuss how our innovative services can help you achieve your goals.
+              </p>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
+                    <Users className=&quot;w-8 h-8 text-cyan-400&quot; />
+                  </div>
+                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>Expert Team</h3>
+                  <p className=&quot;text-gray-300 text-sm&quot;>Dedicated professionals ready to help</p>
+                </div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
+                    <Zap className=&quot;w-8 h-8 text-blue-400&quot; />
+                  </div>
+                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>Fast Implementation</h3>
+                  <p className=&quot;text-gray-300 text-sm&quot;>Quick setup and deployment</p>
+                </div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
+                    <Shield className=&quot;w-8 h-8 text-purple-400&quot; />
+                  </div>
+                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>24/7 Support</h3>
+                  <p className=&quot;text-gray-300 text-sm&quot;>Round-the-clock assistance</p>
+                </div>
+              </div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
+                <a
+                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                  className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300&quot;
+                >
+                  Email Us
+                </Link>
+                <a
+                  href=&quot;tel:+13024640950&quot;
+                  className=&quot;bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300&quot;
+                >
+                  Call Us
+                </Link>
+
               </div>
             </div>
           </div>

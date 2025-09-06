@@ -58,11 +58,16 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
     window && window.addEventListener("scroll", handleScroll);
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
+
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
+
   const navigationItems = [
     {
       name: 'Services',
       href: '/services',
-      icon: <Brain className="w-4 h-4" />,
+icon: <Brain className="w-4 h-4" />,
       dropdown: [
         { name: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: <Brain className="w-4 h-4" /> },
         { name: 'Quantum Computing', href: '/services?category=quantum', icon: <Rocket className="w-4 h-4" /> },
@@ -242,7 +247,7 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
     { name: 'Resources', href: '/resources' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
-  ];
+];
 ;
   const contact_info = {
     mobile: "+1 302 464 0950",

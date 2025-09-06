@@ -205,4 +205,7 @@ if ( {) {
   res.set_header ('Allow', 'GET, PUT');
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');
   res.status (405).end ('Method Not Allowed');
+  res.setHeader('AllowGET, PUT'),
+  res.status(405).end('Method Not Allowed')
+
 }

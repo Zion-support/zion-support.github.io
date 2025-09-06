@@ -220,4 +220,9 @@ if ( {) {
 ;
 write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
+  const tranche = ms[idx].trancheAmount || 0
+  existing.fundsReleased = (existing.fundsReleased || 0) + tranche,
+  existing.milestones = ms,
+  existing.updatedAt = new Date().toISOString(),
+
 }

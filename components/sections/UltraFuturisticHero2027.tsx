@@ -30,7 +30,7 @@ export default function UltraFuturisticHero2027() {
     { icon: Atom, text: 'Quantum Computing', color: 'from-blue-400 to-cyan-400' },
     { icon: Globe, text: 'Digital Reality', color: 'from-green-400 to-emerald-400' },
     { icon: Shield, text: 'Enterprise Security', color: 'from-red-400 to-orange-400' }
-  ];
+];
   const stats = [
     { number: '1000+', label: 'Happy Customers', icon: Users, color: 'text-cyan-400' }
     { number: '4.9★', label: 'Average Rating', icon: Star, color: 'text-purple-400' }
@@ -67,7 +67,7 @@ export default function UltraFuturisticHero2027() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
           transition={{
             duration: 8
@@ -161,7 +161,7 @@ export default function UltraFuturisticHero2027() {
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
         />
         {/* Grid Pattern */}
@@ -174,7 +174,7 @@ export default function UltraFuturisticHero2027() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+className="mb-8"
           >
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -184,11 +184,21 @@ export default function UltraFuturisticHero2027() {
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               The Future of
               <span className="bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4">
+          >
+            <h1 className=&quot;text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight&quot;>
+              <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+                Welcome to 2027
+              </span>
+            </h1>
+            <h2 className=&quot;text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6&quot;>
+              The Future of
+              <span className=&quot;bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4&quot;>
+
                 Technology
               </span>
             </h2>
           </motion.div>
-        />;
+/>;
         {/* Grid Pattern */}          className="absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl";
           animate={{;
             y: [0, -30, 0];
@@ -392,7 +402,7 @@ export default function UltraFuturisticHero2027() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-          </motion && motion.div>;
+</motion && motion.div>;
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -434,7 +444,7 @@ export default function UltraFuturisticHero2027() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                className='text - center group';
+className='text - center group';
               >;
                 <div;
                   className={`text - 4xl md:text - 5xl font - bold mb - 2 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300 ${stat.color}`}
@@ -489,7 +499,7 @@ export default function UltraFuturisticHero2027() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
-                  className="text-center"
+className="text-center"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
                     <Shield className="w-8 h-8 text-cyan-400" />
@@ -564,4 +574,21 @@ export default function UltraFuturisticHero2027() {
       <div className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 500 / 20 via - transparent to - transparent pointer - events - none' />;
     </section>);      <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 500 / 20 via - transparent to - transparent pointer - events - none" />;
     </section>);
+                >
+                  <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3&quot;>
+                    <Shield className=&quot;w-8 h-8 text-cyan-400&quot; />
+                  </div>
+                  <div className=&quot;text-cyan-300 font-medium&quot;>{trust}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Bottom Glow */}
+      <div className=&quot;absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none&quot; />
+    </section>
+  )
+
 }

@@ -22,4 +22,11 @@ function GithubAgentReposPage() {
         </ul>;
       </div>;
     </EnhancedLayout>);
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  )
+
 }

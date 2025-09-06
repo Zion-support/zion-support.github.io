@@ -108,11 +108,27 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+  return (
+    <div className=&quot;min-h-screen bg-black text-white&quot;>
+      <SEO 
+        title=&quot;Quantum AI Neural Network Platform 2045 | Zion Tech Group&quot;
+        description=&quot;Revolutionary quantum-powered AI neural network platform with exponential computational power and quantum advantage.&quot;
+        keywords={[&quot;quantum AI&quot;, &quot;neural networks&quot;, &quot;quantum computing&quot;, &quot;AI platform&quot;, &quot;quantum advantage&quot;]}
+      />
+      
+      {/* Hero Section */}
+      <section className=&quot;relative py-20 overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20&quot;></div>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]&quot;></div>
+        
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+className="text-center"
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
@@ -137,7 +153,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300"
+className="px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300"
               >
                 Schedule Demo
               </motion.button>
@@ -145,7 +161,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           </motion.div>
         </div>
       </section>
-      />;
+/>;
       {/* Hero Section */}
       <section className='relative py-20 overflow-hidden'>;
         <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20'></div>;
@@ -354,7 +370,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Quantum-Powered Features
@@ -471,7 +487,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
+className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-white" />
@@ -498,7 +514,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Pricing Plans
@@ -614,7 +630,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 </motion.button>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* CTA Section */}
@@ -669,7 +685,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover: from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25"
+className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover: from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25"
+
             >
               Start Your Quantum Journey Today
             </motion.button>

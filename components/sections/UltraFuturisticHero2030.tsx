@@ -35,7 +35,7 @@ const features = [
     icon: Brain,
     title: 'AI Consciousness',
     description: 'Develop genuine AI consciousness and emotional intelligence'
-  };
+};
   {;
     icon: Rocket,;
     title: 'Space Technology',;
@@ -92,12 +92,27 @@ export default function UltraFuturisticHero2030() {;
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-8"
+      {/* Background Glow Effects */}
+      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+        <div className=&quot;absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl&quot;></div>
+        <div className=&quot;absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl&quot;></div>
+        <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl&quot;></div>
+      </div>
+
+      <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+        {/* Main Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className=&quot;mb-8&quot;
+
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6"
+className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6"
           >
             <Sparkles className="w-4 h-4 mr-2" />
             Welcome to 2030 - The Future is Now
@@ -106,7 +121,7 @@ export default function UltraFuturisticHero2030() {;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
           >
             <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
               Zion Tech Group
@@ -134,7 +149,7 @@ export default function UltraFuturisticHero2030() {;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
+className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
           >
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.
           </motion.p>
@@ -493,7 +508,7 @@ function UltraFuturisticHero2030() {
           </div>
         </motion.div>
       </div>
-          transition={{ duration: 0 && 0.8, delay: 2 && 2.2 }}
+transition={{ duration: 0 && 0.8, delay: 2 && 2.2 }}
           className='mt-16 text-center'>;
           <p className='text-gray-400 text-sm mb-4'>;
             Trusted by leading companies worldwide;
@@ -666,7 +681,7 @@ function UltraFuturisticHero2030() {
           transition={{
             duration: 3,
             repeat: Infinity,
-        <motion.div
+<motion.div
           className="absolute top-1/2 right-1/4 w-1 h-1 bg-emerald-400 rounded-full"
           animate={{
             scale: [1, 3, 1];
@@ -674,12 +689,12 @@ function UltraFuturisticHero2030() {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
         />
       </div>
     </section>
-        />;
+/>;
       </div>;
     </section>;
   );            ease: "easeInOut";

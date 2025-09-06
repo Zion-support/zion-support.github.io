@@ -259,7 +259,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     reviews: 156,
   },
   // Quantum & Neuroscience Services;
-  {
+{
     id: 'quantum - brain - computer - interface',
     name: 'Quantum Brain - Computer Interface',
     tagline: 'Direct quantum communication with the human brain',

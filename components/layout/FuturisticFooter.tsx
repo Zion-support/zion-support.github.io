@@ -343,6 +343,108 @@ function FuturisticFooter() {
                 <div>
                   <p className="text-white font-medium">Address</p>
                   <p className="text-gray-400 text-sm">
+              </div>
+              <span className=&quot;text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent&quot;>
+                Zion Tech Group
+              </span>
+            </div>
+            <p className=&quot;text-gray-400 mb-6 leading-relaxed&quot;>
+              Leading provider of AI-powered micro SaaS solutions, helping businesses automate, optimize, and scale their operations with cutting-edge technology.
+            </p>
+            <div className=&quot;flex space-x-4&quot;>
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target=&quot;_blank&quot;
+                  rel=&quot;noopener noreferrer&quot;
+                  className=&quot;w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40&quot;
+                >
+                  <span className=&quot;text-lg&quot;>{social.icon}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {_/* Quick Links */}
+          <div>
+            <h3 className=&quot;text-lg font-semibold text-white mb-6 flex items-center&quot;>
+              <ArrowRight className=&quot;w-5 h-5 text-blue-400 mr-2&quot; />
+              Quick Links
+            </h3>
+            <ul className=&quot;space-y-3&quot;>
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className=&quot;text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block&quot;
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {_/* Services */}
+          <div>
+            <h3 className=&quot;text-lg font-semibold text-white mb-6 flex items-center&quot;>
+              <Cloud className=&quot;w-5 h-5 text-green-400 mr-2&quot; />
+              Services
+            </h3>
+            <ul className=&quot;space-y-3&quot;>
+              {serviceCategories.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className=&quot;text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block&quot;
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {_/* Contact Info */}
+          <div>
+            <h3 className=&quot;text-lg font-semibold text-white mb-6 flex items-center&quot;>
+              <Shield className=&quot;w-5 h-5 text-purple-400 mr-2&quot; />
+              Contact Us
+            </h3>
+            <div className=&quot;space-y-4&quot;>
+              <div className=&quot;flex items-start space-x-3&quot;>
+                <Phone className=&quot;w-5 h-5 text-blue-400 mt-1 flex-shrink-0&quot; />
+                <div>
+                  <p className=&quot;text-white font-medium&quot;>Phone</p>
+                  <a 
+                    href={`tel:${contactInfo.mobile}`}
+                    className=&quot;text-gray-400 hover:text-blue-400 transition-colors duration-200&quot;
+                  >
+                    {_contactInfo.mobile}
+                  </a>
+                </div>
+              </div>
+              
+              <div className=&quot;flex items-start space-x-3&quot;>
+                <Mail className=&quot;w-5 h-5 text-green-400 mt-1 flex-shrink-0&quot; />
+                <div>
+                  <p className=&quot;text-white font-medium&quot;>Email</p>
+                  <a 
+                    href={`mailto:${contactInfo.email}`}
+                    className=&quot;text-gray-400 hover:text-green-400 transition-colors duration-200&quot;
+                  >
+                    {_contactInfo.email}
+                  </a>
+                </div>
+              </div>
+              
+              <div className=&quot;flex items-start space-x-3&quot;>
+                <MapPin className=&quot;w-5 h-5 text-purple-400 mt-1 flex-shrink-0&quot; />
+                <div>
+                  <p className=&quot;text-white font-medium&quot;>Address</p>
+                  <p className=&quot;text-gray-400 text-sm&quot;>
+
                     {contactInfo.address}
                   </p>
                 </div>
@@ -350,7 +452,7 @@ function FuturisticFooter() {
             </div>
           </div>
         </div>
-        {/* Bottom section */}
+{/* Bottom section */}
                     href={`tel:${contactInfo && contactInfo.mobile}`}
                     className='text-gray-400 hover:text-blue-400 transition-colors duration-200'>              Contact Us;
             </h3>;
@@ -431,7 +533,7 @@ function FuturisticFooter() {
           </div>
         </div>
       </div>
-      {/* Floating elements */}
+{/* Floating elements */}
       <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />

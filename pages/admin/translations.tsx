@@ -17,3 +17,4 @@ function TranslationsAdminPage() {
       <TranslationPreview />;
     </div>);
 }
+

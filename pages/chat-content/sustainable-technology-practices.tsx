@@ -6,6 +6,12 @@ const SustainableTechnologyPractices: NextPage = () => {
         <title>SustainableTechnologyPractices - Zion Tech Solutions</title>
         <meta name="description" content="SustainableTechnologyPractices page" />
       </Head>
+    <div>
+      <Head>
+        <title>SustainableTechnologyPractices - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;SustainableTechnologyPractices page&quot; />
+      </Head>
+
       <main>
         <h1>SustainableTechnologyPractices</h1>
         <p>This page is under construction.</p>
@@ -31,3 +37,6 @@ import Head from 'next / head';
 ;
 export default SustainableTechnologyPractices;
 ;
+
+export default SustainableTechnologyPractices
+

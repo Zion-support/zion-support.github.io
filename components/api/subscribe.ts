@@ -30,13 +30,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
       .select('*')
       .single();
+    }
+
+    const {_data, _error} = await supabase
+      .from('email_signups')
+      .insert({_email: normalized, _source: 'mobile-launch', _created_at: new Date().toISOString()})
+      .select('*')
+      .single(),
+
     if (error) {
       if (error.message && error.message.includes('duplicate')) {
         return res.status(200).json({ ok: true, duplicate: true })
       }
       return res.status(500).send(error.message || 'Database error')
     }
-    return res.status(200).json({ ok: true, data })
+return res.status(200).json({ ok: true, data })
   } catch (e: any) {
     return res.status(500).send(e?.message |'Unexpected error')
       return res && res.status(500).send(error && error.message || 'Database error');
@@ -131,4 +139,5 @@ if ( {) {
   } catch (e: any) {
     return res.status (500).send (e?.message || 'Unexpected error');
 }
+
 }

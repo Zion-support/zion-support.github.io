@@ -78,7 +78,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
         <div className="flex items-center gap-3">
           <label className="text-sm">Theme</label>
           <select
-            value={theme}
+value={theme}
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
             className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
           >
@@ -94,13 +94,28 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
                 className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
               >
                 <option value="current">Current</option>
+          >
+            <option value=&quot;light&quot;>Light</option>
+            <option value=&quot;dark&quot;>Dark</option>
+          </select>
+
+          {versions.length > 0 && (
+            <>
+              <label className=&quot;text-sm ml-4&quot;>Version</label>
+              <select
+                value={selectedVersionId}
+                onChange={(e) => setSelectedVersionId(e.target.value)}
+                className=&quot;border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black&quot;
+              >
+                <option value=&quot;current&quot;>Current</option>
+
                 {versions.map(v => (
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))}
               </select>
             </>
           )}
-      <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
+<PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
       <div className="mx-auto">
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
@@ -117,7 +132,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         destination: '/auth',
         permanent: false}}
   }
-  // Placeholder: fetch resume data for the logged-in user and versions if any
+// Placeholder: fetch resume data for the logged-in user and versions if any
   const initialData: ResumeData = {
     name: 'Your Name',
     contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' },
@@ -126,7 +141,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     technologies: ['OpenAISupabasePostgresVercelDocker'],
     experience: [
       {
-        title: 'Senior AI Engineer'
+title: 'Senior AI Engineer'
         company: 'Zion AI'
         start: '2023'
         end: 'Present'
@@ -336,7 +351,7 @@ if ( {) {
         start: '2023',
         end: 'Present',
         location: 'Remote',
-        bullets: [;
+bullets: [;
           'Built multi - agent automation systems improving throughput by 40%.',
           'Designed AI - driven dashboards and PDF export workflows.',
         ],

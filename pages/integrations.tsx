@@ -23,3 +23,5 @@ function IntegrationsRedirect() {
   }, [router]);
   return null;
 ;
+}
+

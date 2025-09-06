@@ -53,7 +53,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       quoteInvites,
       jobApplications,
       successRate,
-      topTags: Object && Object.entries(tagCounts)
+topTags: Object && Object.entries(tagCounts)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value }))
@@ -193,4 +193,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { label: 'ai', value: 1 }]})
   }
 }
+  }
+
 }

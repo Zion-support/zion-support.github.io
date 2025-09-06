@@ -1,14 +1,15 @@
+
 export default function FoundationPage() {
   return (
     <>
       <Head>
         <title>Zion Foundation</title>
-        <meta name="description" content="Public-facing Zion Foundation: neutrality, transparency, grants, and governance." />
+<meta name="description" content="Public-facing Zion Foundation: neutrality, transparency, grants, and governance." />
       </Head>
       <div className="space-y-12">
         <section className="space-y-3">
           <h1 className="text-3xl font-bold">Zion Foundation</h1>
-          <p className="text-gray-600 dark:text-gray-300 max-w-3xl">Stewarding the protocol’s vision, maintaining global neutrality, and operating outside of any one jurisdiction. This portal provides the charter, transparency reports, grants, and partnership MOUs.</p>
+<p className="text-gray-600 dark:text-gray-300 max-w-3xl">Stewarding the protocol’s vision, maintaining global neutrality, and operating outside of any one jurisdiction. This portal provides the charter, transparency reports, grants, and partnership MOUs.</p>
           <div className="flex flex-wrap gap-3 text-sm">
             <Link href="/governance/trust"><a className="underline">Governance & Trust</a></Link>
             <a className="underline" href="#reports">Transparency Reports</a>
@@ -16,7 +17,7 @@ export default function FoundationPage() {
             <a className="underline" href="#mou">Partnership MOUs</a>
           </div>
         </section>
-        <section className="space-y-4" id="charter">
+<section className="space-y-4" id="charter">
           <h2 className="text-2xl font-semibold">Foundation Charter</h2>
           <p className="text-gray-600 dark:text-gray-300">Legal-neutral charter for a decentralized AI protocol committed to sovereignty, open knowledge, and trust.</p>
           <CharterGenerator />
@@ -29,11 +30,12 @@ export default function FoundationPage() {
               <div key={q} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
                 <div className="font-medium">Report Q{q} 2025</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Status: Draft</div>
+
               </div>
             ))}
           </div>
         </section>
-              </div>;
+</div>;
             ))}
           </div>;
         </section>;
@@ -98,6 +100,7 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
             <li>Agent interoperability standards and sandbox — RFP (Open)</li>
           </ul>
         </section>
+
         <section className="space-y-4" id="mou">
           <h2 className="text-2xl font-semibold">Partnership MOU Archive</h2>
           <p className="text-gray-600 dark: text-gray-300">Public archive of Memoranda of Understanding (MOUs). Redactions may apply where legally required.</p>

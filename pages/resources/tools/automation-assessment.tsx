@@ -37,7 +37,7 @@ const [currentQuestion, setCurrentQuestion] = useState(0);
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
     }
-  ]
+]
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
   }
@@ -138,7 +138,7 @@ if ( {) {
     const result = calculateScore()
     return (
       <>
-        <Head>
+<Head>
           <title>Automation Readiness Assessment - Results | Zion Tech Group</title>
           <meta name="description" content="View your automation readiness assessment results and get personalized recommendations." />
         </Head>
@@ -175,6 +175,49 @@ if ( {) {
                   <Link
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+        <Head>
+          <title>Automation Readiness Assessment - Results | Zion Tech Group</title>
+          <meta name=&quot;description&quot; content=&quot;View your automation readiness assessment results and get personalized recommendations.&quot; />
+        </Head>
+        
+        <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
+          <main className=&quot;container mx-auto px-6 py-12&quot;>
+            <div className=&quot;max-w-4xl mx-auto&quot;>
+              <nav className=&quot;mb-8&quot;>
+                <Link href=&quot;/resources&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
+                  ← Back to Resources
+                </Link>
+              </nav>
+
+              <div className=&quot;text-center mb-12&quot;>
+                <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>Assessment Results</h1>
+                <p className=&quot;text-white/80 text-lg&quot;>Your automation readiness evaluation is complete</p>
+              </div>
+
+              <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20 mb-8&quot;>
+                <h2 className={`text-3xl font-bold mb-4 ${result.color}`}>Level: {result.level}</h2>
+                <p className=&quot;text-white/90 text-lg mb-6&quot;>{result.description}</p>
+                
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6 mb-8&quot;>
+                  {questions.map((q, index) => (
+                    <div key={q.id} className=&quot;bg-white/10 rounded-lg p-4 border border-white/20&quot;>
+                      <h3 className=&quot;font-semibold text-cyan-400 mb-2&quot;>{q.question}</h3>
+                      <p className=&quot;text-white/80 text-sm&quot;>Score: {answers[q.id] || 0}/5</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+                  <button 
+                    onClick={resetAssessment}
+
+                  >
+                    Retake Assessment
+                  </button>
+                  <Link 
+                    href=&quot;/contact&quot;
+                    className=&quot;px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300&quot;
+
                   >
                     Get Personalized Recommendations
                   </Link>
@@ -186,7 +229,7 @@ if ( {) {
       </>
     )
   }
-  const currentQ = questions[currentQuestion]
+const currentQ = questions[currentQuestion]
   return (
     <>
       <Head>
@@ -215,11 +258,44 @@ if ( {) {
                   <label key={index} className="flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
                     <input
                       type="radio"
+
+  return (_<>
+      <Head>
+        <title>Automation Readiness Assessment | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Evaluate your organization's readiness for AI automation implementation with our interactive assessment tool.&quot; />
+      </Head>
+      
+      <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
+        <main className=&quot;container mx-auto px-6 py-12&quot;>
+          <div className=&quot;max-w-4xl mx-auto&quot;>
+            <nav className=&quot;mb-8&quot;>
+              <Link href=&quot;/resources&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
+                ← Back to Resources
+              </Link>
+            </nav>
+
+            <div className=&quot;text-center mb-12&quot;>
+              <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>Automation Readiness Assessment</h1>
+              <p className=&quot;text-white/80 text-lg&quot;>Evaluate your organization's readiness for AI automation</p>
+              <div className=&quot;mt-4 text-cyan-400&quot;>
+                Question {currentQuestion + 1} of {questions.length}
+              </div>
+            </div>
+
+            <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20&quot;>
+              <h2 className=&quot;text-2xl font-bold mb-6 text-white&quot;>{currentQ.question}</h2>
+              
+              <div className=&quot;space-y-4 mb-8&quot;>
+                {currentQ.options.map((option, index) => (
+                  <label key={index} className=&quot;flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer&quot;>
+                    <input
+                      type=&quot;radio&quot;
+
                       name={currentQ.id}
                       value={index + 1}
                       checked={answers[currentQ.id] === index + 1}
                       onChange={() => handleAnswer(currentQ.id, index + 1)}
-                      className="mr-3 text-cyan-400 focus:ring-cyan-400"
+className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
                   </label>

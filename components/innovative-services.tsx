@@ -188,13 +188,17 @@ function InnovativeServicesPage() {
     { value: 'roi', label: 'Highest ROI' }
   ];
     filteredServices = filteredServices.filter(service =>
+
+  // Search filter
+  if (searchQuery) {_filteredServices = filteredServices.filter(service =>
+
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     )
   }
-  // Sort services
+// Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -260,11 +264,24 @@ if ( {) {
       case 'roi': {
         const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
+
+  // Sort services
+  filteredServices.sort(_(a, _b) => {_switch (sortBy) {
+      case 'price':
+        return a.price.monthly - b.price.monthly,
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+      case 'category':
+        return a.category.localeCompare(b.category),
+      case 'roi': {
+        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0')
+        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0')
+
         return bRoi - aRoi
       }
               default: {
           // Innovation level sorting
-          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
+const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
           const aLevel = a.innovationLevel.split(' - ')[0];
           const bLevel = b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] |0) - (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
@@ -322,12 +339,16 @@ if ( {) {
         }
     }
   });
+        }
+    }
+  }),
+
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+};
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
   return (
@@ -395,7 +416,7 @@ if ( {) {
               </div>
             </div>
           </section>
-          href='https://ziontechgroup && ziontechgroup.com/innovative-services'
+href='https://ziontechgroup && ziontechgroup.com/innovative-services'
         />;
       </Head>;
       <QuantumHolographicBackground>;
@@ -680,7 +701,7 @@ if ( {) {
                           {category.name} ({category.count})
                         </option>
                       ))}
-                    </select>;
+</select>;
                   </div>;
                   {/* Price Range Filter */}
                   <div className="flex-shrink-0">
@@ -740,7 +761,7 @@ if ( {) {
               </div>
             </div>
           </section>
-                      >;
+>;
                         <List className="w-5 h-5" />;
           {/* Filters and Search */}
           <section className='px - 4 sm:px - 6 lg:px - 8 mb - 12'>;
@@ -878,7 +899,7 @@ if ( {) {
               ) : (
                 <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
                   {filteredServices.map((service) => (
-                    <QuantumHolographicCard key={service.id} className="group">
+<QuantumHolographicCard key={service.id} className="group">
                       <div className="p-6">
           {/* Services Grid / List */}
           <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
@@ -1073,7 +1094,7 @@ if ( {) {
                       </div>
                     </QuantumHolographicCard>
                   ))}
-                </div>;
+</div>;
               )}
             </div>;
           </section>;
@@ -1127,7 +1148,7 @@ if ( {) {
                   </Button>
                   <Button
                     href={`mailto:${contactInfo.email}`}
-                    variant="secondary"
+variant="secondary"
                     className="px-8 py-4 text-lg"
                   >
                     <Mail className="w-5 h-5 mr-2" />
@@ -1144,7 +1165,7 @@ if ( {) {
         </div>
       </QuantumHolographicBackground>
     </>
-                    className='px-8 py-4 text-lg'>;
+className='px-8 py-4 text-lg'>;
                     <Mail className='w-5 h-5 mr-2' />;
                     Email Us;
                   </Button>;

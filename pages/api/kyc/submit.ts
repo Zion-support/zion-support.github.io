@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { userId } = req.body as { userId?: string };
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
-  if (req && req.method !== 'POST')
+if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
   const db = load();
@@ -44,7 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const amlResult = profile.role === 'enterprise'
     ? await aml.checkBusiness({ businessName: profile.businessName || '', country: profile.country })
     : await aml.checkPerson({ fullLegalName: profile.fullLegalName || '', country: profile.country, dob: profile.dateOfBirth });
-  profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
+profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
   profile && profile.amlStatus =
     amlResult && amlResult.status === 'clear'
       ? 'clear'
@@ -80,13 +80,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (amlResult.status !== 'clear') flags.add('aml_alert');
   const name = (profile.fullLegalName || profile.businessName || '').toLowerCase();
   if (name.includes('test') || name.includes('demo') || name.includes('fake')) flags.add('fraud_risk');
-  const ip = ((req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || '').split()[0].trim();
+const ip = ((req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || '').split()[0].trim();
   if (ip) {
     // naive duplicate IP heuristic: more than 2 submissions from same IP → flag
     const sameIpCount = Object.values(db).filter((p) =>
       (p.auditTrail || []).some((a) => a.action === 'kyc_submitted' && (a.details as any)?.ip === ip)
     ).length;
-    if (sameIpCount >= 2) flags.add('duplicate_ip')
+if (sameIpCount >= 2) flags.add('duplicate_ip')
   }
   // Compute simple risk score
   let riskScore = 10; // base low risk

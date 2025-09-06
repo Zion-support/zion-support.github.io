@@ -7,7 +7,7 @@ const next_config = {
     ignoreDuringBuilds: true
   }
   typescript: {
-  // Image optimization
+// Image optimization
   page_extensions: ["tsx", "ts", "jsx", "js"],
   trailing_slash: true,
   images: {

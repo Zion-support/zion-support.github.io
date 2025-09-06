@@ -184,6 +184,42 @@ const company_links = [;
   { name: 'Resources', href: '/resources' }
 ],
 const support_links = [;
+
+const _serviceCategories = [
+  {_title: 'Next-Generation AI', _services: [
+      { name: 'AI Multimodal Fusion', _href: '/ai-multimodal-fusion-platform'},
+      {_name: 'AI Autonomous Decision Engine', _href: '/ai-autonomous-decision-engine'},
+      {_name: 'AI Emotional Intelligence', _href: '/ai-emotional-intelligence-platform'},
+      {_name: 'AI Quantum Hybrid Computing', _href: '/ai-quantum-hybrid-computing'}
+    ]
+  },
+  {_title: 'Cutting-Edge IT', _services: [
+      { name: 'Zero Trust Architecture', _href: '/zero-trust-network-architecture'},
+      {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
+      {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},
+      {_name: 'Blockchain Infrastructure', _href: '/blockchain-infrastructure-platform'}
+    ]
+  },
+  {_title: 'Innovative SaaS', _services: [
+      { name: 'AI Brand Personality', _href: '/ai-brand-personality-generator'},
+      {_name: 'Virtual Event Holograms', _href: '/virtual-event-hologram-platform'},
+      {_name: 'AI Meeting Transcriber', _href: '/ai-meeting-transcriber-pro'},
+      {_name: 'AI Mental Health Companion', _href: '/ai-mental-health-companion'}
+    ]
+  }
+],
+
+const companyLinks = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'News', href: '/news' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Resources', href: '/resources' }
+],
+
+const supportLinks = [
+
   { name: 'Contact Support', href: '/contact' },
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api' },
@@ -401,3 +437,70 @@ function EnhancedFooter() {
 ;
 export default EnhancedFooter;
 ;
+                    >
+                      <Icon className=&quot;w-5 h-5&quot; />
+                    </a>
+                  )
+                })}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        {_/* Newsletter Signup */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className=&quot;mt-12 pt-12 border-t border-gray-700/50&quot;
+        >
+          <div className=&quot;text-center&quot;>
+            <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
+              Stay Updated with Latest Innovations
+            </h3>
+            <p className=&quot;text-gray-400 mb-6 max-w-2xl mx-auto&quot;>
+              Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
+              Be the first to know about new services and breakthrough technologies.
+            </p>
+            
+            <div className=&quot;flex flex-col sm:flex-row gap-4 max-w-md mx-auto&quot;>
+              <input
+                type=&quot;email&quot;
+                placeholder=&quot;Enter your email&quot;
+                className=&quot;flex-1 px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
+              />
+              <button className=&quot;px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl&quot;>
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className=&quot;border-t border-gray-700/50&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6&quot;>
+          <div className=&quot;flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0&quot;>
+            <div className=&quot;text-gray-400 text-sm&quot;>
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <a href="/terms" className="hover: text-cyan-400 transition-colors duration-200">
+                Terms of Service
+              </a>
+              <a href=&quot;/privacy&quot; className=&quot;hover:text-cyan-400 transition-colors duration-200&quot;>
+                Privacy Policy
+              </a>
+              <a href=&quot;/cookies&quot; className=&quot;hover:text-cyan-400 transition-colors duration-200&quot;>
+                Cookie Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
+

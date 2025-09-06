@@ -1,5 +1,5 @@
 export interface PracticalMicroSaas2027 {
-    address: string;
+address: string;
   }
 ;
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [;

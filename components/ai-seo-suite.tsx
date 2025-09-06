@@ -206,12 +206,59 @@ function AISeosuitePage() {
   ];
 ;
   const pricing_plans = [;
+
+export default function AISeosuitePage() {_const _features = [
+    {
+      icon: <Search className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'AI Keyword Research',
+      description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500'},
+    {
+      icon: <TrendingUp className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Ranking Analytics',
+      description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500'},
+    {
+      icon: <Target className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Content Optimization',
+      description: 'AI-powered content analysis and optimization suggestions to improve search visibility.',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+      gradient: 'from-purple-400 to-indigo-500'},
+    {
+      icon: <BarChart3 className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Technical SEO',
+      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      gradient: 'from-orange-400 to-red-500'},
+    {
+      icon: <Globe className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Local SEO',
+      description: 'Optimize for local search with location-based keyword research and citation management.',
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
+      gradient: 'from-teal-400 to-blue-500'},
+    {
+      icon: <Zap className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Automated Reports',
+      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600',
+      gradient: 'from-pink-400 to-rose-500'}],
+
+  const seoTools = [
+    {
+      category: 'Keyword Research',
+    }
+  ],
+
+  const pricingPlans = [
+
     {
       name: 'Starter',
       price: '$39',
       period: '/month',
       description: 'Perfect for small websites and blogs',
-      features: [;
+features: [;
         'Up to 5 websites',
         'Basic keyword research',
         'Monthly site audits',
@@ -232,7 +279,7 @@ function AISeosuitePage() {
       price: '$129',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
-    };
+};
     {
       features: [;
         'Up to 25 websites',
@@ -257,7 +304,7 @@ function AISeosuitePage() {
       price: '$399',
       period: '/month',
       description: 'For large organizations and enterprises',
-      features: [;
+features: [;
         'Unlimited websites',
         'Full SEO suite',
         'Daily site audits',
@@ -298,7 +345,7 @@ function AISeosuitePage() {
     { name: 'Slack', icon: '💬', description: 'Team notifications' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
     { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
-  ];
+];
 ;
   const use_cases = [;
     {
@@ -533,7 +580,7 @@ export default function AISeosuitePage() {;
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
-              className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
+className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">;
@@ -582,11 +629,82 @@ export default function AISeosuitePage() {;
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">400%</div>
               <div className="text-gray-400">ROI</div>
+
+  return (
+    <>
+      <Head>
+        <title>AI-Powered SEO Suite | Zion Tech Group - Advanced SEO Tools & Analytics</title>
+        <meta name=&quot;description&quot; content=&quot;Comprehensive AI-powered SEO suite with keyword research, content optimization, technical SEO audits, and real-time analytics. Boost your search rankings and organic traffic.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;AI-Powered SEO Suite | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Advanced SEO tools with AI-powered optimization, keyword research, and comprehensive analytics.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-black&quot;>
+        <div className=&quot;absolute inset-0&quot;>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.08),transparent_50%)]&quot; />
+        </div>
+        
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+          <div className=&quot;mb-8&quot;>
+            <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6&quot;>
+              <Sparkles className=&quot;w-4 h-4 mr-2&quot; />
+              AI-Powered Search Engine Optimization
+            </div>
+          </div>
+          
+          <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight&quot;>
+            AI-Powered SEO Suite
+          </h1>
+          <p className=&quot;text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed&quot;>
+            Dominate search rankings with AI-powered SEO tools, comprehensive analytics, and intelligent optimization
+          </p>
+
+          <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-20&quot;>
+            <Button
+              href=&quot;#pricing&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-blue-600 hover:bg-blue-700 shadow-2xl shadow-blue-500/25&quot;
+            >
+              Start Free Trial
+              <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+            </Button>
+            <Button
+              href=&quot;#demo&quot;
+              variant=&quot;outline&quot;
+              size=&quot;lg&quot;
+              className=&quot;border-white/20 hover:border-white/40 hover:bg-white/5&quot;
+            >
+              <Play className=&quot;w-5 h-5 mr-2&quot; />
+              Watch Demo
+            </Button>
+          </div>
+
+          {/* Stats */}
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto&quot;>
+            <div className=&quot;text-center&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-blue-400&quot;>+150%</div>
+              <div className=&quot;text-gray-400&quot;>Organic Traffic</div>
+            </div>
+            <div className=&quot;text-center&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-green-400&quot;>+45%</div>
+              <div className=&quot;text-gray-400&quot;>Search Rankings</div>
+            </div>
+            <div className=&quot;text-center&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-purple-400&quot;>+80%</div>
+              <div className=&quot;text-gray-400&quot;>Conversion Rate</div>
+            </div>
+            <div className=&quot;text-center&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-orange-400&quot;>400%</div>
+              <div className=&quot;text-gray-400&quot;>ROI</div>
+
             </div>
           </div>
         </div>
       </section>
-      {/* Features Section */}
+{/* Features Section */}
               className="border-white/20 hover:border-white/40 hover:bg-white/5">;
               <Play className="w-5 h-5 mr-2" />;
               Watch Demo;
@@ -1378,7 +1496,7 @@ export default function AISeosuitePage() {;
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-white mb-2">
                     {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
@@ -1431,7 +1549,7 @@ export default function AISeosuitePage() {;
                     </li>
                   ))}
                 </ul>
-                <Button
+<Button
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
                   size="lg"

@@ -104,19 +104,63 @@ const TalentDirectory: NextPage = () => {
             <div className="flex items-center justify-between">
               <h3 className="font-semibold">{t.name}</h3>
               <div className="flex gap-1">
+}
+
+const mockTalent: Talent[] = Array.from({_length: 47}).map(_(_, _i) => ({_id: String(i + 1), _name: `Talent ${i + 1}`,
+  title: 'Full-Stack Developer',
+  badges: (i % 3 === 0 ? ['Verified'] : i % 3 === 1 ? ['Pro'] : ['Top Rated']) as Talent['badges'],
+  testimonial: i % 5 === 0 ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' } : undefined})),
+
+const TalentDirectory: NextPage = () => {
+  const [page, setPage] = useState(1),
+  const pageSize = 10
+  const total = mockTalent.length
+
+  const pageItems = useMemo(() => {
+    const start = (page - 1) * pageSize
+    return mockTalent.slice(start, start + pageSize)
+  }, [page]),
+
+  return (
+    <div className=&quot;space-y-6 pb-16&quot;>
+  testimonial: i % 5 === 0 ? {_quote: 'Delivered beyond expectations!', _author: 'Happy Client'} : undefined}));
+
+const TalentDirectory: NextPage = () => {_const [page, _setPage] = useState(1);
+  const _pageSize = 10;
+  const _total = mockTalent.length;
+
+  const _pageItems = useMemo__(() => {
+    const _start = (page - 1) * pageSize;
+    return mockTalent.slice(start, _start + pageSize);}, [page]);
+
+  return (_<div className="space-y-6 pb-16">
+
+      <Head>
+        <title>Talent - Zion</title>
+      </Head>
+
+      <h1 className=&quot;text-2xl font-semibold&quot;>Explore Talent</h1>
+
+      <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
+        {pageItems.map((t) => (
+          <article key={t.id} className=&quot;border rounded-md p-4 space-y-2&quot;>
+            <div className=&quot;flex items-center justify-between&quot;>
+              <h3 className=&quot;font-semibold&quot;>{t.name}</h3>
+              <div className=&quot;flex gap-1&quot;>
+
                 {t.badges.map((b) => (
                   <TrustBadge key={b} type={b} />
                 ))}
               </div>
             </div>
-            <div className="text-sm opacity-80">{t.title}</div>
+<div className="text-sm opacity-80">{t.title}</div>
             {t.testimonial && (
               <MicroTestimonial quote={t.testimonial.quote} author={t.testimonial.author} />
             )}
           </article>
         ))}
       </div>
-      <Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />
+<Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />
     </div>
   )
 };

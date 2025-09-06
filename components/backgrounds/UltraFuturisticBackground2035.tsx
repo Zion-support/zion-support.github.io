@@ -90,11 +90,23 @@ if ( {) {
       y: number,
       color: string;    }> = [];      coordinate_x: number,
       coordinate_y: number,
+
+    canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
+    canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
+    if (ctx) {
+      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
+    }
+
+    let animationFrameId: number
+    let particles: Array<{
+      x: number,
+      y: number,
+
       vx: number,
       vy: number,
       size: number,
       opacity: number,
-      color: string;    }> = [];      x: number,;
+color: string;    }> = [];      x: number,;
       y: number,;
       vx: number,;
       vy: number,;
@@ -126,7 +138,7 @@ if ( {) {
           opacity: Math.random() * 0.35 + 0.08,
           color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
         })
-      }
+}
     }
     // Update and draw particles
     const updateParticles = () => {
@@ -478,11 +490,101 @@ if ( {) {
             scale: [1, 1.15, 1];
             rotate: [0, 180, 360];
             opacity: [0.22, 0.45, 0.22];
+      }
+    },
+
+    // Update and draw particles
+    const updateParticles = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
+
+      particles.forEach((particle, index) => {
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1),
+        if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1),
+        if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0,
+
+        // Draw particle
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fillStyle = particle.color,
+        ctx.globalAlpha = particle.opacity,
+        ctx.fill(),
+
+        // Draw connections
+        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140)
+
+        if (maxDistance > 0) {
+          particles.forEach(_(otherParticle, _otherIndex) => {
+            if (index !== otherIndex) {
+              const dx = particle.x - otherParticle.x
+              const dy = particle.y - otherParticle.y
+              const distance = Math.sqrt(dx * dx + dy * dy)
+
+              if (distance < maxDistance) {
+                ctx.beginPath(),
+                ctx.moveTo(particle.x, particle.y),
+                ctx.lineTo(otherParticle.x, otherParticle.y),
+                ctx.strokeStyle = particle.color,
+                ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08,
+                ctx.lineWidth = 1,
+                ctx.stroke()
+              }
+
+            }
+          })
+        }
+      }),
+
+      if (!prefersReducedMotion) {
+        animationFrameId = requestAnimationFrame(updateParticles)
+      }
+    },
+
+    initParticles(),
+    updateParticles(),
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
+      canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
+
+    window.addEventListener('resize', handleResize),
+
+    return () => {
+      window.removeEventListener('resize', handleResize),
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId)
+      }
+    }
+  }, []),
+
+  return (
+    <>
+      {_/* Fixed Background Canvas */}
+      <canvas
+        ref={canvasRef}
+        className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
+        style={{ background: 'radial-gradient(ellipse at center, rgba(139,92,246,0.04) 0%, rgba(0,0,0,0) 70%)' }}
+      />
+
+      {/* Animated Background Elements */}
+      <div className=&quot;fixed inset-0 pointer-events-none z-0 overflow-hidden&quot;>
+        {/* Floating Geometric Shapes */}
+        <motion.div
+          className=&quot;absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full&quot;
+          animate={{
+            scale: [1, 1.15, 1],
+            rotate: [0, 180, 360],
+            opacity: [0.22, 0.45, 0.22]
+
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
           transition={{
             duration: 8
@@ -583,7 +685,7 @@ if ( {) {
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
         />
         {/* Neon Glow Effects */}
@@ -753,7 +855,7 @@ if ( {) {
           transition={{
             duration: 4,
             repeat: Infinity,
-        />;
+/>;
         <motion&& motion.div
           className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
           animate={{
@@ -852,7 +954,7 @@ if ( {) {
             animate={{
               scale: [0, 1, 0],
               opacity: [0, 0.8, 0],
-              rotate: [0, 360],            }}            style={{
+rotate: [0, 360],            }}            style={{
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`;
             }}
@@ -934,7 +1036,7 @@ if ( {) {
                 duration: 4,
                 repeat: Infinity,
                 delay: i * 0.5,
-                ease: "easeInOut"
+ease: "easeInOut"
               }}
             />;
           ))}
@@ -969,7 +1071,7 @@ if ( {) {
             transition={{
               duration: 20,
               repeat: Infinity,
-              ease: "linear"
+ease: "linear"
             }}
           />;
           <motion&& motion.div
@@ -996,7 +1098,7 @@ if ( {) {
             transition={{
               duration: 15,
               repeat: Infinity,
-                right: `${Math.random () * 32}px`,
+right: `${Math.random () * 32}px`,
                 top: `${i * 5}%`,
               }}
               animate={{

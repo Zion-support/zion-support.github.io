@@ -4,12 +4,13 @@ id: 'ai-automation-manufacturing',
     industry: 'Manufacturing',
     results: '40% increase in production efficiency, 60% reduction in downtime',
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-  };
+};
+
   return (
     <>
       <Head>
         <title>{caseStudy.title} - Resource | Zion Tech Group</title>
-        <meta name="description" content={caseStudy.description} />
+<meta name="description" content={caseStudy.description} />
         <meta name="keywords" content="AI automation, manufacturing, resource, case study, predictive maintenance" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -69,7 +70,7 @@ id: 'ai-automation-manufacturing',
                 </div>
               </div>
             </section>
-            {/* Related Resources */}
+{/* Related Resources */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -107,6 +108,16 @@ id: 'ai-automation-manufacturing',
                   <Link
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+                  <Link 
+                    href=&quot;/contact&quot;
+                    className=&quot;bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;
+                  >
+                    Get Started
+                  </Link>
+                  <Link 
+                    href=&quot;/resources&quot;
+                    className=&quot;px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300&quot;
+
                   >
                     Explore More Resources
                   </Link>

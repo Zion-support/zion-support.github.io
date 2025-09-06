@@ -137,3 +137,20 @@ function Stat() {
       <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
     </div>);
 }
+    </div>
+  )
+}
+
+function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
+  return (
+    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
+      <div className="text-3xl font-bold">{value}{suffix}</div>
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
+    </div>
+  )
+}
+
+    </div>
+  )
+}
+

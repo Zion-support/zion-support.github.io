@@ -45,7 +45,7 @@ export default function UltraFuturistic2029InnovationsPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  }
+}
   const all2029Services = [
     ...cuttingEdgeInnovations2029
     ...spaceColonization2029Services
@@ -60,6 +60,7 @@ export default function UltraFuturistic2029InnovationsPage() {;
   };
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
+
   return (
     <>
       <Head>
@@ -72,7 +73,7 @@ export default function UltraFuturistic2029InnovationsPage() {;
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
       </Head>
-      {/* Background */}
+{/* Background */}
       <UltraFuturisticBackground2029 />
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
@@ -645,7 +646,7 @@ function UltraFuturistic2029InnovationsPage() {
                 <span className="text-purple-400 font-medium">2029 Technology Preview</span>
               </div>
             </motion.div>
-            <motion.h1
+<motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -655,7 +656,7 @@ function UltraFuturistic2029InnovationsPage() {
               <br />
               <span className="text-white">Innovations</span>
             </motion.h1>
-            <motion.p
+<motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -664,7 +665,7 @@ function UltraFuturistic2029InnovationsPage() {
               Experience the future of technology with our revolutionary services that push the boundaries 
               of what's possible. From AI consciousness simulation to Mars colonization automation.
             </motion.p>
-            <motion.div
+<motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -685,7 +686,7 @@ function UltraFuturistic2029InnovationsPage() {
             </motion.div>
           </div>
         </section>
-        {/* Innovation Categories Overview */}
+{/* Innovation Categories Overview */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -701,7 +702,7 @@ function UltraFuturistic2029InnovationsPage() {
                 Our 2029 innovations span across multiple cutting-edge technology domains
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: '🧠 AI Consciousness & Innovation',
@@ -768,7 +769,7 @@ function UltraFuturistic2029InnovationsPage() {
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700/50">
                     <span className="text-xs text-gray-500">
-                      {category.services.length} innovation{category.services.length !== 1 ? 's' : ''} available
+{category.services.length} innovation{category.services.length !== 1 ? 's' : ''} available
                     </span>
                   </div>
                 </motion.div>
@@ -776,7 +777,7 @@ function UltraFuturistic2029InnovationsPage() {
             </div>
           </div>
         </section>
-        {/* Services Showcase */}
+{/* Services Showcase */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <UltraFuturistic2029ServiceShowcase 
             services={all2029Services}
@@ -801,7 +802,7 @@ function UltraFuturistic2029InnovationsPage() {
                 Our 2029 innovations are already transforming industries and creating new possibilities
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
                 { label: 'Revolutionary Services', value: all2029Services.filter(s => (s as any).innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
                 { label: 'Patent Pending', value: all2029Services.filter(s => (s as any).patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
@@ -825,7 +826,7 @@ function UltraFuturistic2029InnovationsPage() {
             </div>
           </div>
         </section>
-        {/* Contact CTA */}
+{/* Contact CTA */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -849,7 +850,7 @@ function UltraFuturistic2029InnovationsPage() {
                   Get Started Today
                 </a>
                 <a
-                  href={`tel:${contactInfo.mobile}`}
+href={`tel:${contactInfo.mobile}`}
                   className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
                 >
                   Call Now
@@ -857,7 +858,7 @@ function UltraFuturistic2029InnovationsPage() {
               </div>
             </motion.div>
           </div>
-                  className={`w-20 h-20 bg-gradient-to-br ${stat && stat.color} rounded-3xl flex items-center justify-center mx-auto mb-6`}>;
+className={`w-20 h-20 bg-gradient-to-br ${stat && stat.color} rounded-3xl flex items-center justify-center mx-auto mb-6`}>;
                   <stat && stat.icon className='w-10 h-10 text-white' />;
                 </div>;
                 <div className='text-4xl font-bold text-white mb-2'>;
@@ -1104,7 +1105,7 @@ function UltraFuturistic2029InnovationsPage() {
     </>
   )
 }
-            <div className='flex flex - col sm:flex - row items - center justify - center gap - 4'>;
+<div className='flex flex - col sm:flex - row items - center justify - center gap - 4'>;
               <a;
                 href='/contact';
                 className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 text - lg font - semibold shadow - lg hover:shadow - purple - 500 / 25';

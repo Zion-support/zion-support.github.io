@@ -117,7 +117,7 @@ export default function ProposalGenerator() {;
       setIsGenerating(false)
     }
   }
-  async function handleExport() {
+async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
       const res = await fetch('/api/proposals/export', {
@@ -127,7 +127,7 @@ export default function ProposalGenerator() {;
           markdown: draftMarkdown,
           json: draftJson,
           meta: form})}),
-      const data = await res.json();
+const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
@@ -335,6 +335,20 @@ export default function ProposalGenerator() {;
             <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>
             <select
               className="w-full border rounded px-3 py-2"
+          <div>
+            <label className=&quot;block text-sm font-medium&quot;>Target institution</label>
+            <input
+              className=&quot;w-full border rounded px-3 py-2&quot;
+              value={form.targetInstitution}
+              onChange={(e) => handleChange('targetInstitution', e.target.value)}
+              placeholder=&quot;UNDP / World Bank / ILO&quot;
+            />
+          </div>
+          <div>
+            <label className=&quot;block text-sm font-medium&quot;>Type</label>
+            <select
+              className=&quot;w-full border rounded px-3 py-2&quot;
+
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
             >
@@ -345,7 +359,7 @@ export default function ProposalGenerator() {;
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium" htmlFor="input-Regional scope">Regional scope</label>
+<label className="block text-sm font-medium" htmlFor="input-Regional scope">Regional scope</label>
             <input
               className="w-full border rounded px-3 py-2"
               value={form && form.regionalScope}
@@ -405,13 +419,61 @@ export default function ProposalGenerator() {;
             </button>;
             <button
               className="px-4 py-2 bg-purple-600 text-white rounded"
+            />
+          </div>
+          <div>
+            <label className=&quot;block text-sm font-medium&quot;>Supporting multiverse(s)</label>
+            <input
+              className=&quot;w-full border rounded px-3 py-2&quot;
+              value={form.supportingMultiverses}
+              onChange={(e) => handleChange('supportingMultiverses', e.target.value)}
+              placeholder=&quot;Eg. Zion.ai, Zion.ID, Zion.Work&quot;
+            />
+          </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+            <div>
+              <label className=&quot;block text-sm font-medium&quot;>Language</label>
+              <input
+                className=&quot;w-full border rounded px-3 py-2&quot;
+                value={form.language}
+                onChange={(e) => handleChange('language', e.target.value)}
+                placeholder=&quot;English / French / Spanish / Arabic / ...&quot;
+              />
+            </div>
+            <div>
+              <label className=&quot;block text-sm font-medium&quot;>GPT Prompt Assist</label>
+              <textarea
+                className=&quot;w-full border rounded px-3 py-2 min-h-[80px]&quot;
+                value={form.customPrompt}
+                onChange={(e) => handleChange('customPrompt', e.target.value)}
+              />
+            </div>
+          </div>
+          <div className=&quot;flex gap-2&quot;>
+            <button
+              className=&quot;px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50&quot;
+              onClick={handleGenerate}
+              disabled={isGenerating}
+            >
+              {_isGenerating ? 'Generating...' : 'Generate Draft'}
+            </button>
+            <button
+              className=&quot;px-4 py-2 bg-emerald-600 text-white rounded&quot;
+              onClick={handleExport}
+              disabled={!draftMarkdown}
+            >
+              Export (PDF/JSON/MD)
+            </button>
+            <button
+              className=&quot;px-4 py-2 bg-purple-600 text-white rounded&quot;
+
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
             >
               Submit Bridge
             </button>
           </div>
-          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
+{statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
           {exportLinks && (
             <div className="text-sm space-y-1">
               {exportLinks.pdfUrl && (

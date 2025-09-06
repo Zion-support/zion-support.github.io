@@ -72,7 +72,7 @@ const navigationItems = [
   {
     name: 'All Services',
     href: '/2025-innovative-services-showcase',
-    icon: <Globe className="w-5 h-5" />,
+icon: <Globe className="w-5 h-5" />,
     description: 'Complete portfolio of all technology services',
     badge: 'New',
     children: [
@@ -90,7 +90,7 @@ const navigationItems = [
       { name: 'IT Infrastructure', href: '/2025-innovative-it-infrastructure-services', description: 'Advanced IT solutions' },
       { name: 'Micro SAAS Solutions', href: '/2025-innovative-micro-saas-solutions', description: 'Business solutions' }
     ]
-  };
+};
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
@@ -118,14 +118,14 @@ const navigationItems = [
       { name: 'AI Autonomous Sales', href: '/ai-autonomous-sales-platform', description: 'AI that closes deals' },
       { name: 'AI Autonomous Customer Service', href: '/ai-autonomous-customer-service', description: 'Autonomous support AI' },
       { name: 'AI Autonomous HR', href: '/ai-autonomous-hr-platform', description: 'Autonomous HR management' },
-      { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' };
+{ name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' };
       { name: 'AI Quantum Financial Trading', href: '/ai-quantum-financial-trading', description: 'Quantum AI trading platform' },
       { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics-platform', description: 'Medical AI diagnostics' },
       { name: 'AI Autonomous Manufacturing', href: '/ai-autonomous-manufacturing-platform', description: 'Industrial AI automation' },
       { name: 'AI Cybersecurity Intelligence', href: '/ai-cybersecurity-threat-intelligence', description: 'AI threat detection' },
       { name: 'AI Content Creation Studio', href: '/ai-content-creation-studio', description: 'AI content generation' }
     ]
-  };
+};
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
@@ -144,7 +144,7 @@ const navigationItems = [
       { name: 'Quality Assurance AI', href: '/ai-quality-assurance', description: 'Automated testing and QA' },
       { name: 'Data Processing AI', href: '/ai-data-processing', description: 'Intelligent data handling' }
     ]
-  };
+};
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
@@ -163,7 +163,7 @@ const navigationItems = [
       { name: 'Quality Assurance AI', href: '/ai-quality-assurance', description: 'Automated testing and QA' },
       { name: 'Data Processing AI', href: '/ai-data-processing', description: 'Intelligent data handling' }
     ]
-  };
+};
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
@@ -187,7 +187,7 @@ const navigationItems = [
       { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
       { name: 'Quantum-Ready Database', href: '/quantum-ready-database-platform', description: 'Quantum-resistant data storage' }
     ]
-  };
+};
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
@@ -206,7 +206,7 @@ const navigationItems = [
       { name: 'Vulnerability Management', href: '/vulnerability-management', description: 'Automated vulnerability scanning' },
       { name: 'Security Analytics', href: '/security-analytics', description: 'Advanced security insights' }
     ]
-  };
+};
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
@@ -225,7 +225,7 @@ const navigationItems = [
       { name: 'Vulnerability Management', href: '/vulnerability-management', description: 'Automated vulnerability scanning' },
       { name: 'Security Analytics', href: '/security-analytics', description: 'Advanced security insights' }
     ]
-  };
+};
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
@@ -248,7 +248,7 @@ const navigationItems = [
       { name: 'IT Asset Management', href: '/it-asset-management', description: 'Comprehensive asset tracking' },
       { name: 'Infrastructure Monitoring', href: '/infrastructure-monitoring', description: 'Real-time system monitoring' }
     ]
-  };
+};
   {
     name: 'Blockchain & Web3',
     href: '/blockchain-web3-services',
@@ -267,7 +267,7 @@ const navigationItems = [
       { name: 'Token Economics', href: '/token-economics', description: 'Token design and modeling' },
       { name: 'Regulatory Compliance', href: '/web3-compliance', description: 'Compliance automation' }
     ]
-  };
+};
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
@@ -286,7 +286,7 @@ const navigationItems = [
       { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', description: 'Supply chain optimization' },
       { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis', description: 'Legal document processing' }
     ]
-  };
+};
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
@@ -305,7 +305,7 @@ const navigationItems = [
       { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
       { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
     ]
-  };
+};
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
@@ -324,7 +324,7 @@ const navigationItems = [
       { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
       { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
     ]
-  };
+};
   {
     name: 'Solutions',
     href: '/solutions',
@@ -338,7 +338,7 @@ const navigationItems = [
       { name: 'AI Video Generation', href: '/ai-video-generation', description: 'Automated video content' },
       { name: 'AI Music Composition', href: '/ai-music-composition', description: 'AI-generated music' }
     ]
-  };
+};
   {
     name: 'Research & Development',
     href: '/research-development',
@@ -352,7 +352,7 @@ const navigationItems = [
       { name: 'Neuroscience Research', href: '/neuroscience-research-platform', description: 'Brain research tools' },
       { name: 'Climate Research AI', href: '/climate-research-ai', description: 'Environmental research automation' }
     ]
-  };
+};
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
@@ -366,7 +366,7 @@ const navigationItems = [
       { name: 'Education AI', href: '/education-ai-solutions', description: 'Educational technology' },
       { name: 'Transportation AI', href: '/transportation-ai-solutions', description: 'Smart transportation' }
     ]
-  };
+};
   {
     name: 'Pricing & Plans',
     href: '/pricing',
@@ -380,7 +380,7 @@ const navigationItems = [
       { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' },
       { name: 'ROI Calculator', href: '/roi-calculator', description: 'Calculate your return on investment' }
     ]
-  };
+};
   {
     name: 'Resources',
     href: '/resources',
@@ -394,7 +394,7 @@ const navigationItems = [
       { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
       { name: 'Research Papers', href: '/research-papers', description: 'Academic publications' }
     ]
-  };
+};
   {
     name: 'Support',
     href: '/support',
@@ -407,9 +407,13 @@ const navigationItems = [
       { name: 'Training Programs', href: '/training', description: 'Skill development' },
       { name: 'Community Forum', href: '/community', description: 'User community' },
       { name: 'Status Page', href: '/status', description: 'Service status' }
-    ]
+]
   }
 ];
+    ]
+  }
+],
+
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -920,7 +924,7 @@ function EnhancedNavigation2025() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="ml - 8 mt - 2 space - y-2";
+className="ml - 8 mt - 2 space - y-2";
                     >;
                       {item.children?.map ((child) => (
                         <Link;
@@ -989,7 +993,7 @@ function EnhancedNavigation2025() {
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="ml - 8 space - y-2";
+className="ml - 8 space - y-2";
                           >;
                             {item.submenu?.map ((subitem) => (
                               <Link;

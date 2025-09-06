@@ -268,12 +268,103 @@ function PrivacyPage() {
                 </p>
                 <div className="flex items-center justify-center gap-4 text-gray-400">
                   <Shield className="w-6 h-6" />
+
+  const _privacySections = [
+    {
+      title: 'Information We Collect',
+      icon: <Database className=&quot;w-8 h-8&quot; />,
+      color: 'from-cyan-500 to-blue-500',
+      content: [
+        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
+      ]
+    },
+    {
+      title: 'How We Use Your Information',
+      icon: <Settings className=&quot;w-8 h-8&quot; />,
+      color: 'from-purple-500 to-pink-500',
+      content: [
+        'Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
+      ]
+    },
+    {
+      title: 'Information Sharing',
+      icon: <Globe className=&quot;w-8 h-8&quot; />,
+      color: 'from-green-500 to-emerald-500',
+      content: [
+        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)'
+      ]
+    },
+    {
+      title: 'Data Security',
+      icon: <Lock className=&quot;w-8 h-8&quot; />,
+      color: 'from-orange-500 to-red-500',
+      content: [
+        'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
+      ]
+    }
+  ],
+
+  const rights = [
+    {
+      title: 'Access',
+      description: 'Request access to your personal information',
+      icon: <Eye className=&quot;w-6 h-6&quot; />
+    },
+    {
+      title: 'Correction',
+      description: 'Request correction of inaccurate information',
+      icon: <CheckCircle className=&quot;w-6 h-6&quot; />
+    },
+    {
+      title: 'Deletion',
+      description: 'Request deletion of your personal information',
+      icon: <AlertTriangle className=&quot;w-6 h-6&quot; />
+    },
+    {
+      title: 'Portability',
+      description: 'Request transfer of your data to another service',
+      icon: <Database className=&quot;w-6 h-6&quot; />
+    },
+    {
+      title: 'Objection',
+      description: 'Object to processing of your personal information',
+      icon: <User className=&quot;w-6 h-6&quot; />
+    },
+    {
+      title: 'Restriction',
+      description: 'Request restriction of processing activities',
+      icon: <Settings className=&quot;w-6 h-6&quot; />
+    }
+  ],
+
+  return (_<ErrorBoundary>
+      <SEOOptimizer />
+      <AnalyticsTracker />
+      <Layout>
+        <main className=&quot;relative z-10 pt-8&quot;>
+          {/* Hero Section */}
+          <section className=&quot;py-20 px-4&quot;>
+            <div className=&quot;max-w-6xl mx-auto text-center&quot;>
+              <motion.div
+                initial={_{ opacity: 0, _y: 20}}
+                animate={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
+              >
+                <h1 className=&quot;text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
+                  Privacy Policy
+                </h1>
+                <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
+                  Your privacy is our priority. Learn how we protect and handle your personal information.
+                </p>
+                <div className=&quot;flex items-center justify-center gap-4 text-gray-400&quot;>
+                  <Shield className=&quot;w-6 h-6&quot; />
+
                   <span>Last updated: {lastUpdated}</span>
                 </div>
               </motion.div>
             </div>
           </section>
-          {/* Overview */}
+{/* Overview */}
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -303,7 +394,7 @@ function PrivacyPage() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="relative"
+className="relative"
                 >
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
                     <div className="text-center space-y-6">
@@ -328,14 +419,14 @@ function PrivacyPage() {
               </div>
             </div>
           </section>
-          {/* Privacy Principles */}
+{/* Privacy Principles */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-16"
+className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
                 <p className="text-xl text-gray-300">The foundation of how we handle your data</p>
@@ -347,7 +438,7 @@ function PrivacyPage() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
+className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
                       <div className="text-white">
@@ -368,14 +459,14 @@ function PrivacyPage() {
               </div>
             </div>
           </section>
-          {/* Your Rights */}
+{/* Your Rights */}
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-16"
+className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
                 <p className="text-xl text-gray-300">You have control over your personal information</p>
@@ -387,7 +478,7 @@ function PrivacyPage() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
+className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
                   >
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <div className="text-white">
@@ -401,14 +492,14 @@ function PrivacyPage() {
               </div>
             </div>
           </section>
-          {/* Detailed Policy */}
+{/* Detailed Policy */}
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="space-y-12"
+className="space-y-12"
               >
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Detailed Privacy Information</h2>
@@ -426,32 +517,32 @@ function PrivacyPage() {
                         and provide a better user experience.
                       </p>
                     </div>
-                    <div>
+<div>
                       <h3 className="text-2xl font-bold text-white mb-4">Data Usage and Purpose</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We use your information to provide, maintain, and improve our services, process 
                         transactions, send you technical notices and support messages, and respond to your 
                         comments and questions.
                       </p>
-                      <p className="text-gray-300 leading-relaxed">
+<p className="text-gray-300 leading-relaxed">
                         With your consent, we may also use your information to send you marketing communications 
                         about our services, special offers, and updates. You can opt out of these communications 
                         at any time.
                       </p>
                     </div>
-                    <div>
+<div>
                       <h3 className="text-2xl font-bold text-white mb-4">Data Sharing and Disclosure</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We do not sell, trade, or otherwise transfer your personal information to third parties 
                         without your consent, except as described in this policy. We may share your information 
                         with trusted third-party service providers who assist us in operating our business.
                       </p>
-                      <p className="text-gray-300 leading-relaxed">
+<p className="text-gray-300 leading-relaxed">
                         These service providers are contractually obligated to keep your information confidential 
                         and use it only for the purposes for which we disclose it to them.
                       </p>
                     </div>
-                    <div>
+<div>
                       <h3 className="text-2xl font-bold text-white mb-4">Data Security Measures</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We implement appropriate technical and organizational security measures to protect 
@@ -473,19 +564,19 @@ function PrivacyPage() {
                         in accordance with our data retention policies.
                       </p>
                     </div>
-                    <div>
+<div>
                       <h3 className="text-2xl font-bold text-white mb-4">International Data Transfers</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         Your information may be transferred to and processed in countries other than your own. 
                         We ensure that such transfers comply with applicable data protection laws and that 
                         appropriate safeguards are in place.
                       </p>
-                      <p className="text-gray-300 leading-relaxed">
+<p className="text-gray-300 leading-relaxed">
                         For transfers to countries outside the European Economic Area, we rely on adequacy 
                         decisions, standard contractual clauses, or other appropriate safeguards.
                       </p>
                     </div>
-                    <div>
+<div>
                       <h3 className="text-2xl font-bold text-white mb-4">Cookies and Tracking Technologies</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We use cookies and similar tracking technologies to enhance your experience on our 
@@ -496,7 +587,7 @@ function PrivacyPage() {
                         certain cookies may affect the functionality of our services.
                       </p>
                     </div>
-                    <div>
+<div>
                       <h3 className="text-2xl font-bold text-white mb-4">Children's Privacy</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         Our services are not intended for children under the age of 13. We do not knowingly 
@@ -507,14 +598,14 @@ function PrivacyPage() {
                         us immediately, and we will take steps to remove such information.
                       </p>
                     </div>
-                    <div>
+<div>
                       <h3 className="text-2xl font-bold text-white mb-4">Changes to This Policy</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We may update this Privacy Policy from time to time to reflect changes in our 
                         practices or applicable laws. We will notify you of any material changes by posting 
                         the updated policy on our website.
                       </p>
-                      <p className="text-gray-300 leading-relaxed">
+<p className="text-gray-300 leading-relaxed">
                         Your continued use of our services after such changes constitutes acceptance of 
                         the updated policy. We encourage you to review this policy periodically.
                       </p>
@@ -524,7 +615,7 @@ function PrivacyPage() {
               </motion.div>
             </div>
           </section>
-          {/* Contact Information */}
+{/* Contact Information */}
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
@@ -554,6 +645,21 @@ function PrivacyPage() {
                     <User className="w-5 h-5" />
                     Contact Form
                   </a>
+                  <a
+                    href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                    className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2&quot;
+                  >
+                    <Mail className=&quot;w-5 h-5&quot; />
+                    Email Us
+                  </Link>
+                  <a
+                    href=&quot;/contact&quot;
+                    className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2&quot;
+                  >
+                    <User className=&quot;w-5 h-5&quot; />
+                    Contact Form
+                  </Link>
+
                 </div>
               </motion.div>
             </div>

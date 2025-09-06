@@ -908,11 +908,127 @@ const contactInfo = {;
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
+    ]
+  }
+],
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
+],
+
+const UltraFuturisticNavigation2047 = () => {
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+
+  const toggleMenu = () => setIsOpen(!isOpen)
+  const closeMenu = () => setIsOpen(false)
+
+  const handleDropdownToggle = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name)
+  },
+
+  useEffect__(() => {_const _handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsOpen(false),
+        setActiveDropdown(null)
+      }
+    },
+
+    window.addEventListener('resize', handleResize),
+    return () => window.removeEventListener('resize', handleResize)
+  }, []),
+
+  return (
+    <nav className=&quot;relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50&quot;>
+      <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;flex justify-between items-center h-16&quot;>
+          {/* Logo */}
+          <div className=&quot;flex-shrink-0&quot;>
+            <Link href=&quot;/&quot; className=&quot;flex items-center space-x-2&quot;>
+              <div className=&quot;w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center&quot;>
+                <Rocket className=&quot;w-5 h-5 text-white&quot; />
+              </div>
+              <span className=&quot;text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent&quot;>
+                Zion Tech Group
+              </span>
+            </a>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className=&quot;hidden lg:flex lg:items-center lg:space-x-8&quot;>
+            {navigationItems.map((item) => (
+              <div key={item.name} className=&quot;relative group&quot;>
+                <button
+                  onClick={() => handleDropdownToggle(item.name)}
+                  className=&quot;flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200&quot;
+                >
+                  {item.icon}
+                  <span>{item.name}</span>
+                  <ChevronDown className=&quot;w-4 h-4&quot; />
+                </button>
+
+                <AnimatePresence>
+                  {activeDropdown === item.name && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className=&quot;absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50&quot;
+                    >
+                      <div className=&quot;space-y-4&quot;>
+                        {item.children?.map((child) => (
+                          <Link
+                            key={child.name}
+                            href={child.href}
+                            className=&quot;flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200&quot;
+                            onClick={closeMenu}
+                          >
+                            <div className={_`p-2 rounded-lg bg-gradient-to-r ${child.color || 'from-gray-500 to-slate-500'}`}>
+                              {_child.icon}
+                            </div>
+                            <div className=&quot;flex-1&quot;>
+                              <div className=&quot;flex items-center space-x-2&quot;>
+                                <span className=&quot;font-medium text-white&quot;>{child.name}</span>
+                                {child.featured && (
+                                  <span className=&quot;px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full&quot;>
+                                    Featured
+                                  </span>
+                                )}
+                              </div>
+                              <p className=&quot;text-sm text-gray-400 mt-1&quot;>{child.description}</p>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+
+          {/* Contact Info & CTA */}
+          <div className=&quot;hidden lg:flex lg:items-center lg:space-x-4&quot;>
+            <div className=&quot;flex items-center space-x-4 text-sm text-gray-400&quot;>
+              <a href={`tel:${contactInfo.mobile}`} className=&quot;flex items-center space-x-1 hover:text-white transition-colors&quot;>
+                <Phone className=&quot;w-4 h-4&quot; />
+
                 <span>{contactInfo.mobile}</span>
               </a>
             </div>
             <Link
-              href="/contact"
+href="/contact"
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
             >
               Get Started
@@ -1030,7 +1146,7 @@ const contactInfo = {;
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t border - slate - 700 / 50';
+className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t border - slate - 700 / 50';
           >;
             <div className='px - 2 pt - 2 pb - 3 space - y-1'>;
               {navigation_items.map (item => (
@@ -1067,7 +1183,7 @@ const contactInfo = {;
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
-              <div className="pt-4 pb-3 border-t border-slate-700/50">;
+<div className="pt-4 pb-3 border-t border-slate-700/50">;
                 <div className="px-3 py-2 text-sm text-gray-400">;
                   <div className="flex items-center space-x-2 mb-2">;
                     <Phone className="w-4 h-4" />;

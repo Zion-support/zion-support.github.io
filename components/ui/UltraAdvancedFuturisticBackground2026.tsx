@@ -174,13 +174,37 @@ if ( {) {
       y: number,
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
+
+    let animationFrameId: number
+    let particles: Particle[] = []
+    let neuralNodes: NeuralNode[] = []
+    let quantumFields: QuantumField[] = []
+    let holographicLayers: HolographicLayer[] = []
+
+    // Set canvas size
+    const _resizeCanvas = () => {
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect()
+        canvas.width = rect.width,
+        canvas.height = rect.height
+      }
+    },
+
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
+
+    // Particle class
+    class Particle {
+      x: number,
+      y: number,
+
       vx: number,
       vy: number,
       size: number,
       color: string,
       alpha: number,
       life: number,
-        this.maxLife = this.life
+this.maxLife = this.life
       }
       update() {
         this.x += this.vx;
@@ -264,7 +288,7 @@ if ( {) {
       connections: NeuralNode[],
       activation: number,
       pulse: number,
-      constructor(x: number, y: number) {
+constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
         this.connections = [];
@@ -347,12 +371,21 @@ if ( {) {
       y: number;
       radius: number;
       intensity: number;
+          }
+        }),
+        ctx.restore()
+      }
+    }
+
+    // Quantum field class
+    class QuantumField {
+
       x: number,
       y: number,
       radius: number,
       intensity: number,
       phase: number,
-      constructor(x: number, y: number) {
+constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
         this.radius = Math.random() * 100 + 50;
@@ -585,7 +618,7 @@ if ( {) {
       rotation: number,
       alpha: number,
       color: string,
-        this.color = getColorSchemeColor()
+this.color = getColorSchemeColor()
       }
       update() {
         this.rotation += 0.005 * animationSpeed;
@@ -641,20 +674,22 @@ if ( {) {
         })
       })
     }
+
     // Initialize quantum fields
     if (enableQuantumEffects) {
       for (let i = 0, i < 8, i++) {
         quantumFields.push(new QuantumField(
-          Math.random() * canvas.width;
+Math.random() * canvas.width;
           Math.random() * canvas.height
         ))
       }
     }
+
     // Initialize holographic layers
     if (enableHolographic) {
       for (let i = 0, i < 5, i++) {
         holographicLayers.push(new HolographicLayer())
-      };
+};
     }
     // Animation loop
     const animate = () => {
@@ -745,11 +780,56 @@ if ( {) {
       // Draw particle connections
       if (intensity === 'extreme' |intensity === 'high') {
         particles.forEach((particle, i) => {
+      
+      ctx.fillStyle = gradient,
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
+
+      // Update and draw quantum fields
+      if (enableQuantumEffects) {
+        quantumFields.forEach(field => {
+          field.update(),
+          field.draw()
+        })
+      }
+
+      // Update and draw holographic layers
+      if (enableHolographic) {
+        holographicLayers.forEach(layer => {
+          layer.update(),
+          layer.draw()
+        })
+      }
+
+      // Update and draw neural network
+      if (enableNeuralNetworks) {
+        neuralNodes.forEach(node => {
+          node.update(),
+          node.draw()
+        })
+      }
+
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        particle.update(),
+        particle.draw(),
+
+        // Remove dead particles and create new ones
+        if (particle.life <= 0) {
+          particles[index] = new Particle(
+            Math.random() * canvas.width,
+            Math.random() * canvas.height
+          )
+        }
+      }),
+
+      // Draw particle connections
+      if (intensity === 'extreme' || intensity === 'high') {_particles.forEach(_(particle, _i) => {
+
           particles.slice(i + 1).forEach(otherParticle => {
             const distance = Math.sqrt(
               Math.pow(particle.x - otherParticle.x, 2) + 
               Math.pow(particle.y - otherParticle.y, 2)
-            );
+);
             if (distance < 100) {
               ctx.save();
               ctx.globalAlpha = (100 - distance) / 100 * 0.3;
@@ -1350,7 +1430,7 @@ if ( {) {
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: "easeInOut"
+ease: "easeInOut"
             }}
           />;
           <motion.div;
@@ -1377,7 +1457,7 @@ if ( {) {
             transition={{
               duration: 10,
               repeat: Infinity,
-      {children}
+{children}
     </div>
   )
 };

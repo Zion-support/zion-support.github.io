@@ -1,5 +1,5 @@
 export interface PracticalBusinessSolution2029 {
-    address: string;
+address: string;
   }
 ;
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =;

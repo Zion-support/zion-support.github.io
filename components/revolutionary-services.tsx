@@ -282,13 +282,17 @@ function RevolutionaryServicesPage() {
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
   }
     filteredServices = filteredServices.filter(service =>
+
+  // Search filter
+  if (searchQuery) {_filteredServices = filteredServices.filter(service =>
+
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     )
   }
-  // Sort services
+// Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -791,11 +795,158 @@ if ( {) {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+
+  // Sort services
+  filteredServices.sort(_(a, _b) => {_switch (sortBy) {
+      case 'price':
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+      case 'category':
+        return a.category.localeCompare(b.category),
+      case 'roi':
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0')
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0')
+        return bRoi - aRoi,
+      default: return a.name.localeCompare(b.name)
+    }
+  }),
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
+
+  const popularServices = getPopularRevolutionaryServices()
+
+  // Enhanced service categories with better descriptions
+  const enhancedCategories = [
+    {
+      name: 'Quantum AI & Cognitive Computing',
+      description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities',
+      icon: <Brain className=&quot;w-6 h-6&quot; />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length,
+      color: 'from-purple-500 to-indigo-600'
+    },
+    {
+      name: 'Autonomous Manufacturing & Industry 4.0',
+      description: 'Next-generation autonomous manufacturing with zero human intervention',
+      icon: <Factory className=&quot;w-6 h-6&quot; />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
+      color: 'from-orange-500 to-red-600'
+    },
+    {
+      name: 'Quantum Blockchain & DeFi',
+      description: 'Quantum-secured blockchain platforms with infinite scalability',
+      icon: <Globe className=&quot;w-6 h-6&quot; />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length,
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      name: 'AI Biomedical Research & Drug Discovery',
+      description: 'AI-powered platforms for accelerated drug discovery and medical research',
+      icon: <FlaskIcon className=&quot;w-6 h-6&quot; />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length,
+      color: 'from-blue-500 to-indigo-600'
+    },
+    {
+      name: 'Quantum Cybersecurity & Threat Detection',
+      description: 'Quantum-resistant cybersecurity with AI-powered threat detection',
+      icon: <ShieldCheck className=&quot;w-6 h-6&quot; />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length,
+      color: 'from-red-500 to-pink-600'
+    },
+    {
+      name: 'Space Technology & Satellite Optimization',
+      description: 'Revolutionary platforms for space exploration and satellite optimization',
+      icon: <Rocket className=&quot;w-6 h-6&quot; />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length,
+      color: 'from-indigo-500 to-purple-600'
+    },
+    {
+      name: 'AI Content Creation & Marketing',
+      description: 'Quantum-powered content creation at infinite scale',
+      icon: <FileText className=&quot;w-6 h-6&quot; />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length,
+      color: 'from-teal-500 to-cyan-600'
+    },
+    {
+      name: 'Quantum Computing as a Service',
+      description: 'Enterprise quantum computing with real quantum processors',
+      icon: <Cpu className=&quot;w-6 h-6&quot; />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length,
+      color: 'from-violet-500 to-purple-600'
+    },
+    {
+      name: 'Autonomous Vehicles & Smart Transportation',
+      description: 'AI platforms for autonomous vehicles and smart transportation',
+      icon: <CarIcon className=&quot;w-6 h-6&quot; />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length,
+      color: 'from-emerald-500 to-green-600'
+    },
+    {
+      name: 'Smart Energy & Renewable Energy',
+      description: 'AI platforms for smart energy grids and renewable energy optimization',
+      icon: <LeafIcon className=&quot;w-6 h-6&quot; />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
+      color: 'from-yellow-500 to-orange-600'
+    }
+  ],
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { y: 20, _opacity: 0},
+    visible: {_y: 0, _opacity: 1, _transition: {
+        duration: 0.5}
+    }
+  },
+
+  return (
+    <UltraFuturisticBackground variant=&quot;quantum&quot; intensity=&quot;high&quot;>
+      <div className=&quot;min-h-screen&quot;>
+        <Head>
+          <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI, Autonomous Systems, Space Technology</title>
+          <meta name=&quot;description&quot; content=&quot;Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today.&quot; />
+          <meta name=&quot;keywords&quot; content=&quot;revolutionary micro SaaS, quantum AI, autonomous manufacturing, space technology, biomedical research, quantum cybersecurity, blockchain, autonomous vehicles, smart energy&quot; />
+          <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+          <meta property=&quot;og:title&quot; content=&quot;Revolutionary Micro SaaS Services | Zion Tech Group&quot; />
+          <meta property=&quot;og:description&quot; content=&quot;Cutting-edge micro SaaS platform with quantum AI, autonomous systems, and revolutionary technology solutions.&quot; />
+          <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/revolutionary-services&quot; />
+          <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+          <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/revolutionary-services&quot; />
+        </Head>
+
+        {/* Hero Section */}
+        <section className=&quot;relative py-20 overflow-hidden&quot;>
+          <div className=&quot;container mx-auto px-4 text-center&quot;>
+            <div className=&quot;max-w-5xl mx-auto&quot;>
+              <motion.h1 
+                className=&quot;text-6xl md:text-8xl font-bold mb-8 futuristic-glow&quot;
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+                  Revolutionary
+                </span>
+                <br />
+                <span className=&quot;text-white&quot;>Micro SaaS Services</span>
+              </motion.h1>
+              <motion.p 
+                className=&quot;text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed&quot;
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
                 Experience the future of technology with our revolutionary micro;
                 SaaS platform. Quantum AI, autonomous systems, space technology,;
                 and cutting-edge solutions that redefine what's possible.                  Revolutionary;
@@ -826,7 +977,7 @@ if ( {) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>              </motion && motion.p>;
+transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>              </motion && motion.p>;
               {/* Service Count Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -903,7 +1054,7 @@ if ( {) {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
-                  variant="primary" 
+variant="primary" 
                   size="lg"
                   onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
                 >
@@ -913,16 +1064,20 @@ if ( {) {
                 <Button 
                   variant="futuristic" 
                   size="lg"
-                  onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                 >
                   Get Started
                   <Rocket className="ml-2 w-5 h-5" />
+                >
+                  Get Started
+                  <Rocket className=&quot;ml-2 w-5 h-5&quot; />
+
                 </Button>
               </motion.div>
             </div>
           </div>
         </section>
-        {/* Contact Information Banner */}
+{/* Contact Information Banner */}
         <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -941,7 +1096,7 @@ if ( {) {
             </div>
           </div>
         </section>
-                >;
+>;
                   Get Started;
                   <Rocket className='ml-2 w-5 h-5' />                </Button>                  <Rocket className="ml-2 w-5 h-5" />;
                 </Button>;
@@ -1015,7 +1170,7 @@ if ( {) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-            </motion && motion.div>;
+</motion && motion.div>;
           </div>;
         </section>;
         {/* Popular Services Showcase */}
@@ -1467,7 +1622,7 @@ if ( {) {
                   </UltraFuturisticCard>
                 </motion.div>
               ))}
-            </motion && motion.div>;
+</motion && motion.div>;
           </div>;
         </section>;
         {/* Services Grid */}
@@ -1527,7 +1682,7 @@ if ( {) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+<div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
                 <div className="flex flex-wrap gap-4">
                   <select
                     value={selectedCategory}
@@ -1539,7 +1694,7 @@ if ( {) {
                       <option key={category} value={category}>{category}</option>
                     ))}
                   </select>
-                  <select
+<select
                     value={priceRange}
                     onChange={(e) => setPriceRange(e.target.value)}
                     className="px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400"
@@ -1586,7 +1741,7 @@ if ( {) {
                 </div>
               </div>
             </motion.div>
-                    >;
+>;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
                       </div>;
                     </div>;
@@ -1838,7 +1993,7 @@ if ( {) {
                       </div>
                     ) : (
                       // List View
-                        </div>;
+</div>;
                         <div className='space - y-2 mb - 6'>;
                           {service.features.slice (0, 3).map ((feature, idx) => (
                             <div;
@@ -2044,7 +2199,7 @@ if ( {) {
                               </div>
                             </div>
                             <div>
-                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Info</h4>
+<h4 className="text-sm font-semibold text-purple-400 mb-2">Market Info</h4>
                               <div className="space-y-1 text-sm text-gray-300">
                                 <div><span className="text-gray-400">ROI:</span> {service.roi}</div>
                                 <div><span className="text-gray-400">Market:</span> {service.marketSize}</div>
@@ -2088,7 +2243,7 @@ if ( {) {
                         </div>
                       </div>
                     )}
-                  </UltraFuturisticCard>;
+</UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
             </motion && motion.div>;
@@ -2123,7 +2278,7 @@ if ( {) {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="text-6xl mb-4">🔍</div>
+<div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
                 >;
@@ -2143,7 +2298,7 @@ if ( {) {
                          </Button>
               </motion.div>
             )}
-          </div>;
+</div>;
         </section>;
         {/* Service Details Modal */}
         <AnimatePresence>;
@@ -2161,13 +2316,13 @@ if ( {) {
               onClick={() => setSelectedService(null)}
             >
               <motion.div
-                className="bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+className="bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="p-8">
+<div className="p-8">
                   <div className="flex justify-between items-start mb-6">
                     <div className="flex items-center gap-4">
                       <div className="text-5xl">{selectedService.icon}</div>
@@ -2178,12 +2333,12 @@ if ( {) {
                     </div>
                     <button
                       onClick={() => setSelectedService(null)}
-                      className="text-gray-400 hover:text-white text-2xl"
+className="text-gray-400 hover:text-white text-2xl"
                     >
                       ×
                     </button>
                   </div>
-                      className='text-gray-400 hover:text-white text-2xl'                      className="text-gray-400 hover:text-white text-2xl";
+className='text-gray-400 hover:text-white text-2xl'                      className="text-gray-400 hover:text-white text-2xl";
                           <div className='flex gap - 2'>;
                             <Button;
                               variant='primary';
@@ -2339,7 +2494,7 @@ if ( {) {
                         </div>
                       </div>
                     </div>
-                    <div>
+<div>
                               {selectedService && selectedService.growthRate}
                             </div>                          </div>                          <h4 className="text-sm font-semibold text-green-400 mb-2">ROI & Market</h4>;
                           <div className="text-sm text-gray-300 space-y-1">;
@@ -2459,7 +2614,7 @@ if ( {) {
                       </div>
                     </div>
                   </div>
-                  <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
+<div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
                       <h3 className='text - xl font - semibold text - cyan - 400 mb - 4'>;
                         Service Details;
                       </h3>;
@@ -2623,6 +2778,10 @@ if ( {) {
                          >
                            Contact Sales
                            <Mail className="ml-2 w-4 h-4" />
+                         >
+                           Contact Sales
+                           <Mail className=&quot;ml-2 w-4 h-4&quot; />
+
                          </Button>
                       </div>
                     </div>
@@ -2632,7 +2791,7 @@ if ( {) {
             </motion.div>
           )}
         </AnimatePresence>
-        {/* Contact Section */}
+{/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -2642,7 +2801,7 @@ if ( {) {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-        </AnimatePresence>;
+</AnimatePresence>;
         {/* Contact Section */}
         <section className='py-20'>;
           <div className='container mx-auto px-4 text-center'>;
@@ -2717,6 +2876,36 @@ if ( {) {
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
+                 >
+                   Start Free Trial
+                   <Rocket className=&quot;ml-2 w-5 h-5&quot; />
+                 </Button>
+                 <Button 
+                   variant="futuristic" 
+                   size="lg"
+
+                 >
+                   Schedule Demo
+                   <Calendar className=&quot;ml-2 w-5 h-5&quot; />
+                 </Button>
+              </div>
+
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 text-center&quot;>
+                <div>
+                  <Phone className=&quot;w-8 h-8 text-cyan-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.mobile}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Call us anytime</div>
+                </div>
+                <div>
+                  <Mail className=&quot;w-8 h-8 text-purple-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.email}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Email us 24/7</div>
+                </div>
+                <div>
+                  <MapPin className=&quot;w-8 h-8 text-green-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.address}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Visit our office</div>
+
                 </div>
               </div>
             </motion.div>
@@ -2724,7 +2913,7 @@ if ( {) {
         </section>
       </div>
     </UltraFuturisticBackground>
-                >;
+>;
                   Schedule Demo;
                   <Calendar className='ml-2 w-5 h-5' />;
                 </Button>;

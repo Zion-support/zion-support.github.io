@@ -141,7 +141,7 @@ interface SearchResult {
   type: string,
   slug: string,
   relevance: number,
-  features?: string[];
+features?: string[];
   pricing?: {
     starter?: string;
     enterprise?: string
@@ -171,6 +171,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     'AI ConsciousnessQuantum ComputingCybersecurityBusiness IntelligenceSpace TechnologyAutonomous Systems'
   ]);
   // Mock search results - in real app, this would come from API
+
+  // Mock search results - in real app, _this would come from API
+
   const mockSearchResults: SearchResult[] = [
     {
       id: '1',
@@ -182,7 +185,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 95,
       features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],
       pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
-    };
+};
     {
       id: '2',
       name: 'Quantum AI Hybrid Computing',
@@ -193,7 +196,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 92,
       features: ['Quantum SupremacyAI IntegrationHybrid Computing'],
       pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
-    };
+};
     {
       id: '3',
       name: 'Quantum Cybersecurity Intelligence',
@@ -205,19 +208,19 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       features: ['Quantum ResistanceThreat PredictionAI Security'],
       pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
     }
-  ];
+];
   const categories = [
     { id: 'ai', name: 'AI & ML', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { id: 'quantum', name: 'Quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
     { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-500' },
     { id: 'business', name: 'Business', icon: Rocket, color: 'from-emerald-500 to-teal-500' }
-  ];
+];
   // Debounced search function
   const debouncedSearch = useCallback(
     useMemo(
       () => debounce((searchQuery: string) => {
         if (searchQuery.trim().length < 2) {
-          setResults([]);
+setResults([]);
           setShowResults(false);
           return
         }
@@ -288,22 +291,82 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   // Load search history from localStorage
   useEffect(() => {
     const savedHistory = localStorage.getItem('zion-search-history');
+          
+          setResults(sortedResults),
+          setShowResults(true),
+          setIsSearching(false)
+        }, 300)
+      }, 300),
+      [selectedFilters]
+    ),
+    [selectedFilters]
+  ),
+
+  useEffect(() => {
+    debouncedSearch(query)
+  }, [query, debouncedSearch]),
+
+  // Handle search input change
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setQuery(value),
+
+  // Close search on outside click
+  useEffect__(() => {_const _handleClickOutside = (_event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    },
+
+  // Handle search submission
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault(),
+    if (query.trim()) {
+      onSearch(query),
+      addToSearchHistory(query),
+      setShowResults(false)
+    }
+  }, [router, handleSearch]),
+
+  // Handle quick action click
+  const handleQuickAction = useCallback((action: string) => {
+    router.push(action),
+    setIsOpen(false)
+  }, [router]),
+
+  // Add search to history
+  const addToSearchHistory = (searchTerm: string) => {
+    const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5),
+    setSearchHistory(newHistory),
+    localStorage.setItem('zion-search-history', JSON.stringify(newHistory))
+  },
+
+  // Load search history from localStorage
+  useEffect(() => {
+    const savedHistory = localStorage.getItem('zion-search-history')
+
     if (savedHistory) {
       try {
         setSearchHistory(JSON.parse(savedHistory))
       } catch (error) {
         console.error('Failed to parse search history:', error)
       }
-    }
+}
   }, []);
   // Handle filter toggle
   const toggleFilter = (filterId: string) => {
-    setSelectedFilters(prev => 
+    setSelectedFilters(prev =>
+    }
+  }, []),
+
+  // Handle filter toggle
+  const _toggleFilter = (_filterId: string) => {_setSelectedFilters(prev => 
+
       prev.includes(filterId) 
         ? prev.filter(id => id !== filterId)
         : [...prev, filterId]
     )
-  };
+};
   // Handle result selection
   const handleResultSelect = (result: SearchResult) => {
     onResultSelect(result);
@@ -349,7 +412,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
           </button>
         </div>
       </form>
-      {/* Search Results Dropdown */}
+{/* Search Results Dropdown */}
       <AnimatePresence>
         {showResults && (
           <motion.div
@@ -367,7 +430,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                   <span className="text-sm font-medium text-gray-300">Filter by Category</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {categories.map((category) => (
+{categories.map((category) => (
                     <button
                       key={category.id}
                       onClick={() => toggleFilter(category.id)}
@@ -378,12 +441,12 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       }`}
                     >
                       <category.icon className="w-3 h-3" />
-                      {category.name}
+{category.name}
                     </button>
                   )}
                   <div className="flex-shrink-0 pr-4">
                     <button
-                      onClick={() => handleSearch()}
+onClick={() => handleSearch()}
                       disabled={isSearching || !query.trim()}
                       className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
@@ -416,7 +479,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                           ))}
                         </div>
                       </div>
-                      {/* Suggestions */}
+{/* Suggestions */}
                       <div className="max-h-64 overflow-y-auto">
                         {suggestions.map((suggestion) => (
                           <button
@@ -442,14 +505,14 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 </AnimatePresence>
               </div>
             )}
-            {/* Search Results */}
+{/* Search Results */}
             <div className="p-4">
               {isSearching ? (
                 <div className="flex items-center justify-center py-8">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
                   <span className="ml-3 text-gray-400">Searching...</span>
                 </div>
-              ) : results.length > 0 ? (
+) : results.length > 0 ? (
                 <div className="space-y-3">
                   {results.map((result) => (
                     <motion.div
@@ -475,7 +538,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         </div>
                         <div className="flex items-center gap-1 text-cyan-400">
                           <Star className="w-4 h-4 fill-current" />
-                          <span className="text-xs">{result.relevance}</span>
+<span className="text-xs">{result.relevance}</span>
                         </div>
                       </div>
                     </motion.div>
@@ -483,7 +546,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 </div>
               ) : query.trim().length > 0 ? (
                 <div className="text-center py-8">
-                  <div className="text-gray-400 mb-2">No results found for "{query}"</div>
+<div className="text-gray-400 mb-2">No results found for "{query}"</div>
                   <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div>
                 </div>
               ) : (
@@ -496,7 +559,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         <span className="text-sm font-medium text-gray-300">Recent Searches</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
-                        {searchHistory.map((term, index) => (
+{searchHistory.map((term, index) => (
                           <button
                             key={index}
                             onClick={() => setQuery(term)}
@@ -508,14 +571,14 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       </div>
                     </div>
                   )}
-                  {/* Popular Searches */}
+{/* Popular Searches */}
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       <TrendingUp className="w-4 h-4 text-gray-400" />
                       <span className="text-sm font-medium text-gray-300">Popular Searches</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {popularSearches.map((term, index) => (
+{popularSearches.map((term, index) => (
                         <button
                           key={index}
                           onClick={() => setQuery(term)}
@@ -542,7 +605,7 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout)
+clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
   opacity: 0, y: -10 

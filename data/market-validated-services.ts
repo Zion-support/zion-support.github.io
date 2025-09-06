@@ -4,7 +4,7 @@ import { ServiceVariant } from '../types / service - variants';
   name: string;
   tagline: string;
   price: string;
-  period: string;
+period: string;
   description: string;
   features: string[];
   category: string;

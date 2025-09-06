@@ -313,7 +313,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     memoryUsage: 0,
     batteryLevel: 0,
     networkSpeed: 'unknown'
-  });
+});
   const [showMobilePanel, setShowMobilePanel] = useState(false);
   const touchStartRef = useRef<{ x: number, y: number, time: number } | null>(null),
   const touchMoveRef = useRef<{ x: number, y: number, time: number } | null>(null),
@@ -328,11 +328,15 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       const isTabletDevice = /ipad|android(?!.*mobile)|tablet/g.test(userAgent);
       setIsMobile(isMobileDevice);
       setIsTablet(isTabletDevice);
+      
+      setIsMobile(isMobileDevice),
+      setIsTablet(isTabletDevice),
+
       // Apply mobile-specific optimizations
       if (isMobileDevice && enableMobileLayout) {
         applyMobileLayout()
       }
-      if (isMobileDevice && enablePerformanceMode) {
+if (isMobileDevice && enablePerformanceMode) {
         enableMobilePerformanceMode()
       }
     };
@@ -364,6 +368,34 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   useEffect(() => {
     if (!enableTouchGestures || !isMobile) return;
     const handleTouchStart = (e: TouchEvent) => {
+
+    checkDevice(),
+    window.addEventListener('resize', checkDevice),
+    return () => window.removeEventListener('resize', checkDevice)
+  }, [enableMobileLayout, enablePerformanceMode]),
+
+  // Detect orientation changes
+  useEffect(() => {
+    const checkOrientation = () => {
+      const newOrientation = window.innerHeight > window.innerWidth ? 'portrait' : 'landscape'
+      setOrientation(newOrientation),
+
+    checkOrientation(),
+    window.addEventListener('orientationchange', checkOrientation),
+    window.addEventListener('resize', checkOrientation),
+    
+    return () => {
+      window.removeEventListener('orientationchange', checkOrientation),
+      window.removeEventListener('resize', checkOrientation)
+    }
+  }, []),
+
+  // Touch gesture handling
+  useEffect(() => {
+    if (!enableTouchGestures || !isMobile) return,
+
+    const _handleTouchStart = (_e: TouchEvent) => {
+
       if (e.touches.length === 1) {
         touchStartRef.current = {
           x: e.touches[0].clientX,
@@ -371,7 +403,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           time: Date.now()
         }
       }
-    };
+};
     const handleTouchMove = (e: TouchEvent) => {
       if (e.touches.length === 1 && touchStartRef.current) {
         touchMoveRef.current = {
@@ -379,7 +411,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           y: e.touches[0].clientY,
           time: Date.now()
         }
-      }
+}
     });
     setTimeout(() => setIsOptimizing(false), 2000)
   }, []);
@@ -480,7 +512,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         } else if (connection.downlink) {
           speed = `${connection.downlink} Mbps`
         }
-        setPerformanceMetrics(prev => ({
+setPerformanceMetrics(prev => ({
           ...prev;
           networkSpeed: speed
         }))
@@ -517,7 +549,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         duration
       }
     }
-  };
+};
   const handleGestureAction = (gesture: TouchGesture) => {
     switch (gesture.type) {
       case 'swipe':
@@ -537,7 +569,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         } else if (gesture.direction === 'down') {
           // Scroll to bottom
           window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
-        }
+}
         break;
       case 'longPress':
         // Show context menu or additional options
@@ -555,17 +587,40 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     }
     // Add touch-action CSS
     const style = document.createElement('style');
+        }
+        break,
+      case 'longPress':
+        // Show context menu or additional options
+        console.log('Long press detected'),
+        break
+        break;
+
+    }
+  },
+
+  const applyMobileLayout = () => {
+    // Add mobile-specific CSS classes
+    document.documentElement.classList.add('mobile-optimized'),
+    
+    // Optimize viewport
+    if (viewport) {
+      viewport.setAttribute('contentwidth=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    }
+    
+    // Add touch-action CSS
+    const style = document.createElement('style')
+
     style.textContent = `
       .mobile-optimized * {
         touch-action: manipulation,
         -webkit-tap-highlight-color: transparent
       }
-      .mobile-optimized button;
+.mobile-optimized button;
       .mobile-optimized a {
         min-height: 44px,
         min-width: 44px
       }
-      .mobile-optimized input;
+.mobile-optimized input;
       .mobile-optimized select;
       .mobile-optimized textarea {
         font-size: 16px, /* Prevents zoom on iOS */
@@ -586,7 +641,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.documentElement.classList.add('reduced-motion')
     }
-  };
+};
   const applyLandscapeOptimizations = () => {
     // Landscape-specific optimizations
     document.documentElement.classList.add('landscape-mode');
@@ -597,7 +652,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         width: 300px,
         height: 100vh
       }
-    `;
+`;
     document.head.appendChild(style)
   };
   const applyPortraitOptimizations = () => {
@@ -663,11 +718,58 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       {/* Mobile Optimization Panel */}
       <AnimatePresence>
         {showMobilePanel && (
+
+    mediaQuery.addEventListener('change', handleMediaQueryChange),
+    
+    return () => {
+      window.removeEventListener('orientationchange', handleOrientationChange),
+      window.removeEventListener('resize', handleResize),
+      mediaQuery.removeEventListener('change', handleMediaQueryChange)
+    }
+  }, [handleOrientationChange, handleResize]),
+
+  if (!showPanel || !isVisible) return null,
+
+  const getDeviceIcon = (type: string) => {
+    switch (type) {
+    }
+  },
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'success': return <CheckCircle className="w-4 h-4 text-green-400" />,
+      case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-400" />,
+      case 'error': return <AlertTriangle className="w-4 h-4 text-red-400" />,
+      default: return <CheckCircle className="w-4 h-4 text-gray-400" />
+    }
+  },
+    }
+  },
+  const _getDeviceIcon = (_type: string) => {_switch (type) {
+      case 'mobile': return <Smartphone className="w-5 h-5" />;
+      case 'tablet': return <Tablet className="w-5 h-5" />;
+      default: return <Monitor className="w-5 h-5" />;}
+  };
+
+  const _getStatusIcon = (_status: string) => {_switch (status) {
+      case 'success': return <CheckCircle className="w-4 h-4 text-green-400" />;
+      case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
+      case 'error': return <AlertTriangle className="w-4 h-4 text-red-400" />;
+      default: return <CheckCircle className="w-4 h-4 text-gray-400" />;}
+  };
+
+  return (_<>
+      {_children}
+      
+      {_/* Mobile Optimization Panel */}
+      <AnimatePresence>
+        {_showMobilePanel && (
+
           <motion.div
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
-            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l border-cyan-500/30 z-40 overflow-y-auto"
+className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l border-cyan-500/30 z-40 overflow-y-auto"
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
@@ -679,7 +781,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                   ×
                 </button>
               </div>
-              {/* Device Information */}
+{/* Device Information */}
               <div className="mb-6 p-4 bg-cyan-500/20 border border-cyan-500/30 rounded-lg">
                 <h3 className="text-sm font-medium text-cyan-400 mb-2">Device Info</h3>
                 <div className="space-y-1 text-xs text-gray-300">
@@ -688,7 +790,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                   <div>User Agent: {navigator.userAgent.substring(0, 50)}...</div>
                 </div>
               </div>
-              {/* Performance Metrics */}
+{/* Performance Metrics */}
               <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
                 <h3 className="text-sm font-medium text-green-400 mb-2">Performance</h3>
                 <div className="space-y-1 text-xs text-gray-300">
@@ -698,7 +800,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                   <div>Network: {performanceMetrics.networkSpeed}</div>
                 </div>
               </div>
-              {/* Touch Support */}
+{/* Touch Support */}
               <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
@@ -712,7 +814,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                   ))}
                 </div>
               </div>
-              {/* Optimization Controls */}
+{/* Optimization Controls */}
               <div className="space-y-4">
                 <h3 className="text-sm font-medium text-white">Optimizations</h3>
                 <div className="flex items-center justify-between">
@@ -740,7 +842,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                   </button>
                   <button
                     onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
-                    className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors"
+className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors"
                   >
                     Scroll to Bottom
                   </button>
@@ -750,7 +852,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-      {/* Mobile Toggle Button */}
+{/* Mobile Toggle Button */}
       <button
         onClick={() => setShowMobilePanel(!showMobilePanel)}
         className="fixed top-4 right-4 z-50 p-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500/50"
@@ -766,16 +868,18 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           touch-action: manipulation,
           -webkit-tap-highlight-color: transparent
         }
+
         .mobile-performance-mode * {
           animation-duration: 0.3s !important,
           transition-duration: 0.3s !important
         }
+
         .reduced-motion * {
           animation-duration: 0.01ms !important,
           animation-iteration-count: 1 !important,
           transition-duration: 0.01ms !important
         }
-        .landscape-mode .mobile-panel {
+.landscape-mode .mobile-panel {
           width: 300px
         }
         @media (max-width: 768px) {
@@ -789,6 +893,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           .mobile-optimized textarea {
             font-size: 16px
           }
+
         }
       `}</style>
     </>

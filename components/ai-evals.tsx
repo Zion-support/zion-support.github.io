@@ -150,7 +150,7 @@ export default function AIEvalsPage() {
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	};
+};
 	const features = [
 		'Golden datasets and synthetic evalsHallucination and grounding scoreToxicity, bias and safety metricsLLM version comparison reportsCI quality gates and webhooksLatency and cost KPIs with budgets'
 	];
@@ -174,11 +174,34 @@ export default function AIEvalsPage() {
 								<ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
 									{features.map((f) => (
 										<li key={f} className="flex items-start gap-2 text-gray-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /> <span>{f}</span></li>
+
+	return (_<QuantumHolographicMatrixBackground>
+			<Head>
+				<title>AI Evals & Observability | Zion Tech Group</title>
+				<meta name=&quot;description&quot; content=&quot;Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.&quot; />
+				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-evals&quot; />
+			</Head>
+
+			<section className=&quot;min-h-screen pt-28 pb-20 px-4&quot;>
+				<div className=&quot;max-w-6xl mx-auto&quot;>
+					<div className=&quot;text-center mb-12&quot;>
+						<h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent&quot;>AI Evals & Observability</h1>
+						<p className=&quot;mt-4 text-xl text-gray-300&quot;>Continuous evaluation, drift detection, and quality gates to ship safe, trustworthy AI.</p>
+					</div>
+
+					<div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10&quot;>
+						<Card className=&quot;lg:col-span-2 bg-black/30 border border-cyan-500/30&quot;>
+							<div className=&quot;p-6&quot;>
+								<h2 className=&quot;text-2xl font-semibold text-white mb-4&quot;>What you get</h2>
+								<ul className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
+									{features.map((f) => (
+										<li key={f} className=&quot;flex items-start gap-2 text-gray-200&quot;><Check className=&quot;w-5 h-5 text-emerald-400 mt-0.5&quot; /> <span>{f}</span></li>
+
 									))}
 								</ul>
 							</div>
 						</Card>
-						<Card className="bg-black/30 border border-cyan-500/30">
+<Card className="bg-black/30 border border-cyan-500/30">
 							<div className="p-6">
 								<div className="text-3xl font-bold text-white">Starting at $99<span className="text-base text-gray-400">/month</span></div>
 								<div className="text-sm text-gray-400 mt-1">14-day trial • Setup: 45 minutes</div>
@@ -189,7 +212,7 @@ export default function AIEvalsPage() {
 							</div>
 						</Card>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
 						<Card className="p-6 bg-black/30 border border-purple-500/30">
 							<h3 className="text-lg font-semibold mb-2">Guardrails & Policies</h3>
 							<p className="text-gray-300 text-sm">Safety checks for toxicity, PII/PHI, jailbreaks and policy enforcement before responses reach users.</p>

@@ -22,3 +22,6 @@ function handler() {
   return res.status (200).json ({ paused: state.config.paused });
 }
 ;
+
+}
+

@@ -36,3 +36,22 @@ const Messages: NextPage = () => {
     </div>);
 },
 export default Messages,
+      <Head>
+        <title>Messages - Zion</title>
+      </Head>
+
+      <h1 className=&quot;text-2xl font-semibold&quot;>Messages</h1>
+
+      <EmptyState
+        title=&quot;No messages yet&quot;
+        description=&quot;Start a conversation by requesting a quote or responding to an existing one.&quot;
+        icon={<span>📫</span>}
+        primaryAction={_{ label: 'Explore talent', _href: '/talent'}}
+        secondaryAction={_{ label: 'Browse services', _href: '/services'}}
+      />
+    </div>
+  )
+},
+
+export default Messages
+

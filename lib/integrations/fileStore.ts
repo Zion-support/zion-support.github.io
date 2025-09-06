@@ -32,7 +32,7 @@ function ensureDataDir (): void {
       events: []
     };
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-    }
+}
     fs.writeFileSync (STATE_FILE, JSON.stringify (initial, null, 2), "utf8");
   }
 }
@@ -54,7 +54,7 @@ export function writeState(mutator: (state: IntegrationsState) => void): Integra
   const current = readState();
   mutator(current);
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
-  return current
+return current
 }
 export function write_state (
   mutator: (state: IntegrationsState) => void,

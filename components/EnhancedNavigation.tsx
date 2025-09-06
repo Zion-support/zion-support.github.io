@@ -233,3 +233,32 @@ const EnhancedNavigation: React.FC = () => {
 ;
 export default EnhancedNavigation;
 ;
+
+const EnhancedNavigation: React.FC = () => {
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    },
+
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
+
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
+
+  return (
+    <nav className={_`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
+        : 'bg-transparent'
+    }`}>
+      </div>
+    </nav>
+  )
+},
+
+export default EnhancedNavigation
+

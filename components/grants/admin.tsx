@@ -419,7 +419,7 @@ if (return) {
       <div className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
           <div className="mb-3 flex items-center gap-2">
-            <input className="border rounded p-2" placeholder="Admin Token" value={token} onChange={(e) => setToken(e.target.value)} />
+<input className="border rounded p-2" placeholder="Admin Token" value={token} onChange={(e) => setToken(e.target.value)} />
           </div>
           <div className="grid gap-3">
             {items.map((g) => (
@@ -434,11 +434,12 @@ if (return) {
                     <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={() => setStatus(g.id, 'Approved')}>Approve</button>
                     <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={() => setStatus(g.id, 'Rejected')}>Reject</button>
                     <button className="px-2 py-1 border rounded" onClick={() => setSelected(g)}>Milestones</button>
+
                   </div>
                 </div>
               </div>
             ))}
-            {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
+{items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
           </div>
         </div>
         <div>
@@ -471,7 +472,7 @@ if (return) {
         </div>
       </div>
     </EnhancedLayout>
-                    onClick={saveMilestones}>;
+onClick={saveMilestones}>;
                     Save Milestones;
                   </button>;
                 </div>;

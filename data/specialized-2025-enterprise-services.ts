@@ -764,7 +764,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
   }
 ;
   // Space Technology Services;
-  {
+{
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';

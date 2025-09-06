@@ -1,10 +1,11 @@
 const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-catalog-lineage'));
   if (!service) return null;
+
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
+<meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/data-catalog-lineage" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">

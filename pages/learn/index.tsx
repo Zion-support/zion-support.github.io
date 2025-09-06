@@ -120,3 +120,31 @@ function load() {
         </div>)}
     </div>);
 ;
+    }
+    load()
+  }, [filters]),
+
+  return (
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;flex items-end justify-between gap-4&quot;>
+        <div>
+          <h1 className=&quot;text-2xl font-semibold&quot;>Zion Academy</h1>
+          <div className=&quot;text-gray-500 text-sm&quot;>Courses • Certifications • Career Boost</div>
+        </div>
+      </div>
+
+      <FilterBar {_...filters} onChange={_setFilters} />
+
+      {_loading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
+          {courses.map((c) => (
+            <CourseCard key={c.id} course={_c} />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+

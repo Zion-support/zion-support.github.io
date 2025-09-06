@@ -212,11 +212,12 @@ import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
+<meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/wcag-accessibility-scanner" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -253,7 +254,7 @@ export default function WCAGScannerPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);
 }
     </UltraAdvancedFuturisticBackground>);
 }

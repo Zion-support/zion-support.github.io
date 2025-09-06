@@ -324,17 +324,111 @@ const AIBusinessIntelligence: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+
+  const useCases = [
+    {
+      industry: &quot;Retail & E-commerce&quot;,
+      description: &quot;Customer segmentation, inventory optimization, and demand forecasting&quot;,
+      results: &quot;35% increase in conversion rates, 25% reduction in inventory costs&quot;
+    },
+    {
+      industry: &quot;Financial Services&quot;,
+      description: &quot;Risk assessment, fraud detection, and portfolio optimization&quot;,
+      results: &quot;40% improvement in risk prediction, 60% faster fraud detection&quot;
+    },
+    {
+      industry: &quot;Healthcare&quot;,
+      description: &quot;Patient outcome prediction, resource allocation, and treatment optimization&quot;,
+      results: &quot;30% improvement in patient outcomes, 20% reduction in operational costs&quot;
+    },
+    {
+      industry: &quot;Manufacturing&quot;,
+      description: &quot;Predictive maintenance, quality control, and supply chain optimization&quot;,
+      results: &quot;45% reduction in downtime, 35% improvement in product quality&quot;
+    }
+  ],
+
+  const pricing = [
+    {
+      plan: &quot;Starter&quot;,
+      price: &quot;$499&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Perfect for small businesses getting started with AI&quot;,
+      features: [
+        &quot;Basic predictive analytics&quot;,
+        &quot;5 customizable dashboards&quot;,
+        &quot;Standard reporting&quot;,
+        &quot;Email support&quot;,
+        &quot;Up to 10 users&quot;
+      ],
+      popular: false
+    },
+    {
+      plan: &quot;Professional&quot;,
+      price: &quot;$1,299&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Advanced features for growing businesses&quot;,
+      features: [
+        &quot;Advanced predictive analytics&quot;,
+        &quot;Unlimited dashboards&quot;,
+        &quot;Custom reporting&quot;,
+        &quot;Priority support&quot;,
+        &quot;Up to 50 users&quot;,
+        &quot;API access&quot;,
+        &quot;Custom integrations&quot;
+      ],
+      popular: true
+    },
+    {
+      plan: &quot;Enterprise&quot;,
+      price: &quot;Custom&quot;,
+      period: "&quot;,
+      description: &quot;Full-scale solution for large organizations&quot;,
+      features: [
+        &quot;Everything in Professional&quot;,
+        &quot;Custom AI models&quot;,
+        &quot;Dedicated support team&quot;,
+        &quot;Unlimited users&quot;,
+        &quot;On-premise deployment&quot;,
+        &quot;Custom training&quot;,
+        &quot;SLA guarantees&quot;
+      ],
+      popular: false
+    }
+  ],
+
+  return (_<>
+      <Head>
+        <title>AI Business Intelligence - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights to drive growth and efficiency.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI business intelligence, predictive analytics, business analytics, data insights, machine learning, business intelligence platform&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;AI Business Intelligence - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/ai-business-intelligence" />
+      </Head>
+
+      <EnhancedNavigation />
+
+      {_/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={_{ opacity: 0, _y: 20}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.6}}
+
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+<span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 {" "}Business Intelligence
               </span>
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
               Transform raw data into actionable insights with our advanced AI platform. 
-              Make data-driven decisions, predict future trends, and optimize every aspect of your business 
+Make data-driven decisions, predict future trends, and optimize every aspect of your business
               with machine learning-powered analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -343,13 +437,13 @@ const AIBusinessIntelligence: React.FC = () => {
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Get Started Today
-              </a>
+</a>
               <a
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Watch Demo
-              </a>
+</a>
             </div>
           </motion.div>
         </div>
@@ -374,7 +468,7 @@ const AIBusinessIntelligence: React.FC = () => {
               Everything you need to transform your business data into strategic insights.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -417,7 +511,7 @@ const AIBusinessIntelligence: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
@@ -427,7 +521,7 @@ const AIBusinessIntelligence: React.FC = () => {
                 From increased revenue to reduced costs, see the difference data-driven decisions can make.
               </p>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
+{benefits.map((benefit, index) => (
                   <motion.div
         <title > AI Business Intelligence - Zion Tech Group</title>;
         <meta;
@@ -574,7 +668,7 @@ const AIBusinessIntelligence: React.FC = () => {
           </div>
         </div>
       </section>
-              </div>;
+</div>;
             </motion && motion.div>;
             <motion&& motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -626,7 +720,7 @@ const AIBusinessIntelligence: React.FC = () => {
               See how businesses across different industries are leveraging AI to transform their operations.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
@@ -672,7 +766,7 @@ const AIBusinessIntelligence: React.FC = () => {
               Choose the plan that fits your business needs. All plans include our core AI features.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
@@ -839,7 +933,7 @@ const AIBusinessIntelligence: React.FC = () => {
                     Most Popular
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-slate-900 mb-2">
                     {plan.price}
@@ -860,7 +954,7 @@ const AIBusinessIntelligence: React.FC = () => {
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
-                </a>
+</a>
               </motion.div>
             ))}
           </div>;
@@ -905,18 +999,18 @@ const AIBusinessIntelligence: React.FC = () => {
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
-              </a>
+</a>
               <a
                 href="/contact"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Schedule Demo
-              </a>
+</a>
             </div>
           </motion.div>
         </div>
       </section>
-      <EnhancedFooter />
+<EnhancedFooter />
     </>
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
                 Schedule Demo;

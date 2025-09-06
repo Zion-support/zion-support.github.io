@@ -130,6 +130,16 @@ const hasPrice = (result: SearchResult): result is ProductSearchResult =>
   result.type === 'product' || result.type === 'equipment';
 const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
   result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
+
+type SearchResult = ProductSearchResult | TalentSearchResult | BlogSearchResult | CategorySearchResult,
+
+// Type guard functions
+const hasPrice = (result: SearchResult): result is ProductSearchResult => 
+  result.type === 'product' || result.type === 'equipment',
+
+const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
+  result.type === 'product' || result.type === 'equipment' || result.type === 'talent',
+
 interface SearchResultsPageProps {
   initialResults: SearchResult[],
   query: string,
@@ -195,7 +205,7 @@ function offline_search (
     image: p.images?.[0],
     price: p.price ?? undefined,
     rating: p.rating,
-    author: p.author;
+author: p.author;
       ? { name: p.author.name, avatar: p.author.avatar_url }
       : undefined,
     tags: p.tags,
@@ -218,7 +228,7 @@ function offline_search (
     author: { name: t.full_name, avatar: t.profile_picture_url },
     tags: t.skills,
     category: t.location,
-    date: undefined,
+date: undefined,
   }));
 ;
   const blog_results = BLOG_POSTS.filter (
@@ -231,7 +241,7 @@ function offline_search (
     description: b.excerpt,
     type: 'blog' as const,
     slug: b.slug,
-    image: b.featured_image,
+image: b.featured_image,
     tags: b.tags,
     category: 'Blog',
   const productResults = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(;
@@ -316,7 +326,7 @@ function offline_search (
       return true
     })
   }
-  if (typeof filters.maxPrice === 'number') {
+if (typeof filters.maxPrice === 'number') {
     all = all.filter(r => {
       if (r.type === 'product') {
         return (r.price ?? 0) <= filters.maxPrice!
@@ -395,7 +405,7 @@ function offline_search (
   } else {
     all.sort((a, b) => a.title.localeCompare(b.title))
   }
-  const start = (page - 1) * limit;
+const start = (page - 1) * limit;
   const paginated = all && all.slice(start, start + limit);
   return { results: paginated, totalCount: all && all.length };
 export default function SearchResultsPage(): any ({;
@@ -490,12 +500,12 @@ export default function SearchResultsPage(): any ({;
     } catch (error) {
       logErrorToProduction('Error fetching search results:', { data: error }),
       const offline = offlineSearch(searchTerm, page, 12, {
-        sortBy;
+sortBy;
         category: categoryFilter !== 'all' ? categoryFilter : undefined,
         minPrice: minPrice ? Number(minPrice) : undefined,
         maxPrice: maxPrice ? Number(maxPrice) : undefined,
         minRating: minRating ? Number(minRating) : undefined}),
-      setTotalResults(offline.totalCount);
+setTotalResults(offline.totalCount);
       if (page === 1) {
         setResults(offline.results)
       } else {
@@ -504,7 +514,7 @@ export default function SearchResultsPage(): any ({;
     } finally {
       setLoading(false)
     }
-  };
+};
   // Handle search input change
   const handleSearch = (newQuery: string) => {
     setSearchQuery(newQuery)
@@ -519,7 +529,7 @@ export default function SearchResultsPage(): any ({;
     if (debouncedQuery.trim()) {
       fetchResults(debouncedQuery, 1)
     } else {
-      setResults([]);
+setResults([]);
       setTotalResults(0)
     }
   }, [debouncedQuery]);
@@ -550,7 +560,7 @@ export default function SearchResultsPage(): any ({;
       categoryFilter &&
       r.category !== categoryFilter
     ) {
-  // Load more results;
+// Load more results;
   const loadMore = () => {;
     const nextPage = currentPage + 1;
     setCurrentPage(nextPage);
@@ -824,7 +834,7 @@ if ( {) {
       if ((r.rating ?? 0) < Number(minRating)) {
         return false
       }
-    }
+}
     return true
   });
   // Group results by type for better display
@@ -932,6 +942,34 @@ if (acc[result.type] = []) {
       case 'talent':;
         return (
           <div key={result.id} data - testid='result - card'>            <TalentCard;
+    return true
+  }),
+
+  // Group results by type for better display
+  const groupedResults = filteredResults.reduce(
+    (acc, result) => {
+      if (!acc[result.type]) acc[result.type] = [],
+      acc[result.type]!.push(result),
+      return acc
+    },
+    {} as Record<string SearchResult[]>),
+
+  const _renderResultCard = (_result: SearchResult) => {_switch (result.type) {
+      case 'product':
+      case 'equipment':
+        return (
+          <div key={result.id} data-testid=&quot;result-card&quot;>
+            <ProductCard
+              product={_{
+                id: result.id, _name: result.title, _title: result.title, _description: result.description || '', _price: result.price || 0, _images: result.image ? [result.image] : [], _rating: result.rating || 0, _reviewCount: 0, _tags: result.tags || [], _category: result.category || '', _currency: '$', _created_at: new Date().toISOString(), _updated_at: new Date().toISOString(), _stock: (result as any).stock, _in_stock: ((result as any).stock || 0) > 0}}
+            />
+          </div>
+        ),
+      case 'talent':
+        return (
+          <div key={result.id} data-testid=&quot;result-card&quot;>
+            <TalentCard
+
               talent={{
                 id: result.id,
                 user_id: result.id,
@@ -946,7 +984,7 @@ if (acc[result.type] = []) {
                 is_verified: false,
                 availability_type: 'available'}}
               onViewProfile={(id: string) => {
-          <div key={result.id} data-testid="result-card">
+<div key={result.id} data-testid="result-card">
             <CategoryCard
               title={result.title}
               description={result.description |''}
@@ -976,7 +1014,7 @@ if (acc[result.type] = []) {
           </div>
         )
     }
-  };
+};
           >;
             <h3 className='font-semibold'>{result && result.title}</h3>;
             <p className='text-gray-600 dark:text-gray-200'>;
@@ -1190,7 +1228,7 @@ if (acc[result.type] = []) {
                     </option>
                   ))}
                 </select>
-                <div className="flex items-center gap-1">
+<div className="flex items-center gap-1">
                   <input
                     type="number"
                     placeholder="Min $"
@@ -1267,7 +1305,7 @@ if (acc[result.type] = []) {
               </div>
             </div>
           </div>
-                >;
+>;
                   <List className='h-4 w-4' />                </Button>;
               </div>;
             </div>;
@@ -1327,7 +1365,7 @@ if (acc[result.type] = []) {
                     ) : (
                       'Load More Results'
                     )}
-                  </Button>;
+</Button>;
                 </div>;
               )}
             </div>;

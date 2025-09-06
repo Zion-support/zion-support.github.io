@@ -8,7 +8,7 @@ export type Trend = {
   title: string,
   highlights: string[],
   summary: string,
-  tags: string[];
+tags: string[];
 }
 ;
 export async /**
@@ -93,4 +93,11 @@ function AiTrendsPage() {
           </div>))}
       </div>;
     </div>);
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+
 }

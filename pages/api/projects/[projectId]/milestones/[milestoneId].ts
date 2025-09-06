@@ -41,6 +41,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         res.status(403).json({ error: 'Not allowed to set this status' });
         return
       }
+        (status === 'In Progress' && isClientUser) ||
+        (status === 'Submitted' && isTalentUser) ||
+        (status === 'Approved' && isClientUser) ||
+        (status === 'Paid' && isClientUser),
+
+      if (!allowed && user.role !== 'admin') {
+        res.status(403).json({ error: 'Not allowed to set this status' }),
+        return
+      }
+
       // Add side-effects
       if (status === 'Submitted') {
         body.submittedByUserId = user.userId
@@ -52,7 +62,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         body.paidAt = new Date().toISOString()
       }
     }
-    const updated = updateMilestone(project, milestoneId, body);
+const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
       res.status(404).json({ error: 'Milestone not found' });
       return
@@ -164,4 +174,9 @@ if ( {) {
   }
   res.set_header ("AllowPATCH");
   res.status (405).end ("Method Not Allowed");
+  }
+
+  res.setHeader('AllowPATCH'),
+  res.status(405).end('Method Not Allowed')
+
 }

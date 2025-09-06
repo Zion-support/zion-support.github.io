@@ -5529,6 +5529,71 @@ export default function ServicesAdvertisingPage() {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Featured Offerings</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+export default function ServicesAdvertisingPage() {
+	return (
+		<div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8&quot;>
+			<SEO title=&quot;Services Advertising | Zion Tech Group&quot; description=&quot;Features, benefits, and market references for Zion Tech Group services&quot; url=&quot;https://ziontechgroup.com/services-advertising/&quot; />
+			<div className=&quot;max-w-6xl mx-auto space-y-10&quot;>
+				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>Services Advertising</h1>
+
+				{/* Quick contact */}
+				<div className=&quot;flex flex-col md:flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800&quot;>
+					<a href=&quot;tel:+13024640950&quot; className=&quot;px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white&quot;>Call +1 302 464 0950</a>
+					<a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white&quot;>Email kleber@ziontechgroup.com</a>
+					<a href=&quot;/pricing&quot; className=&quot;px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300&quot;>View Pricing</a>
+					<div className=&quot;text-slate-400 text-sm&quot;>
+						<span className=&quot;block md:inline&quot;>Address: 364 E Main St STE 1008 Middletown DE 19709</span>
+						<span className=&quot;hidden md:inline mx-2&quot;>·</span>
+						<a className=&quot;text-cyan-400 underline&quot; href=&quot;https://ziontechgroup.com&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>ziontechgroup.com</a>
+					</div>
+				</div>
+
+				{/* New: Core micro SaaS and AI additions */}
+				<section className=&quot;space-y-6&quot;>
+					<h2 className=&quot;text-2xl font-semibold text-white&quot;>AI Social Media Manager</h2>
+					<p className=&quot;text-slate-300&quot;>Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
+					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
+						<li>Typical SMB budget: $20–$80/mo</li>
+						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
+						<li>Try: <a href=&quot;/services/ai-social-media-manager&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/ai-social-media-manager</a></li>
+					</ul>
+				</section>
+
+				<section className=&quot;space-y-6&quot;>
+					<h2 className=&quot;text-2xl font-semibold text-white&quot;>AI Resume & Cover Letter Builder</h2>
+					<p className=&quot;text-slate-300&quot;>ATS-optimized resumes and tailored cover letters with role-aware keywording and metric suggestions.</p>
+					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
+						<li>Typical budget: $8–$25/mo</li>
+						<li>References: {ext('https://www.rezi.ai/pricing')}, {ext('https://resume.io/pricing')}</li>
+						<li>Try: <a href=&quot;/services/ai-resume-cover-letter-builder&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/ai-resume-cover-letter-builder</a></li>
+					</ul>
+				</section>
+
+				<section className=&quot;space-y-6&quot;>
+					<h2 className=&quot;text-2xl font-semibold text-white&quot;>AI Document Summarizer</h2>
+					<p className=&quot;text-slate-300&quot;>Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
+					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
+						<li>Typical budget: $10–$30/mo + usage</li>
+						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
+						<li>Try: <a href=&quot;/services/ai-document-summarizer&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/ai-document-summarizer</a></li>
+					</ul>
+				</section>
+
+				<section className=&quot;space-y-6&quot;>
+					<h2 className=&quot;text-2xl font-semibold text-white&quot;>Subscription Manager Hub</h2>
+					<p className=&quot;text-slate-300&quot;>Track subscriptions, detect renewals from receipts, and get savings recommendations.</p>
+					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
+						<li>Typical budget: $5–$15/mo</li>
+						<li>References: {ext('https://www.rocketmoney.com/pricing')}</li>
+						<li>Try: <a href=&quot;/services/subscription-manager-hub&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/subscription-manager-hub</a></li>
+					</ul>
+				</section>
+
+          <section>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 text-center&quot;>Featured Offerings</h2>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+
               {[
                 { name: 'LLM Gateway & Cost Control', price: '$299/mo', href: '/llm-gateway' },
                 { name: 'API Observability Starter', price: '$149/mo', href: '/api-observability-starter' },
@@ -5540,7 +5605,7 @@ export default function ServicesAdvertisingPage() {
                 { name: 'SMB Website Analytics Dashboard', price: '$29/mo', href: '/services/smb-website-analytics-dashboard' },
                 { name: 'Customer Support Helpdesk Pro', price: '$79/mo', href: '/services/customer-support-helpdesk-pro' }
               ].map((o) => (
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
+<a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
@@ -5548,7 +5613,7 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-				<section className="space-y-6">
+<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Performance Testing</h2>
 					<p className="text-slate-300">Load, latency and regression testing with CI gates and dashboards.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -5599,7 +5664,7 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-				<section className="space-y-6">
+<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Podcast Transcription & Insights</h2>
 					<p className="text-slate-300">Transcripts, chapters, show notes, and SEO-ready blog pages.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -6791,12 +6856,13 @@ export default function ServicesAdvertisingPage() {
 					<a href="tel:+13024640950" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a>
 					<a href="mailto:kleber@ziontechgroup.com" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a>
 					<a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
+
 				</div>
 			</div>
 		</div>
 	)
 }
-  /* Quick contact */ ;
+/* Quick contact */ ;
 }<div className="flex flex-col md:flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800" > <a href="tel:+13024640950" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white" >Email kleber@ziontechgroup && ziontechgroup.com</a> <a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300" >View Pricing</a> <div className="text-slate-400 text-sm" > <span className="block md:inline" >Address: 364 E Main St STE 1008 Middletown DE 19709</span> <span className="hidden md:inline mx-2" >·</span> <a className="text-cyan-400 underline" href="https://ziontechgroup && ziontechgroup.com" target="blank" rel="noopener noreferrer" >ziontechgroup && ziontechgroup.com</a> </div> </div> </ul> </section> <section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >AI Resume & Cover Letter Builder</h2> <p className="text-slate-300" >ATS-optimized resumes and tailored cover letters with role-aware keywording and metric suggestions.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical budget: $8–$25/mo</li> </ul> </section> <section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >AI Document Summarizer</h2> <p className="text-slate-300" >Concise summaries with citations for PDFs, docs, and URLs with export options.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical budget: $10–$30/mo + usage</li> </ul> </section> <section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >Subscription Manager Hub</h2> <p className="text-slate-300" >Track subscriptions, detect renewals from receipts, and get savings recommendations.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical budget: $5–$15/mo</li> </ul> </section> <section> </a>) ) ;
 }</div> </section> <section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >API Performance Testing</h2> <p className="text-slate-300" >Load, latency and regression testing with CI gates and dashboards.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical budget: $30–$150/mo</li> </ul> </section> <section> </ul> <div className="text-sm text-slate-400 mt-3" >Typical: $99–$500/month + commissions.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical: $9–$59/month.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical: $15–$99/agent/month.</div> </div> </div> </section> <section> </a>) ) ;
 }</div> </section> <section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >Podcast Transcription & Insights</h2> <p className="text-slate-300" >Transcripts, chapters, show notes, and SEO-ready blog pages.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical budget: $10–$60/mo + usage</li> </ul> </section> <section id="ai-evaluation-orchestrator" className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >AI Evaluation Orchestrator</h2> <p className="text-slate-300" >Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical SMB budget: $50–$400/mo + API usage</li> <li>References: {;

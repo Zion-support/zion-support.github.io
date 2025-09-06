@@ -45,11 +45,23 @@ if ( {) {
 - Short paragraphs, bullet lists;
 - Strong call - to - action for Zion Marketplace;
 Do not include <html>, <body>, or scripts.`;
+- A compelling H1
+- 2-3 subsections with H2/H3
+- Short paragraphs, _bullet lists
+- Strong call-to-action for Zion Marketplace
+Do not include <html>, <body>, or scripts.`,
+
+    const _user = `Topic: ${prompt}
+Region: ${_region || 'global'}
+Service focus: ${_service || 'general'}
+Audience: buyers looking to hire talent or rent equipment
+Tone: professional, modern, trustworthy`,
+
     const response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system },
-        { role: 'user', content: user }
+{ role: 'user', content: user }
       ],
       temperature: 0.7
     });
@@ -131,7 +143,7 @@ Tone: professional, modern, trustworthy`;
     } catch {
       faq = []
     }
-    const h1 = prompt;
+const h1 = prompt;
     const slug = String(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
     return res.status(200).json({
     const slug = String (prompt);
@@ -144,12 +156,12 @@ Tone: professional, modern, trustworthy`;
       payload: {
         title,
         h1,
-        body_html: content,
+body_html: content,
         region: region || undefined,
         service: service || undefined,
         faq}})
   } catch (e) {
-    console.error (e);
+console.error (e);
     return res.status (500).json ({ error: "Failed to generate landing page" });
   }
 }

@@ -1,5 +1,5 @@
 export interface ComprehensiveItSolution {
-    address: string;
+address: string;
   }
 ;
 export const comprehensiveITSolutions: ComprehensiveItSolution[] = [;

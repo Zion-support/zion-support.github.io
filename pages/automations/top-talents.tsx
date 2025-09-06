@@ -132,3 +132,20 @@ export const getServerSideProps: GetServerSideProps = async () => {
 ;
 export default TopTalentsPage;
 ;
+              </div>
+              <span className=&quot;pill&quot;>Auto</span>
+            </div>
+          </Link>
+        ))}
+        {!items.length && <div className=&quot;enhanced-card&quot;>No data yet.</div>}
+      </div>
+    </main>
+  )
+},
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const p = path.join(process.cwd(), 'publicautomationstop-talents.json'),
+  let items: TalentItem[] = []
+
+export default TopTalentsPage
+

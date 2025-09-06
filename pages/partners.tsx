@@ -290,7 +290,7 @@ export default function PartnersPage() {
     { number: "100+", label: "Joint Projects", icon: Rocket },
     { number: "25+", label: "Countries", icon: Globe },
     { number: "300%", label: "Growth Rate", icon: TrendingUp }
-  ];
+];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -304,11 +304,28 @@ export default function PartnersPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
+
+  return (
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
+      <Head>
+        <title>Partners - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Strategic partnerships and collaboration opportunities with Zion Tech Group. Join our ecosystem of technology leaders and innovators.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Partners - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Strategic partnerships and collaboration opportunities.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/partners&quot; />
+      </Head>
+
+      <EnhancedNavigation />
+
+      {/* Hero Section */}
+      <section className=&quot;relative pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Strategic Partners
@@ -321,7 +338,7 @@ export default function PartnersPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
               Strategic Partners;
@@ -389,7 +406,7 @@ export default function PartnersPage() {
           </motion.div>
         </div>
       </section>
-      {/* Stats Section */}
+{/* Stats Section */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -398,7 +415,7 @@ export default function PartnersPage() {
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -670,7 +687,7 @@ export default function PartnersPage() {
                       </span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{partner.name}</h3>
+<h3 className="text-xl font-bold text-white mb-3">{partner.name}</h3>
                   <p className="text-white/70 text-sm mb-4">{partner.description}</p>
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>
@@ -714,7 +731,7 @@ export default function PartnersPage() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Become a Partner CTA */}
@@ -734,16 +751,20 @@ export default function PartnersPage() {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-                Partnership Inquiry
+Partnership Inquiry
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+                Partnership Inquiry
+              </button>
+              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
+
                 Download Partnership Guide
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-      <EnhancedFooter />
+<EnhancedFooter />
     </div>
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;

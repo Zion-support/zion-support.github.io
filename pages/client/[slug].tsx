@@ -55,3 +55,15 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { client_id: slug } }
 },
 export default ClientPage,
+      </section>
+    </main>
+  )
+},
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { slug } = ctx.query as { slug: string }
+  return { props: { clientId: slug } }
+},
+
+export default ClientPage
+

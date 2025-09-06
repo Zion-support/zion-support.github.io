@@ -29,4 +29,5 @@ function handler() {
 }
   res.status (200).json ({ opens: u.opens || 0 });
   res.status (200).json ({ opens: u.opens || 0 });
+
 }

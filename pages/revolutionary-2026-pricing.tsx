@@ -20,6 +20,7 @@ export default function Revolutionary2026Pricing() {
   // Filter services based on category and price
   const filteredServices = useMemo(() => {
     let filtered = all2026Services
+
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
@@ -117,13 +118,17 @@ if ( {) {
     })
     return filtered
   }, [selectedCategory, selectedPriceRange, sortBy, all2026Services])
+
+    return filtered
+  }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]),
+
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },
     { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },
     { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length },
     { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length }
-  ];
+];
   const priceRanges = [
     // Price filter;
     // Check condition

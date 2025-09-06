@@ -138,11 +138,43 @@ if (return '/docs / zion - protocol.pdf') {
           </a>;
         </Link>;
       </div>;
+      </div>
+
+      <div className=&quot;flex flex-wrap gap-3 items-center&quot;>
+        <label className=&quot;font-medium&quot;>Edition</label>
+        <select
+          value={edition}
+          onChange={(e) => setEdition(e.target.value as WhitepaperEdition)}
+          className=&quot;border rounded px-3 py-2 bg-white dark:bg-black&quot;
+        >
+          <option value=&quot;full&quot;>Full</option>
+          <option value=&quot;investor&quot;>Investor</option>
+          <option value=&quot;developer&quot;>Developer</option>
+        </select>
+        <Link href={downloadHref} legacyBehavior>
+          <a className=&quot;ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90&quot;>
+            Download PDF
+          </a>
+        </a>
+      </div>
+
+      <div className=&quot;rounded border p-4 bg-gray-50 dark:bg-gray-900&quot;>
+        <h2 className=&quot;text-xl font-semibold mb-2&quot;>Operator Prompt</h2>
+        <pre className=&quot;whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-200&quot;>{OPERATOR_PROMPT}</pre>
+      </div>
+
+      <div className=&quot;space-y-10&quot;>
+        {sections.map((s) => (
+          <section key={s.id} className=&quot;space-y-2&quot;>
+            <h2 className=&quot;text-2xl font-bold&quot;>{s.title}</h2>
+            {s.subtitle ? <p className=&quot;text-gray-500&quot;>{s.subtitle}</p> : null}
+            <article className=&quot;prose dark:prose-invert max-w-none whitespace-pre-wrap&quot;>{s.contentMd}</article>
+
           </section>
         ))}
       </div>
     </div>
-  );
+);
 }
       <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
         <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;

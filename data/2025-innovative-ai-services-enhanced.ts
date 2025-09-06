@@ -267,7 +267,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     reviews: 31,
   },
   // AI Creativity Studio Platform;
-  {
+{
     id: 'ai - creativity - studio',
     name: 'AI Creativity Studio Platform',
     tagline: 'Unleash unlimited creativity with AI - powered artistic tools',

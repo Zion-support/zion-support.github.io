@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (usingPlaceholder) {
       return res.status(200).json({ ok: true, status: 'queued', mock: true })
     }
-    const supabase = getServerSupabase();
+const supabase = getServerSupabase();
     const { error } = await supabase.from('payout_requests').insert({
       partner_code: String(code).toLowerCase(), amount: Number(amount) || null,
       status: 'requested'});
@@ -78,5 +78,6 @@ if ( {) {
     return res.status (200).json ({ ok: true, status: "requested" });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+
   }
 }

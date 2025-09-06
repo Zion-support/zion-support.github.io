@@ -70,5 +70,6 @@ function handler() {
     res.status (500).json ({ error: e.message });
   }  } catch (e: any) {
     res.status (500).json ({ error: e.message });
+
   }
 }

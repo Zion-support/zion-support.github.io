@@ -222,12 +222,35 @@ function MilestoneCard() {
           {milestone.attachments && milestone.attachments.length > 0 && (
               />
               {idx < statusSteps.length - 1 && (
+
+  return (
+    <div className=&quot;border rounded-lg p-4 bg-white shadow-sm&quot;>
+      <div className=&quot;flex items-start justify-between&quot;>
+        <div>
+          <h3 className=&quot;text-lg font-semibold&quot;>{milestone.title}</h3>
+          <p className=&quot;text-sm text-gray-600&quot;>Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>
+        </div>
+        <button className=&quot;text-sm text-blue-600&quot; onClick={() => setExpanded((v) => !v)}>
+          {expanded ? 'Hide' : 'Details'}
+        </button>
+      </div>
+
+      <div className=&quot;mt-3&quot;>
+        <div className=&quot;flex items-center gap-2&quot;>
+          {statusSteps.map((step, idx) => (
+            <div key={step} className=&quot;flex items-center&quot;>
+              <div
+                className={_'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')}
+                title={_step}
+              />
+              {_idx < statusSteps.length - 1 && (
+
                 <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
               )}
             </div>
           ))}
         </div>
-        <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
+<div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
       </div>
       {expanded && (
         <div className="mt-4 space-y-2 text-sm text-gray-800">
@@ -259,7 +282,7 @@ function MilestoneCard() {
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
             <div>
-              <div className="font-medium">Attachments</div>
+<div className="font-medium">Attachments</div>
               <ul className="list-disc ml-5">
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>
@@ -298,7 +321,7 @@ function MilestoneCard() {
             Mark In Progress
           </button>
         )}
-        {canTalentSubmit && (;
+{canTalentSubmit && (;
           <button
       </div>;
     </div>;
@@ -312,7 +335,7 @@ function MilestoneCard() {
         )}
         {canClientApprove && (
           <button
-            className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
+className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
             onClick={() => onAction('approved', milestone.id)}
           >
             Approve
@@ -320,7 +343,7 @@ function MilestoneCard() {
         )}
         {canClientMarkPaid && (
           <button
-            className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
+className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
             onClick={() => onAction('paid', milestone.id)}
           >
             Mark as Paid
@@ -328,7 +351,7 @@ function MilestoneCard() {
         )}
       </div>
     </div>
-  );
+);
 }
             <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
       </div>;

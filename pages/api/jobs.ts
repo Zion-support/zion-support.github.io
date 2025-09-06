@@ -67,7 +67,7 @@ if ( {) {
       title,
       description,
       category,
-      required_skills = [],
+required_skills = [],
       budgetMinUsd,
       budgetMaxUsd,
       deliveryDeadlineIso,
@@ -81,7 +81,7 @@ if ( {) {
       id: uuidv4(),
       title: String(title),
       description: String(description),
-      category: String(category || ""),
+category: String(category || ""),
       requiredSkills: Array && Array.isArray(requiredSkills)
         ? requiredSkills && requiredSkills.map(String)
         : [],
@@ -136,7 +136,7 @@ if ( {) {
       const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());
       if (skills.some((s) => s.includes('openai') || s.includes('langchain') || s.includes('rag'))) job.category = 'LLM App';
       else if (skills.some((s) => s.includes('aws') || s.includes('kubernetes') || s.includes('terraform'))) job.category = 'Cloud';
-      else job.category = 'General'
+else job.category = 'General'
     }
     const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);

@@ -27,7 +27,7 @@ const Revolutionary2027ServicesShowcase = () => {
       name: 'Quantum AI Consciousness Platform',
       description: 'Simulate human consciousness with quantum computing - the first platform to combine quantum computing with advanced AI for breakthrough neuroscience research.',
       price: '$9,999',
-    period: '/month',
+period: '/month',
   ArrowRight,
   Brain,
   Zap,
@@ -519,7 +519,7 @@ const Revolutionary2027ServicesShowcase = () => {;
     visible: {
       opacity: 1,
       transition: {
-        stagger_children: 0.1,
+stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
       }
@@ -740,11 +740,78 @@ const Revolutionary2027ServicesShowcase = () => {;
                 </div>;
                 {/* Hover Effect Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: &quot;easeOut&quot; as const
+      }
+    }
+  },
+
+  return (
+    <section className=&quot;py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden&quot;>
+      {/* Enhanced Background Effects */}
+      <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20&quot;></div>
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]&quot;></div>
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0.1),transparent_50%)]&quot;></div>
+      
+      <div className=&quot;max-w-7xl mx-auto relative z-10&quot;>
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className=&quot;text-center mb-20&quot;
+        >
+          <h2 className=&quot;text-5xl md:text-6xl font-bold text-white mb-8&quot;>
+            <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+              2027 Revolutionary Services
+            </span>
+          </h2>
+          <p className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed&quot;>
+            Experience the future of technology with our cutting-edge AI, quantum computing, and emerging technology services. 
+            Transform your business with solutions that were once science fiction.
+          </p>
+        </motion.div>
+
+        {_/* Category Overview */}
+        <motion.div
+          variants={containerVariants}
+          initial=&quot;hidden&quot;
+          whileInView=&quot;visible&quot;
+          viewport={{ once: true }}
+          className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;
+        >
+          {_categories.map(_(category, _index) => (
+            <motion.div
+              key={category.name}
+              variants={itemVariants}
+              className=&quot;relative group&quot;
+            >
+              <div className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>
+                <div className=&quot;w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm&quot;>
+                  <category.icon className=&quot;w-8 h-8 text-white&quot; />
+                </div>
+                <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{category.name}</h3>
+                <p className=&quot;text-2xl font-bold text-white&quot;>{category.count}</p>
+
               </div>
             </motion.div>
           ))}
         </motion.div>
-                {/* Hover Effect Overlay */}
+{/* Hover Effect Overlay */}
                 <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>              </div>                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>;
               </div>;
             </motion && motion.div>;
@@ -839,7 +906,7 @@ const Revolutionary2027ServicesShowcase = () => {;
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join the future of technology with our revolutionary 2027 services.
               Get in touch to discover how we can accelerate your digital transformation.
             </p>

@@ -1,5 +1,5 @@
 export interface InnovativeAIService {
-    trial_days: number;
+trial_days: number;
     setup_time: string;
   }
   features: string[];

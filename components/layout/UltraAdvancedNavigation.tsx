@@ -636,18 +636,92 @@ import Link from 'next / link';
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='flex justify-between items-center h-20'>          {/* Logo */}  return (
     <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
+
+  const _navigationItems = [
+    {_name: 'Home', _href: '/', _icon: null},
+    {_name: 'AI Services', _href: '#', _icon: Brain, _description: 'Cutting-edge AI solutions', _dropdown: [
+        {
+          name: 'AI Agent Orchestrator', _href: '/ai-agents', _icon: Bot, _description: 'Multi-agent workflow automation', _price: '$2, _999/month'},
+        {_name: 'AI Cybersecurity', _href: '/security', _icon: Shield, _description: 'AI-powered threat detection', _price: '$4, _999/month'},
+        {_name: 'AI Healthcare Analytics', _href: '/ai-data-analytics', _icon: Dna, _description: 'Patient outcome prediction', _price: '$3, _999/month'},
+        {_name: 'AI Supply Chain', _href: '/quantum-logistics', _icon: Package, _description: 'End-to-end optimization', _price: '$2, _499/month'},
+        {_name: 'AI Financial Risk', _href: '/ai-financial-risk', _icon: DollarSign, _description: 'Advanced risk management', _price: '$5, _999/month'}
+      ]
+    },
+    {_name: 'Quantum Computing', _href: '#', _icon: Atom, _description: 'Quantum-powered solutions', _dropdown: [
+        {
+          name: 'Quantum AI Supercomputer', _href: '/quantum-ai-cognitive', _icon: Cpu, _description: 'Enterprise quantum computing', _price: '$15, _999/month'},
+        {_name: 'Quantum Internet Security', _href: '/quantum-internet-security-platform', _icon: Lock, _description: 'Future-proof encryption', _price: '$8, _999/month'},
+        {_name: 'Quantum Drug Discovery', _href: '/biotech-ai', _icon: Dna, _description: 'Accelerated drug development', _price: '$12, _999/month'},
+        {_name: 'Quantum Financial Trading', _href: '/quantum-financial-trading', _icon: DollarSign, _description: 'Nanosecond precision trading', _price: '$19, _999/month'},
+        {_name: 'Quantum IoT Platform', _href: '/quantum-iot', _icon: Wifi, _description: 'Quantum-secured IoT', _price: '$4, _999/month'}
+      ]
+    },
+    {_name: 'Space Technology', _href: '#', _icon: Rocket, _description: 'Space mission management', _dropdown: [
+        {
+          name: 'Space Mission Control', _href: '/space-technology', _icon: Rocket, _description: 'Complete mission management', _price: '$25, _999/month'},
+        {_name: 'Space Debris Cleanup', _href: '/space-technology', _icon: Package, _description: 'AI-powered debris removal', _price: '$35, _999/month'}
+      ]
+    },
+    {_name: 'Enterprise IT', _href: '#', _icon: Building2, _description: 'Enterprise solutions', _dropdown: [
+        {
+          name: 'Cloud Migration', _href: '/cloud-platform', _icon: Cloud, _description: 'Zero-downtime migration', _price: '$8, _999/month'},
+        {_name: 'DevOps Automation', _href: '/automation', _icon: Code, _description: 'AI-powered automation', _price: '$5, _999/month'},
+        {_name: 'Data Analytics', _href: '/ai-data-analytics', _icon: Database, _description: 'AI-powered insights', _price: '$6, _999/month'},
+        {_name: 'Security Operations', _href: '/security', _icon: Shield, _description: '24/7 security monitoring', _price: '$12, _999/month'},
+        {_name: 'API Management', _href: '/api-observability', _icon: Code, _description: 'Complete lifecycle management', _price: '$4, _999/month'},
+        {_name: 'Digital Transformation', _href: '/solutions', _icon: Zap, _description: 'AI-powered transformation', _price: '$15, _999/month'},
+        {_name: 'IoT Management', _href: '/it-asset-discovery-agent', _icon: Wifi, _description: 'AI-powered device management', _price: '$7, _999/month'}
+      ]
+    },
+    {
+      name: 'Micro SaaS',
+      href: '/services',
+      icon: Monitor,
+      description: '300+ micro SaaS services'
+    },
+    {
+      name: 'Market Pricing',
+      href: '/market-pricing',
+      icon: DollarSign,
+      description: 'Benchmarks & vendor references'
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: null
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: null
+    }
+  ],
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  },
+
+  return (_<nav className={_`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
       isScrolled 
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center"
+className="flex items-center"
           >
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -785,7 +859,7 @@ import Link from 'next / link';
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group"
+className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group"
                               >
                                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                                   <dropdownItem.icon className="w-5 h-5 text-cyan-400" />
@@ -842,7 +916,7 @@ import Link from 'next / link';
               Get Started
             </motion.a>
           </div>
-                href={`mailto:${contactInfo && contactInfo.email}`}
+href={`mailto:${contactInfo && contactInfo.email}`}
                 className='flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200'>;
                 <Mail className='w-4 h-4' />;
                 <span className='hidden xl:inline'>{contactInfo && contactInfo.email}</span>;
@@ -887,7 +961,7 @@ import Link from 'next / link';
           </div>
         </div>
       </div>
-                    className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 300 py - 2';
+className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 300 py - 2';
                   >;
                     {item.icon && <item.icon className='w - 4 h - 4' />}                    className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 300 py - 2";
                   >;
@@ -1046,7 +1120,7 @@ import Link from 'next / link';
                     <div>
                       <button
                         onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
+className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
                       >
                         <div className="flex items-center space-x-3">
                           {item.icon && <item.icon className="w-5 h-5" />}
@@ -1063,7 +1137,7 @@ import Link from 'next / link';
                               key={dropdownItem.name}
                               href={dropdownItem.href}
                               onClick={() => setIsOpen(false)}
-                              className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
+className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
                             >
                               {dropdownItem.name}
                             </Link>
@@ -1075,7 +1149,7 @@ import Link from 'next / link';
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
+className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
                     >
                       {item.icon && <item.icon className="w-5 h-5" />}
                       <span>{item.name}</span>

@@ -12,7 +12,7 @@ type DeployFormState = {
     primaryColor: string,
     secondaryColor: string,
     subdomain: string
-    },
+},
     modules: Record<string, boolean>;
   bonusModules: Record<string, boolean>
 };
@@ -27,7 +27,7 @@ const default_modules: DeployFormState['modules'] = {
   academy: true,
   token: true,
   dao: true,
-    setState((prev) => ({
+setState((prev) => ({
       ...prev;
       [group]: { ...prev[group], [key]: !prev[group][key] }}))
   };
@@ -57,13 +57,41 @@ class ErrorBoundary extends React.Component {
         body: JSON.stringify(state)}),
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error || 'Deployment failed');
+
+const InitPage: NextPage = () => {_const [state, _setState] = useState<DeployFormState>({
+    instanceName: '', _defaultLanguage: 'en', _deploymentRegion: 'us-east-1', _tokenActivation: true, _governanceMode: 'Hybrid', _branding: { logoUrl: '', _primaryColor: '#4f46e5', _secondaryColor: '#0ea5e9', _subdomain: ''},
+    modules: defaultModules,
+    bonusModules: defaultBonus}),
+  const [submitting, setSubmitting] = useState(false),
+  const [result, setResult] = useState<any>(null),
+  const [error, setError] = useState<string | null>(null),
+
+  const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
+    setState((prev) => ({
+      ...prev,
+      [group]: { ...prev[group], [key]: !prev[group][key] }}))
+  },
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    setSubmitting(true),
+    setError(null),
+    setResult(null),
+    try {
+      const res = await fetch('/api/deploy/genesis', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(state)}),
+      const json = await res.json()
+      if (!res.ok) throw new Error(json?.error || 'Deployment failed'),
+
       setResult(json)
     } catch (err: any) {
       setError(err.message || 'Unexpected error')
     } finally {
       setSubmitting(false)
     }
-    return this.props.children;
+return this.props.children;
   }
 }
 import React from 'react';
@@ -330,7 +358,7 @@ const InitPage: NextPage = () => {
             </select>
           </div>
         </section>
-              value={state && state.governanceMode}
+value={state && state.governanceMode}
               onChange={e =>;
                 setState({;
                   ...state,;
@@ -505,7 +533,7 @@ const InitPage: NextPage = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+<div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-semibold mb-3">Bonus Modules</h3>
             <div className="space-y-2">
               {Object.keys(state.bonusModules).map((key) => (

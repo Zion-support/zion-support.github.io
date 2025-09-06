@@ -1,5 +1,5 @@
 export interface Revolutionary2026AiService {
-    address: string;
+address: string;
   }
 ;
 export const revolutionary2026AIServices: Revolutionary2026AiService[] = [;

@@ -72,4 +72,5 @@ function handler() {
   );
   appendAuditLog ({ type: "file_download", section, name: file });
   fs.createReadStream (full_path).pipe (res);
+
 }

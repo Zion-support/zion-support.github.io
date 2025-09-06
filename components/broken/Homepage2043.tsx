@@ -668,12 +668,87 @@ const Homepage2043: React.FC = () => {
                     x: [0, 150, 0];
                     y: [0, -150, 0];
                     opacity: [0, 1, 0];
+
+  const testimonials = [
+    {
+      name: &quot;Dr. Sarah Chen&quot;,
+      role: &quot;Chief AI Officer&quot;,
+      company: &quot;QuantumTech Industries&quot;,
+      content: &quot;Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.&quot;,
+      rating: 5,
+      avatar: &quot;👩‍🔬&quot;
+    },
+    {
+      name: &quot;Marcus Rodriguez&quot;,
+      role: &quot;CTO&quot;,
+      company: &quot;SpaceMining Corp&quot;,
+      content: &quot;The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.&quot;,
+      rating: 5,
+      avatar: &quot;👨‍🚀&quot;
+    },
+    {
+      name: &quot;Dr. Emily Watson&quot;,
+      role: &quot;Research Director&quot;,
+      company: &quot;Consciousness Research Institute&quot;,
+      content: &quot;Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.&quot;,
+      rating: 5,
+      avatar: &quot;👩‍💻&quot;
+    }
+  ],
+
+  const handleGetStarted = useCallback(() => {
+    window.location.href = '/revolutionary-2040-2041-pricing-showcase'
+  }, []),
+
+  const handleWatchDemo = useCallback(() => {
+    window.location.href = '/services'
+  }, []),
+
+  const handleContact = useCallback(() => {
+    window.location.href = '/contact'
+  }, []),
+
+  const nextService = () => {
+    setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length)
+  },
+
+  const prevService = () => {
+    setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)
+  },
+
+  return (
+    <Layout>
+      {/* Main Content */}
+      <main className=&quot;relative z-10&quot;>
+        {/* Hero Section */}
+        <section 
+          className=&quot;min-h-screen flex items-center justify-center px-4 relative overflow-hidden&quot;
+          aria-labelledby=&quot;hero-heading&quot;
+        >
+          {/* Enhanced Animated Background */}
+          <div className=&quot;absolute inset-0 -z-10&quot;>
+            {/* Floating orbs with enhanced effects */}
+            <div className=&quot;absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
+            <div className=&quot;absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
+            <div className=&quot;absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500&quot;></div>
+            
+            {/* Enhanced animated particles */}
+            <div className=&quot;absolute inset-0&quot;>
+              {[...Array(20)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className=&quot;absolute w-2 h-2 bg-cyan-400/40 rounded-full&quot;
+                  animate={{
+                    x: [0, 150, 0],
+                    y: [0, -150, 0],
+                    opacity: [0, 1, 0],
+
                     scale: [0, 1.5, 0]}}
                   transition={{
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
-                    ease: "easeInOut"
+ease: "easeInOut"
                   }}
                   style={{
                     left: `${Math.random() * 100}%`,
@@ -703,7 +778,7 @@ const Homepage2043: React.FC = () => {
               }}></div>
             </div>
           </div>
-          {/* Hero Content */}
+{/* Hero Content */}
           <div className="text-center max-w-6xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -725,7 +800,7 @@ const Homepage2043: React.FC = () => {
                 </span>
                 is Here
               </h1>
-              {/* Enhanced Subtitle */}
+{/* Enhanced Subtitle */}
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm'>;
                 <Sparkles className='w-4 h-4 mr-2' />                Revolutionary 2043 Technology;
               </div>;
@@ -769,7 +844,7 @@ const Homepage2043: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleGetStarted}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Get Started Today
                   <ArrowRight className="w-5 h-5" />
@@ -778,7 +853,7 @@ const Homepage2043: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleWatchDemo}
-                  className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
+className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
                 >
                   <Play className="w-5 h-5" />
                   Watch Demo
@@ -811,7 +886,7 @@ const Homepage2043: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
+className="text-center"
                   >
                     <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-3`}>
                       <stat.icon className="w-8 h-8 text-white" />
@@ -911,7 +986,7 @@ const Homepage2043: React.FC = () => {
             </div>
           </div>
         </section>
-                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>;
+className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                     <feature && feature.icon className='w-8 h-8 text-white' />;
                   </div>;
                   <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300'>;
@@ -990,7 +1065,7 @@ const Homepage2043: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.5 }}
-                    className="p-12 text-center"
+className="p-12 text-center"
                   >
                     <div className="text-6xl mb-6">{featuredServices[currentServiceIndex]?.icon}</div>
                     <h3 className="text-3xl font-bold text-white mb-4">
@@ -1505,14 +1580,14 @@ const Homepage2043: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex justify-center gap-1">
+<div className="flex justify-center gap-1">
                     {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
                       <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                     ))}
                   </div>
                 </motion.div>
               </AnimatePresence>
-              {/* Testimonial Indicators */}
+{/* Testimonial Indicators */}
               <div className="flex justify-center gap-2 mt-8">
                 {testimonials.map((_, index) => (
                   <button
@@ -1623,7 +1698,7 @@ const Homepage2043: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleGetStarted}
-                  className="px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+className="px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Start Your Journey
                   <ArrowRight className="w-6 h-6" />
@@ -1632,7 +1707,7 @@ const Homepage2043: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleContact}
-                  className="px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
+className="px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
                 >
                   <Phone className="w-6 h-6" />
                   Contact Us
@@ -1660,6 +1735,26 @@ const Homepage2043: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
                   <p className="text-cyan-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  </div>
+                  <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Call Us</h3>
+                  <p className=&quot;text-cyan-400&quot;>+1 302 464 0950</p>
+                </div>
+                
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4&quot;>
+                    <Mail className=&quot;w-8 h-8 text-white&quot; />
+                  </div>
+                  <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Email Us</h3>
+                  <p className=&quot;text-cyan-400&quot;>kleber@ziontechgroup.com</p>
+                </div>
+                
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4&quot;>
+                    <MapPin className=&quot;w-8 h-8 text-white&quot; />
+                  </div>
+                  <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Visit Us</h3>
+                  <p className=&quot;text-cyan-400&quot;>364 E Main St STE 1008<br />Middletown DE 19709</p>
+
                 </div>
               </div>
             </motion.div>
@@ -1667,7 +1762,7 @@ const Homepage2043: React.FC = () => {
         </section>
       </main>
     </Layout>
-              transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Experience the;

@@ -255,11 +255,87 @@ function URLShortenerPage() {
           </h1>
           <p className="text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed">
             Transform long URLs into short, memorable links with our professional shortening service.
+    
+    setIsShortening(true),
+    
+    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 1000)),
+    
+    const alias = customAlias.trim() || generateRandomAlias()
+    const shortUrl = `https://zion.tech/${alias}`
+    
+    const newShortUrl = {
+      id: Date.now(),
+      longUrl: longUrl.trim(),
+      shortUrl,
+      alias,
+      clicks: 0,
+      createdAt: new Date().toISOString(),
+      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
+    },
+
+    setShortenedUrls(prev => [newShortUrl, ...prev]),
+    setLongUrl(''),
+    setCustomAlias(''),
+    setIsShortening(false)
+  },
+
+  const generateRandomAlias = () => {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    let result = ''
+    for (let i = 0, i < 6, i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length))
+    }
+    return result
+  },
+
+  const _incrementClicks = (_id: number) => {_setShortenedUrls(prev => 
+      prev.map(url => 
+        url.id === id ? { ...url, _clicks: url.clicks + 1} : url
+      )
+    )
+  },
+
+  const deleteUrl = (id: number) => {
+    setShortenedUrls(prev => prev.filter(url => url.id !== id))
+  },
+
+  const getTotalClicks = () => {
+    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)
+  },
+
+  const getTotalUrls = () => {
+    return shortenedUrls.length
+  },
+
+  return (_<>
+      <Head>
+        <title>URL Shortener - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Create short, memorable URLs with our professional URL shortening service. Track clicks, generate QR codes, and manage your links efficiently.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;URL Shortener - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Professional URL shortening service with analytics and QR code generation.&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;pt-32 pb-20 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+          <div className=&quot;mb-8&quot;>
+            <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-orange-500/20 border border-orange-400/30 text-orange-300 text-sm font-medium mb-6&quot;>
+              <Link className=&quot;w-4 h-4 mr-2&quot; />
+              Professional URL Shortening
+            </div>
+          </div>
+          <h1 className=&quot;text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight&quot;>
+            URL Shortener
+          </h1>
+          <p className=&quot;text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed&quot;>
+            Transform long URLs into short, memorable links with our professional shortening service. 
+
             Track clicks, generate QR codes, and manage your links efficiently with advanced analytics.
           </p>
         </div>
       </section>
-      {/* URL Shortening Tool */}
+{/* URL Shortening Tool */}
         />;
       </Head>;
       {/* Hero Section */}
@@ -397,12 +473,12 @@ function URLShortenerPage() {
                     </>
                   ) : (
                     <>
-                      <Link className="w-5 h-5 mr-2" />
+<Link className="w-5 h-5 mr-2" />
                       Create Short URL
                     </>
                   )}
                 </Button>
-                <div className="text-sm text-gray-400">
+<div className="text-sm text-gray-400">
                   <p>• Professional, branded short URLs</p>
                   <p>• Click tracking and analytics</p>
                   <p>• QR code generation</p>
@@ -410,7 +486,7 @@ function URLShortenerPage() {
                 </div>
               </div>
             </Card>
-            {/* Statistics */}
+{/* Statistics */}
                       onChange={(e) => setCustomAlias(e && e.target.value)}
                       placeholder="my-custom-link";
                       className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-r-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent";
@@ -497,7 +573,7 @@ function URLShortenerPage() {
                     </p>
                   </div>
                 ) : (
-                  <div className="space-y-3">
+<div className="space-y-3">
                     <h4 className="text-lg font-semibold text-white mb-3">Recent URLs</h4>
                     {shortenedUrls.slice(0, 3).map((url) => (
                       <div key={url.id} className="p-3 bg-gray-700 rounded-lg">
@@ -517,7 +593,7 @@ function URLShortenerPage() {
                           </div>
                         </div>
                       </div>
-                    </div>;
+</div>;
                     <div className="text-sm text-gray-400">Total Clicks</div>;
                   </div>;
                 </div>;
@@ -700,7 +776,7 @@ function URLShortenerPage() {
                         </Button>
                         <Button
                           onClick={() => incrementClicks(url.id)}
-                          variant="outline"
+variant="outline"
                           size="sm"
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
                         >
@@ -758,7 +834,7 @@ function URLShortenerPage() {
                         </Button>
                         <Button
                           onClick={() => deleteUrl(url.id)}
-                          variant="outline"
+variant="outline"
                           size="sm"
                           className="border-red-600 text-red-400 hover:bg-red-600 hover:text-white"
                         >
@@ -767,7 +843,7 @@ function URLShortenerPage() {
                       </div>
                     </div>
                   </div>
-                          onClick={() => deleteUrl(url && url.id)}
+onClick={() => deleteUrl(url && url.id)}
                           variant='outline';
                           size='sm';
                           className='border-red-600 text-red-400 hover:bg-red-600 hover:text-white';
@@ -797,7 +873,7 @@ function URLShortenerPage() {
                       </p>
                     </div>
                   )}
-                </Card>;
+</Card>;
               ))}
             </div>;
           </div>;
@@ -860,7 +936,7 @@ function URLShortenerPage() {
           </div>
         </div>
       </section>
-      {/* Use Cases */}
+{/* Use Cases */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -884,7 +960,7 @@ function URLShortenerPage() {
                 <li>• Optimize marketing strategies</li>
               </ul>
             </Card>
-            <Card className="p-8 bg-gray-700 border border-gray-600">
+<Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">📱</div>
               <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>
               <p className="text-gray-400 mb-6">
@@ -896,7 +972,7 @@ function URLShortenerPage() {
                 <li>• Brand consistency</li>
               </ul>
             </Card>
-            <Card className="p-8 bg-gray-700 border border-gray-600">
+<Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">📧</div>
               <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>
               <p className="text-gray-400 mb-6">
@@ -908,7 +984,7 @@ function URLShortenerPage() {
                 <li>• A/B testing support</li>
               </ul>
             </Card>
-            <Card className="p-8 bg-gray-700 border border-gray-600">
+<Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🏢</div>
               <h3 className="text-2xl font-bold text-white mb-4">Business Presentations</h3>
               <p className="text-gray-400 mb-6">
@@ -923,7 +999,7 @@ function URLShortenerPage() {
           </div>
         </div>
       </section>
-      <section className='py-20 bg-gray-900'>;
+<section className='py-20 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
@@ -1669,7 +1745,7 @@ function URLShortenerPage() {
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-orange-600'>              href="/pricing";
+className='border-white text-white hover:bg-white hover:text-orange-600'>              href="/pricing";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-orange-600";

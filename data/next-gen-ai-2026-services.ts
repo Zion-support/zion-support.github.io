@@ -1,5 +1,5 @@
 export interface NextGenAi2026Service {
-  real_implementation: boolean;
+real_implementation: boolean;
     mobile: string;
     email: string;
     address: string;

@@ -86,11 +86,37 @@ const service_categories = [;
     icon: TrendingUp,
     color: 'from - green - 500 to - emerald - 600',
     features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization'],
+
+const serviceCategories = [
+  {
+    title: 'Business Intelligence & Analytics',
+    description: 'AI-powered business intelligence and data analytics solutions',
+    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Business Intelligence & Analytics'),
+    icon: ChartIcon,
+    color: 'from-blue-500 to-cyan-600',
+    features: ['Data AnalysisPredictive AnalyticsReal-time Insights']
+  },
+  {
+    title: 'Marketing Automation',
+    description: 'Intelligent marketing automation with AI-driven optimization',
+    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Marketing Automation'),
+    icon: Megaphone,
+    color: 'from-purple-500 to-pink-600',
+    features: ['Campaign OptimizationContent PersonalizationROI Tracking']
+  },
+  {
+    title: 'Sales Intelligence',
+    description: 'AI-powered sales automation and intelligence solutions',
+    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Sales Intelligence'),
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-600',
+    features: ['Lead ScoringSales ForecastingPipeline Optimization']
+
   },
   {
     title: 'Customer Service',
     description: 'Intelligent customer service with AI automation',
-    services: innovativeBusinessSolutions2025.filter (
+services: innovativeBusinessSolutions2025.filter (
       string => s.category === 'Customer Service'),
     icon: HeadphonesIcon,
     color: 'from - orange - 500 to - red - 600',
@@ -145,7 +171,7 @@ const testimonials = [;
     name: 'Michael Rodriguez',
     role: 'CEO, GrowthTech Solutions',
     company: 'GrowthTech Solutions',
-    content:;
+content:;
       "Zion Tech Group's business intelligence platform has transformed our decision - making process. We now have real - time insights that have increased our revenue by 300%.",
     rating: 5,
     avatar: '👨‍💼'
@@ -154,7 +180,7 @@ const testimonials = [;
     name: 'Sarah Johnson',
     role: 'Marketing Director, DigitalFlow Agency',
     company: 'DigitalFlow Agency',
-    content:;
+content:;
       "The AI marketing automation platform has revolutionized our campaigns. We've seen conversion rates increase by 150% while reducing costs by 40%.",
     rating: 5,
     avatar: '👩‍💼'
@@ -163,7 +189,7 @@ const testimonials = [;
     name: 'David Chen',
     role: 'Sales Manager, TechSales Pro',
     company: 'TechSales Pro',
-          href='https://ziontechgroup && ziontechgroup.com/innovative-business-solutions'
+href='https://ziontechgroup && ziontechgroup.com/innovative-business-solutions'
         />;
       </Head>;
     <Layout>
@@ -285,7 +311,7 @@ function InnovativeBusinessSolutions() {
           </motion.div>
         </div>
       </section>
-                href={`tel:${contactInfo && contactInfo.mobile}`}
+href={`tel:${contactInfo && contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300'>;
                 <Phone className='mr-2 w-5 h-5' />                Get Started;
               </Link>;
@@ -347,7 +373,7 @@ function InnovativeBusinessSolutions() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Services Section */}
@@ -591,7 +617,7 @@ function InnovativeBusinessSolutions() {
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: service_index * 0.1 }}
+transition={{ duration: 0.5, delay: service_index * 0.1 }}
                       viewport={{ once: true }}
           </div>;
         </div>;
@@ -655,7 +681,7 @@ function InnovativeBusinessSolutions() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* CTA Section */}
@@ -704,7 +730,7 @@ function InnovativeBusinessSolutions() {
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300"
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -718,7 +744,7 @@ function InnovativeBusinessSolutions() {
         </div>
       </section>
     </Layout>
-                href={`mailto:${contactInfo && contactInfo.email}`}
+href={`mailto:${contactInfo && contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300'>;
                 <Mail className='mr-2 w-5 h-5' />;
                 Email Us;

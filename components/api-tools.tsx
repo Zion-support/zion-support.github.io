@@ -44,7 +44,7 @@ import {
   Play,
   BookOpen,
   Github,
-  Terminal,} from 'lucide-react';import {
+Terminal,} from 'lucide-react';import {
   Code;
   Database,
   Globe,
@@ -520,16 +520,21 @@ function ApiToolsPage() {
           Modern Applications;
         </title>;
       icon: <Code className="w-8 h-8 text-white" />,
+
+export default function ApiToolsPage() {_const _apiTools = [
+    {
+      icon: <Code className=&quot;w-8 h-8 text-white&quot; />,
+
       title: 'CodeGen API - AI-Powered Code Generation',
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
       features: [
         'Support for 20+ programming languagesReal-time code completion and suggestionsCustom code templates and patternsIntegration with popular IDEsCode review and optimization suggestions'
-      ];
+];
       pricing: {
         free: '100 requests/month',
         pro: '$49/month',
         enterprise: 'Custom'
-    },
+},
     category: 'Development',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500',
@@ -538,7 +543,7 @@ function ApiToolsPage() {
       github: 'https://github.com/codegen-api',
       status: 'Live',
       users: '15,000+',
-    rating: 4.8,
+rating: 4.8,
       responseTime: '<100ms'
     };
     {
@@ -561,7 +566,7 @@ function ApiToolsPage() {
       github: 'https://github.com/datasync-api',
       status: 'Live',
       users: '8,500+',
-    rating: 4.9,
+rating: 4.9,
       responseTime: '<50ms'
     };
     {
@@ -584,7 +589,7 @@ function ApiToolsPage() {
       github: 'https://github.com/geo-api',
       status: 'Live',
       users: '12,000+',
-    rating: 4.7,
+rating: 4.7,
       responseTime: '<75ms'
     };
     {
@@ -607,7 +612,7 @@ function ApiToolsPage() {
       github: 'https://github.com/authguard-api',
       status: 'Live',
       users: '6,800+',
-    rating: 4.9,
+rating: 4.9,
       responseTime: '<25ms'
     };
     {
@@ -630,7 +635,7 @@ function ApiToolsPage() {
       github: 'https://github.com/webhookhub-api',
       status: 'Live',
       users: '9,200+',
-    rating: 4.8,
+rating: 4.8,
       responseTime: '<30ms'
     };
     {
@@ -653,7 +658,7 @@ function ApiToolsPage() {
       github: 'https://github.com/nlp-api',
       status: 'Live',
       users: '11,500+',
-    rating: 4.7,
+rating: 4.7,
       responseTime: '<200ms'
     };
     {
@@ -662,7 +667,7 @@ function ApiToolsPage() {
       description: 'Comprehensive analytics and reporting APIs for data-driven decision making.',
       features: [
         'Real-time data aggregation and analysisCustom dashboard creation and sharingAdvanced filtering and segmentationExport capabilities (CSV, JSON, PDF)Scheduled reports and alerts'
-      ];
+];
       pricing: {
         free: '10,000 events/month',
     pro: '$89/month',
@@ -676,7 +681,7 @@ function ApiToolsPage() {
       github: 'https://github.com/analytics-api',
       status: 'Live',
       users: '7,800+',
-    rating: 4.8,
+rating: 4.8,
       responseTime: '<150ms'
     };
     {
@@ -699,7 +704,7 @@ function ApiToolsPage() {
       github: 'https://github.com/encrypt-api',
       status: 'Live',
       users: '4,200+',
-    rating: 4.9,
+rating: 4.9,
       responseTime: '<20ms'
     }
   ];
@@ -708,11 +713,16 @@ function ApiToolsPage() {
   const filteredTools = selectedCategory === 'All' 
     ? apiTools 
     : apiTools.filter(tool => tool.category === selectedCategory);
+
+  const _filteredTools = selectedCategory === 'All' 
+    ? apiTools 
+    : apiTools.filter(tool => tool.category === selectedCategory),
+
   return (
     <>
       <Head>
         <title>API Tools & Developer Services | Zion Tech Group - Powerful APIs for Modern Applications</title>
-        <meta name="description" content="Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need." />
+<meta name="description" content="Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need." />
         <meta property="og:title" content="API Tools & Developer Services | Zion Tech Group" />
         <meta property="og:description" content="Powerful APIs and developer tools for modern applications. AI, security, analytics, and more." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -955,7 +965,7 @@ function ApiToolsPage() {
                         </span>
                       </div>
                     </div>
-                          </span>;
+</span>;
                         </div>;
                         <span className='px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full font - medium'>                          {tool.status}
                         </span>;
@@ -1115,7 +1125,7 @@ function ApiToolsPage() {
                       </Button>
                       <Button
                         href={tool.docs}
-                        variant="outline"
+variant="outline"
                         size="sm"
                         className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
                       >
@@ -1124,7 +1134,7 @@ function ApiToolsPage() {
                       </Button>
                       <Button
                         href={tool.github}
-                        variant="ghost"
+variant="ghost"
                         size="sm"
                         className="text-gray-400 hover:text-indigo-400"
                       >
@@ -1136,7 +1146,7 @@ function ApiToolsPage() {
                 </div>
               </Card>
             ))}
-      <section className="py-24 bg-gray-800">
+<section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
@@ -1189,7 +1199,7 @@ function ApiToolsPage() {
           </div>
         </div>
       </section>
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Developer Resources */}
@@ -1386,7 +1396,7 @@ function ApiToolsPage() {
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'>              href="/docs";
+className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'>              href="/docs";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl";

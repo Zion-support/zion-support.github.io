@@ -12,7 +12,7 @@ type Stage = {
   theme: string,
   objective: string,
   highlights: string[],
-  metrics: string[];
+metrics: string[];
 },
 function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): Stage[] {
   const keyword_list = keywords;
@@ -52,6 +52,31 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
 }
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
+
+    const highlights: string[] = [
+      index === 0 && 'Design system, domain model, and initial data architecture',
+      index === 1 && 'Verifiable credentials, attestations, and dispute primitives',
+      index === 2 && 'AI-assisted scoping, matching, and brief generation',
+      index === 3 && 'Reputation graph, portable profiles, contribution proofs',
+      index === 4 && 'Programmable escrow, milestone releases, stable on/off-ramps',
+      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration',
+      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations',
+      index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem',
+      index === 8 && 'Progressive decentralization, contributor ownership, councils',
+      index === 9 && 'Regionalization, localization, reliability, and performance']
+      .filter(Boolean)
+      .map((s) => String(s)),
+
+    const metrics: string[] = [
+      'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS'],
+
+    return { id, name, theme, objective, highlights, metrics }
+  })
+
+}
+
+function defaultOperatorPrompt(): string {_return `You are Zion's Product Operator.
+
 Inputs you will receive:
 - milestones (string list)
 - keywords (string list)
@@ -178,12 +203,84 @@ export default function RoadmapPage (): JSX.Element {
                   <div className="mt-3">
                     <p className="font-semibold">Highlights</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
+
+  return (_<>
+      <Head>
+        <title>Zion Roadmap</title>
+        <meta name=&quot;description&quot; content=&quot;Zion 10-stage product evolution and roadmap generator.&quot; />
+      </Head>
+      <main className=&quot;min-h-screen bg-white text-gray-900&quot;>
+        <div className=&quot;mx-auto w-full max-w-6xl px-6 py-12&quot;>
+          <header className=&quot;mb-8&quot;>
+            <h1 className=&quot;text-4xl font-extrabold tracking-tight sm:text-5xl&quot;>Zion Roadmap</h1>
+            <p className=&quot;mt-3 text-gray-700&quot;>Public-facing product evolution from v1 → v10 with a generator for operators.</p>
+          </header>
+
+          <section className=&quot;mb-10 grid gap-6 rounded-lg border border-gray-200 bg-gray-50 p-6 md:grid-cols-3&quot;>
+            <div className=&quot;md:col-span-1&quot;>
+              <h2 className=&quot;text-xl font-semibold&quot;>Generator Inputs</h2>
+              <p className=&quot;mt-1 text-sm text-gray-600&quot;>Tune the roadmap with current context and focus.</p>
+            </div>
+            <div className=&quot;md:col-span-2 grid gap-4&quot;>
+              <div>
+                <label className=&quot;block text-sm font-medium text-gray-700&quot;>Milestones achieved so far</label>
+                <textarea
+                  value={milestones}
+                  onChange={(e) => setMilestones(e.target.value)}
+                  rows={3}
+                />
+              </div>
+              <div>
+                <label className=&quot;block text-sm font-medium text-gray-700&quot;>Vision keywords</label>
+                <input
+                  value={keywords}
+                  onChange={(e) => setKeywords(e.target.value)}
+                  className=&quot;mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none&quot;
+                  placeholder=&quot;e.g., AI-native, trustless, talent-first, sovereign tools&quot;
+                />
+              </div>
+              <div>
+                <label className=&quot;block text-sm font-medium text-gray-700&quot;>Upcoming priorities</label>
+                <input
+                  value={priorities}
+                  onChange={(e) => setPriorities(e.target.value)}
+                  className=&quot;mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none&quot;
+                  placeholder=&quot;e.g., governance, scale, regional expansion&quot;
+                />
+              </div>
+            </div>
+          </section>
+
+          <section className=&quot;mb-12&quot;>
+            <div className=&quot;mb-3 flex items-center justify-between gap-3&quot;>
+              <h2 className=&quot;text-xl font-semibold&quot;>Operator Prompt</h2>
+              <button
+                onClick={copyPrompt}
+                className=&quot;rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900&quot;
+              >
+                {_copied ? 'Copied' : 'Copy'}
+              </button>
+            </div>
+            <pre className=&quot;whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800&quot;>{operatorPrompt}</pre>
+          </section>
+
+          <section>
+            <h2 className=&quot;mb-4 text-xl font-semibold&quot;>Zion v1 → v10</h2>
+            <div className=&quot;grid gap-6 md:grid-cols-2&quot;>
+              {stages.map((stage) => (
+                <article key={stage.id} className=&quot;rounded-lg border border-gray-200 p-5 shadow-sm&quot;>
+                  <h3 className=&quot;text-lg font-bold&quot;>{stage.name} — {stage.theme}</h3>
+                  <p className=&quot;mt-2 text-gray-700&quot;><span className=&quot;font-semibold&quot;>Objective:</span> {stage.objective}</p>
+                  <div className=&quot;mt-3&quot;>
+                    <p className=&quot;font-semibold&quot;>Highlights</p>
+                    <ul className=&quot;mt-1 list-disc space-y-1 pl-5 text-gray-800&quot;>
+
                       {stage.highlights.map((h, i) => (
                         <li key={i}>{h}</li>
                       ))}
                     </ul>
                   </div>
-                  <div className="mt-3">
+<div className="mt-3">
                     <p className="font-semibold">Metrics</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       {stage.metrics.map((m, i) => (
@@ -199,7 +296,7 @@ export default function RoadmapPage (): JSX.Element {
                       <li>Regulatory and payment-compliance variability</li>
                     </ul>
                   </div>
-                  <div className="mt-3">
+<div className="mt-3">
                     <p className="font-semibold">Validation</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       <li>Leading indicator movement on activation and retention</li>

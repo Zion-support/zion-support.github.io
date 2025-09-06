@@ -64,7 +64,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },
     { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },
     { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
-  ];
+];
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category);
     return cat ? cat.icon : Star
@@ -100,11 +100,17 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <SEO 
         title="2025 Innovative Services Showcase | Zion Tech Group"
         description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
+
+  return (_<Layout>
+      <SEO 
+        title=&quot;2025 Innovative Services Showcase | Zion Tech Group&quot;
+        description=&quot;Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.&quot;
+
         keywords={[
           'innovative services 2025micro SAASquantum computingspace technologyAI platformsautonomous systems'
         ]}
       />
-      {/* Hero Section */}
+{/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
         {/* Enhanced Background Elements */}
         <div className="absolute inset-0 pointer-events-none">
@@ -119,7 +125,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+className="space-y-6"
           >
             {/* Enhanced Company Badge */}
             <motion&& motion.div
@@ -290,7 +296,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </motion.div>
         </div>
       </section>
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>;
               <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20'>;
                 <div className='text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors'>;
@@ -540,7 +546,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              );
+);
             })}
           </div>;
         </div>;
@@ -784,7 +790,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group relative"
+className="group relative"
                 >
                   <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm">
                     {/* Popular Badge */}
@@ -815,7 +821,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              );
+);
             })}
           </div>;
         </div>;
@@ -1055,7 +1061,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         </div>
       </section>
     </Layout>
-            className="space-y-8">;
+className="space-y-8">;
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
               Ready to Transform Your Business?;
             </h2>;

@@ -84,11 +84,37 @@ const service_categories = [;
       'Deployment Optimization',
       'Performance Monitoring',
     ],
+
+const serviceCategories = [
+  {
+    title: 'AI Development Tools',
+    description: 'Advanced AI-powered development and testing automation',
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Development Tools'),
+    icon: Code,
+    color: 'from-emerald-500 to-teal-600',
+    features: ['Code Review AutomationAI TestingDevOps Intelligence']
+  },
+  {
+    title: 'AI Testing & Quality Assurance',
+    description: 'Intelligent testing automation with AI-driven insights',
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Testing & Quality Assurance'),
+    icon: TestTube,
+    color: 'from-purple-500 to-indigo-600',
+    features: ['Test GenerationPerformance TestingQuality Assurance']
+  },
+  {
+    title: 'AI DevOps & Infrastructure',
+    description: 'Self-managing infrastructure with AI optimization',
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI DevOps & Infrastructure'),
+    icon: Server,
+    color: 'from-blue-500 to-indigo-600',
+    features: ['Infrastructure ManagementDeployment OptimizationPerformance Monitoring']
+
   },
   {
     title: 'AI Cybersecurity',
     description: 'Proactive threat detection and response with AI',
-    services: advancedAIAutomationServices2025.filter (
+services: advancedAIAutomationServices2025.filter (
       string => s.category === 'AI Cybersecurity'),
     icon: SecurityIcon,
     color: 'from - red - 500 to - pink - 600',
@@ -97,7 +123,7 @@ const service_categories = [;
   {
     title: 'AI Data Management',
     description: 'Intelligent data infrastructure with AI automation',
-    services: advancedAIAutomationServices2025.filter (
+services: advancedAIAutomationServices2025.filter (
       string => s.category === 'AI Data Management'),
     icon: Database,
     color: 'from - cyan - 500 to - blue - 600',
@@ -143,7 +169,7 @@ const testimonials = [;
     name: 'Dr. Michael Chen',
     role: 'CTO, TechFlow Solutions',
     company: 'TechFlow Solutions',
-    content:;
+content:;
       "Zion Tech Group's AI automation platform has revolutionized our development process. We've reduced testing time by 90% and improved code quality significantly.",
     rating: 5,
     avatar: '👨‍💻'
@@ -152,7 +178,7 @@ const testimonials = [;
     name: 'Sarah Rodriguez',
     role: 'DevOps Director, CloudScale Inc.',
     company: 'CloudScale Inc.',
-    content:;
+content:;
       'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
     rating: 5,
     avatar: '👩‍💼'
@@ -161,7 +187,7 @@ const testimonials = [;
     name: 'David Kim',
     role: 'Security Manager, SecureNet Corp.',
     company: 'SecureNet Corp.',
-          href='https://ziontechgroup && ziontechgroup.com/advanced-ai-automation-services'
+href='https://ziontechgroup && ziontechgroup.com/advanced-ai-automation-services'
         />;
       </Head>;
     <Layout>
@@ -274,7 +300,7 @@ function AdvancedAIAutomationServices() {
             </div>
           </motion.div>
         </div>
-                href={`tel:${contactInfo && contactInfo.mobile}`}
+href={`tel:${contactInfo && contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'>;
                 <Phone className='mr-2 w-5 h-5' />                Get Started;
               </Link>;
@@ -334,7 +360,7 @@ function AdvancedAIAutomationServices() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>
       {/* Services Section */}
@@ -574,7 +600,7 @@ function AdvancedAIAutomationServices() {
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: service_index * 0.1 }}
+transition={{ duration: 0.5, delay: service_index * 0.1 }}
                       viewport={{ once: true }}
           </div>;
         </div>;
@@ -638,7 +664,7 @@ function AdvancedAIAutomationServices() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* CTA Section */}
@@ -687,7 +713,7 @@ function AdvancedAIAutomationServices() {
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300"
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -701,7 +727,7 @@ function AdvancedAIAutomationServices() {
         </div>
       </section>
     </Layout>
-                href={`mailto:${contactInfo && contactInfo.email}`}
+href={`mailto:${contactInfo && contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'>;
                 <Mail className='mr-2 w-5 h-5' />;
                 Email Us;

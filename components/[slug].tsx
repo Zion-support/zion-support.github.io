@@ -194,22 +194,28 @@ export default function DynamicServicePage() {;
     if (byId) return byId;
     return undefined
   }, [slug]);
+
+  if (!service) {_return (
+      <UltraAdvancedFuturisticBackground>
+
         <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
             <Button href="/services" variant="quantum" size="lg">Browse Services</Button>
+
           </div>
         </div>
       </UltraAdvancedFuturisticBackground>
     )
   }
-  const canonicalUrl = `https://ziontechgroup.com/${slug}`;
+const canonicalUrl = `https://ziontechgroup.com/${slug}`;
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-        return false;        return false;
+return false;        return false;
       }
     });
     // Check condition
@@ -487,7 +493,7 @@ if ( {) {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);
 }
 function collectAllServices(): any (): Svc[] {;
   return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
@@ -669,3 +675,28 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: {} }
 }
 ;
+      }
+    }
+  } catch {}
+
+  for (const s of services) {
+    const fromLink = extractRootSlugFromLink((s as any).link)
+    const slugCandidate = fromLink || (s.id ? normalizeSlug(s.id) : (s.name ? normalizeSlug(s.name) : ''))
+    if (!slugCandidate) continue,
+    if (reservedTopLevelSlugs.has(slugCandidate)) continue, // skip conflicts
+    candidateSlugs.add(slugCandidate)
+  }
+
+  // Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug))
+
+  return {_paths: uniqueNonConflicting.map(_(slug) => ({ params: { slug} })),
+    fallback: true
+  }
+},
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // No dynamic fetching needed, the component resolves the service client-side.
+  return { props: {} }
+},
+

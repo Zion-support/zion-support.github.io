@@ -40,7 +40,7 @@ import {
   Zap,
   Brain,
   Globe,
-  Rocket,} from 'lucide-react';import {
+Rocket,} from 'lucide-react';import {
   Search;
   Filter,
   TrendingUp,
@@ -195,12 +195,83 @@ function ToolComparisonPage() {
       icon: <Globe className="w - 6 h - 6" />,
       color: 'text - gray - 400';
     }
+
+  const _allTools = [
+    // AI Tools
+    {
+      name: 'ChatGPT',
+      category: 'AI Assistant',
+      pricing: 'Free - $20/month',
+      rating: 4.8,
+      users: '100M+',
+      bestFor: 'Content creators, developers, researchers',
+      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier'],
+      cons: ['Sometimes inaccurateLimited contextPrivacy concerns'],
+      website: 'https://chat.openai.com',
+      icon: <Brain className=&quot;w-6 h-6&quot; />,
+      color: 'text-green-400'
+    },
+    {
+      name: 'Midjourney',
+      category: 'AI Art',
+      pricing: '$10 - $30/month',
+      rating: 4.7,
+      users: '1M+',
+      bestFor: 'Designers, marketers, content creators',
+      pros: ['High-quality outputCreative controlCommercial rightsActive community'],
+      cons: ['Discord-only interfaceLimited customizationMonthly subscription'],
+      website: 'https://midjourney.com',
+      icon: <Zap className=&quot;w-6 h-6&quot; />,
+      color: 'text-purple-400'
+    },
+    {
+      name: 'Jasper',
+      category: 'AI Writing',
+      pricing: '$39 - $125/month',
+      rating: 4.6,
+      users: '100K+',
+      bestFor: 'Marketing teams, content creators, businesses',
+      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features'],
+      cons: ['ExpensiveLimited free trialCan be repetitive'],
+      website: 'https://jasper.ai',
+      icon: <Brain className=&quot;w-6 h-6&quot; />,
+      color: 'text-blue-400'
+    },
+    // SaaS Tools
+    {
+      name: 'Zapier',
+      category: 'Automation',
+      pricing: 'Free - $19.99/month',
+      rating: 4.8,
+      users: '2M+',
+      bestFor: 'Businesses looking to automate workflows',
+      pros: ['Easy to useExtensive integrationsReliableGreat support'],
+      cons: ['Can get expensiveLimited customization'],
+      website: 'https://zapier.com',
+      icon: <Zap className=&quot;w-6 h-6&quot; />,
+      color: 'text-orange-400'
+    },
+    {
+      name: 'Notion',
+      category: 'Productivity',
+      pricing: 'Free - $8/month',
+      rating: 4.7,
+      users: '20M+',
+      bestFor: 'Teams that need flexible workspace',
+      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],
+      cons: ['Learning curveLimited offline accessCan be overwhelming'],
+      website: 'https://notion.so',
+      icon: <Globe className=&quot;w-6 h-6&quot; />,
+      color: 'text-gray-400'
+    },
+    {
+
       name: 'Stripe',
       category: 'Payments',
       pricing: '2.9% + 30¢ per transaction',
       rating: 4.9,
       users: '1M+',
-      best_for: 'Online businesses, SaaS companies, e - commerce',
+best_for: 'Online businesses, SaaS companies, e - commerce',
       pros: [;
         'Developer - friendly',
         'Global reach',
@@ -645,13 +716,84 @@ export default function ToolComparisonPage() {;
                 href="/contact"
                 variant="outline"
                 size="lg"
+
+  const _sortedTools = [...filteredTools].sort(_(a, _b) => {_switch (sortBy) {
+      case 'rating':
+        return b.rating - a.rating,
+      case 'users':
+        return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, '')),
+      case 'name':
+        return a.name.localeCompare(b.name),
+      default: return 0
+    }
+  }),
+
+  const getPricingColor = (pricing: string) => {
+    if (pricing.includes('Free')) return 'text-green-400',
+    if (pricing.includes('$')) return 'text-blue-400',
+    return 'text-gray-400'
+  },
+
+  return (
+    <>
+      <Head>
+        <title>Tool Comparison - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Compare SaaS tools, AI services, and business solutions. Find the perfect tools for your business needs with our comprehensive comparison.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Tool Comparison - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Comprehensive comparison of SaaS tools and AI services to help you make informed decisions.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-black&quot;>
+        <div className=&quot;absolute inset-0&quot;>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]&quot; />
+        </div>
+
+        <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20&quot; />
+
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+          <div className=&quot;mb-20 animate-fade-in&quot;>
+            <div className=&quot;mb-8&quot;>
+              <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6 animate-scale-in&quot;>
+                <Search className=&quot;w-4 h-4 mr-2&quot; />
+                Smart Tool Selection
+              </div>
+            </div>
+            
+            <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight&quot;>
+              Tool Comparison
+            </h1>
+            <p className=&quot;text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light&quot;>
+              Compare SaaS tools, AI services, and business solutions. 
+              Make informed decisions with our comprehensive analysis and expert insights.
+            </p>
+
+            <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-20&quot;>
+              <Button
+                href=&quot;#comparison&quot;
+                size=&quot;lg&quot;
+                className=&quot;animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40&quot;
+                style={{ animationDelay: '0.2s' }}
+              >
+                Start Comparing
+                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+              </Button>
+              <Button
+                href=&quot;/contact&quot;
+                variant=&quot;outline&quot;
+                size=&quot;lg&quot;
+                className=&quot;animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5&quot;
+
                 style={{ animationDelay: '0.4s' }}
               >
                 Get Expert Advice
               </Button>
             </div>
           </div>
-          {/* Stats */}
+{/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
@@ -680,7 +822,7 @@ export default function ToolComparisonPage() {;
           </div>
         </div>
       </section>
-                className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
+className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
                 Get Expert Advice;
               </Button>;
             </div>;
@@ -942,14 +1084,14 @@ export default function ToolComparisonPage() {;
               </thead>
               <tbody>
                 {sortedTools.map((tool, index) => (
-                  <tr key={index} className="border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200">
+<tr key={index} className="border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200">
                     <td className="py-4 px-6">
                       <div className="flex items-center space-x-3">
                         <div className={`w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center ${tool.color}`}>
                           {tool.icon}
                         </div>
                         <div>
-                          <div className="font-semibold text-white">{tool.name}</div>
+<div className="font-semibold text-white">{tool.name}</div>
                         </div>
                       </div>
                     </td>
@@ -963,7 +1105,7 @@ export default function ToolComparisonPage() {;
                         {tool.pricing}
                       </span>
                     </td>
-                    <td className="py-4 px-6">
+<td className="py-4 px-6">
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-white">{tool.rating}</span>
@@ -996,7 +1138,7 @@ export default function ToolComparisonPage() {;
                     </td>
                   </tr>
                 ))}
-            <div className="text-center py-20">
+<div className="text-center py-20">
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
@@ -1004,7 +1146,7 @@ export default function ToolComparisonPage() {;
           )}
         </div>
       </section>
-      {/* Detailed Comparison Cards */}
+{/* Detailed Comparison Cards */}
               </tbody>;
             </table>;
           </div>;
@@ -1076,7 +1218,7 @@ export default function ToolComparisonPage() {;
                     </div>
                   </div>
                 </div>
-                <div className="mb-4">
+<div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
                   <p className="text-sm text-gray-400">{tool.bestFor}</p>
                 </div>
@@ -1144,7 +1286,7 @@ export default function ToolComparisonPage() {;
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-red-400 mb-2 flex items-center">
+<h4 className="text-sm font-semibold text-red-400 mb-2 flex items-center">
                       <X className="w-4 h-4 mr-1" />
                       Cons
                     </h4>
@@ -1187,7 +1329,7 @@ export default function ToolComparisonPage() {;
                   </span>
                   <Button
                     href={tool.website}
-                    variant="outline"
+variant="outline"
                     size="sm"
                     className="group-hover:border-purple-500 group-hover:text-purple-400"
                   >
@@ -1197,7 +1339,7 @@ export default function ToolComparisonPage() {;
                 </div>
               </Card>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* CTA Section */}
@@ -1232,7 +1374,7 @@ export default function ToolComparisonPage() {;
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'>              href="/saas-marketplace";
+className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'>              href="/saas-marketplace";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl";

@@ -54,7 +54,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   for (const s of SKILLS) {
     if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
   }
-  const { q = "" } = req && req.query;
+const { q = "" } = req && req.query;
   const query = String(q).toLowerCase();
   if (!query) {
     return res && res.status(200).json({ suggestions: SAMPLE_QUERIES && SAMPLE_QUERIES.slice(0, 5) });
@@ -90,4 +90,5 @@ if ( {) {
   ).slice (0, 5);
 ;
   return res.status (200).json ({ suggestions });
+
 }

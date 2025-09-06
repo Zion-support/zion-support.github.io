@@ -1,5 +1,5 @@
 export interface InnovativeMicroSaas2029 {
-    address: string;
+address: string;
   }
 ;
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;

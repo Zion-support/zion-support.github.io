@@ -60,7 +60,7 @@ import {
   ExternalLink,
   CheckCircle,
   TrendingUp,
-  Shield,} from 'lucide-react';import {
+Shield,} from 'lucide-react';import {
   Brain;
   MessageSquare,
   Image,
@@ -263,7 +263,7 @@ export default function AiToolsPage() {;
       gradient: 'from-gray-400 to-black',
       popular: true,
       category: 'Code Generation'
-    };
+};
     {
       icon: <Video className="w-8 h-8 text-white" />,
       title: 'Runway ML',
@@ -374,24 +374,24 @@ export default function AiToolsPage() {;
       value: '$136.6B',
       growth: '+37% YoY',
       description: 'Global AI market value in 2024'
-    };
+};
     {
       title: 'AI Adoption Rate',
       value: '35%',
       growth: '+12% YoY',
       description: 'Businesses actively using AI tools'
-    };
+};
     {
       title: 'AI Investment',
       value: '$93.5B',
       growth: '+28% YoY',
       description: 'Global AI investment in 2024'
-    };
+};
     {
       title: 'AI Productivity Gain',
       value: '40%',
       growth: '+15% YoY',
-      description: 'Average productivity improvement',
+description: 'Average productivity improvement',
     },  ];      description: 'Global AI market value in 2024';
     }
     {
@@ -501,25 +501,25 @@ export default function AiToolsPage() {;
       description: 'AI-assisted programming and development tools',
       tools: 1,
       avgPrice: '$10/month'
-    };
+};
     {
       name: 'Video Generation',
       description: 'AI video creation and editing tools',
       tools: 1,
       avgPrice: '$44/month'
-    };
+};
     {
       name: 'Content Creation',
       description: 'AI-powered writing and content generation',
       tools: 1,
       avgPrice: '$82/month'
     }
-  ];
+];
   return (
     <>
       <Head>
         <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title>
-        <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
+<meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
         <meta property="og:title" content="AI Tools & Services | Zion Tech Group" />
         <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -543,7 +543,7 @@ export default function AiToolsPage() {;
           </p>
         </div>
       </section>
-      {/* AI Market Statistics */}
+{/* AI Market Statistics */}
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -813,7 +813,7 @@ export default function AiToolsPage() {;
                     </div>
                   </div>
                 )}
-                <div className="flex items-start space-x-6">
+<div className="flex items-start space-x-6">
                   <div className="relative">
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                       {tool.icon}
@@ -968,7 +968,7 @@ export default function AiToolsPage() {;
                         </li>
                       ))}
                     </ul>
-                    <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                       <Button
                         href={tool.website}
                         variant="primary"
@@ -987,7 +987,7 @@ export default function AiToolsPage() {;
                 </div>
               </Card>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* AI Categories Overview */}
@@ -1091,7 +1091,7 @@ export default function AiToolsPage() {;
                 </div>
               </Card>
             ))}
-      <section className="section-padding bg-gradient-cursor">
+<section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
@@ -1118,7 +1118,7 @@ export default function AiToolsPage() {;
                 </ul>
               </div>
             </Card>
-            <Card className="card-hover border-gradient-blue">
+<Card className="card-hover border-gradient-blue">
               <div className="p-6">
                 <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-cursor-blue" />
@@ -1137,7 +1137,7 @@ export default function AiToolsPage() {;
           </div>
         </div>
       </section>
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* AI Implementation Guide */}
@@ -1263,16 +1263,22 @@ export default function AiToolsPage() {;
             and integrate seamlessly with your existing processes.
           </p>
           <div className="flex flex-col sm: flex-row gap-6 justify-center">
-            <Button
+<Button
               href="/micro-saas"
               variant="primary"
               size="lg"
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
+            <Button
+              href=&quot;/micro-saas&quot;
+              variant=&quot;primary&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-cursor-blue hover:bg-cursor-blue-dark&quot;
+
             >
               Explore More Tools
             </Button>
             <Button
-              href="/contact"
+href="/contact"
               variant="outline"
               size="lg"
               className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"

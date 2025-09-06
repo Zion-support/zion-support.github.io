@@ -30,12 +30,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Phone, 
+  Phone,
   Mail, 
   Facebook, 
   Twitter, 
   Linkedin, 
-  Instagram, 
+Instagram, 
   ChevronDown, 
   Menu, 
   X,
@@ -52,7 +52,7 @@ import {
   GraduationCap,
   Factory,
   Truck,
-  CreditCard,
+CreditCard,
   Menu
   X
   ChevronDown
@@ -144,7 +144,7 @@ function Header() {
               </div>
             </div>
           </div>
-          {/* Desktop Navigation */}
+{/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative group">
@@ -417,7 +417,7 @@ function Header() {
                 <Link
                   href="/contact"
                   onClick={closeMenu}
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200">;
+className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200">;
                   Get Started;
                 </Link>;
               </div>;

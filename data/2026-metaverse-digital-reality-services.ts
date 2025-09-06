@@ -1,5 +1,5 @@
 export interface MetaverseDigitalRealityService2026 {
-    address: string;
+address: string;
   }
 ;
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =;

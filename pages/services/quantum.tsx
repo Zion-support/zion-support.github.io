@@ -161,7 +161,7 @@ export default function QuantumServicesPage() {
     { number: "99.99%", label: "Security Guarantee", icon: Shield },
     { number: "10x", label: "Performance Boost", icon: TrendingUp },
     { number: "24/7", label: "Quantum Support", icon: Clock }
-  ];
+];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -175,11 +175,28 @@ export default function QuantumServicesPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
+
+  return (
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
+      <Head>
+        <title>Quantum Computing Services - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Revolutionary quantum computing solutions from Zion Tech Group. Quantum algorithms, security, and AI integration for the future of computing.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Quantum Computing Services - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Revolutionary quantum computing solutions for the future of computing.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/services/quantum&quot; />
+      </Head>
+
+      <EnhancedNavigation />
+
+      {/* Hero Section */}
+      <section className=&quot;relative pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Quantum Computing
@@ -192,7 +209,7 @@ export default function QuantumServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>;
               Quantum Computing;
@@ -266,7 +283,7 @@ export default function QuantumServicesPage() {
           </motion.div>
         </div>
       </section>
-      {/* Stats Section */}
+{/* Stats Section */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -275,7 +292,7 @@ export default function QuantumServicesPage() {
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -342,7 +359,7 @@ export default function QuantumServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                     Get Started
@@ -350,7 +367,7 @@ export default function QuantumServicesPage() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* CTA Section */}
@@ -370,16 +387,20 @@ export default function QuantumServicesPage() {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-                Schedule Quantum Demo
+Schedule Quantum Demo
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+                Schedule Quantum Demo
+              </button>
+              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
+
                 Learn More
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-      <EnhancedFooter />
+<EnhancedFooter />
     </div>
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;

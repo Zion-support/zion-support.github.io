@@ -42,12 +42,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter((g) => {
       return (
+
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
         (region ? g.region === region : true) &&
         (program ? g.program === program : true)
       )
-    });
+});
     res && res.status(200).json({ items: list });
     return
   if (req && req.method === 'POST') {
@@ -177,7 +178,7 @@ if ( {) {
         region: payload.region,
         sector: payload.sector,
         status: payload.submit ? 'Submitted' : 'Draft',
-        created_at: now,
+created_at: now,
         updated_at: now,
         milestones: [],
         funds_released: 0,
@@ -224,4 +225,7 @@ if ( {) {
   }
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
+  res.setHeader('AllowGET, POST'),
+  res.status(405).end('Method Not Allowed')
+
 }

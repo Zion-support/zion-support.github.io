@@ -20,18 +20,21 @@ export default function InnovativeServicesShowcase2029() {
     ...practicalBusinessSolutionServices2029
   ];
   const serviceCategories = [
+
+  const _serviceCategories = [
+
     {
       title: '🚀 AI Autonomous Ecosystem',
       icon: Brain,
       color: 'from-violet-600 via-purple-600 to-indigo-600',
       services: aiAutonomousEcosystemServices2029
-    };
+};
     {
       title: '⚛️ Emerging Tech Breakthroughs',
       icon: Atom,
       color: 'from-indigo-600 via-blue-600 to-cyan-600',
       services: emergingTechBreakthroughServices2029
-    };
+};
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -76,7 +79,7 @@ function InnovativeServicesShowcase2029() {
     {
       title: '🎯 Practical Business Solutions',
       icon: Target,
-      color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
+color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
       services: practicalBusinessSolutionServices2029;
     }
   ],
@@ -196,11 +199,12 @@ function InnovativeServicesShowcase2029() {
                 </motion.div>
               ))}
             </div>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mt-16">
+viewport={{ once: true }} className="text-center mt-16">
               <Link
                 href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
                 View All Services
@@ -209,7 +213,7 @@ function InnovativeServicesShowcase2029() {
             </motion.div>
           </div>
         </section>
-                  viewport={{ once: true }} className="bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8 hover:border - gray - 500 transition - all duration - 500">;
+viewport={{ once: true }} className="bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8 hover:border - gray - 500 transition - all duration - 500">;
                   <h3 className="text - 2xl font - bold text - white mb - 4">{service.name}</h3>;
                   <p className="text - gray - 300 mb - 6">{service.description}</p>;
                   <div className="grid grid - cols - 2 gap - 4 mb - 6">;
@@ -271,12 +275,19 @@ function InnovativeServicesShowcase2029() {
                 </Link>
                 <Link
                   href="/pricing" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">
+                  Contact Us Now
+                  <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                </Link>
+                <Link
+                  href=&quot;/pricing&quot; className=&quot;inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg&quot;>
+
                   View Pricing
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
+
         <UltraFuturisticFooter2029 />
       </div>
     </>

@@ -37,3 +37,13 @@ function QuantumCloudInfrastructurePage() {
       </div>;
     </Layout>);
 }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+}
+  );}
+

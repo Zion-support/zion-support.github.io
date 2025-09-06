@@ -119,4 +119,18 @@ function CodeSamples() {
         <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);
+            key={t.key}
+            className={_`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
+            onClick={_() => setActive(t.key)}
+          >
+            {_t.label}
+          </button>
+        ))}
+      </div>
+      <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm&quot;>
+        <code>{sampleMap[active] || ''}</code>
+      </pre>
+    </div>
+  )
+
 }

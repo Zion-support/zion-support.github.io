@@ -40,18 +40,48 @@ function Support() {
       icon: <Shield className="w - 8 h - 8 text - blue - 400" />,
       description: 'Infrastructure and security support',
       articles: 28;
+
+  const _supportCategories = [
+    {
+      id: 'ai-services',
+      name: 'AI Services',
+      icon: <Brain className=&quot;w-8 h-8 text-cyan-400&quot; />,
+      description: 'Support for AI consciousness and autonomous systems',
+      articles: 25
+    },
+    {
+      id: 'quantum-solutions',
+      name: 'Quantum Solutions',
+      icon: <Atom className=&quot;w-8 h-8 text-purple-400&quot; />,
+      description: 'Help with quantum computing and cryptography',
+      articles: 18
+    },
+    {
+      id: 'autonomous-systems',
+      name: 'Autonomous Systems',
+      icon: <Rocket className=&quot;w-8 h-8 text-green-400&quot; />,
+      description: 'Support for self-managing business operations',
+      articles: 32
+    },
+    {
+      id: 'enterprise-it',
+      name: 'Enterprise IT',
+      icon: <Shield className=&quot;w-8 h-8 text-blue-400&quot; />,
+      description: 'Infrastructure and security support',
+      articles: 28
+
     },
     {
       id: 'billing',
       name: 'Billing & Account',
-      icon: <Zap className="w - 8 h - 8 text - yellow - 400" />,
+icon: <Zap className="w - 8 h - 8 text - yellow - 400" />,
       description: 'Payment, invoices, and account management',
       articles: 15;
     },
     {
       id: 'technical',
       name: 'Technical Issues',
-      icon: <Code className="w - 8 h - 8 text - orange - 400" />,
+icon: <Code className="w - 8 h - 8 text - orange - 400" />,
       description: 'Bug reports and technical troubleshooting',
       articles: 42;
     }
@@ -68,7 +98,7 @@ function Support() {
     {
       title: 'Phone Support',
       description: 'Speak directly with our experts',
-      icon: <Phone className="w - 8 h - 8 text - green - 400" />,
+icon: <Phone className="w - 8 h - 8 text - green - 400" />,
       action: 'Call Now',
       color: 'from - green - 500 to - emerald - 600',
       available: true;
@@ -76,7 +106,7 @@ function Support() {
     {
       title: 'Email Support',
       description: 'Send us a detailed message',
-      icon: <Mail className="w - 8 h - 8 text - purple - 400" />,
+icon: <Mail className="w - 8 h - 8 text - purple - 400" />,
       action: 'Send Email',
       color: 'from - purple - 500 to - pink - 600',
       available: true;
@@ -84,7 +114,7 @@ function Support() {
     {
       title: 'Video Call',
       description: 'Screen share and visual assistance',
-      icon: <Video className="w - 8 h - 8 text - orange - 400" />,
+icon: <Video className="w - 8 h - 8 text - orange - 400" />,
       action: 'Schedule Call',
       color: 'from - orange - 500 to - red - 600',
       available: true;
@@ -108,21 +138,21 @@ function Support() {
     {
       title: 'Troubleshooting Autonomous System Errors',
       category: 'Autonomous Systems',
-      read_time: '6 min read',
+read_time: '6 min read',
       views: '3.1k',
       helpful: '92%';
     },
     {
       title: 'API Integration Best Practices',
       category: 'Technical Issues',
-      read_time: '7 min read',
+read_time: '7 min read',
       views: '4.2k',
       helpful: '96%';
     },
     {
       title: 'Understanding Your Invoice and Billing',
       category: 'Billing & Account',
-      read_time: '3 min read',
+read_time: '3 min read',
       views: '1.5k',
       helpful: '89%';
     }
@@ -136,12 +166,12 @@ function Support() {
     {
       day: 'Saturday',
       hours: '10:00 AM - 6:00 PM EST',
-      status: 'Available';
+status: 'Available';
     },
     {
       day: 'Sunday',
       hours: '12:00 PM - 6:00 PM EST',
-      status: 'Limited';
+status: 'Limited';
     }
   ],
   const filtered_categories = selected_category === 'all';
@@ -726,3 +756,75 @@ export default Support,
 },
 export default SupportPage,
 ;
+              <a
+                href=&quot;/contact&quot;
+                className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300&quot;
+              >
+                Get Support
+                <ArrowRight className=&quot;w-5 h-5&quot; />
+              </Link>
+              <a
+                href=&quot;/resources&quot;
+                className=&quot;inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300&quot;
+              >
+                Browse Resources
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  )
+},
+
+export default Support
+          </div>
+        </section>
+
+        {/* Contact Support */}
+        <section id=&quot;contact-support&quot; className=&quot;py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20&quot;>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+            <motion.div
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
+            >
+              <h2 className=&quot;text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
+                Still Need Help?
+              </h2>
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+                Our expert support team is ready to assist you with any questions or technical issues
+              </p>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+                <a
+                  href=&quot;/contact&quot;
+                  className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center&quot;
+                >
+                  Contact Support
+                  <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+                </Link>
+                <a
+                  href=&quot;tel:+13024640950&quot;
+                  className=&quot;px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center&quot;
+                >
+                  <Phone className=&quot;w-5 h-5 mr-2&quot; />
+                  Call Now
+                </Link>
+              </div>
+              <div className="mt-8 p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30">
+                <h3 className="text-xl font-bold text-white mb-4">Emergency Support</h3>
+                <p className="text-gray-300 mb-4">
+                  For critical issues affecting production systems, contact our emergency support line: </p>
+                <div className="text-2xl font-bold text-cyan-400">+1 (302) 464-0950</div>
+                <p className="text-sm text-gray-400 mt-2">Available 24/7 for enterprise clients</p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+    </Layout>
+  )
+},
+
+export default SupportPage
+

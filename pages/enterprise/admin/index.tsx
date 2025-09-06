@@ -70,7 +70,7 @@ export default function CompanyAdmin() {
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
-          <Link href="/workspace/acme">Go to Workspace</Link>
+<Link href="/workspace/acme">Go to Workspace</Link>
         </div>
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
@@ -181,6 +181,23 @@ function MembersTab(): any ({;
         <ActivityTab events={activity} />
       )}
       {tab === 'billing' && (
+        ))}
+      </nav>
+
+      {_tab === 'members' && (
+        <MembersTab members={members} setMembers={_setMembers} />
+      )}
+
+      {_tab === 'usage' && usage && (
+        <UsageTab usage={usage} setUsage={_setUsage} seatsUsed={_seatsUsed} />
+      )}
+
+      {_tab === 'activity' && (
+        <ActivityTab events={activity} />
+      )}
+
+      {_tab === 'billing' && (
+
         <BillingTab invoices={invoices} />
       )}
     </main>
@@ -517,11 +534,40 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
           <tr>;
             <th
               style={{
+
+  return (
+    <section>
+      <h2>Team members</h2>
+      <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>
+        <input placeholder=&quot;Full name&quot; value={name} onChange={e => setName(e.target.value)} />
+        <input placeholder=&quot;Email&quot; value={email} onChange={e => setEmail(e.target.value)} />
+        <select value={role} onChange={e => setRole(e.target.value as Member['role'])}>
+          <option value=&quot;recruiter&quot;>Recruiter</option>
+          <option value=&quot;manager&quot;>Manager</option>
+          <option value=&quot;viewer&quot;>Viewer</option>
+          <option value=&quot;admin&quot;>Admin</option>
+        </select>
+        <button onClick={_add} style={_{ padding: '0.5rem 0.75rem'}}>Add</button>
+      </div>
+
+      <table style={_{ width: '100%', _borderCollapse: 'collapse'}}>
+        <thead>
+          <tr>
+            <th style={_{ textAlign: 'left', _padding: 8, _borderBottom: '1px solid #e5e7eb'}}>Name</th>
+            <th style={_{ textAlign: 'left', _padding: 8, _borderBottom: '1px solid #e5e7eb'}}>Email</th>
+            <th style={_{ textAlign: 'left', _padding: 8, _borderBottom: '1px solid #e5e7eb'}}>Role</th>
+            <th style={_{ textAlign: 'right', _padding: 8, _borderBottom: '1px solid #e5e7eb'}}>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {_members.map(m => (
+            <tr key={m.id}>
+
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
                 <select value={m.role} onChange={e => changeRole(m.id, e.target.value as Member['role'])}>
-                  <option value="recruiter">Recruiter</option>
+<option value="recruiter">Recruiter</option>
                   <option value="manager">Manager</option>
                   <option value="viewer">Viewer</option>
                   <option value="admin">Admin</option>
@@ -560,6 +606,24 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
       <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
         <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
         <span>Seats used: {seatsUsed}</span>
+
+  return (
+    <section>
+      <h2>Usage limits</h2>
+      <div style={_{ display: 'grid', _gridTemplateColumns: 'repeat(2, _minmax(0, _1fr))', _gap: 12, _maxWidth: 600}}>
+        <label>
+          <div>Monthly job posts</div>
+          <input type=&quot;number&quot; value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
+        </label>
+        <label>
+          <div>Budget cap (USD)</div>
+          <input type=&quot;number&quot; value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
+        </label>
+      </div>
+      <div style={_{ marginTop: 12, _display: 'flex', _alignItems: 'center', _gap: 12}}>
+        <button onClick={_save} style={_{ padding: '0.5rem 0.75rem'}}>Save limits</button>
+        <span>Seats used: {_seatsUsed}</span>
+
       </div>
     </section>
   )
@@ -571,7 +635,7 @@ function ActivityTab({ events }: { events: any[] }) {
       <ul>
         {events.map((e) => (
           <li key={e.id}>
-            <span style={{ color: '#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>
+<span style={{ color: '#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>
             <strong>{e.actorEmail}</strong> {e.action}
           </li>
         ))}
@@ -815,7 +879,7 @@ function BillingTab() {
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
+<a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
               </td>
             </tr>
           ))}

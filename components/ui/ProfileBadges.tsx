@@ -23,4 +23,5 @@ function ProfileBadges() {
 function ProfileBadges() {
   const labels = getBadgeLabels (profile || undefined);
   return <VerifiedBadge labels={labels} />;
+
 }

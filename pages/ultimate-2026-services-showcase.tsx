@@ -15,7 +15,7 @@ export default function Ultimate2026ServicesShowcase() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+};
   // Combine all services
   const allServices = [
     ...ultimate2026Services;
@@ -34,13 +34,35 @@ export default function Ultimate2026ServicesShowcase() {
   const emergingCount = allServices.filter(service =>
     service.category?.includes('Emerging') || service.category?.includes('Innovation')
   ).length;
+
+  // Combine all services
+  const _allServices = [
+    ...ultimate2026Services,
+    ...revolutionary2026Innovations
+  ],
+
+  // Dynamic category counts
+  const _aiCount = allServices.filter(service =>
+    service.category?.includes('AI') || service.category?.includes('Machine Learning')
+  ).length,
+  const quantumCount = allServices.filter(service =>
+    service.category?.includes('Quantum') || service.category?.includes('Space')
+  ).length,
+  const enterpriseCount = allServices.filter(service =>
+    service.category?.includes('Enterprise') || service.category?.includes('IT')
+  ).length,
+  const emergingCount = allServices.filter(service =>
+
+    service.category?.includes('Emerging') || service.category?.includes('Innovation')
+  ).length,
+
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
     { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount }
-  ];
+];
   const priceRanges = [
 import React, { useState, useMemo } from 'react',
 import Head from 'next / head',
@@ -111,11 +133,12 @@ function Ultimate2026ServicesShowcase() {
     return filtered
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
+
   return (
     <>
       <Head>
         <title>Ultimate 2026 Services Showcase | Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary 2026 innovations including AI consciousness simulation, quantum neural interfaces, autonomous AI agents, and cutting-edge enterprise solutions. Transform your business with next-generation technology." />
+<meta name="description" content="Discover our revolutionary 2026 innovations including AI consciousness simulation, quantum neural interfaces, autonomous AI agents, and cutting-edge enterprise solutions. Transform your business with next-generation technology." />
         <meta name="keywords" content="AI consciousness, quantum computing, autonomous AI, metaverse development, space technology, edge computing, 5G networks, cybersecurity, healthcare AI, climate prediction" />
         <meta property="og:title" content="Ultimate 2026 Services Showcase | Zion Tech Group" />
         <meta property="og:description" content="Revolutionary 2026 innovations that will transform your business. AI, quantum computing, and emerging technologies." />
@@ -213,7 +236,7 @@ function Ultimate2026ServicesShowcase() {
           </div>
         </div>
       </section>
-      {/* Services Section */}
+{/* Services Section */}
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
@@ -490,7 +513,7 @@ function Ultimate2026ServicesShowcase() {
                     </div>
                   </div>
                 ) : (
-                  <div className="flex items-center space-x-6">
+<div className="flex items-center space-x-6">
                     <div className="text-4xl">{service.icon}</div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
@@ -605,7 +628,7 @@ function Ultimate2026ServicesShowcase() {
           </motion.div>
         </div>
       </section>
-      {/* Footer Contact */}
+{/* Footer Contact */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -632,7 +655,7 @@ function Ultimate2026ServicesShowcase() {
                 </div>
               </div>
             </div>
-            <div>
+<div>
               <h4 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h4>
               <div className="space-y-4">
                 <div className="flex items-start">

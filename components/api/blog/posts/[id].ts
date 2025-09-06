@@ -103,4 +103,8 @@ if ( {) {
     return res.status (200).json (updated);
   }
   return res.status (405).end ();
+  }
+
+  return res.status(405).end()
+
 }

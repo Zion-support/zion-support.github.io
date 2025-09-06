@@ -48,7 +48,7 @@ export default function Innovative2026ServicesShowcase() {
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '🔬', count: emergingTechCount }
-  ];
+];
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $500', range: 'Under $500' },
@@ -60,16 +60,17 @@ export default function Innovative2026ServicesShowcase() {
     { id: 'price', name: 'Price' },
     { id: 'rating', name: 'Rating' },
     { id: 'popularity', name: 'Popularity' }
-  ];
+];
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
+
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         switch (selectedCategory) {
           case 'ai':
-            return service.category?.includes('AI');
+return service.category?.includes('AI');
           case 'quantum':
             return service.category?.includes('Quantum');
           case 'enterprise':
@@ -82,7 +83,7 @@ export default function Innovative2026ServicesShowcase() {
         }
       })
     }
-    // Price range filter
+// Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -154,15 +155,30 @@ export default function Innovative2026ServicesShowcase() {
         }
       })
     }
-    // Search filter
+// Search filter
     if (searchTerm) {
       filtered = filtered.filter(service =>
+        switch (selectedPriceRange) {
+          case 'low':
+            return price < 500,
+          case 'medium':
+            return price >= 500 && price <= 1000,
+          case 'high':
+            return price > 1000,
+          default: return true
+        }
+      })
+    }
+
+    // Search filter
+    if (searchTerm) {_filtered = filtered.filter(service =>
+
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
       )
     }
-    // Sort
+// Sort
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -370,13 +386,63 @@ if ( {) {
       <UltraAdvancedFuturisticBackground2026 
         intensity="extreme" 
         colorScheme="neural-network"
+
+    // Sort
+    filtered.sort(_(a, _b) => {_switch (sortBy) {
+        case 'price':
+          const priceA = parseInt(a.price.replace(/[^0-9]/g, '')),
+          const priceB = parseInt(b.price.replace(/[^0-9]/g, '')),
+          return priceA - priceB,
+        case 'rating':
+          return b.rating - a.rating,
+        case 'popularity':
+        case 'rating':
+          return b.rating - a.rating,
+        case 'popularity':
+
+          return b.customers - a.customers,
+        default: return a.name.localeCompare(b.name)
+      }
+    }),
+
+    return filtered
+  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]),
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { y: 20, _opacity: 0},
+    visible: {_y: 0, _opacity: 1, _transition: {
+        duration: 0.5}
+    }
+  },
+
+  return (_<>
+      <Head>
+        <title>2026 Innovative Services Showcase - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Discover cutting-edge 2026 innovative services including AI, Quantum Computing, Emerging Technologies, and Enterprise IT solutions. Transform your business with next-generation technology.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;2026 services, innovative technology, AI services, quantum computing, emerging tech, enterprise IT, micro SaaS, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;2026 Innovative Services Showcase - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Discover cutting-edge 2026 innovative services including AI, Quantum Computing, Emerging Technologies, and Enterprise IT solutions.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/2026-innovative-services-showcase&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/2026-innovative-services-showcase&quot; />
+      </Head>
+
+      <UltraAdvancedFuturisticBackground2026 
+        intensity=&quot;extreme&quot; 
+        colorScheme=&quot;neural-network&quot;
+
         particleCount={800}
         animationSpeed={3.0}
         enableHolographic={true}
         enableQuantumEffects={true}
         enableNeuralNetworks={true}
         enableMultidimensional={true}
-      />;
+/>;
       <UltraAdvancedNavigation2026 />;
       <div className='min-h-screen relative z-10'>;
         {/* Hero Section */}
@@ -394,7 +460,7 @@ if ( {) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="mb-8"
+className="mb-8"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
@@ -409,7 +475,7 @@ if ( {) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-4 mb-12"
+className="flex flex-wrap justify-center gap-4 mb-12"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
                 <span className="text-blue-400 font-semibold">{allServices.length}+ Services</span>
@@ -484,7 +550,7 @@ if ( {) {
                   </button>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-4 justify-center">
+<div className="flex flex-wrap gap-4 justify-center">
                 {priceRanges.map((range) => (
                   <button
                     key={range.id}
@@ -746,7 +812,7 @@ if ( {) {
                           </span>
                         )}
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+<h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-300 text-sm">{service.tagline}</p>
                     </div>
                     {/* Service Content */}
@@ -820,7 +886,7 @@ if ( {) {
                           {service.category}
                         </span>
                       </div>
-                      {/* CTA Button */}
+{/* CTA Button */}
                       <Link href={service.link}>
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service && service.textColor} bg-opacity-20`}>                          {service && service.category}
                         </span>;
@@ -833,13 +899,13 @@ if ( {) {
                         </button>
                       </Link>
                     </div>
-                    {/* Hover Effect Overlay */}
+{/* Hover Effect Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                   </div>
                 </motion.div>
               ))}
             </motion.div>
-                      {/* CTA Button */}
+{/* CTA Button */}
                       <Link href={service && service.link}>;
                         <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>;
                           <span className='flex items-center justify-center space-x-2'>;
@@ -872,7 +938,7 @@ if ( {) {
                 </button>
               </motion.div>
             )}
-          </div>;
+</div>;
         </section>;
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
@@ -908,6 +974,33 @@ if ( {) {
               </div>
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                Ready to Transform Your Business?
+              </h2>
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+                Contact our team to learn more about our innovative 2026 services and how they can revolutionize your operations.
+              </p>
+              
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;>
+                <div className=&quot;bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6&quot;>
+                  <Phone className=&quot;w-8 h-8 text-blue-400 mx-auto mb-4&quot; />
+                  <h3 className=&quot;text-white font-semibold mb-2&quot;>Call Us</h3>
+                  <p className=&quot;text-blue-300&quot;>+1 302 464 0950</p>
+                </div>
+                <div className=&quot;bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6&quot;>
+                  <Mail className=&quot;w-8 h-8 text-purple-400 mx-auto mb-4&quot; />
+                  <h3 className=&quot;text-white font-semibold mb-2&quot;>Email Us</h3>
+                  <p className=&quot;text-purple-300&quot;>kleber@ziontechgroup.com</p>
+                </div>
+                <div className=&quot;bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-xl p-6&quot;>
+                  <Globe className=&quot;w-8 h-8 text-green-400 mx-auto mb-4&quot; />
+                  <h3 className=&quot;text-white font-semibold mb-2&quot;>Visit Us</h3>
+                  <p className=&quot;text-green-300&quot;>ziontechgroup.com</p>
+                </div>
+              </div>
+
+              <Link href=&quot;/contact&quot;>
+                <button className=&quot;bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg&quot;>
+
                   Get Started Today
                 </button>
               </Link>
@@ -916,7 +1009,7 @@ if ( {) {
         </section>
       </div>
     </>
-              transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Transform Your Business?;

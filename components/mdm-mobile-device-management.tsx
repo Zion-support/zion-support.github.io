@@ -139,11 +139,12 @@ import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
+<meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/mdm-mobile-device-management" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -180,7 +181,7 @@ export default function MDMPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);
 }
     </UltraAdvancedFuturisticBackground>);
 }

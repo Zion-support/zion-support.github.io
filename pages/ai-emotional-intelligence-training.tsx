@@ -25,4 +25,7 @@ return (
     industries={["Customer Support", "Sales", "HR & L & D", "Leadership"]}
     canonical="https: //ziontechgroup.com / ai - emotional - intelligence - training";
   />);
+		/>
+	)
+
 }

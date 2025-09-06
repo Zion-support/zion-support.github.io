@@ -102,11 +102,39 @@ export default function CloudPlatformPage() {;
     'Automated scaling',;
     'Pay-as-you-go pricing',;
     '24/7 expert support',  ];
+
+export default function CloudPlatformPage() {_const _features = [
+    {
+      icon: <Server className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Scalable Infrastructure',
+      description: 'Auto-scaling compute resources that grow with your needs'
+    },
+    {
+      icon: <Database className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Managed Databases',
+      description: 'Fully managed databases with automated backups and scaling'
+    },
+    {
+      icon: <Globe className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Global CDN',
+      description: 'Lightning-fast content delivery across the globe'
+    },
+    {
+      icon: <Shield className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Enterprise Security',
+      description: 'SOC 2 compliant with advanced threat protection'
+    }
+  ],
+
+  const benefits = [
+    '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
+  ],
+
   return (
     <>
       <Head>
         <title>Cloud Platform - Zion Tech Group</title>
-        <meta name="description" content="Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee." />
+<meta name="description" content="Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee." />
       </Head>
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
@@ -227,7 +255,7 @@ export default function CloudPlatformPage() {;
                   </p>
                 </div>
               ))}
-            </div>;
+</div>;
           </div>;
         </section>;
         {/* Benefits Section */}
@@ -282,7 +310,7 @@ export default function CloudPlatformPage() {;
             </div>
           </div>
         </section>
-                </div>;
+</div>;
               </div>;
               <div className='relative'>;
                 <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>;
@@ -458,7 +486,7 @@ export default function CloudPlatformPage() {;
         </section>
       </div>
     </>
-                className='border-white text-white hover:bg-white hover:text-blue-600'>                Contact Sales;
+className='border-white text-white hover:bg-white hover:text-blue-600'>                Contact Sales;
         {/* CTA Section */}
         <section className='py - 24 bg - gradient - to - r from - blue - 600 to - blue - 700'>;
           <div className='max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center'>;

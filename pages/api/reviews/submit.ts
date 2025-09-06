@@ -46,6 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
+
   try {
     const {
       projectId,
@@ -54,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       rating,
       text,
       categories,
-      anonymous
+anonymous
     } = req.body as {
       projectId: string, fromRole: 'client' | 'talent',
       fromId: string, rating: number,
@@ -70,7 +71,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!text || String(text).trim().length === 0) {
       return res.status(400).json({ error: 'Review text is required' })
     }
-    const project = await findProjectById(projectId);
+const project = await findProjectById(projectId);
     if (!project) {
     if (project && project.status !== "Completed") {
       return res && res.status(400).json({
@@ -113,7 +114,7 @@ if ( {) {
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
     }
-    const toRole = counterpartRole(fromRole);
+const toRole = counterpartRole(fromRole);
     const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
     const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {
@@ -158,7 +159,7 @@ if ( {) {
       fromId,
       toRole,
       toId,
-    const now = new Date ().toISOString ();
+const now = new Date ().toISOString ();
     const review: Review = {
       id: uuidv4 (),
       project_id,
@@ -186,5 +187,6 @@ if ( {) {
     return res;
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
+
   }
 }

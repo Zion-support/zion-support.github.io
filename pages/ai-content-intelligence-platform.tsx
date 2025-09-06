@@ -346,6 +346,52 @@ export default function AIContentIntelligencePlatform() {;
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200">
                   <Play className="w-5 h-5 mr-2" />
+
+export default function AIContentIntelligencePlatform() {_return (_<Layout>
+      <Head>
+        <title>AI Content Intelligence Platform | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Transform your content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI content intelligence, content optimization, content analytics, AI content marketing, content performance, SEO optimization&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;AI Content Intelligence Platform | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Transform your content creation with AI-powered intelligence and analytics.&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/ai-content-intelligence-platform&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-content-intelligence-platform&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;relative py-20 lg:py-32 overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20&quot;></div>
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 items-center&quot;>
+            <motion.div
+              initial={_{ opacity: 0, _x: -30}}
+              animate={_{ opacity: 1, _x: 0}}
+              transition={_{ duration: 0.8}}
+            >
+              <div className=&quot;flex items-center space-x-2 mb-6&quot;>
+                <span className=&quot;bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full&quot;>
+                  NEW SERVICE
+                </span>
+                <span className=&quot;text-gray-400 text-sm&quot;>Launch Date: January 15, 2025</span>
+              </div>
+              <h1 className=&quot;text-4xl lg:text-6xl font-bold text-white mb-6&quot;>
+                AI Content Intelligence Platform
+              </h1>
+              <p className=&quot;text-xl lg:text-2xl text-gray-300 mb-8&quot;>
+                Transform content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling.
+              </p>
+              <div className=&quot;flex flex-col sm:flex-row gap-4&quot;>
+                <Link
+                  href=&quot;/contact&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105&quot;
+                >
+                  Get Started Today
+                  <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+                </Link>
+                <button className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200&quot;>
+                  <Play className=&quot;w-5 h-5 mr-2&quot; />
+
                   Watch Demo
                 </button>
               </div>
@@ -354,7 +400,7 @@ export default function AIContentIntelligencePlatform() {;
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+className="relative"
             >
               <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
                 <div className="text-6xl mb-4">🧠</div>
@@ -377,7 +423,7 @@ export default function AIContentIntelligencePlatform() {;
             </motion.div>
           </div>
         </div>
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               className='relative'>;
               <div className='bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8'>;
                 <div className='text-6xl mb-4'>🧠</div>;
@@ -425,7 +471,7 @@ export default function AIContentIntelligencePlatform() {;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className="group relative"
               >
@@ -467,7 +513,7 @@ export default function AIContentIntelligencePlatform() {;
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
+transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                 viewport={{ once: true }}
                 className="group"
               >
@@ -521,7 +567,7 @@ export default function AIContentIntelligencePlatform() {;
                   </div>
                 )}
                 <div className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-blue-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}>
-                  <div className="text-center mb-8">
+<div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
                     <div className="text-gray-400 mb-4">{plan.period}</div>
@@ -545,7 +591,7 @@ export default function AIContentIntelligencePlatform() {;
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Integrations Section */}
@@ -1011,7 +1057,7 @@ function AIContentIntelligencePlatform() {
               </div>
             </div>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link
+<Link
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
@@ -1021,6 +1067,17 @@ function AIContentIntelligencePlatform() {
               <Link
                 href="/2025-innovative-new-services-showcase"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
+              <Link
+                href=&quot;/contact&quot;
+                className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105&quot;
+              >
+                Start Your Free Trial
+                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+              </Link>
+              <Link
+                href=&quot;/2025-innovative-new-services-showcase&quot;
+                className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200&quot;
+
               >
                 View All Services
               </Link>
@@ -1029,7 +1086,7 @@ function AIContentIntelligencePlatform() {
         </div>
       </section>
     </Layout>
-                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>;
+className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>;
                 View All Services;
               </Link>;
             </div>;

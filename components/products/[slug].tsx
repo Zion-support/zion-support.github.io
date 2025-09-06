@@ -6,6 +6,9 @@ const EquipmentDetail: NextPage = () => {
   const item = items.find((e) => e.slug === slug);
   if (!item) {
     return (
+
+  if (!item) {_return (
+
       <EnhancedLayout>
         <Head>
           <title>Equipment Not Found - Zion Tech Solutions</title>
@@ -13,7 +16,7 @@ const EquipmentDetail: NextPage = () => {
         <div className="space-y-4">
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
-        </div>
+</div>
       </EnhancedLayout>
     )
 import equipment from '@/data/equipment ;
@@ -127,6 +130,7 @@ const EquipmentDetail: NextPage = () => {;
             <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover: bg-blue-700">Request Quote</a>
           </Link>
           <Link href="/products"><a className="text-sm text-blue-600 hover:underline">Back to Equipment</a></Link>
+
         </aside>
       </div>
     </EnhancedLayout>

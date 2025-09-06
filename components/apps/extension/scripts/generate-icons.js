@@ -35,4 +35,5 @@ for (const size of sizes) {
   await sharp (svg_path).resize (size, size).png ().to_file (out),
   // eslint - disable - next - line no - console;
   console.log ('generated', out);
+
 }

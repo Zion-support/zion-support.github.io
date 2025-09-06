@@ -28,12 +28,28 @@ const Onboarding: NextPage = () => {
         ))}
       </div>
       <div className="border rounded-md p-4 min-h-[200px]">
+      <Head>
+        <title>Onboarding - Zion</title>
+      </Head>
+
+      <h1 className=&quot;text-2xl font-semibold&quot;>Get Started</h1>
+
+      <div className=&quot;flex items-center gap-2 text-sm flex-wrap&quot;>
+        {steps.map((label, i) => (
+          <div key={label} className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}>
+            {i + 1}. {label}
+          </div>
+        ))}
+      </div>
+
+      <div className=&quot;border rounded-md p-4 min-h-[200px]&quot;>
+
         {step === 0 && <div>Account setup fields…</div>}
         {step === 1 && <div>Profile details fields…</div>}
         {step === 2 && <div>Preferences selection…</div>}
         {step === 3 && <div>Preview your profile/listing before going live.</div>}
       </div>
-      <div className="flex gap-2">
+<div className="flex gap-2">
         <EnhancedButton variant="secondary" onClick={prev} disabled={step === 0}>Back</EnhancedButton>
         <EnhancedButton onClick={next} disabled={step === steps.length - 1}>{step === steps.length - 1 ? 'Done' : 'Next'}</EnhancedButton>
       </div>

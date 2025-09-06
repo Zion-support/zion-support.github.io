@@ -7,3 +7,4 @@ export default function QuoteRequestsPage() {
       <p className="text - white / 70 mt - 2">This runs hourly and auto - PRs updates.</p>;
     </div>);
 }
+

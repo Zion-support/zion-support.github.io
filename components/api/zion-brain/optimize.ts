@@ -121,5 +121,6 @@ function handler() {
       payload: { error: e?.message || "unknown" },
     });
     return res.status (500).json ({ error: "Optimization failure" });
+
   }
 }

@@ -61,4 +61,22 @@ function SiteMapIntelPage() {
         </table>;
       </div>;
     </div>);
+            <tr>
+              <th className=&quot;text-left p-2&quot;>Route</th>
+              <th className=&quot;text-left p-2&quot;>Last Modified</th>
+            </tr>
+          </thead>
+          <tbody>
+            {routes.map(r => (
+              <tr key={r.path} className=&quot;border-t&quot;>
+                <td className=&quot;p-2&quot;>{r.path}</td>
+                <td className=&quot;p-2&quot;>{new Date(r.lastModified).toLocaleString()}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )
+
 }

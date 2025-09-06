@@ -1,5 +1,5 @@
 export interface Service {
-  tags: string[];
+tags: string[];
 ;
 export const emergingTech2027Services: Service[] = [;
   {

@@ -1,5 +1,5 @@
 export interface Revolutionary2027MicroSaas {
-    address: string;
+address: string;
   }
 ;
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =;

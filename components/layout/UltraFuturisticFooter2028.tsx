@@ -384,6 +384,58 @@ function UltraFuturisticFooter2028() {
                 </p>;
               </div>;
             </div>;
+
+const _serviceCategories = [
+  {_title: '🚀 2028 Futuristic Innovations', _services: [
+      { name: 'AI Climate Prediction Platform', _href: '/ai-climate-prediction-platform'},
+      {_name: 'Quantum Cybersecurity Firewall', _href: '/quantum-cybersecurity-firewall'},
+      {_name: 'Autonomous Drone Delivery Network', _href: '/autonomous-drone-delivery-network'},
+      {_name: 'AI Healthcare Diagnosis Platform', _href: '/ai-healthcare-diagnosis-platform'}
+    ]
+  },
+  {_title: '🏙️ Smart City & Infrastructure', _services: [
+      { name: 'Smart City Infrastructure Management', _href: '/smart-city-infrastructure-management'},
+      {_name: 'IoT Energy Management System', _href: '/iot-energy-management-system'},
+      {_name: 'Digital Twin Manufacturing Platform', _href: '/digital-twin-manufacturing-platform'},
+      {_name: 'Autonomous Manufacturing AI', _href: '/autonomous-manufacturing-ai'}
+    ]
+  },
+  {_title: '⚛️ Quantum & Advanced Tech', _services: [
+      { name: 'Quantum Financial Trading Platform', _href: '/quantum-financial-trading-platform'},
+      {_name: 'Quantum Machine Learning Platform', _href: '/quantum-machine-learning-platform'},
+      {_name: 'Quantum Internet Security Gateway', _href: '/quantum-internet-security-gateway'},
+      {_name: 'Quantum Internet Protocol', _href: '/quantum-internet-protocol'}
+    ]
+  },
+  {_title: '🤖 AI & Machine Learning', _services: [
+      { name: 'AI Customer Service Automation', _href: '/ai-customer-service-automation'},
+      {_name: 'AI Education Platform', _href: '/ai-education-platform'},
+      {_name: 'AI Content Creation Suite', _href: '/ai-content-creation-suite'},
+      {_name: 'AI Legal Research Platform', _href: '/ai-legal-research-platform'}
+    ]
+  }
+],
+
+const companyLinks = [
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
+  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
+  { name: 'Careers', href: '/careers', icon: TrendingUp },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
+  { name: 'Support', href: '/support', icon: ShieldCheck }
+],
+
+const resourceLinks = [
+  { name: 'Documentation', href: '/docs', icon: BookOpen },
+  { name: 'API Reference', href: '/api', icon: Cpu },
+  { name: 'Developer Tools', href: '/dev-tools', icon: Database },
+  { name: 'Mobile Apps', href: '/mobile', icon: Globe },
+  { name: 'Cloud Services', href: '/cloud', icon: Cloud },
+  { name: 'Security Center', href: '/security', icon: Shield }
+],
+
+const socialLinks = [
+
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },
@@ -442,7 +494,7 @@ export default function UltraFuturisticFooter2028() {
                 <a
                   key={social.name}
                   href={social.href}
-                  target="_blank"
+target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40"
                 >
@@ -800,7 +852,7 @@ export default function UltraFuturisticFooter2028() {
           </div>
         </div>
       </div>
-                className='text-purple-300 hover:text-white transition-colors'>                Security            {/* Copyright */}
+className='text-purple-300 hover:text-white transition-colors'>                Security            {/* Copyright */}
             <div className="text-sm text-purple-300">;
               © 2028 Zion Tech Group. All rights reserved. Leading the future of technology.;
             </div>;

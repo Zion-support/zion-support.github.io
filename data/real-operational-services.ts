@@ -1,5 +1,5 @@
 export interface RealOperationalService {
-    address: string;
+address: string;
   }
 ;
 export const realOperationalServices: RealOperationalService[] = [;

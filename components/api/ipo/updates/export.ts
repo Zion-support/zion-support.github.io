@@ -85,4 +85,5 @@ function handler() {
   doc.font_size (12).text (u.kpis || "");
   doc.end ();
   doc.end ();
+
 }

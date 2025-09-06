@@ -46,11 +46,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 }) => {;
   if (fill) {;
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
+
+const: OptimizedImage: React.FC<OptimizedImageProps> = ({
+
   src,
   alt,
   width,
   height,
-  class_name = '',
+class_name = '',
   priority = false,
   sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
   quality = 85,

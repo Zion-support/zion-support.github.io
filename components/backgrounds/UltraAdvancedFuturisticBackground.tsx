@@ -93,6 +93,12 @@ if (return) {
       rotation: number;
       rotation_speed: number;
     }> = [];
+
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
+
+    const particles: Array<{
+
       x: number,
       y: number,
       vx: number,
@@ -105,14 +111,14 @@ if (return) {
       maxLife: number,
       rotation: number,
       rotationSpeed: number
-    }> = [];
+}> = [];
     const colors = {
       quantum: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff'],
       neon: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],
       holographic: ['#ff1493#00bfff#ffd700#7fff00#ff69b4#00ced1#ff4500'],
       cyberpunk: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],
       'quantum-fusion': ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff#ff1493', '#00bfff']
-    };
+};
     const selectedColors = colors[theme] || colors.quantum;
     // Initialize particles with enhanced properties
     const initParticles = () => {
@@ -120,6 +126,13 @@ if (return) {
                    intensity === 'high' ? particleCount : 
                    intensity === 'medium' ? Math.floor(particleCount * 0.7) : 
                    Math.floor(particleCount * 0.5);
+
+    // Initialize particles with enhanced properties
+    const _initParticles = () => {_const _count = intensity === 'extreme' ? particleCount * 2 : 
+                   intensity === 'high' ? particleCount : 
+                   intensity === 'medium' ? Math.floor(particleCount * 0.7) : 
+                   Math.floor(particleCount * 0.5),
+
       for (let i = 0, i < count, i++) {
         particles.push({
           x: Math.random() * canvas.width,
@@ -136,7 +149,7 @@ if (return) {
           rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed
         })
       }
-    };
+};
     // Enhanced animation loop with quantum effects
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -1191,4 +1204,102 @@ if ( {) {
         </div>)}
       {children}
     </div>);
+        }
+        if (particle.y <= 0 || particle.y >= canvas.height) {_if (enableQuantumEffects && Math.random() < 0.1) {
+            // Quantum tunneling effect
+            particle.y = particle.y <= 0 ? canvas.height : 0
+          } else {
+            particle.vy *= -1
+          }
+            particle.y = particle.y <= 0 ? canvas.height : 0;} else {_particle.vy *= -1;}
+
+        }
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
+
+        // Draw particle with enhanced effects
+        ctx.save(),
+        ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife),
+        ctx.translate(particle.x, particle.y),
+        ctx.rotate(particle.rotation),
+        
+        if (particle.type === 'quantum') {
+          // Quantum particle with wave effect
+          const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, particle.size * 4),
+          gradient.addColorStop(0, particle.color),
+          gradient.addColorStop(0.3, particle.color + '80'),
+          gradient.addColorStop(0.6, particle.color + '40'),
+          gradient.addColorStop(1, 'transparent'),
+        
+        ctx.restore()
+      }),
+
+      // Add quantum field effects
+      if (enableQuantumEffects && theme === 'quantum-fusion') {
+        const time = Date.now() * 0.001
+        for (let i = 0, i < 5, i++) {
+          const x = Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5
+          const y = Math.cos(time + i * 0.7) * canvas.height * 0.3 + canvas.height * 0.5
+        }
+      }
+
+      // Add holographic matrix effect
+      if (enableHolographic && theme === 'holographic') {
+        const time = Date.now() * 0.001
+        ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)',
+        ctx.lineWidth = 1,
+      }
+
+      animationRef.current = requestAnimationFrame(animate)
+    },
+
+    // Handle window resize
+    const handleResize = () => {
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight
+    },
+
+    window.addEventListener('resize', handleResize),
+    initParticles(),
+    animate(),
+
+    return () => {
+      window.removeEventListener('resize', handleResize),
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+      }
+    }
+  }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
+
+  return (
+    <div className=&quot;relative min-h-screen&quot;>
+      <canvas
+        ref={canvasRef}
+        className=&quot;fixed inset-0 w-full h-full pointer-events-none&quot;
+        style={{ zIndex: -1 }}
+      />
+      
+      {/* Additional futuristic overlay effects */}
+      {enableHolographic && (
+        <div className=&quot;fixed inset-0 pointer-events-none&quot; style={{ zIndex: -1 }}>
+          <div className=&quot;absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.03),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.03),transparent_50%)]&quot; />
+        </div>
+      )}
+      
+      {enableQuantumEffects && (
+        <div className=&quot;fixed inset-0 pointer-events-none&quot; style={{ zIndex: -1 }}>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.02),transparent_70%)]&quot; />
+        </div>
+      )}
+      
+      {_children}
+    </div>
+  )
+
 }

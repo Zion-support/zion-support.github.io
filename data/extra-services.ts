@@ -1,5 +1,5 @@
 export interface ExtraService {
-    address: string;
+address: string;
   }
 ;
 export const extra_services: ExtraService[] = [;

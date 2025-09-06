@@ -3319,7 +3319,7 @@ import Footer from '../components/Footer';
     {
       title: 'Micro SaaS Products',
       description: 'Innovative, focused software solutions for modern businesses',
-    count: '150+',
+count: '150+',
       color: 'blue',
       services: [
         'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
@@ -3329,20 +3329,23 @@ import Footer from '../components/Footer';
   ];
   const getColorClasses = (color: string) => {
     const colors = {
+
+  const _getColorClasses = (_color: string) => {_const _colors = {
+
       blue: {
         bg: 'bg-blue-600',
         hover: 'hover:bg-blue-700',
         text: 'text-blue-400',
         border: 'border-blue-500/40',
         ring: 'focus:ring-blue-500'
-    },
+},
     purple: {
         bg: 'bg-purple-600',
         hover: 'hover:bg-purple-700',
         text: 'text-purple-400',
         border: 'border-purple-500/40',
         ring: 'focus:ring-purple-500'
-      };
+};
       green: {
         bg: 'bg-green-600',
         hover: 'hover:bg-green-700',
@@ -3350,7 +3353,7 @@ import Footer from '../components/Footer';
         border: 'border-green-500/40',
         ring: 'focus:ring-green-500'
       }
-    };
+};
     return colors[color as keyof typeof colors] || colors.blue
   };
   return (
@@ -3992,11 +3995,33 @@ function Services() {
                         {category.services.map((service, serviceIndex) => (
                           <li key={serviceIndex} className="flex items-center">
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
+                      key={category.title}
+                      className={_`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${_isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                      style={_{ transitionDelay: `${index * 200}ms` }}
+                    >
+                      <div className=&quot;flex items-center justify-between mb-6&quot;>
+                        <h3 className={`text-2xl font-bold ${colors.text}`}>
+                          {category.title}
+                        </h3>
+                        <span className={_`text-3xl font-bold ${colors.text}`}>
+                          {_category.count}
+                        </span>
+                      </div>
+                      
+                      <p className=&quot;text-slate-300 mb-6&quot;>
+                        {category.description}
+                      </p>
+                      
+                      <ul className=&quot;text-slate-400 space-y-2 mb-8&quot;>
+                        {category.services.map((service, serviceIndex) => (
+                          <li key={serviceIndex} className=&quot;flex items-center&quot;>
+                            <span className=&quot;w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0&quot;></span>
+
                             {service}
                           </li>
                         ))}
                       </ul>
-                      <Link 
+<Link 
                         href={category.href}
                         className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
                       >
@@ -4011,7 +4036,7 @@ function Services() {
               </div>
             </div>
           </section>
-          {/* Why Choose Us */}
+{/* Why Choose Us */}
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -4057,7 +4082,7 @@ function Services() {
               </div>
             </div>
           </section>
-          {/* CTA Section */}
+{/* CTA Section */}
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -4076,7 +4101,7 @@ function Services() {
                 </Link>
                 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-                  className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
+className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
                   Call {contact.phone}
                 </a>
@@ -4086,6 +4111,10 @@ function Services() {
                 >
                   Email Us
                 </a>
+                >
+                  Email Us
+                </Link>
+
               </div>
             </div>
           </section>

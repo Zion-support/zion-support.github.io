@@ -38,3 +38,4 @@ function handler() {
   res.set_header ('Content - Dispositionattachment, filename="audit - log.json"');
   res.status (200).send (JSON.stringify (data, null, 2));
 }
+

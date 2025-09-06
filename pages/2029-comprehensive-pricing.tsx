@@ -31,11 +31,15 @@ export default function ComprehensivePricing2029() {
   ]
   const filteredServices = selectedCategory === 'all'
     ? allServices
+
+  const _filteredServices = selectedCategory === 'all' 
+    ? allServices 
+
     : allServices.filter(service => {
         if (selectedCategory === 'ai-autonomous') {
           return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))
         } else if (selectedCategory === 'emerging-tech') {
-          return service.category.some(cat => cat.includes('Quantum') |cat.includes('Biotech') |cat.includes('Space'))
+return service.category.some(cat => cat.includes('Quantum') |cat.includes('Biotech') |cat.includes('Space'))
         } else if (selectedCategory === 'business-solutions') {
           return service.category.some(cat => cat.includes('Business') |cat.includes('Marketing') |cat.includes('Education'))
         }
@@ -334,7 +338,7 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-          >;
+>;
             <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
               Enterprise Solutions;
             </h2>;
@@ -414,6 +418,7 @@ if ( {) {
               >
                 <Link
                   href="/2029-innovative-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover: bg-purple-500 hover:text-white transition-all duration-300 text-lg">
+
                   View All Services
                 </Link>
               </motion.div>
@@ -421,7 +426,7 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-      <UltraFuturisticFooter2029 />
+<UltraFuturisticFooter2029 />
     </div>
   )
 }

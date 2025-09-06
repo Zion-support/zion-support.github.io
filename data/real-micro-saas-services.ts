@@ -1,5 +1,5 @@
 export interface RealMicroSaasService {
-    id: 'ai-legal-document-generator',
+id: 'ai-legal-document-generator',
 export const realMicroSaasServices: RealMicroSaasService[] = [;
   // AI - Powered Business Solutions;
   {    website: string;

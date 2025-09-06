@@ -18,7 +18,7 @@ export default function VerifyStatus() {
     if (typeof emailParam === 'string') {
       setEmail(emailParam)
     }
-  }, [emailParam])
+}, [emailParam])
   // Countdown timer for resend button
   useEffect(() => {
     let interval: NodeJS.Timeout,
@@ -26,7 +26,7 @@ export default function VerifyStatus() {
       interval = setInterval(() => {
         setCountdown(prev => prev - 1)
       }, 1000)
-    }
+}
     return () => clearInterval(interval)
   }, [countdown]);
   const handleResendEmail = async () => {
@@ -37,12 +37,26 @@ export default function VerifyStatus() {
     setIsResending(true)
     setError('')
     setMessage('')
+    }
+    return () => clearInterval(interval)
+  }, [countdown]),
+
+  const handleResendEmail = async () => {
+    if (!email) {
+      setError('Please enter your email address'),
+      return
+    }
+
+    setIsResending(true),
+    setError(''),
+    setMessage(''),
+
     try {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
-      });
+});
       const data = await response.json();
       if (response.ok) {
         setMessage('Verification email sent successfully! Please check your inbox.');
@@ -309,16 +323,112 @@ if ( {) {
               {isCheckingStatus ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
+
+    setIsCheckingStatus(true),
+    setError(''),
+    setMessage(''),
+
+    try {
+      // Attempt to refresh the session to get the latest user status
+      const { error: refreshError } = await supabase.auth.refreshSession()
+
+      if (refreshError) {
+        // Don't treat all refresh errors as critical for this check,
+        // as user might not have a session yet or it might be invalid.
+        logWarn('Error during session refresh:', { data: refreshError.message })
+      }
+
+      // Get the current user details from Supabase
+      const { data: { user }, error: getUserError } = await supabase.auth.getUser(),
+
+      if (getUserError) {
+        setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`),
+        setIsCheckingStatus(false),
+        return
+            </div>
+            <h1 className=&quot;text-2xl font-bold text-gray-900&quot;>Email Verification</h1>
+            <p className=&quot;text-sm text-gray-600 mt-2&quot;>
+              Check and manage your email verification status
+            </p>
+          </div>
+
+          {/* Success Message */}
+          {message && (
+            <Alert className=&quot;border-green-500 bg-green-50 text-green-900&quot;>
+              <CheckCircle className=&quot;h-4 w-4&quot; />
+              <AlertDescription>{message}</AlertDescription>
+            </Alert>
+          )}
+
+          {/* Error Message */}
+          {error && (
+            <Alert variant=&quot;destructive&quot;>
+              <AlertCircle className=&quot;h-4 w-4&quot; />
+              <AlertDescription>{error}</AlertDescription>
+            </Alert>
+          )}
+
+          {/* Email Input */}
+          <div className=&quot;space-y-2&quot;>
+            <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-gray-700&quot;>
+              Email Address
+            </label>
+            <Input
+              id=&quot;email&quot;
+              type=&quot;email&quot;
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder=&quot;Enter your email address&quot;
+              className=&quot;w-full&quot;
+            />
+            {email && (
+              <p className=&quot;text-xs text-gray-500&quot;>
+                We'll check the verification status for this email address
+              </p>
+            )}
+          </div>
+
+          {/* Status Info */}
+          {email && (
+            <div className=&quot;bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4&quot;>
+              <h3 className=&quot;text-sm font-medium text-slate-900 dark:text-slate-100 mb-2&quot;>Verification Status</h3>
+              <div className=&quot;text-sm text-slate-700 dark:text-slate-300 space-y-1&quot;>
+                <p>• Check your email inbox for a verification link</p>
+                <p>• Click the link in the email to verify your account</p>
+                <p>• Return here or try logging in after verification</p>
+              </div>
+              {lastSentTime && (
+                <p className=&quot;text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center&quot;>
+                  <Clock className=&quot;h-3 w-3 mr-1&quot; />
+                  Last email sent: {lastSentTime.toLocaleTimeString()}
+                </p>
+              )}
+            </div>
+          )}
+
+          {/* Action Buttons */}
+          <div className=&quot;space-y-3&quot;>
+            {/* Check Status Button */}
+            <Button
+              onClick={handleCheckStatus}
+              disabled={!email || isCheckingStatus}
+              className=&quot;w-full&quot;
+              variant=&quot;outline&quot;
+            >
+              {_isCheckingStatus ? (
+                <>
+                  <RefreshCw className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
+
                   Checking Status...
                 </>
               ) : (
                 <>
-                  <Eye className="h-4 w-4 mr-2" />
+<Eye className="h-4 w-4 mr-2" />
                   Check Verification Status
                 </>
               )}
             </Button>
-            {/* Resend Email Button */}
+{/* Resend Email Button */}
             <Button
               onClick={handleResendEmail}
               disabled={!email || isResending || countdown > 0}
@@ -332,17 +442,17 @@ if ( {) {
                 </>
               ) : countdown > 0 ? (
                 <>
-                  <Clock className="h-4 w-4 mr-2" />
+<Clock className="h-4 w-4 mr-2" />
                   Resend in {countdown}s
                 </>
               ) : (
                 <>
-                  <Mail className="h-4 w-4 mr-2" />
+<Mail className="h-4 w-4 mr-2" />
                   Resend Verification Email
                 </>
               )}
             </Button>
-            <Button;
+<Button;
               on_click={handleCheckStatus}
               disabled={!email || isCheckingStatus}
               className="w - full";

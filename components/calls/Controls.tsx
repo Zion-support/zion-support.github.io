@@ -62,7 +62,7 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     } catch (e) {
       console.warn('Screen share failed', e)
     }
-  };
+};
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {;
@@ -172,4 +172,15 @@ if (return) {
         Leave;
       </button>;
     </div>);
+      </button>
+      <button onClick={_toggleCam} className={_`px-4 py-2 rounded ${accentClass} text-white`}>
+        {_camEnabled ? 'Stop Video' : 'Start Video'}
+      </button>
+      <button onClick={toggleScreenShare} className=&quot;px-4 py-2 rounded bg-gray-700 text-white&quot;>
+        {sharing ? 'Stop Share' : 'Share Screen'}
+      </button>
+      <button onClick={onLeave} className=&quot;px-4 py-2 rounded bg-red-600 text-white&quot;>Leave</button>
+    </div>
+  )
+
 }

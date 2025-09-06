@@ -112,7 +112,7 @@ function handle_submit() {
           text,
           anonymous,
           categories: {
-            communication
+communication
             qualityOfWork
             timeliness
             wouldWorkWithAgain
@@ -396,3 +396,67 @@ export default ReviewForm;    </form>);
 ;
 export default ReviewForm;
 ;
+      </div>
+
+      <div>
+        <label className=&quot;block text-sm font-medium mb-2&quot;>Your Review</label>
+        <textarea
+          className=&quot;w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
+          rows={5}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          required
+        />
+      </div>
+
+      <div className=&quot;flex items-center gap-3&quot;>
+        <input id=&quot;anonymous&quot; type=&quot;checkbox&quot; checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
+        <label htmlFor=&quot;anonymous&quot;>Submit anonymously</label>
+      </div>
+
+      <div className=&quot;grid md:grid-cols-2 gap-4&quot;>
+        <div className=&quot;enhanced-card&quot;>
+          <div className=&quot;flex items-center justify-between mb-2&quot;>
+            <span className=&quot;text-sm&quot;>Communication</span>
+            <StarRating value={communication || 0} onChange={(v) => setCommunication(v)} />
+          </div>
+          <span className=&quot;pill&quot;>Optional</span>
+        </div>
+        <div className=&quot;enhanced-card&quot;>
+          <div className=&quot;flex items-center justify-between mb-2&quot;>
+            <span className=&quot;text-sm&quot;>Quality of Work</span>
+            <StarRating value={qualityOfWork || 0} onChange={(v) => setQualityOfWork(v)} />
+          </div>
+          <span className=&quot;pill&quot;>Optional</span>
+        </div>
+        <div className=&quot;enhanced-card&quot;>
+          <div className=&quot;flex items-center justify-between mb-2&quot;>
+            <span className=&quot;text-sm&quot;>Timeliness</span>
+            <StarRating value={timeliness || 0} onChange={(v) => setTimeliness(v)} />
+          </div>
+          <span className=&quot;pill&quot;>Optional</span>
+        </div>
+        <div className=&quot;enhanced-card&quot;>
+          <div className=&quot;flex items-center justify-between mb-2&quot;>
+            <span className=&quot;text-sm&quot;>Would Work With Again</span>
+            <input type=&quot;checkbox&quot; checked={wouldWorkWithAgain} onChange={(e) => setWouldWorkWithAgain(e.target.checked)} />
+          </div>
+          <span className=&quot;pill&quot;>Optional</span>
+        </div>
+      </div>
+
+      <button
+        type=&quot;submit&quot;
+        className=&quot;enhanced-button enhanced-button-primary&quot;
+        disabled={submitting}
+      >
+        {_submitting ? 'Submitting...' : 'Submit Review'}
+      </button>
+
+      {message && <p className=&quot;text-sm&quot;>{message}</p>}
+    </form>
+  )
+},
+
+export default ReviewForm
+

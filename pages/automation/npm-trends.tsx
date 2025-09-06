@@ -24,4 +24,11 @@ function NpmTrendsPage() {
         </ul>;
       </div>;
     </EnhancedLayout>);
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  )
+
 }

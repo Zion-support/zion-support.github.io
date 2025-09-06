@@ -1498,13 +1498,35 @@ function MicroSaasPage() {
     target_audience: 'Content marketers, agencies, e - commerce businesses, and content creators',
     market_size: '$15.8B content marketing industry',      growth_rate: '16.1% CAGR expected through 2030';
     }
+  
+  const _microSaasServices = [
+    {
+      name: 'AI Content Generator Pro',
+      tagline: 'Professional AI-powered content creation',
+      price: '$49',
+      period: '/month',
+      description: 'Create high-quality, SEO-optimized content at scale with our advanced AI writing assistant.',
+      features: [
+        'SEO-optimized content generationMulti-language support (15+ languages)Brand voice customizationContent templates library (100+ templates)Plagiarism-free writing guaranteeAdvanced content analyticsTeam collaboration toolsAPI access for integrations'
+      ],
+      popular: true,
+      icon: '📝',
+      color: 'from-pink-500 to-rose-600',
+      textColor: 'text-pink-400',
+      link: 'https://contentgen.ziontechgroup.com',
+      marketPosition: 'Competitive with Jasper ($39-99), Copy.ai ($36-186), and Writesonic ($12.67-100)',
+      targetAudience: 'Content marketers, agencies, e-commerce businesses, and content creators',
+      marketSize: '$15.8B content marketing industry',
+      growthRate: '16.1% CAGR expected through 2030'
+    },
+
     {
       name: 'Design System Builder',
       tagline: 'Automated design system management',
       price: '$79',
       period: '/month',
       description: 'Build and maintain consistent design systems with automated component generation and team collaboration.',
-      features: [;
+features: [;
         'Component library management_design token automation_style guide generation_design - to - code workflow_team collaboration tools_version control & history_design system analytics_integration with Figma, Sketch, Adobe XD';
       ];
       popular: false,
@@ -1540,7 +1562,7 @@ function MicroSaasPage() {
       tagline: 'Organize company knowledge',
       price: '$39',
       period: '/month',
-      description: 'AI - powered knowledge base that helps businesses organize, search, and share company knowledge.',
+description: 'AI - powered knowledge base that helps businesses organize, search, and share company knowledge.',
     features: [        'Intelligent organization_advanced search_knowledge graphs_collaboration tools_integration capabilities_analytics & reporting_mobile app accessAPI access';
       ];
       popular: false,
@@ -1558,7 +1580,7 @@ function MicroSaasPage() {
       tagline: 'Advanced email automation',
       price: '$79',
       period: '/month',
-      description: 'Professional email marketing platform with AI - powered personalization, automation, and advanced analytics.',
+description: 'Professional email marketing platform with AI - powered personalization, automation, and advanced analytics.',
     features: [        'AI - powered personalization_advanced automation workflows_behavioral targeting_a / B testing automation_predictive analytics_advanced segmentation_revenue attribution_integration with major platforms';
       ];
       popular: true,
@@ -1576,7 +1598,7 @@ function MicroSaasPage() {
       tagline: 'Comprehensive SEO optimization',
       price: '$89',
       period: '/month',
-      description: 'All - in - one SEO platform with AI - powered keyword research, content optimization, and technical SEO tools.',
+description: 'All - in - one SEO platform with AI - powered keyword research, content optimization, and technical SEO tools.',
     features: [        'AI keyword research_content optimization_technical SEO audit_ranking tracking_competitor analysis_local SEO tools_schema markup generator_performance reporting';
       ];
       popular: true,
@@ -1594,7 +1616,7 @@ function MicroSaasPage() {
       tagline: 'Intelligent social media automation',
       price: '$59',
       period: '/month',
-      description: 'AI - powered social media management with content creation, scheduling, and performance optimization.',
+description: 'AI - powered social media management with content creation, scheduling, and performance optimization.',
     features: [        'AI content generation_smart scheduling_performance analytics_hashtag optimization_competitor monitoring_multi - platform management_content calendar_team collaboration';
       ];
       popular: false,
@@ -1649,7 +1671,7 @@ function MicroSaasPage() {
       tagline: 'Intelligent project coordination',
       price: '$79',
       period: '/month',
-      description: 'AI - powered project management platform with smart task allocation, progress tracking, and resource optimization.',
+description: 'AI - powered project management platform with smart task allocation, progress tracking, and resource optimization.',
     features: [        'AI task prioritization_resource optimization_progress tracking_risk assessment_team collaboration_time tracking_reporting & analytics_integration with popular tools';
       ];
       popular: false,
@@ -1667,7 +1689,7 @@ function MicroSaasPage() {
       tagline: 'Smart financial management',
       price: '$89',
       period: '/month',
-      description: 'AI - powered financial planning platform for businesses with budgeting, forecasting, and financial analysis.',
+description: 'AI - powered financial planning platform for businesses with budgeting, forecasting, and financial analysis.',
     features: [        'AI - powered budgeting_financial forecasting_cash flow analysis_expense tracking_financial reporting_tax planning_investment analysis_integration with accounting software';
       ];
       popular: false,
@@ -1685,7 +1707,7 @@ function MicroSaasPage() {
       tagline: 'Strategic content planning',
       price: '$39',
       period: '/month',
-      description: 'AI - powered content calendar with content ideation, scheduling, and performance optimization.',
+description: 'AI - powered content calendar with content ideation, scheduling, and performance optimization.',
     features: [        'AI content ideation_smart scheduling_performance tracking_content templates_team collaboration_multi - platform publishing_analytics & insights_integration with CMS platforms';
       ];
       popular: false,
@@ -1721,7 +1743,7 @@ function MicroSaasPage() {
       tagline: 'Beautiful data insights',
       price: '$59',
       period: '/month',
-      description: 'AI - powered data visualization platform that transforms complex data into actionable insights.',
+description: 'AI - powered data visualization platform that transforms complex data into actionable insights.',
       features: [;
         'AI chart recommendations_interactive dashboards_real - time data updates_custom branding_export capabilities_team collaboration_mobile responsivenessAPI integration';
       ],
@@ -1740,7 +1762,7 @@ function MicroSaasPage() {
       tagline: 'Streamlined customer success',
       price: '$49',
       period: '/month',
-      description: 'AI - powered customer onboarding platform that guides new users through product adoption.',
+description: 'AI - powered customer onboarding platform that guides new users through product adoption.',
       features: [;
         'Interactive product tours_progress tracking_personalized guidance_success metrics_integration with products_analytics & reporting_custom workflows_multi - language support';
       ],
@@ -1778,7 +1800,7 @@ function MicroSaasPage() {
       tagline: 'Centralized feedback management',
       price: '$39',
       period: '/month',
-      description: 'AI - powered customer feedback platform that collects, analyzes, and acts on customer insights.',
+description: 'AI - powered customer feedback platform that collects, analyzes, and acts on customer insights.',
     features: [        'Multi - channel feedback collectionAI sentiment analysis_feedback categorization_action item tracking_integration with tools_real - time dashboards_team collaboration_export capabilities';
       ];
       popular: false,
@@ -1796,7 +1818,7 @@ function MicroSaasPage() {
       tagline: 'Predictive inventory management',
       price: '$89',
       period: '/month',
-      description: 'AI - powered inventory forecasting that predicts demand and optimizes stock levels.',
+description: 'AI - powered inventory forecasting that predicts demand and optimizes stock levels.',
       features: [;
         'Demand forecasting_seasonal analysis_supplier optimization_cost optimization_real - time tracking_integration with ERP systems_mobile app access_advanced analytics';
       ],
@@ -1815,7 +1837,7 @@ function MicroSaasPage() {
       tagline: 'Automated lead discovery',
       price: '$99',
       period: '/month',
-      description: 'AI - powered lead generation platform that finds and qualifies prospects automatically.',
+description: 'AI - powered lead generation platform that finds and qualifies prospects automatically.',
       features: [;
         'AI prospect discovery_lead qualification_contact enrichment_integration with CRM systems_campaign automation_performance analytics_team collaboration_export capabilities';
       ],
@@ -1834,7 +1856,7 @@ function MicroSaasPage() {
       tagline: 'Prevent customer churn',
       price: '$69',
       period: '/month',
-      description: 'AI - powered churn prediction platform that identifies at - risk customers and suggests retention strategies.',
+description: 'AI - powered churn prediction platform that identifies at - risk customers and suggests retention strategies.',
       features: [;
         'Churn risk scoring_behavioral analysis_retention recommendations_early warning alerts_integration with CRM systems_performance analytics_team collaboration_custom models';
       ],
@@ -2139,7 +2161,7 @@ function MicroSaasPage() {
       price: '$15',
       period: '/month',
       description: 'Create and manage professional email signatures across your team. Ensure consistent branding and compliance.',
-      features: [;
+features: [;
         'Professional signature templates_team signature management_compliance monitoring_analytics & tracking_mobile optimization_integration with email clients_brand asset management_a / B testing';
       ],
       popular: false,
@@ -2157,7 +2179,7 @@ function MicroSaasPage() {
       tagline: 'Smart meeting productivity',
       price: '$29',
       period: '/month',
-      description: 'Transform meetings with AI - powered transcription, action item tracking, and intelligent summaries.',
+description: 'Transform meetings with AI - powered transcription, action item tracking, and intelligent summaries.',
     features: [        'Real - time transcription_action item extraction_meeting summaries_calendar integration_team collaboration_searchable archives_analytics dashboard_integration with Zoom, Teams';
       ];
       popular: false,
@@ -2175,7 +2197,7 @@ function MicroSaasPage() {
       tagline: 'Secure password management',
       price: '$19',
       period: '/month',
-      description: 'Enterprise - grade password management with AI - powered security insights and team collaboration.',
+description: 'Enterprise - grade password management with AI - powered security insights and team collaboration.',
       features: [;
         'Secure password storage_team sharing & management_security breach monitoring_password strength analysis_auto - fill capabilities_multi - device sync_admin controls_integration with SSO';
       ],
@@ -2195,7 +2217,7 @@ function MicroSaasPage() {
       price: '$25',
       period: '/month',
       description: 'Track time automatically with AI. Get insights into productivity patterns and optimize your workflow.',
-      features: [;
+features: [;
         'Automatic time tracking_productivity analytics_project time allocation_team collaboration_mobile app_integration with project tools_custom reporting_billing automation';
       ],
       popular: false,
@@ -2213,7 +2235,7 @@ function MicroSaasPage() {
       tagline: 'Smart form creation',
       price: '$35',
       period: '/month',
-      description: 'Create intelligent forms with AI - powered validation, conditional logic, and advanced analytics.',
+description: 'Create intelligent forms with AI - powered validation, conditional logic, and advanced analytics.',
     features: [        'Drag - and - drop builderAI - powered validation_conditional logic_advanced analytics_multi - language support_mobile optimization_integration capabilities_custom branding';
       ];
       popular: false,
@@ -2231,7 +2253,7 @@ function MicroSaasPage() {
       tagline: 'Smart scheduling assistant',
       price: '$22',
       period: '/month',
-      description: 'Optimize your calendar with AI - powered scheduling suggestions, conflict resolution, and productivity insights.',
+description: 'Optimize your calendar with AI - powered scheduling suggestions, conflict resolution, and productivity insights.',
     features: [        'Smart scheduling suggestions_conflict detection_productivity analytics_team availability sync_integration with calendars_mobile app_custom preferences_analytics dashboard';
       ];
       popular: false,
@@ -2249,7 +2271,7 @@ function MicroSaasPage() {
       tagline: 'Comprehensive social insights',
       price: '$45',
       period: '/month',
-      description: 'Track and analyze your social media performance with AI - powered insights and competitor analysis.',
+description: 'Track and analyze your social media performance with AI - powered insights and competitor analysis.',
       features: [;
         'Multi - platform analytics_competitor monitoring_content performance tracking_audience insights_automated reportingROI measurement_trend analysis_integration with social platforms';
       ],
@@ -2269,7 +2291,7 @@ function MicroSaasPage() {
       price: '$49',
       period: '/month',
       description: 'Build professional websites with AI assistance. Get personalized design suggestions and content optimization.',
-      features: [;
+features: [;
         'AI - powered design suggestions_content optimizationSEO automation_mobile - first design_template library_e - commerce integration_analytics dashboard_custom domain support';
       ],
       popular: false,
@@ -2307,7 +2329,7 @@ function MicroSaasPage() {
       price: '$55',
       period: '/month',
       description: 'Process invoices automatically with AI. Extract data, validate information, and streamline accounts payable.',
-    features: [        'OCR invoice processing_data extraction_validation automation_approval workflows_integration with accounting_mobile app access_custom reporting_multi - currency support';
+features: [        'OCR invoice processing_data extraction_validation automation_approval workflows_integration with accounting_mobile app access_custom reporting_multi - currency support';
       ];
       popular: false,
       icon: '🧾',
@@ -2324,7 +2346,7 @@ function MicroSaasPage() {
       tagline: 'Predict and prevent project risks',
       price: '$89',
       period: '/month',
-      description: 'Identify and mitigate project risks with AI - powered analysis. Ensure project success and delivery.',
+description: 'Identify and mitigate project risks with AI - powered analysis. Ensure project success and delivery.',
       features: [;
         'Risk identification_impact assessment_mitigation strategies_real - time monitoring_team collaboration_reporting dashboard_integration with PM tools_mobile alerts';
       ],
@@ -2344,7 +2366,7 @@ function MicroSaasPage() {
       price: '$42',
       period: '/month',
       description: 'Automate employee onboarding with AI. Create personalized experiences and track progress efficiently.',
-      features: [;
+features: [;
         'Personalized onboarding paths_progress tracking_document management_task automation_integration with HRISMobile app access_analytics dashboard_custom workflows';
       ],
       popular: false,
@@ -2362,7 +2384,7 @@ function MicroSaasPage() {
       tagline: 'Intelligent customer targeting',
       price: '$67',
       period: '/month',
-      description: 'Segment your customers with AI - powered analysis. Create targeted campaigns and improve customer experience.',
+description: 'Segment your customers with AI - powered analysis. Create targeted campaigns and improve customer experience.',
       features: [;
         'AI - powered segmentation_behavioral analysis_predictive modeling_campaign automation_integration with marketing tools_real - time updates_custom dashboardsAPI access';
       ],
@@ -2382,7 +2404,7 @@ function MicroSaasPage() {
       price: '$129',
       period: '/month',
       description: 'Optimize your supply chain with AI. Reduce costs, improve efficiency, and enhance visibility.',
-    features: [        'Demand forecasting_inventory optimization_supplier management_route optimization_real - time tracking_analytics dashboard_integration with ERPsMobile app access';
+features: [        'Demand forecasting_inventory optimization_supplier management_route optimization_real - time tracking_analytics dashboard_integration with ERPsMobile app access';
       ];
       popular: false,
       icon: '🚚',
@@ -2400,7 +2422,7 @@ function MicroSaasPage() {
       price: '$95',
       period: '/month',
       description: 'Monitor and maintain compliance with AI. Stay ahead of regulatory changes and reduce compliance risks.',
-      features: [;
+features: [;
         'Regulatory monitoring_compliance assessment_risk identification_automated reporting_document management_integration with systems_custom dashboards_mobile alerts';
       ],
       popular: false,
@@ -2437,7 +2459,7 @@ function MicroSaasPage() {
       tagline: 'Maximize customer value',
       price: '$73',
       period: '/month',
-      description: 'Calculate and optimize customer lifetime value with AI. Make data - driven decisions to increase revenue.',
+description: 'Calculate and optimize customer lifetime value with AI. Make data - driven decisions to increase revenue.',
       features: [;
         'CLV calculation_predictive modeling_customer scoring_campaign optimization_integration with CRMsAnalytics dashboard_custom reportingAPI access';
       ],
@@ -2457,7 +2479,7 @@ function MicroSaasPage() {
       price: '$82',
       period: '/month',
       description: 'Automate complex workflows with AI. Streamline operations and reduce manual tasks across your organization.',
-      features: [;
+features: [;
         'Visual workflow builderAI - powered optimization_integration capabilities_analytics dashboard_team collaboration_mobile app access_custom workflowsAPI access';
       ],
       popular: false,
@@ -2473,7 +2495,7 @@ function MicroSaasPage() {
       tagline: 'Convert visitors to customers',
       price: '$59',
       period: '/month',
-      description: 'AI - powered landing page creation with conversion optimization and A / B testing capabilities.',
+description: 'AI - powered landing page creation with conversion optimization and A / B testing capabilities.',
       features: [;
         'AI - powered page generation_conversion optimization_a / B testing automation_mobile - responsive templatesSEO optimization_analytics & heatmaps_integration with marketing tools_custom domain support';
       ],
@@ -2489,7 +2511,7 @@ function MicroSaasPage() {
       tagline: 'Boost your website performance',
       price: '$49',
       period: '/month',
-      description: 'AI - powered website optimization for speed, SEO, and conversion rate improvement.',
+description: 'AI - powered website optimization for speed, SEO, and conversion rate improvement.',
     features: [        'Performance optimizationSEO enhancement_conversion rate optimization_mobile optimization_core Web Vitals monitoring_automated fixes_performance reporting_integration with analytics';
       ];
       popular: false,
@@ -2504,7 +2526,7 @@ function MicroSaasPage() {
       tagline: 'Predict and prevent customer churn',
       price: '$89',
       period: '/month',
-      description: 'Advanced AI - powered churn prediction with automated retention strategies and customer insights.',
+description: 'Advanced AI - powered churn prediction with automated retention strategies and customer insights.',
       features: [;
         'AI churn prediction models_behavioral pattern analysis_automated retention campaigns_customer health scoring_real - time alertsROI tracking_integration with CRMsCustom prediction models';
       ],
@@ -2520,7 +2542,7 @@ function MicroSaasPage() {
       tagline: 'Ensure your emails reach inboxes',
       price: '$39',
       period: '/month',
-      description: 'Monitor and improve email deliverability with AI - powered insights and automated optimization.',
+description: 'Monitor and improve email deliverability with AI - powered insights and automated optimization.',
       features: [;
         'Deliverability monitoring_sender reputation tracking_spam score analysis_automated optimization_blacklist monitoring_performance analytics_integration with ESPsReal - time alerts';
       ],
@@ -2536,7 +2558,7 @@ function MicroSaasPage() {
       tagline: 'Map and optimize customer experiences',
       price: '$79',
       period: '/month',
-      description: 'AI - powered customer journey mapping with behavioral analysis and optimization recommendations.',
+description: 'AI - powered customer journey mapping with behavioral analysis and optimization recommendations.',
       features: [;
         'Journey mapping automation_behavioral analysis_touchpoint optimization_conversion funnel analysis_customer segmentation_journey analytics_integration with analytics tools_custom journey templates';
       ],
@@ -2552,7 +2574,7 @@ function MicroSaasPage() {
       tagline: 'Intelligent contract review and analysis',
       price: '$99',
       period: '/month',
-      description: 'AI - powered contract analysis with risk assessment, compliance checking, and automated insights.',
+description: 'AI - powered contract analysis with risk assessment, compliance checking, and automated insights.',
     features: [        'AI contract review_risk assessment_compliance checking_automated insights_contract templates_version control_integration with legal tools_custom analysis rules';
       ];
       popular: false,
@@ -2567,7 +2589,7 @@ function MicroSaasPage() {
       tagline: 'Predict sales with AI accuracy',
       price: '$89',
       period: '/month',
-      description: 'AI - powered sales forecasting with predictive analytics and revenue optimization insights.',
+description: 'AI - powered sales forecasting with predictive analytics and revenue optimization insights.',
       features: [;
         'AI sales forecasting_predictive analytics_revenue optimization_pipeline analysis_performance tracking_custom forecasting models_integration with CRMsReal - time insights';
       ],
@@ -2583,7 +2605,7 @@ function MicroSaasPage() {
       tagline: 'Optimize customer service performance',
       price: '$69',
       period: '/month',
-      description: 'AI - powered analytics for customer service optimization and performance improvement.',
+description: 'AI - powered analytics for customer service optimization and performance improvement.',
       features: [;
         'Service performance analytics_customer satisfaction tracking_response time optimization_agent performance metrics_automated insights_integration with help desks_custom reporting_real - time monitoring';
       ],
@@ -2599,7 +2621,7 @@ function MicroSaasPage() {
       tagline: 'Boost sales with intelligent recommendations',
       price: '$79',
       period: '/month',
-      description: 'AI - powered product recommendation engine for e - commerce and content platforms.',
+description: 'AI - powered product recommendation engine for e - commerce and content platforms.',
       features: [;
         'AI recommendation algorithms_personalized suggestions_behavioral analysis_a / B testing_performance analytics_integration with e - commerce platforms_custom recommendation rules_real - time optimization';
       ],
@@ -2615,7 +2637,7 @@ function MicroSaasPage() {
       tagline: 'Protect your business from fraud',
       price: '$119',
       period: '/month',
-      description: 'AI - powered fraud detection with real - time monitoring and automated prevention measures.',
+description: 'AI - powered fraud detection with real - time monitoring and automated prevention measures.',
       features: [;
         'Real - time fraud detectionAI risk assessment_automated prevention_transaction monitoring_custom fraud rules_performance analytics_integration with payment systems24 / 7 monitoring';
       ],
@@ -2631,7 +2653,7 @@ function MicroSaasPage() {
       tagline: 'Optimize inventory with AI predictions',
       price: '$89',
       period: '/month',
-      description: 'AI - powered inventory forecasting with demand prediction and optimization recommendations.',
+description: 'AI - powered inventory forecasting with demand prediction and optimization recommendations.',
       features: [;
         'AI demand forecasting_inventory optimization_seasonal trend analysis_automated reordering_cost optimization_integration with ERP systems_custom forecasting models_real - time insights';
       ],
@@ -2647,7 +2669,7 @@ function MicroSaasPage() {
       tagline: 'Automate your social media presence',
       price: '$49',
       period: '/month',
-      description: 'AI - powered social media automation with content scheduling and engagement optimization.',
+description: 'AI - powered social media automation with content scheduling and engagement optimization.',
       features: [;
         'AI content scheduling_engagement optimization_multi - platform management_content calendar_performance analytics_hashtag optimization_integration with design tools_automated responses';
       ],

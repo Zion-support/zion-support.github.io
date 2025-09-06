@@ -7,7 +7,7 @@ export default function Partners() {
     pocName: "",
     pocEmail: "",
     useCaseType: "Education Partnership"}),
-  const [result, setResult] = useState<any>(null);
+const [result, setResult] = useState<any>(null);
   const [loading, setLoading] = useState(false);
     name: ''
     entityType: ''
@@ -275,13 +275,43 @@ function submit() {
     set_result (data);
   }
   return (
+  const [result, setResult] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+
+  async function submit(_e: React.FormEvent) {_e.preventDefault();
+    setLoading(true);
+    setResult(null);
+    const res = await fetch(&quot;/api/partners/register&quot;, {
+      method: &quot;POST&quot;,
+      headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+
+      body: JSON.stringify({
+        name: form.name,
+        entityType: form.entityType,
+        useCaseType: form.useCaseType,
+        pointOfContact: { name: form.pocName, email: form.pocEmail }})}),
+    const data = await res.json()
+    setLoading(false),
+    setResult(data)
+              <option>Education Partnership</option>
+              <option>Workforce Development</option>
+              <option>Token Integration</option>
+              <option>Custom Marketplace Instance</option>
+            </select>
+            <button disabled={loading} className=&quot;bg-black text-white px-4 py-2 rounded disabled:opacity-50&quot;>{loading ? &quot;Submitting...&quot; : &quot;Register&quot;}</button>
+          </form>
+
+          <div className=&quot;bg-white p-6 rounded-lg shadow&quot;>
+            <h2 className=&quot;text-xl font-medium mb-4&quot;>Available Endpoints</h2>
+            <ul className=&quot;list-disc ml-6 space-y-1 text-sm&quot;>
+
               <li>POST /talents</li>
               <li>GET /jobs</li>
               <li>GET /certifications</li>
               <li>POST /verify-student</li>
               <li>POST /redeem-grant</li>
             </ul>
-            </button>;
+</button>;
           </form>;
           <div className='bg-white p-6 rounded-lg shadow'>;
             <h2 className='text-xl font-medium mb-4'>Available Endpoints</h2>;
@@ -316,7 +346,7 @@ function submit() {
             </div>
           </div>
         </div>
-        {result && (
+{result && (
                 href='/api/partners/sdk?type=graphql'>;
                 Download GraphQL SDK;
               </a>;

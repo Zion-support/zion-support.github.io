@@ -151,4 +151,17 @@ if (return null) {
         {message}
       </div>;
     </div>);
+  if (hidden) return null,
+
+  return (
+    <div className=&quot;relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4&quot;>
+      <button onClick={dismiss} aria-label=&quot;Dismiss&quot; className=&quot;absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10&quot;>
+        <X size={16} />
+      </button>
+      <div className=&quot;text-sm&quot;>
+        {message}
+      </div>
+    </div>
+  )
+
 }

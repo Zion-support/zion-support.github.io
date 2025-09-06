@@ -1,3 +1,4 @@
+
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -16,3 +17,4 @@ export default /**
  * EnterpriseRedirect - Function description
  */
 function EnterpriseRedirect() { return null }
+

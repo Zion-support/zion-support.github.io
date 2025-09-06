@@ -154,12 +154,59 @@ function CloudMonitoringPage() {
   ];
 ;
   const pricing_plans = [;
+
+export default function CloudMonitoringPage() {_const _features = [
+    {
+      icon: <Activity className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Real-time Monitoring',
+      description: 'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500'},
+    {
+      icon: <BarChart3 className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Advanced Analytics',
+      description: 'Deep insights into performance metrics, resource utilization, and business intelligence.',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500'},
+    {
+      icon: <AlertTriangle className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Smart Alerting',
+      description: 'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.',
+      color: 'bg-gradient-to-br from-red-500 to-pink-600',
+      gradient: 'from-red-400 to-pink-500'},
+    {
+      icon: <Database className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Multi-Cloud Support',
+      description: 'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+      gradient: 'from-purple-400 to-indigo-500'},
+    {
+      icon: <Shield className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Security Monitoring',
+      description: 'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.',
+      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
+      gradient: 'from-yellow-400 to-orange-500'},
+    {
+      icon: <Zap className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Auto-scaling',
+      description: 'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
+      gradient: 'from-teal-400 to-blue-500'}],
+
+  const monitoringCapabilities = [
+    {
+      category: 'Infrastructure',
+    }
+  ],
+
+  const pricingPlans = [
+
     {
       name: 'Starter',
       price: '$49',
       period: '/month',
       description: 'Perfect for small teams and startups',
-      features: [;
+features: [;
         'Up to 10 servers',
         'Basic monitoring',
         'Email alerts',
@@ -180,7 +227,7 @@ function CloudMonitoringPage() {
       price: '$199',
       period: '/month',
       description: 'Ideal for growing businesses',
-    };
+};
     {
       features: [;
         'Up to 100 servers',
@@ -205,7 +252,7 @@ function CloudMonitoringPage() {
       price: '$599',
       period: '/month',
       description: 'For large organizations',
-  ];
+];
   const integrations = [
       features: [;
         'Unlimited servers',
@@ -235,7 +282,7 @@ function CloudMonitoringPage() {
     { name: 'Slack', icon: '💬', description: 'Team notifications' },
     { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
     { name: 'Jira', icon: '📋', description: 'Issue tracking' }
-  ];
+];
   const useCases = [
     {
 export default function CloudMonitoringPage() {;
@@ -602,11 +649,76 @@ export default function CloudMonitoringPage() {;
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">&lt,100ms</div>
               <div className="text-gray-400">Latency</div>
+
+  return (
+    <>
+      <Head>
+        <title>Cloud Monitoring & Analytics | Zion Tech Group - Real-time Infrastructure Monitoring</title>
+        <meta name=&quot;description&quot; content=&quot;Comprehensive cloud monitoring and analytics platform with real-time insights, AI-powered alerting, and multi-cloud support. Monitor your entire infrastructure from a single dashboard.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Cloud Monitoring & Analytics | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Real-time infrastructure monitoring with advanced analytics, smart alerting, and multi-cloud support.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-black&quot;>
+        <div className=&quot;absolute inset-0&quot;>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]&quot; />
+        </div>
+        
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+          <div className=&quot;mb-8&quot;>
+            <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6&quot;>
+              <Eye className=&quot;w-4 h-4 mr-2&quot; />
+              Real-time Infrastructure Monitoring
+            </div>
+          </div>
+          
+          <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight&quot;>
+            Cloud Monitoring & Analytics
+          </h1>
+          <p className=&quot;text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed&quot;>
+            Monitor your entire infrastructure in real-time with AI-powered insights and intelligent alerting
+          </p>
+
+          <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-20&quot;>
+            <Button
+              href=&quot;#pricing&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-green-600 hover:bg-green-700 shadow-2xl shadow-green-500/25&quot;
+            >
+              Start Free Trial
+              <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+            </Button>
+            <Button
+              href=&quot;#demo&quot;
+              variant=&quot;outline&quot;
+              size=&quot;lg&quot;
+              className=&quot;border-white/20 hover:border-white/40 hover:bg-white/5&quot;
+            >
+              <Play className=&quot;w-5 h-5 mr-2&quot; />
+              Watch Demo
+            </Button>
+          </div>
+
+          {/* Stats */}
+            </div>
+            <div className=&quot;text-center&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-blue-400&quot;>1M+</div>
+              <div className=&quot;text-gray-400&quot;>Metrics Tracked</div>
+            </div>
+            <div className=&quot;text-center&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-purple-400&quot;>50+</div>
+              <div className=&quot;text-gray-400&quot;>Integrations</div>
+            </div>
+            <div className="text-center">
+
             </div>
           </div>
         </div>
       </section>
-      {/* Features Section */}
+{/* Features Section */}
       <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -1233,7 +1345,7 @@ export default function CloudMonitoringPage() {;
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-white mb-2">
                     {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
@@ -1286,7 +1398,7 @@ export default function CloudMonitoringPage() {;
                     </li>
                   ))}
                 </ul>
-                <Button
+<Button
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
                   size="lg"

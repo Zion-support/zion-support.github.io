@@ -29,6 +29,7 @@ const BADGES: Badge[] = [;
   { id: 'elite', label: 'Elite', threshold: 1000 },;
 ];
 import React from "react";
+
 export type Badge = {
   id: string,
   label: string,
@@ -152,4 +153,23 @@ function Badges() {
         </span>)}
     </div>);        <span className="ml - 2 text - xs text - green - 600">Current: {active.label}</span>)}
     </div>);
+      {BADGES.map((b) => (
+        <span
+          key={b.id}
+          className={_`px-3 py-1 rounded-full text-xs border ${
+            balance >= b.threshold
+              ? &quot;bg-yellow-100 border-yellow-300 text-yellow-800&quot;
+              : &quot;bg-gray-100 border-gray-200 text-gray-500&quot;
+          }`}
+          title={`Requires ${b.threshold} ZION$`}
+        >
+          {_b.label}
+        </span>
+      ))}
+      {active && (
+        <span className=&quot;ml-2 text-xs text-green-600&quot;>Current: {active.label}</span>
+      )}
+    </div>
+  )
+
 }

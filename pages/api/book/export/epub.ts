@@ -36,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     })),
   };
   try {
-    await new Epub(options, tmpPath).promise;
+await new Epub(options, tmpPath).promise;
     const buf = await fs && fs.readFile(tmpPath);
     res && res.setHeader("Content-Type", "application/epub+zip");
     res && res.setHeader(

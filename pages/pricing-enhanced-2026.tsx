@@ -5,7 +5,7 @@ const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  }
+}
   const popularServices = getPopularServices()
   // Combine all services for comprehensive pricing
   const allServices = [
@@ -55,6 +55,10 @@ function PricingEnhanced2026Page() {
   const popular_services = getPopularServices (),
   // Combine all services for comprehensive pricing;
   const all_services = [;
+  
+  // Combine all services for comprehensive pricing
+  const _allServices = [
+
     ...enhancedRealMicroSaasServices,
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
@@ -64,7 +68,7 @@ function PricingEnhanced2026Page() {
     ...enterpriseIT2026ServicesV2,
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
-    ...enterpriseIT2026ServicesV3;
+...enterpriseIT2026ServicesV3;
   ],
   // Enhanced service categories with pricing for 2026;
   const service_categories = [;
@@ -195,7 +199,7 @@ function PricingEnhanced2026Page() {
       name: 'Enterprise IT Solutions 2026',
       description: 'Advanced enterprise infrastructure and security',
       services: ['Zero Trust Network ArchitectureEdge Computing Orchestration5G Private NetworksBlockchain InfrastructureAI DevOps Automation'],
-      avg_price: '$5, 199 / month',
+avg_price: '$5, 199 / month',
       savings: 'Save 50 - 75% vs. competitors',
       icon: Shield,
       color: 'from - red - 500 to - pink - 600';
@@ -204,7 +208,7 @@ function PricingEnhanced2026Page() {
       name: 'Innovative Micro SaaS 2026',
       description: 'Creative and practical SaaS tools',
       services: ['AI Content Creation StudioAI Business Intelligence SuiteAI Customer Success PlatformAI Meeting Transcriber'],
-      avg_price: '$299 / month',
+avg_price: '$299 / month',
       savings: 'Save 40 - 60% vs. competitors',
       icon: Rocket,
       color: 'from - green - 500 to - emerald - 600';
@@ -222,7 +226,7 @@ function PricingEnhanced2026Page() {
       name: 'Financial Technology 2026',
       description: 'Advanced financial and trading solutions',
       services: ['AI Quantum Financial TradingBlockchain InfrastructureQuantum Internet SecurityPhotonic Computing'],
-      avg_price: '$4, 499 / month',
+avg_price: '$4, 499 / month',
       savings: 'Save 55 - 75% vs. competitors',
       icon: DollarSign,
       color: 'from - green - 500 to - emerald - 600';
@@ -249,7 +253,7 @@ function PricingEnhanced2026Page() {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billing_cycle === 'monthly' ? 299 : 239,
+price: billing_cycle === 'monthly' ? 299 : 239,
       period: billing_cycle === 'monthly' ? '/month' : '/month',
       savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
       features: [;
@@ -265,7 +269,7 @@ function PricingEnhanced2026Page() {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billing_cycle === 'monthly' ? 999 : 799,
+price: billing_cycle === 'monthly' ? 999 : 799,
       period: billing_cycle === 'monthly' ? '/month' : '/month',
       savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
       features: [;
@@ -418,7 +422,7 @@ function PricingEnhanced2026Page() {
                           {tier.icon}
                         </div>
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+<h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                       <p className="text-gray-400 mb-6">{tier.description}</p>
                       <div className="mb-6">
                         <span className="text-4xl font-bold text-cyan-400">${tier.price}</span>
@@ -444,10 +448,15 @@ function PricingEnhanced2026Page() {
                              window.open(`mailto:${contactInfo.email}?subject=Enterprise Pricing Inquiry`, '_blank')
                            } else {
                              window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank')
-                           }
+}
                          }}
                        >
                          {tier.cta}
+                           }
+                         }}
+                       >
+                         {_tier.cta}
+
                        </Button>
                     </div>
                   </UltraFuturisticCard>
@@ -456,7 +465,7 @@ function PricingEnhanced2026Page() {
             </div>
           </div>
         </div>
-                      <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
+<div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
                         <div className="bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white px - 4 py - 2 rounded - full text - sm font - semibold">;
                           Most Popular;
                         </div>;
@@ -546,7 +555,7 @@ if ( {) {
             </div>
           </div>
         </div>
-                >;
+>;
                   <UltraFuturisticCard variant="quantum - advanced" className="h - full">;
                     <div className="p - 6">;
                       <div className="flex items - center mb - 4">;
@@ -632,7 +641,7 @@ if ( {) {
             </div>
           </div>
         </div>
-                >;
+>;
                   <UltraFuturisticCard variant="holographic" className="h - full">;
                     <div className="p - 6">;
                       <div className="flex items - start justify - between mb - 4">;

@@ -121,7 +121,7 @@ const category_icons: { [key: string]: any } = {
   'Space Energy': Sparkles,
   'AI & Business': Database,
   'Quantum & Time': Timer,
-  'AI & Augmented Reality': Eye,
+'AI & Augmented Reality': Eye,
 }
 ;
 const UltraFuturistic2029ServiceShowcase: React.FC<;
@@ -341,12 +341,69 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
+
+  // Filter and sort services
+  const _filteredServices = services
+    .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
+    .sort(_(a, _b) => {
+      switch (sortBy) {
+        case 'innovation':
+          // Default to 'Advanced' if innovationLevel is not available
+          const aLevel = (a as any).innovationLevel || 'Advanced'
+          const bLevel = (b as any).innovationLevel || 'Advanced'
+          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 },
+          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0),
+
+        case 'price':
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+        case 'rating':
+          return b.rating - a.rating,
+        default: return 0
+      }
+    })
+    .slice(0, maxServices),
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: &quot;easeOut&quot; as const
+      }
+    }
+  },
+
+  return (
+    <section className=&quot;py-20 relative overflow-hidden&quot;>
+      {/* Background Elements */}
+      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+        <div className=&quot;absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl&quot;></div>
+        <div className=&quot;absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl&quot;></div>
+        <div className=&quot;absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl&quot;></div>
+      </div>
+
+      <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className=&quot;text-center mb-16&quot;
+
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
+className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
           >
             {title}
           </motion && motion.h2>;
@@ -553,7 +610,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 Get Started Today
               </a>
               <a
-                href="/pricing"
+href="/pricing"
                 className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
               >
                 View Pricing
@@ -561,7 +618,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
             </div>
           </div>
         </motion.div>
-                className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold">;
+className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold">;
         </motion.div>;
         {/* Services Grid */}
         <motion.div;
@@ -678,7 +735,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
             ].map((stat, index) => (
               <motion.div
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
+<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
               {;
                 label: 'Revolutionary Services',;
@@ -718,7 +775,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+className="text-center"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className="w-8 h-8 text-white" />

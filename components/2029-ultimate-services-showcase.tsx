@@ -173,14 +173,17 @@ export default function UltimateServicesShowcase2029() {
     { id: 'premium', name: 'Over $30K', range: 'Over $30,000' }
   ];
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' ||
+
+  const _filteredServices = allServices.filter(service => {_const _matchesCategory = selectedCategory === 'all' || 
+
       (selectedCategory === 'cutting-edge' && cuttingEdge2028MicroSaas.includes(service)) ||
       (selectedCategory === 'business' && practicalBusinessSolutions2028.includes(service)) ||
       (selectedCategory === 'ai-autonomous' && advancedAIAutonomousServices2028.includes(service)) ||
       (selectedCategory === 'quantum-space' && quantumSpaceInnovations2028.includes(service)) ||
       (selectedCategory === 'ai' && service.category.some(c => c.includes('AI') || c.includes('Machine Learning'))) ||
       (selectedCategory === 'quantum' && service.category.some(c => c.includes('Quantum'))) ||
-      (selectedCategory === 'enterprise' && service.category.some(c => c.includes('Enterprise')));
+(selectedCategory === 'enterprise' && service.category.some(c => c.includes('Enterprise')));
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                          service.category.some(c => c.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -571,17 +574,17 @@ function UltimateServicesShowcase2029() {
         <meta name="keywords" content="2029 technology, AI consciousness, quantum computing, space technology, autonomous AI, business automation, micro SAAS, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultimate-services-showcase" />
-        {/* Open Graph */}
+{/* Open Graph */}
         <meta property="og:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />
         <meta property="og:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultimate-services-showcase" />
         <meta property="og:type" content="website" />
-        {/* Twitter */}
+{/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />
         <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />
       </Head>
-      <UltraFuturisticNavigation2029 />
+<UltraFuturisticNavigation2029 />
         <meta property="og:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
         <meta property="og:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
         <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/2029-ultimate-services-showcase" />;
@@ -650,7 +653,7 @@ function UltimateServicesShowcase2029() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.15),transparent_50%)] animate-spin-slow" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] animate-pulse" />
         </div>
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+<div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -752,7 +755,7 @@ function UltimateServicesShowcase2029() {
                 <Atom className="w-9 h-9 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+<h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 2029 Ultimate
               </span>
@@ -761,7 +764,7 @@ function UltimateServicesShowcase2029() {
                 Services Showcase
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+<p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Experience the future of technology with our revolutionary AI consciousness, quantum computing, space technology, and autonomous systems. Transform your business with innovations that define tomorrow.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -795,13 +798,13 @@ function UltimateServicesShowcase2029() {
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
               >
                 Get Started Today
-              </Link>
+</Link>
               <Link
                 href="/pricing"
                 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg"
               >
                 View Pricing
-              </Link>
+</Link>
             </div>
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
@@ -825,7 +828,7 @@ function UltimateServicesShowcase2029() {
           </motion.div>
         </div>
       </section>
-                className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg">;
+className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg">;
                 View Pricing;
               </Link>;
             </div>;
@@ -888,7 +891,7 @@ function UltimateServicesShowcase2029() {
               <input
                 type="text"
                 placeholder="Search services..."
-                value={searchTerm}
+value={searchTerm}
                 onChange={(e) => setSearchTerm(e && e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200";
               />;
@@ -907,7 +910,7 @@ function UltimateServicesShowcase2029() {
                 >
                   <div className="flex items-center space-x-2">
                     <category.icon className="h-4 w-4" />
-                    <span>{category.name}</span>
+<span>{category.name}</span>
                     <span className="text-xs opacity-75">({category.count})</span>
                   </div>
                 </button>
@@ -1094,7 +1097,7 @@ function UltimateServicesShowcase2029() {
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
           >
-            {filteredServices.map((service, index) => (
+{filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -1108,7 +1111,7 @@ function UltimateServicesShowcase2029() {
                         <Rocket className="w-6 h-6 text-white" />
                       </div>
                       <div className="text-right">
-                        <div className="text-lg font-bold text-cyan-400">{service.price}</div>
+<div className="text-lg font-bold text-cyan-400">{service.price}</div>
                         <div className="text-xs text-gray-400">per month</div>
                       </div>
                     </div>
@@ -1162,7 +1165,7 @@ function UltimateServicesShowcase2029() {
                           key={cat}
                           className="px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20"
                         >
-                          {cat}
+{cat}
                         </span>;
                       ))}
                       {service.category.length > 3 && (
@@ -1170,7 +1173,7 @@ function UltimateServicesShowcase2029() {
                           +{service.category.length - 3}
                         </span>
                       )}
-                    </div>;
+</div>;
                   </div>;
                   {/* Features Preview */}
                   <div className="mb-6">
@@ -1187,7 +1190,7 @@ function UltimateServicesShowcase2029() {
                           +{service.features.length - 3} more features
                         </li>
                       )}
-                  <div className="mb-6 space-y-2">
+<div className="mb-6 space-y-2">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">Market Size: </span>
                       <span className="text-emerald-400 font-medium">{service.marketSize}</span>
@@ -1221,7 +1224,7 @@ function UltimateServicesShowcase2029() {
                     >
                       Learn More
                       <ArrowRight className="inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
-                    </Link>
+</Link>
                   </div>
                       href={`/services/${service && service.id}`}
                       className='w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200'>;
@@ -1270,7 +1273,7 @@ function UltimateServicesShowcase2029() {
               </motion.div>
             ))}
           </motion.div>
-          {/* No Results */}
+{/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1280,17 +1283,18 @@ function UltimateServicesShowcase2029() {
               <p className="text-gray-400 mb-8">Try adjusting your search criteria or browse all services</p>
               <button
                 onClick={() => {
-                  setSelectedCategory('all');
+setSelectedCategory('all');
                   setSearchTerm('');
                   setSelectedPriceRange('all')
                 }}
+
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
                 Reset Filters
               </button>
             </div>
           )}
-        </div>;
+</div>;
       </section>;
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
@@ -1307,7 +1311,7 @@ function UltimateServicesShowcase2029() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join the future of technology with our revolutionary services.
+Join the future of technology with our revolutionary services.
               Contact us today to discuss how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -1316,7 +1320,7 @@ function UltimateServicesShowcase2029() {
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
               >
                 Get Started Today
-              </Link>
+</Link>
               <div className="flex items-center space-x-4 text-gray-300">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-cyan-400" />
@@ -1331,7 +1335,7 @@ function UltimateServicesShowcase2029() {
           </motion.div>
         </div>
       </section>
-      <UltraFuturisticFooter2029 />
+<UltraFuturisticFooter2029 />
     </>
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;

@@ -105,5 +105,18 @@ if ( {) {
     res.status (500).json ({ error: 'Failed to save content' });
   }  } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
+
+    const _ts = new Date()
+      .toISOString()
+      .replace(/[-:T.Z]/g, '')
+      .slice(0, 14),
+
+    fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8'),
+    fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8'),
+
+    res.status(200).json({ ok: true, version: ts })
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
+
   }
 }

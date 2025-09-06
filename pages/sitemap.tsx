@@ -648,23 +648,23 @@ export default function SitemapPage() {;
     { href: '/autonomous-devops', label: 'Autonomous DevOps', category: 'Cloud & DevOps' },
     { href: '/ai-customer-experience', label: 'AI Customer Experience', category: 'AI & ML' },
     { href: '/quantum-neural-networks', label: 'Quantum Neural Networks', category: 'Quantum Computing' }
-  ];
+];
   const resources = [
     { href: '/reports', label: '📊 Reports', description: 'Latest technology reports and insights' },
     { href: '/newsroom', label: '📰 Newsroom', description: 'Company updates and industry news' },
     { href: '/automation', label: '⚡ Automations', description: 'Automation tools and solutions' },
     { href: '/search', label: '🔎 Search', description: 'Search across all services and content' }
-  ];
+];
   const externalLinks = [
     { href: 'https://github.com/ai-factory', label: 'GitHub', description: 'Open source projects and code examples' },
     { href: 'https://docs.ziontechgroup.com', label: 'Documentation', description: 'Technical documentation and guides' },
     { href: 'https://status.ziontechgroup.com', label: 'System Status', description: 'Real-time system status and uptime' }
-  ];
+];
   const contactInfo = [
     { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },
     { type: 'Email', value: 'kleber@ziontechgroup.com', action: 'mailto:kleber@ziontechgroup.com' },
     { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
-  ];
+];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -721,11 +721,46 @@ export default function SitemapPage() {;
                 Search Site
                 <Search className="w-5 h-5 ml-2" />
               </a>
+      </Head>
+
+      <SmartHeader />
+
+      {/* Hero Section */}
+      <section className=&quot;pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+          >
+            <h1 className=&quot;text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6&quot;>
+              Site Map
+            </h1>
+            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8&quot;>
+              Navigate our comprehensive website and discover all the AI-powered technology solutions, 
+              resources, and information available at Zion Tech Group.
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <a
+                href=&quot;#main-pages&quot;
+                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105&quot;
+              >
+                Explore Site
+                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+              </Link>
+              <a
+                href=&quot;/search&quot;
+                className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;
+              >
+                Search Site
+                <Search className=&quot;w-5 h-5 ml-2&quot; />
+              </Link>
+
             </div>
           </motion.div>
         </div>
       </section>
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
+className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
                 Search Site;
                 <Search className='w-5 h-5 ml-2' />              </a>;
             </div>;
@@ -1070,7 +1105,7 @@ export default function SitemapPage() {;
                   href={contact.action}
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                 >
                   {contact.value}
                 </a>
@@ -1130,12 +1165,32 @@ export default function SitemapPage() {;
               >
                 Contact Support
                 <Mail className="w-5 h-5 ml-2" />
+              Need Help Finding Something?
+            </h2>
+            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
+              Use our search functionality or contact us directly for assistance
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <Link
+                href=&quot;/search&quot;
+                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
+              >
+                Search Site
+                <Search className=&quot;w-5 h-5 ml-2&quot; />
+              </Link>
+              <Link
+                href=&quot;/contact&quot;
+                className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;
+              >
+                Contact Support
+                <Mail className=&quot;w-5 h-5 ml-2&quot; />
+
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-      <SmartFooter />
+<SmartFooter />
     </div>
   )
 }animate= {

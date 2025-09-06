@@ -104,11 +104,69 @@ const Homepage2037: React.FC = () => {
                     Explore Services
                   </motion.button>
                 </Link>
+
+  return (_<Layout>
+      {/* Main Content */}
+      <main className=&quot;relative z-10&quot;>
+        {/* Hero Section */}
+        <section className=&quot;min-h-screen flex items-center justify-center px-4 relative&quot;>
+          {/* Animated background elements */}
+          <div className=&quot;absolute inset-0 overflow-hidden&quot;>
+            <div className=&quot;absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
+            <div className=&quot;absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
+            <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500&quot;></div>
+          </div>
+          
+          <div className=&quot;text-center max-w-5xl mx-auto relative z-10&quot;>
+            <motion.div
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 1}}
+            >
+              {/* Main heading with enhanced typography */}
+              <div className=&quot;mb-8&quot;>
+                <h1 className=&quot;text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight&quot;>
+                  Zion Tech Group
+                </h1>
+                <div className=&quot;text-2xl md:text-3xl text-gray-300 mb-4 font-light&quot;>
+                  Pioneering the Future of Technology
+                </div>
+                <div className=&quot;text-xl md:text-2xl text-cyan-400 font-medium&quot;>
+                  Revolutionary AI • Quantum Computing • Enterprise Solutions
+                </div>
+              </div>
+              
+              <p className=&quot;text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed&quot;>
+                Transform your business with cutting-edge AI, quantum computing, and enterprise solutions. 
+                We deliver innovative technology that drives business transformation and shapes the future.
+              </p>
+              
+              {/* Enhanced CTA buttons */}
+              <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center&quot;>
+                <Link href=&quot;/contact&quot;>
+                  <motion.button 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className=&quot;px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40&quot;
+                  >
+                    Start Your Transformation
+                  </motion.button>
+                </a>
+                <Link href=&quot;/services&quot;>
+                  <motion.button 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className=&quot;px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;
+                  >
+                    Explore Services
+                  </motion.button>
+                </a>
+
               </div>
             </motion.div>
           </div>
         </section>
-              <div className='mb-8'>;
+<div className='mb-8'>;
                 <h1 className='text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight'>;
                   Zion Tech Group;
                 </h1>;
@@ -323,7 +381,7 @@ const Homepage2037: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Featured AI Services */}
+{/* Featured AI Services */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -697,7 +755,7 @@ const Homepage2037: React.FC = () => {
                       description: service.description,
                       price: service.price,
                       period: service.period,
-            </div>;
+</div>;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -896,7 +954,7 @@ const Homepage2037: React.FC = () => {
                       description: service.description,
                       price: service.price,
                       period: service.period,
-            </div>;
+</div>;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1095,7 +1153,7 @@ const Homepage2037: React.FC = () => {
                       description: service.description,
                       price: service.price,
                       period: service.period,
-            </div>;
+</div>;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1280,7 +1338,7 @@ const Homepage2037: React.FC = () => {
             </div>
           </div>
         </section>
-                className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group'>;
+className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group'>;
                 <div className='w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>;
                   <Zap className='w-10 h-10 text-white' />;
                 </div>;
@@ -1409,6 +1467,16 @@ const Homepage2037: React.FC = () => {
                 <div className="mt-8 text-gray-400">
                   <p className="text-sm">Contact us: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
                   <p className="text-sm">Email: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></p>
+                    >
+                      Request Demo
+                    </motion.button>
+                  </a>
+                </div>
+                
+                <div className=&quot;mt-8 text-gray-400&quot;>
+                  <p className=&quot;text-sm&quot;>Contact us: <a href=&quot;tel:+13024640950&quot; className=&quot;text-cyan-400 hover:text-cyan-300&quot;>+1 302 464 0950</a></p>
+                  <p className=&quot;text-sm&quot;>Email: <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-cyan-400 hover:text-cyan-300&quot;>kleber@ziontechgroup.com</a></p>
+
                 </div>
               </div>
             </motion.div>
@@ -1416,7 +1484,7 @@ const Homepage2037: React.FC = () => {
         </section>
       </main>
     </Layout>
-                      href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                       className='text-cyan-400 hover:text-cyan-300'>;
                       kleber@ziontechgroup && ziontechgroup.com;
                     </a>;

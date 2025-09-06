@@ -354,7 +354,7 @@ const pricing_tiers = [;
     price: 99,
     period: 'month',
     description: 'Perfect for small businesses and startups',
-    features: [;
+features: [;
       'Up to 5 team members_basic AI content generation_standard support_core integrations_basic analytics_email support';
     ],
     icon: <Target className="w - 6 h - 6" />,
@@ -368,7 +368,7 @@ const pricing_tiers = [;
     price: 299,
     period: 'month',
     description: 'Ideal for growing businesses and teams',
-    features: [;
+features: [;
       'Up to 25 team members_advanced AI features_priority support_advanced integrations_advanced analytics_phone & email support_custom brandingAPI access';
     ],
     icon: <Zap className="w - 6 h - 6" />,
@@ -382,7 +382,7 @@ const pricing_tiers = [;
     price: 999,
     period: 'month',
     description: 'For large organizations with complex needs',
-    features: [;
+features: [;
       'Unlimited team members_full AI suite access24 / 7 dedicated support_custom integrations_advanced analytics & reporting_dedicated account manager_custom developmentSLA guarantees';
       'On - premise options_compliance certifications';
     ],
@@ -536,11 +536,44 @@ function CuttingEdgePricing2025() {
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+
+  const _filteredServices = selectedCategory === 'all' 
+    ? allServices 
+    : allServices.filter(service => service.category === selectedCategory),
+
+  const _containerVariants = {
+    hidden: { opacity: 0},
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { y: 20, _opacity: 0},
+    visible: {_y: 0, _opacity: 1, _transition: {
+        duration: 0.5}
+    }
+  },
+
+  return (_<>
+      <Head>
+        <title>Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;Discover competitive pricing for our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;cutting-edge pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SAAS pricing&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
+        <link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; />
+      </Head>
+
+      <Layout>
+        {/* Hero Section */}
+        <section className=&quot;relative overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black&quot;></div>
+          <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32&quot;>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+className="text-center"
             >
               <motion.h1
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
@@ -549,7 +582,7 @@ function CuttingEdgePricing2025() {
                 transition={{ duration: 1, delay: 0.2 }}
               >
                 Cutting-Edge
-                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
+<span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
                   Pricing 2025
                 </span>
               </motion.h1>
@@ -562,7 +595,7 @@ function CuttingEdgePricing2025() {
                 Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
                 a competitive advantage while maintaining affordability and value.
               </motion.p>
-              {/* Hero Stats */}
+{/* Hero Stats */}
               <motion.div
               transition={{ duration: 0 && 0.8 }}
               className='text-center'>;
@@ -605,7 +638,7 @@ function CuttingEdgePricing2025() {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
+<div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
                         <stat.icon className={`w-5 h-5 ${stat.color}`} />
@@ -649,7 +682,7 @@ function CuttingEdgePricing2025() {
                 and world-class support to ensure your success.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingTiers.map((tier, index) => (
                 <motion.div
                 Pricing Plans;
@@ -873,7 +906,7 @@ function CuttingEdgePricing2025() {
                       </span>
                     </div>
                   )}
-                  <div className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
+<div className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                     tier.popular ? 'border-cyan-500/50 shadow-cyan-500/20' : ''
                   }`}>
                     <div className="text-center mb-8">
@@ -1019,7 +1052,7 @@ function CuttingEdgePricing2025() {
                 Each category offers specialized solutions for different business needs.
               </p>
             </motion.div>
-            {/* Category Filter */}
+{/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
                 onClick={() => setSelectedCategory('all')}
@@ -1414,7 +1447,7 @@ function CuttingEdgePricing2025() {
         </section>
       </Layout>
     </>
-                    href={`mailto:${contactInfo && contactInfo.email}`}
+href={`mailto:${contactInfo && contactInfo.email}`}
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>;
                     {contactInfo && contactInfo.email}
                   </a>;

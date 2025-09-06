@@ -29,3 +29,18 @@ function Placeholder() {
       </main>;
     </div>);
 }
+      <Head>
+        <title>Services • Landing-page-generator - Placeholder</title>
+        <meta name=&quot;robots&quot; content=&quot;noindex&quot; />
+      </Head>
+      
+      <main>
+        <h1>LandingPageGenerator</h1>
+        <p>Service details coming soon...</p>
+        <a href=&quot;/services&quot;>Back to Services</a>
+      </main>
+    </div>
+  )
+}
+  );}
+

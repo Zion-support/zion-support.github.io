@@ -262,7 +262,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
   },
       'AI-powered space missions',
   // AI Space Technology 2030;
-  {
+{
     id: 'ai - space - technology - 2030',
     name: 'AI Space Technology 2030',
     tagline: 'AI - powered space exploration',

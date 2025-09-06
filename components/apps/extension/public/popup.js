@@ -16,7 +16,7 @@ document && document.getElementById('askBtn').addEventListener('click', async ()
   const res = await fetch(`${API_BASE}/ai/ask`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
-    body: JSON && JSON.stringify({ prompt })
+body: JSON && JSON.stringify({ prompt })
   }),
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = data && data.text || JSON && JSON.stringify(data, null, 2)
@@ -26,7 +26,7 @@ document && document.getElementById('postJob').addEventListener('click', async (
   const res = await fetch(`${API_BASE}/jobs/generate`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
-    body: JSON && JSON.stringify({ role: 'Cloud Engineer' })
+body: JSON && JSON.stringify({ role: 'Cloud Engineer' })
   }),
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = data && data.description || 'Draft saved.'
@@ -126,3 +126,4 @@ document.getElementById ('sign_in').addEventListener ('click', async () => {
   setUserId (id),
 document.getElementById ('result').text_content = 'Signed in (local).';
 }),
+

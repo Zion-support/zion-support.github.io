@@ -27,7 +27,7 @@ import React from 'react';
     price: 499,
     period: 'month',
     description: 'Ideal for professional traders and growing investment firms',
-    features: [;
+features: [;
       'Advanced AI models and algorithms',
       'Automated trading with backtesting',
       'Custom strategy development',
@@ -44,7 +44,7 @@ import React from 'react';
     price: 1499,
     period: 'month',
     description: 'For large investment firms and institutional investors',
-    features: [;
+features: [;
       'Custom AI model training and development',
       'White - label solution with branding',
       'Dedicated account manager and support',
@@ -326,15 +326,82 @@ const NeuralFinanceAI: React.FC = () => {;
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
+
+const NeuralFinanceAI: React.FC = () => {_return (
+    <Layout>
+      <Head>
+        <title>Neural Finance AI - Advanced AI-Powered Financial Analysis Platform | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Transform your financial trading with Neural Finance AI. Advanced AI-powered market prediction, risk assessment, and automated portfolio optimization using neural networks.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI trading, financial analysis, neural networks, portfolio optimization, risk management, automated trading, Zion Tech Group&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/neural-finance-ai&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black&quot;></div>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]&quot;></div>
+        
+        <div className=&quot;relative z-10 max-w-7xl mx-auto&quot;>
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 items-center&quot;>
+            <motion.div
+              initial={_{ opacity: 0, _x: -30}}
+              animate={_{ opacity: 1, _x: 0}}
+              transition={_{ duration: 0.8}}
+            >
+              <div className=&quot;inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6&quot;>
+                <Brain className=&quot;w-4 h-4&quot; />
+                <span>AI-Powered Financial Intelligence</span>
+              </div>
+              
+              <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6 leading-tight&quot;>
+                <span className=&quot;bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+                  Neural Finance AI
+                </span>
+                <br />
+                <span className=&quot;text-white&quot;>Revolutionary Trading Intelligence</span>
+              </h1>
+              
+              <p className=&quot;text-xl text-gray-300 mb-8 leading-relaxed&quot;>
+                Advanced AI-powered financial analysis and trading platform using neural networks for real-time market prediction, 
+                risk assessment, and automated portfolio optimization with 94% accuracy.
+              </p>
+              
+              <div className=&quot;flex flex-col sm:flex-row gap-4 mb-8&quot;>
+                <Link
+                  href=&quot;#pricing&quot;
+                  className=&quot;bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2&quot;
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className=&quot;w-5 h-5&quot; />
+                </Link>
+                <button className=&quot;border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200 flex items-center justify-center space-x-2&quot;>
+                  <Play className=&quot;w-5 h-5&quot; />
+                  <span>Watch Demo</span>
+                </button>
+              </div>
+              
+              <div className=&quot;flex flex-wrap gap-6 text-sm text-gray-400&quot;>
+                <div className=&quot;flex items-center space-x-2&quot;>
+                  <CheckCircle className=&quot;w-4 h-4 text-green-400&quot; />
+                  <span>94% Market Prediction Accuracy</span>
+                </div>
+                <div className=&quot;flex items-center space-x-2&quot;>
+                  <CheckCircle className=&quot;w-4 h-4 text-green-400&quot; />
+                  <span>Real-time Risk Assessment</span>
+                </div>
+                <div className=&quot;flex items-center space-x-2&quot;>
+                  <CheckCircle className=&quot;w-4 h-4 text-green-400&quot; />
+
                   <span>Multi-Asset Support</span>
                 </div>
               </div>
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+className="relative"
             >
               <div className="relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-sm">
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-3xl"></div>
@@ -369,7 +436,7 @@ const NeuralFinanceAI: React.FC = () => {;
           </div>
         </div>
       </section>
-          href='https://ziontechgroup && ziontechgroup.com/neural-finance-ai'
+href='https://ziontechgroup && ziontechgroup.com/neural-finance-ai'
         />;
       </Head>;
       {/* Hero Section */}
@@ -624,7 +691,7 @@ const NeuralFinanceAI: React.FC = () => {
                 </p>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Use Cases Section */}
@@ -928,7 +995,7 @@ const NeuralFinanceAI: React.FC = () => {
                     </div>
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 text-sm mb-6">{plan.description}</p>
                   <div className="text-4xl font-bold text-white mb-2">
@@ -1059,7 +1126,7 @@ const NeuralFinanceAI: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Contact CTA */}
@@ -1095,17 +1162,29 @@ const NeuralFinanceAI: React.FC = () => {
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+              Ready to Transform Your Trading?
+            </h2>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
+              Join leading investment firms using Neural Finance AI to gain competitive advantages 
+              in today's dynamic financial markets.
+            </p>
+            
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-8&quot;>
+              <Link
+                href=&quot;/contact&quot;
+                className=&quot;bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105&quot;
+
               >
                 Start Free Trial
               </Link>
               <Link
-                href="/contact"
+href="/contact"
                 className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200"
               >
                 Schedule Demo
               </Link>
             </div>
-            <div className="text-sm text-gray-400">
+<div className="text-sm text-gray-400">
               <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
             </div>

@@ -64,4 +64,5 @@ if ( {) {
     "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate",
   );
   res.status (200).send (pixel);
+
 }

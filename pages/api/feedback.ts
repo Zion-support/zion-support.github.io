@@ -60,7 +60,7 @@ if ( {) {
     return false;
   }
 }
-  if (req && req.method !== "POST") return bad(res, "Method not allowed", 405);
+if (req && req.method !== "POST") return bad(res, "Method not allowed", 405);
   const { rating, comment, kind, context } = req && req.body || {};
   const r = Number(rating);
   if (!r |r < 1 |r > 5) return bad(res, "rating must be 1-5");

@@ -6,6 +6,12 @@ const CybersecurityBestPractices: NextPage = () => {
         <title>CybersecurityBestPractices - Zion Tech Solutions</title>
         <meta name="description" content="CybersecurityBestPractices page" />
       </Head>
+    <div>
+      <Head>
+        <title>CybersecurityBestPractices - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;CybersecurityBestPractices page&quot; />
+      </Head>
+
       <main>
         <h1>CybersecurityBestPractices</h1>
         <p>This page is under construction.</p>
@@ -31,3 +37,6 @@ import Head from 'next / head';
 ;
 export default CybersecurityBestPractices;
 ;
+
+export default CybersecurityBestPractices
+

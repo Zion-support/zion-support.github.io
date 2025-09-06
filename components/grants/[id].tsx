@@ -247,11 +247,44 @@ if (
                 <div className="text-sm font-medium">Supporting Links</div>
                 <ul className="list-disc list-inside text-sm">
                   {item.supportingLinks.map((l, i) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
+    }
+  },
+
+  if (loading) return <EnhancedLayout><div>Loading...</div></EnhancedLayout>,
+  if (!item) return <EnhancedLayout><div>Not found</div></EnhancedLayout>,
+
+  return (
+    <EnhancedLayout>
+      <div className=&quot;flex items-center justify-between mb-4&quot;>
+        <div>
+          <h1 className=&quot;text-2xl font-semibold&quot;>{item.projectName}</h1>
+          <div className=&quot;text-sm text-gray-600 dark:text-gray-400&quot;>{item.sector || 'General'} • {item.region || 'Global'} • {item.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
+        </div>
+        <div className=&quot;flex gap-2 items-center&quot;>
+          {item.program === 'incubator' && <span className=&quot;px-2 py-1 text-xs rounded bg-purple-100 text-purple-700&quot;>Incubated by Zion</span>}
+          {item.status === 'Approved' && <span className=&quot;px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700&quot;>Grant Winner</span>}
+          <span className=&quot;px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800&quot;>{item.status}</span>
+        </div>
+      </div>
+
+      <div className=&quot;grid md:grid-cols-3 gap-6&quot;>
+        <div className=&quot;md:col-span-2 space-y-4&quot;>
+          <section className=&quot;border rounded p-4 bg-white/70 dark:bg-black/40&quot;>
+            <h2 className=&quot;font-medium mb-2&quot;>Proposal</h2>
+            <p className=&quot;text-sm whitespace-pre-wrap&quot;>{item.proposalSummary}</p>
+            <div className=&quot;mt-2 text-sm text-gray-600&quot;>Timeline: {item.timeline}</div>
+            <div className=&quot;mt-1 text-sm text-gray-600&quot;>Budget: {item.budgetAmount} {item.budgetCurrency}</div>
+            {item.supportingLinks && item.supportingLinks.length > 0 && (
+              <div className=&quot;mt-2&quot;>
+                <div className=&quot;text-sm font-medium&quot;>Supporting Links</div>
+                <ul className=&quot;list-disc list-inside text-sm&quot;>
+                  {item.supportingLinks.map((l, i) => <li key={i}><a className=&quot;text-blue-600&quot; href={l} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>{l}</a></li>)}
+
                 </ul>
               </div>
             )}
           </section>
-          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
+<section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h2 className="font-medium mb-2">Updates</h2>
             <div className="space-y-3">
               {(item.updates |[]).slice().reverse().map((u) => (
@@ -313,7 +346,7 @@ if (
             </div>
           </section>
         </div>
-        <aside className="space-y-4">
+<aside className="space-y-4">
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Milestones</h3>
             <ul className="space-y-2">
@@ -339,7 +372,7 @@ if (
         </aside>
       </div>
     </EnhancedLayout>
-              {(!item && item.milestones || item && item.milestones.length === 0) && (;
+{(!item && item.milestones || item && item.milestones.length === 0) && (;
                 <div className='text-sm text-gray-600'>;
                   Milestones will appear here.;
                 </div>;

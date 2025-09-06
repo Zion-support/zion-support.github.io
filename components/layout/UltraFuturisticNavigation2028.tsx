@@ -525,13 +525,87 @@ const service_categories = [;
     color: 'from - emerald - 600 to - green - 600',
     description: 'Environmental solutions',
 ];
+
+const _serviceCategories = [
+  {_title: '🚀 2028 Futuristic Innovations', _icon: Rocket, _color: 'from-violet-600 to-purple-600', _description: 'Beyond the future of technology', _services: [
+      { name: 'AI Climate Prediction Platform', _href: '/ai-climate-prediction-platform', _description: 'Predict climate changes with 99.9% accuracy', _price: '$2, _999/month'},
+      {_name: 'Quantum Cybersecurity Firewall', _href: '/quantum-cybersecurity-firewall', _description: 'Unbreakable quantum encryption', _price: '$4, _999/month'},
+      {_name: 'Autonomous Drone Delivery Network', _href: '/autonomous-drone-delivery-network', _description: 'AI-powered drone delivery', _price: '$1, _999/month'},
+      {_name: 'AI Healthcare Diagnosis Platform', _href: '/ai-healthcare-diagnosis-platform', _description: 'Revolutionary medical diagnosis', _price: '$3, _999/month'}
+    ]
+  },
+  {_title: '🏙️ Smart City & Infrastructure', _icon: Building, _color: 'from-blue-600 to-cyan-600', _description: 'Intelligent urban solutions', _services: [
+      { name: 'Smart City Infrastructure Management', _href: '/smart-city-infrastructure-management', _description: 'IoT and AI urban optimization', _price: '$5, _999/month'},
+      {_name: 'IoT Energy Management System', _href: '/iot-energy-management-system', _description: 'Smart energy optimization', _price: '$1, _999/month'},
+      {_name: 'Digital Twin Manufacturing Platform', _href: '/digital-twin-manufacturing-platform', _description: 'Virtual manufacturing replicas', _price: '$4, _999/month'},
+      {_name: 'Autonomous Manufacturing AI', _href: '/autonomous-manufacturing-ai', _description: 'Self-optimizing factories', _price: '$6, _999/month'}
+    ]
+  },
+  {_title: '⚛️ Quantum & Advanced Tech', _icon: Atom, _color: 'from-indigo-600 to-blue-600', _description: 'Quantum computing and beyond', _services: [
+      { name: 'Quantum Financial Trading Platform', _href: '/quantum-financial-trading-platform', _description: 'Quantum-powered trading', _price: '$8, _999/month'},
+      {_name: 'Quantum Machine Learning Platform', _href: '/quantum-machine-learning-platform', _description: 'Quantum computing for ML', _price: '$7, _999/month'},
+      {_name: 'Quantum Internet Security Gateway', _href: '/quantum-internet-security-gateway', _description: 'Unbreakable internet security', _price: '$3, _999/month'},
+      {_name: 'Quantum Internet Protocol', _href: '/quantum-internet-protocol', _description: 'Next-generation internet', _price: '$5, _999/month'}
+    ]
+  },
+  {_title: '🤖 AI & Machine Learning', _icon: Brain, _color: 'from-emerald-600 to-teal-600', _description: 'Next-generation AI solutions', _services: [
+      { name: 'AI Customer Service Automation', _href: '/ai-customer-service-automation', _description: 'Intelligent customer support', _price: '$899/month'},
+      {_name: 'AI Education Platform', _href: '/ai-education-platform', _description: 'Personalized learning with AI', _price: '$1, _499/month'},
+      {_name: 'AI Content Creation Suite', _href: '/ai-content-creation-suite', _description: 'Unlimited AI content creation', _price: '$1, _299/month'},
+      {_name: 'AI Legal Research Platform', _href: '/ai-legal-research-platform', _description: 'Intelligent legal research', _price: '$2, _999/month'}
+    ]
+  },
+  {_title: '⛓️ Blockchain & Web3', _icon: Layers, _color: 'from-orange-600 to-red-600', _description: 'Decentralized solutions', _services: [
+      { name: 'Blockchain Supply Chain Transparency', _href: '/blockchain-supply-chain-transparency', _description: 'End-to-end supply chain visibility', _price: '$2, _499/month'},
+      {_name: 'Smart Contract Automation Platform', _href: '/smart-contract-automation', _description: 'Automated blockchain contracts', _price: '$1, _999/month'},
+      {_name: 'DeFi Yield Optimization', _href: '/defi-yield-optimization', _description: 'Maximize DeFi returns', _price: '$3, _999/month'},
+      {_name: 'NFT Marketplace Platform', _href: '/nft-marketplace-platform', _description: 'Complete NFT ecosystem', _price: '$2, _999/month'}
+    ]
+  },
+  {_title: '🚗 Autonomous & Mobility', _icon: Car, _color: 'from-red-600 to-pink-600', _description: 'Self-driving and mobility solutions', _services: [
+      { name: 'Autonomous Vehicle Fleet Management', _href: '/autonomous-vehicle-fleet-management', _description: 'Intelligent fleet management', _price: '$3, _999/month'},
+      {_name: 'Smart Traffic Management System', _href: '/smart-traffic-management', _description: 'AI traffic optimization', _price: '$4, _999/month'},
+      {_name: 'Electric Vehicle Charging Network', _href: '/ev-charging-network', _description: 'Smart EV infrastructure', _price: '$2, _999/month'},
+      {_name: 'Mobility as a Service Platform', _href: '/mobility-as-a-service', _description: 'Integrated mobility solutions', _price: '$1, _999/month'}
+    ]
+  },
+  {_title: '🏥 Healthcare & Biotech', _icon: Heart, _color: 'from-pink-600 to-rose-600', _description: 'Advanced healthcare solutions', _services: [
+      { name: 'AI Drug Discovery Platform', _href: '/ai-drug-discovery-platform', _description: 'Accelerate drug development', _price: '$9, _999/month'},
+      {_name: 'Personalized Medicine AI', _href: '/personalized-medicine-ai', _description: 'Tailored treatment plans', _price: '$4, _999/month'},
+      {_name: 'Telemedicine AI Platform', _href: '/telemedicine-ai-platform', _description: 'Intelligent remote healthcare', _price: '$2, _999/month'},
+      {_name: 'Medical Imaging AI', _href: '/medical-imaging-ai', _description: 'Advanced diagnostic imaging', _price: '$3, _999/month'}
+    ]
+  },
+  {_title: '🎓 Education & Training', _icon: GraduationCap, _color: 'from-green-600 to-emerald-600', _description: 'Next-generation learning', _services: [
+      { name: 'Virtual Reality Learning Platform', _href: '/vr-learning-platform', _description: 'Immersive educational experiences', _price: '$1, _999/month'},
+      {_name: 'AI Tutoring System', _href: '/ai-tutoring-system', _description: 'Personalized AI tutoring', _price: '$899/month'},
+      {_name: 'Corporate Training AI', _href: '/corporate-training-ai', _description: 'Intelligent employee training', _price: '$2, _499/month'},
+      {_name: 'Language Learning AI', _href: '/language-learning-ai', _description: 'AI-powered language acquisition', _price: '$1, _299/month'}
+    ]
+  },
+  {_title: '⚖️ Legal & Compliance', _icon: Scale, _color: 'from-slate-600 to-gray-600', _description: 'Legal technology solutions', _services: [
+      { name: 'Contract Analysis AI', _href: '/contract-analysis-ai', _description: 'Intelligent contract review', _price: '$2, _999/month'},
+      {_name: 'Compliance Monitoring Platform', _href: '/compliance-monitoring-platform', _description: 'Automated compliance tracking', _price: '$3, _999/month'},
+      {_name: 'Legal Document Automation', _href: '/legal-document-automation', _description: 'Automated legal documents', _price: '$1, _999/month'},
+      {_name: 'Regulatory Change Tracker', _href: '/regulatory-change-tracker', _description: 'Monitor regulatory updates', _price: '$1, _499/month'}
+    ]
+  },
+  {_title: '🌍 Sustainability & Green Tech', _icon: Leaf, _color: 'from-emerald-600 to-green-600', _description: 'Environmental solutions', _services: [
+      { name: 'Carbon Footprint Tracking', _href: '/carbon-footprint-tracking', _description: 'Monitor environmental impact', _price: '$1, _499/month'},
+      {_name: 'Renewable Energy Management', _href: '/renewable-energy-management', _description: 'Optimize green energy', _price: '$2, _999/month'},
+      {_name: 'Waste Management AI', _href: '/waste-management-ai', _description: 'Intelligent waste optimization', _price: '$1, _999/month'},
+      {_name: 'Sustainable Supply Chain', _href: '/sustainable-supply-chain', _description: 'Green supply chain solutions', _price: '$3, _999/month'}
+    ]
+  }
+],
+
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },
   { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
-    services: [;
+services: [;
       {
         name: 'Carbon Footprint Tracking',
         href: '/carbon - footprint - tracking',
@@ -672,7 +746,7 @@ const resource_links = [;
           </div>
         </div>
       </div>
-                href={contactInfo && contactInfo.website}
+href={contactInfo && contactInfo.website}
                 className='text-purple-300 hover:text-white transition-colors'>                {contactInfo && contactInfo.website}      {/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1151,7 +1225,7 @@ function UltraFuturisticNavigation2028() {
           </div>
         </div>
       </div>
-          {/* Mobile Menu Button */}
+{/* Mobile Menu Button */}
           <div className='lg:hidden'>;
             <button;
               on_click={toggle_menu}
@@ -1228,7 +1302,7 @@ function UltraFuturisticNavigation2028() {
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
-                      className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
+className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                     >
                       <link.icon className="w-5 h-5 text-purple-400" />
                       <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
@@ -1374,7 +1448,7 @@ function UltraFuturisticNavigation2028() {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>;
+</AnimatePresence>;
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50">
@@ -1384,7 +1458,7 @@ function UltraFuturisticNavigation2028() {
                 <Link
                   key={service.name}
                   href={service.href}
-                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
+className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                 >
                   <div className="flex items-center justify-between">
                     <div>

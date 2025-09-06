@@ -135,12 +135,12 @@ const QuantumLoadingFallback = () => (
           transition={{
             duration: Math.random() * 4 + 3,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
           style={{
             left: Math.random() * 100 + '%',
             top: Math.random() * 100 + '%'}}
-        />
+/>
       ))}
     </div>
     {/* Quantum loading animation */}
@@ -230,6 +230,59 @@ const QuantumLoadingFallback = () => (
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
           transition={{ duration: 3, ease: "easeInOut" }}
+        />
+      ))}
+    </div>
+    
+    {_/* Quantum loading animation */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+      className=&quot;text-center relative z-10&quot;
+    >
+      <div className=&quot;relative&quot;>
+        <motion.div
+          animate={{ 
+            rotate: 360,
+            scale: [1, 1.2, 1],
+            boxShadow: [
+              &quot;0 0 20px rgba(6, 182, 212, 0.5)&quot;,
+              &quot;0 0 40px rgba(168, 85, 247, 0.8)&quot;,
+              &quot;0 0 20px rgba(6, 182, 212, 0.5)&quot;
+            ]
+          }}
+          transition={{ 
+            rotate: { duration: 3, repeat: Infinity, ease: &quot;linear&quot; },
+            scale: { duration: 2, repeat: Infinity, ease: &quot;easeInOut&quot; },
+            boxShadow: { duration: 2, repeat: Infinity, ease: &quot;easeInOut&quot; }
+          }}
+          className=&quot;w-32 h-32 mx-auto mb-8&quot;
+        >
+          <div className=&quot;w-full h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 rounded-full blur-xl opacity-40 animate-pulse&quot;></div>
+          <div className=&quot;absolute inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center&quot;>
+            <Brain className=&quot;w-16 h-16 text-white&quot; />
+          </div>
+        </motion.div>
+      </div>
+      <motion.h1 
+        className=&quot;text-4xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent&quot;
+        animate={{ opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 3, repeat: Infinity }}
+      >
+        Zion Tech Group 2046
+      </motion.h1>
+      <p className=&quot;text-xl text-gray-300 mb-3&quot;>Quantum AI • Neural Interfaces • Space Technology</p>
+      <p className=&quot;text-lg text-gray-400&quot;>Preparing your revolutionary digital transformation journey</p>
+      
+      {/* Quantum progress bar */}
+      <div className=&quot;mt-8 w-64 mx-auto bg-gray-700 rounded-full h-2&quot;>
+        <motion.div
+          className=&quot;bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full&quot;
+          initial={{ width: 0 }}
+          animate={{ width: &quot;100%&quot; }}
+          transition={{ duration: 3, ease: &quot;easeInOut&quot; }}
+
         />
       </div>
     </motion.div>
@@ -409,7 +462,7 @@ if ( {) {
               setActiveSection(entry.target.id)
             }
           })
-        };
+};
         { threshold: 0.3 }
       );
       const sections = document.querySelectorAll('section[id]');
@@ -717,11 +770,78 @@ if ( {) {
               </motion.h1>
               <motion.p 
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
+
+      return () => observer.disconnect()
+    }
+  }, []),
+
+  if (isLoading) {
+    return <QuantumLoadingFallback />
+  }
+
+  const _allServices = [
+    ...innovative2046AIServices,
+    ...innovative2046ITServices,
+    ...innovative2046MicroSAASServices
+  ],
+
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()),
+    return matchesCategory && matchesSearch
+  }),
+
+  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))],
+          
+          {_/* Floating orbs */}
+          {_[...Array(20)].map(_(_, _i) => (
+            <motion.div
+              key={i}
+              className=&quot;absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30&quot;
+              animate={{
+                x: [0, Math.random() * 100 - 50],
+                y: [0, Math.random() * 100 - 50],
+                opacity: [0.3, 0.8, 0.3]}}
+              transition={{
+                duration: Math.random() * 10 + 10,
+                repeat: Infinity,
+                ease: &quot;easeInOut&quot;
+              }}
+              style={{
+                left: Math.random() * 100 + '%',
+                top: Math.random() * 100 + '%'}}
+            />
+          ))}
+        </div>
+
+        {/* Hero Section */}
+        <section id=&quot;hero&quot; className=&quot;relative z-10 min-h-screen flex items-center justify-center px-4&quot;>
+          <div className=&quot;text-center max-w-6xl mx-auto&quot;>
+            <motion.div
+              initial={_{ opacity: 0, _y: 50}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 1}}
+            >
+              <motion.h1 
+                className=&quot;text-6xl md:text-8xl font-bold text-white mb-8&quot;
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.5, delay: 0.5 }}
+              >
+                <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent&quot;>
+                  Zion Tech Group
+                </span>
+              </motion.h1>
+              
+              <motion.p 
+                className=&quot;text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;
+
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-                Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
+Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                 <span className="text-purple-400 font-semibold"> Neural Interfaces</span>, and 
                 <span className="text-cyan-400 font-semibold"> Space Technology</span> Solutions
               </motion.p>
@@ -731,7 +851,7 @@ if ( {) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.5 }}
               >
-                <Link href="/services">
+<Link href="/services">
                   <motion.button
                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
                     whileTap={{ scale: 0.95 }}
@@ -799,7 +919,7 @@ if ( {) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 2 }}
             >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                 <div className="flex flex-col items-center">
                   <Phone className="w-6 h-6 text-cyan-400 mb-2" />
                   <p className="text-sm text-gray-300">Phone</p>
@@ -819,7 +939,7 @@ if ( {) {
             </motion.div>
           </div>
         </section>
-            >;
+>;
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-center'>;
                 <div className='flex flex-col items-center'>;
                   <Phone className='w-6 h-6 text-cyan-400 mb-2' />;
@@ -861,7 +981,7 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -949,7 +1069,7 @@ if ( {) {
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10, scale: 1.02 }}
                   className="group"
@@ -1051,7 +1171,7 @@ if ( {) {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2"
+className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2"
                         >
                           Learn More <ArrowUpRight className="w-4 h-4" />
                         </motion.button>
@@ -1071,7 +1191,7 @@ if ( {) {
                 </motion.div>
               ))}
             </motion.div>
-                      </ul>;
+</ul>;
                     </div>;
                     <div className='flex items-center justify-between'>                      <Link href={service && service.link}>;
                         <motion&& motion.button
@@ -1482,6 +1602,11 @@ if ( {) {
                       View All Services
                     </motion.button>
                   </Link>
+                    >
+                      View All Services
+                    </motion.button>
+                  </a>
+
                 </div>
               </div>
             </motion.div>

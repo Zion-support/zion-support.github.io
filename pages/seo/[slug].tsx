@@ -30,7 +30,7 @@ export type LandingPayload = {
   title: string,
   h1: string,
   bodyHtml: string,
-  region?: string;
+region?: string;
   service?: string;
   faq: Array<{ q: string, a: string }>
 };
@@ -67,12 +67,22 @@ export default function SEOLandingPage() {;
       service: undefined,;
       faq: [],;
     });  }, [router && router.isReady, slug]);
+
+  const [payload, setPayload] = React.useState<LandingPayload | null>(null),
+
+  React.useEffect(() => {
+    if (!router.isReady || !slug) return,
+    const dataParam = (router.query?.data as string) || ''
+    if (dataParam) {
+      try {
+        setPayload(JSON.parse(decodeURIComponent(dataParam))),
+
         return
       } catch {}
     }
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
-  }, [router.isReady, slug]);
+}, [router.isReady, slug]);
   if (!payload) return null;
   return (
     <div className="max-w-4xl mx-auto">

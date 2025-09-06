@@ -260,11 +260,118 @@ function BusinessToolsPage() {
           icon: <CreditCard className='w - 6 h - 6' />,
           color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
           popular: true,
+
+export default function BusinessToolsPage() {_const _businessTools = [
+    {
+      category: 'Project Management', _tools: [
+        {
+          name: 'Notion',
+          description: 'All-in-one workspace for notes, docs, projects, and team collaboration.',
+          features: ['TemplatesDatabase viewsReal-time editingIntegrationsTeam spaces'],
+          pricing: 'Free - $8/month',
+          website: 'https://notion.so',
+          icon: <FileText className=&quot;w-6 h-6&quot; />,
+          color: 'bg-gradient-to-br from-gray-800 to-black',
+          popular: true
+        },
+        {
+          name: 'Asana',
+          description: 'Work management platform for teams to organize, track, and manage their work.',
+          features: ['Task managementProject timelinesTeam collaborationWorkflow automationReporting'],
+          pricing: 'Free - $10.99/month',
+          website: 'https://asana.com',
+          icon: <CheckCircle className=&quot;w-6 h-6&quot; />,
+          color: 'bg-gradient-to-br from-pink-500 to-red-600'
+        },
+        {
+          name: 'Monday.com',
+          description: 'Visual project management platform with customizable workflows and automation.',
+          features: ['Visual boardsAutomationTime trackingIntegrationsAnalytics'],
+          pricing: '$8/month - $16/month',
+          website: 'https://monday.com',
+          icon: <Calendar className=&quot;w-6 h-6&quot; />,
+          color: 'bg-gradient-to-br from-red-500 to-pink-600'
+        }
+      ]
+    },
+    {_category: 'Communication & Collaboration', _tools: [
+        {
+          name: 'Slack',
+          description: 'Team communication platform for modern businesses with channels and integrations.',
+          features: ['ChannelsDirect messagesFile sharingIntegrationsSearch'],
+          pricing: 'Free - $7.25/month',
+          website: 'https://slack.com',
+          icon: <MessageSquare className=&quot;w-6 h-6&quot; />,
+          color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+          popular: true
+        },
+        {
+          name: 'Microsoft Teams',
+          description: 'Unified communication platform with chat, video meetings, and file collaboration.',
+          features: ['ChatVideo meetingsFile sharingOffice integrationSecurity'],
+          pricing: 'Free - $6/month',
+          website: 'https://teams.microsoft.com',
+          icon: <Users className=&quot;w-6 h-6&quot; />,
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+        },
+        {
+          name: 'Zoom',
+          description: 'Video conferencing platform for meetings, webinars, and team collaboration.',
+          features: ['HD videoScreen sharingRecordingWebinarsBreakout rooms'],
+          pricing: 'Free - $14.99/month',
+          website: 'https://zoom.us',
+          icon: <Video className=&quot;w-6 h-6&quot; />,
+          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+        }
+      ]
+    },
+    {_category: 'Marketing & Sales', _tools: [
+        {
+          name: 'HubSpot',
+          description: 'All-in-one inbound marketing, sales, and customer service platform.',
+          features: ['CRMEmail marketingLead generationAnalyticsAutomation'],
+          pricing: 'Free - $45/month',
+          website: 'https://hubspot.com',
+          icon: <Target className=&quot;w-6 h-6&quot; />,
+          color: 'bg-gradient-to-br from-orange-500 to-red-600',
+          popular: true
+        },
+        {
+          name: 'Mailchimp',
+          description: 'Email marketing platform for growing businesses and creators.',
+          features: ['Email templatesAutomationAnalyticsAudience segmentationA/B testing'],
+          pricing: 'Free - $13/month',
+          website: 'https://mailchimp.com',
+          icon: <Mail className=&quot;w-6 h-6&quot; />,
+          color: 'bg-gradient-to-br from-yellow-500 to-orange-600'
+        },
+        {
+          name: 'Salesforce',
+          description: 'Customer relationship management platform for sales, service, and marketing.',
+          features: ['Sales CRMService cloudMarketing automationAnalyticsAppExchange'],
+          pricing: '$25/month - $300/month',
+          website: 'https://salesforce.com',
+          icon: <TrendingUp className=&quot;w-6 h-6&quot; />,
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+        }
+      ]
+    },
+    {_category: 'Finance & Accounting', _tools: [
+        {
+          name: 'QuickBooks',
+          description: 'Small business accounting software for invoicing, expenses, and financial reporting.',
+          features: ['InvoicingExpense trackingFinancial reportsTax preparationBank integration'],
+          pricing: '$30/month - $200/month',
+          website: 'https://quickbooks.intuit.com',
+          icon: <CreditCard className=&quot;w-6 h-6&quot; />,
+          color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+          popular: true
+
         },
         {
           name: 'Stripe',
           description: 'Payment processing platform for internet businesses.',
-          features: [;
+features: [;
             'Global payments',
             'Subscription billing',
             'Fraud prevention',
@@ -366,7 +473,7 @@ function BusinessToolsPage() {
       description: 'Essential tools for distributed teams and hybrid work environments.',
       trend: '📈 Growing Demand',
       color: 'text-green-400'
-    };
+};
           description:;
             'Free web analytics service that tracks and reports website traffic.',
           features: [;
@@ -562,7 +669,7 @@ function BusinessToolsPage() {
     <>
       <Head>
         <title>Business Tools & Productivity - Zion Tech Group</title>
-        <meta name="description" content="Essential business tools for project management, communication, marketing, finance, and productivity. Real pricing and features for growing businesses." />
+<meta name="description" content="Essential business tools for project management, communication, marketing, finance, and productivity. Real pricing and features for growing businesses." />
         <meta property="og:title" content="Business Tools & Productivity - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive business tools directory with pricing and features." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -761,7 +868,7 @@ function BusinessToolsPage() {
                 </div>
               </Card>
             ))}
-      <section className="section-padding bg-gradient-cursor">
+<section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
@@ -944,7 +1051,7 @@ function BusinessToolsPage() {
                         </div>
                       </div>
                     )}
-                    <div className="text-center mb-6">
+<div className="text-center mb-6">
                       <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                         {tool.icon}
                       </div>
@@ -1171,16 +1278,22 @@ function BusinessToolsPage() {
             Start with the essentials and build your tech stack strategically.
           </p>
           <div className="flex flex-col sm: flex-row gap-6 justify-center">
-            <Button
+<Button
               href="/micro-saas"
               variant="secondary"
               size="lg"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
+            <Button
+              href=&quot;/micro-saas&quot;
+              variant=&quot;secondary&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl&quot;
+
             >
               Explore Micro SaaS
             </Button>
             <Button
-              href="/contact"
+href="/contact"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"

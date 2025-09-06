@@ -375,20 +375,28 @@ export default function Revolutionary2025Pricing() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+};
   // Combine all revolutionary services
   const allRevolutionaryServices = [
     ...revolutionaryAI2025Services;
     ...revolutionaryITInfrastructure2025Services;
     ...revolutionary2025MicroSaasServices
   ];
+
+  // Combine all revolutionary services
+  const _allRevolutionaryServices = [
+    ...revolutionaryAI2025Services,
+    ...revolutionaryITInfrastructure2025Services,
+    ...revolutionary2025MicroSaasServices
+  ],
+
   // Service categories
   const serviceCategories = [
     { id: 'all', name: 'All Services', icon: Sparkles, count: allRevolutionaryServices.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: revolutionaryAI2025Services.length },
     { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, count: revolutionaryITInfrastructure2025Services.length },
           { id: 'saas', name: 'Micro SaaS', icon: Zap, count: revolutionary2025MicroSaasServices.length }
-  ];
+];
   // Filter services based on selected category
   const filteredServices = selectedCategory === 'all' 
     ? allRevolutionaryServices 
@@ -405,7 +413,7 @@ export default function Revolutionary2025Pricing() {
       return Math.floor(basePrice * 0.8), // 20% discount for yearly
     }
     return basePrice
-  };
+};
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -554,7 +562,7 @@ export default function Revolutionary2025Pricing() {
       popular: false,
       cta: 'Start Free Trial',
       ctaVariant: 'secondary' as const
-    };
+};
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
@@ -562,7 +570,7 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features';
+'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features';
         'Custom IntegrationsPerformance Monitoring'
       ];
       icon: <Rocket className="w-8 h-8" />,
@@ -570,7 +578,7 @@ export default function Revolutionary2025Pricing() {
       popular: true,
       cta: 'Start Free Trial',
       ctaVariant: 'primary' as const
-    };
+};
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
@@ -578,7 +586,7 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL ServicesFull AI & Quantum IntegrationDedicated Support Team90-Day Free TrialEnterprise Analytics Suite24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security Features';
+'Access to ALL ServicesFull AI & Quantum IntegrationDedicated Support Team90-Day Free TrialEnterprise Analytics Suite24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security Features';
         'Custom DevelopmentWhite-label SolutionsAPI AccessSLA Guarantees'
       ];
       icon: <Crown className="w-8 h-8" />,
@@ -587,7 +595,7 @@ export default function Revolutionary2025Pricing() {
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const
     }
-  ];
+];
   // Market analysis
   const marketAnalysis = {
 ;
@@ -873,7 +881,7 @@ if ( {) {
             </motion.div>
           </div>
         </section>
-                  transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                   className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30'>;
                   <div className='text-2xl font-bold text-blue-400'>;
                     {marketAnalysis && marketAnalysis.totalMarketSize}
@@ -947,7 +955,7 @@ if ( {) {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
+viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Transformation Plan
               </h2>
@@ -956,7 +964,7 @@ if ( {) {
                 our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
@@ -1094,7 +1102,7 @@ if ( {) {
                       </div>
                     </div>
                   )}
-                  <div className="text-center mb-8">
+<div className="text-center mb-8">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4">
                       {tier.icon}
                     </div>
@@ -1110,7 +1118,7 @@ if ( {) {
                       </div>
                     )}
                   </div>
-                  <ul className="space-y-4 mb-8">
+<ul className="space-y-4 mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -1126,7 +1134,7 @@ if ( {) {
             </div>
           </div>
         </section>
-                  <div className='text-center mb-8'>;
+<div className='text-center mb-8'>;
                     <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4'>;
                       {tier && tier.icon}
                     </div>;
@@ -1173,7 +1181,7 @@ if ( {) {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
+viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Individual Service Pricing
               </h2>
@@ -1182,7 +1190,7 @@ if ( {) {
                 All services include free trials and comprehensive support.
               </p>
             </motion.div>
-              className='text-center mb-16'>;
+className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Individual Service Pricing;
               </h2>;
@@ -1336,7 +1344,7 @@ if ( {) {
                 </button>
               ))}
             </div>
-            {/* Services Grid */}
+{/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service) => (
                 <motion.div
@@ -1344,7 +1352,7 @@ if ( {) {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
+viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -1363,7 +1371,7 @@ if ( {) {
                       </div>
                     )}
                   </div>
-                  {/* Service Description */}
+{/* Service Description */}
                   <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
                   {/* Price and Rating */}
                   <div className="flex items-center justify-between mb-4">
@@ -1400,7 +1408,7 @@ if ( {) {
                         </div>
                       ))}
                       {service.features.length > 3 && (
-                        <div className="text-xs text-gray-500 mt-1">
+<div className="text-xs text-gray-500 mt-1">
                           +{service.features.length - 3} more features
                         </div>
                       )}
@@ -1476,6 +1484,11 @@ if ( {) {
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
                   <BookOpen className="w-5 h-5 mr-2" />
+                  Get Custom Quote
+                </button>
+                <button className=&quot;border-blue-500 text-blue-400 hover:bg-blue-500/20&quot;>
+                  <BookOpen className=&quot;w-5 h-5 mr-2&quot; />
+
                   Download Pricing Guide
                 </button>
               </div>
@@ -1484,7 +1497,7 @@ if ( {) {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-              transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Get Started?;

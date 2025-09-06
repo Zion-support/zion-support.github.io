@@ -105,7 +105,7 @@ export default function Security() {
       features: [
         'End-to-end encryption for all data in transitAES-256 encryption for data at restRegular automated backups with encryptionSecure data centers with 24/7 monitoringData residency compliance for global clients'
       ]
-    };
+};
     {
       id: 'access-control',
       title: 'Access Control',
@@ -113,7 +113,7 @@ export default function Security() {
       features: [
         'Multi-factor authentication (MFA) requiredRole-based access control (RBAC)Principle of least privilege implementationRegular access reviews and deprovisioningSingle sign-on (SSO) integration'
       ]
-    };
+};
     {
       id: 'infrastructure',
       title: 'Infrastructure Security',
@@ -121,7 +121,7 @@ export default function Security() {
       features: [
         'Network segmentation and firewallsIntrusion detection and prevention systemsRegular vulnerability assessmentsAutomated security patchingDDoS protection and rate limiting'
       ]
-    };
+};
     {
       id: 'monitoring',
       title: 'Security Monitoring',
@@ -130,14 +130,14 @@ export default function Security() {
         '24/7 security operations center (SOC)Real-time threat detection and responseComprehensive audit loggingSecurity incident response teamContinuous security monitoring tools'
       ]
     }
-  ];
+];
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR', status: 'Compliant' },
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' }
-  ];
+];
   return (
     <>
       <Head>
@@ -151,11 +151,27 @@ export default function Security() {
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
+
+  return (_<>
+      <Head>
+        <title>Security | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Learn about Zion Tech Group's comprehensive security measures, certifications, and commitment to protecting your data and privacy.&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
+        <link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; />
+      </Head>
+
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
+        <EnhancedNavigation />
+
+        {/* Hero Section */}
+        <section className=&quot;pt-32 pb-20 px-6&quot;>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex items-center justify-center mb-6"
+className="flex items-center justify-center mb-6"
             >
               <Shield className="w-16 h-16 text-cyan-400" />
             </motion.div>
@@ -163,7 +179,7 @@ export default function Security() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent mb-6"
+className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent mb-6"
             >
               Security First
             </motion.h1>
@@ -171,20 +187,20 @@ export default function Security() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
             >
               Your security and privacy are our top priorities. Learn about our comprehensive security measures and industry-leading practices.
             </motion.p>
           </div>
         </section>
-        {/* Security Overview */}
+{/* Security Overview */}
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">Enterprise-Grade Security</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -198,7 +214,7 @@ export default function Security() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
+className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
                 >
                   <div className="flex items-center mb-6">
                     <measure.icon className="w-8 h-8 text-cyan-400 mr-4" />
@@ -215,12 +231,12 @@ export default function Security() {
                 </motion.div>
               ))}
             </div>
-            {/* Certifications */}
+{/* Certifications */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"
+className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"
             >
               <h3 className="text-3xl font-bold text-white mb-6 text-center">Security Certifications & Compliance</h3>
               <div className="grid md:grid-cols-5 gap-6">
@@ -230,7 +246,7 @@ export default function Security() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"
+className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"
                   >
                     <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
                     <h4 className="text-white font-semibold mb-1">{cert.name}</h4>
@@ -239,12 +255,12 @@ export default function Security() {
                 ))}
               </div>
             </motion.div>
-            {/* Security Incident Response */}
+{/* Security Incident Response */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mb-16"
+className="mb-16"
             >
               <h3 className="text-3xl font-bold text-white mb-6">Incident Response</h3>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
@@ -261,7 +277,7 @@ export default function Security() {
                       <li>• Regular security drills</li>
                     </ul>
                   </div>
-                  <div>
+<div>
                     <h4 className="text-white font-semibold mb-4 flex items-center">
                       <Lock className="w-5 h-5 text-cyan-400 mr-2" />
                       Business Continuity
@@ -276,12 +292,12 @@ export default function Security() {
                 </div>
               </div>
             </motion.div>
-            {/* Vulnerability Management */}
+{/* Vulnerability Management */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="mb-16"
+className="mb-16"
             >
               <h3 className="text-3xl font-bold text-white mb-6">Vulnerability Management</h3>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
@@ -313,12 +329,12 @@ export default function Security() {
                 </div>
               </div>
             </motion.div>
-            {/* Contact Security Team */}
+{/* Contact Security Team */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20"
+className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20"
             >
               <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-8 h-8 text-red-400 mr-4" />
@@ -353,7 +369,7 @@ export default function Security() {
             </motion.div>
           </div>
         </section>
-        <EnhancedFooter />
+<EnhancedFooter />
       </div>
     </>
   );

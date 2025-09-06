@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-  if (req.method !== 'GET') {
+if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
   const data = readOrgData();
@@ -96,4 +96,5 @@ const filters: OrgFilters = {
 ;
   const filtered = filterOrgData (data, filters);
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
+
 }

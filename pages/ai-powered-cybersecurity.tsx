@@ -23,12 +23,12 @@ export default function AIPoweredCybersecurityPage() {
 		<>
 			<Head>
 				<title>AI-Powered Cybersecurity Platform | Zion Tech Group</title>
-				<meta name="description" content="Autonomous threat detection, real-time response, and zero-trust enforcement with AI." />
+<meta name="description" content="Autonomous threat detection, real-time response, and zero-trust enforcement with AI." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-cybersecurity" />
 			</Head>
 			<ServiceLanding
 				title="AI-Powered Cybersecurity Platform"
-				description="Detect, prioritize, and remediate threats automatically. LLM-powered analytics, behavioral baselines, deception canaries, and autonomous response integrated with your SIEM and EDR."
+description="Detect, prioritize, and remediate threats automatically. LLM-powered analytics, behavioral baselines, deception canaries, and autonomous response integrated with your SIEM and EDR."
 				subtitle="Fewer alerts, faster response"
 				pricePerMonthUSD={3999}
 				implementationWeeks="2-6 weeks"
@@ -92,3 +92,8 @@ function AIPoweredCybersecurityPage() {
       />;
     </>);
 ;
+			/>
+		</>
+	)
+}
+

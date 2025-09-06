@@ -389,6 +389,25 @@ function extractServiceSlugFromLink(link: string): string | null {
 	try {
 		const url = new URL(link);
 		const path = url.pathname.replace(/^\/+|\/+$/g, '');
+
+function getAllServices(): Service[] {_return enhancedRealMicroSaasServices
+		.concat(
+			extraServices as Service[],
+			additionalEnhancedServices as Service[],
+			newRealServices as Service[],
+			marketReadyServices as Service[]
+		)
+}
+
+function toSlug(value: string): string {
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+}
+
+function extractServiceSlugFromLink(link: string): string | null {
+	try {
+		const url = new URL(link)
+		const path = url.pathname.replace(/^\/+|\/+$/g, ''),
+
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length)
 		}
@@ -467,7 +486,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 							</ul>
 						</Card>
 					</div>
-					<div className="space-y-6">
+<div className="space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
 							<div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>

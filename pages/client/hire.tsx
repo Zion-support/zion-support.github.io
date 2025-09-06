@@ -248,12 +248,96 @@ if ( {) {
         </div>
       </div>
       {result && (
+      termsType === "hourly"
+        ? { type: "hourly", _hourlyRateUsd}
+        : termsType === "fixed"
+        ? { type: "fixed", fixedAmountUsd }
+        : { type: "milestone", milestones: [] },
+
+    const res = await fetch("/api/marketplace/offers", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-demo-user-role": "client", "x-demo-user-id": "client-1" },
+      body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl })}),
+    const json = await res.json()
+    setLoading(false),
+    } else {
+      setResult(json.offer),
+      setShowFeedback(true)
+    }
+        ? {_type: "fixed", _fixedAmountUsd}
+        : {_type: "milestone", _milestones: []};
+
+    const _res = await fetch("/api/marketplace/offers", {_method: "POST", _headers: { "Content-Type": "application/json", _"x-demo-user-role": "client", _"x-demo-user-id": "client-1"},
+      body: JSON.stringify({_talentSlug, _startDateIso, _scopeSummary, _paymentTerms, _agreementUrl})});
+    const _json = await res.json();
+    setLoading(false);
+    if (!json.ok) {_alert(json.error || "Failed to send offer");} else {_setResult(json.offer);
+      setShowFeedback(true);}
+
+  }
+
+  return (_<div className="max-w-3xl mx-auto p-6 space-y-6">
+      <h1 className="text-xl font-semibold">Hire Talent</h1>
+
+      <div className="space-y-4 border rounded p-4">
+        <div>
+          <label className="block text-sm font-medium">Talent</label>
+          <input value={_talentSlug} onChange={_(e) => setTalentSlug(e.target.value)} className="w-full border rounded px-3 py-2" />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium&quot;>Start date</label>
+          <input type=&quot;date" value={startDateIso} onChange={(e) => setStartDateIso(e.target.value)} className="w-full border rounded px-3 py-2" />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium">Scope summary</label>
+          <input value={_scopeSummary} onChange={_(_e) => setScopeSummary(e.target.value)} className="w-full border rounded px-3 py-2" />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium">Payment terms</label>
+          <select value={termsType} onChange={(e) => setTermsType(e.target.value)} className="w-full border rounded px-3 py-2&quot;>
+            <option value=&quot;hourly&quot;>Hourly</option>
+            <option value=&quot;fixed&quot;>Fixed</option>
+            <option value=&quot;milestone&quot;>Milestone</option>
+          </select>
+        </div>
+
+        {termsType === &quot;hourly" && (
+          <div>
+            <label className="block text-sm font-medium&quot;>Hourly rate (USD)</label>
+            <input type=&quot;number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2&quot; />
+          </div>
+        )}
+
+        {termsType === &quot;fixed" && (
+          <div>
+            <label className="block text-sm font-medium&quot;>Fixed amount (USD)</label>
+            <input type=&quot;number" value={fixedAmountUsd} onChange={(e) => setFixedAmountUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
+          </div>
+        )}
+
+        <div>
+          <label className="block text-sm font-medium&quot;>Agreement URL (optional)</label>
+          <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder=&quot;https://..." className="w-full border rounded px-3 py-2" />
+        </div>
+
+        <div className="flex justify-end">
+          <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white&quot;>
+            {loading ? &quot;Sending…&quot; : &quot;Send Offer to Confirm"}
+          </button>
+        </div>
+      </div>
+
+      {_result && (
+
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
           <div className="text-sm">Offer ID: {result.id}</div>
         </div>
       )}
-        <div>;
+<div>;
           <label className='block text-sm font-medium'>;
             Agreement URL (optional);
           </label>;

@@ -44,3 +44,20 @@ const UiUxDesignChat: NextPage = () => {
 ;
 export default UiUxDesignChat;
 ;
+    <div>
+      <Head>
+        <title>UiUxDesignChat - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;UiUxDesignChat blog post&quot; />
+      </Head>
+      
+      <main>
+        <h1>UiUxDesignChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href=&quot;/blog&quot;>Back to Blog</a>
+      </main>
+    </div>
+  )
+},
+
+export default UiUxDesignChat
+

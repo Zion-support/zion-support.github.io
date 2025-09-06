@@ -60,7 +60,7 @@ function handler() {
         all: results.all.length,
         talent: results.talent.length,
         jobs: results.jobs.length,
-        projects: results.projects.length
+projects: results.projects.length
       },
       results
     });
@@ -72,5 +72,6 @@ function handler() {
   }
 }
     res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
+
   }
 }

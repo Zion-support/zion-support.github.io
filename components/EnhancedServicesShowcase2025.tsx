@@ -59,7 +59,7 @@ interface Service {;
   FaDatabase,
   FaNetworkWired,
   FaRobot,
-  FaSearch,
+FaSearch,
 import {
   SiNextdotjs,
   SiReact,
@@ -72,7 +72,7 @@ import {
   SiKubernetes,
   SiAws,
   SiGooglecloud,
-  SiMicrosoftazure,
+SiMicrosoftazure,
 } from 'react - icons / si';
 ;
 interface Service {
@@ -380,7 +380,7 @@ const services: Service[] = [;
       professional: 2499,
       enterprise: 4999
     },
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
+technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
     benefits: [;
       'Solve previously impossible problems',
       'Exponential speed improvements',
@@ -408,7 +408,7 @@ const services: Service[] = [;
       professional: 599,
       enterprise: 1499
     },
-    technologies: [;
+technologies: [;
       'TensorFlow Lite',
       'ONNX Runtime',
       'Edge TPU',
@@ -442,7 +442,7 @@ const services: Service[] = [;
       professional: 999,
       enterprise: 2499
     },
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
+technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
     benefits: [;
       'Future - proof security',
       'Quantum - resistant encryption',
@@ -470,7 +470,7 @@ const services: Service[] = [;
       professional: 799,
       enterprise: 1999
     },
-    technologies: [;
+technologies: [;
       'Apache Kafka',
       'Apache Spark',
       'Snowflake',
@@ -508,7 +508,7 @@ const services: Service[] = [;
       professional: 599,
       enterprise: 1499
     },
-    technologies: [;
+technologies: [;
       'Kubernetes',
       'Docker',
       'Helm',
@@ -1125,11 +1125,172 @@ if ( {) {
                 ))}
                 {service.technologies.length > 3 && (
                   <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
+    
+    return filtered.sort(_(a, _b) => {_switch (sortBy) {
+        case 'price':
+          return a.pricing.starter - b.pricing.starter,
+        case 'category':
+          return a.category.localeCompare(b.category),
+        default: return a.title.localeCompare(b.title)
+      }
+    })
+  }, [selectedCategory, searchTerm, sortBy]),
+
+  const handleServiceSelect = (service: Service) => {
+    setSelectedService(service)
+  },
+
+  const closeModal = () => {
+    setSelectedService(null)
+  },
+
+  return (
+    <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white&quot;>
+      {/* Header */}
+      <div className=&quot;container mx-auto px-4 py-16&quot;>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className=&quot;text-center mb-16&quot;
+          return a.category.localeCompare(b.category);
+        default:
+          return a.title.localeCompare(b.title);}
+    });
+  }, [selectedCategory, searchTerm, sortBy]);
+
+  const _handleServiceSelect = (_service: Service) => {_setSelectedService(service);};
+
+  const _closeModal = () => {_setSelectedService(null);};
+
+  return (_<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      {_/* Header */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={_{ opacity: 0, _y: 20}}
+          animate={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.8}}
+          className="text-center mb-16"
+
+        >
+          <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+            2025 Services Showcase
+          </h1>
+          <p className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed&quot;>
+            Discover our cutting-edge technology solutions designed for the future. 
+            From AI-powered automation to quantum computing, _we're building tomorrow's innovations today.
+          </p>
+        </motion.div>
+
+        {_/* Search and Filters */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className=&quot;mb-12&quot;
+        >
+          <div className=&quot;flex flex-col md:flex-row gap-4 items-center justify-center&quot;>
+            <div className=&quot;relative flex-1 max-w-md&quot;>
+              <input
+                type=&quot;text&quot;
+                placeholder=&quot;Search services, technologies, or features...&quot;
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className=&quot;w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+              />
+              <FaSearch className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400&quot; />
+            </div>
+            
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
+              className=&quot;px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
+            >
+              <option value=&quot;name&quot;>Sort by Name</option>
+              <option value=&quot;price&quot;>Sort by Price</option>
+              <option value=&quot;category&quot;>Sort by Category</option>
+            </select>
+          </div>
+        </motion.div>
+
+        {_/* Category Tabs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className=&quot;mb-12&quot;
+        >
+          <div className=&quot;flex flex-wrap justify-center gap-4&quot;>
+            <button
+              onClick={_() => setSelectedCategory('all')}
+              className={_`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                selectedCategory === 'all'
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
+                  : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'}`}
+            >
+              All Services
+            </button>
+            {_serviceCategories.map(_(category) => (_<button
+                key={category.id}
+                onClick={_() => setSelectedCategory(category.id)}
+                className={_`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+                  selectedCategory === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                {_category.icon}
+                {_category.name}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        {_/* Services Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
+        >
+          {_filteredServices.map(_(service, _index) => (_<motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className=&quot;bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300&quot;
+              onClick={() => handleServiceSelect(service)}
+            >
+              <div className=&quot;flex items-center gap-3 mb-4&quot;>
+                <div className=&quot;p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg&quot;>
+                  {service.icon}
+                </div>
+                <div>
+                  <h3 className=&quot;text-xl font-bold text-white&quot;>{service.title}</h3>
+                  <p className=&quot;text-sm text-gray-400&quot;>{serviceCategories.find(c => c.id === service.category)?.name}</p>
+                </div>
+              </div>
+              
+              <p className=&quot;text-gray-300 mb-4 line-clamp-3&quot;>{service.description}</p>
+              
+              <div className=&quot;flex flex-wrap gap-2 mb-4&quot;>
+                {service.technologies.slice(0, 3).map((tech) => (
+                  <span
+                    key={tech}
+                    className=&quot;px-2 py-1 bg-white/10 rounded text-xs text-gray-300&quot;
+                  >
+                    {_tech}
+                  </span>
+                ))}
+                {service.technologies.length > 3 && (
+                  <span className=&quot;px-2 py-1 bg-white/10 rounded text-xs text-gray-300&quot;>
+
                     +{service.technologies.length - 3} more
                   </span>
                 )}
               </div>
-              <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                 <div className="text-2xl font-bold text-blue-400">
                   ${service.pricing.starter}
                   <span className="text-sm text-gray-400 font-normal">/month</span>
@@ -1141,7 +1302,7 @@ if ( {) {
             </motion.div>
           ))}
         </motion.div>
-              </div>;
+</div>;
               <div className='flex items-center justify-between'>;
                 <div className='text-2xl font-bold text-blue-400'>                  <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">;
                     +{service && service.technologies.length - 3} more;
@@ -1209,7 +1370,7 @@ if ( {) {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-start justify-between mb-6">
@@ -1224,7 +1385,7 @@ if ( {) {
                 </div>
                 <button
                   onClick={closeModal}
-                  className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+className="p-2 hover:bg-white/10 rounded-lg transition-colors"
                 >
                   <span className="text-2xl">×</span>
                 </button>
@@ -1301,7 +1462,7 @@ if ( {) {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>;
+</AnimatePresence>;
     </div>;
   );
 };

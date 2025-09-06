@@ -139,12 +139,62 @@ function submit_lead() {
                 <div className="font-medium">{p.title}</div>
                 <div className="text-sm text-gray-500">{p.description}</div>
                 <div className="mt-2 text-sm">${p.priceUsd} {p.timeframe ? `/ ${p.timeframe}` : ''}</div>
+
+  if (!vendor) return <div className="text-gray-500">Vendor not found.</div>,
+
+  async function submitLead(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault(),
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const title = String(formData.get('title') || 'New lead')
+    setLoading(true),
+    setMessage(null),
+    try {
+      const res = await fetch('/api/vendors/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ vendorId: vendor.id, title })}),
+      if (!res.ok) throw new Error('Failed to submit'),
+      setMessage('Thanks! We will contact you soon.'),
+      form.reset()
+    } catch (e: any) {
+      setMessage(e.message)
+    } finally {
+      setLoading(false)
+    }
+        ) : (
+          <div className=&quot;w-16 h-16 rounded bg-gray-100 dark:bg-gray-900&quot; />
+        )}
+        <div>
+          <div className=&quot;text-2xl font-semibold flex items-center gap-2&quot;>
+            {vendor.name}
+            {vendor.verified && <span className=&quot;text-xs px-2 py-0.5 rounded bg-green-100 text-green-700&quot;>Verified</span>}
+          </div>
+
+        </div>
+      </div>
+
+      <div>
+        <h2 className=&quot;text-lg font-medium mb-2&quot;>About</h2>
+        <p className=&quot;text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line&quot;>{vendor.about || 'No description provided.'}</p>
+      </div>
+
+      {_vendor.packages && vendor.packages.length > 0 && (
+        <div>
+          <h2 className=&quot;text-lg font-medium mb-2&quot;>Packages</h2>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
+            {vendor.packages.map(p => (
+              <div key={p.id} className=&quot;border border-gray-200 dark:border-gray-800 rounded p-4&quot;>
+                <div className=&quot;font-medium&quot;>{p.title}</div>
+                <div className=&quot;text-sm text-gray-500&quot;>{p.description}</div>
+                <div className=&quot;mt-2 text-sm&quot;>${p.priceUsd} {p.timeframe ? `/ ${p.timeframe}` : ''}</div>
+
               </div>
             ))}
           </div>
         </div>
       )}
-      <div>;
+<div>;
         <h2 className='text-lg font-medium mb-2'>About</h2>;
         <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>;
           {vendor && vendor.about || 'No description provided.'}
@@ -274,7 +324,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
           </div>
         </div>
       )}
-      <div>
+<div>
         <h2 className="text-lg font-medium mb-2">Request a Quote</h2>
         <form onSubmit={submitLead} className="space-y-3">
           <input name="title" required placeholder="What do you need?" className="w-full border rounded px-3 py-2 bg-transparent" />

@@ -20,11 +20,12 @@ res.setHeader('AllowPOST')
     const courses = readJson(coursesPath);
     const course = courses.find((c: any) => c.id === courseId);
     if (!course) return res.status(404).json({ error: 'Course not found' });
+
     const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
     if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
-    // Mark progress complete
+// Mark progress complete
     user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons || []).map((l: any) => l.id) };
     users[userId] = user;
     writeJson(usersPath, users);

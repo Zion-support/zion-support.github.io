@@ -27,3 +27,5 @@ router.replace ('/tokenomics');
   }, [router]);
   return null;
 ;
+}
+

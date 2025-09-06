@@ -37,3 +37,6 @@ function ForgotPasswordPage() {
       <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Enter your email to reset your password.</p>;
     </div>);
 }
+  )
+}
+

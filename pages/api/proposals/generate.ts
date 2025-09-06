@@ -74,7 +74,7 @@ function handler() {
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
-        { role: 'user', content: userPrompt }
+{ role: 'user', content: userPrompt }
       ],
       temperature: 0.3
     });
@@ -98,5 +98,6 @@ function handler() {
     return res;
       .status (500);
       .json ({ error: error?.message || "Failed to generate proposal" });
+
   }
 }

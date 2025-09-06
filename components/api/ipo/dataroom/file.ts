@@ -78,4 +78,5 @@ function handler() {
   res.set_header ("Content - Type", content_type);
   appendAuditLog ({ type: "file_open", section, name: file });
   fs.createReadStream (full_path).pipe (res);
+
 }

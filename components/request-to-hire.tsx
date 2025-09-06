@@ -198,7 +198,7 @@ export default function RequestToHirePage() {;
         <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
         <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
         <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
-      </div>
+</div>
     )
   }
   return (
@@ -392,4 +392,40 @@ if ( {) {
         </button>;
       </form>;
     </div>);
+      </div>
+    )
+  }
+
+  return (
+    <div className=&quot;max-w-xl mx-auto&quot;>
+      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>
+      <form className=&quot;space-y-4&quot; onSubmit={onSubmit}>
+        <div>
+          <label className=&quot;block text-sm font-medium mb-1&quot;>Your Name</label>
+          <input className=&quot;w-full border rounded px-3 py-2&quot; value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+        </div>
+        <div>
+          <label className=&quot;block text-sm font-medium mb-1&quot;>Email</label>
+          <input type=&quot;email&quot; className=&quot;w-full border rounded px-3 py-2&quot; value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+        </div>
+        <div>
+          <label className=&quot;block text-sm font-medium mb-1&quot;>Budget (USD)</label>
+          <input className=&quot;w-full border rounded px-3 py-2&quot; placeholder=&quot;$5,000&quot; value={form.budget} onChange={(e) => setForm({ ...form, budget: e.target.value })} />
+        </div>
+        <div>
+          <label className=&quot;block text-sm font-medium mb-1&quot;>Timeline</label>
+          <input className=&quot;w-full border rounded px-3 py-2&quot; placeholder=&quot;2-3 months&quot; value={form.timeline} onChange={(e) => setForm({ ...form, timeline: e.target.value })} />
+        </div>
+        <div>
+          <label className=&quot;block text-sm font-medium mb-1&quot;>Project Description</label>
+          <textarea className=&quot;w-full border rounded px-3 py-2&quot; rows={5} value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} />
+        </div>
+        {error && <div className=&quot;text-sm text-red-600&quot;>{error}</div>}
+        <button disabled={submitting} className=&quot;px-4 py-2 rounded bg-black text-white&quot;>
+          {submitting ? 'Submitting…' : 'Submit Request'}
+        </button>
+      </form>
+    </div>
+  )
+
 }

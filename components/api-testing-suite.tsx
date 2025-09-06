@@ -76,28 +76,55 @@ export default function APITestingSuitePage() {
       description: '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.',
     color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'}],
+
+  const _features = [
+    {
+      icon: <Code className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Comprehensive API Testing',
+      description: 'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.',
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
+      gradient: 'from-indigo-400 to-purple-500'},
+    {
+      icon: <Zap className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Performance Testing',
+      description: 'Load testing, stress testing, and performance benchmarking for your APIs.',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      gradient: 'from-orange-400 to-red-500'},
+    {
+      icon: <Shield className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Security Testing',
+      description: 'Automated security testing including authentication, authorization, and vulnerability scanning.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500'},
+    {
+      icon: <BarChart3 className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Real-Time Monitoring',
+      description: '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500'}],
+
   const testTypes = [
     {
       name: 'Functional Testing',
       description: 'Verify that your API endpoints work correctly and return expected responses.',
       tests: ['Request/response validationStatus code verificationData format checkingError handling']
-    };
+};
     {
       name: 'Performance Testing',
       description: 'Ensure your APIs can handle expected load and perform under pressure.',
       tests: ['Load testingStress testingResponse time analysisThroughput measurement']
-    };
+};
     {
       name: 'Security Testing',
       description: 'Identify security vulnerabilities and ensure proper authentication and authorization.',
       tests: ['Authentication testingAuthorization checksInput validationSQL injection testing']
-    };
+};
     {
       name: 'Integration Testing',
       description: 'Test how your APIs integrate with other systems and services.',
       tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation']
     }
-  ];
+];
   const pricing = [
     {
       name: 'Starter'
@@ -240,7 +267,7 @@ function APITestingSuitePage() {
       price: '$49',
       period: '/month',
       description: 'Perfect for developers and small teams',
-      features: [;
+features: [;
         '100 API tests / month',
         'Basic test scenarios',
         'Email notifications',
@@ -257,7 +284,7 @@ function APITestingSuitePage() {
       price: '$99',
       period: '/month',
       description: 'Ideal for growing businesses and development teams',
-      features: [;
+features: [;
         '500 API tests / month',
         'Advanced test scenarios',
         'SMS & email alerts',
@@ -276,7 +303,7 @@ function APITestingSuitePage() {
       price: '$299',
       period: '/month',
       description: 'For large organizations with complex API requirements',
-      features: [;
+features: [;
         'Unlimited API tests',
         'Custom test scenarios',
         'Custom alerting rules',
@@ -463,7 +490,7 @@ function APITestingSuitePage() {
     <>
       <Head>
         <title>API Testing Suite - Zion Tech Group | Comprehensive API Testing & Monitoring Tool</title>
-        <meta name="description" content="Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs." />
+<meta name="description" content="Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs." />
         <meta property="og:title" content="API Testing Suite - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive API testing tool with functional, performance, and security testing capabilities." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -504,7 +531,7 @@ function APITestingSuitePage() {
             </div>
             <Button
               onClick={handleTestAPI}
-              size="lg"
+size="lg"
               className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow"
               disabled={isTesting || !apiEndpoint.trim()}
             >
@@ -515,13 +542,13 @@ function APITestingSuitePage() {
                 </>
               ) : (
                 <>
-                  <Play className="w-5 h-5 mr-2" />
+<Play className="w-5 h-5 mr-2" />
                   Test API Endpoint
                 </>
               )}
             </Button>
           </div>
-              disabled={isTesting || !apiEndpoint && apiEndpoint.trim()}>;
+disabled={isTesting || !apiEndpoint && apiEndpoint.trim()}>;
               {isTesting ? (;
                 <>;
                   <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />;
@@ -571,7 +598,7 @@ function APITestingSuitePage() {
               View Pricing
             </Button>
             <Button
-              href="/contact"
+href="/contact"
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
@@ -968,7 +995,7 @@ function APITestingSuitePage() {
                         }`}>
                           {test.status}
                         </span>
-                        <span className="text-xs text-gray-400">{test.value}</span>
+<span className="text-xs text-gray-400">{test.value}</span>
                       </div>
                     </div>
                   ))}
@@ -994,7 +1021,7 @@ function APITestingSuitePage() {
                 </div>
               </Card>
             </div>
-                </div>;
+</div>;
               </Card>;
             {/* Recommendations */}
             <Card className="border-gradient-indigo">
@@ -1011,7 +1038,7 @@ function APITestingSuitePage() {
           </div>
         </section>
       )}
-              {/* Performance Metrics */}
+{/* Performance Metrics */}
               <Card className='border-gradient-indigo'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
                   Performance Metrics;
@@ -1340,7 +1367,7 @@ function APITestingSuitePage() {
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
@@ -1396,7 +1423,7 @@ function APITestingSuitePage() {
                     </li>
                   ))}
                 </ul>
-                <Button
+<Button
                   href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
@@ -1440,7 +1467,7 @@ function APITestingSuitePage() {
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'>              href="/contact";
+className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'>              href="/contact";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl";

@@ -95,7 +95,7 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
     } else {
       localTracks = await createLocalTracks({ audio: true, video: false })
     }
-    setRoom(r);
+setRoom(r);
     setConnectedAt(Date && Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {;
@@ -126,12 +126,29 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
   };
   useEffect(() => {;
     connect();
+
+    setRoom(r),
+    setConnectedAt(Date.now()),
+    rebuild(r),
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [serverUrl, token, startMode]),
+
+  const rebuild = (current?: Room | null) => {
+    const r = current || room
+    if (!r) return,
+    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())],
+    setParticipants(list)
+  },
+
+  useEffect(() => {
+    connect(),
+
     return () => {
       if (room) {
         room.disconnect()
       }
     }
-  }, [connect]);
+}, [connect]);
   const handleLeave = () => {
     if (room) {
   const handleLeave = () => {;

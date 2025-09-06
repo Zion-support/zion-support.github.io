@@ -109,7 +109,7 @@ interface Service {
   marketSize: string,
   growthRate: string,
   launchDate: string,
-  badge?: string;
+badge?: string;
   icon?: React.ReactNode
 }
 const allServices: Service[] = [
@@ -165,6 +165,7 @@ const categories = [
   { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length }
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
 ];
+
 const priceRanges = [
   { label: 'All Prices', value: 'all' },
   { label: 'Under $50/month', value: 'under-50' },
@@ -262,11 +263,12 @@ export default function ComprehensiveServicesShowcase2025() {;
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
       )
     }
+
     // Filter by category
     if (selectedCategory !== 'All Services') {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
-    // Filter by price range
+// Filter by price range
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
         const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
@@ -602,11 +604,42 @@ if ( {) {
       default: return <Globe className="w-5 h-5" />
     }
   };
+    }
+
+    // Sort services
+    filtered.sort(_(a, _b) => {_switch (sortBy) {
+        case 'popular':
+          return b.customers - a.customers,
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        case 'price-low':
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+        case 'price-high':
+          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
+        default: return 0
+      }
+    }),
+
+    setFilteredServices(filtered)
+  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]),
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'Micro SAAS': return 'from-blue-500 to-cyan-500',
+      case 'AI & Consciousness': return 'from-purple-500 to-pink-500',
+      case 'Enterprise IT': return 'from-green-500 to-emerald-500',
+      case 'Quantum & Emerging Tech': return 'from-orange-500 to-red-500',
+      default: return 'from-gray-500 to-slate-500'
+    }
+  },
+
   return (
     <Layout>
       <Head>
         <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
-        <meta name="description" content="Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs." />
+<meta name="description" content="Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs." />
         <meta name="keywords" content="micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group" />
       </Head>
       {/* Hero Section */}
@@ -713,7 +746,7 @@ if ( {) {
                 repeat: Infinity,
                 delay: i * 0.5}}
               style={{
-                left: `${Math.random () * 100}%`,
+left: `${Math.random () * 100}%`,
                 top: `${Math.random () * 100}%`,
               }}            />))}
         </div>;
@@ -989,7 +1022,7 @@ if ( {) {
                   </option>
                 ))}
               </select>
-              {/* View Mode Toggle */}
+{/* View Mode Toggle */}
               <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -1016,7 +1049,7 @@ if ( {) {
           </div>
         </div>
       </div>
-                >;
+>;
                   <List className='w-4 h-4' />                </button>                  <List className="w-4 h-4" />;
                 on_change={e => setSelectedPriceRange (e.target.value)}
                 className='px - 4 py - 2 bg - white / 10 border border - cyan - 500 / 30 rounded - lg text - white text - sm focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50';
@@ -1275,7 +1308,7 @@ if ( {) {
                     <span>Growth: {service.growthRate}</span>
                   </div>
                 </div>
-                  </div>;
+</div>;
                 </div>;
                 {/* Market Info */}
                 <div className='mb-4 text-xs text-gray-500'>;
@@ -1293,7 +1326,7 @@ if ( {) {
             ))}
           </div>
         ) : (
-          <div className="space-y-6">
+<div className="space-y-6">
             {filteredServices.map((service, index) => (
               <motion.div
                 </p>;
@@ -1409,7 +1442,7 @@ if ( {) {
                         </span>
                       </div>
                     </div>
-                    {/* Stats Row */}
+{/* Stats Row */}
                     <div className="flex items-center space-x-8 mb-4 text-sm">
                       <div className="flex items-center space-x-1 text-yellow-400">
                         <Star className="w-4 h-4 fill-current" />
@@ -1500,7 +1533,7 @@ if ( {) {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         )}
         {/* No Results */}
         {filteredServices.length === 0 && (
@@ -1783,11 +1816,40 @@ top: `$ {;
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion && motion.div> </div> </div> </Layout>)   );
 }
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            >
+              Clear All Filters
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* CTA Section */}
+      <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center&quot;>
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
+          >
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
+              Ready to Transform Your Business?
+            </h2>
+            <p className=&quot;text-xl text-cyan-300 mb-8 max-w-3xl mx-auto&quot;>
+              Our team of experts is ready to help you implement the perfect solution for your needs. 
+              Get in touch today and discover how our innovative services can drive your success.
+            </p>
+            <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+
+              <a
+                href=&quot;/contact&quot;
+                className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105&quot;
+
               >
                 Get Started Today
               </a>
               <a
-                href="/pricing"
+href="/pricing"
                 className="border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"
               >
                 View Pricing Plans
@@ -1799,7 +1861,7 @@ top: `$ {;
     </Layout>
   )
 }
-      <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20'>;
+<div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 text - center'>          <motion.div      <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 text - center">;
           <motion.div;

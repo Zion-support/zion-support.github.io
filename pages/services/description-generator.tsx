@@ -31,11 +31,14 @@ export default function ServiceDescriptionGeneratorPage() {;
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
   const keyFeatures = useMemo(() => {
+
+  const _keyFeatures = useMemo__(() => {
+
     return featuresInput
       .split('\n')
       .map((f) => f.trim())
       .filter(Boolean)
-  }, [featuresInput]);
+}, [featuresInput]);
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
@@ -63,7 +66,7 @@ export default function ServiceDescriptionGeneratorPage() {;
       setLoading(false)
     }
   }
-  function handleAccept() {
+function handleAccept() {
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     setLoading(true);
@@ -144,7 +147,7 @@ export default function ServiceDescriptionGeneratorPage() {;
             required
           />
         </div>
-        <div>
+<div>
             onChange={e => setTitle(e && e.target.value)}            required;
           />;
         </div>;
@@ -167,7 +170,7 @@ export default function ServiceDescriptionGeneratorPage() {;
             required
           />
         </div>
-        <div>
+<div>
             onChange={e => setTargetAudience(e && e.target.value)}            required;
           />;
         </div>;
@@ -190,7 +193,7 @@ export default function ServiceDescriptionGeneratorPage() {;
             required
           />
         </div>
-        <div>
+<div>
           <label className="block text-sm font-medium mb-1">Tone</label>
           <select
             className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -379,7 +382,7 @@ if (return) {
             onChange={(e) => setAdditionalNotes(e.target.value)}
           />
         </div>
-        <div className="flex items-center gap-3">
+<div className="flex items-center gap-3">
           <button
             type="submit"
             disabled={loading}
@@ -403,13 +406,13 @@ if (return) {
               </button>
               <button
                 onClick={handleAccept}
-                className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
+className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
               >
                 Accept
               </button>
             </div>
           </div>
-          <textarea
+<textarea
                 className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'>;
                 Accept;
               </button>;

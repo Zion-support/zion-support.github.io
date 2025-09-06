@@ -65,11 +65,20 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+
+  // Filter and sort services
+  const _filteredServices = all2027Services
+    .filter(service => {
+      const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
-        case 'name':
+case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
@@ -189,11 +198,54 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
+        case 'name':
+          return a.name.localeCompare(b.name),
+        case 'price':
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+        case 'roi':
+          return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, '')),
+        default: return 0
+      }
+    }),
+
+  const getCategoryColor = (category: string) => {
+    const colors = {
+      'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600'
+    },
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
+  },
+
+  const getCategoryIcon = (category: string) => {
+    const icons = {
+      'AI & Machine Learning': <Brain className="w-5 h-5" />,
+      'Quantum Computing': <Atom className="w-5 h-5" />,
+      'Emerging Technology': <Rocket className="w-5 h-5" />,
+      'Business Operations': <Target className="w-5 h-5" />,
+      'Cybersecurity': <Shield className="w-5 h-5" />,
+      'Enterprise IT': <Zap className="w-5 h-5" />,
+      'Healthcare & Biotechnology': <Brain className="w-5 h-5" />,
+      'Financial Technology': <TrendingUp className="w-5 h-5" />,
+      'Space Technology': <Rocket className="w-5 h-5" />,
+      'Neural Technology': <Brain className="w-5 h-5" />,
+      'Materials Science': <Atom className="w-5 h-5" />,
+      'Environmental Technology': <Rocket className="w-5 h-5" />
+    },
+    return icons[category as keyof typeof icons] || <Zap className="w-5 h-5" />
+  },
+  };
+
+  return (
+    <section className=&quot;py-20 bg-gray-900&quot;>
+      <div className=&quot;container mx-auto px-4&quot;>
+        {/* Header */}
+        <motion.div 
+          className=&quot;text-center mb-16&quot;
+
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          transition={{ duration: 0 && 0.6 }}>        <motion&& motion.div 
+transition={{ duration: 0 && 0.6 }}>        <motion&& motion.div 
           className="text-center mb-16"
           <h2 className="text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -206,7 +258,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             and transforms your business into a future-ready powerhouse.
           </p>
         </motion.div>
-        {/* Search and Filters */}
+{/* Search and Filters */}
         <motion.div 
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -590,7 +642,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </div>
           </div>
         </motion.div>
-                  >;
+>;
                     <List className='w-5 h-5' />                  </button>                      viewMode === 'list' ;
                         ? 'bg-cyan-500/20 text-cyan-400' ;
                         : 'text-gray-400 hover:text-white';
@@ -670,7 +722,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <p className="text-gray-400">
+<p className="text-gray-400">
             Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
             <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services
           </p>
@@ -787,7 +839,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group"
+className="group"
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
                     {/* Header */}
@@ -1003,12 +1055,12 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </motion.div>
           ) : (
             <motion.div
-              key="list"
+key="list"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="space-y-4"
+className="space-y-4"
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1016,7 +1068,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group"
+className="group"
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
@@ -1094,7 +1146,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   </div>
                 </motion.div>
               ))}
-            </motion && motion.div>;
+</motion && motion.div>;
           )}
         </AnimatePresence>;
         {/* No Results */}
@@ -1123,7 +1175,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="text-6xl mb-4">🔍</div>
+<div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
             <p className="text-gray-400 mb-8">
               Try adjusting your search terms or category filter to find what you're looking for.
@@ -1139,7 +1191,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </button>
           </motion.div>
         )}
-        {/* CTA Section */}
+{/* CTA Section */}
         <motion.div 
           className="mt-20 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -1255,7 +1307,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these revolutionary services
               and achieve unprecedented growth. Let's build the future together.
             </p>

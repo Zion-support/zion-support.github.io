@@ -84,4 +84,9 @@ function ReportProblemButton() {
     <Link href={`/disputes / new?${query.to_string ()}`}>;
       <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm"></a>;
     </Link>);
+        Report a Problem
+      </a>
+    </Link>
+  )
+
 }

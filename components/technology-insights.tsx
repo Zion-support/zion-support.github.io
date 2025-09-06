@@ -35,20 +35,20 @@ function TechnologyInsightsPage() {
       description: 'Pioneering research in building truly autonomous systems that can operate independently.',
       focus: ['Decision MakingSelf-LearningAdaptive BehaviorSystem Integration'],
       icon: '🔬'
-    };
+};
     {
       title: 'AI Ethics & Governance',
       description: 'Research into responsible AI development and ethical considerations for autonomous systems.',
       focus: ['Ethical AIBias DetectionTransparencyAccountability'],
       icon: '⚖️'
-    };
+};
     {
       title: 'Human-AI Collaboration',
       description: 'Exploring how humans and AI can work together effectively and safely.',
       focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],
       icon: '🤝'
     }
-  ];
+];
   const whitepapers = [
       description:;
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
@@ -126,7 +126,7 @@ function TechnologyInsightsPage() {
       description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',
       pages: '32',
       category: 'Ethics',
-      download_url: '/whitepapers / ai - ethics - framework.pdf';
+download_url: '/whitepapers / ai - ethics - framework.pdf';
     }
     {
       id: 'automation - roi - guide',
@@ -134,7 +134,7 @@ function TechnologyInsightsPage() {
       description: 'How to calculate and maximize return on investment for automation initiatives.',
       pages: '28',
       category: 'Business',
-      download_url: '/whitepapers / automation - roi - guide.pdf',
+download_url: '/whitepapers / automation - roi - guide.pdf',
     },
     {
       id: 'ai - ethics - framework',
@@ -235,11 +235,52 @@ function TechnologyInsightsPage() {
                     >
                       Read More <span className="ml-1">→</span>
                     </Link>
+
+  return (_<>
+      <Head>
+        <title>Technology Insights | Zion Tech Group - Research & Innovation</title>
+        <meta name=&quot;description&quot; content=&quot;Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Technology Insights | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Research insights, technology trends, and thought leadership in AI and automation.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+      
+      <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
+        <main className=&quot;container mx-auto px-6 py-12&quot;>
+          <section className=&quot;text-center mb-16&quot;>
+            <h1 className=&quot;text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;>
+              Technology Insights
+            </h1>
+            <p className=&quot;text-xl text-white/80 max-w-3xl mx-auto&quot;>
+              Research insights, technology trends, and thought leadership in AI, automation, and emerging technologies
+            </p>
+          </section>
+
+          <section className=&quot;mx-auto max-w-7xl&quot;>
+            {/* Technology Trends */}
+            <div className=&quot;mb-16&quot;>
+              <h2 className=&quot;text-3xl font-bold mb-8 text-center text-cyan-400&quot;>Latest Technology Trends</h2>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+                {technologyTrends.map((trend, index) => (
+                  <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300&quot;>
+                    <div className=&quot;flex items-center justify-between mb-4&quot;>
+                      <span className=&quot;px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full&quot;>{trend.category}</span>
+                      <span className=&quot;text-white/60 text-sm&quot;>{trend.readTime}</span>
+                    </div>
+                    <h3 className=&quot;text-xl font-bold mb-3 text-white&quot;>{trend.title}</h3>
+                    <p className=&quot;text-white/70 mb-4&quot;>{trend.description}</p>
+                    <Link 
+                      href={`/blog/${trend.id}`}
+                      className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;
+                    >
+                      Read More <span className=&quot;ml-1&quot;>→</span>
+                    </a>
+
                   </div>
                 ))}
               </div>
             </div>
-                      href={`/blog/${trend && trend.id}`}
+href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>;
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
@@ -317,7 +358,7 @@ function TechnologyInsightsPage() {
                 ))}
               </div>
             </div>
-            {/* Innovation Lab */}
+{/* Innovation Lab */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">Innovation Lab</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
@@ -334,14 +375,14 @@ function TechnologyInsightsPage() {
                       <li>• Industry collaboration and partnerships</li>
                     </ul>
                   </div>
-                  <div className="text-center">
+<div className="text-center">
                     <div className="text-6xl mb-4">🧪</div>
                     <p className="text-white/60 text-sm">Innovation Lab</p>
                   </div>
                 </div>
               </div>
             </div>
-                      href={paper && paper.downloadUrl}
+href={paper && paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'>;
                       Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers && whitepapers.map((paper, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
@@ -576,7 +617,7 @@ function TechnologyInsightsPage() {
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get in Touch
-                </Link>
+</Link>
                 <Link
                   href="/blog"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
@@ -589,7 +630,7 @@ function TechnologyInsightsPage() {
         </main>
       </div>
     </>
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'>              </p>;
+className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'>              </p>;
               <div className="flex flex-wrap justify-center gap-4">;
                 <Link
                   href="/contact"

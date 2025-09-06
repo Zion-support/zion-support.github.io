@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     target: '$10,000,000',
     valuationCap: '$80,000,000',
     discount: '20%',
-    leadInvestor: 'TBD'});
+leadInvestor: 'TBD'});
   res && res.status(200).json(terms)
 }
 import { readJsonFile } from '../../../../utils / api / storage';
@@ -37,4 +37,5 @@ function handler() {
     discount: '20%',
     lead_investor: 'TBD'});
   res.status (200).json (terms);
+
 }

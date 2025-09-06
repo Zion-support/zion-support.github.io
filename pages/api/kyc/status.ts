@@ -33,7 +33,7 @@ function load (): Record < string, KycProfile> {
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
   const db = load();
   const profile = db[userId];
-  if (!profile) return res.status(404).json({ error: "Profile not found" });
+if (!profile) return res.status(404).json({ error: "Profile not found" });
   res.status(200).json({
   if (req && req.method !== "GET")
     return res && res.status(405).json({ error: "Method not allowed" });

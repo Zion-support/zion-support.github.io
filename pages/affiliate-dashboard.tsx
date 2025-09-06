@@ -11,12 +11,19 @@
   }, [code]);
   async function requestPayout() {
     setMsg('')
+      } catch {}
+    })()
+  }, [code]),
+
+  async function requestPayout() {
+    setMsg(''),
+
     try {
       const res = await fetch('/api/partners/request-payout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
-      const json = await res.json();
+const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed');
       setMsg('Payout requested')
     } catch (e: any) {
@@ -164,4 +171,7 @@ function Stat() {
       <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
       <div className="text - 2xl font - semibold">{value}</div>;
     </div>);
+    </div>
+  )
+
 }

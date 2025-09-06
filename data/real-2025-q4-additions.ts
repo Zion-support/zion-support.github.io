@@ -1,5 +1,5 @@
 export interface Q4Service {
-  id: string, name: string,
+id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
   features: string[], popular?: boolean,

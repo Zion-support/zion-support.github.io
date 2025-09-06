@@ -263,12 +263,64 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         {/* Category Filter */}
         <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
+
+  const _filteredServices = activeCategory === 'all' 
+    ? allServices 
+    : allServices.filter(service => {
+        if (activeCategory === 'ai') return service.category.includes('AI'),
+        if (activeCategory === 'quantum') return service.category.includes('Quantum'),
+        if (activeCategory === 'emerging') return emergingTech2025Services.includes(service),
+        if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service),
+        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service),
+        return true
+      }),
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { opacity: 0, _y: 20},
+    visible: {_opacity: 1, _y: 0, _transition: {
+        duration: 0.5}
+    }
+  },
+
+  return (
+    <section className=&quot;relative z-10 py-20 px-4 sm:px-6 lg:px-8&quot;>
+      <div className=&quot;max-w-7xl mx-auto&quot;>
+        {/* Header */}
+        <motion.div 
+          className=&quot;text-center mb-16&quot;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
+            <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent&quot;>
+              Revolutionary 2025
+            </span>
+            <br />
+            <span className=&quot;text-white&quot;>Services</span>
+          </h2>
+          <p className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed&quot;>
+            Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions. 
+            Transform your business with services that were once science fiction.
+          </p>
+        </motion.div>
+
+        {_/* Category Filter */}
+        <motion.div 
+          className=&quot;flex flex-wrap justify-center gap-4 mb-12&quot;
+
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          {categories.map((category) => (
+{categories.map((category) => (
             <button
               key={category.id}
               onClick={() => {
@@ -707,7 +759,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             </motion.div>
           ))}
         </motion.div>
-                {/* Floating Particles */}
+{/* Floating Particles */}
                 <div className='absolute inset-0 pointer-events-none overflow-hidden'>;
                   <div
                     className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60'
@@ -751,7 +803,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             </button>
           </motion.div>
         )}
-        {/* Call to Action */}
+{/* Call to Action */}
         <motion&& motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion && motion.div 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
@@ -782,7 +834,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold text-white mb-4">
+<h3 className="text-3xl font-bold text-white mb-4">
             Ready to Experience the Future?
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -799,6 +851,16 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             <a
               href="/pricing"
               className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
+            <a 
+              href=&quot;/contact&quot; 
+              className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40&quot;
+            >
+              Start Your Transformation
+            </a>
+            <a 
+              href=&quot;/pricing&quot; 
+              className=&quot;px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300&quot;
+
             >
               View Pricing
             </a>
@@ -806,7 +868,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         </motion.div>
       </div>
     </section>
-              className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>            Ready to Experience the Future?;
+className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>            Ready to Experience the Future?;
           </h3>;
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
             Join the revolution with our cutting-edge AI, quantum, and emerging technology services. ;

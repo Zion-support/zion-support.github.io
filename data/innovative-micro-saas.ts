@@ -1,5 +1,5 @@
 export interface InnovativeMicroSaas {
-      'AI-powered data extraction',
+'AI-powered data extraction',
       'Multi-format support (PDF, images, emails)',
   real_implementation: boolean;
   implementation_details: string;

@@ -8,7 +8,7 @@ export default function LinksReportRedirect() {
     if (typeof window !== 'undefined') {
       window.location.replace('/reports/links/index.html')
     }
-  }, []);
+}, []);
   return null;export default function LinksReportRedirect() {;
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
@@ -42,4 +42,5 @@ if ( {) {
     }
   }, []);
   return null;
+
 }

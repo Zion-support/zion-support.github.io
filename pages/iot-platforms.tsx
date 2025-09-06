@@ -6,6 +6,12 @@ const IotPlatforms: NextPage = () => {
         <title>IotPlatforms - Zion Tech Solutions</title>
         <meta name="description" content="IotPlatforms page" />
       </Head>
+    <div>
+      <Head>
+        <title>IotPlatforms - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;IotPlatforms page&quot; />
+      </Head>
+
       <main>
         <h1>IotPlatforms</h1>
         <p>This page is under construction.</p>
@@ -31,3 +37,6 @@ import Head from 'next / head';
 ;
 export default IotPlatforms;
 ;
+
+export default IotPlatforms
+

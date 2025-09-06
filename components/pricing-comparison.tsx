@@ -31,6 +31,13 @@ export default function PricingComparisonPage() {
         enterprise: '$199/month'
     },
     competitors: [
+
+export default function PricingComparisonPage() {_const _serviceComparisons = [
+    {
+      service: 'AI Content Generator', _zionPricing: {
+        starter: '$19/month', _professional: '$49/month', _enterprise: '$199/month'},
+      competitors: [
+
         {
           name: 'Jasper AI',
           pricing: '$39/month',
@@ -38,7 +45,7 @@ export default function PricingComparisonPage() {
           pros: ['Excellent templatesGood AI qualityWide integrations'],
           cons: ['Higher pricingLimited customizationNo unlimited plan'],
           savings: 'Save $20/month with Zion'
-        };
+};
         {
           name: 'Copy.ai',
           pricing: '$36/month',
@@ -46,7 +53,7 @@ export default function PricingComparisonPage() {
           pros: ['Unlimited wordsGood valueSimple interface'],
           cons: ['Basic featuresLimited templatesNo advanced SEO'],
           savings: 'Save $17/month with Zion'
-        };
+};
         {
           name: 'Writesonic',
           pricing: '$19/month',
@@ -55,7 +62,7 @@ export default function PricingComparisonPage() {
           cons: ['Limited featuresBasic AI modelsNo team features'],
           savings: 'Same price, better features'
         }
-      ];
+];
       features: [
         'AI-powered content generationMultiple content formatsSEO optimizationTeam collaborationAPI accessCustom templates'
       ];
@@ -77,7 +84,7 @@ export default function PricingComparisonPage() {
           pros: ['Comprehensive featuresGreat integrationsAdvanced analytics'],
           cons: ['Very expensiveComplex pricingSteep learning curve'],
           savings: 'Save $121/month for 10 servers'
-        };
+};
         {
           name: 'New Relic',
           pricing: '$99/user/month',
@@ -85,7 +92,7 @@ export default function PricingComparisonPage() {
           pros: ['Good APMUser-based pricingReliable'],
           cons: ['Expensive for teamsLimited server monitoringComplex setup'],
           savings: 'Save $396/month for 5 users'
-        };
+};
         {
           name: 'Prometheus + Grafana',
           pricing: 'Free',
@@ -94,7 +101,7 @@ export default function PricingComparisonPage() {
           cons: ['Requires DevOps expertiseNo managed serviceMaintenance overhead'],
           savings: 'Professional service for $29/month'
         }
-      ];
+];
       features: [
         'Real-time monitoringMulti-cloud supportAI-powered alertingAdvanced analyticsCustom dashboardsAPI access'
       ];
@@ -116,7 +123,7 @@ export default function PricingComparisonPage() {
           pros: ['GitHub nativeGood free tierWide adoption'],
           cons: ['Expensive for teamsLimited featuresComplex pricing'],
           savings: 'Save $200+/month for active teams'
-        };
+};
         {
           name: 'GitLab CI/CD',
           pricing: '$19/user/month',
@@ -124,7 +131,7 @@ export default function PricingComparisonPage() {
           pros: ['Integrated platformGood CI/CDUnlimited repos'],
           cons: ['User-based pricingLimited integrationsHigher cost for teams'],
           savings: 'Save $56/month for 5 users'
-        };
+};
         {
           name: 'Jenkins',
           pricing: 'Free',
@@ -133,7 +140,7 @@ export default function PricingComparisonPage() {
           cons: ['Requires maintenanceNo managed serviceComplex setup'],
           savings: 'Professional service for $39/month'
         }
-      ];
+];
       features: [
         'CI/CD pipelinesInfrastructure as CodeSecurity automationMulti-cloud deploymentTeam collaborationCustom integrations'
       ];
@@ -452,7 +459,7 @@ function PricingComparisonPage() {
                 View Comparison
               </Button>
               <Button
-                href="/pricing"
+href="/pricing"
                 variant="outline"
                 size="lg"
                 className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
@@ -823,7 +830,7 @@ function PricingComparisonPage() {
                               </ul>
                             </div>
                             <div>
-                              <p className="text-red-400 font-medium mb-1">Cons:</p>
+<p className="text-red-400 font-medium mb-1">Cons:</p>
                               <ul className="text-gray-300 space-y-1">
                                 {competitor.cons.map((con, conIndex) => (
                                   <li key={conIndex} className="flex items-center">
@@ -834,14 +841,14 @@ function PricingComparisonPage() {
                               </ul>
                             </div>
                           </div>
-                          <div className="text-center">
+<div className="text-center">
                             <p className="text-green-400 font-semibold text-sm">{competitor.savings}</p>
                           </div>
                         </div>
                       </Card>
                     </div>
                   ))}
-                </div>;
+</div>;
               </div>;
             ))}
           </div>;
@@ -865,7 +872,7 @@ function PricingComparisonPage() {
                 Try AI Content Generator
               </Button>
               <Button
-                href="/cloud-monitoring"
+href="/cloud-monitoring"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
@@ -873,7 +880,7 @@ function PricingComparisonPage() {
                 Try Cloud Monitoring
               </Button>
               <Button
-                href="/devops-automation"
+href="/devops-automation"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"

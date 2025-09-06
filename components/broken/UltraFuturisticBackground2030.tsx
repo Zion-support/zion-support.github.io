@@ -76,11 +76,20 @@ if (return) {
       y: number,
       opacity: number;    }> = [];      coordinate_x: number,
       coordinate_y: number,
+
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
+
+    let animationId: number
+    let particles: Array<{
+      x: number,
+      y: number,
+
       vx: number,
       vy: number,
       size: number,
       color: string,
-      opacity: number;    }> = [];      x: number,;
+opacity: number;    }> = [];      x: number,;
       y: number,;
       vx: number,;
       vy: number,;
@@ -401,11 +410,103 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut',          }}
             opacity: [0.3, 0.6, 0.3];
+      }
+    },
+
+    const animate = () => {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)',
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
+
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
+
+        // Draw particle
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fillStyle = particle.color,
+        ctx.globalAlpha = particle.opacity,
+        ctx.fill(),
+
+        // Draw connections
+        particles.forEach(_(otherParticle, _otherIndex) => {
+          if (index !== otherIndex) {
+            const distance = Math.sqrt(
+              Math.pow(particle.x - otherParticle.x, 2) + 
+              Math.pow(particle.y - otherParticle.y, 2)
+            ),
+          }
+        })
+      }),
+
+      ctx.globalAlpha = 1,
+      animationId = requestAnimationFrame(animate)
+    },
+
+    initParticles(),
+    animate(),
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight,
+      initParticles()
+    },
+
+    window.addEventListener('resize', handleResize),
+
+    return () => {
+      cancelAnimationFrame(animationId),
+      window.removeEventListener('resize', handleResize)
+    }
+  }, []),
+
+  return (
+    <div className=&quot;relative min-h-screen bg-black overflow-hidden&quot;>
+      {/* Animated Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
+        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
+      />
+
+      {/* Floating Geometric Shapes */}
+      <div className=&quot;fixed inset-0 pointer-events-none z-10&quot;>
+        {/* Hexagon Grid */}
+        <motion.div
+          className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/30&quot;
+          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+          animate={{
+            rotate: 360,
+            scale: [1, 1.1, 1],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: &quot;linear&quot;
+          }}
+        />
+        
+        <motion.div
+          className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/30&quot;
+          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+          animate={{
+            rotate: -360,
+            scale: [1, 0.9, 1],
+            opacity: [0.3, 0.6, 0.3]
+
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
-            ease: 'linear',            ease: "linear";
+ease: 'linear',            ease: "linear";
           }}
         />;
         {/* Floating Circles */}
@@ -435,7 +536,7 @@ if ( {) {
           transition={{
             duration: 8,
             repeat: Infinity,
-        />;
+/>;
         <motion&& motion.div
           className='absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40'
           animate={{
@@ -487,7 +588,7 @@ if ( {) {
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
@@ -532,7 +633,7 @@ if ( {) {
           transition={{
             duration: 6,
             repeat: Infinity,
-        />;
+/>;
         <motion&& motion.div
           className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent'
           animate={{
@@ -558,7 +659,7 @@ if ( {) {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
         />;
         <motion&& motion.div

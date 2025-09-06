@@ -152,7 +152,7 @@ const service_categories = [;
     title: '🚀 2028 Futuristic Innovations',
     description: 'Beyond the future of technology',
     icon: Rocket,
-    color: 'from - violet - 600 to - purple - 600',
+color: 'from - violet - 600 to - purple - 600',
     services: futuristic2028Services.slice (0, 4),
   },  {    services: futuristic2028Services.slice (0, 4);
   }
@@ -160,7 +160,7 @@ const service_categories = [;
     title: '🏙️ Smart City & Infrastructure',
     description: 'Intelligent urban solutions',
     icon: Building,
-    color: 'from - blue - 600 to - cyan - 600',
+color: 'from - blue - 600 to - cyan - 600',
     services: emergingTech2028Services;
       .filter (
         string =>;
@@ -173,7 +173,7 @@ const service_categories = [;
     title: '⚛️ Quantum & Advanced Tech',
     description: 'Quantum computing and beyond',
     icon: Atom,
-    color: 'from - indigo - 600 to - blue - 600',
+color: 'from - indigo - 600 to - blue - 600',
     services: futuristic2028Services;
       .filter (string => s.category.includes ('Quantum'));
       .slice (0, 4),
@@ -193,7 +193,7 @@ const service_categories = [;
     title: '⛓️ Blockchain & Web3',
     description: 'Decentralized solutions',
     icon: Globe,
-    color: 'from - orange - 600 to - red - 600',
+color: 'from - orange - 600 to - red - 600',
     services: emergingTech2028Services;
       .filter (string => s.category.includes ('Blockchain'));
       .slice (0, 4),
@@ -210,11 +210,20 @@ const service_categories = [;
         <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />
         <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />
         <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />
+
+export default function ServicesShowcase2028() {_return (_<>
+      <Head>
+        <title>2028 Futuristic Services Showcase - Zion Tech Group</title>
+        <meta name="description" content="Explore our cutting-edge 2028 services including AI, _quantum computing, _autonomous systems, _and futuristic innovations. Transform your business with next-generation technology." />
+        <meta name="keywords" content="2028 technology, _AI services, _quantum computing, _autonomous systems, _futuristic innovations, _Zion Tech Group" />
+        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />
+        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, _quantum computing, _autonomous systems, _and futuristic innovations." />
+
         <meta property="og:url" content="https://ziontechgroup.com/2028-services-showcase" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" />
       </Head>
-      <UltraFuturisticNavigation2028 />
+<UltraFuturisticNavigation2028 />
           href='https://ziontechgroup && ziontechgroup.com/2028-services-showcase'
         />      </Head>        <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." />;
         <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />;
@@ -242,7 +251,7 @@ const service_categories = [;
           <div className="absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -289,6 +298,7 @@ const service_categories = [;
               <Sparkles className="w-4 h-4" />
               <span>2028 Future Technology</span>
             </div>
+
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
                 Futuristic
@@ -296,7 +306,7 @@ const service_categories = [;
               <br />
               <span className="text-white">Services</span>
             </h1>
-            <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
+<p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
               Experience the future of technology with our cutting-edge 2028 services.
               From AI consciousness to quantum internet, we're building tomorrow's solutions today.
             </p>
@@ -351,7 +361,7 @@ const service_categories = [;
           </motion.div>
         </div>
       </section>
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2">;
+className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2">;
                 <span>View Pricing</span>;
                 <DollarSign className="w-5 h-5" />;
               </Link>;
@@ -397,7 +407,7 @@ const service_categories = [;
               Explore Our <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Service Categories</span>
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Discover our comprehensive range of futuristic services designed to transform your business
+Discover our comprehensive range of futuristic services designed to transform your business
               and propel you into the future of technology.
             </p>
           </div>
@@ -685,7 +695,7 @@ function ServicesShowcase2028() {
               >
                 <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative z-10">
+<div className="relative z-10">
                     <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <category.icon className="w-8 h-8 text-white" />
                     </div>
@@ -705,12 +715,12 @@ function ServicesShowcase2028() {
                     >
                       <span>Explore More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Link>
+</Link>
                   </div>
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Featured Services */}
@@ -724,7 +734,7 @@ function ServicesShowcase2028() {
               Our most innovative and in-demand services that are revolutionizing industries worldwide.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {futuristic2028Services.slice(0, 6).map((service, index) => (
               <motion.div
                 key={service.id}
@@ -871,7 +881,7 @@ function ServicesShowcase2028() {
               >
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative z-10">
+<div className="relative z-10">
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-4xl">{service.icon}</div>
                       <div className="text-right">
@@ -914,7 +924,7 @@ function ServicesShowcase2028() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Market Analysis */}
@@ -928,7 +938,7 @@ function ServicesShowcase2028() {
               Understand the market dynamics and growth potential of our futuristic services.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Insights;
@@ -1032,13 +1042,13 @@ function ServicesShowcase2028() {
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
               <p className="text-purple-300 mb-6">
-                Our services target markets with exponential growth potential
+Our services target markets with exponential growth potential
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
               <div className="text-purple-300">Average Annual Growth</div>
             </motion.div>
-            <motion.div
+<motion.div
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
               <TrendingUp className='w-16 h-16 text-green-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1069,13 +1079,13 @@ function ServicesShowcase2028() {
               <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Size</h3>
               <p className="text-blue-300 mb-6">
-                Combined market size of our service categories exceeds
+Combined market size of our service categories exceeds
                 $500 billion with rapid expansion expected.
               </p>
               <div className="text-3xl font-bold text-blue-400">$500B+</div>
               <div className="text-blue-300">Total Addressable Market</div>
             </motion.div>
-            <motion.div
+<motion.div
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'>;
               <DollarSign className='w-16 h-16 text-blue-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1106,7 +1116,7 @@ function ServicesShowcase2028() {
               <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Edge</h3>
               <p className="text-pink-300 mb-6">
-                First-to-market solutions with proprietary technology
+First-to-market solutions with proprietary technology
                 and AI algorithms that competitors cannot replicate.
               </p>
               <div className="text-3xl font-bold text-pink-400">90%</div>
@@ -1115,7 +1125,7 @@ function ServicesShowcase2028() {
           </div>
         </div>
       </section>
-              className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'>;
+className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'>;
               <Shield className='w-16 h-16 text-pink-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
                 Competitive Edge;
@@ -1176,6 +1186,7 @@ function ServicesShowcase2028() {
               Join hundreds of forward-thinking companies already leveraging our futuristic services 
               to gain competitive advantages and drive innovation.
             </p>
+
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
@@ -1183,14 +1194,14 @@ function ServicesShowcase2028() {
               >
                 <span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+</Link>
               <Link
                 href="/case-studies"
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
               >
                 <span>View Case Studies</span>
                 <TrendingUp className="w-5 h-5" />
-              </Link>
+</Link>
             </div>
             <div className="flex items-center justify-center space-x-8 text-purple-300">
               <div className="flex items-center space-x-2">
@@ -1209,7 +1220,7 @@ function ServicesShowcase2028() {
           </motion.div>
         </div>
       </section>
-      <UltraFuturisticFooter2028 />
+<UltraFuturisticFooter2028 />
     </>
                 className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'>;
                 <span>View Case Studies</span>;

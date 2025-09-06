@@ -58,7 +58,7 @@ export default function ComprehensiveServicesShowcase() {
     { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length },
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
-  ];
+];
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
@@ -70,7 +70,7 @@ export default function ComprehensiveServicesShowcase() {
     })
     .sort((a, b) => {
       switch (sortBy) {
-        case 'popularity':
+case 'popularity':
           return b.popular ? 1 : -1;
         case 'price':
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -307,11 +307,85 @@ export default function ComprehensiveServicesShowcase() {
               <div>
                 <div className="text-3xl font-bold text-orange-400">500%+</div>
                 <div className="text-white/60">Average ROI</div>
+        case 'popularity':
+          return b.popular ? 1 : -1,
+        case 'price':
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        default: return 0
+      }
+    }),
+
+  const getCategoryIcon = (category: string) => {
+    const categoryData = categories.find(cat => cat.id === category)
+    return categoryData?.icon || '🚀'
+  },
+
+  const formatPrice = (price: string) => {
+    return price.replace('$', '').replace(, '')
+  },
+
+  return (
+    <section className=&quot;py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950&quot;>
+      <div className=&quot;max-w-7xl mx-auto&quot;>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className=&quot;text-center mb-16&quot;
+        >
+          <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
+            Revolutionary Micro SAAS Services 2025
+          </h2>
+          <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto mb-8&quot;>
+            Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology
+          </p>
+          <div className=&quot;flex items-center justify-center gap-6 text-white/60 mb-8&quot;>
+            <div className=&quot;flex items-center gap-2&quot;>
+              <Shield className=&quot;w-5 h-5&quot; />
+              <span>Enterprise-grade security</span>
+            </div>
+            <div className=&quot;flex items-center gap-2&quot;>
+              <Zap className=&quot;w-5 h-5&quot; />
+              <span>AI-powered optimization</span>
+            </div>
+            <div className=&quot;flex items-center gap-2&quot;>
+              <Globe className=&quot;w-5 h-5&quot; />
+              <span>Global deployment</span>
+            </div>
+          </div>
+          <div className=&quot;bg-white/5 rounded-2xl p-6 border border-white/10&quot;>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-6 text-center&quot;>
+              <div>
+                <div className=&quot;text-3xl font-bold text-blue-400&quot;>{allServices.length}+</div>
+                <div className=&quot;text-white/60&quot;>Services Available</div>
+              </div>
+              <div>
+                <div className=&quot;text-3xl font-bold text-green-400&quot;>99.9%</div>
+                <div className=&quot;text-white/60&quot;>Uptime Guarantee</div>
+              </div>
+              <div>
+                <div className=&quot;text-3xl font-bold text-purple-400&quot;>24/7</div>
+                <div className=&quot;text-white/60&quot;>Support Available</div>
+              </div>
+              <div>
+                <div className=&quot;text-3xl font-bold text-orange-400&quot;>500%+</div>
+                <div className=&quot;text-white/60&quot;>Average ROI</div>
+
               </div>
             </div>
           </div>
         </motion.div>
-          className='text-center mb-16'>;
+className='text-center mb-16'>;
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
             Revolutionary Micro SAAS Services 2025;
           </h2>;
@@ -805,7 +879,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             </div>
           </div>
         </motion.div>
-                >;
+>;
                   <List className="w-5 h-5" />;
               </div>;
             </div>;
@@ -1177,7 +1251,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             </AnimatePresence>
           </div>
         ) : (
-          <div className="space-y-6">
+<div className="space-y-6">
             <AnimatePresence>
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1186,7 +1260,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
+className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
                 >
                   <div className="flex flex-col lg:flex-row gap-6">
                     {/* Left Side - Icon and Basic Info */}
@@ -1198,7 +1272,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         </div>
                       )}
                     </div>
-                    {/* Center - Service Details */}
+{/* Center - Service Details */}
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-4">
                         <div>
@@ -1267,7 +1341,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         </div>
                       </div>
                     </div>
-                    {/* Right Side - CTA and Category */}
+{/* Right Side - CTA and Category */}
                     <div className="flex-shrink-0 flex flex-col items-end gap-4">
                       <div className="text-right">
                         <div className="text-sm text-white/60 mb-1">Category</div>
@@ -1328,7 +1402,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   </div>
                 </motion.div>
               ))}
-            </AnimatePresence>;
+</AnimatePresence>;
           </div>;
         )}
         {/* No Results */}
@@ -1524,4 +1598,24 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
         </motion.div>;
       </div>;
     </section>);
+              <a
+                href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                className=&quot;bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2&quot;
+              >
+                Contact Sales Team
+                <ArrowRight className=&quot;w-5 h-5&quot; />
+              </a>
+              <a
+                href=&quot;tel:+13024640950&quot;
+                className=&quot;bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2&quot;
+              >
+                Call +1 302 464 0950
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+
 }

@@ -6,6 +6,12 @@ const AutoUpdate20250808t163020949z: NextPage = () => {
         <title>AutoUpdate20250808t163020949z - Zion Tech Solutions</title>
         <meta name="description" content="AutoUpdate20250808t163020949z page" />
       </Head>
+    <div>
+      <Head>
+        <title>AutoUpdate20250808t163020949z - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;AutoUpdate20250808t163020949z page&quot; />
+      </Head>
+
       <main>
         <h1>AutoUpdate20250808t163020949z</h1>
         <p>This page is under construction.</p>
@@ -31,3 +37,6 @@ import Head from 'next / head';
 ;
 export default AutoUpdate20250808t163020949z;
 ;
+
+export default AutoUpdate20250808t163020949z
+

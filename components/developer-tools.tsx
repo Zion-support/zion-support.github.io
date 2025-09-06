@@ -39,7 +39,7 @@ import {
   CheckCircle,
   TrendingUp,
   Cpu,
-  Globe,} from 'lucide-react';import {
+Globe,} from 'lucide-react';import {
   Code;
   GitBranch,
   Database,
@@ -54,11 +54,16 @@ import {
   Globe
 } from 'lucide-react';
       icon: <Code className="w-8 h-8 text-white" />,
+
+export default function DeveloperToolsPage() {_const _developerTools = [
+    {
+      icon: <Code className=&quot;w-8 h-8 text-white&quot; />,
+
       title: 'GitHub Copilot',
       description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
       features: [
         'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection'
-  Globe;
+Globe;
 export default /**
  * DeveloperToolsPage - Function description
  */
@@ -203,12 +208,12 @@ function DeveloperToolsPage() {
       value: '$8.2B',
       growth: '+24% YoY',
       description: 'Global developer tools market size'
-    };
+};
     {
       title: 'AI Code Tools',
       value: '$2.1B',
       growth: '+45% YoY',
-      description: 'AI - powered development tools market',
+description: 'AI - powered development tools market',
     },    {
       title: 'Cloud Dev Tools',
       value: '$4.8B',
@@ -232,14 +237,14 @@ function DeveloperToolsPage() {
       title: 'Cloud Dev Tools',
       value: '$4.8B',
       growth: '+32% YoY',
-      description: 'Cloud - based development platforms',
+description: 'Cloud - based development platforms',
     },      description: 'Cloud - based development platforms';
     }
     {
       title: 'Dev Productivity',
       value: '35%',
       growth: '+18% YoY',
-      description: 'Average productivity improvement',
+description: 'Average productivity improvement',
     },      description: 'Average productivity improvement';
     }
   ];
@@ -255,7 +260,7 @@ function DeveloperToolsPage() {
       phase: 'Development',
       tools: ['GitHub CopilotVS CodeGit'],
       description: 'Write and manage code with AI assistance'
-    }
+}
 export default function DeveloperToolsPage() {;
   const developerTools = [;
     {;
@@ -440,7 +445,7 @@ export default function DeveloperToolsPage() {;
     <>
       <Head>
         <title>Developer Tools & Services | Zion Tech Group - Real Dev Tools with Pricing</title>
-        <meta name="description" content="Discover real developer tools and services including GitHub Copilot, MongoDB Atlas, Vercel, and more. All tools include pricing, features, and direct links." />
+<meta name="description" content="Discover real developer tools and services including GitHub Copilot, MongoDB Atlas, Vercel, and more. All tools include pricing, features, and direct links." />
         <meta property="og:title" content="Developer Tools & Services | Zion Tech Group" />
         <meta property="og:description" content="Real developer tools with pricing and direct links to boost your development workflow." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -464,7 +469,7 @@ export default function DeveloperToolsPage() {;
           </p>
         </div>
       </section>
-      {/* Developer Market Statistics */}
+{/* Developer Market Statistics */}
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -734,7 +739,7 @@ export default function DeveloperToolsPage() {;
                     </div>
                   </div>
                 )}
-                <div className="flex items-start space-x-6">
+<div className="flex items-start space-x-6">
                   <div className="relative">
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                       {tool.icon}
@@ -889,7 +894,7 @@ export default function DeveloperToolsPage() {;
                         </li>
                       ))}
                     </ul>
-                    <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                       <Button
                         href={tool.website}
                         variant="primary"
@@ -908,7 +913,7 @@ export default function DeveloperToolsPage() {;
                 </div>
               </Card>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Developer Workflow */}
@@ -1126,7 +1131,7 @@ export default function DeveloperToolsPage() {;
                 </div>
               </Card>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* CTA Section */}
@@ -1180,16 +1185,22 @@ export default function DeveloperToolsPage() {;
             and integrate seamlessly with your existing workflow.
           </p>
           <div className="flex flex-col sm: flex-row gap-6 justify-center">
-            <Button
+<Button
               href="/ai-tools"
               variant="primary"
               size="lg"
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
+            <Button
+              href=&quot;/ai-tools&quot;
+              variant=&quot;primary&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-cursor-blue hover:bg-cursor-blue-dark&quot;
+
             >
               Explore AI Tools
             </Button>
             <Button
-              href="/contact"
+href="/contact"
               variant="outline"
               size="lg"
               className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"

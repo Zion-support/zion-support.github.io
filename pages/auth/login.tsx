@@ -252,20 +252,130 @@ if (return) {
       } as AuthError);
       return;
     }
+
+  // Using centralized Supabase client (imported at top)
+
+  // Effect for initial session check and auth state changes
+  useEffect(() => {
+    let mounted = true
+    logInfo('LoginPage: Initial session check effect runs.'),
+
+    const _sessionTimeoutId = setTimeout__(() => {
+      if (mounted) {
+        logWarn('LoginPage: Session check timeout after 5 seconds'),
+        setSessionCheckTimedOut(true),
+        setIsCheckingSession(false), // Allow form to render if timeout
+        setSessionChecked(true), // Mark check as complete even on timeout
+      }
+    }, 5000),
+
+    const checkSessionAndListen = async () => {
+      if (!mounted) return,
+
+      setIsCheckingSession(true),
+      try {
+
+      setIsCheckingSession(true),
+      try {
+
+        logInfo('LoginPage: Calling supabase.auth.getSession()'),
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession(),
+        clearTimeout(sessionTimeoutId), // Clear timeout once getSession completes
+        if (!mounted) return,
+
+        if (sessionError) {
+          logErrorToProduction('LoginPage: Error getting session:', { data: sessionError }),
+          setError(sessionError as any), // Cast to any if type is too strict
+        } else {
+          logInfo('LoginPage: getSession returned, user:', { data: session?.user?.id }),
+          setUser(session?.user ?? null)
+        }
+      } catch (e) {
+        if (mounted) {
+          logErrorToProduction('LoginPage: Exception during getSession:', { data:  e }),
+          clearTimeout(sessionTimeoutId), // Ensure timeout is cleared on error too
+        }
+      } finally {
+        if (mounted) {
+          setIsCheckingSession(false),
+          setSessionChecked(true),
+          logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true')
+        }
+      }
+
+      // Listener for auth state changes
+      logInfo('LoginPage: Setting up onAuthStateChange listener.'),
+      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
+        if (!mounted) return,
+        logInfo('LoginPage: onAuthStateChange event:', { 
+          event,
+          userId: session?.user?.id 
+        }),
+        setUser(session?.user ?? null),
+        // If auth state changes after initial check, ensure sessionChecked is true
+        // This handles cases like login/logout in another tab.
+        }
+      }),
+      
+      return () => { // Cleanup for listener
+        logInfo('LoginPage: Unsubscribing from onAuthStateChange.'),
+        authListener?.subscription?.unsubscribe()
+      }
+    },
+
+    const unsubscribePromise = checkSessionAndListen()
+
+    return () => {
+      mounted = false,
+      clearTimeout(sessionTimeoutId), // Clear timeout on unmount
+      logInfo('LoginPage: Unmounting, cleaning up auth listener.'),
+      unsubscribePromise.then(cleanup => cleanup && cleanup())
+    }
+  }, []), // Run only once on mount
+
+  // Effect for handling redirection AFTER session is checked and user state is updated
+  useEffect(() => {
+    logInfo(`LoginPage: Redirection effect runs. sessionChecked: ${sessionChecked}, isLoading: ${isLoading}, user: ${user?.id}, pathname: ${router.pathname}`),
+    
+    // Only redirect if the initial session check is complete, not currently submitting login form, and user exists
+    if (sessionChecked && !isLoading && user) {
+      // Get returnTo from query params, decode it if it exists
+      let returnTo = '/dashboard', // Default fallback
+      
+      if (router.query.returnTo && typeof router.query.returnTo === 'string') {
+        try {
+          returnTo = decodeURIComponent(router.query.returnTo)
+        } catch (e) {
+          logWarn('Failed to decode returnTo parameter:', { data: router.query.returnTo }),
+          returnTo = '/dashboard'
+
+        }
+      }
+      
+      // Prevent redirecting back to auth pages or creating loops
+      const authPages = ['/auth/login/auth/register/login/signup/auth/forgot-password']
+      if (authPages.includes(returnTo) || returnTo.startsWith('/auth/')) {
+        returnTo = '/dashboard'
+      }
+
       // Ensure returnTo is a relative path to prevent open redirect attacks
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
         returnTo = '/dashboard'
       }
-      logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
+logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
       // Add a small delay to ensure session is fully established
       const redirectTimer = setTimeout(() => {
         // Double-check that we're still logged in before redirecting
+      
+      // Add a small delay to ensure session is fully established
+      const _redirectTimer = setTimeout__(() => {_// Double-check that we're still logged in before redirecting
+
         if (user && router.pathname === '/auth/login') {
           logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`),
           router.replace(returnTo), // Use replace to avoid back button issues
         }
       }, 100), // Small delay to let session stabilize
-      return () => clearTimeout(redirectTimer)
+return () => clearTimeout(redirectTimer)
     }
     // Return undefined for all other cases
     return undefined
@@ -275,7 +385,7 @@ if (return) {
       setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError),
       return
     }
-    setIsResendingVerification(true);
+setIsResendingVerification(true);
     try {;
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
@@ -309,14 +419,14 @@ if (return) {
     } finally {
       setIsResendingVerification(false)
     }
-  };
+};
   const handleProactiveResendVerification = async (e: FormEvent) => {
     e.preventDefault();
     if (!proactiveResendEmail) {
       setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' }),
       return
     }
-    setIsProactivelyResending(true);
+setIsProactivelyResending(true);
     setProactiveResendMessage(null);
     try {;
       const response = await fetch('/api/resend-verification-email', {;
@@ -338,7 +448,7 @@ if (return) {
     } finally {
       setIsProactivelyResending(false)
     }
-  };
+};
       const data = await response && response.json();
       if (response && response.ok) {;
         setProactiveResendMessage({;
@@ -452,13 +562,44 @@ if (return) {
           name: 'UnknownAuthError',;
           message: 'Login failed due to an unknown error. Please try again.',;
         } as AuthError);
+        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
+        const codeIsEmailNotVerified = (signInError as any).code === 'email_not_verified'
+
+        if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {
+          setIsEmailUnverified(true),
+          setError({ 
+            name: 'EmailNotVerifiedError',
+            message: 'Please verify your email address before logging in. Check your inbox for a verification link.' 
+          } as AuthError),
+          setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered
+          
+          // Auto-resend verification email
+          setTimeout(() => {
+            handleResendVerification()
+          }, 1000)
+        } else {
+          // MODIFIED SECTION FOR BETTER ERROR MESSAGES
+          let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
+          if (signInError.message) {
+              if (signInError.message.toLowerCase().includes('invalid login credentials')) {
+                  displayMessage = 'Invalid email or password. Please try again.'
+              } else if (signInError.message.toLowerCase().includes('network request failed')) {
+                  displayMessage = 'Network error. Please check your internet connection and try again.'
+              } else if (signInError.message.toLowerCase().includes('user disabled')) {
+                  displayMessage = 'Your account has been disabled. Please contact support.'
+              }
+              // Add more specific checks here if needed for other Supabase error messages
+          }
+          setError({ name: signInError.name || 'AuthApiError', message: displayMessage } as AuthError)
+        }
+
       } else if (data.user) {
         logInfo('Supabase sign-in successful, user:', { data: data.user }),
         setUser(data.user), // setUser to trigger useEffect for redirection
         // Redirection is now handled by the useEffect hook
       } else {
         // Should not happen if signInError is null and data.user is null
-        logWarn('Supabase sign-in returned no error but no user.');
+logWarn('Supabase sign-in returned no error but no user.');
         setError({ name: 'UnknownAuthError', message: 'Login failed due to an unknown error. Please try again.' } as AuthError)
       }
     } catch (catchedError: any) {;
@@ -488,12 +629,12 @@ if (return) {
     } finally {
       setIsLoading(false)
     }
-  };
+};
   // Auto-redirect to verification status page for unverified users after showing message
   useEffect(() => {
     if (isEmailUnverified && verificationEmailSent && email) {
       const timer = setTimeout(() => {
-  };
+};
   // Auto-redirect to verification status page for unverified users after showing message;
   useEffect(() => {;
     if (isEmailUnverified && verificationEmailSent && email) {;
@@ -907,25 +1048,50 @@ if ( {) {
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Checking authentication...</p>
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
+    }
+    return undefined, // Explicitly return undefined if condition is not met
+  }, [isEmailUnverified, verificationEmailSent, email, router]),
+
+  // --- Rendering Logic ---
+
+  // 1. Primary Loading State: During initial session check
+  if (isCheckingSession) {
+
+    return (
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <p className=&quot;text-gray-600&quot;>Checking authentication...</p>
+          <p className=&quot;text-sm text-gray-500 mt-2&quot;>This should only take a moment</p>
+
         </div>
       </div>
     )
   }
+
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
-    return (
+return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>
           <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
+
+    return (
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <h2 className=&quot;text-2xl font-bold mb-4&quot;>Already Logged In</h2>
+          <p className=&quot;text-gray-600 mb-4&quot;>Redirecting to your dashboard...</p>
+
         </div>
       </div>
     )
   }
-  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
+// 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
   // This also covers the case where a user was present but a login attempt failed, clearing the user.
   logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`),
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.
@@ -946,11 +1112,13 @@ if ( {) {
       `LoginPage: Current pathname is ${router && router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`;
     );
     return null; // Or a minimal loader/empty div  }
+  }
+
   return (
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-        <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
+<meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">
         <Card className="w-full max-w-md">
@@ -961,7 +1129,7 @@ if ( {) {
             </CardDescription>
           </CardHeader>
           <CardContent>
-        />;
+/>;
       </Head>;
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>;
         <Card className='w-full max-w-md'>          <CardHeader>;
@@ -1041,7 +1209,7 @@ if ( {) {
         </Card>
       </div>
     </>
-                />;
+/>;
               </div>;
               <Button
                 type='submit'

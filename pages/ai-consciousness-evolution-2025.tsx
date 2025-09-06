@@ -25,4 +25,7 @@ return (
     industries={["R & D", "Healthcare", "Education", "Assistive Tech"]}
     canonical="https: //ziontechgroup.com / ai - consciousness - evolution - 2025";
   />);
+		/>
+	)
+
 }

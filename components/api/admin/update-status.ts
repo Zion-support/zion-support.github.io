@@ -110,4 +110,5 @@ if ( {) {
     updated_at: new Date ().toISOString ()}
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
   res.status (200).json ({ ok: true });
+
 }

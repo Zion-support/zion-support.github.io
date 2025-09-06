@@ -42,7 +42,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
     visible: {
       opacity: 1,
       transition: {
-        stagger_children: 0.2,
+stagger_children: 0.2,
         delay_children: 0.1,
       },
     },  }
@@ -264,12 +264,90 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               {service.features.slice(0, 3).map((feature: string, idx: number) => (
                 <div key={idx} className="flex items-center space-x-2 text-xs text-slate-400">
                   <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full" />
+    }
+  },
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 50,
+      scale: 0.9
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: &quot;easeOut&quot; as const
+      }
+    }
+  },
+
+  const cardVariants = {
+    hover: {
+      y: -10,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: &quot;easeOut&quot; as const
+      }
+    }
+  },
+
+  const _renderServiceCard = (_service: unknown, _index: number) => (
+    <motion.div
+      key={service.id}
+      variants={itemVariants}
+      whileHover=&quot;hover&quot;
+      className=&quot;group relative&quot;
+    >
+      <motion.div
+        variants={cardVariants}
+        className=&quot;relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300&quot;
+      >
+        {/* Glowing border effect */}
+        <div className=&quot;absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot; />
+        
+        <div className=&quot;relative p-6&quot;>
+          {/* Service header */}
+          <div className=&quot;flex items-start justify-between mb-4&quot;>
+            <div className=&quot;flex items-center space-x-3&quot;>
+              <div className=&quot;text-3xl&quot;>{service.icon}</div>
+              <div>
+                <h3 className=&quot;text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300&quot;>
+                  {service.name}
+                </h3>
+                <p className=&quot;text-slate-400 text-sm&quot;>{service.tagline}</p>
+              </div>
+            </div>
+            {service.popular && (
+              <div className=&quot;flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium&quot;>
+                <Star className=&quot;w-3 h-3 fill-current&quot; />
+                <span>Popular</span>
+              </div>
+            )}
+          </div>
+
+          {/* Description */}
+          <p className=&quot;text-slate-300 text-sm mb-4 leading-relaxed&quot;>
+            {service.description}
+          </p>
+
+          {/* Features */}
+          <div className=&quot;mb-4&quot;>
+            <h4 className=&quot;text-white font-semibold mb-2 text-sm&quot;>Key Features:</h4>
+            <div className=&quot;grid grid-cols-1 gap-1&quot;>
+              {service.features.slice(0, 3).map((feature: string, idx: number) => (
+                <div key={idx} className=&quot;flex items-center space-x-2 text-xs text-slate-400&quot;>
+                  <div className=&quot;w-1.5 h-1.5 bg-cyan-500 rounded-full&quot; />
+
                   <span>{feature}</span>
                 </div>
               ))}
             </div>
           </div>
-          {/* Price and CTA */}
+{/* Price and CTA */}
           <div className="flex items-center justify-between">
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{service.price}</div>
@@ -278,7 +356,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
             >
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4" />
@@ -292,7 +370,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             </div>
           </div>
         </div>
-        {/* Hover glow effect */}
+{/* Hover glow effect */}
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
       </motion.div>
     </motion.div>
@@ -362,12 +440,23 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />
       <div className="container mx-auto px-4 relative z-10">
+      </motion.div>
+    </motion.div>
+  ),
+
+  return (
+    <section className=&quot;py-20 relative overflow-hidden&quot;>
+      {/* Background effects */}
+      <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40&quot; />
+      
+      <div className=&quot;container mx-auto px-4 relative z-10&quot;>
+
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+className="text-center mb-16"
         >
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -594,7 +683,8 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
+className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
+
               >
                 Schedule Demo
               </motion.button>
@@ -603,7 +693,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         </motion.div>
       </div>
     </section>
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
           className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>;
             <h3 className='text-2xl font-bold text-white mb-4'>;

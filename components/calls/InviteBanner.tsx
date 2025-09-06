@@ -68,4 +68,10 @@ function InviteBanner() {
           Join Meeting;
         </button>)}
     </div>);
+          Join Meeting
+        </button>
+      )}
+    </div>
+  )
+
 }

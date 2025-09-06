@@ -28,3 +28,12 @@ function escape_html() {
     .replace (/>/g, '&gt, ');
 }
 ;
+}
+
+function escapeHtml(str: string) {
+  return String(str)
+    .replace(/&/g, '&amp,')
+    .replace(/</g, '&lt,')
+    .replace(/>/g, '&gt,')
+}
+

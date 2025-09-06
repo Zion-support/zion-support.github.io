@@ -51,7 +51,7 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
-          >;
+>;
             <svg
 > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>);
 });
@@ -131,3 +131,15 @@ export default StarRating;              width={size}
 ;
 export default StarRating;
 ;
+            >
+              <polygon points=&quot;12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2&quot; />
+            </svg>
+          </button>
+        )
+      })}
+    </div>
+  )
+},
+
+export default StarRating
+

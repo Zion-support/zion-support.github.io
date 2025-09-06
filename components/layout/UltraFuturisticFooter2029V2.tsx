@@ -546,6 +546,55 @@ const quickLinks = [
 const quick_links = [;
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
+
+const _serviceCategories = [
+  {_title: 'AI & Consciousness', _icon: Brain, _color: 'from-violet-600 via-purple-600 to-indigo-600', _services: [
+      { name: 'AI Consciousness Evolution', _href: '/services/ai-consciousness-evolution-platform'},
+      {_name: 'AI Emotional Intelligence', _href: '/services/ai-emotional-intelligence-platform'},
+      {_name: 'AI Creativity Orchestrator', _href: '/services/ai-creativity-orchestrator'},
+      {_name: 'AI Autonomous Business Manager', _href: '/services/ai-autonomous-business-manager'}
+    ]
+  },
+  {_title: 'Quantum Technology', _icon: Globe, _color: 'from-indigo-600 via-blue-600 to-cyan-600', _services: [
+      { name: 'Quantum Internet Security', _href: '/services/quantum-internet-security-gateway'},
+      {_name: 'Biotech DNA Computing', _href: '/services/biotech-dna-computing-platform'},
+      {_name: 'Quantum Financial Trading', _href: '/services/quantum-financial-trading-platform'},
+      {_name: 'Quantum Creativity Studio', _href: '/services/quantum-creativity-studio'}
+    ]
+  },
+  {_title: 'Space & Metaverse', _icon: Rocket, _color: 'from-teal-600 via-emerald-600 to-green-600', _services: [
+      { name: 'Space Mining Automation', _href: '/services/space-mining-automation-platform'},
+      {_name: 'Metaverse Digital Reality', _href: '/services/metaverse-digital-reality-platform'},
+      {_name: 'AI Predictive Health', _href: '/services/ai-predictive-health-analytics'},
+      {_name: 'Virtual Event Holograms', _href: '/services/virtual-event-hologram-platform'}
+    ]
+  },
+  {_title: 'Enterprise IT', _icon: Cpu, _color: 'from-blue-600 via-cyan-600 to-teal-600', _services: [
+      { name: 'AI Business Intelligence', _href: '/services/ai-business-intelligence-suite'},
+      {_name: 'Smart Supply Chain', _href: '/services/smart-supply-chain-optimization'},
+      {_name: 'Intelligent HR Management', _href: '/services/intelligent-hr-management-system'},
+      {_name: 'Smart Financial Management', _href: '/services/smart-financial-management-platform'}
+    ]
+  }
+],
+
+const mainNavigation = [
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe },
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu },
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
+  { name: 'Micro SAAS', href: '/micro-saas', icon: Target },
+  { name: 'Innovations', href: '/innovations', icon: Sparkles },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Contact', href: '/contact', icon: MessageCircle }
+],
+
+const quickLinks = [
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+
   { name: 'Blog', href: '/blog', icon: BookOpen },
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
@@ -797,7 +846,7 @@ function UltraFuturisticFooter2029V2() {
               </div>
             </motion.div>
           </div>
-              transition={{ duration: 0 && 0.6 }}
+transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
               <Link href='/' className='flex items-center space-x-3 mb-6 group'>;
                 <div className='relative'>;
@@ -1307,4 +1356,19 @@ function UltraFuturisticFooter2029V2() {
 }
       </motion.div>;
     </footer>);
+              <input
+                type=&quot;email&quot;
+                placeholder=&quot;Enter your email&quot;
+                className=&quot;flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50&quot;
+              />
+              <button className=&quot;px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105&quot;>
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </footer>
+  )
+
 }

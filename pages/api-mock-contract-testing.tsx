@@ -137,12 +137,36 @@ function ApiMockContractTestingPage() {
                 <ul className="space-y-2 text-gray-300 text-sm">
                   {t.items.map((i) => (
                     <li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
+
+  return (_<Layout>
+      <Head>
+        <title>API Mock & Contract Testing | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/api-mock-contract-testing&quot; />
+      </Head>
+
+      <div className=&quot;min-h-screen py-20 px-4 sm:px-6 lg:px-8&quot;>
+        <ServiceAds heading=&quot;API Quality Fast-Track&quot; subheading=&quot;Mock, validate, and ship with confidence.&quot; items={adItems} />
+
+        <div className=&quot;max-w-5xl mx-auto mt-8&quot;>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+            {tiers.map((t) => (
+              <div key={t.name} className=&quot;bg-black/30 border border-gray-700/50 rounded-2xl p-6&quot;>
+                <div className=&quot;flex items-center gap-2 mb-2&quot;>
+                  <ShieldCheck className=&quot;w-5 h-5 text-cyan-400&quot; />
+                  <h3 className=&quot;text-white text-xl font-bold&quot;>{t.name}</h3>
+                </div>
+                <div className=&quot;text-cyan-400 font-semibold mb-4&quot;>{t.price}</div>
+                <ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
+                  {t.items.map((i) => (
+                    <li key={i} className=&quot;flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400&quot;><Check /> <span>{i}</span></li>
+
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-          <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
+<div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
               <div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
@@ -155,7 +179,7 @@ function ApiMockContractTestingPage() {
         </div>
       </div>
     </Layout>
-          </div>;
+</div>;
           <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>;
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>;
               <div className='flex items-center justify-center gap-2 text-cyan-400 w-4 h-4'>;

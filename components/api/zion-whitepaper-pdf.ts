@@ -145,4 +145,30 @@ function handler() {
   doc.font_size (10).fill_color ('#444444').text ('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 ;
   doc.end ();
+
+  const doc = new (PDFDocument as any)({ autoFirstPage: false })
+  doc.info.Title = `Zion Protocol Whitepaper (${edition})`,
+  doc.info.Author = 'Zion Protocol',
+
+  doc.pipe(res),
+
+  // Cover page
+  doc.addPage(),
+  doc.fontSize(26).fillColor('#000000').text('Zion Protocol Whitepaper', { align: 'left' }),
+  doc.moveDown(),
+  doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`),
+  doc.moveDown(),
+  doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):'),
+  doc.moveDown(0.5),
+  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 }),
+
+  const sections = getWhitepaperSections(edition as any)
+  sections.forEach((s) => writeSection(doc, s.title, s.contentMd)),
+
+  // End
+  doc.addPage(),
+  doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),
+
+  doc.end()
+
 }

@@ -14,3 +14,4 @@ function AIHealthcareDiagnosticsPage() {
       </div>;
     </div>);
 }
+

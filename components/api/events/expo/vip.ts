@@ -43,4 +43,5 @@ function handler() {
   $2
 }
   res.status (200).json ({ allowed: allowlist.has (address) });
+
 }

@@ -25,4 +25,7 @@ return (
     industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
     canonical="https: //ziontechgroup.com / healthcare - ai - solutions";
   />);
+		/>
+	)
+
 }

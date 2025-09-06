@@ -27,6 +27,11 @@ export default function WebsitePerformanceMonitorPage() {;
   const features = [
     {
       icon: <Monitor className="w-8 h-8 text-white" />,
+
+  const _features = [
+    {
+      icon: <Monitor className=&quot;w-8 h-8 text-white&quot; />,
+
       title: 'Real-Time Monitoring',
       description: '24/7 monitoring of your website performance with instant alerts and notifications.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
@@ -167,7 +172,7 @@ function WebsitePerformanceMonitorPage() {
       name: 'Uptime Monitoring',
       description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.',
       icon: '🔄',
-      color: 'text - purple - 400';
+color: 'text - purple - 400';
     }
     {
       name: 'Mobile Performance',
@@ -179,13 +184,13 @@ function WebsitePerformanceMonitorPage() {
       name: 'SEO Impact',
       description: 'Performance metrics that directly affect your search engine rankings and visibility.',
       icon: '🔍',
-      color: 'text - cyan - 400';
+color: 'text - cyan - 400';
     }
     {
       name: 'User Experience',
       description: 'Real user experience metrics and conversion impact analysis.',
       icon: '👥',
-      color: 'text - pink - 400';
+color: 'text - pink - 400';
     }
   ];
 ;
@@ -195,6 +200,7 @@ function WebsitePerformanceMonitorPage() {
       price: '$29',
       period: '/month',
       description: 'Perfect for small websites and blogs',
+
     {
       name: 'Professional',
       price: '$79',
@@ -202,7 +208,7 @@ function WebsitePerformanceMonitorPage() {
       description: 'Ideal for growing businesses and e-commerce sites',
       features: [
         '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
-      ];
+];
       popular: true;
     };
     {
@@ -212,7 +218,7 @@ function WebsitePerformanceMonitorPage() {
       description: 'For large organizations with critical performance requirements',
       features: [
         'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
-      ];
+];
       popular: false;
     }
   ];
@@ -259,7 +265,7 @@ function WebsitePerformanceMonitorPage() {
     <>
       <Head>
         <title>Website Performance Monitor - Zion Tech Group | Real-Time Website Monitoring Tool</title>
-        <meta name="description" content="Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, and AI-powered optimization recommendations." />
+<meta name="description" content="Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, and AI-powered optimization recommendations." />
         <meta property="og:title" content="Website Performance Monitor - Zion Tech Group" />
         <meta property="og:description" content="Real-time website performance monitoring with Core Web Vitals tracking and optimization recommendations." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -345,7 +351,7 @@ function WebsitePerformanceMonitorPage() {
                 </>
               ) : (
                 <>
-                  <Zap className="w-5 h-5 mr-2" />
+<Zap className="w-5 h-5 mr-2" />
                   Analyze Website
                 </>
               )}
@@ -361,7 +367,7 @@ function WebsitePerformanceMonitorPage() {
           </div>
         </div>
       </section>
-      {/* Features Section */}
+{/* Features Section */}
               className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white shadow-2xl'>              href="#pricing";
               variant="outline";
               size="lg";
@@ -870,7 +876,7 @@ function WebsitePerformanceMonitorPage() {
           </div>
         </section>
       )}
-              {/* Metrics Card */}
+{/* Metrics Card */}
               <Card className="border-gradient-blue">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Core Web Vitals</h3>;
                 <div className="space-y-4">;
@@ -1171,7 +1177,7 @@ function WebsitePerformanceMonitorPage() {
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
@@ -1227,7 +1233,7 @@ function WebsitePerformanceMonitorPage() {
                     </li>
                   ))}
                 </ul>
-                <Button
+<Button
                   href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
@@ -1271,7 +1277,7 @@ function WebsitePerformanceMonitorPage() {
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>              href="/contact";
+className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>              href="/contact";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl";

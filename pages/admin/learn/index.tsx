@@ -8,7 +8,7 @@ export default function AdminLearn() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)
-    })
+})
     const data = await resp.json()
     if (data.ok) setMessage('Saved')
     else setMessage('Error: ' + (data.error |'unknown'))
@@ -17,7 +17,7 @@ export default function AdminLearn() {
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
       <div className="grid gap-3 sm:grid-cols-2">
-        <input className="border rounded px-3 py-2" placeholder="Course ID" value={form.id} onChange={(e) => setForm({ ...form, id: e.target.value })} />
+<input className="border rounded px-3 py-2" placeholder="Course ID" value={form.id} onChange={(e) => setForm({ ...form, id: e.target.value })} />
         <input className="border rounded px-3 py-2" placeholder="Title" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} />
         <select className="border rounded px-3 py-2" value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })}>
           <option>AI Development</option>

@@ -12,4 +12,5 @@ export default /**
  */
 function AutomatedFinancialAnalyticsPlatform() {
 return <ServicePage {...props} />;
+
 }

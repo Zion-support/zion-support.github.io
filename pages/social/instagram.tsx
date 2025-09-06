@@ -42,7 +42,8 @@ export default function InstagramRedirect() {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //instagram.com/ziontechgroup')
 		}
-	}, []);
+}, []);
+
 	return (
 		<>
 			<Head>
@@ -53,7 +54,7 @@ export default function InstagramRedirect() {
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
 				<a href="https: //instagram.com/ziontechgroup" className="text-cyan-400 underline">
-					Continue to Instagram
+Continue to Instagram
 				</a>
 			</div>
 		</>
@@ -77,3 +78,10 @@ export default function InstagramRedirect() {
       </div>;
     </>);
 ;
+					Continue to Instagram
+				</Link>
+			</div>
+		</>
+	)
+}
+

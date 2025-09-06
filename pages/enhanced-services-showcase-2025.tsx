@@ -35,21 +35,21 @@ export default function EnhancedServicesShowcase2025() {
     { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },
     { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },
     { id: 'security', name: 'Cybersecurity', icon: '🔒', count: cybersecurityCount }
-  ];
+];
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $2K/month', range: 'Under $2K' },
     { id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },
     { id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
-  ];
+];
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' },
     { id: 'price-low', name: 'Price Low to High' },
     { id: 'price-high', name: 'Price High to Low' },
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customer Count' }
-  ];
+];
   // Filter and sort services
   const filteredServices = React.useMemo(() => {
     const parsePriceToNumber = (price: string | number): number => {
@@ -170,13 +170,20 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || 
+      const matchesCategory = selectedCategory === 'all' ||
+
+    let _filtered = allServices.filter(service => {_const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+      
+      const _matchesCategory = selectedCategory === 'all' || 
+
                              (selectedCategory === 'ai' && service.category.includes('AI')) ||
                              (selectedCategory === 'quantum' && service.category.includes('Quantum')) ||
                              (selectedCategory === 'blockchain' && service.category.includes('Blockchain')) ||
                              (selectedCategory === 'iot' && service.category.includes('IoT')) ||
                              (selectedCategory === 'space' && service.category.includes('Space')) ||
-                             (selectedCategory === 'security' && (service.category.includes('Security') || service.category.includes('Cybersecurity')));
+(selectedCategory === 'security' && (service.category.includes('Security') || service.category.includes('Cybersecurity')));
       const matchesPrice = selectedPriceRange === 'all' || 
                           (selectedPriceRange === 'low' && parsePriceToNumber(service.price) < 2000) ||
                           (selectedPriceRange === 'medium' && parsePriceToNumber(service.price) >= 2000 && parsePriceToNumber(service.price) < 8000) ||
@@ -351,11 +358,33 @@ if ( {) {
     visible: {
       opacity: 1
       y: 0
+    }
+  },
+
+    return filtered
+  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]),
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  },
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+
       transition: {
         duration: 0.5
       }
     }
-  const containerVariants = {;
+const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -500,7 +529,7 @@ if ( {) {
             </motion.div>
           </div>
         </section>
-                  </div>;
+</div>;
                   <div className='text-gray-400'>Specialized</div>                </div>;
               </div>;
             </motion && motion.div>;
@@ -533,7 +562,7 @@ if ( {) {
                       {category.name} ({category.count})
                     </option>
                   ))}
-                </select>;
+</select>;
           <meta;
             name='description';
             content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting - edge emerging technologies. Contact: +1 302 464 0950";
@@ -646,7 +675,7 @@ if ( {) {
                       {range.name}
                     </option>
                   ))}
-                </select>;
+</select>;
                 {/* Sort Options */}
                 <select
                   value={sortBy}
@@ -656,7 +685,7 @@ if ( {) {
                       {option.name}
                     </option>
                   ))}
-                  on_change={e => setSelectedPriceRange (e.target.value)}
+on_change={e => setSelectedPriceRange (e.target.value)}
                   className='px - 4 py - 3 bg - gray - 700 / 50 border border - gray - 600 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
                 >;
                   {price_ranges.map (range => (                    <option key={range.id} value={range.id}>;
@@ -727,7 +756,7 @@ if ( {) {
                         </div>
                       )}
                     </div>
-                    {/* Service Title and Description */}
+{/* Service Title and Description */}
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                       {service.name}
                     </h3>
@@ -842,7 +871,7 @@ if ( {) {
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
                     </div>
-                        className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500'>                        Contact Us;
+className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500'>                        Contact Us;
                       </a>;
                     </div>;
                     {/* Contact Information */}
@@ -1027,13 +1056,24 @@ if ( {) {
                   <span className="relative">View Pricing</span>
                   <DollarSign className="ml-2 w-6 h-6" />
                 </a>
+                <a 
+                  href=&quot;/contact&quot; className=&quot;inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline&quot;>
+                  <span className=&quot;relative&quot;>Start Your Transformation</span>
+                  <Rocket className=&quot;ml-2 w-6 h-6&quot; />
+                </Link>
+                <a 
+                  href=&quot;/pricing&quot; className=&quot;inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline&quot;>
+                  <span className=&quot;relative&quot;>View Pricing</span>
+                  <DollarSign className=&quot;ml-2 w-6 h-6&quot; />
+                </Link>
+
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </EnhancedFuturisticBackground>
-                  className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline'>;
+className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline'>;
                   <span className='relative'>View Pricing</span>;
                   <DollarSign className='ml-2 w-6 h-6' />                </a>;
               </div>;

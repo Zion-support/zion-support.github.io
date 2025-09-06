@@ -6,6 +6,12 @@ const FutureOfWorkAndAutomation: NextPage = () => {
         <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
         <meta name="description" content="FutureOfWorkAndAutomation page" />
       </Head>
+    <div>
+      <Head>
+        <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;FutureOfWorkAndAutomation page&quot; />
+      </Head>
+
       <main>
         <h1>FutureOfWorkAndAutomation</h1>
         <p>This page is under construction.</p>
@@ -31,3 +37,6 @@ import Head from 'next / head';
 ;
 export default FutureOfWorkAndAutomation;
 ;
+
+export default FutureOfWorkAndAutomation
+

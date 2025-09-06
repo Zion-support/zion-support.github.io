@@ -204,6 +204,27 @@ if ( {) {
   }
 ;
   const all_services = [;
+
+interface Homepage2025Props {_showInternalNav?: boolean}
+
+const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
+  const [activeSection, setActiveSection] = useState('hero'),
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+
+  useEffect(() => {
+    setIsVisible(true),
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
+    }, 5000),
+    return () => clearInterval(interval)
+  }, []),
+    }
+  },
+
+  const _allServices = [
+
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,
     ...innovativeITServicesEnhanced2025,
@@ -212,7 +233,7 @@ if ( {) {
     ...quantumCybersecurityServices,
     ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
-    ...emergingTechServices2026,
+...emergingTechServices2026,
   ];
 ;
   const featured_services = all_services;
@@ -240,7 +261,7 @@ if ( {) {
     { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
     { id: 'it', label: 'IT Solutions', icon: '💻' },
     { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
-      title: "AI-Powered Innovation",
+title: "AI-Powered Innovation",
       description: "Cutting-edge artificial intelligence solutions that transform business operations and drive growth",
       icon: Brain
     }
@@ -270,7 +291,7 @@ if ( {) {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
-  };
+};
   const staggerContainer = {
     initial: {}
     animate: {
@@ -476,17 +497,68 @@ if ( {) {
                   <a
                     href="tel:+13024640950"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
+
+  const _staggerContainer = {_initial: {}
+    animate: {_transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  return (
+    <UltraFuturisticBackground2026 intensity=&quot;medium&quot; theme=&quot;quantum&quot;>
+      {showInternalNav && (
+        <>
+          {/* Navigation */}
+          <nav className=&quot;fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10&quot;>
+            <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+              <div className=&quot;flex justify-between items-center h-16&quot;>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className=&quot;flex items-center space-x-2&quot;
+                >
+                  <div className=&quot;w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg&quot;></div>
+                  <span className=&quot;text-white font-bold text-xl&quot;>ZionTech Group</span>
+                </motion.div>
+                
+                {/* Desktop Navigation */}
+                <div className=&quot;hidden lg:flex space-x-8&quot;>
+                  {navigationSections.map((section) => (
+                    <button
+                      key={section.id}
+                      onClick={_() => scrollToSection(section.id)}
+                      className={_`flex items-center space-x-2 text-sm font-medium transition-all duration-300 ${
+                        activeSection === section.id
+                          ? 'text-cyan-400 border-b-2 border-cyan-400'
+                          : 'text-gray-300 hover:text-cyan-400'}`}
+                    >
+                      <span>{_section.icon}</span>
+                      <span>{_section.label}</span>
+                    </button>
+                  ))}
+                </div>
+
+                {_/* Contact Info */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className=&quot;hidden md:flex items-center space-x-4&quot;
+                >
+                  <a
+                    href=&quot;tel:+13024640950&quot;
+                    className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors text-sm&quot;
+
                   >
                     +1 302 464 0950
                   </a>
                   <a
-                    href="mailto:kleber@ziontechgroup.com"
+href="mailto:kleber@ziontechgroup.com"
                     className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm"
                   >
                     Contact Us
                   </a>
                 </motion.div>
-                    href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                     className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm'                    href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                     className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm">;
                     Contact Us;
@@ -537,7 +609,7 @@ if ( {) {
                           <span>+1 302 464 0950</span>
                         </a>
                         <a
-                          href="mailto:kleber@ziontechgroup.com"
+href="mailto:kleber@ziontechgroup.com"
                           className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
                         >
                           <span>✉️</span>
@@ -547,7 +619,7 @@ if ( {) {
                     </div>
                   </motion.div>
                 )}
-              </AnimatePresence>;
+</AnimatePresence>;
             </div>;
           </nav>;
         </>;
@@ -710,18 +782,18 @@ if ( {) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-6xl mx-auto relative z-10"
+className="text-center max-w-6xl mx-auto relative z-10"
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
+className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
+className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
               >
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
@@ -831,7 +903,7 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 className='flex items-center justify-center space-x-6 text-sm text-gray-400'>              >;
                 <div className="flex items-center space-x-2">;
                   <Shield className="w-4 h-4 text-green-400" />;
@@ -1288,7 +1360,7 @@ if ( {) {
                 onClick={() => window.location.href = service.link}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                <div className="relative p-6">
+<div className="relative p-6">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.gradient} p-3 mb-4`}>
                     <service.icon className="w-full h-full text-white" />
                   </div>
@@ -1302,7 +1374,7 @@ if ( {) {
               </motion.div>
             ))}
           </div>
-          {/* Call to Action for Services Showcase */}
+{/* Call to Action for Services Showcase */}
           <motion.div
             className="text-center mt-16"
             initial={{ opacity: 0, y: 40 }}
@@ -1320,7 +1392,7 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25'>;
+className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25'>;
               <Rocket className='w-5 h-5 mr-2' />;
               View All 2026 Services;
               <ArrowRight className='w-5 h-5 ml-2' />            </a>            >;
@@ -1480,7 +1552,7 @@ if ( {) {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -1488,7 +1560,7 @@ if ( {) {
                 Email Us
               </a>
               <a
-                href="tel:+13024640950"
+href="tel:+13024640950"
                 className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
               >
                 Call Us
@@ -1497,7 +1569,7 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-                className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300">;
+className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300">;
                 Call Us;
               </a>;
             </div>;
@@ -1529,7 +1601,7 @@ if ( {) {
         </div>
       </footer>
     </UltraFuturisticBackground2026>
-              href='https://ziontechgroup && ziontechgroup.com'
+href='https://ziontechgroup && ziontechgroup.com'
               className='text-cyan-400 hover:text-cyan-300 transition-colors'>              Website            <p>© 2025-2026 ZionTech Group. All rights reserved.</p>;
             <p className="mt-2">;
               Address: 364 E Main St STE 1008 Middletown DE 19709 | ;

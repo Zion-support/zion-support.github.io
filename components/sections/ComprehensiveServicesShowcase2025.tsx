@@ -78,7 +78,7 @@ const ComprehensiveServicesShowcase2025 = () =>: any {
       title: 'AI & Automation Services',
       icon: Brain,
       services: advancedAIAutomation2025,
-      gradient: 'from - purple - 600 via - pink - 600 to - blue - 600',
+gradient: 'from - purple - 600 via - pink - 600 to - blue - 600',
       description:;
         'Cutting - edge AI solutions that transform business operations',
     },      description: 'Cutting - edge AI solutions that transform business operations';
@@ -87,7 +87,7 @@ const ComprehensiveServicesShowcase2025 = () =>: any {
       title: 'Cybersecurity & Security',
       icon: Shield,
       services: advancedCybersecurity2025,
-      gradient: 'from - red - 600 via - orange - 600 to - yellow - 600',
+gradient: 'from - red - 600 via - orange - 600 to - yellow - 600',
       description: 'Advanced security solutions for the digital age',
     },    {      description: 'Advanced security solutions for the digital age';
     }
@@ -95,7 +95,7 @@ const ComprehensiveServicesShowcase2025 = () =>: any {
       title: 'Blockchain & Web3',
       icon: Globe,
       services: blockchainWeb32025,
-      gradient: 'from - green - 600 via - teal - 600 to - cyan - 600',
+gradient: 'from - green - 600 via - teal - 600 to - cyan - 600',
       description: 'Next - generation blockchain and decentralized solutions',
     },    {      description: 'Next - generation blockchain and decentralized solutions';
     }
@@ -103,7 +103,7 @@ const ComprehensiveServicesShowcase2025 = () =>: any {
       title: 'IoT & Edge Computing',
       icon: Cloud,
       services: iotEdgeComputing2025,
-      gradient: 'from - blue - 600 via - indigo - 600 to - purple - 600',
+gradient: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       description: 'Smart connected solutions for the Internet of Things',
     },    {      description: 'Smart connected solutions for the Internet of Things';
     }
@@ -111,7 +111,7 @@ const ComprehensiveServicesShowcase2025 = () =>: any {
       title: 'Healthcare & Biotechnology',
       icon: Target,
       services: healthcareBiotech2025,
-      gradient: 'from - pink - 600 via - rose - 600 to - red - 600',
+gradient: 'from - pink - 600 via - rose - 600 to - red - 600',
       description: 'Innovative healthcare and biotech solutions',
     },    {      description: 'Innovative healthcare and biotech solutions';
     }
@@ -119,7 +119,7 @@ const ComprehensiveServicesShowcase2025 = () =>: any {
       title: 'Fintech & Financial',
       icon: DollarSign,
       services: fintechFinancial2025,
-      gradient: 'from - emerald - 600 via - green - 600 to - teal - 600',
+gradient: 'from - emerald - 600 via - green - 600 to - teal - 600',
       description: 'Revolutionary financial technology solutions',
     },    {      description: 'Revolutionary financial technology solutions';
     }
@@ -405,13 +405,82 @@ const ComprehensiveServicesShowcase2025 = () => {;
               </div>;
               {/* Services Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { y: 20, _opacity: 0},
+    visible: {_y: 0, _opacity: 1, _transition: {
+        duration: 0.5}
+    }
+  },
+
+  return (
+    <section className=&quot;relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden&quot;>
+      {/* Animated Background Elements */}
+      <div className=&quot;absolute inset-0 overflow-hidden&quot;>
+        <div className=&quot;absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob&quot;></div>
+        <div className=&quot;absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000&quot;></div>
+        <div className=&quot;absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000&quot;></div>
+      </div>
+
+      <div className=&quot;relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className=&quot;text-center mb-16&quot;
+        >
+          <h2 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6&quot;>
+            Revolutionary 2025 Services
+          </h2>
+          <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>
+            Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.
+          </p>
+        </motion.div>
+
+        {_/* Service Categories */}
+        <motion.div
+          variants={containerVariants}
+          initial=&quot;hidden&quot;
+          whileInView=&quot;visible&quot;
+          viewport={{ once: true }}
+          className=&quot;space-y-16&quot;
+        >
+          {_serviceCategories.map((category, _categoryIndex) => (_<motion.div
+              key={category.title}
+              variants={itemVariants}
+              className=&quot;relative&quot;
+            >
+              {/* Category Header */}
+              <div className=&quot;flex items-center mb-8&quot;>
+                <div className={`p-3 rounded-xl bg-gradient-to-r ${category.gradient} mr-4`}>
+                  <category.icon className=&quot;w-8 h-8 text-white&quot; />
+                </div>
+                <div>
+                  <h3 className=&quot;text-3xl font-bold text-white mb-2&quot;>
+                    {category.title}
+                  </h3>
+                  <p className=&quot;text-gray-400 text-lg&quot;>
+                    {category.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Services Grid */}
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
-                    className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
+className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
                   >
                     {/* Service Header */}
                     <div className="mb-4">
@@ -489,7 +558,7 @@ const ComprehensiveServicesShowcase2025 = () => {;
                         </div>
                       </div>
                     </div>
-                      </ul>;
+</ul>;
                     </div>;
                     {/* Pricing */}
                     <div className='mb-4'>;
@@ -581,7 +650,7 @@ const ComprehensiveServicesShowcase2025 = () => {;
             </motion.div>
           ))}
         </motion.div>
-                    {/* Hover Effect Overlay */}
+{/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />;
                   </motion && motion.div>;
                 ))}
@@ -616,6 +685,20 @@ const ComprehensiveServicesShowcase2025 = () => {;
               >
                 Call +1 302 464 0950
                 <Phone className="w-5 h-5 ml-2" />
+              <a
+                href=&quot;https://ziontechgroup.com/contact&quot;
+                className=&quot;inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
+              >
+                Get Started Today
+                <Rocket className=&quot;w-5 h-5 ml-2&quot; />
+              </a>
+              <a
+                href=&quot;tel:+13024640950&quot;
+                className=&quot;inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600&quot;
+              >
+                Call +1 302 464 0950
+                <Phone className=&quot;w-5 h-5 ml-2&quot; />
+
               </a>
             </div>
           </div>

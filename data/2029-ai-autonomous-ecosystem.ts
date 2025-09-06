@@ -1,5 +1,5 @@
 export interface AiAutonomousEcosystem2029 {
-    address: string;
+address: string;
   }
 ;
 export const aiAutonomousEcosystemServices2029: AiAutonomousEcosystem2029[] = [;

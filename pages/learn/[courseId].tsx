@@ -54,11 +54,34 @@ export default function CourseView() {;
       ? (progress.completedLessons || []).length
       : (progress.completedLessons || []).length + 1;
     const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+    async function load() {
+      const [courseResp, _progResp] = await Promise.all([
+        fetch(`/api/learn/courses/${courseId}`),
+        fetch(`/api/learn/progress?userId=demo-user`)
+      ]),
+      const courseData = await courseResp.json()
+      const progData = await progResp.json()
+      setCourse(courseData.course),
+      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },
+      setProgress(cp),
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null)
+
+    }
+    load()
+  }, [courseId]),
+
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),
+
+  async function markLessonComplete(_lessonId: string) {_const _completedCount = (progress.completedLessons || []).includes(lessonId)
+      ? (progress.completedLessons || []).length
+      : (progress.completedLessons || []).length + 1,
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100)
+
     const resp = await fetch('/api/learn/progress', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent })
-    });
+});
     const data = await resp.json();
     setProgress(data.progress)
   }
@@ -66,7 +89,7 @@ export default function CourseView() {;
     // For demo, simply mark as completed when quiz attempted
     if (currentLessonId) markLessonComplete(currentLessonId)
   }
-  async function onFinalQuizComplete(score: number) {
+async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold || 0;
     const passed = score >= needed;
     setFinalPassed(passed)
@@ -143,6 +166,26 @@ export default function CourseView() {;
           <aside className="lg:col-span-2 border rounded p-3 h-max">
             <div className="font-medium mb-2">Lessons</div>
             <ul className="space-y-2">
+
+  if (!course) return <div>Loading...</div>,
+
+  return (
+    <div className=&quot;grid lg:grid-cols-3 gap-6&quot;>
+      <div className=&quot;lg:col-span-2 space-y-4&quot;>
+        <div>
+          <h1 className=&quot;text-2xl font-semibold&quot;>{course.title}</h1>
+          <div className=&quot;text-gray-500 text-sm&quot;>{course.category} • {course.level}</div>
+          <div className=&quot;mt-3&quot;>
+            <ProgressBar value={progress.percent || 0} />
+            <div className=&quot;text-xs text-gray-500 mt-1&quot;>Progress: {progress.percent || 0}%</div>
+          </div>
+        </div>
+
+        <div className=&quot;grid lg:grid-cols-5 gap-4&quot;>
+          <aside className=&quot;lg:col-span-2 border rounded p-3 h-max&quot;>
+            <div className=&quot;font-medium mb-2&quot;>Lessons</div>
+            <ul className=&quot;space-y-2&quot;>
+
               {course.lessons?.map((l: any) => (
                 <li key={l.id}>
                   <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
@@ -150,7 +193,7 @@ export default function CourseView() {;
                   </button>
                 </li>
               ))}
-            </ul>;
+</ul>;
           </aside>;
           <section className='lg:col-span-3 space-y-4'>;
             {currentLesson ? (;
@@ -405,7 +448,7 @@ if (return <div > Loading...</div>) {
           </section>
         </div>
       </div>
-      <div className="space-y-4">
+<div className="space-y-4">
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>

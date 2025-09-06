@@ -79,3 +79,30 @@ if (state.config.instance_id = instance_id, ) {
   return res.status (405).json ({ error: "Method not allowed" });
 }
 ;
+
+export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_const _state = readState();
+
+  if (req.method === "GET") {
+  }
+
+  if (req.method === &quot;POST&quot;) {
+    const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
+      peers?: Peer[],
+      scope?: SyncScope,
+      instanceId?: string
+    },
+
+    if (scope && !["full", "dao", "marketplace"].includes(scope)) {
+      return res.status(400).json({ error: "Invalid scope" })
+    }
+
+    if (Array.isArray(peers)) {
+      state.config.peers = peers.filter((p) => typeof p.baseUrl === "string" && p.baseUrl.length > 0)
+    }
+    if (typeof optIn === "boolean") state.config.optIn = optIn,
+    if (typeof paused === "boolean") state.config.paused = paused,
+    if (scope) state.config.scope = scope,
+    if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId,
+
+}
+

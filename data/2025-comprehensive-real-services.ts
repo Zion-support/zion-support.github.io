@@ -1,5 +1,5 @@
 export interface ComprehensiveService {
-  trial_days: number;
+trial_days: number;
   setup_time: string;
   competitors: string[];
   roi: string;

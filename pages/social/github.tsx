@@ -42,7 +42,8 @@ export default function GitHubRedirect() {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //github.com/Zion-Holdings')
 		}
-	}, []);
+}, []);
+
 	return (
 		<>
 			<Head>
@@ -53,7 +54,7 @@ export default function GitHubRedirect() {
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
 				<a href="https: //github.com/Zion-Holdings" className="text-cyan-400 underline">
-					Continue to GitHub
+Continue to GitHub
 				</a>
 			</div>
 		</>
@@ -77,3 +78,10 @@ export default function GitHubRedirect() {
       </div>;
     </>);
 ;
+					Continue to GitHub
+				</Link>
+			</div>
+		</>
+	)
+}
+

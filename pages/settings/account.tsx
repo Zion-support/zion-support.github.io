@@ -189,20 +189,26 @@ if (.solana?.is_phantom) {) {
        ens, lens, ceramic, farcaster 
     },
     resume: {},
+    try {
+      const _profile = {
+        user, _preferences: { displayWeb3},
+        did: {_ens, _lens, _ceramic, _farcaster},
+        resume: {},
+
         projects: [],
         reviews: []},
       const res = await fetch('/api/backup/upload', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(profile)}),
-      const data = await res.json();
+const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Backup failed');
       setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage')
     } catch (e: any) {
       setStatus(e?.message || 'Backup failed')
     }
-  };
+};
   const doRestore = async () => {
     setStatus(null);
     try {
@@ -262,7 +268,7 @@ if (.solana?.is_phantom) {) {
     } catch (e: any) {
       setStatus(e?.message || 'Restore failed')
     }
-  };
+};
   const doBackup = async () => {;
     setStatus(null);
     try {;
@@ -525,12 +531,30 @@ if ( {) {
             <label className="inline-flex items-center cursor-pointer">
               <input type="checkbox" checked={displayWeb3} onChange={(e) => saveDisplayPref(e.target.checked)} className="sr-only" />
               <span className="relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner">
+
+  return (_<>
+      <Head>
+        <title>Account Settings — Zion</title>
+      </Head>
+      <div className=&quot;max-w-3xl mx-auto space-y-8&quot;>
+        <section className=&quot;rounded-xl border p-5&quot;>
+          <h1 className=&quot;text-xl font-semibold mb-2&quot;>Account</h1>
+          <p className=&quot;text-sm text-gray-500&quot;>Manage your Web3 identity and backups. Email is optional when using wallets.</p>
+          <div className=&quot;mt-4 flex items-center justify-between&quot;>
+            <div>
+              <div className=&quot;text-sm font-medium&quot;>Display Web3 identity</div>
+              <div className=&quot;text-xs text-gray-500&quot;>Show ENS/Lens name instead of email</div>
+            </div>
+            <label className=&quot;inline-flex items-center cursor-pointer&quot;>
+              <input type=&quot;checkbox&quot; checked={displayWeb3} onChange={(e) => saveDisplayPref(e.target.checked)} className=&quot;sr-only&quot; />
+              <span className=&quot;relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner&quot;>
+
                 <span className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>
               </span>
             </label>
           </div>
         </section>
-        <section className="rounded-xl border p-5">
+<section className="rounded-xl border p-5">
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>
           <div className="grid grid-cols-1 gap-3">
             <input value={ens} onChange={(e) => setEns(e.target.value)} placeholder="ENS (e.g. vitalik.eth)" className="w-full rounded-md border px-3 py-2" />

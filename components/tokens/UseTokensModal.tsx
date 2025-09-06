@@ -35,11 +35,14 @@ export default function UseTokensModal(): any ({;
 }) {;
   const [account, setAccount] = useState<string | null>(null);
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
+
+export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
+
 export default function UseTokensModal({
   isOpen,
   onClose,
   serviceId,
-  defaultType
+defaultType
 }: {
   isOpen: boolean,
   onClose: () => void,
@@ -305,4 +308,9 @@ if (return null) {
   );
 }
     </div>);
+        </div>
+      </div>
+    </div>
+  )
+
 }

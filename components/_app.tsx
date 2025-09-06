@@ -7,3 +7,7 @@ function MyApp() {
   return <Component {...page_props} />;
 }
 export default MyApp;
+}
+
+export default MyApp
+

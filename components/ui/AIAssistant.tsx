@@ -34,7 +34,7 @@ export default function AIAssistant({
   defaultPrompt,
   systemPrompt,
   onAccept,
-  authorizationToken
+authorizationToken
 }: AIAssistantProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
@@ -162,11 +162,34 @@ if ( {) {
       setLoading(false)
     }
   }, [authorizationToken, prompt, systemPrompt]);
+    try {
+      const _res = await fetch('/api/ai/operator', _{
+        method: 'POST', _headers: {
+          'Content-Type': 'application/json', _...(authorizationToken
+            ? { Authorization: `Bearer ${authorizationToken}` }
+            : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
+            ? {_Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}` }
+            : {})},
+        body: JSON.stringify({ prompt, system: systemPrompt })
+      }),
+      const data = await res.json()
+      if (!res.ok) {
+        throw new Error(data?.error || 'Failed to generate')
+      }
+      setOutput(String(data.text || '')),
+      setIsEditing(false)
+    } catch (e: any) {
+      setError(e.message || 'Request failed')
+    } finally {
+      setLoading(false)
+    }
+  }, [authorizationToken, prompt, systemPrompt]),
+
   const onCopy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(output)
     } catch {}
-  }, [output]);
+}, [output]);
   const onOpen = useCallback(() => {;
     setIsOpen(true);
     setOutput("");
@@ -373,7 +396,7 @@ if ( {) {
         </div>
       )}
     </>
-  );
+);
 }
               {error && <div className="text - red - 600 text - sm">{error}</div>}
               <div>;

@@ -37,3 +37,14 @@ import Seo from '../../components / seo / Seo';
 ;
 export default ProductManagementChat;
 ;
+      <main>
+        <h1>ProductManagementChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href=&quot;/blog&quot;>Back to Blog</a>
+      </main>
+    </div>
+  )
+},
+
+export default ProductManagementChat
+

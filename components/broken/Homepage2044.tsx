@@ -117,15 +117,18 @@ const LoadingSkeleton = () => (
     <div className="h-8 bg-gray-700 rounded mb-4"></div>
     <div className="h-4 bg-gray-700 rounded mb-2"></div>
     <div className="h-4 bg-gray-700 rounded w-3/4"></div>
-  </div>
+</div>
 );
+  </div>
+),
+
 interface Service {
   id: string,
   name: string,
   description: string,
   type: string,
   category: string,
-  pricing: {
+pricing: {
     starter: string
     },
     slug: string
@@ -152,7 +155,7 @@ const Homepage2044: React.FC = () => {
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
     )
-  }, [selectedCategory, allRevolutionaryServices]);
+}, [selectedCategory, allRevolutionaryServices]);
   const categories = useMemo(() => [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500' },
     { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-500 to-blue-500' },
@@ -160,7 +163,7 @@ const Homepage2044: React.FC = () => {
     { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500' },
     { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-500 to-purple-500' },
     { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-500 to-teal-500' }
-  ], []);
+], []);
   const features = useMemo(() => [
     { icon: Brain, title: "AI Consciousness Evolution 2044", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-2044", color: "from-purple-500 to-pink-500" },
     { icon: Atom, title: "Quantum Neural Networks 2044", description: "Quantum-powered AI with consciousness integration", href: "/quantum-neural-network-platform-2044", color: "from-blue-500 to-cyan-500" },
@@ -191,18 +194,40 @@ const Homepage2044: React.FC = () => {
   }, []);
   const handleServiceClick = useCallback((service: any) => {
     // Add analytics tracking
+
+  const _handleGetStarted = useCallback__(() => {_// Add analytics tracking
+
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('eventservice_click', { service_name: service.name })
     }
     window.location.href = service.slug
-  }, []);
+}, []);
   const handleCategoryChange = useCallback((categoryId: string) => {
     setSelectedCategory(categoryId);
+  }, []),
+
+  const _handleWatchDemo = useCallback__(() => {_// Add analytics tracking
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('eventcta_click', { cta_type: 'explore_services' })
+    }
+    window.location.href = '/services'
+  }, []),
+
+  const _handleServiceClick = useCallback(_(service: unknown) => {_// Add analytics tracking
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('eventservice_click', { service_name: service.name })
+    }
+    window.location.href = service.slug
+  }, []),
+
+  const handleCategoryChange = useCallback((categoryId: string) => {
+    setSelectedCategory(categoryId),
+
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('eventcategory_filter', { category: categoryId })
     }
-  }, []);
+}, []);
   useEffect(() => {
     // Performance optimization: Use requestIdleCallback for non-critical operations
     const initializePage = () => {
@@ -214,7 +239,7 @@ const Homepage2044: React.FC = () => {
     } else {
       setTimeout(initializePage, 100)
     }
-    // Auto-rotate featured services with better performance
+// Auto-rotate featured services with better performance
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)
     }, 6000);
@@ -225,7 +250,7 @@ const Homepage2044: React.FC = () => {
         requestAnimationFrame(() => {
           setMousePosition({ x: e.clientX, y: e.clientY }),
           ticking = false
-        });
+});
         ticking = true
       }
     };
@@ -271,7 +296,7 @@ const Homepage2044: React.FC = () => {
           transition={{ duration: 0.1 }}
         />
       </div>
-      {/* Main Content */}
+{/* Main Content */}
       <main className="relative z-10">
         {/* Hero Section */}
         <section 
@@ -299,7 +324,7 @@ const Homepage2044: React.FC = () => {
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
-                    ease: "easeInOut"
+ease: "easeInOut"
                   }}
                   style={{
                     left: `${Math.random() * 100}%`,
@@ -324,7 +349,7 @@ const Homepage2044: React.FC = () => {
               transition={{
                 duration: 10,
                 repeat: Infinity as any,
-                ease: "linear"
+ease: "linear"
               }}
             />
             <motion.div
@@ -335,7 +360,7 @@ const Homepage2044: React.FC = () => {
               transition={{
                 duration: 8,
                 repeat: Infinity as any,
-                ease: "easeInOut"
+ease: "easeInOut"
               }}
             />
           </div>
@@ -343,7 +368,7 @@ const Homepage2044: React.FC = () => {
       </Layout>
     )
   }
-  return(<>
+return(<>
       <Head>
         <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title>
         <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." />
@@ -383,7 +408,7 @@ const Homepage2044: React.FC = () => {
             })
           }}
         />
-        {/* Preload critical resources */}
+{/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
@@ -452,7 +477,7 @@ const Homepage2044: React.FC = () => {
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                   transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
+<div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
                     <stat.icon className="w-8 h-8 text-cyan-400" />
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
@@ -467,7 +492,7 @@ const Homepage2044: React.FC = () => {
                 </motion.div>
               ))}
             </motion.div>
-            {/* Featured Service Showcase */}
+{/* Featured Service Showcase */}
             <motion.div
               className="max-w-6xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
@@ -494,12 +519,12 @@ const Homepage2044: React.FC = () => {
                         : 'bg-gray-900/50 text-gray-300 border-gray-600 hover:border-gray-500 hover:text-white'
                     }`}
                   >
-                    <category.icon className="w-4 h-4" />
+<category.icon className="w-4 h-4" />
                     {category.name}
                   </button>
                 ))}
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {getFilteredServices().slice(0, 6).map((service, index) => (
                   <motion.div
                     key={service.id}
@@ -532,7 +557,7 @@ const Homepage2044: React.FC = () => {
               </div>
             </div>
           </section>
-        {/* Enhanced Features Section */}
+{/* Enhanced Features Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-transparent to-gray-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -542,7 +567,7 @@ const Homepage2044: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl font-bold text-white mb-6">
+<h2 className="text-5xl font-bold text-white mb-6">
                 Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -560,7 +585,7 @@ const Homepage2044: React.FC = () => {
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
                 >
-                  <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
+<div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
                     <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-5 rounded-3xl group-hover:opacity-10 transition-opacity duration-300`}></div>
                     <div className="relative z-10">
                       <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
@@ -586,7 +611,7 @@ const Homepage2044: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Call to Action Section */}
+{/* Call to Action Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div

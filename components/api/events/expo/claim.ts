@@ -73,4 +73,5 @@ function handler() {
     signature.slice (0, 18) + "…",
   );
   return res.status (200).json ({ ok: true });
+
 }

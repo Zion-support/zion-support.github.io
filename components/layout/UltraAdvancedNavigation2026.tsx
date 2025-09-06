@@ -302,6 +302,52 @@ const service_categories = [;
     color: 'from - emerald - 600 to - green - 600',
     description: 'Fintech solutions',
 ];
+
+const _serviceCategories = [
+  {_title: 'AI & Machine Learning 2026', _icon: Brain, _color: 'from-purple-600 to-pink-600', _description: 'Next-generation AI solutions', _services: [
+      { name: 'AI Consciousness Simulation', _href: '/ai-consciousness-simulation-platform', _description: 'Simulate human consciousness', _price: '$4, _999/month'},
+      {_name: 'Autonomous AI Agents', _href: '/autonomous-ai-agents-platform-2026', _description: 'Create autonomous AI agents', _price: '$199/month'},
+      {_name: 'AI Healthcare Companion', _href: '/ai-healthcare-companion-2026', _description: 'Revolutionary healthcare AI', _price: '$399/month'},
+      {_name: 'AI Content Creation Revolution', _href: '/ai-content-creation-revolution', _description: 'Unlimited AI content generation', _price: '$599/month'}
+    ]
+  },
+  {_title: 'Quantum Computing & Security', _icon: Atom, _color: 'from-blue-600 to-cyan-600', _description: 'Quantum-powered solutions', _services: [
+      { name: 'Quantum Neural Interface', _href: '/quantum-neural-interface-platform', _description: 'Brain-computer interface', _price: '$8, _999/month'},
+      {_name: 'Quantum Internet Security', _href: '/quantum-internet-security-gateway', _description: 'Unbreakable encryption', _price: '$3, _999/month'},
+      {_name: 'Quantum Financial Trading', _href: '/quantum-financial-trading-algorithm-platform', _description: 'Quantum trading algorithms', _price: '$12, _999/month'},
+      {_name: 'Quantum Internet Infrastructure', _href: '/quantum-internet-infrastructure-platform', _description: 'Build the quantum internet', _price: '$15, _999/month'}
+    ]
+  },
+  {_title: 'Emerging Technologies 2026', _icon: Sparkles, _color: 'from-green-600 to-emerald-600', _description: 'Cutting-edge innovations', _services: [
+      { name: 'Holographic Metaverse', _href: '/holographic-metaverse-development-platform', _description: '3D holographic experiences', _price: '$2, _999/month'},
+      {_name: 'Space Debris Management', _href: '/space-debris-management-ai-platform', _description: 'AI space safety', _price: '$5, _999/month'},
+      {_name: 'AI Climate Prediction', _href: '/ai-climate-prediction-platform', _description: 'Climate change prediction', _price: '$1, _999/month'},
+      {_name: 'Autonomous Manufacturing', _href: '/autonomous-manufacturing-ai-platform', _description: 'Self-optimizing manufacturing', _price: '$3, _499/month'}
+    ]
+  },
+  {_title: 'Enterprise IT Solutions 2026', _icon: Shield, _color: 'from-red-600 to-orange-600', _description: 'Enterprise-grade solutions', _services: [
+      { name: 'Zero Trust Architecture', _href: '/zero-trust-network-architecture-2026', _description: 'Next-gen security', _price: 'Custom pricing'},
+      {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration-2026', _description: 'Intelligent edge computing', _price: 'Custom pricing'},
+      {_name: '5G Private Networks', _href: '/5g-private-network-solutions-2026', _description: 'Enterprise 5G', _price: 'Custom pricing'},
+      {_name: 'Blockchain Infrastructure', _href: '/blockchain-infrastructure-platform-2026', _description: 'Enterprise blockchain', _price: 'Custom pricing'}
+    ]
+  },
+  {_title: 'Healthcare & Life Sciences', _icon: Microscope, _color: 'from-teal-600 to-cyan-600', _description: 'Healthcare innovation', _services: [
+      { name: 'AI Drug Discovery', _href: '/ai-drug-discovery-platform', _description: 'Accelerate drug development', _price: '$4, _999/month'},
+      {_name: 'Autonomous Healthcare AI', _href: '/autonomous-healthcare-ai-platform', _description: 'Self-learning healthcare', _price: '$2, _499/month'},
+      {_name: 'Quantum Machine Learning', _href: '/quantum-machine-learning-platform', _description: 'Quantum AI research', _price: '$6, _999/month'},
+      {_name: 'AI Legal Research', _href: '/ai-legal-research-platform', _description: 'Revolutionary legal tech', _price: '$899/month'}
+    ]
+  },
+  {_title: 'Financial Technology', _icon: DollarSign, _color: 'from-emerald-600 to-green-600', _description: 'Fintech solutions', _services: [
+      { name: 'Autonomous Supply Chain', _href: '/autonomous-supply-chain-optimization-ai', _description: 'AI supply chain optimization', _price: '$899/month'},
+      {_name: 'Autonomous Marketing AI', _href: '/autonomous-marketing-ai-platform', _description: 'Self-optimizing marketing', _price: '$1, _499/month'},
+      {_name: 'AI Cybersecurity', _href: '/ai-cybersecurity-platform', _description: 'Next-gen security', _price: '$2, _999/month'},
+      {_name: 'AI Business Intelligence', _href: '/autonomous-business-intelligence-network', _description: 'Self-evolving BI', _price: '$1, _299/month'}
+    ]
+  }
+],
+
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'About Us', href: '/about', icon: Users },
@@ -798,7 +844,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
           : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
@@ -993,7 +1039,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   </AnimatePresence>
                 </div>
               ))}
-                          <Link
+<Link
                             href={item && item.href}
                             className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}                          ;
                           <Link
@@ -1129,7 +1175,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
           </div>
         </div>
       </nav>
-            {/* Contact Info - Desktop */}
+{/* Contact Info - Desktop */}
             <div className='hidden lg:flex items - center space - x-4'>;
               <div className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200'>;
                 <Phone className='w - 4 h - 4' />;
@@ -1170,7 +1216,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
+transition={{ duration: 0.3, ease: 'easeOut' }}
               className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -1214,7 +1260,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
+className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
@@ -1223,7 +1269,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     </div>
                   </div>
                 ))}
-                    {/* Mobile Sub-items */}
+{/* Mobile Sub-items */}
                     <div className='mt-3 ml-11 space-y-2'>;
                       {item && item.subItems.slice(0, 3).map(subItem => (;
                         <Link
@@ -1467,7 +1513,7 @@ export default UltraAdvancedNavigation2026;    </>;
           </motion.div>
         )}
       </AnimatePresence>
-      {/* Spacer for fixed navigation */}
+{/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
   );

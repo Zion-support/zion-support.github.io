@@ -24,4 +24,12 @@ function GovernancePulsePage() {
         </ul>;
       </div>;
     </EnhancedLayout>);
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  )
+
 }

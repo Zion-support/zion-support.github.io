@@ -108,7 +108,7 @@ export default function AIServices() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+};
   const categories = [
     { id: 'all', name: 'All AI Services', count: 100 },
     { id: 'autonomous', name: 'Autonomous Agents', count: 25 },
@@ -117,7 +117,7 @@ export default function AIServices() {
     { id: 'predictive', name: 'Predictive Analytics', count: 15 },
     { id: 'automation', name: 'AI Automation', count: 15 },
     { id: 'specialized', name: 'Specialized AI', count: 10 }
-  ];
+];
   const services = [
     {
       id: 1,
@@ -128,17 +128,17 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Process AutomationCustomer ServiceData AnalysisContent Generation']
-    };
+};
     {
       id: 2,
       name: 'AI-Powered Financial Trading',
       description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
-    category: 'predictive',
+category: 'predictive',
       features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Algorithmic TradingPortfolio ManagementRisk AnalysisMarket Prediction']
-    };
+};
     {
       id: 3,
       name: 'AI Legal Document Analysis',
@@ -148,17 +148,17 @@ export default function AIServices() {
       price: '$199/month',
       popular: false,
       useCases: ['Contract ReviewLegal ResearchCompliance MonitoringDocument Management']
-    };
+};
     {
       id: 4,
       name: 'AI-Powered Voice Analytics',
       description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
-    category: 'nlp',
+category: 'nlp',
       features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
       price: '$149/month',
       popular: true,
       useCases: ['Customer ServiceCall Center AnalyticsMarket ResearchQuality Assurance']
-    };
+};
     {
       id: 5,
       name: 'AI-Powered Search & Discovery',
@@ -168,17 +168,17 @@ export default function AIServices() {
       price: '$99/month',
       popular: false,
       useCases: ['Enterprise SearchE-commerceContent DiscoveryKnowledge Management']
-    };
+};
     {
       id: 6,
       name: 'Computer Vision Solutions',
       description: 'Advanced image and video analysis for object detection, recognition, and processing.',
-    category: 'computer-vision',
+category: 'computer-vision',
       features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
       price: '$179/month',
       popular: true,
       useCases: ['Quality ControlSecurity MonitoringMedical ImagingAutonomous Vehicles']
-    };
+};
     {
       id: 7,
       name: 'Machine Learning Model Training',
@@ -188,17 +188,17 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: false,
       useCases: ['Predictive ModelingPattern RecognitionAnomaly DetectionRecommendation Systems']
-    };
+};
     {
       id: 8,
       name: 'Natural Language Processing',
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
-    category: 'nlp',
+category: 'nlp',
       features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
       price: '$129/month',
       popular: true,
       useCases: ['Content AnalysisMultilingual SupportCustomer FeedbackDocument Processing']
-    };
+};
     {
       id: 9,
       name: 'AI Process Automation',
@@ -208,27 +208,27 @@ export default function AIServices() {
       price: '$159/month',
       popular: false,
       useCases: ['Business Process AutomationWorkflow ManagementDecision SupportSystem Integration']
-    };
+};
     {
       id: 10,
       name: 'Predictive Analytics Engine',
       description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
-    category: 'predictive',
+category: 'predictive',
       features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
       price: '$189/month',
       popular: true,
       useCases: ['Sales ForecastingCustomer BehaviorRisk ManagementResource Planning']
-    };
+};
     {
       id: 11,
       name: 'AI Content Generation',
       description: 'Intelligent content creation for marketing, documentation, and communication.',
-    category: 'specialized',
+category: 'specialized',
       features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
       price: '$79/month',
       popular: false,
       useCases: ['Marketing ContentTechnical DocumentationSocial MediaEmail Campaigns']
-    };
+};
     {
       id: 12,
       name: 'AI Chatbot Development',
@@ -239,7 +239,7 @@ export default function AIServices() {
       popular: true,
       useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
     }
-  ];
+];
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
@@ -247,7 +247,7 @@ export default function AIServices() {
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
+<meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, autonomous agents, computer vision, NLP, predictive analytics" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
@@ -343,7 +343,7 @@ export default function AIServices() {
               </div>
             </div>
           </section>
-          {/* AI Capabilities Section */}
+{/* AI Capabilities Section */}
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -390,7 +390,7 @@ export default function AIServices() {
               </div>
             </div>
           </section>
-          {/* CTA Section */}
+{/* CTA Section */}
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -409,7 +409,7 @@ export default function AIServices() {
                 </Link>
                 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-                  className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
+className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
                 >
                   Call {contact.phone}
                 </a>
@@ -418,10 +418,11 @@ export default function AIServices() {
                   className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
                 >
                   Email Us
-                </a>
+</a>
               </div>
             </div>
           </section>
+
         </main>
       </ErrorBoundary>
     </>
@@ -446,7 +447,7 @@ export default function AIServicesPage() {
               { title: 'AI Content Generator', href: '/intelligent-content-automation-platform' },
               { title: 'AI Customer Service', href: '/ai-customer-service' },
               { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (
-              <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
+<Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
                 <div className="text-xl font-semibold">{c.title}</div>
                 <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
               </Link>
@@ -461,3 +462,5 @@ export default function AIServicesPage() {
 }
     </Layout>);
 }
+  );}
+

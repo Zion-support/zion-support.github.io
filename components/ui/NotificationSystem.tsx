@@ -104,14 +104,14 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
             {onDismiss && (
               <button
                 onClick={() => onDismiss(notification.id)}
-                className="ml-2 text-gray-400 hover:text-gray-600"
+className="ml-2 text-gray-400 hover:text-gray-600"
               >
                 ×
               </button>
             )}
           </div>
         </div>
-      ))}
+))}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 export interface NextGenInnovation2025 {
-  real_implementation: boolean;
+real_implementation: boolean;
     mobile: string;
     email: string;
     address: string;

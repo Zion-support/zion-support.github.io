@@ -7,11 +7,12 @@
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
+
   return (
     <Layout>
       <Head>
         <title>Mobile Device Management (MDM) | Zion Tech Group</title>
-        <meta name="description" content="Modern MDM with zero-touch enrollment, compliance policies, app management, and identity integration." />
+<meta name="description" content="Modern MDM with zero-touch enrollment, compliance policies, app management, and identity integration." />
         <link rel="canonical" href="https://ziontechgroup.com/mobile-device-management" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -38,7 +39,7 @@
               ))}
             </div>
           </section>
-          <section>
+<section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Typical Pricing Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {pricing.map((p) => (

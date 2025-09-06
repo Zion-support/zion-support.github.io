@@ -10,6 +10,17 @@ const MarketSignals: NextPage = () => {
         <p>Runs daily to curate relevant AI/tech market signals and trends and stores them in the repository.</p>
         <div className="space-y-2">
           <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</a></Link>
+    <div>
+      <Head>
+        <title>AI Market Signals Agent</title>
+        <meta name=&quot;description&quot; content=&quot;Daily curated AI market signals.&quot; />
+      </Head>
+      <main className=&quot;space-y-4&quot;>
+        <h1 className=&quot;text-2xl font-bold&quot;>AI Market Signals Agent</h1>
+        <p>Runs daily to curate relevant AI/tech market signals and trends and stores them in the repository.</p>
+        <div className=&quot;space-y-2&quot;>
+          <Link href=&quot;/data/reports/market-signals/latest.json&quot;><a className=&quot;text-blue-600 underline&quot;>Latest Report (JSON)</Link></Link>
+
         </div>
       </main>
     </div>
@@ -36,3 +47,6 @@ const MarketSignals: NextPage = () => {
     </div>);
 },
 export default MarketSignals,
+
+export default MarketSignals
+

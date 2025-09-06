@@ -518,8 +518,9 @@ export default function CaseStudiesPage() {
 		<Layout>
 			<Head>
 				<title>Case Studies | Zion Tech Group</title>
-				<link rel="canonical" href="https://ziontechgroup.com/case-studies" />
+<link rel="canonical" href="https://ziontechgroup.com/case-studies" />
 				<meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />
+
 			</Head>
 			<section className="container mx-auto px-4 py-24">
 				<h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Case Studies</h1>
@@ -528,7 +529,7 @@ export default function CaseStudiesPage() {
 		</Layout>
 	)
 }
-        />;
+/>;
       </Head>;
       <section className='container mx-auto px-4 py-24'>;
         <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>;
@@ -633,3 +634,4 @@ return (
   </section>;
   </Layout>);
 }
+

@@ -32,6 +32,11 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
         onChange={(e) => onChange({ category: e.target.value, level, isFree })}
+      <select
+        className=&quot;border rounded px-3 py-2 bg-white dark:bg-black&quot;
+        value={category}
+        onChange={_(e) => onChange({ category: e.target.value, _level, _isFree})}
+
       >
         <option value="">All Categories</option>
         <option>AI Development</option>
@@ -40,7 +45,7 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
         <option>Cloud Architecture</option>
       </select>
       <select
-        className="border rounded px-3 py-2 bg-white dark:bg-black"
+className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={level}
         onChange={(e) => onChange({ category, level: e.target.value, isFree })}
       >
@@ -50,7 +55,7 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
         <option>Advanced</option>
       </select>
       <select
-        className="border rounded px-3 py-2 bg-white dark:bg-black"
+className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={isFree}
         onChange={(e) => onChange({ category, level, isFree: e.target.value })}
       >

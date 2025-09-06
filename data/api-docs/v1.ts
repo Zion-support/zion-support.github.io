@@ -45,7 +45,7 @@ const v1: ApiDocsSpec = {
             { code: 'INVALID_CREDENTIALS', httpStatus: 401, message: 'Email or password incorrect' }
           ],
           versions: ['v1']
-        },
+},
         {
           id: 'oauth-token', title: 'OAuth Token',
           description: 'Exchange auth code for access token.', path: '/v1/oauth/token',

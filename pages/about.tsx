@@ -21,7 +21,7 @@ import Layout from "../components/Layout";
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { 
+import {
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -29,7 +29,7 @@ const AboutPage: React.FC = () => {
       title: "Innovation First",
       description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
       color: "from-purple-500 to-pink-500"
-    };
+};
     {
       icon: Shield,
       title: "Trust & Security",
@@ -72,12 +72,12 @@ export default function AboutPage() {
     { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500' }
-  ];
+];
   const values = [
     {
       icon: Brain,
       title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.';
+description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.';
       color: 'from-purple-500 to-pink-500'
     };
     {
@@ -85,12 +85,12 @@ export default function AboutPage() {
       title: 'Trust & Security',
       description: 'Security is at the core of everything we do. We build solutions that protect your business and data with quantum-resistant technology.',
       color: 'from-red-500 to-orange-500'
-    };
+};
     {
       icon: Rocket,
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
-    color: 'from-indigo-500 to-purple-500'
+color: 'from-indigo-500 to-purple-500'
     };
     {
       icon: Users,
@@ -98,7 +98,7 @@ export default function AboutPage() {
       description: 'Your success is our success. We partner with you to understand your needs and deliver solutions that transform your business.',
       color: 'from-emerald-500 to-teal-500'
     }
-  ];
+];
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
@@ -106,7 +106,7 @@ export default function AboutPage() {
     { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500' }
-  ];
+];
   const team = [
     {
 import React from "react";
@@ -140,6 +140,7 @@ export default function About() {;
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts delivering cutting-edge technology solutions." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative pt-20 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
@@ -163,6 +164,7 @@ export default function About() {;
             </div>
           </div>
         </section>
+
         {/* Mission Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -178,7 +180,7 @@ export default function About() {;
             </div>
           </div>
         </section>
-        {/* Values Section */}
+{/* Values Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -237,6 +239,7 @@ export default function About() {;
             </div>
           </div>
         </section>
+
         {/* Team Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -273,6 +276,7 @@ export default function About() {;
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600">
           <div className="container mx-auto px-4">
@@ -297,7 +301,7 @@ export default function About() {;
       </div>
     </>
   );
-      name: 'Kleber',
+name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
       image: '/api/placeholder/150/150',

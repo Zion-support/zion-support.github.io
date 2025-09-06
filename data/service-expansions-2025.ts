@@ -1,5 +1,5 @@
 export interface ServiceExpansion2025 {
-    address: string;
+address: string;
   }
 ;
 export const serviceExpansions2025: ServiceExpansion2025[] = [;

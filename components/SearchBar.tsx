@@ -47,13 +47,13 @@ const SearchBar: React.FC = () => {
     {
       title: 'AI Services',
       description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai - services',
+url: '/ai - services',
       type: 'category',
     },
     {
       title: 'IT Services',
       description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-      url: '/it - services',
+url: '/it - services',
       type: 'category',
     },
     {

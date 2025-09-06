@@ -454,7 +454,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'Only AI - powered satellite mission control platform with proven space operations',
   },
   // Neural Technology & BCI Services;
-  {
+{
     id: 'brain - computer - interface - development - kit',
     name: 'Brain - Computer Interface Development Kit',
     tagline:;

@@ -674,12 +674,18 @@ export default function CookiesPage() {
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+            <li>Purpose: performance and security</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+          <p className=&quot;text-gray-400 text-sm&quot;>Questions? <a className=&quot;text-cyan-400&quot; href=&quot;mailto:kleber@ziontechgroup.com&quot;>kleber@ziontechgroup.com</Link></p>
+
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
   )
 }
-        canonical='https://ziontechgroup && ziontechgroup.com/cookies/'
+canonical='https://ziontechgroup && ziontechgroup.com/cookies/'
       />;
       <div className='container mx-auto px-4 py-24 text-white'>;
         <div className='max-w-3xl mx-auto space-y-6'>;
@@ -753,3 +759,4 @@ function CookiesPage() {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+

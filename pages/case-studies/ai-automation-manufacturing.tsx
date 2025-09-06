@@ -14,7 +14,7 @@ function CaseStudyPage() {
     industry: 'Manufacturing',
     challenge: 'Inefficient production processes, high downtime, and quality control issues',
     solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
-  };
+};
   return (
     <>
       <Head>
@@ -66,11 +66,68 @@ function CaseStudyPage() {
                 {caseStudy.technologies.map((tech, index) => (
                   <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">
                     <span className="text-blue-400 font-semibold">{tech}</span>
+
+  return (_<>
+      <Head>
+        <title>{caseStudy.title} - Case Study | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content={`Learn how ${caseStudy.company} achieved ${caseStudy.results[0]} with AI automation.`} />
+        <meta name=&quot;keywords&quot; content=&quot;AI automation, manufacturing, case study, predictive maintenance, quality control&quot; />
+      </Head>
+      
+      <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900&quot;>
+        <main className=&quot;pt-20 pb-16&quot;>
+          <div className=&quot;max-w-4xl mx-auto px-6&quot;>
+            {/* Breadcrumb */}
+            <nav className=&quot;mb-8&quot;>
+              <Link href=&quot;/case-studies&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
+                ← Back to Case Studies
+              </Link>
+            </nav>
+
+            {/* Header */}
+            <header className=&quot;mb-12 text-center&quot;>
+              <div className=&quot;mb-4&quot;>
+                <span className=&quot;px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30&quot;>
+                  {caseStudy.industry}
+                </span>
+              </div>
+              <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>{caseStudy.title}</h1>
+              <p className=&quot;text-xl text-cyan-400 font-semibold&quot;>{caseStudy.company}</p>
+              <div className=&quot;mt-4 text-white/60&quot;>
+                <span className=&quot;mr-6&quot;>Duration: {caseStudy.duration}</span>
+                <span>Team: {caseStudy.teamSize}</span>
+              </div>
+            </header>
+
+            {/* Challenge */}
+            <section className=&quot;mb-12&quot;>
+              <h2 className=&quot;text-2xl font-semibold mb-6 text-red-400&quot;>The Challenge</h2>
+              <div className=&quot;bg-red-500/10 rounded-lg p-6 border border-red-500/20&quot;>
+                <p className=&quot;text-white/90 text-lg&quot;>{caseStudy.challenge}</p>
+              </div>
+            </section>
+
+            {/* Solution */}
+            <section className=&quot;mb-12&quot;>
+              <h2 className=&quot;text-2xl font-semibold mb-6 text-green-400&quot;>Our Solution</h2>
+              <div className=&quot;bg-green-500/10 rounded-lg p-6 border border-green-500/20&quot;>
+                <p className=&quot;text-white/90 text-lg&quot;>{caseStudy.solution}</p>
+              </div>
+            </section>
+
+            {/* Technologies */}
+            <section className=&quot;mb-12&quot;>
+              <h2 className=&quot;text-2xl font-semibold mb-6 text-blue-400&quot;>Technologies Used</h2>
+              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-4&quot;>
+                {caseStudy.technologies.map((tech, index) => (
+                  <div key={index} className=&quot;bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center&quot;>
+                    <span className=&quot;text-blue-400 font-semibold&quot;>{tech}</span>
+
                   </div>
                 ))}
               </div>
             </section>
-            {/* Results */}
+{/* Results */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -86,7 +143,7 @@ function CaseStudyPage() {
                 ))}
               </div>
             </section>
-            {/* Call to Action */}
+{/* Call to Action */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Achieve Similar Results?</h2>
@@ -104,6 +161,16 @@ function CaseStudyPage() {
                   <Link
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+                  <Link 
+                    href=&quot;/contact&quot;
+                    className=&quot;bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;
+                  >
+                    Get Started
+                  </Link>
+                  <Link 
+                    href=&quot;/case-studies&quot;
+                    className=&quot;px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300&quot;
+
                   >
                     View More Case Studies
                   </Link>

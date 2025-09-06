@@ -1,5 +1,5 @@
 export interface ComprehensiveITService {
-    id: 'enterprise-it-infrastructure',
+id: 'enterprise-it-infrastructure',
     name: 'Enterprise IT Infrastructure Management',
     tagline:
       'Complete enterprise IT infrastructure with 99 && 99.99% uptime guarantee',

@@ -48,4 +48,5 @@ function handler() {
   commits.push (record);
   writeJsonFile ('deal / soft - commits.json', commits);
   res.status (200).json (record);  res.status (200).json (record);
+
 }

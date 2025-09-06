@@ -16,7 +16,7 @@ export default function AdminWeb3Page() {
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
     disabled: users.filter(u => !u.enabled).length},
-  return (
+return (
     <>
       <Head><title>Admin — Web3</title></Head>
       <div className="max-w-3xl mx-auto space-y-6">
@@ -36,6 +36,25 @@ export default function AdminWeb3Page() {
                   <span>Web3</span>
                   <input type="checkbox" checked={u.enabled} onChange={(e) => {
                     const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next)
+
+  return (_<>
+      <Head><title>Admin — Web3</title></Head>
+      <div className=&quot;max-w-3xl mx-auto space-y-6&quot;>
+        <h1 className=&quot;text-xl font-semibold&quot;>Web3 Admin</h1>
+        <div className=&quot;rounded-md border p-4&quot;>
+          <div className=&quot;font-medium mb-2&quot;>Usage Metrics</div>
+          <div className=&quot;text-sm text-gray-600&quot;>Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>
+        </div>
+        <div className=&quot;rounded-md border p-4&quot;>
+          <div className=&quot;font-medium mb-2&quot;>Users</div>
+          {users.length === 0 && <div className=&quot;text-sm text-gray-500&quot;>No data yet</div>}
+          <ul className=&quot;space-y-2&quot;>
+            {users.map((u, i) => (
+              <li key={i} className=&quot;flex items-center justify-between&quot;>
+                <div className=&quot;text-sm&quot;>{u.id}</div>
+                <label className=&quot;inline-flex items-center gap-2 text-sm&quot;>
+                  <span>Web3</span>
+
                   }} />
                 </label>
               </li>

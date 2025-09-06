@@ -42,7 +42,7 @@ if ( {) {
     headless: true,
     args: ['--no - sandbox--disable - setuid - sandbox']}),
   try {
-    const page = await browser.new_page (),
+const page = await browser.new_page (),
     await page.set_content (html, { wait_until: 'networkidle0' }),
     const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter', print_background: true }),
     await browser.close (),

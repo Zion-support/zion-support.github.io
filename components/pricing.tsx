@@ -53,6 +53,17 @@ export default function PricingPage() {
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s =>
     Array.isArray(s.category) ? s.category[0] : s.category
   )))];
+
+  // Get unique services by ID
+  const _uniqueServices = allServices.filter(_(service, _index, _self) => 
+    index === self.findIndex(s => s.id === service.id)
+  ),
+
+  // Get all categories
+  const _categories = ['All', _...Array.from(new Set(uniqueServices.map(s => 
+    Array.isArray(s.category) ? s.category[0] : s.category
+  )))],
+
   // Price ranges
   const priceRanges = [
     { id: 'All', name: 'All Prices', range: 'All' },
@@ -60,7 +71,7 @@ export default function PricingPage() {
     { id: '$1K - $5K', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: '$5K - $20K', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: '$20K+', name: '$20K+/month', range: '$20K+' }
-  ];
+];
   // Filter services
   const filteredServices = uniqueServices.filter(service => {
     const matchesCategory = selectedCategory === 'All' || 
@@ -276,12 +287,20 @@ if ( {) {
       acc[category].push (service);
       return acc;
   });
+                        (selectedPriceRange === 'Under $1K' && price < 1000) ||
+                        (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) ||
+                        (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) ||
+                        (selectedPriceRange === '$20K+' && price >= 20000),
+    
+    return matchesCategory && matchesPrice
+  }),
+
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+};
   // Group services by category for better organization
   const servicesByCategory = filteredServices.reduce((acc, service) => {
     const category = Array.isArray(service.category) ? service.category[0] : service.category;
@@ -307,7 +326,7 @@ if ( {) {
     {
       question: 'Can I change my plan at any time?',
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.'
-    };
+};
     {
       question: 'Is there a free trial available?',
       answer: 'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.'
@@ -481,11 +500,33 @@ if ( {) {
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
+
+  const _filteredServices = selectedCategory === 'All' 
+    ? microSaasServices 
+    : microSaasServices.filter(service => service.category === selectedCategory),
+
+  const yearlyDiscount = 0.2, // 20% discount for yearly billing
+
+  return (_<UltraFuturisticBackground2029>
+      <Head>
+        <title>Revolutionary 2029 Technology Pricing | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Explore comprehensive pricing for our revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;technology pricing, AI services pricing, quantum computing pricing, space technology pricing, 2029 technology pricing&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/pricing&quot; />
+      </Head>
+
+      <UltraFuturisticNavigation2029 />
+
+      <main className=&quot;relative z-10 pt-20&quot;>
+        {/* Hero Section */}
+        <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 text-center&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
+className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -534,7 +575,7 @@ if ( {) {
             </div>
           </motion.div>
         </section>
-              </select>;
+</select>;
             </div>;
             <div className='text-center text-gray-400'>;
               <p>;
@@ -1001,7 +1042,7 @@ if ( {) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
-                className="mb-20"
+className="mb-20"
               >
                 <div className="text-center mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1019,12 +1060,12 @@ if ( {) {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
-                      className="group cursor-pointer"
+className="group cursor-pointer"
                     >
                       <div className={`p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105 ${service.popular ? 'ring-2 ring-yellow-400/50' : ''}`}>
                         {/* Popular Badge */}
                         {service.popular && (
-                          <div className="flex items-center justify-center mb-4">
+<div className="flex items-center justify-center mb-4">
                             <div className="px-3 py-1 bg-yellow-400/20 border border-yellow-400/30 rounded-full">
                               <span className="text-sm text-yellow-400 font-medium flex items-center">
                                 <Star className="w-4 h-4 mr-1 fill-current" />
@@ -1033,7 +1074,7 @@ if ( {) {
                             </div>
                           </div>
                         )}
-                        {/* Service Icon */}
+{/* Service Icon */}
                         <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                           <span className="text-2xl">{service.icon}</span>
                         </div>
@@ -1098,7 +1139,7 @@ if ( {) {
                             )}
                           </div>
                         </div>
-        {/* Contact CTA Section */}
+{/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
                         {/* Market Position */}
@@ -1154,7 +1195,7 @@ if ( {) {
             ))}
           </div>
         </section>
-        {/* Contact CTA Section */}
+{/* Contact CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1184,7 +1225,7 @@ if ( {) {
                   </button>
                 </a>
               </div>
-              {/* Contact Information */}
+{/* Contact Information */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-cyan-400" />
@@ -1225,7 +1266,7 @@ if ( {) {
           </div>
         </section>
       </main>
-      <UltraFuturisticFooter2029 />
+<UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
                   Revolutionary Technology?;
                 </span>;

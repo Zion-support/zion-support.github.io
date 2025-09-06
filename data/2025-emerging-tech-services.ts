@@ -1,5 +1,5 @@
 export interface EmergingTechService {
-    trial_days: number;
+trial_days: number;
     setup_time: string;
   }
   features: string[];
@@ -1340,7 +1340,7 @@ const contact = {
   email: "kleber@ziontechgroup && ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
-  website: "https://ziontechgroup.com";,
+website: "https://ziontechgroup.com";,
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;

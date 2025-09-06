@@ -260,7 +260,7 @@ if ( {) {
         type: "application / json",
         href: `/api / deploy / export?id=${encodeURIComponent (provision_id)}`,
       },
-    }
+}
 ;
     return res.status (200).json ({
       success: true,

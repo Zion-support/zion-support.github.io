@@ -278,7 +278,7 @@ const quickLinks = [
   { name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },
   { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' },
   { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },
-  { name: 'Case Studies', href: '/case - studies', icon: Users, description: 'Success stories and implementations' },
+{ name: 'Case Studies', href: '/case - studies', icon: Users, description: 'Success stories and implementations' },
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
 const service_categories = [;
@@ -457,6 +457,65 @@ const companyInfo = [
   { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },
   { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
 const company_info = [;
+
+const _serviceCategories = [
+  {_title: '🚀 2032 Revolutionary AI Services', _services: [
+      { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-platform'},
+      {_name: 'AI Emotional Intelligence', _href: '/ai-emotional-intelligence-platform'},
+      {_name: 'AI Creativity Orchestrator', _href: '/ai-creativity-orchestrator'},
+      {_name: 'AI Autonomous Business Manager', _href: '/ai-autonomous-business-manager'}
+    ]
+  },
+  {_title: '⚛️ 2032 Quantum & Emerging Tech', _services: [
+      { name: 'Quantum DNA Computing', _href: '/quantum-dna-computing-platform'},
+      {_name: 'Quantum Internet Security', _href: '/quantum-internet-security-gateway'},
+      {_name: 'Quantum Financial Trading', _href: '/quantum-financial-trading-platform'},
+      {_name: 'Quantum Creativity Studio', _href: '/quantum-creativity-studio'}
+    ]
+  },
+  {_title: '🏙️ 2032 Enterprise IT Solutions', _services: [
+      { name: 'Autonomous DevOps', _href: '/autonomous-devops-platform'},
+      {_name: 'Zero Trust Architecture', _href: '/zero-trust-network-architecture'},
+      {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
+      {_name: 'AI IT Operations Center', _href: '/ai-powered-it-operations-center'}
+    ]
+  },
+  {_title: '🌌 2032 Space & Metaverse Tech', _services: [
+      { name: 'Space Mining Automation', _href: '/space-mining-automation-platform'},
+      {_name: 'Metaverse Development', _href: '/metaverse-development-platform'},
+      {_name: 'AI Predictive Health', _href: '/ai-predictive-health-analytics'},
+      {_name: 'AI Autonomous Business', _href: '/ai-autonomous-business-manager'}
+    ]
+  },
+  {_title: '🎯 2032 Innovative Micro SAAS', _services: [
+      { name: 'AI Business Intelligence', _href: '/ai-business-intelligence-suite'},
+      {_name: 'Quantum-Secure Communication', _href: '/quantum-secure-communication-platform'},
+      {_name: 'AI Customer Success', _href: '/ai-customer-success-automation'},
+      {_name: 'Blockchain Supply Chain', _href: '/blockchain-supply-chain-transparency'}
+    ]
+  },
+  {_title: '🔬 2032 Research & Development', _services: [
+      { name: 'Neuromorphic Computing', _href: '/neuromorphic-computing-platform'},
+      {_name: 'DNA Computing Platform', _href: '/dna-computing-platform'},
+      {_name: 'Photonic Computing', _href: '/photonic-computing-infrastructure'},
+      {_name: 'Swarm Robotics', _href: '/swarm-robotics-orchestration'}
+    ]
+  }
+],
+
+const quickLinks = [
+  { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },
+  { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' },
+  { name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Competitive pricing references' },
+  { name: 'Enhanced Services', href: '/enhanced-services-showcase', icon: Star, description: 'Premium service showcase' },
+  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services', icon: TrendingUp, description: '2026 breakthrough services' },
+  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' },
+  { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },
+  { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
+],
+
+const companyInfo = [
+
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'Press', href: '/press' },
@@ -968,7 +1027,7 @@ function UltraFuturisticFooter2032() {
                         <li key={serviceIndex}>
                           <Link
                             href={service.href}
-                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform"
+className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform"
                           >
                             {service.name}
                           </Link>
@@ -1225,7 +1284,7 @@ function UltraFuturisticFooter2032() {
                     <a
                       key={index}
                       href={social.href}
-                      target="_blank"
+target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
                     >
@@ -1395,7 +1454,7 @@ function UltraFuturisticFooter2032() {
           </motion.div>
         </motion.div>
       </div>
-                  className='text-slate-400 hover:text-cyan-300 transition-colors'>                  Cookie Policy                <span>© 2024 Zion Tech Group. All rights reserved.</span>;
+className='text-slate-400 hover:text-cyan-300 transition-colors'>                  Cookie Policy                <span>© 2024 Zion Tech Group. All rights reserved.</span>;
                 <span className="text-cyan-400">|</span>;
                 <span>Leading the Future of Technology</span>;
               </div>;

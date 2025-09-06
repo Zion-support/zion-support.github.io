@@ -36,11 +36,15 @@ function Pricing2033Page() {
   const [selected_plan, setSelectedPlan] = useState < string | null>(null),
   // Enhanced service categories with pricing;
   const service_categories = [;
+
+  // Enhanced service categories with pricing
+  const _serviceCategories = [
+
     {
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
       services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'],
-  ];
+];
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -194,7 +198,7 @@ function Pricing2033Page() {
       name: 'Space & Metaverse Tech',
       description: 'Space mining and metaverse development',
       services: ['Space Mining AutomationMetaverse AI DevelopmentAI Health AnalyticsHolographic Events'],
-      avg_price: '$14, 999 / month',
+avg_price: '$14, 999 / month',
       savings: 'Save 65 - 80% vs. competitors',
       icon: Rocket,
       color: 'from - teal - 500 to - emerald - 500';
@@ -212,7 +216,7 @@ function Pricing2033Page() {
       name: 'Research & Development',
       description: 'Breakthrough technologies and innovations',
       services: ['Neuromorphic ComputingPhotonic ComputingSwarm RoboticsBiotech Automation'],
-      avg_price: '$1, 099 / month',
+avg_price: '$1, 099 / month',
       savings: 'Save 55 - 75% vs. competitors',
       icon: Microscope,
       color: 'from - orange - 500 to - red - 500';
@@ -236,7 +240,7 @@ function Pricing2033Page() {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billing_cycle === 'monthly' ? 299 : 239,
+price: billing_cycle === 'monthly' ? 299 : 239,
       period: billing_cycle === 'monthly' ? '/month' : '/month',
       savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
       features: [;
@@ -249,7 +253,7 @@ function Pricing2033Page() {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billing_cycle === 'monthly' ? 999 : 799,
+price: billing_cycle === 'monthly' ? 999 : 799,
       period: billing_cycle === 'monthly' ? '/month' : '/month',
       savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
       features: [;
@@ -424,7 +428,7 @@ function Pricing2033Page() {
             </div>
           </div>
         </div>
-        {/* Service Categories Pricing */}
+{/* Service Categories Pricing */}
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -442,7 +446,7 @@ function Pricing2033Page() {
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
                       <category.icon className="w-6 h-6 text-white" />
@@ -474,7 +478,7 @@ function Pricing2033Page() {
             </div>
           </div>
         </div>
-        {/* Popular Services */}
+{/* Popular Services */}
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -617,7 +621,7 @@ function Pricing2033Page() {
             </div>
           </div>
         </div>
-        {/* Call to Action */}
+{/* Call to Action */}
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

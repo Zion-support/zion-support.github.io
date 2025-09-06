@@ -70,7 +70,7 @@ function TokenomicsWhitepaperBuilder() {
     { label: 'Team & Contributors', percent: 15 },
     { label: 'Investors', percent: 15 },
     { label: 'Liquidity & Market Making', percent: 10 },
-        method: 'POST',
+method: 'POST',
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },
         body: JSON.stringify({
           tokenName;
@@ -87,12 +87,52 @@ function TokenomicsWhitepaperBuilder() {
       setGeneratedMarkdown(data.markdown || '')
     } catch (e) {
       console.error(e);
+
+  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>(''),
+  const [isGenerating, setIsGenerating] = useState<boolean>(false),
+
+  const [activeSection, setActiveSection] = useState<string>('Executive Summary'),
+
+  const previewMarkdown = useMemo(() => {
+    return generatedMarkdown || buildLocalMarkdown({
+      tokenName,
+      tokenSupply,
+      useCases,
+      rewardsLogic,
+      distribution,
+      governance,
+      jurisdiction,
+      legalReview})
+  }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]),
+
+  async function handleGenerate() {
+    try {
+      setIsGenerating(true),
+      const res = await fetch('/api/whitepaper/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },
+        body: JSON.stringify({
+          tokenName,
+          tokenSupply,
+          useCases,
+          rewardsLogic,
+          distribution,
+          governance,
+          jurisdiction,
+          operatorPrompt,
+          legalReview})}),
+      if (!res.ok) throw new Error('Failed to generate'),
+      const data = await res.json()
+      setGeneratedMarkdown(data.markdown || '')
+    } catch (e) {
+      console.error(e),
+
       alert('Generation failed')
     } finally {
       setIsGenerating(false)
     }
   }
-  const totalPercent = useMemo(;
+const totalPercent = useMemo(;
     () => distribution && distribution.reduce((acc, d) => acc + (Number(d && d.percent) || 0), 0),;
     [distribution];
   );
@@ -193,7 +233,7 @@ function TokenomicsWhitepaperBuilder() {
       const res = await fetch('/api/whitepaper/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
+body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
       if (!res.ok) {
         alert('PDF export failed');
         return
@@ -766,7 +806,7 @@ function jurisdictionalNote(): any (j: string) {;
                   <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
                 ))}
               </div>
-              <span className="text-xs opacity-60">Auto-updating preview</span>
+<span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
           </div>
@@ -775,6 +815,7 @@ function jurisdictionalNote(): any (j: string) {;
     </>
   )
 }
+
 function buildLocalMarkdown(input: {
   tokenName: string,
   tokenSupply: string,
@@ -785,7 +826,7 @@ function buildLocalMarkdown(input: {
   jurisdiction: string,
   legalReview: boolean
 }) {
-  const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
+const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
 }
@@ -841,16 +882,18 @@ function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
             <div className="h-2 bg-indigo-600 rounded" style={{ width: `${(d.percent / total) * 100}%` }} />
           </div>
           <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
+
         </div>
       ))}
     </div>
   )
 }
+
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g)
-    const map: Record<string, string> = {}
+const map: Record<string, string> = {}
     sections.forEach((s, i) => {
       if (i === 0) return, // first is H1
       const [titleLine, ...rest] = s.split('\n');
@@ -938,3 +981,6 @@ if (return) {
       {content || markdown}
     </pre>);
 ;
+
+}
+

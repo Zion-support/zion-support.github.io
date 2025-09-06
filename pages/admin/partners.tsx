@@ -58,7 +58,7 @@ export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
-  useEffect(() => {
+useEffect(() => {
     (async () => {
       try {
         const res = await fetch('/api/admin/partners/list');

@@ -63,11 +63,21 @@ const service_categories = [;
     icon: Cloud,
     color: 'from - indigo - 500 to - purple - 600',
     features: ['Quantum Processing', 'Hybrid Computing', 'AI Acceleration'],
+
+const serviceCategories = [
+  {
+    title: 'Quantum Cloud Computing',
+    description: 'Next-generation cloud infrastructure with quantum processing capabilities',
+    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Cloud Computing'),
+    icon: Cloud,
+    color: 'from-indigo-500 to-purple-600',
+    features: ['Quantum ProcessingHybrid ComputingAI Acceleration']
+
   },
   {
     title: 'Edge Computing & IoT',
     description: 'Autonomous edge infrastructure with intelligent optimization',
-    services: advancedITInfrastructureServices2025.filter (
+services: advancedITInfrastructureServices2025.filter (
       string => s.category === 'Edge Computing & IoT'),
     icon: Wifi,
     color: 'from - green - 500 to - emerald - 600',
@@ -143,7 +153,7 @@ const testimonials = [;
     name: 'Dr. Jennifer Martinez',
     role: 'CTO, QuantumTech Industries',
     company: 'QuantumTech Industries',
-    content:;
+content:;
       "Zion Tech Group's quantum cloud infrastructure has revolutionized our research capabilities. We've achieved computational breakthroughs that were previously impossible.",
     rating: 5,
     avatar: '👩‍🔬'
@@ -152,7 +162,7 @@ const testimonials = [;
     name: 'Robert Thompson',
     role: 'Infrastructure Director, EdgeNet Solutions',
     company: 'EdgeNet Solutions',
-    content:;
+content:;
       'The autonomous edge computing network has transformed our IoT operations. We now have real - time processing with 90% lower latency and 70% cost reduction.',
     rating: 5,
     avatar: '👨‍💼'
@@ -161,7 +171,7 @@ const testimonials = [;
     name: 'Lisa Chang',
     role: 'Security CISO, SecureCorp International',
     company: 'SecureCorp International',
-          href='https://ziontechgroup && ziontechgroup.com/advanced-it-infrastructure-services'
+href='https://ziontechgroup && ziontechgroup.com/advanced-it-infrastructure-services'
         />;
       </Head>;
     <Layout>
@@ -282,7 +292,7 @@ function AdvancedITInfrastructureServices() {
             </div>
           </motion.div>
         </div>
-                href={`tel:${contactInfo && contactInfo.mobile}`}
+href={`tel:${contactInfo && contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'>;
                 <Phone className='mr-2 w-5 h-5' />                Get Started;
               </Link>;
@@ -342,7 +352,7 @@ function AdvancedITInfrastructureServices() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>
       {/* Services Section */}
@@ -582,7 +592,7 @@ function AdvancedITInfrastructureServices() {
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: service_index * 0.1 }}
+transition={{ duration: 0.5, delay: service_index * 0.1 }}
                       viewport={{ once: true }}
           </div>;
         </div>;
@@ -646,7 +656,7 @@ function AdvancedITInfrastructureServices() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* CTA Section */}
@@ -695,7 +705,7 @@ function AdvancedITInfrastructureServices() {
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -709,7 +719,7 @@ function AdvancedITInfrastructureServices() {
         </div>
       </section>
     </Layout>
-                href={`mailto:${contactInfo && contactInfo.email}`}
+href={`mailto:${contactInfo && contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'>;
                 <Mail className='mr-2 w-5 h-5' />;
                 Email Us;

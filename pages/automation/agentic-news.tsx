@@ -21,4 +21,11 @@ function AgenticNewsPage() {
         </ul>;
       </div>;
     </EnhancedLayout>);
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  )
+
 }

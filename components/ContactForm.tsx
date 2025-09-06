@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: '',
+message: '',
   });
   const [is_submitting, setIsSubmitting] = useState (false);
   const [submit_status, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -192,7 +192,7 @@ const ContactForm: React.FC = () => {;
         company: '',
         phone: '',
         service: '',
-        message: '',
+message: '',
       });
 ;
       setSubmitStatus ('success');

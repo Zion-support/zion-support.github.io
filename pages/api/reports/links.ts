@@ -62,6 +62,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')))
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to read links report' })
+
   }
 }
 ;

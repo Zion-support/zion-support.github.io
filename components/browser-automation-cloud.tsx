@@ -101,7 +101,8 @@ function BrowserAutomationCloudPage() {
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
-								<p className="text-gray-200">{f}</p>
+<p className="text-gray-200">{f}</p>
+
 							</div>
 						))}
 					</div>
@@ -111,7 +112,7 @@ function BrowserAutomationCloudPage() {
 						<a href="https://playwright.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
 							<ExternalLink className="w-4 h-4" /> Playwright
 							</a>
-						<a href="https://pptr.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
+<a href="https://pptr.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
 							<ExternalLink className="w-4 h-4" /> Puppeteer
 							</a>
 					</div>
@@ -120,7 +121,7 @@ function BrowserAutomationCloudPage() {
 		</>
 	)
 }
-		<>;
+<>;
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />;
 			<main id="main" className="container mx-auto px-4 py-24">;
 				<section className="max-w-5xl mx-auto">;

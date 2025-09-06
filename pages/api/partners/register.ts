@@ -27,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (usingPlaceholder) {
       return res.status(200).json({ ok: true, code, status: 'pending', mock: true })
     }
-    const supabase = getServerSupabase();
+const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
       .from("partners")
       .select("code")
@@ -105,5 +105,30 @@ if ( {) {
     return res.status (200).json ({ ok: true, code, status: "pending" });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+
+    const {_data: existing, _error: existingErr} = await supabase
+      .from('partners')
+      .select('code')
+      .eq('code', code)
+      .maybeSingle(),
+
+    if (existingErr) return res.status(500).json({ error: existingErr.message }),
+    if (existing) return res.status(409).json({ error: 'Code already taken' }),
+
+    const { error } = await supabase.from('partners').insert({
+      code,
+      name,
+      niche: niche || null,
+      socials: socials || null,
+      payout_method: payout_method || null,
+      status: 'pending',
+      commission_rate: 0.15}),
+
+    if (error) return res.status(500).json({ error: error.message }),
+
+    return res.status(200).json({ ok: true, code, status: 'pending' })
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message })
+
   }
 }

@@ -4,7 +4,7 @@ import path from 'path';
 import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);
+return path.join(GRANTS_DIR, `${id}.json`);
 }
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 function grantPath(id: string) {
@@ -201,4 +201,5 @@ const payload = req.body as StatusUpdatePayload;
   existing.updated_at = new Date ().toISOString ();
   write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
+
 }

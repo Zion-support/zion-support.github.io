@@ -49,5 +49,6 @@ if ( {) {
     res.status (500).json ({ error: 'Failed to read content' });
   }  } catch (e) {
     res.status (500).json ({ error: 'Failed to read content' });
+
   }
 }

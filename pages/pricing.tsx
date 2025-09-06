@@ -264,7 +264,7 @@ export default function PricingPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  }
+}
   const popularServices = getPopularServices();
   // Combine all services for comprehensive pricing
   const allServices = [
@@ -557,11 +557,36 @@ export default function PricingPage() {;
       ],
       avg_price: '$4, 999 / month',
       savings: 'Save 50 - 70% vs. competitors',
+  
+  // Combine all services for comprehensive pricing
+  const _allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services
+  ],
+
+  // Enhanced service categories with pricing
+  const serviceCategories = [
+    {
+      name: 'Next-Generation AI',
+      description: 'Revolutionary AI platforms',
+      services: ['AI Multimodal FusionAI Autonomous Decision EngineAI Emotional Intelligence'],
+      avgPrice: '$3,199/month',
+      savings: 'Save 60-80% vs. competitors'
+    },
+    {
+      name: 'Cutting-Edge IT Infrastructure',
+      description: 'Advanced infrastructure solutions',
+      services: ['Zero Trust ArchitectureEdge Computing Orchestration5G Private Networks'],
+      avgPrice: '$4,999/month',
+      savings: 'Save 50-70% vs. competitors'
+
     },
     {
       name: 'Innovative Micro SaaS',
       description: 'Creative and practical SaaS tools',
-      services: [;
+services: [;
         'AI Brand Personality',
         'Virtual Event Holograms',
         'AI Meeting Transcriber',
@@ -572,7 +597,7 @@ export default function PricingPage() {;
     {
       name: 'Quantum & Space Technology',
       description: 'Quantum computing and space solutions',
-      services: [;
+services: [;
         'Quantum AI Hybrid',
         'Space Technology Platform',
         'Quantum Cybersecurity',
@@ -583,7 +608,7 @@ export default function PricingPage() {;
     {
       name: 'Enterprise IT Services',
       description: 'Comprehensive enterprise solutions',
-      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
+services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
       avg_price: '$2, 999 / month',
       savings: 'Save 45 - 65% vs. competitors',
     },  ];
@@ -873,7 +898,7 @@ export default function PricingPage() {;
       popular: false,
       cta: 'Start Free Trial',
       ctaVariant: 'secondary' as const
-    };
+};
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
@@ -881,7 +906,7 @@ export default function PricingPage() {;
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 200+ Premium ServicesAdvanced AI & Quantum ComputingPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security & Compliance';
+'Access to 200+ Premium ServicesAdvanced AI & Quantum ComputingPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security & Compliance';
         'Custom IntegrationsTeam Collaboration ToolsAPI AccessWhite-label Options'
       ];
       icon: <Crown className="w-8 h-8" />,
@@ -889,7 +914,7 @@ export default function PricingPage() {;
       popular: true,
       cta: 'Start Free Trial',
       ctaVariant: 'primary' as const
-    };
+};
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
@@ -897,7 +922,7 @@ export default function PricingPage() {;
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL 500+ ServicesFull Quantum AI & Autonomous SystemsDedicated Support Team (24/7)90-Day Free TrialEnterprise Analytics & AI InsightsDedicated Account Manager99.99% Uptime SLAEnterprise Security & Compliance';
+'Access to ALL 500+ ServicesFull Quantum AI & Autonomous SystemsDedicated Support Team (24/7)90-Day Free TrialEnterprise Analytics & AI InsightsDedicated Account Manager99.99% Uptime SLAEnterprise Security & Compliance';
         'Custom Development ServicesAdvanced Team ManagementFull API & SDK AccessCustom Branding & White-labelOn-premise Deployment OptionsAdvanced AI Training & CustomizationPriority Feature DevelopmentGlobal Infrastructure Access'
       ];
       icon: <Rocket className="w-8 h-8" />,
@@ -906,44 +931,44 @@ export default function PricingPage() {;
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const
     }
-  ];
+];
   // Service category pricing examples
   const serviceCategoryPricing = [
     {
       category: 'Quantum AI & Computing',
       services: ['Quantum AI PlatformNeural Network TrainingQuantum Optimization'],
       startingPrice: '$99/month',
-      icon: <Brain className="w-6 h-6" />
+icon: <Brain className="w-6 h-6" />
     };
     {
       category: 'Autonomous Systems',
       services: ['AI Factory ManagementRobotic Process AutomationSmart Manufacturing'],
       startingPrice: '$149/month',
-      icon: <Factory className="w-6 h-6" />
+icon: <Factory className="w-6 h-6" />
     };
     {
       category: 'Healthcare & Biotech',
       services: ['Drug Discovery AIMedical Imaging AnalysisGenomic Research Platform'],
       startingPrice: '$199/month',
-      icon: <FlaskConical className="w-6 h-6" />
+icon: <FlaskConical className="w-6 h-6" />
     };
     {
       category: 'Cybersecurity',
       services: ['Quantum EncryptionThreat IntelligenceZero-Trust Security'],
       startingPrice: '$129/month',
-      icon: <Shield className="w-6 h-6" />
+icon: <Shield className="w-6 h-6" />
     };
     {
       category: 'Financial Technology',
       services: ['AI Trading PlatformRisk ManagementPortfolio Optimization'],
       startingPrice: '$179/month',
-      icon: <DollarSign className="w-6 h-6" />
+icon: <DollarSign className="w-6 h-6" />
     };
     {
       category: 'Space Technology',
       services: ['Satellite ManagementSpace Data AnalyticsMission Planning AI'],
       startingPrice: '$299/month',
-      icon: <Rocket className="w-6 h-6" />
+icon: <Rocket className="w-6 h-6" />
     }
   ];
   // Value propositions
@@ -951,7 +976,7 @@ export default function PricingPage() {;
     {
       title: 'Unprecedented ROI',
       description: 'Average 300% ROI within 6 months',
-      icon: <TrendingUp className="w-8 h-8" />,
+icon: <TrendingUp className="w-8 h-8" />,
       metric: '300%',
       detail: 'Average ROI'
     };
@@ -1026,7 +1051,7 @@ export default function PricingPage() {;
               </span>
             </Button>
           </div>
-          {/* Billing Toggle */}
+{/* Billing Toggle */}
           <div className='flex items-center justify-center gap-4 mb-8'>;
             <span
               className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>;
@@ -1176,7 +1201,7 @@ export default function PricingPage() {;
                     </span>
                   </div>
                 )}
-                <div className="text-center p-8">
+<div className="text-center p-8">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6">
                     {tier.icon}
                   </div>
@@ -1211,7 +1236,7 @@ export default function PricingPage() {;
                 </div>
               </UltraFuturisticCard>
             ))}
-          </div>;
+</div>;
         </div>;
         {/* Value Propositions */}
         <div className='mb-20'>;
@@ -1228,7 +1253,7 @@ export default function PricingPage() {;
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
-                className="text-center p-6"
+className="text-center p-6"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
                   {proposition.icon}
@@ -1357,7 +1382,7 @@ export default function PricingPage() {;
                 key={index}
                 variant={index % 3 === 0 ? 'quantum' : index % 3 === 1 ? 'holographic' : 'neural'}
                 interactive={true}
-                className="p-6"
+className="p-6"
               >
                 <div className="flex items-center mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4">
@@ -1376,7 +1401,7 @@ export default function PricingPage() {;
                     </li>
                   ))}
                 </ul>
-                <Button
+<Button
                   href="/services"
                   variant="secondary"
                   size="sm"
@@ -1796,12 +1821,36 @@ export default function PricingPage() {;
             <div className="text-sm text-gray-400">
               <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure</p>
+              <Button
+                href=&quot;/services&quot;
+                variant=&quot;primary&quot;
+                size=&quot;lg&quot;
+                className=&quot;text-lg px-8 py-4&quot;
+              >
+                Start Free Trial
+                <Play className=&quot;ml-2 w-5 h-5&quot; />
+              </Button>
+              <Button
+                href=&quot;/contact&quot;
+                variant=&quot;secondary&quot;
+                size=&quot;lg&quot;
+                className=&quot;text-lg px-8 py-4&quot;
+              >
+                Contact Sales
+                <MessageSquare className=&quot;ml-2 w-5 h-5&quot; />
+              </Button>
+            </div>
+            
+            <div className=&quot;text-sm text-gray-400&quot;>
+              <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
+              <p className=&quot;mt-2&quot;>✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure</p>
+
             </div>
           </UltraFuturisticCard>
         </div>
       </div>
     </UltraFuturisticBackground>
-                className='text-lg px-8 py-4'>;
+className='text-lg px-8 py-4'>;
                 Contact Sales;
                 <MessageSquare className='ml-2 w-5 h-5' />;
               </Button>;

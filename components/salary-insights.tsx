@@ -46,7 +46,7 @@ type InsightResponse = {
   minHourlyUsd: number,
   maxHourlyUsd: number,
   confidence: number,
-  trend_monthly: { label: string, value: number }[],
+trend_monthly: { label: string, value: number }[],
   regional_comparison: { region: string, medianHourlyUsd: number }[],
   tags: string[],
   gptRecommendation?: string;};  recommendedHourlyUsd: number,;
@@ -111,7 +111,7 @@ function SalaryInsightsPage() {
         setIsLoggedIn(false)
       }
     })()
-  }, []);
+}, []);
   async function fetchInsights() {;
     setLoading(true);
     setError(null);
@@ -167,7 +167,7 @@ function SalaryInsightsPage() {
     const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data },
     (async () => {
       try {
-        const { supabase } = await import('../utils/supabase/client');
+const { supabase } = await import('../utils/supabase/client');
         const user = await supabase.auth.getUser();
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
@@ -308,7 +308,7 @@ if ( {) {
       } catch {}
     })()
   }
-  const donutData = useMemo(() => {
+const donutData = useMemo(() => {
     if (!data) return [] as { label: string, value: number }[],
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
@@ -376,7 +376,7 @@ if (return [] as { label: string, value: number }[], ) {
         <div className="relative z-10">
           <h1 className="text-2xl font-semibold">Salary Insights</h1>
           <p className="opacity-90">Benchmark rates and set competitive offers in real-time.</p>
-        </div>
+</div>
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
       </div>
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -393,6 +393,28 @@ if (return [] as { label: string, value: number }[], ) {
               <div>
                 <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>
                 <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
+        </div>
+        <div className=&quot;absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl&quot; />
+      </div>
+
+      <div className=&quot;mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6&quot;>
+        <div className=&quot;lg:col-span-1 space-y-4&quot;>
+          <div className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
+            <h2 className=&quot;font-medium mb-3&quot;>Filters</h2>
+            <label className=&quot;block text-sm mb-2&quot;>Role title</label>
+            <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className=&quot;w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm&quot; placeholder=&quot;e.g., Senior AI Engineer&quot; />
+
+            <label className=&quot;block text-sm mt-3 mb-2&quot;>Skills</label>
+            <input value={skills} onChange={(e) => setSkills(e.target.value)} className=&quot;w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm&quot; placeholder=&quot;Comma-separated&quot; />
+
+            <label className=&quot;block text-sm mt-3 mb-2&quot;>Region</label>
+            <input value={region} onChange={(e) => setRegion(e.target.value)} className=&quot;w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm&quot; placeholder=&quot;City, Country&quot; />
+
+            <div className=&quot;grid grid-cols-2 gap-3 mt-3&quot;>
+              <div>
+                <label className=&quot;block text-sm mb-2&quot;>Experience</label>
+                <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value as any)} className=&quot;w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm&quot;>
+
                   <option>Junior</option>
                   <option>Mid</option>
                   <option>Senior</option>
@@ -400,7 +422,7 @@ if (return [] as { label: string, value: number }[], ) {
                 </select>
               </div>
               <div>
-                <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
+<label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
                   <option value="contract">Contract</option>
                   <option value="freelance">Freelance</option>
@@ -778,7 +800,7 @@ if (return [] as { label: string, value: number }[], ) {
                   </thead>
                   <tbody>
                     {data.regionalComparison.map((r) => (
-                      <tr key={r.region} className="border-t border-gray-100 dark:border-gray-900">
+<tr key={r.region} className="border-t border-gray-100 dark:border-gray-900">
                         <td className="py-1">{r.region}</td>
                         <td className="py-1">${r.medianHourlyUsd}</td>
                       </tr>
@@ -885,7 +907,7 @@ if (return [] as { label: string, value: number }[], ) {
                   </div>
                 </div>
               ) : (
-                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
+<div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
@@ -937,7 +959,7 @@ if (return [] as { label: string, value: number }[], ) {
               </div>
             </div>
           )}
-        </div>;
+</div>;
       </div>;
     </div>;
   );

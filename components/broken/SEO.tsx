@@ -29,7 +29,7 @@ interface SEOProps {
   author?: string;
   section?: string;
   tags?: string[];
-  structuredData?: any;
+structuredData?: any;
   noindex?: boolean;
   nofollow?: boolean
 }
@@ -455,13 +455,76 @@ const SEO: React.FC < SEOProps> = ({
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Space Technology Solutions'
+          ))}
+        </>
+      )}
+      
+      {/* Additional Meta Tags */}
+      <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot; />
+      <meta name=&quot;theme-color&quot; content=&quot;#000000&quot; />
+      <meta name=&quot;msapplication-TileColor&quot; content=&quot;#000000&quot; />
+      <meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; />
+      <meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; />
+      <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Zion Tech Group&quot; />
+      
+      {_/* Structured Data */}
+      <script
+        type=&quot;application/ld+json&quot;
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            &quot;@context&quot;: &quot;https://schema.org&quot;,
+            &quot;@type&quot;: &quot;Organization&quot;,
+            &quot;name&quot;: &quot;Zion Tech Group&quot;,
+            &quot;url&quot;: &quot;https://ziontechgroup.com&quot;,
+            &quot;logo&quot;: &quot;https://ziontechgroup.com/images/zion-tech-group-logo.png&quot;,
+            &quot;description&quot;: description,
+            &quot;foundingDate&quot;: &quot;2020&quot;,
+            &quot;sameAs&quot;: [
+              &quot;https://www.linkedin.com/company/zion-tech-group&quot;,
+              &quot;https://twitter.com/ziontechgroup&quot;,
+              &quot;https://github.com/Zion-Holdings&quot;
+            ],
+            &quot;contactPoint&quot;: {
+              &quot;@type&quot;: &quot;ContactPoint&quot;,
+              &quot;telephone&quot;: &quot;+1-800-ZION-TECH&quot;,
+              &quot;contactType&quot;: &quot;customer service&quot;,
+              &quot;availableLanguage&quot;: &quot;English&quot;
+            },
+            &quot;address&quot;: {
+              &quot;@type&quot;: &quot;PostalAddress&quot;,
+              &quot;addressCountry&quot;: &quot;US&quot;
+            },
+            &quot;hasOfferCatalog&quot;: {
+              &quot;@type&quot;: &quot;OfferCatalog&quot;,
+              &quot;name&quot;: &quot;Technology Services&quot;,
+              &quot;itemListElement&quot;: [
+                {
+                  &quot;@type&quot;: &quot;Offer&quot;,
+                  &quot;itemOffered&quot;: {
+                    &quot;@type&quot;: &quot;Service&quot;,
+                    &quot;name&quot;: &quot;AI & Machine Learning Solutions&quot;
+                  }
+                },
+                {
+                  &quot;@type&quot;: &quot;Offer&quot;,
+                  &quot;itemOffered&quot;: {
+                    &quot;@type&quot;: &quot;Service&quot;,
+                    &quot;name&quot;: &quot;Quantum Computing Services&quot;
+                  }
+                },
+                {
+                  &quot;@type&quot;: &quot;Offer&quot;,
+                  &quot;itemOffered&quot;: {
+                    &quot;@type&quot;: &quot;Service&quot;,
+                    &quot;name&quot;: &quot;Space Technology Solutions&quot;
+
                   }
                 }
               ]
             }
           })
         }}
-      />;
+/>;
       {/* Canonical URL */}
       <link rel='canonical' href={fullUrl} />;
       {/* Favicon and App Icons */}

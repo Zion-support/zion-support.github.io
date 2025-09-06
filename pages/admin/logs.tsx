@@ -60,7 +60,7 @@ interface LogEntry {
   url?: string;
   userAgent?: string;
   userId?: string;
-  component?: string;
+component?: string;
   timestamp: string;
   session_id?: string;
   user_id?: string;
@@ -156,6 +156,7 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
     </Badge>
   )
 };
+
 export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
@@ -164,7 +165,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
-  const categories = Array && Array.from(new Set(logs && logs.map(log => log && log.category))).filter(;
+const categories = Array && Array.from(new Set(logs && logs.map(log => log && log.category))).filter(;
     Boolean;
   );
   const sources = Array && Array.from(new Set(logs && logs.map(log => log && log.source))).filter(;
@@ -255,19 +256,22 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
         (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     }
+
     // Level filter
     if (levelFilter !== 'all') {
       filtered = filtered.filter(log => log.level === levelFilter)
     }
+
     // Category filter
     if (categoryFilter !== 'all') {
       filtered = filtered.filter(log => log.category === categoryFilter)
     }
+
     // Source filter
     if (sourceFilter !== 'all') {
       filtered = filtered.filter(log => log.source === sourceFilter)
     }
-    setFilteredLogs(filtered)
+setFilteredLogs(filtered)
   }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]);
   const refreshLogs = async () => {
     setIsLoading(true);
@@ -275,6 +279,17 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
       const response = await fetch('/api/admin/logs');
       if (response.ok) {
         const data = await response.json();
+
+    setFilteredLogs(filtered)
+  }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]);
+
+  const refreshLogs = async () => {
+    setIsLoading(true);
+    try {
+      const response = await fetch('/api/admin/logs')
+      if (response.ok) {
+        const data = await response.json()
+
         setLogs(data.logs)
       }
     } catch (error) {
@@ -283,7 +298,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
       setIsLoading(false)
     }
   };
-  const exportLogs = () => {
+const exportLogs = () => {
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
@@ -292,7 +307,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click()
   };
-  const formatTimestamp = (timestamp: string) => {
+const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString()
   };
   const formatPerformance = (performance?: LogEntry['performance']) => {
@@ -324,7 +339,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           </Button>
         </div>
       </div>
-      {/* Summary Cards */}
+{/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -426,7 +441,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           <CardTitle>Filters</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="relative">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
@@ -436,7 +451,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
-            <Select value={levelFilter} onValueChange={setLevelFilter}>
+<Select value={levelFilter} onValueChange={setLevelFilter}>
               <SelectTrigger>
                 <SelectValue placeholder="All levels" />
               </SelectTrigger>
@@ -460,7 +475,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                 ))}
               </SelectContent>
             </Select>
-            <Select value={sourceFilter} onValueChange={setSourceFilter}>
+<Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
                 onChange={e => setSearchTerm(e && e.target.value)}
               />;
@@ -477,7 +492,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           </div>
         </CardContent>
       </Card>
-            <Select value={levelFilter} onValueChange={setLevelFilter}>;
+<Select value={levelFilter} onValueChange={setLevelFilter}>;
               <SelectTrigger>;
                 <SelectValue placeholder='All levels' />;
               </SelectTrigger>;
@@ -889,7 +904,7 @@ if ( {) {
                       </pre>
                     </details>
                   )}
-                  {log.error && (
+{log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
                         View Error Details
@@ -935,7 +950,7 @@ if ( {) {
                 </div>
               ))
             ) : (
-              <div className="text-center text-muted-foreground py-8">
+<div className="text-center text-muted-foreground py-8">
                 No logs found matching the current filters.
               </div>
             )}
@@ -945,7 +960,7 @@ if ( {) {
     </div>
   )
 }
-                  <div className='flex items-center justify-between text-xs text-muted-foreground'>                    <div>;
+<div className='flex items-center justify-between text-xs text-muted-foreground'>                    <div>;
                       Session: {log && log.sessionId}
                       {log && log.userId && ` • User: ${log && log.userId}`}
                     </div>;
@@ -1100,6 +1115,15 @@ export const getServerSideProps: GetServerSideProps = async () => {
     };
   }
 }
+
+    return {_props: {
+        logs: logs.slice(0, _1000), _// Limit to most recent 1000 logs
+        errorCount, _warningCount, _totalCount, _lastUpdated: new Date().toISOString()}};
+  } catch (error) {_logErrorToProduction('Error reading logs:', _error);
+    return {
+      props: {
+        logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
+
         errorCount;
         warningCount;
         totalCount;
@@ -1108,7 +1132,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
             logErrorToProduction('Error reading logs:', error);
     return {
       props: {
-        logs: [],
+logs: [],
         error_count: 0,
         warning_count: 0,
         total_count: 0,

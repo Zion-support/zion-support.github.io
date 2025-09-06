@@ -25,7 +25,7 @@ import React from 'react';
           <p className="text-gray-400 mb-6">The requested service could not be found.</p>
           <Button href="/services" variant="primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Services
+Back to Services
           </Button>
         </div>
       </div>
@@ -40,13 +40,14 @@ import React from 'react';
           <p className="text-gray-400 mb-6">The requested service "{id}" could not be found.</p>
           <Button href="/services" variant="primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
+
             Back to Services
           </Button>
         </div>
       </div>
     )
   }
-  return (
+return (
           content={`${service && service.name} | Zion Tech Group`}
         />;
         <meta property='og:description' content={service && service.description} />;
@@ -90,11 +91,41 @@ import React from 'react';
                 className="text-gray-400 hover:text-white"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Services
+          </Button>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <>
+      <Head>
+        <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>
+        <meta name=&quot;description&quot; content={service.description} />
+        <meta property=&quot;og:title&quot; content={`${service.name} | Zion Tech Group`} />
+        <meta property=&quot;og:description&quot; content={service.description} />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+
+      <div className=&quot;min-h-screen bg-black&quot;>
+        {/* Navigation */}
+        <nav className=&quot;border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+            <div className=&quot;flex items-center justify-between h-16&quot;>
+              <Button
+                href=&quot;/services&quot;
+                variant=&quot;ghost&quot;
+                size=&quot;sm&quot;
+                className=&quot;text-gray-400 hover:text-white&quot;
+              >
+                <ArrowLeft className=&quot;w-4 h-4 mr-2&quot; />
+
                 Back to Services
               </Button>
               <Button
                 href={service.website}
-                variant="primary"
+variant="primary"
                 size="sm"
                 icon={<ExternalLink className="w-4 h-4" />}
               >
@@ -103,7 +134,7 @@ import React from 'react';
             </div>
           </div>
         </nav>
-        {/* Service Detail Content */}
+{/* Service Detail Content */}
         <ServiceDetail service={service} />
               >;
                 Visit Service;
@@ -132,7 +163,7 @@ import React from 'react';
                 View All Services
               </Button>
               <Button
-                href="/contact"
+href="/contact"
                 variant="outline"
                 size="lg"
                 className="border-white/20 text-white hover:border-white/40"

@@ -14,3 +14,4 @@ function AIEducationPlatformPage() {
       </div>;
     </div>);
 }
+

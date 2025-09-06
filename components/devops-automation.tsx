@@ -91,12 +91,42 @@ function DevOpsAutomationPage() {
   ];
 ;
   const pricing_plans = [;
+
+export default function DevOpsAutomationPage() {_const _features = [
+    {
+      icon: <GitBranch className=&quot;w-6 h-6&quot; />,
+      title: 'CI/CD Pipelines',
+      description: 'Automated build, test, and deployment workflows',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+    },
+    {
+      icon: <Zap className=&quot;w-6 h-6&quot; />,
+      title: 'Infrastructure as Code',
+      description: 'Terraform, CloudFormation, and Kubernetes automation',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+    },
+    {
+      icon: <Shield className=&quot;w-6 h-6&quot; />,
+      title: 'Security Automation',
+      description: 'Automated security scanning and compliance checks',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+    },
+    {
+      icon: <BarChart3 className=&quot;w-6 h-6&quot; />,
+      title: 'Performance Monitoring',
+      description: 'Real-time performance insights and optimization',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+    }
+  ],
+
+  const pricingPlans = [
+
     {
       name: 'Starter',
       price: '$39',
       period: '/month',
       description: 'Perfect for small teams and startups',
-      features: [;
+features: [;
         'Up to 5 repositories',
         'Basic CI / CD pipelines',
         'GitHub integration',
@@ -198,7 +228,7 @@ function DevOpsAutomationPage() {
       price: '$129',
       period: '/month',
       description: 'Ideal for growing development teams',
-      features: [;
+features: [;
         'Up to 25 repositories',
         'Advanced CI / CD workflows',
         'Multi - cloud deployment',
@@ -265,7 +295,7 @@ function DevOpsAutomationPage() {
       competitor: 'Jenkins',
       pricing: 'Free',
       repositories: 'Unlimited',
-      rating: '4.2 / 5',
+rating: '4.2 / 5',
       pros: ['Completely free', 'Highly customizable'],
       cons: ['Requires maintenance', 'No managed service'],
     },  ];      pros: ['Completely free_highly customizable'],
@@ -278,7 +308,7 @@ function DevOpsAutomationPage() {
       name: 'Michael Chen',
       role: 'DevOps Lead',
       company: 'TechStart Inc.',
-      content:;
+content:;
         'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.',
       rating: 5,
     },    {
@@ -302,7 +332,7 @@ function DevOpsAutomationPage() {
       name: 'Sarah Johnson',
       role: 'Engineering Manager',
       company: 'CloudWorks',
-      content:;
+content:;
         'We switched from GitHub Actions to Zion and saved $200 / month while getting better automation features.',
       rating: 5,
     },      content: 'We switched from GitHub Actions to Zion and saved $200 / month while getting better automation features.',
@@ -312,7 +342,7 @@ function DevOpsAutomationPage() {
       name: 'Robert Davis',
       role: 'Site Reliability Engineer',
       company: 'ScaleTech',
-      content:;
+content:;
         'The infrastructure automation features are game - changing. We can now deploy to multiple clouds with a single click.',
       rating: 5,
     },      content: 'The infrastructure automation features are game - changing. We can now deploy to multiple clouds with a single click.',
@@ -325,7 +355,7 @@ function DevOpsAutomationPage() {
       title: 'Automated Testing',
       description: 'Run comprehensive test suites on every commit',
       icon: '🧪',
-                  key={index}
+key={index}
                   className={`relative p - 8 ${plan.color} transition - all duration - 300 hover:scale - 105 ${
                     plan.popular ? 'ring - 2 ring - blue - 500' : '';
                   }`}
@@ -526,7 +556,7 @@ function DevOpsAutomationPage() {
                 Start Free Trial
               </Button>
               <Button
-                href="/contact"
+href="/contact"
                 variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-blue-600"

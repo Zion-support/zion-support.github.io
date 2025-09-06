@@ -249,11 +249,21 @@ return res
       }
       // Fallback: return the slug as if saved
       return res.status(201).json({ slug: item.slug })
+
+export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method === 'GET') {
+    try {
+      if (hasSupabase) {
+        const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false }),
+        if (error) throw error,
+        return res.status(200).json({ items: data as TalentProfile[] })
+      }
+      return res.status(200).json({ items: LOCAL })
+
     } catch (e: any) {
       return res.status(500).json({ error: e.message })
     }
   }
-  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
         reviews_count: 0,
         created_at: new Date ().toISOString (),
@@ -262,7 +272,7 @@ return res
         name: payload.name || 'Unnamed',
         title: payload.title || 'Professional',
         location: payload.location || 'Remote',
-        availability: (payload.availability as any) || 'Open',
+availability: (payload.availability as any) || 'Open',
       } as TalentProfile;
 ;
       // Auto - translate;
@@ -317,6 +327,14 @@ if ( {) {
   $2
 }
         const { error } = await supabase_client.from ('talent_profiles').insert ({
+        }
+      }
+      item.originalLanguage = originalLang,
+      item.translations = translations,
+
+      if (hasSupabase) {
+        const { error } = await supabaseClient.from('talent_profiles').insert({
+
           id: item.id,
           slug: item.slug,
           name: item.name,
@@ -329,7 +347,7 @@ if ( {) {
           summary: item.summary,
           bio: item.bio,
           hourly_rate_usd: item.hourlyRateUsd ?? null,
-          request_quote: item.request_quote ?? null,
+request_quote: item.request_quote ?? null,
           availability: item.availability,
           profile_image_url: item.profileImageUrl ?? null,
           video_url: item.video_url ?? null,

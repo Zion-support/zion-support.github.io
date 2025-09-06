@@ -44,7 +44,7 @@ import {
   Lock,
   BarChart3,
   Calendar,
-  Target,} from 'lucide-react';import {
+Target,} from 'lucide-react';import {
   Brain;
   Monitor,
   Search,
@@ -66,11 +66,19 @@ import {
       name: 'AI Content Generator',
       description: 'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.',
     icon: <Brain className="w-8 h-8 text-white" />,
+
+export default function MicroSaasServicesPage() {_const _microSaasServices = [
+    {
+      id: 'ai-content-generator',
+      name: 'AI Content Generator',
+      description: 'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.',
+      icon: <Brain className=&quot;w-8 h-8 text-white&quot; />,
+
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-400 to-pink-500',
       features: [
         'AI-powered content generationMultiple content types (blog, social, email)SEO optimization suggestionsContent templates libraryPlagiarism-free contentMulti-language support'
-      ];
+];
       useCases: [
         'Blog content creationSocial media postsEmail marketing campaignsProduct descriptionsLanding page copyNewsletter content'
       ];
@@ -78,12 +86,12 @@ import {
         starter: { price: 29, features: ['100 generations/monthBasic templatesSEO analysisEmail support'] },
         professional: { price: 99, features: ['500 generations/monthPremium templatesAdvanced SEOPriority supportAPI access'] },
         enterprise: { price: 299, features: ['Unlimited generationsCustom templatesWhite-label optionsSLA guarantee'] }
-      };
+};
       marketPrice: '$29-299/month',
       competitors: ['Jasper AICopy.aiWritesonic'],
       website: 'https://ai-content.ziontech.ai',
       demo: 'https://demo.ai-content.ziontech.ai'
-    }
+}
   Target;
 export default /**
  * MicroSaasServicesPage - Function description
@@ -1377,7 +1385,7 @@ export default function MicroSaasServicesPage() {;
                       </Button>
                     </div>
                   </div>
-                  {/* Pricing & Market Info */}
+{/* Pricing & Market Info */}
                         className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'>                        variant="outline";
                         size="sm";
                         className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white";
@@ -1434,7 +1442,7 @@ export default function MicroSaasServicesPage() {;
                             ))}
                           </div>
                         </div>
-                        <div>
+<div>
                                   </span>;
                                   <span className='text-sm font-semibold text-white'>;
                                     ${details && details.price}/mo;
@@ -1614,7 +1622,7 @@ export default function MicroSaasServicesPage() {;
                 </div>
               </div>
             ))}
-      <section className="section-padding bg-gradient-cursor-accent">
+<section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
@@ -1664,7 +1672,7 @@ export default function MicroSaasServicesPage() {;
           </div>
         </div>
       </section>
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Why Choose Our Services */}
@@ -1841,11 +1849,16 @@ export default function MicroSaasServicesPage() {;
               href="/contact"
               size="lg"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
+            <Button
+              href=&quot;/contact&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow&quot;
+
             >
               Get Started
             </Button>
             <Button
-              href="/pricing"
+href="/pricing"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"

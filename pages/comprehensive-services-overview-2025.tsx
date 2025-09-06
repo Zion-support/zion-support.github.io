@@ -30,7 +30,7 @@ export default function ComprehensiveServicesOverviewPage() {
     { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length },
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
-  ];
+];
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
@@ -42,7 +42,7 @@ export default function ComprehensiveServicesOverviewPage() {
     })
     .sort((a, b) => {
       switch (sortBy) {
-        case 'popularity':
+case 'popularity':
           return b.popular ? 1 : -1
         case 'price':
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
@@ -67,11 +67,45 @@ export default function ComprehensiveServicesOverviewPage() {
     return sum + (roi ? parseInt(roi[1]) : 0)
   }, 0) / allServices.length;
   const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0);
+        case 'popularity':
+          return b.popular ? 1 : -1,
+        case 'price':
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        default: return 0
+      }
+    }),
+
+  const getCategoryIcon = (category: string) => {
+    const categoryData = categories.find(cat => cat.id === category)
+    return categoryData?.icon || '🚀'
+  },
+
+  // Calculate market statistics
+  const totalMarketSize = allServices.reduce((sum, service) => {
+    const marketSize = service.marketSize.match(/\$([\d.]+)B/)
+    return sum + (marketSize ? parseFloat(marketSize[1]) : 0)
+  }, 0),
+
+  const averageROI = allServices.reduce((sum, service) => {
+    const roi = service.roi.match(/(\d+)%/)
+    return sum + (roi ? parseInt(roi[1]) : 0)
+  }, 0) / allServices.length,
+
+  const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0),
+
   return (
     <>
       <Head>
         <title>Comprehensive Services Overview 2025 - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive micro SAAS services overview for 2025. Revolutionary AI, quantum computing, cybersecurity, and emerging technology solutions." />
+<meta name="description" content="Explore our comprehensive micro SAAS services overview for 2025. Revolutionary AI, quantum computing, cybersecurity, and emerging technology solutions." />
         <meta name="keywords" content="micro SAAS services, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-overview-2025" />
       </Head>
@@ -495,4 +529,26 @@ function ComprehensiveServicesOverviewPage() {
         </section>;
       </div>;
     </>);
+                  <a
+                    href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                    className=&quot;bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2&quot;
+                  >
+                    Contact Sales Team
+                    <ArrowRight className=&quot;w-5 h-5&quot; />
+                  </Link>
+                  <a
+                    href=&quot;tel:+13024640950&quot;
+                    className=&quot;bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2&quot;
+                  >
+                    Call +1 302 464 0950
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+
 }

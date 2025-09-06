@@ -38,3 +38,6 @@ import type { DefaultSeoProps } from 'next - seo';
 ;
 export default config;
 ;
+
+export default config
+

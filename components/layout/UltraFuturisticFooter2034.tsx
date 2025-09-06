@@ -419,6 +419,51 @@ const quick_links = [;
 ];
 ;
 const company_links = [;
+
+const _serviceCategories = [
+  {_title: '🧠 Revolutionary AI Services', _icon: Brain, _services: [
+      { name: 'AI Business Intelligence Pro', _href: '/ai-business-intelligence-pro', _price: '$299/month'},
+      {_name: 'AI Video Generation Platform', _href: '/ai-video-generation-platform', _price: '$499/month'},
+      {_name: 'AI-Powered Cybersecurity', _href: '/ai-cybersecurity-platform', _price: '$799/month'},
+      {_name: 'AI Drug Discovery Platform', _href: '/ai-drug-discovery-platform', _price: '$3, _999/month'}
+    ]
+  },
+  {_title: '⚛️ Quantum & Emerging Tech', _icon: Atom, _services: [
+      { name: 'Quantum Machine Learning', _href: '/quantum-machine-learning-platform', _price: '$1, _999/month'},
+      {_name: 'Blockchain AI Platform', _href: '/blockchain-ai-platform', _price: '$899/month'},
+      {_name: 'Edge AI Computing', _href: '/edge-ai-computing-platform', _price: '$599/month'},
+      {_name: 'AI Climate Modeling', _href: '/ai-climate-modeling-platform', _price: '$1, _299/month'}
+    ]
+  },
+  {_title: '🏙️ Enterprise IT Solutions', _icon: Cpu, _services: [
+      { name: 'API Security & Monitoring', _href: '/api-security-monitoring-suite', _price: '$399/month'},
+      {_name: 'Customer Success Automation', _href: '/customer-success-automation', _price: '$199/month'},
+      {_name: 'HR Automation Suite', _href: '/hr-automation-suite', _price: '$179/month'},
+      {_name: 'Project Management AI', _href: '/project-management-ai-platform', _price: '$199/month'}
+    ]
+  },
+  {_title: '🛒 Business Automation', _icon: ShoppingCart, _services: [
+      { name: 'E-commerce Automation', _href: '/ecommerce-automation-platform', _price: '$249/month'},
+      {_name: 'Marketing Automation Suite', _href: '/marketing-automation-suite', _price: '$279/month'},
+      {_name: 'Financial Analytics Platform', _href: '/financial-analytics-platform', _price: '$349/month'},
+      {_name: 'Legal Document Automation', _href: '/legal-document-automation', _price: '$399/month'}
+    ]
+  }
+],
+
+const quickLinks = [
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case-studies', icon: FileText },
+  { name: 'Blog', href: '/blog', icon: MessageSquare },
+  { name: 'Contact', href: '/contact', icon: MessageCircle }
+],
+
+const companyLinks = [
+
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Careers', href: '/careers', icon: Briefcase },
   { name: 'News', href: '/news', icon: Newspaper },
@@ -583,7 +628,7 @@ export default function UltraFuturisticFooter2034() {;
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
                     >
                       <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
                       <div className="text-lg font-bold text-white">{stat.value}</div>
@@ -608,7 +653,7 @@ export default function UltraFuturisticFooter2034() {;
                 </div>
               </motion.div>
             </div>
-                </div>;
+</div>;
                 {/* Contact Info */}
                 <div className='space-y-3'>;
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>;
@@ -653,7 +698,7 @@ export default function UltraFuturisticFooter2034() {;
                       key={category.title}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
                       className="space-y-4"
                     >
@@ -940,7 +985,7 @@ function UltraFuturisticFooter2034() {
                       <Link
                         key={link.name}
                         href={link.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
+className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
                       >
                         <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                         <span className="text-sm">{link.name}</span>
@@ -956,7 +1001,7 @@ function UltraFuturisticFooter2034() {
                       <Link
                         key={social.name}
                         href={social.href}
-                        target="_blank"
+target="_blank"
                         rel="noopener noreferrer"
                         className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"
                       >
@@ -1124,7 +1169,7 @@ function UltraFuturisticFooter2034() {
         </div>
       </div>
     </footer>
-                  className='hover:text-cyan-400 transition-colors'>;
+className='hover:text-cyan-400 transition-colors'>;
                   Terms of Service;
                 </Link>;
               </div>;

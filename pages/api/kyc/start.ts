@@ -23,7 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     role?: KycRole;
     fullLegalName?: string;
     businessName?: string;
-    businessRegistrationNumber?: string
+businessRegistrationNumber?: string
   };
   if (!userId || !role) return res.status(400).json({ error: 'Missing userId or role' });
   const db = load();
@@ -117,7 +117,7 @@ function handler() {
   profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-  res.status(200).json({
+res.status(200).json({
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})

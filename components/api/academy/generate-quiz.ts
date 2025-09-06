@@ -163,6 +163,46 @@ function handler() {
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
+
+  const _fallback = () => {_return res.status(200).json({
+      questions: [
+        {
+          question: `Which topic is central to ${moduleTitle}?`,
+          options: ['Random OpsZion OS missionUnrelated financeLegacy ERP'],
+          answerIndex: 1},
+        {
+          question: 'What does DAO commonly refer to?',
+          options: ['Data Access ObjectDecentralized Autonomous OrganizationDigital Asset OptionDynamic Allocation Output'],
+          answerIndex: 1},
+        {
+          question: 'What should be configured during deployment?',
+          options: ['Genesis Deploy Kit & modulesOnly UI colorsNothingRandom plugins'],
+          answerIndex: 0},
+        {
+          question: 'Who are key community roles to hire?',
+          options: ['Moderators, educators, ambassadorsAstronautsComediansNo one'],
+          answerIndex: 0},
+        {
+          question: 'Which docs are needed for launch?',
+          options: ['Whitepaper + governance docsNovelRecipe bookNone'],
+          answerIndex: 0}]})
+  },
+
+  if (!apiKey) return fallback(),
+
+  try {
+
+    const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: 'You are an expert course designer for founders.' },
+        { role: 'user', content: prompt }],
+      temperature: 0.2}),
+
+    const text = completion.choices?.[0]?.message?.content ?? ''
+    try {
+      const json = JSON.parse(text)
+
       return res.status(200).json(json)
     } catch {
       return fallback()
@@ -175,4 +215,5 @@ function handler() {
   } catch (err) {
     return fallback ();
 }
+
 }

@@ -98,4 +98,16 @@ function Button() {
   );
 }
     </button>);
+  
+  return (
+    <button
+      type={_type}
+      className={_classes}
+      onClick={_onClick}
+      disabled={_disabled}
+    >
+      {_children}
+    </button>
+  )
+
 }

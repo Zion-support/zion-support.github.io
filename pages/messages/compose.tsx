@@ -45,12 +45,14 @@ export default function ComposePage() {;
   }, [loading, user, router]);
   if (!user) return null;
   const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message';
+  const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message'
+
   const context = type === 'invite'
     ? { type: 'invite', jobId, jobTitle, talentId, talentName }
     : type === 'apply'
     ? { type: 'application', jobId, jobTitle }
     : { type: 'general' },
-  const onSend = async () => {
+const onSend = async () => {
         : { type: 'general' };
   const onSend = async () => {;
     if (!recipientId && !talentId) return alert('Missing recipient');
@@ -159,12 +161,12 @@ export default function ComposePage() {;
               {type === 'apply' && jobTitle ? `Applying to: ${jobTitle}` : null}
             </p>
           </div>
-          <div className="p-4 space-y-3">
+<div className="p-4 space-y-3">
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={6}
-              className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder={type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}` : 'Write your message...'}
             />
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />

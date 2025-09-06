@@ -34,7 +34,7 @@ export default function ComprehensivePricingPage() {;
     { value: 'All', label: 'All Prices' },
     { value: '0-100', label: '$0 - $100' },
     { value: '101-500', label: '$101 - $500' },
-    { value: '501-1000', label: '$501 - $1,000' };
+{ value: '501-1000', label: '$501 - $1,000' };
     { value: '1001-2500', label: '$1,001 - $2,500' };
     { value: '2501-5000', label: '$2,501 - $5,000' };
     { value: '5001+', label: '$5,001+' }
@@ -174,11 +174,16 @@ function ComprehensivePricingPage() {
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
+  }
+
+  // Search filter
+  if (searchQuery) {_filteredServices = filteredServices.filter(service =>
+
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+);
   }
   // Sort services
   filteredServices.sort((a, b) => {
@@ -362,12 +367,40 @@ if ( {) {
 ;
   // Pricing tiers;
   const pricing_tiers = [;
+
+  // Sort services
+  filteredServices.sort(_(a, _b) => {_switch (sortBy) {
+      case 'price':
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+      case 'category':
+        return a.category.localeCompare(b.category),
+      case 'roi':
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0')
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0')
+        return bRoi - aRoi,
+      default: return a.name.localeCompare(b.name)
+    }
+  }),
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
+
+  // Pricing tiers
+  const pricingTiers = [
+
     {
       name: 'Starter',
       price: '$49',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [;
+features: [;
         'Basic service access',
         'Email support',
         'Standard features',
@@ -387,7 +420,7 @@ if ( {) {
       price: '$199',
       period: '/month',
       description: 'Ideal for growing businesses and teams',
-      features: [;
+features: [;
         'Advanced service access',
         'Priority support',
         'Advanced features',
@@ -408,7 +441,7 @@ if ( {) {
       price: '$499',
       period: '/month',
       description: 'For large organizations and enterprises',
-      features: [;
+features: [;
         'Full service access',
         '24 / 7 dedicated support',
         'All features',
@@ -432,7 +465,7 @@ if ( {) {
       metric: '$15.2B',
       label: 'Total Market Size',
       description: 'Combined market value of all services',
-      icon: <ChartBar className='w - 6 h - 6' />,
+icon: <ChartBar className='w - 6 h - 6' />,
     },    {
       metric: '400+',
       label: 'Services Available',
@@ -454,7 +487,7 @@ if ( {) {
       metric: '400+',
       label: 'Services Available',
       description: 'Comprehensive micro SaaS portfolio',
-      icon: <Database className='w - 6 h - 6' />,
+icon: <Database className='w - 6 h - 6' />,
     },      icon: <Database className="w - 6 h - 6" />;
     }
     {
@@ -468,7 +501,7 @@ if ( {) {
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
-  };
+};
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
@@ -629,7 +662,7 @@ if ( {) {
     visible: {
       opacity: 1,
       transition: {
-        stagger_children: 0.1,
+stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
       }
@@ -689,6 +722,53 @@ if ( {) {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { y: 20, _opacity: 0},
+    visible: {_y: 0, _opacity: 1, _transition: {
+        duration: 0.5}
+    }
+  },
+
+  return (
+    <UltraFuturisticBackground variant=&quot;holographic&quot; intensity=&quot;high&quot;>
+      <div className=&quot;min-h-screen&quot;>
+        <Head>
+          <title>Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans</title>
+          <meta name=&quot;description&quot; content=&quot;Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size.&quot; />
+          <meta name=&quot;keywords&quot; content=&quot;micro SaaS pricing, service pricing, business pricing, ROI guarantees, market analysis, transparent pricing, enterprise pricing&quot; />
+          <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+          <meta property=&quot;og:title&quot; content=&quot;Comprehensive Pricing | Zion Tech Group&quot; />
+          <meta property=&quot;og:description&quot; content=&quot;Transparent pricing for all micro SaaS services with market analysis and ROI guarantees.&quot; />
+          <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/comprehensive-pricing&quot; />
+          <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+          <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/comprehensive-pricing&quot; />
+        </Head>
+
+        {/* Hero Section */}
+        <section className=&quot;relative py-20 overflow-hidden&quot;>
+          <div className=&quot;container mx-auto px-4 text-center&quot;>
+            <div className=&quot;max-w-5xl mx-auto&quot;>
+              <motion.h1 
+                className=&quot;text-6xl md:text-8xl font-bold mb-8 futuristic-glow&quot;
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+                  Comprehensive
+                </span>
+                <br />
+                <span className=&quot;text-white&quot;>Pricing & Plans</span>
+              </motion.h1>
+              <motion.p 
+                className=&quot;text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed&quot;
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -696,7 +776,7 @@ if ( {) {
                 Transparent pricing for all our revolutionary micro SaaS services. 
                 Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
               </motion.p>
-              {/* Market Stats */}
+{/* Market Stats */}
               <motion.div
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
                 Transparent pricing for all our revolutionary micro SaaS;
@@ -770,7 +850,7 @@ if ( {) {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
-                  variant="primary" 
+variant="primary" 
                   size="lg"
                   onClick={() => document.getElementById('pricing-tiers')?.scrollIntoView({ behavior: 'smooth' })}
                 >
@@ -789,7 +869,7 @@ if ( {) {
             </div>
           </div>
         </section>
-        {/* Contact Information Banner */}
+{/* Contact Information Banner */}
         <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -808,7 +888,7 @@ if ( {) {
             </div>
           </div>
         </section>
-        {/* Pricing Tiers */}
+{/* Pricing Tiers */}
         <section id="pricing-tiers" className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -818,7 +898,7 @@ if ( {) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-                >;
+>;
                   Browse All Services;
                   <Search className='ml-2 w-5 h-5' />                </Button>                  <Search className="ml-2 w-5 h-5" />;
                 </Button>;
@@ -1175,7 +1255,7 @@ if ( {) {
                         </div>
                       </div>
                     )}
-                    <div className="text-center mb-8">
+<div className="text-center mb-8">
                       <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier.color} mb-6`}>
                         {tier.icon}
                       </div>
@@ -1242,12 +1322,16 @@ if ( {) {
                        >
                         Get Started
                         <ArrowRight className="ml-2 w-4 h-4" />
+                       >
+                        Get Started
+                        <ArrowRight className=&quot;ml-2 w-4 h-4&quot; />
+
                       </Button>
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
               ))}
-            </motion && motion.div>;
+</motion && motion.div>;
           </div>;
         </section>;
         {/* Services Pricing Grid */}
@@ -1307,7 +1391,7 @@ if ( {) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+<div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
                 <div className="flex flex-wrap gap-4">
                   <select
                     value={selectedCategory}
@@ -1319,7 +1403,7 @@ if ( {) {
                       <option key={category} value={category}>{category}</option>
                     ))}
                   </select>
-                  <select
+<select
                     value={priceRange}
                     onChange={(e) => setPriceRange(e.target.value)}
                     className="px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400"
@@ -1366,7 +1450,7 @@ if ( {) {
                 </div>
               </div>
             </motion.div>
-                    >;
+>;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
                       </div>;
                       <div className='text - sm text - gray - 400'>{tier.period}</div>;
@@ -1879,11 +1963,16 @@ if ( {) {
                               </div>;
                             </div>;
                           </div>;
+                           >
+                             Get Pricing
+                             <DollarSign className=&quot;ml-2 w-4 h-4&quot; />
+                           </Button>
+
                         </div>
                       </div>
                     ) : (
                       // List View
-                      <div className="flex flex-col md:flex-row gap-6 w-full">
+<div className="flex flex-col md:flex-row gap-6 w-full">
                         <div className="text-4xl md:text-5xl flex-shrink-0">{service.icon}</div>
                         <div className="flex-1">
                           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
@@ -1909,7 +1998,7 @@ if ( {) {
                               </div>
                             </div>
                             <div>
-                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Info</h4>
+<h4 className="text-sm font-semibold text-purple-400 mb-2">Market Info</h4>
                               <div className="space-y-1 text-sm text-gray-300">
                                 <div><span className="text-gray-400">ROI:</span> {service.roi}</div>
                                 <div><span className="text-gray-400">Market:</span> {service.marketSize}</div>
@@ -1990,6 +2079,10 @@ if ( {) {
                              >
                                Get Pricing
                                <DollarSign className="ml-2 w-4 h-4" />
+                             >
+                               Get Pricing
+                               <DollarSign className=&quot;ml-2 w-4 h-4&quot; />
+
                              </Button>
                           </div>
                         </div>
@@ -1999,14 +2092,14 @@ if ( {) {
                 </motion.div>
               ))}
             </motion.div>
-            {filteredServices.length === 0 && (
+{filteredServices.length === 0 && (
               <motion.div 
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="text-6xl mb-4">🔍</div>
+<div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
                 >;
@@ -2026,7 +2119,7 @@ if ( {) {
                  </Button>
               </motion.div>
             )}
-        <section className="py-20">
+<section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               className="max-w-4xl mx-auto"
@@ -2035,7 +2128,7 @@ if ( {) {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-          </div>;
+</div>;
         </section>;
         {/* Contact Section */}
         <section className='py-20'>;
@@ -2111,6 +2204,36 @@ if ( {) {
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
+                >
+                  Contact Sales
+                  <Mail className=&quot;ml-2 w-5 h-5&quot; />
+                </Button>
+                <Button 
+                  variant="futuristic" 
+                  size="lg"
+
+                >
+                  Schedule Demo
+                  <Calendar className=&quot;ml-2 w-5 h-5&quot; />
+                </Button>
+              </div>
+
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 text-center&quot;>
+                <div>
+                  <Phone className=&quot;w-8 h-8 text-cyan-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.mobile}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Call us anytime</div>
+                </div>
+                <div>
+                  <Mail className=&quot;w-8 h-8 text-purple-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.email}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Email us 24/7</div>
+                </div>
+                <div>
+                  <MapPin className=&quot;w-8 h-8 text-green-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.address}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Visit our office</div>
+
                 </div>
               </div>
             </motion.div>
@@ -2118,7 +2241,7 @@ if ( {) {
         </section>
       </div>
     </UltraFuturisticBackground>
-                >;
+>;
                   Schedule Demo;
                   <Calendar className='ml-2 w-5 h-5' />;
                 </Button>;

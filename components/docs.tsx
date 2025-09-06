@@ -13,7 +13,7 @@ function DocsPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-        { name: 'Overview', href: '/enhanced-services-showcase' },
+{ name: 'Overview', href: '/enhanced-services-showcase' },
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
         { name: 'Contact Sales', href: '/contact' }]
     };
@@ -26,21 +26,37 @@ function DocsPage() {
     };
     {
       title: 'IT & Platform Docs'
+
+  const _sections = [
+    {_title: 'Getting Started', _links: [
+        { name: 'Overview', _href: '/enhanced-services-showcase'},
+        {_name: 'Pricing & Market Benchmarks', _href: '/market-pricing'},
+        {_name: 'Contact Sales', _href: '/contact'}]
+    },
+    {_title: 'AI Services Docs', _links: [
+        { name: 'AI Guardrails', _href: '/ai-guardrails'},
+        {_name: 'AI Evals', _href: '/ai-evals'},
+        {_name: 'Agentic RAG', _href: '/agentic-rag'}]
+    },
+    {
+      title: 'IT & Platform Docs',
+
       links: [
         { name: 'API Observability', href: '/api-observability' },
         { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
         { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
-    }];
+}];
   const external = [
     { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
     { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' },
     { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' },
     { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }],
+
   const quickLinks = [
     {
       title: 'API Status',
       description: 'Check service availability and performance',
-      icon: <CheckCircle className="w-6 h-6" />,
+icon: <CheckCircle className="w-6 h-6" />,
       href: '/status',
       color: 'text-green-400'
     }
@@ -271,21 +287,21 @@ export default function DocsPage() {;
     {
       title: 'SDK Downloads',
       description: 'Get the latest SDKs and client libraries',
-      icon: <Download className='w - 6 h - 6' />,
+icon: <Download className='w - 6 h - 6' />,
       href: '/downloads',
       color: 'text - blue - 400',
     },
     {
       title: 'Support Portal',
       description: 'Get help from our technical support team',
-      icon: <ExternalLink className='w - 6 h - 6' />,
+icon: <ExternalLink className='w - 6 h - 6' />,
       href: '/support',
       color: 'text - purple - 400',
     },
     {
       title: 'Community Forum',
       description: 'Connect with other developers and users',
-      icon: <ExternalLink className='w - 6 h - 6' />,
+icon: <ExternalLink className='w - 6 h - 6' />,
       href: '/community',
       color: 'text - yellow - 400',
     },
@@ -471,7 +487,7 @@ export default function DocsPage() {;
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);
 }
                       </a>                    </li>      </Head>;
       <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;

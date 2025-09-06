@@ -65,7 +65,7 @@ const ContactPage: React.FC = () => {
       <Head>
         <title>Contact Us - Zion Tech Group</title>
         <meta
-          name='description'
+name='description'
           content='Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation.'
         />
         <meta
@@ -142,7 +142,7 @@ const ContactPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+</div>
     </>
       description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;

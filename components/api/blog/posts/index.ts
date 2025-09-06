@@ -189,4 +189,18 @@ if ( {) {
     return res.status (201).json (post);
   }
 return res.status (405).end ();
+    }
+    const post: BlogPost = {_id: uuidv4(), _title: body.title!, _slug: body.slug!, _coverImageUrl: body.coverImageUrl || '', _author: body.author!, _publishDate: body.publishDate!, _tags: body.tags || [], _topics: body.topics || [], _seo: {
+        metaTitle: body.seo?.metaTitle || body.title!, _metaDescription: body.seo?.metaDescription || '', _ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || ''},
+      body: body.body || '',
+      status: body.status || 'draft',
+      metrics: { views: 0, likes: 0, shares: 0 }},
+    posts.unshift(post),
+    writePosts(posts),
+    return res.status(201).json(post)
+
+  }
+
+  return res.status(405).end()
+
 }

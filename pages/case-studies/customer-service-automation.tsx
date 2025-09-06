@@ -41,6 +41,129 @@ function CaseStudyPage() {
           {/* Case Study Content */}
           <div className="max - w-4xl mx - auto">;
             {/* Company Overview */}
+      </Head>
+      
+      <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900&quot;>
+        <main className=&quot;container mx-auto px-6 py-12&quot;>
+          {/* Breadcrumb */}
+          <nav className=&quot;mb-8&quot;>
+            <Link href=&quot;/&quot; className=&quot;text-white/60 hover:text-white transition-colors&quot;>
+              Home
+            </Link>
+            <span className=&quot;text-white/60 mx-2&quot;>→</span>
+            <Link href=&quot;/case-studies&quot; className=&quot;text-white/60 hover:text-white transition-colors&quot;>
+              Case Studies
+            </Link>
+            <span className=&quot;text-white/60 mx-2&quot;>→</span>
+            <span className=&quot;text-white&quot;>Intelligent Customer Service Automation</span>
+          </nav>
+
+          {/* Header */}
+          <header className=&quot;text-center mb-16&quot;>
+            <div className=&quot;inline-block px-4 py-2 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30 mb-6&quot;>
+              Financial Services Industry
+            </div>
+            <h1 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
+              Intelligent Customer Service Automation
+            </h1>
+            <p className=&quot;text-xl text-white/80 max-w-3xl mx-auto&quot;>
+              How a Financial Services Provider achieved 80% reduction in response time with AI-powered chatbots and automated ticket routing
+            </p>
+          </header>
+
+          {/* Case Study Content */}
+          <div className=&quot;max-w-4xl mx-auto&quot;>
+            {/* Company Overview */}
+            <section className=&quot;mb-16&quot;>
+              <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Company Overview</h2>
+              <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20&quot;>
+                <h3 className=&quot;text-2xl font-semibold text-green-400 mb-4&quot;>Financial Services Provider</h3>
+                <p className=&quot;text-white/90 text-lg mb-4&quot;>
+                  A leading financial services company serving millions of customers with banking, 
+                  investment, and insurance products. The company faced challenges with high customer service costs and long response times.
+                </p>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mt-6&quot;>
+                  <div className=&quot;text-center&quot;>
+                    <div className=&quot;text-3xl font-bold text-green-400&quot;>1M+</div>
+                    <div className=&quot;text-white/70&quot;>Customers</div>
+                  </div>
+                  <div className=&quot;text-center&quot;>
+                    <div className=&quot;text-3xl font-bold text-green-400&quot;>500+</div>
+                    <div className=&quot;text-white/70&quot;>Support Agents</div>
+                  </div>
+                  <div className=&quot;text-center&quot;>
+                    <div className=&quot;text-3xl font-bold text-green-400&quot;>$100M+</div>
+                    <div className=&quot;text-white/70&quot;>Annual Revenue</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Challenge */}
+            <section className=&quot;mb-16&quot;>
+              <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>The Challenge</h2>
+              <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20&quot;>
+                <h3 className=&quot;text-2xl font-semibold text-red-400 mb-4&quot;>Critical Issues</h3>
+                <ul className=&quot;space-y-3 text-white/90 text-lg&quot;>
+                  <li className=&quot;flex items-start gap-3&quot;>
+                    <div className=&quot;w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0&quot;></div>
+                    <span>High customer service costs consuming 25% of operational budget</span>
+                  </li>
+                  <li className=&quot;flex items-start gap-3&quot;>
+                    <div className=&quot;w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0&quot;></div>
+                    <span>Long response times averaging 4-6 hours</span>
+                  </li>
+                  <li className=&quot;flex items-start gap-3&quot;>
+                    <div className=&quot;w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0&quot;></div>
+                    <span>Inefficient ticket routing causing delays and customer frustration</span>
+                  </li>
+                  <li className=&quot;flex items-start gap-3&quot;>
+                    <div className=&quot;w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0&quot;></div>
+                    <span>Limited 24/7 support coverage</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Solution */}
+            <section className=&quot;mb-16&quot;>
+              <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Our Solution</h2>
+              <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20&quot;>
+                <h3 className=&quot;text-2xl font-semibold text-green-400 mb-4&quot;>AI-Powered Customer Service Platform</h3>
+                <p className=&quot;text-white/90 text-lg mb-6&quot;>
+                  We implemented a comprehensive customer service automation platform that combines 
+                  intelligent chatbots, _automated ticket routing, _and sentiment analysis for optimal customer experience.
+                </p>
+                
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
+                  <div className=&quot;bg-white/5 rounded-lg p-6 border border-white/10&quot;>
+                    <h4 className=&quot;text-xl font-semibold text-green-400 mb-3&quot;>Intelligent Chatbots</h4>
+                    <p className=&quot;text-white/80&quot;>
+                      AI-powered chatbots handle 70% of customer inquiries automatically with 
+                      natural language understanding and context awareness.
+                    </p>
+                  </div>
+                  
+                  <div className=&quot;bg-white/5 rounded-lg p-6 border border-white/10&quot;>
+                    <h4 className=&quot;text-xl font-semibold text-green-400 mb-3&quot;>Automated Ticket Routing</h4>
+                    <p className=&quot;text-white/80&quot;>
+                      Smart routing algorithms automatically assign tickets to the most 
+                      qualified agents based on expertise and workload.
+                    </p>
+                  </div>
+                  
+                  <div className=&quot;bg-white/5 rounded-lg p-6 border border-white/10&quot;>
+                    <h4 className=&quot;text-xl font-semibold text-green-400 mb-3&quot;>Sentiment Analysis</h4>
+                    <p className=&quot;text-white/80&quot;>
+                      Real-time sentiment analysis identifies customer emotions and 
+                      prioritizes urgent cases automatically.
+                    </p>
+                  </div>
+                  
+                  <div className=&quot;bg-white/5 rounded-lg p-6 border border-white/10&quot;>
+                    <h4 className=&quot;text-xl font-semibold text-green-400 mb-3&quot;>24/7 Support</h4>
+                    <p className=&quot;text-white/80&quot;>
+
                       Round-the-clock automated support with seamless escalation 
                       to human agents when needed.
                     </p>
@@ -48,7 +171,7 @@ function CaseStudyPage() {
                 </div>
               </div>
             </section>
-            {/* Results */}
+{/* Results */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -98,7 +221,7 @@ function CaseStudyPage() {
                 </div>
               </div>
             </section>
-            {/* Technologies */}
+{/* Technologies */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -106,12 +229,13 @@ function CaseStudyPage() {
                   {['ChatbotsNatural Language ProcessingTicket RoutingSentiment Analysis'].map((tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-green-400 font-semibold">{tech}</span>
+
                     </div>
                   ))}
                 </div>
               </div>
             </section>
-            {/* Implementation */}
+{/* Implementation */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -147,7 +271,7 @@ function CaseStudyPage() {
                 </div>
               </div>
             </section>
-            {/* Call to Action */}
+{/* Call to Action */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl p-8 border border-green-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Customer Service?</h2>
@@ -165,6 +289,16 @@ function CaseStudyPage() {
                   <Link
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-green-400/50 transition-all duration-300"
+                  <Link 
+                    href=&quot;/contact&quot;
+                    className=&quot;bg-gradient-to-r from-green-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-500 hover:to-cyan-500 transition-all duration-300&quot;
+                  >
+                    Get Started
+                  </Link>
+                  <Link 
+                    href=&quot;/case-studies&quot;
+                    className=&quot;px-8 py-4 border border-white/20 rounded-lg text-white hover:border-green-400/50 transition-all duration-300&quot;
+
                   >
                     View All Case Studies
                   </Link>

@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
-  try {
+try {
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
     if (!targetType || !targetId) {
       return res && res.status(400).json({ error: "Missing targetType or targetId" });
@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (targetType !== 'talent' && targetType !== 'client') {
       return res.status(400).json({ error: 'Invalid targetType' })
     }
-    const all = await readReviews();
+const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
     const filtered = all.filter((r) => {
       if (r.removed |!r.approved) return false;
@@ -34,11 +34,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (!matchesTarget) return false;
       const counterpartExists = all && all.some(
         (x) =>
+
           x.projectId === r.projectId &&
           x.fromRole !== r.fromRole &&
           x.toRole !== r.toRole &&
           x.approved &&
-          !x.removed
+!x.removed
           x && x.projectId === r && r.projectId &&
           x && x.fromRole !== r && r.fromRole &&
           x && x.toRole !== r && r.toRole &&
@@ -174,6 +175,16 @@ if (author_name = "Anonymous") {
   }
       mostRecent: publicReviews.slice(0, 5)
     };
+      (targetType === 'talent' && p.talentSlug === targetId) ||
+      (targetType === 'client' && p.clientId === targetId)
+    )).length,
+
+    const summary: ReviewsSummary = {
+      averageRating,
+      totalReviews,
+      totalCompletedProjects,
+      mostRecent: publicReviews.slice(0, 5)},
+
     return res.status(200).json({ summary, reviews: publicReviews })
   } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })

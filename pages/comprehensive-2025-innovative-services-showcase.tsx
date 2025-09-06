@@ -32,7 +32,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length },
     { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length },
     { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s => s.category.includes('Advanced Analytics')).length }
-  ]
+]
   const getPriceRange = (price: string) => {
     const numPrice = parseFloat(price.replace('$', '').replace(, ''))
     if (numPrice < 1000) return 'budget'
@@ -46,11 +46,19 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
       const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange;
+
+  const _filteredServices = allServices
+    .filter(service => {_const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory)
+      const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange
+
       return matchesSearch && matchesCategory && matchesPrice
     })
     .sort((a, b) => {
       switch (sortBy) {
-        case 'popularity':
+case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
@@ -163,12 +171,40 @@ if (return 'mid', ) {
       }
     }
   };
+        case 'popularity':
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+        case 'price':
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        default: return 0
+      }
+    }),
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { opacity: 0, _y: 20},
+    visible: {_opacity: 1, _y: 0, _transition: {
+        duration: 0.5}
+    }
+  },
+
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  }
+}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -298,7 +334,7 @@ if (return 'mid', ) {
           </motion.div>
         </div>
       </section>
-      {/* Services Grid */}
+{/* Services Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -322,16 +358,17 @@ if (return 'mid', ) {
                 <p className="text-white/60 mb-6">Try adjusting your search criteria or filters</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
+setSearchTerm('');
                     setSelectedCategory('all');
                     setPriceRange('all')
                   }}
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
+
                 >
                   Clear Filters
                 </button>
               </div>
-            ) : (
+) : (
               <div className={viewMode === 'grid' 
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'

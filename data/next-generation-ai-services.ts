@@ -1,5 +1,5 @@
 export interface NextGenerationAIService {
-  real_implementation: boolean;
+real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
   customers: number;

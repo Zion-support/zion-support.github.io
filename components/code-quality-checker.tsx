@@ -109,12 +109,29 @@ function CodeQualityCheckerPage() {
       gradient: 'from-green-400 to-emerald-500'},
     {
       icon: <Zap className="w-8 h-8 text-white" />,
+
+  const _features = [
+    {
+      icon: <Code className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Multi-Language Support',
+      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
+      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
+      gradient: 'from-teal-400 to-cyan-500'},
+    {
+      icon: <CheckCircle className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Code Quality Metrics',
+      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500'},
+    {
+      icon: <Zap className=&quot;w-8 h-8 text-white&quot; />,
+
       title: 'Real-Time Analysis',
       description: 'Instant code quality feedback with detailed explanations and improvement suggestions.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'},
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
+icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Security Scanning',
       description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',
     color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
@@ -184,7 +201,7 @@ function CodeQualityCheckerPage() {
       price: '$29',
       period: '/month',
       description: 'Perfect for individual developers and small projects',
-      features: [;
+features: [;
         '100 code analyses / month',
         'Basic quality metrics',
         '5 programming languages',
@@ -201,7 +218,7 @@ function CodeQualityCheckerPage() {
       price: '$79',
       period: '/month',
       description: 'Ideal for development teams and growing companies',
-      features: [;
+features: [;
         '500 code analyses / month',
         'Advanced quality metrics',
         'All programming languages',
@@ -220,7 +237,7 @@ function CodeQualityCheckerPage() {
       price: '$199',
       period: '/month',
       description: 'For large organizations with complex codebases',
-      features: [;
+features: [;
         'Unlimited analyses',
         'Enterprise metrics',
         'Custom language support',
@@ -460,13 +477,13 @@ function CodeQualityCheckerPage() {
                 </>
               ) : (
                 <>
-                  <Play className="w-5 h-5 mr-2" />
+<Play className="w-5 h-5 mr-2" />
                   Analyze Code Quality
                 </>
               )}
             </Button>
           </div>
-              disabled={isAnalyzing || !codeInput && codeInput.trim()}>;
+disabled={isAnalyzing || !codeInput && codeInput.trim()}>;
               {isAnalyzing ? (;
                 <>;
                   <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />;
@@ -516,7 +533,7 @@ function CodeQualityCheckerPage() {
               View Pricing
             </Button>
             <Button
-              href="/contact"
+href="/contact"
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
@@ -998,7 +1015,7 @@ function CodeQualityCheckerPage() {
                       </div>
                     </div>
                   ))}
-              <Card className="border-gradient-teal">
+<Card className="border-gradient-teal">
                 <h3 className="text-2xl font-bold mb-6 text-white">Quality Metrics</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
@@ -1020,7 +1037,7 @@ function CodeQualityCheckerPage() {
                 </div>
               </Card>
             </div>
-                </div>;
+</div>;
               </Card>;
             {/* Recommendations */}
             <Card className="border-gradient-teal">
@@ -1037,7 +1054,7 @@ function CodeQualityCheckerPage() {
           </div>
         </section>
       )}
-              {/* Quality Metrics */}
+{/* Quality Metrics */}
               <Card className='border-gradient-teal'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
                   Quality Metrics;
@@ -1326,7 +1343,7 @@ function CodeQualityCheckerPage() {
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
@@ -1382,7 +1399,7 @@ function CodeQualityCheckerPage() {
                     </li>
                   ))}
                 </ul>
-                <Button
+<Button
                   href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
@@ -1419,6 +1436,20 @@ function CodeQualityCheckerPage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl"
+            <Button
+              href=&quot;/contact&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-white text-teal-600 hover:bg-gray-100 shadow-2xl&quot;
+            >
+              Start Free Trial
+              <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+            </Button>
+            <Button
+              href=&quot;/contact&quot;
+              variant=&quot;outline&quot;
+              size=&quot;lg&quot;
+              className=&quot;border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl&quot;
+
             >
               Schedule Demo
             </Button>
@@ -1426,7 +1457,7 @@ function CodeQualityCheckerPage() {
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'>              href="/contact";
+className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'>              href="/contact";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl";

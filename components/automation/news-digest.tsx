@@ -55,4 +55,11 @@ function NewsDigestPage() {
           </div>))}
       </div>;
     </div>);
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+
 }

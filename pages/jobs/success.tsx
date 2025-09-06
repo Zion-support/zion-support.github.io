@@ -17,3 +17,14 @@ function JobSuccessPage() {
       </div>;
     </div>);
 }
+      </div>
+      <h1 className=&quot;text-xl font-semibold mb-2&quot;>Job posted successfully</h1>
+      <p className=&quot;text-sm opacity-80 mb-6&quot;>We are matching your job with top talent. You will be notified as applications come in.</p>
+      <div className=&quot;flex gap-2 justify-center&quot;>
+        <Link href=&quot;/dashboard&quot;><a className=&quot;px-4 py-2 rounded-md bg-blue-600 text-white&quot;>Go to Dashboard</Link></Link>
+        <Link href=&quot;/talent&quot;><a className=&quot;px-4 py-2 rounded-md border&quot;>Browse Talent</Link></Link>
+      </div>
+    </div>
+  )
+}
+

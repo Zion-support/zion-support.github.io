@@ -307,17 +307,43 @@ const Homepage2047: React.FC = () => {
     ...emergingTechBreakthroughs2025V4;
     ...innovative2025ITInfrastructureV2;
   ];
+    
+    window.addEventListener('mousemove', handleMouseMove),
+    window.addEventListener('scroll', handleScroll),
+    
+    return () => {
+      clearInterval(interval),
+      clearInterval(consciousnessInterval),
+      window.removeEventListener('mousemove', handleMouseMove),
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, []),
+
+  // Combine all innovative services
+  const _allInnovativeServices = [
+    ...innovative2025AIAutonomousEcosystemV2,
+    ...emergingTechBreakthroughs2025V4,
+    ...innovative2025ITInfrastructureV2
+  ],
+
+  // Get featured services for rotation
+  const featuredServices = allInnovativeServices.slice(0, 6),
+
+  // Filter services by category
+  const getFilteredServices = () => {
+    if (selectedCategory === 'all') return allInnovativeServices,
+
     return allInnovativeServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
     )
-  };
+};
   const categories = [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
     { id: 'ai', name: 'AI & Autonomous', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: innovative2025AIAutonomousEcosystemV2.length },
     { id: 'quantum', name: 'Quantum & Emerging', icon: AtomIcon, color: 'from-blue-500 to-indigo-500', count: emergingTechBreakthroughs2025V4.length },
     { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-emerald-500 to-teal-500', count: innovative2025ITInfrastructureV2.length }
-  ];
+];
   const features = [
     { icon: Brain, title: "AI Autonomous Ecosystem 2025", description: "Revolutionary autonomous AI solutions", href: "/2025-innovative-services-showcase-v2", color: "from-purple-500 to-pink-500" },
     { icon: Atom, title: "Quantum AI Neural Networks 2025", description: "Quantum-powered AI with consciousness", href: "/quantum-ai-neural-network-fusion-platform-2025", color: "from-blue-500 to-cyan-500" },
@@ -325,7 +351,7 @@ const Homepage2047: React.FC = () => {
     { icon: Rocket, title: "Space Resource Intelligence 2025", description: "AI-powered space resource discovery", href: "/space-resource-intelligence-platform-2025", color: "from-indigo-500 to-purple-500" },
     { icon: Cpu, title: "Autonomous DevOps Intelligence 2025", description: "AI-powered DevOps optimization", href: "/autonomous-devops-intelligence-platform-2025", color: "from-emerald-500 to-teal-500" },
     { icon: Database, title: "Edge Computing Orchestration 2025", description: "Edge computing optimization platform", href: "/edge-computing-orchestration-platform-2025", color: "from-yellow-500 to-orange-500" }
-  ];
+];
   const stats = [
     { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },
 ;
@@ -588,11 +614,37 @@ if (return allInnovativeServices) {
               className="space-y-8"
             >
               <div className="space-y-6">
+      transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  return (
+    <div className=&quot;min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden&quot;>
+      {/* Futuristic Background */}
+      <UltraFuturisticBackground2047 />
+      
+      {_/* Navigation */}
+      <UltraFuturisticNavigation2047 />
+
+      {/* Hero Section */}
+      <section className=&quot;relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center&quot;>
+        <div className=&quot;max-w-7xl mx-auto w-full&quot;>
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-16 items-center&quot;>
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className=&quot;space-y-8&quot;
+            >
+              <div className=&quot;space-y-6&quot;>
+
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium"
+className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Innovating the Future Since 2025</span>
@@ -1051,7 +1103,7 @@ if (return allInnovativeServices) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Service Categories
@@ -1149,7 +1201,7 @@ if (return allInnovativeServices) {
           </motion.div>
         </div>
       </section>
-                        className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
+className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
                         <category && category.icon className='w-8 h-8 text-white' />;
                       </div>;
                       <div className='text-right'>;
@@ -1237,7 +1289,7 @@ if (return allInnovativeServices) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured Innovative Services
@@ -1363,7 +1415,7 @@ if (return allInnovativeServices) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center mt-16"
+className="text-center mt-16"
           >
             <Link
               href="/2025-innovative-services-showcase-v2"
@@ -1444,7 +1496,7 @@ if (return allInnovativeServices) {
           </motion.div>
         </div>
       </section>
-                className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200">;
+className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200">;
                 Explore Services;
               </Link>;
             </div>;

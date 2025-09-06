@@ -125,11 +125,12 @@ if (return null) {
 export default function SecurityAwarenessPhishingPage() {
   const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'));
   if (!service) return null;
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
+<meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/security-awareness-phishing" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -166,7 +167,7 @@ export default function SecurityAwarenessPhishingPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);
 }
     </UltraAdvancedFuturisticBackground>);
 }

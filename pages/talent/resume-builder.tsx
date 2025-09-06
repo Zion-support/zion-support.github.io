@@ -13,12 +13,13 @@ const ResumeBuilder: NextPage = () => {
   const improveSectionPrompt = (sectionName: string, content: string) => (
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
   );
+
   return (
     <div>
       <Head>
         <title>Resume Builder - Zion AI Marketplace</title>
       </Head>
-      <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
+<h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
       <section className="mb-8">
         <h2 className="text-lg font-semibold mb-2">Profile</h2>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -48,7 +49,7 @@ const ResumeBuilder: NextPage = () => {
               authorizationToken={operatorToken}
             />
             <AIAssistant
-              buttonLabel="Improve with AI"
+buttonLabel="Improve with AI"
               title="Improve Resume Summary"
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
               onAccept={setSummary}
@@ -56,7 +57,7 @@ const ResumeBuilder: NextPage = () => {
             />
           </div>
         </div>
-        <textarea value={summary} onChange={e => setSummary(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
+<textarea value={summary} onChange={e => setSummary(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
@@ -69,7 +70,7 @@ const ResumeBuilder: NextPage = () => {
             authorizationToken={operatorToken}
           />
         </div>
-        <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
+<textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
       </section>
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
@@ -82,7 +83,7 @@ const ResumeBuilder: NextPage = () => {
             authorizationToken={operatorToken}
           />
         </div>
-        <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
+<textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
     </div>
   )

@@ -1,3 +1,4 @@
+
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
   path: string, // full URL or relative
@@ -281,4 +282,22 @@ if (headers['Authorization'] = `Bearer ${token}`) {
         </pre>;
       </div>;
     </div>);
+        </div>
+      </div>
+      {_(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>
+          <label className=&quot;block text-sm mb-1&quot;>Request Body (JSON)</label>
+          <textarea className=&quot;w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm&quot; value={body} onChange={(e) => setBody(e.target.value)} placeholder=&quot;{ }&quot; />
+        </div>
+      )}
+      <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>
+        {loading ? 'Sending…' : 'Send Request'}
+      </button>
+      <div>
+        <label className=&quot;block text-sm mb-1&quot;>Response</label>
+        <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80&quot;><code>{response}</code></pre>
+      </div>
+    </div>
+  )
+
 }

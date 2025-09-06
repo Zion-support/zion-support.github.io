@@ -518,6 +518,71 @@ const quickLinks = [
 const quick_links = [;
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
+
+const _serviceCategories = [
+  {_title: '🚀 2029 Futuristic AI Services', _icon: Brain, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and creativity', _services: [
+      { name: 'AI Consciousness Evolution Platform', _href: '/services/ai-consciousness-evolution-platform', _description: 'Develop genuine AI consciousness', _price: '$19, _999/month'},
+      {_name: 'AI Emotional Intelligence Platform', _href: '/services/ai-emotional-intelligence-platform', _description: 'Real-time emotion analysis and response', _price: '$3, _999/month'},
+      {_name: 'AI Creativity Orchestrator', _href: '/services/ai-creativity-orchestrator', _description: 'Multi-model creativity fusion', _price: '$5, _999/month'},
+      {_name: 'AI Autonomous Business Manager', _href: '/services/ai-autonomous-business-manager', _description: 'Fully autonomous business operations', _price: '$12, _999/month'}
+    ]
+  },
+  {_title: '⚛️ 2029 Quantum & Emerging Tech', _icon: Globe, _color: 'from-indigo-600 via-blue-600 to-cyan-600', _description: 'Quantum computing and beyond', _services: [
+      { name: 'Quantum Internet Security Gateway', _href: '/services/quantum-internet-security-gateway', _description: 'Unbreakable quantum encryption', _price: '$15, _999/month'},
+      {_name: 'Biotech DNA Computing Platform', _href: '/services/biotech-dna-computing-platform', _description: 'DNA-based computation', _price: '$25, _999/month'},
+      {_name: 'Quantum Financial Trading Platform', _href: '/services/quantum-financial-trading-platform', _description: 'Quantum-powered trading algorithms', _price: '$35, _999/month'},
+      {_name: 'Quantum Creativity Studio', _href: '/services/quantum-creativity-studio', _description: 'Quantum-enhanced creativity', _price: '$1, _999/month'}
+    ]
+  },
+  {_title: '🏙️ 2029 Enterprise IT Solutions', _icon: Cpu, _color: 'from-blue-600 via-cyan-600 to-teal-600', _description: 'Autonomous enterprise infrastructure', _services: [
+      { name: 'AI Business Intelligence Suite', _href: '/services/ai-business-intelligence-suite', _description: 'Intelligent insights and analytics', _price: '$2, _499/month'},
+      {_name: 'Smart Supply Chain Optimization', _href: '/services/smart-supply-chain-optimization', _description: 'AI-powered supply chain intelligence', _price: '$3, _999/month'},
+      {_name: 'Intelligent HR Management System', _href: '/services/intelligent-hr-management-system', _description: 'AI-powered HR optimization', _price: '$1, _599/month'},
+      {_name: 'Smart Financial Management Platform', _href: '/services/smart-financial-management-platform', _description: 'AI-powered financial planning', _price: '$2, _999/month'}
+    ]
+  },
+  {_title: '🌌 2029 Space & Metaverse Tech', _icon: Rocket, _color: 'from-teal-600 via-emerald-600 to-green-600', _description: 'Space exploration and digital reality', _services: [
+      { name: 'Space Mining Automation Platform', _href: '/services/space-mining-automation-platform', _description: 'Automated asteroid mining', _price: '$45, _999/month'},
+      {_name: 'Metaverse Digital Reality Platform', _href: '/services/metaverse-digital-reality-platform', _description: 'Immersive virtual worlds', _price: '$8, _999/month'},
+      {_name: 'AI Predictive Health Analytics', _href: '/services/ai-predictive-health-analytics', _description: 'Predictive health outcomes', _price: '$7, _999/month'},
+      {_name: 'Virtual Event Hologram Platform', _href: '/services/virtual-event-hologram-platform', _description: 'Holographic event experiences', _price: '$2, _999/month'}
+    ]
+  },
+  {_title: '🎯 2029 Innovative Micro SAAS', _icon: Target, _color: 'from-green-600 via-yellow-600 to-orange-600', _description: 'Cutting-edge micro solutions', _services: [
+      { name: 'Intelligent Customer Experience Platform', _href: '/services/intelligent-customer-experience-platform', _description: 'AI-powered customer journey optimization', _price: '$1, _899/month'},
+      {_name: 'Intelligent Marketing Automation', _href: '/services/intelligent-marketing-automation', _description: 'AI-powered marketing optimization', _price: '$1, _299/month'},
+      {_name: 'Smart Project Management', _href: '/services/smart-project-management', _description: 'AI-powered project optimization', _price: '$899/month'},
+      {_name: 'Intelligent Sales Optimization', _href: '/services/intelligent-sales-optimization', _description: 'AI-powered sales intelligence', _price: '$1, _799/month'}
+    ]
+  },
+  {
+    title: '🔬 2029 Research & Development',
+    icon: Eye,
+    color: 'from-orange-600 via-red-600 to-pink-600',
+    description: 'Breakthrough research solutions',
+    services: [
+      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite'
+    ]
+  }
+],
+
+const mainNavigation = [
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe },
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu },
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
+  { name: 'Micro SAAS', href: '/micro-saas', icon: Target },
+  { name: 'Innovations', href: '/innovations', icon: Sparkles },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Contact', href: '/contact', icon: MessageCircle }
+],
+
+const quickLinks = [
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+
   { name: 'Blog', href: '/blog', icon: BookOpen },
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
@@ -539,7 +604,7 @@ export default function UltraFuturisticNavigation2029V2() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex-shrink-0"
+className="flex-shrink-0"
           >
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
@@ -710,7 +775,7 @@ function UltraFuturisticNavigation2029V2() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }}
-                className="relative group"
+className="relative group"
               >
                 <Link
                   href={item.href}
@@ -778,7 +843,7 @@ function UltraFuturisticNavigation2029V2() {
           </div>
         </div>
       </div>
-                  className='flex items - center space - x-2 px - 4 py - 2 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 rounded - lg hover:bg - cyan - 500 / 10';
+className='flex items - center space - x-2 px - 4 py - 2 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 rounded - lg hover:bg - cyan - 500 / 10';
                 >;
                   <item.icon className='w - 4 h - 4' />;
                   <span>{item.name}</span>;
@@ -892,7 +957,7 @@ function UltraFuturisticNavigation2029V2() {
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
+className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
                     >
                       <item.icon className="w-4 h-4" />
                       <span className="text-sm">{item.name}</span>

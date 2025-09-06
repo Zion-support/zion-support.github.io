@@ -135,6 +135,12 @@ if (return) {
       y: number;
       connections: number[];
       activation: number;    }> = [];
+
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
+
+    type ParticleType = 'quantum' | 'neural' | 'holographic',
+
     // Particle system
     const particles: Array<{
       x: number,
@@ -147,7 +153,7 @@ if (return) {
       vy: number,
       size: number,
       life: number,
-      max_life: number,
+max_life: number,
       type: ParticleType;
     // Quantum entanglement lines;
     const entanglement_lines: Array<{
@@ -172,13 +178,14 @@ if (return) {
       x2: number,
       y2: number,
       strength: number,
+
       for (let i = 0, i < 20 * intensity, i++) {
         neuralNodes.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           connections: [],
           activation: Math.random()
-        });      }      for (let i = 0, i < 20 * intensity, i++) {
+});      }      for (let i = 0, i < 20 * intensity, i++) {
         neuralNodes.push({
           x: Math.random() * canvas.width
           y: Math.random() * canvas.height
@@ -197,7 +204,7 @@ if (return) {
           }
         }
       })
-    };
+};
     // Initialize entanglement lines
     const initEntanglementLines = () => {
       for (let i = 0, i < 15 * intensity, i++) {
@@ -382,7 +389,7 @@ if (return) {
           y1,
           x2,
           y2,
-          strength: Math.random (),
+strength: Math.random (),
           life: Math.random () * 100,
         });      }        entanglement_lines.push ({
           x1;
@@ -529,6 +536,72 @@ if ( {) {
         ctx.fill();
         ctx.restore()
       });
+        }
+
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fill(),
+        ctx.restore(),
+
+        // Remove dead particles
+        if (particle.life <= 0) {
+          particles.splice(index, 1)
+        }
+      }),
+
+      // Draw entanglement lines
+      entanglementLines.forEach((line, index) => {
+        line.life--,
+        const alpha = line.life / 100
+        
+        ctx.beginPath(),
+        ctx.moveTo(line.x1, line.y1),
+        ctx.lineTo(line.x2, line.y2),
+        ctx.stroke(),
+        ctx.restore(),
+
+        if (line.life <= 0) {
+          entanglementLines.splice(index, 1)
+        }
+      }),
+
+      // Draw neural network
+      neuralNodes.forEach((node, i) => {
+        node.activation = Math.sin(Date.now() * 0.001 + i) * 0.5 + 0.5,
+        
+        // Draw connections
+        node.connections.forEach(connectionIndex => {
+          const targetNode = neuralNodes[connectionIndex]
+          if (targetNode) {
+            const strength = (node.activation + targetNode.activation) / 2
+            ctx.save(),
+            ctx.globalAlpha = strength * 0.4,
+            ctx.strokeStyle = `rgba(255, 0, 255, ${strength})`,
+            ctx.lineWidth = strength * 2,
+            ctx.shadowColor = 'magenta',
+            ctx.shadowBlur = 3,
+            
+            ctx.beginPath(),
+            ctx.moveTo(node.x, node.y),
+            ctx.lineTo(targetNode.x, targetNode.y),
+            ctx.stroke(),
+            ctx.restore()
+          }
+        }),
+
+        // Draw node
+        ctx.save(),
+        ctx.globalAlpha = node.activation,
+        ctx.fillStyle = `rgba(255, 0, 255, ${node.activation})`,
+        ctx.shadowColor = 'magenta',
+        ctx.shadowBlur = 8,
+
+        ctx.beginPath(),
+        ctx.arc(node.x, node.y, 4, 0, Math.PI * 2),
+        ctx.fill(),
+        ctx.restore()
+      }),
+
       // Add new particles
       if (particles.length < 100 * intensity) {
         particles.push({
@@ -542,7 +615,7 @@ if ( {) {
           type: ['quantumneuralholographic'][Math.floor(Math.random() * 3)] as ParticleType
         })
       }
-      // Add new entanglement lines
+// Add new entanglement lines
       if (entanglementLines.length < 15 * intensity) {
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
@@ -799,7 +872,7 @@ if ( {) {
           y1,
           x2,
           y2,
-          strength: Math.random (),
+strength: Math.random (),
           life: 100,
         });
       }
@@ -819,7 +892,7 @@ if ( {) {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
-      window && window.removeEventListener('resize', resizeCanvas);
+window && window.removeEventListener('resize', resizeCanvas);
     }
   // Mouse move handler for interactive effects;
   useEffect(() => {;
@@ -1060,7 +1133,7 @@ if ( {) {
           transition={{
             duration: 20,
             repeat: -1,
-              opacity: [0, 1, 0],
+opacity: [0, 1, 0],
               scaleY: [0, 1, 0],            }}        {Array && Array.from({ length: 20 }).map((_, i) => (;
           <motion&& motion.div
               opacity: [0, 1, 0],
@@ -1126,7 +1199,7 @@ export default UltraFuturisticBackground2034;        <motion&& motion.div
             backgroundSize: '50px 50px'
           }}
           animate={{
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
+opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
           }}
           transition={{
             duration: 4
@@ -1143,7 +1216,7 @@ export default UltraFuturisticBackground2034;        <motion&& motion.div
           transition={{
             duration: 4,
             repeat: -1,
-            ease: 'easeInOut',            ease: "easeInOut";
+ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
       </div>;

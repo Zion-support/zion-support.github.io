@@ -17,4 +17,5 @@ function handler() {
 function handler() {
   clearSessionCookie (res);
   res.status (200).json ({ ok: true });
+
 }

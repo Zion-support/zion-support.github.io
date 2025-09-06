@@ -71,7 +71,7 @@ const categories = [;
   'Healthcare AI',
   'Emerging Technology',
   'Biotechnology',
-  'Human - Computer Interaction',
+'Human - Computer Interaction',
   'Metaverse',
   'Autonomous Systems',
   'Climate Technology',
@@ -255,6 +255,71 @@ function InnovativeServicesShowcase2036() {
         <div className="relative z-10 text-center max-w-6xl mx-auto">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+
+  const _sortedServices = [...filteredServices].sort(_(a, _b) => {_switch (sortBy) {
+      case 'price':
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+      case 'rating':
+        return (b.rating || 0) - (a.rating || 0),
+      case 'marketSize':
+      case 'rating':
+        return (b.rating || 0) - (a.rating || 0),
+      case 'marketSize':
+
+        return parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') - parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0'),
+      default: return a.name.localeCompare(b.name)
+    }
+  }),
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { y: 20, _opacity: 0},
+    visible: {_y: 0, _opacity: 1, _transition: {
+        duration: 0.5}
+    }
+  },
+
+  return (
+    <Layout>
+      <SEO 
+        title=&quot;2036 Innovative Services Showcase | Zion Tech Group&quot;
+        description=&quot;Discover our cutting-edge 2036 innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with next-generation technology.&quot;
+        keywords=&quot;2036 services, innovative micro SAAS, AI platforms, quantum technology, space technology, IT solutions, Zion Tech Group&quot;
+      />
+      
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center px-4 overflow-hidden&quot;>
+        {/* Animated Background */}
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20&quot;>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+        </div>
+        
+        {/* Floating Elements */}
+        <div className=&quot;absolute inset-0 overflow-hidden&quot;>
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className=&quot;absolute w-2 h-2 bg-cyan-400/30 rounded-full&quot;
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${_Math.random() * 100}%`}}
+              animate={_{
+                y: [0, _-100, _0], _opacity: [0.3, _1, _0.3]}}
+              transition={_{
+                duration: 3 + Math.random() * 2, _repeat: Infinity, _delay: Math.random() * 2}}
+            />
+          ))}
+        </div>
+
+        <div className=&quot;relative z-10 text-center max-w-6xl mx-auto&quot;>
+          <motion.h1 
+            className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;
+
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -262,7 +327,7 @@ function InnovativeServicesShowcase2036() {
             2036 Innovative Services
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -271,7 +336,7 @@ function InnovativeServicesShowcase2036() {
             AI platforms, and quantum solutions. Transform your business with next-generation innovation.
           </motion.p>
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
@@ -283,7 +348,7 @@ function InnovativeServicesShowcase2036() {
           </motion.div>
         </div>
       </section>
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
+transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
             <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'>;
               Explore Services;
             </button>;
@@ -347,7 +412,7 @@ function InnovativeServicesShowcase2036() {
           </motion.div>
         </div>
       </section>
-      {/* Services Section */}
+{/* Services Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
@@ -552,7 +617,7 @@ function InnovativeServicesShowcase2036() {
                 </div>
               </div>
             </div>
-            {/* Category Filters */}
+{/* Category Filters */}
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((category) => (
                 <button
@@ -570,7 +635,7 @@ function InnovativeServicesShowcase2036() {
               ))}
             </div>
           </motion.div>
-                >;
+>;
                   {categoryIcons[category] || <Star className='w-4 h-4' />}                  {category}
                 </button>;
               ))}
@@ -763,7 +828,7 @@ function InnovativeServicesShowcase2036() {
                           </div>
                         ))}
                         {service.features.length > 4 && (
-                          <div className="text-xs text-gray-500 mt-1">
+<div className="text-xs text-gray-500 mt-1">
                             +{service.features.length - 4} more features
                           </div>
                         )}
@@ -802,7 +867,7 @@ function InnovativeServicesShowcase2036() {
               </motion.div>
             ))}
           </motion.div>
-          {/* Results Summary */}
+{/* Results Summary */}
           <motion.div 
             className="mt-12 text-center text-gray-400"
             initial={{ opacity: 0 }}
@@ -929,12 +994,16 @@ function InnovativeServicesShowcase2036() {
               >
                 Call Us Now
               </a>
+              >
+                Call Us Now
+              </Link>
+
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
-                href={`tel:${contactInfo && contactInfo.mobile}`}
+href={`tel:${contactInfo && contactInfo.mobile}`}
                 className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>;
                 Call Us Now;
               </a>;

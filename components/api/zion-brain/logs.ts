@@ -95,4 +95,5 @@ if ( {) {
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1;
   }
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
+
 }

@@ -47,11 +47,27 @@ const AICodeReviewSecurityScanner = () => {;
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+
+const _AICodeReviewSecurityScanner = () => {_return (_<>
+      <SEO 
+        title=&quot;AI-Powered Code Review & Security Scanner | Zion Tech Group&quot;
+        description=&quot;Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages.&quot;
+        keywords={[&quot;AI code review&quot;, &quot;security scanner&quot;, &quot;vulnerability detection&quot;, &quot;code quality&quot;, &quot;automated code analysis&quot;, &quot;security testing&quot;, &quot;DevOps security&quot;]}
+        ogImage=&quot;https://ziontechgroup.com/og-ai-code-review.jpg&quot;
+        canonical=&quot;https://ziontechgroup.com/ai-code-review-security-scanner&quot;
+      />
+      
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;>
+        {/* Hero Section */}
+        <section className=&quot;relative overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot; />
+          <div className=&quot;relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20&quot;>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8">
                 <Brain className="w-4 h-4 mr-2" />
@@ -81,7 +97,7 @@ const AICodeReviewSecurityScanner = () => {;
                   Schedule Demo
                 </motion.button>
               </div>
-              <div className="flex flex-wrap justify-center gap-8 text-gray-400">
+<div className="flex flex-wrap justify-center gap-8 text-gray-400">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                   Multi-language support
@@ -98,7 +114,7 @@ const AICodeReviewSecurityScanner = () => {;
             </motion.div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
               className='text-center'>;
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8'>;
                 <Brain className='w-4 h-4 mr-2' />;
@@ -269,7 +285,7 @@ const AICodeReviewSecurityScanner = () => {;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Code Security & Quality
@@ -279,7 +295,7 @@ const AICodeReviewSecurityScanner = () => {;
                 to protect your applications and improve development efficiency.
               </p>
             </motion.div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: <Code className="w-8 h-8" />,
@@ -547,7 +563,7 @@ const AICodeReviewSecurityScanner = () =>: any {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transparent Pricing Plans
@@ -557,7 +573,7 @@ const AICodeReviewSecurityScanner = () =>: any {
                 All plans include our core AI-powered security scanning capabilities.
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
+<div className="grid md:grid-cols-3 gap-8">
               {[
                 {
                   name: "Starter",
@@ -817,7 +833,7 @@ const AICodeReviewSecurityScanner = () =>: any {
                       </span>
                     </div>
                   )}
-                    <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
+<div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
                       <span className='bg - gradient - to - r from - purple - 500 to - blue - 600 text - white px - 4 py - 2 rounded - full text - sm font - semibold'>                    <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
                       <span className="bg - gradient - to - r from - purple - 500 to - blue - 600 text - white px - 4 py - 2 rounded - full text - sm font - semibold">;
                         Most Popular;
@@ -885,7 +901,7 @@ const AICodeReviewSecurityScanner = () =>: any {
                       </li>
                     ))}
                   </ul>
-                  <motion.button
+<motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   </ul>;
@@ -973,7 +989,7 @@ const AICodeReviewSecurityScanner = () =>: any {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our AI Code Security Platform?
@@ -1254,7 +1270,7 @@ const AICodeReviewSecurityScanner = () =>: any {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Trusted by Development Teams Worldwide
@@ -1264,7 +1280,7 @@ const AICodeReviewSecurityScanner = () =>: any {
                 to protect their applications and improve code quality.
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 "Software Development Teams";
         {/* Use Cases Section */}
@@ -1313,7 +1329,7 @@ const AICodeReviewSecurityScanner = () =>: any {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
+className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Users className="w-6 h-6" />
@@ -1359,13 +1375,13 @@ const AICodeReviewSecurityScanner = () =>: any {
                   Contact Sales
                 </motion.button>
               </div>
-              <div className="mt-8 text-gray-400">
+<div className="mt-8 text-gray-400">
                 <p>14-day free trial • No credit card required • Cancel anytime</p>
               </div>
             </motion.div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}>;
+transition={{ duration: 0 && 0.8 }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Secure Your Code?;
               </h2>;
@@ -1461,7 +1477,7 @@ const AICodeReviewSecurityScanner = () =>: any {
         </section>
       </div>
     </>
-              transition={{ duration: 0 && 0.8 }}>;
+transition={{ duration: 0 && 0.8 }}>;
               <h3 className='text-2xl font-bold text-white mb-6'>;
                 Get in Touch;
               </h3>;

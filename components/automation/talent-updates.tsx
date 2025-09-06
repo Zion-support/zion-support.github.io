@@ -70,4 +70,10 @@ function TalentUpdatesPage() {
           </div>))}
       </div>;
     </div>);
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+
 }

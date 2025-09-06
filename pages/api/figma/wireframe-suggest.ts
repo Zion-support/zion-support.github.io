@@ -22,7 +22,7 @@ if ( {) {
     return;
   }
   try {
-    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screen_name}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
+const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screen_name}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create ({
       model: 'gpt - 4o - mini',
       messages: [;

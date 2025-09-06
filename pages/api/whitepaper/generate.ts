@@ -82,7 +82,7 @@ if ( {) {
         model: 'gpt-4.1-mini',
         input: [
           { role: 'system', content: sysPrompt },
-          { role: 'user', content: userPrompt }
+{ role: 'user', content: userPrompt }
         ],
         temperature: 0.3
       } as any);
@@ -91,7 +91,7 @@ if ( {) {
     } else {
       markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview })
     }
-    res && res.status(200).json({ markdown });
+res && res.status(200).json({ markdown });
   } catch (e: any) {
     console && console.error("generation_error", e?.message || e);
     res && res.status(500).json({ error: "Generation failed" });
@@ -131,4 +131,5 @@ function fallback_markdown (input: any): string {
         .join ("\n");
     : "";
   return `# ${input?.token_name || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.token_name || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI - native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.use_cases || ""}.\n\n## Rewards System\n${input?.rewards_logic || ""}.\n\n## Distribution\n${dist_lines}\n\n_total Supply: ${input?.token_supply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\n_not financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+
 }

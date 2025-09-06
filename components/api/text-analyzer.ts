@@ -69,7 +69,7 @@ export default async function handler(
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
-  try {
+try {
     const { text } = req && req.body;
     if (!text || typeof text !== 'string') {
       return res && res.status(400).json({ error: 'Text is required' });
@@ -552,13 +552,46 @@ if ( {) {
 ;
     const result: TextAnalysisResult = {
       text,
+
+    const _topWords = Array.from(wordCounts.entries())
+      .sort(_(a, _b) => b[1] - a[1])
+      .slice(0, 10)
+      .map(([word, count]) => ({
+        word,
+        count,
+        frequency: Math.round((count / words) * 1000) / 10
+      })),
+
+    // Bigrams and trigrams
+    const wordsArray = text.toLowerCase().split(/\s+/)
+    }
+
+    const _bigrams = Array.from(bigramCounts.entries())
+      .sort(_(a, _b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([phrase, count]) => ({ phrase, count })),
+
+    const _trigrams = Array.from(trigramCounts.entries())
+      .sort(_(a, _b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([phrase, count]) => ({ phrase, count })),
+
+    // Language detection (simplified - assume English for demo)
+    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text),
+    const detectedLanguage = isEnglish ? 'en' : 'unknown'
+    const confidence = isEnglish ? 0.95 : 0.5
+
+    const result: TextAnalysisResult = {
+      text,
+      statistics: {
+
         characters,
         charactersNoSpaces,
         words,
         sentences,
         paragraphs,
         syllables,
-        reading_time,
+reading_time,
         speaking_time,
       },
       readability: {
@@ -655,5 +688,6 @@ if ( {) {
   } catch (error) {
     console.error ('Text analysis error:', error);
     res.status (500).json ({ error: 'Internal server error' });
+
   }
 }

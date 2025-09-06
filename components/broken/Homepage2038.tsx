@@ -207,12 +207,71 @@ const Homepage2038: React.FC = () => {
                 <Link href="/services">
                   <motion.button
                     className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm"
+
+  return (_<Layout>
+      {/* Main Content */}
+      <main className=&quot;relative z-10&quot;>
+        {/* Hero Section */}
+        <section className=&quot;min-h-screen flex items-center justify-center px-4 relative overflow-hidden&quot;>
+          {/* Background Elements */}
+          <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+            <div className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse&quot;></div>
+            <div className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000&quot;></div>
+            <div className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000&quot;></div>
+            <div className=&quot;absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-1500&quot;></div>
+            <div className=&quot;absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500&quot;></div>
+          </div>
+          
+          <div className=&quot;text-center max-w-5xl mx-auto relative z-10&quot;>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className=&quot;space-y-8&quot;
+            >
+              {_/* Company Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className=&quot;inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm&quot;
+              >
+                <Star className=&quot;w-4 h-4&quot; />
+                <span>Innovation Leader 2038</span>
+                <Sparkles className=&quot;w-4 h-4&quot; />
+              </motion.div>
+              
+              <h1 className=&quot;text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight&quot;>
+                Zion Tech Group
+              </h1>
+              <p className=&quot;text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed&quot;>
+                Pioneering the future of technology with revolutionary AI, quantum computing, and consciousness evolution solutions
+              </p>
+              
+              {/* Enhanced CTA Section */}
+              <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center mb-10&quot;>
+                <Link href=&quot;/get-started&quot;>
+                  <motion.button 
+                    className=&quot;group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg&quot;
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span className=&quot;flex items-center gap-3&quot;>
+                      Get Started
+                      <ArrowRight className=&quot;w-6 h-6 group-hover:translate-x-1 transition-transform&quot; />
+                    </span>
+                  </motion.button>
+                </a>
+                <Link href=&quot;/services&quot;>
+                  <motion.button 
+                    className=&quot;px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm&quot;
+
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     Explore Services
                   </motion.button>
-                </Link>
+</Link>
               </div>
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ scale: 0 && 0.95 }}>;
@@ -284,7 +343,7 @@ const Homepage2038: React.FC = () => {
             </motion.div>
           </div>
         </section>
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400'>              >;
                 <div className="flex items-center space-x-2">;
                   <Shield className="w-5 h-5 text-green-400" />;
@@ -372,7 +431,7 @@ const Homepage2038: React.FC = () => {
             </motion.div>
           </div>
         </section>
-                whileHover={{ scale: 1 && 1.05 }}>;
+whileHover={{ scale: 1 && 1.05 }}>;
                 <div className='text-5xl font-bold text-green-400 mb-3 group-hover:text-green-300 transition-colors'>;
                   ∞;
                 </div>;
@@ -471,7 +530,7 @@ const Homepage2038: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-            <div className="text-center">
+<div className="text-center">
               <Link href="/ai-services">
                 <motion.button
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
@@ -480,7 +539,7 @@ const Homepage2038: React.FC = () => {
                 >
                   View All AI Services
                 </motion.button>
-              </Link>
+</Link>
             </div>
           </div>
         </section>
@@ -808,7 +867,7 @@ const Homepage2038: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-            <div className="text-center">
+<div className="text-center">
               <Link href="/services">
                 <motion.button
                   className="px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
@@ -817,7 +876,7 @@ const Homepage2038: React.FC = () => {
                 >
                   Explore All Services
                 </motion.button>
-              </Link>
+</Link>
             </div>
           </div>
         </section>
@@ -942,7 +1001,7 @@ const Homepage2038: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-            <div className="text-center">
+<div className="text-center">
               <Link href="/it-services">
                 <motion.button
                   className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
@@ -951,7 +1010,7 @@ const Homepage2038: React.FC = () => {
                 >
                   View All IT Services
                 </motion.button>
-              </Link>
+</Link>
             </div>
           </div>
         </section>
@@ -1312,7 +1371,7 @@ const Homepage2038: React.FC = () => {
                   >
                     Explore Our Services
                   </motion.button>
-                </Link>
+</Link>
               </div>
             </motion.div>
           </div>

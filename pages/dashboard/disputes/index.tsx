@@ -132,12 +132,13 @@ export default function AdminDisputesDashboard() {
     if (statusFilter === 'All') return list;
     return list.filter((d: any) => d.status === statusFilter)
   }, [data, statusFilter]);
+
   return (
     <EnhancedLayout>
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Dispute Resolution Center</h1>
-          <select value={statusFilter} onChange={e => setStatusFilter(e.target.value as any)} className="border rounded px-2 py-1 text-sm">
+<select value={statusFilter} onChange={e => setStatusFilter(e.target.value as any)} className="border rounded px-2 py-1 text-sm">
             {(['OpenUnder ReviewResolvedAll'] as const).map(s => (<option key={s} value={s}>{s}</option>))}
           </select>
         </div>
@@ -152,11 +153,25 @@ export default function AdminDisputesDashboard() {
                 <th className="text-left px-3 py-2">Created At</th>
                 <th className="text-left px-3 py-2">Status</th>
                 <th className="text-left px-3 py-2">Actions</th>
+          </select>
+        </div>
+        <div className=&quot;overflow-auto border rounded&quot;>
+          <table className=&quot;min-w-full text-sm&quot;>
+            <thead className=&quot;bg-gray-50 dark:bg-gray-900&quot;>
+              <tr>
+                <th className=&quot;text-left px-3 py-2&quot;>Case ID</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Talent</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Client</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Project</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Created At</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Status</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Actions</th>
+
               </tr>
             </thead>
             <tbody>
               {disputes.map((d: any) => (
-                <tr key={d.id} className="border-t">
+<tr key={d.id} className="border-t">
                   <td className="px-3 py-2 font-medium">{d.id}</td>
                   <td className="px-3 py-2">{d.talentUserId}</td>
                   <td className="px-3 py-2">{d.clientUserId}</td>

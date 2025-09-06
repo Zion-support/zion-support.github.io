@@ -4,7 +4,7 @@ import path from 'path';
 import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);
+return path.join(GRANTS_DIR, `${id}.json`);
 }
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 function grantPath(id: string) {
@@ -208,4 +208,9 @@ if ( {) {
   }
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
+  }
+
+  res.setHeader('AllowGET, POST'),
+  res.status(405).end('Method Not Allowed')
+
 }

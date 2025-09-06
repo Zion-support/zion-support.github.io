@@ -263,6 +263,40 @@ const service_categories = [;
 ];
 ;
 const quick_links = [;
+
+const _serviceCategories = [
+  {_title: 'AI & Machine Learning', _icon: Brain, _services: [
+      { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-2029'},
+      {_name: 'Quantum Neural Networks', _href: '/quantum-neural-network-platform'},
+      {_name: 'Autonomous Business Operations', _href: '/autonomous-business-operations-platform'},
+      {_name: 'AI-Powered IT Asset Management', _href: '/ai-powered-it-asset-management'}
+    ]
+  },
+  {_title: '🧠 AI & Technology', _services: [
+      { name: 'AI Services', _href: '/ai-services'},
+      {_name: 'Machine Learning', _href: '/machine-learning'},
+      {_name: 'Natural Language Processing', _href: '/nlp-services'},
+      {_name: 'Computer Vision', _href: '/computer-vision'}
+    ]
+  },
+  {_title: '⚛️ Quantum & Emerging Tech', _services: [
+      { name: 'Quantum Computing', _href: '/quantum-computing'},
+      {_name: 'Blockchain Solutions', _href: '/blockchain-solutions'},
+      {_name: 'IoT Platforms', _href: '/iot-platforms'},
+      {_name: 'Space Technology', _href: '/space-tech'}
+    ]
+  },
+  {_title: '🏙️ Enterprise Solutions', _services: [
+      { name: 'Enterprise IT', _href: '/enterprise-it'},
+      {_name: 'Cloud Solutions', _href: '/cloud-solutions'},
+      {_name: 'Cybersecurity', _href: '/cybersecurity'},
+      {_name: 'DevOps Automation', _href: '/devops-automation'}
+    ]
+  }
+],
+
+const quickLinks = [
+
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Rocket },
@@ -458,7 +492,7 @@ const UltraFuturisticFooter2029 = () => {;
                 <a
                   key={social.name}
                   href={social.href}
-                  target="_blank"
+target="_blank"
                   rel="noopener noreferrer"
                   className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
                 >
@@ -479,7 +513,7 @@ const UltraFuturisticFooter2029 = () => {;
                       <li key={service.name}>
                         <Link
                           href={service.href}
-                          className="text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group"
+className="text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group"
                         >
                           <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                           <span>{service.name}</span>
@@ -499,7 +533,7 @@ const UltraFuturisticFooter2029 = () => {;
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50"
+className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50"
                 >
                   <link.icon className="w-4 h-4" />
                   <span>{link.name}</span>
@@ -776,7 +810,7 @@ const UltraFuturisticFooter2029 = () =>: any {
           </div>
         </div>
       </div>
-      {/* Newsletter Signup */}
+{/* Newsletter Signup */}
                 className='hover:text-white transition-colors'>                Cookie Policy              © 2025 Zion Tech Group. All rights reserved.;
             </div>;
             <div className="flex items-center space-x-6 text-sm text-gray-400">;
@@ -863,6 +897,13 @@ const UltraFuturisticFooter2029 = () =>: any {
       </div>;
               />
               <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200">
+              <input
+                type=&quot;email&quot;
+                placeholder=&quot;Enter your email&quot;
+                className=&quot;flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent&quot;
+              />
+              <button className=&quot;px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200&quot;>
+
                 Subscribe
               </button>
             </div>

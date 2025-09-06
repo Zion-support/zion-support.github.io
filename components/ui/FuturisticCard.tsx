@@ -50,3 +50,8 @@ function FuturisticCard() {
       </div>;
     </div>);
 }
+      </div>
+    </div>
+  )
+}
+

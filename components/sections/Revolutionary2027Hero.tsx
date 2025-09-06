@@ -30,7 +30,7 @@ const Revolutionary2027Hero = () => {
     { icon: Lock, delay: 2.5, position: 'top-1/2 right-10' },
     { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' },
     { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
-  ];
+];
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -266,11 +266,91 @@ const Revolutionary2027Hero = () =>: any {
           {/* Main Heading */}
           <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed">
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: &quot;easeOut&quot; as const
+      }
+    }
+  },
+
+  return (
+    <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900&quot;>
+      {/* Enhanced Background Effects */}
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]&quot;></div>
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]&quot;></div>
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]&quot;></div>
+      
+      {/* Animated Grid Pattern */}
+      <div className=&quot;absolute inset-0 opacity-20&quot;>
+        <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]&quot;></div>
+      </div>
+
+      {_/* Floating Icons */}
+      {_floatingIcons.map(_(item, _index) => (
+        <motion.div
+          key={index}
+          className={`absolute ${item.position} text-purple-400/30`}
+          animate={{
+            y: [0, -20, 0],
+            rotate: [0, 5, -5, 0]}}
+          transition={{
+            duration: 4,
+            delay: item.delay,
+            repeat: Infinity,
+            ease: &quot;easeInOut&quot;
+          }}
+        >
+          <item.icon className=&quot;w-8 h-8&quot; />
+        </motion.div>
+      ))}
+
+      {/* Main Content */}
+      <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+        <motion.div
+          variants={containerVariants}
+          initial=&quot;hidden&quot;
+          animate=&quot;visible&quot;
+          className=&quot;space-y-8&quot;
+        >
+          {/* Main Heading */}
+          <motion.div variants={itemVariants} className=&quot;space-y-6&quot;>
+            <h1 className=&quot;text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight&quot;>
+              <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+                Future
+              </span>
+              <br />
+              <span className=&quot;text-white&quot;>is Now</span>
+            </h1>
+            <div className=&quot;flex items-center justify-center space-x-4 text-2xl md:text-3xl text-gray-300&quot;>
+              <span>2027</span>
+              <div className=&quot;w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full&quot;></div>
+              <span>Revolutionary</span>
+              <div className=&quot;w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full&quot;></div>
+              <span>Technology</span>
+            </div>
+          </motion.div>
+
+          {/* Subtitle */}
+          <motion.div variants={itemVariants} className=&quot;max-w-4xl mx-auto&quot;>
+            <p className=&quot;text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed&quot;>
+
               Experience the next generation of AI, quantum computing, and emerging technologies. 
               Transform your business with solutions that were once science fiction.
             </p>
           </motion.div>
-          {/* Key Features */}          <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
+{/* Key Features */}          <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed">
               Experience the next generation of AI, quantum computing, and emerging technologies.
               Transform your business with solutions that were once science fiction.
@@ -428,7 +508,7 @@ const Revolutionary2027Hero = () =>: any {
           </motion.div>
         </motion.div>
       </div>
-            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
+className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
             <div className='text-center'>;
               <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
                 500+;
@@ -667,7 +747,7 @@ const Revolutionary2027Hero = () =>: any {
         transition={{
           duration: 2,
           repeat: Infinity,
-          ease: 'easeInOut',
+ease: 'easeInOut',
         }}>;
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>;
           <motion&& motion.div

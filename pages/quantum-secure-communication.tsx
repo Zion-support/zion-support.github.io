@@ -13,7 +13,7 @@ export default function QuantumSecureCommunication() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  }
+}
   const features = [
     'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration toolsReal-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools'
     'Advanced threat detection and monitoring24/7 security monitoring and support'
@@ -122,11 +122,59 @@ function QuantumSecureCommunication() {
                 initial={{ scale: 0.8, rotate: -5 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
+    >
+      <div className=&quot;min-h-screen&quot;>
+        <Head>
+          <title>Quantum-Secure Communication - Zion Tech Group | Unbreakable Encryption</title>
+          <meta name=&quot;description&quot; content=&quot;Unbreakable encryption for the quantum era with quantum key distribution and quantum-resistant protocols. Contact: +1 302 464 0950&quot; />
+          <meta name=&quot;keywords&quot; content=&quot;quantum secure communication, quantum encryption, quantum key distribution, post-quantum cryptography, secure messaging, quantum security&quot; />
+          <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+          <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
+          <meta property=&quot;og:title&quot; content=&quot;Quantum-Secure Communication - Zion Tech Group&quot; />
+          <meta property=&quot;og:description&quot; content=&quot;Unbreakable encryption for the quantum era with quantum key distribution. Contact: +1 302 464 0950&quot; />
+          <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/quantum-secure-communication&quot; />
+          <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+          <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/quantum-secure-communication&quot; />
+        </Head>
+
+        <UltraAdvancedNavigation />
+
+        {/* Hero Section */}
+        <section className=&quot;relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className=&quot;text-center mb-16&quot;
+            >
+              <motion.div
+                initial={{ scale: 0.8, rotate: -5 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+                className=&quot;mb-8&quot;
+              >
+                <div className=&quot;inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden&quot;>
+                  <div className=&quot;absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse&quot;></div>
+                  <Lock className=&quot;w-12 h-12 text-white relative z-10&quot; />
+                  <div className=&quot;absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300&quot;></div>
+                </div>
+              </motion.div>
+
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className=&quot;text-5xl md:text-7xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-6&quot;
+              >
+                Quantum-Secure Communication
+              </motion.h1>
+
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
+className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
               >
                 Unbreakable encryption for the <span className="text-purple-400 font-bold">quantum era</span>
               </motion.p>
@@ -197,7 +245,7 @@ function QuantumSecureCommunication() {
                   </Button>
                 </motion.div>
               </motion.div>
-                  className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 rounded - 2xl shadow - 2xl";
+className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 rounded - 2xl shadow - 2xl";
                 >;
                   <div className="bg - gray - 900 rounded - 2xl px - 8 py - 6">;
                     <div className="text - center">;
@@ -413,7 +461,7 @@ function QuantumSecureCommunication() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
+className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
                 <p className="text-gray-300 mb-6">
@@ -440,7 +488,7 @@ function QuantumSecureCommunication() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
+className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
                 <div className="text-4xl font-bold text-green-400 mb-4">500% ROI</div>
@@ -465,7 +513,7 @@ function QuantumSecureCommunication() {
             </div>
           </div>
         </section>
-              className="text - center mb - 16";
+className="text - center mb - 16";
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 <span className="bg - gradient - to - r from - yellow - 400 to - orange - 500 bg - clip - text text - transparent">;
@@ -568,7 +616,7 @@ function QuantumSecureCommunication() {
                   </Button>
                 </motion.div>
               </div>
-              <div className="mt-8 text-gray-400">
+<div className="mt-8 text-gray-400">
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</a></p>
                 <p className="mt-2">{contactInfo.address}</p>
               </div>

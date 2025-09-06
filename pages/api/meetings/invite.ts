@@ -59,5 +59,6 @@ if ( {) {
   } catch (e) {
     console.error (e);
     return res.status (500).json ({ ok: false, error: "Failed to send invite" });
+
   }
 }

@@ -6,6 +6,12 @@ const Callback: NextPage = () => {
         <title>Callback - Zion Tech Solutions</title>
         <meta name="description" content="Callback page" />
       </Head>
+    <div>
+      <Head>
+        <title>Callback - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;Callback page&quot; />
+      </Head>
+
       <main>
         <h1>Callback</h1>
         <p>This page is under construction.</p>
@@ -31,3 +37,6 @@ import Head from 'next / head';
 ;
 export default Callback;
 ;
+
+export default Callback
+

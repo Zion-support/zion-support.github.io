@@ -227,7 +227,7 @@ interface Service {
   price?: string,
   category?: string,
   popular?: boolean,
-  launch_date?: string,
+launch_date?: string,
   [key: string]: unknown, // Allow additional properties;
 }
 // Define a unified service interface;
@@ -241,7 +241,7 @@ interface Service {
   features: string[],
   popular?: boolean,
   icon?: string,
-  link?: string;
+link?: string;
 }
 // Sample services for now;
 const sample_services: Service[] = [;
@@ -271,7 +271,7 @@ const sample_services: Service[] = [;
     name: 'Cybersecurity',
     tagline: 'Enterprise security solutions',
     description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
-    price: '$1, 999 / month',
+price: '$1, 999 / month',
     category: 'Security',
     features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],
     link: '/cybersecurity';
@@ -304,6 +304,11 @@ function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat (
       extra_services as unknown[],
+
+export default function ServicesIndexPage() {_const _all = (enhancedRealMicroSaasServices as unknown[])
+    .concat(
+      extraServices as unknown[],
+
       additionalEnhancedServices as unknown[],
       newlyAddedServices as unknown[],
       curatedMarketServices as unknown[],
@@ -322,7 +327,7 @@ function ServicesIndexPage() {
       augmentedServicesBatch3 as unknown[],
       realServicesQ22025 as unknown[],
       realServicesQ32025 as unknown[],
-      realServicesQ42025 as unknown[]),
+realServicesQ42025 as unknown[]),
     return acc;
   }, {} as Record < string, Service[]>),
   return (
@@ -410,7 +415,7 @@ if (return null, ) {
                           {category === 'Government' && '🏛️'}
                           {category === 'Energy' && '⚡'}
                           {category === 'Transportation' && '🚗'}
-                        </span>;
+</span>;
                         {category}
                         <span className="px - 3 py - 1 bg - gradient - to - r from - gray - 700 to - gray - 800 rounded - full text - sm text - gray - 300">;
                           {category_services.length} services;
@@ -536,6 +541,62 @@ if (return null, ) {
                   <div key={category} className="border border - gray - 800 rounded - 2xl p - 8 bg - black / 50 backdrop - blur - sm">;
                     <h3 className="text - 2xl font - bold mb - 6 text - white flex items - center gap - 3">;
                       <span className="text - 3xl">;
+                    </div>
+                  </Card>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Featured Services */}
+          {featuredServices.length > 0 && (
+            <section className=&quot;mb-20&quot;>
+              <h2 className=&quot;text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
+                Featured Services
+              </h2>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+                {featuredServices.map((service: Service, index: number) => (
+                  <UltraFuturisticServiceCard2026
+                    key={`${service.id || service.name}-${index}`}
+                    service={service}
+                    variant=&quot;quantum&quot;
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Latest Services */}
+          {latestServices.length > 0 && (
+            <section className=&quot;mb-20&quot;>
+              <h2 className=&quot;text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent&quot;>
+                Latest Services (2026)
+              </h2>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+                {latestServices.map((service: Service, index: number) => (
+                  <UltraFuturisticServiceCard2026
+                    key={`${service.id || service.name}-${index}`}
+                    service={service}
+                    variant=&quot;ai&quot;
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Services by Category */}
+              Services by Category
+            </h2>
+            <div className=&quot;space-y-12&quot;>
+              {categories.map((category) => {
+                const categoryServices = servicesByCategory[category]
+                if (!categoryServices || categoryServices.length === 0) return null,
+
+                return (
+                  <div key={category} className=&quot;border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm&quot;>
+                    <h3 className=&quot;text-2xl font-bold mb-6 text-white flex items-center gap-3&quot;>
+                      <span className=&quot;text-3xl&quot;>
+
                         {category === 'AI & Data' && '🧠'}
                         {category === 'Developer Tools' && '⚙️'}
                         {category === 'Cloud & FinOps' && '☁️'}
@@ -554,7 +615,7 @@ if (return null, ) {
                         {category === 'Government' && '🏛️'}
                         {category === 'Energy' && '⚡'}
                         {category === 'Transportation' && '🚗'}
-                      </span>;
+</span>;
                       {category}
                       <span className="text - sm text - gray - 400 bg - gray - 800 px - 3 py - 1 rounded - full">;
                         {category_services.length} services;
@@ -663,3 +724,34 @@ if (return null, ) {
       />;
     </div>);
 }
+                <a
+                  href=&quot;/contact&quot;
+                  className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;
+                >
+                  Contact Sales
+                </Link>
+                <a
+                  href=&quot;/get-started&quot;
+                  className=&quot;px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300&quot;
+                >
+                  Get Started
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+}
+
+      <QuoteRequestModal
+        open={_modalOpen}
+        onClose={_() => setModalOpen(false)}
+        service={_selected}
+        onSubmit={_handleSubmit}
+      />
+    </div>
+  )
+}
+

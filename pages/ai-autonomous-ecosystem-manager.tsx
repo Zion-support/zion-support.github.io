@@ -25,4 +25,7 @@ return (
     industries={["Platform Teams", "R & D", "Operations", "Security"]}
     canonical="https: //ziontechgroup.com / ai - autonomous - ecosystem - manager";
   />);
+		/>
+	)
+
 }

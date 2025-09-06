@@ -97,11 +97,12 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
         <button
           className="text-xs text-red-500 hover:underline"
           onClick={() => onReport && onReport(review.id)}
+
         >
           Report abuse
         </button>
       </div>
-      <div className="flex items-center gap-2 mb-3">
+<div className="flex items-center gap-2 mb-3">
         <span className="text-sm font-medium">{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
           <span className="pill pill-success">Would work again</span>

@@ -122,7 +122,7 @@ type Speaker = {
   title: string,
   avatarUrl: string,
   bio: string,
-  twitter?: string;
+twitter?: string;
   linkedin?: string;
   highlight?: boolean
 };
@@ -160,7 +160,7 @@ export default function SummitPage() {
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
-    avatarUrl: '/favicon.svg',
+avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
   'Content - Type': 'application / json';
 }
@@ -217,7 +217,7 @@ function SummitPage() {
     {
       name: 'Alex Rivera',
       title: 'Head of Protocol Engineering',
-      avatar_url: '/favicon.svg',
+avatar_url: '/favicon.svg',
       bio: 'Leading the architecture of ZionDAO and trust rails.',
     },    {
       name: 'Jordan Lee',
@@ -251,12 +251,18 @@ function SummitPage() {
     } finally {
       setSubmitting(false)
     }
-  };
+};
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
       return (
         <iframe
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+
+  const _livestreamEmbed = () => {_if (platform === 'youtube') {
+      return (
+        <iframe
+          className=&quot;w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800&quot;
+
           src={`https://www.youtube.com/embed/${embedId}`}
           title="YouTube livestream"
           allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
@@ -264,7 +270,7 @@ function SummitPage() {
         />
       )
     }
-    if (platform === 'twitch') {
+if (platform === 'twitch') {
       return (
         <iframe
           className="w-full aspect-video rounded-lg border border-gray-200 dark: border-gray-800"
@@ -276,7 +282,7 @@ function SummitPage() {
     }
     return (
       <iframe
-        className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
         src={`https://twitter.com/i/broadcasts/${embedId}`}
         title="Twitter livestream"
         allowFullScreen
@@ -350,7 +356,7 @@ function SummitPage() {
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
-        <section className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+<section className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
             <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
@@ -706,7 +712,7 @@ if ( {) {
               onChange={(e) => setEmbedId(e.target.value)}
             />
             {isPast ? (
-              <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
+<span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
             ) : (
               <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
             )}
@@ -729,7 +735,7 @@ if ( {) {
             />
           </div>
           <div>
-            <label className="block text-sm mb-1">Email</label>
+<label className="block text-sm mb-1">Email</label>
             <input
               type="email"
               required
@@ -739,7 +745,7 @@ if ( {) {
             />
           </div>
           <div>
-            <label className="block text-sm mb-1">Role</label>
+<label className="block text-sm mb-1">Role</label>
             <input
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -748,7 +754,7 @@ if ( {) {
             />
           </div>
           <div>
-            <label className="block text-sm mb-1">Country</label>
+<label className="block text-sm mb-1">Country</label>
             <input
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -756,7 +762,7 @@ if ( {) {
               onChange={(e) => setForm({ ...form, country: e.target.value })}
             />
           </div>
-          <div className="md:col-span-2 flex items-center gap-3">
+<div className="md:col-span-2 flex items-center gap-3">
             <button
               type="submit"
               disabled={submitting}
@@ -859,3 +865,8 @@ if ( {) {
       </section>;
     </>);
 ;
+      </section>
+    </>
+  )
+}
+

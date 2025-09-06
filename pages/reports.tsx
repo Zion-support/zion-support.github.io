@@ -30,3 +30,22 @@ function Reports() {
       </div>;
     </div>);
 }
+        </div>
+        <div className=&quot;border rounded p-5&quot;>
+          <h3 className=&quot;font-semibold&quot;>External Link Health</h3>
+          <p className=&quot;text-sm opacity-80&quot;>Daily check of outbound links.</p>
+          <div className=&quot;flex gap-3&quot;>
+            <Link href=&quot;/metrics/links.json&quot;><a className=&quot;text-blue-600&quot;>Summary →</Link></Link>
+            <Link href=&quot;/automation_logs/link-report.json&quot;><a className=&quot;text-blue-600&quot;>Full report →</Link></Link>
+          </div>
+        </div>
+        <div className=&quot;border rounded p-5&quot;>
+          <h3 className=&quot;font-semibold&quot;>Automations Catalog</h3>
+          <p className=&quot;text-sm opacity-80&quot;>List of GitHub Action workflows.</p>
+          <Link href=&quot;/automation-catalog.json&quot;><a className=&quot;text-blue-600&quot;>Catalog JSON →</Link></Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+

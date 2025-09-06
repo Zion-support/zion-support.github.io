@@ -47,7 +47,7 @@ function FraudAdminPage() {
     localStorage.setItem('admin-token', adminToken)
     fetchItems()
   }
-  const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
+const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST'
       headers: {
@@ -71,7 +71,7 @@ function FraudAdminPage() {
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
-      {loading && <div>Loading...</div>}
+{loading && <div>Loading...</div>}
       {error && <div className="text-red-600">{error}</div>}
       <div className="overflow-x-auto">
         <table className="min-w-full border">
@@ -89,7 +89,7 @@ function FraudAdminPage() {
           <tbody>
             {items.map((it) => (
               <tr key={it.id} className="border-t">
-                <td className="p-2 border">{it.userId |'—'}</td>
+<td className="p-2 border">{it.userId |'—'}</td>
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
@@ -101,7 +101,7 @@ function FraudAdminPage() {
                 </td>
                 <td className="p-2 border">
                   <div className="text-sm">
-                    <div className="font-semibold">{it.gpt?.label |'—'}</div>
+<div className="font-semibold">{it.gpt?.label |'—'}</div>
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>

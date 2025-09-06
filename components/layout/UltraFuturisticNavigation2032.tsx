@@ -413,12 +413,60 @@ const mainNavigation = [
     ];
   }
 const main_navigation = [;
+
+const _serviceCategories = [
+  {_title: '🧠 AI & Consciousness 2030', _icon: BrainIcon, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and emotional intelligence', _services: [
+      { name: 'AI Consciousness Evolution Platform', _href: '/ai-consciousness-evolution-platform', _description: 'Develop genuine AI consciousness', _price: '$19, _999/month'},
+      {_name: 'AI Emotional Intelligence Platform', _href: '/ai-emotional-intelligence-platform', _description: 'Real-time emotion analysis and response', _price: '$3, _999/month'},
+      {_name: 'AI Creativity Orchestrator', _href: '/ai-creativity-orchestrator', _description: 'Multi-model creativity fusion', _price: '$5, _999/month'},
+      {_name: 'AI Autonomous Business Manager', _href: '/ai-autonomous-business-manager', _description: 'Fully autonomous business operations', _price: '$12, _999/month'}
+    ]
+  },
+  {_title: '⚛️ Quantum & Emerging Tech 2030', _icon: AtomIcon, _color: 'from-indigo-600 via-blue-600 to-cyan-600', _description: 'Quantum computing and beyond', _services: [
+      { name: 'Quantum Internet Security Gateway', _href: '/quantum-internet-security-gateway', _description: 'Unbreakable quantum encryption', _price: '$15, _999/month'},
+      {_name: 'Biotech DNA Computing Platform', _href: '/biotech-dna-computing-platform', _description: 'DNA-based computation', _price: '$25, _999/month'},
+      {_name: 'Neuromorphic Computing Platform', _href: '/neuromorphic-computing-platform', _description: 'Brain-inspired computing', _price: '$899/month'},
+      {_name: 'Photonic Computing Infrastructure', _href: '/photonic-computing-infrastructure', _description: 'Light-speed computing', _price: '$699/month'}
+    ]
+  },
+  {_title: '🚀 Space & Metaverse 2030', _icon: Rocket, _color: 'from-teal-600 via-emerald-600 to-green-600', _description: 'Space exploration and digital reality', _services: [
+      { name: 'Space Mining Automation Platform', _href: '/space-mining-automation-platform', _description: 'Automated asteroid mining', _price: '$45, _999/month'},
+      {_name: 'Metaverse Development Platform', _href: '/metaverse-development-platform', _description: 'Build immersive virtual worlds', _price: '$499/month'},
+      {_name: 'Virtual Event Hologram Platform', _href: '/virtual-event-hologram-platform', _description: 'Immersive holographic events', _price: '$799/month'},
+      {_name: 'AI Predictive Health Analytics', _href: '/ai-predictive-health-analytics', _description: 'Predictive health outcomes', _price: '$7, _999/month'}
+    ]
+  },
+  {_title: '⚙️ Enterprise IT 2030', _icon: CpuIcon, _color: 'from-blue-600 via-cyan-600 to-teal-600', _description: 'Autonomous enterprise infrastructure', _services: [
+      { name: 'Autonomous DevOps Platform', _href: '/autonomous-devops-platform', _description: 'Fully autonomous DevOps', _price: '$799/month'},
+      {_name: 'Zero Trust Network Architecture', _href: '/zero-trust-network-architecture', _description: 'Never trust, _always verify', _price: '$599/month'},
+      {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration', _description: 'Distributed edge computing', _price: '$449/month'},
+      {_name: 'AI-Powered IT Operations Center', _href: '/ai-it-operations-center', _description: 'Intelligent IT operations', _price: '$699/month'}
+    ]
+  },
+  {_title: '🎯 Business Solutions 2030', _icon: Target, _color: 'from-green-600 via-yellow-600 to-orange-600', _description: 'Practical business solutions with AI', _services: [
+      { name: 'AI Business Intelligence Suite', _href: '/ai-business-intelligence-suite', _description: 'Intelligent business insights', _price: '$299/month'},
+      {_name: 'AI Customer Success Automation', _href: '/ai-customer-success-automation', _description: 'Automate customer success', _price: '$199/month'},
+      {_name: 'Blockchain Supply Chain Transparency', _href: '/blockchain-supply-chain-transparency', _description: 'End-to-end traceability', _price: '$399/month'},
+      {_name: 'AI Meeting Transcriber Pro', _href: '/ai-meeting-transcriber-pro', _description: 'Professional transcription', _price: '$149/month'}
+    ]
+  },
+  {_title: '🔬 Research & Development 2030', _icon: Microscope, _color: 'from-orange-600 via-red-600 to-pink-600', _description: 'Breakthrough research solutions', _services: [
+      { name: 'Swarm Robotics Orchestration', _href: '/swarm-robotics-orchestration', _description: 'Coordinate robot swarms', _price: '$449/month'},
+      {_name: 'Brain-Computer Interface Platform', _href: '/brain-computer-interface-platform', _description: 'Direct neural interface', _price: '$1, _299/month'},
+      {_name: 'Quantum Machine Learning Platform', _href: '/quantum-machine-learning-platform', _description: 'Quantum-enhanced ML', _price: '$2, _999/month'},
+      {_name: 'Synthetic Biology Automation Platform', _href: '/synthetic-biology-automation-platform', _description: 'Automate biology research', _price: '$3, _999/month'}
+    ]
+  }
+],
+
+const mainNavigation = [
+
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Layers },
   { name: 'Pricing', href: '/pricing', icon: DollarSign },
   { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'Case Studies', href: '/case - studies', icon: TrendingUp },
+{ name: 'Case Studies', href: '/case - studies', icon: TrendingUp },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
@@ -429,7 +477,7 @@ const company_links = [;
   { name: 'News', href: '/news' },
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
-      setIsScrolled(window.scrollY > 20)
+setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
@@ -487,7 +535,7 @@ export default function UltraFuturisticNavigation2032() {;
                 </a>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
+<div className="flex items-center space-x-4">
               <a href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
@@ -502,7 +550,7 @@ export default function UltraFuturisticNavigation2032() {;
           </div>
         </div>
       </div>
-                  viewBox='0 0 24 24'>;
+viewBox='0 0 24 24'>;
                   <path d='M20 && M20.447 20 && 20.452h-3 && 3.554v-5 && 5.569c0-1 && 1.328-.027-3 && 3.047-1 && 1.852-3 && 3.047-1 && 1.853 0-2 && 2.136 1 && 1.445-2 && 2.136 2 && 2.939v5.677H9 && 677H9.351V9h3.414v1 && 414v1.561h.046c && 046c.477-.9 1 && 1.637-1 && 1.85 3 && 3.37-1 && 1.85 3 && 3.601 0 4 && 4.267 2 && 2.37 4 && 4.267 5 && 5.455v6.286zM5 && 286zM5.337 7 && 7.433c-1 && 1.144 0-2 && 2.063-.926-2 && 2.063-2 && 2.065 0-1 && 1.138.92-2 && 2.063 2 && 2.063-2 && 2.063 1 && 1.14 0 2 && 2.064.925 2 && 2.064 2 && 2.063 0 1 && 1.139-.925 2 && 2.065-2 && 2.064 2 && 2.065zm1.782 13 && 13.019H3.555V9h3 && 555V9h3.564v11.452zM22 && 452zM22.225 0H1 && 0H1.771C.792 0 0 .774 0 1 && 1.729v20.542C0 23 && 23.227.792 24 1 && 1.771 24h20 && 24h20.451C23.2 24 24 23 && 23.227 24 22 && 22.271V1.729C24 .774 23 && 23.2 0 22 && 22.222 0h && 0h.003z' />                </svg>            <div className="flex items-center space-x-4">;
               <a href="https://github && github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">;
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">;
@@ -621,7 +669,7 @@ function UltraFuturisticNavigation2032() {
           ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
           : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
@@ -690,7 +738,7 @@ function UltraFuturisticNavigation2032() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
+className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
                 >
                   <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   <span>{item.name}</span>
@@ -723,7 +771,7 @@ function UltraFuturisticNavigation2032() {
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
-                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
+className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                               >
                                 <div className="flex items-center justify-between">
                                   <div>
@@ -911,7 +959,7 @@ function UltraFuturisticNavigation2032() {
           </div>
         </div>
       </nav>
-            {/* Mobile Menu Button */}
+{/* Mobile Menu Button */}
             <button;
               on_click={toggle_menu}
               className='lg:hidden p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors';
@@ -996,7 +1044,7 @@ function UltraFuturisticNavigation2032() {
                       </div>
                     </div>
                   </div>
-                  <button onClick={closeMenu} className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50">
+<button onClick={closeMenu} className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50">
                     <X className="w-6 h-6" />
                   </button>
                 </div>
@@ -1007,7 +1055,7 @@ function UltraFuturisticNavigation2032() {
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
-                      className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50"
+className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50"
                     >
                       <item.icon className="w-5 h-5" />
                       <span>{item.name}</span>
@@ -1093,7 +1141,7 @@ function UltraFuturisticNavigation2032() {
                           key={link.name}
                           href={link.href}
                           onClick={closeMenu}
-                          className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
+className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
                         >
                           {link.name}
                         </Link>
@@ -1174,7 +1222,7 @@ function UltraFuturisticNavigation2032() {
           </motion.div>
         )}
       </AnimatePresence>
-      {/* Spacer for fixed navigation */}
+{/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
       </AnimatePresence>;

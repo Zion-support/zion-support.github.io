@@ -514,7 +514,7 @@ function SearchPage() {
     status: 'all',
     priceRange: 'all',
     technology: 'all'
-  });
+});
   const [sortBy, setSortBy] = useState('relevance');
   const [showFilters, setShowFilters] = useState(false);
   // Mock data for search
@@ -532,7 +532,7 @@ function SearchPage() {
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       relevance: 95
-    };
+};
     {
       id: 'quantum-cybersecurity',
       title: 'Quantum Cybersecurity',
@@ -546,7 +546,7 @@ function SearchPage() {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       relevance: 92
-    };
+};
     {
       id: 'ai-customer-experience',
       title: 'AI Customer Experience',
@@ -560,7 +560,7 @@ function SearchPage() {
       icon: Users,
       color: 'from-green-500 to-teal-500',
       relevance: 88
-    };
+};
     {
       id: 'edge-computing-orchestration',
       title: 'Edge Computing Orchestration',
@@ -574,7 +574,7 @@ function SearchPage() {
       icon: Network,
       color: 'from-purple-500 to-pink-500',
       relevance: 85
-    };
+};
     {
       id: 'space-technology',
       title: 'Space Technology Innovation',
@@ -582,13 +582,13 @@ function SearchPage() {
       category: 'Space Technology',
       status: 'beta',
       price: '$2,499/month',
-    technology: 'Space',
+technology: 'Space',
       features: ['Satellite managementAI mission planningQuantum communicationResource optimization'],
       link: '/space-technology',
       icon: Rocket,
       color: 'from-violet-500 to-purple-500',
       relevance: 82
-    };
+};
     {
       id: 'neural-interface',
       title: 'Neural Interface Development',
@@ -602,7 +602,7 @@ function SearchPage() {
       icon: Brain,
       color: 'from-pink-500 to-rose-500',
       relevance: 78
-    };
+};
     {
       id: 'quantum-neural-networks',
       title: 'Quantum Neural Networks',
@@ -610,13 +610,13 @@ function SearchPage() {
       category: 'Quantum Computing',
       status: 'beta',
       price: '$1,299/month',
-    technology: 'Quantum',
+technology: 'Quantum',
       features: ['Quantum algorithmsNeural optimizationConsciousness simulationResearch tools'],
       link: '/quantum-neural-networks',
       icon: Atom,
       color: 'from-blue-500 to-cyan-500',
       relevance: 75
-    };
+};
     {
       id: 'autonomous-devops',
       title: 'Autonomous DevOps',
@@ -630,7 +630,7 @@ function SearchPage() {
       icon: Cpu,
       color: 'from-emerald-500 to-teal-500',
       relevance: 72
-    };
+};
     {
       id: 'ai-autonomous-business',
       title: 'AI Autonomous Business Manager',
@@ -638,13 +638,13 @@ function SearchPage() {
       category: 'AI & Machine Learning',
       status: 'beta',
       price: '$1,999/month',
-    technology: 'AI/ML',
+technology: 'AI/ML',
       features: ['Business automationDecision makingResource allocationPerformance optimization'],
       link: '/ai-autonomous-business',
       icon: Target,
       color: 'from-indigo-500 to-purple-500',
       relevance: 70
-    };
+};
     {
       id: 'quantum-financial-trading',
       title: 'Quantum Financial Trading',
@@ -652,14 +652,14 @@ function SearchPage() {
       category: 'Financial Technology',
       status: 'beta',
       price: '$3,999/month',
-    technology: 'Quantum',
+technology: 'Quantum',
       features: ['Quantum algorithmsRisk assessmentPortfolio optimizationReal-time analysis'],
       link: '/quantum-financial-trading',
       icon: TrendingUp,
       color: 'from-emerald-500 to-green-500',
       relevance: 68
     }
-  ];
+];
   const categories = [
     { id: 'all', name: 'All Categories', icon: '📂' },
     { id: 'AI & Machine Learning', name: 'AI & Machine Learning', icon: '🧠' },
@@ -670,20 +670,20 @@ function SearchPage() {
     { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },
     { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },
     { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
-  ];
+];
   const statuses = [
     { id: 'all', name: 'All Statuses', icon: '📊' },
     { id: 'active', name: 'Active', icon: '✅' },
     { id: 'beta', name: 'Beta', icon: '🧪' },
     { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
-  ];
+];
   const priceRanges = [
     { id: 'all', name: 'All Prices', icon: '💰' },
     { id: 'under-500', name: 'Under $500/month', icon: '💵' },
     { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },
     { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },
     { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
-  ];
+];
   const technologies = [
     { id: 'all', name: 'All Technologies', icon: '🔧' },
     { id: 'AI/ML', name: 'AI/ML', icon: '🧠' },
@@ -692,7 +692,7 @@ function SearchPage() {
     { id: 'Space', name: 'Space', icon: '🚀' },
     { id: 'Biotech', name: 'Biotech', icon: '🧬' },
     { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
-  ];
+];
   // Search function
   const performSearch = () => {
     if (!searchTerm.trim()) {
@@ -750,18 +750,82 @@ function SearchPage() {
       setIsSearching(false)
     }, 500)
   };
+    setIsSearching(true),
+    
+    // Simulate search delay
+    setTimeout__(() => {_const _results = allServices.filter(service => {
+        const _matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            service.technology.toLowerCase().includes(searchTerm.toLowerCase()),
+        
+        const matchesCategory = filters.category === 'all' || service.category === filters.category
+        const matchesStatus = filters.status === 'all' || service.status === filters.status
+        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology
+        
+        let matchesPrice = true
+        if (filters.priceRange !== 'all') {
+          const price = parseInt(service.price.replace(/[^0-9]/g, '')),
+
+          switch (filters.priceRange) {
+            case 'under-500':
+              matchesPrice = price < 500,
+              break,
+            case '500-1000':
+              matchesPrice = price >= 500 && price < 1000,
+              break,
+            case '1000-2500':
+              matchesPrice = price >= 1000 && price < 2500,
+              break,
+            case 'over-2500':
+              matchesPrice = price >= 2500,
+              break
+          }
+              matchesPrice = price >= 2500;
+              break;}
+
+        }
+        
+        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
+      }),
+
+      // Sort results
+      const _sortedResults = results.sort(_(a, _b) => {_switch (sortBy) {
+          case 'relevance':
+            return b.relevance - a.relevance,
+          case 'price-low':
+            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
+          case 'price-high':
+            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
+          case 'name':
+            return a.title.localeCompare(b.title),
+          case 'status':
+          case 'name':
+            return a.title.localeCompare(b.title),
+          case 'status':
+
+            return a.status.localeCompare(b.status),
+          default: return 0
+        }
+      }),
+
+      setSearchResults(sortedResults),
+      setIsSearching(false)
+    }, 500)
+  },
+
   // Handle search on Enter key
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       performSearch()
     }
-  };
+};
   // Update search when filters change
   useEffect(() => {
     if (searchTerm.trim()) {
       performSearch()
     }
-  }, [filters, sortBy]);
+}, [filters, sortBy]);
   // Clear all filters
   const clearFilters = () => {
     setFilters({
@@ -769,7 +833,7 @@ function SearchPage() {
       status: 'all',
       priceRange: 'all',
       technology: 'all'
-    });
+});
     setSortBy('relevance')
   };
   return (
@@ -800,7 +864,7 @@ function SearchPage() {
           </motion.div>
         </div>
       </section>
-      {/* Search Interface */}
+{/* Search Interface */}
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
@@ -825,7 +889,7 @@ function SearchPage() {
                   </button>
                 </div>
               </div>
-              {/* View Mode Toggle */}
+{/* View Mode Toggle */}
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -880,13 +944,14 @@ function SearchPage() {
                 </button>
               )}
             </div>
+
             {/* Expanded Filters */}
             {showFilters && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
-                className="mt-6 pt-6 border-t border-white/20"
+className="mt-6 pt-6 border-t border-white/20"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {/* Category Filter */}
@@ -904,7 +969,7 @@ function SearchPage() {
                       ))}
                     </select>
                   </div>
-                  {/* Status Filter */}
+{/* Status Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Status</label>
                     <select
@@ -919,7 +984,7 @@ function SearchPage() {
                       ))}
                     </select>
                   </div>
-                  {/* Price Range Filter */}
+{/* Price Range Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Price Range</label>
                     <select
@@ -934,7 +999,7 @@ function SearchPage() {
                       ))}
                     </select>
                   </div>
-                  {/* Technology Filter */}
+{/* Technology Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Technology</label>
                     <select
@@ -955,7 +1020,7 @@ function SearchPage() {
           </div>
         </div>
       </section>
-      {/* Search Results */}
+{/* Search Results */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           {/* Results Header */}
@@ -968,7 +1033,7 @@ function SearchPage() {
               {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
             </p>
           </div>
-          {/* Loading State */}
+{/* Loading State */}
           {isSearching && (
             <div className="text-center py-20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
@@ -989,13 +1054,13 @@ function SearchPage() {
               </p>
               <button
                 onClick={clearFilters}
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
+className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
               >
                 Clear All Filters
               </button>
             </div>
           )}
-          {/* Search Results */}
+{/* Search Results */}
           {!isSearching && searchResults.length > 0 && (
             <AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
@@ -1046,7 +1111,7 @@ function SearchPage() {
                           ))}
                         </div>
                       </div>
-                      <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                         <a
                           href={service.link}
                           className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"
@@ -1066,7 +1131,7 @@ function SearchPage() {
                   </motion.div>
                 ))}
               </div>
-                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
+transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
                     <div className="flex items-start justify-between">;
                       <div className="flex-1">;
                         <div className="flex items-center mb-2">;
@@ -1273,7 +1338,7 @@ function SearchPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 <span className="text-sm text-white/40">Popular searches:</span>
-                {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
+{['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
                   <button
                     key={term}
                     onClick={() => {
@@ -1283,6 +1348,9 @@ function SearchPage() {
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
                   >
                     {term}
+                  >
+                    {_term}
+
                   </button>
                 ))}
               </div>
@@ -1290,7 +1358,7 @@ function SearchPage() {
           )}
         </div>
       </section>
-      <SmartFooter />
+<SmartFooter />
     </div>
   )
 }

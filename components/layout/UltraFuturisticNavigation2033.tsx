@@ -364,6 +364,39 @@ const quick_links = [;
     ]
   }
 ];
+
+const _serviceCategories = [
+  {_title: '🧠 Revolutionary AI', _icon: Brain, _color: 'from-violet-500 to-purple-600', _services: [
+      { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-platform', _description: 'Advanced AI consciousness', _price: '$2, _999/month'},
+      {_name: 'AI Emotional Intelligence', _href: '/ai-emotional-intelligence-platform', _description: 'Emotional AI platform', _price: '$1, _999/month'},
+      {_name: 'AI Creativity Orchestrator', _href: '/ai-creativity-orchestrator', _description: 'Creative AI solutions', _price: '$1, _499/month'},
+      {_name: 'AI Autonomous Business Manager', _href: '/ai-autonomous-business-manager', _description: 'Autonomous business AI', _price: '$3, _999/month'}
+    ]
+  },
+  {_title: '⚛️ Quantum & Emerging Tech', _icon: Atom, _color: 'from-indigo-500 to-blue-600', _services: [
+      { name: 'Quantum Internet Security', _href: '/quantum-internet-security-gateway', _description: 'Quantum security', _price: '$4, _999/month'},
+      {_name: 'Biotech DNA Computing', _href: '/biotech-dna-computing-platform', _description: 'DNA computing platform', _price: '$3, _999/month'},
+      {_name: 'Quantum Financial Trading', _href: '/quantum-financial-trading-platform', _description: 'Quantum trading', _price: '$5, _999/month'},
+      {_name: 'DNA Computing Platform', _href: '/dna-computing-platform', _description: 'Molecular computing', _price: '$1, _299/month'},
+      {_name: 'Photonic Computing Infrastructure', _href: '/photonic-computing-infrastructure', _description: 'Light-speed computing', _price: '$699/month'},
+      {_name: 'Swarm Robotics Platform', _href: '/swarm-robotics-platform', _description: 'Collective robot intelligence', _price: '$1, _199/month'}
+    ]
+  },
+  {_title: '🏙️ Enterprise IT Solutions', _icon: Cpu, _color: 'from-blue-500 to-cyan-600', _services: [
+      { name: 'Autonomous DevOps Platform', _href: '/autonomous-devops-platform', _description: 'Self-managing DevOps', _price: '$2, _499/month'},
+      {_name: 'Zero Trust Network Architecture', _href: '/zero-trust-network-architecture', _description: 'Zero trust security', _price: '$1, _999/month'},
+      {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration', _description: 'Edge computing platform', _price: '$1, _799/month'},
+      {_name: 'AI IT Operations Center', _href: '/ai-it-operations-center', _description: 'AI-powered IT ops', _price: '$2, _999/month'}
+    ]
+  },
+  {_title: '🌌 Space & Metaverse Tech', _icon: Rocket, _color: 'from-teal-500 to-emerald-600', _services: [
+      { name: 'Space Mining Automation', _href: '/space-mining-automation-platform', _description: 'Space mining platform', _price: '$9, _999/month'},
+      {_name: 'Metaverse Development', _href: '/metaverse-development-platform', _description: 'Metaverse platform', _price: '$3, _999/month'},
+      {_name: 'Virtual Event Holograms', _href: '/virtual-event-hologram-platform', _description: 'Holographic events', _price: '$2, _499/month'}
+    ]
+  }
+],
+
 const quickLinks = [
   { name: 'Services Overview', href: '/enhanced-services-overview', icon: Globe, color: 'from-cyan-500 to-blue-600' },
   { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' },
@@ -422,7 +455,7 @@ export default function UltraFuturisticNavigation2033() {
           </div>
         </div>
       </div>
-      <div className='bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20'>;
+<div className='bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex items-center justify-between h-10 text-xs text-purple-300'>;
             <div className='flex items-center space-x-4'>;
@@ -790,7 +823,7 @@ function UltraFuturisticNavigation2033() {
             </div>
           </div>
         </div>
-                                      </span>;
+</span>;
                                     </div>;
                                     <p className="text - sm text - gray - 400">{service.description}</p>;
                                   </div>;
@@ -860,7 +893,7 @@ function UltraFuturisticNavigation2033() {
                             key={service.name}
                             href={service.href}
                             onClick={closeMenu}
-                            className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                           >
                             {service.name}
                           </Link>
@@ -878,7 +911,7 @@ function UltraFuturisticNavigation2033() {
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
-                        className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                       >
                         {link.name}
                       </Link>
@@ -975,7 +1008,7 @@ function UltraFuturisticNavigation2033() {
               </div>
             </motion.div>
           )}
-        </AnimatePresence>;
+</AnimatePresence>;
       </nav>;
     </>;
   );

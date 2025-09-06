@@ -12,4 +12,5 @@ export default /**
  */
 function IntelligentProjectManagementSuite() {
 return <ServicePage {...props} />;
+
 }

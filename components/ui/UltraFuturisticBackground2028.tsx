@@ -122,10 +122,20 @@ if (return) {
     // Create particles;
     for (let index = 0; i < 100; i++) {      particles.push ({      coordinate_x: number,
       coordinate_y: number,
+
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
+
+    // Particle system
+    const particles: Array<{
+      x: number,
+      y: number,
+
       vx: number,
       vy: number,
       size: number,
       color: string,
+
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -136,7 +146,7 @@ if (return) {
         opacity: Math.random() * 0.5 + 0.3
       })
     }
-    // Animation loop
+// Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -438,11 +448,86 @@ if ( {) {
             rotate: [45, 405];
             scale: [1, 1.1, 1];
             opacity: [0.3, 0.6, 0.3];
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
+
+        // Draw particle
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fillStyle = particle.color,
+        ctx.globalAlpha = particle.opacity,
+        ctx.fill(),
+
+        // Draw connections
+        particles.forEach((otherParticle) => {
+          const dx = particle.x - otherParticle.x
+          const dy = particle.y - otherParticle.y
+          const distance = Math.sqrt(dx * dx + dy * dy)
+
+          if (distance < 100) {
+            ctx.beginPath(),
+            ctx.moveTo(particle.x, particle.y),
+            ctx.lineTo(otherParticle.x, otherParticle.y),
+            ctx.strokeStyle = particle.color,
+            ctx.globalAlpha = (100 - distance) / 100 * 0.1,
+            ctx.lineWidth = 1,
+            ctx.stroke()
+          }
+        })
+      }),
+
+      requestAnimationFrame(animate)
+    },
+
+    animate(),
+
+    // Handle resize
+    const handleResize = () => {
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight
+    },
+
+    window.addEventListener('resize', handleResize),
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, []),
+
+  return (
+    <div className=&quot;relative min-h-screen bg-black overflow-hidden&quot;>
+      {/* Animated Background Canvas */}
+      <canvas
+        ref={canvasRef}
+        className=&quot;absolute inset-0 w-full h-full pointer-events-none&quot;
+        style={{ zIndex: 0 }}
+      />
+
+      {/* Gradient Overlays */}
+      <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20&quot; style={{ zIndex: 1 }} />
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]&quot; style={{ zIndex: 1 }} />
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]&quot; style={{ zIndex: 1 }} />
+      <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]&quot; style={{ zIndex: 1 }} />
+
+      {/* Floating Geometric Shapes */}
+      <div className=&quot;absolute inset-0 pointer-events-none&quot; style={{ zIndex: 2 }}>
+        {/* Animated Hexagons */}
+        <motion.div
+          className=&quot;absolute top-20 left-20 w-32 h-32 border border-purple-500/30 rotate-45&quot;
+          animate={{
+            rotate: [45, 405],
+            scale: [1, 1.1, 1],
+            opacity: [0.3, 0.6, 0.3]
+
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut',          }}
+ease: 'easeInOut',          }}
         />;
         <motion.div;
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - blue - 500 / 30 rotate - 45";
@@ -589,7 +674,7 @@ if ( {) {
           transition={{
             duration: 6,
             repeat: Infinity,
-        />;
+/>;
         <motion&& motion.div
           className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounded-full'
           animate={{
@@ -607,7 +692,7 @@ if ( {) {
           transition={{
             duration: 7,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
         />
         <motion.div
@@ -637,7 +722,7 @@ if ( {) {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
         />;
         <motion&& motion.div
@@ -760,7 +845,7 @@ if ( {) {
           transition={{
             duration: 6,
             repeat: Infinity,
-        />;
+/>;
         <motion&& motion.div
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent'
           animate={{

@@ -72,11 +72,31 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
     { name: 'Contact', href: '/contact' },;
     { name: 'Pricing', href: '/pricing' }
   ];
+
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
+
+  const _navigationItems = [
+    {_name: 'Services', _href: '/services', _hasDropdown: true, _dropdownItems: [
+        { name: 'AI & Machine Learning', _href: '/services/ai-ml', _icon: Brain, _color: 'from-purple-500 to-pink-600'},
+        {_name: 'Quantum Computing', _href: '/services/quantum', _icon: Atom, _color: 'from-cyan-500 to-blue-600'},
+        {_name: 'Cybersecurity', _href: '/services/cybersecurity', _icon: Shield, _color: 'from-red-500 to-pink-600'},
+        {_name: 'IT Solutions', _href: '/services/it-solutions', _icon: Rocket, _color: 'from-green-500 to-emerald-600'},
+        {_name: 'View All Services', _href: '/services', _icon: Rocket, _color: 'from-gray-500 to-gray-600'}
+      ]
+    },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' }
+  ],
+
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+};
     >;
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
@@ -85,14 +105,14 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
         : 'bg-transparent'
     } ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center space-x-3"
+className="flex items-center space-x-3"
           >
             <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl">
               <Rocket className="w-7 h-7 text-white" />
@@ -465,7 +485,7 @@ function UltraFuturisticNavigation() {
           </div>
         </div>
       </div>
-          <div className='hidden lg:flex items - center space - x-6'>;
+<div className='hidden lg:flex items - center space - x-6'>;
             {/* Contact Info */}
             <div className='flex items - center space - x-4 text - sm text - gray - 300'>;
               <div className='flex items - center space - x-2'>;
@@ -519,7 +539,7 @@ function UltraFuturisticNavigation() {
                     <div>
                       <button
                         onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
+className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
                       >
                         <span>{item.name}</span>
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
@@ -536,7 +556,7 @@ function UltraFuturisticNavigation() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="ml-4 mt-2 space-y-2"
+className="ml-4 mt-2 space-y-2"
                         >
                           {item.dropdownItems?.map((dropdownItem) => (
                             <Link
@@ -732,7 +752,7 @@ function UltraFuturisticNavigation() {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>;
+</AnimatePresence>;
     </nav>;
   );
 }

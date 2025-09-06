@@ -95,11 +95,44 @@ function FrontLanding() {
       <main className="relative z-10">
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
           <div className="text-center">
+      </Head>
+
+      {/* Animated background layers */}
+      <div aria-hidden className=&quot;pointer-events-none absolute inset-0 -z-10&quot;>
+        <div className=&quot;absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float&quot; />
+        <div className=&quot;absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow&quot; />
+        <div className=&quot;absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast&quot; />
+        <div className=&quot;absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid&quot; />
+        <div className=&quot;absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]&quot;>
+          <div className=&quot;twinkle-field absolute inset-0&quot; />
+        </div>
+      </div>
+
+      {/* Header */}
+      <header className=&quot;relative z-10&quot;>
+        <nav className=&quot;mx-auto flex max-w-7xl items-center justify-between px-6 py-6&quot;>
+          <div className=&quot;text-2xl font-bold tracking-wide&quot;>
+            <Link href=&quot;/&quot;><a className=&quot;bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon&quot;>Zion</Link></Link>
+          </div>
+          <div className=&quot;hidden gap-6 md:flex&quot;>
+            <Link href=&quot;/&quot;><a className=&quot;text-white/80 hover:text-white&quot;>Home</Link></Link>
+            <Link href=&quot;/automation&quot;><a className=&quot;text-white/80 hover:text-white&quot;>Automations</Link></Link>
+            <Link href=&quot;/newsroom&quot;><a className=&quot;text-white/80 hover:text-white&quot;>Newsroom</Link></Link>
+            <Link href=&quot;/contact&quot;><a className=&quot;text-white/80 hover:text-white&quot;>Contact</Link></Link>
+          </div>
+        </nav>
+      </header>
+
+      {/* Hero */}
+      <main className=&quot;relative z-10&quot;>
+        <section className=&quot;mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24&quot;>
+          <div className=&quot;text-center&quot;>
+
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md"
+className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md"
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
               Autonomous agents running continuous improvements
@@ -108,7 +141,7 @@ function FrontLanding() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.05 }}
-              className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"
+className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"
             >
               <span className="gradient-text">Autonomous Cloud Automations</span>
             </motion.h1>
@@ -116,7 +149,7 @@ function FrontLanding() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
+className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
             >
               Self-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously.
             </motion.p>
@@ -376,7 +409,7 @@ function FrontLanding() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
+className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
           >
             <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>

@@ -25,7 +25,7 @@ const aiServices = [
   {
     title: 'AI Consciousness Evolution',
     description: 'Advanced AI systems with evolving consciousness and emotional intelligence',
-    icon: <Brain className="w-8 h-8 text-cyan-400" />,
+icon: <Brain className="w-8 h-8 text-cyan-400" />,
     href: '/ai-consciousness-evolution-2029',
     features: ['Emotional IntelligenceConsciousness DevelopmentEthical AI Framework']
   };
@@ -97,13 +97,48 @@ export default function AIServices() {
                 <ul className="space-y-2 text-gray-300 text-sm">
                   {p.items.map((i) => (
                     <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 mt-0.5 text-emerald-400" /> <span>{i}</span></li>
+
+export default function AIServices() {_return (_<QuantumHolographicMatrixBackground intensity={1.5}>
+      <Head>
+        <title>AI Services | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;LLM apps, RAG, MLOps, and AI research enablement with transparent pricing and measurable outcomes.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-services&quot; />
+      </Head>
+
+      <div className=&quot;min-h-screen py-20 px-4 sm:px-6 lg:px-8&quot;>
+        <ServiceAds heading=&quot;Featured AI Services&quot; subheading=&quot;Production-ready offerings with transparent pricing.&quot; items={featuredAIAds} />
+        <div className=&quot;text-center max-w-4xl mx-auto mb-12&quot;>
+          <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>AI Services</h1>
+          <p className=&quot;text-xl text-gray-300&quot;>From prototype to production, we build AI systems that are safe, observable, and cost-efficient.</p>
+        </div>
+
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16&quot;>
+          {tracks.map((t) => (
+            <div key={t.title} className=&quot;bg-black/30 border border-gray-700/50 rounded-2xl p-6&quot;>
+              <div className=&quot;mb-4&quot;>{t.icon}</div>
+              <h3 className=&quot;text-white font-semibold mb-2&quot;>{t.title}</h3>
+              <p className=&quot;text-gray-400 text-sm&quot;>{t.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className=&quot;max-w-6xl mx-auto mb-20&quot;>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+            {packages.map((p) => (
+              <div key={p.name} className=&quot;bg-black/30 border border-gray-700/50 rounded-2xl p-6&quot;>
+                <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{p.name}</h3>
+                <div className=&quot;text-cyan-400 font-semibold mb-4&quot;>{p.price}</div>
+                <ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
+                  {p.items.map((i) => (
+                    <li key={i} className=&quot;flex items-start gap-2&quot;><Check className=&quot;w-4 h-4 mt-0.5 text-emerald-400&quot; /> <span>{i}</span></li>
+
                   ))}
                 </ul>
               </div>
             </motion.div>
           </div>
         </section>
-  duration: 0 && 0.8, delay: 0 && 0.4 
+duration: 0 && 0.8, delay: 0 && 0.4 
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion && motion.button > Schedule Consultation </motion && motion.button> <motion&& motion.button export default function AIServices() {
   return (
     <QuantumHolographicMatrixBackground intensity={1 && 1.5}>;
@@ -370,3 +405,15 @@ function AIServices() {
       </div>;
     </>),
 }
+                >
+                  View Case Studies
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}
+

@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-  const cookie = clearSessionCookie();
+const cookie = clearSessionCookie();
   res && res.setHeader('Set-Cookie', cookie);
   res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const cookie = clearSessionCookie();
@@ -25,4 +25,5 @@ function handler() {
   const cookie = clearSessionCookie ();
   res.set_header ('Set - Cookie', cookie);
   res.status (200).json ({ ok: true });
+
 }

@@ -229,11 +229,108 @@ import React from 'react';
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+
+  const useCases = [
+    {
+      industry: &quot;Manufacturing&quot;,
+      description: &quot;Real-time quality control, predictive maintenance, and production optimization&quot;,
+      results: &quot;30% reduction in downtime, 25% improvement in product quality&quot;
+    },
+    {
+      industry: &quot;Healthcare&quot;,
+      description: &quot;Patient monitoring, medical device management, and telemedicine support&quot;,
+      results: &quot;40% faster response times, improved patient outcomes&quot;
+    },
+    {
+      industry: &quot;Transportation&quot;,
+      description: &quot;Autonomous vehicle support, traffic management, and fleet optimization&quot;,
+      results: &quot;50% reduction in accidents, 35% improvement in efficiency&quot;
+    },
+    {
+      industry: &quot;Retail&quot;,
+      description: &quot;Inventory management, customer analytics, and supply chain optimization&quot;,
+      results: &quot;45% reduction in stockouts, 30% improvement in customer satisfaction&quot;
+    }
+  ],
+
+  const pricing = [
+    {
+      plan: &quot;Starter&quot;,
+      price: &quot;$399&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Basic edge computing for small deployments&quot;,
+      features: [
+        &quot;Up to 10 edge nodes&quot;,
+        &quot;Basic orchestration&quot;,
+        &quot;Standard monitoring&quot;,
+        &quot;Email support&quot;,
+        &quot;Basic security features&quot;,
+        &quot;Up to 100 IoT devices&quot;
+      ],
+      popular: false
+    },
+    {
+      plan: &quot;Professional&quot;,
+      price: &quot;$999&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Advanced features for growing edge networks&quot;,
+      features: [
+        &quot;Everything in Starter&quot;,
+        &quot;Up to 100 edge nodes&quot;,
+        &quot;Advanced orchestration&quot;,
+        &quot;Real-time monitoring&quot;,
+        &quot;Priority support&quot;,
+        &quot;Advanced security&quot;,
+        &quot;Up to 1000 IoT devices&quot;,
+        &quot;Custom integrations&quot;
+      ],
+      popular: true
+    },
+    {
+      plan: &quot;Enterprise&quot;,
+      price: &quot;Custom&quot;,
+      period: "&quot;,
+      description: &quot;Full-scale solution for large organizations&quot;,
+      features: [
+        &quot;Everything in Professional&quot;,
+        &quot;Unlimited edge nodes&quot;,
+        &quot;Custom orchestration&quot;,
+        &quot;Dedicated support team&quot;,
+        &quot;Unlimited IoT devices&quot;,
+        &quot;On-premise deployment&quot;,
+        &quot;Custom training&quot;,
+        &quot;SLA guarantees&quot;
+      ],
+      popular: false
+    }
+  ],
+
+  return (_<>
+      <Head>
+        <title>Edge Computing Orchestration - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;edge computing, IoT management, edge orchestration, real-time processing, distributed computing, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Edge Computing Orchestration - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/edge-computing-orchestration" />
+      </Head>
+
+      <EnhancedNavigation />
+
+      {_/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={_{ opacity: 0, _y: 20}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.6}}
+
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+<span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 {" "}Orchestration
               </span>
             </h1>
@@ -247,18 +344,18 @@ import React from 'react';
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Get Started Today
-              </a>
+</a>
               <a
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Watch Demo
-              </a>
+</a>
             </div>
           </motion.div>
         </div>
       </section>
-                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
+className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
                 Watch Demo;
               </a>;
             </div>;
@@ -281,7 +378,7 @@ import React from 'react';
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Edge Computing Features</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Everything you need to deploy, manage, and optimize edge computing infrastructure.
+Everything you need to deploy, manage, and optimize edge computing infrastructure.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -325,7 +422,7 @@ import React from 'react';
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Edge Computing?</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
@@ -623,7 +720,7 @@ function EdgeComputingPage() {
           </div>
         </div>
       </section>
-              </div>;
+</div>;
             </motion && motion.div>;
             <motion&& motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -675,7 +772,7 @@ function EdgeComputingPage() {
               See how businesses across different industries are leveraging edge computing to transform their operations.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
@@ -726,7 +823,7 @@ function EdgeComputingPage() {
               Our distributed architecture ensures optimal performance, reliability, and scalability.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -739,7 +836,7 @@ function EdgeComputingPage() {
               <h3 className="text-xl font-bold text-white mb-2">Edge Nodes</h3>
               <p className="text-white/70 text-sm">Distributed computing nodes deployed at strategic locations for optimal performance</p>
             </motion.div>
-            <motion.div
+<motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -751,7 +848,7 @@ function EdgeComputingPage() {
               <h3 className="text-xl font-bold text-white mb-2">Orchestration Layer</h3>
               <p className="text-white/70 text-sm">Intelligent workload distribution and management across the edge network</p>
             </motion.div>
-            <motion.div
+<motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -827,7 +924,7 @@ function EdgeComputingPage() {
           </div>
         </div>
       </section>
-      {/* Pricing */}
+{/* Pricing */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
@@ -841,7 +938,7 @@ function EdgeComputingPage() {
               Choose the plan that fits your edge computing needs. All plans include our core orchestration features.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
@@ -1079,7 +1176,7 @@ function EdgeComputingPage() {
                     Most Popular
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-slate-900 mb-2">
                     {plan.price}
@@ -1100,7 +1197,7 @@ function EdgeComputingPage() {
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
-                </a>
+</a>
               </motion.div>
             ))}
           </div>;
@@ -1145,18 +1242,18 @@ function EdgeComputingPage() {
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
-              </a>
+</a>
               <a
                 href="/contact"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Schedule Demo
-              </a>
+</a>
             </div>
           </motion.div>
         </div>
       </section>
-      <EnhancedFooter />
+<EnhancedFooter />
     </>
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
                 Schedule Demo;

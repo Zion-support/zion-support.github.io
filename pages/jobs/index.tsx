@@ -93,3 +93,11 @@ export default function JobsListPage() {
         </div>)}
     </div>);
 ;
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+

@@ -181,11 +181,29 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
           <header className="mb - 6">;
             <h1 className="text - 3xl font - bold text - gray - 900 dark:text - white">{data.name}</h1>;
             <div className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300 space - x-3 flex flex - wrap">;
+  </h2>
+),
+
+export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
+  ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
+    const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems)),
+
+    return (
+      <div
+        ref={ref}
+        className={_`resume-a4 ${theme === 'dark' ? 'dark' : ''} bg-white dark:bg-black text-gray-900 dark:text-gray-100`}
+      >
+        <div className=&quot;p-8&quot;>
+          {/* Header */}
+          <header className=&quot;mb-6&quot;>
+            <h1 className=&quot;text-3xl font-bold text-gray-900 dark:text-white&quot;>{data.name}</h1>
+            <div className=&quot;mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap&quot;>
+
               {data.contact?.email && <span>{data.contact.email}</span>}
               {data.contact?.phone && <span>{data.contact.phone}</span>}
               {data.contact?.location && <span>{data.contact.location}</span>}
               {data.contact?.website && (
-                <a;
+<a;
                   className='underline';
                   href={data.contact.website}
                   target='_blank';
@@ -246,7 +264,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                   </span>
                 ))}
                 {data.technologies?.map((t, idx) => (
-                  <span key={`tech-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
+<span key={`tech-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
                     {t}
                   </span>
                 ))}
@@ -440,7 +458,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               </div>
             </section>
           ) : null}
-          {/* Certifications */}
+{/* Certifications */}
           {data.certifications?.length ? (
             <section className="mb-5">
               <SectionTitle>Certifications</SectionTitle>

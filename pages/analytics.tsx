@@ -130,11 +130,39 @@ export default function AnalyticsPage() {;
     'Track business metrics',
     'Generate actionable insights',  ];
 ;
+
+export default function AnalyticsPage() {_const _features = [
+    {
+      icon: <BarChart3 className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Real-time Dashboards',
+      description: 'Live monitoring and visualization of your key metrics'
+    },
+    {
+      icon: <TrendingUp className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Predictive Analytics',
+      description: 'AI-powered forecasting and trend analysis'
+    },
+    {
+      icon: <PieChart className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Custom Reports',
+      description: 'Build and schedule personalized reports'
+    },
+    {
+      icon: <Activity className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Performance Monitoring',
+      description: 'Track system performance and user behavior'
+    }
+  ],
+
+  const benefits = [
+    'Make data-driven decisionsIdentify growth opportunitiesOptimize user experienceMonitor system healthTrack business metricsGenerate actionable insights'
+  ],
+
   return (
     <>
       <Head>
         <title>Analytics - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities." />
+<meta name="description" content="Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities." />
       </Head>
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
@@ -254,7 +282,7 @@ export default function AnalyticsPage() {;
                   </p>
                 </div>
               ))}
-            </div>;
+</div>;
           </div>;
         </section>;
         {/* Benefits Section */}
@@ -309,7 +337,7 @@ export default function AnalyticsPage() {;
             </div>
           </div>
         </section>
-                </div>;
+</div>;
               </div>;
               <div className='relative'>;
                 <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>;
@@ -455,7 +483,7 @@ export default function AnalyticsPage() {;
         </section>
       </div>
     </>
-                className='border-white text-white hover:bg-white hover:text-blue-600'>                Schedule Demo;
+className='border-white text-white hover:bg-white hover:text-blue-600'>                Schedule Demo;
         {/* CTA Section */}
         <section className='py - 24 bg - gradient - to - r from - blue - 600 to - blue - 700'>;
           <div className='max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center'>;

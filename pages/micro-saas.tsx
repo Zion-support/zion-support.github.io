@@ -58,7 +58,7 @@ function MicroSaaS() {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com',  }
+site: 'https://ziontechgroup.com',  }
 ;
   const categories = [;
     { id: 'all', name: 'All Products', count: 150 },
@@ -67,7 +67,7 @@ function MicroSaaS() {
     { id: 'automation', name: 'Automation', count: 25 },
     { id: 'security', name: 'Security', count: 20 },
     { id: 'productivity', name: 'Productivity', count: 15 },
-          {/* Hero Section */}
+{/* Hero Section */}
                 className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
                 Discover our comprehensive collection of micro SaaS products;
                 designed to solve specific business challenges with focused,;
@@ -158,12 +158,93 @@ function MicroSaaS() {
                         {product.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0"></span>
+
+  const _filteredProducts = selectedCategory === 'all' 
+    ? products 
+    : products.filter(product => product.category === selectedCategory),
+
+  return (_<>
+      <Head>
+        <title>Micro SaaS Products - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Explore our 150+ innovative micro SaaS products including AI-powered tools, analytics dashboards, automation solutions, and security services.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;micro SaaS, SaaS products, AI tools, analytics, automation, security, productivity, marketing tools&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; />
+        <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
+        <link rel=&quot;canonical&quot; href={`${contact.site}/micro-saas`} />
+      </Head>
+      
+      <ErrorBoundary level=&quot;page&quot;>
+        <main className=&quot;min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
+          {/* Hero Section */}
+          <section className=&quot;py-20 px-4 text-center&quot; role=&quot;banner&quot;>
+            <div className=&quot;max-w-4xl mx-auto&quot;>
+              <h1 
+                className={_`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                Micro SaaS Products
+              </h1>
+              <p className={_`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                150+ Innovative Solutions for Modern Businesses
+              </p>
+              <p className={_`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                Discover our comprehensive collection of micro SaaS products designed to solve specific business challenges 
+                with focused, _efficient, _and cost-effective solutions.
+              </p>
+            </div>
+          </section>
+
+          {/* Category Filter */}
+          <section className=&quot;py-8 px-4&quot;>
+            <div className=&quot;max-w-6xl mx-auto&quot;>
+              <div className=&quot;flex flex-wrap justify-center gap-4 mb-8&quot;>
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={_() => setSelectedCategory(category.id)}
+                    className={_`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}
+                  >
+                    {_category.name} ({_category.count})
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Products Grid */}
+          <section className=&quot;py-16 px-4&quot; role=&quot;main&quot;>
+            <div className=&quot;max-w-7xl mx-auto&quot;>
+              <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+                {filteredProducts.map((product, index) => (
+                  <div 
+                    key={product.id}
+                    className={_`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    style={_{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    {product.popular && (
+                      <div className=&quot;absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full&quot;>
+                        Popular
+                      </div>
+                    )}
+                    
+                    <h3 className=&quot;text-xl font-bold mb-3&quot;>{product.name}</h3>
+                    <p className=&quot;text-slate-300 mb-4 text-sm&quot;>{product.description}</p>
+                    
+                    <div className=&quot;mb-4&quot;>
+                      <h4 className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>Key Features:</h4>
+                      <ul className=&quot;text-slate-400 text-sm space-y-1&quot;>
+                        {product.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className=&quot;flex items-center&quot;>
+                            <span className=&quot;w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0&quot;></span>
+
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
-    { id: 'marketing', name: 'Marketing', count: 15 },  ];
+{ id: 'marketing', name: 'Marketing', count: 15 },  ];
 ;
   const products = [;
     {
@@ -459,7 +540,7 @@ function MicroSaas() {
               </div>
             </div>
           </section>
-          {/* Features Section */}
+{/* Features Section */}
                     <h3 className='text-xl font-bold mb-3'>{product && product.name}</h3>;
                     <p className='text-slate-300 mb-4 text-sm'>;
                       {product && product.description}
@@ -615,7 +696,7 @@ function MicroSaas() {
               </div>
             </div>
           </section>
-          {/* CTA Section */}
+{/* CTA Section */}
                         d='M4 && M4.318 6 && 6.318a4.5 4 && 4.5 0 000 6 && 6.364L12 20 && 20.364l7.682-7 && 7.682a4.5 4 && 4.5 0 00-6 && 6.364-6 && 6.364L12 7 && 7.636l-1 && 1.318-1 && 1.318a4.5 4 && 4.5 0 00-6 && 6.364 0z'
                       />;
                     </svg>;
@@ -1051,7 +1132,7 @@ function MicroSaas() {
                 </Link>
                 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-                  className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
+className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
                   Call {contact.phone}
                 </a>
@@ -1061,6 +1142,10 @@ function MicroSaas() {
                 >
                   Email Us
                 </a>
+                >
+                  Email Us
+                </Link>
+
               </div>
             </div>
           </section>
@@ -1068,7 +1153,7 @@ function MicroSaas() {
       </ErrorBoundary>
     </>
   )
-              transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">;
                 Ready to Transform Your Business?;

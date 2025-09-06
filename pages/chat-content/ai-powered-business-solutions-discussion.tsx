@@ -6,6 +6,12 @@ const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
         <title>AiPoweredBusinessSolutionsDiscussion - Zion Tech Solutions</title>
         <meta name="description" content="AiPoweredBusinessSolutionsDiscussion page" />
       </Head>
+    <div>
+      <Head>
+        <title>AiPoweredBusinessSolutionsDiscussion - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;AiPoweredBusinessSolutionsDiscussion page&quot; />
+      </Head>
+
       <main>
         <h1>AiPoweredBusinessSolutionsDiscussion</h1>
         <p>This page is under construction.</p>
@@ -31,3 +37,6 @@ import Head from 'next / head';
 ;
 export default AiPoweredBusinessSolutionsDiscussion;
 ;
+
+export default AiPoweredBusinessSolutionsDiscussion
+

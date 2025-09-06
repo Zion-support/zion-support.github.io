@@ -47,3 +47,20 @@ const CloudMigrationServicesChat: NextPage = () => {
 ;
 export default CloudMigrationServicesChat;
 ;
+    <div>
+      <Head>
+        <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;CloudMigrationServicesChat service&quot; />
+      </Head>
+      
+      <main>
+        <h1>CloudMigrationServicesChat</h1>
+        <p>Service details coming soon...</p>
+        <a href=&quot;/services&quot;>Back to Services</a>
+      </main>
+    </div>
+  )
+},
+
+export default CloudMigrationServicesChat
+

@@ -46,13 +46,17 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
+
+  useEffect__(() => {
+    const _handleTrackSubscribed = (_pub: TrackPublication, _track: Track) => {
+
       if (track.kind === 'video' && videoRef.current) {
         track.attach(videoRef.current)
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current)
       }
-      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
+if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.attach(audioRef && audioRef.current);      }
     };
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
@@ -253,4 +257,25 @@ if ( {) {
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
       </div>;
     </div>);
+
+    participant.on('trackSubscribed', handleTrackSubscribed),
+    participant.on('trackUnsubscribed', handleTrackUnsubscribed),
+
+    return () => {
+      participant.off('trackSubscribed', handleTrackSubscribed),
+      participant.off('trackUnsubscribed', handleTrackUnsubscribed)
+    }
+  }, [participant]),
+
+  return (
+    <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
+      <video ref={_videoRef} autoPlay playsInline muted={_Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />
+      <audio ref={_audioRef} autoPlay className="hidden" />
+      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
+        {_displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
+
+      </div>
+    </div>
+  )
+
 }

@@ -31,6 +31,9 @@ export const LazySection: React.FC<LazySectionProps> = ({
   }
   const getAnimatePosition = () => {
     switch (direction) {
+
+  const _getInitialPosition = () => {_switch (direction) {
+
       case 'up':
         return { opacity: 1, y: 0 },
       case 'down':
@@ -42,7 +45,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       default:
         return { opacity: 1, y: 0 }
     }
-  }
+}
     >
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -201,3 +204,19 @@ export default LazySection;      case 'down':;
 ;
 export default LazySection;
 ;
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={getInitialPosition()}
+      animate={isInView ? getAnimatePosition() : getInitialPosition()}
+      transition={{ duration: 0.8, delay, ease: &quot;easeOut&quot; }}
+      className={className}
+    >
+      {_children}
+    </motion.div>
+  )
+},
+
+export default LazySection
+

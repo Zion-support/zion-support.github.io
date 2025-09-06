@@ -107,7 +107,7 @@ function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: bo
     <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>
       <div className="font-semibold text-sm line-clamp-2">{slide.title || 'Untitled'}</div>
       <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>
-    </button>
+</button>
   )
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -214,13 +214,53 @@ function PitchGenerator() {
     } finally {;
       setLoading(false);    }
       const data = await res.json();
+    </button>
+  )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const result = await requireAdminRole(ctx)
+  // @ts-ignore
+  if ('redirect' in result) return result,
+  return result
+},
+
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
+  const [slides, setSlides] = useState<Slide[]>([]),
+  const [activeIndex, setActiveIndex] = useState(0),
+  const [loading, setLoading] = useState(false),
+  const [versionTag, setVersionTag] = useState<string | null>(null),
+  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
+
+  const activeSlide = slides[activeIndex]
+
+  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault(),
+    const files = Array.from(e.dataTransfer.files || [])
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
+  }, []),
+
+  const prevent = (e: React.DragEvent) => {
+    e.preventDefault(),
+    e.stopPropagation()
+  },
+
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []),
+
+  const autoFetchMetrics = useCallback(async () => {
+    setLoading(true),
+    try {
+      const res = await fetch('/api/admin/pitch/metrics')
+      const data = await res.json()
+
       return data
     } catch (e) {
       return {}
     } finally {
       setLoading(false)
     }
-  }, []);
+}, []);
   const buildDeck = useCallback(async () => {;
     setLoading(true);
     try {;
@@ -229,7 +269,7 @@ function PitchGenerator() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          operatorPrompt;
+operatorPrompt;
           inputs: builder,
           metrics})});
       const json = await res.json();
@@ -358,7 +398,7 @@ if (return) {
     } finally {
       setLoading(false)
     }
-  }, [autoFetchMetrics, builder, operatorPrompt]);
+}, [autoFetchMetrics, builder, operatorPrompt]);
   const rephraseSlide = useCallback(async (idx: number) => {
     if (!slides[idx]) return;
     setLoading(true);
@@ -367,13 +407,13 @@ if (return) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ slide: slides[idx] })}),
-      const json = await res.json();
+const json = await res.json();
       setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)))
     } catch (e) {
     } finally {
       setLoading(false)
     }
-  }, [slides]);
+}, [slides]);
   const addSlide = useCallback(async () => {
     setLoading(true);
     try {
@@ -385,7 +425,7 @@ if (return) {
     } finally {
       setLoading(false)
     }
-  }, [slides.length]);
+}, [slides.length]);
   const exportPdf = useCallback(async () => {
     setLoading(true);
     try {
@@ -401,7 +441,7 @@ if (return) {
     } finally {
       setLoading(false)
     }
-  }, [slides, versionTag]);
+}, [slides, versionTag]);
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
     try {
@@ -453,7 +493,7 @@ if (return) {
     } finally {
       setLoading(false)
     }
-  }, [slides, versionTag]);
+}, [slides, versionTag]);
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
   };
@@ -484,7 +524,7 @@ if (return) {
             </div>
           )}
           {type === 'timeline' && (
-            <div className="text-xs grid grid-cols-4 gap-2 w-full">
+<div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
                 <div key={d.label} className="border p-1 rounded">
                   <div className="font-medium">{d.label}</div>
@@ -693,7 +733,7 @@ if (return null, ) {
                 <option>Token Sale</option>
               </select>
               <label className="block text-sm mt-3 mb-1">Target raise amount</label>
-              <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+<input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
               <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
                 Drag & drop logos, photos here
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
@@ -711,7 +751,7 @@ if (return null, ) {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-                className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
+className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
                 Drag & drop logos, photos here;
                 <div className='text-xs mt-1'>;
                   {builder && builder.assets.length} file(s) added;
@@ -981,7 +1021,7 @@ if (return null, ) {
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="flex items-center justify-between">
                 <div className="font-medium">Slides</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
+<div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
               </div>
               <div className="mt-3 flex gap-3 overflow-x-auto py-2">
                 {slides.map((s, i) => (

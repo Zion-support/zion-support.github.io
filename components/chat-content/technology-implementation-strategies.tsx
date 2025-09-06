@@ -40,3 +40,6 @@ function TechnologyImplementationStrategiesPage() {
       <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Article coming soon.</p>;
     </div>);
 }
+  )
+}
+

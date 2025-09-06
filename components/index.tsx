@@ -283,11 +283,120 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]" />
         </div>
         <div className="relative z-10 text-center max-w-6xl mx-auto">
+    
+    return () => clearInterval(interval)
+  }, []),
+
+  const features = [
+    {
+      icon: Brain,
+      title: &quot;AI Autonomous Ecosystem&quot;,
+      description: &quot;Revolutionary autonomous AI solutions that adapt and evolve&quot;,
+      color: &quot;from-purple-500 to-pink-500&quot;
+    },
+    {
+      icon: Atom,
+      title: &quot;Quantum AI Neural Networks&quot;,
+      description: &quot;Quantum-powered AI with advanced consciousness capabilities&quot;,
+      color: &quot;from-blue-500 to-cyan-500&quot;
+    },
+    {
+      icon: Shield,
+      title: &quot;Quantum Cybersecurity&quot;,
+      description: &quot;Quantum-resistant security with AI-powered threat detection&quot;,
+      color: &quot;from-red-500 to-orange-500&quot;
+    },
+    {
+      icon: Rocket,
+      title: &quot;Space Resource Intelligence&quot;,
+      description: &quot;AI-powered space resource discovery and optimization&quot;,
+      color: &quot;from-indigo-500 to-purple-500&quot;
+    },
+    {
+      icon: Cpu,
+      title: &quot;Autonomous DevOps&quot;,
+      description: &quot;AI-powered DevOps optimization and automation&quot;,
+      color: &quot;from-emerald-500 to-teal-500&quot;
+    },
+    {
+      icon: Database,
+      title: &quot;Edge Computing Orchestration&quot;,
+      description: &quot;Advanced edge computing optimization platform&quot;,
+      color: &quot;from-yellow-500 to-orange-500&quot;
+    }
+  ],
+
+  const services = [
+    {
+      title: &quot;AI & Machine Learning&quot;,
+      description: &quot;Custom AI solutions, neural networks, and autonomous systems&quot;,
+      icon: Brain,
+      color: &quot;from-purple-500 to-pink-500&quot;
+    },
+    {
+      title: &quot;Quantum Computing&quot;,
+      description: &quot;Quantum algorithms, cryptography, and quantum AI integration&quot;,
+      icon: Atom,
+      color: &quot;from-blue-500 to-cyan-500&quot;
+    },
+    {
+      title: &quot;Cybersecurity&quot;,
+      description: &quot;Advanced threat detection, quantum-resistant encryption&quot;,
+      icon: Shield,
+      color: &quot;from-red-500 to-orange-500&quot;
+    },
+    {
+      title: &quot;Cloud Infrastructure&quot;,
+      description: &quot;Scalable cloud solutions, edge computing, and DevOps&quot;,
+      icon: Cloud,
+      color: &quot;from-emerald-500 to-teal-500&quot;
+    },
+    {
+      title: &quot;Data Analytics&quot;,
+      description: &quot;Big data processing, predictive analytics, and insights&quot;,
+      icon: BarChart3,
+      color: &quot;from-indigo-500 to-purple-500&quot;
+    },
+    {
+      title: &quot;Digital Transformation&quot;,
+      description: &quot;End-to-end digital transformation and modernization&quot;,
+      icon: Rocket,
+      color: &quot;from-yellow-500 to-orange-500&quot;
+    }
+  ],
+
+  const stats = [
+  ];
+
+  return (
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden&quot;>
+      <Head>
+        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
+        <meta name=&quot;description&quot; content=&quot;Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Zion Tech Group — Leading-Edge Technology Solutions&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com&quot; />
+      </Head>
+
+      <EnhancedNavigation />
+
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center px-6 py-20&quot;>
+        {/* Animated Background */}
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950&quot;>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]&quot; />
+        </div>
+
+        <div className=&quot;relative z-10 text-center max-w-6xl mx-auto&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Zion Tech Group
@@ -300,7 +409,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
+<div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]" />;
         </div>;
@@ -456,7 +565,7 @@ export default function HomePage() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Stats Section */}
@@ -939,7 +1048,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'>;
+className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'>;
               <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
               <h3 className='text-lg font-semibold text-white'>;
                 Autonomous Update — 2025: 08: 15: 0457;
@@ -1130,3 +1239,19 @@ and digital transformation solutions that drive innovation and growth. </p> <div
 }</div> </div> </section> <EnhancedServicesShowcase /> </div> {
   /* Enhanced Testimonials Section */;
 }<EnhancedTestimonialsSection /> > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent" > Latest Autonomous Updates </h2> <p className="text - xl text - white / 70 max - w-3xl mx - auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6" > <a href="/reports / updates / update - 2025 - 08 - 15 - 0508" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <h3 className="text - lg font - semibold text - white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt - 1 text - sm text - white / 75" >Freshly published by autonomous agents.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90 group - hover:text - cyan - 200 transition - colors duration - 300" > Open <span aria - hidden>→</span> </div> </a> <a href="/reports / updates / update - 2025 - 08 - 15 - 0507" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <h3 className="text - lg font - semibold text - white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt - 1 text - sm text - white / 75" >Freshly published by autonomous agents.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90 group - hover:text - cyan - 200 transition - colors duration - 300" > Open <span aria - hidden>→</span> </div> </a> <a href="/reports / updates / update - 2025 - 08 - 15 - 0457" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <h3 className="text - lg font - semibold text - white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt - 1 text - sm text - white / 75" >Freshly published by autonomous agents.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90 group - hover:text - cyan - 200 transition - colors duration - 300" > Open <span aria - hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text - xl text - white / 70 max - w-3xl mx - auto" > Let's discuss your project and explore how our cutting - edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
+              Ready to Get Started?
+            </h2>
+            <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
+              Let's discuss your project and explore how our cutting-edge technology solutions can transform your business
+            </p>
+          </motion.div>
+
+          <EnhancedContactForm />
+        </div>
+      </section>
+
+      <EnhancedFooter />
+    </div>
+  )
+}
+

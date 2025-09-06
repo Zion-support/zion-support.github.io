@@ -1,10 +1,11 @@
 const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ci-cd-security-hardening'));
   if (!service) return null;
+
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
+<meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/ci-cd-security-hardening" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">

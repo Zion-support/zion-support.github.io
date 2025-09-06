@@ -131,6 +131,18 @@ if ( {) {
       y: number,
       max_life: number;    }> = [];      coordinate_x: number,
       coordinate_y: number,
+
+    canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
+    canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
+    if (ctx) {
+      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
+    }
+
+    let animationFrameId: number
+    let particles: Array<{
+      x: number,
+      y: number,
+
       vx: number,
       vy: number,
       size: number,
@@ -138,7 +150,7 @@ if ( {) {
       color: string,
       type: 'quantum' | 'hologram' | 'neon' | 'energy',
       life: number,
-      for (let i = 0; i < particleCount; i++) {;
+for (let i = 0; i < particleCount; i++) {;
         const type = ['quantum', 'hologram', 'neon', 'energy'][;
           Math && Math.floor(Math && Math.random() * 4);
         ] as any;
@@ -399,11 +411,128 @@ if ( {) {
             ctx.moveTo(particles[currentIndex].x, particles[currentIndex].y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
       ctx && ctx.restore();
+      }
+    },
+
+    // Get color based on particle type
+    const _getColorForType = (_type: string) => {_switch (type) {
+        case 'quantum':
+          return ['#8b5cf6#06b6d4#ec4899'][Math.floor(Math.random() * 3)],
+        case 'hologram':
+          return ['#10b981#f59e0b#ef4444'][Math.floor(Math.random() * 3)],
+        case 'neon':
+          return ['#f97316#eab308#a855f7'][Math.floor(Math.random() * 3)],
+        case 'energy':
+          return ['#dc2626#7c3aed#059669'][Math.floor(Math.random() * 3)],
+        default: return '#8b5cf6'
+      }
+    },
+
+    // Update and draw particles with enhanced effects
+    const updateParticles = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
+
+    // Update and draw particles with enhanced effects
+    const _updateParticles = () => {_ctx.clearRect(0, _0, _canvas.width, _canvas.height);
+
+      particles.forEach(_(particle, _index) => {
+        // Update particle life
+        particle.life--,
+        if (particle.life <= 0) {
+          particle.life = particle.maxLife,
+          particle.x = Math.random() * canvas.width / (window.devicePixelRatio || 1),
+          particle.y = Math.random() * canvas.height / (window.devicePixelRatio || 1)
+        }
+
+        // Update position
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1),
+        if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1),
+        if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0,
+
+        // Calculate opacity based on life
+        const lifeRatio = particle.life / particle.maxLife
+        const currentOpacity = particle.opacity * lifeRatio
+
+        // Draw particle based on type
+        drawParticle(ctx, particle, currentOpacity),
+
+        // Draw connections with enhanced effects
+        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 120 : 180)
+        if (maxDistance > 0) {
+          drawConnections(ctx, particles, index, maxDistance, currentOpacity)
+        }
+      }),
+
+      if (!prefersReducedMotion) {
+        animationFrameId = requestAnimationFrame(updateParticles)
+      }
+    },
+
+    // Enhanced particle drawing with different types
+    const drawParticle = (ctx: CanvasRenderingContext2D, particle: any, opacity: number) => {
+      ctx.save(),
+      ctx.globalAlpha = opacity,
+
+      switch (particle.type) {
+        case 'quantum':
+          drawQuantumParticle(ctx, particle),
+          break,
+        case 'hologram':
+          drawHologramParticle(ctx, particle),
+          break,
+        case 'neon':
+          drawNeonParticle(ctx, particle),
+          break,
+        case 'energy':
+          drawEnergyParticle(ctx, particle),
+          break
+      }
+
+      ctx.restore()
+    },
+
+    // Quantum particle with wave-like effects
+    const drawQuantumParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
+      const time = Date.now() * 0.001
+      const wave = Math.sin(time + particle.x * 0.01) * 0.5
+
+    // Enhanced connection drawing with different effects
+    const _drawConnections = (_ctx: CanvasRenderingContext2D, _particles: unknown[], _currentIndex: number, _maxDistance: number, _opacity: number) => {_particles.forEach(_(otherParticle, _otherIndex) => {
+        if (currentIndex !== otherIndex) {
+          const dx = particles[currentIndex].x - otherParticle.x
+          const dy = particles[currentIndex].y - otherParticle.y
+          const distance = Math.sqrt(dx * dx + dy * dy)
+
+          if (distance < maxDistance) {
+            const connectionOpacity = (maxDistance - distance) / maxDistance * 0.15 * opacity
+
+            // Different connection styles based on particle types
+            if (particles[currentIndex].type === otherParticle.type) {
+              // Same type - stronger connection
+              ctx.globalAlpha = connectionOpacity * 1.5,
+              ctx.strokeStyle = particles[currentIndex].color,
+              ctx.lineWidth = 2
+            } else {
+              // Different types - weaker connection
+              ctx.globalAlpha = connectionOpacity * 0.7,
+              ctx.strokeStyle = '#ffffff',
+              ctx.lineWidth = 1
+            }
+
+            ctx.beginPath(),
+            ctx.moveTo(particles[currentIndex].x, particles[currentIndex].y),
+            ctx.lineTo(otherParticle.x, otherParticle.y),
+
             ctx.stroke()
           }
         }
       })
-    };
+};
     // Quantum particle with wave-like effects;
     const drawQuantumParticle = (;
       ctx: CanvasRenderingContext2D,;
@@ -1155,7 +1284,7 @@ if ( {) {
             repeat: Infinity,
             ease: 'easeInOut'
           }}
-        />;
+/>;
         <motion.div;
           className='absolute top - 3/4 right - 1/4 w - 24 h - 24 rounded - full bg - gradient - to - r from - purple - 400 to - pink - 500 opacity - 20';
           animate={{
@@ -1180,5 +1309,5 @@ if ( {) {
           transition={{
             duration: 8,
             repeat: Infinity,
-        />;
+/>;
         {/* Quantum energy waves */}

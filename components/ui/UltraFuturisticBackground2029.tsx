@@ -94,7 +94,7 @@ function UltraFuturisticBackground2029() {  const canvas_ref = useRef < HTMLCanv
   color: string,
   type: 'energy' | 'data' | 'quantum' | 'neon',
   life: number,
-  max_life: number;
+max_life: number;
 }
 interface EnergyField {
   coordinate_x: number,
@@ -116,12 +116,27 @@ interface EnergyField {
     // Initialize particles with different types
     const initParticles = () => {
       const particles: Particle[] = [];
+
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
+
+    // Mouse move handler for interactive effects
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    },
+
+    window.addEventListener('mousemove', handleMouseMove),
+
+    // Initialize particles with different types
+    const initParticles = () => {
+      const particles: Particle[] = []
+
       const colors = {
         energy: ['#00ffff#ff00ff#ffff00#00ff00'],
         data: ['#0080ff#8000ff#ff0080#80ff00'],
         quantum: ['#ff8000#8000ff#00ffff#ff0080'],
         neon: ['#ff0066#00ffff#ffff00#ff00ff']
-      }
+}
       for (let i = 0, i < 150, i++) {
         const type = ['energydataquantumneon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
         particles.push({
@@ -132,12 +147,12 @@ interface EnergyField {
           size: Math.random() * 4 + 1,
           opacity: Math.random() * 0.8 + 0.2,
           color: colors[type][Math.floor(Math.random() * colors[type].length)],
-          type;
+type;
           life: Math.random() * 100,
           maxLife: 100
         })
       }
-      particlesRef.current = particles
+particlesRef.current = particles
     };
     // Initialize energy fields
     const initEnergyFields = () => {
@@ -153,7 +168,7 @@ interface EnergyField {
           pulse: Math.random() * Math.PI * 2
         })
       }
-      energyFieldsRef.current = fields
+energyFieldsRef.current = fields
     };
     initParticles();
     initEnergyFields();
@@ -863,11 +878,118 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut',          }}
             opacity: [0.2, 0.4, 0.2];
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
+
+        // Draw particle with type-specific effects
+        ctx.save(),
+        
+        switch (particle.type) {_case 'energy':
+            // Energy particles with glow effect
+            ctx.shadowColor = particle.color,
+            ctx.shadowBlur = 15,
+            ctx.globalCompositeOperation = 'screen',
+            break,
+          case 'data':
+            // Data particles with digital effect
+            ctx.globalCompositeOperation = 'multiply',
+            break,
+          case 'quantum':
+            // Quantum particles with uncertainty effect
+            ctx.globalCompositeOperation = 'overlay',
+            ctx.shadowColor = particle.color,
+            ctx.shadowBlur = 10,
+            break,
+          case 'neon':
+            // Neon particles with bright glow
+            ctx.shadowColor = particle.color,
+            ctx.shadowBlur = 20,
+            ctx.globalCompositeOperation = 'lighter',
+            break
+        }
+
+        const lifeRatio = particle.life / particle.maxLife
+        const currentOpacity = particle.opacity * lifeRatio
+
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2, '0'),
+        ctx.fill(),
+        
+        ctx.restore(),
+
+        // Draw connections between nearby particles
+        particlesRef.current.forEach((otherParticle, otherIndex) => {
+          if (index === otherIndex) return,
+          
+          const distance = Math.sqrt(
+            Math.pow(particle.x - otherParticle.x, 2) + 
+            Math.pow(particle.y - otherParticle.y, 2)
+          ),
+        }
+        
+        ctx.stroke()
+      }
+
+      // Draw neural network connections
+      ctx.strokeStyle = 'rgba(255, 0, 255, 0.1)',
+      ctx.lineWidth = 1,
+      
+      for (let i = 0, i < 20, i++) {
+        const x1 = Math.random() * canvas.width
+        const y1 = Math.random() * canvas.height
+        const x2 = Math.random() * canvas.width
+        const y2 = Math.random() * canvas.height
+        
+        ctx.beginPath(),
+        ctx.moveTo(x1, y1),
+        ctx.lineTo(x2, y2),
+        ctx.stroke()
+      }
+
+      animationRef.current = requestAnimationFrame(animate)
+    },
+
+    animate(),
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas),
+      window.removeEventListener('mousemove', handleMouseMove),
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+      }
+    }
+  }, [mousePosition]),
+
+  return (
+    <div className=&quot;relative w-full h-full overflow-hidden&quot;>
+      {/* Animated background canvas */}
+      <canvas
+        ref={canvasRef}
+        className=&quot;absolute inset-0 w-full h-full pointer-events-none&quot;
+        style={{ zIndex: -1 }}
+      />
+      
+      {/* Floating geometric shapes */}
+      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+        <motion.div
+          className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20&quot;
+          animate={{
+            rotate: 360,
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2]
+
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
         />;
         <motion&& motion.div
@@ -905,7 +1027,7 @@ if ( {) {
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
         />;
         <motion&& motion.div
@@ -940,7 +1062,7 @@ if ( {) {
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: "easeInOut"
+ease: "easeInOut"
           }}
         />;
         <motion&& motion.div
@@ -965,7 +1087,7 @@ if ( {) {
           transition={{
             duration: 10,
             repeat: Infinity,
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
+<div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       {/* Content */}
       <div className='relative z-10'>{children}</div>;

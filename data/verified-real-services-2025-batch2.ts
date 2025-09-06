@@ -1,5 +1,5 @@
 export interface VerifiedRealService2025Batch2 {
-    address: string;
+address: string;
   }
 ;
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;

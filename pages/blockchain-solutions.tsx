@@ -6,6 +6,12 @@ const BlockchainSolutions: NextPage = () => {
         <title>BlockchainSolutions - Zion Tech Solutions</title>
         <meta name="description" content="BlockchainSolutions page" />
       </Head>
+    <div>
+      <Head>
+        <title>BlockchainSolutions - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;BlockchainSolutions page&quot; />
+      </Head>
+
       <main>
         <h1>BlockchainSolutions</h1>
         <p>This page is under construction.</p>
@@ -31,3 +37,6 @@ import Head from 'next / head';
 ;
 export default BlockchainSolutions;
 ;
+
+export default BlockchainSolutions
+

@@ -10,3 +10,4 @@ export default /**
 function ZionStackApiRoute() {
   return <ApiDocsPage />;
 }
+

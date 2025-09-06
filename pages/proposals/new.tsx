@@ -7,12 +7,13 @@ const NewProposal: NextPage = () => {
   const pitchPrompt = useMemo(() => (
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary]);
+
   return (
     <div>
       <Head>
         <title>New Proposal - Zion AI Marketplace</title>
       </Head>
-      <h1 className="text-2xl font-semibold mb-4">Create Proposal</h1>
+<h1 className="text-2xl font-semibold mb-4">Create Proposal</h1>
       <div className="grid gap-4">
         <label className="text-sm">Job Description / Brief
           <textarea value={jobBrief} onChange={e => setJobBrief(e.target.value)} rows={6} className="mt-1 w-full rounded-md border p-3" />
@@ -34,7 +35,7 @@ const NewProposal: NextPage = () => {
           authorizationToken={operatorToken}
         />
       </div>
-      <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
+<textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
   )
 }

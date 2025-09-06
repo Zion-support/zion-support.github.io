@@ -1,5 +1,5 @@
 export interface EnterpriseService2034 {
-  website: string;
+website: string;
 ;
 export const enterprise2034Services: EnterpriseService2034[] = [;
   {

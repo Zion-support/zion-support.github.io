@@ -63,18 +63,19 @@ function PasswordCheckerPage() {
     lowercase: false,
     numbers: false,
     symbols: false,
+
   useEffect(() => {
     if (password) {
       analyzePassword(password)
     } else {
       resetAnalysis()
     }
-  }, [password]);
+}, [password]);
       length: pass.length >= 8,
       uppercase: /[A-Z]/.test(pass),
       lowercase: /[a-z]/.test(pass),
       numbers: /\d/.test(pass),
-      symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(pass);
+symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(pass);
       noCommon: !isCommonPassword(pass),
       noSequential: !hasSequentialChars(pass)
     };
@@ -362,12 +363,90 @@ if (
     setStrengthText ('');
     setStrengthColor ('');
     set_checks ({
+
+      noCommon: !isCommonPassword(pass),
+      noSequential: !hasSequentialChars(pass)
+    },
+
+    setChecks(newChecks),
+
+    // Calculate strength score
+    let score = 0
+    score += newChecks.length ? 15 : 0,
+    score += newChecks.uppercase ? 15 : 0,
+    score += newChecks.lowercase ? 15 : 0,
+    score += newChecks.numbers ? 15 : 0,
+    score += newChecks.symbols ? 20 : 0,
+    score += newChecks.noCommon ? 10 : 0,
+    score += newChecks.noSequential ? 10 : 0,
+
+    // Bonus for length
+    if (pass.length >= 12) score += 10,
+    if (pass.length >= 16) score += 5,
+
+    setStrength(score),
+
+    // Set strength text and color
+    if (score >= 90) {
+      setStrengthText('Very Strong'),
+      setStrengthColor('text-green-400')
+    } else if (score >= 70) {
+      setStrengthText('Strong'),
+      setStrengthColor('text-green-400')
+    } else if (score >= 50) {
+      setStrengthText('Moderate'),
+      setStrengthColor('text-yellow-400')
+    } else if (score >= 30) {
+      setStrengthText('Weak'),
+      setStrengthColor('text-orange-400')
+    } else {
+      setStrengthText('Very Weak'),
+      setStrengthColor('text-red-400')
+    }
+
+    // Generate suggestions
+    generateSuggestions(newChecks, pass)
+  },
+
+  const isCommonPassword = (pass: string) => {
+    const commonPasswords = [
+      'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhello'
+    ],
+    return commonPasswords.includes(pass.toLowerCase())
+  },
+
+  const hasSequentialChars = (pass: string) => {
+    const sequences = ['123abcqweasdzxc789456']
+    return sequences.some(seq => pass.toLowerCase().includes(seq))
+  },
+
+  const generateSuggestions = (checks: any, pass: string) => {
+    const suggestions: string[] = []
+    if (!checks.length) suggestions.push('Make your password at least 8 characters long'),
+    if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)'),
+    if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)'),
+    if (!checks.numbers) suggestions.push('Add at least one number (0-9)'),
+    if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)'),
+    if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"'),
+    if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"'),
+    if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security'),
+    if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters'),
+    
+    setSuggestions(suggestions)
+  },
+
+  const resetAnalysis = () => {
+    setStrength(0),
+    setStrengthText(''),
+    setStrengthColor(''),
+    setChecks({
+
       length: false,
       uppercase: false,
       lowercase: false,
       numbers: false,
       symbols: false,
-    setSuggestions([]);
+setSuggestions([]);
   };
   const generateStrongPassword = () => {;
       no_common: false,
@@ -395,11 +474,12 @@ if (
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase
     result += '0123456789'[Math.floor(Math.random() * 10)], // Number
     result += '!@#$%^&*'[Math.floor(Math.random() * 8)], // Symbol
+
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
       result += charset[Math.floor(Math.random() * charset.length)]
     }
-    // Shuffle the password
+// Shuffle the password
     result = result.split('').sort(() => Math.random() - 0.5).join('');
     setGeneratedPassword(result);
     setPassword(result)
@@ -481,6 +561,22 @@ if (
         <meta property="og:description" content="Advanced password strength analyzer with security recommendations." />
       </Head>
       {/* Hero Section */}
+
+  const _getCheckIcon = (_passed: boolean) => {_return passed ? (
+      <CheckCircle className="w-5 h-5 text-green-400" />
+    ) : (
+      <XCircle className="w-5 h-5 text-red-400" />
+
+  return (_<>
+      <Head>
+        <title>Password Strength Checker - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Password Strength Checker - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Advanced password strength analyzer with security recommendations." />
+      </Head>
+
+      {_/* Hero Section */}
+
       <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <div className="mb-8">
@@ -493,7 +589,7 @@ if (
             Password Strength Checker
           </h1>
           <p className="text-xl text-indigo-200 max-w-4xl mx-auto leading-relaxed">
-            Analyze your password security with our advanced strength checker. Get detailed feedback
+Analyze your password security with our advanced strength checker. Get detailed feedback
             suggestions, and generate strong passwords to protect your accounts and data.
           </p>
         </div>
@@ -581,14 +677,14 @@ if (
               Our advanced security analyzer evaluates multiple factors to determine password strength and security.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Input Form */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <Lock className="w-6 h-6 mr-3 text-indigo-400" />
                 Password Analysis
               </h3>
-              <div className="space-y-6">
+<div className="space-y-6">
                       className='absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white';
                     >;
                       {showPassword ? (;
@@ -813,7 +909,7 @@ if (return 'bg - orange - 400') {
                     Generate Strong Password
                   </Button>
                 </div>
-                    className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'>;
+className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'>;
                     <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold";
                   >;
                     <RefreshCw className="w-5 h-5 mr-2" />;
@@ -836,7 +932,7 @@ if (return 'bg - orange - 400') {
                       </Button>
                     </div>
                     <div className="mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all">
-                      {generatedPassword}
+{generatedPassword}
                     </div>;
                   </div>;
                 )}
@@ -848,13 +944,13 @@ if (return 'bg - orange - 400') {
                 </div>
               </div>
             </Card>
-            {/* Strength Analysis */}
+{/* Strength Analysis */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-6 h-6 mr-3 text-purple-400" />
                 Security Analysis
               </h3>
-              {password ? (
+{password ? (
                 <div className='text-sm text-gray-400'>                  <p>• Real-time strength analysis</p>                <div className="text-sm text-gray-400">;
                   <p>• Real-time strength analysis</p>;
                   <p>• Multiple security criteria</p>;
@@ -894,7 +990,7 @@ if (return 'bg - orange - 400') {
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-3">
                       <div 
-                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
+className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
                         style={{ width: `${strength}%` }}
                       />
                     </div>
@@ -1075,6 +1171,7 @@ if (return 'bg - orange - 400') {
                   </p>
                 </div>
               )}
+
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1085,6 +1182,7 @@ if (return 'bg - orange - 400') {
               Comprehensive password analysis with real-time feedback and security recommendations.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🔍</div>
@@ -1093,6 +1191,7 @@ if (return 'bg - orange - 400') {
                 Get instant feedback on password strength as you type with our advanced security algorithms.
               </p>
             </Card>
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-white mb-4">Comprehensive Scoring</h3>
@@ -1100,6 +1199,7 @@ if (return 'bg - orange - 400') {
                 Multi-factor analysis including length, complexity, and common password detection.
               </p>
             </Card>
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">💡</div>
               <h3 className="text-xl font-bold text-white mb-4">Smart Suggestions</h3>
@@ -1107,6 +1207,7 @@ if (return 'bg - orange - 400') {
                 Personalized recommendations to improve your password security and strength.
               </p>
             </Card>
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🔐</div>
               <h3 className="text-xl font-bold text-white mb-4">Password Generator</h3>
@@ -1114,6 +1215,7 @@ if (return 'bg - orange - 400') {
                 Generate cryptographically secure passwords that meet all security requirements.
               </p>
             </Card>
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-bold text-white mb-4">Security Standards</h3>
@@ -1121,6 +1223,7 @@ if (return 'bg - orange - 400') {
                 Based on industry best practices and security standards for maximum protection.
               </p>
             </Card>
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-bold text-white mb-4">Privacy First</h3>
@@ -1131,7 +1234,7 @@ if (return 'bg - orange - 400') {
           </div>
         </div>
       </section>
-      {/* Security Tips */}
+{/* Security Tips */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1142,6 +1245,7 @@ if (return 'bg - orange - 400') {
               Follow these guidelines to create and maintain strong, secure passwords for all your accounts.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="text-4xl mb-4">✅</div>
@@ -1169,6 +1273,7 @@ if (return 'bg - orange - 400') {
                 </li>
               </ul>
             </Card>
+
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="text-4xl mb-4">❌</div>
               <h3 className="text-2xl font-bold text-white mb-4">Don'ts</h3>
@@ -1198,7 +1303,7 @@ if (return 'bg - orange - 400') {
           </div>
         </div>
       </section>
-            </Card>;
+</Card>;
           </div>;
         </div>;
       </section>;
@@ -1502,7 +1607,7 @@ if (return 'bg - orange - 400') {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              href="/contact"
+href="/contact"
               size="lg"
               className="bg-white text-indigo-600 hover:bg-gray-100"
             >
@@ -1510,7 +1615,7 @@ if (return 'bg - orange - 400') {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
-              href="/pricing"
+href="/pricing"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600"
@@ -1521,7 +1626,7 @@ if (return 'bg - orange - 400') {
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-indigo-600'>              href="/pricing";
+className='border-white text-white hover:bg-white hover:text-indigo-600'>              href="/pricing";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-indigo-600";

@@ -1,5 +1,5 @@
 export interface AdditionalRealService {
-    address: string;
+address: string;
   }
 ;
 export const additionalEnhancedServices: AdditionalRealService[] = [;

@@ -1,5 +1,5 @@
 export interface ProfessionalService {
-    address: string;
+address: string;
   }
 ;
 export const professional_services: ProfessionalService[] = [;

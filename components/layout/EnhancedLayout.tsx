@@ -76,4 +76,18 @@ function EnhancedLayout() {
 }
 }
   );
+
+  return (
+    <div className=&quot;min-h-screen flex flex-col&quot;>
+      <header>
+        <EnhancedNavigation />
+        <LanguageSwitchPrompt />
+      </header>
+      <main id=&quot;main&quot; className=&quot;flex-1 container mx-auto px-4 py-6&quot;>{children}</main>
+      <footer>
+        <EnhancedFooter />
+      </footer>
+    </div>
+  )
+
 }

@@ -292,7 +292,7 @@ const testimonials = [;
     name: 'Dr. Sarah Chen',
     role: 'Clinical Psychologist',
     company: 'Mindful Wellness Center',
-    content:;
+content:;
       'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self - awareness and empathy.',
     rating: 5,
     avatar: '👩‍⚕️',
@@ -455,7 +455,7 @@ function AIConsciousnessEvolution2025() {
                 delay: i * 0.3}}
               style={{
                 left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`}}
+top: `${Math.random() * 100}%`}}
             />
           ))}
         </div>
@@ -617,12 +617,12 @@ function AIConsciousnessEvolution2025() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105"
+className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                  label: 'Success Rate',
+label: 'Success Rate',
                   value: '94%',
                   icon: <Award className='w - 8 h - 8' />,
                 },
@@ -697,7 +697,7 @@ function AIConsciousnessEvolution2025() {
           </motion.div>
         </div>
       </div>
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
+transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
                 className='border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200'>                className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200";
               >;
                 Watch Demo;
@@ -773,7 +773,7 @@ function AIConsciousnessEvolution2025() {
                 </p>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* How It Works Section */}
@@ -984,14 +984,14 @@ function AIConsciousnessEvolution2025() {
               {
                 step: '02',
                 title: 'Personalized Training',
-                description:;
+description:;
                   'AI - generated exercises and experiences tailored to your specific needs and goals.',
                 icon: <Target className='w - 12 h - 12' />,
               },
               {
                 step: '03',
                 title: 'Continuous Evolution',
-                description:;
+description:;
                   'Real - time feedback and adaptation ensure continuous growth and development.',
                 icon: <TrendingUp className='w - 12 h - 12' />,
               },            ].map ((step, index) => (              {
@@ -1093,7 +1093,7 @@ function AIConsciousnessEvolution2025() {
                 </p>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Technology Section */}
@@ -1272,7 +1272,7 @@ function AIConsciousnessEvolution2025() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Testimonials Section */}
@@ -1459,7 +1459,7 @@ function AIConsciousnessEvolution2025() {
                 description: 'Perfect for individuals beginning their consciousness journey',
                 features: [
                   'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access'
-                ];
+];
                 popular: false
               };
               {
@@ -1469,7 +1469,7 @@ function AIConsciousnessEvolution2025() {
                 description: 'Advanced features for serious consciousness development',
                 features: [
                   'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
-                ];
+];
                 popular: true
               };
               {
@@ -1646,7 +1646,7 @@ function AIConsciousnessEvolution2025() {
                 price: '$799',
                 period: '/month',
                 description: 'Complete solution for organizations and teams',
-                features: [;
+features: [;
                   'Everything in Professional',
                   'Team management',
                   'Custom integrations',
@@ -1690,7 +1690,7 @@ function AIConsciousnessEvolution2025() {
                     </span>
                   </div>
                 )}
-                  <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
+<div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
                     <span className='bg - gradient - to - r from - purple - 500 to - pink - 600 text - white px - 4 py - 2 rounded - full text - sm font - bold'>                  <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
                     <span className="bg - gradient - to - r from - purple - 500 to - pink - 600 text - white px - 4 py - 2 rounded - full text - sm font - bold">;
                       Most Popular;
@@ -1768,7 +1768,7 @@ function AIConsciousnessEvolution2025() {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
+<button className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
                     : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
@@ -1777,7 +1777,7 @@ function AIConsciousnessEvolution2025() {
                 </button>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* CTA Section */}

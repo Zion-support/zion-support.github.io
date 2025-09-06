@@ -55,7 +55,7 @@ const Navigation: React.FC = () => {
       name: 'Home',
       href: '/',
       icon: Home
-    };
+};
     {
       name: 'Services'
       href: '/services'
@@ -238,12 +238,43 @@ import Link from 'next / link';
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
   ];
+
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
+
+  const _navigationItems = [
+    {_name: 'Home', _href: '/', _icon: Home},
+    {_name: 'Services', _href: '/services', _icon: Rocket, _dropdown: [
+        { name: 'AI Services', _href: '/ai-services', _icon: Brain, _description: 'Revolutionary AI solutions'},
+        {_name: 'IT Services', _href: '/it-services', _icon: Cpu, _description: 'Enterprise IT solutions'},
+        {_name: 'Micro SaaS', _href: '/micro-saas', _icon: Rocket, _description: 'Specialized software solutions'},
+        {_name: 'Innovative Showcase', _href: '/innovative-services-showcase', _icon: Globe, _description: 'Cutting-edge technology'}
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Cpu
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: Globe
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone
+    }
+  ],
+
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+};
   return (
     <>;
       {/* Navigation Bar */}
@@ -344,7 +375,7 @@ import Link from 'next / link';
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2 }}
-                      className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300';
+className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300';
                     >;
                       <span className='font-medium'>{item && item.name}</span>;
                       <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />;
@@ -432,7 +463,7 @@ import Link from 'next / link';
                                   <Link
                                     key={dropdownItem.name}
                                     href={dropdownItem.href}
-                                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item"
+className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item"
                                   >
                                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300">
                                       <Icon className="w-5 h-5 text-cyan-400" />
@@ -447,7 +478,7 @@ import Link from 'next / link';
                                     </div>
                                   </Link>
                                 )
-                  <div className='text - white font - bold text - lg lg:text - xl'>;
+<div className='text - white font - bold text - lg lg:text - xl'>;
                     Zion Tech Group;
                   </div>;
                   <div className='text - cyan - 400 text - xs'>;
@@ -578,7 +609,7 @@ import Link from 'next / link';
           </div>
         </div>
       </motion.nav>
-              </motion && motion.button>;
+</motion && motion.button>;
             </div>;
           </div>;
         </div>;
@@ -591,7 +622,7 @@ import Link from 'next / link';
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 lg:hidden"
+className="fixed inset-0 z-40 lg:hidden"
           >
             {/* Backdrop */}
             <div
@@ -798,7 +829,7 @@ import Link from 'next / link';
                                 </Link>
                               )
                             })}
-                          </div>;
+</div>;
                         </div>;
                       ) : (;
                         <Link

@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `- Location: ${location || 'Remote'}\n` +
     `- Key skills: ${(skills || []).join()}\n` +
     `- Responsibilities: ${(responsibilities || []).join()}\n` +
-    `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
+`Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res && res.status(200).json({ jobDescription: text })
 }
@@ -69,4 +69,5 @@ function handler() {
 ;
   const text = await generate_text (prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res.status (200).json ({ job_description: text });
+
 }

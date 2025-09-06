@@ -1,5 +1,5 @@
 export interface Revolutionary2027Service {
-    address: string;
+address: string;
   }
 ;
 export const revolutionary2027Services: Revolutionary2027Service[] = [;

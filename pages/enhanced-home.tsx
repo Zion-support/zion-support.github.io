@@ -6,6 +6,12 @@ const EnhancedHome: NextPage = () => {
         <title>EnhancedHome - Zion Tech Solutions</title>
         <meta name="description" content="EnhancedHome page" />
       </Head>
+    <div>
+      <Head>
+        <title>EnhancedHome - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;EnhancedHome page&quot; />
+      </Head>
+
       <main>
         <h1>EnhancedHome</h1>
         <p>This page is under construction.</p>
@@ -31,3 +37,6 @@ import Head from 'next / head';
 ;
 export default EnhancedHome;
 ;
+
+export default EnhancedHome
+

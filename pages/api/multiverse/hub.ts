@@ -22,3 +22,19 @@ lastSyncedAt: state.lastSyncedAt});
   return res.status (405).json ({ error: "Method not allowed" });
 }
 ;
+
+export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_const _state = readState();
+
+  if (req.method === &quot;GET&quot;) {
+    return res.status(200).json({
+      route: &quot;/multiverse/hub&quot;,
+      instanceId: state.config.instanceId,
+      peers: state.config.peers,
+      scope: state.config.scope,
+      optIn: state.config.optIn,
+      paused: state.config.paused,
+      lastSyncedAt: state.lastSyncedAt})
+  }
+
+}
+

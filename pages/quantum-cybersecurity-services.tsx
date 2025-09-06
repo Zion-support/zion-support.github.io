@@ -1,9 +1,10 @@
+
 export default function QuantumCybersecurityServices() {
   return (
     <>
       <Head>
         <title>Quantum Cybersecurity Services - ZionTech Group | Unbreakable Security Solutions</title>
-        <meta name="description" content="Protect your business with unbreakable quantum cybersecurity. Quantum encryption, threat detection, identity verification, and network security powered by quantum computing. Contact us at +1 302 464 0950" />
+<meta name="description" content="Protect your business with unbreakable quantum cybersecurity. Quantum encryption, threat detection, identity verification, and network security powered by quantum computing. Contact us at +1 302 464 0950" />
         <meta name="keywords" content="quantum cybersecurity, quantum encryption, quantum threat detection, quantum identity verification, quantum network security, ZionTech Group" />
         <meta name="author" content="ZionTech Group" />
         <meta name="robots" content="index, follow" />
@@ -45,11 +46,41 @@ export default function QuantumCybersecurityServices() {
                 Quantum Cybersecurity
               </span>
             </motion.h1>
+        
+        {/* Open Graph */}
+        <meta property=&quot;og:title&quot; content=&quot;Quantum Cybersecurity Services - ZionTech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Unbreakable security powered by quantum computing and advanced AI algorithms.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/quantum-cybersecurity-services&quot; />
+        <meta property=&quot;og:site_name&quot; content=&quot;ZionTech Group&quot; />
+        
+        {/* Contact Information */}
+        <meta name=&quot;contact:phone&quot; content=&quot;+1 302 464 0950&quot; />
+        <meta name=&quot;contact:email&quot; content=&quot;kleber@ziontechgroup.com&quot; />
+        <meta name=&quot;contact:address&quot; content=&quot;364 E Main St STE 1008 Middletown DE 19709&quot; />
+        <meta name=&quot;contact:website&quot; content=&quot;https://ziontechgroup.com&quot; />
+      </Head>
+
+      <UltraFuturisticBackground2026 intensity=&quot;high&quot; theme=&quot;cyberpunk&quot;>
+        {/* Hero Section */}
+        <section className=&quot;relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16&quot;>
+          <div className=&quot;text-center z-10 max-w-6xl mx-auto&quot;>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className=&quot;text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6&quot;
+            >
+              <span className=&quot;bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent&quot;>
+                Quantum Cybersecurity
+              </span>
+            </motion.h1>
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
+className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
             >
               Unbreakable security powered by quantum computing and advanced AI algorithms. Protect your business from tomorrow's threats today.
             </motion.p>
@@ -193,14 +224,14 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
             </motion.div>
           </div>
         </section>
-        {/* Services Section */}
+{/* Services Section */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -265,7 +296,7 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -273,7 +304,7 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
                 </span>
               </h2>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -292,7 +323,7 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
                   <li>• Financial systems exposed</li>
                 </ul>
               </motion.div>
-              <motion.div
+<motion.div
                 className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8'>;
                 <h3 className='text-2xl font-bold text-white mb-4'>;
                   The Quantum Threat;
@@ -328,7 +359,7 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
             </div>
           </div>
         </section>
-                className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8'>;
+className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8'>;
                 <h3 className='text-2xl font-bold text-white mb-4'>;
                   Our Quantum Solution;
                 </h3>;
@@ -365,7 +396,7 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -373,7 +404,7 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
                 </span>
               </h2>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -462,7 +493,7 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
             </div>
           </div>
         </section>
-        {/* Contact Section */}
+{/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -761,12 +792,39 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
                   <div className="text-3xl mb-4">📍</div>
                   <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
                   <p className="text-gray-300 text-sm">
+                  Secure Your Future Today
+                </span>
+              </h2>
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+                Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.
+              </p>
+              
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-12&quot;>
+                <div className=&quot;bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6&quot;>
+                  <div className=&quot;text-3xl mb-4&quot;>📱</div>
+                  <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Phone</h3>
+                  <a href=&quot;tel:+13024640950&quot; className=&quot;text-indigo-400 hover:text-indigo-300 transition-colors&quot;>
+                    +1 302 464 0950
+                  </Link>
+                </div>
+                <div className=&quot;bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6&quot;>
+                  <div className=&quot;text-3xl mb-4&quot;>✉️</div>
+                  <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Email</h3>
+                  <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-indigo-400 hover:text-indigo-300 transition-colors&quot;>
+                    kleber@ziontechgroup.com
+                  </Link>
+                </div>
+                <div className=&quot;bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6&quot;>
+                  <div className=&quot;text-3xl mb-4&quot;>📍</div>
+                  <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Address</h3>
+                  <p className=&quot;text-gray-300 text-sm&quot;>
+
                     364 E Main St STE 1008<br />
                     Middletown DE 19709
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -785,7 +843,7 @@ import UltraFuturisticServiceCard2026 from '../components / ui / UltraFuturistic
         </section>
       </UltraFuturisticBackground2026>
     </>
-                  href='https://ziontechgroup && ziontechgroup.com'
+href='https://ziontechgroup && ziontechgroup.com'
                   className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
                   Visit Our Website;
                 </a>;

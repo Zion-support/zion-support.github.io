@@ -26,4 +26,7 @@ return (
     industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
     canonical="https: //ziontechgroup.com / ai - predictive - maintenance - platform";
   />);
+		/>
+	)
+
 }

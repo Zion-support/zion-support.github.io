@@ -162,7 +162,7 @@ export default function CloudServicesPage() {
     { number: "50%", label: "Cost Reduction", icon: TrendingUp },
     { number: "24/7", label: "Support Available", icon: Clock },
     { number: "100+", label: "Cloud Projects", icon: CheckCircle }
-  ];
+];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -176,11 +176,28 @@ export default function CloudServicesPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
+
+  return (
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
+      <Head>
+        <title>Cloud Infrastructure Services - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Scalable cloud infrastructure solutions from Zion Tech Group. Cloud migration, DevOps, edge computing, and security services.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Cloud Infrastructure Services - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Scalable cloud infrastructure solutions for modern businesses.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/services/cloud&quot; />
+      </Head>
+
+      <EnhancedNavigation />
+
+      {/* Hero Section */}
+      <section className=&quot;relative pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent mb-6">
               Cloud Infrastructure
@@ -193,7 +210,7 @@ export default function CloudServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent mb-6'>;
               Cloud Infrastructure;
@@ -264,7 +281,7 @@ export default function CloudServicesPage() {
           </motion.div>
         </div>
       </section>
-      {/* Stats Section */}
+{/* Stats Section */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -273,7 +290,7 @@ export default function CloudServicesPage() {
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -340,7 +357,7 @@ export default function CloudServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-teal-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                     Get Started
@@ -348,7 +365,7 @@ export default function CloudServicesPage() {
                 </div>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* CTA Section */}
@@ -368,16 +385,20 @@ export default function CloudServicesPage() {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-                Infrastructure Assessment
+Infrastructure Assessment
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+                Infrastructure Assessment
+              </button>
+              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
+
                 View Case Studies
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-      <EnhancedFooter />
+<EnhancedFooter />
     </div>
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;

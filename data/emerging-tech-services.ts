@@ -1,5 +1,5 @@
 export interface EmergingTechService {
-  market_size: string;
+market_size: string;
   growth_rate: string;
   variant:;
     | 'default';
@@ -210,7 +210,7 @@ export const emergingTechServices: EmergingTechService[] = [;
     reviews: 23,
   },
   // Quantum Energy & Sustainability Services;
-  {
+{
     id: 'quantum - energy - optimization',
     name: 'Quantum Energy Optimization Platform',
     tagline:;
@@ -552,7 +552,7 @@ export const emergingTechServices: EmergingTechService[] = [;
     reviews: 42,
   },
   // Quantum Financial Trading & Analytics;
-  {
+{
     id: 'quantum - financial - trading - platform',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI - powered algorithmic trading with nanosecond precision',

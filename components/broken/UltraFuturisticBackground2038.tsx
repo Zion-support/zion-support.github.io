@@ -100,39 +100,48 @@ if ( {) {
         case 'consciousness':;
           return {
     window && window.addEventListener('resize', resizeCanvas);
+
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
+
+    // Enhanced theme-based color schemes for 2038
+    const _getThemeColors = () => {_switch (theme) {
+        case 'consciousness':
+          return {
+
             primary: ['#ff0080#00ffff#ffff00#ff00ff#8000ff#00ff80'],
             secondary: ['#ff8000#0080ff#ff4080#40ffff#ffff40#ff40ff'],
             accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
-          };
+};
         case 'neon':
           return {
             primary: ['#ff0080#00ffff#ffff00#ff00ff#8000ff#00ff80'],
             secondary: ['#ff8000#0080ff#ff4080#40ffff#ffff40#ff40ff'],
             accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
-          };
+};
         case 'holographic':
           return {
             primary: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
             secondary: ['#54a0ff#5f27cd#ff9ff3#54a0ff#5f27cd#ff6b6b'],
             accent: ['#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3#54a0ff'],
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
-          };
+};
         case 'cyberpunk':
           return {
             primary: ['#ff0055#00ffff#ffff00#ff00ff#8000ff#00ff80'],
             secondary: ['#ff8000#0080ff#ff4080#40ffff#ffff40#ff40ff'],
             accent: ['#ffff40#ff40ff#ff6b6b#4ecdc4#45b7d1#96ceb4'],
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
-          };
+};
         case 'space':
           return {
             primary: ['#1e3a8a#7c3aed#059669#dc2626#ea580c#0891b2'],
             secondary: ['#8b5cf6#ec4899#f59e0b#10b981#06b6d4#a855f7'],
             accent: ['#f97316#ef4444#84cc16#06b6d4#a855f7#f97316'],
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
-          };
+};
         default: // quantum
           return {
             primary: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'],
@@ -386,12 +395,19 @@ if ( {) {
       y: number,
       quantum_state: number;    }> = [];      coordinate_x: number,
       coordinate_y: number,
+    const colors = getThemeColors()
+
+    // Enhanced particle system with consciousness and quantum effects
+    let particles: Array<{
+      x: number,
+      y: number,
+
       vx: number,
       vy: number,
       size: number,
       opacity: number,
       color: string,
-      type: 'particle' | 'wave' | 'quantum' | 'neon' | 'hologram' | 'space' | 'consciousness' | 'quantum - field',
+type: 'particle' | 'wave' | 'quantum' | 'neon' | 'hologram' | 'space' | 'consciousness' | 'quantum - field',
       life: number,
       max_life: number,
       rotation: number,
@@ -401,7 +417,7 @@ if ( {) {
       frequency: number,
       entanglement: number[],
       consciousness: number,
-      for (let i = 0, i < particleCount, i++) {
+for (let i = 0, i < particleCount, i++) {
         const type = Math.random() > 0.7 ? 'consciousness' :
                     Math.random() > 0.5 ? 'quantum-field' :
                     Math.random() > 0.3 ? 'hologram' : 'particle';
@@ -413,7 +429,7 @@ if ( {) {
           size: Math.random() * 4 + 1,
           opacity: Math.random() * 0.8 + 0.2,
           color: colors.primary[Math.floor(Math.random() * colors.primary.length)],
-          type;
+type;
           life: Math.random() * 100,
           maxLife: 100,
           rotation: Math.random() * Math.PI * 2,
@@ -421,12 +437,12 @@ if ( {) {
           phase: Math.random() * Math.PI * 2,
           amplitude: Math.random() * 20 + 10,
           frequency: Math.random() * 0.02 + 0.01,
-          entanglement: [Math.random(), Math.random()];
+entanglement: [Math.random(), Math.random()];
           consciousness: Math.random(),
           quantumState: Math.random()
         })
       }
-    };
+};
     // Enhanced animation loop with consciousness and quantum effects
     const animate = () => {
       if (prefersReducedMotion) return;
@@ -615,7 +631,7 @@ if ( {) {
           }
         }
       }
-      // Update and draw particles;
+// Update and draw particles;
       particles.for_each ((particle, index) => {
         // Update particle properties;
         particle.x += particle.vx;
@@ -667,7 +683,7 @@ if ( {) {
             }
           })
         }
-        // Consciousness wave effects
+// Consciousness wave effects
         if (particle.type === 'consciousness') {
           const waveX = particle.x + Math.sin(particle.phase) * particle.amplitude;
           const waveY = particle.y + Math.cos(particle.phase) * particle.amplitude;
@@ -1125,7 +1141,7 @@ if ( {) {
           background: theme === 'consciousness' ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
                    theme === 'quantum' ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
                    theme === 'holographic' ? 'radial-gradient(ellipse at center, rgba(78, 205, 196, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
-                   'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)';
+'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)';
         }}
       />
       {/* Additional visual effects */}
@@ -1141,12 +1157,12 @@ if ( {) {
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`}}
                 animate={{
-                  height: [32, 64, 32];
+height: [32, 64, 32];
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={{
                   duration: 3 + i * 0.2,
                   repeat: Infinity,
-                  ease: "easeInOut";
+ease: "easeInOut";
                 }}
                 animate={{
                   height: [32, 64, 32],

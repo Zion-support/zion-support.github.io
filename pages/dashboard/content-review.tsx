@@ -260,11 +260,62 @@ export default function ContentReviewPage() {
                 <th className="text-left px-3 py-2">Created</th>
                 <th className="text-left px-3 py-2">Status</th>
                 <th className="text-left px-3 py-2">Actions</th>
+
+  const [selected, setSelected] = useState<any | null>(null),
+
+  async function handleAction(action: 'approve'|'remove'|'warn'|'ban', adminNotes?: string) {
+    if (!selected) return,
+    await fetch(`/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action, adminNotes })
+    }),
+    setSelected(null),
+    mutate()
+  }
+
+  return (
+    <EnhancedLayout>
+      <div className=&quot;max-w-7xl mx-auto&quot;>
+        <div className=&quot;flex items-center justify-between mb-4&quot;>
+          <h1 className=&quot;text-2xl font-semibold&quot;>Admin Content Review</h1>
+        </div>
+        <div className=&quot;mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm&quot;>
+          <select value={filters.status || ''} onChange={e => setFilters(f => ({ ...f, status: e.target.value || undefined }))} className=&quot;border rounded px-2 py-1&quot;>
+            <option value="&quot;>All Statuses</option>
+            <option value=&quot;pending&quot;>Pending</option>
+            <option value=&quot;approved&quot;>Approved</option>
+            <option value=&quot;removed&quot;>Removed</option>
+            <option value=&quot;warned&quot;>Warned</option>
+            <option value=&quot;banned">Banned</option>
+          </select>
+          <select value={filters.contentType || ''} onChange={e => setFilters(f => ({ ...f, contentType: e.target.value || undefined }))} className="border rounded px-2 py-1&quot;>
+            <option value="&quot;>All Types</option>
+            <option value=&quot;listing&quot;>Listing</option>
+            <option value=&quot;message&quot;>Message</option>
+            <option value=&quot;cv&quot;>CV</option>
+            <option value=&quot;job&quot;>Job Post</option>
+          </select>
+          <input placeholder=&quot;Reason contains...&quot; value={filters.reason || ''} onChange={e => setFilters(f => ({ ...f, reason: e.target.value || undefined }))} className=&quot;border rounded px-2 py-1&quot; />
+          <input placeholder=&quot;User email&quot; value={filters.userEmail || ''} onChange={e => setFilters(f => ({ ...f, userEmail: e.target.value || undefined }))} className=&quot;border rounded px-2 py-1&quot; />
+          <button onClick={() => setFilters({ status: 'pending' })} className=&quot;border rounded px-2 py-1&quot;>Reset</button>
+        </div>
+        <div className=&quot;overflow-auto border rounded&quot;>
+          <table className=&quot;min-w-full text-sm&quot;>
+            <thead className=&quot;bg-gray-50 dark:bg-gray-900&quot;>
+              <tr>
+                <th className=&quot;text-left px-3 py-2&quot;>ID</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Type</th>
+                <th className=&quot;text-left px-3 py-2&quot;>User</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Reason</th>
+                <th className=&quot;text-left px-3 py-2&quot;>AI Scores</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Created</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Status</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Actions</th>
+
               </tr>
             </thead>
             <tbody>
               {flags.map((f: any) => (
-                <tr key={f.id} className="border-t hover:bg-gray-50/50">
+<tr key={f.id} className="border-t hover:bg-gray-50/50">
                   <td className="px-3 py-2 font-mono text-xs">{f.id}</td>
                   <td className="px-3 py-2">{f.contentType}</td>
                   <td className="px-3 py-2">{f.userEmail}</td>
@@ -278,13 +329,13 @@ export default function ContentReviewPage() {
                 </tr>
               ))}
               {flags.length === 0 && (
-                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
+<tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )}
             </tbody>
           </table>
         </div>
       </div>
-      {selected && (
+{selected && (
             </tbody>;
           </table>;
         </div>;

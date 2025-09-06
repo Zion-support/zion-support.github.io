@@ -202,11 +202,18 @@ const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
   const icon_variants = {
     hidden: { rotate: -180, scale: 0 },
     visible: {    visible: {
+    }
+  },
+
+  const iconVariants = {
+    hidden: { rotate: -180, scale: 0 },
+    visible: { 
+
       rotate: 0,
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: 'back_out' as const,
+ease: 'back_out' as const,
       },
     },        ease: "back_out" as const;
       }
@@ -216,7 +223,7 @@ const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
       scale: 1.1,
       transition: {
         duration: 0.6,
-            .map(c => `var(--tw-${c && c.split('-')[0]}-${c && c.split('-')[1]})`);
+.map(c => `var(--tw-${c && c.split('-')[0]}-${c && c.split('-')[1]})`);
             .join(', ')})`,;
   return (
     <motion.div
@@ -243,12 +250,12 @@ const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
             animate={{ scale: 1, rotate: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <Star className="w-3 h-3 fill-current" />
+<Star className="w-3 h-3 fill-current" />
             POPULAR
           </motion.div>
         </div>
       )}
-      {/* Card Content */}
+{/* Card Content */}
       <div className="relative p-6">
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
@@ -351,7 +358,7 @@ const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 * index }}
               >
-                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
+<div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
                 {feature}
               </motion && motion.div>;
             ))}
@@ -458,7 +465,7 @@ const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
           </div>
         </div>
       </div>
-            whileHover={{ scale: 1 && 1.05 }}
+whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}>;
             <ExternalLink className="w-4 h-4" />;
             Learn More;
@@ -732,3 +739,9 @@ export default EnhancedServiceCard;    </motion.div>);
 ;
 export default EnhancedServiceCard;
 ;
+    </motion.div>
+  )
+},
+
+export default EnhancedServiceCard
+

@@ -50,6 +50,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
+
+  const _system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${_persona?.voice || 'Visionary'} tone, speak in ${_persona?.language || 'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
+
 1) 7-10 concise interview questions mixing visionary and technical angles
 2) Time markers for: Intro, segment transitions, Closing CTA for Zion
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest
@@ -214,12 +217,35 @@ if ( {) {
     const episode = {
       id,
       created_at: new Date ().toISOString (),
+        transcript: 'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.',
+        youtubeDescription: 'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.',
+        spotifyDescription: 'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.',
+        bestQuote: 'Talent networks become protocols when incentives, reputation, and opportunity align.'})
+    }
+
+    try {
+      generated = JSON.parse(content)
+    } catch {
+      // Attempt to extract JSON block
+      const match = content.match(/\{[\s\S]*\}$/)
+      if (match) generated = JSON.parse(match[0])
+    }
+
+    if (!generated || !generated.title || !generated.transcript) {
+      return res.status(500).json({ error: 'Failed to generate structured content' })
+    }
+
+    const episodes = readEpisodes()
+    const episode = {
+      id,
+      createdAt: new Date().toISOString(),
+
       persona,
       invitee,
       topic,
       title: generated.title,
       questions: generated.questions || [],
-      time_markers: generated.time_markers || {
+time_markers: generated.time_markers || {
         intro: '00:00',
         segments: [],
         closing: '14:30',
@@ -303,4 +329,6 @@ if ( {) {
     console.error (error);
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
+  }
+
 }

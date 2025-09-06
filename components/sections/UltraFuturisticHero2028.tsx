@@ -30,13 +30,13 @@ export default function UltraFuturisticHero2028() {
     { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' },
     { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' },
     { icon: Shield, text: 'Quantum Internet Security', color: 'from-red-500 to-orange-500' }
-  ];
+];
   const stats = [
     { value: '50+', label: 'Cutting-Edge Services', icon: Rocket },
     { value: '25+', label: 'AI Solutions', icon: Brain },
     { value: '15+', label: 'Quantum Technologies', icon: Atom },
     { value: '1000+', label: 'Happy Clients', icon: Users }
-  ];
+];
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Badge */}  ];
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20">;
@@ -111,11 +111,35 @@ export default function UltraFuturisticHero2028() {
             <span className="text-white">
               Technology is{' '}
               <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+        >
+          <div className=&quot;inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6 backdrop-blur-sm&quot;>
+            <Rocket className=&quot;w-5 h-5 text-cyan-400&quot; />
+            <span className=&quot;text-cyan-400 font-mono text-sm&quot;>2028 Future Technology</span>
+            <div className=&quot;w-2 h-2 bg-cyan-400 rounded-full animate-pulse&quot; />
+          </div>
+        </motion.div>
+
+        {_/* Main Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className=&quot;mb-8&quot;
+        >
+          <h1 className=&quot;text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight&quot;>
+            <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent&quot;>
+              The Future of
+            </span>
+            <br />
+            <span className=&quot;text-white&quot;>
+              Technology is{' '}
+              <span className=&quot;bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent&quot;>
+
                 Here
               </span>
             </span>
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
+<p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
             Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation, and Autonomous AI Civilization. We're building tomorrow's solutions today.
           </p>
         </motion.div>
@@ -306,7 +330,7 @@ function UltraFuturisticHero2028() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2"
+className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2"
           >
             <span>Explore 2028 Services</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -420,7 +444,7 @@ function UltraFuturisticHero2028() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-          </div>;
+</div>;
         </motion && motion.div>;
         {/* Stats */}
         <motion&& motion.div
@@ -468,7 +492,7 @@ function UltraFuturisticHero2028() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                className='text - center group';
+className='text - center group';
               >;
                 <div className='w - 20 h - 20 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 border border - cyan - 500 / 30 rounded - 3xl flex items - center justify - center mx - auto mb - 4 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 group - hover:border - cyan - 400 / 50 transition - all duration - 300'>;
                   <stat.icon className='w - 10 h - 10 text - cyan - 400' />;
@@ -566,7 +590,7 @@ function UltraFuturisticHero2028() {
         </motion.div>
       </motion.div>
     </section>
-          />;
+/>;
         </motion && motion.div>;
       </motion && motion.div>;
     </section>;

@@ -24,11 +24,12 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/metaverse-ai-development-platform'));
   if (!service) return null;
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
+<meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/metaverse-ai-development-platform" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -66,7 +67,7 @@ export default function MetaverseAIPlatformPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);
 }
 import Head from 'next / head';
 import {

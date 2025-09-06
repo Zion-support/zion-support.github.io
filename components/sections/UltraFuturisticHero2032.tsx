@@ -305,12 +305,31 @@ function UltraFuturisticHero2032() {
       </div>;
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                left: `${Math.random() * 100}%`,
+                top: `${_Math.random() * 100}%`}}
+              animate={_{
+                y: [0, _-20, _0], _opacity: [0.3, _0.8, _0.3]}}
+              transition={_{
+                duration: 3 + Math.random() * 2, _repeat: Infinity, _delay: Math.random() * 2}}
+            />
+          ))}
+        </div>
+
+        {/* Gradient Orbs */}
+        <div className=&quot;absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse&quot; />
+        <div className=&quot;absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse&quot; />
+        <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow&quot; />
+      </div>
+
+      {/* Main Content */}
+      <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+
         {/* Hero Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
+className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
         >
           <Sparkles className="w-5 h-5 text-purple-400" />
           <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>
@@ -529,7 +548,7 @@ function UltraFuturisticHero2032() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-        </motion && motion.div>;
+</motion && motion.div>;
         {/* Featured Services */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -838,4 +857,11 @@ function UltraFuturisticHero2032() {
         </Link>;
       </motion.div>;
     </section>);
+        >
+          <Phone className=&quot;w-7 h-7 text-white group-hover:rotate-12 transition-transform&quot; />
+        </a>
+      </motion.div>
+    </section>
+  )
+
 }

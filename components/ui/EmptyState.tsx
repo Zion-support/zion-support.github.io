@@ -108,7 +108,7 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
               </a>
             </Link>
           )}
-          {secondaryAction && (;
+{secondaryAction && (;
             <Link href={secondaryAction && secondaryAction.href}>;
               <a>;
                 <EnhancedButton variant='secondary' size='md'>;

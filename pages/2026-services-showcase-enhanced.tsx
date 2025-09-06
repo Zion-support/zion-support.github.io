@@ -34,7 +34,7 @@ if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+};
   // Combine all 2026 services including new ones
   const all2026Services = [
     ...innovative2026MicroSaasServicesV2;
@@ -44,6 +44,17 @@ if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 
     ...emergingTech2026ServicesV3;
     ...enterpriseIT2026ServicesV3
   ];
+
+  // Combine all 2026 services including new ones
+  const _all2026Services = [
+    ...innovative2026MicroSaasServicesV2,
+    ...emergingTech2026ServicesV2,
+    ...enterpriseIT2026ServicesV2,
+    ...innovative2026AIServicesV3,
+    ...emergingTech2026ServicesV3,
+    ...enterpriseIT2026ServicesV3
+  ],
+
   // Enhanced categories for 2026
   const categories = [
     { id: 'all', name: 'All 2026 Services', icon: '🚀', count: all2026Services.length },
@@ -54,7 +65,7 @@ if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 
     { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length }
-  ];
+];
   const priceRanges = [
 import React, { useState, useMemo } from 'react',
 import Head from 'next / head',
@@ -235,6 +246,28 @@ function Services2026ShowcaseEnhancedPage() {
     })
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+    }
+
+    // Sort services
+    filtered.sort(_(a, _b) => {_switch (sortBy) {
+        case 'price-low':
+          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
+        case 'price-high':
+          return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
+
+        case 'popularity':
+          return (b.rating * b.reviews) - (a.rating * a.reviews),
+        case 'newest':
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        case 'rating':
+          return b.rating - a.rating,
+        default: return a.name.localeCompare(b.name)
+      }
+    }),
+
+    return filtered
+  }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
+
   // Service statistics
   const serviceStats = {
     totalServices: all2026Services.length,
@@ -245,7 +278,7 @@ function Services2026ShowcaseEnhancedPage() {
     healthcareServices: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length,
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
-  };
+};
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
@@ -428,7 +461,7 @@ if (return price >= 20000, ) {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: key.length * 0.1 }}
-                    className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 backdrop - blur - sm rounded - xl p - 4 border border - gray - 600 / 30";
+className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 backdrop - blur - sm rounded - xl p - 4 border border - gray - 600 / 30";
                   >;
                     <div className="text - 3xl font - bold text - cyan - 400">{value}</div>;
                     <div className="text - sm text - gray - 400 capitalize">{key.replace (/([A - Z])/g, ' $1').trim ()}</div>;

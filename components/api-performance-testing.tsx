@@ -227,7 +227,8 @@ function ApiPerformanceTestingPage() {
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
-								<p className="text-gray-200">{f}</p>
+<p className="text-gray-200">{f}</p>
+
 							</div>
 						))}
 					</div>
@@ -237,14 +238,14 @@ function ApiPerformanceTestingPage() {
 						<a href="https://grafana.com/docs/k6/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
 							<ExternalLink className="w-4 h-4" /> k6 Docs
 							</a>
-						<a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
+<a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
 							<ExternalLink className="w-4 h-4" /> Gatling OSS
 							</a>
 					</div>
 				</section>
 			</main>
 		</>
-	);
+);
 }
     </>);
 }

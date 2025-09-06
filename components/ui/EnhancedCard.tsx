@@ -36,7 +36,7 @@ export default function EnhancedCard({ children, className = '' }: { children: R
   return (
     <div className={["card-base p-4", className].join(' ')}>
       {children}
-    </div>
+</div>
   );
 }
 import React from './react';
@@ -49,4 +49,7 @@ function EnhancedCard() {
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
+    </div>
+  )
+
 }

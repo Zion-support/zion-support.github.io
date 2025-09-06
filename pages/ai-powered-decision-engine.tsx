@@ -26,4 +26,7 @@ return (
     industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
     canonical="https: //ziontechgroup.com / ai - powered - decision - engine";
   />);
+		/>
+	)
+
 }

@@ -44,7 +44,7 @@ export default function AdminIntegrationsPage() {
     setLoading(true)
     try {
       // Open mock oauth popup
-  const [syncRules, setSyncRules] = useState<any>({;
+const [syncRules, setSyncRules] = useState<any>({;
     autoCreateContacts: true,;
     pushNotesMode: 'auto',;
     autoSyncApplicants: true,;
@@ -139,7 +139,7 @@ export default function AdminIntegrationsPage() {
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
+<div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
             <div>
               <div className="font-semibold">{p.name}</div>
               <div className="text-xs text-gray-500">{p.description}</div>
@@ -162,7 +162,7 @@ export default function AdminIntegrationsPage() {
       </div>
     )
   }
-  function RulesModal() {
+function RulesModal() {
   function RulesModal() {;
     if (!selected) return null;
     const provider = providers && providers.find(p => p && p.id === selected)!;
@@ -548,7 +548,7 @@ if (return null) {
               </>
             )}
           </div>
-          <div className="mt-4 flex justify-end gap-2">
+<div className="mt-4 flex justify-end gap-2">
             <button className="px-3 py-1.5 rounded border text-sm" onClick={() => setSelected(null)}>Close</button>
             <button className="px-3 py-1.5 rounded bg-black text-white text-sm" onClick={async () => { await connect(provider.id), setSelected(null) }}>Save</button>
           </div>
@@ -562,18 +562,21 @@ if (return null) {
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-2xl font-semibold mb-2">Integrations</h1>
         <p className="text-sm text-gray-600 mb-6">Connect your CRM and ATS to sync contacts, applicants, and activity.</p>
+
         <section className="mb-8">
           <h2 className="text-lg font-semibold mb-3">CRM</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {grouped.crm.map(p => <Card key={p.id} p={p} />)}
           </div>
         </section>
+
         <section className="mb-10">
           <h2 className="text-lg font-semibold mb-3">ATS</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {grouped.ats.map(p => <Card key={p.id} p={p} />)}
           </div>
         </section>
+
         <section className="mb-10">
           <h2 className="text-lg font-semibold mb-2">Zapier</h2>
           <div className="text-sm text-gray-600">Polling endpoints: </div>
@@ -582,6 +585,7 @@ if (return null) {
             <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
           </ul>
         </section>
+
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
@@ -589,7 +593,7 @@ if (return null) {
       </main>
       <RulesModal />
     </>
-              <code>;
+<code>;
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP;
               </code>;
             </li>          </ul>;
@@ -608,7 +612,7 @@ function ManualOverrideForm() {;
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
-  async function save() {;
+async function save() {;
     setMessage('');
     const res = await fetch('/api/integrations/overrides', {;
       method: 'POST',;

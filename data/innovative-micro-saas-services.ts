@@ -1,5 +1,5 @@
 export interface InnovativeMicroSaasService {
-    id: 'quantum-ai-brain-computer-interface',
+id: 'quantum-ai-brain-computer-interface',
     name: 'Quantum AI Brain-Computer Interface',
     tagline:
   real_implementation: boolean;
@@ -248,7 +248,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     reviews: 18,
   },
   // Quantum Financial Trading;
-  {
+{
     id: 'quantum - financial - trading',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI - powered algorithmic trading with nanosecond precision',
@@ -904,7 +904,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     reviews: 19,
   },
   // Autonomous Vehicle AI;
-  {
+{
     id: 'autonomous - vehicle - ai - platform',
     name: 'Autonomous Vehicle AI Platform',
     tagline:;

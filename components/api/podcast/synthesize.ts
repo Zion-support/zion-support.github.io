@@ -213,7 +213,7 @@ if ( {) {
     } else if (playhtKey) {
       const resp = await axios.post(
         'https: //api.play.ht/api/v2/tts',
-        { text, voice: process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' };
+{ text, voice: process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' };
         { responseType: 'arraybuffer', headers: { Authorization: `Bearer ${playhtKey}`, 'Content-Type': 'application/json' } }
       );
       fs.writeFileSync(mp3Path, Buffer.from(resp.data));
@@ -311,4 +311,10 @@ if ( {) {
     console.error (error),
     return res.status (500).json ({ error: error?.message || 'Synthesis failed' });
 }
+    return res.status(200).json({ episode })
+  } catch (error: any) {
+    console.error(error),
+    return res.status(500).json({ error: error?.message || 'Synthesis failed' })
+  }
+
 }

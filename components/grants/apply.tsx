@@ -176,19 +176,90 @@ function ApplyGrantPage() {
         <div className="grid md:grid-cols-2 gap-3">
           <label className="text-sm">Program
             <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>
+
+  const _save = async (_submit: boolean) => {
+    try {
+      setLoading(true),
+      setError(null),
+      const resp = await fetch('/api/grants', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map((s) => s.trim())
+            .filter(Boolean),
+          pitchDeckUrl,
+          region,
+          sector: (sector as any) || undefined,
+          submit})}),
+      const data = await resp.json()
+      if (!resp.ok) throw new Error(data?.error || 'Failed'),
+      router.push(`/grants/${data.id}`)
+    } catch (e: any) {
+      setError(e.message)
+    } finally {
+      setLoading(false)
+    }
+  },
+
+  return (
+    <EnhancedLayout>
+      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <div className=&quot;grid gap-4 max-w-3xl&quot;>
+        <div className=&quot;grid md:grid-cols-2 gap-3&quot;>
+          <label className=&quot;text-sm&quot;>Program
+            <select className=&quot;mt-1 w-full border rounded p-2&quot; value={program} onChange={(e) => setProgram(e.target.value as any)}>
+              <option value=&quot;grant&quot;>Grant</option>
+              <option value=&quot;incubator&quot;>Incubator</option>
+            </select>
+          </label>
+          <label className=&quot;text-sm&quot;>Sector
+            <select className=&quot;mt-1 w-full border rounded p-2&quot; value={sector} onChange={(e) => setSector(e.target.value)}>
+      setLoading(true);
+      setError(null);
+      const _resp = await fetch('/api/grants', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({_program, _projectName, _teamInfo, _proposalSummary, _timeline, _budgetAmount: Number(budgetAmount || 0), _budgetCurrency, _supportingLinks: supportingLinks
+            .split('\n')
+            .map(_(s) => s.trim())
+            .filter(Boolean), _pitchDeckUrl, _region, _sector: (sector as any) || undefined, _submit})});
+      const _data = await resp.json();
+      if (!resp.ok) throw new Error(data?.error || 'Failed');
+      router.push(`/grants/${_data.id}`);
+    } catch (e: unknown) {_setError(e.message);} finally {_setLoading(false);}
+  };
+
+  return (_<EnhancedLayout>
+      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {_program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <div className="grid gap-4 max-w-3xl">
+        <div className="grid md:grid-cols-2 gap-3">
+          <label className="text-sm">Program
+            <select className="mt-1 w-full border rounded p-2" value={_program} onChange={_(e) => setProgram(e.target.value as any)}>
+
               <option value="grant">Grant</option>
               <option value="incubator">Incubator</option>
             </select>
           </label>
           <label className="text-sm">Sector
-            <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>
+<select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>
               <option value="">Select sector</option>
               {categories.map((c) => <option key={c} value={c}>{c}</option>)}
+              <option value="">Select sector</option>
+              {_categories.map(_(c) => <option key={c} value={_c}>{_c}</option>)}
+
             </select>
           </label>
         </div>
         <label className="text-sm">Project Name
-          <input className="mt-1 w-full border rounded p-2" value={projectName} onChange={(e) => setProjectName(e.target.value)} />
+<input className="mt-1 w-full border rounded p-2" value={projectName} onChange={(e) => setProjectName(e.target.value)} />
         </label>
         <label className="text-sm">Team Info
           <textarea className="mt-1 w-full border rounded p-2" rows={3} value={teamInfo} onChange={(e) => setTeamInfo(e.target.value)} />

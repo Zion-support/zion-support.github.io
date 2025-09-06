@@ -47,13 +47,55 @@ import { motion } from 'framer-motion';
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+
+  const filteredProjects = selectedCategory === &quot;All&quot; 
+    ? projects 
+    : projects.filter(project => project.category === selectedCategory),
+
+  return (
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
+      <Head>
+        <title>Our Work - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Our Work - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Explore our portfolio of innovative technology projects and solutions.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/portfolio&quot; />
+      </Head>
+
+      <EnhancedNavigation />
+
+      {/* Hero Section */}
+      <section className=&quot;relative pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className=&quot;mb-8&quot;
+          >
+            <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6&quot;>
+              Our Work
+            </h1>
+            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed&quot;>
+              Innovative technology solutions that drive business transformation and growth
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className=&quot;mb-12&quot;
+          >
+            <p className=&quot;text-lg text-white/70 max-w-2xl mx-auto mb-8&quot;>
+
               Discover how we've helped organizations leverage cutting-edge technology to solve 
               complex challenges and achieve remarkable results.
             </p>
           </motion.div>
         </div>
       </section>
-      {/* Stats Section */}
+{/* Stats Section */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -62,7 +104,7 @@ import { motion } from 'framer-motion';
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -116,7 +158,7 @@ import { motion } from 'framer-motion';
                 key={project.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                       className={`w-12 h-12 bg-gradient-to-br ${project && project.color} rounded-xl flex items-center justify-center`}>;
                       <project && project.icon className='w-6 h-6 text-white' />;
@@ -194,7 +236,7 @@ import { motion } from 'framer-motion';
           </div>
         </div>
       </section>
-                    </ul>;
+</ul>;
                   </div>;
                   <div className='flex items-center justify-between'>;
                     <span className='text-sm text-white/60'>;
@@ -226,16 +268,20 @@ import { motion } from 'framer-motion';
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-                Start Your Project
+Start Your Project
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+                Start Your Project
+              </button>
+              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
+
                 Schedule Consultation
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-      <EnhancedFooter />
+<EnhancedFooter />
     </div>
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;

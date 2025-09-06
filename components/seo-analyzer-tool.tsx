@@ -29,23 +29,34 @@ export default function SEOAnalyzerToolPage() {;
       gradient: 'from-green-400 to-emerald-500'},
     {
       icon: <Target className="w-8 h-8 text-white" />,
+
+  const _features = [
+    {
+      icon: <Search className=&quot;w-8 h-8 text-white&quot; />,
+      title: 'Comprehensive SEO Analysis',
+      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500'},
+    {
+      icon: <Target className=&quot;w-8 h-8 text-white&quot; />,
+
       title: 'Keyword Research',
       description: 'Discover high-value keywords and analyze search intent to optimize your content strategy.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'},
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
+icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Competitive Analysis',
       description: 'Analyze your competitors\' SEO strategies and identify opportunities to outperform them.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'},
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
+icon: <Zap className="w-8 h-8 text-white" />,
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and actionable insights to improve your search rankings.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'}],
-  const seoFactors = [
+const seoFactors = [
     {
       category: 'On-Page SEO'
       factors: [
@@ -338,7 +349,7 @@ function SEOAnalyzerToolPage() {
       price: '$39',
       period: '/month',
       description: 'Perfect for small businesses and bloggers',
-      features: [;
+features: [;
         '10 website analyses / month',
         'Basic SEO metrics',
         'Keyword research (100 keywords)',
@@ -355,7 +366,7 @@ function SEOAnalyzerToolPage() {
       price: '$89',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
-      features: [;
+features: [;
         '50 website analyses / month',
         'Advanced SEO metrics',
         'Keyword research (500 keywords)',
@@ -374,7 +385,7 @@ function SEOAnalyzerToolPage() {
       price: '$249',
       period: '/month',
       description: 'For large organizations and SEO agencies',
-      features: [;
+features: [;
         'Unlimited analyses',
         'Enterprise SEO metrics',
         'Unlimited keyword research',
@@ -663,14 +674,14 @@ function SEOAnalyzerToolPage() {
                   </>
                 ) : (
                   <>
-                    <Search className="w-5 h-5 mr-2" />
+<Search className="w-5 h-5 mr-2" />
                     Analyze SEO
                   </>
                 )}
               </Button>
             </div>
           </div>
-                disabled={isAnalyzing || !url && url.trim()}>;
+disabled={isAnalyzing || !url && url.trim()}>;
                 {isAnalyzing ? (;
                   <>;
                     <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />;
@@ -721,7 +732,7 @@ function SEOAnalyzerToolPage() {
               View Pricing
             </Button>
             <Button
-              href="/contact"
+href="/contact"
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
@@ -1309,7 +1320,7 @@ function SEOAnalyzerToolPage() {
                       </div>
                     </div>
                   ))}
-            <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
+<div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
               {/* Overall Score */}
               <Card className='border - gradient - green text - center'>;
                 <h3 className='text - 2xl font - bold mb - 6 text - white'>;
@@ -1576,7 +1587,7 @@ function SEOAnalyzerToolPage() {
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
@@ -1632,7 +1643,7 @@ function SEOAnalyzerToolPage() {
                     </li>
                   ))}
                 </ul>
-                <Button
+<Button
                   href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
@@ -1676,7 +1687,7 @@ function SEOAnalyzerToolPage() {
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'>              href="/contact";
+className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'>              href="/contact";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl";

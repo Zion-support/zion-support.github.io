@@ -84,7 +84,7 @@ if ( {) {
       const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
       const courseProgress = user.progress[courseId] || { completedLessons: [], percent: 0, completed: false };
       if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
-        courseProgress.completedLessons.push(lessonId)
+courseProgress.completedLessons.push(lessonId)
       }
       if (typeof percent === 'number') {
         courseProgress.percent = Math.max(courseProgress.percent, percent)
@@ -92,7 +92,7 @@ if ( {) {
       user.progress[courseId] = courseProgress;
       users[userId] = user;
       writeUsers(users);
-      return res.status(200).json({ ok: true, progress: courseProgress })
+return res.status(200).json({ ok: true, progress: courseProgress })
     }
     res.setHeader('AllowGET, POST');
     return res.status(405).end('Method Not Allowed')

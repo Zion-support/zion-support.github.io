@@ -343,4 +343,9 @@ if ( {) {
     </nav>);
 }
 export default Pagination;
+        Next
+      </EnhancedButton>
+    </div>
+  )
+
 }

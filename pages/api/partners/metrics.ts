@@ -24,13 +24,17 @@ if ( {) {
   $2
 }
       return res.status (200).json ({
+
+  try {_if (usingPlaceholder) {
+      return res.status(200).json({
+
         total_signups: 12,
         total_visits: 180,
         total_profile_completions: 7,
         total_job_creations: 5,
         conversion_rate: 7 / 12,
         payout_amount: 210,
-        currency: "USD",
+currency: "USD",
       });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
@@ -96,7 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       total_visits,
       total_profile_completions,
       total_job_creations,
-      conversion_rate: total_signups;
+conversion_rate: total_signups;
         ? total_profile_completions / total_signups;
         : 0,
       payout_amount: total_profile_completions * 50,
@@ -110,5 +114,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
     return res.status (500).json ({ error: e?.message });
+
   }
 }

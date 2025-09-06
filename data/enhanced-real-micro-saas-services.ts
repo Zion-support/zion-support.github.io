@@ -1,5 +1,5 @@
 export interface MicroSaasService {
-  id: string, name: string,
+id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
   features: string[], popular: boolean,
@@ -886,7 +886,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
-  },
+},
   {
     id: 'autonomous-financial-advisor', name: 'Autonomous Financial Advisor',
     tagline: 'AI-powered financial planning and investment management', price: '$799',

@@ -139,4 +139,9 @@ if ( {) {
   }
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
+  }
+
+  res.setHeader('AllowGET, POST'),
+  res.status(405).end('Method Not Allowed')
+
 }

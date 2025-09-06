@@ -27,3 +27,5 @@ router.replace ('/automation / contract - builder');
   }, [router]);
   return null;
 ;
+}
+

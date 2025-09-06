@@ -68,4 +68,31 @@ function DepRadarPage() {
           </table>;
         </div>)}
     </div>);
+      ) : (
+        <div className=&quot;overflow-auto border rounded&quot;>
+          <table className=&quot;min-w-full text-sm&quot;>
+            <thead className=&quot;bg-gray-50&quot;>
+              <tr>
+                <th className=&quot;text-left p-2&quot;>Package</th>
+                <th className=&quot;text-left p-2&quot;>Current</th>
+                <th className=&quot;text-left p-2&quot;>Latest</th>
+                <th className=&quot;text-left p-2&quot;>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {outdated.map(o => (
+                <tr key={o.name} className=&quot;border-t&quot;>
+                  <td className=&quot;p-2&quot;>{o.name}</td>
+                  <td className=&quot;p-2&quot;>{o.current}</td>
+                  <td className=&quot;p-2&quot;>{o.latest}</td>
+                  <td className=&quot;p-2&quot;>{o.type}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  )
+
 }

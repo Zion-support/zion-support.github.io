@@ -134,7 +134,7 @@ function ComprehensiveServicesShowcase2025V2() {
     ...innovativeITServices2025ExpansionV2,
     ...innovativeAIServices2025ExpansionV2,
     ...industrySpecificSolutions2025V2,
-    ...emergingTechBreakthroughs2025V2,  ];    ...innovativeMicroSaas2025ExpansionV2;
+...emergingTechBreakthroughs2025V2,  ];    ...innovativeMicroSaas2025ExpansionV2;
     ...innovativeITServices2025ExpansionV2;
     ...innovativeAIServices2025ExpansionV2;
     ...industrySpecificSolutions2025V2;
@@ -286,7 +286,7 @@ function ComprehensiveServicesShowcase2025V2() {
               href="#contact" 
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               Get Started
-            </a>;
+</a>;
           </motion && motion.div>;
         </div>;
       </section>;

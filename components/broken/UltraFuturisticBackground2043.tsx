@@ -66,11 +66,14 @@ if (return) {
       opacity: number;
       color: string;
       life: number;
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
+
     // Particle system
     const particles: Array<{
       x: number,
       y: number,
-      max_life: number;    }> = [];      coordinate_x: number,
+max_life: number;    }> = [];      coordinate_x: number,
       coordinate_y: number,
       vx: number,
       vy: number,
@@ -78,7 +81,7 @@ if (return) {
       opacity: number,
       color: string,
       life: number,
-      ];
+];
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -89,7 +92,7 @@ if (return) {
         color: colors[Math.floor(Math.random() * colors.length)],
         life: Math.random() * 100 + 50,
         maxLife: Math.random() * 100 + 50}
-    };
+};
     // Initialize particles
     for (let i = 0, i < 100, i++) {
       particles.push(createParticle());
@@ -496,11 +499,111 @@ if ( {) {
             opacity: [0.3, 0.6, 0.3],
           animate={{
             scale: [1.3, 1, 1.3];
+
+        // Draw particle
+        ctx.save(),
+        ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife),
+        ctx.fillStyle = particle.color,
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fill(),
+        ctx.restore()
+      }),
+
+      // Draw connecting lines between nearby particles
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)',
+      ctx.lineWidth = 0.5,
+      
+      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
+          const dx = particles[i].x - particles[j].x
+          const dy = particles[i].y - particles[j].y
+          const distance = Math.sqrt(dx * dx + dy * dy)
+          
+          if (distance < 100) {
+            ctx.globalAlpha = (100 - distance) / 100 * 0.1,
+            ctx.beginPath(),
+            ctx.moveTo(particles[i].x, particles[i].y),
+            ctx.lineTo(particles[j].x, particles[j].y),
+            ctx.stroke()
+          }
+
+        }
+      }
+
+      requestAnimationFrame(animate)
+    },
+
+    animate(),
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas)
+    }
+  }, []),
+
+  return (
+    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
+      {/* Canvas background */}
+      <canvas
+        ref={canvasRef}
+        className=&quot;absolute inset-0 w-full h-full&quot;
+        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
+      />
+
+      {/* Enhanced floating orbs */}
+      <div className=&quot;absolute inset-0&quot;>
+        {/* Primary orb */}
+        <motion.div
+          className=&quot;absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl&quot;
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3]}}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: &quot;easeInOut&quot;
+          }}
+        />
+
+        {_/* Secondary orb */}
+        <motion.div
+          className=&quot;absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl&quot;
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.4, 0.7, 0.4]}}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: &quot;easeInOut&quot;,
+            delay: 2
+          }}
+        />
+
+        {_/* Tertiary orb */}
+        <motion.div
+          className=&quot;absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl&quot;
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.5, 0.2]}}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: &quot;easeInOut&quot;,
+            delay: 4
+          }}
+        />
+
+        {_/* Additional orbs */}
+        <motion.div
+          className=&quot;absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl&quot;
+          animate={{
+            scale: [1.3, 1, 1.3],
+
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 9,
             repeat: Infinity,
-            ease: 'easeInOut',
+ease: 'easeInOut',
             delay: 1,          }}
           transition={{
             duration: 9,
@@ -653,7 +756,7 @@ if ( {) {
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: 'easeInOut',          }}
+ease: 'easeInOut',          }}
           transition={{
             duration: 15,
             repeat: Infinity,
@@ -778,7 +881,7 @@ if ( {) {
               duration: 4 + Math.random() * 4,
               repeat: Infinity,
               delay: Math.random() * 4,
-              ease: "easeInOut"
+ease: "easeInOut"
             }}
             style={{
               left: `${Math.random() * 100}%`,

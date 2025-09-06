@@ -18,12 +18,32 @@ id: 'ai-automation-manufacturing',
         minimize human intervention, and provide real-time insights into their operations.</p>
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included: </p>
+
+  // Case studies data - this should match the data in resources.tsx
+  const _caseStudies = [
+    {_id: 'ai-automation-manufacturing', _title: 'AI-Powered Manufacturing Automation', _company: 'Global Manufacturing Corp', _industry: 'Manufacturing', _results: '40% increase in production efficiency, _60% reduction in downtime', _description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.', _fullContent: `
+        <h2>Executive Summary</h2>
+        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations, _delivering significant improvements in efficiency, _quality, _and cost reduction.</p>
+        
+        <h2>Background</h2>
+        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes. 
+        High downtime, _inefficient production scheduling, _and quality control issues were impacting their bottom line 
+        and preventing them from meeting growing customer demands.</p>
+        
+        <h2>Challenge</h2>
+        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
+        and reducing operational costs. They required a solution that could adapt to changing production demands, _minimize human intervention, _and provide real-time insights into their operations.</p>
+        
+        <h2>Solution</h2>
+        <p>We implemented a comprehensive AI automation system that included:</p>
+
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
           <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>
           <li><strong>Automated Quality Control:</strong> Computer vision systems for defect detection</li>
           <li><strong>Intelligent Scheduling:</strong> AI-powered production planning and optimization</li>
         </ul>
+
         <h2>Implementation</h2>
         <p>The system was deployed in phases over 6 months:</p>
         <ul>
@@ -32,6 +52,7 @@ id: 'ai-automation-manufacturing',
           <li><strong>Phase 3:</strong> Integration with existing systems</li>
           <li><strong>Phase 4:</strong> Training and optimization</li>
         </ul>
+
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -40,6 +61,7 @@ id: 'ai-automation-manufacturing',
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
           <li><strong>30% reduction in operational costs</strong> - Optimized resource allocation and reduced waste</li>
         </ul>
+
         <h2>Key Learnings</h2>
         <p>This project revealed several important insights:</p>
         <ul>
@@ -48,7 +70,7 @@ id: 'ai-automation-manufacturing',
           <li>Gradual implementation reduces resistance and improves adoption</li>
           <li>Continuous monitoring and optimization is essential for long-term success</li>
         </ul>
-        <h2>Conclusion</h2>
+<h2>Conclusion</h2>
         <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
@@ -195,7 +217,7 @@ function CaseStudyResourcePage() {
         <Head>
           <title>Case Study Resource Not Found | Zion Tech Group</title>
         </Head>
-        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+<div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>
@@ -214,11 +236,12 @@ function CaseStudyResourcePage() {
       </>
     )
   }
+
   return (
     <>
       <Head>
         <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>
-        <meta name="description" content={caseStudy.description} />
+<meta name="description" content={caseStudy.description} />
         <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
         <meta property="og:description" content={caseStudy.description} />
       </Head>

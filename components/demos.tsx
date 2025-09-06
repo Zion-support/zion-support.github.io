@@ -263,11 +263,136 @@ function DemosPage() {
                 Instant
               </div>
               <div className="text-gray-400 text-sm">Results</div>
+
+  const _demos = [
+    {
+      id: 'email-validator',
+      title: 'Email Validator Pro',
+      description: 'Advanced email validation with domain checking and deliverability scoring',
+      icon: <Mail className=&quot;w-6 h-6&quot; />,
+      color: 'from-blue-500 to-cyan-600',
+      component: <EmailValidatorDemo />
+    },
+    {
+      id: 'password-strength',
+      title: 'Password Strength Analyzer',
+      description: 'Comprehensive password security analysis with entropy calculation',
+      icon: <Lock className=&quot;w-6 h-6&quot; />,
+      color: 'from-green-500 to-emerald-600',
+      component: <PasswordStrengthDemo />
+    },
+    {
+      id: 'url-shortener',
+      title: 'Smart URL Shortener',
+      description: 'Professional URL shortening with analytics and custom codes',
+      icon: <Link className=&quot;w-6 h-6&quot; />,
+      color: 'from-purple-500 to-pink-600',
+      component: <UrlShortenerDemo />
+    },
+    {
+      id: 'text-analyzer',
+      title: 'Text Analysis Suite',
+      description: 'Advanced text analysis with readability and sentiment analysis',
+      icon: <FileText className=&quot;w-6 h-6&quot; />,
+      color: 'from-orange-500 to-red-600',
+      component: <TextAnalyzerDemo />
+    }
+  ],
+
+  return (
+    <>
+      <Head>
+        <title>Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services</title>
+        <meta name=&quot;description&quot; content=&quot;Try our professional micro SaaS services with interactive demos. Test email validation, password strength, URL shortening, and text analysis in real-time.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Interactive Demos | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Test our micro SaaS services with interactive demos.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-black&quot;>
+        <div className=&quot;absolute inset-0&quot;>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]&quot; />
+        </div>
+
+        <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20&quot; />
+
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+          <div className=&quot;mb-20 animate-fade-in&quot;>
+            <div className=&quot;mb-8&quot;>
+              <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in&quot;>
+                <Play className=&quot;w-4 h-4 mr-2&quot; />
+                Interactive Demos
+              </div>
+            </div>
+            
+            <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight&quot;>
+              Try Our
+              <span className=&quot;block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>
+                Micro SaaS Services
+              </span>
+            </h1>
+            <p className=&quot;text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light&quot;>
+              Experience our professional-grade micro SaaS services firsthand with interactive demos. 
+              Test, explore, and see the power of our APIs in action.
+            </p>
+
+            <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-20&quot;>
+              <Button
+                href=&quot;#demos&quot;
+                size=&quot;lg&quot;
+                className=&quot;animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40&quot;
+                style={{ animationDelay: '0.2s' }}
+              >
+                Start Testing
+                <Play className=&quot;w-5 h-5 ml-2&quot; />
+              </Button>
+              <Button
+                href=&quot;/micro-saas&quot;
+                variant=&quot;outline&quot;
+                size=&quot;lg&quot;
+                className=&quot;animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5&quot;
+                style={{ animationDelay: '0.4s' }}
+              >
+                <Code className=&quot;w-5 h-5 mr-2&quot; />
+                View All Services
+              </Button>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={{ animationDelay: '0.6s' }}>
+            <div className=&quot;text-center group&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300&quot;>
+                4
+              </div>
+              <div className=&quot;text-gray-400 text-sm&quot;>Live Demos</div>
+            </div>
+            <div className=&quot;text-center group&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300&quot;>
+                Real
+              </div>
+              <div className=&quot;text-gray-400 text-sm&quot;>API Endpoints</div>
+            </div>
+            <div className=&quot;text-center group&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300&quot;>
+                Free
+              </div>
+              <div className=&quot;text-gray-400 text-sm&quot;>To Test</div>
+            </div>
+            <div className=&quot;text-center group&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300&quot;>
+                Instant
+              </div>
+              <div className=&quot;text-gray-400 text-sm&quot;>Results</div>
+
             </div>
           </div>
         </div>
       </section>
-      {/* Demo Navigation */}
+{/* Demo Navigation */}
       <section id="demos" className="py-16 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -712,7 +837,7 @@ function DemosPage() {
           </div>
         </div>
       </section>
-            </p>;
+</p>;
           </div>;
           <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
             {activeDemoData?.component}
@@ -856,7 +981,7 @@ function DemosPage() {
             with our comprehensive APIs and documentation.
           </p>
           <div className="flex flex-col sm: flex-row gap-6 justify-center">
-            <Button
+<Button
               href="/micro-saas"
               variant="secondary"
               size="lg"
@@ -870,6 +995,21 @@ function DemosPage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
+            <Button
+              href=&quot;/micro-saas&quot;
+              variant=&quot;secondary&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-white text-blue-600 hover:bg-gray-100 shadow-2xl&quot;
+            >
+              View All Services
+              <Code className=&quot;w-5 h-5 ml-2&quot; />
+            </Button>
+            <Button
+              href=&quot;/contact&quot;
+              variant=&quot;outline&quot;
+              size=&quot;lg&quot;
+              className=&quot;border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl&quot;
+
             >
               Get Started
             </Button>
@@ -877,7 +1017,7 @@ function DemosPage() {
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>              href="/contact";
+className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>              href="/contact";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl";

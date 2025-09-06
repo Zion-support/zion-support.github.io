@@ -190,6 +190,37 @@ function ZionTechGroupPage() {
                     About
                   </Link>
                   <Link href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+
+export default function ZionTechGroupPage() {_return (
+    <>
+      <Head>
+        <title>About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems</title>
+        <meta name=&quot;description&quot; content=&quot;Discover Zion Tech Group's mission to revolutionize technology with quantum AI, autonomous systems, and cutting-edge platforms. Learn about our innovative solutions and global impact.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;Zion Tech Group, about us, quantum AI, autonomous systems, technology innovation, company mission&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
+        <link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; />
+      </Head>
+
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;>
+        {/* Navigation */}
+        <nav className=&quot;bg-black/20 backdrop-blur-md border-b border-white/10&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+            <div className=&quot;flex justify-between items-center h-16&quot;>
+              <div className=&quot;flex items-center&quot;>
+                <div className=&quot;flex-shrink-0&quot;>
+                  <Link href=&quot;/&quot; className=&quot;text-2xl font-bold text-white&quot;>Zion Tech Group</Link>
+                </div>
+              </div>
+              <div className=&quot;hidden md:block&quot;>
+                <div className=&quot;ml-10 flex items-baseline space-x-4&quot;>
+                  <Link href=&quot;/&quot; className=&quot;text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium&quot;>
+                    Home
+                  </Link>
+                  <Link href=&quot;/zion-tech-group&quot; className=&quot;text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium&quot;>
+                    About
+                  </Link>
+                  <Link href=&quot;/contact&quot; className=&quot;text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium&quot;>
+
                     Contact
                   </Link>
                 </div>
@@ -197,7 +228,7 @@ function ZionTechGroupPage() {
             </div>
           </div>
         </nav>
-        {/* Breadcrumb */}
+{/* Breadcrumb */}
         <div className="bg-black/20 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <nav className="flex" aria-label="Breadcrumb">
@@ -211,7 +242,7 @@ function ZionTechGroupPage() {
                   </div>
                 </li>
                 <li>
-                  <div className="flex items-center">
+<div className="flex items-center">
                     <ChevronRight className="h-4 w-4 text-gray-400" />
                     <span className="ml-4 text-sm font-medium text-white">About Zion Tech Group</span>
                   </div>
@@ -220,7 +251,7 @@ function ZionTechGroupPage() {
             </nav>
           </div>
         </div>
-        {/* Hero Section */}
+{/* Hero Section */}
         <div className="relative overflow-hidden py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -234,7 +265,7 @@ function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-        {/* Mission & Vision Section */}
+{/* Mission & Vision Section */}
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -265,7 +296,7 @@ function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-        {/* Core Values Section */}
+{/* Core Values Section */}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -332,7 +363,7 @@ function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-        {/* Technology Stack Section */}
+{/* Technology Stack Section */}
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -381,7 +412,7 @@ function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-        {/* Company Stats Section */}
+{/* Company Stats Section */}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -410,7 +441,7 @@ function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-        {/* Team Section */}
+{/* Team Section */}
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -453,7 +484,7 @@ function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-                    className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>                    Contact;
+className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>                    Contact;
                   </Link>;
                 </div>;
               </div>;
@@ -1110,7 +1141,7 @@ function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-                className='inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700'>                Schedule Consultation;
+className='inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700'>                Schedule Consultation;
         {/* CTA Section */}
         <div className='bg - purple - 600'>;
           <div className='max - w-2xl mx - auto text - center py - 16 px - 4 sm:py - 20 sm:px - 6 lg:px - 8'>;
@@ -1200,18 +1231,18 @@ function ZionTechGroupPage() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
+<Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
                           Autonomous Systems
                         </Link>
                       </li>
                       <li>
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
+<Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
                           Technology Platforms
                         </Link>
                       </li>
                     </ul>
                   </div>
-                  <div className="mt-12 md:mt-0">
+<div className="mt-12 md:mt-0">
                     <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
                     <ul className="mt-4 space-y-4">
                       <li>
@@ -1220,7 +1251,7 @@ function ZionTechGroupPage() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/contact" className="text-base text-gray-300 hover:text-white">
+<Link href="/contact" className="text-base text-gray-300 hover:text-white">
                           Contact
                         </Link>
                       </li>
@@ -1238,7 +1269,7 @@ function ZionTechGroupPage() {
         </footer>
       </div>
     </>
-                          className='text-base text-gray-300 hover:text-white'>                          Contact;
+className='text-base text-gray-300 hover:text-white'>                          Contact;
                   <div className='mt - 12 md:mt - 0'>;
                     <h3 className='text - sm font - semibold text - gray - 400 tracking - wider uppercase'>;
                       Company;

@@ -25,4 +25,7 @@ return (
     industries={["SaaS", "Healthcare", "Finance", "Retail"]}
     canonical="https: //ziontechgroup.com / ai - autonomous - business - operations";
   />);
+		/>
+	)
+
 }

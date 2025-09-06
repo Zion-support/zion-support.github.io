@@ -159,12 +159,25 @@ if (return) {
       y: number,
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
+
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
+
+    let animationFrameId: number
+    let particles: Particle[] = []
+    let quantumFields: QuantumField[] = []
+    let neuralNetworks: NeuralNetwork[] = []
+
+    class Particle {
+      x: number,
+      y: number,
+
       vx: number,
       vy: number,
       size: number,
       color: string,
       life: number,
-        this.maxLife = 100
+this.maxLife = 100
       }
       update() {
         this.x += this.vx;
@@ -286,7 +299,7 @@ if (return) {
       intensity: number,
       phase: number,
       color: string,
-        this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
+this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
       }
       update() {
         this.phase += 0.02
@@ -485,11 +498,59 @@ if ( {) {
         ctx.restore()
       }
     }
+
+      constructor() {
+        this.x = Math.random() * canvas.width,
+        this.y = Math.random() * canvas.height,
+        this.radius = Math.random() * 100 + 50,
+        this.intensity = Math.random() * 0.5 + 0.5,
+        this.phase = Math.random() * Math.PI * 2,
+        this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
+      }
+
+      update() {
+        this.phase += 0.02
+      }
+
+      draw() {
+        if (!ctx) return,
+        ctx.save(),
+        ctx.globalAlpha = this.intensity * (0.5 + 0.5 * Math.sin(this.phase)),
+        ctx.strokeStyle = this.color,
+        ctx.lineWidth = 2,
+        ctx.beginPath(),
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2),
+        ctx.stroke(),
+        ctx.restore()
+      }
+              }
+            }
+            nodeIndex++
+          }
+        })
+      }
+
+      update() {
+        // Animate neural network
+        this.nodes.forEach((node, index) => {
+          node.x += (Math.random() - 0.5) * 0.5,
+          node.y += (Math.random() - 0.5) * 0.5
+        })
+      }
+
+      draw() {
+        if (!ctx) return,
+        ctx.save(),
+
+        ctx.restore()
+      }
+    }
+
     // Initialize
     for (let i = 0, i < 100, i++) {
       particles.push(new Particle())
     }
-    for (let i = 0, i < 8, i++) {
+for (let i = 0, i < 8, i++) {
       quantumFields.push(new QuantumField())
     }
     neuralNetworks.push(new NeuralNetwork());
@@ -849,11 +910,60 @@ if ( {) {
         className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"
         animate={{
           scale: [1, 1.2, 1];
+
+    neuralNetworks.push(new NeuralNetwork()),
+
+    const animate = () => {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
+        }
+      }
+      ctx.restore(),
+
+      animationFrameId = requestAnimationFrame(animate)
+    },
+
+    animate(),
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight
+    },
+
+    window.addEventListener('resize', handleResize),
+
+    return () => {
+      window.removeEventListener('resize', handleResize),
+      cancelAnimationFrame(animationFrameId)
+    }
+  }, []),
+
+  return (
+    <div className={`relative min-h-screen overflow-hidden ${className}`}>
+      {/* Quantum Matrix Overlay */}
+      <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black&quot;>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+      </div>
+
+      {/* Animated Quantum Grid */}
+      <div className=&quot;absolute inset-0 opacity-20&quot;>
+        <div className=&quot;absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]&quot; />
+        <div className=&quot;absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]&quot; />
+      </div>
+
+      {_/* Floating Quantum Elements */}
+      <motion.div
+        className=&quot;absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl&quot;
+        animate={{
+          scale: [1, 1.2, 1],
+
           opacity: [0.2, 0.4, 0.2]}}
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: "easeInOut";
+ease: "easeInOut";
         }}
       />;
       <motion.div;
@@ -864,7 +974,7 @@ if ( {) {
         transition={{
           duration: 5,
           repeat: Infinity,
-          ease: "easeInOut",
+ease: "easeInOut",
           delay: 1;
         }}
       />;
@@ -876,7 +986,7 @@ if ( {) {
         transition={{
           duration: 6,
           repeat: Infinity,
-          ease: 'easeInOut',
+ease: 'easeInOut',
           delay: 2,          ease: "easeInOut",
           delay: 2;
         }}
@@ -966,7 +1076,7 @@ if ( {) {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'linear',          }}
+ease: 'linear',          }}
         />;
         <motion.div;
           className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 500 / 20 to - transparent';

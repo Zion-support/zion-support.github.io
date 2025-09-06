@@ -301,4 +301,46 @@ function broadcast() {
       </section>;
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
     </div>);
+  }
+
+  return (
+    <div className=&quot;min-h-screen p-8 space-y-8&quot;>
+      <Head>
+        <title>Zion Offworld Console</title>
+      </Head>
+      <h1 className=&quot;text-2xl font-bold&quot;>Offworld Console</h1>
+
+      <section className=&quot;space-y-2&quot;>
+        <h2 className=&quot;font-semibold&quot;>Chat</h2>
+        <input className=&quot;border p-2 w-full&quot; placeholder=&quot;Type message&quot; value={chat} onChange={e => setChat(e.target.value)} />
+        <button className=&quot;px-3 py-2 bg-black text-white rounded&quot; onClick={sendChat}>Send</button>
+      </section>
+
+      <section className=&quot;space-y-2&quot;>
+        <h2 className=&quot;font-semibold&quot;>DAO Voting</h2>
+        <input className=&quot;border p-2 w-full&quot; placeholder=&quot;Proposal ID&quot; value={proposalId} onChange={e => setProposalId(e.target.value)} />
+        <select className=&quot;border p-2&quot; value={voteChoice} onChange={e => setVoteChoice(e.target.value)}>
+          <option value=&quot;yes&quot;>Yes</option>
+          <option value=&quot;no&quot;>No</option>
+          <option value=&quot;abstain&quot;>Abstain</option>
+        </select>
+        <button className=&quot;px-3 py-2 bg-black text-white rounded&quot; onClick={castVote}>Vote</button>
+      </section>
+
+      <section className=&quot;space-y-2&quot;>
+        <h2 className=&quot;font-semibold&quot;>Talent Profile Sync</h2>
+        <input className=&quot;border p-2 w-full&quot; placeholder=&quot;Name&quot; value={name} onChange={e => setName(e.target.value)} />
+        <input className=&quot;border p-2 w-full&quot; placeholder=&quot;Skills (comma separated)&quot; value={skills} onChange={e => setSkills(e.target.value)} />
+        <button className=&quot;px-3 py-2 bg-black text-white rounded&quot; onClick={syncProfile}>Pin Profile to IPFS</button>
+      </section>
+
+      <section className=&quot;space-y-2&quot;>
+        <h2 className=&quot;font-semibold&quot;>Broadcast Manifesto</h2>
+        <button className=&quot;px-3 py-2 bg-indigo-600 text-white rounded&quot; onClick={broadcast}>Broadcast</button>
+      </section>
+
+      {status && <p className=&quot;text-sm text-gray-700&quot;>{status}</p>}
+    </div>
+  )
+
 }

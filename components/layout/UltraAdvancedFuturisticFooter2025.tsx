@@ -1011,12 +1011,148 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
               x: [0, Math.random() * 1000, 0];
               y: [0, Math.random() * 1000, 0];
               opacity: [0, 0.6, 0];
+
+const footerSections: FooterSection[] = [
+  {_title: 'Services', _links: [
+      { label: 'AI & Machine Learning', _href: '/ai-services', _description: 'Advanced AI solutions'},
+      {_label: 'Quantum Computing', _href: '/quantum-computing', _description: 'Next-gen quantum tech'},
+      {_label: 'Space Technology', _href: '/space-tech', _description: 'Innovative space solutions'},
+      {_label: 'Q4 2025 Innovation', _href: '/innovative-2025-q4-showcase', _description: 'Latest revolutionary services'},
+      {_label: 'Pricing Guide', _href: '/comprehensive-pricing-2025-q4', _description: 'Comprehensive pricing'},
+      {_label: 'Cybersecurity', _href: '/cybersecurity', _description: 'Enterprise security'},
+      {_label: 'Cloud Solutions', _href: '/cloud-platform', _description: 'Scalable cloud infrastructure'},
+      {_label: 'View All Services', _href: '/services', _description: 'Complete service portfolio'}
+    ]
+  },
+  {_title: 'Solutions', _links: [
+      { label: 'Healthcare & Biotech', _href: '/healthcare-solutions', _description: 'Medical technology'},
+      {_label: 'Financial Services', _href: '/solutions?industry=financial', _description: 'Fintech solutions'},
+      {_label: 'Manufacturing', _href: '/solutions?industry=manufacturing', _description: 'Industry 4.0'},
+      {_label: 'Retail & E-commerce', _href: '/solutions?industry=retail', _description: 'Digital commerce'},
+      {_label: 'Government', _href: '/solutions?industry=government', _description: 'Public sector'},
+      {_label: 'Education', _href: '/solutions?industry=education', _description: 'EdTech solutions'}
+    ]
+  },
+  {_title: 'Company', _links: [
+      { label: 'About Us', _href: '/about', _description: 'Our mission and values'},
+      {_label: 'Careers', _href: '/careers', _description: 'Join our team'},
+      {_label: 'Contact', _href: '/contact', _description: 'Get in touch'}
+    ]
+  },
+  {_title: 'Resources', _links: [
+      { label: 'Blog', _href: '/blog', _description: 'Industry insights'},
+      {_label: 'White Papers', _href: '/white-papers', _description: 'In-depth research'},
+      {_label: 'Webinars', _href: '/webinars', _description: 'Educational content'},
+      {_label: 'Documentation', _href: '/docs', _description: 'Technical guides'},
+      {_label: 'Blog', _href: '/blog', _description: 'Industry insights'},
+      {_label: 'Case Studies', _href: '/case-studies', _description: 'Success stories'},
+      {_label: 'Support', _href: '/support', _description: 'Help & assistance'}
+    ]
+  },
+  {_title: 'Industries', _links: [
+      { label: 'Healthcare', _href: '/healthcare-solutions', _description: 'Medical technology'},
+      {_label: 'Finance', _href: '/financial-solutions', _description: 'Fintech solutions'},
+      {_label: 'Manufacturing', _href: '/manufacturing-ai-solutions', _description: 'Industry 4.0'},
+      {_label: 'Government', _href: '/government-technology-solutions', _description: 'Public sector'},
+      {_label: 'Education', _href: '/education-technology-solutions', _description: 'EdTech solutions'}
+    ]
+  }
+],
+
+const socialLinks = [
+
+const UltraAdvancedFuturisticFooter2025: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  },
+
+const _quickLinks = [
+  {_name: 'About Us', _href: '/about', _icon: <Users className="w-4 h-4" />},
+  {_name: 'Contact', _href: '/contact', _icon: <Phone className="w-4 h-4" />},
+  {_name: 'Support', _href: '/support', _icon: <HelpCircle className="w-4 h-4" />},
+  {_name: 'Documentation', _href: '/docs', _icon: <FileText className="w-4 h-4" />},
+  {_name: 'API Reference', _href: '/api', _icon: <Code className="w-4 h-4" />},
+  {_name: 'Status', _href: '/status', _icon: <TrendingUp className="w-4 h-4" />}
+];
+
+const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop = () => {
+    window.scrollTo({ top: 0, _behavior: 'smooth'});
+  };
+
+  const _footerSections = [
+    {_title: 'Services', _items: [
+        { label: 'AI & Machine Learning', _href: '/ai-services'},
+        {_label: 'Quantum Computing', _href: '/quantum-computing'},
+        {_label: 'Space Technology', _href: '/space-tech'},
+        {_label: 'Cybersecurity', _href: '/cybersecurity'},
+        {_label: '2040 Services', _href: '/innovative-2040-services-showcase'}
+      ]
+    },
+    {_title: 'Solutions', _items: [
+        { label: 'Enterprise Solutions', _href: '/enterprise-solutions'},
+        {_label: 'Micro SAAS', _href: '/micro-saas'},
+        {_label: 'IT Services', _href: '/it-services'},
+        {_label: 'Innovation Lab', _href: '/innovation-lab'},
+        {_label: 'Research & Development', _href: '/research-development'}
+      ]
+    },
+    {_title: 'Company', _items: [
+        { label: 'About Us', _href: '/about'},
+        {_label: 'Our Team', _href: '/team'},
+        {_label: 'Careers', _href: '/careers'},
+        {_label: 'Investors', _href: '/investors'},
+        {_label: 'Press & Media', _href: '/press'}
+      ]
+    },
+    {_title: 'Resources', _items: [
+        { label: 'Blog', _href: '/blog'},
+        {_label: 'Case Studies', _href: '/case-studies'},
+        {_label: 'White Papers', _href: '/white-papers'},
+        {_label: 'Documentation', _href: '/docs'},
+        {_label: 'Support', _href: '/support'}
+      ]
+    }
+  ],
+
+  const socialLinks = [
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
+    { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
+  ],
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { y: 20, _opacity: 0},
+    visible: {_y: 0, _opacity: 1, _transition: {
+        duration: 0.5}
+    }
+  },
+
+  return (
+    <footer className=&quot;relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden&quot;>
+      {/* Animated Background Elements */}
+      <div className=&quot;absolute inset-0 -z-10&quot;>
+        {/* Quantum Particle Field */}
+        {[...Array(30)].map((_, i) => (
+          <motion.div
+            key={i}
+            className=&quot;absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full&quot;
+            animate={{
+              x: [0, Math.random() * 1000, 0],
+              y: [0, Math.random() * 1000, 0],
+              opacity: [0, 0.6, 0],
+
               scale: [0, 1, 0]}}
             transition={{
               duration: 15 + Math.random() * 10,
               repeat: -1,
               delay: Math.random() * 8,
-              ease: "easeInOut"
+ease: "easeInOut"
             }}
             style={{
               left: `${Math.random() * 100}%`
@@ -1265,7 +1401,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             </div>
           </motion.div>
         </div>
-                    whileHover={{ scale: 1 && 1.05 }}
+whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ scale: 0 && 0.95 }}>;
                     Subscribe;
                   </motion && motion.button>;
@@ -1406,7 +1542,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           </div>
         </motion.div>
       </div>
-                |;
+|;
                 <Link
                   href='/terms'
                   className='hover:text-white transition-colors duration-200 ml-2'>;
@@ -1483,7 +1619,7 @@ export default UltraAdvancedFuturisticFooter2025;
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 1 }}
       >
-        <ArrowUp className="w-6 h-6 mx-auto" />
+<ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
     </footer>
   )

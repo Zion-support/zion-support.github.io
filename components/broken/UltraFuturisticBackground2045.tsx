@@ -150,23 +150,34 @@ if (return) {
     // Create initial particles;
     for (let index = 0; i < 100; i++) {      particles.push ({      coordinate_x: number,
       coordinate_y: number,
+
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
+
+    // Particle system
+    const particles: Array<{
+      x: number,
+      y: number,
+
       vx: number,
       vy: number,
       size: number,
       color: string,
       alpha: number,
+
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,
         vy: (Math.random() - 0.5) * 2,
         size: Math.random() * 3 + 1,
-        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+
         alpha: Math.random() * 0.8 + 0.2,
         life: Math.random() * 100 + 50
       })
     }
-    // Animation loop
+// Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -492,12 +503,49 @@ if ( {) {
             duration: 20
             repeat: Infinity
             ease: 'linear',          }}      }
+
+        // Add glow effect
+        ctx.shadowColor = particle.color,
+        ctx.shadowBlur = 20,
+        ctx.fill(),
+        ctx.restore(),
+
+        // Remove dead particles and create new ones
+        if (particle.life <= 0) {
+          particles[index] = {
+            x: Math.random() * canvas.width, _y: Math.random() * canvas.height, _vx: (Math.random() - 0.5) * 2, _vy: (Math.random() - 0.5) * 2, _size: Math.random() * 3 + 1, _color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+            alpha: Math.random() * 0.8 + 0.2,
+            life: Math.random() * 100 + 50
+          }
+        }
+      }),
+
+      // Draw connecting lines between nearby particles
+      particles.forEach((particle1, i) => {
+        particles.slice(i + 1).forEach((particle2) => {
+          const dx = particle1.x - particle2.x
+          const dy = particle1.y - particle2.y
+          const distance = Math.sqrt(dx * dx + dy * dy)
+
+      animationRef.current = requestAnimationFrame(animate)
+    },
+
+    animate(),
+
+    // Handle resize
+    const handleResize = () => {
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight
+    },
+
+    window.addEventListener('resize', handleResize),
+
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', handleResize)
-      window.removeEventListener ('resize', handle_resize);
+window.removeEventListener ('resize', handle_resize);
     }
   }, [])
   return (
@@ -672,7 +720,7 @@ if ( {) {
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: 'easeInOut',          }}
+ease: 'easeInOut',          }}
           transition={{
             duration: 6,
             repeat: Infinity,
@@ -698,7 +746,7 @@ if ( {) {
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: 'easeInOut',          }}
+ease: 'easeInOut',          }}
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -721,7 +769,7 @@ if ( {) {
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: 'easeInOut',          }}
+ease: 'easeInOut',          }}
           transition={{
             duration: 4,
             repeat: Infinity,
@@ -738,7 +786,7 @@ if ( {) {
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: 'linear',
+ease: 'linear',
             ease: 'linear';
           }}
           transition={{
@@ -932,7 +980,7 @@ if ( {) {
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: 'linear',          }}
+ease: 'linear',          }}
         />;
       </div>;
     </div>);

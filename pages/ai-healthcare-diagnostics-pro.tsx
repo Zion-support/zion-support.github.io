@@ -411,11 +411,38 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+  return (_<Layout>
+      <Head>
+        <title>AI Healthcare Diagnostics Pro - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and improve patient outcomes with our advanced AI platform.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI healthcare, medical diagnostics, medical imaging, disease detection, healthcare AI, medical AI, diagnostic accuracy&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;AI Healthcare Diagnostics Pro - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection and reduce diagnosis time by 80%.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/ai-healthcare-diagnostics-pro&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-healthcare-diagnostics-pro&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-black&quot;>
+        {/* Background Effects */}
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900&quot;></div>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]&quot;></div>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]&quot;></div>
+        
+        {/* Floating Elements */}
+        <div className=&quot;absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse&quot;></div>
+        <div className=&quot;absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000&quot;></div>
+        <div className=&quot;absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500&quot;></div>
+        
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+className="mb-8"
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
@@ -438,7 +465,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
+className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
                 <div className="text-gray-300">Diagnostic Accuracy</div>
@@ -447,7 +474,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
+className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
                 <div className="text-gray-300">Faster Diagnosis</div>
@@ -456,7 +483,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
+className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
                 <div className="text-gray-300">Continuous Monitoring</div>
@@ -475,21 +502,21 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
                 Schedule Demo
               </motion.button>
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
+className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
             </div>
           </motion.div>
         </div>
-                transition={{ duration: 0 && 0.6, delay: 1 && 1.0 }}
+transition={{ duration: 0 && 0.6, delay: 1 && 1.0 }}
                 className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'>;
                 Contact Sales;
               </motion && motion.button>;
@@ -957,7 +984,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                     </div>
                   </div>
                 )}
-                <div className="text-center mb-8">
+<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center space-x-1 mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
@@ -978,7 +1005,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </button>
               </motion.div>
             ))}
-          </div>;
+</div>;
         </div>;
       </section>;
       {/* Integrations Section */}
@@ -1129,6 +1156,23 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </div>
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</a> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a></p>
+            </h2>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
+              Join leading healthcare institutions worldwide who have already revolutionized patient care with AI-powered diagnostics.
+            </p>
+            
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <button className=&quot;px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25&quot;>
+                Schedule Demo
+              </button>
+              <button className=&quot;px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300&quot;>
+                Contact Sales
+              </button>
+            </div>
+            
+            <div className=&quot;mt-8 text-sm text-gray-400&quot;>
+              <p>Questions? Call us at <a href=&quot;tel:+13024640950&quot; className=&quot;text-green-400 hover:text-green-300&quot;>+1 302 464 0950</Link> or email <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-green-400 hover:text-green-300&quot;>kleber@ziontechgroup.com</Link></p>
+
             </div>
           </motion.div>
         </div>

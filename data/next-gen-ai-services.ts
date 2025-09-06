@@ -54,7 +54,7 @@ export const nextGenAIServices: NextGenAIService[] = [
 }
 export const nextGenAIServices: NextGenAIService[] = [;
   // Advanced AI & Neural Network Services;
-  {
+{
     id: 'neural - quantum - brain - interface',
     name: 'Neural Quantum Brain Interface',
     tagline:;
@@ -489,7 +489,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
     reviews: 95;
   },
   // AI Autonomous Research Platform;
-  {
+{
     id: 'ai - autonomous - research - platform',
     name: 'AI Autonomous Research Platform',
     tagline: 'Fully autonomous AI research with breakthrough discoveries',
@@ -931,7 +931,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
     reviews: 23;
   },
   // AI Quantum Computing Platform;
-  {
+{
     id: 'ai - quantum - computing - platform',
     name: 'AI Quantum Computing Platform',
     tagline: 'Accessible quantum computing with AI optimization',

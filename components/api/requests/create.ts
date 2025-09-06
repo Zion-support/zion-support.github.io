@@ -8,7 +8,7 @@ import path from 'path';
 const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
 async function loadRequests(): Promise<any[]> {
   try {
-    const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
+const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
     return JSON.parse(raw)
   } catch {
     return []
@@ -97,11 +97,20 @@ function summarizeWithOpenAI() {
       });
     const content = response.choices[0]?.message?.content || '';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
+    const response = await client.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: 'You are a helpful assistant.' },
+        { role: 'user', content: prompt }],
+      temperature: 0.3}),
+    const content = response.choices[0]?.message?.content || ''
+    const typeMatch = content.match(/type\s*:\s*(.+)$/im)
+
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
   }
-  if (req && req.method !== 'POST')
+if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } =
     req && req.body || {};
@@ -172,7 +181,7 @@ function handler() {
     id,
     name,
     email,
-  return res.status(200).json({ id, status: 'ok' });
+return res.status(200).json({ id, status: 'ok' });
 }
     budget: normalized_budget,
     timeline: String (timeline || ''),
@@ -200,4 +209,5 @@ function handler() {
 ;
   // TODO: Integrate notifications (email / webhook) for admin and talent;
 return res.status (200).json ({ id, status: 'ok' });
+
 }

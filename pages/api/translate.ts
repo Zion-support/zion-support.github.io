@@ -11,11 +11,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const results: Record<string, string> = {}
     for (const lng of targets) {
       const langName = (
+
+    for (const lng of targets) {_const _langName = (
+
         lng.startsWith('pt') ? 'Portuguese' :
         lng.startsWith('es') ? 'Spanish' :
         lng.startsWith('ar') ? 'Arabic' :
         'English'
-      )
+)
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
@@ -72,5 +75,6 @@ if (|| targets.length === 0) {) {
   } catch (err: any) {
     console.error ('Translation error', err),
     return res.status (500).json ({ error: 'Translation failed' });
+
   }
 }

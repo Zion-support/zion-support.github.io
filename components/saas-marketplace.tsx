@@ -44,7 +44,7 @@ import {
   ArrowRight,
   Star,
   Check,
-  ExternalLink,} from 'lucide-react';import {
+ExternalLink,} from 'lucide-react';import {
   Zap;
   Shield,
   BarChart3,
@@ -301,13 +301,17 @@ export default function SaaSMarketplacePage() {;
       ],;
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],;
     },;
+
+export default function SaaSMarketplacePage() {_const _microSaasServices = [
+    {
+
       name: 'Zapier',
       description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',
       category: 'Automation',
       pricing: 'Free - $19.99/month',
       rating: 4.8,
       users: '2M+',
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
+icon: <Zap className="w-8 h-8 text-orange-400" />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
         '5000+ app integrationsVisual workflow builderMulti-step automationsScheduled triggersError handlingTeam collaboration'
@@ -367,7 +371,7 @@ export default function SaaSMarketplacePage() {;
       useCase: 'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.',
       pros: ['Great UXPowerful featuresGood integrationsMobile apps'],
       cons: ['ExpensiveComplex pricingCan be overwhelming']
-    };
+};
     {
       name: 'Mixpanel',
       description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
@@ -375,7 +379,7 @@ export default function SaaSMarketplacePage() {;
       pricing: 'Free - $25/month',
       rating: 4.5,
       users: '26K+',
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
         'User behavior trackingFunnel analysisA/B testingReal-time dataCustom eventsMobile analytics'
@@ -392,7 +396,7 @@ export default function SaaSMarketplacePage() {;
       pricing: 'Free - $57/month',
       rating: 4.7,
       users: '35K+',
-      icon: <Database className="w-8 h-8 text-green-400" />,
+icon: <Database className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
         'Fully managed MongoDBGlobal clustersAuto-scalingBackup & recoverySecurity & complianceMonitoring & alerting'
@@ -496,7 +500,7 @@ export default function SaaSMarketplacePage() {;
     <>
       <Head>
         <title>SaaS Marketplace - Zion Tech Group</title>
-        <meta name="description" content="Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more." />
+<meta name="description" content="Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more." />
         <meta property="og:title" content="SaaS Marketplace - Zion Tech Group" />
         <meta property="og:description" content="Curated selection of the best micro SaaS services for modern businesses." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -544,7 +548,7 @@ export default function SaaSMarketplacePage() {;
               </Button>
             </div>
           </div>
-          {/* Stats */}
+{/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
@@ -573,7 +577,7 @@ export default function SaaSMarketplacePage() {;
           </div>
         </div>
       </section>
-                className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
+className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
                 Get Recommendations;
               </Button>;
             </div>;
@@ -1165,7 +1169,7 @@ function SaaSMarketplacePage() {
               }
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredServices.map((service, index) => (
               <Card
                 key={index}
@@ -1178,7 +1182,7 @@ function SaaSMarketplacePage() {
                       {service.icon}
                     </div>
                   </div>
-                  <div className="flex-1">
+<div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
                         {service.name}
@@ -1207,7 +1211,7 @@ function SaaSMarketplacePage() {
                         ))}
                       </div>
                     </div>
-                    <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                       <Button
                         href={service.website}
                         variant="outline"
@@ -1229,7 +1233,7 @@ function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-                        className='group-hover:border-blue-500 group-hover:text-blue-400'>;
+className='group-hover:border-blue-500 group-hover:text-blue-400'>;
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
                       </Button>;
@@ -1352,7 +1356,7 @@ function SaaSMarketplacePage() {
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>              href="/services";
+className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>              href="/services";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl";

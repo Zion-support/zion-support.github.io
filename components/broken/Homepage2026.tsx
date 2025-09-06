@@ -143,11 +143,68 @@ const Homepage2026: React.FC = () => {
                 </Link>
                 <a href="mailto:kleber@ziontechgroup.com">
                   <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+
+const Homepage2026: React.FC = () => {_return (
+    <Layout>
+      {/* Main Content */}
+      <main className=&quot;relative z-10&quot;>
+        {/* Hero Section */}
+        <section className=&quot;min-h-screen flex items-center justify-center px-4 relative overflow-hidden&quot;>
+          {/* Background Elements */}
+          <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+            <div className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse&quot;></div>
+            <div className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000&quot;></div>
+            <div className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000&quot;></div>
+          </div>
+          
+          <div className=&quot;text-center max-w-4xl mx-auto relative z-10&quot;>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className=&quot;space-y-6&quot;
+            >
+              {_/* Company Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className=&quot;inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium&quot;
+              >
+                <Star className=&quot;w-4 h-4&quot; />
+                <span>Innovation Leader 2026</span>
+              </motion.div>
+              
+              <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
+                Zion Tech Group
+              </h1>
+              <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed&quot;>
+                Pioneering the future of technology with innovative micro SAAS services, cutting-edge IT infrastructure, and advanced AI solutions
+              </p>
+              
+              {/* Enhanced CTA Section */}
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-8&quot;>
+                <Link href=&quot;/comprehensive-2025-services-showcase&quot;>
+                  <button className=&quot;group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25&quot;>
+                    <span className=&quot;flex items-center gap-2&quot;>
+                      Explore Services
+                      <ArrowRight className=&quot;w-5 h-5 group-hover:translate-x-1 transition-transform&quot; />
+                    </span>
+                  </button>
+                </a>
+                <Link href=&quot;/services&quot;>
+                  <button className=&quot;px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;>
+                    All Services
+                  </button>
+                </a>
+                <a href=&quot;mailto:kleber@ziontechgroup.com&quot;>
+                  <button className=&quot;px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;>
+
                     Get Started
                   </button>
                 </a>
               </div>
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'>;
                 <Star className='w-4 h-4' />;
                 <span>Innovation Leader 2026</span>;
@@ -282,7 +339,7 @@ const Homepage2026: React.FC = () => {
             </motion.div>
           </div>
         </section>
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 className='flex items-center justify-center space-x-6 text-sm text-gray-400'>              >;
                 <div className="flex items-center space-x-2">;
                   <Shield className="w-4 h-4 text-green-400" />;
@@ -330,7 +387,7 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -342,7 +399,7 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-center"
+className="text-center"
               >
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Micro SAAS Solutions</h3>
@@ -354,7 +411,7 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-center"
+className="text-center"
               >
                 <div className="text-4xl mb-4">🏗️</div>
                 <h3 className="text-xl font-semibold text-white mb-2">IT Infrastructure</h3>
@@ -366,7 +423,7 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-center"
+className="text-center"
               >
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-semibold text-white mb-2">AI Automation</h3>
@@ -378,7 +435,7 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-center"
+className="text-center"
               >
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>
@@ -389,7 +446,7 @@ const Homepage2026: React.FC = () => {
             </div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
               <h2 className='text-4xl font-bold text-white mb-4'>;
                 Why Choose Zion Tech Group?;
@@ -494,7 +551,7 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">Our Service Portfolio</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1011,7 +1068,7 @@ const Homepage2026: React.FC = () => {
             </div>
           </div>
         </section>
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
+transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
                 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'>🧠</div>;
                 <h3 className='text-2xl font-semibold text-white mb-4'>;
@@ -1105,7 +1162,7 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+className="space-y-6"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -1137,7 +1194,7 @@ const Homepage2026: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3">
+<div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-green-400" />
                     <div>
                       <div className="text-sm text-gray-400">Phone</div>
@@ -1146,7 +1203,7 @@ const Homepage2026: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3">
+<div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-yellow-400" />
                     <div>
                       <div className="text-sm text-gray-400">Email</div>
@@ -1155,7 +1212,7 @@ const Homepage2026: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3">
+<div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-purple-400" />
                     <div>
                       <div className="text-sm text-gray-400">Address</div>
@@ -1167,7 +1224,7 @@ const Homepage2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-                        href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                         className='text-cyan-400 hover:underline font-medium'>                        kleber@ziontechgroup && ziontechgroup.com;
                       </a>;
                     </div>;

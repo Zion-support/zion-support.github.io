@@ -100,4 +100,7 @@ function UseTokensButton() {
         default_type={default_type}
       />;
     </>);
+    </>
+  )
+
 }

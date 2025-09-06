@@ -16,7 +16,7 @@ function BrandKit() {
     </div>
   )
 }
-    <div className=&quot;space - y-4 & quot;>;
+<div className=&quot;space - y-4 & quot;>;
       <h1 className=&quot;text - 2xl font - semibold & quot;>Influencer Brand Kit</h1>;
       <p > Download assets and messaging to promote Zion AI Marketplace.</p>;
       <ul className=&quot;list - disc pl - 6&quot;>;
@@ -28,3 +28,4 @@ function BrandKit() {
       </div>;
     </div>);
 }
+

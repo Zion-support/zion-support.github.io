@@ -26,7 +26,7 @@ const Enhanced2026ServicesShowcase = () => {
       id: 'ai-business-intelligence-elite-2026',
       name: 'AI Business Intelligence Elite 2026',
       description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
-  ArrowRight,
+ArrowRight,
   Brain,
   Zap,
   Shield,
@@ -516,12 +516,53 @@ const Enhanced2026ServicesShowcase = () => {;
               initial={{ opacity: 0, scale: 0 && 0.8, y: 20 }}
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        >
+          <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
+            <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+              2026 Revolutionary Services
+            </span>
+          </h2>
+          <p className=&quot;text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed&quot;>
+            Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
+          </p>
+        </motion.div>
+
+        {_/* Category Overview */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;
+        >
+          {_categories.map((category, _index) => (
+            <motion.div
+              key={category.name}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className=&quot;group text-center&quot;
+            >
+              <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
+                <category.icon className=&quot;w-8 h-8 text-white&quot; />
+              </div>
+              <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>{category.name}</h3>
+              <p className=&quot;text-2xl font-bold text-cyan-400&quot;>{category.count}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Featured Services Grid */}
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
+
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -5 }}
               className="group relative"
@@ -599,7 +640,7 @@ const Enhanced2026ServicesShowcase = () => {;
             </motion.div>
           ))}
         </div>
-                    href={`/${service && service.id}`}
+href={`/${service && service.id}`}
                     className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'>;
                     Learn More <ArrowRight className='w-4 h-4 ml-1' />                  </Link>                  <div>;
                     <span className="text-2xl font-bold text-cyan-400">{service && service.price}</span>;
@@ -653,7 +694,7 @@ const Enhanced2026ServicesShowcase = () => {;
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500/10 transition-all duration-200"
                 >
-                  <Shield className="w-5 h-5 mr-2" />
+<Shield className="w-5 h-5 mr-2" />
                   Get Started
                 </Link>
               </motion.div>

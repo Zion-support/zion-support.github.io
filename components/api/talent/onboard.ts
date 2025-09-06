@@ -169,11 +169,24 @@ if ( {) {
   }
   try {
     const id = randomUUID ();
+  const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,
+  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST'),
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
+  try {
+    const id = randomUUID()
+
     const {
       fullName,
       professionalTitle,
       profilePicture,
-      full_name,
+full_name,
       professional_title,
       profile_picture,
       bio,
@@ -183,7 +196,7 @@ if ( {) {
       tools,
       availability,
       timezone,
-      fullName;
+fullName;
       professionalTitle;
       profilePicture;
       bio;
@@ -303,7 +316,7 @@ if ( {) {
       tools,
       availability,
       timezone,
-      hourly_rate: hourly_rate ? Number (hourly_rate) : null,
+hourly_rate: hourly_rate ? Number (hourly_rate) : null,
       portfolio_links,
       assets: {
         profile_image: savedProfileImagePath,
@@ -400,4 +413,6 @@ if ( {) {
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
 }
+  }
+
 }

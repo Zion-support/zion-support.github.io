@@ -45,7 +45,7 @@ import {
   Zap,
   Target,
   Lightbulb,
-  BookOpen,} from 'lucide-react';import {
+BookOpen,} from 'lucide-react';import {
   Rocket;
   DollarSign,
   Users,
@@ -75,12 +75,27 @@ import {
       features: [
         'CRM systemEmail marketingLead generationAnalytics & reportingMarketing automationFree tier available'
       ];
+
+export default function StartupToolsPage() {_const _startupTools = [
+    {
+      name: 'HubSpot',
+      description: 'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
+      category: 'Marketing & Sales',
+      pricing: 'Free - $45/month',
+      rating: 4.7,
+      users: '135K+',
+      icon: <Target className=&quot;w-8 h-8 text-orange-400&quot; />,
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      features: [
+        'CRM systemEmail marketingLead generationAnalytics & reportingMarketing automationFree tier available'
+      ],
+
       website: 'https://hubspot.com',
       useCase: 'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.',
       pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'],
       cons: ['Can get expensiveComplex for small teamsLimited customization'],
       bestFor: 'B2B startups, SaaS companies, marketing teams'
-    }
+}
     {
       name: 'Mailchimp'
       description:
@@ -240,7 +255,7 @@ function StartupToolsPage() {
       pros: ['Free tierEasy to useGood analyticsAffordable'],
       cons: ['Limited free featuresBasic schedulingLimited platforms'],
       bestFor: 'Social media managers, small businesses, content creators'
-    };
+};
     {
       name: 'Notion',
       description: 'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.',
@@ -359,7 +374,7 @@ function StartupToolsPage() {
       pricing: '2.9% + 30¢ per transaction',
       rating: 4.9,
       users: '1M+',
-      icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
+icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
       color: 'bg - gradient - to - br from - blue - 500 to - indigo - 600',
       features: [;
         'Global payment methods',
@@ -447,7 +462,7 @@ function StartupToolsPage() {
     <>
       <Head>
         <title>Startup Tools & Resources - Zion Tech Group</title>
-        <meta name="description" content="Essential tools and resources for startups and entrepreneurs. Curated selection of SaaS services to help your business grow." />
+<meta name="description" content="Essential tools and resources for startups and entrepreneurs. Curated selection of SaaS services to help your business grow." />
         <meta property="og:title" content="Startup Tools & Resources - Zion Tech Group" />
         <meta property="og:description" content="Essential tools and resources for startups and entrepreneurs to accelerate growth." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -495,7 +510,7 @@ function StartupToolsPage() {
               </Button>
             </div>
           </div>
-          {/* Stats */}
+{/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
@@ -524,7 +539,7 @@ function StartupToolsPage() {
           </div>
         </div>
       </section>
-                className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
+className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
                 Get Startup Advice;
               </Button>;
             </div>;
@@ -927,7 +942,7 @@ function StartupToolsPage() {
               }
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredTools.map((tool, index) => (
               <Card
                 key={index}
@@ -940,7 +955,7 @@ function StartupToolsPage() {
                       {tool.icon}
                     </div>
                   </div>
-                  <div className="flex-1">
+<div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors duration-300">
                         {tool.name}
@@ -969,7 +984,7 @@ function StartupToolsPage() {
                         ))}
                       </div>
                     </div>
-                    <div className="mb-4">
+<div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
                       <p className="text-sm text-gray-400">{tool.bestFor}</p>
                     </div>
@@ -995,7 +1010,7 @@ function StartupToolsPage() {
           </div>
         </div>
       </section>
-      {/* Startup Resources Section */}
+{/* Startup Resources Section */}
                         className='group-hover:border-orange-500 group-hover:text-orange-400'>;
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -1189,7 +1204,7 @@ function StartupToolsPage() {
           </div>
         </div>
       </section>
-                size='sm'>                Start Learning;
+size='sm'>                Start Learning;
               </Button>;
             </Card>;
             <Card className='text-center'>;
@@ -1327,6 +1342,21 @@ function StartupToolsPage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl"
+            <Button
+              href=&quot;/contact&quot;
+              variant=&quot;secondary&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-white text-orange-600 hover:bg-gray-100 shadow-2xl&quot;
+            >
+              Get Startup Consultation
+              <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+            </Button>
+            <Button
+              href=&quot;/saas-marketplace&quot;
+              variant=&quot;outline&quot;
+              size=&quot;lg&quot;
+              className=&quot;border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl&quot;
+
             >
               Explore More Tools
             </Button>
@@ -1334,7 +1364,7 @@ function StartupToolsPage() {
         </div>
       </section>
     </>
-              className='border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl'>              href="/saas-marketplace";
+className='border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl'>              href="/saas-marketplace";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl";

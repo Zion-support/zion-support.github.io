@@ -91,7 +91,7 @@ const footerSections = [
   {
     title: 'Featured Services',
     description: 'Our most popular and innovative solutions',
-    icon: <Star className="w-5 h-5 text-yellow-400" />,
+icon: <Star className="w-5 h-5 text-yellow-400" />,
     links: [
       { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform', featured: true },
       { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', featured: true },
@@ -113,7 +113,7 @@ const footerSections = [
       { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent' },
       { name: 'Managed Postgres HA', href: '/managed-postgres-ha' }
     ]
-  }
+}
   {
     title: 'AI & Consciousness'
     description: 'Revolutionary AI platforms and solutions'
@@ -413,7 +413,7 @@ const footer_sections = [;
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
-    icon: <Rocket className='w - 5 h - 5 text - emerald - 400' />,    links: [;
+icon: <Rocket className='w - 5 h - 5 text - emerald - 400' />,    links: [;
       { name: 'AI Content Generator', href: '/ai - content - generator' },
       { name: 'AI Code Review', href: '/ai - code - review' },
       { name: 'AI Meeting Transcriber', href: '/ai - meeting - transcriber - pro' },  {
@@ -503,7 +503,7 @@ const footer_sections = [;
   {
     title: 'Resources',
     description: 'Documentation, support, and learning',
-    icon: <BookOpen className='w - 5 h - 5 text - cyan - 400' />,    links: [      { name: 'Energy & Utilities', href: '/energy - utilities - solutions' },
+icon: <BookOpen className='w - 5 h - 5 text - cyan - 400' />,    links: [      { name: 'Energy & Utilities', href: '/energy - utilities - solutions' },
       { name: 'Biotech AI Research', href: '/biotech - ai - research - platform' }
     ];
   }
@@ -915,6 +915,26 @@ const UltraFuturisticFooter2035: React.FC = () => {
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
             `;
+    ]
+  }
+],
+
+const socialLinks = [
+
+const UltraFuturisticFooter2035: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  },
+        
+        {_/* Animated grid */}
+        <motion.div
+          className=&quot;absolute inset-0 opacity-5&quot;
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
+            `,
+
             backgroundSize: '200px 200px'
           }}
           animate={{
@@ -926,7 +946,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
           }}
         />
       </div>
-      <div className="relative z-10">
+<div className="relative z-10">
         {/* Main Footer Content */}
         <div className='container mx-auto px-4 py-20'>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8'>;
@@ -1060,7 +1080,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="space-y-6"
+className="space-y-6"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
@@ -1242,6 +1262,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 aria-label="Scroll to top"
               >
                 <ArrowUp className="w-5 h-5" />
+              >
+                <ArrowUp className=&quot;w-5 h-5&quot; />
+
               </button>
             </div>
           </motion.div>

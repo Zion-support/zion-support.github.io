@@ -1,3 +1,4 @@
+
 import { 
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
@@ -383,11 +384,89 @@ function AIFinancialPlanningPlatform() {
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+export default function AIFinancialPlanningPlatform() {_const _features = [
+    {
+      icon: <DollarSign className=&quot;w-6 h-6&quot; />,
+      title: 'AI-Powered Financial Analysis',
+      description: 'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
+    },
+    {
+      icon: <TrendingUp className=&quot;w-6 h-6&quot; />,
+      title: 'Predictive Financial Planning',
+      description: 'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'
+    },
+    {
+      icon: <Target className=&quot;w-6 h-6&quot; />,
+      title: 'Goal-Based Planning',
+      description: 'Personalized financial planning based on your specific goals, timeline, and risk tolerance.'
+    },
+    {
+      icon: <Zap className=&quot;w-6 h-6&quot; />,
+      title: 'Automated Portfolio Management',
+      description: 'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'
+    },
+    {
+      icon: <Shield className=&quot;w-6 h-6&quot; />,
+      title: 'Risk Assessment & Management',
+      description: 'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'
+    },
+    {
+      icon: <BarChart3 className=&quot;w-6 h-6&quot; />,
+      title: 'Real-Time Financial Insights',
+      description: 'Live financial data, market analysis, and personalized recommendations updated in real-time.'
+    }
+  ],
+
+  const benefits = [
+    'Increase investment returns by 25%Reduce financial planning time by 70%Improve risk-adjusted returns by 40%Optimize tax efficiency by 30%Reduce portfolio volatility by 35%Improve financial goal achievement by 50%Reduce financial planning costs by 60%Gain professional-grade financial insights'
+  ],
+
+					<div className=&quot;mt-12&quot;>
+						<h2 className=&quot;text-2xl font-semibold&quot;>Pricing</h2>
+						<div className=&quot;mt-6 grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+							<div className=&quot;rounded-2xl border border-emerald-400/30 p-6&quot;>
+								<h3 className=&quot;text-xl font-bold&quot;>Starter</h3>
+								<p className=&quot;mt-2 text-gray-300&quot;>Up to 5 users, core models, board pack.</p>
+								<p className=&quot;mt-4 text-3xl font-bold&quot;>$390<span className=&quot;text-base font-normal text-gray-300&quot;>/mo</span></p>
+							</div>
+							<div className=&quot;rounded-2xl border border-cyan-400/30 p-6&quot;>
+								<h3 className=&quot;text-xl font-bold&quot;>Growth</h3>
+								<p className=&quot;mt-2 text-gray-300&quot;>25 users, consolidation, Snowflake/NetSuite.</p>
+								<p className=&quot;mt-4 text-3xl font-bold&quot;>$1,290<span className=&quot;text-base font-normal text-gray-300&quot;>/mo</span></p>
+							</div>
+							<div className=&quot;rounded-2xl border border-amber-400/30 p-6&quot;>
+								<h3 className=&quot;text-xl font-bold&quot;>Enterprise</h3>
+								<p className=&quot;mt-2 text-gray-300&quot;>Advanced governance, custom models, SSO.</p>
+								<p className=&quot;mt-4 text-3xl font-bold&quot;>Custom</p>
+							</div>
+						</div>
+						<p className=&quot;mt-4 text-sm text-gray-400&quot;>Market references: <a className=&quot;underline hover:text-cyan-300&quot; href=&quot;https://www.workday.com/en-us/products/planning/adaptive-planning.html&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Workday Adaptive</a>, <a className=&quot;underline hover:text-cyan-300&quot; href=&quot;https://www.anaplan.com/pricing/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Anaplan</a>, <a className=&quot;underline hover:text-cyan-300&quot; href=&quot;https://pigment.com/pricing&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Pigment</a>.</p>
+					</div>
+
+  return (_<>
+      <Head>
+        <title>AI Financial Planning Platform | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Intelligent financial planning and wealth management with AI. Personalized plans, portfolio optimization, and risk management.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI financial planning, financial planning, wealth management, portfolio optimization, investment planning, financial advisor&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;AI Financial Planning Platform | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Intelligent financial planning and wealth management with AI.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/ai-financial-planning-platform&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-financial-planning-platform&quot; />
+      </Head>
+
+      <div className=&quot;min-h-screen bg-black text-white&quot;>
+        {/* Hero Section */}
+        <section className=&quot;relative pt-32 pb-20 overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20&quot;></div>
+          <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+className="text-center"
             >
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4">
@@ -412,7 +491,7 @@ function AIFinancialPlanningPlatform() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
+className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
                 >
                   Watch Demo
                 </motion.button>
@@ -420,7 +499,7 @@ function AIFinancialPlanningPlatform() {
             </motion.div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}
+transition={{ duration: 0 && 0.8 }}
               className='text-center'>;
               <div className='flex items-center justify-center mb-6'>;
                 <div className='w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4'>;
@@ -522,7 +601,7 @@ function AIFinancialPlanningPlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Financial Planning Features
@@ -672,7 +751,7 @@ function AIFinancialPlanningPlatform() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group"
+className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group"
                 >
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-yellow-400" />
@@ -701,7 +780,7 @@ function AIFinancialPlanningPlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Financial Planning Solutions
@@ -885,7 +964,7 @@ function AIFinancialPlanningPlatform() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-            </div>;
+</div>;
           </div>;
         </section>;
         {/* CTA Section */}
@@ -917,7 +996,8 @@ function AIFinancialPlanningPlatform() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover: bg-yellow-500/10 transition-all duration-200"
+className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover: bg-yellow-500/10 transition-all duration-200"
+
                 >
                   Contact Sales
                 </motion.button>
@@ -927,7 +1007,7 @@ function AIFinancialPlanningPlatform() {
         </section>
       </div>
     </>
-              transition={{ duration: 0 && 0.8 }}>;
+transition={{ duration: 0 && 0.8 }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Transform Your Financial Planning?;
               </h2>;

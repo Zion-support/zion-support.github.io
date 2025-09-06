@@ -35,3 +35,21 @@ const LandingPageGenerator: NextPage = () => {
     </div>);
 },
 export default LandingPageGenerator,
+    <div>
+      <Head>
+        <title>LandingPageGenerator - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;LandingPageGenerator service&quot; />
+      </Head>
+      
+      <main className=&quot;space-y-4&quot;>
+        <h1>LandingPageGenerator</h1>
+        <p>Service details coming soon...</p>
+        <UseTokensButton serviceId=&quot;landing-page-generator&quot; />
+        <Link href=&quot;/services&quot;>Back to Services</Link>
+      </main>
+    </div>
+  )
+},
+
+export default LandingPageGenerator
+

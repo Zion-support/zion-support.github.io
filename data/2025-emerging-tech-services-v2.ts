@@ -1,5 +1,5 @@
 export interface EmergingTechService {
-    trial_days: number;
+trial_days: number;
     setup_time: string;
     enterprise: number;
   }

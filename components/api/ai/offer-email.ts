@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-  try {
+try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `Start Date: ${startDate || 'TBD'}\n` +
     `Company: ${companyName || 'Your Company'}\n` +
     `Notes: ${notes || ''}\n` +
-    `Include signature and next steps.`;
+`Include signature and next steps.`;
   const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status(200).json({ email: text })
 }
@@ -98,4 +98,5 @@ function handler() {
     'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });  const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });
+
 }

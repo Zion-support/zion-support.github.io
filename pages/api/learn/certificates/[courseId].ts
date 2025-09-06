@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-  size: 'A4', margin: 50;
+size: 'A4', margin: 50;
 });
 // Zion certificate template (simple) doc && doc.rect (0, 0, doc && doc.page.width, doc && doc.page.height) .fill ('#0f172a');
 doc && doc.fill ('#ffffff');
@@ -52,7 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(0.5);
     doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
     doc.moveDown(1.5);
-    doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+doc.fontSize(14).text(`This certifies that`, { align: 'center' });
     doc.moveDown(0.5);
     doc.fontSize(22).text(user.name |user.userId, { align: 'center' });
     doc.moveDown(0.5);
@@ -60,7 +60,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(0.5);
     doc.fontSize(20).text(course.title, { align: 'center' });
     doc.moveDown(0.5);
-    doc && doc.rect(0, 0, doc && doc.page.width, doc && doc.page.height).fill('#0f172a');
+doc && doc.rect(0, 0, doc && doc.page.width, doc && doc.page.height).fill('#0f172a');
     doc && doc.fill('#ffffff');
     doc
       .fontSize(28)

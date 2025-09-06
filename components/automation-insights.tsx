@@ -99,7 +99,7 @@ function AutomationInsightsPage() {
     {
       metric: '99.9%',
       label: 'Uptime',
-      description: 'Reliable automation performance',    {
+description: 'Reliable automation performance',    {
       metric: '99.9%',
       label: 'Uptime',
       description: 'Reliable automation performance';
@@ -117,7 +117,7 @@ function AutomationInsightsPage() {
     {
       metric: '40%',
       label: 'Efficiency Gain',
-      label: 'Average improvement across projects',
+label: 'Average improvement across projects',
     },
     {
       metric: '2, 960+',
@@ -214,11 +214,43 @@ function AutomationInsightsPage() {
                     >
                       Read More <span className="ml-1">→</span>
                     </Link>
+
+  return (_<>
+      <Head>
+        <title>Automation Insights | Zion Tech Group - AI Automation Expertise</title>
+        <meta name=&quot;description&quot; content=&quot;Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Automation Insights | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Expert insights on AI automation, autonomous systems, and industry trends.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+      
+      <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
+        <main className=&quot;container mx-auto px-6 py-12&quot;>
+          <section className=&quot;text-center mb-16&quot;>
+            <h1 className=&quot;text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;>
+              Automation Insights
+            </h1>
+            <p className=&quot;text-xl text-white/80 max-w-3xl mx-auto&quot;>
+              Deep insights into AI automation, autonomous systems, and the future of intelligent technology
+            </p>
+          </section>
+
+          <section className=&quot;mx-auto max-w-7xl&quot;>
+            {/* Success Metrics */}
+            <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16&quot;>
+              <h2 className=&quot;text-3xl font-bold mb-8 text-center text-cyan-400&quot;>Our Automation Success</h2>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
+                {successMetrics.map((item, index) => (
+                  <div key={index} className=&quot;text-center&quot;>
+                    <div className=&quot;text-4xl font-bold text-fuchsia-400 mb-2&quot;>{item.metric}</div>
+                    <div className=&quot;text-lg font-semibold text-white mb-1&quot;>{item.label}</div>
+                    <div className=&quot;text-sm text-white/70&quot;>{item.description}</div>
+
                   </div>
                 ))}
               </div>
             </div>
-                      href={`/blog/${trend && trend.id}`}
+href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends && automationTrends.map((trend, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
@@ -266,7 +298,7 @@ function AutomationInsightsPage() {
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
-                </Link>
+</Link>
                 <Link
                   href="/case-studies"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
@@ -279,7 +311,7 @@ function AutomationInsightsPage() {
         </main>
       </div>
     </>
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'>              </p>;
+className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'>              </p>;
               <div className="flex flex-wrap justify-center gap-4">;
                 <Link
                   href="/contact"

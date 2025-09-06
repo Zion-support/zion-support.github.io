@@ -852,11 +852,114 @@ const supportLinks = [;
             <AnimatePresence>;
               {expanded_sections.has (section.title) && (
                 <motion.div;
+    ]
+  }
+],
+
+const resources = [
+
+const supportLinks = [
+  { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
+  { name: 'Documentation', href: '/docs', description: 'Technical guides' },
+  { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' },
+  { name: 'Status Page', href: '/status', description: 'Service status' },
+  { name: 'Training', href: '/training', description: 'Learn our platforms' },
+  { name: 'Community', href: '/community', description: 'Connect with users' }
+],
+
+  const toggleSection = (title: string) => {
+    const newExpanded = new Set(expandedSections)
+    if (newExpanded.has(title)) {
+      newExpanded.delete(title)
+    } else {
+      newExpanded.add(title)
+    }
+    setExpandedSections(newExpanded)
+  },
+
+  const _filteredServices = sidebarItems.flatMap(item =>
+    item.children?.filter(child =>
+      child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      child.description?.toLowerCase().includes(searchQuery.toLowerCase())
+    ) || []
+  ),
+
+  return (
+    <motion.aside
+      initial={{ x: -300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: &quot;easeOut&quot; }}
+      className=&quot;fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/50 scrollbar-track-transparent&quot;
+    >
+      {/* Header */}
+      <div className=&quot;sticky top-0 bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 p-4&quot;>
+        <div className=&quot;flex items-center space-x-3 mb-4&quot;>
+          <div className=&quot;relative&quot;>
+            <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center&quot;>
+              <Zap className=&quot;w-6 h-6 text-white&quot; />
+            </div>
+            <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50&quot;></div>
+          </div>
+          <div>
+            <h2 className=&quot;text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent&quot;>
+              Zion Tech Group
+            </h2>
+            <p className=&quot;text-xs text-gray-400&quot;>Navigation</p>
+          </div>
+        </div>
+
+        {/* Contact Info */}
+        <div className=&quot;space-y-2 text-xs text-gray-300&quot;>
+          <div className=&quot;flex items-center space-x-2&quot;>
+            <Phone className=&quot;w-3 h-3 text-cyan-400&quot; />
+            <span>{contactInfo.mobile}</span>
+          </div>
+          <div className=&quot;flex items-center space-x-2&quot;>
+            <Mail className=&quot;w-3 h-3 text-cyan-400&quot; />
+            <span>{contactInfo.email}</span>
+          </div>
+          <div className=&quot;flex items-center space-x-2&quot;>
+            <Globe className=&quot;w-3 h-3 text-cyan-400&quot; />
+            <span>{contactInfo.website}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation Sections */}
+      <div className=&quot;p-4 space-y-2&quot;>
+        {sidebarSections.map((section) => (
+          <div key={section.title} className=&quot;space-y-1&quot;>
+            <button
+              onClick={() => toggleSection(section.title)}
+              className=&quot;w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white hover:bg-cyan-500/10 rounded-lg transition-all duration-200 group&quot;
+            >
+              <div className=&quot;flex items-center space-x-3&quot;>
+                <div className=&quot;text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200&quot;>
+                  {section.icon}
+                </div>
+                <span className=&quot;font-medium&quot;>{section.title}</span>
+                {section.badge && (
+                  <span className=&quot;px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full&quot;>
+                    {section.badge}
+                  </span>
+                )}
+              </div>
+              {expandedSections.has(section.title) ? (
+                <ChevronDown className=&quot;w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200&quot; />
+              ) : (
+                <ChevronRight className=&quot;w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200&quot; />
+              )}
+            </button>
+
+            <AnimatePresence>
+              {expandedSections.has(section.title) && (
+                <motion.div
+
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.2 }}
-            </button>;
+</button>;
             <AnimatePresence>;
               {expandedSections && expandedSections.has(section && section.title) && (;
                 <motion&& motion.div
@@ -1075,7 +1178,7 @@ const supportLinks = [;
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-                    className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30";
+className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30";
                   >;
                     <div className="text - 2xl font - bold text - white mb - 1">{stat.value}</div>;
                     <div className="text - xs text - gray - 400">{stat.label}</div>;
@@ -1241,7 +1344,7 @@ const supportLinks = [;
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
-                          className="ml - 8 mt - 2 space - y-1";
+className="ml - 8 mt - 2 space - y-1";
                         >;
                           {item.children?.map ((child) => (
                             <Link;

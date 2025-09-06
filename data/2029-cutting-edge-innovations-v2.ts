@@ -356,7 +356,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [;
     reviews: 15,
   },
   // Autonomous Business & Operations;
-  {
+{
     id: 'autonomous - business - ecosystem - 2029',
     name: 'Autonomous Business Ecosystem 2029',
     tagline: 'Fully autonomous business operations',

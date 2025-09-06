@@ -1,5 +1,5 @@
 export interface EnterpriseItService {
-    address: string;
+address: string;
   }
 ;
 export const enterpriseITServices: EnterpriseItService[] = [;

@@ -47,3 +47,20 @@ const BusinessIntelligenceChat: NextPage = () => {
 ;
 export default BusinessIntelligenceChat;
 ;
+    <div>
+      <Head>
+        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;BusinessIntelligenceChat service&quot; />
+      </Head>
+      
+      <main>
+        <h1>BusinessIntelligenceChat</h1>
+        <p>Service details coming soon...</p>
+        <a href=&quot;/services&quot;>Back to Services</a>
+      </main>
+    </div>
+  )
+},
+
+export default BusinessIntelligenceChat
+

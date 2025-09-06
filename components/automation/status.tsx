@@ -50,4 +50,11 @@ function AutomationStatusPage() {
         </div>) : (
         <div className="text - sm text - gray - 500">No status available yet.</div>)}
     </div>);
+        </div>
+      ) : (
+        <div className=&quot;text-sm text-gray-500&quot;>No status available yet.</div>
+      )}
+    </div>
+  )
+
 }

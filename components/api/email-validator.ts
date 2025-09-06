@@ -15,7 +15,7 @@ export default async function handler(
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
-  try {
+try {
     const { email } = req && req.body;
     if (!email || typeof email !== 'string') {
       return res && res.status(400).json({ error: 'Email is required' });
@@ -227,7 +227,7 @@ if ( {) {
     if (score < 50) {
       suggestions.push('This email may not be suitable for business use')
     }
-    const result: EmailValidationResult = {
+const result: EmailValidationResult = {
       email;
       isValid: score >= 70,
       score: Math.max(0, score);
@@ -268,5 +268,6 @@ if ( {) {
   } catch (error) {
     console.error ('Email validation error:', error);
     res.status (500).json ({ error: 'Internal server error' });
+
   }
 }

@@ -20,3 +20,15 @@ function AICustomerService() {
       </div>;
     </>);
 }
+      </Head>
+      <div className=&quot;min-h-screen bg-black text-white&quot;>
+        <section className=&quot;container mx-auto px-4 py-20&quot;>
+          <h1 className=&quot;text-4xl font-bold mb-6&quot;>AI Customer Service</h1>
+          <p className=&quot;text-gray-300&quot;>Automate and augment customer support experiences with AI agents and analytics.</p>
+        </section>
+      </div>
+    </>
+  )
+}
+  );}
+

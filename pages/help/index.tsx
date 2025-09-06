@@ -42,10 +42,11 @@ export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[
               .filter((a) => a.category === (cat as any))
               .map((a) => (
                 <Link key={a.id} href={`/help/${a.slug}`}>
-                  <a className="enhanced-card hover:shadow-md">
+<a className="enhanced-card hover:shadow-md">
                     <div className="font-medium">{a.title}</div>
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
                   </a>
+
                 </Link>
               ))}
           </div>
