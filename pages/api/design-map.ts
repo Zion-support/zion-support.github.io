@@ -1,4 +1,42 @@
+<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  try {
+    // Mock design map data
+    const designMap = {
+      route: '/design-system',
+      products: ['zion-os', 'zion-gpt', 'zion-marketplace'],
+      tokens: {
+        colors: {
+          primary: '#3B82F6',
+          secondary: '#8B5CF6',
+          accent: '#F59E0B'
+        },
+        typography: {
+          fontSizes: {
+            sm: '0.875rem',
+            base: '1rem',
+            lg: '1.125rem',
+            xl: '1.25rem'
+          }
+        }
+      }
+    };
+
+    res.status(200).json(designMap);
+    return;
+  } catch (e: unknown) {
+    res.status(500).json({
+      error: (e as Error)?.message || 'Failed to build design map'
+    });
+    return;
+  }
+}
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -7,6 +45,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {
   getZionDesignMap,
   buildTokenSet,
@@ -22,12 +63,16 @@ export default async function handler(
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   try {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -41,6 +86,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default async function handler(req, res) {
   try {
     const base = getZionDesignMap();
@@ -99,6 +147,7 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -106,11 +155,17 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();
       fetchLovableTokens()]);
     const tokens = {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -186,3 +241,12 @@ export default async function handler(req, res) {
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

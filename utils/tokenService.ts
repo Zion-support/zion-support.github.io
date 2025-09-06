@@ -8,6 +8,7 @@ import {
   
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -37,6 +38,8 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
 
   const currentBalance = getUserBalance(userId);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return addTransaction({
     userId,
     type: "earn",

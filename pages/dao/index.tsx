@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -91,6 +92,11 @@ export default function DaoMetrics(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -118,13 +124,19 @@ export default function DaoMetrics(req, res) {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="border rounded p-4">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
             <thead>
@@ -136,6 +148,7 @@ export default function DaoMetrics(req, res) {
             <tbody>
               {data.topHolders.map((h) => (
                 <tr key={h.address} className="border-t border-gray-200 dark:border-gray-800">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
                 </tr>
@@ -146,13 +159,19 @@ export default function DaoMetrics(req, res) {
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="grid lg:grid-cols-2 gap-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
           {data.activeProposals.length ? (
@@ -162,6 +181,7 @@ export default function DaoMetrics(req, res) {
               ))}
             </ul>
           ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div className="text-sm text-gray-600">No active proposals.</div>
@@ -174,11 +194,17 @@ export default function DaoMetrics(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+            <div className="text-sm text-gray-600">No active proposals.</div>
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -188,6 +214,11 @@ export default function DaoMetrics(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -199,6 +230,7 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -219,10 +251,16 @@ export default function DaoMetrics(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { useEffect, useState } from 'react',
 ;
 type Holder = { address: string, amount: string },
@@ -329,6 +367,7 @@ if (return <div > Error loading data</div>, ) {
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -339,3 +378,5 @@ if (return <div > Error loading data</div>, ) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

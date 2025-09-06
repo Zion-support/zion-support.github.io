@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     }
     const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
@@ -48,11 +49,16 @@ if ( {) {
   $2
 }
     const { error } = await supabase.from ("partners").insert ({
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       code,
       name,
 
   }
 }
+<<<<<<< HEAD
       niche: niche || null, socials: socials || null,
       payout_method: payout_method || null, status: 'pending',
       commission_rate: 0.15});
@@ -83,3 +89,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

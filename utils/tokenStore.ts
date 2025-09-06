@@ -7,6 +7,18 @@ export interface TokenTransaction {
 
 
 export interface TokenTransaction {;
+=======
+
+;
+
+export interface TokenTransaction {
+=======
+
+
+export interface TokenTransaction {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   userId: string;
   type: "earn" | "spend" | "transfer";
@@ -68,6 +80,7 @@ function load_config (): TokenConfig {
     return getDefaultConfig ();
   }
 }
+<<<<<<< HEAD
 export function getAllTransactions(): TokenTransaction[] {
   return loadTransactions();
 }

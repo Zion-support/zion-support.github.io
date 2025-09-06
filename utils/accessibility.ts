@@ -163,6 +163,18 @@ export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior =
   element.scrollIntoView({ behavior, block: 'start' });
 }
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+=======
+
+  ].join(', ');
+  return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[];
+
+};
+
+export const isElementInViewport = (element: HTMLElement): boolean => {;
+
+  const rect = element.getBoundingClientRect();
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
@@ -197,6 +209,7 @@ export const createSkipLink = (
       scrollToElement(target);
     }
   });
+<<<<<<< HEAD
   
 
   return skipLink;
@@ -204,3 +217,40 @@ export const createSkipLink = (
 
   return skipLink;
 };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    rect.top >= 0 &&;
+    rect.left >= 0 &&;
+    rect.bottom <= (window.inner_height || document.document_element.client_height) &&;
+    rect.right <= (window.inner_width || document.document_element.client_width));
+}
+;
+export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
+  element.scrollIntoView ({ behavior, block: 'start' });
+}
+;
+export const createSkipLink = (target_id: string, text: string = 'Skip to main content'): HTMLElement => {
+  const skip_link = document.create_element ('a');
+  skip_link.href = `#${target_id}`;
+  skip_link.text_content = text;
+  skip_link.class_name = 'sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg - blue - 600 text - white px - 4 py - 2 rounded z - 50';
+;
+  skip_link.addEventListener ('click', (e) => {
+    e.prevent_default ();
+    const target = document.getElementById (target_id);
+    // Check condition
+if ( {) {
+  $2
+}
+      target.focus ();
+      scrollToElement (target);
+    }
+  });
+;
+  return skip_link;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

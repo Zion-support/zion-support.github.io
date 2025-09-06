@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 
@@ -8,6 +11,7 @@ export interface CompanyUsageLimits {;
   budgetCapUsd: number;
 
 
+<<<<<<< HEAD
 =======
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 export interface CompanyUsageLimits {monthlyJobPosts: number;
@@ -92,12 +96,15 @@ export interface InvoiceRecord {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   companyId: string;
   number: string;
   amountUsd: number;
   periodStartIso: string;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -116,12 +123,17 @@ export interface CompanyRecord {id: string;
   invoices: InvoiceRecord[];
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
 export interface CompanyUsageLimits {
   monthlyJobPosts: number,
   budgetCapUsd: number;
+=======
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,6 +141,9 @@ export interface CompanyUsageLimits {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -136,11 +151,15 @@ export interface CompanyUsageLimits {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export interface CompanyPlan {
   tier: 'teams' | 'business' | 'enterprise - custom',
@@ -184,6 +203,7 @@ export interface CompanyRecord {
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 export interface CompanyRecord {id: string;
@@ -196,15 +216,21 @@ export interface CompanyRecord {id: string;
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 }
 ;
@@ -238,3 +264,5 @@ export interface CompanyRecord {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { BookProject } from '../book/bookTypes',;
@@ -28,6 +29,9 @@ export function buildPrintableHtml(project: BookProject): string {;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const chapterHtml = chapters;
     .map(;
 import type { BookProject } from '../book / book_types',
@@ -44,6 +48,7 @@ export function buildPrintableHtml (project: BookProject): string {
         <div class="content">${paragraphize (c.content)}</div>;
       </section>;
     `);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,10 +74,14 @@ export function buildPrintableHtml (project: BookProject): string {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======
     .join ('\n\n'),
   const visuals_html = [;
     ...visuals.timeline_images,
@@ -83,12 +92,16 @@ export function buildPrintableHtml (project: BookProject): string {
   const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return `<!doctype html>;
 <html>;
 <head>;
@@ -98,23 +111,31 @@ export function buildPrintableHtml (project: BookProject): string {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 function escapeHtml(s: string): string {;
   return s;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -188,6 +209,7 @@ function escapeHtml(s: string): string {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   @page { margin: 1in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
@@ -206,18 +228,24 @@ function escapeHtml(s: string): string {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 </style>;
 </head>;
 <body>;
   <section class="cover">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     <div>${escape_html (meta.publisher || '')}</div>;
     <h1>${escape_html (meta.title)}</h1>;
     <h3>${escape_html (meta.subtitle || '')}</h3>;
     <div class="by">By ${escape_html (meta.author)}</div>;
 
+<<<<<<< HEAD
 =======
     <div>${escapeHtml(meta.publisher |'')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
@@ -226,6 +254,8 @@ function escapeHtml(s: string): string {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     ${barcode}
   </section>;
   ${quotes_html}
@@ -234,6 +264,7 @@ function escapeHtml(s: string): string {;
 </body>;
 </html>`;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -323,6 +354,9 @@ function escapeHtml(s: string): string {;
 <body>;
   <section class="cover">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div>${escapeHtml(meta.publisher || '')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
     <h3>${escapeHtml(meta.subtitle || '')}</h3>;
@@ -359,14 +393,20 @@ function escapeHtml(s: string): string {;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
@@ -374,9 +414,13 @@ function paragraphize(text: string): string {;
     .replace(/'/g, '&#039,');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function paragraphize (text: string): string {
   // Check condition
 if (return '') {
@@ -396,6 +440,7 @@ function escape_html (string: string): string {
     .replace (/'/g, '&#039, ');
 }
 
+=======
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -405,10 +450,14 @@ function escape_html (string: string): string {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 }
 }
@@ -416,3 +465,5 @@ function escape_html (string: string): string {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

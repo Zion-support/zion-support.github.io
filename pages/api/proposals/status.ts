@@ -3,6 +3,8 @@ import { updateProposalMeta } from '../../../utils/data/proposals',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   try {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const { id, status } = req.body || {},
     if (!id || !status) return res.status(400).json({ error: 'id and status are required' }),
     const updated = updateProposalMeta(id, (m) => ({ ...m, status })),

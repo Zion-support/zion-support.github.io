@@ -1,31 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+import Button from './Button';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  // Keyboard shortcut for search (Ctrl+K)
-  React.useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        setIsSearchOpen(true);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
-    { name: "Pricing", href: "/pricing" },
-  ];
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="bg-gray-900 text-white shadow-lg fixed w-full top-0 z-40">
@@ -44,26 +27,8 @@ const Header: React.FC = () => {
             <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
             <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
             <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-            <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
             <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
           </nav>
-
-          {/* Search Button */}
-          <button
-            onClick={() => setIsSearchOpen(true)}
-            className="hidden lg:flex items-center justify-center w-10 h-10 mr-4 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group relative"
-            title="Search (Ctrl+K)"
-          >
-            <Search className="w-5 h-5" />
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
-              Ctrl+K
-            </div>
-          </button>
-
-          {/* Theme Toggle */}
-          <div className="hidden lg:flex items-center mr-4">
-            <ThemeToggle />
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -82,20 +47,14 @@ const Header: React.FC = () => {
               <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
               <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
               <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-              <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
               <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+              <Button variant="primary" size="small" className="w-full">
+                Get Started
+              </Button>
             </nav>
           </div>
         )}
       </div>
-
-      {/* Search Modal */}
-      {isSearchOpen && (
-        <SearchModal
-          isOpen={isSearchOpen}
-          onClose={() => setIsSearchOpen(false)}
-        />
-      )}
     </header>
   );
 };

@@ -1,9 +1,24 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
 ;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
   if (req.method === "GET") {
 
     return res.status(200).json({ config: state.config })
@@ -12,9 +27,13 @@ import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -42,14 +61,20 @@ import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
   } catch (error) {
     console.error("Error:", error);
@@ -74,6 +99,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     writeState(state),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -87,6 +113,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId
     writeState(state)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return res.status(200).json({ config: state.config })
     } catch (error) {
     console.error("Error:", error);

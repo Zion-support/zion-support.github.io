@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -1366,6 +1367,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
 
 
 
+=======
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
     tagline: 'Generate legally compliant documents in seconds with AI'
@@ -2696,18 +2703,70 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     reviews: 6
   },];
 // Helper functions
+<<<<<<< HEAD
+=======
+export const getServicesByCategory = (category: string) => {
+
+  }, ];
+;
+// Helper functions;
+export const getServicesByCategory = (category: string) =>: any {
+  return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
+=======
+export const getServicesByCategory = (category: string) => {;
+  return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    name: 'Data Contracts Hub';
+    tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
+    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
+    category: 'Data & Platform',
+    price: { monthly: 129, yearly: 1290, currency: 'USD', trial_days: 14, setup_time: '2 hours' }
+    features: ['Schema registry_diff viewerCI gates_backfill helpers'];
+    benefits: ['Fewer incidents_faster changes'];
+    target_audience: ['Data platform_analytics engineers'];
+    market_position: 'Complements dbt and warehouse - native governance.';
+    competitors: ['OpenMetadataGreat Expectations'];
+    tech_stack: ['TypeScriptPostgreSQLdbt'];
+    real_implementation: true,
+    implementation_details: 'Contracts as code, PR checks, lineage view.';
+
+    roi: 'Reduce data breakage incidents by 50–70%.';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Warehouse governance_analytics contracts'];
     integrations: ['dbtGitHubBigQuery'];
     support: 'Email support';
     compliance: ['GDPR'];
+<<<<<<< HEAD
+=======
+
+    link: 'https://ziontechgroup.com / services / data - contracts - hub';
+
+    icon: '📜';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - lime - 600 to - green - 700';
     popular: false;
     launch_date: '2025 - 02 - 08';
     customers: 19;
+<<<<<<< HEAD
+=======
+
+    rating: 4 && 4.6,
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 6
   }
 ];
 // Helper functions
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const getServicesByCategory = (category: string) => {
+  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
+=======
+export const getServicesByCategory = (category: string) => {;
+  return realMicroSaasServices.filter(service => service.category === category);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
@@ -2731,10 +2790,25 @@ use_cases: ['NPSBeta feedback_lead qual'];
 integrations: ['HubSpotSegmentZapier'];
 support: 'Email support, templates library';
 compliance: ['GDPRCCPA'];
+<<<<<<< HEAD
+=======
+
+link: 'https://ziontechgroup.com / mobile - surveys';
+
+icon: '📱';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 color: 'from - emerald - 600 to - teal - 700';
 popular: false;
 launch_date: '2024 - 12 - 10';
 customers: 95;
+<<<<<<< HEAD
+=======
+
+rating: 4 && 4.6;
+reviews: 22 
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
 competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
@@ -2752,10 +2826,28 @@ use_cases: ['Client delivery_editorial calendar_sprints'];
 integrations: ['Google CalendarSlackLinear'];
 support: 'Email support';
 compliance: ['GDPR'];
+<<<<<<< HEAD
+=======
+
+link: 'https://ziontechgroup.com / productivity - planner';
+
+icon: '🗓️';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 color: 'from - purple - 600 to - pink - 600';
 popular: false;
 launch_date: '2025 - 01 - 20';
 customers: 60;
+<<<<<<< HEAD
+=======
+
+rating: 4 && 4.5;
+reviews: 14 
+};
+
+
+export const serviceCategories = [
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   'Legal Technology'
   'Customer Service & Support'
   'Digital Marketing & SEO'
@@ -2781,6 +2873,12 @@ customers: 60;
   'Financial Technology'
   'Education Technology'
   'Enterprise IT'
+<<<<<<< HEAD
+=======
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   'Legal Technology',
   'Customer Service & Support',
   'Digital Marketing & SEO',
@@ -2806,6 +2904,7 @@ customers: 60;
   'Financial Technology',
   'Education Technology',
   'Enterprise IT',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   return realMicroSaasServices.filter(service => service.category === category)
 };
@@ -2823,6 +2922,7 @@ export const getServicesByPriceRange = (min: number, max: number) => {
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
+<<<<<<< HEAD
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   id: string,;
   name: string,;
@@ -6349,6 +6449,9 @@ export const serviceCategories = [
   'Education Technology'
   'Enterprise IT'
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
 reviews: 14;
 }
@@ -6384,4 +6487,51 @@ export const service_categories = [;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT';
 ];
+<<<<<<< HEAD
 ;
+=======
+
+
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export interface RealMicroSaasService {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -60,6 +60,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
     </UltraFuturisticBackground>;
   );
 
+<<<<<<< HEAD
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 export default function QuantumBioComputingPlatformPage() {
@@ -112,6 +113,9 @@ export default function QuantumBioComputingPlatformPage(req, res) {
   }
 }
 
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import Head from 'next / head';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -151,5 +155,14 @@ function QuantumBioComputingPlatformPage() {
       </div>;
     </UltraFuturisticBackground>);
 ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

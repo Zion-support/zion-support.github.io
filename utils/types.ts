@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -15,6 +16,11 @@ export interface Application {;
   createdAt: string;
   updatedAt?: string;
 }
+=======
+
+
+export interface Application {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   id: string;

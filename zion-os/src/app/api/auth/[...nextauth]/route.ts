@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import NextAuth from './next - auth';,
 import CredentialsProvider from './next - auth / providers / credentials';,
 import { PrismaAdapter  } from '@auth / prisma - adapter';,
@@ -11,6 +15,9 @@ import bcrypt from './bcryptjs';,
 const handler = NextAuth ({
   adapter: PrismaAdapter (prisma),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 import NextAuth from "next-auth",;
@@ -21,6 +28,7 @@ import bcrypt from "bcryptjs",;
 const handler = NextAuth({;
   adapter: PrismaAdapter(prisma),;
 
+<<<<<<< HEAD
 =======
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
@@ -29,6 +37,8 @@ import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 const handler = NextAuth({adapter: PrismaAdapter(prisma);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   providers: [;
     CredentialsProvider ({
       name: "credentials",
@@ -93,6 +103,7 @@ if ( {) {
       }
       return session;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }}
@@ -150,11 +161,15 @@ const handler = NextAuth({;
       return session;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }},;
   pages: {;
     signIn: "/auth/signin",;
     signUp: "/auth/signup"}}),;
 export { handler as GET, handler as POST };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -162,3 +177,7 @@ export { handler as GET, handler as POST };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,95 +1,37 @@
-import React from "react";
+import React from 'react';
+import Card from '../components/Card';
 
 const About: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('mission');
-
-  const teamMembers = [
-    {
-      name: "Dr. Sarah Chen",
-      role: "Chief Technology Officer",
-      expertise: "AI & Machine Learning",
-      image: "👩‍💼",
-      description: "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Head of Engineering",
-      expertise: "Cloud Architecture",
-      image: "👨‍💻",
-      description: "Expert in scalable cloud solutions and microservices architecture with a track record of successful enterprise deployments."
-    },
-    {
-      name: "Emily Johnson",
-      role: "Security Director",
-      expertise: "Cybersecurity",
-      image: "👩‍🔬",
-      description: "Cybersecurity specialist ensuring our solutions meet the highest security standards and compliance requirements."
-    },
-    {
-      name: "David Kim",
-      role: "Product Manager",
-      expertise: "Digital Transformation",
-      image: "👨‍💼",
-      description: "Driving product strategy and digital transformation initiatives for our enterprise clients."
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
-        <div className="prose max-w-4xl">
-          <p className="text-lg text-gray-600 mb-6">
-            Zion Tech is a leading technology company specializing in innovative
-            solutions for businesses of all sizes. We combine cutting-edge
-            technology with deep industry expertise to deliver exceptional
-            results.
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We are a leading technology company specializing in AI solutions, cybersecurity, 
+            and cloud infrastructure. Our mission is to transform businesses through 
+            innovative technology solutions.
           </p>
-          <p className="text-lg text-gray-600">
-            Our team of experienced professionals is dedicated to helping our
-            clients achieve their technology goals and drive business growth.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-              <p className="text-gray-600">
-                To empower businesses with AI-driven solutions that automate processes, enhance productivity, 
-                and drive exponential growth through innovative technology.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-              <p className="text-gray-600">
-                To be the world's leading provider of intelligent business solutions that transform 
-                how companies operate and compete in the digital age.
-              </p>
-            </div>
-          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <Card
+            title="Our Mission"
+            description="To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age."
+          />
+          <Card
+            title="Our Vision"
+            description="To be the global leader in AI-powered technology solutions, transforming industries and creating a smarter, more connected world."
+          />
+          <Card
+            title="Our Values"
+            description="We maintain the highest standards in everything we do, from our code quality to our customer service and support."
+          />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

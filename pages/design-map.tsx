@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     }
@@ -11,6 +12,8 @@ import Head from 'next/head';
 import { getZionDesignMap } from '../utils/design-map';
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
@@ -22,6 +25,7 @@ import React, { useMemo, useState } from "react";
 import Head from "next/head";
 import { getZionDesignMap } from "../utils/design-map";
 >>>>>>> main
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function DesignMapPage() {
@@ -32,6 +36,21 @@ export default function DesignMapPage() {
   const [isLoading, setIsLoading] = useState(false)
 
   async function requestWireframe() {
+=======
+export default function DesignMapPage() {
+  const designMap = useMemo(() => getZionDesignMap(), []);
+  const [screenName, setScreenName] = useState("");
+  const [role, setRole] = useState("Talent");
+  const [suggestion, setSuggestion] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  async function requestWireframe() {
+<<<<<<< HEAD
+    if (!screenName) return
+    setIsLoading(true)
+    setSuggestion(null)
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function DesignMapPage(req, res) {
   try {
   const designMap = useMemo(() => getZionDesignMap(), []);
@@ -41,12 +60,21 @@ export default function DesignMapPage(req, res) {
   const [isLoading, setIsLoading] = useState(false);
   async function requestWireframe() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!screenName) return;
     setIsLoading(true);
     setSuggestion(null);
+=======
+    if (!screenName) return;
+    setIsLoading(true);
+    setSuggestion(null);
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     try {
 
       const res = await fetch('/api/figma/wireframe-suggest', {;
@@ -64,7 +92,10 @@ export default function DesignMapPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     if (!screenName) return;
     setIsLoading(true);
@@ -83,9 +114,12 @@ export default function DesignMapPage(req, res) {
       setIsLoading(false);
     }
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
     } catch (error) {
@@ -95,6 +129,7 @@ export default function DesignMapPage(req, res) {
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -117,6 +152,9 @@ const res = await fetch("/api/figma/wireframe-suggest", {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <>
       <Head>
@@ -124,10 +162,14 @@ const res = await fetch("/api/figma/wireframe-suggest", {
       </Head>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Zion OS Design Map</h1>
           <div className="flex gap-2">
+<<<<<<< HEAD
 
 
 =======
@@ -138,6 +180,10 @@ const res = await fetch("/api/figma/wireframe-suggest", {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</a>
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</a>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</a>
@@ -149,6 +195,7 @@ const res = await fetch("/api/figma/wireframe-suggest", {
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</Link>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</Link>
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -171,6 +218,10 @@ const res = await fetch("/api/figma/wireframe-suggest", {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <a
               href="/api/design-map"
               className="px-3 py-2 rounded bg-gray-900 text-white text-sm"
@@ -195,6 +246,10 @@ const res = await fetch("/api/figma/wireframe-suggest", {
             >
               Export React
             </a>
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>
         </div>
 
@@ -219,14 +274,21 @@ const res = await fetch("/api/figma/wireframe-suggest", {
             sections={designMap.products.mobile}
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+        </div>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
             <div className="flex-1 w-full">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -243,6 +305,8 @@ const res = await fetch("/api/figma/wireframe-suggest", {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <label className="block text-xs text-gray-500 mb-1">
                 Screen name
               </label>
@@ -260,9 +324,12 @@ const res = await fetch("/api/figma/wireframe-suggest", {
                 onChange={(e) => setRole(e.target.value)}
                 className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40"
               >
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <option>Talent</option>
                 <option>Client</option>
                 <option>Admin</option>
@@ -271,6 +338,7 @@ const res = await fetch("/api/figma/wireframe-suggest", {
                 <option>Mobile</option>
               </select>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -290,6 +358,8 @@ const res = await fetch("/api/figma/wireframe-suggest", {
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
             <button onClick={requestWireframe} className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60" disabled={isLoading || !screenName}>
 <<<<<<< HEAD
@@ -334,6 +404,13 @@ const res = await fetch("/api/figma/wireframe-suggest", {
         </div>;
       </section>;
     </>);
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,9 +425,12 @@ function MapColumn() {
 
                   {i.title}
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 }
 
@@ -365,6 +445,10 @@ function MapColumn({
     items: { id: string; title: string }[];
   }[];
 }) {
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="space-y-3">
       <h3 className="text-lg font-semibold">{title}</h3>
@@ -377,10 +461,15 @@ function MapColumn({
             <div className="font-medium mb-2">{s.title}</div>
             <div className="flex flex-wrap gap-2">
               {s.items.map((i) => (
+<<<<<<< HEAD
+                <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
+<<<<<<< HEAD
+=======
                 <span
                   key={i.id}
                   className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800"
                 >
+<<<<<<< HEAD
                   {i.title}
 
 <<<<<<< HEAD
@@ -390,6 +479,10 @@ function MapColumn({
 
                   {i.title}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> main
+                  {i.title}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </span>
               ))}
             </div>
@@ -397,6 +490,7 @@ function MapColumn({
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -418,6 +512,11 @@ function MapColumn({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  )
+};
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   {i.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -443,6 +542,7 @@ function MapColumn({
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
   );
 }
@@ -451,3 +551,11 @@ function MapColumn({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+}
+>>>>>>> main
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -3,8 +3,21 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 // Authentication utilities
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface User {
   id: string;
   email: string;
@@ -41,11 +54,34 @@ export async function ensureAdminFromApi(
     const user = parseUserFromRequest (req);
     ensure_admin (user);
 }
+=======
+<<<<<<< HEAD
+
+  try {
+=======
+  try {;
+    const user = parseUserFromRequest(req);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    ensureAdmin(user);
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return { allowed: true }
   } catch {
     return { allowed: false }
   }
 }
+<<<<<<< HEAD
+=======
+
+// Additional auth utilities for login;
+
+export interface DemoUser {
+=======
+// Additional auth utilities for login
+export interface DemoUser {;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   role: "admin" | "user" | "guest";

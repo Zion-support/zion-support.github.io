@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -111,10 +112,15 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     deployment: 'Hardware appliances, cloud options',
     maintenance: 'Continuous updates, security patches',
     training: 'Quantum security training, certification',
     documentation: 'Security guides, best practices',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -591,6 +597,9 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     documentation: 'Security guides, best practices',
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     api: 'Security management APIs', mobile: 'Mobile security apps',
     security: 'Quantum-safe encryption, zero-trust',
     backup: 'Secure backup, disaster recovery',
@@ -664,22 +673,29 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 
 export interface EmergingTechService2029V2 {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 export interface EmergingTechService2029V2 {;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
   }
 ];
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     white_label: 'Available for financial institutions',
@@ -1097,3 +1113,5 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
 ];
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

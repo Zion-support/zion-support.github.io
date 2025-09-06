@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,4 +22,11 @@ const React from";react""";"";''"
 import React from\';react\''\';\'';
 const React from";react""";"";''"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> main
 import _React from';react''';'';
+=======
+import React from\';react\''\';\'';
+const React from";react""";"";''"
+import _React from';react''';'';
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

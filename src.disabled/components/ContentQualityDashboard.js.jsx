@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -37,3 +38,12 @@ import _React from';react' const ContentQualityDashboard = ({ className = ' }) =
 =======
 import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
+import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
+=======
+import React from\';react\' const ContentQualityDashboard = ({ className = \' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(\') const [filterStatus,setFilterStatus] = useState(\'all\') const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {\''\';
+const React from";react" const ContentQualityDashboard = ({ className = " }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(") const [filterStatus,setFilterStatus] = useState("all") const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {""";""
+import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

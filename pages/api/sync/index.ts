@@ -6,6 +6,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === "GET") {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -70,6 +71,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const scope = state.config.scope,
     const scoped_events = filterEventsByScope (state.events, scope),
     return res.status (200).json ({
@@ -85,6 +88,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 

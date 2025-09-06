@@ -5,6 +5,7 @@ const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NE
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const { slide } = req.body || {};
   if (!slide) return res.status(400).json({ error: 'Missing slide' });
@@ -30,6 +31,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`,

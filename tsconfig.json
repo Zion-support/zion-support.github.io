@@ -15,7 +15,6 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "ESNext",
@@ -41,25 +40,5 @@
       "@/assets/*": ["./src/assets/*"]
     },
     "allowSyntheticDefaultImports": true
-  },
-  "include": [
-    "next-env.d.ts",
-    "types/global.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "apps/**",
-    "apps.backup/**",
-    "api-backup/**",
-    "backup-merge-conflicts/**",
-    "browserstack.config.ts",
-    "cypress.config.ts",
-    "jest.config.*",
-    "*.config.ts",
-    "netlify/**",
-    "temp_exclude/**"
-  ]
+  }
 }

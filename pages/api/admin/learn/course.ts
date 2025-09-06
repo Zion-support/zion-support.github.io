@@ -10,6 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   try {
+<<<<<<< HEAD
     const body = req.body || {},
     const raw = fs.readFileSync(coursesPath, 'utf-8'),
     const courses = JSON.parse(raw),
@@ -20,6 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } else {
       courses.push(body)
     }
+<<<<<<< HEAD
 
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2)),
     res.status(200).json({ ok: true, course: body })

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -17,4 +18,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 "export\": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (\') const [message,setMessage] = useState (\') const [error,setError] = useState (\') const [isLoading,setIsLoading] = useState (false) \'';\";\";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> main
 export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
+=======
+"export\": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (\') const [message,setMessage] = useState (\') const [error,setError] = useState (\') const [isLoading,setIsLoading] = useState (false) \'';\";\";
+export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

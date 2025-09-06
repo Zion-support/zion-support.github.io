@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+import NextHead from 'next/head';
+import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <UltraAdvancedFuturisticBackground>;
       <NextHead>;
         <title>;
@@ -46,6 +54,7 @@
                     <span>{feat}</span>;
                   </li>;
                 ))}
+<<<<<<< HEAD
 import {innovativeAIServices} from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
   const service = innovativeAIServices.find(s =>
@@ -114,6 +123,8 @@ export default function AIFinancialRiskPage() {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
               </div>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
               </ul>;
             </div>;
@@ -210,10 +221,53 @@ export default function AIFinancialRiskPage() {
                   <MapPin className='w-4 h-4 text-green-400' />;
                   <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 }
 }
+<<<<<<< HEAD
+=======
+
+
+=======
+              <Button;
+                href='/contact';
+                variant='quantum';
+                size='lg';
+                className='w - full';
+              >;
+                Discuss Controls;
+              </Button>;
+              <div className='mt - 6 space - y-3 text - sm text - slate - 300'>;
+                <div className='flex items - center space - x-2'>;
+                  <Phone className='w - 4 h - 4 text - cyan - 400' />;
+                  <span>{contact_info.mobile}</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <Mail className='w - 4 h - 4 text - purple - 400' />;
+                  <span>{contact_info.email}</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <MapPin className='w - 4 h - 4 text - green - 400' />;
+                  <span className='text - xs'>{contact_info.address}</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                </div>              </div>;
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
@@ -266,6 +320,7 @@ export default function AIFinancialRiskPage(req, res) {
                 <div>;
                   <div className="text-3xl font-bold text-white">{service?.price || 'Custom pricing'}<span className="text-slate-400 text-base">{service?.period || ''}</span></div>;
                 </div>;
+<<<<<<< HEAD
                 <div className='flex items - center space - x-2'>;
                   <Mail className='w - 4 h - 4 text - purple - 400' />;
                   <span>{contact_info.email}</span>;
@@ -274,13 +329,41 @@ export default function AIFinancialRiskPage(req, res) {
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{contact_info.address}</span>;
                 </div>              </div>;
+=======
+              </div>;
+              <Button href="/contact" variant="quantum" size="lg" className="w-full">Discuss Controls</Button>;
+              <div className="mt-6 space-y-3 text-sm text-slate-300">;
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>;
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>;
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>;
+              </div>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+
+=======
+    </UltraAdvancedFuturisticBackground>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

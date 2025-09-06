@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] };
   const apiKey = process.env.OPENAI_API_KEY;
@@ -19,6 +20,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -33,6 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ chapters: drafted })
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -92,9 +96,35 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+}
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import OpenAI from 'openai',
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: 'Method not allowed' }),
+    return;
+  }
+  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] },
+  const api_key = process.env.OPENAI_API_KEY,
+  // Check condition
+if ( {) {
+  $2
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     // Fallback: return structured placeholders;
     const drafted = chapters.map ((c) => ({
@@ -119,6 +149,7 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -170,6 +201,9 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
@@ -179,6 +213,7 @@ export default async function handler(req, res) {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -196,3 +231,6 @@ export default async function handler(req, res) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
