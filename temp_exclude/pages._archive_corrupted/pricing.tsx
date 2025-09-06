@@ -1,156 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-export default function PricingPage() {
-  const plans = [
-    {
-      \"name\": \"Starter\",
-      \"description\": \"Perfect for small businesses and startups\",
-      \"price\": \"$2,999\",
-      \"period\": \"/month\",
-      \"icon\": Zap,
-      \"color\": \"from-green-500 to-emerald-500\",
-      \"features\": [
-        \"Up to 5 users\",
-        \"Basic AI automation\",
-        \"Standard security features\",
-        \"Email support\",
-        \"Basic analytics\",
-        \"Monthly reports\"
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {CheckCircle,, ArrowRight,, Users,, Zap,, Shield} from 'lucide-react';
-const "PricingPage": React.FC = () => {
-  const pricingPlans = [{
-      name: 'Starter',
-      "description": 'Perfect for small businesses and startups',
-      "price": '$2,500',
-      "period": 'per month',
-      "features": [
-        'Basic website development',
-        'Up to 5 pages',
-        'Mobile responsive design',
-        'Basic SEO optimization',
-        'Email support',
-        '3 months maintenance included'
-import {Helmet} from 'react-helmet-async';
-import {Link} from 'react-router-dom';
-import {Check,, Star,, Zap,, Shield,, Users,, Clock,, ArrowRight} from 'lucide-react';
-export default function PricingPage() {
-  const plans = [
-    {
-      "name": "Starter",
-      "description": "Perfect for small businesses and startups",
-      "price": "$2,999",
-      "period": "/month",
-      "icon": Zap,
-      "color": "from-green-500 to-emerald-500",
-      "features": [
-        "Up to 5 users",
-        "Basic AI automation",
-        "Standard security features",
-        "Email support",
-        "Basic analytics",
-        "Monthly reports"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-      ],
+:pages._archive_corrupted/pricing.tsx      ],
       \"popular\": false
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-      \"name\": \"Professional\",
-      \"description\": \"Ideal for growing businesses\",
-      \"price\": \"$7,999\",
-      \"period\": \"/month\",
-      \"icon\": Shield,
-      \"color\": \"from-cyan-500 to-blue-500\",
-      \"features\": [\'Advanced website development\',
-        \'Up to 15 pages\',
-        \'Custom functionality\',
-        \'Advanced SEO optimization\',
-        \'Priority support\',
-        \'6 months maintenance included\',
-        \'Analytics integration\',
-        \'Content management system\'
-      "name": 'Professional',
-      "description": 'Ideal for growing businesses',
-      "price": '$5,000',
-      "period": 'per month',
-      "name": "Professional",
-      "description": "Ideal for growing businesses",
-      "price": "$7,999",
-      "period": "/month",
-      "icon": Shield,
-      "color": "from-cyan-500 to-blue-500",
-      "features": ['Advanced website development',
-        'Up to 15 pages',
-        'Custom functionality',
-        'Advanced SEO optimization',
-        'Priority support',
-        '6 months maintenance included',
-        'Analytics integration',
-        'Content management system'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-      ],
+:pages._archive_corrupted/pricing.tsx      ],
       \"popular\": true
     },
     {
@@ -178,84 +30,19 @@ export default function PricingPage() {
         <title>Pricing - Zion Tech Group</title>
         <meta name=\"description\" content=\"Transparent pricing for our technology services. Choose the plan that fits your business needs.\" />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-      <div className=\"min-h-screen bg-gray-50 py-12\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"text-center mb-16\">
-            <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-              Simple, Transparent Pricing
+:pages._archive_corrupted/pricing.tsx              Simple, Transparent Pricing
             </h1>
             <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
               Choose the plan that fits your business needs.
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
+:pages._archive_corrupted/pricing.tsx          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-<<<<<<< HEAD
+:pages._archive_corrupted/pricing.tsx
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
-=======
-<<<<<<< HEAD
-=======
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">            {pricingPlans.map((plan, index) => (
               <div
                 key={plan.name}
                 className={`relative bg-white rounded-2xl shadow-lg p-8 ${
@@ -269,57 +56,7 @@ export default function PricingPage() {
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-                <div className=\"text-center mb-8\">
-                  <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan.name}</h3>
-                  <p className=\"text-gray-600 mb-4\">{plan.description}</p>
-                  <div className=\"mb-4\">
-                    <span className=\"text-4xl font-bold text-gray-900\">{plan.price}</span>
-                    <span className=\"text-gray-600 ml-2\">{plan.period}</span>
-                  </div>
-                </div>
-                <ul className=\"space-y-4 mb-8\">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 mb-4">{plan.description}</p>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-gray-600 ml-2">{plan.period}</span>
-                  </div>
-                </div>
-                <ul className="space-y-4 mb-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-                  {plan.features.map((feature, featureIndex) => (
+:pages._archive_corrupted/pricing.tsx                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center\">
                       <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />
                       <span className=\"text-gray-600\">{feature}</span>
@@ -340,43 +77,7 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-          <div className=\"text-center\">
-            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-              Ready to Get Started?
+:pages._archive_corrupted/pricing.tsx              Ready to Get Started?
             </h2>
             <p className=\"text-xl text-gray-600 mb-8\">
               Contact us today for a free consultation and custom quote.
@@ -400,24 +101,7 @@ export default function PricingPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/pricing.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/pricing.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-}
+:pages._archive_corrupted/pricing.tsx}
 };
 export default PricingPage;
 }

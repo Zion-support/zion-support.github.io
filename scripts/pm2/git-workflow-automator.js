@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 #!/usr/bin/env node,;
@@ -265,20 +262,10 @@ if (require.main === module) {,;
 };
 ,;
 module.exports = GitWorkflowAutomator,;
-;#!/usr/bin/env node;
-=======
-#!/usr/bin/env node;
-/**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-/**;
+;#!/usr/bin/env node;/**;
  * Git Workflow Automator Script;
  * Automates git operations and workflow management;
  */;
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
-=======
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;const { execSync } = require('child_process');
 const fs = require('fs');

@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-innovative-micro-saas-breakthrough.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-innovative-micro-saas-breakthrough.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-export const innovativeMicroSaasBreakthrough2025 = [{
+:data_backup/2025-innovative-micro-saas-breakthrough.tsexport const innovativeMicroSaasBreakthrough2025 = [{
     id:,
   ai-content-factory-enterprise',
     "name": 'AI Content Factory Enterprise,

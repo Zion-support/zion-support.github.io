@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/emerging-tech.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/emerging-tech.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import React from 'react'
+:pages._archive_corrupted/emerging-tech.tsximport React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'

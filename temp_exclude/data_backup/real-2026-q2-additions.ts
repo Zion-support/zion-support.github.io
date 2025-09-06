@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/real-2026-q2-additions.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/real-2026-q2-additions.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-export const real2026Q2Additions = [{
+:data_backup/real-2026-q2-additions.tsexport const real2026Q2Additions = [{
     id:,
   ai-governance-compliance-hub',
     "name": 'AI Governance & Compliance Hub,

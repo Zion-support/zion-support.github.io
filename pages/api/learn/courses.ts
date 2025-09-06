@@ -15,7 +15,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (level && c.level !== level) return false;
       if (typeof isFree !== 'undefined') {
         const freeVal = isFree === 'true' || isFree === true;
-<<<<<<< HEAD
         if (c.isFree !== freeVal) return false;
       }
       return true;

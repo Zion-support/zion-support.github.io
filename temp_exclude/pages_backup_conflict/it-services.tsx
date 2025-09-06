@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup_conflict/it-services.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup_conflict/it-services.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import React from 'react';
+:pages_backup_conflict/it-services.tsximport React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {Brain,, Shield,, Database,, Cloud,, Server,, Zap,, ArrowRight,, CheckCircle,, Clock,, Star,, Users,, BarChart3,, Settings,, Globe,, Smartphone,, Lock,, Target,, TrendingUp,, MessageSquare,, FileText,, Calendar,, CreditCard,, ShoppingCart,, Camera,, Music,, Video,, Code,, Search,, Mail,, Phone,, MapPin,, Network,, Monitor,, HardDrive,, Wifi,, Cpu,, MemoryStick,, Router} from 'lucide-react';

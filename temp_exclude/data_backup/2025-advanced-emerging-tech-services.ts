@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-advanced-emerging-tech-services.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-advanced-emerging-tech-services.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-export const advancedEmergingTechServices2025 = [{
+:data_backup/2025-advanced-emerging-tech-services.tsexport const advancedEmergingTechServices2025 = [{
     id:,
   space-mining-operations-platform',
     "name": 'SpaceMining Operations,

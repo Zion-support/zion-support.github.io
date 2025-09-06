@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:scripts/performance-monitor-enhanced.js
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-monitor-enhanced.js
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
+:scripts/performance-monitor-enhanced.jsconst fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
 const fs = require('fs');
 const path = require('path');
 console.log('📊 Enhanced Performance Monitor Starting...');

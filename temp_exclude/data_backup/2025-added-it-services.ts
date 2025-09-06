@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-added-it-services.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-added-it-services.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import type { AdvancedITService } from "./advanced-it-services"
+:data_backup/2025-added-it-services.tsimport type { AdvancedITService } from "./advanced-it-services"
 const contact = {
   "mobile": '+1 302 464 0950',
   "email": 'kleber@ziontechgroup.com',

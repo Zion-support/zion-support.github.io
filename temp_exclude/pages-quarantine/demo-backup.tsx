@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages-quarantine/demo-backup.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages-quarantine/demo-backup.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import Head from "next/head"
+:pages-quarantine/demo-backup.tsximport Head from "next/head"
 import React, { useState } from "react"
 const Head = dynamic(() => import("next/head"), { "ssr": false })
 }

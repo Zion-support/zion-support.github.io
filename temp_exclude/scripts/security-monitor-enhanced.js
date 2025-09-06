@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:scripts/security-monitor-enhanced.js
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/security-monitor-enhanced.js
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-const securityChecks = { dependencies: () => {  return true},codeScan: () => {  return true},headers: () => {  return true} }; Object.entries(securityChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
+:scripts/security-monitor-enhanced.jsconst securityChecks = { dependencies: () => {  return true},codeScan: () => {  return true},headers: () => {  return true} }; Object.entries(securityChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
 console.log('🔒 Enhanced Security Monitor Starting...');
 const securityChecks = {
   "dependencies": () => {

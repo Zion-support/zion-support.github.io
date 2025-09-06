@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-advanced-it-services.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-advanced-it-services.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-export const advancedITServices2025 = [{
+:data_backup/2025-advanced-it-services.tsexport const advancedITServices2025 = [{
     id:,
   quantum-cloud-infrastructure-platform',
     "name": 'QuantumCloud Infrastructure,

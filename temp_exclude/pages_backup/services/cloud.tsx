@@ -1,53 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import { motion } from 'framer-motion';
+:pages_backup/services/cloud.tsximport { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-<<<<<<< HEAD
+:pages_backup/services/cloud.tsx
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import React from 'react';
+import { Cloud, Server, Shield, Zap } from 'lucide-react';import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-export default function CloudServicesPage() {
+:pages_backup/services/cloud.tsxexport default function CloudServicesPage() {
   const cloudServices = [;
     {}
       title: "Cloud Migration","
@@ -81,22 +45,7 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-
+:pages_backup/services/cloud.tsx
 const cloudServices = [
   {
     title: "Cloud Migration",
@@ -136,111 +85,7 @@ const cloudServices = [
 ];
 
 export default function CloudServicesPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-export default function CloudServicesPage() {
-  const cloudServices = [;
-    {}
-      title: "Cloud Migration","
-      description: "Seamless migration of your infrastructure to the cloud","
-      icon: Cloud,
-      features: ["Zero Downtime", "Data Integrity", "Cost Optimization"]"
-    },
-    {}
-      title: "Cloud Infrastructure","
-      description: "Scalable and secure cloud infrastructure setup","
-      icon: Server,
-      features: ["Auto Scaling", "High Availability", "Disaster Recovery"]"
-    },
-    {}
-      title: "Cloud Security","
-      description: "Comprehensive security solutions for cloud environments","
-      icon: Shield,
-      features: ["Identity Management", "Data Encryption", "Compliance"]"
-    },
-    {}
-      title: "Cloud Optimization","
-      description: "Performance and cost optimization for cloud resources","
-      icon: Zap,
-      features: ["Cost Analysis", "Performance Tuning", "Resource Management"]"
-    }
-;  ];
-  return (;
-    <Layout );
-      title="Cloud Solutions - Zion Tech Group"";
-      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.""
-    >;
-      <div className="min-h-screen bg-gray-50">";
-  ];
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-  return (
-    <Layout
-      title="Cloud Solutions - Zion Tech Group"
-      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-              className="text-center""
-            >;
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cloud Solutions,
-              </h1>;
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",
-                Transform your business with our comprehensive cloud solutions. 
-                From migration to optimization, we help you leverage the power of the cloud.,
-              </p>;
-            </motion.div>;
-          </div>;
-        </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-              className="text-center"
+:pages_backup/services/cloud.tsx              className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Cloud Solutions
@@ -252,17 +97,7 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-        {/* Services Section */}
+:pages_backup/services/cloud.tsx        {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
@@ -303,22 +138,7 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-
+:pages_backup/services/cloud.tsx
         {/* Services Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -358,12 +178,6 @@ export default function CloudServicesPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -405,16 +219,6 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,

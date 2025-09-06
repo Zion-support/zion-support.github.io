@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import { motion } from 'framer-motion';
+:pages_backup/solutions/digital-transformation.tsximport { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import {RefreshCw,, Target,, Rocket,, TrendingUp} from 'lucide-react';
 import React from 'react';
@@ -86,20 +78,8 @@ const industries = [
 ];
 export default function DigitalTransformation() {
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+:pages_backup/solutions/digital-transformation.tsx
 import React from 'react';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -199,10 +179,6 @@ const industries = [
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
 export default function DigitalTransformation() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from "../../components/Layout";";
 import {motion} from 'framer-motion';
 import {Rocket,, RefreshCw,, Target,, TrendingUp,, CheckCircle,, ArrowRight} from 'lucide-react';
@@ -232,91 +208,14 @@ export default function DigitalTransformationPage() {
       icon: TrendingUp,
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]"
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-;  ];
-  return (;
-    <Layout );
-      title="Digital Transformation - Zion Tech Group"";
-      description="Complete digital transformation solutions to modernize your business and drive innovation."";
-    >;
-      <div className="min-h-screen bg-gray-50">";
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-  ];
+:pages_backup/solutions/digital-transformation.tsx  ];
   return (
     <MainLayout
       title="Digital Transformation Solutions - Zion Tech Group"
       description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."
       keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization"
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-:pages/solutions/digital-transformation.tsx
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-      <div className="min-h-screen bg-gray-50">
+:pages_backup/solutions/digital-transformation.tsx      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">"
           <div className="container mx-auto px-4">";
@@ -324,48 +223,7 @@ export default function DigitalTransformationPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-              className="text-center""
-            >;
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Digital Transformation,
-              </h1>;
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",
-                Transform your business for the digital age with our comprehensive transformation solutions. 
-                Modernize processes, enhance efficiency, and drive innovation.,
-              </p>;
-            </motion.div>;
-          </div>;
-        </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-              className="text-center"
+:pages_backup/solutions/digital-transformation.tsx              className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Digital{' '}
@@ -387,62 +245,7 @@ export default function DigitalTransformationPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-:pages/solutions/digital-transformation.tsx
-        {/* Transformation Process */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Transformation Process
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We follow a proven methodology to ensure successful digital transformation that delivers measurable results.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {transformationSteps.map((step, index) => {
-                const IconComponent = step.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-50 rounded-lg p-6 text-center"
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-        {/* Services Section */}
+:pages_backup/solutions/digital-transformation.tsx        {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
@@ -456,54 +259,7 @@ export default function DigitalTransformationPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-:pages/solutions/digital-transformation.tsx
-                  >
-                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
-                      {step.step}
-                    </div>
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-8 h-8 mx-auto" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                    <p className="text-gray-600 mb-4">{step.description}</p>
-                    <div className="text-sm text-blue-600 font-semibold mb-4">
-                      Duration: {step.duration}
-                    </div>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {step.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-                  >,
+:pages_backup/solutions/digital-transformation.tsx                  >,
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
                     </div>;
@@ -524,15 +280,7 @@ export default function DigitalTransformationPage() {
                   </motion.div>;
                 );
               })}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-            </div>,
+:pages_backup/solutions/digital-transformation.tsx            </div>,
           </div>;
         </section>;
             </div>
@@ -651,22 +399,10 @@ export default function DigitalTransformationPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+:pages_backup/solutions/digital-transformation.tsx
             </div>
           </div>
         </section>
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>,
           </div>;
         </section>;
@@ -783,10 +519,6 @@ export default function DigitalTransformationPage() {
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

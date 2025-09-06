@@ -2,22 +2,9 @@
 module.exports = {
   env: {
     node: true,
-    es2021: true
+    es2021: true,
+    browser: true
   },
-<<<<<<< HEAD
-  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'no-undef': 'off',
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-html-link-for-pages': 'off',
-    '@next/next/no-img-element': 'off'
-=======
   globals: {
     module: 'readonly',
     require: 'readonly',
@@ -28,7 +15,9 @@ module.exports = {
     Buffer: 'readonly',
     console: 'readonly'
   },
-  extends: ['next/core-web-vitals'],
+  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -38,21 +27,30 @@ module.exports = {
     ],
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/no-empty-object-type': 'warn',
-    '@next/next/no-html-link-for-pages': 'warn'
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
+    'react/react-in-jsx-scope': 'off',
+    'no-undef': 'off',
+    'react/no-unescaped-entities': 'off',
+    '@next/next/no-html-link-for-pages': 'warn',
+    '@next/next/no-img-element': 'off'
   },
   ignorePatterns: [
     'node_modules/',
     '.next/',
     'out/',
-<<<<<<< HEAD
-    'dist/',
     'build/',
+    'dist/',
     'coverage/',
     '*.config.js',
     '*.config.cjs',
     '*.config.mjs',
-    'fix-critical-files.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    'src/',
+    'apps/',
+    '*.cjs',
+    '*.js',
     'fix-*.js',
     'fix-*.cjs',
     '*-fix*.cjs',
@@ -63,7 +61,6 @@ module.exports = {
     'app-improvement-*.cjs',
     'analyze-*.cjs',
     'code-quality-*.js',
-    'automation/',
     'automation_backup/',
     'backup/',
     'lib_backup/',
@@ -83,7 +80,6 @@ module.exports = {
     'pages.disabled_auto/',
     'zion_academy/',
     'pm2-automation/',
-    'scripts/',
     '*.report.json',
     'temp_*/',
     'test_build/',
@@ -199,16 +195,3 @@ module.exports = {
     'commit-and-push.js'
   ]
 };
-=======
-    'build/',
-    'dist/',
-    '*.config.js',
-    '*.config.ts',
-    'scripts/',
-    'automation/',
-    'netlify/',
-    'src/',
-    'apps/'
-  ]
-};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a

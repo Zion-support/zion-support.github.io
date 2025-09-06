@@ -1,43 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-const \"About\": NextPage = () => {
-import React from 'react';
-import Link from 'next/link';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import {Users,, Target,, Award,, Globe,, Shield,, Zap} from 'lucide-react';
-const "About": NextPage = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-  const values = [{
+:pages._archive_corrupted/about.tsx  const values = [{
       title: \'Innovation\',
       \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',
       \"icon\": Zap
@@ -93,84 +54,7 @@ const "About": NextPage = () => {
       \"image\": \'/team/david.jpg\'
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
-    { \"number\": \'50+\', \"label\": \'Happy Clients\' },
-    { \"number\": \'5+\', \"label\": \'Years Experience\' },
-    { \"number\": \'24/7\', \"label\": \'Support Available\' }
-  ];
-export default function AboutPage() {
-  return (
-  const stats = [{ "number": '150+', "label": 'Projects Completed' },
-    { "number": '50+', "label": 'Happy Clients' },
-    { "number": '5+', "label": 'Years Experience' },
-    { "number": '24/7', "label": 'Support Available' }
-  ];
-export default function AboutPage() {
-  return (
-    <main>
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl "md": text-6xl font-bold mb-6">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech Group</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud, and modern development services.
-          </p>
-        </div>
-      </section>
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-          <p className="text-xl text-gray-600">
-            Empower businesses with innovative technology that drives growth, efficiency, and competitive advantage.
-          </p>
-        </div>
-      </section>
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-10">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[{ title: 'Excellence', "desc": 'We deliver solutions that exceed expectations.' },
-              { "title": 'Integrity', "desc": 'We operate with honesty and transparency.' },
-              { "title": 'Innovation', "desc": 'We embrace modern technologies to solve problems.' },
-              { "title": 'Collaboration', "desc": 'We partner closely with clients for success.' }
-            ].map((v) => (
-              <div key={v.title} className="bg-white rounded-lg p-8 shadow text-center">
-                <h3 className="text-xl font-semibold mb-3">{v.title}</h3>
-                <p className="text-gray-600">{v.desc}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-    <MainLayout
+:pages._archive_corrupted/about.tsx    <MainLayout
       title=\"About Us - Zion Tech Group\"
       description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\"
     >
@@ -222,99 +106,12 @@ export default function AboutPage() {
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">
             {stats.map((stat) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-              <div key={stat.label} className=\"text-center\">
-                <div className=\"text-4xl font-bold text-blue-600 mb-2\">{stat.number}</div>
-                <div className=\"text-gray-600\">{stat.label}</div>
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-              </div>
+:pages._archive_corrupted/about.tsx              </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Let’s discuss how we can help transform your business.
-          </p>
-          <div className="flex flex-col "sm": flex-row justify-center gap-4">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
-              Get in Touch
-            </Link>
-            <Link href="/careers" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors">
-              Join Our Team
-            </Link>
-          </div>
-        </div>
-      </section>
-    </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-      {/* Values Section */}
+:pages._archive_corrupted/about.tsx      {/* Values Section */}
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -323,38 +120,13 @@ export default function AboutPage() {
               The principles that guide everything we do and shape our company culture
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+:pages._archive_corrupted/about.tsx          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-<<<<<<< HEAD
+:pages._archive_corrupted/about.tsx
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
-=======
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-            {values.map((value) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">            {values.map((value) => (
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
                   <value.icon className=\"h-8 w-8\" />
@@ -380,38 +152,13 @@ export default function AboutPage() {
               technology solutions
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+:pages._archive_corrupted/about.tsx          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-<<<<<<< HEAD
+:pages._archive_corrupted/about.tsx
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-<<<<<<< HEAD
-=======
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-            {team.map((member) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">            {team.map((member) => (
               <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">
                   <Users className=\"h-16 w-16 text-blue-600\" />
@@ -495,38 +242,13 @@ export default function AboutPage() {
         <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />
         <link rel=\"canonical\" href=\""https\": //ziontechgroup.com/about\" />
       </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+:pages._archive_corrupted/about.tsx      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-<<<<<<< HEAD
+:pages._archive_corrupted/about.tsx
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-<<<<<<< HEAD
-=======
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">        {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"text-center\">
@@ -657,16 +379,8 @@ export default function AboutPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/about.tsx
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/about.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-}
+:pages._archive_corrupted/about.tsx
+}}
 }
 }
 }

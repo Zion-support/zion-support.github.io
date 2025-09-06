@@ -1,31 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.bak/index.tsx
+:pages.bak/index.tsx
 export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
+module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
+module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
 module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
-=======
-<<<<<<< HEAD
-export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
-module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
-=======
-<<<<<<< HEAD
-=======
-export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
-module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
-module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.bak/index.tsx
-=======
-export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
-module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 interface IndexProps {
   // Add props here as needed
@@ -37,15 +14,7 @@ export default function Index({ }: IndexProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.bak/index.tsx
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.bak/index.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-}
+:pages.bak/index.tsx
+}}
 }
 }

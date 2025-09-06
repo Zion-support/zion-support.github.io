@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-enterprise-it-breakthrough.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-enterprise-it-breakthrough.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-export const enterpriseITBreakthroughServices2025 = [{
+:data_backup/2025-enterprise-it-breakthrough.tsexport const enterpriseITBreakthroughServices2025 = [{
     id:,
   quantum-cloud-infrastructure-pro',
     "name": 'Quantum Cloud Infrastructure Pro,

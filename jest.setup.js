@@ -150,7 +150,6 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-<<<<<<< HEAD
 
 // Global test setup,
 beforeEach(() => {

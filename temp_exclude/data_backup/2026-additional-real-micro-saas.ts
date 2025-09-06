@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2026-additional-real-micro-saas.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2026-additional-real-micro-saas.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-export const additionalRealMicroSaas2026 = [{
+:data_backup/2026-additional-real-micro-saas.tsexport const additionalRealMicroSaas2026 = [{
 		id:,
   ai-seo-content-optimizer',
 		"name": 'AI SEO Content Optimizer,

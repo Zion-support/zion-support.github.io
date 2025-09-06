@@ -1,31 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.bak/404.route.tsx
+:pages.bak/404.route.tsx
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
+module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
+module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
 module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
-=======
-<<<<<<< HEAD
-export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
-module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
-=======
-<<<<<<< HEAD
-=======
-export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
-module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
-module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.bak/404.route.tsx
-=======
-export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
-module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 interface 404.routeProps {
   // Add props here as needed
@@ -37,15 +14,7 @@ export default function 404.route({ }: 404.routeProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.bak/404.route.tsx
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.bak/404.route.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-}
+:pages.bak/404.route.tsx
+}}
 }
 }

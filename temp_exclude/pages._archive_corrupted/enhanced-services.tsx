@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/enhanced-services.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/enhanced-services.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import React from "react"
+:pages._archive_corrupted/enhanced-services.tsximport React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import {ArrowRight,, Award,, BarChart3,, Bot,, Brain,, CheckCircle,, Eye,, MessageSquare,, Shield,, Zap,, Cloud,, Database,, Users,, Settings,, Monitor,, Network,, FileText,, Target,, Calendar,, Smartphone,, Globe,, Lock,, TrendingUp,, Clock,, Star,, Cpu,, Wifi,, Server,, Code,, Mail,, Phone,, MapPin,, DollarSign,, Rocket,, Heart} from "lucide-react"

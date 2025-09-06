@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import fs from 'fs')
 import path from 'path')
 const { execSync } = require('child_process');

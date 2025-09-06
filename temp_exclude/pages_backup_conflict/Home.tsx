@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup_conflict/Home.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup_conflict/Home.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import React from 'react';
+:pages_backup_conflict/Home.tsximport React from 'react';
 import Head from 'next/head';
 export default function Home() {
   return (

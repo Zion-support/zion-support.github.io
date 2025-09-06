@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-cutting-edge-emerging-tech.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-cutting-edge-emerging-tech.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-export const cuttingEdgeEmergingTechServices2025 = [{
+:data_backup/2025-cutting-edge-emerging-tech.tsexport const cuttingEdgeEmergingTechServices2025 = [{
     id:,
   space-mining-platform',
     "name": 'Space Mining Platform,

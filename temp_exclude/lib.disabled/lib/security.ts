@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:lib.disabled/lib/security.ts
+:lib.disabled/lib/security.ts
 
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/lib.disabled/lib/security.ts
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 // Security headers configuration;
 export const securityHeaders = [;
   {;
@@ -51,21 +36,12 @@ export const contentSecurityPolicy = {;
     "baseUri": [""self""],
     "formAction": [""self""],}
 }
-<<<<<<< HEAD:lib.disabled/lib/security.ts
+:lib.disabled/lib/security.ts
 export const securityHeaders = [; {; key: "X-DNS-Prefetch-Control",; value: "on";,;,},; {; key: "Strict-Transport-Security",; value: "max-age=63072000; includeSubDomains; preload";,;,},; {; key: "X-XSS-Protection",; value: "1; mode=block";,;,},; {; key: "X-Frame-Options",; value: "SAMEORIGIN";,;,},; {; key: "X-Content-Type-Options",; value: "nosniff";,;,},; {; key: "Referrer-Policy",; value: "origin-when-cross-origin";,;,},; {; key: "Permissions-Policy",; value: "camera=(),microphone=(),geolocation=(),interest-cohort=()";,;,} ]; export const contentSecurityPolicy = {; directives: {; defaultSrc: [self""],; styleSrc: [self",""unsafe-inline],; scriptSrc: [""self],; imgSrc: [""self","data:","https:"],; fontSrc: [self""],; connectSrc: [self""],; frameAncestors: [none""],; baseUri: [self""],; formAction: [self""];,;,} }
-<<<<<<< HEAD
-export const securityHeaders = [; {; key: "X-DNS-Prefetch-Control",value: "on",,},{; key: "Strict-Transport-Security",value: "max-age=63072000; includeSubDomains; preload",,},{; key: "X-XSS-Protection",value: "1; mode=block",,},{; key: "X-Frame-Options",value: "SAMEORIGIN",,},{; key: "X-Content-Type-Options",value: "nosniff",,},{; key: "Referrer-Policy",value: "origin-when-cross-origin",,},{; key: "Permissions-Policy",value: "camera=(),microphone=(),geolocation=(),interest-cohort=()",,} ]; export const contentSecurityPolicy = {; directives: {; defaultSrc: [""self""],styleSrc: [""self",""unsafe-inline""],scriptSrc: [""self""],imgSrc: [""self","data:","https:"],fontSrc: [""self""],connectSrc: [""self""],frameAncestors: [""none""],baseUri: [""self""],formAction: [""self""],,} }
-<<<<<<< HEAD
 export const securityHeaders = [; {; key: "X-DNS-Prefetch-Control",value: "on",,},{; key: "Strict-Transport-Security",value: "max-age=63072000; includeSubDomains; preload",,},{; key: "X-XSS-Protection",value: "1; mode=block",,},{; key: "X-Frame-Options",value: "SAMEORIGIN",,},{; key: "X-Content-Type-Options",value: "nosniff",,},{; key: "Referrer-Policy",value: "origin-when-cross-origin",,},{; key: "Permissions-Policy",value: "camera=(),microphone=(),geolocation=(),interest-cohort=()",,} ]; export const contentSecurityPolicy = {; directives: {; defaultSrc: [""self""],styleSrc: [""self",""unsafe-inline""],scriptSrc: [""self""],imgSrc: [""self","data:","https:"],fontSrc: [""self""],connectSrc: [""self""],frameAncestors: [""none""],baseUri: [""self""],formAction: [""self""],,} }
 export const securityHeaders = [; {; key: "X-DNS-Prefetch-Control",value: "on",,},{; key: "Strict-Transport-Security",value: "max-age=63072000; includeSubDomains; preload",,},{; key: "X-XSS-Protection",value: "1; mode=block",,},{; key: "X-Frame-Options",value: "SAMEORIGIN",,},{; key: "X-Content-Type-Options",value: "nosniff",,},{; key: "Referrer-Policy",value: "origin-when-cross-origin",,},{; key: "Permissions-Policy",value: "camera=(),microphone=(),geolocation=(),interest-cohort=()",,} ]; export const contentSecurityPolicy = {; directives: {; defaultSrc: [""self""],styleSrc: [""self",""unsafe-inline""],scriptSrc: [""self""],imgSrc: [""self","data:","https:"],fontSrc: [""self""],connectSrc: [""self""],frameAncestors: [""none""],baseUri: [""self""],formAction: [""self""],,} }
 export const securityHeaders = [; {; key: "X-DNS-Prefetch-Control",value: "on",,},{; key: "Strict-Transport-Security",value: "max-age=63072000; includeSubDomains; preload",,},{; key: "X-XSS-Protection",value: "1; mode=block",,},{; key: "X-Frame-Options",value: "SAMEORIGIN",,},{; key: "X-Content-Type-Options",value: "nosniff",,},{; key: "Referrer-Policy",value: "origin-when-cross-origin",,},{; key: "Permissions-Policy",value: "camera=(),microphone=(),geolocation=(),interest-cohort=()",,} ]; export const contentSecurityPolicy = {; directives: {; defaultSrc: [""self""],styleSrc: [""self",""unsafe-inline""],scriptSrc: [""self""],imgSrc: [""self","data:","https:"],fontSrc: [""self""],connectSrc: [""self""],frameAncestors: [""none""],baseUri: [""self""],formAction: [""self""],,} }
-=======
-=======
-export const securityHeaders = [; {; key: "X-DNS-Prefetch-Control",value: "on",,},{; key: "Strict-Transport-Security",value: "max-age=63072000; includeSubDomains; preload",,},{; key: "X-XSS-Protection",value: "1; mode=block",,},{; key: "X-Frame-Options",value: "SAMEORIGIN",,},{; key: "X-Content-Type-Options",value: "nosniff",,},{; key: "Referrer-Policy",value: "origin-when-cross-origin",,},{; key: "Permissions-Policy",value: "camera=(),microphone=(),geolocation=(),interest-cohort=()",,} ]; export const contentSecurityPolicy = {; directives: {; defaultSrc: [""self""],styleSrc: [""self",""unsafe-inline""],scriptSrc: [""self""],imgSrc: [""self","data:","https:"],fontSrc: [""self""],connectSrc: [""self""],frameAncestors: [""none""],baseUri: [""self""],formAction: [""self""],,} }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-export const securityHeaders = [; {; key: "X-DNS-Prefetch-Control",; value: "on";,;,},; {; key: "Strict-Transport-Security",; value: "max-age=63072000, includeSubDomains, preload";,;,},; {; key: "X-XSS-Protection",; value: "1, mode=block",,;,},; {; key: "X-Frame-Options",; value: "SAMEORIGIN";,;,},; {; key: "X-Content-Type-Options",; value: "nosniff";,;,},; {; key: "Referrer-Policy",; value: "origin-when-cross-origin";,;,},; {; key: "Permissions-Policy",; value: "camera=(),microphone=(),geolocation=(),interest-cohort=()";,;,} ]; export const contentSecurityPolicy = {; directives: {,
+export const securityHeaders = [; {; key: "X-DNS-Prefetch-Control",value: "on",,},{; key: "Strict-Transport-Security",value: "max-age=63072000; includeSubDomains; preload",,},{; key: "X-XSS-Protection",value: "1; mode=block",,},{; key: "X-Frame-Options",value: "SAMEORIGIN",,},{; key: "X-Content-Type-Options",value: "nosniff",,},{; key: "Referrer-Policy",value: "origin-when-cross-origin",,},{; key: "Permissions-Policy",value: "camera=(),microphone=(),geolocation=(),interest-cohort=()",,} ]; export const contentSecurityPolicy = {; directives: {; defaultSrc: [""self""],styleSrc: [""self",""unsafe-inline""],scriptSrc: [""self""],imgSrc: [""self","data:","https:"],fontSrc: [""self""],connectSrc: [""self""],frameAncestors: [""none""],baseUri: [""self""],formAction: [""self""],,} }export const securityHeaders = [; {; key: "X-DNS-Prefetch-Control",; value: "on";,;,},; {; key: "Strict-Transport-Security",; value: "max-age=63072000, includeSubDomains, preload";,;,},; {; key: "X-XSS-Protection",; value: "1, mode=block",,;,},; {; key: "X-Frame-Options",; value: "SAMEORIGIN";,;,},; {; key: "X-Content-Type-Options",; value: "nosniff";,;,},; {; key: "Referrer-Policy",; value: "origin-when-cross-origin";,;,},; {; key: "Permissions-Policy",; value: "camera=(),microphone=(),geolocation=(),interest-cohort=()";,;,} ]; export const contentSecurityPolicy = {; directives: {,
     defaultSrc: [self""],; styleSrc: [self",""unsafe-inline],; scriptSrc: [""self],; imgSrc: [""self","data:","https:"],; fontSrc: [self""],; connectSrc: [self""],; frameAncestors: [none""],; baseUri: [self""],; formAction: [self""];,;,} }
 export const securityHeaders = [; {; key: "X-DNS-Prefetch-Control",value: "on",,},{; key: "Strict-Transport-Security",value: "max-age=63072000, includeSubDomains, preload",,},{; key: "X-XSS-Protection",value: "1; mode=block",,},{; key: "X-Frame-Options",value: "SAMEORIGIN",,},{; key: "X-Content-Type-Options",value: "nosniff",,},{; key: "Referrer-Policy",value: "origin-when-cross-origin",,},{; key: "Permissions-Policy",value: "camera=(),microphone=(),geolocation=(),interest-cohort=()",,} ]; export const contentSecurityPolicy = {; directives: {,
     defaultSrc: [""self""],styleSrc: [""self",""unsafe-inline""],scriptSrc: [""self""],imgSrc: [""self","data:","https:"],fontSrc: [""self""],connectSrc: [""self""],frameAncestors: [""none""],baseUri: [""self""],formAction: [""self""],,} }

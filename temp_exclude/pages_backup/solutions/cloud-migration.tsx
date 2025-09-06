@@ -1,59 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-import React from 'react';
+:pages_backup/solutions/cloud-migration.tsximport React from 'react';
 import Link from 'next/link';';
 import {motion} from 'framer-motion';
 import {Cloud,, Shield,, Zap,, CheckCircle,, ArrowRight,, BarChart3,, Users,, Settings,, Database,, Globe,, Lock,, Smartphone,, Brain,} from 'lucide-react';
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+:pages_backup/solutions/cloud-migration.tsx
 const phases = [;
   {}
     title: 'Assessment & Planning,',
@@ -227,12 +177,10 @@ export default function CloudMigrationPage() {
                 with minimal downtime and maximum security.;
               </p>;
             </motion.div>;
-<<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
+:pages_backup/solutions/cloud-migration.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-=======
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
               {phases.map((phase, index) => (,
                 <motion.div}),
                   key={phase.title}
@@ -275,12 +223,10 @@ export default function CloudMigrationPage() {
                 for maximum flexibility and redundancy.;
               </p>;
             </motion.div>;
-<<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
+:pages_backup/solutions/cloud-migration.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
-=======
 
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
               {services.map((service, index) => (,
                 <motion.div}),
                   key={service.title}
@@ -327,12 +273,10 @@ export default function CloudMigrationPage() {
                 performance, and security.,
               </p>;
             </motion.div>;
-<<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
+:pages_backup/solutions/cloud-migration.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-=======
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
               {benefits.map((benefit, index) => (,
                 <motion.div}),
                   key={benefit.title}
@@ -358,55 +302,7 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-            >,
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Move to the Cloud?,
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
-                Let our cloud migration experts help you seamlessly transition to the cloud;
-                with minimal downtime and maximum security.;
-              </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
-                  Start Your Cloud Migration;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-            >
+:pages_backup/solutions/cloud-migration.tsx            >
               <h2 className="text-4xl md: text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?
               </h2>

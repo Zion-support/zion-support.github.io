@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-advanced-micro-saas-services.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-advanced-micro-saas-services.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-export const advancedMicroSaasServices2025 = [{
+:data_backup/2025-advanced-micro-saas-services.tsexport const advancedMicroSaasServices2025 = [{
     id:,
   ai-powered-customer-success-platform',
     "name": 'CustomerSuccess AI Pro,
