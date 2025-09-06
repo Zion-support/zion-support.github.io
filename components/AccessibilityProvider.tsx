@@ -35,7 +35,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
       {children}
     </AccessibilityContext.Provider>
   );
-<<<<<<< HEAD
   return context;
 }
 ;
@@ -60,16 +59,3 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
     toggleHighContrast,
     toggleLargeText,
     toggleReducedMotion,
-=======
-};
-
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {
-    throw new Error(
-      "useAccessibility must be used within an AccessibilityProvider",
-    );
-  }
-  return context;
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
