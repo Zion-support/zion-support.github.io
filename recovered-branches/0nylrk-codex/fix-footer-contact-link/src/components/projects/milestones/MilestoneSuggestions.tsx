@@ -14,7 +14,7 @@ import React, { useState } from 'react';
   scopeSummary;
   startDate;
   endDate;
-  projectType;import React, { useState } from 'react',;
+  projectType;import React, { useState } from 'react';
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -236,5 +236,4 @@ if ( {) {
     </div>;
   );
 }
-;
-
+}

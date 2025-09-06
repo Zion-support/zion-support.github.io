@@ -34,7 +34,7 @@ interface ClientBudgetRecommenderProps {
   scope?: string,
   experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button",;
 import {;
   getClientBudgetSuggestion,;
@@ -258,4 +258,4 @@ if ( {) {
       </div>;
     </div>);
 }
-;
+}

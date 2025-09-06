@@ -36,7 +36,7 @@ export function SidebarProvider({
 
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 
-import React, { createContext, useContext, useState } from "react",;
+import React, { createContext, useContext, useState } from "react";
 
 interface SidebarContextType {;
   isOpen: boolean,;

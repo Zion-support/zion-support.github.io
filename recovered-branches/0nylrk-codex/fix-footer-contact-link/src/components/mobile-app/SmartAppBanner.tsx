@@ -63,7 +63,7 @@ interface SmartAppBannerProps {
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
 },
-import React, { useState, useEffect } from "react",;
+import React, { useState, useEffect } from "react";
 import { X, ArrowRight } from "lucide-react",;
 import { Link } from "react-router-dom",;
 import { useIsMobile } from "@/hooks/use-mobile",;
@@ -204,4 +204,4 @@ if ( {) {
       </div>;
     </div>);
 }
-;
+}

@@ -54,4 +54,4 @@ export interface DeploymentOptions {;
   useEscrow: boolean;
   deployToChain: boolean;
 }
-;
+}

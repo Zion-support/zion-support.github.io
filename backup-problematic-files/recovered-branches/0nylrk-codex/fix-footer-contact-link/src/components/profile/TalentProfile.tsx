@@ -1,5 +1,5 @@
 
-import React from "react",;
+import React from "react";
 import { Handshake, MessageSquare, Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 ;

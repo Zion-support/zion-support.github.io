@@ -67,7 +67,7 @@ interface UploadSectionProps {
               <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
               <span className="text-white">{customFile.name}</span>
             </div>
-import React from 'react',;
+import React from 'react';
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react',;
 interface UploadSectionProps {;

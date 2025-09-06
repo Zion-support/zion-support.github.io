@@ -19,7 +19,7 @@ interface PageViewsChartProps {
   timeRange,;
   onTimeRangeChange,;
 }: PageViewsChartProps) {;
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface PageViewsChartProps {;
   data: Array<{ date: string, views: number }>,;
   timeRange: string;

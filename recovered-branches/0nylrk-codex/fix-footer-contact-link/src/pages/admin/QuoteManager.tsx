@@ -77,7 +77,7 @@ import {
     updateStatus,
     toggleArchive,
     deleteQuote            
-import { Header } from "@/components/Header",;
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer",;
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
 import { useAuth } from "@/hooks/useAuth",;

@@ -1,4 +1,4 @@
-import React from 'react',;
+import React from 'react';
 import Link from 'next/link',;
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button',;

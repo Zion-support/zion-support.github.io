@@ -659,5 +659,5 @@ export default EnhancedServiceCard;    </motion.div>);
 }
 ;
 export default EnhancedServiceCard
-};
-
+}
+}

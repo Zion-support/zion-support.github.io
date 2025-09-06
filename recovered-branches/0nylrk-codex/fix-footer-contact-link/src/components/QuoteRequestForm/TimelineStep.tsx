@@ -90,7 +90,7 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
                       onSelect={(date) => updateFormData({ endDate: date })}
                       initialFocus
                       className="p-3 pointer-events-auto"
-import { useState } from "react",;
+import { useState } from "react";
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
 import { Button } from "@/components/ui/button",;
@@ -170,4 +170,5 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       className="p - 3 pointer - events-auto";
                       disabled={(date) =>;
                         date < (form_data.start_date || new Date ())
-};
+}
+}

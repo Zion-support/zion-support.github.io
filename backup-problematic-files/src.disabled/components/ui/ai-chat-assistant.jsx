@@ -25,5 +25,5 @@ const Ai-chat-assistant = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

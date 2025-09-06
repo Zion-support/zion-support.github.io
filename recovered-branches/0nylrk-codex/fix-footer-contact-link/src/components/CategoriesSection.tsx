@@ -57,7 +57,7 @@ const categories = [;
   description: "On-demand IT support, consulting, development, and more";
     title: "IT Onsite Services",
     link: "/it-onsite-services"
-import { GradientHeading } from "./GradientHeading",;
+import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom",;
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 

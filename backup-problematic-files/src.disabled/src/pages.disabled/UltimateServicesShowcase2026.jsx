@@ -7,5 +7,5 @@ const UltimateServicesShowcase2026 = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

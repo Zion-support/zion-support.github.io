@@ -113,7 +113,7 @@ export function TeamActivity() {;
         <h3 className="text - xl font-medium">Recent Team Activity</h3>;
         <div className="flex items - center gap-2">;
 
-import React from "react",;
+import React from "react";
 import {;
   Table,;
   TableBody,;

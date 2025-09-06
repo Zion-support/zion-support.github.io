@@ -71,7 +71,7 @@ import {createJob, updateJob, getJobById} from "@/services/jobService";
     update_job,
     getJobById;
 
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
 import { toast } from "sonner",;
@@ -168,4 +168,5 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   }
 };
   }
-};
+}
+}

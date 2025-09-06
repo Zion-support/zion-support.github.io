@@ -27,7 +27,7 @@ interface LeaveReviewModalProps {
   isOpen: boolean,
   onClose: () => void
 
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import {;
   Dialog,;
   DialogContent,;

@@ -52,7 +52,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 
-import React from "react",;
+import React from "react";
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from 'lucide-react';

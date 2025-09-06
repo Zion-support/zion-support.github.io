@@ -26,7 +26,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   target?: string,
   badge?: React.ReactNode
 
-import React, { forwardRef } from "react",;
+import React, { forwardRef } from "react";
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;

@@ -89,7 +89,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
       </CardHeader>;
       <CardContent>;
 
-import React from "react",;
+import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
 interface ConversionAnalysisProps {;

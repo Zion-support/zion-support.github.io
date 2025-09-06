@@ -57,7 +57,7 @@ interface Transaction {
   in_escrow: boolean,
   created_at: string,
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;

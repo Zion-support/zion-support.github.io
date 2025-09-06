@@ -2,5 +2,5 @@
 export const Lighthouse.spec = () => {
   // Implementation here
   return null
-};
-
+}
+}

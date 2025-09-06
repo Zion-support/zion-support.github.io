@@ -129,7 +129,7 @@ export function PartnerResources() {
                     className="w-full flex items-center gap-2"
                   >
                     <Download className="h-4 w-4" />
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react';
 import { toast } from "@/hooks/use-toast",;

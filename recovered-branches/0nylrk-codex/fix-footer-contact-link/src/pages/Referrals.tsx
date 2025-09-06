@@ -126,7 +126,7 @@ export default function ReferralsPage() {
 
   const referralLink = getReferralLink(),
 
-import { useEffect } from 'react',;
+import { useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
 import { ReferralStats } from '@/components/referrals/ReferralStats',;

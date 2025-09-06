@@ -21,7 +21,7 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
           projectId={projectId}
           variant="outline"
         />
-import React from 'react',;
+import React from 'react';
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
 import { ShieldAlert } from "lucide-react",;

@@ -36,7 +36,7 @@
     reviews: 45
   }
 ];
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026ServiceV2 {;
   id: string,;
   name: string,;

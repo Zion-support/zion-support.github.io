@@ -1,17 +1,7 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 #!/usr/bin/env node
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -89,19 +79,6 @@ console.log(`📁 Scanning ${targetDir} for files with merge conflicts`);
 
 const files = findFilesWithConflicts(targetDir);
 console.log(`📄 Found ${files.length} files with merge conflicts`);
-=======
-// Get list of conflicted files
-const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file.length > 0);
-
-console.log(`Found ${conflictedFiles.length} conflicted files`);
-
-// Strategy: For modify/delete conflicts, accept the deletion (main branch)
-// For content conflicts, we'll need to resolve manually
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 let resolvedCount = 0;
 let manualCount = 0;
 
@@ -112,8 +89,7 @@ for (const file of conflictedFiles) {
       console.log(`🗑️  Removing backup file: ${file}`);
       execSync(`git rm "${file}"`);
       resolvedCount++;
-<<<<<<< HEAD
-    }
+}
   } catch (error) {
     console.error(`❌ Error processing ${file}:`, error.message);
     errorCount++;
@@ -253,24 +229,6 @@ function resolveMergeConflicts() {
                     console.log(`Could not resolve ${file}: ${err.message}`);
                 }
             }
-=======
-    } else {
-      // For content conflicts, we'll accept the current branch version (HEAD)
-      console.log(`📝 Resolving content conflict: ${file}`);
-      
-      // Check if file exists and has conflict markers
-      if (fs.existsSync(file)) {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('<<<<<<< HEAD')) {
-          // Accept HEAD version (current branch)
-          execSync(`git checkout --ours "${file}"`);
-          execSync(`git add "${file}"`);
-          resolvedCount++;
-        } else {
-          // No conflict markers, just add the file
-          execSync(`git add "${file}"`);
-          resolvedCount++;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       } else {
         // File doesn't exist, remove it
@@ -376,20 +334,8 @@ contentConflicts.forEach(file => {
   }
 });
 
-<<<<<<< HEAD
 console.log('\nMerge conflict resolution completed!');
 console.log('Run "git status" to check remaining conflicts.');
-=======
-if (resolveMergeConflicts()) {
-    console.log('Ready to commit merge resolution');
-} else {
-}
-  console.log(`⚠️  ${remainingConflicts.length} files still have conflicts`);
-}
-console.log('\n🎉 Merge conflict resolution completed!');
-
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
 

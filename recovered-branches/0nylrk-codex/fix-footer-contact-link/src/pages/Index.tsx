@@ -127,7 +127,7 @@ export default function Index() {;
   description: "Take Zion with you on the go with our mobile app for iOS and Android",;
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,;
       link: "/mobile-launch";
-import { Footer } from "@/components/Footer",;
+import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection",;
 import { TestimonialCarousel } from "@/components/TestimonialCarousel",;
 import { FloatingCTA } from "@/components/FloatingCTA",;

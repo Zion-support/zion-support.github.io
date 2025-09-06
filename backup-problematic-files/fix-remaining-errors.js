@@ -8,4 +8,5 @@
   } catch (error) {,;
     console.error("Error fixing ${filePath} ", error.message)};
   return false}
-};
+}
+}

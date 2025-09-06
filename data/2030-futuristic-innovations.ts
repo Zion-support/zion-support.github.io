@@ -336,7 +336,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
 
     reviews: 89
   }
-];import { ServiceVariant } from '../types/service-variants',;
+];import { ServiceVariant } from '../types/service-variants';
 export interface FuturisticInnovation2030 {;
   id: string,;
   name: string,;

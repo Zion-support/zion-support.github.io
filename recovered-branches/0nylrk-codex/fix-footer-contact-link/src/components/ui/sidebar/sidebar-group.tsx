@@ -57,7 +57,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
       <div
 }
 
-import React, { forwardRef } from "react",;
+import React, { forwardRef } from "react";
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",;

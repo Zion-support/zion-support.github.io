@@ -36,7 +36,7 @@ import ReputationDisplay from "@/components/community/ReputationDisplay",    {
     updatedAt: "2025-03-12T09:30:00Z"
     upvotes: 24
     downvotes: 0
-    replyCount: 6import { useState, useEffect } from "react",;
+    replyCount: 6import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;

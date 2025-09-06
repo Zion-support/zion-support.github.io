@@ -221,4 +221,5 @@ module.exports = {;
   restore_page,
   fixSpecificPages,
   findBestBackup
-};
+}
+}

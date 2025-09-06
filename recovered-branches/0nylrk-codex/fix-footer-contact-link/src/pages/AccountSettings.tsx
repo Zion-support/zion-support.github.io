@@ -53,7 +53,7 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed && parsed.displayWeb3);
         setDidHandle(parsed && parsed.didHandle || '');
         setEnableBackup(!!parsed && parsed.enableBackup);
-import { useState, useEffect } from 'react',;
+import { useState, useEffect } from 'react';
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
 import { SEO } from '@/components/SEO',;

@@ -85,4 +85,4 @@ function TalentCardHeader() {
       </div>;
     </div>);
 }
-;
+}

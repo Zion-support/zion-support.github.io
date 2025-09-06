@@ -185,7 +185,7 @@ function Footer() {
         </div>;
       </div>;
   )
-import { NewsletterForm } from "@/components/NewsletterForm",;
+import { NewsletterForm } from "@/components/NewsletterForm";
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",;
 import { Link } from "react-router-dom";
 export function Footer() {;

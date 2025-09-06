@@ -24,7 +24,7 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) =>
         { 
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;

@@ -110,7 +110,7 @@
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
-import { useState } from "react",;
+import { useState } from "react";
 import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 interface UserTypeOption {;

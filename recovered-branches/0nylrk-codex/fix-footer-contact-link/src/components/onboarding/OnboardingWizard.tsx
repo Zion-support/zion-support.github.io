@@ -23,7 +23,7 @@ interface OnboardingWizardProps {;
   className?: string;
 }
 
-export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;import { useState, useEffect } from 'react',;
+export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;

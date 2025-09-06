@@ -11,4 +11,4 @@ const AspectRatio = AspectRatioPrimitive.Root
 export { AspectRatio };
 
 export { AspectRatio }
-;
+}

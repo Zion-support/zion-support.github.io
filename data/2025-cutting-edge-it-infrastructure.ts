@@ -179,7 +179,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network performance.'
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
   name: string,;

@@ -7,5 +7,5 @@ const MicroSAASServicesPage = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

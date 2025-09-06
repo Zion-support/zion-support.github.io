@@ -1,7 +1,6 @@
 {
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-<<<<<<< HEAD
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+"extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": [
@@ -10,23 +9,6 @@
   ],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
 origin/automation-improvements-final
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true,
-<<<<<<< HEAD
-    "jest": true
-    "es6": true,
-    "jest": true
-    "es6": true,
-    "jest": true
-=======
-    "jest": true,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "es2021": true
   },
   "globals": {
@@ -36,8 +18,7 @@ origin/automation-improvements-final
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
-<<<<<<< HEAD
-    "es6": true,
+"es6": true,
     "jest": true
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
@@ -45,40 +26,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  },
-  "rules": {
-    "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-explicit-any": "warn",
-    "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "warn",
-<<<<<<< HEAD
-    "no-console": "warn"
-    "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
-    "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
-    "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "error",
-    "react/no-unescaped-entities": "off"
-    "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-=======
-    "no-console": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "error"
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },
   "ignorePatterns": [
     "node_modules/",

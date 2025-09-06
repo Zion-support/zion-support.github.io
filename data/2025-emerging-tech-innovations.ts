@@ -498,7 +498,7 @@ export interface EmergingTechInnovationService {
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechInnovation {;
   id: string,;
   name: string,;

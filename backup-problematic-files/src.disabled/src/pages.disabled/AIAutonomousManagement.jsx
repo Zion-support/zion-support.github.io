@@ -7,5 +7,5 @@ const AIAutonomousManagement = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

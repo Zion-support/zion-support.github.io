@@ -190,4 +190,5 @@ async function $1() {,
       errorCount++}
 };
 ,
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
+}

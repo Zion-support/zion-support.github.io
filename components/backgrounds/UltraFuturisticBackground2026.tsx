@@ -276,5 +276,5 @@ export default UltraFuturisticBackground2026;
 
 export default UltraFuturisticBackground2026;
 export default UltraFuturisticBackground2026
-};
-
+}
+}

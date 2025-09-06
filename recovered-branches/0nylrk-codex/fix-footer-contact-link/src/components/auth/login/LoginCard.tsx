@@ -8,7 +8,7 @@ export function LoginCard() {
   );
 }
   )
-import { Link } from "react-router-dom",;
+import { Link } from "react-router-dom";
 import { LoginForm } from "./LoginForm",;
 import { SocialLogin } from "./SocialLogin";
 export function LoginCard() {;

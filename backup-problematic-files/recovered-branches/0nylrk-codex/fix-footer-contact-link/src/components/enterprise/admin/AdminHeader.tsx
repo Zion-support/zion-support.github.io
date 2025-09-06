@@ -1,5 +1,5 @@
 
-import React from "react",;
+import React from "react";
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from "lucide-react",;

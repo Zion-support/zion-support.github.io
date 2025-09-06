@@ -62,7 +62,7 @@
               <item.icon className="h-5 w-5 mb-1" aria-hidden="true" />
               {item.badge && item.badge > 0 && (
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
-import React from "react",;
+import React from "react";
 import { useRouter } from "next/router",;
 import Link from "next/link",;
 import { cn } from "@/lib/utils",;

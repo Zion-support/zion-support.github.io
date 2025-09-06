@@ -16,7 +16,7 @@ import {
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 
-import React from 'react',;
+import React from 'react';
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
 import { motion } from 'framer-motion',;

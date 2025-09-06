@@ -7,7 +7,7 @@ import {SearchSuggestion, SearchHighlight} from "@/types/search";interface Autoc
   onSelectSuggestion: (suggestion: string) => void
 
   visible: boolean
-import { SearchSuggestion, SearchHighlight } from "@/types/search",;
+import { SearchSuggestion, SearchHighlight } from "@/types/search";
 interface AutocompleteSuggestionsProps {;
   suggestions: SearchSuggestion[],;
   searchTerm: string,;

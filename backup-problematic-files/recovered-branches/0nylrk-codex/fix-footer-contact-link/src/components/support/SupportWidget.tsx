@@ -1,5 +1,5 @@
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button",;
 import { ChatBotPanel } from "./ChatBotPanel",;
 import { MessageSquare, Info, X } from "lucide-react",;

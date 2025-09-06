@@ -25,5 +25,5 @@ const CommunityTrust = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

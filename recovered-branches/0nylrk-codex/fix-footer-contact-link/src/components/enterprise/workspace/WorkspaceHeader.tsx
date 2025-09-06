@@ -60,7 +60,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 
 }
 
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard",;
 import { Bell, Users, Settings } from "lucide-react";
 interface WorkspaceHeaderProps {;
@@ -87,4 +87,4 @@ interface WorkspaceHeaderProps {;
 }
   );
 }
-;
+}

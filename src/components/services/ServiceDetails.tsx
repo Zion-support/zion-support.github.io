@@ -157,7 +157,7 @@ import {;
                   key={idx} 
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
                 >
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from 'lucide-react';
 
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5

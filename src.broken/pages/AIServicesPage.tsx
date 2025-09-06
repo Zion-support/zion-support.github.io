@@ -255,7 +255,7 @@ export default function AIServicesPage() {
               <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
               <div className="text-gray-300 text-sm">{stat.label}</div>
             </div>
-import React from 'react',;
+import React from 'react';
 import {;
   Brain,;
   MessageSquare,;

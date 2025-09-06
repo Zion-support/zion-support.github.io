@@ -102,5 +102,4 @@ const Progress = React.forward_ref<;
 Progress.display_name = ProgressPrimitive.Root.display_name;
 ;
 export { Progress }
-;
-
+}

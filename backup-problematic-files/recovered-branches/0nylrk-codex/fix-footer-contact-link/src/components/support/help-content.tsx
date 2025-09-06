@@ -1,5 +1,5 @@
 
-import React from "react",;
+import React from "react";
 import { HelpCategory } from "./types",;
 import { ;
   HelpCircle,;

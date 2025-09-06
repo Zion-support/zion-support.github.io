@@ -11,7 +11,7 @@ interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
-import React from "react",;
+import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleListProps {;

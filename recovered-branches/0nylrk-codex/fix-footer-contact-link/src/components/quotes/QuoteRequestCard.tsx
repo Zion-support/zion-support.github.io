@@ -66,7 +66,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 <ArchiveIcon className="h-4 w-4" />
 }
 
-import React from "react",;
+import React from "react";
 import { format } from "date-fns",;
 import {;
   Card,;
@@ -167,4 +167,4 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 };
     </Card>);
 }
-;
+}

@@ -58,7 +58,7 @@ interface SidebarProps extends React && React.HTMLAttributes<HTMLDivElement> {;
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200"
         className
 
-import React from "react",;
+import React from "react";
 import { cn } from "@/lib/utils",;
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string,;

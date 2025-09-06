@@ -1227,7 +1227,7 @@ export default function MicroSaasPage() {
       description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.";
       icon: "🎯"
     }
-import React from 'react',;
+import React from 'react';
 import Head from 'next/head',;
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react',;
 import Button from '../components/ui/Button',;

@@ -339,4 +339,5 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 ;
 
 export interface SpecializedITSolution2026 {
-};
+}
+}

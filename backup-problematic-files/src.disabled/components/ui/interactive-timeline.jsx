@@ -7,5 +7,5 @@ const Interactive-timeline = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

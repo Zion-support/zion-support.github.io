@@ -907,7 +907,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 ];
 ;
 
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveService {;
   id: string,;
   name: string,;

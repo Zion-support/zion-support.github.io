@@ -66,7 +66,7 @@ export default function BlogPost() {
   }
 };
 
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
 import { Button } from "@/components/ui/button",;

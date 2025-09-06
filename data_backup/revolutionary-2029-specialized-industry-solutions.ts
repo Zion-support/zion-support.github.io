@@ -1812,4 +1812,5 @@ export const getSpecializedIndustryServicesByPriceRange = (
 ) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice})};
+    return price >= minPrice && price <= maxPrice})}
+}

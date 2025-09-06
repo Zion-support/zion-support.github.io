@@ -63,7 +63,7 @@ interface TalentCardAvailabilityProps {
 
 import React from 'react';
 
-import React from "react",;
+import React from "react";
 
 import { Clock } from 'lucide-react';
 interface TalentCardAvailabilityProps {;
@@ -125,4 +125,4 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     </div>
   )
 }
-;
+}

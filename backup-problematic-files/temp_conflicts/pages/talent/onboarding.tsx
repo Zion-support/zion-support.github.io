@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react',;
+import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion',;
 ;
 interface FileData {;

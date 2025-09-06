@@ -117,7 +117,7 @@ import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
             </p>
           </div>
 
-import { useState } from "react",;
+import { useState } from "react";
 import { Link } from "react-router-dom",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;

@@ -48,7 +48,7 @@ export function OnboardingWizard(): any ({;
         <div className='flex flex-col items-center text-center p-4'>;
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
 
-import { useState, useEffect } from 'react',;
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;

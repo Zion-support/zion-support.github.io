@@ -64,7 +64,7 @@ export default function HiringTracker() {
   );
 }
 
-import { useState } from "react",;
+import { useState } from "react";
 import { useParams } from "react-router-dom",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;

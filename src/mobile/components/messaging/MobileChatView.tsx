@@ -579,4 +579,4 @@ export function MobileChatView(): any ({;
 }
 
 }
-;
+}

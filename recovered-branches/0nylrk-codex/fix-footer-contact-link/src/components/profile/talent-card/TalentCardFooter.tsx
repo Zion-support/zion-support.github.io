@@ -75,7 +75,7 @@ interface TalentCardFooterProps {
   onViewProfile: (id: string) => void,
   onRequestHire?: (profile: TalentProfile) => void
   };
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { ExternalLink } from "lucide-react",;

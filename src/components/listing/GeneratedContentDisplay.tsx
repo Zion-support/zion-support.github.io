@@ -8,7 +8,7 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-import React from "react",;
+import React from "react";
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { ArrowRight } from 'lucide-react';

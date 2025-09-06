@@ -115,7 +115,7 @@ import { MessageSquare } from "lucide-react",  const links = [
               )}>;
               {link && link.name}
 
-import { Link, useLocation } from "react-router-dom",;
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",;
 import { MessageSquare } from "lucide-react",;

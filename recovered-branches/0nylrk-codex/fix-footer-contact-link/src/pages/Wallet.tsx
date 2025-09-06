@@ -74,4 +74,4 @@ export default function WalletPage() {;  const { wallet, transactions, loading }
 }
 }
 }
-;
+}

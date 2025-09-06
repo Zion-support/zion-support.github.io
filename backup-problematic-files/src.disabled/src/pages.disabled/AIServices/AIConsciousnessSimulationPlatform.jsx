@@ -7,5 +7,5 @@ const AIConsciousnessSimulationPlatform = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

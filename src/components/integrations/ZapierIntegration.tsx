@@ -205,7 +205,7 @@ function ZapierIntegration() {
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;

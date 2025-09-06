@@ -364,4 +364,5 @@ export const getServiceStats = () =>: any {
       text_analysis: { users: 3890, requests: 11500, avg_response: 178 }
     }
   }
-};
+}
+}

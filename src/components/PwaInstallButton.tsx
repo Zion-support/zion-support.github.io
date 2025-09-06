@@ -1,6 +1,6 @@
 
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-import React, { useEffect, useState } from 'react',;
+import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner',;

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next",;
+import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
 ;

@@ -14,7 +14,7 @@ import React from 'react';
   isOpen;
   onClose;
   onApply;
-  defaultOptions;import React from 'react',;
+  defaultOptions;import React from 'react';
 import {;
   Dialog,;
   DialogContent,;

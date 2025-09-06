@@ -96,7 +96,7 @@ function ComparisonSection() {
       </div>  );
 }
   )
-import { GradientHeading } from "./GradientHeading",;
+import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button",;
 import { CheckCircle2 } from "lucide-react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;        <div className="max-w-4xl mx-auto">;
@@ -138,4 +138,4 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
     </section>);
 }  );
 }
-;
+}

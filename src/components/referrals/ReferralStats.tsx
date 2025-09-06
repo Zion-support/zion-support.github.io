@@ -174,7 +174,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 }
 
               </>
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
 interface ReferralStatsProps {;
@@ -228,5 +228,4 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
         </Card>))}
     </div>);
 }
-
-;
+}

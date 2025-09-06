@@ -23,7 +23,7 @@ export function DisputeDetail() {;
   const handleResolveDispute = async () => {
     if (!disputeId) return
 };
-import React, { useState, useEffect } from "react",;
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
 import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;

@@ -64,7 +64,7 @@ export function MilestoneManager({
     }
 
   },
-  import React from 'react',;
+  import React from 'react';
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;

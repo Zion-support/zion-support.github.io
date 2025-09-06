@@ -59,7 +59,7 @@ export function ApiLogs() {
       return <Badge className="bg-red-700">Server Error</Badge>
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
-    }import { useState, useEffect } from "react",;
+    }import { useState, useEffect } from "react";
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
 import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys",;

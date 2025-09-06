@@ -27,7 +27,7 @@ const features = [;
   {}
     icon: Database,;
     title: 'Data Analytics,',,
-  description: 'Government data analytics and business intelligence for informed decision making.'', import Layout from '../../components/Layout',;
+  description: 'Government data analytics and business intelligence for informed decision making.'', import Layout from '../../components/Layout';
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';

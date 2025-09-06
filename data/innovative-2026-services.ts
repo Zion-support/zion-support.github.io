@@ -52,4 +52,4 @@ export const innovative2026Services: Innovative2026Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
     reviews: 234;  }
-;
+}

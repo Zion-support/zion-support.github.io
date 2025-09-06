@@ -35,7 +35,7 @@ export function MobileOnboarding() {;
   const handleRoleSelect = () => {
     setCurrentStep("signup")
 };
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
 import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;

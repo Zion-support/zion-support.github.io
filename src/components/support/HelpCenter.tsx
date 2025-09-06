@@ -107,7 +107,7 @@ import { HELP_CATEGORIES } from './help-content';
               {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList 
                   categories={HELP_CATEGORIES} 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;

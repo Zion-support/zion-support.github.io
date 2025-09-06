@@ -135,7 +135,7 @@ export default function ServicesAdvertisingPage() {
             <div className="flex flex-wrap items-center justify-center gap-3">
               {anchors.map((a) => (
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
-import React from 'react',;
+import React from 'react';
 import SEO from '../components/SEO',;
 const ext = (url: string) => (;
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>;
@@ -2577,4 +2577,4 @@ export default function ServicesAdvertisingPage() {;
 		</div>;
 	);
 }
-;
+}

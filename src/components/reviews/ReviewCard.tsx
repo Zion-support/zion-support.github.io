@@ -53,7 +53,7 @@ import {
                 <AvatarFallback>
 
                   {review.reviewer_profile?.display_name ? 
-import { useState } from "react",;
+import { useState } from "react";
 import { formatDistanceToNow } from "date-fns",;
 import { Star, Flag, User } from 'lucide-react';
 import { Review } from '@/types / reviews';

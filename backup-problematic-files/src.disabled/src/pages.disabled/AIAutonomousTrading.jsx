@@ -7,5 +7,5 @@ const AIAutonomousTrading = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

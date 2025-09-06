@@ -95,4 +95,4 @@ export const AppFeatures: React.FC = () => {
       </div>;
     </section>);
 }
-;
+}

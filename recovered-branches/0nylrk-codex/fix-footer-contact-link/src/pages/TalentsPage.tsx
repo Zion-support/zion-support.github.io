@@ -134,7 +134,7 @@ const TALENT_FILTERS = [
 
   return (
     <DynamicListingPage
-import { DynamicListingPage } from "@/components/DynamicListingPage",;
+import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings",;
 // Sample talent listings;
 const TALENT_LISTINGS: ProductListing[] = [;

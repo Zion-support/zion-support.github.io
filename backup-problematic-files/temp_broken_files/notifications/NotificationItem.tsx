@@ -1,4 +1,4 @@
-import React from 'react',;
+import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button',;

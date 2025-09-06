@@ -78,4 +78,4 @@ const TabsContent = React.forward_ref<;
 TabsContent.display_name = TabsPrimitive.Content.display_name;
 ;
 export { Tabs, TabsList, TabsTrigger, TabsContent }
-;
+}

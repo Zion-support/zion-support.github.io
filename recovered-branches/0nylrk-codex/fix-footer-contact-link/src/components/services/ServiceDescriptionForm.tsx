@@ -65,7 +65,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     setIsLoading(true)
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;

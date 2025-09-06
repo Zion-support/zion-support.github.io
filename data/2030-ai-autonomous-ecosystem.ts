@@ -252,7 +252,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
 
     reviews: 12
   }
-];import { ServiceVariant } from '../types/service-variants',;
+];import { ServiceVariant } from '../types/service-variants';
 export interface AIAutonomousEcosystem2030 {;
   id: string,;
   name: string,;

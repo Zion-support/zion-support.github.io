@@ -1131,7 +1131,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     reviews: 198;
 ]}}
 
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface PracticalBusinessSolution2029 {;
   id: string,;
   name: string,;
@@ -1878,4 +1878,5 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   })
-};
+}
+}

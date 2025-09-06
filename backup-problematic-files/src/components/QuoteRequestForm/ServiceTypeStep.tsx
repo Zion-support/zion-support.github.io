@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react",;
+import { useEffect, useState } from "react";
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
 import { Card } from "@/components/ui/card",;

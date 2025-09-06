@@ -189,7 +189,7 @@
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import {;
   Table,;
   TableBody,;

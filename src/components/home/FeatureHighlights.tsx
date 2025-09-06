@@ -56,7 +56,7 @@
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
 
-import React from "react",;
+import React from "react";
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from 'lucide-react';
 import { cn } from "@/lib/utils",;

@@ -181,7 +181,7 @@ if ( {) {
         description: "Please generate a referral code first",
         variant: "destructive"}),
       return
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import { toast } from "@/hooks/use-toast",;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from "@/integrations/supabase/client",;

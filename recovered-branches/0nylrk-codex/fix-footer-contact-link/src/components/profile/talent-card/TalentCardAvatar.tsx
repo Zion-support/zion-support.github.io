@@ -34,5 +34,4 @@ function TalentCardAvatar() {
       .join ("");
       .toUpperCase ();
   }
-;
-
+}

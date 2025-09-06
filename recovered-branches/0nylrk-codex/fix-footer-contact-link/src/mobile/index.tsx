@@ -5,7 +5,7 @@ export * from './pages/MobileProjects';
 export * from './pages/MobileMessages';
 export * from './pages/MobileResumeBuilder';
 export * from './pages/MobileJobPost';
-import React from 'react',;
+import React from 'react';
 import { MobileApp } from './MobileApp',;
 export { MobileApp },;
 // Export all mobile components for potential reuse in other projects;

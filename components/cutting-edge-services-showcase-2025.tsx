@@ -914,5 +914,5 @@ const item_variants = {
   duration: 0.5 
 
 };}
-};
-
+}
+}

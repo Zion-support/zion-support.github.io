@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils",
   className?: string;import React from './react';
 import { cn  } from '@/lib / utils';
 interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
-  class_name?: string;import React from "react",;
+  class_name?: string;import React from "react";
 import { cn } from "@/lib/utils",;
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string,;

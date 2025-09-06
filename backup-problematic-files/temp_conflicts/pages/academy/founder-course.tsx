@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react',;
+import React, { useEffect, useMemo, useState } from 'react';
 import ModuleCard from '../../components/academy/ModuleCard',;
 import ProgressTracker from '../../components/academy/ProgressTracker',;
 import CertificateView from '../../components/academy/CertificateView',;

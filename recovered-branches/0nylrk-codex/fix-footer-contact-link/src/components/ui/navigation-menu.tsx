@@ -272,4 +272,4 @@ NavigationMenuIndicator.display_name =;
 ;  NavigationMenuViewport,
 };
   NavigationMenuViewport}
-;
+}

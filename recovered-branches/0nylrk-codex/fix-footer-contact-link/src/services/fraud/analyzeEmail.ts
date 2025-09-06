@@ -47,7 +47,7 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 };
 
 // Email analysis functionality;
-import { suspiciousEmailDomains } from './constants',;
+import { suspiciousEmailDomains } from './constants';
 import { EmailAnalysisResult } from './types',;
 ;
 /**;
@@ -80,4 +80,5 @@ export const analyzeEmail = (email:string):EmailAnalysisResult => {;
   }
 }
 
-};
+}
+}

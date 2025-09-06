@@ -9,7 +9,7 @@ export function AdminHeader() {;
   const { company } = useCompanyWorkspace();
   return (
 
-import { useAuth } from "@/hooks/useAuth",;
+import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from "lucide-react",;
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;

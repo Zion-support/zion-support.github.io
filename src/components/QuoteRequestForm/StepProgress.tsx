@@ -115,7 +115,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
-import { QuoteRequestSteps } from "../QuoteRequestForm",;
+import { QuoteRequestSteps } from "../QuoteRequestForm";
 import { CheckIcon } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 interface StepProgressProps {;

@@ -50,4 +50,5 @@ export const email = {
   ) {
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
-};
+}
+}

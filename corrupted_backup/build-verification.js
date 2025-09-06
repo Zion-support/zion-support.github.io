@@ -3,7 +3,6 @@ console.log(' Starting build verification...');
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 console.log('🔍 Starting build verification...');
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:corrupted_backup/build-verification.js
 try {
@@ -13,13 +12,7 @@ try {
   const { motion } = require('framer-motion');
 <<<<<<< HEAD:backup-problematic-files/build-verification.js
   console.log(' Framer Motion import successful', typeof motion);
- try {  const React = require('react');  const { motion } = require('framer-motion');  const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react');   } catch (error) { console.error(' Import error:',error.message); process.exit(1)} 
-=======
-  console.log('✅ Framer Motion import successful', typeof motion);
- try {  const React = require('react');  const { motion } = require('framer-motion');  const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react');   } catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} 
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:corrupted_backup/build-verification.js
+ try {  const React = require('react');  const { motion } = require('framer-motion');  const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react');   } catch (error) { console.error(' Import error:',error.message); process.exit(1)}
 // Build Verification Script
 // This script checks if our components can be imported without syntax errors
 console.log(' Starting build verification...');

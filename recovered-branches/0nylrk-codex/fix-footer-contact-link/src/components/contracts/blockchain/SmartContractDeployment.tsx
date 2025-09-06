@@ -24,7 +24,7 @@ import { toast } from "sonner",  isDeploying
                 deployToChain: checked
             <Switch 
               id="deploy-blockchain"
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
@@ -257,4 +257,4 @@ import { toast } from "sonner",;  isDeploying;
       </CardContent>;
 }
 ;}
-;
+}

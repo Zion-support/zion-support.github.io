@@ -102,4 +102,4 @@ onSmartClick: () => void
     </div>;
   );
 }
-;
+}

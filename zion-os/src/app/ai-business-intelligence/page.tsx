@@ -1,5 +1,5 @@
 
-import Link from "next/link",;
+import Link from "next/link";
 export const metadata = {
   title: "AI Business Intelligence - Zion Tech Group",,
   description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.",,

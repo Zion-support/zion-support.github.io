@@ -84,7 +84,7 @@ if ( {) {
   return {
     handleSignedIn,
     handleSignedOut
-import { toast } from "@/hooks/use-toast",;
+import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth",;
 import { checkNewRegistration } from "@/utils/authUtils",;
 import { useNavigate } from 'react-router-dom',;

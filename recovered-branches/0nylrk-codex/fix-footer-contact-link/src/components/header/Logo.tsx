@@ -19,7 +19,7 @@ export function Logo(): any ({ customLogo, customColor }: LogoProps) {;
   if (logoToUse) {;  customColor?: string;
 }
 
-import React from 'react',;
+import React from 'react';
 import { Link } from 'react-router-dom',;
 import { useWhitelabel } from '@/context/WhitelabelContext',;
 interface LogoProps {;

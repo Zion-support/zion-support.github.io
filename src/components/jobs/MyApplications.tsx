@@ -55,7 +55,7 @@ import {ApplicationStatus} from "@/types/jobs";
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
 
-import { useState } from "react",;
+import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;

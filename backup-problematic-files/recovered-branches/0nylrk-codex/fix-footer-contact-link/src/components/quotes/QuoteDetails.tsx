@@ -1,5 +1,5 @@
 
-import React from "react",;
+import React from "react";
 import { ;
   Dialog,;
   DialogContent, ;
@@ -133,4 +133,5 @@ try {
 }catch (e) {
   return dateString;
 }
-};
+}
+}

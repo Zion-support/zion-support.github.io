@@ -72,7 +72,7 @@ import { Search } from "lucide-react",export default function HelpCenter() {
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;

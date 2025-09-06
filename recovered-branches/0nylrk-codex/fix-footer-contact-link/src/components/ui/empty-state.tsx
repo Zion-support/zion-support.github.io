@@ -33,7 +33,7 @@ export function EmptyState({;
       className={cn(        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
         className
-import React from "react",;
+import React from "react";
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;

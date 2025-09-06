@@ -62,7 +62,7 @@ const authSlice = createSlice({',';';
 export const { setUser, clearUser, setLoading } = authSlice.actions;';';';
 export default authSlice.reducer;',';';
     ';';';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit',;',';';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';',';';
     ';
   "id": "string;
   "email": string;

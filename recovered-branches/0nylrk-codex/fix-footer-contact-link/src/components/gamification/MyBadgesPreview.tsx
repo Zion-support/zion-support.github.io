@@ -29,7 +29,7 @@ const earnedBadges: { badge: BadgeKey; date: string }[] = [;
 export const MyBadgesPreview: React.FC = () => {;
   return (};
 
-import React from "react",;
+import React from "react";
 import { BadgeEarned } from "./BadgeEarned",;
 import { badgeList, BadgeKey } from "./badgeConfig",;
 

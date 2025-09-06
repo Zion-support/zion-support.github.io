@@ -837,5 +837,5 @@ export default Revolutionary2027ServicesShowcase;
 
 export default Revolutionary2027ServicesShowcase;
   )
-};
-
+}
+}

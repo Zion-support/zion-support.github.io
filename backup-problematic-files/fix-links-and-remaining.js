@@ -68,4 +68,5 @@ remainingCorruptedFiles.forEach(filePath => {,
     console.log(` Fixed ${filePath}`)} catch (error) {,
 
     } catch (error) {_
-};
+}
+}

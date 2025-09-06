@@ -85,5 +85,4 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 }
   )
 }
-;
-
+}

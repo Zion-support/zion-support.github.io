@@ -36,7 +36,7 @@
     reviews: 25
   }
 ];
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface Revolutionary2026Service {;
   id: string,;
   name: string,;

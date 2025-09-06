@@ -52,4 +52,4 @@ export function ErrorState({ error }: ErrorStateProps) {;
     </Card>;
   );
 }
-;
+}

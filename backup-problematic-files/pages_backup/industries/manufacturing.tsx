@@ -523,5 +523,5 @@ export default function ManufacturingPage() {;
       </div>
     </Layout>
   )
-};
-
+}
+}

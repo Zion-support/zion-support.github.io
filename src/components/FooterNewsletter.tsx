@@ -133,7 +133,7 @@ export function FooterNewsletter(): React.ReactElement {
           toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` })
         } else {
           toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` })
-import React, { useState, useRef } from 'react',;
+import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input',;
 import { Button } from '@/components/ui/button',;
 import { useToast } from '@/hooks/use-toast',;

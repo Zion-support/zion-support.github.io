@@ -32,7 +32,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
-import { useState } from 'react',;
+import { useState } from 'react';
 import { Button } from '@/components/ui/button',;
 import {;
   DropdownMenu,;

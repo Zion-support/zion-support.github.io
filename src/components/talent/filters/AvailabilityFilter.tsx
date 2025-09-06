@@ -182,7 +182,7 @@ function AvailabilityFilter() {
 }"}
               >
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox",;
+import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
@@ -234,4 +234,4 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
     </div>;
   );
 }
-;
+}

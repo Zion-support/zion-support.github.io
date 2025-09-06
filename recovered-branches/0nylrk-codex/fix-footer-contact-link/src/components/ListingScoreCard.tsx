@@ -55,7 +55,7 @@ interface ListingScoreCardProps {
               <span>{aiScore}%</span>;
             </div>;
           )}
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button",;
 import { StarIcon } from "lucide-react",;
 interface ListingScoreCardProps {;

@@ -19,7 +19,7 @@ export interface EnhancedProfile {
     setIsGenerating(true);
     setError(null)      if (error) {
         throw new Error(error.message)
-import { useState } from 'react',;
+import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client',;
 export interface TalentProfileData {;
   name: string,;

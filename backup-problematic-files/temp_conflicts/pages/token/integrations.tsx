@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic',;
+import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react',;
 import { useWallet } from '../../hooks/useWallet',;
 import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins',;

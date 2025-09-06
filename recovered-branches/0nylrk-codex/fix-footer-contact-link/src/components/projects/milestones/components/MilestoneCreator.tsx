@@ -12,7 +12,7 @@ interface MilestoneCreatorProps {;
 
 export function MilestoneCreator(): any ({;
 
-export function MilestoneCreator({;import React from 'react',;
+export function MilestoneCreator({;import React from 'react';
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
   onSubmit: (data: any) => Promise<void>,;

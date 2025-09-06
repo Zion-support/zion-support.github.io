@@ -9,7 +9,7 @@ import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components
 import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
-import {Badge} from "@/components/ui/badge";import React, { useState } from "react",;
+import {Badge} from "@/components/ui/badge";import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;

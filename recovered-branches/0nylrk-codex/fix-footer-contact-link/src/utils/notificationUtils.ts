@@ -46,7 +46,7 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
     
     if (error) throw error,
     
-import { supabase } from "@/integrations/supabase/client",;
+import { supabase } from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 /**;
  * Creates a notification for a user and optionally sends an email notification;

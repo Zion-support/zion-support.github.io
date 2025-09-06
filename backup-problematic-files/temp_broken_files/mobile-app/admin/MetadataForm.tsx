@@ -1,5 +1,5 @@
 
-import React from "react",;
+import React from "react";
 import { UseFormReturn } from "react-hook-form",;
 import { AppMetadataValues } from "./MetadataManager",;
 import { Input } from "@/components/ui/input",;

@@ -152,7 +152,7 @@ if ( {) {
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
-import { useState } from "react",;
+import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
 import { Button } from "@/components/ui/button",;

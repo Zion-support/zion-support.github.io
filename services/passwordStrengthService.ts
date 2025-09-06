@@ -169,4 +169,5 @@ export interface CommonPasswordData {;
 // Export singleton instance
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
-export { PasswordStrengthService };
+export { PasswordStrengthService }
+}

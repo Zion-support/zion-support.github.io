@@ -61,7 +61,7 @@ export const QrCodeDownload: React.FC = () => {
 
 };
 },
-import React from "react",;
+import React from "react";
 import { QrCode } from "lucide-react",;
 import { AppStoreButtons } from "./AppStoreButtons",;
 

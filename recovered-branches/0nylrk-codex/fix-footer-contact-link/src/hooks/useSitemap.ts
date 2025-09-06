@@ -98,7 +98,7 @@ if (!route) return false;
 }
 
     canAccessRoute
-import { useAuth } from './useAuth',;
+import { useAuth } from './useAuth';
 import { getAccessibleRoutes } from '@/config/sitemap',;
 import type { SitemapItem } from '@/config/sitemap',;
 // Define the allowed user types;

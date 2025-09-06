@@ -7,5 +7,5 @@ const AIAutonomousLegalCounsel.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

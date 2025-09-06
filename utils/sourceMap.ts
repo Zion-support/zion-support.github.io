@@ -108,5 +108,4 @@ export function ensure_directory (dir_path: string): void {
     skipped_paths.push (readme_file);
   }
   return { created_paths, skipped_paths }
-;
-
+}

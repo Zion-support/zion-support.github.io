@@ -1,5 +1,5 @@
 
-import { ChevronDown, ChevronUp } from "lucide-react",;
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider",;
 import { PriceFilterProps } from "@/types/filters",;
 ;
@@ -44,4 +44,5 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 }: PriceFilterProps) {
   const handleChange = (values: number[]) => {
   setPriceRange ([values[0], values[1]]) 
-};
+}
+}

@@ -19,7 +19,7 @@ import {Menu, X} from 'lucide-react';
   const isMobile = useIsMobile();
   } catch (error) {
     console.warn ('Messaging context not available');
-import { useState } from 'react',;
+import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
 import { Logo } from '@/components/header/Logo',;

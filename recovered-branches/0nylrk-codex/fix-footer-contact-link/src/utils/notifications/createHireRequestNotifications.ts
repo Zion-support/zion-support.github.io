@@ -57,7 +57,7 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-import { createNotification } from './createNotification',;
+import { createNotification } from './createNotification';
 import { HireRequestNotificationParams } from './types',;
 /**;
  * Creates a hire request notification for admin and talent;

@@ -84,7 +84,7 @@ interface ReviewsModerationTableProps {;
       status}: {;
       reviewId: string,;
       status: ReviewStatus;
-import { useState } from "react",;
+import { useState } from "react";
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
 import { format } from "date-fns",;

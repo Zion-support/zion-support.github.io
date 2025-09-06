@@ -32,7 +32,7 @@ export function ApplicationsTracker() {
   
   if (isLoading) {
     return <LoadingState />
-import { useState } from "react",;
+import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { ApplicationCard } from "./ApplicationCard",;
 import { LoadingState } from "./LoadingState",;

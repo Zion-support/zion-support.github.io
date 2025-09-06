@@ -24,7 +24,7 @@ export const AppFeatures: React.FC = () => {
             </Card>
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-import React from "react",;
+import React from "react";
 import { Brain, Clock, Award, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 const features = [;

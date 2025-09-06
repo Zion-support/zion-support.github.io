@@ -1,5 +1,5 @@
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { Button } from "@/components/ui/button",;

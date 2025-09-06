@@ -53,7 +53,7 @@ import {;
 
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {;

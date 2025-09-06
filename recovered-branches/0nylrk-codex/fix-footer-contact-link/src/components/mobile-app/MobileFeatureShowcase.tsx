@@ -64,7 +64,7 @@ export const MobileFeatureShowcase: React.FC = () => {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />,;
       title: "Biometric Security",,
   description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
-import React from "react",;
+import React from "react";
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",;
 export const MobileFeatureShowcase: React.FC = () => {;
   const features = [;
@@ -165,4 +165,4 @@ export const MobileFeatureShowcase: React.FC = () => {;
       </div>;
     </section>);
 }
-;
+}

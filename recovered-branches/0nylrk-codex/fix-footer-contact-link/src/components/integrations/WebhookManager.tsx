@@ -99,7 +99,7 @@ export function WebhookManager() {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="webhook-url">URL</Label>import React, { useEffect, useState } from "react",;
+              <Label htmlFor="webhook-url">URL</Label>import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;

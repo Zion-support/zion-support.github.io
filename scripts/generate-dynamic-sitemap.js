@@ -177,4 +177,5 @@ export {
   generateSitemap,
   generateRobotsTxt,
   generateStructuredData
-};
+}
+}

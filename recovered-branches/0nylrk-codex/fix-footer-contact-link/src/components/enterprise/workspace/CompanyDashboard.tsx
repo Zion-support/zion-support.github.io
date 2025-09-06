@@ -17,7 +17,7 @@ import { TalentPool } from "./TalentPool",    primaryColor: string,
   teamLimit: number,
   billingCycle: string,
   workspaceUrl: string
-import React from "react",;
+import React from "react";
 import { WorkspaceHeader } from "./WorkspaceHeader",;
 import { SharedInbox } from "./SharedInbox",;
 import { TeamStats } from "./TeamStats",;
@@ -106,4 +106,4 @@ function CompanyDashboard() {
         <div className="lg:col - span - 2 space-y-6">;
 }  );
 }
-;
+}

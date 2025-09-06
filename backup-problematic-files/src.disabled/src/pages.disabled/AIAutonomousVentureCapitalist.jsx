@@ -7,5 +7,5 @@ const AIAutonomousVentureCapitalist = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

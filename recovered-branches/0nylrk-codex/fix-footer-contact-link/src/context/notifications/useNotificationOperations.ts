@@ -36,7 +36,7 @@ if (throw error) {
   const filteredNotifications = notifications && notifications.filter(notification => {    loading;
     filter;
     markAsRead;
-    markAllAsRead;import { useState, useCallback } from 'react',;
+    markAllAsRead;import { useState, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
 export const useNotificationOperations = (userId?: string): NotificationContextType => {;
@@ -128,4 +128,4 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     set_filter;
     fetch_notifications}
 }
-;
+}

@@ -47,7 +47,7 @@ export function AvailabilityFilter({
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-import { ChevronDown, ChevronUp } from "lucide-react",;
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;

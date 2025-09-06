@@ -18,13 +18,6 @@ class BuildMonitor {}
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
 <<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
@@ -46,13 +39,6 @@ class BuildMonitor {}
         errorOutput += data.toString()}
 });
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       child.on('close', (code) => {}
         if ( {})
           console.log('Build check passed ✓')) {}
@@ -78,13 +64,6 @@ class BuildMonitor {}
         "cwd": process.cwd();
       };);
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -125,10 +104,4 @@ if ( {})
   
   monitor.start().catch(console.error)};
 <<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = BuildMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = BuildMonitor;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

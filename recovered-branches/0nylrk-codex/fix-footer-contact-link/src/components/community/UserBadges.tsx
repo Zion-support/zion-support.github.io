@@ -53,7 +53,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
           </TooltipProvider>
         )
 
-import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",;
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react";
 import { Badge } from "@/types/community",;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
 interface UserBadgesProps {;

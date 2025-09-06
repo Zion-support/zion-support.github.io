@@ -18,7 +18,7 @@
                     const target = e.currentTarget as HTMLImageElement;
 
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
-                    const target = e.currentTarget as HTMLImageElement,import { GradientHeading } from "./GradientHeading",;
+                    const target = e.currentTarget as HTMLImageElement,import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { Button } from "./ui/button",;
 import { Link } from "react-router-dom",;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react',;
+import { useEffect, useState } from 'react';
 import Link from 'next/link',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants',;

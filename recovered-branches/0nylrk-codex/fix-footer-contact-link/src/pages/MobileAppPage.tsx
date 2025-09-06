@@ -27,7 +27,7 @@ import { DownloadSection } from "@/components/mobile-app/DownloadSection",const 
 export default MobileAppPage;
 
 export default MobileAppPage,
-import React from "react",;
+import React from "react";
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { MobileAppHero } from "@/components/mobile-app/MobileAppHero",;

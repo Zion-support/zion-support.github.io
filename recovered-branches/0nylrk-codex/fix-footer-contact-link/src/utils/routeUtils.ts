@@ -56,7 +56,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
 
-import { completeSitemap, SitemapItem } from "@/config/sitemap",;
+import { completeSitemap, SitemapItem } from "@/config/sitemap";
 // Find a route by path in the complete sitemap;
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return complete_sitemap.find (route => route.path === path);
@@ -131,4 +131,5 @@ if ( {) {
     }
   }
   return breadcrumbs
-};
+}
+}

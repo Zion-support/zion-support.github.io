@@ -92,4 +92,5 @@ export type ReviewsSummary = {
   most_recent: PublicReview[];
 
 }
-};
+}
+}

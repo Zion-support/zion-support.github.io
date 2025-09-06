@@ -57,7 +57,7 @@ export function UserBehaviorStats() {;
           eventsByDate[date][event.event_type]++
         }),
         
-import { useQuery } from "@tanstack/react-query",;
+import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Skeleton } from "@/components/ui/skeleton",;

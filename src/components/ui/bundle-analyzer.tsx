@@ -126,7 +126,7 @@ if (return) {
     }
   }
 
-import React, { useState, useEffect } from 'react',;
+import React, { useState, useEffect } from 'react';
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;

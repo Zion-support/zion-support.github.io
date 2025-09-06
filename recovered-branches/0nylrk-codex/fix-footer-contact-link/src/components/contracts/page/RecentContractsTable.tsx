@@ -15,7 +15,7 @@ interface Contract {
   talent: string,
   date: string,
   isSmartContract: boolean
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 interface Contract {;
   id: string,;
   title: string,;

@@ -460,5 +460,5 @@ export default function RetailPage() {;
       </div>
     </Layout>
   )
-};
-
+}
+}

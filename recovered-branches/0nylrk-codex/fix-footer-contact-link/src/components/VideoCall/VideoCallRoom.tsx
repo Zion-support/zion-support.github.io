@@ -25,7 +25,7 @@ interface VideoCallRoomProps {
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
   return (
 
-import React from 'react',;
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 interface VideoCallRoomProps {;

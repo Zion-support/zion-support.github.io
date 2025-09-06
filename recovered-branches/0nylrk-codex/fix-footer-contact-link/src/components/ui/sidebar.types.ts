@@ -68,4 +68,5 @@ export type SidebarContext = {
   set_open: (open: boolean) => void;
   open_mobile: boolean;
   setOpenMobile: (open: boolean) => void
-};
+}
+}

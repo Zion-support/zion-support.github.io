@@ -22,7 +22,7 @@ export default function AboutPage() {
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
 	}
-import Button from '../components/ui/Button',;
+import Button from '../components/ui/Button';
 import Button from '../components/ui/Button',
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {

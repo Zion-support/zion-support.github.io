@@ -4,7 +4,7 @@ import {format} from 'date - fns';
 interface CertificationsSectionProps {
   certifications: Certification[];
 }
-import { Certification } from '@/types/resume',;
+import { Certification } from '@/types/resume';
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];

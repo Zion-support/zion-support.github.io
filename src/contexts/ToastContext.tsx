@@ -181,4 +181,5 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
       </div>
     </div>
   )
-};
+}
+}

@@ -1,4 +1,4 @@
-import React from 'react',;
+import React from 'react';
   const featuredNews = [;
     {;
       title:'Zion Tech Group Launches Revolutionary AI Consciousness Platform',;

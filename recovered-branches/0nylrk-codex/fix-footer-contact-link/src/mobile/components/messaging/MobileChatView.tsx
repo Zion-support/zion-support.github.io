@@ -11,7 +11,7 @@ import {toast} from "sonner";  id: string,;
   content: string,;
   timestamp: string,;
   isMe: boolean,;
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;

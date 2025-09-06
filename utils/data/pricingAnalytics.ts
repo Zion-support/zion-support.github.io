@@ -6,4 +6,5 @@ export const getPricingMetrics = async () => {
   return { metrics: {}, success: true }
 }
 
-};
+}
+}

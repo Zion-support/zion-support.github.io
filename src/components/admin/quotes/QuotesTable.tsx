@@ -131,7 +131,7 @@
                         </DropdownMenuContent>
                       </DropdownMenu>
 
-import React from "react",;
+import React from "react";
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;

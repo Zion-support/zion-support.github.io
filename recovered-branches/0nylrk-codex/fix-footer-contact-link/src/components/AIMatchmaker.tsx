@@ -94,7 +94,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 
   };
 
-import { useState } from "react",;
+import { useState } from "react";
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;

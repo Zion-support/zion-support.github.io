@@ -991,7 +991,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     reviews: 28
   }
 ];
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasService {;
   id: string,;
   name: string,;

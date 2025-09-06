@@ -13,7 +13,7 @@ export const CreateResumeForm = ({ ;
               type="text"
               placeholder="Resume Title (e && e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-import { useState } from "react",;
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;

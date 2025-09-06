@@ -290,7 +290,7 @@ function DetailsStep() {
           id="description" 
           placeholder="Describe the job role and responsibilities" 
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",;
 import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",;
 import { Button } from "@/components/ui/button",;

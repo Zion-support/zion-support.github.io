@@ -31,7 +31,7 @@ export function BenefitsSection() {;
 }
 };
 
-import { GradientHeading } from "./GradientHeading",;
+import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
 const benefits = [;
@@ -102,4 +102,4 @@ function BenefitsSection() {
     </section>);
 }            <FeatureCard;
 }
-;
+}

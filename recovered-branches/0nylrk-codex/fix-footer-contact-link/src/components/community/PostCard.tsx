@@ -24,7 +24,7 @@ import { ProfileBadge } from "@/components/profile/ProfileBadge",      post.isFe
               {post.title}
             </Link>
             {post.isAnswered && (
-              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />import { Link } from "react-router-dom",;
+              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />import { Link } from "react-router-dom";
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;

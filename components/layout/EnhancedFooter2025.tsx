@@ -387,5 +387,5 @@ export default EnhancedFooter2025;
     </footer>);
 }
 export default EnhancedFooter2025
-};
-
+}
+}

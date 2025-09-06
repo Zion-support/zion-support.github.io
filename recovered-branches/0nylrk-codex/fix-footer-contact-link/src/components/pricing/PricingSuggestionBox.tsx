@@ -49,7 +49,7 @@ import {PricingSuggestion} from "@/services/pricingSuggestionService";
         </CardContent>
       </Card>
     )
-import React from "react",;
+import React from "react";
 import { Button } from "@/components/ui/button",;
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",;
 import { Card, CardContent } from "@/components/ui/card",;

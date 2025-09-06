@@ -40,7 +40,7 @@ import { CalendarIcon, Search } from "lucide-react";
             <Input
               type="search"
               placeholder="Search activities..."
-              className="w-[200px] md:w-[300px] pl-9"import React from "react",;
+              className="w-[200px] md:w-[300px] pl-9"import React from "react";
 import {;
   Table,;
   TableBody,;

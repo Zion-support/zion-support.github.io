@@ -9,7 +9,7 @@ export default function InteractiveCard({title;
   children;
 }: InteractiveCardProps) {const [isHovered, setIsHovered] = useState(false);
 'use client',;
-import React, { useState } from 'react',;
+import React, { useState } from 'react';
 import Link from 'next/link',;
 interface InteractiveCardProps {;
   title: string,,

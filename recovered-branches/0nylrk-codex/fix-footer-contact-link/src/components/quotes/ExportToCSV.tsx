@@ -14,7 +14,7 @@ import type { QuoteRequest } from "@/types/quotes",      quote.id;
     setTimeout(() => {
       document.body.removeChild(link),
       URL.revokeObjectURL(url)
-    }, 100)import { Button } from "@/components/ui/button",;
+    }, 100)import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react",;
 import type { QuoteRequest } from "@/types/quotes",;
 ;
@@ -67,4 +67,5 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       Export CSV;
     </Button>;
   )
-};
+}
+}

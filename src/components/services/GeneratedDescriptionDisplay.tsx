@@ -61,7 +61,7 @@ export function GeneratedDescriptionDisplay(): any ({;
                 Edit
               </>
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
@@ -208,4 +208,4 @@ export function GeneratedDescriptionDisplay({;
 }</Card>);
 }'";
 }
-;
+}

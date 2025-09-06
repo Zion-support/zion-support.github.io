@@ -30,7 +30,7 @@ export default function CreateTalentProfile() {
       </div>
     </div>
   )
-import React from "react",;
+import React from "react";
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 
 export default function CreateTalentProfile() {;
@@ -56,4 +56,4 @@ export default function CreateTalentProfile() {;
 }
 ;
 }
-;
+}

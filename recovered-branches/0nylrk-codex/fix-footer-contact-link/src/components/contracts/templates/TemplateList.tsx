@@ -48,7 +48,7 @@ export function TemplateList({;
       setTemplateToDelete(null)
     }
   };
-import { ContractTemplate } from "@/types/contracts",;
+import { ContractTemplate } from "@/types/contracts";
 import { Button } from "@/components/ui/button",;
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",;
 import { useContractTemplates } from "@/hooks/useContractTemplates",;

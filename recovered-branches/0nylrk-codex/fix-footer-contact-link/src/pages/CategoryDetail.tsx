@@ -85,7 +85,7 @@ export default function CategoryDetail() {
             category: listing.category
             image: listing.images?.[0]
 
-import { Header } from "@/components/header/Header",;
+import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ProductListingCard } from "@/components/ProductListingCard",;

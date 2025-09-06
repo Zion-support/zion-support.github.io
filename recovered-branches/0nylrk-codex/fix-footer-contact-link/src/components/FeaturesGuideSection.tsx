@@ -141,7 +141,7 @@ export function FeaturesGuideSection() {;
   ];
 ;
   return (
-import { GradientHeading } from "./GradientHeading",;
+import { GradientHeading } from "./GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Button } from "./ui/button",;
 import {;

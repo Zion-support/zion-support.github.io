@@ -499,5 +499,5 @@ export default ServicesSection;
 
 export default ServicesSection;
   )
-};
-
+}
+}

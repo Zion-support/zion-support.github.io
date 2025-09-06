@@ -267,4 +267,4 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
     </div>;
   );
 }
-;
+}

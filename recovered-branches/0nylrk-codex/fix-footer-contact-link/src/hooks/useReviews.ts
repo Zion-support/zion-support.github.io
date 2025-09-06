@@ -233,7 +233,7 @@ if ( {) {
         toast({
           title: "Error",
           description: "Failed to submit review",
-          variant: "destructive"})import { useState } from "react",;
+          variant: "destructive"})import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Review, ReviewReport } from "@/types/reviews",;

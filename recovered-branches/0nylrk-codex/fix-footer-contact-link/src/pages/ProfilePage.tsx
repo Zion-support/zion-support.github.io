@@ -57,7 +57,7 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
           variant: "destructive"})
       } finally {
         setIsLoading(false)
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/components/ui/use-toast",;

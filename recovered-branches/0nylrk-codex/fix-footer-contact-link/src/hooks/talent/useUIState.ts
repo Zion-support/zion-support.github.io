@@ -12,7 +12,7 @@ export function useUIState() {;
     setSelectedTalent;
     selected_talent;
     setSelectedTalent;
-import { useState } from 'react',;
+import { useState } from 'react';
 import { TalentProfile } from '@/types/talent',;
 export function useUIState() {;
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false),;

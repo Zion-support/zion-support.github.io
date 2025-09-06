@@ -1,5 +1,5 @@
 
-import { Octokit } from '@octokit/rest',;
+import { Octokit } from '@octokit/rest';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ''
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
 

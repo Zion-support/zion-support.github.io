@@ -553,4 +553,4 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     customers: 8;
     rating: 4.9
   }
-;
+}

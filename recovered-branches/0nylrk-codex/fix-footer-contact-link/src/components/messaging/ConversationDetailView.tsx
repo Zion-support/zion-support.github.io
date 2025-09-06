@@ -23,7 +23,7 @@ export function ConversationDetailView() {  const { user } = useAuth();
     if (activeConversation) {
       loadMessages(activeConversation.id)
     }
-  }, [activeConversation?.id, loadMessages]);import React, { useState, useEffect, useRef } from 'react',;
+  }, [activeConversation?.id, loadMessages]);import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;

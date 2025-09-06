@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react',;
+import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head',;
 import EnhancedNavigation from '@/components/layout/EnhancedNavigation',;
 ;

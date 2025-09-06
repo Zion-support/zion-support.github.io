@@ -11,7 +11,7 @@ export default /**
 function RootLayout() {
   return (
 
-import type { ReactNode } from "react",;
+import type { ReactNode } from "react";
 import { Metadata } from "next",;
 export const metadata = {
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",,

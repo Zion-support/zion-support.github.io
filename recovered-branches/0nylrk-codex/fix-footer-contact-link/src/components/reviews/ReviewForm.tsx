@@ -52,7 +52,7 @@ import {
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",import { useState } from "react",;
+import { Review } from "@/types/reviews",import { useState } from "react";
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;

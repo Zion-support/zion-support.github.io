@@ -149,4 +149,4 @@ import { useAuth  } from '@/hooks/useAuth';  const { toast } = useToast();
     toggle_archive: (id: string, is_archived: boolean) =>;
       toggleArchiveMutation.mutate ({ id, is_archived })}
 }
-;
+}

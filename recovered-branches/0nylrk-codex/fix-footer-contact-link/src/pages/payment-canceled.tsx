@@ -57,7 +57,7 @@ export default function PaymentCanceled() {
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
-import React from 'react',;
+import React from 'react';
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
 import { XCircle } from 'lucide-react',;

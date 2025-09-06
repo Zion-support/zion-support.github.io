@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react',;
+import React, { useMemo, useRef, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 import SimulatorForm from '../../components/economy/SimulatorForm',;
 import SimulatorCharts from '../../components/economy/SimulatorCharts',;

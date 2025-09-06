@@ -508,4 +508,4 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   rating: number,;
   reviews: number;
 }
-;
+}

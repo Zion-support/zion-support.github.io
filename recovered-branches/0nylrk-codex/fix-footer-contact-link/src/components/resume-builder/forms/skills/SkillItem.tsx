@@ -49,4 +49,4 @@ import { SkillItemProps } from './types',  return (
       </Button>;
     </Badge>);
 }
-;
+}

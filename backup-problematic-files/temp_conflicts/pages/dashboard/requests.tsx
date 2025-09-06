@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react',;
+import { useMemo, useState } from 'react';
 import Head from 'next/head',;
 import type { GetServerSideProps } from 'next',;
 import { MailCheck, UserRound, CalendarDays, BadgeDollarSign, Eye, Check } from 'lucide-react',;

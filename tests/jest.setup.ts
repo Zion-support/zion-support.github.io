@@ -202,7 +202,7 @@ if ( {) {
   window.scroll_to = jest.fn ();
 }
 // Mock axios.create to return axios itself;
-import axios from 'axios',;
+import axios from 'axios';
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
 ;

@@ -22,7 +22,7 @@ import {useIsMobile} from '@/hooks/use-mobile';interface PreviewHeaderProps {
       @media print {
         body * {
           visibility: hidden
-import { Button } from '@/components/ui/button',;
+import { Button } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link } from 'lucide-react',;
 import { PdfExportButton } from '../PdfExportButton',;
 import { Resume } from '@/types/resume',;

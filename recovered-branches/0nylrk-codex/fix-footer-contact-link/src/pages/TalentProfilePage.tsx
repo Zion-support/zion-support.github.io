@@ -84,7 +84,7 @@ export default function TalentProfilePage() {
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
 
-import React, { useState, useEffect } from "react",;
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/components/profile/TalentProfile",;
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",;

@@ -32,7 +32,7 @@ const ContentRoutes = () => {;
       {/* Green IT Route */}
 export default ContentRoutes;
 export default ContentRoutes,
-import { Fragment } from "react",;
+import { Fragment } from "react";
 import { Route, Routes, Navigate } from "react-router-dom",;
 import Home from "@/pages/Home",;
 import About from "@/pages/About",;

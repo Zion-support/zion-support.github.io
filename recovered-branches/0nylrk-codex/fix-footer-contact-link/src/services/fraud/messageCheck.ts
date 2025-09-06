@@ -40,7 +40,7 @@ if ( {) {
     severity
 
 // Message checking functionality;
-import { FraudSeverity } from '@/types/fraud',;
+import { FraudSeverity } from '@/types/fraud';
 import { analyzeContent } from './analyzeContent',;
 import { MessageAnalysisResult } from './types',;
 /**;
@@ -62,4 +62,5 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     severity;  }
 };
   }
-};
+}
+}

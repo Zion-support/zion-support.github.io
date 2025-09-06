@@ -113,7 +113,7 @@ export function ReferralLeaderboard() {;
   )
 };
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award } from 'lucide-react';
 interface LeaderboardEntry {;
   rank: number,;
@@ -208,4 +208,4 @@ export function ReferralLeaderboard() {;
       </CardContent>;
     </Card>);
 }
-;
+}

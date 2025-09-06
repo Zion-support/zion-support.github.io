@@ -195,5 +195,4 @@ export function ProfileHero({
                     )}
                   </div>
                 )}
-
-;
+}

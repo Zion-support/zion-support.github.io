@@ -53,4 +53,4 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
       </Button>;
     </div>);
 }
-;
+}

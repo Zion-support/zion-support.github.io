@@ -17,7 +17,7 @@ export async function createOnboardingNotification({  missingMilestone;
   let actionText = '';
   if (userRole === 'talent') {
     switch (missingMilestone) {
-      case 'profile_completed':import { createNotification } from './createNotification',;
+      case 'profile_completed':import { createNotification } from './createNotification';
 import { OnboardingNotificationParams } from './types',;
 /**;
  * Creates an onboarding notification for a user;

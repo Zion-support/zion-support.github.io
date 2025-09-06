@@ -496,4 +496,4 @@ timestamp: new Date ()
 }
   );
 }
-;
+}

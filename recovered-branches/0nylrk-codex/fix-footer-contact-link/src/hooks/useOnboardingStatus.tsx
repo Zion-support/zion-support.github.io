@@ -107,4 +107,4 @@ const { data, error} = await supabase
 }, [user]);
 return status;
 }
-;
+}

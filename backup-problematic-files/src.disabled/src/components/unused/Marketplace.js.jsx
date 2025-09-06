@@ -7,5 +7,5 @@ const Marketplace.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

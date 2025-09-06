@@ -443,5 +443,5 @@ export default UltraAdvancedNavigation;
 
 export default UltraAdvancedNavigation;
   )
-};
-
+}
+}

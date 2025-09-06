@@ -40,7 +40,7 @@ function SharedInbox() {
     }
   ],
 
-  return (import React from "react",;
+  return (import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 export function SharedInbox() {;
@@ -134,4 +134,4 @@ flex items-center justify-between" > <div> <CardTitle>Shared Inbox</CardTitle> <
     </Card>;
   );
 }
-;
+}

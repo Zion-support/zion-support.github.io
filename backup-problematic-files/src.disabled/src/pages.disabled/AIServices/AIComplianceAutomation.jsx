@@ -7,5 +7,5 @@ const AIComplianceAutomation = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

@@ -32,7 +32,7 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
   return (
     <Badge className={config.class_name}>;
       {config.label}
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { QuoteStatus } from "@/types/quotes",;
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
 
@@ -46,4 +46,5 @@ interface QuoteStatusBadgeProps {;
   status: QuoteStatus;
 }
 
-};
+}
+}

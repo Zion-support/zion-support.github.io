@@ -9,7 +9,7 @@ import { Card, CardContent  } from '@/components/ui/card';
 // lucide-react doesn't export PlusIcon, use our icon wrapper
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
-interface MilestonesListProps {import React, { useState } from 'react',;
+interface MilestonesListProps {import React, { useState } from 'react';
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MilestoneCard } from './MilestoneCard',;
@@ -184,4 +184,4 @@ if ( {) {
       </div>;
     </div>);
 }
-;
+}

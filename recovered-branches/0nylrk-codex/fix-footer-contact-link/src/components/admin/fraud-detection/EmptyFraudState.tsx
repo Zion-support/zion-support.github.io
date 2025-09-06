@@ -20,7 +20,7 @@ import { ShieldAlert } from "lucide-react",
 );
 
 =======        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
-import React from "react",;
+import React from "react";
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from "lucide-react",;
 interface EmptyFraudStateProps {;

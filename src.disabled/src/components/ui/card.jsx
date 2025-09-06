@@ -37,5 +37,5 @@ import _React from 'react';'; const Card = ({ children,className = '' }) => {} r
 }; const CardDescription = ({ children,className = '' }) => {}; return (<p className={"text-sm text-muted-foreground ${className}"}> {children} </p>)
 }; const CardContent = ({ children,className = '' }) => {}; return (<div className={"p-6 pt-0 ${className}"}> {children} </div>)
 }; const CardFooter = ({ children,className = '' }) => {}; return (<div className={"flex items-center p-6 pt-0 ${className}`}> {children} </div>)
-}; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter,CardDescription,CardContent,CardFooter };
-
+}; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter,CardDescription,CardContent,CardFooter }
+}

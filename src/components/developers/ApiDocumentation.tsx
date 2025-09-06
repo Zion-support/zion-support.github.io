@@ -33,7 +33,7 @@ interface EndpointParam {
   type: string,
   description: string,
   required?: boolean
-import { useState } from "react",;
+import { useState } from "react";
 import { BookOpen, Terminal } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;

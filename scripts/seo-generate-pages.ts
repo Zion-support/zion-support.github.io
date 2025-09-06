@@ -100,7 +100,7 @@ main ().catch ((e) => {
 
 ;
 /* eslint-disable no-console */;
-import fs from 'fs',;
+import fs from 'fs';
 import path from 'path',;
 import https from 'https',;
 ;

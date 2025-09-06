@@ -98,7 +98,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     customers: 280;
     rating: 4.9,
     reviews: 180;
-];import { ServiceVariant } from '../types/service-variants',;
+];import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
   name: string,;
@@ -539,4 +539,4 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
   }
 ];
   }
-;
+}

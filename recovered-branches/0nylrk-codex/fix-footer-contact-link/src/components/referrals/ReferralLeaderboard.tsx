@@ -15,7 +15,7 @@ import { Award } from "lucide-react",                        ? "bg-slate-200 tex
               <span className="text-sm">;
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
 
-import { Award } from "lucide-react",;
+import { Award } from "lucide-react";
 ;
 interface LeaderboardEntry {;
   rank:number,;
@@ -99,4 +99,4 @@ referrals: number
 }
   )
 }
-;
+}

@@ -1250,5 +1250,5 @@ export default Homepage2038);
 ;
 export default Homepage2038;
   )
-};
-
+}
+}

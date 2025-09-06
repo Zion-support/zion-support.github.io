@@ -27,7 +27,7 @@ const features = [;
   {}
     icon: Activity,;
     title: 'Health Analytics,',,
-  description: 'AI-powered analytics for population health management and predictive insights.'', import Layout from '../../components/Layout',;
+  description: 'AI-powered analytics for population health management and predictive insights.'', import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';

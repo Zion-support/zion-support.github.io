@@ -10,7 +10,6 @@
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "postbuild": "echo \"Build completed\"",
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "lint": "next lint",
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
@@ -19,7 +18,7 @@
     "test:watch": "jest --watch --config jest.config.cjs",
     "test:coverage": "jest --coverage --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
-    "test:unit": "jest -c jest.config.ts --runInBand",
+    "test:unit": "npm test -- --testPathPatterns=unit",
     "verify": "npm run type-check && npm run build && npm run test:smoke",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
@@ -86,7 +85,6 @@
     "deploy:staging": "pm2 deploy ecosystem.ultimate-intelligent-v4.cjs staging",
     "deploy:development": "pm2 deploy ecosystem.ultimate-intelligent-v4.cjs development",
     "test:comprehensive": "npm run test:smoke && npm run test:unit && npm run test:integration",
-    "test:unit": "npm test -- --testPathPatterns=unit",
     "test:integration": "npm test -- --testPathPatterns=integration",
     "test:e2e": "npm test -- --testPathPatterns=e2e",
     "test:ai": "node scripts/automation/intelligent-test-orchestrator.cjs",
@@ -277,8 +275,7 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-    "@next/swc-linux-x64-gnu": "^15.5.2",
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    "@next/swc-linux-x64-gnu": "^14.2.32",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
@@ -312,6 +309,7 @@
     "autoprefixer": "^10.4.21",
     "aws-sdk": "^2.1692.0",
     "axios": "^1.11.0",
+    "bs58": "^6.0.0",
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
@@ -325,6 +323,7 @@
     "d3-time-format": "^4.1.0",
     "date-fns": "^2.30.0",
     "dotenv": "^17.2.2",
+    "ethers": "^6.15.0",
     "events": "^3.3.0",
     "express-rate-limit": "^8.1.0",
     "fastify": "^5.6.0",
@@ -334,6 +333,7 @@
     "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
+    "jsonwebtoken": "^9.0.2",
     "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
     "mongodb": "^6.19.0",
@@ -343,7 +343,6 @@
     "path": "^0.12.7",
     "postcss-preset-env": "^10.3.1",
     "prettier": "^3.0.3",
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
@@ -358,6 +357,7 @@
     "swr": "^2.3.6",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
+    "tweetnacl": "^1.0.3",
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
   },
@@ -411,7 +411,6 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
     "vite": "^7.1.4"
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   "engines": {
     "node": ">=18.0.0",
@@ -436,7 +435,6 @@
     "automation",
     "zion-tech-group"
   ],
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   "author": "Zion Tech Group",
   "license": "MIT"
 }

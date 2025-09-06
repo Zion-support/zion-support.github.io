@@ -590,5 +590,5 @@ export default function HealthcarePage() {;
       </div>
     </Layout>
   )
-};
-
+}
+}

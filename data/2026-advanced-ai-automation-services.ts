@@ -273,7 +273,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
   }
 ];
-;import { ServiceVariant } from '../types/service-variants',;
+;import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedAIAutomationService {;
   id: string,;
   name: string,;

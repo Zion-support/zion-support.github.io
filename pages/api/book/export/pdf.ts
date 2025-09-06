@@ -1,6 +1,6 @@
 
 
-import puppeteer from 'puppeteer',;
+import puppeteer from 'puppeteer';
 export const config = {
   api: {
     bodyParser: {

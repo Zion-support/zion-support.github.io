@@ -1,5 +1,5 @@
 
-import React from 'react',;
+import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from '@/components/icons',;
 import { Button } from '@/components/ui/button',;
@@ -160,4 +160,5 @@ if (!notification.read) {
   notification.action text 
 }<ChevronRight className="h-3 w-3 ml-1" /> </Button>) 
 }</div> </div> </div> ghost"size=" icon"className="h-6 w-6"> <Check className="h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button variant=" ghost"size=" icon"className="h-6 w-6"> <Trash2 className="h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) 
-};
+}
+}

@@ -130,4 +130,5 @@ if ( {) {
     return res.status (200).json (updated.by_tenant[tenant_id]);
   }
 return res.status (405).json ({ error: 'Method not allowed' });
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {}
+}

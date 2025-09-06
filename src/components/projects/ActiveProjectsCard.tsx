@@ -61,7 +61,7 @@ export function ActiveProjectsCard() {;
             {[1, 2].map(idx => (
 
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
-import { useEffect, useState } from "react",;
+import { useEffect, useState } from "react";
 import Link from "next/link",;
 import { BriefcaseIcon, Clock } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -376,5 +376,4 @@ return (<Card> <CardHeader> <CardTitle className="flex items - center gap-2" > <
 if ( {'") {
   $2
 }
-
-;
+}

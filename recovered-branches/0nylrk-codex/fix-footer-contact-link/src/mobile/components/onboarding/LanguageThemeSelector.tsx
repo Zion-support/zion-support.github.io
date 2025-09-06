@@ -42,7 +42,7 @@ export function LanguageThemeSelector() {
                 </div>
                 {selectedLanguage === language.code && (
                   <Check className="h-4 w-4 text-primary" />
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button",;
 import { useTheme } from "@/hooks/useTheme",;
 import { Moon, Sun, Check } from "lucide-react",;

@@ -88,7 +88,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
-import { Card, CardContent } from "@/components/ui/card",;
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge",;
 import { ProfileProject } from "@/types/profile",;
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -246,4 +246,4 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
       </div>;
     </div>);
 }
-;
+}

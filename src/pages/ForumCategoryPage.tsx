@@ -59,7 +59,7 @@ import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 import { logInfo } from '@/utils/productionLogger';
 
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import Link from "next/link",;
 import { useRouter } from "next/router",;
 import { Suspense } from "react",;

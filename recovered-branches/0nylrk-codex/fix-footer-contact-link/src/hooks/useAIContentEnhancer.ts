@@ -41,7 +41,7 @@ type EnhancementType =;
       setError(errorMessage);
       toast({
         title: "AI Enhancement Failed",
-  description: errorMessageimport { useState } from 'react',;
+  description: errorMessageimport { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
 type EnhancementType =;

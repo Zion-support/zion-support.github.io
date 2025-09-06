@@ -23,7 +23,7 @@ export const useRecordActivity = () => {
   
   return {
     recordMilestoneActivity
-import { supabase } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client';
 import { MilestoneActivity } from './types',;
 export const useRecordActivity = () => {;
   const { user } = useAuth(),;

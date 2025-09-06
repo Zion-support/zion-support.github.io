@@ -39,7 +39,7 @@ import {FormValues} from "./useHireRequestForm";
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { UseFormReturn } from "react-hook-form",;
 import { FormValues } from "./useHireRequestForm",;

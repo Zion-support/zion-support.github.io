@@ -13,7 +13,7 @@ title?: string;',';';';';
 import Head from &apos;next/head';';';';';';';
 import React, { useEffect } from 'react';""',';';';';
     ';';';';';
-import React, { useEffect } from 'react',;',';';';';
+import React, { useEffect } from 'react';',';';';';
     ';';';';';';
 import React, { useEffect } from 'react';""',';';
     ';';';

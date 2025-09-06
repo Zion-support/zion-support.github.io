@@ -63,7 +63,7 @@ export interface ResumeTabProps {
   onResumeSelected?: (resume: ResumeOption) => void,
   onApply?: () => Promise<void>,
   isSubmitting?: boolean
-import React from 'react',;
+import React from 'react';
 import { ResumeSelector, ResumeOption } from "../resume-selector",;
 import { Button } from "@/components/ui/button",;
 export interface ResumeTabProps {;

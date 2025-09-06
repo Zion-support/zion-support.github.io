@@ -61,7 +61,7 @@ function InterviewsContent() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
-import React, { useEffect, useState } from "react",;
+import React, { useEffect, useState } from "react";
 import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
 import { AppHeader } from "@/layout/AppHeader",;

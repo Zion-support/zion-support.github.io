@@ -17,7 +17,7 @@ import type { AuthContextType } from "@/types/auth",
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined),
-import { createContext } from "react",;
+import { createContext } from "react";
 import type { AuthContextType } from "@/types/auth",;
 // Create the AuthContext and export it. We avoid providing a generic;
 // parameter to `createContext` because in environments where the React;

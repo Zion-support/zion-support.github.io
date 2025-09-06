@@ -1,23 +1,10 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node;
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -242,24 +229,7 @@ export {};";
 const fixer = new TypeScriptFixer();
 fixer.run().catch(console.error)
 #!/usr/bin/env node;
-<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
@@ -348,33 +318,11 @@ export {};"
   this.log("\\n "Errors": ")
       this.log("\\n� TypeScript fixing completed!")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-<<<<<<< HEAD
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
@@ -564,20 +512,12 @@ class TypeScriptFixer {
 
 const fixer = new TypeScriptFixer();
 fixer.run().catch(console.error);
-<<<<<<< HEAD
 >>>>>>> main
 =======
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
 =======
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

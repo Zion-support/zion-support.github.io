@@ -9,7 +9,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     model: 'gpt-4o-mini'
     input: prompt
 });
-import OpenAI from 'openai',;
+import OpenAI from 'openai';
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });}

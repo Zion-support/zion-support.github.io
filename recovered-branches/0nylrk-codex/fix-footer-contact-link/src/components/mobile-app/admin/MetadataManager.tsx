@@ -99,7 +99,7 @@ export const MetadataManager: React.FC = () => {
   )
 
 },
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useForm } from "react-hook-form",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { MetadataForm } from "./MetadataForm",;

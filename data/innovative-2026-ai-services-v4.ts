@@ -436,4 +436,4 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.7;
     reviews: 167;
   }
-;
+}

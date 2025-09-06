@@ -46,7 +46,7 @@ export function MobileResumeBuilder() {
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;

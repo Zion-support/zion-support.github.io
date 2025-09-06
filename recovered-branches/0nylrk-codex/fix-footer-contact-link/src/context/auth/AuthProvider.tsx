@@ -64,7 +64,7 @@ import { mapProfileToUser } from "./profileMapper",export const AuthProvider = (
           } catch (error) {
             console.error("Error fetching user profile:", error),
             setUser(null)
-import React, { useEffect } from "react",;
+import React, { useEffect } from "react";
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
 import { useAuthOperations } from "../../hooks/useAuthOperations",;
 import { AuthContext } from "./AuthContext",;
@@ -127,5 +127,5 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
       {children}
     </AuthContext.Provider>;
   )
-};
-
+}
+}

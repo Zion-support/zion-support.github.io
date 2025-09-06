@@ -7,5 +7,5 @@ const ServicesMarketingPage = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

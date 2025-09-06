@@ -23,7 +23,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
     error: 'text-red-500',
 };
 
-import React, { useState, useEffect } from 'react',;
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion',;
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button',;

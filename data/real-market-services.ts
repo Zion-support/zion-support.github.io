@@ -671,7 +671,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface RealMarketService {;
   id: string,;
   name: string,;

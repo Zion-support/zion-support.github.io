@@ -16,7 +16,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
 
     isLoading 
 
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
   const [isUnderDispute, setIsUnderDispute] = useState(false),;

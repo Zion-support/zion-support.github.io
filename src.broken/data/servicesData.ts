@@ -1,4 +1,4 @@
-import { ServiceCategory, ITService, AIService, MicroSAAS } from '@/types/services',;
+import { ServiceCategory, ITService, AIService, MicroSAAS } from '@/types/services';
 export const SERVICE_CATEGORIES: ServiceCategory[] = [;
   {;
     id: 'ai-services',;

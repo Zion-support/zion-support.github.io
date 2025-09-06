@@ -23,7 +23,7 @@ import { Button } from "@/components/ui/button";  if (!user) {;
       </div>;
     );
   }  )
-import { Link } from "react-router-dom",;
+import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth",;
 import { useToast } from "@/hooks/use-toast",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;

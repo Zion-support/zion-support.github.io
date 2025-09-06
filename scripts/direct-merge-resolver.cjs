@@ -1,31 +1,8 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-    log("4. Continue with your workflow", "blue"),}
-}
-;
-if (require.main === module) {;
-  main(),}
-;
-        resolvedCount++;log("✅ Resolved": ${filePath}", "green")} else {log("⚠️  No changes ""needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(`❌ Error processing ${filePath}: ${error.message}`, "red")}"}";
-  log("\n📊 Resolution Summary":", "cyan");log("Total conflicted ""files": ${conflictedFiles.length}", "blue");log("Successfully resolved": ${resolvedCount}", "green");log("Errors ""encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n🎯 Next steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. ""Run": git add .", "blue");    log("3. Run": git commit -m "Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"}
-;
-        resolvedCount++;log(`✅ "Resolved": ${filePath}`, "green");"} else {log(`⚠️  No changes needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log("❌ Error processing ${filePath}: ${error.message}", "red");"}"}";
-  log("\n📊 Resolution ""Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n🎯 Next ""steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"}
-if (require.main === module) {;
-  main()}
-;
-module.exports = { resolveMergeConflict, findConflictedFiles }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52

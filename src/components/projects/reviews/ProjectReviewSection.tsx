@@ -83,7 +83,7 @@ import { useState } from 'react';
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
                         Edit Review
                       </Button>
-import { Project } from '@/types/projects',;
+import { Project } from '@/types/projects';
 import { useState } from "react",;
 
 import { Star } from 'lucide-react';
@@ -275,5 +275,4 @@ function ProjectReviewSection() {
     </Card>;
   );
 }
-
-;
+}

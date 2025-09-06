@@ -30,4 +30,5 @@ export type DisputeAttachment = {  id: string;
 
   role: 'admin' | 'client' | 'talent';
 }
-};
+}
+}

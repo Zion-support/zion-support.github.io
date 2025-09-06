@@ -42,7 +42,7 @@ export function GradientHeading({ children, className, level = "h2" }: GradientH
       className={cn(
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
 
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 import React from "react",;
 interface GradientHeadingProps {;
   children: React.ReactNode,;

@@ -48,7 +48,7 @@ export function addWorkExperienceSection(;  for (const work of sortedWorkExperie
 
     } else {
       yPos += 20
-import { jsPDF } from 'jspdf',;
+import { jsPDF } from 'jspdf';
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
 import { formatDate } from '../formatters',;

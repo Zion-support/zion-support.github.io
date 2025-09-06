@@ -22,7 +22,7 @@ export function ProfileLoadingState() {
 }
 ;
 
-import React from 'react',;
+import React from 'react';
 ;
 export function ProfileLoadingState() {;
   return (;

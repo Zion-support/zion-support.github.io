@@ -12,7 +12,7 @@ describe ('EquipmentPage', () => {
     expect (screen.getByText ('Equipment')).toBeInTheDocument ();
 
   });
-  const [selectedService, setSelectedService] = useState('');import React, { useState } from 'react',;
+  const [selectedService, setSelectedService] = useState('');import React, { useState } from 'react';
 import { Link } from 'react-router-dom',;
 import { SERVICE_CATEGORIES } from '@/data/servicesData',;
 export function ContactPage() {

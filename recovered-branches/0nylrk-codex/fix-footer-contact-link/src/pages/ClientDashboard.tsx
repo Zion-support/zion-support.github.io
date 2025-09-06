@@ -244,7 +244,7 @@ if ( {) {
             </Button>;
             <Button as_child className={is_mobile ? 'w - full justify - center' : ''}>;
               <Link to="/post - job">;
-                <PlusCircle className="h - 4 w - 4 mr-2" /> Post New Job;import { useState, useEffect } from "react",;
+                <PlusCircle className="h - 4 w - 4 mr-2" /> Post New Job;import { useState, useEffect } from "react";
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { JobsList } from "@/components/jobs/JobsList",;

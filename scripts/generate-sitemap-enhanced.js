@@ -8,4 +8,5 @@ const __dirname = path && path.dirname(__filename);
 const baseUrl = '"https": //ziontechgroup && ziontechgroup.com';// Run if this is the main module
 if (import && import.meta.url === `"file": //${process ;
   generateRobotsTxt()}
-export { generateSitemap, generateRobotsTxt };
+export { generateSitemap, generateRobotsTxt }
+}

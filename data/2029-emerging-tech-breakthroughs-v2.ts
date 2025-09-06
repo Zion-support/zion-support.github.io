@@ -330,7 +330,7 @@ export interface EmergingTechBreakthroughServiceV2 {
     marketSize: '$8B market', growthRate: '900% annual growth'
     variant: 'ai-futuristic'
     contactInfo: {
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
   name: string,;

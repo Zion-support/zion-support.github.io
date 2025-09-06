@@ -7,5 +7,5 @@ const 3d-card-gallery = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

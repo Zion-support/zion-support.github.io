@@ -247,7 +247,7 @@ export default DashboardRoutes;
 },
 
 export default DashboardRoutes,
-import { Fragment } from "react",;
+import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import Dashboard from "@/pages/Dashboard",;

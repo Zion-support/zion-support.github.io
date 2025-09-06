@@ -9,7 +9,7 @@ export const useResumeProgress = (resume: Resume | null) => {;  const [progress,
       setProgress(0);
       return;
     }
-import { useState, useEffect } from 'react',;
+import { useState, useEffect } from 'react';
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
   const [progress, setProgress] = useState(0),;

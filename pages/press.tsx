@@ -32,5 +32,4 @@ export default function PressPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-
+}

@@ -32,7 +32,7 @@ function DisputeStatusBadge() {
       variant = "outline",
       message = "This dispute has been closed",
       break,
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from "@/components/ui/badge";
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
 interface DisputeStatusBadgeProps {;

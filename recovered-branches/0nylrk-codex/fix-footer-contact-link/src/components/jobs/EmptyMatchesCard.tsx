@@ -62,7 +62,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
             Find AI Matches
           </>
 
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react",;
 export interface EmptyMatchesCardProps {;
   onRefresh: () => void;
@@ -152,4 +152,4 @@ isProcessing: boolean
     </Card>;
   );
 }
-;
+}

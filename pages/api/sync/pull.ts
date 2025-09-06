@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-import type { NextApiRequest, NextApiResponse } from "next",;
+import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';

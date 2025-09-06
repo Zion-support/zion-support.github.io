@@ -548,5 +548,5 @@ export default UltraAdvancedFuturisticBackground;
       {children}
     </div>
   )
-};
-
+}
+}

@@ -9,7 +9,7 @@ import {SearchSuggestion} from "@/types/search";  const [filteredSuggestions, se
   const containerRef = useRef<HTMLDivElement>(null);  // Filter suggestions based on input value
   useEffect(() => {
     if (!value) {
-      // Show recent searches when input is emptyimport { Search, X } from "lucide-react",;
+      // Show recent searches when input is emptyimport { Search, X } from "lucide-react";
 import { Input } from "@/components/ui/input",;
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",;
 import { SearchSuggestion } from "@/types/search",;

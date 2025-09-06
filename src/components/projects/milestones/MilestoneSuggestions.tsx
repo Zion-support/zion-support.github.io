@@ -393,4 +393,4 @@ export function MilestoneSuggestions({
     </div>;
   );
 }
-;
+}

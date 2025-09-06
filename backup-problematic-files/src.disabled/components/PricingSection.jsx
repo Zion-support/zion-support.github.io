@@ -7,5 +7,5 @@ const PricingSection = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

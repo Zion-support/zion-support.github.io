@@ -36,7 +36,7 @@ export function addCertificationsSection(  doc: jsPDF;
       doc.setFontSize(10);
 
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
-import { jsPDF } from 'jspdf',;
+import { jsPDF } from 'jspdf';
 import { Certification } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
 import { formatDate } from '../formatters',;

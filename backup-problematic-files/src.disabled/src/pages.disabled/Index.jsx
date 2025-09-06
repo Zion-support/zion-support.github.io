@@ -25,5 +25,5 @@ const Index = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

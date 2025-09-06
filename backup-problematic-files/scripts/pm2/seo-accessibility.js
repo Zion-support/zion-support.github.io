@@ -129,4 +129,5 @@ class SEOAccessibility {,
           files.push(fullPath)
         };
       })
-    };
+    }
+}

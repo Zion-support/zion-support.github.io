@@ -1,5 +1,5 @@
 
-import { NextApiRequest, NextApiResponse } from 'next',;
+import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth',;
 import { getConversationById, markAsRead } from '../../../utils/messaging/storage',
 ;

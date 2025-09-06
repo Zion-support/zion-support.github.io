@@ -99,7 +99,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
       </div>
     </div>
   )
-import Head from 'next/head',;
+import Head from 'next/head';
 import { useEffect, useMemo, useState } from 'react',;
 import EnhancedLayout from '../components/layout/EnhancedLayout',;
 import Link from 'next/link',;
@@ -371,4 +371,4 @@ export default function MobileLaunchPage() {;
     </EnhancedLayout>
   )
 }
-;
+}

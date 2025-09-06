@@ -124,7 +124,7 @@ import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-
     } finally {
       setIsLoading(false)
 
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -521,4 +521,4 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
     </>;
   );
 }
-;
+}

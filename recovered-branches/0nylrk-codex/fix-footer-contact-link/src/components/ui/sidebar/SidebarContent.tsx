@@ -18,7 +18,7 @@ interface SidebarContentProps extends React && React.HTMLAttributes<HTMLDivEleme
 
   )
 
-import React from "react",;
+import React from "react";
 import { cn } from "@/lib/utils",;
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string;

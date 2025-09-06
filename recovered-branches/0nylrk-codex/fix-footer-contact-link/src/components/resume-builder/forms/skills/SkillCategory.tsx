@@ -17,4 +17,5 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
       </div>
     </div>
   )
-};
+}
+}

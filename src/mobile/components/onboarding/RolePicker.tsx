@@ -17,7 +17,7 @@ className={`cursor-pointer transition-all ${
               {selectedRole === 'client' && (
 
                 <Check className="h-5 w-5 text-primary" />
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Briefcase, Users, Check } from 'lucide-react';
@@ -154,4 +154,4 @@ function RolePicker() {
 
     </div>);
 }
-;
+}

@@ -1,6 +1,5 @@
 
 import React from 'react';
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -20,8 +19,6 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>
       <Head>
@@ -43,5 +40,4 @@ export default function MainLayout({
       </div>
     </>
   );
-
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+}

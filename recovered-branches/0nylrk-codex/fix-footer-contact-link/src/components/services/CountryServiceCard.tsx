@@ -67,7 +67,7 @@ import { CountryPricing } from "@/data/onsiteServicePricing",
             isPopular 
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" 
               : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;

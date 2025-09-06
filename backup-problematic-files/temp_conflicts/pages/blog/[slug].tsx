@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage } from 'next',;
+import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head',;
 import { useEffect, useMemo } from 'react',;
 import { BlogPost } from '@/utils/types/blog',;

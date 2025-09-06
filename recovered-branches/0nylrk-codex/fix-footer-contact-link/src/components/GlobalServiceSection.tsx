@@ -79,7 +79,7 @@ const services = [;
 
 export function GlobalServiceSection() {;
   return (
-import { GradientHeading } from "./GradientHeading",;
+import { GradientHeading } from "./GradientHeading";
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;
 const services = [;
@@ -156,4 +156,4 @@ function GlobalServiceSection() {
         <div className="flex justify - center mt-12">;
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px-8">;
 }
-;
+}

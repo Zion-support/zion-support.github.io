@@ -36,7 +36,7 @@ export * from './useResumeUtils';
 
 ;
 
-import { useState } from 'react',;
+import { useState } from 'react';
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;

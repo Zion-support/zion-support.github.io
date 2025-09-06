@@ -7,5 +7,5 @@ const ProjectDetails.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

@@ -169,5 +169,5 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   return { props: { vendor } }
 };
 }
-};
-
+}
+}

@@ -62,7 +62,7 @@ export function BasicInfoForm({
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
-          form.setValue(key as keyof BasicInfoFormData, value as any)import React, { useState, useEffect } from "react",;
+          form.setValue(key as keyof BasicInfoFormData, value as any)import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Button } from "@/components/ui/button",;

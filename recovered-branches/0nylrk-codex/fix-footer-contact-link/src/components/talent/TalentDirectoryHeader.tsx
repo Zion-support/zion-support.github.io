@@ -24,7 +24,7 @@ export function TalentDirectoryHeader({
         <p className="text-zion-slate-light max-w-2xl">;
 =======}
 
-import React from "react",;
+import React from "react";
 ;
 interface TalentDirectoryHeaderProps {;
   title:string,,
@@ -84,5 +84,4 @@ function TalentDirectoryHeader() {
         <p className="text-zion-slate-light max-w-2xl">
         <p className="text-zion-slate-light max-w-2xl">
 }
-;
-
+}

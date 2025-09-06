@@ -20,7 +20,7 @@ export function ProjectOfferBanner() {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent'),
       setPendingOffers(offers)
-import { useEffect, useState } from "react",;
+import { useEffect, useState } from "react";
 import { useRouter } from 'next/router',;
 import { Bell, Calendar, X } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -259,4 +259,4 @@ if () ) {) {
     </div>;
   );
 }
-;
+}

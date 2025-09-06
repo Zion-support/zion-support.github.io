@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react',;',';';';';
+import React, { useEffect } from 'react';',';';';';
     ';';';';';';
 import { Helmet } from 'react-helmet-async'; interface PerformanceEnhancerProps {';
  title?: string; description?: string; keywords?: string; canonicalUrl?: string; ogImage?: string; structuredData? object';';

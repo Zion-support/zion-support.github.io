@@ -33,7 +33,7 @@ const { wallet, loading } = useWallet();
             </div>
           </div>
 
-import React from "react",;
+import React from "react";
 import { BadgeDollarSign } from 'lucide-react';
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -96,4 +96,4 @@ function TokenDisplay() {
             </div>;
 
 }
-;
+}

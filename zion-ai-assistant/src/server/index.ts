@@ -27,7 +27,7 @@ if ( {) {
       return res.status (400).json ({ error: "Invalid input", details: error.issues });
 
 import "dotenv/config",;
-import express from "express",;
+import express from "express";
 import cors from "cors",;
 import { z } from "zod",;
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse } from "../shared/types.js",;

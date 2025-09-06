@@ -2561,4 +2561,4 @@ optimizer.run().catch(error => {,;
       } else {,;
         this.log('\n✨ Build is well optimized!');
       }
-;
+}

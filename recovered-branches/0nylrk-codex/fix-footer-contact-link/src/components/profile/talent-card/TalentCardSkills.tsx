@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge",// Get top skills (limit to 4);
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (
-import React from "react",;
+import React from "react";
 import { Badge } from "@/components/ui/badge",;
 
 interface TalentCardSkillsProps {;

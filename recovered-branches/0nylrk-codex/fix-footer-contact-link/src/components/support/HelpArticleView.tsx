@@ -15,7 +15,7 @@ interface HelpArticleViewProps {
     if (found) {
       article = found,
       break
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { ThumbsUp, ThumbsDown } from "lucide-react",;

@@ -69,7 +69,7 @@ export default function Profile() {
       </div>
       <Footer />
     </>
-  )import React, { useEffect } from 'react',;
+  )import React, { useEffect } from 'react';
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAuth } from "@/hooks/useAuth",;

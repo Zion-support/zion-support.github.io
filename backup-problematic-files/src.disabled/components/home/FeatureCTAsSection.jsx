@@ -7,5 +7,5 @@ const FeatureCTAsSection = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

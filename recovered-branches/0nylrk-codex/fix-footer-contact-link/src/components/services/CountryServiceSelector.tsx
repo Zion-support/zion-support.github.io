@@ -18,7 +18,7 @@ import { ServiceDetails } from "./ServiceDetails",
 }
 ;
 
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
 import { CountrySelector } from "./CountrySelector",;
 import { PaymentSection } from "./PaymentSection",;
 import { ServiceDetails } from "./ServiceDetails",;

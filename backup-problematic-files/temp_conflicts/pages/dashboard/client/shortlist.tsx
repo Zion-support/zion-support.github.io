@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react",;
+import React, { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router",;
 import { supabase } from "../../../utils/supabase/client",;
 import HiringBoard from "../../../components/hiring/HiringBoard",;

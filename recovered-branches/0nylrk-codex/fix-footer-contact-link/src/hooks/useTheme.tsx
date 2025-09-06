@@ -12,7 +12,7 @@ export const useTheme = () => {
     setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
   }
 },
-import React from 'react',;
+import React from 'react';
 // This is a simplified version of the theme hook for offline development;
 export const use_theme = () =>: any {
   return {
@@ -22,4 +22,5 @@ export const use_theme = () =>: any {
 
     theme: "dark",
 
-};
+}
+}

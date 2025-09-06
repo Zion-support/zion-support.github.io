@@ -134,7 +134,7 @@ export default function EditPostPage() {;
           isEditing={true}        />
       </div>
     </AppLayout>
-  )import { useState, useEffect } from "react",;
+  )import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;

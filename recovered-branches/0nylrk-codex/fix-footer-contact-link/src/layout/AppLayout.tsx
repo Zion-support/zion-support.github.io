@@ -14,7 +14,7 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
       <main className="flex-grow">
 }
 
-import React from "react",;
+import React from "react";
 import { AppHeader } from "./AppHeader",;
 import { Footer } from "@/components/Footer",;
 ;

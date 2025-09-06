@@ -18,7 +18,7 @@ export function useInterviews() {
     } catch (err: any) {
       console && console.error("Error in requestInterview:", err);
       setError(err && err.message);
-      return null    } finally {import { useState } from 'react',;
+      return null    } finally {import { useState } from 'react';
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
 import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',;

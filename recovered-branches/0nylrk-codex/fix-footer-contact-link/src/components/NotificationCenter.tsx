@@ -30,7 +30,7 @@ export const NotificationCenter: React.FC = () => {;  const { ;
   useEffect(() => {
     if (open) {
       const loadNotifications = async () => {
-        try {import React, { useState, useEffect } from 'react',;
+        try {import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper;
 import { Bell } from '@/components/icons',;
 import { Button } from '@/components/ui/button',;
@@ -125,4 +125,4 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverContent>;
     </Popover>);
 }
-;
+}

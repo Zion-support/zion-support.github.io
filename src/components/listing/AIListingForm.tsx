@@ -159,7 +159,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;

@@ -540,7 +540,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-01-25',
     customers: 203,
     reviews: 445
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface NextGenAIService2026 {;
   id: string,;
   name: string,;

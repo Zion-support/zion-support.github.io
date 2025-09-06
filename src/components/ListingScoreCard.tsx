@@ -71,7 +71,7 @@ interface ListingScoreCardProps {
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { StarIcon } from 'lucide-react';

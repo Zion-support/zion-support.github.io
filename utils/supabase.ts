@@ -76,5 +76,5 @@ export const supabase = createSupabaseClient(supabaseConfig);
 };
 }
   })
-};
-
+}
+}

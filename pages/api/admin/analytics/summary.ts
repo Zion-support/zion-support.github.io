@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
+interface EventRow {
   name: string
   page?: string
   userType?: string
@@ -32,11 +33,36 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         rows.push(obj)
       } catch {}
     }
-
+    return rows
   } catch {
     return []
   }
 }
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    await ensureAdminFromApi(req, res)
+  } catch {
+    return res.status(403).json({ error: 'Forbidden' })
+  }
+
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
+  const { start, end } = req.query as { start?: string; end?: string }
+  const rows = parseLines(start, end)
+
+  const byFeature: Record<string, number> = {}
+  const byEvent: Record<string, number> = {}
+  const byDay: Record<string, number> = {}
+
+  for (const row of rows) {
+    byFeature[row.page || 'unknown'] = (byFeature[row.page || 'unknown'] || 0) + 1
+    byEvent[row.name] = (byEvent[row.name] || 0) + 1
+    const day = row.at.split('T')[0]
+    byDay[day] = (byDay[day] || 0) + 1
+  }
 
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
@@ -44,17 +70,14 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
-
-    .sort((a, b) => b.value - a.value),
-
-  const days = Object.keys(byDay).sort(),
-  const line = days.map((d) => ({ date: d, value: byDay[d] })),
+    .sort((a, b) => b.value - a.value)
 
   const days = Object.keys(byDay).sort()
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
 
-  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
+  const funnelStages = ['Visit', 'AI Prompt Used', 'Post Created', 'Message Sent']
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }))
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
+}
 

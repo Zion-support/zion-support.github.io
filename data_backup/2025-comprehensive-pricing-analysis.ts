@@ -925,4 +925,5 @@ export const getCompetitiveLandscape = () => {
     blockchain['Chainalysis',
   'ConsenSys',
   'Alchemy',
-  'Infura']}};
+  'Infura']}}
+}

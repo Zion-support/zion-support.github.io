@@ -127,7 +127,7 @@ function MessageTab() {
 }
 
   )
-import React from 'react',;
+import React from 'react';
 import { Textarea } from "@/components/ui/textarea",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
@@ -165,4 +165,4 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
     </div>;
   );
 }
-;
+}

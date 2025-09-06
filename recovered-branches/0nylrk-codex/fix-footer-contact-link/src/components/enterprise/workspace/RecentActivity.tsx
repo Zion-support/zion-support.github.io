@@ -78,7 +78,7 @@ import { Badge } from "@/components/ui/badge",      id: "act-1",
     </Card>
   )
 
-import React from "react",;
+import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
     {;
@@ -170,4 +170,4 @@ default:
     </Card>;
   );
 }
-;
+}

@@ -557,5 +557,5 @@ export default UltraFuturisticServiceCardV2;
 
 export default UltraFuturisticServiceCardV2;
 export default UltraFuturisticServiceCardV2
-};
-
+}
+}

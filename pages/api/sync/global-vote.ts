@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next",;
+import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",;
 import { signPayload } from "../../../utils/sync/signature",;

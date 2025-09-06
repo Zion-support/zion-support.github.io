@@ -46,7 +46,7 @@ import { cn } from "@/lib/utils";interface DateFieldsProps {
             <Calendar
               mode="single"
               selected={startDate}
-              onSelect={setStartDate}import React from 'react',;
+              onSelect={setStartDate}import React from 'react';
 import { format } from 'date-fns',;
 import { Label } from "@/components/ui/label",;
 import { Button } from "@/components/ui/button",;

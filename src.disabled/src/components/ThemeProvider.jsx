@@ -17,5 +17,5 @@ import _React,{ useState } from 'react';import * as _React from 'react'; const T
 }; const value = {; theme,; setTheme,
 }; return (<ThemeContext && ThemeContext.Provider value={value}>{children}</ThemeContext && ThemeContext.Provider>) 
 }; const context = _React && _React.useContext(ThemeContext) ; if(context === null) {}} return context
-};
-
+}
+}

@@ -25,7 +25,7 @@ import { AppStoreButtons } from "./AppStoreButtons";
 };
 ";
 
-import React from "react",;
+import React from "react";
 import Link from "next/link",;
 import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button",;

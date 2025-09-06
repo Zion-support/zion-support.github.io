@@ -126,4 +126,5 @@ export const useFraudDetection = () => {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
   return context
-};
+}
+}

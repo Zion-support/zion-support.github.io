@@ -130,7 +130,7 @@ function MainNavigation() {
             isActive ? "text-zion-cyan" : "text-muted-foreground",
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
           )
-import React from 'react',;
+import React from 'react';
 import { Link } from 'react-router-dom',;
 import { cn } from "@/lib/utils",;
 import { NavLink } from "react-router-dom",;

@@ -287,4 +287,4 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
   const vendor = list_vendors ()[0] || null, // tie to auth later;
   return { props: { vendor } }
 }
-;
+}

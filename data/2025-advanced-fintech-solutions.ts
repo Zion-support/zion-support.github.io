@@ -109,7 +109,7 @@
     launchDate: '2025-02-12';
     customers: 89;
 
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedFintechSolution2025 {;
   id: string,;
   name: string,;

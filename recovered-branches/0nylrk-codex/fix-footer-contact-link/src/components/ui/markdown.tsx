@@ -12,7 +12,7 @@ export function Markdown({ content, className }: MarkdownProps) {
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   )
-import React from "react",;
+import React from "react";
 import ReactMarkdown from "react-markdown",;
 import { cn } from "@/lib/utils",;
 interface MarkdownProps {;

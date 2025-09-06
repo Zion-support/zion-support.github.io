@@ -28,7 +28,7 @@ import {Star, DollarSign} from "lucide-react";  onRequestQuote
     e.preventDefault(),
     e.stopPropagation(),
     
-import { useNavigate } from "react-router-dom",;
+import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { ProductListing } from "@/types/listings",;

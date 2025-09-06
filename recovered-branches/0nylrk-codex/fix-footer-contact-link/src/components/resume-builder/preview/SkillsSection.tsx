@@ -14,7 +14,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
       acc[category] = []
     }
     acc[category].push(skill);
-import { Skill } from '@/types/resume',;
+import { Skill } from '@/types/resume';
 interface SkillsSectionProps {;
   skills: Skill[];
 }

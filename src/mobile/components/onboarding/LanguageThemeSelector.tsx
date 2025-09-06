@@ -264,4 +264,4 @@ function LanguageThemeSelector() {
 
     </div>);
 }
-;
+}

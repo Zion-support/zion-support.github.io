@@ -22,7 +22,7 @@ import {Plugin} from 'vite';
 
 ;;
 declare module '@vitejs/plugin-react-swc' {;
-  import { Plugin } from 'vite',;
+  import { Plugin } from 'vite';
   export default function reactSWC(): Plugin;
 }
 ;

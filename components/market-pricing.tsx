@@ -1458,5 +1458,5 @@ export default MarketPricing;export default MarketPricing
 
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
 
-};
-
+}
+}

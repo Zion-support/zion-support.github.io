@@ -93,7 +93,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                       className="min - h-[100px] resize-y";
   FormMessage;
 } from "@/components/ui/form",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 ;
 interface ReplyFormProps {;
   onSubmit:(content:string) => Promise<void>,;

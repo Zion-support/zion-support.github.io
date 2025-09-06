@@ -1,5 +1,5 @@
 
-import * as React from 'react',;
+import * as React from 'react';
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;

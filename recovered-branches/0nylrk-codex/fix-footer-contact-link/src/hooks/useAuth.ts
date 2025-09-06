@@ -26,7 +26,7 @@ if ( {) {
 }
     throw new Error ('use_auth must be used within an AuthProvider');
 
-import { useContext } from 'react',;
+import { useContext } from 'react';
 import { AuthContext } from '@/context/auth/AuthContext',;
 import type { AuthContextType } from '@/types/auth',;
 export const useAuth = (): AuthContextType => {;

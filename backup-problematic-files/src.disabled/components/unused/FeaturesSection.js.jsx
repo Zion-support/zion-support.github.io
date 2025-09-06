@@ -7,5 +7,5 @@ const FeaturesSection.js = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

@@ -16,7 +16,7 @@ export default function DocsPage() {
 
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-import React from 'react',;
+import React from 'react';
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
 import React from 'react'
@@ -42,5 +42,4 @@ export default function DocsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-
+}

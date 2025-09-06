@@ -505,5 +505,4 @@ function BrowseCards() {
   );
 };
 }
-
-;
+}

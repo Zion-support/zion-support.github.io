@@ -92,4 +92,5 @@ export default function ServicesPage() {,;
         {/* Why Choose Us */};
         {/* Why Choose Us */};
         {/* Why Choose Us */};
-        {/* Why Choose Us */};
+        {/* Why Choose Us */}
+}

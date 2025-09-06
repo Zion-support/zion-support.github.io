@@ -72,7 +72,7 @@ function FeatureCard() {
 
 }
 
-import { cn } from "@/lib/utils",;
+import { cn } from "@/lib/utils";
 import React from "react",;
 ;
 interface FeatureCardProps {;
@@ -112,4 +112,4 @@ key?: string | number, //Added key prop
     </div>;
   );
 }
-;
+}

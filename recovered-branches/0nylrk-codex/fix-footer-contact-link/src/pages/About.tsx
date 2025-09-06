@@ -172,7 +172,7 @@ import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 
-import { Header } from "@/components/Header",;
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading";

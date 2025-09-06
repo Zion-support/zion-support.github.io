@@ -53,5 +53,5 @@ const Home: React.FC = () => {
 
     </div>
   );
-};
-
+}
+}

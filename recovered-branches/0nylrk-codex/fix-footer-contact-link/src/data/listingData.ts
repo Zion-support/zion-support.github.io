@@ -228,7 +228,7 @@ availability_options: availability.map (item => ({
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
     ratingOptions: [1, 2, 3, 4, 5]
-import { ProductListing } from "@/types/listings",;
+import { ProductListing } from "@/types/listings";
 import { SearchSuggestion } from "@/types/search",;
 // Shared data source for marketplace listings;
 export const MARKETPLACE_LISTINGS: ProductListing[] = [;

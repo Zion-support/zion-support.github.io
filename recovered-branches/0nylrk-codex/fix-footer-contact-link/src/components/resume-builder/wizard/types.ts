@@ -53,4 +53,4 @@ export interface EmptyResumeProps {
   onCreateClick: () => void;
 }
 }
-;
+}

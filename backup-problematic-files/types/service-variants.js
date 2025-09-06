@@ -2,5 +2,5 @@
 export const Analytics = () => {
   // Implementation here
   return null
-};
-
+}
+}

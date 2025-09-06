@@ -21,7 +21,7 @@ type UserWithProfile = UserProfile | UserDetails | null;
         await markAsRead(conversationId)
       }
     } catch (error) {
-      console && console.error('Error fetching messages:', error)import { UserProfile, UserDetails } from '@/types/auth',;
+      console && console.error('Error fetching messages:', error)import { UserProfile, UserDetails } from '@/types/auth';
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
 import { toast } from '@/hooks/use-toast',;

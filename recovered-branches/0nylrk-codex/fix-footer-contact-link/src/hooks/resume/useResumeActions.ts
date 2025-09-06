@@ -194,7 +194,7 @@ if (throw error) {
 }
 ;
 
-import { useState } from 'react',;
+import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
 import { useAuth } from '@/hooks/useAuth',;

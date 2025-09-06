@@ -27,7 +27,7 @@ interface EducationSectionProps {
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return ''
     if (typeof date === 'string') {
-      return format(new Date(date), 'MMM yyyy')import { Education } from '@/types/resume',;
+      return format(new Date(date), 'MMM yyyy')import { Education } from '@/types/resume';
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
   education: Education[];

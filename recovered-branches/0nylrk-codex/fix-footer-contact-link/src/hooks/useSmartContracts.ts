@@ -120,7 +120,7 @@ if ( {) {
       toast.error("Failed to deploy smart contract"),
       setDeploymentStatus('error'),
       return null
-import { useState } from 'react',;
+import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from 'sonner',;

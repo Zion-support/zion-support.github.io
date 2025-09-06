@@ -25,7 +25,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
       (acc, skill) => {
     return null
 
-import { useState, useEffect } from 'react',;
+import { useState, useEffect } from 'react';
 import { Skill } from '@/types/resume',;
 import { SkillCategory } from './SkillCategory',;
 interface SkillsListProps {;
@@ -89,4 +89,4 @@ if (.length === 0) {) {
       </div>;
     </div>);
 }
-;
+}

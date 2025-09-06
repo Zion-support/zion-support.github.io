@@ -58,7 +58,7 @@ export const ResumeStepContent = ({
       <TabsContent value="work-experience">
         <WorkExperienceForm
         <WorkExperienceForm 
-import { TabsContent } from "@/components/ui/tabs",;
+import { TabsContent } from "@/components/ui/tabs";
 import { Resume } from "@/types/resume",;
 import { BasicInfoForm } from '../forms/basic-info',;
 import { WorkExperienceForm } from '../forms/WorkExperienceForm',;

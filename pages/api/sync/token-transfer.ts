@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next",;
+import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
 import axios from "axios",;

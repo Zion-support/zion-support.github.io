@@ -429,7 +429,7 @@ export function FeaturesGuideSection() {
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-import Link from "next/link",;
+import Link from "next/link";
 import { GradientHeading } from "./GradientHeading",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Button } from "./ui/button",;

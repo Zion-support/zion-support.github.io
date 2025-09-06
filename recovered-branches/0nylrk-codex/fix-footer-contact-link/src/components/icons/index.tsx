@@ -171,7 +171,7 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
   BarChart;
   BookOpen;
   Key;
-import React from 'react',;
+import React from 'react';
 import * as LucideIcons from 'lucide-react',;
 // Alias for missing icons or for icons with different names;
 const iconAliases: Record<string keyof typeof LucideIcons> = {;

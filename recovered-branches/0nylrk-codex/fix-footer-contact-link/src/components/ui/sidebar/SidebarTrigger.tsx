@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils",interface SidebarTriggerProps extends React.HTM
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   const { open, toggleSidebar } = useSidebar(),
 
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react",;
 import { useSidebar } from "./sidebar-context",;
 import { cn } from "@/lib/utils",;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react',;
+import { useEffect, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types',;
 ;
 export default function AdminVendorsPage() {;

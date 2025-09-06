@@ -50,4 +50,4 @@ const Separator = React.forward_ref<;
 Separator.display_name = SeparatorPrimitive.Root.display_name;
 ;
 export { Separator }
-;
+}

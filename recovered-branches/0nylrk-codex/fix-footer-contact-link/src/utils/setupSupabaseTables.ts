@@ -136,4 +136,5 @@ if ( {) {
 export const initializeDatabase = async () => {;
 
   await ensureProfilesTableExists()
-};
+}
+}

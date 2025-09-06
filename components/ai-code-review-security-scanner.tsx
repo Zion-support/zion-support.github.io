@@ -864,5 +864,5 @@ export default AICodeReviewSecurityScanner);
 export default AICodeReviewSecurityScanner;
 
 export default AICodeReviewSecurityScanner
-};
-
+}
+}

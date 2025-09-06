@@ -3,7 +3,6 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
@@ -21,7 +20,6 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -42,4 +40,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
- origin/cursor/fix-lint-push-and-merge-to-main-1dc5

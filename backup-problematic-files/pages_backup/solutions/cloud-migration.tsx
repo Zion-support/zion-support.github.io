@@ -340,5 +340,5 @@ const benefits = [;
       </div>
     </Layout>
   )
-};
-
+}
+}

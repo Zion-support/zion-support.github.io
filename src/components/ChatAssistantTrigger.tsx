@@ -21,7 +21,7 @@
       
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
-import { useState } from "react",;
+import { useState } from "react";
 import { MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { ChatAssistant } from "@/components/ChatAssistant",;

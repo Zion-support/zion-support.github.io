@@ -72,7 +72,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
     
     default:
       return null
-import React from "react",;
+import React from "react";
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 
             This tab shows flags where action has already been taken.;

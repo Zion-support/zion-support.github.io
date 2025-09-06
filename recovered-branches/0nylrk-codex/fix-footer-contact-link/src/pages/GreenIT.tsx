@@ -13,7 +13,7 @@ import { AppLayout } from "@/layout/AppLayout",    {
       icon: Cloud}
     {
       title: "Renewable Energy Integration"
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."import { SEO } from "@/components/SEO",;
+      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
 import { Leaf, Server, Cloud } from "lucide-react",;

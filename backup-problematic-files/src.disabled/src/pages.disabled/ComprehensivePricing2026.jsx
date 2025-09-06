@@ -7,5 +7,5 @@ const ComprehensivePricing2026 = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react",;
+import React, { useMemo, useState } from "react";
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
 ;
 export interface MilestoneAssistantProps {;

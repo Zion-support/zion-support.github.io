@@ -743,4 +743,5 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 ;
 
 export interface EmergingTechService {
-};
+}
+}

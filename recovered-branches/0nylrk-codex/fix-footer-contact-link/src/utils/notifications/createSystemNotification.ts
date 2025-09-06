@@ -29,7 +29,7 @@ import {SystemNotificationParams} from './types';
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
 
-import { createNotification } from './createNotification',;
+import { createNotification } from './createNotification';
 import { SystemNotificationParams } from './types',;
 
 /**;
@@ -82,4 +82,4 @@ export async function createSystemNotification({;
     actionText;
   });
 }
-;
+}

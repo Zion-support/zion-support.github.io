@@ -70,7 +70,7 @@ import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
                 <Skeleton className="h-4 w-48" />
                 <Skeleton className="h-4 w-32" />
               </div>
-            </div>import React from "react",;
+            </div>import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;

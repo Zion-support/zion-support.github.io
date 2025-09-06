@@ -471,5 +471,5 @@ company updates.;
   )
 };export default EnhancedFooter;  )
 
-};
-
+}
+}

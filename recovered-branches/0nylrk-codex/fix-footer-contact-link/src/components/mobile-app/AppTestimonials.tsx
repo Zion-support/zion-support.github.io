@@ -47,7 +47,7 @@ const testimonials = [
               </CardFooter>
             </Card>
 
-import React from "react",;
+import React from "react";
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
     <section className="py-16 bg-zion-blue">;

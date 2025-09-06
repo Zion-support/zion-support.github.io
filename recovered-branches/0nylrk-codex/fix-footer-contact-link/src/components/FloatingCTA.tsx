@@ -38,7 +38,7 @@ export function FloatingCTA() {
 
   if (!isVisible) return null,
   )
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom",;
 import { useState, useEffect } from "react",;
 import { X } from "lucide-react",;          </button>;

@@ -107,4 +107,5 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
   communication: 'Communication Issues',;
   payment: 'Payment Dispute',;
   contract_terms: 'Contract Terms Disagreement',;
-  other: 'Other Issue'};
+  other: 'Other Issue'}
+}

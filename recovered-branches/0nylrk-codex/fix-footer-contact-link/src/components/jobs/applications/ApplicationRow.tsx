@@ -48,7 +48,7 @@ export function ApplicationRow({
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
-  return (import { formatDistanceToNow } from "date-fns",;
+  return (import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom",;
 import { Calendar, User, FileText, BarChart } from "lucide-react",;
 import { Button } from "@/components/ui/button",;

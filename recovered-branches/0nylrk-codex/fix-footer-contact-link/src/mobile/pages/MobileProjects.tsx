@@ -47,7 +47,7 @@ const milestonesData = [
     dueDate: "Dec 30, 2023",
     status: "pending" as const,
     paymentStatus: "pending" as const,
-import React from "react",;
+import React from "react";
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileProjectView } from "../components/projects/MobileProjectView",;

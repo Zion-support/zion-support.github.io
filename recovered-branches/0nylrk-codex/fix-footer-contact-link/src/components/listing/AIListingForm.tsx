@@ -54,7 +54,7 @@ import {Sparkles} from "lucide-react";
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
       <Button 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;

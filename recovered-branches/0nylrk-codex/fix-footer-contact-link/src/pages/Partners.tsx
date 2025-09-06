@@ -194,7 +194,7 @@ export default function Partners() {
             size="lg" 
             variant="outline" 
             className="text-zion-cyan border-zion-cyan"
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react",;
@@ -509,4 +509,4 @@ export default function Partners() {;
 }
 }
 }
-;
+}

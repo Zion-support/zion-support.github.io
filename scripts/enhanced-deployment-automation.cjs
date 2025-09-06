@@ -1,16 +1,10 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-deployment-automation.cjs
 =======
-<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/enhanced-deployment-automation.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-deployment-automation.cjs
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/enhanced-deployment-automation.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -254,15 +248,7 @@ console.log(' Starting Enhanced Deployment Automation...')
   console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
   console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
 =======
-<<<<<<< HEAD
-  console.error('� Deployment automation "failed")
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  console.error('� Deployment automation "failed")
-=======
-  console.error('� Deployment automation "failed")
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+console.error('� Deployment automation "failed")
 =======
   console.error('� Deployment automation "failed")
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52

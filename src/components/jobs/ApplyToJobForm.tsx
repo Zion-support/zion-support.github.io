@@ -236,7 +236,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
                       </SelectItem>
                     )
 
-import { useState } from "react",;
+import { useState } from "react";
 import { useRouter } from 'next/router',;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { useResume } from "@/hooks/useResume",;

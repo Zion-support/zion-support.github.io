@@ -14,4 +14,4 @@ export interface MessageAnalysisResult extends AnalysisResult {
 
 ;
 export interface SignupCheckResult extends AnalysisResult {}
-;
+}

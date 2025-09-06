@@ -167,7 +167,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                 <CalendarComponent
                   initialFocus
                   mode="range"
-import React from "react",;
+import React from "react";
 import { Calendar, RefreshCw } from "@/components/icons",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;

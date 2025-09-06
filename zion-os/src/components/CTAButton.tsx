@@ -15,7 +15,7 @@ function CTAButton() {
     large: "px - 8 py - 4 text - lg";
   }
 "use client",;
-import Link from "next/link",;
+import Link from "next/link";
 import { ReactNode } from "react",;
 interface CTAButtonProps {;
   href: string,;

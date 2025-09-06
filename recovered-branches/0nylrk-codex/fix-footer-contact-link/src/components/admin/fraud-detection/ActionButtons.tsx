@@ -19,7 +19,7 @@ interface ActionButtonsProps {
         variant="ghost"
         size="icon"
         title="View Details"
-import React from "react",;
+import React from "react";
 import { Button } from "@/components/ui/button",;
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
 ;

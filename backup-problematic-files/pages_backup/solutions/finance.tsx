@@ -27,7 +27,7 @@ const features = [;
   {}
     icon: Database,;
     title: 'Fraud Detection,',,
-  description: 'Real-time fraud detection and prevention systems using advanced analytics.'', import Layout from '../../components/Layout',;
+  description: 'Real-time fraud detection and prevention systems using advanced analytics.'', import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';

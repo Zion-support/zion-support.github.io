@@ -37,7 +37,7 @@ import { toast } from "@/hooks/use-toast",    {
       <Card className="bg - zion - blue - dark border - zion - blue-light">;
         <CardHeader>;
           <CardTitle > Marketing Resources</CardTitle>;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",;
 import { toast } from "@/hooks/use-toast",;

@@ -68,7 +68,7 @@ export function RaiseDisputeButton({
 
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <DisputeForm 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button",;
 import {;
   Dialog,;

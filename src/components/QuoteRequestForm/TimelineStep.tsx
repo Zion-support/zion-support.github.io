@@ -109,7 +109,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
                       className="p-3 pointer-events-auto"
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-import { format } from "date-fns",;
+import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar",;
 import { Button } from "@/components/ui/button",;
 import { Label } from "@/components/ui/label",;

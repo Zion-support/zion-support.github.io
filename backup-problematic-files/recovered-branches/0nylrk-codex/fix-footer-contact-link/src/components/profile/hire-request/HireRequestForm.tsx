@@ -1,5 +1,5 @@
 
-import React from "react",;
+import React from "react";
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
 import { Button } from "@/components/ui/button",;
 import { DialogFooter } from "@/components/ui/dialog",;

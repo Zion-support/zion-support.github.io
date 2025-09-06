@@ -132,7 +132,7 @@ function DisputesList() {
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
 
                 </TableRow>
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;

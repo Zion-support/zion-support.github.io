@@ -40,7 +40,7 @@ function useResumeBasic() {
     setActiveResume: resume_actions.setActiveResume}
 }
 
-import { useFetchResume } from './useFetchResume',;
+import { useFetchResume } from './useFetchResume';
 import { useResumeActions } from './useResumeActions',;
 ;
 export function useResumeBasic() {;

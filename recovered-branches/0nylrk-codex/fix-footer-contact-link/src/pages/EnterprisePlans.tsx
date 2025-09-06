@@ -41,7 +41,7 @@ import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadg
 import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
 import {SEO} from "@/components/SEO";
 
-import React from "react",;
+import React from "react";
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",;

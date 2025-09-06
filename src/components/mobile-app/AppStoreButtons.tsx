@@ -68,7 +68,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 
 },
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-import React from "react",;
+import React from "react";
 import { Apple, GithubIcon } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { logInfo } from '@/utils/productionLogger',;

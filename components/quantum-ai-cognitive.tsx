@@ -178,4 +178,4 @@ if ( {) {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-;
+}

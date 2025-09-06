@@ -7,5 +7,5 @@ const Ai-powered-it-asset-management = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

@@ -425,4 +425,4 @@ import { LoginModal } from '@/components/auth/LoginModal';
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);
 }
-;
+}

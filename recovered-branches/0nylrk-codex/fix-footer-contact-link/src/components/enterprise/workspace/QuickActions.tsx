@@ -19,7 +19,7 @@ import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
       icon: <Calendar className="h-5 w-5 mr-2" />
       description: "Set up candidate interviews"
       color: "bg-amber-100 dark:bg-amber-900/20"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button",;
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
       <CardHeader>;

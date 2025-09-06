@@ -110,7 +110,7 @@ if ( {) {
   }, [companySlug]);
 
   return { company, isLoading, error }
-}import { useState, useEffect } from "react",;
+}import { useState, useEffect } from "react";
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard",;
 export function useCompanyWorkspace(companySlug?: string) {;
   const [company, setCompany] = useState<Company | null>(null),;

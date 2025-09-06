@@ -7,5 +7,5 @@ const AIAutonomousBusinessPlatform2029 = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

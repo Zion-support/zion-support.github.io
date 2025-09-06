@@ -35,7 +35,7 @@ function createTestNotification() {
     'hire_request': { url: '/dashboard', text: 'View Request' }
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
-  }import { NotificationType } from './types',;
+  }import { NotificationType } from './types';
 import { createNotification } from './createNotification',;
 /**;
  * Demo function to create test notifications for the current user;
@@ -81,4 +81,4 @@ export async function createTestNotification(userId: string) {;
     action_text: actions[random_type].text;
   });
 }}
-;
+}

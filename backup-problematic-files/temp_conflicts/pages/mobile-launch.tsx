@@ -1,4 +1,4 @@
-import Head from 'next/head',;
+import Head from 'next/head';
 import { useEffect, useMemo, useState } from 'react',;
 import EnhancedLayout from '../components/layout/EnhancedLayout',;
 import Link from 'next/link',;

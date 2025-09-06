@@ -22,7 +22,7 @@ import {NotificationContextType} from './types';
 export const useNotifications = (): NotificationContextType => {;
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider')import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+    throw new Error('useNotifications must be used within a NotificationProvider')import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useNotificationOperations } from './useNotificationOperations',;

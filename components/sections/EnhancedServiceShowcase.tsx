@@ -1029,5 +1029,5 @@ export default EnhancedServiceShowcase);
 ;
 export default EnhancedServiceShowcase;
   )
-};
-
+}
+}

@@ -534,7 +534,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     variant: 'ai-futuristic',
     contactInfo: {
 
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaas2030 {;
   id: string,;
   name: string,;

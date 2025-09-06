@@ -64,7 +64,7 @@
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => loginWithTwitter()}
           disabled={isLoading}  )
-import { Facebook, Twitter } from "lucide-react",;
+import { Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Web3Login } from "./Web3Login",;

@@ -23,4 +23,5 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
 }    connections: [],
     logs: [],
     overrides: [],
-  };
+  }
+}

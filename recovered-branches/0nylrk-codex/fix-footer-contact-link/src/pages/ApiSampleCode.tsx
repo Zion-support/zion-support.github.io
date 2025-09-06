@@ -31,7 +31,7 @@ import axios from 'axios';
 // Configure Axios with the base URL and headers;
 const api = axios.create ({
   baseURL: 'https://api.zionai.com / v1',
-import React from "react",;
+import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;

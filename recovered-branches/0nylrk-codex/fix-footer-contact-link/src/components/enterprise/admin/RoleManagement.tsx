@@ -99,7 +99,7 @@ function RoleManagement() {
                     checked={member.permissions.viewBilling} 
                     onCheckedChange={(checked) => 
                       handlePermissionChange(member.id, "viewBilling", checked)
-import React from "react",;
+import React from "react";
 import {;
   Table,;
   TableBody,;

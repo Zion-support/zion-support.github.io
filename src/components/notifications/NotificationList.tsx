@@ -33,7 +33,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   notifications
   onMarkAsRead
 
-import React from 'react',;
+import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import Skeleton from '@/components/ui/skeleton',;
 import { Button } from '@/components/ui/button',;
@@ -192,5 +192,5 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       )}
     </ScrollArea>;
   );
-};
-
+}
+}

@@ -8,7 +8,7 @@ interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonE
   active?: boolean,
   href?: string,
   target?: string,
-  badge?: React.ReactNodeimport React, { forwardRef } from "react",;
+  badge?: React.ReactNodeimport React, { forwardRef } from "react";
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",;
@@ -173,4 +173,5 @@ className)
 };
   );
 },;
-export { SidebarMenuItem, SidebarMenuGroup };
+export { SidebarMenuItem, SidebarMenuGroup }
+}

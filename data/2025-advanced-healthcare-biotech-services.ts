@@ -282,7 +282,7 @@ export interface AdvancedHealthcareBiotechService {
     useCases: ['Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'];
     roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
     competitors: ['Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'];
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
   name: string,;

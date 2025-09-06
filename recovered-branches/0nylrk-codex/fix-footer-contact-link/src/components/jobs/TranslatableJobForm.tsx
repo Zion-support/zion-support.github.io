@@ -8,7 +8,7 @@
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;

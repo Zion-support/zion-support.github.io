@@ -45,7 +45,7 @@ export interface EmergingTechService {
     launchDate: '2024-04-30';
     customers: 18;
 
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechService2025 {;
   id: string,;
   name: string,;

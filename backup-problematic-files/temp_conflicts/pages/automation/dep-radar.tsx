@@ -1,4 +1,4 @@
-import fs from 'fs',;
+import fs from 'fs';
 import path from 'path',;
 ;
 type Outdated = { name:string, current:string, latest:string, type:'dependency' | 'devDependency' },;

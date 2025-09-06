@@ -9,7 +9,7 @@ export const analyzeContent = (content: string): AnalysisResult => {
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
 // Content analysis functionality;
-import { suspiciousPhrases } from './constants',;
+import { suspiciousPhrases } from './constants';
 import { AnalysisResult } from './types',;
 /**;
  * Analyzes text content for suspicious patterns;

@@ -1,45 +1,21 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
  f6b849a806966ab0803a1eba10ab812addf04f56
-=======
-import globals from 'globals';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-export default [
-  ...compat.extends('next/core-web-vitals'),
-  {
-<<<<<<< HEAD
-    files: ['**/*.{js,jsx,ts,tsx}'],
-=======
- a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     ignores: [
       'node_modules/**',
       'dist/**',
       'build/**',
-<<<<<<< HEAD
-      '.next/**',
+'.next/**',
       'out/**',
       'dist/**',
       'node_modules/**',
       'temp_exclude/**',
       'src.disabled/**',
       'src.pages.disabled/**',
-=======
- f6b849a806966ab0803a1eba10ab812addf04f56
-      'coverage/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/**',
-      'automation/**',
- a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       'backup-problematic-files/**',
       'src.disabled/**',
       'components.disabled/**',
@@ -230,8 +206,7 @@ export default [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
-<<<<<<< HEAD
-      'no-trailing-spaces': 'error',
+'no-trailing-spaces': 'error',
       'indent': 'off',
       'linebreak-style': ['error', 'unix'],
       'quotes': ['error', 'single'],
@@ -309,50 +284,6 @@ export default [
       sourceType: "script",
       globals: {
         ...globals.node,
-=======
-      'coverage/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.ts'
-    ],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
-      parser: tsparser,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        ...globals.es2020,
-      },
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      'react': react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      'jsx-a11y': jsxA11y,
-    },
-    rules: {
-      ...tseslint.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      'jsx-a11y/alt-text': 'warn',
-      'jsx-a11y/aria-role': 'warn',
-      'jsx-a11y/heading-has-content': 'warn',
-      'jsx-a11y/img-redundant-alt': 'warn',
-      'jsx-a11y/no-access-key': 'warn',
-=======
- a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     },
     settings: {
       react: {
@@ -360,7 +291,6 @@ export default [
       },
     },
   },
-<<<<<<< HEAD
 =======
  f6b849a806966ab0803a1eba10ab812addf04f56
   {
@@ -382,22 +312,6 @@ export default [
       'no-console': 'off',
     },
   },
-=======
-      react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-    },
-  },
- main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 =======
         ...globals.node

@@ -91,7 +91,7 @@ export function ApiKeysManager() {  const {
 
   },
 
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";
 import { format } from "date-fns",;
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
 import { Button } from "@/components/ui/button",;

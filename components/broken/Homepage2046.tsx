@@ -1495,5 +1495,5 @@ export default Homepage2046;
 
 export default Homepage2046;
   )
-};
-
+}
+}

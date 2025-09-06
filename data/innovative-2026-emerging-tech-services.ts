@@ -506,7 +506,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
   })
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026EmergingTechService {;
   id: string,;
   name: string,;
@@ -589,4 +589,5 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
   })
-};
+}
+}

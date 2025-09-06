@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import { Globe } from "lucide-react",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
@@ -77,4 +77,5 @@ setTopCountries (top)
 //Handle country selection const handleCountryChange = (countryName: string) => {
   const country = onsiteServicePricing.find (item => item.country === countryName) || null;
 onCountryChange (country) 
-};
+}
+}

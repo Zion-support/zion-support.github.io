@@ -134,7 +134,7 @@ export function MobileHeader(): any ({;
 }
 
             </Button>
-import React from "react",;
+import React from "react";
 import { useRouter } from 'next/router',;
 import { ChevronLeft, Bell, Settings } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -205,5 +205,4 @@ export function MobileHeader({;
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
           )}
-
-;
+}

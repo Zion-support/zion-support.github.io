@@ -34,7 +34,7 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
 
 <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
-import { Card, CardContent } from "@/components/ui/card",;
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge",;
 import { ProfileProject } from "@/types/profile",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
@@ -97,4 +97,4 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
       </div>
     </div>
   )}
-;
+}

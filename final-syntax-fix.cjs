@@ -1,13 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -62,14 +53,6 @@ for (const file of files) {}
 	if (processFile(file)) fixedCount++
 };
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require('fs');
 const path = require('path');
 
@@ -161,15 +144,6 @@ walkDir('/workspace/pages');
 walkDir('/workspace/src');
 
 console.log('Final syntax fix completed!');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-=======
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
-=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

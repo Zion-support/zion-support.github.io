@@ -71,4 +71,4 @@ export interface GeneratedNewsletterContent {;
   body: string;
   cta: string;
 }
-;
+}

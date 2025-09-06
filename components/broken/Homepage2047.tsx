@@ -1084,5 +1084,5 @@ export default Homepage2047;
 
 export default Homepage2047;
 export default Homepage2047
-};
-
+}
+}

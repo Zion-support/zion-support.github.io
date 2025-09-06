@@ -16,7 +16,7 @@ import { useIsMobile } from "@/hooks/use-mobile",
 interface DnDLocation {
   droppableId: string,
   index: number
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;

@@ -28,7 +28,7 @@ export const jobSchema = z.object({
     message: "Title must be at least 3 characters."}),
 
 import { z } from "zod",export type JobSchemaType = z.infer<typeof jobSchema>,
-import { z } from "zod",;
+import { z } from "zod";
 export const jobSchema = z.object({;
   title: z.string().min(3, {;
     message: "Title must be at least 3 characters."}),;

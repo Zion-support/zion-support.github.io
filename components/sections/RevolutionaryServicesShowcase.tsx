@@ -551,5 +551,5 @@ export default RevolutionaryServicesShowcase);
 export default RevolutionaryServicesShowcase;
 
 export default RevolutionaryServicesShowcase
-};
-
+}
+}

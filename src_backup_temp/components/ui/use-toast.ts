@@ -11,4 +11,5 @@ export function useToast() {
     return toast(message, options)
 };
   return { showToast }
-};
+}
+}

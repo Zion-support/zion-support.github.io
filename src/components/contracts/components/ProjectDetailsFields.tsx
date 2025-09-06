@@ -20,7 +20,7 @@ import { Calendar } from "@/components/ui/calendar",
 import { ContractFormValues } from "./ContractForm",
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>
-import { format } from "date-fns",;
+import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react';
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form",;
 import {;

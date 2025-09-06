@@ -30,7 +30,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, 
 
 interface HiringAnalyticsProps {
   jobId?: string
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;

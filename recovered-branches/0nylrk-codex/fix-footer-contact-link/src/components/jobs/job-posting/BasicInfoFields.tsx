@@ -46,7 +46,7 @@ import { Card, CardContent } from "@/components/ui/card",
             </FormControl>
             <FormMessage />
           </FormItem>
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Control } from "react-hook-form",;
 import {;
   FormField,;
@@ -142,4 +142,4 @@ import { Card, CardContent } from "@/components/ui/card",;        <FormField
       />;
     </div>);
 }
-;
+}

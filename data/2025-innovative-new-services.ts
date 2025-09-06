@@ -214,7 +214,7 @@ export interface InnovativeNewService {
     launchDate: '2025-01-08';
     customers: 12;
 
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeNewService {;
   id: string,;
   name: string,;

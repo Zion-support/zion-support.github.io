@@ -38,7 +38,7 @@ export /**
  */
 function useAuthStatus() {
 
-import { useState } from 'react',;
+import { useState } from 'react';
 export function useAuthStatus() {;
 
   // Mock authenticated status;
@@ -101,4 +101,4 @@ if ( {) {
     toggle_auth;
   }
 }  }
-;
+}

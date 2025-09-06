@@ -30,4 +30,5 @@ export const a11yUtils = {
     document && document.body.appendChild(announcement);
     setTimeout(() => {
       document && document.body.removeChild(announcement)}, 1000)}
-};
+}
+}

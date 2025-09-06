@@ -143,7 +143,7 @@ export function QuoteFormSection() {
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
-import { Button } from "./ui/button",;
+import { Button } from "./ui/button";
 import { Input } from "./ui/input",;
 import { GradientHeading } from "./GradientHeading",;
 import { useState } from "react",;

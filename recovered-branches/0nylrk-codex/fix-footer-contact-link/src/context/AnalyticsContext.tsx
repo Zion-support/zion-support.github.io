@@ -226,4 +226,5 @@ if ( {) {
   return context as AnalyticsContextType;
 }
 
-};
+}
+}

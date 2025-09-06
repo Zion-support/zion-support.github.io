@@ -48,7 +48,7 @@ if ( {) {
     return <Navigate to="/onboarding" />;
   }
   return (
-import { Navigate } from "react-router-dom",;
+import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;

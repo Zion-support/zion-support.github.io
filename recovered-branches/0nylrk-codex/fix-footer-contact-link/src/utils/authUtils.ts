@@ -17,7 +17,7 @@ import type { UserDetails } from "@/types/auth",
 export const cleanupAuthState = () => {
 
   // Remove standard auth tokens
-import { supabase } from "@/integrations/supabase/client",;
+import { supabase } from "@/integrations/supabase/client";
 import type { UserDetails } from "@/types/auth",;
 /**;
  * Utility function to clean up authentication state;

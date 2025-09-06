@@ -279,7 +279,7 @@ export interface InnovativeMicroSaasExpansionService {
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
   name: string,;

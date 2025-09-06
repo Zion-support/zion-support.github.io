@@ -28,7 +28,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
-import { ChevronDown, ChevronUp } from "lucide-react",;
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider",;
 import { ExperienceFilterProps } from "@/types/filters",;
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;

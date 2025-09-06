@@ -286,4 +286,4 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
   )
 }
 }
-;
+}

@@ -52,7 +52,7 @@ import {RESUME_STEPS} from './constants';  // Use the extracted hook for progres
   }
 
   };
-import { useAuth } from '@/hooks/useAuth',;
+import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume',;
 import { Tabs } from '@/components/ui/tabs',;
 import { Card, CardContent } from '@/components/ui/card',;

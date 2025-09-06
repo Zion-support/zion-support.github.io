@@ -184,4 +184,5 @@ import { AppLayout } from '@/layout/AppLayout',  return (
           </div>;
         </div>;
       </div>;  )
-};
+}
+}

@@ -11,7 +11,7 @@ export function useTrackUserBehavior(componentName: string) {;
       }
     }
     // Track form submissions
-    const trackFormSubmits = (e: Event) => {import { useAnalytics } from '@/context/AnalyticsContext',;
+    const trackFormSubmits = (e: Event) => {import { useAnalytics } from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
   const { trackEvent } = useAnalytics(),;
   const componentRef = useRef<HTMLDivElement>(null),;

@@ -25,5 +25,4 @@ type FormData = z.infer < typeof form_schema>;
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
-
-;
+}

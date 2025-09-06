@@ -816,6 +816,4 @@ function TeamPage() {
 }
 
 }
-
-;
-
+}

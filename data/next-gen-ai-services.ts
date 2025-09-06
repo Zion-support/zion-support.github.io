@@ -3641,7 +3641,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 34,
     reviews: 34
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface NextGenAIService {;
   id: string,;
   name: string,;

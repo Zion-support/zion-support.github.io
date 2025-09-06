@@ -158,4 +158,5 @@ return res.status(405).json({ error: 'Method not allowed' });
 
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
-    const { tenantId, rotateKey } = req.body || {};
+    const { tenantId, rotateKey } = req.body || {}
+}

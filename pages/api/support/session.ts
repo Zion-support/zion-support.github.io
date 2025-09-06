@@ -1,5 +1,5 @@
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { readJson, writeJson } from '../../../utils/fsDb',;
 import { logSupportEventToOperator } from '../../../utils/operator',;

@@ -115,4 +115,4 @@ export interface ProfileData {;
   hourlyRate?: number;
   contactEmail?: string;
 }
-;
+}

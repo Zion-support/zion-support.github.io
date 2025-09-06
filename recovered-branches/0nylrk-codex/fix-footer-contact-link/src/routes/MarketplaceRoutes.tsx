@@ -100,7 +100,7 @@ export default MarketplaceRoutes;
 },
 
 export default MarketplaceRoutes,
-import { Route, Routes } from "react-router-dom",;
+import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import Marketplace from "@/pages/Marketplace",;
 import Categories from "@/pages/Categories",;

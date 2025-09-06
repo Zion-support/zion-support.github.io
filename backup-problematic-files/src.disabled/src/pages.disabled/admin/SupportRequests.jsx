@@ -7,5 +7,5 @@ const SupportRequests = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   )
-};
-
+}
+}

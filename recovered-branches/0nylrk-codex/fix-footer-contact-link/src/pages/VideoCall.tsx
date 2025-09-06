@@ -37,7 +37,7 @@ import {toast} from 'sonner';    avatar?: string;
       isMuted: false
     }
   ]);
-import { useState, useEffect } from 'react',;
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;

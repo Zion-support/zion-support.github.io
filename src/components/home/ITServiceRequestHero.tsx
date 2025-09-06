@@ -484,7 +484,7 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }
 }
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
  origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Image from "next/image",;
 import { GradientHeading } from "@/components/GradientHeading",;

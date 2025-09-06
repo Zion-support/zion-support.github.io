@@ -36,10 +36,4 @@ const { execSync } = require('child_process')
       if (content.includes('${'})
     fixed = fixed.replace(/(\w+):\s*([^,}]+)/g, '"$1"
 <<<<<<< HEAD
-<<<<<<< HEAD
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

@@ -54,5 +54,4 @@ export function TalentResults(): any ({;      />;
       />;
     </div>);
 }
-;
-
+}

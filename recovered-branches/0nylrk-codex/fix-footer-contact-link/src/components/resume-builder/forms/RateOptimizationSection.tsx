@@ -84,4 +84,4 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       </Card>;
     </div>);
 }
-;
+}

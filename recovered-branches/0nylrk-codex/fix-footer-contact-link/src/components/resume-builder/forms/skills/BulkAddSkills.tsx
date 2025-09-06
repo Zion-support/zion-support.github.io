@@ -35,7 +35,7 @@
   }
   return (
 
-import { useState } from 'react',;
+import { useState } from 'react';
 import { Button } from '@/components/ui/button',;
 import { Loader2, Sparkles } from 'lucide-react',;
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
@@ -188,4 +188,4 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
       </div>;
     </div>);
 }
-;
+}

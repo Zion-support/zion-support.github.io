@@ -38,7 +38,7 @@ interface Milestone {
   if (data.success && data.contract) {
     return data.contract  } else {
     throw new Error("Failed to generate contract")
-import { supabase } from "@/integrations/supabase/client",;
+import { supabase } from "@/integrations/supabase/client";
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
 import { ContractFormValues } from "../components/ContractForm",;

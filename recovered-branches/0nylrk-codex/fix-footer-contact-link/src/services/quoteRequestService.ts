@@ -100,7 +100,7 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 export const quoteRequestService = {;
   // Get all quote requests (for admin);
   getAll: async () => {;

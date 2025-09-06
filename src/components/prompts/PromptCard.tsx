@@ -92,5 +92,4 @@ function PromptCard() {
       </div>;
     </div>);
 }
-
-;
+}

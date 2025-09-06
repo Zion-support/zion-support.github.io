@@ -110,7 +110,7 @@ interface IntegrationCardProps {
 
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
-import React from "react",;
+import React from "react";
 import { logDebug } from '@/utils/productionLogger',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;

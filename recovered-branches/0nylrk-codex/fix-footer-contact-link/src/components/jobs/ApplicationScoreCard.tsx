@@ -48,7 +48,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
       case "Strongly Recommended": return "bg-green-100 text-green-800";
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800";
-import { useState } from "react",;
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",;

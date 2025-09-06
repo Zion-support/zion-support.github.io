@@ -1,4 +1,4 @@
-import React from 'react',;
+import React from 'react';
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
 import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react',;

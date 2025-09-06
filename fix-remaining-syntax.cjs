@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 console.log('🔧 Fixing remaining syntax errors...');
 
 // Fix specific files with known issues
@@ -13,16 +12,6 @@ const filesToFix = [
     'src/components/talent/TalentCard.jsx'
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 ];
-
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-function fixFile(filePath) {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
   try {}

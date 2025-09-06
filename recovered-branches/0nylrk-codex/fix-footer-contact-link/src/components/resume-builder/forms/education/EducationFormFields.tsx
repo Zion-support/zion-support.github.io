@@ -29,7 +29,7 @@ const educationSchema = z.object({
   is_current: z.boolean().default(false)
   description: z.string().optional()
   location: z.string().optional()})
-type EducationFormValues = z.infer<typeof educationSchema>;import { useForm } from 'react-hook-form',;
+type EducationFormValues = z.infer<typeof educationSchema>;import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { format } from 'date-fns',;

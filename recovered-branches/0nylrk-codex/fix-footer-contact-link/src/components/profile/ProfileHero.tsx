@@ -25,7 +25,7 @@ export function ProfileHero(): any ({;interface ProfileHeroProps {
   profileType: 'service' | 'talent'
 }
 
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge",;
 import { Star } from "lucide-react",;
 import { cn } from "@/lib/utils",;

@@ -358,4 +358,4 @@ export function TalentProfile({
       </div>;
     </div>);
 }
-;
+}

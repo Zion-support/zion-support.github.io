@@ -169,7 +169,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
                     {BUDGET_RANGES.map((range) => (
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
-import { useState } from 'react',;
+import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;

@@ -17,7 +17,7 @@ export default define_config ({
       '@': path.resolve (__dirname, './src')}}
   test: {
     environment: 'jsdom';
-    setup_files: './tests / setup.ts',import { defineConfig } from 'vitest/config',;
+    setup_files: './tests / setup.ts',import { defineConfig } from 'vitest/config';
 import path from 'node: path',;
 export default defineConfig({;
   resolve: {;

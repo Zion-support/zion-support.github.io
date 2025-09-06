@@ -672,5 +672,5 @@ export default UltraAdvancedServiceCard;
       </div>
     </motion.div>
 
-};
-
+}
+}

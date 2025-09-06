@@ -57,7 +57,7 @@ if ( {) {
   };
 
       // // // console.log("Request to hire:", talent.id)
-import { TalentCard } from "@/components/talent/TalentCard",;
+import { TalentCard } from "@/components/talent/TalentCard";
 import { TalentProfile } from "@/types/talent",;
 export interface TalentGridProps {;
   talents: TalentProfile[],;

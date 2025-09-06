@@ -10,10 +10,6 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
   ],
@@ -144,7 +140,6 @@
   ],
   "recommendations": [
     {
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -295,61 +290,6 @@
   ],
   "recommendations": [
     {
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      "priority": "high",
-      "category": "dependencies",
-      "message": "Update dependencies with known vulnerabilities",
-      "action": "Run npm audit fix to automatically fix vulnerabilities"
-    },
-    {
-      "priority": "high",
-      "category": "code_security",
-      "message": "Address code security issues",
-      "action": "Review and fix dangerous code patterns identified in the audit"
-    },
-    {
-      "priority": "medium",
-      "category": "environment",
-      "message": "Secure environment variables",
-      "action": "Ensure sensitive environment variables are properly secured and not committed to version control"
-    },
-    {
-      "priority": "low",
-      "category": "permissions",
-      "message": "Review file permissions",
-      "action": "Consider restricting file permissions for sensitive files"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  "summary": {
-    "totalVulnerabilities": 0,
-    "totalSecurityIssues": 17,
-    "criticalIssues": 0,
-    "warnings": 13,
-    "info": 4,
-    "totalRecommendations": 4
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

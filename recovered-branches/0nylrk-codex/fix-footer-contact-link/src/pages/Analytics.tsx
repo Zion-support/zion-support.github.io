@@ -38,7 +38,7 @@ export default function Analytics() {;
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, path')
-        .eq('event_typepage_view')import React, { useState } from "react",;
+        .eq('event_typepage_view')import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;

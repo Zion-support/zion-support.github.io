@@ -29,5 +29,5 @@ const Card: React.FC<CardProps> = ({
       {children}
     </div>
   );
-};
-
+}
+}

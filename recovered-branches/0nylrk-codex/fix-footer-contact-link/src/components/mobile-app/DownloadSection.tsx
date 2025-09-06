@@ -23,7 +23,7 @@ export const DownloadSection: React.FC = () => {
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console.log("App Store button clicked")}
                 onGooglePlayClick={() => console.log("Google Play button clicked")}
-import React from "react",;
+import React from "react";
 import { QrCodeIcon } from "lucide-react",;
 import { AppStoreButtons } from "./AppStoreButtons",;
 export const DownloadSection: React.FC = () => {;
@@ -90,4 +90,5 @@ export const DownloadSection: React.FC = () => {;
         </div>;
       </div>;
 }
-};
+}
+}

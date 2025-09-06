@@ -23,4 +23,4 @@ type ThemeProviderProps = {
     theme
     setTheme: (theme: Theme) => {  return context
 }
-;
+}

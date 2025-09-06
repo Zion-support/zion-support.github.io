@@ -127,7 +127,7 @@ export function ProductGallery(): any ({;
 };
 };
 
-import React, { useState, Suspense } from 'react',;
+import React, { useState, Suspense } from 'react';
 import {;
   Dialog,;
   DialogContent,;

@@ -52,7 +52,7 @@ import { useState } from 'react';
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
-import { useState } from "react",;
+import { useState } from "react";
 // Local stub is used in place of the @hello-pangea/dnd package which isn't;
 // available in this environment.;
 import { Draggable } from '@/lib/dnd-stub';

@@ -46,7 +46,7 @@ export default function MarketPricing() {
           strengths: ['True AI consciousnessEnterprise-grade securityCompetitive pricing'],
           weaknesses: ['Smaller market presenceLimited brand recognitionNewer player'],
           rating: 4.8
-import React, { useState } from 'react',;
+import React, { useState } from 'react';
 import { motion } from 'framer-motion',;
 import {;
   TrendingUp, TrendingDown, DollarSign, Target,;

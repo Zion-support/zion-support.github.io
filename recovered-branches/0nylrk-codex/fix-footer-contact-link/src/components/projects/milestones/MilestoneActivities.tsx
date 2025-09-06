@@ -199,7 +199,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
   if (isLoading) {;
     return (
 
-import React, { useState, useEffect } from 'react',;
+import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;

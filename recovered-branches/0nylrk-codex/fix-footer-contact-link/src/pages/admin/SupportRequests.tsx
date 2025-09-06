@@ -97,7 +97,7 @@ const MOCK_SUPPORT_REQUESTS = [
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;

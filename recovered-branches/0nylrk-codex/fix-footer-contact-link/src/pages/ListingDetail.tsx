@@ -78,7 +78,7 @@ export default function ListingDetail() {;
                           className="w-full h-full object-cover"
                           onError={(e) => {                            const target = e.target as HTMLImageElement,
                             target.src = "/placeholder.svg"
-import { useState } from "react",;
+import { useState } from "react";
 import { useParams } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -463,4 +463,4 @@ export default function ListingDetail() {;
 }
   );
 }
-;
+}

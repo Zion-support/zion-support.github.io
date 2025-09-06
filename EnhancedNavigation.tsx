@@ -22,4 +22,4 @@ const EnhancedNavigation: React.FC = () => {
       </div>;
     </nav>);
 }
-;
+}

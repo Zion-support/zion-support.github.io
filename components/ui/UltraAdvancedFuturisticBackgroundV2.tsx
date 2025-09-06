@@ -262,5 +262,5 @@ export default UltraAdvancedFuturisticBackgroundV2;    </div>);
 }
 ;
 export default UltraAdvancedFuturisticBackgroundV2
-};
-
+}
+}

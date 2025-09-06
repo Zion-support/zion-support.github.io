@@ -1611,4 +1611,5 @@ export const getAIServicesByPriceRange = (
 ) => {
   return revolutionaryAIInnovationServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice})};
+    return price >= minPrice && price <= maxPrice})}
+}

@@ -11,7 +11,7 @@ export function useAuthState() {
     onboardingStep,
     setOnboardingStep
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import type { UserProfile } from "@/types/auth",;
   }
 }

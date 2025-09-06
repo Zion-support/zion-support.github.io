@@ -14,7 +14,7 @@ import CodeBlock from "./CodeBlock",
 export function ApiDocumentation() {
   return (
 
-import { useState } from "react",;
+import { useState } from "react";
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -938,5 +938,4 @@ function EndpointSection() {
 }    </div>;
   );
 }
-;
-
+}

@@ -4,7 +4,7 @@ import { supabase } from '@/integrations/supabase/client',export async function 
     // Check if analytics_events table exists
     const { error } = await supabase
       .from('analytics_events')
-import { supabase } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client';
 export async function ensureAnalyticsTablesExist() {;
   try {;
     // Check if analytics_events table exists;

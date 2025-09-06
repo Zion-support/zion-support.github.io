@@ -59,7 +59,7 @@ export default function PaymentSuccess() {
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
-import React from 'react',;
+import React from 'react';
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
 import { CheckCircle2 } from 'lucide-react',;

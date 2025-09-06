@@ -55,7 +55,7 @@ import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
 
-import React from 'react',;
+import React from 'react';
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { CategoriesSection } from "@/components/CategoriesSection",;
@@ -87,5 +87,4 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
       <Footer />;
     </div>);
 }}
-;
-
+}

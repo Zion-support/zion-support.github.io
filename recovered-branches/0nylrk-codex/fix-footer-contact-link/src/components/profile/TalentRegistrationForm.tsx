@@ -21,7 +21,7 @@ import {X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound} from "l
 import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {useAuth} from "@/hooks/useAuth";import { useForm } from "react-hook-form",;
+import {useAuth} from "@/hooks/useAuth";import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { Button } from "@/components/ui/button",;

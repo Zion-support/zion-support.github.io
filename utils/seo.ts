@@ -32,4 +32,5 @@ export const generateStructuredData = () => {
       "email": "contact@ziontechgroup.com"
     }
   }
-};
+}
+}

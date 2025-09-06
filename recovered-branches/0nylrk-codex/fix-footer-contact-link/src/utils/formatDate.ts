@@ -226,4 +226,5 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 
-};
+}
+}

@@ -123,5 +123,5 @@ function getStaticProps() {
 }
   } catch {
 
-    return { props: { content: null, generatedAt: null }, revalidate: 300 };
-
+    return { props: { content: null, generatedAt: null }, revalidate: 300 }
+}

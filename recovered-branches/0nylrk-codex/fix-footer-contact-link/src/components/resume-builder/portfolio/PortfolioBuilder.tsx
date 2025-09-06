@@ -32,7 +32,7 @@ export function PortfolioBuilder() {;  const { projects, fetchProjects, deletePr
       fetchProjects();
     }
 
-import { useState, useEffect } from 'react',;
+import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
 import { FilePlus, Loader2 } from 'lucide-react',;

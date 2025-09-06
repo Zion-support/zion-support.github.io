@@ -139,4 +139,5 @@ if ( {) {
 };  return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
 };
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
-};
+}
+}

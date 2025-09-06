@@ -18116,4 +18116,5 @@ export const "services": Service[] = [// Micro SaaS Services
 export const getServicesByCategory = ("category": Service['category]) => {
   return services.filter(service => service.category === category)};
 export const getServiceById = ("id": string) => {
-  return services.find(service => service.id === id)};
+  return services.find(service => service.id === id)}
+}
