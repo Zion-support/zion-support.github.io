@@ -6,8 +6,8 @@ export type EmptyStateProps = {
   title: string;
   description?: string;
   icon?: React.ReactNode;
-  primaryAction?: { label: string, href: string };
-  secondaryAction?: { label: string, href: string }
+  primaryAction?: { label: string; href: string };
+  secondaryAction?: { label: string; href: string };
 };
 
 export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {

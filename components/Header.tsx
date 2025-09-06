@@ -1,127 +1,72 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { Phone, Mail, Facebook, Twitter, Linkedin, Instagram, ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Phone, 
-  Mail, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram,
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-  Users,
-  Building,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Briefcase,
-  Home,
-  Globe,
-  BarChart3
-} from 'lucide-react';
 
-const Header = () => {
+const servicesDropdown = [
+  {
+    title: 'AI Services',
+    href: '/ai-services',
+    description: 'Artificial Intelligence Solutions',
+    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">🤖</div>
+  },
+  {
+    title: 'Web Development',
+    href: '/web-development',
+    description: 'Custom Web Applications',
+    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">🌐</div>
+  },
+  {
+    title: 'Mobile Apps',
+    href: '/mobile-apps',
+    description: 'iOS & Android Development',
+    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">📱</div>
+  },
+  {
+    title: 'Cloud Solutions',
+    href: '/cloud-solutions',
+    description: 'Cloud Infrastructure & Migration',
+    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">☁️</div>
+  }
+];
+
+const solutionsDropdown = [
+  {
+    title: 'Digital Transformation',
+    href: '/digital-transformation',
+    description: 'Complete digital overhaul for your business',
+    icon: () => <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">🔄</div>
+  },
+  {
+    title: 'Automation',
+    href: '/automation',
+    description: 'Streamline your business processes',
+    icon: () => <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">⚙️</div>
+  }
+];
+
+const industriesDropdown = [
+  { name: 'Healthcare', href: '/healthcare', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center">🏥</div> },
+  { name: 'Finance', href: '/finance', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center">💰</div> },
+  { name: 'E-commerce', href: '/ecommerce', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center">🛒</div> }
+];
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' }
+];
+
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const closeMenu = () => setIsMenuOpen(false);
-
-  const servicesDropdown = [
-    {
-      title: 'Web Development',
-      description: 'Custom websites and web applications',
-      href: '/services/web-development',
-      icon: Code
-    },
-    {
-      title: 'Mobile Apps',
-      description: 'iOS and Android applications',
-      href: '/services/mobile-apps',
-      icon: Smartphone
-    },
-    {
-      title: 'Cloud Solutions',
-      description: 'AWS, Azure, and Google Cloud services',
-      href: '/services/cloud-solutions',
-      icon: Cloud
-    },
-    {
-      title: 'Database Management',
-      description: 'Database design and optimization',
-      href: '/services/database-management',
-      icon: Database
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Security audits and protection',
-      href: '/services/cybersecurity',
-      icon: Shield
-    },
-    {
-      title: 'AI & Automation',
-      description: 'Artificial intelligence solutions',
-      href: '/services/ai-automation',
-      icon: Zap
-    }
-  ];
-
-  const solutionsDropdown = [
-    {
-      title: 'E-commerce',
-      description: 'Online stores and marketplaces',
-      href: '/solutions/ecommerce',
-      icon: ShoppingCart
-    },
-    {
-      title: 'Healthcare',
-      description: 'Medical software and systems',
-      href: '/solutions/healthcare',
-      icon: Heart
-    },
-    {
-      title: 'Education',
-      description: 'Learning management systems',
-      href: '/solutions/education',
-      icon: GraduationCap
-    },
-    {
-      title: 'Enterprise',
-      description: 'Large-scale business solutions',
-      href: '/solutions/enterprise',
-      icon: Building
-    }
-  ];
-
-  const industriesDropdown = [
-    { name: 'Technology', href: '/industries/technology', icon: Code },
-    { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-    { name: 'Finance', href: '/industries/finance', icon: BarChart3 },
-    { name: 'Education', href: '/industries/education', icon: GraduationCap },
-    { name: 'Manufacturing', href: '/industries/manufacturing', icon: Building },
-    { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
-  ];
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Industries', href: '/industries' },
-    { name: 'Contact', href: '/contact' }
-  ];
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-lg">
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -164,7 +109,115 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
+          <div className="hidden md:flex space-x-8">
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                Services <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isServicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
+                  >
+                    <div className="p-6">
+                      <div className="grid grid-cols-2 gap-4">
+                        {servicesDropdown.map((service) => (
+                          <Link key={service.title} href={service.href} className="group">
+                            <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                              <service.icon />
+                              <div>
+                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{service.title}</h3>
+                                <p className="text-sm text-gray-600">{service.description}</p>
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Solutions Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsSolutionsOpen(true)}
+                onMouseLeave={() => setIsSolutionsOpen(false)}
+              >
+                Solutions <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isSolutionsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsSolutionsOpen(true)}
+                    onMouseLeave={() => setIsSolutionsOpen(false)}
+                  >
+                    <div className="p-6">
+                      {solutionsDropdown.map((solution) => (
+                        <Link key={solution.title} href={solution.href} className="group block mb-4 last:mb-0">
+                          <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                            <solution.icon />
+                            <div>
+                              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{solution.title}</h3>
+                              <p className="text-sm text-gray-600">{solution.description}</p>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Industries Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsIndustriesOpen(true)}
+                onMouseLeave={() => setIsIndustriesOpen(false)}
+              >
+                Industries <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isIndustriesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsIndustriesOpen(true)}
+                    onMouseLeave={() => setIsIndustriesOpen(false)}
+                  >
+                    <div className="p-4">
+                      {industriesDropdown.map((industry) => (
+                        <Link key={industry.name} href={industry.href} className="group flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                          <industry.icon />
+                          <span className="text-gray-700 group-hover:text-blue-600">{industry.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -176,23 +229,27 @@ const Header = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-            >
-              Get Started
-            </Link>
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-1" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-4 w-4 mr-1" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2"
-            onClick={toggleMenu}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="p-2"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -202,7 +259,7 @@ const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden"
+              className="md:hidden"
             >
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
                 {navigation.map((item) => (
@@ -210,14 +267,14 @@ const Header = () => {
                     key={item.name}
                     href={item.href}
                     className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
-                    onClick={closeMenu}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
                 ))}
                 <Link
                   href="/contact"
-                  onClick={closeMenu}
+                  onClick={() => setIsMenuOpen(false)}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                 >
                   Get Started
@@ -229,6 +286,4 @@ const Header = () => {
       </nav>
     </header>
   );
-};
-
-export default Header;
+}

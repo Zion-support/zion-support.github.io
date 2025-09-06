@@ -1,56 +1,50 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const Footer = () => {
-  const services = [
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile Apps', href: '/services/mobile-apps' },
-    { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-    { name: 'Database Management', href: '/services/database-management' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
-    { name: 'AI & Automation', href: '/services/ai-automation' }
-  ];
+const services = [
+  { name: 'AI Services', href: '/ai-services' },
+  { name: 'Web Development', href: '/web-development' },
+  { name: 'Mobile Apps', href: '/mobile-apps' },
+  { name: 'Cloud Solutions', href: '/cloud-solutions' }
+];
 
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News', href: '/news' },
-    { name: 'Case Studies', href: '/case-studies' }
-  ];
+const company = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Our Team', href: '/team' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Contact', href: '/contact' }
+];
 
-  const resources = [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Reference', href: '/api' },
-    { name: 'Support', href: '/support' },
-    { name: 'Community', href: '/community' }
-  ];
+const resources = [
+  { name: 'Blog', href: '/blog' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Documentation', href: '/docs' },
+  { name: 'Support', href: '/support' }
+];
 
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'GitHub', href: '#', icon: Github }
-  ];
+const socialLinks = [
+  { name: 'Facebook', href: '#', icon: Facebook },
+  { name: 'Twitter', href: '#', icon: Twitter },
+  { name: 'LinkedIn', href: '#', icon: Linkedin },
+  { name: 'Instagram', href: '#', icon: Instagram }
+];
 
+export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+                <span className="text-white font-bold">Z</span>
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-4">
-              Leading technology solutions provider delivering innovative software, 
-              cloud services, and digital transformation to businesses worldwide.
+              Leading technology solutions provider specializing in AI, web development, and digital transformation.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -134,8 +128,8 @@ const Footer = () => {
               <div className="flex items-start text-gray-300">
                 <MapPin className="h-4 w-4 mr-2 mt-0.5" />
                 <span>
-                  123 Tech Street<br />
-                  San Francisco, CA 94105
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
                 </span>
               </div>
             </div>
@@ -143,20 +137,17 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-blue-400 text-sm">
+              <Link href="/privacy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-blue-400 text-sm">
+              <Link href="/terms" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
                 Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-blue-400 text-sm">
-                Cookie Policy
               </Link>
             </div>
           </div>
@@ -164,6 +155,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
