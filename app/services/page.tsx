@@ -2,7 +2,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed. Expert solutions for modern enterprises.",
 };
 export default function ServicesOverviewPage() {
   return (
