@@ -3,6 +3,7 @@ Allow: /
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -26,10 +27,20 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0a01
 # Disallow admin and private areas
 Disallow: /admin/
+Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
 Disallow: /private/
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,3 +164,24 @@ Allow: /guides/
 Crawl-delay: 1
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+Disallow: /temp_backup/
+Disallow: /src.corrupted/
+Disallow: /components.corrupted/
+Disallow: /lib.corrupted/
+Disallow: /pages.disabled/
+Disallow: /pages.disabled_auto/
+Disallow: /solutions.disabled/
+Disallow: /src.disabled/
+Disallow: /data_backup/
+
+# Allow important pages
+Allow: /services
+Allow: /ai-services
+Allow: /micro-saas
+Allow: /it-services
+Allow: /about
+Allow: /contact
+Allow: /pricing
+Allow: /faq
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0a01
