@@ -3,14 +3,12 @@ import { FooterNewsletter } from "./FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
 import Link from "next/link";
 // import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
-
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "") {
     return fallback;
   }
   return envVar;
 }
-
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -18,7 +16,6 @@ export function Footer() {
       behavior: 'smooth'
     });
   };
-
 const Footer: React.FC = () => {
   return (
     <footer className="bg-background border-t">
