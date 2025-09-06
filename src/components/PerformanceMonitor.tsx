@@ -1,7 +1,12 @@
 
 import React from 'react';
 
-=======
-import React from 'react';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default PerformanceMonitor;
