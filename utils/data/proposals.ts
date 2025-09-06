@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -195,6 +196,10 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -202,6 +207,7 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -213,11 +219,16 @@ export function listProposals(): ProposalMeta[] {ensureDirs();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -227,6 +238,10 @@ export function getProposal(id: string): ProposalMeta | null {try {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const metaPath = path.join(dataDir, id, 'meta.json');
     if (!fs.existsSync(metaPath)) return null;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
@@ -235,25 +250,35 @@ export function getProposal(id: string): ProposalMeta | null {try {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   artifacts: {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     markdownPath?: string,;
     jsonPath?: string,;
     pdfPath?: string,;
     ipfsCid?: string,;
     ensRecordHash?: string,;
     signature?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -466,6 +491,10 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
@@ -473,6 +502,9 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   return `/proposals/${id}/proposal.pdf`;
 <<<<<<< HEAD
 
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -487,6 +519,7 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
     artifacts: { ...meta.artifacts, ...artifacts }}));
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -656,3 +689,7 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

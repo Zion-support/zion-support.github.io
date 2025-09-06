@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -6,6 +11,11 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -24,6 +34,11 @@ class BuildMonitor {
       console.log(logMessage);
     }
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -43,6 +58,11 @@ class BuildMonitor {
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -242,6 +262,11 @@ class BuildMonitor {
 // Handle command line arguments
 const monitor = new BuildMonitor();
 if (require.main === module) {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const command = process.argv[2];
   switch (command) {
     case 'start':
@@ -269,6 +294,14 @@ if (require.main === module) {
   }
 }
 
+<<<<<<< HEAD
+=======
+=======
+
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');
@@ -403,3 +436,14 @@ class BuildMonitor {
 // Main execution
 if (require.main === module) {
   const monitor = new BuildMonitor(),
+<<<<<<< HEAD
+=======
+  monitor.run().catch(console.error)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

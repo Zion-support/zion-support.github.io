@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 type Note = {
@@ -21,10 +22,30 @@ const notesStore: Note[] = []
 const notesStore: Note[] = [];
 
 
+=======
+
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
+};
+
+const notesStore: Note[] = [];
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { randomUUID } from 'crypto';
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true'
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
   if (req.method === 'GET') {
+<<<<<<< HEAD
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -72,6 +93,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } else {
       res.setHeader('Allow', 'GET, POST');
       res.status(405).end('Method Not Allowed');
+=======
+
+
+  }
+  if (req.method === 'POST') {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const authorId = String(req.headers['x-admin-user'] || 'admin');
     const { targetType, targetId, text } = req.body || {};
@@ -89,5 +116,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     notesStore.push(note);
     return res.status(200).json({ ok: true, note });
   }
+<<<<<<< HEAD
 
 
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+export function getAllNotes(): Note[] {
+  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

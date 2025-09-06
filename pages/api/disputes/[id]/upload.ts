@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -10,6 +13,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
@@ -23,6 +27,8 @@ import {
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   ensureDisputeUploadDir,
   getDisputeById,
@@ -40,11 +46,16 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+<<<<<<< HEAD
   const { id } = req.query;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  const { id } = req.query;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   if (typeof id !== "string")
 
@@ -52,28 +63,37 @@ export default async function handler(
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
 
     }
     const { files } =
 
+<<<<<<< HEAD
 =======
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
     const { files } =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
 import {
@@ -116,6 +136,9 @@ if ( {) {
     const { files } =;
       req.body ||;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       ({} as {
         files: { file_name: string; mime_type: string; base64: string }[];
@@ -132,6 +155,7 @@ if ( {) {
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import("fs");
   await new Promise<void>((resolve, reject) => {
+<<<<<<< HEAD
 
 
 =======
@@ -253,6 +277,10 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    fs.mkdir(
+      require("path").dirname(filePath),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       { recursive: true },
       (err: any) => {
         if (return reject (err)) {
@@ -260,6 +288,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 }
         fs.write_file (file_path, data, (err2: any) =>;
           err2 ? reject (err2) : resolve (),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         );
       }
     );
@@ -267,6 +296,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -324,11 +354,21 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
 
 }
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -424,9 +464,14 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

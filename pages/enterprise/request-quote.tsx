@@ -1,12 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default /**
  * RequestQuote - Function description
  */
 function RequestQuote() {
   return (
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
       <p>Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p>
@@ -22,8 +28,10 @@ function RequestQuote() {
     </main>
   )
 
+=======
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -31,6 +39,9 @@ function RequestQuote() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <main style={{ padding: '3rem', max_width: 800, margin: '0 auto' }}>;
       <h1 > Request a Quote</h1>;
       <p > Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p>;
@@ -42,6 +53,7 @@ function RequestQuote() {
         <button type=&quot;submit & quot; style={{ padding: '0.5rem 0.75rem' }}>Send</button>;
       </form>;
     </main>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -80,3 +92,8 @@ export default function RequestQuote() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

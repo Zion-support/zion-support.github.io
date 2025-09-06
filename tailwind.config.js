@@ -39,7 +39,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -48,7 +48,7 @@ module.exports = {
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 3s infinite',
-        'spin-slow': 'spin 8s linear infinite',
+        'spin-slow': 'spin 8s linear infinite'
       },
       keyframes: {
         fadeIn: {
@@ -75,18 +75,18 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
-        '5xl': '2.5rem',
+        '5xl': '2.5rem'
       },
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
-        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
-      },
-    },
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'
+      }
+    }
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
+    require('@tailwindcss/aspect-ratio')
+  ]
 };

@@ -1,6 +1,9 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   "timestamp": "2025-09-06T10:56:47.356Z",
   "totalDuration": 7910,
@@ -17261,8 +17264,11 @@
         "Consider consolidating JavaScript files"
       ]
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       "type": "image-optimization",
@@ -17293,6 +17299,7 @@
     }
 <<<<<<< HEAD
   ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -17351,6 +17358,10 @@
     "cachingConfigured": true,
     "compressionSetup": true
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   "timestamp": "2025-09-06T01:32:26.433Z",
   "optimizations": [
     "Use WebP format for images",
@@ -17386,6 +17397,7 @@
       "Enable gzip compression"
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -17409,4 +17421,9 @@
 =======
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }

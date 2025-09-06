@@ -519,6 +519,17 @@ a:hover {
 <<<<<<< HEAD
 .btn-futuristic::before {
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+.btn-futuristic::before {
+  content: '';
+.btn-futuristic::before {  content: '';
+
+.btn-futuristic::before {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 .particles-bg::before {
   content: '';
   position: absolute;

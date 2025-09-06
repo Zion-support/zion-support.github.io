@@ -1,15 +1,35 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default [
+<<<<<<< HEAD
   js.configs.recommended,
   {
+<<<<<<< HEAD
+    files: ['src/**/*.{js,jsx,ts,tsx}', '*.{js,jsx,ts,tsx}'],
+    ignores: ['dist/**', 'node_modules/**', 'build/**'],
+=======
     files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
       '.next/**',
@@ -49,7 +69,9 @@ export default [
       'test-next.js',
       'ultimate-*.cjs'
     ],
+>>>>>>> origin/main
     languageOptions: {
+<<<<<<< HEAD
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
@@ -64,27 +86,100 @@ export default [
         beforeAll: 'readonly',
       },
       parser: tsparser,
+=======
+      parser: typescriptParser,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
+=======
+  {
+    ignores: [
+      "node_modules/",
+      ".next/",
+      "out/",
+      "dist/",
+      "build/",
+      "coverage/",
+      "*.config.js",
+      "*.config.cjs",
+      "*.config.mjs",
+      "scripts/",
+      "automation/",
+      "pm2-automation/",
+      "pages.disabled/",
+      "pages.disabled_auto/",
+      "pages.disabled_full/",
+      "pages.corrupted.*/",
+      "pages.broken/",
+      "pages.bak/",
+      "pages.blog.disabled/",
+      "pages._archive_corrupted/",
+      "pages._quarantine/",
+      "pages-disabled/",
+      "pages-quarantine/",
+      "pages.__backup/",
+      "pages-backup/",
+      "tests.disabled/",
+      "components.disabled/",
+      "zion-os.disabled/",
+      "zion_academy/",
+      "temp_backup/",
+      "temp_broken_files/",
+      "test_build/",
+      "temp_exclude/",
+      "zion-os/",
+      "zion-website/",
+      "zion-ai-assistant/",
+      "types/",
+      "utils/",
+      "ultimate-*.cjs",
+      "*.test.js",
+      "*.test.ts",
+      "*.test.tsx",
+      "*.spec.js",
+      "*.spec.ts",
+      "*.spec.tsx",
+    ],
+  },
+  js.configs.recommended,
+  {
+    files: ["src/**/*.{js,jsx,ts,tsx}"],
+    languageOptions: {
+      parser: tsparser,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true
-        }
-      }
+          jsx: true,
+        },
+      },
+      globals: {
+<<<<<<< HEAD
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        performance: 'readonly',
+        Performance: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        KeyboardEvent: 'readonly',
+        reportError: 'readonly',
+        __REACT_DEVTOOLS_GLOBAL_HOOK__: 'readonly',
+      },
     },
     plugins: {
-      react,
+      '@typescript-eslint': typescript,
+      'react': react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint,
-      'jsx-a11y': jsxA11y
+      'jsx-a11y': jsxA11y,
     },
     rules: {
-      ...js.configs.recommended.rules,
+      ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
+<<<<<<< HEAD
       ...tseslint.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
@@ -159,10 +254,63 @@ export default [
       'strict': ['error', 'global'],
       'no-shadow': 'off',
       '@typescript-eslint/no-shadow': ['error']
+=======
+      // Additional rules or overrides can be added here
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
     },
     settings: {
       react: {
+<<<<<<< HEAD
+        version: 'detect',
+      },
+    },
+  },
+=======
         version: 'detect'
+=======
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
+      },
+    },
+    plugins: {
+      "@typescript-eslint": tseslint,
+      react,
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+      "jsx-a11y": jsxA11y
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true }
+      ],
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react-hooks/exhaustive-deps": "warn",
+      "no-undef": "off",
+      "no-unused-vars": "off",
+      "no-console": "warn",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off"
+    },
+    settings: {
+      react: {
+        version: "detect"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
   },
@@ -178,10 +326,35 @@ export default [
       sourceType: "script",
       globals: {
         ...globals.node,
+<<<<<<< HEAD
       },
     },
     rules: {
       'no-console': 'off',
     },
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
+=======
+        console: "readonly",
+        process: "readonly",
+        require: "readonly",
+        module: "readonly",
+        exports: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        Buffer: "readonly",
+        global: "readonly"
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'no-undef': 'error'
+    }
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ];

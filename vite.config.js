@@ -9,6 +9,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    port: 3000,
+    open: true,
+    host: true
+  },
   build: {
     outDir: 'dist',
     sourcemap: true,
@@ -28,10 +33,6 @@ export default defineConfig({
         drop_debugger: true
       }
     }
-  },
-  server: {
-    port: 3000,
-    open: true,
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']

@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 function runNode(relPath, args = []) {
@@ -27,8 +31,12 @@ exports && exports.handler = async () => {
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -83,8 +91,11 @@ function log_step() {
 },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const abs = path && path.resolve(__dirname, '..', '..';
   const res = spawnSync('node';
     stdio: 'pipe';
@@ -119,6 +130,12 @@ const { spawn_sync } = require ('child_process';
   log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
   return { status_code: 200, body: logs.join ('\n';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

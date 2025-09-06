@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface CustomerTicket {
 =======
@@ -23,10 +24,13 @@ export interface CustomerTicket {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   attachments: string[],
   conversation_history: CustomerMessage[];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -35,12 +39,15 @@ export interface CustomerTicket {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export interface CustomerMessage {
   id: string;
   ticket_id: string;
   sender_id: string;
   sender_type: 'customer' | 'agent' | 'ai';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -59,10 +66,13 @@ export interface CustomerMessage {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   message: string;
   timestamp: Date;
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -89,6 +99,14 @@ export interface CustomerProfile {;
 }
 export interface CustomerProfile {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  intent: string,
+  confidence: number;
+
+}
+export interface CustomerProfile {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   email: string;
   name: string;
@@ -97,6 +115,9 @@ export interface CustomerProfile {
   plan: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   total_tickets: number;
   resolved_tickets: number;
 =======
@@ -107,13 +128,17 @@ export interface CustomerProfile {
   preferences: {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     communication_channel: 'email' | 'chat' | 'phone';
     language: string,
     timezone: string;
   }
   tags: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -122,6 +147,9 @@ export interface CustomerProfile {
   tags: string[];
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export interface AIResponse {
   id: string;
@@ -130,17 +158,25 @@ export interface AIResponse {
   confidence: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   suggested_actions: string[];
   next_steps: string[];
   requiresHumanReview: boolean,
   generated_at: Date;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -151,6 +187,9 @@ export interface CustomerServiceMetrics {
   averageResolutionTime: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ticketsResolved: number
     averageResolutionTime: number,
@@ -158,12 +197,15 @@ export interface CustomerServiceMetrics {
     customerSatisfaction: number
   }>
 =======
+<<<<<<< HEAD
 =======
     ticketsResolved: number
     averageResolutionTime: number,
     customerSatisfaction: number
   }>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   customer_satisfaction: number;
   firstResponseTime: number,
   ticketVolumeByCategory: Record < string, number>;
@@ -172,6 +214,7 @@ export interface CustomerServiceMetrics {
     averageResolutionTime: number,
     customer_satisfaction: number;
   }>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -236,10 +279,17 @@ export interface CustomerServiceRequest {
 =======
   customer_id: string;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+export interface CustomerServiceRequest {
+  customer_id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -309,12 +359,36 @@ export class AICustomerServiceService {;
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  attachments?: string[],
+  preferred_channel?: 'email' | 'chat' | 'phone';
+
+}
+export interface CustomerServiceResponse {
+  ticket_id: string;
+  status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
+  ai_response?: AIResponse;
+  estimatedResolutionTime: string;
+
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
+
+  }
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify(request)});
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`Create ticket API error: ${response && response.statusText}`)
@@ -322,6 +396,7 @@ export class AICustomerServiceService {;
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
@@ -357,6 +432,11 @@ export class AICustomerServiceService {;
     } catch (error) {
       console && console.error('Error creating ticket:', error);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      return data
+    } catch (error) {
+      console && console.error('Error creating ticket:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -364,11 +444,19 @@ export class AICustomerServiceService {;
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
+        headers: {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           'Authorization': `Bearer ${this && this.apiKey}`}});
+
       if (!response && response.ok) {
         throw new Error(`Get ticket API error: ${response && response.statusText}`)
       }
+
       const data = await response && response.json();
       return {
         ...data;
@@ -378,8 +466,10 @@ export class AICustomerServiceService {;
         conversationHistory: data && data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
+
     } catch (error) {
       console && console.error('Error getting ticket:', error);
+<<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`}});
@@ -431,6 +521,8 @@ export class AICustomerServiceService {;
 
     } catch (error) {
       console && console.error('Error getting ticket:', error);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -457,6 +549,7 @@ export class AICustomerServiceService {;
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
 
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error updating ticket:', error);
 =======
@@ -486,6 +579,10 @@ export class AICustomerServiceService {;
     } catch (error) {
       console && console.error('Error updating ticket:', error);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } catch (error) {
+      console && console.error('Error updating ticket:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -493,15 +590,22 @@ export class AICustomerServiceService {;
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify(message)});
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`Add message API error: ${response && response.statusText}`)
@@ -509,6 +613,7 @@ export class AICustomerServiceService {;
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
 =======
       if (!response && response.ok) {
         throw new Error(`Add message API error: ${response && response.statusText}`)
@@ -517,11 +622,14 @@ export class AICustomerServiceService {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return {
         ...data;
         timestamp: new Date(data && data.timestamp)}
     } catch (error) {
       console && console.error('Error adding message:', error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -542,6 +650,8 @@ export class AICustomerServiceService {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -549,14 +659,21 @@ export class AICustomerServiceService {;
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`}});
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`AI response API error: ${response && response.statusText}`)
@@ -564,6 +681,7 @@ export class AICustomerServiceService {;
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
 =======
       if (!response && response.ok) {
         throw new Error(`AI response API error: ${response && response.statusText}`)
@@ -572,11 +690,14 @@ export class AICustomerServiceService {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return {
         ...data;
         generatedAt: new Date(data && data.generatedAt)}
     } catch (error) {
       console && console.error('Error generating AI response:', error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -596,6 +717,8 @@ export class AICustomerServiceService {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -603,6 +726,9 @@ export class AICustomerServiceService {;
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
 
@@ -614,6 +740,7 @@ export class AICustomerServiceService {;
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
 =======
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
@@ -623,11 +750,14 @@ export class AICustomerServiceService {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return {
         ...data;
         lastContact: new Date(data && data.lastContact)}
     } catch (error) {
       console && console.error('Error getting customer profile:', error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -646,6 +776,8 @@ export class AICustomerServiceService {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -653,6 +785,9 @@ export class AICustomerServiceService {;
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
 
@@ -664,6 +799,7 @@ export class AICustomerServiceService {;
 
       return await response && response.json()
 
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error getting metrics:', error);
 =======
@@ -688,6 +824,10 @@ export class AICustomerServiceService {;
     } catch (error) {
       console && console.error('Error getting metrics:', error);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } catch (error) {
+      console && console.error('Error getting metrics:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -696,6 +836,9 @@ export class AICustomerServiceService {;
       const params = new URLSearchParams({ query, ...filters });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
 
@@ -705,12 +848,15 @@ export class AICustomerServiceService {;
         throw new Error(`Search tickets API error: ${response && response.statusText}`)
       }
 
+<<<<<<< HEAD
 =======
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Search tickets API error: ${response && response.statusText}`)
       }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const data = await response && response.json();
       return data && data.tickets.map((ticket: any) => ({
         ...ticket;
@@ -720,6 +866,7 @@ export class AICustomerServiceService {;
         conversationHistory: ticket && ticket.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     } catch (error) {
@@ -749,6 +896,11 @@ export class AICustomerServiceService {;
     } catch (error) {
       console && console.error('Error searching tickets:', error);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    } catch (error) {
+      console && console.error('Error searching tickets:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -756,14 +908,21 @@ export class AICustomerServiceService {;
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`}});
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`Auto assign tickets API error: ${response && response.statusText}`)
@@ -771,6 +930,7 @@ export class AICustomerServiceService {;
 
       return await response && response.json()
 
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
 =======
@@ -795,6 +955,10 @@ export class AICustomerServiceService {;
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } catch (error) {
+      console && console.error('Error auto-assigning tickets:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -802,15 +966,22 @@ export class AICustomerServiceService {;
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify({ timeframe, format })});
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`Generate report API error: ${response && response.statusText}`)
@@ -819,6 +990,7 @@ export class AICustomerServiceService {;
       const data = await response && response.json();
       return data && data.downloadUrl
 
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error generating report:', error);
 =======
@@ -846,12 +1018,17 @@ export class AICustomerServiceService {;
     } catch (error) {
       console && console.error('Error generating report:', error);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } catch (error) {
+      console && console.error('Error generating report:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -886,6 +1063,12 @@ export const aiCustomerServiceService = new AICustomerServiceService(process && 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   next_steps: string[],
   assigned_agent?: string;
 }
@@ -1125,6 +1308,7 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1536,3 +1720,11 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export interface CustomerTicket {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

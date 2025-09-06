@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -27,6 +28,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import AIChatAssistant from './AIChatAssistant'
@@ -37,9 +43,12 @@ describe('AIChatAssistant'
     expect(screen ; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant', () => {; it('renders without crashing', () => {; render(<AIChatAssistant />); expect(screen && screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content', () => {; render(<AIChatAssistant />)}); ; it('handles user interactions'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     expect(screen ; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant', () => {; it('renders without crashing', () => {; render(<AIChatAssistant />); expect(screen && screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content', () => {; render(<AIChatAssistant />)}); ; it('handles user interactions'
 ursor/automate-test-improve-and-merge-code-2480
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

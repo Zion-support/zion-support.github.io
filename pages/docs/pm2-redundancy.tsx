@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 import Head from 'next / head',
@@ -13,6 +14,8 @@ function Pm2RedundancyRedirect() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>;
       <Head>;
         <meta http_equiv="refresh" content="0, url=/README_PM2_REDUNDANCY_COMPLETE.md" />;
@@ -23,6 +26,7 @@ function Pm2RedundancyRedirect() {
       </main>;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -78,3 +82,8 @@ export default function Pm2RedundancyRedirect(req, res) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

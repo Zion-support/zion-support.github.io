@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -10,23 +19,50 @@ class CodeQualityMonitor {
     this.logFile = path.join(__dirname, 'logs', 'code-quality-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'code-quality.json');
     // Ensure directories exist
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
     fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
   }
   log(message, level = 'INFO') {
+<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
 #!/usr/bin/env node;
+=======
+
+
+=======
+
+=======
+
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)};
 ; async analyzeCodeQuality() {; try {; this.log("Starting code quality analysis...");
 ; this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString();
 ; this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {; this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null};
 ;
+<<<<<<< HEAD
 
 
 
+=======
+
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -37,10 +73,18 @@ class CodeQualityMonitor {;
 };
 ;
   log(message) {;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
   }
   async runQualityChecks() {
     this.log('Running code quality checks...');
@@ -55,6 +99,14 @@ class CodeQualityMonitor {;
     try {
       execSync('yarn lint', { "stdio": 'pipe', "cwd": process.cwd() });
       results.lint.status = 'pass';
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       this.log('"ESLint": PASS');
     } catch (error) {
       results.lint.status = 'fail';
@@ -62,17 +114,32 @@ class CodeQualityMonitor {;
       results.lint.errors = (output.match(/error/gi) || []).length;
       results.lint.warnings = (output.match(/warning/gi) || []).length;
       results.lint.issues = results.lint.errors + results.lint.warnings;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       this.log(`"ESLint": ${results.lint.issues} issues found`, 'WARN');
     }
     // TypeScript check
     try {
       execSync('npx tsc --noEmit', { "stdio": 'pipe', "cwd": process.cwd() });
       results.typeCheck.status = 'pass';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       this.log('"TypeScript": PASS');
     } catch (error) {
       results.typeCheck.status = 'fail';
       const output = error.stdout || error.message;
       results.typeCheck.errors = (output.match(/error TS/g) || []).length;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       this.log(`"TypeScript": ${results.typeCheck.errors} errors found`, 'WARN');
     }
     // Test coverage (if tests exist)
@@ -96,6 +163,11 @@ class CodeQualityMonitor {;
     results.qualityScore = this.calculateQualityScore(results);
     // Generate report
     fs.writeFileSync(this.reportFile, JSON.stringify(results, null, 2));
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     this.log(`Code quality report "generated": ${this.reportFile}`);
     return results;
   }
@@ -118,6 +190,11 @@ class CodeQualityMonitor {;
     }
     return Math.max(0, Math.min(100, score));
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async run() {
     this.log('Starting Code Quality Monitor...');
     try {
@@ -128,6 +205,11 @@ class CodeQualityMonitor {;
       if (results.qualityScore < 70) {
         this.log('Code quality is below threshold. Review needed.', 'WARN');
       }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {
       this.log(`Error in code quality "monitor": ${error.message}`, 'ERROR');
     }
@@ -138,6 +220,17 @@ if (require.main === module) {
   const monitor = new CodeQualityMonitor();
   monitor.run().catch(console.error);
 }
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 ;
   async analyzeCodeQuality() {;
@@ -157,6 +250,7 @@ if (require.main === module) {
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
       return null;
 };
+=======
 #!/usr/bin/env node,
 const fs = require("fs"),
 const path = require("path"),
@@ -174,14 +268,35 @@ class CodeQualityMonitor {,
     this.logFile = path.join(__dirname, "logs", "code-quality.log"),
   };
 
+<<<<<<< HEAD
 
 }
 }
+=======
+=======
+
+=======
+
+}
+}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
     console.log(message),
+<<<<<<< HEAD
+=======
+
+
+    fs.appendFileSync(this.logFile, logMessage)
+  },
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ,
   async analyzeCodeQuality() {,
     try {,
@@ -195,10 +310,16 @@ class CodeQualityMonitor {,
 ,
       this.saveMetrics(),
       this.log("Code quality analysis completed successfully"),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
+<<<<<<< HEAD
 class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
       return this.metrics
     } catch (error) {,
@@ -206,6 +327,38 @@ class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, main
       return null
     },
 
+=======
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+const fs = require ("fs");
+const path = require ("path");
+const { exec_sync } = require ("child_process");
+;
+class CodeQualityMonitor { constructor () { this.metrics = { complexity: 0, maintainability: 0, test_coverage: 0, performance: 0, last_updated: new Date ().toISOString ()} this.log_file = path.join (__dirname, "logs", "code - quality.log")}
+; log (message) { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] ${message}\n`; console.log (message); fs.appendFileSync (this.log_file, log_message)}
+; async analyzeCodeQuality () { try { this.log ("Starting code quality analysis...");
+; this.metrics.complexity = this.calculate_complexity (); this.metrics.maintainability = this.calculate_maintainability (); this.metrics.test_coverage = this.calculateTestCoverage (); this.metrics.performance = this.calculate_performance (); this.metrics.last_updated = new Date ().toISOString ();
+; this.save_metrics (); this.log ("Code quality analysis completed successfully"); return this.metrics} catch (error) { this.log (`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
+;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 #!/usr/bin/env node,;
 const fs = require("fs"),;
@@ -248,3 +401,10 @@ class CodeQualityMonitor {,;
       this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),;
       return null;
     },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

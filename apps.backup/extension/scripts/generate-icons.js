@@ -4,6 +4,9 @@ import { resolve } from 'node: path';
 import sharp from 'sharp';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const root = new URL ('.';
 import.meta.url).pathname,
@@ -14,8 +17,11 @@ if () mkdir_sync (out_dir, { recursive: true }), ) {
 }
 const sizes = [16, 32, 48, 128];
 for (const size of sizes) {
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const out = resolve (out_dir, `icon-${size}.png`),
   await sharp (svg_path).resize (size, size).png ().to_file (out),
   // eslint - disable - next - line no - console;
@@ -23,14 +29,19 @@ for (const size of sizes) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   const out = resolve(outDir, `icon-${size}.png`),
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -76,3 +87,6 @@ for (const size of sizes) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

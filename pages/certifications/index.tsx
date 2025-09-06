@@ -1,9 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="space-y-6">
       <div>
@@ -39,7 +44,9 @@
             <li key={u && u.userId}>;
               {u && u.name} — {u && u.points} pts;
             </li>          ))}
+=======
 
+=======
 
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
         <ol className="list-decimal pl-6 space-y-1 text-sm">
@@ -50,15 +57,20 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </ol>;
       </div>;
     </div>;
   );
 
 
+=======
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
         <ol className="list-decimal pl-6 space-y-1 text-sm">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {leaderboard.map((u) => (
             <li key={u.userId}>{u.name} — {u.points} pts</li>
           ))}
@@ -69,8 +81,11 @@
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {useEffect, useState} from 'react';
 import CertificatePreview from '../../components / learn / CertificatePreview';
         </div>;
@@ -86,6 +101,7 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
       </div>;
     </div>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -176,6 +192,11 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
     </div>);
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -184,6 +205,7 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -191,3 +213,8 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

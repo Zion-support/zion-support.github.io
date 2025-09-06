@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const paintEntries = window && window.performance.getEntriesByType("paint");
+=======
+
+      const paintEntries = window && window.performance.getEntriesByType("paint");
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      const fcp = paintEntries && paintEntries.find(
+        (entry) => entry && entry.name === "first-contentful-paint",
+      );
+      const lcpEntries = window && window.performance.getEntriesByType(
+        "largest-contentful-paint",
+      );
+      const lcp = lcpEntries[0] as PerformanceEntry;
+      const clsEntries = window && window.performance.getEntriesByType("layout-shift");
+      const cls = clsEntries && clsEntries.reduce((acc, entry) => {
+        return acc + (entry as PerformanceEntry & { value: number }).value;
+      }, 0);
+      const fidEntries = window && window.performance.getEntriesByType("first-input");
+<<<<<<< HEAD
+      const fid = fidEntries[0] as PerformanceEventTiming;
+      setMetrics({
+=======
+
+      const fid = fidEntries[0] as PerformanceEventTiming;
+      setMetrics({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
+        firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,
+        largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,
+        cumulativeLayoutShift: cls,
+        firstInputDelay: fid ? fid && fid.processingStart - fid && fid.startTime : 0,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       });
     }
     // Wait for all performance entries to be available

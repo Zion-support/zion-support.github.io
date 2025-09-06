@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+<<<<<<< HEAD
 <<<<<<< HEAD
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
@@ -32,12 +36,15 @@ module.exports = next_config;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"],
   },
   output: "standalone",
   trailingSlash: false,
+<<<<<<< HEAD
   distDir: '.next',
 };
 /** @type {import('next').NextConfig} */;
@@ -151,3 +158,9 @@ module.exports = nextConfig;
 module.exports = nextConfig;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  distDir: ".next",
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

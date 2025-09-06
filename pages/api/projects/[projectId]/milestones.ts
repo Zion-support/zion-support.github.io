@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -44,6 +45,9 @@ import { Milestone } from '../../../../utils/types/milestones';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -56,10 +60,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 
   if (req && req.method === "POST") {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 =======
   if (req.method === 'POST') {
 
@@ -197,6 +205,15 @@ if (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+  if (req.method === 'POST') {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    if (!isClient(project, user)) {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     });
     res && res.status(201).json({ milestone: created });
     return;
@@ -205,13 +222,18 @@ if (
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -234,6 +256,9 @@ res.status(403).json({ error: 'Only client (or admin) can add milestones' });
   res && res.status(405).end("Method Not Allowed");
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../utils / api / auth';
 import {
@@ -258,11 +283,20 @@ if (return) {
 if ( {) {
   $2
 =======
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     res.status (404).json ({ error: "Project not found" });
     return;
@@ -314,16 +348,23 @@ if ( {) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

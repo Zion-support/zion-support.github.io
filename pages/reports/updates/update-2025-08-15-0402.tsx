@@ -1,9 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 
 =======
@@ -13,6 +18,7 @@ import Head from 'next/head';
 import Head from 'next/head';
 
 import React from 'react';
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 export default function Update202508150402() {
@@ -23,6 +29,18 @@ export default function Update202508150402() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+import React from 'react',
+=======
+import React from 'react';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function Update202508150402() {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',;
 export default function Update202508150402() {;
   return (
@@ -85,11 +103,15 @@ export default function Update202508150402() {;
                   <p className='text-sm text-white/70 mt-2'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
 ;
@@ -97,11 +119,15 @@ export default function Update202508150402() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next / head';
 import React from 'react',
 export default /**
@@ -162,12 +188,16 @@ function Update202508150402() {
             </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 mb - 8'>;
               <h2 className='text - 2xl font - bold mb - 4 text - fuchsia - 400'>;
                 Technology Breakthroughs;
@@ -180,24 +210,32 @@ function Update202508150402() {
                     <p className='text - white / 70'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       Advanced neural network architectures;
                     </p>;
                   </div>;
                 </li>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <li className='flex items - start'>;
                   <span className='text - cyan - 400 mr - 3'>•</span>;
                   <div>;
@@ -214,12 +252,16 @@ function Update202508150402() {
                     <p className='text - white / 70'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       Advanced language understanding models;
                     </p>;
                   </div>;
@@ -228,12 +270,16 @@ function Update202508150402() {
             </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8'>;
               <h2 className='text - 2xl font - bold mb - 4 text - green - 400'>;
                 Research Metrics;
@@ -252,12 +298,16 @@ function Update202508150402() {
                   <div className='text - sm text - white / 70'>Patents Filed</div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>;
               </div>;
             </div>;
@@ -266,12 +316,16 @@ function Update202508150402() {
       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 =======
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 
@@ -414,3 +468,10 @@ export default function Update202508150402() {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

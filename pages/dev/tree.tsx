@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 
@@ -7,6 +8,9 @@ status: {
 import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
 
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import React, { useEffect, useState } from 'react';
 
@@ -16,11 +20,48 @@ import React, { useEffect, useState } from 'react';
 
 import Tree, { TreeNode } from '../../components / ui / Tree';
 interface ApiResponse {
+<<<<<<< HEAD
+=======
+  nodes: TreeNode[],
+status: {
+  git_connected: boolean, git_branch?: string;
+export default /**
+ * DevTreePage - Function description
+ */
+function DevTreePage() {
+  const [nodes, set_nodes] = useState < TreeNode[] | null>(null);
+  const [error, set_error] = useState < string | null>(null);
+  const [git, set_git] = useState < ApiResponse['status'] | null>(null);
+  const [admin_token, setAdminToken] = useState < string>('');
+;
+  const fetch_tree = async (token?: string) => {
+    try {
+      const resp = await fetch ('/api / dev / source - map', {
+        headers: token ? { 'x - admin - token': token } : undefined,
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        const inner_index = await resp.json ().catch (() => ({}));
+        throw new Error (j.error || `HTTP ${resp.status}`);
+
+      }
+      const data: ApiResponse = await resp.json();
+      setNodes(data.nodes);
+      setGit(data.status);
+    } catch (e: any) {
+
+import React, { useEffect, useState } from "react";
+import Tree, { TreeNode } from "../../components/ui/Tree";
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 interface ApiResponse {
   nodes: TreeNode[],
   status: { gitConnected: boolean, gitBranch?: string }
 }
 
+<<<<<<< HEAD
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
@@ -46,6 +87,16 @@ export default function DevTreePage() {
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
   const fetchTree = async (token?: string) => {
+=======
+export default function DevTreePage() {
+  const [nodes, setNodes] = useState<TreeNode[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [git, setGit] = useState<ApiResponse["status"] | null>(null);
+  const [adminToken, setAdminToken] = useState<string>("");
+
+  const fetchTree = async (token?: string) => {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     try {
       const resp = await fetch('/api/dev/source-map', {
         method: 'POST'
@@ -62,11 +113,14 @@ export default function DevTreePage() {
       await fetchTree(adminToken);
     } catch (e: any) {
 
+<<<<<<< HEAD
       {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const fetchTree = async (token?: string) => {;
     try {;
       const resp = await fetch('/api/dev/source-map', {;
@@ -120,11 +174,17 @@ export default function DevTreePage() {
 
 
             onClick={handleSaveToken}>            Save Token;
+=======
 
 
 }
 }
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -237,12 +297,20 @@ export default function DevTreePage(req, res) {
           />;
           <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>;
             Save Token;
+<<<<<<< HEAD
           </button>;
         </div>;
       </div>;
 
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          </button>;
+        </div>;
+      </div>;
+      {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {nodes ? (;
         <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />;
         </div>;
@@ -253,6 +321,12 @@ export default function DevTreePage(req, res) {
   );
 
 
+<<<<<<< HEAD
+=======
+=======
+  )
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       set_error (e.message || 'Failed to load');    }
   }
 ;
@@ -320,8 +394,21 @@ if ( {) {
         <div > Loading...</div>)}
     </div>);
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

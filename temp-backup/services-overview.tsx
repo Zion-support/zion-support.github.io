@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
+<<<<<<< HEAD
 import React from \'react\'; import { Helmet } from \'react-helmet-async\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import { ArrowRight,CheckCircle,Star,Clock,Users,Shield,Zap,TrendingUp,Award,Globe,Brain,Cloud,Cpu,Lock,Rocket,Heart,Code,Network,Database,Target } from \'lucide-react\';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
@@ -19,3 +23,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 import React from \'react\'; import { Helmet } from \'react-helmet-async\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import { ArrowRight,CheckCircle,Star,Clock,Users,Shield,Zap,TrendingUp,Award,Globe,Brain,Cloud,Cpu,Lock,Rocket,Heart,Code,Network,Database,Target } from \'lucide-react\';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import React from \'react\'; import { Helmet } from \'react-helmet-async\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import { ArrowRight,CheckCircle,Star,Clock,Users,Shield,Zap,TrendingUp,Award,Globe,Brain,Cloud,Cpu,Lock,Rocket,Heart,Code,Network,Database,Target } from \'lucide-react\';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

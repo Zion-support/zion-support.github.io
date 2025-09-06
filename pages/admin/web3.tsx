@@ -1,17 +1,22 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
@@ -36,7 +41,10 @@ export default function AdminWeb3Page() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const metrics = {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,
     sol: users.filter(u => u.chain === 'sol').length,
@@ -44,11 +52,17 @@ export default function AdminWeb3Page() {
     disabled: users.filter(u => !u.enabled).length},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <>
       <Head><title>Admin — Web3</title></Head>
@@ -65,17 +79,22 @@ export default function AdminWeb3Page() {
           <div className="font-medium mb-2">Users</div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -85,6 +104,11 @@ export default function AdminWeb3Page() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <ul className="space-y-2">
             {users.map((u, i) => (
               <li key={i} className="flex items-center justify-between">
@@ -95,6 +119,9 @@ export default function AdminWeb3Page() {
                     const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   }} />
                 </label>
               </li>
@@ -156,6 +183,7 @@ function AdminWeb3Page() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 
 
@@ -279,3 +307,9 @@ function AdminWeb3Page() {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

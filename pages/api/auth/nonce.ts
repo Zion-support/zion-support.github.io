@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 function randomString(length: number): string {
@@ -16,12 +17,25 @@ function randomString(length: number) {
   const cryptoObj = require('crypto')
   const bytes: Buffer = cryptoObj.randomBytes(length)
   for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length]
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return res
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
+<<<<<<< HEAD
 
+=======
+  res.status(200).json({ nonce })
+
+=======
+}
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 /**
@@ -46,3 +60,8 @@ function handler() {
 ;
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

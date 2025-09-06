@@ -4,6 +4,7 @@ import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
 
+<<<<<<< HEAD
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: "Forbidden" });
   if (req.method !== "POST")
@@ -22,6 +23,12 @@ const client = new OpenAI({
     "Ask & Call to Action"
   ];
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+  apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+
+});
+export default async function handler(
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   req: NextApiRequest,
@@ -45,6 +52,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     "Ask & Call to Action",
   ];
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
 Operator Prompt: ${operator_prompt}
@@ -58,6 +66,10 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
       const chat = await client && client.chat.completions && completions.create({
         model: "gpt-4o-mini",
         messages: [
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {
             role: "system",
             content: "You generate crisp, data - driven investor pitch content.",
@@ -66,6 +78,16 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
         ],
         temperature: 0 && 0.5,
       });
+<<<<<<< HEAD
+=======
+
+    res && res.status(500).json({ error: e?.message || "Generation failed" });
+
+  }
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
@@ -77,6 +99,23 @@ function extractSection(body: string, title: string): string {
     return snippet && snippet.trim();
   }
   return "";
+<<<<<<< HEAD
+=======
+}
+
+=======
+  const lines = body.split('\n');
+  const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase()));
+  if (matchIdx >= 0) {
+    const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join('\n');
+    return snippet.trim()
+  }
+  return ''
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {
@@ -123,6 +162,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
+=======
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -160,3 +205,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

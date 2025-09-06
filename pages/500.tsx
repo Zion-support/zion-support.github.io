@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -11,6 +12,11 @@
               Something went wrong on our end. We&apos,re working to fix it. 
               Something went wrong on our end. We're working to fix it.
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               Please try again in a few moments.
             </p>
           </div>
@@ -72,9 +78,13 @@
   )
 <<<<<<< HEAD
 
+=======
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 import React from 'react',
 import Head from 'next / head',
@@ -85,8 +95,11 @@ export default /**
 function Custom500() {
   return (
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import React from 'react';
 import Head from 'next/head';
@@ -94,8 +107,12 @@ import Link from 'next/link';
 export default function Custom500(req, res) {
   try {
   return (;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;
@@ -151,6 +168,7 @@ export default function Custom500(req, res) {
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -301,3 +319,7 @@ export default function Custom500(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

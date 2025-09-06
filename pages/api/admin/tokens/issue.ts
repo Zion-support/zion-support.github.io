@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const { userId, amount, reason } = req.body |{}
@@ -7,3 +8,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const tx = issueTokens(userId, Math.floor(amount), reason |"admin_issue")
     return res.status(200).json({ tx })
 ;
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

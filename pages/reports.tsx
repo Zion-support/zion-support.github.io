@@ -3,20 +3,43 @@
           <h3 className="font-semibold">External Link Health</h3>
           <p className="text-sm opacity-80">Daily check of outbound links.</p>
           <div className="flex gap-3">
+<<<<<<< HEAD
+=======
+
+
+            <Link href="/metrics/links.json"><a className="text-blue-600">Summary →</Link></Link>
+            <Link href="/automation_logs/link-report.json"><a className="text-blue-600">Full report →</Link></Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>
         </div>
         <div className="border rounded p-5">
           <h3 className="font-semibold">Automations Catalog</h3>
           <p className="text-sm opacity-80">List of GitHub Action workflows.</p>
+<<<<<<< HEAD
+=======
+
+
+          <Link href="/automation-catalog.json"><a className="text-blue-600">Catalog JSON →</Link></Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>
       </div>
     </div>
   )
 <<<<<<< HEAD
 
+=======
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 import Link from 'next / link',
 export default /**
@@ -33,8 +56,11 @@ function Reports() {
           <p className="text - sm opacity - 80">Weekly summary of core categories.</p>;
           <Link href="/metrics / performance.json"><a className="text - blue - 600">Open JSON →</a></Link>;
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import Link from 'next/link';
 export default function Reports(req, res) {
@@ -48,8 +74,12 @@ export default function Reports(req, res) {
           <h3 className="font-semibold">Performance (Lighthouse)</h3>;
           <p className="text-sm opacity-80">Weekly summary of core categories.</p>;
           <Link href="/metrics/window.window.window.performance.json"><a className="text-blue-600">Open JSON →</a></Link>;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>;
         <div className="border rounded p - 5">;
           <h3 className="font - semibold">External Link Health</h3>;
@@ -67,6 +97,7 @@ export default function Reports(req, res) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -156,3 +187,8 @@ export default function Reports(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

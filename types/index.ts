@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface ContactInfo {;
 export interface ContactInfo {
@@ -11,6 +14,7 @@ export interface Service {;
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 // Core Types
 export interface ContactInfo {
@@ -22,6 +26,16 @@ export interface ContactInfo {
   site: string;
 }
 export interface Service {
+=======
+}
+export interface Service {
+
+  }
+
+=======
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   features: string[];
   technologies: string[];
   delivery_time: string;
@@ -29,11 +43,22 @@ export interface Service {
   image?: string;
   popular?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  title: string;
+  href: string;
+  icon: string;
+  color: string;
+;
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface ServiceCategory {
   title: string;
   description: string;
@@ -42,8 +67,11 @@ export interface ServiceCategory {
   href: string;
   color: string;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -85,6 +113,7 @@ export interface SEOProps {;
   canonical?: string;
 
   og_image?: string;
+<<<<<<< HEAD
 =======
   keywords?: string;
   canonical?: string;
@@ -94,6 +123,12 @@ export interface SEOProps {;
   type?: string;
   noindex?: boolean;
 <<<<<<< HEAD
+=======
+  url?: string;
+  type?: string;
+
+  noindex?: boolean;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -148,8 +183,11 @@ export interface AnimationState {,
   hasError: boolean,
 };
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 =======
@@ -161,6 +199,9 @@ export interface LoadingState {
   progress?: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface AnimationState {
   is_loaded: boolean;
   has_error: boolean;
@@ -172,6 +213,7 @@ export interface AnimationState {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface FormData {
@@ -181,31 +223,95 @@ export interface FormData {
   phone?: string;
   service?: string;
   message: string;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
   project?: string;
 }
 
 export interface Testimonial {
+=======
+export interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  url?: string;
+  type?: string;
+  noindex?: boolean;
+  image?: string;
+}
+export interface LoadingState {
+  isLoading: boolean;
+  error?: string;
+  progress?: number;
+}
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export interface AnimationState {
+>>>>>>> main
+  isLoaded: boolean;
+  hasError: boolean;
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+}
+export interface FormData {
+  name: string;
+  email: string;
+  company?: string;
+  phone?: string;
+  service?: string;
+  message: string;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   role: string;
   company: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   position: string;
   content: string;
   rating: number;
   avatar?: string;
   image?: string;
+<<<<<<< HEAD
+=======
+
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   project?: string;
 }
 
 export interface BlogPost {
+<<<<<<< HEAD
+=======
+=======
+
+  project?: string;
+}
+
+
+export interface BlogPost {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   title: string;
   excerpt: string;
   content: string;
   author: string;
+<<<<<<< HEAD
   publishedAt: string;
   updatedAt: string;
   tags: string[];
@@ -220,14 +326,63 @@ export interface TeamMember {
   id: string;
   name: string;
   role: string;
+=======
+
+  date: string;
+
+  publishedAt: string;
+  updatedAt: string;
+=======
+  published_at: string;
+  updated_at: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  tags: string[];
+  category: string;
+  image: string;
+
+  slug: string;
+  featured?: boolean;
+
+=======
+  read_time: number;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+export interface TeamMember {
+=======
+
+}
+
+
+export interface TeamMember {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  id: string;
+  name: string;
+
+  role: string;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   position: string;
   bio: string;
   image: string;
   skills: string[];
+<<<<<<< HEAD
+=======
+
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   social: {
     linkedin?: string;
     twitter?: string;
     github?: string;
+<<<<<<< HEAD
   };
 }
 
@@ -423,6 +578,8 @@ export interface TeamMember {;
     linkedin?: string;
     twitter?: string;
     github?: string;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 
@@ -508,7 +665,11 @@ export interface Project {
   };
 
   deliverables?: {
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     allocated: number;
     spent: number;
     currency: string;
@@ -626,6 +787,7 @@ export interface FAQ {;
   answer: string;
   category?: string;
 }
+<<<<<<< HEAD
 
 
 
@@ -655,6 +817,19 @@ export interface JobOpening {
 export interface PricingTier {
   id: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+<<<<<<< HEAD
+export interface PricingPlan {;
+=======
+export interface PricingPlan {
+<<<<<<< HEAD
+>>>>>>> main
+  id: string;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   name: string;
   price: number;
   currency: string;
@@ -685,6 +860,9 @@ export interface PricingPlan {
 }
   href: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   name: string;
@@ -752,6 +930,7 @@ export interface SocialLink {;
 
 ;
 
+<<<<<<< HEAD
 =======
 export interface SocialLink {
   platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
@@ -761,6 +940,10 @@ export interface SocialLink {
 }
 
 export interface CompanyInfo {
+=======
+}
+export interface FooterLink {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   name: string;
 <<<<<<< HEAD
   href: string;
@@ -775,6 +958,9 @@ export interface HeroSection {
 }
 
 
+export interface FooterLink {;
+  name: string;
+  href: string;
 }
 
 export interface FooterSection {;
@@ -819,6 +1005,7 @@ export interface CompanyInfo {
     zip: string;
     country: string;
   }
+<<<<<<< HEAD
   contact: {
     phone: string;
     email: string;
@@ -827,6 +1014,10 @@ export interface CompanyInfo {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   certifications: string[];
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  image?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 <<<<<<< HEAD
@@ -983,6 +1174,21 @@ export interface Event {;
   image?: string;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface Partner {;
+=======
+<<<<<<< HEAD
+export interface Partner {
+>>>>>>> main
+  name: string;
+  logo: string;
+  website: string;
+  description: string;
+  tier: 'platinum' | 'gold' | 'silver' | 'bronze';
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 export interface Technology {
@@ -1001,12 +1207,245 @@ export interface ContactFormData {
   phone?: string;
   service: string;
   message: string;
+<<<<<<< HEAD
 =======
 =======
   }
   certifications: string[];
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  budget?: string;
+  timeline?: string;
+  source?: string;
+  preferredContact?: 'email' | 'phone' | 'both';
+}
+
+export interface NewsletterSubscription {;
+  email: string;
+  interests: string[];
+  frequency: 'daily' | 'weekly' | 'monthly';
+  subscribed: boolean;
+  subscribedAt: string;
+}
+
+export interface SearchResult {;
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  type: 'page' | 'blog' | 'service' | 'case-study' | 'job';
+  score: number;
+  highlights?: string[];
+}
+
+export interface FilterOption {;
+  label: string;
+  value: string;
+  count?: number;
+}
+
+export interface SortOption {;
+  label: string;
+  value: string;
+  direction: 'asc' | 'desc';
+}
+
+export interface Pagination {;
+  currentPage: number;
+  totalPages: number;
+  totalItems: number;
+  itemsPerPage: number;
+  hasNext: boolean;
+  hasPrev: boolean;
+  page?: number;
+  limit?: number;
+  total?: number;
+  pages?: number;
+}
+
+export interface APIResponse<T> {;
+  data: T;
+  success: boolean;
+  message?: string;
+  errors?: string[];
+  pagination?: Pagination;
+}
+
+export interface ErrorResponse {;
+  success: false;
+  message: string;
+  errors: string[];
+  code?: string;
+}
+
+export interface SuccessResponse<T> {;
+  success: true;
+  data: T;
+  message?: string;
+}
+
+export type Response<T> = SuccessResponse<T> | ErrorResponse;
+=======
+export interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'manager' | 'developer' | 'client' | 'guest';
+  permissions: string[];
+  profile: {
+    avatar?: string;
+    bio?: string;
+    skills: string[];
+    experience: number;
+    location: string;
+    timezone: string;
+  };
+  preferences: {
+    theme: 'light' | 'dark' | 'auto';
+    language: string;
+    notifications: {
+      email: boolean;
+      push: boolean;
+      sms: boolean;
+    };
+  };
+  activity: {
+    lastLogin: Date;
+    loginCount: number;
+    projects: string[];
+    tasks: string[];
+  };
+  subscription: {
+    plan: 'free' | 'basic' | 'premium' | 'enterprise';
+    status: 'active' | 'inactive' | 'cancelled' | 'expired';
+    startDate: Date;
+    endDate: Date;
+    features: string[];
+  };
+}
+
+export interface Notification {
+  id: string;
+  type: 'info' | 'success' | 'warning' | 'error';
+  title: string;
+  message: string;
+  timestamp: Date;
+  read: boolean;
+  action?: {
+    label: string;
+    url: string;
+  };
+  category: 'system' | 'project' | 'team' | 'client' | 'billing';
+  priority: 'low' | 'medium' | 'high';
+  expires?: Date;
+}
+
+export interface BaseComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+export interface InputProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
+  error?: string;
+  required?: boolean;
+}
+
+export interface ApiRequest {
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+  url: string;
+  data?: any;
+  params?: Record<string, any>;
+  headers?: Record<string, string>;
+}
+
+export interface ApiResponse<T> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
+}
+
+export interface PaginationParams {
+  page: number;
+  limit: number;
+  sort?: string;
+  order?: 'asc' | 'desc';
+}
+
+export interface PaginatedResponse<T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    pages: number;
+    hasNext: boolean;
+    hasPrev: boolean;
+  };
+}
+
+export interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
+
+export interface AccessibilitySettings {
+  highContrast: boolean;
+  fontSize: number;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
+
+export interface UserPreferences {
+  theme: 'light' | 'dark' | 'system';
+  language: string;
+  accessibility: AccessibilitySettings;
+  notifications: {
+    email: boolean;
+    browser: boolean;
+    marketing: boolean;
+  };
+}
+
+export interface CompanyInfo {
+  name: string;
+  tagline: string;
+  description: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+  };
+  contact: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  certifications: string[];
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface ErrorInfo {
   message: string;
   code?: string;
@@ -1015,6 +1454,7 @@ export interface ErrorInfo {
   user_agent?: string;
   url?: string;
 }
+
 export interface FormField {
   name: string;
   label: string;
@@ -1026,6 +1466,208 @@ export interface FormField {
     max?: number;
     pattern?: string;
     message?: string;
+<<<<<<< HEAD
+=======
+  };
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1488
+
+// Environment
+export interface Environment {;
+  NODE_ENV: 'development' | 'production' | 'test';
+  NEXT_PUBLIC_API_URL?: string;
+  NEXT_PUBLIC_APP_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
+  NEXT_PUBLIC_SENTRY_DSN?: string;
+}
+
+<<<<<<< HEAD
+// Additional interfaces
+export interface User {;
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'manager' | 'developer' | 'client' | 'guest';
+  permissions: string[];
+  profile: {
+    avatar?: string;
+    bio?: string;
+    skills: string[];
+    experience: number;
+    location: string;
+    timezone: string;
+  };
+  preferences: {
+    theme: 'light' | 'dark' | 'auto';
+    language: string;
+    notifications: {
+      email: boolean;
+      push: boolean;
+      sms: boolean;
+    };
+  };
+  activity: {
+    lastLogin: Date;
+    loginCount: number;
+    projects: string[];
+    tasks: string[];
+  };
+  subscription: {
+    plan: 'free' | 'basic' | 'premium' | 'enterprise';
+    status: 'active' | 'inactive' | 'cancelled' | 'expired';
+    startDate: Date;
+    endDate: Date;
+    features: string[];
+  };
+}
+
+export interface Notification {;
+  id: string;
+  type: 'info' | 'success' | 'warning' | 'error';
+  title: string;
+  message: string;
+  timestamp: Date;
+  read: boolean;
+  action?: {
+    label: string;
+    url: string;
+  };
+  category: 'system' | 'project' | 'team' | 'client' | 'billing';
+  priority: 'low' | 'medium' | 'high';
+  expires?: Date;
+}
+
+export interface BaseComponentProps {;
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+export interface InputProps {;
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
+  error?: string;
+  required?: boolean;
+}
+
+export interface ApiRequest {;
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+  url: string;
+  data?: any;
+  params?: Record<string, any>;
+  headers?: Record<string, string>;
+}
+
+export interface PerformanceMetrics {;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
+
+export interface AccessibilitySettings {;
+  highContrast: boolean;
+  fontSize: number;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
+
+export interface UserPreferences {;
+  theme: 'light' | 'dark' | 'system';
+  language: string;
+  accessibility: AccessibilitySettings;
+  notifications: {
+    email: boolean;
+    browser: boolean;
+    marketing: boolean;
+  };
+}
+
+export interface CompanyInfo {;
+  name: string;
+  tagline: string;
+  description: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+  };
+  contact: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  certifications: string[];
+}
+
+export interface ErrorInfo {;
+  message: string;
+  code?: string;
+  details?: any;
+  timestamp: string;
+  userAgent?: string;
+  url?: string;
+}
+
+export interface FormField {;
+  name: string;
+  label: string;
+  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
+  required: boolean;
+  placeholder?: string;
+  options?: {
+    value: string;
+    label: string;
+  }[];
+  validation?: {
+    min?: number;
+    max?: number;
+    pattern?: string;
+    message?: string;
+  };
+}
+
+export interface PaginationParams {;
+  page: number;
+  limit: number;
+  sort?: string;
+  order?: 'asc' | 'desc';
+}
+
+export interface PaginatedResponse<T> {;
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    pages: number;
+    hasNext: boolean;
+    hasPrev: boolean;
+  };
+}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
+=======
+<<<<<<< HEAD
+export interface ContactInfo {
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface Partner {
   name: string;
   logo: string;
@@ -1228,6 +1870,7 @@ export interface SuccessResponse<T> {
 
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export interface ErrorInfo {
   message: string;
@@ -1395,3 +2038,7 @@ export type Response < T> = SuccessResponse < T> | ErrorResponse;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1488
+>>>>>>> main
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

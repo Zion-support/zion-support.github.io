@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       } catch {}
@@ -89,6 +90,12 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
     if (!fs.existsSync(LOG_FILE)) return [];
     const raw = fs.readFileSync(LOG_FILE, 'utf8');
+=======
+
+
+      } catch {}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     return rows;
 <<<<<<< HEAD
@@ -96,7 +103,11 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch {
     return [];
   }
@@ -104,6 +115,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 function featureFromPath(page?: string): string {
@@ -138,11 +150,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -157,6 +172,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     .sort((a, b) => b.value - a.value);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    .sort((a, b) => b.value - a.value);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
     .sort((a, b) => b.value - a.value),
@@ -164,8 +184,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const days = Object.keys(byDay).sort();
   const line = days.map((d) => ({ date: d, value: byDay[d] }));
 
@@ -185,11 +208,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function featureFromPath (page?: string): string {
 // Check condition
 if (return 'other', ) {
@@ -242,6 +268,7 @@ function handler() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -273,6 +300,14 @@ function handler() {
 =======
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+};
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -294,6 +329,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -301,3 +337,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

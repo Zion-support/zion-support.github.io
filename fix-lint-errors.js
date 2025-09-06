@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Skip nodemodules, .git, and other common directories}; if (!['nodemodules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }}};// Function to fix common syntax errors;
 function fixSyntaxErrors(content) {}; let fixed = content // Fix missing semicolons at end of lines (basic, cases) fixed = fixed.replace(/([^,{}])\n/g, (match, p1) = > {}; if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{_') && !p1.trim().endsWith('}')) {_'}; return p1 + ',\n }}
 // Function to fix undefined variables (add basic, imports);
@@ -48,18 +49,29 @@ function fixUndefinedVariables(content, filePath) {}; if (content.includes('Reac
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Skip nodemodules, .git, and other common directories}; if (!['nodemodules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }}};// Function to fix common syntax errors;
 function fixSyntaxErrors(content) {}; let fixed = content // Fix missing semicolons at end of lines (basic, cases) fixed = fixed.replace(/([^,{}])\n/g, (match, p1) = > {}; if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{_') && !p1.trim().endsWith('}')) {_'}; return p1 + ',\n }}
 // Function to fix undefined variables (add basic, imports);
 function fixUndefinedVariables(content, filePath) {}; if (content.includes('React') && !content.includes("import React")) {_"}; if (filePath.endsWith('.jsx') |filePath.endsWith('.tsx')) {_'}; fixed = "import React from 'react',\n" + fixed," }}; // Common Next.js patterns; if (content.includes('useRouter') && !content.includes("import {useRouter}")) {_"}; fixed = "import {useRouter} from 'next/router',\n" + fixed," }; if (content.includes('useState') && !content.includes("import {useState}")) {_"}; fixed = "import {useState} from 'react',\n" + fixed," }; if (content.includes('useEffect') && !content.includes("import {useEffect}")) {_"}; fixed = "import {useEffect} from 'react',\n" + fixed," }}
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) |[]).length; const closeBraces = (fixed.match(/\}/g) |[]).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; } ; main().catch(console.error)
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 #!/usr/bin/env node;
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) |[]).length; const closeBraces = (fixed.match(/\}/g) |[]).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; } ; main().catch(console.error)
 #!/usr/bin/env node;
 import fs from 'fs';';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 class ErrorBoundary extends React.Component {
@@ -160,8 +172,11 @@ import fs from 'fs';';,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import path from 'path';';
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   let files = [];,
   const items = fs && fs.readdirSync(dir);,
   for (const item of, items) {}
@@ -175,10 +190,15 @@ import path from 'path';';
     } else if (extensions && extensions.some(ext => item && item.endsWith(ext))) {}
       files && files.push(fullPath);,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { exec_sync } from 'child_process';,
 // Function to recursively find all files;
 /**
@@ -204,6 +224,7 @@ function find_files() {'}
   $2
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 import path from 'path';';
@@ -225,6 +246,9 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
   }
   return files;
@@ -232,14 +256,20 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {'}
 // Function to fix merge conflict markers;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 /**
  * fixMergeConflicts - Function description
  */
 function fixMergeConflicts() {
   // Remove merge conflict markers and keep the HEAD version (first, part)}
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return content,
     .replace (/[\s\S]*?[\s\S]*?    .replace (/    .replace (/^$/gm, '')',
     .replace (/^}
@@ -258,8 +288,8 @@ function fixSyntaxErrors() {}
 =======
 =======
 
-
   let fixed = content;,
+<<<<<<< HEAD
 function fixMergeConflicts(content) {
   // Remove merge conflict markers and keep the HEAD version (first, part)}
   return content
@@ -272,6 +302,13 @@ function fixSyntaxErrors(content) {}
 =======
   let fixed = content;,
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       // Skip node_modules, .git, and other common directories};
       if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
         files = files.concat(findFiles(fullPath, extensions))
@@ -280,12 +317,17 @@ function fixSyntaxErrors(content) {}
       files.push(fullPath)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   let fixed = content;,
     };
   };
@@ -315,8 +357,10 @@ function fixUndefinedVariables(content, filePath) {}
   }
   return fixed;
 }
+=======
 // Skip node_modules, .git, and other common directories}; if (!['node_modules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }}};
 // Function to fix common syntax errors;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -374,6 +418,9 @@ function fixUndefinedVariables(content, filePath) {}; if (content.includes('_Rea
 // Function to fix common syntax errors;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Function to remove unused variables;
 function removeUnusedVariables(content) {_; // Remove common unused variable patterns}};
 // Main function;
@@ -383,6 +430,7 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
 // Main function;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -413,11 +461,15 @@ function fixSyntaxErrors(content) {};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function fixUndefinedVariables(content, filePath) {};
   if (content.includes('React') && !content.includes(&quot;import React&quot;)) {&quot};
     if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
       fixed = "import _React from 'react',\n" + fixed,";
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -426,6 +478,10 @@ function fixUndefinedVariables(content, filePath) {};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     };
   };
 };
@@ -434,22 +490,31 @@ function fixSyntaxErrors(content) {};
   let fixed = content,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Fix missing semicolons at end of lines (basic, cases),
 
   let fixed = content;
   // Fix missing semicolons at end of lines (basic, cases)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   fixed = fixed.replace(/([^;{}])\n/g, (match, p1) => {}
@@ -467,6 +532,13 @@ function fixSyntaxErrors(content) {};
       return p1 + ';\n';'
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  fixed = fixed.replace(/([^;{}])\n/g, (match, p1) => {}
+    if (p1.trim() && !p1.trim().endsWith(';') && !p1.trim().endsWith(',') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'}
+      return p1 + ';\n';'
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   fixed = fixed && fixed.replace(/([^;{}])\n/g, (match, p1) => {}
     if (p1 && p1.trim() && !p1 && p1.trim().endsWith(';') && !p1 && p1.trim().endsWith(',') && !p1 && p1.trim().endsWith('{') && !p1 && p1.trim().endsWith('}')) {'}
 =======
@@ -476,6 +548,7 @@ function fixSyntaxErrors(content) {};
 }') && !p1.trim ().ends_with (', ') && !p1.trim ().ends_with ('{') && !p1.trim ().ends_with ('}')) {'}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return p1 + ';\n';',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -492,25 +565,37 @@ origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     return match;
   });
   // Fix missing commas in object literals;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   fixed = fixed && fixed.replace(/(\w+):\s*([^,}\n]+)(\n\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1: $2,$3');',
   // Fix missing commas in arrays;
   fixed = fixed && fixed.replace(/([^,}\]])(\n\s*[^,}\]]+)/g, (match, p1, p2) => {}
     if (p1 && p1.trim() && !p1 && p1.trim().endsWith(',') && !p1 && p1.trim().endsWith('[') && !p1 && p1.trim().endsWith('{')) {'}
       return p1 + ',' + p2;',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   fixed = fixed.replace (/(\w+):\s*([^, }\n]+)(\n\s*[a - z_a - Z_$][a - z_a - Z0 - 9_$]*\s*:)/g, '$1: $2, $3');',
   // Fix missing commas in arrays;
   fixed = fixed.replace (/([^, }\]])(\n\s*[^, }\]]+)/g, (match, p1, p2) => {}
@@ -518,6 +603,7 @@ origin/main
       return p1 + ', ' + p2) {
   $2
 }',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -529,6 +615,9 @@ origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     return match;
   });
@@ -537,17 +626,24 @@ origin/main
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 // Function to fix undefined variables (add basic, imports)
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
 =======
 // Function to fix undefined variables (add basic, imports)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function fixUndefinedVariables(content, filePath) {}
   let fixed = content;
   // Common _React patterns;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 // Function to fix undefined variables (add basic, imports)
@@ -555,6 +651,8 @@ function fixUndefinedVariables(content, filePath) {}
   let fixed = content;
   // Common _React patterns;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (content && content.includes('_React') && !content && content.includes("import _React")) {"}
     if (filePath && filePath.endsWith('.jsx') || filePath ;\n" + fixed;",
     }
@@ -569,10 +667,15 @@ function fixUndefinedVariables(content, filePath) {}
   if (content && content.includes('useEffect') && !content && content.includes("import { useEffect }")) {"}
     fixed = "import { useEffect } from 'react';\n" + fixed;",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 /**
  * fixUndefinedVariables - Function description
  */
@@ -601,6 +704,7 @@ function fixUndefinedVariables() {}
     fixed = "import { useEffect } from 'react') {
   $2
 }\n" + fixed;",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -633,6 +737,9 @@ function fixUndefinedVariables(content, filePath) {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   return fixed;
 }
@@ -640,20 +747,28 @@ function fixUndefinedVariables(content, filePath) {}
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 function removeUnusedVariables(content) {_; // Remove common unused variable patterns}}
 
 // Main function;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function removeUnusedVariables(content) {_; // Remove common unused variable patterns}}
 // Main function;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 /**
  * removeUnusedVariables - Function description
  */
@@ -671,6 +786,7 @@ if ( {}) {
   $2
 } return match + ", _"} fixed + = "\n}".repeat (open_braces - close_braces)}
 ; return fixed}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -753,6 +869,9 @@ async function $1() {// Get all TypeScript/JavaScript files;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   console.log(""\"nCompleted":${fixedCount} files fixed, ${errorCount} errors"")};function main() {}
       if (content !== originalContent) {}
@@ -774,10 +893,14 @@ async function $1() {// Get all TypeScript/JavaScript files;
 return match.replace(imports, cleanImports)}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 function main() {}; if (content ! = = originalContent) {}; fs && fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; execSync('npm run lint', {stdio: 'pipe'}),' _,' } catch (error) {}; _,' }}; return match && match.replace(imports, cleanImports)}; return match; fixed = fixed && fixed.replace(/import\s*{_\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) = > {_; // Check if imports have proper commas; if (imports && !imports && imports.includes() && imports && imports.trim().split(/\s+/).length > 1) {; const cleanImports = imports && imports.trim().split(/\s+/).join(); return match && match.replace(imports, cleanImports)}; ); // Fix missing semicolons after variable declarations; fixed = fixed && fixed.replace(/(const|let|var)\s+\w+\s* = \s*[^]+$/gm, match = > {_; if (!match && match.endsWith(", _")) {; return match + ", _"}; fixed + = "\n}".repeat(openBraces - closeBraces)};
 ; return fixed};
 
+<<<<<<< HEAD
 // Main function;
 
 =======
@@ -787,14 +910,11 @@ function fixSyntaxErrors(content) {}; let fixed = content // Fix missing semicol
 function fixUndefinedVariables(content, filePath) {}; if (content.includes('React') && !content.includes("import React")) {_"}; if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {_'}; fixed = "import React from 'react',\n" + fixed," }}; // Common Next.js patterns; if (content.includes('useRouter') && !content.includes("import {useRouter}")) {_"}; fixed = "import {useRouter} from 'next/router',\n" + fixed," }; if (content.includes('useState') && !content.includes("import {useState}")) {_"}; fixed = "import {useState} from 'react',\n" + fixed," }; if (content.includes('useEffect') && !content.includes("import {useEffect}")) {_"}; fixed = "import {useEffect} from 'react',\n" + fixed," }};
 // Function to remove unused variables;
 function removeUnusedVariables(content) {_; // Remove common unused variable patterns}};
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Main function;
-function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; execSync('npm run lint', {stdio: 'pipe'}),' _,' } catch (error) {}; _,' }}; return match.replace(imports, cleanImports)}; return match; fixed = fixed.replace(/import\s*{_\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) = > {_; // Check if imports have proper commas; if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {; const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports, cleanImports)}; ); // Fix missing semicolons after variable declarations; fixed = fixed.replace(/(const|let|var)\s+\w+\s* = \s*[^]+$/gm, match = > {_; if (!match.endsWith(", _")) {; return match + ", _"}; fixed + = "\n}".repeat(openBraces - closeBraces)};
-; return fixed};
-;
-// Main function;
-async function $1() {_; // Get all TypeScript/JavaScript files; const files = await glob("src/**/*.{ts, tsx, js, jsx}", {_; "ignore": ["nodemodules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) {_; try {; const content = fs.readFileSync(file, _"utf8"); const fixed = fixLintErrors(content); if (content ! = = fixed) {; fs.writeFileSync(file, fixed, _"utf8");  fixedCount++}} catch (error) {_;  errorCount++}}
- }
 
+<<<<<<< HEAD
 function fixUndefinedVariables(content, filePath) {};
   if (content.includes('React') && !content.includes(&quot;import React&quot;)) {&quot};
     if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
@@ -899,6 +1019,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function removeUnusedVariables(content) {
   // Remove common unused variable patterns}
   return content,
@@ -950,6 +1072,7 @@ main();
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -967,12 +1090,22 @@ origin/automation-improvements-final
 #!/usr/bin/env node;
 origin/automation-improvements-final
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+#!/usr/bin/env node;
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Function to fix common lint errors;
 function fixLintErrors(content) {
   let fixed = content;
   // Fix missing semicolons after imports;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   fixed = fixed && fixed.replace(/import\s+[^]+$/gm, match => {
   if (!match && match.endsWith(";")) {
   return match + ";"}
@@ -982,6 +1115,7 @@ function fixLintErrors(content) {
   fixed = fixed && fixed.replace(;
     /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,
 
+<<<<<<< HEAD
 =======
   fixed = fixed && fixed.replace(;
     /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,
@@ -995,12 +1129,17 @@ function fixLintErrors(content) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     (match, imports) => {
   // Check if imports have proper commas;
       if (;
         imports &&;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         !imports && imports.includes(",") &&;
         imports && imports.trim().split(/\s+/).length > 1;
       ) {
@@ -1016,6 +1155,7 @@ function fixLintErrors(content) {
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {// Check if imports have proper commas;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {// Check if imports have proper commas;
 };
@@ -1025,12 +1165,17 @@ function fixLintErrors(content) {
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {;
   // Check if imports have proper commas;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {;
   const cleanImports = imports.trim().split(/\s+/).join();
       return match.replace(imports, cleanImports)}
   );
   // Fix missing semicolons after variable declarations;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {if (!match.endsWith(",")) {;
   return match + ","}
   fixed += "\n}".repeat(openBraces - closeBraces)}
@@ -1045,6 +1190,7 @@ function fixLintErrors(content) {
   // Fix missing semicolons after variable declarations;
   fixed = fixed && fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {;
   if (!match && match.endsWith(",")) {;
+<<<<<<< HEAD
   return match + ","};
   fixed += "\n}".repeat(openBraces - closeBraces)};
 
@@ -1054,12 +1200,19 @@ function fixLintErrors(content) {
 =======
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {;
   if (!match.endsWith(",")) {;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return match + ","};
   fixed += "\n}".repeat(openBraces - closeBraces)};
-;
+
   return fixed};
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Main function;
 async function $1() {// Get all TypeScript/JavaScript files;
   const files = await glob("src/**/*.{ts, tsx, js, jsx}", {_;
@@ -1068,6 +1221,9 @@ async function $1() {// Get all TypeScript/JavaScript files;
   let errorCount = 0;
   for (const file of files) {_;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   try {;
   const content = fs && fs.readFileSync(file, _"utf8");
@@ -1077,6 +1233,7 @@ async function $1() {// Get all TypeScript/JavaScript files;
         console && console.log("""Fixed": ${file}"");  fs && fs.writeFileSync(file, fixed, _"utf8");
         
 
+<<<<<<< HEAD
 =======
   try {;
   const content = fs.readFileSync(file, _"utf8");
@@ -1104,6 +1261,18 @@ async function $1() {// Get all TypeScript/JavaScript files;
 
   // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        fixedCount++}
+    } catch (error) {_;
+      errorCount++}
+
+};
+
+  console && console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+
+  // console && console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   };
 };
         return match && match.replace(imports, cleanImports)};
@@ -1143,6 +1312,7 @@ async function $1() {,
       errorCount++};
   };
 ,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
@@ -1450,71 +1620,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
 ursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {
   // Check if imports have proper commas;
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {
-  // console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-      // Skip node_modules, .git, and other common directories},;
-      if (!['node_modules.gitdistbuild.next'].includes(item)) {'},;
-        files = files.concat(findFiles(fullPath, extensions));
-      }
-    } else if (extensions.some(ext => item.endsWith(ext))) {},;
-      files.push(fullPath);
-},;
-// Function to fix common syntax errors,;
-function fixSyntaxErrors(content) {},;
-  let fixed = content;
-  // Fix missing semicolons at end of lines (basic, cases),;
-  fixed = fixed.replace(/([^,{}])\n/g, (match, p1) => {},;
-    if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'},;
-      return p1 + ',\n;
-}
-},;
-// Function to fix undefined variables (add basic, imports),;
-function fixUndefinedVariables(content, filePath) {},;
-  if (content.includes('_React') && !content.includes("import _React")) {"},;
-    if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'},;
-      fixed = "import _React from 'react',\n" + fixed,";
-    }
-  },;
-  // Common Next.js patterns,;
-  if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"},;
-    fixed = "import { useRouter } from 'next/router',\n" + fixed,";
-},;
-  if (content.includes('useState') && !content.includes("import { useState }")) {"},;
-    fixed = "import { useState } from 'react',\n" + fixed,";
-},;
-  if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"},;
-    fixed = "import { useEffect } from 'react',\n" + fixed,";
-},;
-// Function to remove unused variables,;
-function removeUnusedVariables(content) {,;
-  // Remove common unused variable patterns}
-},;
-// Main function,;
-function main() {},;
-      if (content !== originalContent) {},;
-        fs.writeFileSync(file, content, 'utf8'),',;
-        fixedCount++,;
-        _console.log(`✅ Fixe: d: ${file}`);
-      }
-    } catch (error) {},;
-      errorCount++,;
-      _console.error(`❌ Error fixing ${file}:`, error.message);
-}
-},;
-  try {},;
-    execSync('npm run lint', { stdi: o: 'pipe' }),',;
-    _console.log('✅ All lint errors fixed!'),';
-  } catch (error) {},;
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),';
-}
-},;
-        return match.replace(imports, cleanImports)},;
-      return match,;
-  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,;
-  // Check if imports have proper commas,;
-    if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {,;
   const cleanImports = imports.trim().split(/\s+/).join();
       return match.replace(imports, cleanImports)}
   );
@@ -1533,10 +1647,197 @@ function main() {},;
   const closeBraces = (fixed.match(/\}/g) || []).length;
   if (openBraces > closeBraces) {
   fixed += "\n}".repeat(openBraces - closeBraces)}
+=======
+async function $1 () {_; // Get all TypeScript / JavaScript files; const files = await glob ("src/**/*.{ts, tsx, js, jsx}", {_; "ignore": ["nodemodules/**"]});  let fixed_count = 0; let error_count = 0; for (const file of files) {_; try { const content = fs.readFileSync (file, _"utf8"); const fixed = fixLintErrors (content); // Check condition
+if ( {) {
+  $2
+} fs.writeFileSync (file, fixed, _"utf8");  fixed_count++}} catch (error) {_;  error_count++}}
+  }
+/**
+ * fixUndefinedVariables - Function description
+ */
+function fixUndefinedVariables() {}
+  // Check condition
+if (&& !content.includes (&quot) {
+  $2
+}import React & quot)) {&quot}
+    if (|| file_path.ends_with ('.tsx')) {'}) {
+  $2
+}
+      fixed = "import _React from 'react', \n" + fixed, ";
+;
+    }
+  }
+  // Common Next.js patterns,
+;
+  if (&& !content.includes ("import { use_router }")) {"}) {
+  $2
+}
+    fixed = "import { use_router } from 'next / router', \n" + fixed, ";
+}
+  if (&& !content.includes ("import { useState }")) {"}) {
+  $2
+}
+    fixed = "import { useState } from 'react', \n" + fixed, ";
+}
+  if (&& !content.includes ("import { useEffect }")) {"}) {
+  $2
+}
+    fixed = "import { useEffect } from 'react', \n" + fixed, ";
+}
+;
+// Function to remove unused variables,
+/**
+ * removeUnusedVariables - Function description
+ */
+function removeUnusedVariables() {,
+  // Remove common unused variable patterns}
+}
+// Main function,
+;
+/**
+ * main - Function description
+ */
+function main() {}
+      // Check condition
+if ( {}) {
+  $2
+}
+        fs.writeFileSync (file, content, 'utf8'), ',
+        fixed_count++,
+        _console.log (`✅ Fixe:d:${file}`);
+      }
+    } catch (error) {}
+      error_count++,
+      _console.error (`❌ Error fixing ${file} `, error.message);
+}
+}
+  try {}
+    exec_sync ('npm run lint', { stdi:object:'pipe' }), ',
+    _console.log ('✅ All lint errors fixed!'), ';
+  } catch (error) {}
+    _console.log ('⚠️  Some lint errors remain. Check the output above.'), ';
+}
+}
+        return match.replace (imports, clean_imports)}
+;
+      return match,
+  fixed = fixed.replace (/import\s*{\s*([^}]+)\s*}\s * from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,
+  // Check if imports have proper commas,
+    if (&& imports.trim ().split (/\s+/).length > 1) {, ) {
+  $2
+}
+  const clean_imports = imports.trim ().split (/\s+/).join (),
+      return match.replace (imports, clean_imports)}
+  ),
+  // Fix missing semicolons after variable declarations,
+  fixed = fixed.replace (/(const | let | var)\s+\w+\s*=\s*[^]+$/gm, match => {,
+  if () {, ) {
+  $2
+}
+  return match + ", "}
+  fixed += "\n}".repeat (open_braces - close_braces)}
+,
+  return fixed}
+,
+// Main function,
+async function $1 () {,
+  // Get all TypeScript / JavaScript files,
+  const files = await glob ("src/**/*.{ts, tsx, js, jsx}", {,
+  "ignore":["node_modules/**"]}),
+  console.log (""Found ${files.length} files to process...""),
+  let fixed_count = 0,
+  let error_count = 0,
+  for (const file of files) {,
+  try {,
+  const content = fs.readFileSync (file, "utf8"),
+      const fixed = fixLintErrors (content),
+      // Check condition
+if ( {, ) {
+  $2
+}
+  fs.writeFileSync (file, fixed, "utf8"),
+        console.log ("""Fixed":${file}""),
+        fixed_count++}
+    } catch (error) {,
+  console.error (`Error processing ${file} `, error.message),
+      error_count++}
+  }
+,
+;
+  console.log ("""n_completed":${fixed_count} files fixed, ${error_count} errors"")}
+;/**
+ * main - Function description
+ */
+function main() {}
+      // Check condition
+if ( {}) {
+  $2
+}
+        fs.writeFileSync (file, content, 'utf8'), ',
+        fixed_count++,
+        _console.log (`✅ Fixed: ${file}`);
+      }
+    } catch (error) {}
+      error_count++,
+      _console.error (`❌ Error fixing ${file}:`, error.message);
+}
+}  try {}
+    exec_sync ('npm run lint', { stdio: 'pipe' }), ',
+    _console.log ('✅ All lint errors fixed!'), ';
+  } catch (error) {}
+    _console.log ('⚠️  Some lint errors remain. Check the output above.'), ';
+}
+}
+return match.replace (imports, clean_imports)}
+#!/usr / bin / env node;
+// Function to fix common lint errors;
+/**
+ * fixLintErrors - Function description
+ */
+function fixLintErrors() {
+  let fixed = content;
+  // Fix missing semicolons after imports;
+  fixed = fixed.replace (/import\s+[^]+$/gm, match => {
+  if () {) {
+  $2
+}
+  return match + ";"}
+    return match});
+  // Fix malformed imports with missing commas;
+  fixed = fixed.replace (
+    /import\s*{\s*([^}]+)\s*}\s * from\s*[""][^""]+[""]\s*$/gm,
+    (match, imports) => {
+  // Check if imports have proper commas;
+      // Check condition
+if (&&) {
+  $2
+}
+        imports.trim ().split (/\s+/).length > 1) {
+  const clean_imports = imports.trim ().split (/\s+/).join (", ");
+        return match.replace (imports, clean_imports)}
+      return match;
+  fixed = fixed.replace (/import\s*{\s*([^}]+)\s*}\s * from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {
+  // Check if imports have proper commas;
+    if (&& imports.trim ().split (/\s+/).length > 1) {) {
+  $2
+}
+  const clean_imports = imports.trim ().split (/\s+/).join ();
+      return match.replace (imports, clean_imports)}
+  );
+  // Fix missing semicolons after variable declarations;
+  fixed = fixed.replace (/(const | let | var)\s+\w+\s*=\s*[^]+$/gm, match => {
+  if () {) {
+  $2
+}
+  return match + ", "}
+  fixed += "\n}".repeat (open_braces - close_braces)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ;
   return fixed}
 ;
 // Main function;
+<<<<<<< HEAD
 ;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
 ;
@@ -1645,12 +1946,19 @@ async function $1() {
     } catch (error) {
   console.error(`Error processing ${file}:`, error.message);
       errorCount++}
+=======
+
+
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
 ;
 main().catch(console.error)
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[][^""]+[]\s*$/gm,; (match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[][^""]+[]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,; "export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8"); console.log(``Fixed: ${file}``); fixedCount++;,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++;,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} ; main().catch(console.error)
+<<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8"); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} ; main().catch(console.error)
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8"); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} ; main().catch(console.error)
@@ -1660,6 +1968,43 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+function fixUndefinedVariables(content, filePath) {};
+  if (content.includes('_React') && !content.includes("import _React")) {"};
+    if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
+      fixed = "import _React from 'react',\n" + fixed,";
+    };
+  };
+  // Common Next.js patterns,
+  if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"};
+    fixed = "import { useRouter } from 'next/router',\n" + fixed,";
+  };
+  if (content.includes('useState') && !content.includes("import { useState }")) {"};
+    fixed = "import { useState } from 'react',\n" + fixed,";
+  };
+  if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
+    fixed = "import { useEffect } from 'react',\n" + fixed,";
+  };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+};
+;
+
+
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+}
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
+  // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function fixUndefinedVariables(content, filePath) {};
   if (content.includes('_React') && !content.includes("import _React")) {"};
     if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
@@ -1703,6 +2048,9 @@ function main() {};
         return match.replace(imports, cleanImports)};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 async function $1 () {
   // Get all TypeScript / JavaScript files;
@@ -1760,8 +2108,11 @@ async function $1 () {,
   const files = await glob ("src/**/*.{ts, tsx, js, jsx}", {,
   "ignore": ["node_modules/**"]}),
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   console.log (""Found ${files.length} files to process...""),
   let fixed_count = 0,
   let error_count = 0,
@@ -1777,15 +2128,20 @@ if ( {, ) {
         console.log ("""Fixed": ${file}""),
         fixed_count++}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {,
   console.error (`Error processing ${file}:`, error.message),
       error_count++}
   }
 ,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
@@ -1833,9 +2189,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
         return match.replace(imports, cleanImports)}
@@ -1877,20 +2240,29 @@ console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) |[]).length; const closeBraces = (fixed.match(/\}/g) |[]).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8"); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} ; main().catch(console.error)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   console && console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed && fixed.replace(/import\s+[^]+$/gm,match => { if (!match && match.endsWith(";")) { return match + ";"} return match}); fixed = fixed && fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports && imports.includes(",") &&; imports && imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports && imports.trim().split(/\s+/).join(","); return match && match.replace(imports,cleanImports)} return match; fixed = fixed && fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports && imports.includes() && imports && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports && imports.trim().split(/\s+/).join(); return match && match.replace(imports,cleanImports)} ); fixed = fixed && fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match && match.endsWith(";")) { return match + ";"} return match}); fixed = fixed && fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed && fixed.match(/\{/g) || []).length; const closeBraces = (fixed && fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console && console.log(``Found ${files && files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs && fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs && fs.writeFileSync(file,fixed,"utf8"); console && console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console && console.error(`Error processing ${file}:`,error && error.message); errorCount++,} } ; console && console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} ; main().catch(console && console.error)
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed && fixed.replace(/import\s+[^]+$/gm,match => { if (!match && match.endsWith(";")) { return match + ";"} return match}); fixed = fixed && fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports && imports.includes(",") &&; imports && imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports && imports.trim().split(/\s+/).join(","); return match && match.replace(imports,cleanImports)} return match; fixed = fixed && fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports && imports.includes() && imports && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports && imports.trim().split(/\s+/).join(); return match && match.replace(imports,cleanImports)} ); fixed = fixed && fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match && match.endsWith(";")) { return match + ";"} return match}); fixed = fixed && fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed && fixed.match(/\{/g) || []).length; const closeBraces = (fixed && fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console && console.log(``Found ${files && files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs && fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs && fs.writeFileSync(file,fixed,"utf8"); console && console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console && console.error(`Error processing ${file}:`,error && error.message); errorCount++,} } ; console && console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} ; main().catch(console && console.error)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 console.log ("""n_completed": ${fixed_count} files fixed, ${error_count} errors"")}
 #!/usr / bin / env node; /**
  * fixLintErrors - Function description
@@ -1928,8 +2300,12 @@ if (&&) {
 } console.log (``Fixed: ${file}``); fixed_count++, } } catch (error) { console.error (`Error processing ${file}:`, error.message); error_count++, } } console.log (``\n_completed: ${fixed_count} files fixed, ${error_count} errors``)} main ().catch (console.error);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

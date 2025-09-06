@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -16,6 +17,8 @@
   contact: {
     phone: string;
     email: string;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 ];      phone: '+1 302 464 0950';
@@ -30,6 +33,12 @@
     roi: 'Average customer sees 600% ROI through operational improvements';
     launch_date: '2024 - 01 - 10';
     customers: 950;
+<<<<<<< HEAD
+=======
+
+    rating: 4 && 4.9,
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 520
   }
 ];
@@ -57,6 +66,7 @@
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
@@ -312,15 +322,23 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'], compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+<<<<<<< HEAD
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     trialDays: 60, setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
     launchDate: '2024-01-10', customers: 950,
     rating: 4.9,
+<<<<<<< HEAD
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1351,6 +1369,14 @@ export interface ComprehensiveService {;
     launch_date: '2024 - 01 - 10';
     customers: 950;
     reviews: 520
+=======
+    reviews: 520;
+=======
+
+export interface ComprehensiveService {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
   id: string, name: string,
@@ -1667,3 +1693,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
   }
 ];
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
@@ -32,6 +33,10 @@ if ( {) {
 }
     res.set_header ("Allow", "POST");
     return res.status (405).json ({ error: "Method not allowed" });
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   try {
     const { projectId, roomName, inviterName } = req.body || {};
@@ -41,6 +46,7 @@ if ( {) {
     await supabase.channel(`project_${projectId}_calls`).send({ type: 'broadcast', event: 'call_invite', payload: { projectId, roomName, inviterName } });
     return res.status(200).json({ ok: true });
   } catch (e) {
+<<<<<<< HEAD
   }
 }
 
@@ -57,3 +63,14 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+    console.error(e);
+    return res.status(200).json({ ok: true, skipped: true });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+
+}
+
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

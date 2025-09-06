@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -35,6 +39,7 @@
     highlights: ['Unlimited seats_custom SLADedicated CSM'],
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import Link from 'next/link';
@@ -80,6 +85,8 @@ const tiers = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -129,6 +136,7 @@ export default function EnterprisePlans() {
                   ))}
                 </tr>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -249,10 +257,17 @@ export default function EnterprisePlans(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </tbody>
           </table>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -261,6 +276,10 @@ export default function EnterprisePlans(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: 8 }}>
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
@@ -269,6 +288,7 @@ export default function EnterprisePlans(req, res) {
         </div>
         <div style={{ marginLeft: 'auto' }}>
           <Link href="/enterprise/admin">Admin Dashboard</Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         </div>
@@ -295,10 +315,19 @@ export default function EnterprisePlans(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+        </div>
+      </section>
+    </main>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default /**
  * EnterprisePlans - Function description
  */
@@ -367,6 +396,7 @@ function EnterprisePlans() {
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -377,3 +407,5 @@ function EnterprisePlans() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

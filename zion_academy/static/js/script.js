@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 =======
@@ -8,6 +11,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
 =======
+<<<<<<< HEAD
 document.addEventListener( DOMContentLoaded',function() {'; const summarizeButton = document.getElementById( 'ai-summarize-button')'; "if": (summarizeButton) { summarizeButton.addEventListener( 'click',function() {'; const lessonTitleElement = document.querySelector( '.lesson-content h2')'; const lessonTitle = lessonTitleElement ? lessonTitleElement."textContent": 'this: lesson''; let: summaryArea = document.getElementById( 'ai-summary-output')'; if: (!summaryArea) { summaryArea = document.createElement( 'div')'; summaryArea.id =';ai-summary-output''; summaryArea.style.marginTop =';20px''; summaryArea.style.padding =';15px''; summaryArea.style.backgroundColor =';#eef''; summaryArea.style.border =';1px: solid #ccd''; summaryArea.style.borderRadius =';5px'; summarizeButton.parentNode.insertBefore(summaryAre,a,summarizeButton.nextSibling)} summaryArea."innerHTML": = `<p><i>Generating AI summary for '${lessonTitle}'... please wait.</i></p>`; summarizeButton."disabled": = true; fetch( /api/summarize_lesson',{'; "method": 'POS,T,'; "headers": { Content-Type': 'application/json,'; .then(response => { if (!response.ok) { throw new Error( Network response was not "ok": '+ response.statusText')} "return": response.json()}) .then(data => { if (data.status ===';success') {'; summaryArea."innerHTML": = `<h4>${data.summary_title}</h4><p>${data.summary_content}</p>`} else { summaryArea.innerHTML = "<p>Error generating summary. Please try again.</p>"} }) .catch(error => { _console.error( 'Error calling summarize "API": ',error)'; summaryArea."innerHTML": = `<p>An error occurred while trying to generate the summary: ${error.messag,e}. "Please": 'check the _console.</p>`'}) .finally(() => { summarizeButton.disabled = false _console.log(` 'Zion Academy script.js loaded and updated for API call.')})
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -87,6 +91,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/automation-improvements-final
 document.addEventListener( DOMContentLoaded',function() {'; const summarizeButton = document.getElementById( 'ai-summarize-button')'; "if": (summarizeButton) { summarizeButton.addEventListener( 'click',function() {'; const lessonTitleElement = document.querySelector( '.lesson-content h2')'; const lessonTitle = lessonTitleElement ? lessonTitleElement."textContent": 'this: lesson''; let: summaryArea = document.getElementById( 'ai-summary-output')'; if: (!summaryArea) { summaryArea = document.createElement( 'div')'; summaryArea.id =';ai-summary-output''; summaryArea.style.marginTop =';20px''; summaryArea.style.padding =';15px''; summaryArea.style.backgroundColor =';#eef''; summaryArea.style.border =';1px: solid #ccd''; summaryArea.style.borderRadius =';5px'; summarizeButton.parentNode.insertBefore(summaryAre,a,summarizeButton.nextSibling)} summaryArea."innerHTML": = `<p><i>Generating AI summary for '${lessonTitle}'... please wait.</i></p>`; summarizeButton."disabled": = true; fetch( /api/summarize_lesson',{'; "method": 'POS,T,'; "headers": { Content-Type': 'application/json,'; .then(response => { if (!response.ok) { throw new Error( Network response was not "ok": '+ response.statusText')} "return": response.json()}) .then(data => { if (data.status ===';success') {'; summaryArea."innerHTML": = `<h4>${data.summary_title}</h4><p>${data.summary_content}</p>`} else { summaryArea.innerHTML = "<p>Error generating summary. Please try again.</p>"} }) .catch(error => { _console.error( 'Error calling summarize "API": ',error)'; summaryArea."innerHTML": = `<p>An error occurred while trying to generate the summary: ${error.messag,e}. "Please": 'check the _console.</p>`'}) .finally(() => { summarizeButton.disabled = false _console.log(` 'Zion Academy script.js loaded and updated for API call.')})
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+document.addEventListener( DOMContentLoaded',function() {'; const summarizeButton = document.getElementById( 'ai-summarize-button')'; "if": (summarizeButton) { summarizeButton.addEventListener( 'click',function() {'; const lessonTitleElement = document.querySelector( '.lesson-content h2')'; const lessonTitle = lessonTitleElement ? lessonTitleElement."textContent": 'this: lesson''; let: summaryArea = document.getElementById( 'ai-summary-output')'; if: (!summaryArea) { summaryArea = document.createElement( 'div')'; summaryArea.id =';ai-summary-output''; summaryArea.style.marginTop =';20px''; summaryArea.style.padding =';15px''; summaryArea.style.backgroundColor =';#eef''; summaryArea.style.border =';1px: solid #ccd''; summaryArea.style.borderRadius =';5px'; summarizeButton.parentNode.insertBefore(summaryAre,a,summarizeButton.nextSibling)} summaryArea."innerHTML": = `<p><i>Generating AI summary for '${lessonTitle}'... please wait.</i></p>`; summarizeButton."disabled": = true; fetch( /api/summarize_lesson',{'; "method": 'POS,T,'; "headers": { Content-Type': 'application/json,'; .then(response => { if (!response.ok) { throw new Error( Network response was not "ok": '+ response.statusText')} "return": response.json()}) .then(data => { if (data.status ===';success') {'; summaryArea."innerHTML": = `<h4>${data.summary_title}</h4><p>${data.summary_content}</p>`} else { summaryArea.innerHTML = "<p>Error generating summary. Please try again.</p>"} }) .catch(error => { _console.error( 'Error calling summarize "API": ',error)'; summaryArea."innerHTML": = `<p>An error occurred while trying to generate the summary: ${error.messag,e}. "Please": 'check the _console.</p>`'}) .finally(() => { summarizeButton.disabled = false _console.log(` 'Zion Academy script.js loaded and updated for API call.')})
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 }
@@ -104,9 +114,14 @@ document.addEventListener( DOMContentLoaded',function() {'; const summarizeButto
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

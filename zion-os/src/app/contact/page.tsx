@@ -1,11 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import Link from 'next/link';
 export default function ContactPage() {
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="min-h-screen bg-white">
 
@@ -13,6 +19,9 @@ export default function ContactPage() {
       {/* Hero Section */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className=&quot;bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white py - 20 & quot;>;
         <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center & quot;>;
           <h1 className=&quot;text - 4xl md:text - 6xl font - bold mb - 6&quot;>;
@@ -24,10 +33,13 @@ export default function ContactPage() {
         </div>;
       </section>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Contact Form & Info */}
       <section className=&quot;py - 20 & quot;>;
         <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
@@ -35,9 +47,13 @@ export default function ContactPage() {
             {/* Contact Form */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className=&quot;bg - gray - 50 p - 8 rounded - xl & quot;>;
               <h2 className=&quot;text - 2xl font - bold text - gray - 900 mb - 6&quot;>Send us a Message</h2>;
               <form className=&quot;space - y-6 & quot;>;
@@ -132,20 +148,28 @@ export default function ContactPage() {
                     id=&quot;message & quot;
                     name=&quot;message";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     rows={5}
                     required;
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
                     placeholder=&quot;Tell us about your project or inquiry...&quot;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   ></textarea>;
                 </div>;
                 <button;
@@ -214,11 +238,15 @@ export default function ContactPage() {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               {/* Social Media Links */}
               <div>;
                 <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;
@@ -246,13 +274,19 @@ export default function ContactPage() {
       </section>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 import Link from 'next/link';
 export default function ContactPage() {
+<<<<<<< HEAD
   return (;
     <div className=&quot;min-h-screen bg-white&quot;>
+=======
   return (
     <div className="min-h-screen bg-white">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -458,9 +492,13 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* FAQ Section */}
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

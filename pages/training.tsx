@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react';
 import Layout from '../components/Layout';
@@ -8,6 +9,10 @@ export default function Training() {
 
 
 
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 
 export default function Training() {
@@ -28,9 +33,27 @@ export default function Training() {
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
         </div>
+<<<<<<< HEAD
 export default function Training() {
 
 
+=======
+
+import React from 'react';
+import Layout from '../components/Layout';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function Training() {
+
+
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -227,6 +250,64 @@ export default function TrainingPage() {
       title: 'Enterprise AI Integration',
       description: 'Integrate AI solutions into existing enterprise infrastructure and systems.',
       category: 'enterprise-it',
+<<<<<<< HEAD
+=======
+      duration: '10 weeks',
+      level: 'Intermediate',
+      price: '$2,299',
+      rating: 4.7,
+      students: '823',
+      icon: <Building className='w-8 h-8' />,
+    },
+    {
+      id: 14,
+      title: 'Cloud-Native AI Development',
+      description:
+        'Build and deploy AI applications using cloud-native technologies and practices.',      category: 'enterprise-it',
+      duration: '8 weeks',
+      level: 'Intermediate',
+      price: '$1,899',
+      rating: 4.6,
+      students: '1,134',
+      icon: <Server className='w-8 h-8' />,
+    },
+    {
+      id: 15,
+      title: 'DevOps for AI Systems',
+      description:
+        'Implement DevOps practices specifically for AI and machine learning systems.',      category: 'enterprise-it',
+      duration: '6 weeks',
+      level: 'Intermediate',
+      price: '$1,599',
+      rating: 4.8,
+      students: '756',
+      icon: <Zap className='w-8 h-8' />,
+    },
+  ];
+
+  const filteredPrograms = allPrograms.filter(
+    program =>
+      selectedCategory === 'all' || program.category === selectedCategory  );
+
+  const getCategoryIcon = (category: string) => {
+    const icons = {
+      'ai-consciousness': <Brain className='w-6 h-6' />,
+      'quantum-computing': <Atom className='w-6 h-6' />,
+      'autonomous-ops': <Rocket className='w-6 h-6' />,
+      'enterprise-it': <Building className='w-6 h-6' />,
+    };
+    return (
+      icons[category as keyof typeof icons] || (
+        <GraduationCap className='w-6 h-6' />
+      )
+    );  };
+
+  const getCategoryColor = (category: string) => {
+    const colors = {
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     };
     return colors[category as keyof typeof colors] || 'gray'
@@ -236,6 +317,11 @@ export default function TrainingPage() {
     setExpandedProgram(expandedProgram === id ? null : id)
 
   },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
 
     <Layout>
@@ -273,6 +359,7 @@ export default function TrainingPage() {
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
     };
     return colors[category as keyof typeof colors] || 'gray';
   };
@@ -782,12 +869,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default Training;
 };export default Training;
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </div>
     </Layout>
 
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
   opacity: 0, y: 20 
 
@@ -823,14 +917,42 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
+<<<<<<< HEAD
+=======
+}whileInView= {
+  {
+  opacity: 1, y: 0 
+}transition= {
+  {
+  duration: 0.8 
+}viewport= {
+  {
+  once: true 
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
 
-
-};export default Training;
+=======
 
   )
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+};export default Training;
+
+>>>>>>> origin/main
+=======
+  )
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 
 export default Training;
+<<<<<<< HEAD
 };export default Training;
 
 },
@@ -857,6 +979,39 @@ export default Training,
                 </a>;
               </div>;
             </motion.div>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+};export default Training;
+
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  )
+  );
+};
+export default Training;
+<<<<<<< HEAD
+import Layout from '../components / Layout';
+;
+export default /**
+ * Training - Function description
+ */
+function Training() {
+  return (
+    <Layout;
+      title="Training & Education - Zion Tech Group";
+      description="Professional training and education services for technology professionals.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">Training & Education</h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Professional training and education services for technology professionals.;
+            </p>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">Training page is under construction.</p>;
@@ -870,3 +1025,9 @@ export default Training,
 }
 ;
 export default Training;
+<<<<<<< HEAD
+=======
+}export default Training;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
