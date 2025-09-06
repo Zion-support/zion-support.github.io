@@ -1,8 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Button from '../components/Button';
-import Card from '../components/Card';
-import ServiceCard from '../components/ServiceCard';
+import React from "react";
+import { Link } from "react-router-dom";
+
+// Card component
+const Card = ({ title, href, description, icon }: { title: string; href: string; description: string; icon: string }) => (
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+    <div className="text-4xl mb-4">{icon}</div>
+    <h3 className="text-xl font-semibold mb-2">{title}</h3>
+    <p className="text-gray-600 mb-4">{description}</p>
+    <Link 
+      to={href}
+      className="text-blue-600 hover:text-blue-800 font-medium"
+    >
+      Learn More →
+    </Link>
+  </div>
+);
+
+// FeatureCard component
+const FeatureCard = ({ title, description }: { title: string; description: string }) => (
+  <div className="text-center">
+    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
 
 const Home: React.FC = () => {
   return (

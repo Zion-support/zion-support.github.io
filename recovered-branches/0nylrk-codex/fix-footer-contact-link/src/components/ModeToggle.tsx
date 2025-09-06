@@ -1,16 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-
-import {Moon, Sun} from "lucide-react";
-import {Button} from "@/components/ui/button";
-
-// Create a simplified theme hook for offline mode;
-const useTheme = () => ({;
-  theme: "dark",;
-  setTheme: (theme: string) => console && console.log(`Theme would change to: ${theme}`);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import {Moon, Sun} from "lucide-react"
+import {Button} from "@/components/ui/button"
+// Create a simplified theme hook for offline mode
+const useTheme = () => ({
+  theme: "dark",
+  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),
 });
 
 export function ModeToggle() {;
@@ -138,14 +134,7 @@ export function ModeToggle() {;
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  )
-
-
+  );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

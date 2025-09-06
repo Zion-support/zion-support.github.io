@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X, Search } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
+import SearchModal from "./SearchModal";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const navigation = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" },
+    { name: "Pricing", href: "/pricing" },
+  ];
+
   return (
     <header className="bg-gray-900 text-white shadow-lg fixed w-full top-0 z-40">
       <div className="container mx-auto px-4">
@@ -31,7 +38,7 @@ const Header: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={toggleMenu}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors"
             aria-label="Toggle menu"
           >

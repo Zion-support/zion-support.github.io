@@ -1,37 +1,57 @@
-import React from 'react';
-import ServiceCard from '../components/ServiceCard';
-
-const RevolutionaryServicesPage: React.FC = () => {
+import React from "react";
+const RevolutionaryServicesPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Revolutionary Services</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our cutting-edge services that are transforming industries and shaping the future.
-          </p>
-        </div>
-
+    <div className="min-h-screen bg-gray-50">
+      {" "}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {" "}
+        <div className="text-center mb-12">
+          {" "}
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            {" "}
+            Revolutionary Services{" "}
+          </h1>{" "}
+          <p className="text-xl text-gray-600">
+            {" "}
+            Cutting-edge solutions that transform your business.{" "}
+          </p>{" "}
+        </div>{" "}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ServiceCard
-            title="AI-Powered Automation"
-            description="Revolutionary AI solutions that automate complex business processes."
-            icon="🤖"
-          />
-          <ServiceCard
-            title="Quantum Computing"
-            description="Next-generation computing power for solving complex problems."
-            icon="⚛️"
-          />
-          <ServiceCard
-            title="Blockchain Solutions"
-            description="Secure, decentralized solutions for modern business needs."
-            icon="⛓️"
-          />
-        </div>
-      </div>
+          {" "}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            {" "}
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              AI-Powered Automation
+            </h3>{" "}
+            <p className="text-gray-600 mb-4">
+              Revolutionary AI solutions that automate complex business
+              processes.
+            </p>{" "}
+            <span className="text-sm text-blue-600">Learn More</span>{" "}
+          </div>{" "}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            {" "}
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Quantum Computing
+            </h3>{" "}
+            <p className="text-gray-600 mb-4">
+              Next-generation computing power for complex problem solving.
+            </p>{" "}
+            <span className="text-sm text-blue-600">Learn More</span>{" "}
+          </div>{" "}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            {" "}
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Blockchain Solutions
+            </h3>{" "}
+            <p className="text-gray-600 mb-4">
+              Secure,transparent,and decentralized business solutions.
+            </p>{" "}
+            <span className="text-sm text-blue-600">Learn More</span>{" "}
+          </div>{" "}
+        </div>{" "}
+      </div>{" "}
     </div>
   );
 };
-
 export default RevolutionaryServicesPage;

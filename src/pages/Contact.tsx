@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import Button from '../components/Button';
-import Card from '../components/Card';
+import React from "react";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({

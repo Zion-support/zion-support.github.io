@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
+import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
@@ -55,79 +49,24 @@ interface GeneratedDescriptionDisplayProps {
   onSave: (editedDescription: string) => void;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-interface GeneratedDescriptionDisplayProps {;
-  description: string,;
-  onSave: (editedDescription: string) => void;
-}
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export function GeneratedDescriptionDisplay(): any ({ ;
-  description, ;
-  onSave ;
-}: GeneratedDescriptionDisplayProps) {;
-<<<<<<< HEAD
-
+export function GeneratedDescriptionDisplay({
+  description,
+  onSave,
+}: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
-=======
-
-export function GeneratedDescriptionDisplay({ 
-  description, 
-  onSave 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const handleSave = () => {;
     onSave(editedDescription);
     setIsEditing(false);
-
-
-    })
-  },
-=======
-<<<<<<< HEAD
-export function GeneratedDescriptionDisplay({ 
-  description, 
-  onSave 
-<<<<<<< HEAD
-}: GeneratedDescriptionDisplayProps) {;
-=======
-export function GeneratedDescriptionDisplay({
-  description,
-  onSave,
-}: GeneratedDescriptionDisplayProps) {
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
-
-  const handleSave = () => {
-    onSave(editedDescription),
-    setIsEditing(false),
     toast({
-<<<<<<< HEAD
       title: "Description Saved",
-<<<<<<< HEAD
-      description: "Your edited description has been saved."
-    })
-  },
-=======
       description: "Your edited description has been saved.",
     });
   };
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -137,12 +76,6 @@ export function GeneratedDescriptionDisplay({
           <Button
             variant="outline"
             size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
@@ -156,19 +89,35 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
               </>
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Check, Pencil } from "lucide-react",;
-interface GeneratedDescriptionDisplayProps {;
-  description: string,;
-  onSave: (editedDescription: string) => void;
+            )}
+          </Button>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        {isEditing ? (
+          <Textarea
+            value={editedDescription}
+            onChange={(e) => setEditedDescription(e.target.value)}
+            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"
+          />
+        ) : (
+          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
+            {editedDescription}
+          </div>
+        )}
+      </CardContent>
+      {isEditing && (
+        <CardFooter>
+          <Button
+            onClick={handleSave}
+            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
+          >
+            Save Changes
+          </Button>
+        </CardFooter>
+      )}
+    </Card>
+  );
 }
 ;
 export function GeneratedDescriptionDisplay({;

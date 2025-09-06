@@ -4,14 +4,6 @@ import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 
-
-
-=======
-
-
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -52,23 +44,6 @@ function handler() {
     const top = entries.sort ((array: any, boolean: any) => b.points - a.points).slice (0, 20),
     res.status (200).json ({ leaderboard: top });
   } catch (e: any) {
-<<<<<<< HEAD
-
-
-=======
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
   }
-
-=======
-}
-
-=======
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+};

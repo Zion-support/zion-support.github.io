@@ -13,6 +13,72 @@ interface Performance {
 }
 interface PerformanceEntry {
 
+<<<<<<< HEAD
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: any) => void;
+}
+
+// Extend Window interface to include performance
+declare global {
+  interface Window {
+    performance: Performance;
+  }
+}
+
+// Declare Performance and PerformanceNavigationTiming types for TypeScript
+declare global {
+  interface Performance {
+    getEntriesByType(type: string): PerformanceEntry[];
+  }
+  
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+    domContentLoadedEventStart: number;
+    domContentLoadedEventEnd: number;
+    loadEventStart: number;
+    loadEventEnd: number;
+    fetchStart: number;
+  }
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+  useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof performance === 'undefined') return;
+
+    const measurePerformance = () => {
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = window.performance.getEntriesByType('paint');
+      
+      const performanceData = {
+        // Navigation timing
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+        
+        // Paint timing
+        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        
+        // Resource timing
+        resourceCount: window.performance.getEntriesByType('resource').length,
+        
+        // Memory usage (if available)
+        memory: (window.performance as any).memory ? {
+          used: (window.performance as any).memory.usedJSHeapSize,
+          total: (window.performance as any).memory.totalJSHeapSize,
+          limit: (window.performance as any).memory.jsHeapSizeLimit
+        } : null
+      };
+
+      if (onPerformanceData) {
+        onPerformanceData(performanceData);
+      }
+
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metrics:', performanceData);
+      }
+=======
 interface PerformanceData {;
   domContentLoaded: number,;
   loadComplete: number,;
@@ -43,6 +109,7 @@ declare global {;
     memory?: {;
       usedJSHeapSize: number, totalJSHeapSize: number,;
       jsHeapSizeLimit: number,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-c52f
     };
   }
 
@@ -181,6 +248,16 @@ if ( {) {
       window.addEventListener ('load', measure_performance);
     }
     return () => {
+<<<<<<< HEAD
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [onPerformanceData]);
+
+  return null;
+};
+
+export default PerformanceMonitor;
+=======
       window.removeEventListener ('load', measure_performance);
     }
   }, [onPerformanceData]);
@@ -311,3 +388,4 @@ if (return 'Needs Improvement) {
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-c52f

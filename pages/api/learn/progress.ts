@@ -1,58 +1,55 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import fs from 'fs';
-import path from 'path';
+import { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+
+const usersPath = path.join(process.cwd(), "data", "users.json");
+
+function readUsers() {
+  try {
+    return JSON.parse(fs.readFileSync(usersPath, "utf8"));
+  } catch {
+    return { users: [] };
+  }
+}
 
 function writeUsers(data: any) {
   fs.writeFileSync(usersPath, JSON.stringify(data, null, 2));
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const users = readUsers()
-    if (req.method === 'GET') {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-<<<<<<< HEAD
-
-    const users = readUsers(),
-<<<<<<< HEAD
-    if (req && req.method === 'GET') {
-      const { userId = 'demo-user' } = req && req.query;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      const user = users[userId as string];
-      return res.status(200).json({ progress: user?.progress ?? {} });
-    }
-    if (req.method === 'POST') {
-      const {
-        userId = 'demo-user'
-        courseId
-        lessonId
-        percent
-      } = req.body |{}
-      if (!courseId)
-  }
-
-
-
 }
-        course_progress.completed_lessons.push (lesson_id);
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const users = readUsers();
+    if (req.method === "GET") {
+      const { userId } = req.query;
+      const user = users.users.find((u: any) => u.id === userId);
+      if (!user) {
+        return res.status(404).json({ error: "User not found" });
       }
-      // Check condition
-if ( {) {
-  $2
-}
-<<<<<<< HEAD
+      return res.status(200).json({ progress: user.progress || [] });
+    }
 
+    if (req.method === "POST") {
+      const { userId, courseId, progress } = req.body;
+      let user = users.users.find((u: any) => u.id === userId);
+      if (!user) {
+        user = { id: userId, progress: [] };
+        users.users.push(user);
+      }
+      if (!user.progress) user.progress = [];
+      user.progress.push({
+        courseId,
+        progress,
+        updatedAt: new Date().toISOString(),
+      });
+      writeUsers(users);
+      return res.status(200).json({ success: true });
+    }
 
+    res.setHeader("Allow", "GET, POST");
+    return res.status(405).end("Method Not Allowed");
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message ?? "Progress error" });
+  }
 
 =======
 

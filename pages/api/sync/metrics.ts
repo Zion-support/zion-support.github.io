@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
@@ -238,15 +225,14 @@ export default function handler(req, res) {
 
       const p = e.payload as any,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  const topContributors = Object.entries(contributionsBySubject)
+    .map(([subjectId, score]) => ({ subjectId, score }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10),
+
+  return res.status(200).json({
+    treasuryTotals: totalsByToken,
+    topContributors,
+    totalVoteCount: globalVotes,
+    lastSyncedAt: state.lastSyncedAt})
+};

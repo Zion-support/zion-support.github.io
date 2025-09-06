@@ -1,34 +1,56 @@
-import React from 'react';
-import Card from '../components/Card';
-
-const Help: React.FC = () => {
+import React from "react";
+const Help = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Help Center</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Find answers to your questions and get the support you need.
-          </p>
-        </div>
-
+    <div className="min-h-screen bg-gray-50">
+      {" "}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {" "}
+        <div className="text-center mb-12">
+          {" "}
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            {" "}
+            Help Center{" "}
+          </h1>{" "}
+          <p className="text-xl text-gray-600">
+            {" "}
+            Find answers to your questions and get the support you need.{" "}
+          </p>{" "}
+        </div>{" "}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card title="Getting Started" description="Learn how to get started with our services." />
-          <Card title="Technical Support" description="Get help with technical issues and troubleshooting." />
-          <Card title="Account Management" description="Manage your account settings and preferences." />
-        </div>
-
-        <div className="text-center mt-12">
-          <a 
-            href="/contact" 
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Support
-          </a>
-        </div>
-      </div>
+          {" "}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            {" "}
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Getting Started
+            </h3>{" "}
+            <p className="text-gray-600 mb-4">
+              Learn how to get started with our services and solutions.
+            </p>{" "}
+            <span className="text-sm text-blue-600">Read Guide</span>{" "}
+          </div>{" "}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            {" "}
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Technical Support
+            </h3>{" "}
+            <p className="text-gray-600 mb-4">
+              Get help with technical issues and troubleshooting.
+            </p>{" "}
+            <span className="text-sm text-blue-600">Contact Support</span>{" "}
+          </div>{" "}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            {" "}
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Documentation
+            </h3>{" "}
+            <p className="text-gray-600 mb-4">
+              Browse our comprehensive documentation and guides.
+            </p>{" "}
+            <span className="text-sm text-blue-600">View Docs</span>{" "}
+          </div>{" "}
+        </div>{" "}
+      </div>{" "}
     </div>
   );
 };
-
 export default Help;
