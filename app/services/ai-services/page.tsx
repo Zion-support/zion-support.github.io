@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
 
 export const metadata = {
-  title: 'AI Services & Solutions | Zion Tech Group',
-  description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
-  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
+  title: "AI Services & Solutions | Zion Tech Group",
+  description:
+    "Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.",
+  keywords:
+    "AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting",
 };
 
 interface AIServiceProps {
@@ -16,7 +18,15 @@ interface AIServiceProps {
   href: string;
 }
 
-function AIService({ title, description, price, features, useCases, icon, href }: AIServiceProps) {
+function AIService({
+  title,
+  description,
+  price,
+  features,
+  useCases,
+  icon,
+  href,
+}: AIServiceProps) {
   return (
     <a
       href={href}
@@ -31,7 +41,9 @@ function AIService({ title, description, price, features, useCases, icon, href }
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
       <div className="mb-4">
-        <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+        <h4 className="text-sm font-semibold text-gray-900 mb-2">
+          Key Features:
+        </h4>
         <ul className="space-y-1">
           {features.map((feature, index) => (
             <li key={index} className="text-sm text-gray-600 flex items-center">
@@ -45,7 +57,10 @@ function AIService({ title, description, price, features, useCases, icon, href }
         <h4 className="text-sm font-semibold text-gray-900 mb-2">Use Cases:</h4>
         <div className="flex flex-wrap gap-1">
           {useCases.map((useCase, index) => (
-            <span key={index} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+            <span
+              key={index}
+              className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
+            >
               {useCase}
             </span>
           ))}
@@ -65,9 +80,19 @@ interface PricingTierProps {
   cta: string;
 }
 
-function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
+function PricingTier({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular = false,
+  cta,
+}: PricingTierProps) {
   return (
-    <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
+    <div
+      className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
+    >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -86,8 +111,16 @@ function PricingTier({ name, price, period, description, features, popular = fal
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            <svg
+              className="w-5 h-5 text-green-500 mr-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -97,8 +130,8 @@ function PricingTier({ name, price, period, description, features, popular = fal
         href="mailto:kleber@ziontechgroup.com?subject=AI Services - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? 'bg-blue-600 text-white hover:bg-blue-700'
-            : 'bg-gray-900 text-white hover:bg-gray-800'
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-gray-900 text-white hover:bg-gray-800"
         }`}
       >
         {cta}
@@ -116,7 +149,9 @@ export default function AIServicesPage() {
           AI Services & Solutions
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Harness the power of artificial intelligence to automate processes, gain insights, and transform your business with cutting-edge AI solutions.
+          Harness the power of artificial intelligence to automate processes,
+          gain insights, and transform your business with cutting-edge AI
+          solutions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -137,9 +172,12 @@ export default function AIServicesPage() {
       {/* AI Services Grid */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Services</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our AI Services
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive AI solutions tailored to your business needs, from chatbots to predictive analytics.
+            Comprehensive AI solutions tailored to your business needs, from
+            chatbots to predictive analytics.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -152,9 +190,14 @@ export default function AIServicesPage() {
               "Multi-channel support",
               "Custom training data",
               "Analytics dashboard",
-              "Integration APIs"
+              "Integration APIs",
             ]}
-            useCases={["Customer Support", "Lead Generation", "FAQ Automation", "Sales Assistant"]}
+            useCases={[
+              "Customer Support",
+              "Lead Generation",
+              "FAQ Automation",
+              "Sales Assistant",
+            ]}
             icon="🤖"
             href="/services/ai-chatbot-platform"
           />
@@ -167,9 +210,14 @@ export default function AIServicesPage() {
               "SEO optimization",
               "Brand voice training",
               "Multi-format output",
-              "Plagiarism detection"
+              "Plagiarism detection",
             ]}
-            useCases={["Blog Writing", "Social Media", "Email Campaigns", "Product Descriptions"]}
+            useCases={[
+              "Blog Writing",
+              "Social Media",
+              "Email Campaigns",
+              "Product Descriptions",
+            ]}
             icon="✍️"
             href="/services/ai-content-generation"
           />
@@ -182,9 +230,14 @@ export default function AIServicesPage() {
               "Anomaly detection",
               "Trend analysis",
               "Custom ML models",
-              "Real-time insights"
+              "Real-time insights",
             ]}
-            useCases={["Sales Forecasting", "Risk Assessment", "Customer Segmentation", "Performance Optimization"]}
+            useCases={[
+              "Sales Forecasting",
+              "Risk Assessment",
+              "Customer Segmentation",
+              "Performance Optimization",
+            ]}
             icon="🧠"
             href="/services/ai-data-analytics"
           />
@@ -197,9 +250,14 @@ export default function AIServicesPage() {
               "Security vulnerability detection",
               "Performance optimization",
               "Best practice recommendations",
-              "CI/CD integration"
+              "CI/CD integration",
             ]}
-            useCases={["Code Quality", "Security Audits", "Performance Reviews", "Team Training"]}
+            useCases={[
+              "Code Quality",
+              "Security Audits",
+              "Performance Reviews",
+              "Team Training",
+            ]}
             icon="🔍"
             href="/services/ai-code-reviewer"
           />
@@ -212,9 +270,14 @@ export default function AIServicesPage() {
               "Meeting summaries",
               "Action item extraction",
               "Calendar integration",
-              "Meeting analytics"
+              "Meeting analytics",
             ]}
-            useCases={["Meeting Notes", "Action Tracking", "Team Collaboration", "Client Meetings"]}
+            useCases={[
+              "Meeting Notes",
+              "Action Tracking",
+              "Team Collaboration",
+              "Client Meetings",
+            ]}
             icon="🎤"
             href="/services/ai-meeting-assistant"
           />
@@ -227,9 +290,14 @@ export default function AIServicesPage() {
               "Behavior prediction",
               "Personalized recommendations",
               "Churn prediction",
-              "ROI analysis"
+              "ROI analysis",
             ]}
-            useCases={["Customer Retention", "Personalization", "Marketing Optimization", "Sales Enhancement"]}
+            useCases={[
+              "Customer Retention",
+              "Personalization",
+              "Marketing Optimization",
+              "Sales Enhancement",
+            ]}
             icon="👥"
             href="/services/ai-customer-insights"
           />
@@ -242,9 +310,14 @@ export default function AIServicesPage() {
               "Image classification",
               "Facial recognition",
               "Video analysis",
-              "Real-time processing"
+              "Real-time processing",
             ]}
-            useCases={["Quality Control", "Security Systems", "Medical Imaging", "Retail Analytics"]}
+            useCases={[
+              "Quality Control",
+              "Security Systems",
+              "Medical Imaging",
+              "Retail Analytics",
+            ]}
             icon="👁️"
             href="/services/computer-vision-solutions"
           />
@@ -257,9 +330,14 @@ export default function AIServicesPage() {
               "Document classification",
               "Data validation",
               "Workflow automation",
-              "Multi-format support"
+              "Multi-format support",
             ]}
-            useCases={["Invoice Processing", "Contract Analysis", "Data Entry", "Compliance"]}
+            useCases={[
+              "Invoice Processing",
+              "Contract Analysis",
+              "Data Entry",
+              "Compliance",
+            ]}
             icon="📄"
             href="/services/ai-document-processor"
           />
@@ -272,9 +350,14 @@ export default function AIServicesPage() {
               "Content personalization",
               "Send time optimization",
               "A/B testing automation",
-              "Performance analytics"
+              "Performance analytics",
             ]}
-            useCases={["Email Marketing", "Campaign Optimization", "Personalization", "Engagement"]}
+            useCases={[
+              "Email Marketing",
+              "Campaign Optimization",
+              "Personalization",
+              "Engagement",
+            ]}
             icon="📧"
             href="/services/ai-email-optimizer"
           />
@@ -284,14 +367,21 @@ export default function AIServicesPage() {
       {/* AI Technologies */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">AI Technologies We Use</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            AI Technologies We Use
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We leverage cutting-edge AI technologies and frameworks to deliver state-of-the-art solutions.
+            We leverage cutting-edge AI technologies and frameworks to deliver
+            state-of-the-art solutions.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {[
-            { name: "OpenAI GPT", icon: "🧠", description: "Large Language Models" },
+            {
+              name: "OpenAI GPT",
+              icon: "🧠",
+              description: "Large Language Models",
+            },
             { name: "TensorFlow", icon: "🔧", description: "Machine Learning" },
             { name: "PyTorch", icon: "🔥", description: "Deep Learning" },
             { name: "Hugging Face", icon: "🤗", description: "NLP Models" },
@@ -302,9 +392,12 @@ export default function AIServicesPage() {
             { name: "MLflow", icon: "📊", description: "ML Lifecycle" },
             { name: "Kubeflow", icon: "☸️", description: "ML Pipelines" },
             { name: "Ray", icon: "⚡", description: "Distributed ML" },
-            { name: "Docker", icon: "🐳", description: "Containerization" }
+            { name: "Docker", icon: "🐳", description: "Containerization" },
           ].map((tech, index) => (
-            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+            <div
+              key={index}
+              className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200"
+            >
               <div className="text-2xl mb-2">{tech.icon}</div>
               <h3 className="font-semibold text-gray-900 mb-1">{tech.name}</h3>
               <p className="text-xs text-gray-600">{tech.description}</p>
@@ -316,9 +409,12 @@ export default function AIServicesPage() {
       {/* AI Process */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Development Process</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our AI Development Process
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We follow a proven methodology to ensure your AI solutions are robust, scalable, and deliver real business value.
+            We follow a proven methodology to ensure your AI solutions are
+            robust, scalable, and deliver real business value.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -326,29 +422,35 @@ export default function AIServicesPage() {
             {
               step: "01",
               title: "Discovery & Strategy",
-              description: "We analyze your business needs and create a comprehensive AI strategy with clear objectives and success metrics."
+              description:
+                "We analyze your business needs and create a comprehensive AI strategy with clear objectives and success metrics.",
             },
             {
               step: "02",
               title: "Data Preparation",
-              description: "We assess your data quality, prepare datasets, and implement data pipelines for optimal AI model training."
+              description:
+                "We assess your data quality, prepare datasets, and implement data pipelines for optimal AI model training.",
             },
             {
               step: "03",
               title: "Model Development",
-              description: "We develop, train, and validate AI models using state-of-the-art techniques and frameworks."
+              description:
+                "We develop, train, and validate AI models using state-of-the-art techniques and frameworks.",
             },
             {
               step: "04",
               title: "Deployment & Monitoring",
-              description: "We deploy your AI solution to production and implement monitoring systems for continuous optimization."
-            }
+              description:
+                "We deploy your AI solution to production and implement monitoring systems for continuous optimization.",
+            },
           ].map((phase, index) => (
             <div key={index} className="text-center">
               <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 {phase.step}
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">{phase.title}</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                {phase.title}
+              </h3>
               <p className="text-gray-600">{phase.description}</p>
             </div>
           ))}
@@ -358,9 +460,12 @@ export default function AIServicesPage() {
       {/* Pricing */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">AI Services Pricing</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            AI Services Pricing
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Flexible pricing options for AI services. Choose the plan that fits your project needs and budget.
+            Flexible pricing options for AI services. Choose the plan that fits
+            your project needs and budget.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -374,7 +479,7 @@ export default function AIServicesPage() {
               "AI strategy development",
               "Proof of concept",
               "Technology selection",
-              "Project roadmap"
+              "Project roadmap",
             ]}
             cta="Get Started"
           />
@@ -388,7 +493,7 @@ export default function AIServicesPage() {
               "Data preparation",
               "Model training & validation",
               "Integration & deployment",
-              "3 months support"
+              "3 months support",
             ]}
             popular={true}
             cta="Get Started"
@@ -403,7 +508,7 @@ export default function AIServicesPage() {
               "Advanced ML pipelines",
               "Scalable infrastructure",
               "Dedicated AI team",
-              "12 months support"
+              "12 months support",
             ]}
             cta="Contact Sales"
           />
@@ -413,9 +518,12 @@ export default function AIServicesPage() {
       {/* Success Stories */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Success Stories
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how we've helped businesses transform their operations with AI solutions.
+            See how we've helped businesses transform their operations with AI
+            solutions.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -424,26 +532,38 @@ export default function AIServicesPage() {
               company: "E-commerce Platform",
               industry: "Retail",
               result: "40% increase in conversion",
-              description: "Implemented AI-powered recommendation engine that increased conversion rates by 40% and average order value by 25%."
+              description:
+                "Implemented AI-powered recommendation engine that increased conversion rates by 40% and average order value by 25%.",
             },
             {
               company: "Financial Services",
               industry: "Finance",
               result: "95% fraud detection accuracy",
-              description: "Deployed AI fraud detection system that achieved 95% accuracy in identifying fraudulent transactions, reducing losses by $2M annually."
+              description:
+                "Deployed AI fraud detection system that achieved 95% accuracy in identifying fraudulent transactions, reducing losses by $2M annually.",
             },
             {
               company: "Healthcare Provider",
               industry: "Healthcare",
               result: "30% faster diagnosis",
-              description: "Developed AI diagnostic assistant that reduced diagnosis time by 30% and improved accuracy by 15% for radiology assessments."
-            }
+              description:
+                "Developed AI diagnostic assistant that reduced diagnosis time by 30% and improved accuracy by 15% for radiology assessments.",
+            },
           ].map((story, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-              <div className="text-sm text-blue-600 font-semibold mb-2">{story.industry}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">{story.company}</h3>
+            <div
+              key={index}
+              className="p-6 bg-white rounded-lg shadow-md border border-gray-200"
+            >
+              <div className="text-sm text-blue-600 font-semibold mb-2">
+                {story.industry}
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                {story.company}
+              </h3>
               <p className="text-gray-600 mb-4">{story.description}</p>
-              <div className="text-2xl font-bold text-green-600">{story.result}</div>
+              <div className="text-2xl font-bold text-green-600">
+                {story.result}
+              </div>
             </div>
           ))}
         </div>
@@ -451,9 +571,12 @@ export default function AIServicesPage() {
 
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Transform Your Business with AI?
+        </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Let's discuss how AI can solve your specific business challenges and drive growth.
+          Let's discuss how AI can solve your specific business challenges and
+          drive growth.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

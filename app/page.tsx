@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 interface CardProps {
   title: string;
@@ -34,7 +34,13 @@ function Card({ title, href, description, bullets = [], icon }: CardProps) {
   );
 }
 
-function ServiceCard({ title, href, description, bullets = [], icon }: CardProps) {
+function ServiceCard({
+  title,
+  href,
+  description,
+  bullets = [],
+  icon,
+}: CardProps) {
   return (
     <Link
       href={href}
@@ -68,7 +74,8 @@ export default function HomePage() {
           Zion Tech Group
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with our comprehensive suite of intelligent services.
+          Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with
+          our comprehensive suite of intelligent services.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
@@ -91,9 +98,12 @@ export default function HomePage() {
       {/* Featured Services */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Services</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our Core Services
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive solutions for modern businesses, from AI-powered tools to complete IT infrastructure.
+            Comprehensive solutions for modern businesses, from AI-powered tools
+            to complete IT infrastructure.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -106,7 +116,7 @@ export default function HomePage() {
               "Payment integration",
               "User authentication",
               "Analytics dashboard",
-              "API development"
+              "API development",
             ]}
             icon="🚀"
           />
@@ -119,7 +129,7 @@ export default function HomePage() {
               "Machine learning models",
               "Natural language processing",
               "Computer vision",
-              "Predictive analytics"
+              "Predictive analytics",
             ]}
             icon="🤖"
           />
@@ -132,7 +142,7 @@ export default function HomePage() {
               "DevOps & CI/CD",
               "Infrastructure management",
               "Security solutions",
-              "24/7 support"
+              "24/7 support",
             ]}
             icon="💻"
           />
@@ -160,9 +170,12 @@ export default function HomePage() {
       {/* Why Choose Us */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Why Choose Zion Tech Group?
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We combine technical expertise with business acumen to deliver solutions that drive real results.
+            We combine technical expertise with business acumen to deliver
+            solutions that drive real results.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -170,29 +183,45 @@ export default function HomePage() {
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">⚡</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Fast Delivery</h3>
-            <p className="text-gray-600">Rapid development and deployment with agile methodologies</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Fast Delivery
+            </h3>
+            <p className="text-gray-600">
+              Rapid development and deployment with agile methodologies
+            </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🔒</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
-            <p className="text-gray-600">Enterprise-grade security and 99.9% uptime guarantee</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Secure & Reliable
+            </h3>
+            <p className="text-gray-600">
+              Enterprise-grade security and 99.9% uptime guarantee
+            </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🎯</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Custom Solutions</h3>
-            <p className="text-gray-600">Tailored solutions that fit your specific business needs</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Custom Solutions
+            </h3>
+            <p className="text-gray-600">
+              Tailored solutions that fit your specific business needs
+            </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">📞</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h3>
-            <p className="text-gray-600">Round-the-clock technical support and maintenance</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              24/7 Support
+            </h3>
+            <p className="text-gray-600">
+              Round-the-clock technical support and maintenance
+            </p>
           </div>
         </div>
       </section>
@@ -204,8 +233,9 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Let's discuss your project and create a custom solution that drives real business value. 
-            Our team has delivered 1000+ successful projects across various industries.
+            Let's discuss your project and create a custom solution that drives
+            real business value. Our team has delivered 1000+ successful
+            projects across various industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -230,7 +260,13 @@ export default function HomePage() {
   );
 }
 
-function FeatureCard({ title, description }: { title: string; description: string }) {
+function FeatureCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>

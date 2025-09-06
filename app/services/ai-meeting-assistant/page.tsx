@@ -1,10 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 export const metadata = {
-  title: 'AI Meeting Assistant | Zion Tech Group',
-  description: 'Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings.',
-  keywords: 'AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings'
+  title: "AI Meeting Assistant | Zion Tech Group",
+  description:
+    "Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings.",
+  keywords:
+    "AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings",
 };
 
 export default function AIMeetingAssistantPage() {
@@ -16,8 +18,9 @@ export default function AIMeetingAssistantPage() {
           AI Meeting Assistant
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform every meeting into actionable insights with our AI-powered assistant. Get real-time transcription, 
-          intelligent summaries, and automatic action item extraction with 95% accuracy.
+          Transform every meeting into actionable insights with our AI-powered
+          assistant. Get real-time transcription, intelligent summaries, and
+          automatic action item extraction with 95% accuracy.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -38,9 +41,12 @@ export default function AIMeetingAssistantPage() {
       {/* Key Features */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionary Meeting Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Revolutionary Meeting Features
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI assistant handles every aspect of your meetings, from real-time transcription to intelligent follow-ups.
+            Our AI assistant handles every aspect of your meetings, from
+            real-time transcription to intelligent follow-ups.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -52,7 +58,7 @@ export default function AIMeetingAssistantPage() {
               "95% accuracy rate",
               "50+ languages supported",
               "Speaker identification",
-              "Noise cancellation"
+              "Noise cancellation",
             ]}
           />
           <FeatureCard
@@ -63,7 +69,7 @@ export default function AIMeetingAssistantPage() {
               "Key points extraction",
               "Decision tracking",
               "Insight generation",
-              "Custom summary formats"
+              "Custom summary formats",
             ]}
           />
           <FeatureCard
@@ -74,7 +80,7 @@ export default function AIMeetingAssistantPage() {
               "Auto action detection",
               "Assignee assignment",
               "Deadline tracking",
-              "Follow-up reminders"
+              "Follow-up reminders",
             ]}
           />
           <FeatureCard
@@ -85,7 +91,7 @@ export default function AIMeetingAssistantPage() {
               "Participation metrics",
               "Talk time analysis",
               "Meeting effectiveness",
-              "Productivity insights"
+              "Productivity insights",
             ]}
           />
           <FeatureCard
@@ -96,7 +102,7 @@ export default function AIMeetingAssistantPage() {
               "Zoom integration",
               "Microsoft Teams",
               "Google Meet",
-              "Calendar sync"
+              "Calendar sync",
             ]}
           />
           <FeatureCard
@@ -107,7 +113,7 @@ export default function AIMeetingAssistantPage() {
               "Meeting optimization",
               "Agenda suggestions",
               "Follow-up strategies",
-              "Best practices"
+              "Best practices",
             ]}
           />
         </div>
@@ -116,9 +122,12 @@ export default function AIMeetingAssistantPage() {
       {/* Pricing */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Flexible Pricing Plans
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your team size and meeting volume. All plans include our core AI features.
+            Choose the plan that fits your team size and meeting volume. All
+            plans include our core AI features.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -133,7 +142,7 @@ export default function AIMeetingAssistantPage() {
               "Meeting summaries",
               "Action item extraction",
               "Email support",
-              "Basic analytics"
+              "Basic analytics",
             ]}
             cta="Start Free Trial"
             popular={false}
@@ -150,7 +159,7 @@ export default function AIMeetingAssistantPage() {
               "Custom integrations",
               "Priority support",
               "Advanced analytics",
-              "API access"
+              "API access",
             ]}
             cta="Start Free Trial"
             popular={true}
@@ -167,7 +176,7 @@ export default function AIMeetingAssistantPage() {
               "Dedicated support",
               "Custom integrations",
               "Advanced security",
-              "SLA guarantee"
+              "SLA guarantee",
             ]}
             cta="Contact Sales"
             popular={false}
@@ -178,9 +187,12 @@ export default function AIMeetingAssistantPage() {
       {/* Success Metrics */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Results</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Proven Results
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our clients consistently see dramatic improvements in meeting productivity and follow-through.
+            Our clients consistently see dramatic improvements in meeting
+            productivity and follow-through.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -210,9 +222,12 @@ export default function AIMeetingAssistantPage() {
       {/* Use Cases */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect for Every Meeting Type</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Perfect for Every Meeting Type
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From client calls to team standups, our AI assistant enhances every type of meeting.
+            From client calls to team standups, our AI assistant enhances every
+            type of meeting.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -224,7 +239,7 @@ export default function AIMeetingAssistantPage() {
               "Professional transcripts",
               "Client action tracking",
               "Follow-up automation",
-              "Meeting recordings"
+              "Meeting recordings",
             ]}
           />
           <UseCaseCard
@@ -235,7 +250,7 @@ export default function AIMeetingAssistantPage() {
               "Team collaboration",
               "Action item assignment",
               "Progress tracking",
-              "Meeting effectiveness"
+              "Meeting effectiveness",
             ]}
           />
           <UseCaseCard
@@ -246,7 +261,7 @@ export default function AIMeetingAssistantPage() {
               "Knowledge capture",
               "Searchable content",
               "Learning analytics",
-              "Progress tracking"
+              "Progress tracking",
             ]}
           />
         </div>
@@ -255,17 +270,32 @@ export default function AIMeetingAssistantPage() {
       {/* Technology Stack */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Powered by Advanced AI</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Powered by Advanced AI
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our platform uses cutting-edge AI and machine learning technologies for superior performance.
+            Our platform uses cutting-edge AI and machine learning technologies
+            for superior performance.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {[
-            { name: "OpenAI Whisper", icon: "🎤", description: "Speech recognition" },
-            { name: "GPT-4", icon: "🧠", description: "Natural language processing" },
+            {
+              name: "OpenAI Whisper",
+              icon: "🎤",
+              description: "Speech recognition",
+            },
+            {
+              name: "GPT-4",
+              icon: "🧠",
+              description: "Natural language processing",
+            },
             { name: "TensorFlow", icon: "⚡", description: "Machine learning" },
-            { name: "WebRTC", icon: "📡", description: "Real-time communication" },
+            {
+              name: "WebRTC",
+              icon: "📡",
+              description: "Real-time communication",
+            },
             { name: "AWS", icon: "☁️", description: "Cloud infrastructure" },
             { name: "Docker", icon: "🐳", description: "Containerization" },
             { name: "Kubernetes", icon: "⚙️", description: "Orchestration" },
@@ -273,9 +303,12 @@ export default function AIMeetingAssistantPage() {
             { name: "PostgreSQL", icon: "🐘", description: "Database" },
             { name: "Elasticsearch", icon: "🔍", description: "Search engine" },
             { name: "React", icon: "⚛️", description: "Frontend" },
-            { name: "Node.js", icon: "🟢", description: "Backend" }
+            { name: "Node.js", icon: "🟢", description: "Backend" },
           ].map((tech, index) => (
-            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+            <div
+              key={index}
+              className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200"
+            >
               <div className="text-2xl mb-2">{tech.icon}</div>
               <h3 className="font-semibold text-gray-900 mb-1">{tech.name}</h3>
               <p className="text-xs text-gray-600">{tech.description}</p>
@@ -287,9 +320,12 @@ export default function AIMeetingAssistantPage() {
       {/* Testimonials */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            What Our Clients Say
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say about their experience.
+            Don't just take our word for it. Here's what our clients have to say
+            about their experience.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -316,9 +352,12 @@ export default function AIMeetingAssistantPage() {
 
       {/* Contact CTA */}
       <section className="py-12 bg-purple-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Meetings?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Transform Your Meetings?
+        </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Join thousands of professionals using our AI Meeting Assistant to make every meeting more productive and actionable.
+          Join thousands of professionals using our AI Meeting Assistant to make
+          every meeting more productive and actionable.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -343,7 +382,12 @@ export default function AIMeetingAssistantPage() {
   );
 }
 
-function FeatureCard({ icon, title, description, benefits }: {
+function FeatureCard({
+  icon,
+  title,
+  description,
+  benefits,
+}: {
   icon: string;
   title: string;
   description: string;
@@ -366,7 +410,15 @@ function FeatureCard({ icon, title, description, benefits }: {
   );
 }
 
-function PricingCard({ name, price, period, description, features, cta, popular }: {
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  cta,
+  popular,
+}: {
   name: string;
   price: string;
   period: string;
@@ -376,7 +428,9 @@ function PricingCard({ name, price, period, description, features, cta, popular 
   popular: boolean;
 }) {
   return (
-    <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'} shadow-lg`}>
+    <div
+      className={`relative p-8 rounded-lg border-2 ${popular ? "border-purple-500 bg-purple-50" : "border-gray-200 bg-white"} shadow-lg`}
+    >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -395,8 +449,16 @@ function PricingCard({ name, price, period, description, features, cta, popular 
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <svg className="w-5 h-5 text-purple-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            <svg
+              className="w-5 h-5 text-purple-500 mr-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -406,8 +468,8 @@ function PricingCard({ name, price, period, description, features, cta, popular 
         href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Assistant - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? 'bg-purple-600 text-white hover:bg-purple-700'
-            : 'bg-gray-900 text-white hover:bg-gray-800'
+            ? "bg-purple-600 text-white hover:bg-purple-700"
+            : "bg-gray-900 text-white hover:bg-gray-800"
         }`}
       >
         {cta}
@@ -416,7 +478,11 @@ function PricingCard({ name, price, period, description, features, cta, popular 
   );
 }
 
-function MetricCard({ number, label, description }: {
+function MetricCard({
+  number,
+  label,
+  description,
+}: {
   number: string;
   label: string;
   description: string;
@@ -430,7 +496,12 @@ function MetricCard({ number, label, description }: {
   );
 }
 
-function UseCaseCard({ icon, title, description, benefits }: {
+function UseCaseCard({
+  icon,
+  title,
+  description,
+  benefits,
+}: {
   icon: string;
   title: string;
   description: string;
@@ -453,7 +524,12 @@ function UseCaseCard({ icon, title, description, benefits }: {
   );
 }
 
-function TestimonialCard({ quote, author, role, company }: {
+function TestimonialCard({
+  quote,
+  author,
+  role,
+  company,
+}: {
   quote: string;
   author: string;
   role: string;

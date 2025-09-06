@@ -1,10 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 export const metadata = {
-  title: 'Micro SaaS Solutions | Zion Tech Group',
-  description: 'Comprehensive micro SaaS development services including AI-powered tools, productivity apps, business automation, and revenue-generating solutions. From MVP to enterprise scale.',
-  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
+  title: "Micro SaaS Solutions | Zion Tech Group",
+  description:
+    "Comprehensive micro SaaS development services including AI-powered tools, productivity apps, business automation, and revenue-generating solutions. From MVP to enterprise scale.",
+  keywords:
+    "micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence",
 };
 
 interface PricingTierProps {
@@ -17,9 +19,19 @@ interface PricingTierProps {
   cta: string;
 }
 
-function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
+function PricingTier({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular = false,
+  cta,
+}: PricingTierProps) {
   return (
-    <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
+    <div
+      className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
+    >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -38,8 +50,16 @@ function PricingTier({ name, price, period, description, features, popular = fal
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            <svg
+              className="w-5 h-5 text-green-500 mr-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -49,8 +69,8 @@ function PricingTier({ name, price, period, description, features, popular = fal
         href="mailto:kleber@ziontechgroup.com?subject=Micro SaaS Quote Request - {name}"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? 'bg-blue-600 text-white hover:bg-blue-700'
-            : 'bg-gray-900 text-white hover:bg-gray-800'
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-gray-900 text-white hover:bg-gray-800"
         }`}
       >
         {cta}
@@ -68,7 +88,14 @@ interface ServiceFeatureProps {
   href: string;
 }
 
-function ServiceFeature({ icon, title, description, benefits, pricing, href }: ServiceFeatureProps) {
+function ServiceFeature({
+  icon,
+  title,
+  description,
+  benefits,
+  pricing,
+  href,
+}: ServiceFeatureProps) {
   return (
     <Link
       href={href}
@@ -103,7 +130,9 @@ export default function MicroSaaSPage() {
           Micro SaaS Solutions
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Complete SaaS development from concept to deployment. We build scalable, secure, and user-friendly micro SaaS applications that drive business growth.
+          Complete SaaS development from concept to deployment. We build
+          scalable, secure, and user-friendly micro SaaS applications that drive
+          business growth.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -124,9 +153,12 @@ export default function MicroSaaSPage() {
       {/* Featured Micro SaaS Services */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Micro SaaS Solutions</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our Micro SaaS Solutions
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Real, useful, and intelligent micro SaaS tools that solve specific business problems and generate recurring revenue.
+            Real, useful, and intelligent micro SaaS tools that solve specific
+            business problems and generate recurring revenue.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -139,7 +171,7 @@ export default function MicroSaaSPage() {
               "Smart content personalization",
               "Automated A/B testing",
               "Advanced analytics dashboard",
-              "Multi-platform integration"
+              "Multi-platform integration",
             ]}
             pricing="From $99/month"
             href="/services/ai-email-optimizer"
@@ -153,7 +185,7 @@ export default function MicroSaaSPage() {
               "AI content generation",
               "Multi-platform support",
               "Optimal posting times",
-              "Hashtag optimization"
+              "Hashtag optimization",
             ]}
             pricing="From $29/month"
             href="/services/ai-social-media-scheduler"
@@ -167,7 +199,7 @@ export default function MicroSaaSPage() {
               "50+ language support",
               "60% cost reduction",
               "Sentiment analysis",
-              "Live chat integration"
+              "Live chat integration",
             ]}
             pricing="From $199/month"
             href="/services/ai-customer-support-automation"
@@ -181,7 +213,7 @@ export default function MicroSaaSPage() {
               "99% accuracy",
               "30% faster payments",
               "Smart categorization",
-              "Payment tracking"
+              "Payment tracking",
             ]}
             pricing="From $49/month"
             href="/services/ai-invoice-generator"
@@ -195,7 +227,7 @@ export default function MicroSaaSPage() {
               "Smart resource allocation",
               "Risk prediction AI",
               "Team collaboration tools",
-              "Time tracking automation"
+              "Time tracking automation",
             ]}
             pricing="From $99/month"
             href="/services/ai-project-management-suite"
@@ -209,7 +241,7 @@ export default function MicroSaaSPage() {
               "Predictive analytics",
               "Custom dashboards",
               "Data visualization",
-              "Automated reporting"
+              "Automated reporting",
             ]}
             pricing="From $149/month"
             href="/services/analytics-dashboard"
@@ -223,7 +255,7 @@ export default function MicroSaaSPage() {
               "Keyword research AI",
               "Competitor analysis",
               "Content optimization",
-              "Technical SEO audit"
+              "Technical SEO audit",
             ]}
             pricing="From $79/month"
             href="/services/seo-analyzer"
@@ -237,7 +269,7 @@ export default function MicroSaaSPage() {
               "AI prospecting",
               "Automated sequences",
               "CRM integration",
-              "Lead scoring"
+              "Lead scoring",
             ]}
             pricing="From $199/month"
             href="/services/lead-generation-tool"
@@ -251,7 +283,7 @@ export default function MicroSaaSPage() {
               "Receipt scanning",
               "Financial insights",
               "Tax preparation",
-              "Budget tracking"
+              "Budget tracking",
             ]}
             pricing="From $39/month"
             href="/services/expense-tracker"
@@ -265,7 +297,7 @@ export default function MicroSaaSPage() {
               "HIPAA compliant",
               "Predictive diagnostics",
               "Treatment optimization",
-              "Clinical insights"
+              "Clinical insights",
             ]}
             pricing="From $2,999/month"
             href="/services/ai-healthcare-analytics"
@@ -279,7 +311,7 @@ export default function MicroSaaSPage() {
               "40% cost reduction",
               "Bank-level security",
               "Risk assessment",
-              "Algorithmic trading"
+              "Algorithmic trading",
             ]}
             pricing="From $1,999/month"
             href="/services/ai-fintech-solutions"
@@ -293,7 +325,7 @@ export default function MicroSaaSPage() {
               "Progress tracking",
               "Adaptive content",
               "Student analytics",
-              "Gamification"
+              "Gamification",
             ]}
             pricing="From $299/month"
             href="/services/edtech"
@@ -304,9 +336,12 @@ export default function MicroSaaSPage() {
       {/* Technology Stack */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Technology Stack</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our Technology Stack
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We use modern, proven technologies to build fast, secure, and scalable micro SaaS applications.
+            We use modern, proven technologies to build fast, secure, and
+            scalable micro SaaS applications.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -322,9 +357,12 @@ export default function MicroSaaSPage() {
             { name: "Stripe", icon: "💳", description: "Payment processing" },
             { name: "Auth0", icon: "🔐", description: "Authentication" },
             { name: "Vercel", icon: "▲", description: "Deployment" },
-            { name: "GitHub", icon: "🐙", description: "Version control" }
+            { name: "GitHub", icon: "🐙", description: "Version control" },
           ].map((tech, index) => (
-            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+            <div
+              key={index}
+              className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200"
+            >
               <div className="text-2xl mb-2">{tech.icon}</div>
               <h3 className="font-semibold text-gray-900 mb-1">{tech.name}</h3>
               <p className="text-xs text-gray-600">{tech.description}</p>
@@ -336,9 +374,12 @@ export default function MicroSaaSPage() {
       {/* Pricing */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Micro SaaS Development Pricing</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Micro SaaS Development Pricing
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Transparent pricing with no hidden fees. Choose the plan that fits your needs.
+            Transparent pricing with no hidden fees. Choose the plan that fits
+            your needs.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -353,7 +394,7 @@ export default function MicroSaaSPage() {
               "Simple database design",
               "Basic API endpoints",
               "Deployment setup",
-              "3 months support"
+              "3 months support",
             ]}
             cta="Get Started"
           />
@@ -369,7 +410,7 @@ export default function MicroSaaSPage() {
               "Admin dashboard",
               "API documentation",
               "6 months support",
-              "Analytics integration"
+              "Analytics integration",
             ]}
             popular={true}
             cta="Get Started"
@@ -386,7 +427,7 @@ export default function MicroSaaSPage() {
               "Custom integrations",
               "Performance optimization",
               "12 months support",
-              "Dedicated project manager"
+              "Dedicated project manager",
             ]}
             cta="Contact Sales"
           />
@@ -396,9 +437,12 @@ export default function MicroSaaSPage() {
       {/* Process */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Development Process</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our Development Process
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We follow a proven methodology to ensure your micro SaaS is delivered on time and within budget.
+            We follow a proven methodology to ensure your micro SaaS is
+            delivered on time and within budget.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -406,29 +450,35 @@ export default function MicroSaaSPage() {
             {
               step: "01",
               title: "Discovery & Planning",
-              description: "We analyze your requirements and create a detailed project plan with timelines and milestones."
+              description:
+                "We analyze your requirements and create a detailed project plan with timelines and milestones.",
             },
             {
               step: "02",
               title: "Design & Prototyping",
-              description: "Our designers create wireframes and prototypes to visualize your application before development."
+              description:
+                "Our designers create wireframes and prototypes to visualize your application before development.",
             },
             {
               step: "03",
               title: "Development & Testing",
-              description: "We build your application using agile methodology with regular testing and quality assurance."
+              description:
+                "We build your application using agile methodology with regular testing and quality assurance.",
             },
             {
               step: "04",
               title: "Deployment & Launch",
-              description: "We deploy your application to production and provide ongoing support and maintenance."
-            }
+              description:
+                "We deploy your application to production and provide ongoing support and maintenance.",
+            },
           ].map((phase, index) => (
             <div key={index} className="text-center">
               <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 {phase.step}
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">{phase.title}</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                {phase.title}
+              </h3>
               <p className="text-gray-600">{phase.description}</p>
             </div>
           ))}
@@ -438,37 +488,48 @@ export default function MicroSaaSPage() {
       {/* Success Stories */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Success Stories
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how we've helped businesses transform their ideas into successful micro SaaS applications.
+            See how we've helped businesses transform their ideas into
+            successful micro SaaS applications.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               title: "E-commerce Analytics Platform",
-              description: "Built a comprehensive analytics dashboard for an e-commerce business, resulting in 40% increase in conversion rates.",
+              description:
+                "Built a comprehensive analytics dashboard for an e-commerce business, resulting in 40% increase in conversion rates.",
               metrics: "40% conversion increase",
               tech: "React, Node.js, PostgreSQL",
-              revenue: "$50K MRR"
+              revenue: "$50K MRR",
             },
             {
               title: "AI Email Marketing Tool",
-              description: "Developed an AI-powered email optimization platform that increased open rates by 40% for 500+ businesses.",
+              description:
+                "Developed an AI-powered email optimization platform that increased open rates by 40% for 500+ businesses.",
               metrics: "40% higher open rates",
               tech: "Next.js, OpenAI API, Stripe",
-              revenue: "$25K MRR"
+              revenue: "$25K MRR",
             },
             {
               title: "Project Management SaaS",
-              description: "Created a custom project management solution with team collaboration features and time tracking.",
+              description:
+                "Created a custom project management solution with team collaboration features and time tracking.",
               metrics: "50% productivity boost",
               tech: "React, MongoDB, Stripe",
-              revenue: "$75K MRR"
-            }
+              revenue: "$75K MRR",
+            },
           ].map((caseStudy, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{caseStudy.title}</h3>
+            <div
+              key={index}
+              className="p-6 bg-white rounded-lg shadow-md border border-gray-200"
+            >
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {caseStudy.title}
+              </h3>
               <p className="text-gray-600 mb-4">{caseStudy.description}</p>
               <div className="space-y-2">
                 <div className="text-sm">
@@ -476,11 +537,15 @@ export default function MicroSaaSPage() {
                   <span className="text-gray-700">{caseStudy.metrics}</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-blue-600">Tech Stack: </span>
+                  <span className="font-semibold text-blue-600">
+                    Tech Stack:{" "}
+                  </span>
                   <span className="text-gray-700">{caseStudy.tech}</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-purple-600">Revenue: </span>
+                  <span className="font-semibold text-purple-600">
+                    Revenue:{" "}
+                  </span>
                   <span className="text-gray-700">{caseStudy.revenue}</span>
                 </div>
               </div>
@@ -491,9 +556,12 @@ export default function MicroSaaSPage() {
 
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Build Your Micro SaaS?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Build Your Micro SaaS?
+        </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Let's discuss your project and create a custom micro SaaS solution that drives your business forward.
+          Let's discuss your project and create a custom micro SaaS solution
+          that drives your business forward.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

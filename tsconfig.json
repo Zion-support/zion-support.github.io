@@ -1,34 +1,14 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "target": "ES2020",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
-    ],
-=======
     "target": "es5",
     "lib": ["dom", "dom.iterable", "es6"],
->>>>>>> main
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-<<<<<<< HEAD
-    "module": "ESNext",
-    "moduleResolution": "node",
-=======
     "module": "esnext",
     "moduleResolution": "bundler",
->>>>>>> main
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -40,19 +20,6 @@
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/types/*": ["./src/types/*"],
-      "@/styles/*": ["./src/styles/*"],
-      "@/assets/*": ["./src/assets/*"]
-    },
-    "allowSyntheticDefaultImports": true
-  }
-=======
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/pages/*": ["./pages/*"],
@@ -63,5 +30,4 @@
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
->>>>>>> main
 }

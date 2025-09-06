@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
 
 export const metadata = {
-  title: 'AI Social Media Scheduler | Zion Tech Group',
-  description: 'Intelligent social media management with AI content generation, optimal timing, and hashtag optimization. Increase engagement by 3x with our AI-powered scheduler.',
-  keywords: 'AI social media, social media scheduler, content generation, hashtag optimization, social media automation, engagement boost'
+  title: "AI Social Media Scheduler | Zion Tech Group",
+  description:
+    "Intelligent social media management with AI content generation, optimal timing, and hashtag optimization. Increase engagement by 3x with our AI-powered scheduler.",
+  keywords:
+    "AI social media, social media scheduler, content generation, hashtag optimization, social media automation, engagement boost",
 };
 
 interface FeatureCardProps {
@@ -41,9 +43,19 @@ interface PricingTierProps {
   cta: string;
 }
 
-function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
+function PricingTier({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular = false,
+  cta,
+}: PricingTierProps) {
   return (
-    <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
+    <div
+      className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
+    >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -62,8 +74,16 @@ function PricingTier({ name, price, period, description, features, popular = fal
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            <svg
+              className="w-5 h-5 text-green-500 mr-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -73,8 +93,8 @@ function PricingTier({ name, price, period, description, features, popular = fal
         href="mailto:kleber@ziontechgroup.com?subject=AI Social Media Scheduler - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? 'bg-blue-600 text-white hover:bg-blue-700'
-            : 'bg-gray-900 text-white hover:bg-gray-800'
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-gray-900 text-white hover:bg-gray-800"
         }`}
       >
         {cta}
@@ -92,7 +112,9 @@ export default function AISocialMediaSchedulerPage() {
           AI Social Media Scheduler
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your social media presence with AI-powered content generation, optimal timing, and hashtag optimization. Increase engagement by 3x with intelligent automation.
+          Transform your social media presence with AI-powered content
+          generation, optimal timing, and hashtag optimization. Increase
+          engagement by 3x with intelligent automation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -113,9 +135,12 @@ export default function AISocialMediaSchedulerPage() {
       {/* Key Features */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            AI-Powered Features
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI social media scheduler uses advanced algorithms to maximize your social media impact.
+            Our AI social media scheduler uses advanced algorithms to maximize
+            your social media impact.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -128,7 +153,7 @@ export default function AISocialMediaSchedulerPage() {
               "Multiple content formats",
               "Trending topic integration",
               "Emoji optimization",
-              "Call-to-action suggestions"
+              "Call-to-action suggestions",
             ]}
           />
           <FeatureCard
@@ -140,7 +165,7 @@ export default function AISocialMediaSchedulerPage() {
               "Platform-specific timing",
               "Time zone optimization",
               "Engagement prediction",
-              "Continuous learning"
+              "Continuous learning",
             ]}
           />
           <FeatureCard
@@ -152,7 +177,7 @@ export default function AISocialMediaSchedulerPage() {
               "Niche hashtag discovery",
               "Competitor analysis",
               "Engagement tracking",
-              "ROI measurement"
+              "ROI measurement",
             ]}
           />
           <FeatureCard
@@ -164,7 +189,7 @@ export default function AISocialMediaSchedulerPage() {
               "Reach and impressions",
               "Audience growth analysis",
               "Content performance insights",
-              "ROI measurement"
+              "ROI measurement",
             ]}
           />
           <FeatureCard
@@ -176,7 +201,7 @@ export default function AISocialMediaSchedulerPage() {
               "LinkedIn, TikTok, Pinterest",
               "Platform-specific formatting",
               "Cross-platform scheduling",
-              "Unified analytics"
+              "Unified analytics",
             ]}
           />
           <FeatureCard
@@ -188,7 +213,7 @@ export default function AISocialMediaSchedulerPage() {
               "Video optimization",
               "Brand consistency",
               "Aspect ratio optimization",
-              "Visual trend analysis"
+              "Visual trend analysis",
             ]}
           />
         </div>
@@ -197,22 +222,34 @@ export default function AISocialMediaSchedulerPage() {
       {/* Supported Platforms */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Supported Platforms</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Supported Platforms
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Manage all your social media accounts from one powerful AI-driven dashboard.
+            Manage all your social media accounts from one powerful AI-driven
+            dashboard.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {[
-            { name: "Instagram", icon: "📷", color: "bg-gradient-to-r from-purple-500 to-pink-500" },
+            {
+              name: "Instagram",
+              icon: "📷",
+              color: "bg-gradient-to-r from-purple-500 to-pink-500",
+            },
             { name: "Facebook", icon: "👥", color: "bg-blue-600" },
             { name: "Twitter", icon: "🐦", color: "bg-blue-400" },
             { name: "LinkedIn", icon: "💼", color: "bg-blue-700" },
             { name: "TikTok", icon: "🎵", color: "bg-black" },
-            { name: "Pinterest", icon: "📌", color: "bg-red-600" }
+            { name: "Pinterest", icon: "📌", color: "bg-red-600" },
           ].map((platform, index) => (
-            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-              <div className={`w-16 h-16 ${platform.color} rounded-full flex items-center justify-center text-2xl mx-auto mb-3`}>
+            <div
+              key={index}
+              className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200"
+            >
+              <div
+                className={`w-16 h-16 ${platform.color} rounded-full flex items-center justify-center text-2xl mx-auto mb-3`}
+              >
                 {platform.icon}
               </div>
               <h3 className="font-semibold text-gray-900">{platform.name}</h3>
@@ -224,9 +261,12 @@ export default function AISocialMediaSchedulerPage() {
       {/* How It Works */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            How It Works
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Get started with our AI social media scheduler in three simple steps.
+            Get started with our AI social media scheduler in three simple
+            steps.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -234,27 +274,36 @@ export default function AISocialMediaSchedulerPage() {
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
               1
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Connect Accounts</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              Connect Accounts
+            </h3>
             <p className="text-gray-600">
-              Connect your social media accounts and our AI analyzes your audience, posting history, and engagement patterns.
+              Connect your social media accounts and our AI analyzes your
+              audience, posting history, and engagement patterns.
             </p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
               2
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Content Creation</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              AI Content Creation
+            </h3>
             <p className="text-gray-600">
-              Our AI generates engaging content, suggests optimal posting times, and optimizes hashtags for maximum reach.
+              Our AI generates engaging content, suggests optimal posting times,
+              and optimizes hashtags for maximum reach.
             </p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
               3
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Schedule & Optimize</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              Schedule & Optimize
+            </h3>
             <p className="text-gray-600">
-              Schedule your posts and watch as our AI continuously optimizes your strategy based on performance data.
+              Schedule your posts and watch as our AI continuously optimizes
+              your strategy based on performance data.
             </p>
           </div>
         </div>
@@ -263,9 +312,12 @@ export default function AISocialMediaSchedulerPage() {
       {/* Pricing */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Pricing Plans
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your social media management needs. All plans include our core AI features.
+            Choose the plan that fits your social media management needs. All
+            plans include our core AI features.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -280,7 +332,7 @@ export default function AISocialMediaSchedulerPage() {
               "AI content generation",
               "Basic analytics",
               "Optimal timing AI",
-              "Email support"
+              "Email support",
             ]}
             cta="Start Free Trial"
           />
@@ -295,7 +347,7 @@ export default function AISocialMediaSchedulerPage() {
               "Advanced AI features",
               "Comprehensive analytics",
               "Hashtag optimization",
-              "Priority support"
+              "Priority support",
             ]}
             popular={true}
             cta="Start Free Trial"
@@ -311,7 +363,7 @@ export default function AISocialMediaSchedulerPage() {
               "Custom AI models",
               "White-label solution",
               "Team collaboration",
-              "Dedicated account manager"
+              "Dedicated account manager",
             ]}
             cta="Contact Sales"
           />
@@ -321,9 +373,12 @@ export default function AISocialMediaSchedulerPage() {
       {/* Success Stories */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Success Stories
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how businesses have transformed their social media presence with our AI scheduler.
+            See how businesses have transformed their social media presence with
+            our AI scheduler.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -332,26 +387,38 @@ export default function AISocialMediaSchedulerPage() {
               company: "Fashion Brand",
               industry: "Retail",
               result: "300% increase in engagement",
-              description: "Increased Instagram followers by 50K and boosted sales by 40% with AI-optimized content and timing."
+              description:
+                "Increased Instagram followers by 50K and boosted sales by 40% with AI-optimized content and timing.",
             },
             {
               company: "Tech Startup",
               industry: "Technology",
               result: "5x more qualified leads",
-              description: "Generated 200+ qualified leads monthly through LinkedIn and Twitter with AI-generated thought leadership content."
+              description:
+                "Generated 200+ qualified leads monthly through LinkedIn and Twitter with AI-generated thought leadership content.",
             },
             {
               company: "Restaurant Chain",
               industry: "Food & Beverage",
               result: "250% increase in foot traffic",
-              description: "Boosted local engagement and reservations by 250% with location-based content and optimal posting times."
-            }
+              description:
+                "Boosted local engagement and reservations by 250% with location-based content and optimal posting times.",
+            },
           ].map((story, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-              <div className="text-sm text-blue-600 font-semibold mb-2">{story.industry}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">{story.company}</h3>
+            <div
+              key={index}
+              className="p-6 bg-white rounded-lg shadow-md border border-gray-200"
+            >
+              <div className="text-sm text-blue-600 font-semibold mb-2">
+                {story.industry}
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                {story.company}
+              </h3>
               <p className="text-gray-600 mb-4">{story.description}</p>
-              <div className="text-2xl font-bold text-green-600">{story.result}</div>
+              <div className="text-2xl font-bold text-green-600">
+                {story.result}
+              </div>
             </div>
           ))}
         </div>
@@ -359,9 +426,12 @@ export default function AISocialMediaSchedulerPage() {
 
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Social Media?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Transform Your Social Media?
+        </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Start your free trial today and see how AI can revolutionize your social media strategy.
+          Start your free trial today and see how AI can revolutionize your
+          social media strategy.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
