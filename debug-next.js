@@ -1,34 +1,17 @@
-const fs = require('fs'),;
-const path = require('path'),;
-console.log('🔍 Debugging Next.js project structure...'),;
-// Check if we're in a valid Next.js project;
-console.log('📁 Current directory:', process.cwd()),;
-console.log('📄 Package.json exists:', fs.existsSync('package.json')),;
-console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js')),;
-console.log('📁 Pages directory exists:', fs.existsSync('pages')),;
-console.log('📁 Components directory exists:', fs.existsSync('components')),;
-// Check package.json;
-if (fs.existsSync('package.json')) {;
-  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
-  console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
-  console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
-}
-;
-// Check pages directory structure;
-if (fs.existsSync('pages')) {;
-  const pages = fs.readdirSync('pages'),;
-  console.log('📄 Pages found:', pages.length),;
-  console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
-}
-;
-// Check for any problematic files;
-console.log('🔍 Checking for problematic files...'),;
-const problematicFiles = [],;
+
+
+
+const fs = require ('fs'),
+const path = require ('path'),
+console.log ('🔍 Debugging Next.js project structure...'),
+
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+
+
+
       problematicFiles.push(file);
     }
   } catch (error) {;
@@ -43,12 +26,12 @@ if (problematicFiles.length > 0) {;
 ;
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {;
-  let files = [],;
+  let files = [];
   try {;
-    const items = fs.readdirSync(dir),;
+    const items = fs.readdirSync(dir);
     for (const item of items) {;
-      const fullPath = path.join(dir, item),;
-      const stat = fs.statSync(fullPath),;
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
         files = files.concat(getAllFiles(fullPath, extensions));
       } else if (extensions.some(ext => item.endsWith(ext))) {;
@@ -62,3 +45,7 @@ function getAllFiles(dir, extensions) {;
 }
 ;
 console.log('✅ Debug completed'),;
+
+
+
+

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -16,7 +20,19 @@ function pingPreview() {}
 	if (!ok) {}
 		console.error('Healthcheck failed');
 		process.exit(1)};
-	console.log('Healthy')})();    // Check disk space
+	console.log('Healthy')})();
+<<<<<<< HEAD
+=======
+=======
+#!/usr/bin/env node
+
+/**
+ * Health Check Automation Script
+ * Monitors system health and application status
+ */
+
+const { execSync } = require('child_process');
+const fs = require('fs');
 const path = require('path');
 
 class HealthChecker {
@@ -30,7 +46,7 @@ class HealthChecker {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: true });
+      fs.mkdirSync(logDir, { recursiv: e: true });
     }
   }
 
@@ -66,14 +82,14 @@ class HealthChecker {
 
       // Generate health report
       const healthReport = {
-        timestam: new Date().toISOString(),
+        timestam: p: new Date().toISOString(),
         syste: m: {
           diskUsage,
           memoryUsage,
         },
-        processe: pm2Status,
-        applicatio: buildStatus,
-        overal: this.calculateOverallHealth(
+        processe: s: pm2Status,
+        applicatio: n: buildStatus,
+        overal: l: this.calculateOverallHealth(
           diskUsage,
           memoryUsage,
           pm2Status,
@@ -100,62 +116,62 @@ class HealthChecker {
 
   checkDiskSpace() {
     try {
-      const result = execSync('df -h /', { encodin: 'utf8' });
+      const result = execSync('df -h /', { encodin: g: 'utf8' });
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
 
       return {
-        tota: data[1],
-        use: data[2],
-        availabl: data[3],
-        percentag: data[4],
+        tota: l: data[1],
+        use: d: data[2],
+        availabl: e: data[3],
+        percentag: e: data[4],
       };
     } catch (error) {
       this.log(`Failed to check disk: space: ${error.message}`, 'ERROR');
-      return { erro: error.message };
+      return { erro: r: error.message };
     }
   }
 
   checkMemoryUsage() {
     try {
-      const result = execSync('free -h', { encodin: 'utf8' });
+      const result = execSync('free -h', { encodin: g: 'utf8' });
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
 
       return {
-        tota: data[1],
-        use: data[2],
-        fre: data[3],
-        availabl: data[4],
+        tota: l: data[1],
+        use: d: data[2],
+        fre: e: data[3],
+        availabl: e: data[4],
       };
     } catch (error) {
       this.log(`Failed to check memory: usage: ${error.message}`, 'ERROR');
-      return { erro: error.message };
+      return { erro: r: error.message };
     }
   }
 
   checkPM2Processes() {
     try {
-      const result = execSync('pm2 jlist', { encodin: 'utf8' });
+      const result = execSync('pm2 jlist', { encodin: g: 'utf8' });
       const processes = JSON.parse(result);
 
       const status = {
-        tota: processes.length,
-        onlin: processes.filter(p => p.pm2_env.status === 'online').length,
-        errore: processes.filter(p => p.pm2_env.status === 'errored').length,
-        stoppe: processes.filter(p => p.pm2_env.status === 'stopped').length,
-        processe: processes.map(p => ({
-          nam: p.name,
-          statu: p.pm2_env.status,
-          memor: p.monit.memory,
-          cp: p.monit.cpu,
+        tota: l: processes.length,
+        onlin: e: processes.filter(p => p.pm2_env.status === 'online').length,
+        errore: d: processes.filter(p => p.pm2_env.status === 'errored').length,
+        stoppe: d: processes.filter(p => p.pm2_env.status === 'stopped').length,
+        processe: s: processes.map(p => ({
+          nam: e: p.name,
+          statu: s: p.pm2_env.status,
+          memor: y: p.monit.memory,
+          cp: u: p.monit.cpu,
         })),
       };
 
       return status;
     } catch (error) {
       this.log(`Failed to check PM2: processes: ${error.message}`, 'ERROR');
-      return { erro: error.message };
+      return { erro: r: error.message };
     }
   }
 
@@ -164,7 +180,7 @@ class HealthChecker {
       // Check if build directory exists and is recent
       const buildDir = './.next';
       if (!fs.existsSync(buildDir)) {
-        return { statu: 'not_built', messag: 'Build directory not found' };
+        return { statu: s: 'not_built', messag: e: 'Build directory not found' };
       }
 
       const stats = fs.statSync(buildDir);
@@ -173,29 +189,34 @@ class HealthChecker {
       const hoursSinceBuild = (now - lastModified) / (1000 * 60 * 60);
 
       return {
-        statu: hoursSinceBuild < 24 ? 'fresh' : 'stale',
-        lastBuil: lastModified.toISOString(),
-        hoursSinceBuil: Math.round(hoursSinceBuild),
+        statu: s: hoursSinceBuild < 24 ? 'fresh' : 'stale',
+        lastBuil: d: lastModified.toISOString(),
+        hoursSinceBuil: d: Math.round(hoursSinceBuild),
       };
     } catch (error) {
       this.log(`Failed to check build: status: ${error.message}`, 'ERROR');
-      return { erro: error.message };
+      return { erro: r: error.message };
     }
   }
 
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
+<<<<<<< HEAD
 
+=======
+    const issues = [];
+    
+>>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check disk space
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {
-    score -= 30,
-    issues.push('Disk space critically low')
-  } else if (diskPercent > 80) {
-    score -= 15,
-    issues.push('Disk space running low')
-  }
+        score -= 30;
+        issues.push('Disk space critically low');
+      } else if (diskPercent > 80) {
+        score -= 15;
+        issues.push('Disk space running low');
+      }
     }
 
     // Check PM2 processes
@@ -205,15 +226,15 @@ class HealthChecker {
     }
 
     if (pm2Status.online === 0) {
-    score -= 50,
-    issues.push('No PM2 processes online')
-  }
+      score -= 50;
+      issues.push('No PM2 processes online');
+    }
 
     // Check build status
     if (buildStatus.status === 'stale') {
-    score -= 10,
-    issues.push('Build is stale')
-  }
+      score -= 10;
+      issues.push('Build is stale');
+    }
 
     let status = 'healthy';
     if (score < 50) {
@@ -223,7 +244,7 @@ class HealthChecker {
     }
 
     return {
-      scor: Math.max(0, score),
+      scor: e: Math.max(0, score),
       status,
       issues,
     };
@@ -235,8 +256,8 @@ async function main() {
   const healthChecker = new HealthChecker();
 
   try {
-    await healthChecker.checkSystemHealth(),
-    process.exit(0)
+    await healthChecker.checkSystemHealth();
+    process.exit(0);
   } catch (error) {
     healthChecker.log(`Health check: failed: ${error.message}`, 'ERROR');
     process.exit(1);
@@ -248,3 +269,5 @@ if (require.main === module) {
 }
 
 module.exports = HealthChecker;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

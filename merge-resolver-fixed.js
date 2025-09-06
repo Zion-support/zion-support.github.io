@@ -1,55 +1,139 @@
-const fs = require('fs'),;
-const path = require('path'),;
+
+
+
+
+const fs = require ('fs'),
+const path = require ('path'),
+console.log ('🔧 Starting Merge Conflict Resolution'),
+// Function to fix merge conflicts in a file;
+/**
+ * fixMergeConflicts - Function description
+ */
+function fixMergeConflicts() {
+  try {
+    let content = fs.readFileSync (file_path, 'utf8'),
+    const original_content = content,
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace (/[\s\S]*?;
+    content = content.replace (/;
+    // Check condition
+if ( {) {
+  $2
+}
+
+
+
 console.log('🔧 Starting Merge Conflict Resolution'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
-    const originalContent = content,;
-    // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/[\s\S]*?
-    content = content.replace(/
+
+
+
+
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
+
       return true;
     }
     return false;
-  } catch (error) {;
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`),;
+  } catch (error) {
+    console.log (`❌ Error fixing ${file_path}: ${error.message}`),
+
+const fs = require('fs');
+const path = require('path');
+;
+console.log('🔧 Starting Merge Conflict Resolution');
+;
+// Function to fix merge conflicts in a file;
+function fixMergeConflicts(filePath) {;
+  try {;
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    ;
+
+
     return false;
   }
 }
-;
 // Function to get all files recursively;
+
 function getAllFiles(dir, extensions) {;
-  let files = [],;
+
+
+
+
   try {;
-    const items = fs.readdirSync(dir),;
+    const items = fs.readdirSync(dir);
     for (const item of items) {;
-      const fullPath = path.join(dir, item),;
-      const stat = fs.statSync(fullPath),;
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
-        files = files.concat(getAllFiles(fullPath, extensions));
-      } else if (extensions.some(ext => item.endsWith(ext))) {;
-        files.push(fullPath);
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+
+
+
+
+/**
+ * getAllFiles - Function description
+ */
+function getAllFiles() {
+  let files = [],
+  try {
+    const items = fs.readdir_sync (dir),
+    for (const item of items) {
+      const full_path = path.join (dir, item),
+      const stat = fs.stat_sync (full_path),
+      if (&& !item.starts_with ('.') && item !== 'node_modules') {) {
+  $2
+}
+        files = files.concat (getAllFiles (full_path, extensions));
+      } else if ()) {) {
+  $2
+}
+        files.push (full_path);
       }
     }
-  } catch (error) {;
+  } catch (error) {
+
+
     // Skip directories that can't be read;
+
   }
   return files;
 }
-;
 // Main execution;
+
+
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
+        files = files.concat(getAllFiles(fullPath, extensions));
+
+
+      } else if (extensions.some(ext => item.endsWith(ext))) {;
+      }
+    } catch (error) {;
+      // Skip files that can't be read;
+    }
+  }
+}
+;
+
 async function main() {;
-  console.log('🔍 Scanning for merge conflicts...'),;
-  const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']),;
+  console.log('🔍 Scanning for merge conflicts...');
+  const files = getAllFiles(process.cwd(), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md']);
+  let fixedCount = 0;
+  ;
+  for (const file of files) {;
+    try {;
+      const content = fs.readFileSync(file, 'utf8');
+      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+        if (fixMergeConflicts(file)) {;
+          fixedCount++;        }
   let fixedCount = 0,;
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+
         if (fixMergeConflicts(file)) {;
           fixedCount++;
         }
@@ -64,3 +148,9 @@ async function main() {;
 }
 ;
 main().catch(console.error),;
+
+main().catch(console.error),;
+
+
+
+

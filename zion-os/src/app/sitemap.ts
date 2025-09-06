@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
@@ -17,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation',;
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant',;
     '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub',;
+
     '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
@@ -25,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {;
   const complianceServices = [;
     '/soc2-compliance-automation'];
   const allRoutes = [;
+
     ...routes,;
     ...aiServices,;
     ...quantumServices,;
@@ -32,7 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     ...complianceServices];
   return allRoutes.map((route) => ({;
     url: `${baseUrl}${route}`,;
+
     lastModified: new Date();
     changeFrequency: 'weekly';
+
     priority: route === '' ? 1 : 0.8}));
 }

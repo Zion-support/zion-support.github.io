@@ -1,7 +1,39 @@
 #!/usr/bin/env node
-
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
+=======
+>>>>>>> main
+
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = 0;
+    this.totalErrors = 0;
+  }
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  async fixAllSyntaxErrors() {
+    this.log('🔧 Starting comprehensive syntax error fixing...');
+    
+    try {
+      // Get all TypeScript and JavaScript files
+      const files = this.getAllCodeFiles();
+      this.log(`Found ${files.length} files to check`);
+      
+      for (const file of files) {
+        await this.fixFileSyntax(file);
+      }
+      
+      this.log(`✅ Fixed syntax errors in ${this.fixedFiles} files`);
+      this.log(`📊 Total errors fixed: ${this.totalErrors}`);
+      
+    } catch (error) {
+      this.log(`❌ Error during syntax fixing: ${error.message}`);
+      throw error;
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -93,6 +125,7 @@ for (const file of files) {;
   }
 }
 
+<<<<<<< HEAD
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
@@ -193,3 +226,7 @@ if (require.main === module) {;
 }
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
+=======
+console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
+console.log('🎯 Comprehensive syntax fixing complete!');
+>>>>>>> main

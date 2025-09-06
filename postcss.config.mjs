@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 export default {
-
-  plugin: s: {
-    tailwindcs: s: {},
-    autoprefixe: r: {},
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
   },
-
 };
-=======
-export default {;
-  plugins: {;
-  tailwindcss: {},
-    autoprefixer: {},,,
-},,,
-};
->>>>>>> origin/automation-fixes

@@ -8,90 +8,71 @@ function fixSyntaxErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Fix common syntax errors
-    content = content.replace(/;\s*;/g, ';');
-    content = content.replace(/;\s*$/gm, '');
-    content = content.replace(/;\s*{/g, ' {');
-    content = content.replace(/;\s*}/g, ' }');
-    content = content.replace(/;\s*return/g, '; return');
-    content = content.replace(/;\s*export/g, '; export');
-    content = content.replace(/;\s*import/g, '; import');
+    // Remove merge conflict markers
+    content = content.replace(/([\s\S]*?)
+    content = content.replace(//g, '');
+    content = content.replace(/
     
-    // Fix JSX syntax
-    content = content.replace(/;\s*<([^>]+)>/g, ' <$1>');
-    content = content.replace(/;\s*<\/[^>]+>/g, ' </>');
+    // Fix common syntax issues
+    content = content.replace(/(\w+)\s*(\w+)\s*:/g, '$1: $2:');
+    content = content.replace(/(\w+):\s*(\w+)\s*:/g, '$1: $2:');
     
-    // Fix function declarations
-    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*;/g, 'function $1() {');
-    content = content.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*;/g, 'export default function $1() {');
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    // Fix object syntax
-    content = content.replace(/{\s*;\s*}/g, '{}');
-    content = content.replace(/{\s*;\s*([^}]+)\s*}/g, '{$1}');
-    
-    // Fix array syntax
-    content = content.replace(/\[\s*;\s*\]/g, '[]');
-    content = content.replace(/\[\s*;\s*([^\]]+)\s*\]/g, '[$1]');
-    
-    // Fix import statements
-    content = content.replace(/import\s+([^;]+);\s*;/g, 'import $1;');
-    
-    // Fix export statements
-    content = content.replace(/export\s+([^;]+);\s*;/g, 'export $1;');
-    
-    // Fix duplicate imports
-    const lines = content.split('\n');
-    const seenImports = new Set();
-    const filteredLines = [];
-    
-    for (const line of lines) {
-      if (line.trim().startsWith('import ')) {
-        if (!seenImports.has(line.trim())) {
-          seenImports.add(line.trim());
-          filteredLines.push(line);
-        }
-      } else {
-        filteredLines.push(line);
-      }
-    }
-    
-    content = filteredLines.join('\n');
-    
-    // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors: in: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
+function findFilesWithErrors(dir) {
+  const files = [];
+  const extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs'];
   
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixedCount += processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        if (!['node_modules', '.git', '.next', 'dist', 'build', 'backup-merge-conflicts'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(fullPath);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
       }
     }
   }
   
-  return fixedCount;
+  traverse(dir);
+  return files;
 }
 
 // Main execution
-console.log('Starting syntax error fixing...');
-const fixedCount = processDirectory('/workspace/src');
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
+console.log('🔍 Scanning for files with syntax errors...');
+const files = findFilesWithErrors(process.cwd());
+
+console.log(`Found ${files.length} files to check`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
+console.log('🎉 Syntax error fixing complete!');

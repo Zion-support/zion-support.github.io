@@ -1,3 +1,19 @@
+
+
+import React from 'react';
+
+
+import SEO from '../components/SEO';
+import Link from 'next/link';
+
+
+
+            Automate SOC 2 readiness with continuous controls, evidence;
+            pipelines, and prebuilt auditor workflows. Integrates with cloud;
+            providers and ticketing systems.;
+          </p>;
+
+import React from 'react',
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
@@ -18,34 +34,37 @@ import Link from 'next/link';
             pipelines, and prebuilt auditor workflows. Integrates with cloud
             providers and ticketing systems.
           </p>
-
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
+
+
               {
-                title: 'Controls Library',
-                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.',
-              },
+                title: 'Controls Library'
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'
+              }
               {
-                title: 'Evidence Automation',
-                desc: 'Pull evidence from cloud, CI, ticketing, security tools.',
-              },
+                title: 'Evidence Automation'
+                desc: 'Pull evidence from cloud, CI, ticketing, security tools.'
+              }
               {
-                title: 'Vendor Risk',
-                desc: 'Automated questionnaires, tracking, and remediation workflows.',
-              },
+                title: 'Vendor Risk'
+                desc: 'Automated questionnaires, tracking, and remediation workflows.'
+              }
               {
-                title: 'Asset Inventory',
-                desc: 'Infrastructure and device inventory with configuration checks.',
-              },
+                title: 'Asset Inventory'
+                desc: 'Infrastructure and device inventory with configuration checks.'
+              }
               {
-                title: 'Workflow & Tasks',
-                desc: 'Assign remediation tasks, SLAs, and approvals.',
-              },
+                title: 'Workflow & Tasks'
+                desc: 'Assign remediation tasks, SLAs, and approvals.'
+              }
               {
-                title: 'Audit Room',
-                desc: 'Share evidence securely with auditors; immutable logs.',
-              },
+
+                title: 'Audit Room'
+                desc: 'Share evidence securely with auditors; immutable logs.'
+              }
             ].map(f => (
+
               <div
                 key={f.title}
                 className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'
@@ -54,8 +73,8 @@ import Link from 'next/link';
                 <p className='mt-2 text-sm text-gray-300'>{f.desc}</p>
               </div>
             ))}
-          </div>
 
+          </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -122,7 +141,6 @@ import Link from 'next/link';
               .
             </p>
           </div>
-
           <div className='mt-12 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'
@@ -142,12 +160,5 @@ import Link from 'next/link';
       </section>
     </>
   );					<div className="mt-12 flex flex-wrap items-center gap-4">
-						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
-						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
-						<span className="text-gray-400">Call: +1 302 464 0950</span>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}
+
+

@@ -1,3 +1,22 @@
+
+
+
+"use client",
+import { useEffect  } from './react';,
+interface FirstInputEntry extends PerformanceEntry {
+  processing_start: number,
+  processing_end: number,
+  target?: Element;
+}
+export /**
+ * Analytics - Function description
+ */
+function Analytics() {
+  useEffect (() => {
+
+
+
+
 "use client",;
 import { useEffect } from "react",;
 interface FirstInputEntry extends PerformanceEntry {;
@@ -8,14 +27,53 @@ interface FirstInputEntry extends PerformanceEntry {;
 ;
 export function Analytics() {;
   useEffect(() => {;
+
+
+
+
+
     // Performance monitoring;
-    if (typeof window !== "undefined") {;
+    // Check condition
+if ( {) {
+  $2
+}
       // Core Web Vitals monitoring;
-      const observer = new PerformanceObserver((list) => {;
-        for (const entry of list.getEntries()) {;
-          if (entry.entryType === "largest-contentful-paint") {;
-            // // // console.log("LCP:", entry.startTime);
+      const observer = new PerformanceObserver ((list) => {
+        for (const entry of list.get_entries ()) {
+          // Check condition
+if ( {) {
+  $2
+}
+            // // // console.log ("LCP:", entry.start_time);
           }
+
+
+
+          // Check condition
+if ( {) {
+  $2
+}
+            const firstInputEntry = entry as FirstInputEntry,
+            // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
+
+
+
+
+          }
+        }
+      });
+      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
+      // Cumulative Layout Shift monitoring;
+
+
+
+      return () => {;
+        observer.disconnect();
+
+        observer2.disconnect();
+
+
+      return () => {observer.disconnect();
           if (entry.entryType === "first-input") {;
             const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
@@ -42,6 +100,9 @@ export function Analytics() {;
       return () => {;
         observer.disconnect();
         observer2.disconnect();
+
+
+
       }
     }
   }, []);

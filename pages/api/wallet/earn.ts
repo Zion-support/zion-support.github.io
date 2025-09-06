@@ -1,42 +1,83 @@
 
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
-  }
 
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  const { userId, amount, reason, metadata } = req.body |{}
+  if (!userId |typeof amount !== "number" |!reason) {
+    return res.status(400).json({ error: "userId, amount, reason required" })
+
+
+
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { earn_tokens  } from '../../../utils / token / service';,
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
+  $2
+}
+
+
+
+
+  };
+};
+
+
+
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  const { userId, amount, reason, metadata } = req.body |{}
+  if (!userId |typeof amount !== "number" |!reason) {
+    return res.status(400).json({ error: "userId, amount, reason required" })
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { earn_tokens  } from '../../../utils / token / service';,
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
+  $2
+}
+
+
+  };
+};
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { earnTokens } from "../../../utils/token/service";
+export default function handler(req, res) {
   try {
-    const { amount, userId, reason } = req.body;
-    
-    if (!amount || !userId) {
-      return res.status(400).json({ error: 'Amount and userId are required' });
-    }
 
-    const supabase = getServerSupabase();
-    
-    const { data, error } = await supabase
-      .from('wallet_transactions')
-      .insert({
-        user_id: userId,
-        action: 'earn',
-        amount: Math.abs(amount),
-        reason: reason || 'Earned tokens',
-        status: 'completed',
-        created_at: new Date().toISOString()
-      })
-      .select()
-      .single();
 
-    if (error) {
-      return res.status(500).json({ error: error.message });
-    }
 
-    res.status(200).json({ transaction: data });
-  } catch (err: any) {
-    return res.status(400).json({ error: err.message });
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { userId, amount, reason, metadata } = req.body || {};
+  if (!userId || typeof amount !== "number" || !reason) {;
+    return res.status(400).json({ error: "userId, amount, reason required" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
+
+  }
+}
+
+  }
+}
+  }
+}
+
+
+
 

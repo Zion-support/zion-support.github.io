@@ -1,43 +1,85 @@
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
+import {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import {
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,
+  ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
-
 export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
+
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+
+} from "../../../../utils/auth";
+export default async function handler(
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
   const { id } = req.query;
+
   if (typeof id !== "string")
-    return res.status(400).json({ error: "Invalid id" });
+    return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
 
-  if (req.method === "POST") {
+
+  const user = parseUserFromRequest(req);
+
+  if (req.method === 'POST') {
     const dispute = await getDisputeById(id);
-    if (!dispute) return res.status($1).json({ $2 });
+    if (!dispute) return res.status(404).json({ error: 'Not found' });
     try {
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+
+
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
+
+
+
     } catch (e: any) {
-      return res.status(e.statusCode || 403).json({ error: "Forbidden" });
+
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
-    const { body } = req.body || {};
+    const { body } = req && req.body || {};
     if (!body || typeof body !== "string")
-      return res.status(400).json({ error: "Message body required" });
+      return res && res.status(400).json({ error: "Message body required" });
+
+
     const now = new Date().toISOString();
-    dispute.messages.push({
-      id: `${Date.now()}`,
-      authorUserId: user.id,
+    dispute && dispute.messages.push({
+      id: `${Date && Date.now()}`,
+      authorUserId: user && user.id,
+
       authorRole:
-        user.role === "admin"
+        user && user.role === "admin"
           ? "admin"
-          : user.id === dispute.clientUserId
+          : user && user.id === dispute && dispute.clientUserId
             ? "client"
-            : "talent",
-      body,
-      createdAt: now,
+            : "talent"
+      body
+      createdAt: now
     });
+
+
+
+  res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
+
+}
+
+
+
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
@@ -46,3 +88,44 @@ export default async function handler(
   res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
+
+
+
+    dispute.updatedAt = now;
+    await upsertDispute(dispute);
+    return res.status(201).json({ dispute });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.setHeader('Allow', 'POST');
+  return res.status(405).end('Method Not Allowed');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
+

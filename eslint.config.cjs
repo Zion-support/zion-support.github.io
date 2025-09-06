@@ -1,8 +1,6 @@
 const js = require('@eslint/js');
 const reactHooks = require('eslint-plugin-react-hooks');
 const reactRefresh = require('eslint-plugin-react-refresh');
-const typescriptEslint = require('@typescript-eslint/eslint-plugin');
-const typescriptParser = require('@typescript-eslint/parser');
 
 module.exports = [
   {
@@ -24,17 +22,6 @@ module.exports = [
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      '@typescript-eslint': typescriptEslint,
-    },
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 2022,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -42,12 +29,11 @@ module.exports = [
         'warn',
         { allowConstantExport: true },
       ],
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
+      'no-unused-vars': [
         'warn',
         { argsIgnorePattern: '^_' }
       ],
-      '@typescript-eslint/no-explicit-any': 'warn'
+      'no-explicit-any': 'warn'
     },
   },
   {

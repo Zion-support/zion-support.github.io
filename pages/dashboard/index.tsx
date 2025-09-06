@@ -1,6 +1,11 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import EmptyState from '../../components/ui/EmptyState',;
+
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import EmptyState from '../../components/ui/EmptyState';
+
+
+
+
 const Dashboard: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
@@ -8,8 +13,28 @@ const Dashboard: NextPage = () => {
         <title>Dashboard - Zion</title>
       </Head>
 
-      <h1 className="text-2xl font-semibold">Dashboard</h1>
 
+
+
+          icon={<span>🧰</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          secondaryAction={{ label: 'Explore talent', href: '/talent' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+      <h1 className="text-2xl font-semibold">Dashboard</h1>
       <section>
         <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
         <EmptyState
@@ -18,20 +43,38 @@ const Dashboard: NextPage = () => {
           icon={<span>🧰</span>}
           primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
           secondaryAction={{ label: 'Explore talent', href: '/talent' }}
+
         />
       </section>
+
+        />
+      </section>
+
 
       <section>
         <h2 className="text-lg font-semibold mb-2">Messages</h2>
         <EmptyState
           title="No messages yet"
-          description="When conversations start, they’ll show up here."
-          icon={<span>💬</span>}
-          primaryAction={{ label: 'Browse services', href: '/services' }}
-        />
-      </section>
-    </div>
-  )
-},
+          icon={<span>💬</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          primaryAction={{ label: 'Browse services', href: '/services' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-export default Dashboard,;
+
+
+
+    </div>;
+  );
+},;
+export default Dashboard;
+
+
+
+
+

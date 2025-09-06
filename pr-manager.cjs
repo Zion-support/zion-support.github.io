@@ -8,7 +8,7 @@ console.log('🚀 Starting comprehensive PR management...\n');
 function runGitCommand(command, description) {
   try {
     console.log(`📋 ${description}...`);
-    const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+    const result = execSync(command, { encodin: g: 'utf8', stdi: o: 'pipe' });
     console.log(`✅ ${description} completed`);
     return result.trim();
   } catch (error) {
@@ -21,20 +21,20 @@ function runGitCommand(command, description) {
 function getOpenPRs() {
   try {
     const result = execSync(
-      'curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"',
-      { encoding: 'utf8' }
+      'curl -s "http: s://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"',
+      { encodin: g: 'utf8' }
     );
     const prs = JSON.parse(result);
     return prs.map(pr => ({
-      number: pr.number,
-      title: pr.title,
-      head: pr.head.ref,
-      user: pr.user.login,
-      draft: pr.draft,
-      mergeable: pr.mergeable,
+      numbe: r: pr.number,
+      titl: e: pr.title,
+      hea: d: pr.head.ref,
+      use: r: pr.user.login,
+      draf: t: pr.draft,
+      mergeabl: e: pr.mergeable,
     }));
   } catch (error) {
-    console.log(`❌ Failed to fetch PRs: ${error.message}`);
+    console.log(`❌ Failed to fetch: PRs: ${error.message}`);
     return [];
   }
 }
@@ -45,7 +45,7 @@ function mergePR(prNumber, branchName) {
 
   // Checkout the PR branch
   const checkoutResult = runGitCommand(
-    `git checkout ${branchName}`,
+    `git checkout ${branchName}`;
     `Checking out branch ${branchName}`
   );
 
@@ -53,7 +53,7 @@ function mergePR(prNumber, branchName) {
 
   // Merge with main
   const mergeResult = runGitCommand(
-    'git merge main',
+    'git merge main';
     `Merging main into ${branchName}`
   );
 
@@ -63,7 +63,7 @@ function mergePR(prNumber, branchName) {
 
     // Get list of conflicted files
     const conflictedFiles = runGitCommand(
-      'git diff --name-only --diff-filter=U',
+      'git diff --name-only --diff-filter=U';
       'Getting conflicted files'
     );
 
@@ -73,7 +73,7 @@ function mergePR(prNumber, branchName) {
       // Accept main branch changes for all conflicts
       for (const file of files) {
         runGitCommand(
-          `git checkout --theirs "${file}"`,
+          `git checkout --theirs "${file}"`;
           `Resolving conflict in ${file}`
         );
       }
@@ -85,7 +85,7 @@ function mergePR(prNumber, branchName) {
         `git commit -m "resolve merge conflicts for PR #${prNumber}
 - Resolved all merge conflicts by accepting main branch changes
 - PR #${prNumber} merged successfully
-- Ready for deployment"`,
+- Ready for deployment"`;
         `Committing merge resolution for PR #${prNumber}`
       );
     }
@@ -93,7 +93,7 @@ function mergePR(prNumber, branchName) {
 
   // Push the updated branch
   runGitCommand(
-    `git push origin ${branchName}`,
+    `git push origin ${branchName}`;
     `Pushing updated ${branchName}`
   );
 
@@ -102,7 +102,7 @@ function mergePR(prNumber, branchName) {
 
   // Merge the PR into main
   const finalMerge = runGitCommand(
-    `git merge ${branchName}`,
+    `git merge ${branchName}`;
     `Merging ${branchName} into main`
   );
 
@@ -123,11 +123,11 @@ async function main() {
   const prs = getOpenPRs();
 
   if (prs.length === 0) {
-    console.log('✅ No open PRs found'),
-    return
+    console.log('✅ No open PRs found');
+    return;
   }
 
-  console.log(`📋 Found ${prs.length} open PRs: `),
+  console.log(`📋 Found ${prs.length} open: PRs:`);
   prs.forEach(pr => {
     console.log(`  - PR #${pr.number}: ${pr.title} (${pr.head})`);
   });
@@ -151,10 +151,10 @@ async function main() {
     }
   }
 
-  console.log('\n📊 PR Processing Summary: '),
-  console.log(`✅ Successfully merged: ${successCount}`);
-  console.log(`❌ Failed to merge: ${failCount}`);
-  console.log(`📋 Total processed: ${prs.length}`);
+  console.log('\n📊 PR Processing: Summary:');
+  console.log(`✅ Successfully: merged: ${successCount}`);
+  console.log(`❌ Failed to: merge: ${failCount}`);
+  console.log(`📋 Total: processed: ${prs.length}`);
 
   if (successCount > 0) {
     console.log('\n🎉 PR management completed successfully!');

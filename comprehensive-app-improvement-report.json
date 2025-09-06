@@ -1,16 +1,13 @@
 {
-  "timestamp": "2025-09-06T09:58:01.679Z",
-  "totalDuration": 50159,
-  "successfulTasks": 4,
+  "timestamp": "2025-09-06T18:02:23.333Z",
+  "totalDuration": 105291,
+  "successfulTasks": 6,
   "totalTasks": 8,
   "results": {
     "performanceOptimization": {
-      "success": false,
-      "duration": 24437,
-      "errors": [
-        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n✗ Build failed in 39ms\nerror during build:\nCould not resolve \"./index.css\" from \"src/main.tsx\"\nfile: /workspace/src/main.tsx\n    at getRollupError (file:///workspace/node_modules/rollup/dist/es/shared/parseAst.js:401:41)\n    at error (file:///workspace/node_modules/rollup/dist/es/shared/parseAst.js:397:42)\n    at ModuleLoader.handleInvalidResolvedId (file:///workspace/node_modules/rollup/dist/es/shared/node-entry.js:21534:24)\n    at file:///workspace/node_modules/rollup/dist/es/shared/node-entry.js:21494:26\n",
-        "Command failed: npm run optimize:images\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/optimize-images.js:2\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/scripts/optimize-images.js:2:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
-      ],
+      "success": true,
+      "duration": 53198,
+      "errors": [],
       "improvements": [
         "Implement code splitting for better bundle size",
         "Add image optimization and lazy loading",
@@ -20,11 +17,9 @@
       ]
     },
     "securityEnhancement": {
-      "success": false,
-      "duration": 1005,
-      "errors": [
-        "Command failed: npm run security:audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/security-audit.js:2\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/scripts/security-audit.js:2:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
-      ],
+      "success": true,
+      "duration": 713,
+      "errors": [],
       "improvements": [
         "Implement Content Security Policy (CSP)",
         "Add security headers middleware",
@@ -34,9 +29,11 @@
       ]
     },
     "accessibilityImprovement": {
-      "success": true,
-      "duration": 94,
-      "errors": [],
+      "success": false,
+      "duration": 100,
+      "errors": [
+        "Command failed: npm run automation:accessibility\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/automation/accessibility-checker.cjs:65\n      timestam: p: new Date().toISOString(),\n                 ^\n\nSyntaxError: Unexpected token ':'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      ],
       "improvements": [
         "Add ARIA labels and roles",
         "Implement keyboard navigation",
@@ -47,7 +44,7 @@
     },
     "seoOptimization": {
       "success": true,
-      "duration": 128,
+      "duration": 241,
       "errors": [],
       "improvements": [
         "Optimize meta tags and descriptions",
@@ -59,9 +56,9 @@
     },
     "codeQualityEnhancement": {
       "success": false,
-      "duration": 23066,
+      "duration": 43852,
       "errors": [
-        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:4831) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
       ],
       "improvements": [
         "Implement comprehensive error handling",
@@ -73,7 +70,7 @@
     },
     "userExperienceImprovement": {
       "success": true,
-      "duration": 124,
+      "duration": 102,
       "errors": [],
       "improvements": [
         "Implement responsive design improvements",
@@ -85,7 +82,7 @@
     },
     "monitoringSetup": {
       "success": true,
-      "duration": 202,
+      "duration": 188,
       "errors": [],
       "improvements": [
         "Set up application performance monitoring",
@@ -96,11 +93,9 @@
       ]
     },
     "deploymentOptimization": {
-      "success": false,
-      "duration": 554,
-      "errors": [
-        "Command failed: npm run build:production\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n✗ Build failed in 43ms\nerror during build:\nCould not resolve \"./index.css\" from \"src/main.tsx\"\nfile: /workspace/src/main.tsx\n    at getRollupError (file:///workspace/node_modules/rollup/dist/es/shared/parseAst.js:401:41)\n    at error (file:///workspace/node_modules/rollup/dist/es/shared/parseAst.js:397:42)\n    at ModuleLoader.handleInvalidResolvedId (file:///workspace/node_modules/rollup/dist/es/shared/node-entry.js:21534:24)\n    at file:///workspace/node_modules/rollup/dist/es/shared/node-entry.js:21494:26\n"
-      ],
+      "success": true,
+      "duration": 3516,
+      "errors": [],
       "improvements": [
         "Implement CI/CD pipeline optimization",
         "Set up automated testing in deployment",
@@ -111,13 +106,13 @@
     }
   },
   "summary": {
-    "performanceOptimized": false,
-    "securityEnhanced": false,
-    "accessibilityImproved": true,
+    "performanceOptimized": true,
+    "securityEnhanced": true,
+    "accessibilityImproved": false,
     "seoOptimized": true,
     "codeQualityEnhanced": false,
     "userExperienceImproved": true,
     "monitoringSetup": true,
-    "deploymentOptimized": false
+    "deploymentOptimized": true
   }
 }

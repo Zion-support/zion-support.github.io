@@ -1,55 +1,62 @@
-import NextAuth from 'next-auth';
-import { NextAuthOptions } from 'next-auth';
-import CredentialsProvider from 'next-auth/providers/credentials';
 
-const authOptions: NextAuthOptions = {
-  providers: [
-    CredentialsProvider({
-      name: 'credentials',
-      credentials: {
-        email: { label: 'Email', type: 'email' },
-        password: { label: 'Password', type: 'password' }
-      },
-      async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) {
-          return null;
-        }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET' && req.method !== 'POST') {
+    res.status(405).end()
 
-        // TODO: Implement actual authentication logic
-        // For now, return a mock user
-        if (credentials.email === 'admin@ziontechgroup.com' && credentials.password === 'password') {
-          return {
-            id: '1',
-            email: credentials.email,
-            name: 'Admin User'
-          };
-        }
 
-        return null;
-      }
-    })
-  ],
-  pages: {
-    signIn: '/auth/signin',
-    error: '/auth/error'
-  },
-  callbacks: {
-    async jwt({ token, user }) {
-      if (user) {
-        token.id = user.id;
-      }
-      return token;
-    },
-    async session({ session, token }) {
-      if (token) {
-        session.user.id = token.id as string;
-      }
-      return session;
-    }
-  },
-  session: {
-    strategy: 'jwt'
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET' && req.method !== 'POST') {
+    res.status(405).end()
+
+    return
   }
-};
+  // TODO: Implement authentication logic here
+  res.status(200).json({ message: 'Auth endpoint placeholder' })
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET' && req.method !== 'POST') {
+    res.status(405).end();
+    return
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+  // TODO: Implement authentication logic here
+  res.status(200).json({ message: 'Auth endpoint placeholder' })
 
-export default NextAuth(authOptions);
+
+
+  }
+}
+  // TODO: Implement authentication logic here
+  res.status(200).json({ message: 'Auth endpoint placeholder' })
+} ;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req, res) {
+  try {
+  if (req.method !== 'GET' && req.method !== 'POST') {;
+    res.status(405).end();
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // TODO: Implement authentication logic here;
+  res.status(200).json({ message: 'Auth endpoint placeholder' });
+} ;
+
+
+
+
+
+
+
+

@@ -5,12 +5,12 @@ const fs = require('fs');
 
 function runCommand(command, description) {
   try {
-    console.log(`Runnin: ${description}`);
-    const result = execSync(command, { encodin: 'utf8', cw: '/workspace' });
+    console.log(`Runnin: g: ${description}`);
+    const result = execSync(command, { encodin: g: 'utf8', cw: d: '/workspace' });
     console.log(`✅ ${description} completed`);
     return result;
   } catch (error) {
-    console.error(`❌ ${description} faile: `, error.message);
+    console.error(`❌ ${description} faile: d:`, error.message);
     throw error;
   }
 }

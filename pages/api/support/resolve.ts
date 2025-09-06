@@ -1,40 +1,83 @@
 
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase';
-
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',;
+;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'PATCH') {
-    res.setHeader('Allow', 'PATCH');
-    return res.status(405).end('Method Not Allowed');
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  const { id } = req.body as { id: string },
+  if (!id) return res.status(400).json({ error: 'id required' }),
+
+
+
   }
 
-  try {
-    const { ticketId, resolution } = req.body;
-    
-    if (!ticketId) {
-      return res.status(400).json({ error: 'Ticket ID is required' });
-    }
 
-    const supabase = getServerSupabase();
-    
-    const { data, error } = await supabase
-      .from('support_tickets')
-      .update({ 
-        status: 'resolved',
-        resolution: resolution || 'Issue resolved',
-        resolved_at: new Date().toISOString()
-      })
-      .eq('id', ticketId)
-      .select()
-      .single();
+  }
+  return res.status(200).json({ ok: true })
+}
 
-    if (error) {
-      return res.status(500).json({ error: error.message });
-    }
 
-    res.status(200).json({ ok: true });
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to resolve ticket' });
+
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { read_json, write_json } from '../../../utils / fs_db',
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  const { id } = req.body as { id: string },
+  if (return res.status (400).json ({ error: 'id required' }), ) {
+  $2
+}
+  const requests = read_json < any[]>('support / requests.json', []),
+  const idx = requests.find_index ((r) => r.id === id),
+  // Check condition
+if ( {) {
+  $2
+}
+    requests[idx].status = 'resolved',
+    requests[idx].resolved_at = Date.now (),
+    write_json ('support / requests.json', requests);
+  }
+  return res.status (200).json ({ ok: true });
+}
+;
+
+
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
+  return res.status(200).json({ ok: true });
+
+};
+
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+}
+
+
+
+
+
 

@@ -1,4 +1,5 @@
-export interface TenantInfo {
+
+
   id: string;
   brand_name: string;
   subdomain: string;
@@ -8,13 +9,40 @@ export interface TenantInfo {
   theme_preset: string;
   landing_page_copy: {
     headline: string;
-    subtitle: string;
+
+}
+
+export interface TenantResponse {
+
+    subtitle: string,
     cta: string;
-  };
+  }
   is_active: boolean;
+}
+export interface TenantResponse {
+  tenant: TenantInfo | null,
+  error?: string;
+}
+}
+
+
+    cta: string;
+  },;
+  is_active: boolean;
+}
+;
+export interface TenantResponse {;
+  tenant: TenantInfo | null;
+  error?: string;
+}
+;
+
 }
 
 export interface TenantResponse {
   tenant: TenantInfo | null;
   error?: string;
 }
+;
+
+

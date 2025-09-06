@@ -1,53 +1,47 @@
-import { Button } from '@/components/ui/button'
-import { Loader2 } from 'lucide-react'
-import { NavigationButtonsProps } from './types'
-import { Button } from "@/components/ui/button"
-import { NavigationButtonsProps } from "./types"
-export const NavigationButtons = ({
-  onBack
-  onNext
-  isNextDisabled = false
-  backLabel = "Back"
-  nextLabel = "Next"
-  isLoading = false}: NavigationButtonsProps) => {
+import { Loader2 } from 'lucide-react';
+import { NavigationButtonsProps } from "./types";
+export const NavigationButtons = ({;
+  onBack;
+  onNext;
+  isNextDisabled = false;
+  backLabel = "Back";
+  nextLabel = "Next";
+  isLoading = false}: NavigationButtonsProps) => {;
   return (
-    <div className="flex justify-between">
-      {onBack && (
-        <Button variant='outline' onClick={onBack}>
-export const NavigationButtons = ({
-  onBack,
-  onNext,
-  isNextDisabled = false,
-  backLabel = 'Back',
-  nextLabel = 'Next',
-  isLoading = false,
-}: NavigationButtonsProps) => {
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant='outline' onClick={onBack}>;
+export const NavigationButtons = ({;
+  onBack,;
+  onNext,;
+  isNextDisabled = false,;
+  backLabel = 'Back',;
+  nextLabel = 'Next',;
+  isLoading = false,;
+}: NavigationButtonsProps) => {;
   return (
-    <div className='flex justify-between'>
-      {onBack && (
+    <div className='flex justify-between'>;
+      {onBack && (;
         <Button variant='outline' onClick={onBack}>          {backLabel}
         <Button variant="outline" onClick={onBack}>
   return (
-    <div className="flex justify-between">
-      {onBack && (
-        <Button variant="outline" onClick={onBack}>
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant="outline" onClick={onBack}>;
           {backLabel}
-        </Button>
+        </Button>;
       )}
-      {onNext && (
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+
+
           {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
-        </Button>
+        </Button>;
       )}
-    </div>
-  )
-}
+
+    </div>;
+  );
+};
+
 "          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
-        </Button>
+        </Button>;
       )}
-    </div>
-  )
-}
-"  )
-}

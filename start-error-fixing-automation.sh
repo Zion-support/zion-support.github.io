@@ -1,6 +1,4 @@
 #!/bin/bash
-<<<<<<< HEAD
-=======
 # Error Fixing Automation Startup Script
 # This script starts all PM2 error fixing automations
 echo "Starting Error Fixing Automation System..."
@@ -12,7 +10,8 @@ pm2 delete all 2>/dev/null || true
 # Start the error fixing ecosystem
 echo "Starting PM2 error fixing ecosystem..."
 pm2 start ecosystem.error-fixing.config.cjs
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+
+
 # Error Fixing Automation Startup Script
 # This script starts the comprehensive error fixing automation system
 # Error Fixing Automation PM2 Management Script
@@ -59,8 +58,6 @@ pm2 start ecosystem-error-fixing.config.cjs --update-env
 # Show status
 echo "PM2 Status:"
 pm2 status
-<<<<<<< HEAD
-=======
 # Show logs
 echo "Recent logs:"
 pm2 logs --lines 20
@@ -68,7 +65,8 @@ echo "Error fixing automation system started successfully!"
 echo "Monitor with: pm2 status"
 echo "View logs with: pm2 logs"
 echo "Stop with: pm2 stop all"
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+
+
 echo "📋 Available commands:"
 echo "  pm2 logs error-fixer-automation          # View main error fixer logs"
 echo "  pm2 logs typescript-error-fixer          # View TypeScript error fixer logs"
@@ -281,8 +279,4 @@ case "${1:-help}" in
         show_help
         exit 1
         ;;
-<<<<<<< HEAD
 esac
-=======
-esac
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

@@ -1,46 +1,73 @@
-export interface TokenConfig {
   tokenName: string;
   tokenSymbol: string;
-  decimals: number;
-  totalSupply: number;
-  issueRate: number;
-  redeemRate: number;
-  minIssueAmount: number;
-  maxIssueAmount: number;
-}
+
+
+
+
+
+export interface TokenConfig {
+
+export interface TokenConfig {
+
 
 class TokenStore {
   private config: TokenConfig = {
-    tokenName: 'ZION$',
-    tokenSymbol: 'ZION',
+    token_name: 'ZION$',
+    token_symbol: 'ZION',
     decimals: 18,
-    totalSupply: 1000000000,
-    issueRate: 1.0,
-    redeemRate: 1.0,
+    total_supply: 1000000000,
+    issue_rate: 1.0,
+    redeem_rate: 1.0,
     minIssueAmount: 1,
-    maxIssueAmount: 10000
-  };
+    maxIssueAmount: 10000;
+  }
+;
 
 export interface TokenStoreData {
+  wallets: Record < string, Wallet>;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+}
+class TokenStore {
+  private config: TokenConfig = {
+    tokenName: 'ZION$'
+    tokenSymbol: 'ZION'
+    decimals: 18
+    totalSupply: 1000000000
+    issueRate: 1.0
+    redeemRate: 1.0
+    minIssueAmount: 1
+    maxIssueAmount: 10000
+
+  }
+export interface TokenStoreData {
+
+
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
 }
-
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
-    if (!fs.existsSync(STORE_FILE)) return null;
-    const raw = fs.readFileSync(STORE_FILE, 'utf8');
-    const parsed = JSON.parse(raw) as TokenStoreData;
-    return parsed;
-  } catch {
-    return null;
-  }
 
-  setConfig(newConfig: Partial<TokenConfig>): void {
-    this.config = { ...this.config, ...newConfig };
+
+
+  set_config (new_config: Partial < TokenConfig>): void {
+    this.config = { ...this.config, ...new_config }
   }
 }
+export const token_store = new TokenStore ();
+;
 
-export const tokenStore = new TokenStore();
+
+
+
+
+
+
+
+
+
+
+

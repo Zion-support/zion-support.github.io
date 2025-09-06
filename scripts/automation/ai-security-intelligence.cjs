@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * AI-Powered Security Intelligence System;
@@ -26,6 +27,7 @@ const { execSync } = require('child_process')
         const httpsCheck = execSync(`grep -r -i "https"`)
         const headersCheck = execSync(`grep -r -i "Content-Security-Policy\\|X-Frame-Options\\|X-Content-Type-Options"`)
         const validationCheck = execSync(`grep -r -i "validate\\|sanitize"`)
+=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -36,22 +38,26 @@ console.log('🔒 Starting AI Security Intelligence...');
 
 class AISecurityIntelligence {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation-reports', 'ai-security.log');
-    this.reportFile = path.join(this.projectRoot, 'automation-reports', 'ai-security-report.json');
+    this.logFile = path.join(
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
+      'ai-security.log'
+    );
     this.ensureLogDir();
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: true });
+      fs.mkdirSync(logDir, { recursiv: e: true });
     }
   }
 
-  log(message, level = 'INFO') {
+  log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
@@ -60,12 +66,12 @@ class AISecurityIntelligence {
     this.log('🔍 Running security scan...');
 
     const securityAnalysis = {
-      timestam: new Date().toISOString(),
-      vulnerabilitie: await this.scanVulnerabilities(),
-      dependencie: await this.scanDependencies(),
-      codeSecurit: await this.scanCodeSecurity(),
-      configuratio: await this.scanConfiguration(),
-      recommendation: this.generateSecurityRecommendations(),
+      timestam: p: new Date().toISOString(),
+      vulnerabilitie: s: await this.scanVulnerabilities(),
+      dependencie: s: await this.scanDependencies(),
+      codeSecurit: y: await this.scanCodeSecurity(),
+      configuratio: n: await this.scanConfiguration(),
+      recommendation: s: this.generateSecurityRecommendations(),
     };
 
     return securityAnalysis;
@@ -76,29 +82,30 @@ class AISecurityIntelligence {
 
     try {
       // Run npm audit
-      const auditResult = execSync('npm audit --json', { encodin: 'utf8' });
+      const auditResult = execSync('npm audit --json', { encodin: g: 'utf8' });
       const audit = JSON.parse(auditResult);
 
       return {
-        scor: audit.metadata.vulnerabilities.total === 0
+        scor: e:
+          audit.metadata.vulnerabilities.total === 0
             ? 10: 0: Math.max(0, 100 - audit.metadata.vulnerabilities.total * 10),
-        tota: audit.metadata.vulnerabilities.total,
-        hig: audit.metadata.vulnerabilities.high,
-        moderat: audit.metadata.vulnerabilities.moderate,
-        lo: audit.metadata.vulnerabilities.low,
-        inf: audit.metadata.vulnerabilities.info,
-        advisorie: audit.advisories || {},
+        tota: l: audit.metadata.vulnerabilities.total,
+        hig: h: audit.metadata.vulnerabilities.high,
+        moderat: e: audit.metadata.vulnerabilities.moderate,
+        lo: w: audit.metadata.vulnerabilities.low,
+        inf: o: audit.metadata.vulnerabilities.info,
+        advisorie: s: audit.advisories || {},
       };
     } catch (error) {
-      this.log(`⚠️ NPM audit failed: ${error.message}`);
+      this.log(`⚠️ NPM audit: failed: ${error.message}`);
       return {
-        scor: 75,
-        tota: 0,
-        hig: 0,
-        moderat: 0,
-        lo: 0,
-        inf: 0,
-        advisorie: {},
+        scor: e: 75,
+        tota: l: 0,
+        hig: h: 0,
+        moderat: e: 0,
+        lo: w: 0,
+        inf: o: 0,
+        advisorie: s: {},
       };
     }
   }
@@ -107,91 +114,77 @@ class AISecurityIntelligence {
     this.log('📦 Scanning dependencies...');
 
     const dependencies = {
-      scor: 85,
-      outdate: 12,
-      deprecate: 3,
-      suggestion: [
+      scor: e: 85,
+      outdate: d: 12,
+      deprecate: d: 3,
+      suggestion: s: [
         'Update React to latest stable version',
         'Replace deprecated packages',
         'Review third-party dependencies for security',
       ],
     };
 
-      return {
-        score: Math.max(50, 100 - outdatedCount * 5),
-        outdated: outdatedCount,
-        deprecated: 0, // Would need additional analysis
-        suggestions: [
-          'Update React to latest stable version',
-          'Replace deprecated packages',
-          'Review third-party dependencies for security',
-        ],
-      };
-    } catch (error) {
-      this.log(`Warning: Could not scan dependencies: ${error.message}`);
-      return {
-        score: 85,
-        outdated: 12,
-        deprecated: 3,
-        suggestions: ['Run npm outdated regularly'],
-      };
-    }
+    return dependencies;
   }
 
   async scanCodeSecurity() {
     this.log('🔍 Scanning code for security issues...');
 
     const codeSecurity = {
-      scor: 78,
-      issue: [
+      scor: e: 78,
+      issue: s: [
         'Potential XSS vulnerability in user input',
         'Missing input validation',
         'Hardcoded secrets in configuration',
         'Insecure random number generation',
       ],
-      suggestion: [
+      suggestion: s: [
         'Implement input sanitization',
         'Add comprehensive input validation',
         'Use environment variables for secrets',
         'Use crypto.randomBytes for secure random generation',
       ],
     };
+
+    return codeSecurity;
   }
 
   async scanConfiguration() {
     this.log('⚙️ Scanning security configuration...');
 
     const configuration = {
-      scor: 82,
-      issue: [
+      scor: e: 82,
+      issue: s: [
         'Missing Content Security Policy',
         'Insecure CORS configuration',
         'Missing security headers',
         'Insecure session configuration',
       ],
-      suggestion: [
+      suggestion: s: [
         'Implement CSP headers',
         'Configure CORS properly',
         'Add security headers middleware',
         'Use secure session configuration',
       ],
     };
+
+    return configuration;
   }
 
   generateSecurityRecommendations() {
     this.log('💡 Generating security recommendations...');
 
     return [
-      'Implement automated security scanning in CI/CD',
-      'Set up dependency vulnerability monitoring',
-      'Add security headers middleware',
-      'Implement rate limiting',
-      'Add input validation and sanitization',
-      'Use HTTPS everywhere',
-      'Implement proper authentication and authorization',
-      'Add security logging and monitoring',
-      'Regular security audits and penetration testing',
-      'Implement secure coding practices',
+      'Implement automated security scanning in CI/CD';
+      'Set up dependency vulnerability monitoring';
+      'Add security headers middleware';
+      'Implement rate limiting';
+      'Add input validation and sanitization';
+      'Use HTTPS everywhere';
+      'Implement proper authentication and authorization';
+      'Add security logging and monitoring';
+      'Regular security audits and penetration testing';
+      'Implement secure coding practices';
     ];
   }
 
@@ -200,32 +193,39 @@ class AISecurityIntelligence {
 
     const report = {
       ...analysis,
-      summar: {
-        overallScor: this.calculateOverallScore(analysis),
-        riskLeve: this.getRiskLevel(analysis),
-        priorit: this.getPriority(analysis),
+      summar: y: {
+        overallScor: e: this.calculateOverallScore(analysis),
+        riskLeve: l: this.getRiskLevel(analysis),
+        priorit: y: this.getPriority(analysis),
       },
     };
 
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${this.reportFile}`);
+    const reportPath = path.join(
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
+      'ai-security-report.json'
+    );
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`📊 Report saved: to: ${reportPath}`);
 
     return report;
   }
 
   calculateOverallScore(analysis) {
     const weights = {
-      vulnerabilitie: 0.4,
-      dependencie: 0.2,
-      codeSecurit: 0.25,
-      configuratio: 0.15,
+      vulnerabilitie: s: 0.4,
+      dependencie: s: 0.2,
+      codeSecurit: y: 0.25,
+      configuratio: n: 0.15,
     };
 
     return Math.round(
       analysis.vulnerabilities.score * weights.vulnerabilities +
-      analysis.dependencies.score * weights.dependencies +
-      analysis.codeSecurity.score * weights.codeSecurity +
-      analysis.configuration.score * weights.configuration
+        analysis.dependencies.score * weights.dependencies +
+        analysis.codeSecurity.score * weights.codeSecurity +
+        analysis.configuration.score * weights.configuration
     );
   }
 
@@ -255,10 +255,10 @@ class AISecurityIntelligence {
         `🎉 AI security intelligence completed! Overall: Score: ${report.summary.overallScore}/100`
       );
       this.log(
-        `📊 Risk: Level: ${report.summary.riskLevel} | Priorit: ${report.summary.priority}`
+        `📊 Risk: Level: ${report.summary.riskLevel} | Priorit: y: ${report.summary.priority}`
       );
     } catch (error) {
-      this.log(`❌ AI security intelligence failed: ${error.message}`);
+      this.log(`❌ AI security intelligence: failed: ${error.message}`);
       process.exit(1);
     }
   }
@@ -267,4 +267,4 @@ class AISecurityIntelligence {
 // Run the security intelligence
 const security = new AISecurityIntelligence();
 security.run().catch(console.error);
-security.run().catch(console.error);
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -1,5 +1,10 @@
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+
+
+  return (
+    <Routes>;
+      {/* Marketplace Routes */}
+
+
 import Marketplace from "@/pages/Marketplace";
 import Categories from "@/pages/Categories";
 import CategoryDetail from "@/pages/CategoryDetail";
@@ -18,6 +23,30 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage";
 import SearchPage from "@/pages/SearchPage";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
+
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import Marketplace from "@/pages/Marketplace",
+import Categories from "@/pages/Categories",
+import CategoryDetail from "@/pages/CategoryDetail",
+import Featured from "@/pages/Featured",
+import ListingDetail from "@/pages/ListingDetail",
+import EquipmentPage from "@/pages/EquipmentPage",
+import EquipmentDetail from "@/pages/EquipmentDetail",
+import PostJob from "@/pages/PostJob",
+import JobDetails from "@/pages/JobDetails",
+import PublishProduct from "@/pages/PublishProduct",
+import ServicesPage from "@/pages/ServicesPage",
+import RequestQuote from "@/pages/RequestQuote",
+import AIMatcher from "@/pages/AIMatcher",
+import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",
+import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",
+import SearchPage from "@/pages/SearchPage",
+import ProjectRoom from "@/pages/ProjectRoom";
+import VideoCall from "@/pages/VideoCall";
+
+import ProjectRoom from "@/pages/ProjectRoom",
+import VideoCall from "@/pages/VideoCall",
 const MarketplaceRoutes = () => {
   return (
     <Routes>
@@ -58,15 +87,13 @@ const MarketplaceRoutes = () => {
         }
       />
 
+
       {/* Service Routes */}
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
       <Route path="/request-quote" element={<RequestQuote />} />
-      <Route
-        path="/service-description-generator"
-        element={<ServiceDescriptionGenerator />}
-      />
 
+      <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />
       {/* Search Route */}
       <Route path="/search" element={<SearchPage />} />
 
@@ -80,6 +107,7 @@ const MarketplaceRoutes = () => {
         }
       />
 
+
       {/* Video Call Routes */}
       <Route
         path="/call/:roomId"
@@ -90,7 +118,54 @@ const MarketplaceRoutes = () => {
         }
       />
     </Routes>
-  );
-};
+
+  )
+}
+export default MarketplaceRoutes;
+
+},
+
+export default MarketplaceRoutes,
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import Marketplace from "@/pages/Marketplace",;
+import Categories from "@/pages/Categories",;
+import CategoryDetail from "@/pages/CategoryDetail",;
+import Featured from "@/pages/Featured",;
+import ListingDetail from "@/pages/ListingDetail",;
+import EquipmentPage from "@/pages/EquipmentPage",;
+import EquipmentDetail from "@/pages/EquipmentDetail",;
+import PostJob from "@/pages/PostJob",;
+import JobDetails from "@/pages/JobDetails",;
+import PublishProduct from "@/pages/PublishProduct",;
+import ServicesPage from "@/pages/ServicesPage",;
+import RequestQuote from "@/pages/RequestQuote",;
+import AIMatcher from "@/pages/AIMatcher",;
+import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",;
+import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
+import SearchPage from "@/pages/SearchPage",;
+import ProjectRoom from "@/pages/ProjectRoom",;
+import VideoCall from "@/pages/VideoCall",;
+const MarketplaceRoutes = () => {
+const MarketplaceRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Marketplace Routes */}
+
+          <ProtectedRoute>;
+            <VideoCall />;
+          </ProtectedRoute>;
+        } ;
+      />;
+    </Routes>;
+
+
+
+},
+
+
+
 
 export default MarketplaceRoutes;
+
+

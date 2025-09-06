@@ -1,33 +1,16 @@
-import { useEffect, useState } from 'react',
-;
-type Note = {
-  id: string,
-  targetType: string,
-  targetId: string,
-  text: string,
-  authorId: string,
-  createdAt: number
-},
 
-export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true),
-  const [notes, setNotes] = useState<Note[]>([]),
-  const [loading, setLoading] = useState(false),
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+
 
   useEffect(() => {
     async function load() {
-      setLoading(true),
+      setLoading(true)
       try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
-        if (!res.ok) return,
-        const data = await res.json(),
-        setNotes(data.notes || [])
-      } finally {
-        setLoading(false)
-      }
-    }
-    if (isAdmin) load()
-  }, [isAdmin]),
+
+
+
 
   return (
     <div className="space-y-4">
@@ -38,7 +21,6 @@ export default function AdminNotesConsole() {
           <span>Admin</span>
         </label>
       </div>
-
       {loading ? (
         <div>Loading…</div>
       ) : notes.length === 0 ? (
@@ -47,13 +29,12 @@ export default function AdminNotesConsole() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {notes.map((n) => (
             <div key={n.id} className="rounded border p-3 text-sm">
-              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
-              <div>{n.text}</div>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  )
-};
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+
+
+

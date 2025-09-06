@@ -1,27 +1,33 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
-;
+
+
+
+
 export default function MDMPage() {
   const features = [
     'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
 
+
+
   const pricing = [
     { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
-    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' },
-    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }],
+    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' };
+    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }];
 
   const references = [
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
 
+
+
+
+
   return (
     <Layout>
       <Head>
         <title>Mobile Device Management (MDM) | Zion Tech Group</title>
         <meta name="description" content="Modern MDM with zero-touch enrollment, compliance policies, app management, and identity integration." />
+
         <link rel="canonical" href="https://ziontechgroup.com/mobile-device-management" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -33,11 +39,17 @@ export default function MDMPage() {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Mobile Device Management (MDM)</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/contact" className="px-8 py-4">Talk to an Engineer</a>
-              <a href="/market-pricing" className="px-8 py-4">Market Pricing</a>
+
+
+
+              <a href="/contact" className="px-8 py-4">Talk to an Engineer</Link>
+              <a href="/market-pricing" className="px-8 py-4">Market Pricing</Link>
+
+
+
+
             </div>
           </header>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Key Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -46,35 +58,18 @@ export default function MDMPage() {
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-              ))}
+
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </section>
 
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Typical Pricing Ranges</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {pricing.map((p) => (
-                <div key={p.tier} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <div className="text-gray-400 text-sm mb-1">{p.tier}</div>
-                  <div className="text-2xl font-bold text-white">{p.range}</div>
-                  <div className="text-sm text-gray-400 mt-2">{p.note}</div>
-                </div>
-              ))}
             </div>
-            <div className="text-sm text-gray-400 mt-3 text-center">We align with leading platforms like Intune, Jamf, and Workspace ONE.</div>
           </section>
 
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Vendor References</h2>
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              {references.map((r) => (
-                <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer" className="px-4 py-3 rounded-xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 inline-flex items-center gap-2 text-cyan-300">
-                  <ExternalLink className="w-4 h-4" />
-                  <span>{r.name}</span>
-                </a>
-              ))}
-            </div>
-          </section>
 
           <section className="text-center">
             <div className="inline-flex items-center justify-center gap-3 text-gray-300">
@@ -85,5 +80,10 @@ export default function MDMPage() {
         </div>
       </div>
     </Layout>
-  )
-};
+
+
+
+}
+
+
+

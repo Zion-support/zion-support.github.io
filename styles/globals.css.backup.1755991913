@@ -188,6 +188,8 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,6 +202,7 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.2) 0%, transparent 50%),
@@ -209,11 +212,14 @@ h3 {
     radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 30% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
+>>>>>>> main
     radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);
 =======
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
@@ -227,6 +233,9 @@ h3 {
     radial-gradient(circle at 85% 60%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 15% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
+<<<<<<< HEAD
+  pointer-events: none;
+=======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   pointer-events: none;
@@ -242,6 +251,7 @@ h3 {
 =======
     radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);  pointer-events: none;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   z-index: -1;
   animation: backgroundFloat 30s ease-in-out infinite;
 }
@@ -514,6 +524,163 @@ body::after {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+/* Advanced Card Hover Effects */
+.futuristic-card {
+  position: relative;
+/* Advanced Card Hover Effects */
+.futuristic-card {  position: relative;
+
+/* Advanced Card Hover Effects */
+.futuristic-card {
+
+@keyframes holographicWave {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.1; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 0.3; }
+}
+
+@keyframes cyberpunkPulse {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  25% { opacity: 0.2; transform: scale(1.05); }
+  50% { opacity: 0.3; transform: scale(1.1); }
+  75% { opacity: 0.2; transform: scale(1.05); }
+}
+
+/* Enhanced Text Effects */
+.quantum-text {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: quantumTextGlow 3s ease-in-out infinite;
+}
+
+.holographic-text {
+  background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink), var(--neon-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+  animation: holographicTextGlow 4s ease-in-out infinite;
+}
+
+.cyberpunk-text {
+  background: linear-gradient(45deg, var(--neon-pink), var(--neon-cyan), var(--neon-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(236, 73, 153, 0.7);
+  animation: cyberpunkTextGlow 5s ease-in-out infinite;
+}
+
+.neural-text {
+  background: linear-gradient(45deg, var(--neon-green), var(--neon-cyan), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 35px rgba(16, 185, 129, 0.4);
+  animation: neuralTextGlow 6s ease-in-out infinite;
+}
+
+@keyframes quantumTextGlow {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.2) saturate(1.3); }
+}
+
+@keyframes holographicTextGlow {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.3) saturate(1.4); }
+}
+
+@keyframes cyberpunkTextGlow {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.4) saturate(1.5); }
+}
+
+@keyframes neuralTextGlow {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.1) saturate(1.2); }
+}
+
+/* Advanced Futuristic Animations */
+@keyframes quantumPulse {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    transform: scale(1.05) rotate(90deg);
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    transform: scale(1.1) rotate(180deg);
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    transform: scale(1.05) rotate(270deg);
+    filter: hue-rotate(270deg);
+  }
+}
+
+@keyframes holographicFlow {
+  0% { 
+    background-position: 0% 0%;
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  50% { 
+    background-position: 100% 100%;
+    filter: hue-rotate(180deg) brightness(1.2);
+  }
+  100% { 
+    background-position: 0% 0%;
+    filter: hue-rotate(360deg) brightness(1);
+  }
+}
+
+@keyframes neuralWave {
+  0%, 100% { 
+    transform: translateX(0) scale(1);
+    opacity: 0.8;
+  }
+  25% { 
+    transform: translateX(20px) scale(1.1);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateX(0) scale(1.2);
+    opacity: 0.9;
+  }
+  75% { 
+    transform: translateX(-20px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes quantumEntanglement {
+  0%, 100% { 
+    transform: translateY(0) scale(1);
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    transform: translateY(-10px) scale(1.1);
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    transform: translateY(-20px) scale(1.2);
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    transform: translateY(-10px) scale(1.1);
+    filter: hue-rotate(270deg);
+  }
+}
+
+/* Enhanced Button Effects */
+.quantum-button {
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
+  position: relative;
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -685,6 +852,7 @@ body::after {
 /* Advanced Card Hover Effects */
 .futuristic-card {  position: relative;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -693,9 +861,12 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> main
 .futuristic-card::before {
 =======
 /* Advanced Futuristic Effect Classes */
@@ -740,6 +911,9 @@ body::after {
 
 .quantum-button::before {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
+<<<<<<< HEAD
+  content: '';
+=======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   content: '';
@@ -755,6 +929,7 @@ body::after {
 =======
 .futuristic-card::before {  content: '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   position: absolute;
   top: 0;
   left: -100%;

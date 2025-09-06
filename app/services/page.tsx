@@ -1,90 +1,96 @@
 import Link from "next/link";
-export const metadata = {
-  title: "Services | Zion Tech Group",
+
+  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description:
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",
-};
-export default function ServicesOverviewPage() {
+
   return (
-    <div className="animate-fade-in">
+    <div className="animate - fade - in">;
       {" "}
-      <div className="text-center mb-16">
+      <div className="text - center mb - 16">;
         {" "}
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
+        <h1 className="text - 4xl font - bold text - gray - 900 mb - 6">;
+          Our Services;
         </h1>{" "}
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
           {" "}
-          Product engineering and AI-first consulting to deliver measurable
-          outcomes for your business.{" "}
+
+          Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
+          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.{" "}
+
         </p>{" "}
       </div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 16">;
         {" "}
-        <ServiceCard
-          href="/services/micro-saas"
-          title="Micro SaaS"
-          description="End-to-end product development with billing,auth,and analytics"
-          bullets={[
+        <ServiceCard;
+          href="/services / micro - saas";
+          title="Micro SaaS";
+          description="End - to - end product development with billing, auth, and analytics";
+          bullets={[;
             "Foundational architecture",
             "Billing + subscriptions",
             "Growth analytics",
           ]}
+
+
           icon="🚀"
-        />{" "}
+          pricing="From $2,999/month"
+        />
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
-          description="LLM applications,RAG systems,and MLOps pipelines"
+
+          description="LLM applications, RAG systems, and MLOps pipelines"
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+
           icon="🤖"
-        />{" "}
+          pricing="From $5,000/project"
+        />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
-          description="Cloud migration,DevOps,and security solutions"
+
+          description="Cloud migration, DevOps, and security solutions"
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
           icon="⚙️"
-        />{" "}
-      </div>{" "}
-      <CTA />{" "}
-    </div>
-  );
-}
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
-}: {
+        />
+        <ServiceCard
+
+          href="/services/blockchain-solutions"
+          title="Blockchain Solutions"
+          description="DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security"
+          bullets={["Smart contracts", "DeFi protocols", "Web3 apps"]}
+          icon="⛓️"
+          pricing="From $15,000/project"
+        />
+        <ServiceCard
+          href="/services/automation-solutions"
+          title="Automation Solutions"
+          description="RPA, workflow automation, and AI-powered automation for maximum efficiency"
+          bullets={["Process automation", "Workflow optimization", "AI automation"]}
+          icon="⚡"
+
+
+        />
+        <ServiceCard
+          href="/services/data-analytics"
+          title="Data Analytics"
+
+      <CTA />
+
   href: string;
   title: string;
   description: string;
   bullets: string[];
   icon: string;
+  pricing: string;
 }) {
   return (
     <Link
       href={href}
       className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
-      {" "}
-      <div className="text-4xl mb-4">{icon}</div>{" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>{" "}
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
-      <ul className="text-gray-600 space-y-2">
-        {" "}
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            {" "}
-            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
-          </li>
-        ))}{" "}
-      </ul>{" "}
-    </Link>
+
+
   );
 }
 function CTA() {
@@ -96,8 +102,10 @@ function CTA() {
       </h3>{" "}
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
         {" "}
-        Talk to our experts about your project. We'll help you choose the right
+
+        Talk to our experts about your project. We&apos;ll help you choose the right
         service and create a custom solution for your business needs.{" "}
+
       </p>{" "}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         {" "}

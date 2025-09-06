@@ -1,22 +1,10 @@
 
 
-                isOpen={sidebarOpen};
-                onClose={() => setSidebarOpen(false)};
+import React from 'react';
 
-              />,
-              <div className=&quot;flex-1 ml-80&quot;>,
-                {children};
-              </div>
-            </div>
-          )};
-          {!showSidebar && children};
-        </main>,
-        <Footer />,
-      </div>,
-    </>,
-  ),
 
-};
+
+
 
 
 

@@ -206,6 +206,8 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,6 +220,7 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 /* New Futuristic Effects */
 
 /* Holographic effect */
@@ -413,11 +416,14 @@ h3 {
 
 .glitch::before,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
+>>>>>>> main
 .glitch::after {
 =======
 @keyframes particleFloat {
@@ -482,6 +488,9 @@ h3 {
 .cyberpunk-glitch::before,
 .cyberpunk-glitch::after {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+<<<<<<< HEAD
+  content: attr(data-text);
+=======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   content: attr(data-text);
@@ -497,6 +506,7 @@ h3 {
 =======
 .glitch::after {  content: attr(data-text);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   position: absolute;
   top: 0;
   left: 0;
@@ -505,6 +515,8 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -532,11 +544,20 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
+>>>>>>> main
 .glitch::before {
-  animation: glitch-1 2s infinite;  color: #ff0000;
+  animation: glitch-1 2s infinite;
+=======
+.cyberpunk-glitch::before {
+  animation: glitch-1 2s infinite linear alternate-reverse;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+  color: #ff0000;
   z-index: -1;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -545,6 +566,7 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 .glitch::after {
   animation: glitch-2 2s infinite;
   color: #00ff00;
@@ -561,11 +583,14 @@ h3 {
 
 @keyframes glitch-1 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
+>>>>>>> main
   0%, 100% { transform: translate(0); }
 =======
 .cyberpunk-glitch::after {
@@ -578,6 +603,8 @@ h3 {
   0% { transform: translate(0); }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
   20% { transform: translate(-2px, 2px); }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -613,17 +640,29 @@ h3 {
   20% { transform: translate(-2px, 2px); }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
+>>>>>>> main
   40% { transform: translate(-2px, -2px); }
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
+<<<<<<< HEAD
 }
 
 @keyframes glitch-2 {
-  0%, 100% { transform: translate(0); }  20% { transform: translate(2px, -2px); }
+  0%, 100% { transform: translate(0); }
+=======
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-2 {
+  0% { transform: translate(0); }
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+  20% { transform: translate(2px, -2px); }
   40% { transform: translate(2px, 2px); }
   60% { transform: translate(-2px, -2px); }
   80% { transform: translate(-2px, 2px); }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -632,6 +671,7 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 }
 
 /* Enhanced component styles */
@@ -653,11 +693,14 @@ h3 {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
+>>>>>>> main
 .button::before {
 =======
   100% { transform: translate(0); }
@@ -672,6 +715,9 @@ h3 {
 
 .futuristic-card::before {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+<<<<<<< HEAD
+  content: '';
+=======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   content: '';
@@ -687,6 +733,7 @@ h3 {
 =======
 .button::before {  content: '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   position: absolute;
   top: 0;
   left: -100%;
@@ -705,6 +752,8 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -717,6 +766,7 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 .button:hover::before {
   left: 100%;
 }
@@ -730,11 +780,14 @@ h3 {
 .futuristic-text {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
+>>>>>>> main
   background-size: 300% 300%;
 =======
 .futuristic-card:hover::before {
@@ -919,6 +972,9 @@ h3 {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
   background-size: 200% 200%;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+<<<<<<< HEAD
+  -webkit-background-clip: text;
+=======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   -webkit-background-clip: text;
@@ -934,12 +990,15 @@ h3 {
 =======
   background-size: 300% 300%;  -webkit-background-clip: text;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 3s ease infinite;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -955,6 +1014,7 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 @keyframes textGradient {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -1015,11 +1075,14 @@ h3 {
   .quantum-tunnel,
   .floating-orbs,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
+>>>>>>> main
   .matrix-rain {
 =======
 .text-glow {
@@ -1033,6 +1096,8 @@ h3 {
 @media (max-width: 768px) {
   .futuristic-card:hover {
     transform: none;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -1089,30 +1154,92 @@ h3 {
   .futuristic-bg,
   .quantum-neural-bg,
   .particles-bg {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+
+    background: none !important;
+  }
+  
+.cyber-grid {
+
+    background-size: 15px 15px;
+
+  }
+  .matrix-rain {    background: none !important;
+>>>>>>> main
+  }
+  
+  .quantum-particles::before {
+    animation-duration: 30s;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .futuristic-card {
+    border-width: 2px;
+  }
+  
+  .neon-glow {
+    text-shadow: 
+      0 0 10px currentColor,
+      0 0 20px currentColor;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .futuristic-card:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .futuristic-bg,
+  .quantum-neural-bg,
+  .particles-bg {
+
     background: none !important;
   }
   
 <<<<<<< HEAD
   .cyber-grid {
 <<<<<<< HEAD
-<<<<<<< HEAD
+    background-size: 15px 15px;
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     background-size: 15px 15px;
 =======
+=======
+  .cyber-grid {
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    background-size: 15px 15px;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   .futuristic-card {
     box-shadow: none !important;
     border: 1px solid #000 !important;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+
+  }
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-  }
-  .matrix-rain {    background: none !important;
-  }
-  
-  .cyber-grid {
     background-size: 15px 15px;  }
 <<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -1125,6 +1252,7 @@ h3 {
 =======
     background-size: 15px 15px;  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 }
 
 /* Dark mode enhancements */

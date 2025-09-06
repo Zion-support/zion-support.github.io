@@ -1,3 +1,5 @@
+
+
 "use client",;
 export function StructuredData() {;
   const structuredData = {;
@@ -48,10 +50,11 @@ export function StructuredData() {;
       "url": "https://ziontechgroup.com";
     }
   };
+
   return (;
+
     <script;
-      type="application/ld+json";
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />;
-  );
+      type="application / ld + json";
+      dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
+    />);
 }

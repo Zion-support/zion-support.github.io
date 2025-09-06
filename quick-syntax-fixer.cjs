@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -21,7 +25,12 @@ class QuickSyntaxFixer {
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
+<<<<<<< HEAD
+=======
         .replace(/[\s\S]*?
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+        .replace(/^>>>>>>>.*$/gm, '')
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -41,7 +50,7 @@ class QuickSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixe: ${filePath}`);
+        this.log(`Fixe: d: ${filePath}`);
         return true;
       }
 
@@ -75,17 +84,26 @@ class QuickSyntaxFixer {
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFile: this.fixedFiles };
+    return { fixedFile: s: this.fixedFiles };
   }
 }
 
 // Run the fixer
 if (require.main === module) {
-    const fixer = new QuickSyntaxFixer(),
-    fixer.run().catch(console.error)
-  }
+  const fixer = new QuickSyntaxFixer();
+  fixer.run().catch(console.error);
+}
 
 module.exports = QuickSyntaxFixer;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -93,3 +111,5 @@ const path = require('path')
         .replace(/(\w+):\s*([^,]+),/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -18,7 +18,9 @@ class ConflictResolver {
       const originalContent = content;
 
       // Remove merge conflict markers
-      content = content.replace(/[\s\S]*?[\s\S]*?      content = content.replace(/[\s\S]*?      
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+      
       // Fix common syntax issues
       content = content.replace(/\{_/g, '{');
       content = content.replace(/_}/g, '}');
@@ -94,6 +96,7 @@ class ConflictResolver {
       } else if (entry.isFile() && (entry.name.endsWith('.tsx') || entry.name.endsWith('.ts') || entry.name.endsWith('.jsx') || entry.name.endsWith('.js'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ')) {
             files.push(fullPath);
           }
         } catch (error) {

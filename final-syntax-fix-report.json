@@ -1,14 +1,15 @@
 {
-  "timestamp": "2025-09-06T09:24:44.020Z",
-  "fixedFiles": [
-    "pages/api/enterprise/companies/[companyId]/usage.ts",
-    "pages/api/feedback.ts",
-    "pages/api/feedback/submit.ts",
-    "pages/api/figma/export.ts",
-    "utils/feedback/store.ts",
-    "utils/design-map.ts"
+  "timestamp": "2025-09-04T15:42:36.078Z",
+  "fixedFiles": 5,
+  "errors": 0,
+  "fixedFileList": [
+    "/workspace/src/pages/AccountSettings.js.jsx",
+    "/workspace/src/pages/ComprehensiveContact.js.jsx",
+    "/workspace/src/pages/ComprehensiveServicesShowcase.tsx",
+    "/workspace/src/pages/Marketplace.js.jsx",
+    "/workspace/src/pages/SavedTalentsPage.js.jsx"
   ],
-  "errors": [],
-  "totalFixed": 6,
-  "totalErrors": 0
+
+  "errorList": []
 }
+

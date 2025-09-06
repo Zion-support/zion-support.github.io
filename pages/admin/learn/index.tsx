@@ -1,26 +1,100 @@
-import { useEffect, useState } from 'react',
-;
+
+
+
+
+import { useEffect, useState } from 'react';
 export default function AdminLearn() {
+
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
-  const [message, setMessage] = useState(''),
+  const [message, setMessage] = useState('');
+
 
   async function saveCourse() {
-    setMessage(''),
+    setMessage('')
+    const resp = await fetch('/api/admin/learn/course', {
+
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+
+      body: JSON.stringify(form)
+
+import { useEffect, useState } from 'react';
+export default function AdminLearn() {
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
+  const [message, setMessage] = useState('');
+  async function saveCourse() {
+    setMessage('')
     const resp = await fetch('/api/admin/learn/course', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)
+})
+
+    })
+
+    const data = await resp.json()
+    if (data.ok) setMessage('Saved')
+    else setMessage('Error: ' + (data.error |'unknown'))
+
+
+
+  }
+      body: JSON.stringify(form)
+
+
+      body: JSON.stringify(form)
+
+  }
+
+
+
     }),
     const data = await resp.json(),
     if (data.ok) setMessage('Saved'),
     else setMessage('Error: ' + (data.error || 'unknown'))
+
+
+
+import { useEffect, useState } from 'react';
+export default function AdminLearn(req, res) {
+  try {
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),;
+  const [message, setMessage] = useState('');
+  async function saveCourse() {;
+    setMessage('');
+    const resp = await fetch('/api/admin/learn/course', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify(form);
+    }),;
+    const data = await resp.json();
+    if (data.ok) setMessage('Saved');
+    else setMessage('Error: ' + (data.error || 'unknown'));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+
+
   }
+}
+
+
+
+  }
+}
+  }
+}
+
+
 
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
       <div className="grid gap-3 sm:grid-cols-2">
         <input className="border rounded px-3 py-2" placeholder="Course ID" value={form.id} onChange={(e) => setForm({ ...form, id: e.target.value })} />
+
         <input className="border rounded px-3 py-2" placeholder="Title" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} />
         <select className="border rounded px-3 py-2" value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })}>
           <option>AI Development</option>
@@ -38,7 +112,42 @@ export default function AdminLearn() {
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={form.isFree} onChange={(e) => setForm({ ...form, isFree: e.target.checked })} /> Free</label>
       </div>
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
-      {message && <div className="text-sm">{message}</div>}
+
+
+
+
+
+
+
+    </div>
+  );
+};
+
+
+
+      {message && <div className="text-sm">{message}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     </div>
   )
-};
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+
+}
+
+
+
+
+}
+
+}
+}
+
+
+

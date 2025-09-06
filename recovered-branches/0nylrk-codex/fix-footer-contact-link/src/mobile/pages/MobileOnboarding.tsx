@@ -1,3 +1,9 @@
+
+
+
+
+
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -7,8 +13,6 @@ import { SignUpForm } from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
 
 export function MobileOnboarding() {
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
-  const navigate = useNavigate();
 
   const goToNextStep = () => {
     if (currentStep === "language") {
@@ -18,11 +22,8 @@ export function MobileOnboarding() {
     } else {
       navigate("/mobile");
     }
-  };
 
-  const handleRoleSelect = () => {
-    setCurrentStep("signup");
-  };
+
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -46,6 +47,7 @@ export function MobileOnboarding() {
           </div>
         )}
 
+
         {currentStep === "role" && (
           <div className="space-y-6">
             <div className="text-center mb-8">
@@ -65,6 +67,7 @@ export function MobileOnboarding() {
           </div>
         )}
 
+
         {currentStep === "signup" && (
           <div className="space-y-6">
             <div className="text-center mb-6">
@@ -74,10 +77,12 @@ export function MobileOnboarding() {
               </p>
             </div>
 
+
             <SignUpForm />
           </div>
-        )}
-      </div>
-    </div>
-  );
-}
+
+
+
+
+
+
