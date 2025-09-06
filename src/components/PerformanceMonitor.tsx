@@ -1,61 +1,85 @@
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isSlow: boolean;
-}
+import React, { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    isSlow: false
-  });
-
   useEffect(() => {
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      
-      const memory = (performance as any).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0; // MB
-      
-      const isSlow = loadTime > 3000 || memoryUsage > 50; // 3s or 50MB threshold
-      
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(performance.now()),
-        memoryUsage: Math.round(memoryUsage * 100) / 100,
-        isSlow
-      });
+    // Only run in development mode
+    if (process.env.NODE_ENV !== 'development') {
+      return;
+    }
+
+    // Monitor Core Web Vitals
+    const observeWebVitals = () => {
+      // Largest Contentful Paint (LCP)
+      if ('PerformanceObserver' in window) {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          console.log('LCP:', lastEntry.startTime);
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift (CLS)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          console.log('CLS:', clsValue);
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
     };
 
-    // Measure performance after component mounts
-    const timer = setTimeout(measurePerformance, 1000);
-    
-    return () => clearTimeout(timer);
+    // Monitor bundle size and load times
+    const monitorBundleSize = () => {
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart);
+          console.log('DOM Content Loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
+        });
+      }
+    };
+
+    // Monitor memory usage
+    const monitorMemory = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        console.log('Memory Usage:', {
+          used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+          total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+          limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
+        });
+      }
+    };
+
+    observeWebVitals();
+    monitorBundleSize();
+    monitorMemory();
+
+    // Log performance metrics every 30 seconds in development
+    const interval = setInterval(() => {
+      monitorMemory();
+    }, 30000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
-  // Only show in development or if performance is poor
-  if (process.env.NODE_ENV !== 'development' && !metrics.isSlow) {
-    return null;
-  }
-
-  return (
-    <div className={`fixed top-4 right-4 z-50 p-3 rounded-lg text-xs font-mono ${
-      metrics.isSlow 
-        ? 'bg-red-100 text-red-800 border border-red-300' 
-        : 'bg-green-100 text-green-800 border border-green-300'
-    }`}>
-      <div className="font-semibold mb-1">Performance</div>
-      <div>Load: {metrics.loadTime}ms</div>
-      <div>Memory: {metrics.memoryUsage}MB</div>
-      {metrics.isSlow && <div className="text-red-600 font-semibold">⚠️ Slow</div>}
-    </div>
-  );
+  return null; // This component doesn't render anything
 };
 
 export default PerformanceMonitor;
