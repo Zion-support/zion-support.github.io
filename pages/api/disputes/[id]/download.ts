@@ -8,16 +8,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(400).json({ error: 'Invalid parameters' })
   }
-  const user = parseUserFromRequest(req),
+  const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
-  if (!dispute) return res.status(404).json({ error: 'Not found' }),
+  if (!dispute) return res.status($1).json({$2});
   try {
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
   } catch (e: any) {
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
   }
-  const att = dispute.attachments.find(a => a.fileName === fileName),
-  if (!att) return res.status(404).json({ error: 'Attachment not found' }),
+  const att = dispute.attachments.find(a => a.fileName === fileName);
+  if (!att) return res.status($1).json({$2});
   const stat = fs.statSync(att.path);
   res.setHeader('Content-Type', att.mimeType);
   res.setHeader('Content-Length', String(stat.size));

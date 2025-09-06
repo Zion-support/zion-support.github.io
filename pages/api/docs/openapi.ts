@@ -18,16 +18,17 @@ function toOpenApi() {
           '200': { description: 'OK', content: { 'application/json': { schema: ep.responseBodySchema || { type: 'object' } } } }},
         security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []}
     })
-  }),
+  });
   return {
     openapi: '3.0.3',
     info: { title: 'Zion OS API', version: 'v1', description: 'Zion OS API generated from internal spec' },
     servers: [{ url: 'https://api.zion.os' }],
-    paths;
-    components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } } }}
+    paths,
+    components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } } }
+  };
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Content-Typeapplication/json'),
-  res.status(200).json(toOpenApi())
+  res.setHeader('Content-Type', 'application/json');
+  res.status(200).json(toOpenApi());
 }

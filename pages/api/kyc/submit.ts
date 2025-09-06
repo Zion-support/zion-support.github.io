@@ -21,18 +21,18 @@ function save(db: Record<string, KycProfile>) {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method !== 'POST') return res.status($1).json({$2});
   const { userId } = req.body as { userId?: string };
-  if (!userId) return res.status(400).json({ error: 'Missing userId' }),
+  if (!userId) return res.status($1).json({$2});
   const db = load();
   const profile = db[userId];
-  if (!profile) return res.status(404).json({ error: 'Profile not found.' }),
+  if (!profile) return res.status($1).json({$2});
   const validation = validateKycSubmission(profile);
-  if (!validation.ok) return res.status(400).json({ error: 'Missing data', missing: validation.missing }),
+  if (!validation.ok) return res.status($1).json({$2});
   // Simple AML check
   const aml = getAmlProvider();
   const amlResult = profile.role === 'enterprise'
-    ? await aml.checkBusiness({ businessName: profile.businessName || '', country: profile.country })
+    ? await aml.checkBusiness({ businessName: profile.businessName || ''; country: profile.country })
     : await aml.checkPerson({ fullLegalName: profile.fullLegalName || '', country: profile.country, dob: profile.dateOfBirth }),
   profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
   // Flags and risk scoring
@@ -45,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // naive duplicate IP heuristic: more than 2 submissions from same IP → flag
     const sameIpCount = Object.values(db).filter((p) =>
       (p.auditTrail || []).some((a) => a.action === 'kyc_submitted' && (a.details as any)?.ip === ip)
-    ).length,
+    ).length;
     if (sameIpCount >= 2) flags.add('duplicate_ip')
   }
 

@@ -18,13 +18,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   const { userId = 'demo-user', courseId, enableBoost } = req.body || {};
-  if (!courseId) return res.status(400).json({ error: 'courseId required' }),
+  if (!courseId) return res.status($1).json({$2});
   try {
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
-    const course = courses.find((c: any) => c.id === courseId),
-    if (!course) return res.status(404).json({ error: 'Course not found' }),
-    const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },
+    const course = courses.find((c: any) => c.id === courseId);
+    if (!course) return res.status($1).json({$2});
+    const user = users[userId] || { userId; name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
     if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;

@@ -16,7 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Invalid targetType' })
     }
 
-    const all = await readReviews(),
+    const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
     const filtered = all.filter((r) => {
       if (r.removed || !r.approved) return false;
@@ -57,7 +57,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     )).length;
     const summary: ReviewsSummary = {
       averageRating,
-      totalReviews;
+    totalReviews,
       totalCompletedProjects;
       mostRecent: publicReviews.slice(0, 5)};
     return res.status(200).json({ summary, reviews: publicReviews })

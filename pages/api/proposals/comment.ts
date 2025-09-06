@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
     const comment = {
-      id: Date.now().toString(),
+      id: Date.now().toString();
       proposalId: body.proposalId,
       region: body.region || 'Global',
       author: body.author || 'anon',

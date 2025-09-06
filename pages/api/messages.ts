@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const now = new Date().toISOString();
     const msg: Message = {
-      id: uuidv4(),
+      id: uuidv4();
       conversationId: String(conversationId),
       sender: { type: sender.type, id: String(sender.id) },
       text: text ? String(text) : undefined,

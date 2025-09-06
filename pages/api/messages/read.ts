@@ -4,11 +4,11 @@ import { getConversationById, markAsRead } from '../../../utils/messaging/storag
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method !== 'POST') return res.status($1).json({$2});
   const { conversationId } = req.body || {};
-  if (!conversationId) return res.status(400).json({ error: 'Missing conversationId' }),
+  if (!conversationId) return res.status($1).json({$2});
   const conv = getConversationById(conversationId);
-  if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' }),
+  if (!conv || !conv.participants.includes(user.id)) return res.status($1).json({$2});
   markAsRead(conversationId, user.id);
   res.status(200).json({ success: true })
 }

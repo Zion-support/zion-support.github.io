@@ -5,7 +5,7 @@ import { Milestone } from '../../../../utils/types/milestones';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
-  const { projectId } = req.query as { projectId: string },
+  const { projectId } = req.query as { projectId: string };
   const project = getProject(projectId);
   if (!project) {
     res.status(404).json({ error: 'Project not found' }),
@@ -31,7 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
       return
     }
-    const created = addMilestone(project, {
+    const created = addMilestone(project; {
       title: body.title,
       description: body.description,
       dueDate: body.dueDate,

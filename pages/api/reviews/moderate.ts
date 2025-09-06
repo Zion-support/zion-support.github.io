@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const key = req.headers['x-admin-key'],
+  const key = req.headers['x-admin-key'];
   if (key !== ADMIN_KEY) {
     return res.status(401).json({ error: 'Unauthorized' })
   }
@@ -20,13 +20,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
     const reviews = await readReviews();
     const idx = reviews.findIndex((r) => r.id === reviewId);
-    if (idx < 0) return res.status(404).json({ error: 'Review not found' }),
+    if (idx < 0) return res.status($1).json({$2});
     if (action === 'approve') {
       reviews[idx].approved = true
     } else if (action === 'remove') {
       reviews[idx].removed = true
     } else if (action === 'edit') {
-      if (!updates) return res.status(400).json({ error: 'Missing updates' }),
+      if (!updates) return res.status($1).json({$2});
       if (typeof updates.rating === 'number') {
         if (updates.rating < 1 || updates.rating > 5) {
           return res.status(400).json({ error: 'Rating must be 1-5' })

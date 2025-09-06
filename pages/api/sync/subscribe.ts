@@ -3,10 +3,10 @@ import { readState, writeState } from "../../../utils/sync/storage";
 import { Peer } from "../../../utils/sync/types";
 import { v4 as uuidv4 } from "uuid";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+  if (req.method !== "POST") return res.status($1).json({$2});
   const state = readState();
   const peer = req.body as Partial<Peer>;
-  if (!peer.baseUrl) return res.status(400).json({ error: "baseUrl required" }),
+  if (!peer.baseUrl) return res.status($1).json({$2});
   const id = peer.id || uuidv4();
   const existing = state.config.peers.find((p) => p.baseUrl === peer.baseUrl);
   if (existing) {

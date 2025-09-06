@@ -14,12 +14,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req.method === 'POST') {
     const {
-      title;
-      description;
+      title,
+    description,
       category;
       requiredSkills = [];
-      budgetMinUsd;
-      budgetMaxUsd;
+      budgetMinUsd,
+    budgetMaxUsd,
       deliveryDeadlineIso;
       clientEmail} = req.body || {};
     if (!title || !description || !clientEmail) {
@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const nowIso = new Date().toISOString();
     const job: Job = {
-      id: uuidv4(),
+      id: uuidv4();
       title: String(title),
       description: String(description),
       category: String(category || ''),

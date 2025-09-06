@@ -5,7 +5,7 @@ import { isMilestoneStatus } from '../../../../../utils/types/milestones';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
-  const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string },
+  const { projectId; milestoneId } = req.query as { projectId: string, milestoneId: string },
   const project = getProject(projectId);
   if (!project) {
     res.status(404).json({ error: 'Project not found' }),
@@ -27,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (body.status) {
       const isClientUser = isClient(project, user);
       const isTalentUser = isTalent(project, user);
-      const status: string = body.status,
+      const status: string = body.status;
       const allowed =
         (status === 'In Progress' && isClientUser) ||
         (status === 'Submitted' && isTalentUser) ||

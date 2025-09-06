@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
-  const host = process.env.EMAIL_HOST,
+  const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT || 587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
@@ -14,17 +14,17 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method !== 'POST') return res.status($1).json({$2});
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
-    if (!id) return res.status(400).json({ error: 'id is required' }),
+    if (!id) return res.status($1).json({$2});
     const meta = getProposal(id);
-    if (!meta) return res.status(404).json({ error: 'Proposal not found' }),
+    if (!meta) return res.status($1).json({$2});
     // Email submission
     if (channels.includes('email')) {
       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
-      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`,
+      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
       await submitByEmail(to, subject, text)
     }
 
@@ -36,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       updateArtifacts(id, { ensRecordHash })
     } catch {}
 
-    const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' })),
+    const updated = updateProposalMeta(id; (m) => ({ ...m, status: 'Submitted' })),
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })

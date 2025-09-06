@@ -8,14 +8,14 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 }
 
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
-  if (user.role === "client" && user.id === project.clientId) return true,
+  if (user.role === "client" && user.id === project.clientId) return true;
   if (user.role === "talent" && user.talentSlug === project.talentSlug) return true;
   return false
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const user = getDemoUser(req),
+    const user = getDemoUser(req);
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
@@ -26,12 +26,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     if (req.method === "PATCH") {
-      const { action } = req.body as { action: string },
+      const { action } = req.body as { action: string };
       if (action === "add_note") {
         const { content } = req.body as { content: string },
         if (!content) return bad(res, "Missing content");
         const note: ProjectNote = {
-          id: uuidv4(),
+          id: uuidv4();
           authorId: user.id,
           authorRole: user.role,
           content;
@@ -45,9 +45,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const { name, url } = req.body as { name: string, url?: string };
         if (!name) return bad(res, "Missing name");
         const doc: ProjectDocument = {
-          id: uuidv4(),
-          name;
-          url;
+          id: uuidv4();
+          name,
+    url,
           uploadedAtIso: new Date().toISOString()},
         project.documents.push(doc);
         saveProject(project);
@@ -55,7 +55,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       if (action === "update_timeline") {
-        const { timeline } = req.body as { timeline: Project["timeline"] },
+        const { timeline } = req.body as { timeline: Project["timeline"] };
         project.timeline = Array.isArray(timeline) ? timeline : project.timeline;
         saveProject(project);
         return res.json({ ok: true, project })
@@ -72,7 +72,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return bad(res, "Method not allowed", 405)
   } catch (e: any) {
-    const status = e?.statusCode || 500,
+    const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
 }

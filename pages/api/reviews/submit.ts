@@ -10,11 +10,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const {
       projectId,
-      fromRole;
-      fromId;
-      rating;
-      text;
-      categories;
+    fromRole,
+      fromId,
+    rating,
+      text,
+    categories,
       anonymous} = req.body as {
       projectId: string,
       fromRole: 'client' | 'talent',
@@ -34,7 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Review text is required' })
     }
 
-    const project = await findProjectById(projectId),
+    const project = await findProjectById(projectId);
     if (!project) {
       return res.status(404).json({ error: 'Project not found' })
     }
@@ -54,15 +54,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
     }
 
-    const now = new Date().toISOString(),
+    const now = new Date().toISOString();
     const review: Review = {
       id: uuidv4(),
-      projectId;
-      fromRole;
-      fromId;
-      toRole;
-      toId;
-      rating;
+      projectId,
+    fromRole,
+      fromId,
+    toRole,
+      toId,
+    rating,
       text: String(text).trim(),
       categories;
       anonymous: Boolean(anonymous),

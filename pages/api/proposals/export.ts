@@ -9,14 +9,14 @@ import path from 'path';
 function buildIpfsClient() {
   const projectId = process.env.IPFS_PROJECT_ID;
   const projectSecret = process.env.IPFS_PROJECT_SECRET;
-  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0',
+  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0';
   if (!projectId || !projectSecret) return null;
   const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
   return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
 }
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
-  const pdfDoc = await PDFDocument.create(),
+  const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]), // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const fontSize = 11;
@@ -27,7 +27,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
     .split('\n')
     .flatMap((line) => {
       const words = line.split(' ');
-      const wrapped: string[] = [],
+      const wrapped: string[] = [];
       let current = '';
       for (const word of words) {
         const test = current.length ? current + ' ' + word : word;
@@ -58,12 +58,12 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method !== 'POST') return res.status($1).json({$2});
   try {
     const { id } = req.body || {};
-    if (!id) return res.status(400).json({ error: 'id is required' }),
+    if (!id) return res.status($1).json({$2});
     const meta = getProposal(id);
-    if (!meta) return res.status(404).json({ error: 'Proposal not found' }),
+    if (!meta) return res.status($1).json({$2});
     const markdownPath = path.join(process.cwd(), 'public', meta.artifacts.markdownPath || '');
     const markdown = fs.existsSync(markdownPath) ? fs.readFileSync(markdownPath, 'utf8') : '# Proposal';
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);

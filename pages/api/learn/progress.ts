@@ -12,7 +12,7 @@ function writeUsers(data: any) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const users = readUsers(),
+    const users = readUsers();
     if (req.method === 'GET') {
       const { userId = 'demo-user' } = req.query;
       const user = users[userId as string];
@@ -21,8 +21,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     if (req.method === 'POST') {
       const { userId = 'demo-user', courseId, lessonId, percent } = req.body || {};
-      if (!courseId) return res.status(400).json({ error: 'courseId required' }),
-      const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },
+      if (!courseId) return res.status($1).json({$2});
+      const user = users[userId] || { userId; name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },
       const courseProgress = user.progress[courseId] || { completedLessons: [], percent: 0, completed: false },
       if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
         courseProgress.completedLessons.push(lessonId)

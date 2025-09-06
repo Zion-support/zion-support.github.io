@@ -18,14 +18,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(500).json({ error: 'LiveKit env vars not configured' })
     }
 
-    const date = new Date(),
+    const date = new Date();
     const pad = (n: number) => String(n).padStart(2, '0');
     const roomName = `${projectId}-${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
     // Attempt to create or ensure the room exists
     try {
       const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
       const opts: CreateRoomOptions = {
-        name: roomName,
+        name: roomName;
         emptyTimeout: 60 * 10, // 10 minutes
         maxParticipants: 24,
         metadata: JSON.stringify({ projectId, createdBy: preferredName || 'host' })},

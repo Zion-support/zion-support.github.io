@@ -8,9 +8,9 @@ export type GenerateServiceDescriptionRequest = {
   tone?: 'professional' | 'friendly' | 'persuasive' | 'technical'
 };
 export type GenerateServiceDescriptionResponse = {
-  description: string
-},
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
+  description: string;
+};
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
@@ -49,7 +49,8 @@ Requirements:
     const response = await openai.responses.create({
       model: 'gpt-4o-mini',
       input: prompt,
-      temperature: 0.7}),
+      temperature: 0.7
+    });
     let description = '';
     const output = response.output?.[0];
     if (output && output.type === 'message') {
