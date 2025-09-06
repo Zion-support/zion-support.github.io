@@ -1,13 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Button from './components/Button';
-import Card from './components/Card';
-import ServiceCard from './components/ServiceCard';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Button from './components/Button'
+import Card from './components/Card'
+import ServiceCard from './components/ServiceCard'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import About from './pages/About'
+import Services from './pages/Services'
+import Contact from './pages/Contact'
 
 const Home = () => (
   <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -55,7 +55,7 @@ const Home = () => (
       </div>
     </div>
   </div>
-);
+)
 
 function App() {
   return (
@@ -73,7 +73,7 @@ function App() {
         <Footer />
       </div>
     </Router>
-  );
+  )
 }
 
 export default App;

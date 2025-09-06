@@ -15,7 +15,29 @@ const imgRef = useRef<HTMLDivElement>(null);
 <defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64')
 }`
 }
+
+export function OptimizedImage({
+  src,
+  alt,
+  width,
+  height,
+  className,
+  priority = false,
+  placeholder = 'empty',
+  blurDataURL,
+  quality = 75,
+  sizes,
+  onLoad,
+  onError,
+  fallbackSrc,
+  lazy = true,
+  ...props
+}: OptimizedImageProps) {
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
+  const [isInView, setIsInView] = useState(!lazy || priority)
   const imgRef = useRef<HTMLDivElement>(null)
+
   // Intersection Observer for lazy loading
   useEffect(() => {
 
@@ -24,7 +46,7 @@ const imgRef = useRef<HTMLDivElement>(null);
 
 
     const observer = new IntersectionObserver(
-      ([entry],) => {
+      ([entry]) => {
         if (entry && entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
@@ -73,10 +95,12 @@ if (||) {
     return original_src;
 
   }
+
   const handleLoad = () => {
     setIsLoading(false)
     onLoad?.()
   }
+
   const handleError = () => {
     setHasError(true)
     setIsLoading(false)
@@ -341,6 +365,8 @@ export function preloadImage(): any (src: string): Promise<void> {;
     const { src, alt, ...otherProps } = props
     return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />
   }
+}
+
 // Utility to preload critical images
 export function preloadImage(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
@@ -351,8 +377,8 @@ export function preloadImage(src: string): Promise<void> {
   })
 
 // Utility to get image dimensions
-export function getImageDimensions(;
-  src: string;
+export function getImageDimensions(
+  src: string
 ): Promise<{ width: number; height: number }> {
   return new Promise((resolve, reject) => {
     const img = new window.Image()
@@ -361,7 +387,6 @@ export function getImageDimensions(;
       resolve({ width: img.naturalWidth, height: img.naturalHeight })
     img.onerror = reject
     img.src = src
-  });    img.src = src
   })
 }
     img.onerror = reject

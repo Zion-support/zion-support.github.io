@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Button from './Button';
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
         )}
       </div>
     </header>
-  );
-};
+  )
+}
 
 export default Header;

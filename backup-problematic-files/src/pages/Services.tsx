@@ -1,6 +1,6 @@
-import React from 'react';
-import ServiceCard from '../components/ServiceCard';
-import Card from '../components/Card';
+import React from 'react'
+import ServiceCard from '../components/ServiceCard'
+import Card from '../components/Card'
 
 const Services: React.FC = () => {
   return (
@@ -124,7 +124,7 @@ const Services: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services
