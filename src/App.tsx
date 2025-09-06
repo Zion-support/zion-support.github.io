@@ -1,45 +1,16 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
+import Sidebar from './components/layout/Sidebar';
 import Footer from './components/Footer';
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';
 import ContactPage from './pages/Contact';
 import ServicesPage from './pages/Services';
+import PricingPage from './pages/Pricing';
 
 export default function App(): React.JSX.Element {
-  return (
-    <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-}
-=======
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Sidebar from './components/layout/Sidebar'
-import ErrorBoundary from './components/ErrorBoundary'
-// Import pages
-import HomePage from './pages/Home'
-import AboutPage from './pages/About'
-import ContactPage from './pages/Contact'
-import ServicesPage from './pages/Services'
-import PricingPage from './pages/Pricing'
-export default function App() {
   return (
     <ErrorBoundary>
       <Router>
@@ -60,5 +31,4 @@ export default function App() {
       </Router>
     </ErrorBoundary>
   );
-};
->>>>>>> main
+}

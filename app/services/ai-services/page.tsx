@@ -1,15 +1,10 @@
 export const metadata = { 
   title: 'AI Services | Zion Tech Group',
-<<<<<<< HEAD
   description: 'Advanced AI solutions including machine learning, natural language processing, computer vision, and intelligent automation. Transform your business with cutting-edge AI technology.'
-=======
-  description: 'Advanced AI solutions including LLM applications, RAG systems, AI agents, fine-tuning, and MLOps. Transform your business with cutting-edge AI technology.'
->>>>>>> main
 };
 
 export default function AIPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -345,7 +340,6 @@ function AIServiceCategory({ title, icon, description, services }: {
   services: string[];
 }) {
   return (
-<<<<<<< HEAD
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
       <div className="text-3xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
@@ -358,7 +352,6 @@ function AIServiceCategory({ title, icon, description, services }: {
           </li>
         ))}
       </ul>
-=======
     <section className="py-12">
       <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI Development Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -431,12 +424,10 @@ function Plan({ name, price, duration, features }: {
       >
         Get Started
       </a>
->>>>>>> main
     </div>
   );
 }
 
-<<<<<<< HEAD
 function AISolution({ title, description, features, price, timeline, useCase, marketSize }: {
   title: string;
   description: string;
@@ -479,7 +470,6 @@ function AISolution({ title, description, features, price, timeline, useCase, ma
         </a>
       </div>
     </div>
-=======
 function ContactSection() {
   return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
@@ -510,6 +500,5 @@ function ContactSection() {
         </div>
       </div>
     </section>
->>>>>>> main
   );
 }

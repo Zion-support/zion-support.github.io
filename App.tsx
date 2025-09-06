@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
@@ -33,14 +32,3 @@ export default function App(): React.JSX.Element {
     </ErrorBoundary>
   );
 }
-=======
-
-export default function App() {
-  return (
-    <main>
-      <h1>Zion Tech Group - AI, Micro SaaS & IT Services</h1>
-      <p>Building the future with innovative technology solutions</p>
-    </main>
-  );
-}
->>>>>>> main
