@@ -1,11 +1,11 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PWARegistration from '../components/PWARegistration.dynamic';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import PWARegistration from "../components/PWARegistration.dynamic";
 
-describe('PWARegistration', () => {
-  test('renders without crashing', () => {
+describe("PWARegistration", () => {
+  test("renders without crashing", () => {
     render(<PWARegistration />);
-    expect(screen.getByTestId('pwa-registration')).toBeInTheDocument();
+    expect(screen.getByTestId("pwa-registration")).toBeInTheDocument();
   });
 });

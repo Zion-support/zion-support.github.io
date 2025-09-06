@@ -64,7 +64,7 @@ export default async function handler(
     context: context || undefined,
   };
 
-const wrote = await tryWriteToFirestore(doc);
+  const wrote = await tryWriteToFirestore(doc);
   if (!wrote) saveFeedbackFallback(doc);
   return ok(res, { id: doc.id });
 }

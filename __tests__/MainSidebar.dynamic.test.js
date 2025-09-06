@@ -1,15 +1,15 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import MainSidebar from '../components/MainSidebar.dynamic';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import MainSidebar from "../components/MainSidebar.dynamic";
 
-describe('MainSidebar', () => {
-  test('renders without crashing', () => {
+describe("MainSidebar", () => {
+  test("renders without crashing", () => {
     render(<MainSidebar />);
-    expect(screen.getByTestId('main-sidebar')).toBeInTheDocument();
+    expect(screen.getByTestId("main-sidebar")).toBeInTheDocument();
   });
-  
-  test('displays navigation items', () => {
+
+  test("displays navigation items", () => {
     render(<MainSidebar />);
     // Test navigation items
   });

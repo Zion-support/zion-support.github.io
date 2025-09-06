@@ -1,15 +1,15 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import MainLayout from '../components/MainLayout.dynamic';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import MainLayout from "../components/MainLayout.dynamic";
 
-describe('MainLayout', () => {
-  test('renders without crashing', () => {
+describe("MainLayout", () => {
+  test("renders without crashing", () => {
     render(<MainLayout />);
-    expect(screen.getByTestId('main-layout')).toBeInTheDocument();
+    expect(screen.getByTestId("main-layout")).toBeInTheDocument();
   });
-  
-  test('displays correct content', () => {
+
+  test("displays correct content", () => {
     render(<MainLayout />);
     // Test content display
   });

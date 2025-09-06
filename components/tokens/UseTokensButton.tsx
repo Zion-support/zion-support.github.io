@@ -24,7 +24,7 @@ export default function UseTokensButton({
         defaultType={defaultType}
       />
     </>
-);
+  );
   const [open, setOpen] = useState(false);
   return (
     <>

@@ -24,7 +24,7 @@ export default function CertificatePreview({
         Download PDF
       </a>
     </div>
-);
+  );
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">

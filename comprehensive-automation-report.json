@@ -1,81 +1,56 @@
 {
-  "timestamp": "2025-09-06T09:22:21.501Z",
-  "totalDuration": 93290,
-  "successfulTasks": 2,
+  "timestamp": "2025-09-06T10:38:04.537Z",
+  "totalDuration": 69125,
+  "successfulTasks": 6,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-      "duration": 80288,
+      "duration": 19557,
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-      "duration": 5840,
-      "errors": [
-        "spawnSync /bin/sh ENOBUFS",
-        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      ],
+      "duration": 25309,
+      "errors": [],
       "warnings": []
     },
     "securityAudit": {
-      "success": false,
-      "duration": 3375,
-      "errors": [
-        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-      ],
+      "success": true,
+      "duration": 1595,
+      "errors": [],
       "warnings": []
     },
     "buildOptimization": {
-      "success": false,
-      "duration": 550,
-      "errors": [
-        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Configuring Next.js via 'next.config.cjs' is not supported. Please replace the file with 'next.config.js', 'next.config.mjs', or 'next.config.ts'.]\n"
-      ],
+      "success": true,
+      "duration": 6001,
+      "errors": [],
       "warnings": []
     },
     "seoOptimization": {
-      "success": false,
+      "success": true,
       "duration": 39,
-<<<<<<< HEAD
       "errors": [],
-=======
-      "errors": [
-        "Command failed: node scripts/generate-sitemap.cjs\n/workspace/scripts/generate-sitemap.cjs:11\n\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
-        "Command failed: node scripts/generate-search-index.cjs\n/workspace/scripts/generate-search-index.cjs:18\n\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-      ],
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
       "warnings": []
     },
-    "accessibilityImprovements": {
+    "accessibilityImprovement": {
       "success": false,
-      "duration": 585,
-      "errors": [
-        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      ],
+      "duration": 8696,
+      "errors": [],
       "warnings": []
     },
     "performanceOptimization": {
-      "success": false,
-      "duration": 990,
-      "errors": [
-        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Configuring Next.js via 'next.config.cjs' is not supported. Please replace the file with 'next.config.js', 'next.config.mjs', or 'next.config.ts'.]\n"
-      ],
+      "success": true,
+      "duration": 6388,
+      "errors": [],
       "warnings": []
     },
     "deployment": {
       "success": true,
-      "duration": 1619,
+      "duration": 1534,
       "errors": [],
       "warnings": []
     }
-  },
-  "recommendations": [
-    "Review and fix code quality issues",
-    "Address security vulnerabilities",
-    "Optimize application performance",
-    "Improve SEO optimization",
-    "Enhance accessibility features"
-  ]
+  }
 }

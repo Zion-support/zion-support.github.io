@@ -26,6 +26,6 @@ export default async function handler(
     return res.status(200).json({ dispute });
   }
 
-res.setHeader("Allow", "GET");
+  res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
 }

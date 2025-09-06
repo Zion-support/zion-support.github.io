@@ -64,7 +64,7 @@ export default async function handler(
       }),
   );
 
-return res
+  return res
     .status(200)
     .json({ status: "created", version, eventId: event.eventId });
 }
