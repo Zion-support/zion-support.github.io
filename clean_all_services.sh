@@ -1,3 +1,16 @@
+#!/bin/bash
+
+# List of problematic service files to clean
+services=(
+  "ai-social-media-scheduler"
+  "devops-automation" 
+  "it-services"
+  "micro-saas"
+  "smart-invoice-generator"
+)
+
+# Template for service pages
+cat > service_template.tsx << 'EOF'
 export const metadata = {
   title: 'Service Name | Zion Tech Group',
   description: 'Service description for the Zion Tech Group service page.',
@@ -66,3 +79,15 @@ export default function ServicePage() {
     </div>
   );
 }
+EOF
+
+# Clean each service file
+for service in "${services[@]}"; do
+  echo "Cleaning $service..."
+  cp service_template.tsx "app/services/$service/page.tsx"
+done
+
+# Clean up template
+rm service_template.tsx
+
+echo "All service files cleaned!"
