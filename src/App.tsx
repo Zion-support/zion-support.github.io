@@ -1,43 +1,134 @@
-import React, { useState, Suspense } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import Button from './components/Button';
+import Card from './components/Card';
+import ServiceCard from './components/ServiceCard';
+import Pricing from './pages/Pricing';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import AISolutions from './pages/AISolutions';
+import About from './pages/About';
 
-// Lazy load pages
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+const Home = () => (
+  <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className="container mx-auto px-4 py-16">
+      <div className="text-center mb-12">
+        <h1 className="text-6xl font-extrabold mb-4 animate-fade-in">
+          Zion Tech Group
+        </h1>
+        <p className="text-2xl text-gray-300 mb-8 animate-slide-up">
+          Leading AI & Technology Solutions for a Smarter Future
+        </p>
+        <div className="animate-fade-in-delay">
+          <Button variant="primary" size="lg" onClick={() => window.location.href = '/services'}>
+            Explore Our Services
+          </Button>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <ServiceCard
+            title="AI Services"
+            description="Transform your business with cutting-edge AI solutions."
+            icon="✨"
+            features={['Machine Learning', 'NLP', 'Computer Vision', 'AI Consulting']}
+          />
+        </div>
+        <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <ServiceCard
+            title="Cybersecurity"
+            description="Protect your digital assets with advanced security solutions."
+            icon="🔒"
+            features={['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response']}
+          />
+        </div>
+        <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <ServiceCard
+            title="Cloud Infrastructure"
+            description="Scale your operations with robust cloud solutions."
+            icon="☁️"
+            features={['Cloud Migration', 'Infrastructure Setup', 'Monitoring', 'Cost Optimization']}
+          />
+        </div>
+      </div>
+
+      <div className="mt-16 text-center">
+        <h2 className="text-4xl font-bold mb-8 animate-fade-in">Why Choose Us?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <Card title="Innovation" description="Pioneering the next generation of technology." />
+          </div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <Card title="Expertise" description="Team of industry-leading professionals." />
+          </div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <Card title="Reliability" description="Trusted solutions for critical operations." />
+          </div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <Card title="Scalability" description="Solutions designed to grow with you." />
+          </div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+            <Card title="Security" description="Robust protection for all your data." />
+          </div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+            <Card title="Support" description="24/7 dedicated customer assistance." />
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Section */}
+      <div className="mt-20 bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div className="text-4xl font-bold text-blue-400 mb-2">500+</div>
+            <div className="text-gray-300">Projects Completed</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
+            <div className="text-gray-300">Client Satisfaction</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
+            <div className="text-gray-300">Support Available</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-yellow-400 mb-2">5+</div>
+            <div className="text-gray-300">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-          <Header />
-          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          
-          <main className="pt-20">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </Suspense>
+        <div className="min-h-screen flex flex-col">
+          <Header onMenuClick={handleMenuClick} />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/ai-solutions" element={<AISolutions />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
           </main>
-          
           <Footer />
-          <PerformanceMonitor />
         </div>
       </Router>
     </ErrorBoundary>

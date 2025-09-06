@@ -1,8 +1,9 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export const metadata = {
   title: "Services | Zion Tech Group",
-  description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+  description:
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 };
 
 export default function ServicesOverviewPage() {
@@ -17,7 +18,7 @@ export default function ServicesOverviewPage() {
           outcomes for your business.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS"
@@ -43,15 +44,145 @@ export default function ServicesOverviewPage() {
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
           icon="⚙️"
         />
+        <ServiceCard
+          href="/services/automation-tools"
+          title="Business Automation"
+          description="Intelligent automation tools that streamline operations and boost productivity"
+          bullets={["Workflow automation", "Document processing", "Customer service bots"]}
+          icon="⚡"
+        />
+        <ServiceCard
+          href="/services/ai-copilots"
+          title="AI Copilots"
+          description="Intelligent assistants that enhance productivity and automate complex tasks"
+          bullets={["Code development", "Customer support", "Sales & marketing"]}
+          icon="🧠"
+        />
+        <ServiceCard
+          href="/services/data-analytics"
+          title="Data Analytics"
+          description="Advanced analytics and BI solutions that transform data into insights"
+          bullets={["Real-time dashboards", "Predictive analytics", "AI-powered insights"]}
+          icon="📊"
+        />
+        <ServiceCard
+          href="/services/cloud-migration"
+          title="Cloud Migration"
+          description="Seamless cloud migration with zero downtime and cost optimization"
+          bullets={["AWS/Azure/GCP", "Zero-downtime migration", "Cost optimization"]}
+          icon="☁️"
+        />
+        <ServiceCard
+          href="/services/ai-content-generation"
+          title="AI Content Generation"
+          description="Scale content marketing with AI-powered content creation and optimization"
+          bullets={["Content creation", "SEO optimization", "Social media automation"]}
+          icon="✍️"
+        />
+        <ServiceCard
+          href="/services/blockchain-development"
+          title="Blockchain Development"
+          description="Secure blockchain applications, smart contracts, and Web3 solutions"
+          bullets={["Smart contracts", "DeFi applications", "NFT marketplaces"]}
+          icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/ai-customer-insights"
+          title="AI Customer Insights"
+          description="Transform customer data into actionable insights with AI-powered analytics"
+          bullets={["Predictive analytics", "Sentiment analysis", "Customer journey mapping", "Real-time dashboards"]}
+          icon="🧠"
+        />
+        <ServiceCard
+          href="/services/automated-workflow-builder"
+          title="Workflow Automation"
+          description="Build powerful business automation workflows without coding"
+          bullets={["Visual workflow designer", "500+ integrations", "AI optimization", "Real-time monitoring"]}
+          icon="⚡"
+        />
+        <ServiceCard
+          href="/services/ai-document-processor"
+          title="AI Document Processor"
+          description="Intelligent document processing with OCR and data extraction"
+          bullets={["Smart OCR engine", "AI data extraction", "Automated workflows", "99% accuracy"]}
+          icon="📄"
+        />
+        <ServiceCard
+          href="/services/cybersecurity-suite"
+          title="Cybersecurity Suite"
+          description="Comprehensive security solutions with threat detection and monitoring"
+          bullets={["Threat detection", "Vulnerability assessment", "Compliance management", "24/7 SOC monitoring"]}
+          icon="🛡️"
+        />
+        <ServiceCard
+          href="/services/ai-chatbot-platform"
+          title="AI Chatbot Platform"
+          description="Build intelligent chatbots with natural language processing"
+          bullets={["NLP capabilities", "Multi-channel deployment", "Machine learning", "Visual builder"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/ai-code-reviewer"
+          title="AI Code Reviewer"
+          description="Automated code review and quality analysis powered by AI with 99% accuracy"
+          bullets={["Intelligent analysis", "Real-time feedback", "Security scanning", "Quality metrics"]}
+          icon="🔍"
+        />
+        <ServiceCard
+          href="/services/ai-meeting-assistant"
+          title="AI Meeting Assistant"
+          description="Transform meetings with AI transcription, action items, and intelligent insights"
+          bullets={["Real-time transcription", "Smart action items", "AI summaries", "Meeting analytics"]}
+          icon="🎤"
+        />
+        <ServiceCard
+          href="/services/ai-document-processor"
+          title="AI Document Processor"
+          description="Intelligent document processing with OCR, data extraction, and automated workflows"
+          bullets={["Multi-format OCR", "Data extraction", "Automated workflows", "Smart classification"]}
+          icon="📄"
+        />
+        <ServiceCard
+          href="/services/invoice-automation"
+          title="Invoice Automation"
+          description="Automate invoice processing, approval workflows, and payment tracking"
+          bullets={["Smart capture", "Automated approval", "Payment processing", "Duplicate detection"]}
+          icon="🧾"
+        />
+        <ServiceCard
+          href="/services/expense-tracker"
+          title="AI Expense Tracker"
+          description="Smart expense tracking with receipt scanning, categorization, and automated reporting"
+          bullets={["Receipt scanning", "Smart categorization", "Real-time analytics", "Team management"]}
+          icon="💰"
+        />
+        <ServiceCard
+          href="/services/api-testing-suite"
+          title="API Testing Suite"
+          description="Comprehensive API testing platform with automated testing, monitoring, and documentation"
+          bullets={["Automated testing", "Performance testing", "Security testing", "Real-time monitoring"]}
+          icon="🧪"
+        />
+        <ServiceCard
+          href="/services/email-campaign-manager"
+          title="AI Email Campaign Manager"
+          description="Intelligent email marketing with AI personalization, automation, and analytics"
+          bullets={["AI personalization", "Advanced analytics", "Automated workflows", "A/B testing"]}
+          icon="📧"
+        />
+        <ServiceCard
+          href="/services/ai-customer-insights"
+          title="AI Customer Insights"
+          description="Unlock customer behavior insights with AI-powered analytics and predictive modeling"
+          bullets={["Predictive analytics", "Sentiment analysis", "Customer segmentation", "Churn prediction"]}
+          icon="🧠"
+        />
       </div>
       <CTA />
     </div>
   );
 }
 
-/**
- * ServiceCard - Function description
- */
 function ServiceCard({
   href,
   title,
@@ -86,9 +217,6 @@ function ServiceCard({
   );
 }
 
-/**
- * CTA - Function description
- */
 function CTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
@@ -112,6 +240,10 @@ function CTA() {
         >
           Email Us
         </a>
+      </div>
+      <div className="mt-4 text-sm text-gray-500">
+        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
     </div>
   );
