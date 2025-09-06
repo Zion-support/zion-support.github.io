@@ -34,6 +34,7 @@ export function RatingStars({ value;
 <<<<<<< HEAD
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 =======
@@ -67,3 +68,14 @@ export function RatingStars({ value;
 
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+
+}) ;
+}{";
+  typeof count === 'number' && (<span className="text-xs ml-1" > ({;
+  count ;
+}) </span> ;
+}</div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

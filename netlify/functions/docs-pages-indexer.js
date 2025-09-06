@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -40,10 +41,23 @@ exports && exports.config = { schedule: '0 */4 * * *' };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 exports && exports.handler = async () => {
+=======
+const path = require('path');
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '....', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+
+exports.config = { schedule: '0 */4 * * *' };
+exports.handler = async () => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const logs = [];
   const step = (name, fn) => {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -176,3 +190,15 @@ exports.handler = async () => {
   step ('docs:index', () => run_node ('automation / docs - pages - indexer.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
+=======
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status
+  },
+
+  step('docs:index', () => runNode('automation/docs-pages-indexer.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

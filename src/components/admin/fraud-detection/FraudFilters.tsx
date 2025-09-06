@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -339,3 +340,32 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
 =======
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { Search, Filter } from 'lucide-react';
+
+interface FraudFiltersProps {
+  searchQuery: string;
+  setSearchQuery: (value: string) => void;
+  statusFilter: string | null;
+  setStatusFilter: (value: string | null) => void;
+  severityFilter: string | null;
+  setSeverityFilter: (value: string | null) => void;
+  contentTypeFilter: string | null;
+  setContentTypeFilter: (value: string | null) => void;
+  resetFilters: () => void
+}
+export const FraudFilters: React.FC<FraudFiltersProps> = ({
+  );
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

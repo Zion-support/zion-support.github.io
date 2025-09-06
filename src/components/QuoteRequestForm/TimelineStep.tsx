@@ -1,7 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <div
 
+=======
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { cn } from "@/lib/utils";
+import { QuoteFormData } from "@/types/quotes";
+import {
+  Popover
+  PopoverContent
+  PopoverTrigger
+} from '@/components/ui/popover'
+import { cn } from '@/lib/utils'
+import { QuoteFormData } from '@/types/quotes'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface TimelineStepProps {
   formData: QuoteFormData
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -25,6 +38,7 @@ interface TimelineStepProps {
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     <div className='space-y-6'>
@@ -259,6 +273,9 @@ function TimelineStep() {
                       variant="outline"
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+=======
+    <div className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         !formData.endDate && "text-zion-slate-light"
                       )}
                     >
@@ -280,6 +297,7 @@ function TimelineStep() {
           )}
         </div>
       </div>
+<<<<<<< HEAD
     </div>;
   );
 };
@@ -408,3 +426,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 =======
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

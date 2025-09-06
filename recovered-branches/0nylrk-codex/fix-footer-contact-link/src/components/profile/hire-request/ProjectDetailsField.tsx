@@ -1,24 +1,14 @@
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
-<<<<<<< HEAD
   FormField
   FormItem
   FormLabel
   FormControl
-  FormMessage
-=======
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
-<<<<<<< HEAD
   form: UseFormReturn<FormValues>
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -30,17 +20,10 @@ interface ProjectDetailsFieldProps {
 import React from "react",;
 import { UseFormReturn } from "react-hook-form",;
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Textarea } from "@/components/ui/textarea",;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  form: UseFormReturn<FormValues>;
+import { Textarea } from "@/components/ui/textarea",;  form: UseFormReturn<FormValues>;
 }
 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <FormField
       control={form && form.control}
@@ -73,21 +56,8 @@ function ProjectDetailsField() {
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-} from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
-import { FormValues } from "./useHireRequestForm";
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-  form: UseFormReturn<FormValues>;
->>>>>>> main
 }
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <FormField
       control={form && form.control}
@@ -95,9 +65,6 @@ export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) 
 }
 ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   ),;}
  interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues> 
@@ -137,6 +104,3 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

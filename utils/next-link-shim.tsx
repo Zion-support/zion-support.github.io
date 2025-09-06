@@ -1,29 +1,24 @@
-<<<<<<< HEAD
-};
+}
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
-      {children};
+      {children}
 };
-};
+}
 };
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href;
-  children: React.ReactNode;
+  children: React.ReactNode
 };
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
-      {children};
+      {children}
 };
+}
 };
-};
-=======
-import React from "react";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -58,14 +53,7 @@ interface HTMLElement {;
   textContent: string | null;
   style: { [key: string]: string }
 }
-<<<<<<< HEAD
-  tagName: 'A';
-=======
-
-interface HTMLAnchorElement extends HTMLElement {
-  tagName: "A";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  href: string;
+  tagName: 'A';  href: string;
   target: string;
 }
 type Href = string | { pathname?: string; href?: string }
@@ -74,25 +62,24 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: React.ReactNode;
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-};
+}
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
-      {children};
+      {children}
 };
 };
 ursor/integrate-build-improve-and-re-verify-8f7d
 };
 }
-<<<<<<< HEAD
-}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
+}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}}
 };
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
-      {children};
+      {children}
 };
-};
+}
 };
 import React from 'react';
   className: string;
@@ -125,31 +112,14 @@ import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   "href": Href;
-  children: React.ReactNode;
+  children: React.ReactNode
 };
 function resolveHref("href": Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname || (href as { href?: string })?.href || '#';
 }
 
-=======
-function resolveHref(href: Href): string {
-  if (typeof href === "string") return href;
-  return href?.pathname || (href as { href?: string })?.href || "#";
-}
-
-export default function Link({
-  href,
-  children,
-  className,
-  ...rest
-}: LinkProps) {
-  const resolved = resolveHref(href);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-
 export default function Link({ href, children, className, ...rest }: LinkProps) {;
-
 
   const resolved = resolveHref(href);
   if (React.isValidElement(children)) {
@@ -159,7 +129,6 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       .filter(Boolean)
       .join(" ");
 
-<<<<<<< HEAD
 export default function Link(): any ({ href, children, className, ...rest }: LinkProps) {;
   const resolved = resolveHref(href);
 
@@ -190,13 +159,9 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 }
 }
 
-
 }
 
-
 }
-
-
 
 }
 
@@ -246,18 +211,7 @@ function Link() {
       href: resolved,
       class_name: mergedClassName,
       ...rest,
-    });
-=======
-    return React.cloneElement(
-      children as React.ReactElement<{ href?: string; className?: string }>,
-      {
-        href: resolved,
-        className: mergedClassName,
-        ...rest,
-      },
-    );
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  }
+    });  }
   return (
     <a href={resolved} className={class_name} {...rest}>;
       {children}

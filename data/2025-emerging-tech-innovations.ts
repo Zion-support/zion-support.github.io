@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EmergingTechInnovationService {
 =======
 <<<<<<< HEAD
@@ -28,6 +29,11 @@ export interface EmergingTechInnovationService {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { ServiceVariant } from '../types/service-variants';
+export interface EmergingTechInnovation {
+export interface EmergingTechInnovationService {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   tagline: string;
@@ -59,6 +65,7 @@ export interface EmergingTechInnovationService {;
     email: string;
     address: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -71,11 +78,19 @@ export interface EmergingTechInnovationService {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -106,6 +121,12 @@ const contact = {
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  marketAdvantage: string
+}
+
+const contact = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     tagline:
       'Next-generation quantum internet infrastructure for unbreakable communication'
     price: '$6,999'
@@ -558,13 +579,10 @@ const contact = {
       'Threat hunting'
     ]
     marketAdvantage:
-      'Only quantum-powered cybersecurity platform with proven AI integration'
-  }
-];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
-    ];
-    marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
-  }
+      'Only quantum-powered cybersecurity platform with proven AI integration',
+  },
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2084,3 +2102,5 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

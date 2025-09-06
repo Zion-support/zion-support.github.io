@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,6 +10,11 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const advancedAIServices2025 = [
+=======
+id: 'ai-powered-business-intelligence-suite',
+    name: 'BusinessIntelligence AI Pro',
+    description:
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
       'Natural language query processing'
       'AI-powered data visualization'
@@ -637,6 +643,7 @@ export const advancedAIServices2025 = [;
     website: 'https://ziontechgroup.com / hr - recruitment - ai',
 
     contact: {
+<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -1237,3 +1244,15 @@ export const advancedAIServices2025 = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      phone: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+    }
+    marketSize: '$173.5B'
+    targetAudience:
+      'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
+    competitiveAdvantage:
+      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

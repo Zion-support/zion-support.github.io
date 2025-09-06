@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
+=======
+export interface EnterpriseItService {
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -14,6 +19,7 @@
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 export interface EnterpriseItService {;
     address: string;
   };
@@ -74,20 +80,46 @@ export const enterpriseITServices: EnterpriseItService[] = [
       'Comprehensive enterprise architecture consulting services for digital transformation.'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    address: string
+  }
+}
+
+export const enterpriseITServices: EnterpriseItService[] = [
+  {
+    id: "enterprise-architecture";
+    name: "Enterprise Architecture Consulting";
+    tagline: "Strategic IT architecture for large organizations";
+    price: "$150/hour";
+    description: "Comprehensive enterprise architecture consulting services for digital transformation.";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
       "Architecture assessment";
       "Technology roadmap";
       "Integration strategy";
+<<<<<<< HEAD
       "Governance framework";
       "Implementation support"
     ];
     link: "/services/enterprise-architecture", category: "Enterprise IT",
     realImplementation: true,
     contactInfo: {
+=======
+      "Governance framework",
+      "Implementation support"
+    ],
+    link: "/services/enterprise-architecture";
+    category: "Enterprise IT";
+    realImplementation: true;
+    contactInfo: {
+      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -145,3 +177,5 @@ export const enterpriseITServices: EnterpriseItService[] = [
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

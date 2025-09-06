@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import {;
@@ -55,6 +58,7 @@ import {;
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
+<<<<<<< HEAD
 interface SearchResult {;
 import React, { useState, useEffect, useMemo } from 'react';
 import { use_router } from 'next / router';
@@ -89,6 +93,41 @@ import { Separator } from '@/components / ui / separator';
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { logErrorToProduction, log_info } from '@/utils / production_logger';
+=======
+import React, { useState, useEffect, useMemo } from 'react'
+import { useRouter } from 'next/router'
+import {
+  Search
+  Filter
+  X
+  SortAsc
+  SortDesc
+  GridIcon
+  List
+  Loader2
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Badge } from '@/components/ui/badge'
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Slider } from '@/components/ui/slider'
+import { Separator } from '@/components/ui/separator'
+  Sheet
+  SheetContent
+  SheetHeader
+  SheetTitle
+  SheetTrigger
+} from '@/components/ui/sheet'
+import { EnhancedSearchInput } from './EnhancedSearchInput'
+import { generateSearchSuggestions } from '@/data/marketplaceData'
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface SearchResult {
   id: string;
   title: string;
@@ -121,6 +160,7 @@ interface SearchResponse {;
   page: number;
   limit: number;
   query: string;
+<<<<<<< HEAD
 
   hasMore: boolean;
 <<<<<<< HEAD
@@ -1948,3 +1988,7 @@ export default SearchResultsPage,
 =======
                 {hasMore && (
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  hasMore: boolean
+// Highlight search terms in text
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

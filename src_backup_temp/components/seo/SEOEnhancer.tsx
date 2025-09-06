@@ -539,7 +539,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta httpEquiv="X-Frame-Options" content="DENY" /" >""
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /" >
     </Head>
-  );
+  )
 };
 export default SEOEnhancer;"
     <Head>""
@@ -630,7 +630,8 @@ export default SEOEnhancer;";
       <meta httpEquiv="X-Frame-Options" content="DENY" /"" >""
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /"" >
     </Head>
-  );};
+  )
+};
 export default SEOEnhancer;""
     <Head>
       <title>{title}</title>
@@ -780,7 +781,7 @@ export default SEOEnhancer;""
       <meta httpEquiv=&quot;X-Frame-Options&quot; content=&quot;DENY&quot;   />&quot;
       <meta httpEquiv=&quot;X-XSS-Protection&quot; content=&quot;1; mode=block&quot;   />&quot;
     </Head>';
-  );';';
+  );';'
 };';';';
 export default SEOEnhancer';';';';
 export default SEOEnhancer;';';';';';
@@ -791,7 +792,7 @@ export default SEOEnhancer;';';';';';
 </SEOEnhancerProps>;';;';
     </Head>;
     </Head>
-  );
+  )
 };';
 export default SEOEnhancer';';
 export default SEOEnhancer;';';';

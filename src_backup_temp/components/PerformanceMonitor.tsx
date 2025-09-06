@@ -87,7 +87,7 @@ const "PerformanceMonitor": "React.FC = () => {;
       </div>
     </div>
   )};
-  );
+  )
 };
 ;
   return (;
@@ -108,7 +108,7 @@ const "PerformanceMonitor": "React.FC = () => {;
         </div>;
       </div>;
     </div>;
-  );
+  )
 };
 ;
 export default PerformanceMonitor;

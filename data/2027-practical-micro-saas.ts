@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
+=======
+export interface PracticalMicroSaas2027 {
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -14,6 +19,7 @@
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 export interface PracticalMicroSaas2027 {;
     address: string;
   };
@@ -74,20 +80,46 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
       'Practical micro SAAS platform designed for 2027 with real-world business applications.'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    address: string
+  }
+}
+
+export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
+  {
+    id: "2027-practical-micro-saas";
+    name: "2027 Practical Micro SAAS Platform";
+    tagline: "Practical micro SAAS for 2027";
+    price: "$129/month";
+    description: "Practical micro SAAS platform designed for 2027 with real-world business applications.";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
       "Practical solutions";
       "Business applications";
       "Real-world use cases";
+<<<<<<< HEAD
       "Easy integration";
       "Affordable pricing"
     ];
     link: "/services/2027-practical-micro-saas", category: "Practical Micro SAAS 2027",
     realImplementation: true,
     contactInfo: {
+=======
+      "Easy integration",
+      "Affordable pricing"
+    ],
+    link: "/services/2027-practical-micro-saas";
+    category: "Practical Micro SAAS 2027";
+    realImplementation: true;
+    contactInfo: {
+      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -145,3 +177,5 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

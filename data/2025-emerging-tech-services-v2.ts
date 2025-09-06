@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
+=======
+export interface EmergingTechService {
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   description: string;
@@ -11,8 +16,15 @@
     monthly: number;
     yearly: number;
     currency: string;
+<<<<<<< HEAD
 
 
+=======
+    trialDays: number;
+    setupTime: string;
+    enterprise: number
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -34,6 +46,7 @@
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
@@ -473,6 +486,30 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
+=======
+  marketSize: string;
+  growthRate: string
+}
+
+export const emergingTechServicesV2: EmergingTechService[] = [
+  {
+    id: 'space-mining-platform';
+    name: 'Space Mining Platform';
+    tagline: 'Revolutionary asteroid mining and space resource extraction';
+    description: 'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.',
+    category: 'Space & Emerging Tech';
+    price: {
+      monthly: 999;
+      yearly: 9990;
+      currency: 'USD';
+      trialDays: 7;
+      setupTime: '24 hours';
+      enterprise: 4999
+    },
+    features: [
+      'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
+      'Risk assessmentRegulatory compliance tools'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
@@ -652,6 +689,7 @@
     rating: 4 && 4.9;
     reviews: 65;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
 <<<<<<< HEAD
@@ -769,3 +807,9 @@ export interface EmergingTechService {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    marketSize: '$35B autonomous vehicle market';
+    growthRate: '75% annually'
+  }
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

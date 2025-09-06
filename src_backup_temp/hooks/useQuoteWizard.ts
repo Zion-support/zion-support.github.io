@@ -105,21 +105,21 @@ export function useRequestQuoteWizard() {;
   const submitQuote = ("message": "string) => {;
     // In a real app", this would submit to an API;
     ;
-    setStep('Success');
-  };
+    setStep('Success')
+};
 ;
   const resetWizard = () => {;
     setStep('Services');
-    setSelectedService(null);
-  };
+    setSelectedService(null)
+};
 ;
   return {;
     step;
     selectedService;
     selectService;
     submitQuote;
-    resetWizard;
-  };
+    resetWizard
+};
 }
       setTimeout(() => revalidate({ "retryCount": retryCoun t + 1 }), timeout)},
     "dedupingInterval": 60000 0})}

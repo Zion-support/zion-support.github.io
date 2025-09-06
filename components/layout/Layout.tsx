@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -12,6 +13,13 @@ import Head from 'next/head';
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { ReactNode } from 'react';
+=======
+React from
+  'react'
+import Header from 'react'
+  './Header';import Footer from 'react'
+  './Footer'
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 import Header from '../Header';
 import Footer from '../Footer';

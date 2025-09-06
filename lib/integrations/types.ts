@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export type IntegrationCategory = 'crm' | 'ats';
 <<<<<<< HEAD
@@ -96,12 +97,18 @@ export interface IntegrationProviderMeta {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export type IntegrationCategory = any;
+  events: ZapierEvent[]
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
   pushNotesMode?: 'auto' | 'manual';
   // ATS rules;
   autoSyncApplicants?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -110,15 +117,28 @@ export interface SyncRules {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+autoUploadResumes?: boolean;
+
+export interface ProviderConnection {
+  providerId: IntegrationProviderId;
+  status: SyncStatus;
+  accessToken?: string;
+  refreshToken?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
   lastSyncAt?: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
+=======
+lastError?: string | null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 export interface SyncLogEntry {
 =======
@@ -198,6 +218,7 @@ export interface ZapierEvent {;
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
+<<<<<<< HEAD
   events: ZapierEvent[];  events: ZapierEvent[]
 }
 
@@ -253,3 +274,6 @@ export interface IntegrationsState {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  events: ZapierEvent[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -262,6 +262,7 @@ if ( {) {
 }
     missing.push ('dateOfBirth');
   }
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -290,3 +291,6 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return { ok: missing.length === 0, missing };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

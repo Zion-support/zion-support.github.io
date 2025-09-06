@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
+=======
+export interface EmergingTechService2026 {
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -31,6 +36,7 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
   text_color: string;
   link: string;
   market_position: string;
@@ -179,6 +185,19 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
+=======
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number
+}
+
+const contact = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     tagline:
       'Access quantum computing power through the cloud with AI-optimized algorithms'
     price: '$999'
@@ -663,6 +682,7 @@ export const getEmergingTechServices2026ByPriceRange = (
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return price >= minPrice && price <= maxPrice;
   });
+<<<<<<< HEAD
 };    return price >= minPrice && price <= maxPrice
 
   })
@@ -989,3 +1009,6 @@ export interface EmergingTechService2026 {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

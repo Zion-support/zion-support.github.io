@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { Input } from '@/components/ui/input';
+import { SearchIcon } from 'lucide-react';
+import { SearchFilterProps } from '@/types/filters';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 
 
@@ -15,13 +22,22 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           type='text'
           placeholder='Search talents...'
           value={searchTerm}
+<<<<<<< HEAD
 
 
 
+=======
+          onChange={e => setSearchTerm(e.target.value)}
+          aria-describedby='talent-search-help'
+          className='pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light'
+        />
+        <p id='talent-search-help' className='sr-only'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           Type a name or skill to filter results
         </p>
       </div>
     </div>
+<<<<<<< HEAD
 
           onChange={e => setSearchTerm(e && e.target.value)}
           aria-describedby='talent-search-help';
@@ -103,3 +119,7 @@ import { SearchFilterProps } from '@/types / filters';
     </div>);
 }
 ;
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

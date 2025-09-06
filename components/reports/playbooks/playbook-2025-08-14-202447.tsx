@@ -234,6 +234,7 @@ function Page() {
         </p>
       </main>
     </div>
+<<<<<<< HEAD
     </div>;
   );export default function Page() {
   return (
@@ -291,3 +292,6 @@ export default function Page() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

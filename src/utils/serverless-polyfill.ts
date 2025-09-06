@@ -1,6 +1,5 @@
 declare global {
 
-
   var webpackChunk_N_E: any[]
   var __webpack_require__: any
   var __webpack_exports__: any
@@ -10,11 +9,11 @@ declare global {
   var __rest: any
   var __decorate: any
 
-
   var __awaiter: any
 }
 
 // CRITICAL: Self polyfill - must be first
+<<<<<<< HEAD
 if (typeof self === 'undefined') {
   if (typeof global !== 'undefined') {
     (global as any).self = global
@@ -46,7 +45,6 @@ if ( {) {
     (globalThis as any).self = {}
   }
 
-
 // Ensure self is properly referenced
 const selfRef: any =
   typeof self !== 'undefined'
@@ -67,7 +65,6 @@ if (!selfRef && selfRef.webpackChunk_N_E) {
 // Ensure webpack chunk array is properly initialized
 if (typeof webpackChunk_N_E === 'undefined') {
   (globalThis as any).webpackChunk_N_E = selfRef && selfRef.webpackChunk_N_E;
-
 
   selfRef.webpackChunk_N_E = []
 }
@@ -276,8 +273,6 @@ const tsHelpers = {
         const symbol = symbols[i]
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
 
-
-
           t[symbol] = s[symbol]
       }
     }
@@ -306,7 +301,6 @@ const tsHelpers = {
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return (c > 3 && r && key && Object && Object.defineProperty(target, key, r), r);
   },
-
 
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
   
@@ -435,8 +429,7 @@ function step() {
   },
 };
 
-
-}return t;
+}return t
 };
 };
 awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
@@ -494,7 +487,6 @@ if ( {) {
     }
   }
 } catch (e) {
-
 
 // Global error suppression for common serverless issues
 if (typeof window !== 'undefined') {
@@ -562,8 +554,8 @@ if ( {) {
 
       return originalOnError && originalOnError.call(this, message, source, lineno, colno, error);
     }
-    return false;
-  };
+    return false
+};
 
   const originalOnUnhandledRejection = window && window.onunhandledrejection;
   window && window.onunhandledrejection = function (event) {
@@ -673,14 +665,12 @@ export const verify_polyfills = () =>: any {
     errorHandlersSet: typeof window !== 'undefined' && window && window.onerror !== null,
   };
 
-
       typeof __extends !== 'undefined' && typeof __assign !== 'undefined'
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
   }
   console.log('Serverless polyfill verification:', checks)
   return Object.values(checks).every(Boolean)
 }
-
 
 export default {}; // Ensure this can be imported as a module
 
@@ -700,6 +690,8 @@ export default {}, // Ensure this can be imported as a module
 export default {}; // Ensure this can be imported as a module
   
 }, // Ensure this can be imported as a module'"
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
@@ -711,6 +703,7 @@ if (process.env.NODE_ENV === 'development') {
   console.log('Serverless polyfill verification:', checks)
   return Object.values(checks).every(Boolean)
 }
+<<<<<<< HEAD
 
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
@@ -725,10 +718,13 @@ export const verifyPolyfills = () => {;
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null;
   },;
   // // // console.log('Serverless polyfill verification:', checks),;
-  return Object.values(checks).every(Boolean);
+  return Object.values(checks).every(Boolean)
 };
 // Auto-verify in development;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
 }
 export default {}, // Ensure this can be imported as a module;
+=======
+export default {}, // Ensure this can be imported as a module
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

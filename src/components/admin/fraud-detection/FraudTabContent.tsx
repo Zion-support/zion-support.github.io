@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+
+import React from "react";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 =======
@@ -43,6 +50,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
 
       return (
+<<<<<<< HEAD
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
           <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />
           <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>
@@ -178,3 +186,11 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
 =======
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      );
+
+    default:
+      return null;
+  }
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

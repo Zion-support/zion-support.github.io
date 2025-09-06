@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -115,6 +116,20 @@ function SecurityAudit() {
  
 };
 </pre> </div>) 
+=======
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface AuditReport {
+  generatedAt?: string;
+  metadata?: any;
+  vulnerabilities?: any;
+  error?: string;
+  raw?: string
+}
+
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -133,9 +148,12 @@ export default function SecurityAudit({ report }: Props) {
     </div>;
 );
 }
+<<<<<<< HEAD
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

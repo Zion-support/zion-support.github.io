@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export interface DeployTemplateResult {
 =======
@@ -13,6 +14,40 @@ export interface DeployTemplateResult {
 
 // Mock source map utility
 export function getSourceMapWithExistence() {
+=======
+import fs from 'fs';
+import path from 'path';
+
+export type SourceNodeType = 'folder' | 'file';
+
+export interface SourceNode {
+  name: string;
+  path: string; // repo-relative path starting with '/'
+  type: SourceNodeType;
+  children?: SourceNode[];
+  exists?: boolean;
+
+export interface SourceMapStatus {
+  gitConnected: boolean;
+  gitBranch?: string;
+
+export interface SourceMapResponse {
+  nodes: SourceNode[];
+  status: SourceMapStatus;
+
+const ROOT = process.cwd();
+
+function withPath(base: string, segment: string): string {
+  if (base === '/') return `/${segment}`;
+  return `${base}/${segment}`;
+
+function folder(
+  name: string,
+  basePath: string,
+  children: string[] = []
+): SourceNode {
+  const fullPath = withPath(basePath, name);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return {
 <<<<<<< HEAD
     nodes: []
@@ -179,6 +214,7 @@ export function deployBasicTemplateForPath(
     skippedPaths.push(readmeFile);
   }
 
+<<<<<<< HEAD
 
 
 
@@ -225,3 +261,6 @@ export function ensure_directory (dir_path: string): void {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return { createdPaths, skippedPaths };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

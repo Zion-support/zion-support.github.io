@@ -9,7 +9,6 @@ const blogPosts = [
   { id: 2, title: 'Micro SaaS: Building Scalable Solutions', excerpt: 'Build and scale micro SaaS apps.', author: 'Michael Rodriguez', date: '2024-01-12', readTime: '7 min read' }
 ]
 
-
 export default function BlogPage() {
   return (
     <Layout

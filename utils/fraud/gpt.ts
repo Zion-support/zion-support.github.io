@@ -27,6 +27,7 @@
     } as GptClassification;
   } catch {
     return {
+<<<<<<< HEAD
   reasoning: string;
 <<<<<<< HEAD
 =======
@@ -69,10 +70,13 @@ export interface GptClassification {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
+<<<<<<< HEAD
   }export interface GptResult {;
 <<<<<<< HEAD
 =======
@@ -133,3 +137,6 @@ export interface GptClassification {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

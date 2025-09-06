@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const started = null;
+  return res.status(201).json({ id: record.id })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
@@ -93,7 +106,6 @@ if ( {) {
 
     partnerId: auth.partner.id,
 
-
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
@@ -138,6 +150,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   records.push(record);
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
+<<<<<<< HEAD
   return res.status(201).json({ id: record.id })
 }
     id: uuidv4 (),
@@ -154,3 +167,6 @@ created_at: now,
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
 }
+=======
+  return res.status(201).json({ id: record.id });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

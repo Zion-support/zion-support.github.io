@@ -1,10 +1,40 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface ApplicationRowProps {
+=======
+import { Button } from "@/components/ui/button",
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
+import { ScoreBadge } from "./ScoreBadge";
+import { ApplicationActions } from "./ApplicationActions";
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import useState
+
+interface ApplicationRowProps {
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+  onViewScore: (application: JobApplication) => void
+import { Button } from '@/components/ui/button'
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
+import { TableRow, TableCell } from '@/components/ui/table'
+import { JobApplication, ApplicationStatus } from '@/types/jobs'
+import { StatusBadge } from './StatusBadge'
+import { ScoreBadge } from './ScoreBadge'
+import { ApplicationActions } from './ApplicationActions'
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useState
+interface ApplicationRowProps {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   application: JobApplication
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
+<<<<<<< HEAD
 
 =======
 interface ApplicationRowProps {
@@ -76,6 +106,28 @@ export function ApplicationRow(): any ({;
 
   const talentName = application.talent_profile?.full_name || 'Unknown'
 
+=======
+    applicationId: string
+    newStatus: ApplicationStatus
+  ) => Promise<void>
+  onViewScore: (application: JobApplication) => void
+interface ApplicationRowProps {
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string,) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>
+  onViewScore: (application: JobApplication,) => void
+}
+export function ApplicationRow({
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange;
+  onViewScore
+}: ApplicationRowProps) {
+  const [avatarError, setAvatarError] = useState(false);
+  const talentName = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
   const talentName = application.talent_profile?.full_name |'Unknown'
 
@@ -346,6 +398,7 @@ export function ApplicationRow({;
           processingId = {processingId,}
           onViewApplication = {onViewApplication,}
           onStatusChange = {onStatusChange,}
+<<<<<<< HEAD
 
         />;
       </TableCell>;
@@ -377,3 +430,9 @@ export function ApplicationRow({;
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        />
+      </TableCell>
+    </TableRow>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

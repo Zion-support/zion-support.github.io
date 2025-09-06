@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -64,10 +65,24 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       id: "visiontech";
     aiScore: 94
   }
+=======
+    id: "ai-model-1";
+    title: "GPT-4 API Integration Package";
+    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
+    category: "AI Models & APIs";
+    price: 1999;
+    currency: "$";
+    tags: ["GPT-4", "API Integration", "NLP"],
+    author: {
+      name: "AI Solutions Inc.";
+      id: "ai-solutions";
+      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -88,10 +103,23 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Code assistant'
     'Virtual assistant'
     'Enterprise AI solutions'
+=======
+'AI models',
+    'GPT integration',
+    'Machine learning',
+    'Computer vision',
+    'Speech recognition',
+    'Data analysis',
+    'Content generation',
+    'Code assistant',
+    'Virtual assistant',
+    'Enterprise AI solutions',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   return suggestions.map(text => ({
     text
     type: 'product', // Use a valid type from the SearchSuggestion interface
+<<<<<<< HEAD
   }));};  ];
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion } from "@/types/search",
@@ -313,6 +341,16 @@ export const generateFilterOptions = () => {
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }));
+};
+
+// Generate filter options for sidebar
+export const generateFilterOptions = () => {
+  // Extract unique categories, locations, and availability options from listings
+const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ].sort();
   const locations = [
     ...new Set(
@@ -367,6 +405,7 @@ aiScore: 94
 }];
 //Generate search suggestions based on existing listings ];
   return {
+<<<<<<< HEAD
 ratingOptions: [1, 2, 3, 4, 5]
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
@@ -773,3 +812,17 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  productTypes: productTypes.map (type => ({
+  label: type, value: type
+}) );
+locations: locations.map (location => ({
+  label: location, value: location
+}) );
+availabilityOptions: availability.map (item => ({
+  label: item, value: item
+}) );
+ratingOptions: [1, 2, 3, 4, 5] 
+
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

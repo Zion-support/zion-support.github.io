@@ -14,6 +14,6 @@ const Custom: React.FC<CustomProps> = ({ className }) => {
       <h1>Custom</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

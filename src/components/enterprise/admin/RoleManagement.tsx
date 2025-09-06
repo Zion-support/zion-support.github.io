@@ -1,16 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
 import React from 'react';
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow,
 } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -118,10 +123,13 @@ import {;
   TableCell,;
   TableHead,;
   TableHeader,;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
+<<<<<<< HEAD
 import { toast } from '@/hooks/use-toast';import { InfoIcon } from 'lucide-react';
 import {;
   Tooltip,;
@@ -209,6 +217,38 @@ export function RoleManagement() {;
     Viewer: 'Read-only access to candidates',;
   };
 
+=======
+import { toast } from '@/hooks/use-toast';
+import { InfoIcon } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+
+import React from "react";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Switch } from "@/components/ui/switch";
+import { toast } from "@/hooks/use-toast";
+import { InfoIcon } from 'lucide-react'
+import {
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger} from "@/components/ui/tooltip",
+
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 
@@ -963,6 +1003,7 @@ export function RoleManagement() {;
               </TableRow>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
           </TableBody>;
@@ -1030,3 +1071,10 @@ export function RoleManagement() {;
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

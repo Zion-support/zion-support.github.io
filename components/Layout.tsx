@@ -295,13 +295,22 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
+<<<<<<< HEAD
     <main className="min-h-screen">
       {children}
     </main>
+=======
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </div>
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
 };
 
 export default Layout;
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -311,3 +320,5 @@ export default Layout;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

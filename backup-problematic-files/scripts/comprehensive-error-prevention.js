@@ -6,10 +6,8 @@ import path from 'path';
 import {exec_sync} from 'child_process';
 import {fileURLToPath} from 'url';
 
-
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
-
 
 class ComprehensiveErrorPrevention {
   constructor() {
@@ -47,7 +45,6 @@ class ComprehensiveErrorPrevention {
         'src && src.broken',
         'solutions && solutions.disabled',
         'scripts && scripts.disabled',
-=======
 ;
 const __filename = fileURLToPath (import.meta.url);
 const __dirname = path.dirname (__filename);
@@ -89,7 +86,6 @@ class ComprehensiveErrorPrevention {
         'automation_backup',
         'data_backup'
       ];
-
 
       this && this.fixedCount++;
       this && this.log('Corrupted files cleanup completed.');
@@ -210,7 +206,6 @@ class ComprehensiveErrorPrevention {
 // Run the system
 const system = new ComprehensiveErrorPrevention();
 system && system.run().catch(console && console.error);
-=======
 ;
       for (const dir of corrupted_dirs) {
         const dir_path = path.join (process.cwd (), dir);
@@ -329,4 +324,3 @@ system && system.run().catch(console && console.error);
 // Run the system;
 const system = new ComprehensiveErrorPrevention ();
 system.run ().catch (console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

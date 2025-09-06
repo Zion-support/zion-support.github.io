@@ -8,27 +8,43 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 import type { TrustAppeal } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
+  const { userId, message, contactEmail } = req.body || {};
+  if (!userId || !message) return res.status(400).json({ error: 'Missing userId or message' });
+  const appeal: TrustAppeal;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   }
-  const { userId, message, contactEmail } = req.body |{}
-  if (!userId |!message)
+
+  const { userId, message, contactEmail } = req.body || {};
+  if (!userId || !message)
     return res.status(400).json({ error: 'Missing userId or message' });
+
   const appeal: TrustAppeal = {
-    userId
-    message
-    contactEmail
-    createdAt: new Date().toISOString()
-  }
+    userId,
+    message,
+    contactEmail,
+    createdAt: new Date().toISOString(),
+  };
+
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal);
   } catch {}
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST');
@@ -52,6 +68,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     contactEmail;
     createdAt: new Date().toISOString()}
 
+=======
+
+  return res.status(200).json({ ok: true, appeal });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
@@ -138,6 +158,7 @@ return res.status (200).json ({ ok: true, appeal });
 
 return res.status(200).json({ ok: true, appeal });
 }
+<<<<<<< HEAD
 
   return res.status(200).json({ ok: true, appeal });
 }
@@ -145,3 +166,5 @@ return res.status(200).json({ ok: true, appeal });
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

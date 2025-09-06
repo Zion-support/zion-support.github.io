@@ -47,7 +47,7 @@ export const useAccessibility = (props: any) => {
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
   "}
-  return context;
+  return context
 };
 ;
 interface AccessibilityProviderProps {;
@@ -159,27 +159,27 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   const toggleHighContrast = (props: any) => {
     const newValue = !highContrast;';
     setHighContrast(newValue);';';
-    localStorage.setItem('zion-high-contrast', newValue.toString());
-  };
+    localStorage.setItem('zion-high-contrast', newValue.toString())
+};
   const toggleReducedMotion = (props: any) => {
     const newValue = !reducedMotion;';
     setReducedMotion(newValue);';';
-    localStorage.setItem('zion-reduced-motion', newValue.toString());
-  };
+    localStorage.setItem('zion-reduced-motion', newValue.toString())
+};
   const increaseFontSize = (props: any) => {
     const newSize = Math.min(fontSize + 2, 24);';
     setFontSize(newSize);';';
-    localStorage.setItem('zion-font-size', newSize.toString());
-  };
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
   const decreaseFontSize = (props: any) => {
     const newSize = Math.max(fontSize - 2, 12);';
     setFontSize(newSize);';';
-    localStorage.setItem('zion-font-size', newSize.toString());
-  };
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
   const resetFontSize = (props: any) => {';
     setFontSize(16);';';
-    localStorage.setItem('zion-font-size', '16');
-  };
+    localStorage.setItem('zion-font-size', '16')
+};
   const toggleVoiceNavigation = (props: any) => {
     const newValue = !voiceNavigation;';
     setVoiceNavigation(newValue);';';
@@ -217,51 +217,51 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   const toggleHighContrast = (props: any) => {
     const newValue = !highContrast;
     setHighContrast(newValue);
-    localStorage.setItem('zion-high-contrast'", newValue.toString());
-  };
+    localStorage.setItem('zion-high-contrast'", newValue.toString())
+};
 ;
   const toggleReducedMotion = ("props": "any) => {;
   const toggleReducedMotion = (props: any) => {
     const newValue = !reducedMotion;
     setReducedMotion(newValue);
-    localStorage.setItem('zion-reduced-motion'", newValue.toString());
-  };
+    localStorage.setItem('zion-reduced-motion'", newValue.toString())
+};
 ;
   const increaseFontSize = ("props": "any) => {;
     const newSize = Math.min(fontSize + 2", 24);
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString());
-  };
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
 ;
   const decreaseFontSize = ("props": "any) => {;
     const newSize = Math.max(fontSize - 2", 12);
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString());
-  };
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
 ;
   const resetFontSize = ("props": "any) => {;
   const increaseFontSize = (props: any) => {
     const newSize = Math.min(fontSize + 2, 24);
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString());
-  };
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
   const decreaseFontSize = (props: any) => {
     const newSize = Math.max(fontSize - 2, 12);
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString());
-  };
+    localStorage.setItem('zion-font-size', newSize.toString())
+};
   const resetFontSize = (props: any) => {
     setFontSize(16);
-    localStorage.setItem('zion-font-size'", '16');
-  };
+    localStorage.setItem('zion-font-size'", '16')
+};
 ;
   const toggleVoiceNavigation = ("props": "any) => {;
   const toggleVoiceNavigation = (props: any) => {
     const newValue = !voiceNavigation;
     setVoiceNavigation(newValue);
     localStorage.setItem('zion-voice-navigation', newValue.toString());
-    localStorage.setItem('zion-voice-navigation'", newValue.toString());
-  };
+    localStorage.setItem('zion-voice-navigation'", newValue.toString())
+};
   const value = {
     highContrast,
     toggleHighContrast,
@@ -487,7 +487,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       </div>
       {children}
     </AccessibilityContext.Provider>
-  );
+  )
 };
 ;
 // Focus trap component for modals;
@@ -534,12 +534,12 @@ export const FocusTrap: React.FC<{ children: ReactNod e; isActive?: boolean }> =
       }
     };';
 ';';
-    document.addEventListener('keydown', handleKeyDown);';';
-    };
+    document.addEventListener('keydown', handleKeyDown);';'
+};
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isActive]);
-  return <>{children}</>;
+  return <>{children}</>
 };
 </motion>
 </motion>

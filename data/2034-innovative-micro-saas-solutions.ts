@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -9,6 +10,9 @@ export type InnovativeMicroSaas = {
 export type InnovativeMicroSaas = {
 export type InnovativeMicroSaas = {;
   id: string;
+=======
+export type InnovativeMicroSaas = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   description: string;
   tagline?: string;
@@ -74,6 +78,7 @@ export type InnovativeMicroSaas = {
 
   },
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -129,10 +134,53 @@ export type InnovativeMicroSaas = {
     name: 'Candidate Screening Copilot',
     description:;
       'Summarize resumes, score against job descriptions, and auto - generate interview question sets.',
+=======
+    id: 'local-seo-reviews-booster'
+    name: 'Local SEO Reviews Booster'
+    description:
+      'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.'
+    category: 'Marketing Automation'
+    pricing: { starter: '$29/mo' }
+    features: [
+      'Smart review routing'
+      'NPS & CSAT'
+      'Churn alerts'
+      'Multi-location dashboards'
+    ]
+    integrations: ['Google Business Profile', 'Yelp']
+    useCases: ['Local ranking', 'Reputation management']
+    link: 'https://ziontechgroup.com/services/local-seo-reviews-booster'
+    realService: true
+  }
+  {
+    id: 'smart-invoice-reconciliation'
+    name: 'Smart Invoice Reconciliation'
+    description:
+      'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.'
+    category: 'Financial Technology'
+    pricing: { starter: '$59/mo' }
+    features: [
+      'OCR ingestion'
+      'Matching heuristics'
+      'Discrepancy alerts'
+      'Export to ERP'
+    ]
+    integrations: ['QuickBooks', 'Xero', 'Stripe']
+    useCases: ['Accounting automation', 'Finance ops']
+    link: 'https://ziontechgroup.com/services/smart-invoice-reconciliation'
+    realService: true
+  }
+  {
+    id: 'candidate-screening-copilot'
+    name: 'Candidate Screening Copilot'
+    description:
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     category: 'Human Resources',
     pricing: { starter: '$69/mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integrations: ['Greenhouse', 'Lever'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -715,3 +763,10 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    useCases: ['Faster hiring', 'Bias reduction'],
+    link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
+    realService: true,
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

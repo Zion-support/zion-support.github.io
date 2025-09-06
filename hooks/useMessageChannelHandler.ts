@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -52,6 +53,9 @@ export function useMessageChannelHandler({
   onError,
 =======
 >>>>>>> main
+=======
+  onMessage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   onError
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }: MessageChannelHandlerProps = {}) {
@@ -71,6 +75,7 @@ export function useMessageChannelHandler({
     };
   }, [handleMessage]);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -93,3 +98,5 @@ import { useEffect,useCallback } from 'react'; interface MessageEvent { data: un
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -29,6 +30,13 @@
   ALL_SERVICES
   AI_SERVICES
   IT_SERVICES
+=======
+import React, { useState } from 'react';
+import { SERVICE_CATEGORIES;
+  ALL_SERVICES;
+  AI_SERVICES;
+  IT_SERVICES;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   MICRO_SAAS_SERVICES;
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
@@ -56,12 +64,28 @@ export function ServicesPage() {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
+<<<<<<< HEAD
   const filteredServices = ALL_SERVICES.filter(service => {
 
 
 <<<<<<< HEAD
 =======
 =======
+=======
+  const filteredServices = null;
+    const matchesSearch =
+      service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.tags.some(tag =>
+        tag.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    return matchesCategory && matchesSearch;
+  });
+
+  const getServicesByCategory = (categoryId: string) => {
+    switch (categoryId) {
+case 'ai-services':
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         return AI_SERVICES;
       case 'it-services':
         return IT_SERVICES;
@@ -104,6 +128,7 @@ export function ServicesPage() {;
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com'
+<<<<<<< HEAD
                 className='bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors'              >    }
   }
   const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
@@ -133,6 +158,9 @@ export function ServicesPage() {;
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+=======
+                className='bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
 
 =======
@@ -284,6 +312,7 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
@@ -493,6 +522,30 @@ function ServicesPage() {
             <div className="flex items-center gap-2">
               <span className="text-blue-600">🌐</span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
+=======
+      {/* Contact Info Banner */}
+<div className='bg-white border-b'>
+        <div className='container mx-auto px-4 py-4'>
+          <div className='flex flex-wrap justify-center items-center gap-8 text-gray-600'>
+            <div className='flex items-center gap-2'>
+              <span className='text-blue-600'>📍</span>
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <span className='text-blue-600'>📱</span>
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <span className='text-blue-600'>✉️</span>
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <span className='text-blue-600'>🌐</span>
+              <a
+                href='https://ziontechgroup.com'
+                className='text-blue-600 hover:underline'
+              >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 ziontechgroup.com
 <<<<<<< HEAD
 =======
@@ -510,6 +563,7 @@ function ServicesPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -610,6 +664,23 @@ function ServicesPage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      {/* Search and Filter Section */}
+<div className='container mx-auto px-4 py-8'>
+        <div className='bg-white rounded-xl shadow-lg p-6 mb-8'>
+          <div className='flex flex-col md:flex-row gap-4'>
+            <div className='flex-1'>
+              <input
+                type='text'
+                placeholder='Search services...'
+                value={searchTerm}
+                onChange={e => setSearchTerm(e.target.value)}
+                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+              />
+            </div>
+            <div className='flex gap-2'>
+              {SERVICE_CATEGORIES.map(category => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <button
                   key={category && category.id}
                   onClick={() => setSelectedCategory(category && category.id)}
@@ -623,9 +694,18 @@ function ServicesPage() {
                 </button>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
           {selectedServices.map((service) => (
+=======
+            </div>
+          </div>
+        </div>
+        {/* Services Grid */}
+<div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
+          {selectedServices.map(service => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <ServiceCard key={service.id} service={service} />
 =======
 
@@ -659,6 +739,7 @@ function ServicesPage() {
 
         {selectedServices.length === 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className="text-center py-12">
 
@@ -681,11 +762,25 @@ function ServicesPage() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <h3 className="text-xl text-gray-600 mb-4">No services found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
+=======
+<div className='text-center py-12'>
+            <h3 className='text-xl text-gray-600 mb-4'>No services found</h3>
+            <p className='text-gray-500'>
+              Try adjusting your search or filter criteria
+            </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         )}
       </div>
       {/* Why Choose Zion Tech Group */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<div className='bg-white py-16'>
+        <div className='container mx-auto px-4'>
+          <div className='text-center mb-12'>
+            <h2 className='text-4xl font-bold text-gray-900 mb-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               Why Choose Zion Tech Group?
             </h2>
 =======
@@ -789,6 +884,7 @@ function ServicesPage() {
               <p className='text-gray-600'>Quick setup and implementation</p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </h2>
 =======
 <<<<<<< HEAD
@@ -854,6 +950,14 @@ function ServicesPage() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
               <p className="text-gray-600">Trusted by businesses nationwide</p>
+=======
+            <div className='text-center'>
+              <div className='bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-2xl'>🎯</span>
+              </div>
+              <h3 className='text-xl font-semibold mb-2'>Proven Results</h3>
+              <p className='text-gray-600'>Trusted by businesses nationwide</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
@@ -878,6 +982,7 @@ function ServicesPage() {
 =======
 =======
       {/* CTA Section */}
+<<<<<<< HEAD
 
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -1177,6 +1282,9 @@ function ServicesPage() {
 =======
 <<<<<<< HEAD
       <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>
+=======
+<div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>
 =======
@@ -1209,6 +1317,7 @@ function ServicesPage() {
             </a>
             <a
               href='https://ziontechgroup.com'
+<<<<<<< HEAD
               className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'            >            Ready to Transform Your Business?
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </h2>
@@ -1251,12 +1360,16 @@ function ServicesPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+=======
+              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               🌐 Visit Website
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
   )
 
@@ -1370,6 +1483,14 @@ interface ServiceCardProps {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 function ServiceCard(): any ({ service }: ServiceCardProps) {;
+=======
+);
+
+interface ServiceCardProps {
+  service: ServiceSolution;
+
+function ServiceCard({ service }: ServiceCardProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [showDetails, setShowDetails] = useState(false);
 
 <<<<<<< HEAD
@@ -1379,6 +1500,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 =======
 
   const getPopularPlan = () => {
+<<<<<<< HEAD
     if (service.pricing.professional.popular) return service.pricing.professional;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1407,12 +1529,25 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
     return service.pricing.professional
   },
     <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>;
+=======
+if (service.pricing.professional.popular)
+      return service.pricing.professional;
+    if (service.pricing.basic.popular) return service.pricing.basic;
+    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
+    return service.pricing.professional;
+  };
+
+  const popularPlan = getPopularPlan();
+  return (
+<div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Service Image */}
       <div className='h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden'>;
         <img
           src={service && service.images[0]}
           alt={service && service.title}
           className='w-full h-full object-cover'
+<<<<<<< HEAD
           className="w-full h-full object-cover"
         />;
         <div className="absolute top-4 right-4">;
@@ -1525,10 +1660,16 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="absolute top-4 right-4">
           <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
+=======
+        />
+        <div className='absolute top-4 right-4'>
+          <span className='bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {service.category}
           </span>
         </div>
         {service.aiScore && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1543,6 +1684,10 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+=======
+<div className='absolute bottom-4 left-4'>
+            <span className='bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               AI Score: {service.aiScore}
             </span>
           </div>
@@ -1599,7 +1744,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         )}
       </div>
       {/* Service Content */}
-      <div className='p-6'>
+<div className='p-6'>
         <div className='flex items-start justify-between mb-3'>
           <h3 className='text-xl font-bold text-gray-900 mb-2'>
             {service.title}
@@ -1618,6 +1763,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         {/* Provider Info */}
         <div className='flex items-center gap-3 mb-4'>
           <div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>
+<<<<<<< HEAD
             <span className='text-blue-600 font-semibold text-sm'>              {service.provider.name.charAt(0)}
             </span>
           </div>
@@ -1663,10 +1809,14 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         <div className="flex items-center gap-3 mb-4">
           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
             <span className="text-blue-600 font-semibold text-sm">
+=======
+            <span className='text-blue-600 font-semibold text-sm'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               {service.provider.name.charAt(0)}
             </span>
           </div>
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1707,14 +1857,27 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         {/* Pricing */}
 <<<<<<< HEAD
         <div className='bg-gray-50 rounded-lg p-4 mb-4'>
+=======
+<p className='font-medium text-gray-900'>{service.provider.name}</p>
+            <p className='text-sm text-gray-500'>{service.provider.location}</p>
+          </div>
+          {service.provider.verified && (
+            <span className='text-blue-600 text-sm'>✓ Verified</span>
+          )}
+        </div>
+        {/* Pricing */}
+<div className='bg-gray-50 rounded-lg p-4 mb-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='text-center'>
             <div className='text-2xl font-bold text-gray-900'>
               {popularPlan.currency}
               {popularPlan.price}
-              <span className='text-sm font-normal text-gray-500'>                /{popularPlan.period}
+              <span className='text-sm font-normal text-gray-500'>
+                /{popularPlan.period}
               </span>
             </div>
             {popularPlan.popular && (
+<<<<<<< HEAD
               <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>                Most Popular        <div className="bg-gray-50 rounded-lg p-4 mb-4">
           <div className="text-center">
             <div className="text-2xl font-bold text-gray-900">
@@ -1744,17 +1907,23 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 Most Popular
               </span>
             )}
         {/* Features Preview */}
+<<<<<<< HEAD
+=======
+<div className='mb-4'>
+          <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>
+          <div className='flex flex-wrap gap-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {service.features.slice(0, 3).map((feature, index) => (
               <span 
                 key={index}
-                className='bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs'              >            {service.features.slice(0, 3).map((feature, index) => (
-              <span
-                key={index}
-                className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
+                className='bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs'
               >
                 {feature}
 =======
@@ -1775,7 +1944,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
               </span>
             ))}
             {service.features.length > 3 && (
-              <span className='text-gray-500 text-xs'>                +{service.features.length - 3} more              <span className="text-gray-500 text-xs">
+<span className='text-gray-500 text-xs'>
                 +{service.features.length - 3} more
               </span>
                 className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
@@ -1826,6 +1995,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 <<<<<<< HEAD
             )}
         {/* Action Buttons */}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             )}
@@ -1877,10 +2047,18 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<div className='flex gap-2'>
+          <button
+            onClick={() => setShowDetails(!showDetails)}
+            className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'
+          >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             {showDetails ? 'Hide Details' : 'View Details'}
           </button>;
           <a
             href={`tel:+13024640950`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1890,6 +2068,9 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Call Now
           </a>
@@ -1930,6 +2111,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Detailed Information */}
         {showDetails && (
+<<<<<<< HEAD
           <div className="mt-6 pt-6 border-t border-gray-200">
 <<<<<<< HEAD
 =======
@@ -1948,9 +2130,27 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 <<<<<<< HEAD
                   ))}
               {/* Use Cases */}
+=======
+<div className='mt-6 pt-6 border-t border-gray-200'>
+            <div className='space-y-4'>
+              {/* Benefits */}
+              <div>
+                <h4 className='font-semibold text-gray-900 mb-2'>Benefits:</h4>
+                <ul className='list-disc list-inside text-sm text-gray-600 space-y-1'>
+                  {service.benefits.slice(0, 3).map((benefit, index) => (
+                    <li key={index}>{benefit}</li>
+                  ))}
+                </ul>
+              </div>
+              {/* Use Cases */}
+              <div>
+<h4 className='font-semibold text-gray-900 mb-2'>Use Cases:</h4>
+                <div className='flex flex-wrap gap-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.useCases.slice(0, 3).map((useCase, index) => (
                     <span 
                       key={index}
+<<<<<<< HEAD
                       className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs'                    >                  {service.useCases.slice(0, 3).map((useCase, index) => (
                     <span
                       key={index}
@@ -1980,10 +2180,30 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
+=======
+                      className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs'
+                    >
+                      {useCase}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              {/* Technologies */}
+              <div>
+<h4 className='font-semibold text-gray-900 mb-2'>
+                  Technologies:
+                </h4>
+                <div className='flex flex-wrap gap-2'>
+                  {service.technologies.slice(0, 4).map((tech, index) => (
+                    <span
+                      key={index}
+                      className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       {tech}
                     </span>;
                   ))}
+<<<<<<< HEAD
               <div className="grid grid-cols-2 gap-4 text-sm">
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -2028,11 +2248,18 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+                </div>
+              </div>
+              {/* Deployment & Support */}
+<div className='grid grid-cols-2 gap-4 text-sm'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
                   <span className='font-medium text-gray-900'>Deployment:</span>
                   <p className='text-gray-600'>{service.deploymentTime}</p>
                 </div>
                 <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
 
@@ -2105,8 +2332,34 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+                  <span className='font-medium text-gray-900'>Support:</span>
+                  <p className='text-gray-600'>
+                    {service.support.slice(0, 2).join(', ')}
+                  </p>
+                </div>
+              </div>
+              {/* All Pricing Plans */}
+              <div>
+<h4 className='font-semibold text-gray-900 mb-2'>
+                  Pricing Plans:
+                </h4>
+                <div className='space-y-2'>
+                  {Object.entries(service.pricing).map(([plan, details]) => (
+                    <div
+                      key={plan}
+                      className='flex justify-between items-center text-sm'
+                    >
+                      <span className='capitalize font-medium'>{plan}</span>
+                      <span className='text-gray-600'>
+                        {details.currency}
+                        {details.price}/{details.period}
+                      </span>
+                    </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
               {/* Contact CTA */}
+<<<<<<< HEAD
 =======
               {/* All Pricing Plans */}
 
@@ -2147,11 +2400,22 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+=======
+<div className='bg-blue-50 rounded-lg p-4 text-center'>
+                <p className='text-sm text-blue-800 mb-2'>
+                  Ready to get started with {service.title}?
+                </p>
+                <div className='flex gap-2 justify-center'>
+                  <a
+                    href={`tel:+13024640950`}
+                    className='bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     📞 Call +1 302 464 0950
                   </a>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2164,6 +2428,9 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     ✉️ Email Inquiry
                   </Link>
@@ -2204,6 +2471,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2381,3 +2649,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </div>
+    </div>
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

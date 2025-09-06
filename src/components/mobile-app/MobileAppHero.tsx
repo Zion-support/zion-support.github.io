@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import React from "react",
+import Link from "next/link",
+import { ArrowRight, Phone } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { AppStoreButtons } from "./AppStoreButtons";
+export const MobileAppHero: React.FC;
+}
+import React from "react"
+import Link from "next/link"
+import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button"
+import { AppStoreButtons } from "./AppStoreButtons"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -149,6 +164,7 @@ export const MobileAppHero: React.FC = () => {;
 };
 
 "
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -156,3 +172,5 @@ export const MobileAppHero: React.FC = () => {;
 =======
 ";
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

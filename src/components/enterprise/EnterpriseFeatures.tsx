@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
@@ -84,6 +85,16 @@ const features = [;
 ];
 
 export function EnterpriseFeatures() {;
+=======
+import React from 'react';
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
+
+import React from "react";
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
+
+const features = null;
+export function EnterpriseFeatures() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
     <section id='features' className='py-20 px-4 md:px-6 bg-muted/50'>;
@@ -165,6 +176,7 @@ function EnterpriseFeatures() {
                 <feature.icon className='h-6 w-6 text-primary' />
               </div>
               <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
+<<<<<<< HEAD
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
 
 
@@ -227,6 +239,9 @@ export function EnterpriseFeatures() {
               </div>
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
+=======
+              <p className='text-muted-foreground'>{feature.description}</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
 import React from "react",;
@@ -288,6 +303,7 @@ export function EnterpriseFeatures() {;
 <<<<<<< HEAD
           ))}
         </div>
+<<<<<<< HEAD
       </div>;
     </section>;
   );
@@ -316,3 +332,9 @@ export function EnterpriseFeatures() {;
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </div>
+    </section>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

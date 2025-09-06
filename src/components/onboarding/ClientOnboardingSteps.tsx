@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
@@ -114,3 +115,8 @@ export function ClientOnboardingSteps() {;
 =======
       completed: onboardingStatus.responseReceived,
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  const onboardingStatus = null;
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

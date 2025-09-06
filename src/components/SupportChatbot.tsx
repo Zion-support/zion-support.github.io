@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
     set_messages (prev => [...prev, user_msg]);
@@ -574,6 +575,21 @@ if ( {) {
 <<<<<<< HEAD
   }
 
+=======
+import { useState, useRef, useEffect } from 'react';
+import { MessageSquare, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface Msg {
+  id: string;
+  role: 'user' | 'assistant';
+  message: string;
+
+// Fallback responses when API is unavailable
+const FALLBACK_RESPONSES = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   if (!open) {
         onClick={() => setOpen(true)}
         size='icon'
@@ -839,9 +855,15 @@ set_typing (false);
 }/>) );
 });
 }<div ref= {
+<<<<<<< HEAD
   end_ref;
 }/> </div> </div> </div>);
 }'";
 }
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  endRef
+}/> </div> </div> </div>)
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

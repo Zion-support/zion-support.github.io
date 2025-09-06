@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
@@ -275,6 +276,39 @@ if ( {) {
 
 
 
+=======
+/**
+ * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
+ * Handles automatic retry, cache clearing, and graceful degradation
+ */
+
+import { logErrorToProduction } from './productionLogger';
+interface ChunkErrorStats {
+  errorCount: number;
+  lastErrorTime: number;
+  userAgent: string;
+  url: string
+class ChunkErrorHandler {
+          background: #0070f3;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          cursor: pointer;
+          margin-right: 1rem;
+        ">
+          Try Again
+        </button>
+        <button onclick="window.location.href='/'" style="
+background: #666;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          cursor: pointer;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         ">
           Go Home
         </button>
@@ -416,6 +450,7 @@ if ( {) {
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
+<<<<<<< HEAD
 
 export default chunkErrorHandler
 export default chunkErrorHandler
@@ -576,3 +611,6 @@ export default chunkErrorHandler;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
 export default chunkErrorHandler;
+=======
+export default chunkErrorHandler;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

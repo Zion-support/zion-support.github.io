@@ -10,14 +10,14 @@ import CodeBlock from "./CodeBlock",;
 import { logInfo } from '@/utils/productionLogger',;
 interface EndpointParam {;
   name:string,;
-  type:string,;
+  type:string,,
   description:string,;
   required?:boolean;
 }
 ;
 interface EndpointSectionProps {;
   method:string,;
-  endpoint:string,;
+  endpoint:string,,
   description:string,;
   note?:string,;
   params?:EndpointParam[],;
@@ -28,7 +28,6 @@ interface EndpointSectionProps {;
 export function ApiDocumentation() {;
   return (;
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
           <BookOpen className="mr-2" size={20} /> API Documentation;
@@ -222,8 +221,8 @@ print(data)`;
     'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
   },;
   body:JSON.stringify({;
-    title:'Senior React Developer',;
-    description:'We need an experienced React developer...',;
+    title:'Senior React Developer',,
+  description:'We need an experienced React developer...',;
     category:'development',;
     skills:['reacttypescript', 'node.js'],;
     budget:{;

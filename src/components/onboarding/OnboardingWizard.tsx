@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+
+import { useState, useEffect  } from 'react';
+import { useRouter  } from 'next/router';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAuth } from '@/hooks/useAuth'
@@ -18,7 +27,10 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
 <<<<<<< HEAD
@@ -74,6 +86,7 @@ interface OnboardingWizardProps {;
   onComplete: () => void;
   onSkip: () => void;
   className?: string
+<<<<<<< HEAD
 
 
 export function OnboardingWizard(): any ({;
@@ -273,6 +286,13 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         <Button
 =======
                   "h-2 w-2 rounded-full mx-1",
+=======
+}
+
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
+  const [currentStep, setCurrentStep] = useState(0);
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
@@ -331,6 +351,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             {steps[currentStep]?.skipText}
           </Button>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -518,3 +539,8 @@ if ( {) {
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </CardFooter>
+    </Card>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
 import { ImageIcon } from 'lucide-react'
@@ -91,20 +92,60 @@ export function SafeImage({
   priority = false
   sizes
   quality = 75
+=======
+'use client',
+
+import Image from 'next/image';
+import { useState } from 'react';
+import { ImageIcon } from 'lucide-react';
+
+interface SafeImageProps {
+  src: string
+  alt: string;  width?: number;interface SafeImageProps {
+  src: string
+  alt: string
+interface SafeImageProps {
+quality?: number;
+
+export function SafeImage({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  fallbackSrc,
+  priority = false,
+  sizes,
+  quality = 75,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }: SafeImageProps) {
-  const [hasError, setHasError] = useState(false)
-  const [currentSrc, setCurrentSrc] = useState(src)
+  const [hasError, setHasError] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState(src);
+
   const handleError = () => {
     if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
-      setCurrentSrc(fallbackSrc)
-      setHasError(true)
+      setCurrentSrc(fallbackSrc);
+setHasError(true);
+    } else if (!hasError && src.startsWith('/')) {
       // Try serving the image directly through our custom API route
-      const fallbackUrl = `/api/image${src}`
-      setCurrentSrc(fallbackUrl)
-      setHasError(true)
+      const fallbackUrl = `/api/image${src}`;
+      setCurrentSrc(fallbackUrl);
+      setHasError(true);
     } else if (!hasError) {
+<<<<<<< HEAD
       setHasError(true)
 
+=======
+      setHasError(true);
+    }
+  };
+
+  // If we have an error and no fallback, show a placeholder
+  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
+    
+      >
+        <ImageIcon className='w-6 h-6' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
 =======
@@ -173,6 +214,7 @@ export function SafeImage({
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     />
@@ -308,3 +350,8 @@ if ( {) {
 }
 } ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+/>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

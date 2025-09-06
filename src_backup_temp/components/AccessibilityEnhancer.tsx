@@ -349,15 +349,15 @@ export function AccessibilityEnhancer(props: any) {
       }
     };';
 ';';
-    document.addEventListener('keydown', handleKeyDown);';';
-    };
+    document.addEventListener('keydown', handleKeyDown);';'
+};
 ;
     element.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
 ;
     return () => {;
-      element.removeEventListener('keydown', handleTabKey);
-    };
+      element.removeEventListener('keydown', handleTabKey)
+};
   }
   // Announce to screen readers;
   announce("message": "string", "priority": 'polite' | 'assertive' = 'polite'): "void {;
@@ -422,8 +422,8 @@ export const useAccessibility = () => {;
     increaseFontSize;
     decreaseFontSize;
     resetFontSize;
-    announce;
-  };
+    announce
+};
 };
 ;
 // Accessibility Controls Component;
@@ -532,8 +532,8 @@ export default AccessibilityManager;
 ';';
     const announcement = document.createElement('div');';';
     announcement.setAttribute('aria-live', 'polite');';';
-    announcement.setAttribute('aria-atomic', 'true');';';
-    };
+    announcement.setAttribute('aria-atomic', 'true');';'
+};
     if (!settings.screenReader) return;
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
@@ -543,8 +543,8 @@ export default AccessibilityManager;
     document.body.appendChild(announcement);
     setTimeout(() => {
       document.body.removeChild(announcement);
-    }, 1000);
-  };
+    }, 1000)
+};
   // Add accessibility attributes to interactive elements
   useEffect(() => {
     if (!enabled) return;
@@ -563,8 +563,8 @@ export default AccessibilityManager;
     setSettings(prev => ({
       ...prev,
       [key]: value
-    }));
-  };
+    }))
+};
   if (!enabled) return null;
   return (
     <>
@@ -722,7 +722,7 @@ export const useAccessibility = () => {
     decreaseFontSize,
     resetFontSize,
     announce,
-  };
+  }
 };
 // Accessibility Controls Component
 export const AccessibilityControls: React.FC = () => {
@@ -787,7 +787,7 @@ export const AccessibilityControls: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 export default AccessibilityManager;
 </any>

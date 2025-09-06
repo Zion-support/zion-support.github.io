@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Upload, FileText } from 'lucide-react';
+
+import React from 'react';
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
@@ -12,6 +21,7 @@ interface UploadSectionProps {
           {custom_file;
             ? custom_file.name;
             : 'Drag & drop your PDF or click to browse'}
+<<<<<<< HEAD
         </p>;
         <Button variant='outline' className='relative'>;
           Browse Files;
@@ -19,10 +29,20 @@ interface UploadSectionProps {
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
+=======
+        </p>
+        <Button variant='outline' className='relative'>
+          Browse Files
+          <input
+            type='file'
+            className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
+            accept='.pdf'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             onChange={onFileUpload}
           />
         </Button>
       </div>
+<<<<<<< HEAD
 
 
       
@@ -35,6 +55,18 @@ interface UploadSectionProps {
               <span className="text-white">{customFile.name}</span>
             </div>
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
+=======
+{customFile && (
+        <div className='p-3 bg-zion-blue-dark/30 rounded-md'>
+          <div className='flex items-center justify-between'>
+            <div className='flex items-center'>
+              <FileText className='h-4 w-4 mr-2 text-zion-cyan' />
+              <span className='text-white'>{customFile.name}</span>
+            </div>
+            <span className='text-xs text-zion-slate'>
+              {Math.round(customFile.size / 1024)} KB
+            </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 
@@ -132,4 +164,7 @@ export function UploadSection({
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

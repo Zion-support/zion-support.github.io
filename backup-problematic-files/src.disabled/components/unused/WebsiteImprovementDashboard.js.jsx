@@ -6,6 +6,6 @@ const WebsiteImprovementDashboard.js = ({ className }) => {
       <h1>WebsiteImprovementDashboard.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

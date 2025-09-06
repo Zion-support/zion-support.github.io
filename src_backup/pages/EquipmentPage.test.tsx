@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react';
 import { render, screen } from '@testing - library / react';
@@ -17,12 +12,7 @@ describe ('EquipmentPage', () => {
     expect (screen.getByText ('Equipment')).toBeInTheDocument ();
 
   });
-  const [selectedService, setSelectedService] = useState('');
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-import React, { useState } from 'react',;
+  const [selectedService, setSelectedService] = useState('');import React, { useState } from 'react',;
 import { Link } from 'react-router-dom',;
 import { SERVICE_CATEGORIES } from '@/data/servicesData',;
 export function ContactPage() {
@@ -39,17 +29,10 @@ export function ContactPage() {
 
   const [selectedService, setSelectedService] = useState(''),
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
@@ -114,30 +97,7 @@ export function ContactPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
             <p className="text-gray-600 mb-8">
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
-            </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-            
-
-
-<<<<<<< HEAD
-=======
-            
-            
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            <form onSubmit={handleSubmit} className="space-y-6">
+            </p>            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -170,138 +130,7 @@ export function ContactPage() {
                     placeholder="your.email@company.com"
                   />
                 </div>
-              </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-              
-
-
-<<<<<<< HEAD
-=======
-              
-              
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                  Service of Interest *
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  required
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  <option value="">Select a service</option>
-                  {SERVICE_CATEGORIES.map((category) => (
-                    <optgroup key={category.id} label={category.name}>
-                      {category.id === 'ai-services' && (
-                        <>
-                          <option value="ai-customer-service">AI Customer Service Automation</option>
-                          <option value="ai-content-generation">AI Content Generation Suite</option>
-                          <option value="ai-data-analytics">AI-Powered Business Intelligence</option>
-                        </>
-                      )}
-                      {category.id === 'it-services' && (
-                        <>
-                          <option value="onsite-it-support">Onsite IT Support & Infrastructure</option>
-                          <option value="cloud-migration">Cloud Migration & Optimization</option>
-                        </>
-                      )}
-                      {category.id === 'micro-saas' && (
-                        <>
-                          <option value="project-management-saas">Smart Project Management Platform</option>
-                          <option value="crm-saas">AI-Powered CRM System</option>
-                          <option value="hr-management-saas">HR Management & Talent Platform</option>
-                        </>
-                      )}
-                      {category.id === 'cybersecurity' && (
-                        <>
-                          <option value="security-audit">Security Audit & Penetration Testing</option>
-                        </>
-                      )}
-                      {category.id === 'data-analytics' && (
-                        <>
-                          <option value="business-intelligence">Advanced Business Intelligence Platform</option>
-                        </>
-                      )}
-                      {category.id === 'cloud-solutions' && (
-                        <>
-                          <option value="devops-automation">DevOps Automation & CI/CD Pipeline</option>
-                        </>
-                      )}
-                    </optgroup>
-                  ))}
-                </select>
-              </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-              
-
-
-<<<<<<< HEAD
-=======
-              
-              
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
                     Budget Range
@@ -426,76 +255,6 @@ export function ContactPage() {
             </div>
 
             {/* Business Hours */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Monday - Friday</span>
-                  <span className="font-semibold">8:00 AM - 6:00 PM EST</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Saturday</span>
-                  <span className="font-semibold">9:00 AM - 2:00 PM EST</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Sunday</span>
-                  <span className="font-semibold">Closed</span>
-                </div>
-                <div className="pt-3 border-t border-gray-200">
-                  <p className="text-sm text-gray-600">
-                    <span className="font-semibold text-green-600">24/7 Emergency Support</span> available for critical issues
-                  </p>
-                </div>
-              </div>
-            </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-            <div className="bg-white rounded-xl shadow-lg p-8">;
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;
-              <div className="space-y-3">;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Monday - Friday</span>;
-                  <span className="font-semibold">8:00 AM - 6:00 PM EST</span>;
-                </div>;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Saturday</span>;
-                  <span className="font-semibold">9:00 AM - 2:00 PM EST</span>;
-                </div>;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Sunday</span>;
-                  <span className="font-semibold">Closed</span>;
-                </div>;
-                <div className="pt-3 border-t border-gray-200">;
-                  <p className="text-sm text-gray-600">;
-                    <span className="font-semibold text-green-600">24/7 Emergency Support</span> available for critical issues;
-                  </p>;
-                </div>;
-              </div>;
-            </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -556,47 +315,3 @@ export function ContactPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-  );
-};
-<<<<<<< HEAD
-
-
-=======
-  )
-}
-  );
-};
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import EquipmentPage from './EquipmentPage';
-describe('EquipmentPage', () => {
-  it('renders equipment page correctly', () => {
-    render(
-      <MemoryRouter>
-        <EquipmentPage />
-      </MemoryRouter>
-    );
-    expect(screen.getByText('Equipment')).toBeInTheDocument();
-  });
-});
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

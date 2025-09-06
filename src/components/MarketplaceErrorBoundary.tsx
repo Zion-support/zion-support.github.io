@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
@@ -54,10 +55,20 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       logErrorToProduction('Error during retry:', { data: retryError })
       Sentry.captureException(retryError)
 <<<<<<< HEAD
+=======
+import React from 'react';
+import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
+import * as Sentry from '@sentry/nextjs';
+
+function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
+  const handleRetry = null;
+  return (
+    <ErrorBoundary 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   return (
-    <div className='flex items-center justify-center min-h-[400px] p-6'>
+<div className='flex items-center justify-center min-h-[400px] p-6'>
       <div className='max-w-md w-full space-y-4'>
         <Alert variant='destructive'>
           <AlertCircle className='h-4 w-4' />
@@ -74,6 +85,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
           <Button
             onClick={() => window.location.reload()}
             variant='outline'
+<<<<<<< HEAD
             className='w-full'          >
             Reload Page
           </Button>
@@ -155,10 +167,14 @@ function MarketplaceErrorFallback(): any ({;
             onClick={() => window.location.reload()}
             variant="outline"
             className="w-full"
+=======
+            className='w-full'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Reload Page
           </Button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -184,11 +200,20 @@ function MarketplaceErrorFallback(): any ({;
             className="text-primary hover:underline"
 
 
+=======
+<div className='text-center text-sm text-muted-foreground'>
+          If the problem persists, please{' '}
+          <a
+            href='mailto:support@example.com'
+            className='text-primary hover:underline'
+          >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             contact support
           </a>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
       // Re - call SWR mutate ('*') to refresh all cached data;
       await mutate ((, ) => true, undefined, { revalidate: true }),
@@ -225,6 +250,9 @@ function MarketplaceErrorFallback(): any ({;
             variant="outline";
             className="w - full";
 <<<<<<< HEAD
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
 export function MarketplaceErrorBoundary({
@@ -238,6 +266,7 @@ export function MarketplaceErrorBoundary({
     Sentry.withScope(scope => {
       scope.setTag('errorBoundary', 'marketplace')
       scope.setContext('errorInfo', {
+<<<<<<< HEAD
         componentStack: errorInfo.componentStack |undefined
       })
       scope.setLevel('error')
@@ -412,9 +441,23 @@ export function MarketplaceErrorBoundary(): any ({;
 }   return (
     <ErrorBoundary
 
+=======
+        componentStack: errorInfo.componentStack || undefined,
+      });
+      scope.setLevel('error');
+      Sentry.captureException(error);
+    });
+  };
+    >
+      {children}
+    </ErrorBoundary>
+  );
+} 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}>;
       {children}
+<<<<<<< HEAD
 
     </ErrorBoundary>;
   );
@@ -456,3 +499,8 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     </ErrorBoundary>);
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </ErrorBoundary>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

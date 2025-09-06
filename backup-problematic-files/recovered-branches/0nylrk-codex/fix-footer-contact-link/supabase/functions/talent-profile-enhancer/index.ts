@@ -156,7 +156,8 @@ interface EnhancedProfile {_summary: string;
     devops: string[];
     platforms: string[];
     softSkills: string[];
-    other: string[];};
+    other: string[]
+};
 }
 
 serve(_async (req) => {_// Handle CORS preflight requests

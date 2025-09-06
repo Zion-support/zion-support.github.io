@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next / link';
@@ -263,3 +264,18 @@ export default InteractiveFeatures;
 ;
 export default InteractiveFeatures;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
+  );
+
+export default InteractiveFeatures;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -8,8 +8,8 @@ const originalLog = console.log;
               fixCount = parseInt(match[1]);
             }
           }
-          originalLog(...args);
-        };
+          originalLog(...args)
+};
         try {
           // // require('/workspace/scripts/automation/console-error-fixer && fixer.cjs');
           setTimeout(() => {

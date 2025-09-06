@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { logInfo, logWarn } from '@/utils/productionLogger'
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -9,27 +12,45 @@ import { SearchSuggestion } from "@/types/search",
 import { useDebounce } from "@/hooks/useDebounce",
 import { useRouter } from "next/router",
 import { slugify } from "@/lib/slugify",
+<<<<<<< HEAD
 import { debounce } from "lodash",
 import { logInfo, logWarn } from '@/utils/productionLogger',
 
 
 
 
+=======
+import { debounce } from "lodash";
+import { logInfo, logWarn } from '@/utils/productionLogger';
+interface EnhancedSearchInputProps {
+  value: string;
+  onChange: (value: string) => void;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 interface EnhancedSearchInputProps {
+<<<<<<< HEAD
   value: string,
   onChange: (value: string) => void,
+=======
+  value: string
+  onChange: (value: string,) => void
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
 
    */
+<<<<<<< HEAD
 
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
   /**
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
+=======
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
+  placeholder?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
@@ -37,6 +58,7 @@ interface EnhancedSearchInputProps {
   searchSuggestions?: SearchSuggestion[]
 }
 export function EnhancedSearchInput({
+<<<<<<< HEAD
 
   value
   onChange
@@ -911,6 +933,15 @@ if ( {) {
 <<<<<<< HEAD
             onChange(e && e.target.value);
             setEnterHandledPostFocus(false);
+=======
+  value;
+  onChange;
+  onSelectSuggestion;
+  placeholder;
+              setHighlightedIndex(-1)
+            ,}
+            setValueOnFocus(null)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           onFocus={(e) => {;
             setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus;
@@ -1067,6 +1098,7 @@ break ;
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
+<<<<<<< HEAD
 
         highlightedIndex={highlightedIndex} 
         listId="autocomplete-suggestions-list" 
@@ -1181,3 +1213,33 @@ break;
       />;
     </div>);
 }
+=======
+        highlightedIndex={highlightedIndex}
+        listId="autocomplete-suggestions-list"
+      />
+    </div>
+  );
+
+}setIsFocused (false);
+inputRef.current?.blur ();
+setHighlightedIndex (-1) ;
+};
+const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+  switch (e.key) {';
+  case 'ArrowDown': if (isFocused && filteredSuggestions.length > 0) {';
+  case 'Escape': e.preventDefault ();
+setIsFocused (false);
+setHighlightedIndex (-1);
+setValueOnFocus (null);
+inputRef.current?.blur ();
+break;
+default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
+break ;
+
+};
+> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={';
+  () => onChange ('') ";
+}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
+}</div> <AutocompleteSuggestions /> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

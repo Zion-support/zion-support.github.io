@@ -43,6 +43,7 @@ export default function VerifyEmailPage() {
       <p className='mt-2 text-gray-600 dark:text-gray-300'>
         Please verify your email to continue.
       </p>
+<<<<<<< HEAD
     </div>;
   );export default function VerifyEmailPage() {
   return (
@@ -126,3 +127,7 @@ export default function VerifyEmailPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

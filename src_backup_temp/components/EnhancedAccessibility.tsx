@@ -338,8 +338,8 @@ modals.forEach(modal:  > {;
     document.addEventListener('focusout', handleFocusOut);
     return () => {';
 ';';
-      document.removeEventListener('focusin', handleFocusIn);';';
-    };
+      document.removeEventListener('focusin', handleFocusIn);';'
+};
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
                      target.getAttribute('title') || ;

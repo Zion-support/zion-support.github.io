@@ -414,6 +414,7 @@ self.addEventListener('sync', (event) = > {'; "if": (event.tag = = = 'background
 // "Notification": click;
 self.addEventListener('notificationclick', (event) = > {'; event.notification.close(); "if": (event.action = = = 'explore') {'; event.waitUntil(; clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
+<<<<<<< HEAD
 async: function getPendingSubmissions() {// In a real app, you would store these in IndexedDB; "return": []}
 });
 // Check if request is for a static asset;
@@ -1204,3 +1205,8 @@ const CACHE_NAME = 'zion-tech-group-v1'';; const STATIC_CACHE = 'static-v1'';; c
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
+;
+  "return": []};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

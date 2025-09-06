@@ -217,7 +217,7 @@ const createLazyComponent = (;
         <LazyComponent {...props} />;
       </Suspense>;
     </ErrorBoundary>;
-  ));
+  ))
 };
 ;
 // Preload functions for critical components;

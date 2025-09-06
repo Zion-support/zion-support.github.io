@@ -1,10 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 appStoreUrl?: string;
+=======
+import React from 'react';
+import { Apple, GithubIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { logInfo } from '@/utils/productionLogger';
+
+import React from "react",
+import { Apple, GithubIcon } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { logInfo } from '@/utils/productionLogger';
+interface AppStoreButtonsProps {
+  className?: string;
+  appStoreUrl?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
+<<<<<<< HEAD
 
 
 
@@ -320,3 +336,8 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
 ;
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

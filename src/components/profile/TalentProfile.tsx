@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
@@ -11,6 +12,8 @@ import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -26,6 +29,7 @@ import { ProfileRatings } from './ProfileRatings';
 import { TalentProfile as TalentProfileType } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
 import { Availability } from '@/types/profile';
+<<<<<<< HEAD
 interface TalentProfileProps {;
   profile: TalentProfileType;
   onRequestHire: () => void;
@@ -66,6 +70,23 @@ export function TalentProfile(): any ({;
       date: new Date().toISOString(), // Default date since we don't have this data;
     })) || [];
 
+=======
+
+interface TalentProfileProps {
+  profile: TalentProfileType;
+  onRequestHire: () => void;
+  onMessageTalent?: () => void
+}
+
+export function TalentProfile({ 
+  profile;
+  onRequestHire;
+  onMessageTalent
+}: TalentProfileProps) {
+  const { isAuthenticated } = useAuth();
+  // Create proper availability object from talent profile
+  const availability: Availability;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
@@ -437,6 +458,7 @@ export function TalentProfile({
               </div>
             </div>
           )}
+<<<<<<< HEAD
 
 
 
@@ -474,3 +496,9 @@ export function TalentProfile({
     </div>);
 }
 ;
+=======
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

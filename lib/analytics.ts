@@ -222,6 +222,7 @@ interface WebVitalMetric {
 =======
 =======
 
+<<<<<<< HEAD
 }
 ;
 // Track events;
@@ -248,6 +249,15 @@ export const event = ({
       non_interaction: true,;
 
     });
+=======
+declare global {
+  interface Window {
+    gtag: (
+      command: string,
+      targetId: string,
+      config?: Record<string, unknown>
+    ) => void;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
 }
 // Track events

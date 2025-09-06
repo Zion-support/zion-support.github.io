@@ -25,7 +25,7 @@ const ErrorRoutes: React.FC = () => {
         <Route path="*" element={<NotFound  />} />
       </Routes>
     </Suspense>
-  );
+  )
 };
 export default ErrorRoutes;';
 ;';;';

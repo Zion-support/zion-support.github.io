@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
+import { X, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { useIsMobile } from '@/hooks/use-mobile';
+
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage",
+import { X, ArrowRight } from 'lucide-react'
+import Link from "next/link";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
   appName?: string;
@@ -7,6 +20,7 @@ interface SmartAppBannerProps {
 <<<<<<< HEAD
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+<<<<<<< HEAD
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const [isVisible, setIsVisible] = useState(false),
@@ -249,3 +263,5 @@ if ( {) {
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

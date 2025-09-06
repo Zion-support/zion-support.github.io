@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { Textarea } from "@/components/ui/textarea",;
 import { Check, Pencil } from 'lucide-react';
 ;
-interface GeneratedDescriptionDisplayProps {;
+interface GeneratedDescriptionDisplayProps {,
   description:string,;
   onSave:(editedDescription:string) => void;
 }
@@ -23,8 +23,8 @@ export function GeneratedDescriptionDisplay({ ;
     onSave(editedDescription),;
     setIsEditing(false),;
     toast({;
-      title:"Description Saved",;
-      description:"Your edited description has been saved.";
+      title:"Description Saved",,
+  description:"Your edited description has been saved.";
     }),;
   },;
 ;
@@ -82,7 +82,7 @@ export function GeneratedDescriptionDisplay({ ;
   {;
   {;
   Check, Pencil ;
-}from 'lucide-react' interface GeneratedDescriptionDisplayProps {;
+}from 'lucide-react' interface GeneratedDescriptionDisplayProps {,
   description: string;
 onSave: (editedDescription: string) => void ;
 }export function GeneratedDescriptionDisplay ({;
@@ -97,8 +97,7 @@ const [editedDescription, setEditedDescription] = useState (description);
 const handleSave = () => {;
   onSave (editedDescription);
 setIsEditing (false);
-toast ({;
-  ;
+toast ({
 };
 :temp_broken_files/services/GeneratedDescriptionDisplay.tsx
 

@@ -1,4 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage";
+import { X } from 'lucide-react'
+import { useIsMobile } from "@/hooks/use-mobile";
+export const AppStoreBanner: React.FC;
+}
+import React, { useState, useEffect } from "react"
+import { safeStorage } from "@/utils/safeStorage"
+import { X } from 'lucide-react'import { useIsMobile } from "@/hooks/use-mobile"
+export const AppStoreBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false)
+  const isMobile = useIsMobile()
+  useEffect((,) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
@@ -47,6 +64,7 @@ return (
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 },
 import React, { useState, useEffect } from "react",;
@@ -156,3 +174,8 @@ if (return null) {
 
   )
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

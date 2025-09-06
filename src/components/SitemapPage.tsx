@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
@@ -516,3 +517,19 @@ export const SitemapPage: React.FC = () => {;
 =======
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import { completeSitemap, dynamicPaths } from '@/config/sitemap';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
+import { SEO } from './SEO';
+
+import React from 'react';
+import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react'
+import { SEO  } from './SEO';
+// Map sitemap paths to their actual routes in the application
+// Note: This pathMap might need to be updated based on Next.js page structure
+const pathMap: Record<string, string> = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

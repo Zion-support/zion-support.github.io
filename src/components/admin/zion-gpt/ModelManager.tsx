@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // If activating, deactivate all other models with the same purpose;
       // Check condition
@@ -21,6 +22,37 @@ import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+import {
+  Loader2,
+  RefreshCw,
+  Play,
+  CheckCircle,
+  AlertCircle,;
+} from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { ModelConfig } from '@/utils/zion-gpt';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
@@ -34,6 +66,7 @@ interface ModelVersionData extends ModelConfig {
       // Refresh the model list;
       fetch_models ();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
       // Update this model
@@ -87,6 +120,19 @@ interface ModelVersionData extends ModelConfig {
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export function ZionGPTModelManager() {
+  const [models, setModels] = useState<ModelVersionData[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
+
+  // Fetch model data on component mount
+  useEffect(() => {
+    fetchModels()
+  }, []),
+
+  const fetchModels = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
@@ -230,6 +276,7 @@ interface ModelVersionData extends ModelConfig {
             </TableBody>;
           </Table>;
         )}
+<<<<<<< HEAD
       </CardContent>;
     </Card>;
   );
@@ -330,3 +377,26 @@ interface ModelVersionData extends ModelConfig {
 =======
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </CardContent>
+    </Card>
+  );
+
+};
+return (<Card className="w-full" > <CardHeader className="flex flex-row items-center justify-between" > <div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+  models.map ( (model) => (<TableRow key= {;
+  model.id '";
+}>) : model.trainingStatus === 'failed' ? (<Badge className="bg-red-500" >Failed</Badge>) : model.trainingStatus === 'running' ? (<Badge className="bg-blue-500" >Training</Badge>) : (<Badge className="bg-yellow-500" >Queued</Badge>) ;
+}onClick={;
+  () => checkTrainingStatus (model.id) ;
+}disabled= {;
+  activeJobs[model.id] ";
+}>) : (<RefreshCw className="h-4 w-4" />) ";
+}<span className="ml-1" >Check</span> </Button> > {";
+  model.active ? (<> <CheckCircle className="h-4 w-4 mr-1" /> Active </>) : (<> <Play className="h-4 w-4 mr-1" /> Activate </>) ";
+}</Button>) : (<Button > <AlertCircle className="h-4 w-4 mr-1" /> Error </Button>) ;
+}</TableCell> </TableRow>) ) ;
+}</TableBody> </Table>) ;
+}</CardContent> </Card>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

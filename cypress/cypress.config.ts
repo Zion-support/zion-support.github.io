@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
@@ -64,6 +65,12 @@ export default defineConfig({;
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 <<<<<<< HEAD
+=======
+import { defineConfig } from 'cypress';
+export default defineConfig({
+  e2e: {
+    baseUrl: 'http://localhost:3000', // Standard Next.js port
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     supportFile: 'cypress/support/e2e.ts';
     baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
     supportFile: 'cypress/support/e2e && e2e.ts';
@@ -81,6 +88,7 @@ export default defineConfig({;
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
+<<<<<<< HEAD
       on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser && browser.family === 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');        }
@@ -271,3 +279,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      on('before:browser:launch', (browser;
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

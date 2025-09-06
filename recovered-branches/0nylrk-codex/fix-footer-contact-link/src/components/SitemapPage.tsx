@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from './react';
 import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';
 import { Link  } from './react-router-dom';
@@ -18,18 +17,7 @@ import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import { Link } from 'react-router-dom',
 import { ChevronRight } from 'lucide-react',
 import { SEO } from './SEO',
-import { AppLayout } from '@/layout/AppLayout',
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import React from "react";
-import { completeSitemap, dynamicPaths } from "@/config/sitemap";
-import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
-import { SEO } from "./SEO";
-import { AppLayout } from "@/layout/AppLayout";
-export const SitemapPage: React.FC = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
+import { AppLayout } from '@/layout/AppLayout',  return (
     <AppLayout>
       <SEO
         title="Sitemap | Zion AI Marketplace"
@@ -192,17 +180,8 @@ export const SitemapPage: React.FC = () => {
                   </div>
                 </li>
               ))}
-<<<<<<< HEAD
             </ul>;
           </div>;
         </div>;
-      </div>;
-=======
-            </ul>
-          </div>
-        </div>
-      </div>
-    </AppLayout>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  );
+      </div>;  )
 };

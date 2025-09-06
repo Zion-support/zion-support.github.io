@@ -157,8 +157,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
-    };
+}, []);, [])
+};
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 ;
@@ -369,8 +369,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           window.print()},';';
         color: 'bg-gray-500 hover: b g-gray-600',';';
         priority: 'low' as const
-;
-    };
+
+};
 ;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
@@ -555,8 +555,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         return 'bottom-6 right-6'}
   };
 ;
-  // Get theme classes;
-  };
+  // Get theme classes
+};
   return ()
     <>
       {/* Main Floating Action Button */}`';
@@ -751,7 +751,7 @@ const "FloatingActionButton": "React.FC<FloatingActionButtonProps> = ({ enabled 
       `}</style>
     </>) ;
 type FloatingActionButtonProps = {
-  enabled?: boolean;
+  enabled?: boolean
 };
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
   const [open, setOpen] = useState<any>(false);

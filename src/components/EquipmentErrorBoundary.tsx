@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Props {;
   children: React && React.ReactNode;
 }
@@ -21,13 +22,23 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 }
 import {logErrorToProduction} from '@/utils/productionLogger'
 
+=======
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface Props {
   children: React.ReactNode
 }
 interface State {
+<<<<<<< HEAD
 
   hasError: boolean
 
+=======
+  hasError: boolean;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   error?: Error
 }
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
@@ -42,7 +53,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className='container py-8'>
+<div className='container py-8'>
           <Card className='border-red-200 bg-red-50'>
             <CardContent className='p-8 text-center'>
               <AlertTriangle className='mx-auto mb-4 h-12 w-12 text-red-600' />
@@ -65,14 +76,8 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                 <Button
                   onClick={() => window.location.reload()}
                   variant='default'
-                >                  Refresh Page
-                <Button onClick={() => window.location.reload()} variant="default">
-              </p>
-              <div className="flex gap-2 justify-center">
-                <Button
-                  onClick={() => this.setState({ hasError: false, error: undefined })}
-                  variant="outline"
                 >
+<<<<<<< HEAD
                   <RefreshCw className="h-4 w-4 mr-2" />
                   Try Again
                 </Button>
@@ -127,12 +132,15 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Button onClick={() => window.location.reload()} variant="default">
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   Refresh Page
                 </Button>
               </div>
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD
       )
 <<<<<<< HEAD
 =======
@@ -250,3 +258,10 @@ if ( {) {
 
 } ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+    }
+
+    return this.props.children;
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

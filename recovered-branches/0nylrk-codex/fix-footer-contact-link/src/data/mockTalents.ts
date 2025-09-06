@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -56,10 +57,15 @@ import { ProfileData } from '@/types/profile';
 =======
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { ProfileData } from '@/types/profile';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
+<<<<<<< HEAD
 
       {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -2228,3 +2234,5 @@ contact_email: "david.martinez@example.com";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

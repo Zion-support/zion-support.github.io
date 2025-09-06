@@ -11,7 +11,7 @@ interface CartState {;
 const initialState: CartState = {;
   items: [], ;
   total: 0,;
-  itemCount: 0;
+  itemCount: 0
 };
 ;
 const cartSlice = createSlice({';

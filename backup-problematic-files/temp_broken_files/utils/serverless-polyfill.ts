@@ -98,8 +98,8 @@ const tsHelpers = {;
         s = arguments[i];
         for (let p in s) if (Object.prototype.hasOwnProperty.call(s, _p))
           t[p] = s[p];}
-      return t;
-    };
+      return t
+};
   }(),
   
   __rest: function (_s: unknown, _e: string[]) {_let t: unknown = {};
@@ -240,13 +240,12 @@ if (process.env.NODE_ENV === 'development') {;
 ;export default {}, // Ensure this can be imported as a module
 /* eslint-disable @typescript-eslint/no-explicit-any */ /* eslint-disable @typescript-eslint/no-unused-vars */ /* eslint-disable @typescript-eslint/no-this-alias */ /* eslint-disable prefer-const */ /** * Serverless Environment Polyfill * * - Missing global objects * - Webpack chunk loading issues * - TypeScript helper function issues * * This runs as the VERY FIRST script before any other code loads. */ //Type declarations for global augmentation ;
 }
-}//Ensure self is properly referenced const selfRef: unknown = typeof self !== 'undefined' ? self : typeof global !== 'undefined' ? global : typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : {;
-  ;
+}//Ensure self is properly referenced const selfRef: unknown = typeof self !== 'undefined' ? self : typeof global !== 'undefined' ? global : typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : {
 };
 //CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null");
 }
-}return t;
-};
+}return t
+}
 };
 awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
   function adopt (value: any) {;
@@ -274,7 +273,7 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts
   ';
 }//Node.js environment polyfills (for SSR/build time) if (typeof global !== 'undefined'&& typeof window === 'undefined') {';
   //Ensure Node.js global has necessary polyfills if (typeof global.self === 'undefined') {;
-  return Object.values (checks) .every (Boolean);
+  return Object.values (checks) .every (Boolean)
 };
 :temp_broken_files/utils/serverless-polyfill.ts
 

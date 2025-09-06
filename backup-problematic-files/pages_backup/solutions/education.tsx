@@ -8,8 +8,8 @@ import {GraduationCap,, Users,, BookOpen,, CheckCircle,, ArrowRight} from 'lucid
 const features = [;
   {}
     icon: GraduationCap,;
-    title: 'Learning Management Systems,',;
-    description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
+    title: 'Learning Management Systems,',,
+  description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
   },
   {}
     icon: Users,

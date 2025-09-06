@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
+=======
+export interface MetaverseDigitalRealityService2026 {
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -14,6 +19,7 @@
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 
     address: string;
   }
@@ -83,12 +89,36 @@ export interface MetaverseDigitalRealityService2026 {;
     link: "/services/2026-metaverse-digital-reality",
     category: "Metaverse Digital Reality 2026",
     realImplementation: true,
+=======
+    address: string
+  }
+}
+
+export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [
+  {
+    id: "2026-metaverse-digital-reality";
+    name: "2026 Metaverse Digital Reality Platform";
+    tagline: "Immersive digital reality experiences";
+    price: "$399/month";
+    description: "Advanced metaverse platform creating immersive digital reality experiences for 2026 and beyond.";
+    features: [
+      "Immersive experiences";
+      "Digital reality";
+      "Metaverse platform";
+      "Advanced graphics",
+      "Social interactions"
+    ],
+    link: "/services/2026-metaverse-digital-reality";
+    category: "Metaverse Digital Reality 2026";
+    realImplementation: true;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
+<<<<<<< HEAD
 
 ];
 
@@ -204,3 +234,6 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function Cloudservices({ }: CloudservicesProps) {
 
 class ErrorBoundary extends React.Component {
@@ -28,23 +27,10 @@ import React from 'react';
 interface CloudservicesProps {;
   // Add props here as needed;
 }
-export default function Cloudservices(): any ({ }: CloudservicesProps) {;
-=======
-import * as React from 'react';
-
-interface CloudservicesProps {
-  // Add props here as needed
-}
-
-export default function Cloudservices({ }: CloudservicesProps) {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  return (
+export default function Cloudservices(): any ({ }: CloudservicesProps) {;  return (
     <div>
       <h1>Cloudservices</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

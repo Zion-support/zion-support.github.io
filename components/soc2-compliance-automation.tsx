@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -34,6 +35,24 @@ import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
+=======
+import React from 'react',
+import SEO from '../components/SEO';
+import Link from 'next/link';
+export default function SOC2ComplianceAutomationPage() {
+	return (
+		<>
+			<SEO title;
+							{ title: 'Audit Room', desc: 'Share evidence securely with auditors, immutable logs.' }
+						].map((f) => (
+							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
+								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
+							</div>
+						))}
+					</div>
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -211,6 +230,7 @@ import Link from 'next/link';
         </div>
       </section>
     </>
+<<<<<<< HEAD
   );					<div className="mt-12 flex flex-wrap items-center gap-4">
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -379,3 +399,6 @@ import Link from 'next/link';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

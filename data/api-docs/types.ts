@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -6,6 +7,12 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export type HttpMethod = any;
+export interface CodeSample {
+  language: 'curl' | 'javascript' | 'python';
+  code: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
@@ -66,12 +73,22 @@ export interface EndpointSpec {;
   path: string;
   method: HttpMethod;
   visibility: Visibility;
+<<<<<<< HEAD
   auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;  query?: Record < string, string>;
   params?: Record < string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
   samples: CodeSample[];
   rate_limits?: RateLimitInfo[];
+=======
+  auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>;
+  query?: Record<string, string>;
+  params?: Record<string, string>;
+  requestBodySchema?: unknown;
+  responseBodySchema?: unknown;
+samples: CodeSample[];
+  rateLimits?: RateLimitInfo[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   errors?: ErrorCode[];
   tags?: string[];
 <<<<<<< HEAD
@@ -138,6 +155,7 @@ export interface ApiDocsSpec {;
   versions: string[]; // available versions;
   default_version: string;
   sections: SectionSpec[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -286,3 +304,8 @@ export interface ApiDocsSpec {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  lastUpdatedIso: string;
+  lastUpdatedIso: string
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

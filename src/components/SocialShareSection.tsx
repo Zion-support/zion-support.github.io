@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   const shareLinks = [
     {
       name: "Twitter",
@@ -25,6 +26,16 @@
       onClick: copyLinkToClipboard
     }],
 
+=======
+import { Button } from './ui/button';
+import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
+import { toast } from './ui/use-toast';
+import { useTranslation } from 'react-i18next';
+export function SocialShareSection() {
+  const { t } = useTranslation();
+  // Current URL is not available during SSR, guard with typeof check
+  const shareUrl = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 =======
 return (
@@ -237,8 +248,13 @@ export function SocialShareSection() {;
   title: t ('errors.failed to copy');
 });
 }
+<<<<<<< HEAD
 }</div> </div> </div> </section>);
 }'";
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}</div> </div> </div> </section>)
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

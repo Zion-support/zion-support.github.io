@@ -12,4 +12,3 @@ export default function Infrastructure(): any ({ }: InfrastructureProps) {;
     </div>;
   );
 
-

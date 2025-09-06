@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 reputation: number;
   size?: 'sm' | 'md' | 'lg'
@@ -279,3 +280,25 @@ export default ReputationDisplay;
 };
 export default ReputationDisplay;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+
+export const ReputationDisplay = null;
+  return (
+    <div className='space-y-1'>
+      <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
+        <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />
+        <span className='font-semibold'>{reputation}</span>
+        <span className='text-muted-foreground'>rep</span>
+      </div>
+      <Progress value={progress} className={sizeClasses[size].progress} />
+      <div className='text-xs text-muted-foreground'>
+        Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level
+        up
+      </div>
+    </div>
+  );
+};
+export default ReputationDisplay;
+'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

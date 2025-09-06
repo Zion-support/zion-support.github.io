@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -16,7 +14,6 @@ import {
 const features = [
   {
     icon: ShoppingCart,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     title: 'E-commerce Platform',
     description: 'Complete online store solution with payment processing'
   },
@@ -31,7 +28,6 @@ const features = [
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
-<<<<<<< HEAD
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -47,37 +43,7 @@ const features = [
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform your retail business with modern e-commerce, omnichannel,
-                and customer experience solutions.
-=======
-    icon: Smartphone,
-    title: 'Mobile Commerce',
-    description: 'Mobile-optimized shopping experience'
-  }
-];
-
-export default function RetailSolutionsPage() {
-  return (
-    <>
-      <Head>
-        <title>Retail Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive retail technology solutions for modern commerce." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Retail Solutions</h1>
-              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-                Transform your retail business with cutting-edge technology solutions.
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              </p>
+                and customer experience solutions.              </p>
             </motion.div>
           </div>
         </section>
@@ -94,13 +60,7 @@ export default function RetailSolutionsPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Retail Features</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Everything you need to succeed in modern retail.
-              </p>
-<<<<<<< HEAD
-=======
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              {features.map((feature, index) => (
+              </p>              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -111,7 +71,6 @@ export default function RetailSolutionsPage() {
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -181,14 +140,7 @@ export default function RetailSolutionsPage() {
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
-                  ))}
-=======
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
-              ))}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            </div>
+                  ))}            </div>
           </div>
         </section>
 
@@ -225,7 +177,6 @@ export default function RetailSolutionsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
   );
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
@@ -258,8 +209,3 @@ export default function RetailSolutionsPage() {
     </>;
   ),;
 }
-=======
-    </>
-  );
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

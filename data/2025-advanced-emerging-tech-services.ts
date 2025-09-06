@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -11,6 +12,70 @@ export const advancedEmergingTechServices2025 = [
   {
 
 
+=======
+id: 'space-mining-operations-platform',
+    name: 'SpaceMining Operations',
+    description:
+      'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.'
+      'Asteroid mining operations'
+      'Lunar resource extraction'
+      'Space resource mapping'
+      'Automated mining systems'
+      'Integration with space agencies'
+      'Advanced analytics and reporting'
+      'Custom mining strategies'
+      '24/7 space operations monitoring'
+    ]
+    pricing: {
+      starter: {
+        price: 999
+        period: 'month'
+        features: [
+          'Basic space operations'
+          'Resource mapping'
+          'Standard support'
+        ]
+      }
+      professional: {
+        price: 2999
+        period: 'month'
+        features: [
+          'Advanced mining operations'
+          'Custom strategies'
+          'Priority support'
+          'Dedicated operations team'
+        ]
+      }
+      enterprise: {
+        price: 7999
+        period: 'month'
+        features: [
+          'Full mining operations'
+          'Custom space solutions'
+          'White-label platform'
+          'Dedicated support team'
+        ]
+      }
+    }
+    category: 'Space Technology'
+    tags: [
+      'Space Mining'
+      'Asteroid Mining'
+      'Lunar Resources'
+      'Space Operations'
+    ]
+    website: 'https://ziontechgroup.com/space-mining-operations'
+    contact: {
+      phone: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+    }
+    marketSize: '$3.8B'
+    targetAudience:
+      'Space agencies, mining companies, aerospace firms, government agencies'
+    competitiveAdvantage:
+      'Industry-leading space mining operations, comprehensive resource mapping, and extensive space agency integration'
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   {
 <<<<<<< HEAD
 =======
@@ -931,6 +996,7 @@ export const advancedEmergingTechServices2025 = [
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
@@ -1972,3 +2038,8 @@ export const advancedEmergingTechServices2025 = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

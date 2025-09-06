@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Sparkles, RefreshCcw } from 'lucide-react';
+
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { Sparkles, RefreshCcw } from 'lucide-react'
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
@@ -16,6 +25,7 @@ export function EmptyMatchesCard({
       <p className='text-muted-foreground mb-6'>;
         Run AI matching to find talents that match this job&apos;s requirements.
       </p>
+<<<<<<< HEAD
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button 
         onClick = {onRefresh,}
         disabled = {isProcessing,}
@@ -67,10 +77,17 @@ export function EmptyMatchesCard(): any ({;
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>
+        {isProcessing ? (
+          <>
+            <RefreshCcw className='mr-2 h-4 w-4 animate-spin' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             Processing...
           </>
         ) : (
           <>
+<<<<<<< HEAD
 
 
 
@@ -130,3 +147,13 @@ function EmptyMatchesCard() {
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<Sparkles className='mr-2 h-4 w-4' />
+            Find AI Matches
+          </>
+        )}
+      </Button>
+    </Card>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

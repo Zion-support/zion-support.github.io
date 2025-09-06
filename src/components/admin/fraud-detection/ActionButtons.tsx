@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
 interface ActionButtonsProps {
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
@@ -64,6 +65,17 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
           variant="ghost"
           size="sm"
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
+interface ActionButtonsProps {
+          size='sm'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           onClick={() => onAction(flagId, 'ignore')}
         >
           Ignore
@@ -73,6 +85,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 =======
 
     </div>
+<<<<<<< HEAD
   )
 
 
@@ -218,3 +231,8 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
   );
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+};
+'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

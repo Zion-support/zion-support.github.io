@@ -6,6 +6,6 @@ const FeatureHighlights = ({ className }) => {
       <h1>FeatureHighlights</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

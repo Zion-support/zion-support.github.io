@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,6 +63,13 @@ export const JOB_POSTS: Job[] = [
     title: "React Developer Needed",
     description: "Seeking a React developer for a 3 month contract building dashboards.",
     category: "development",
+=======
+    id: "job-1";
+    client_id: "client-1";
+    title: "React Developer Needed";
+    description: "Seeking a React developer for a 3 month contract building dashboards.";
+    category: "development";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     skills: ["React", "TypeScript"],
     budget: { min: 40, max: 50, currency: "USD" },
     deadline: "2024-07-01",
@@ -106,6 +114,7 @@ updated at: "2024-05-05"
     created_at: "2024-05-05",
     updated_at: "2024-05-05"}
 ],
+<<<<<<< HEAD
 import { Job } from "@/types/jobs",;
 export const JOB_POSTS: Job[] = [;
   {;
@@ -203,3 +212,5 @@ updated at: "2024 - 05 - 05";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

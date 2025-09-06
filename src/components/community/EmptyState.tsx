@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import Link from 'next/link'
@@ -8,6 +9,12 @@ import Link from 'next/link'
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
+=======
+import React from 'react',
+import Link from 'next/link';
+import { Button  } from '@/components/ui/button';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Tooltip
   TooltipContent
@@ -15,7 +22,10 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface EmptyStateProps {
 <<<<<<< HEAD
 =======
@@ -72,6 +82,7 @@ interface EmptyStateProps {
   subtitle: string;
   cta: string;
   href: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   hasSession: boolean
 
@@ -155,6 +166,10 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <p className="text-muted-foreground mb-6">{subtitle}</p>
+=======
+  hasSession: boolean
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -169,6 +184,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
 =======
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
+<<<<<<< HEAD
 
 
 
@@ -221,3 +237,11 @@ export default EmptyState;
 },;
 export default EmptyState;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        </Tooltip>
+      </TooltipProvider>
+    </div>
+);
+};
+export default EmptyState;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

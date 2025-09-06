@@ -6,6 +6,6 @@ const TokenIntegrations = ({ className }) => {
       <h1>TokenIntegrations</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

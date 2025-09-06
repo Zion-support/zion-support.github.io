@@ -36,6 +36,7 @@ import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
+<<<<<<< HEAD
 import React from 'react',;
 import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils',;
@@ -89,3 +90,7 @@ export default Spinner,
 =======
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

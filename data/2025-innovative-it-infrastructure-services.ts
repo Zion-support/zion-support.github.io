@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -12,6 +13,11 @@ export const innovativeITInfrastructureServices2025 = [
 
 
 <<<<<<< HEAD
+=======
+id: 'quantum-edge-computing-orchestrator',
+    name: 'Quantum Edge Computing Orchestrator',
+    description:
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'
       'Quantum-enhanced edge processing with 1000x speed improvement'
       'Intelligent workload distribution and optimization'
@@ -423,6 +429,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance tools'
     ]
     compliance: [
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -431,11 +438,14 @@ export const innovativeITInfrastructureServices2025 = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
       'Industry-specific regulations',
+<<<<<<< HEAD
     ],;
 <<<<<<< HEAD
 =======
@@ -936,3 +946,8 @@ export const innovativeITInfrastructureServices2025 = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    ],
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

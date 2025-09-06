@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
@@ -348,3 +349,8 @@ export default InstallPrompt,
     </>
   )
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React, { useEffect, useState } from 'react';
+import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
+'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

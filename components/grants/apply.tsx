@@ -16,6 +16,7 @@ import {useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
+<<<<<<< HEAD
 
 const categories: GrantCategory[] = [
   'Ecosystem Tools',
@@ -46,6 +47,11 @@ const categories: GrantCategory[] = [
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
+export default function ApplyGrantPage() {
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -69,6 +75,7 @@ export default function ApplyGrantPage() {;
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +89,11 @@ export default function ApplyGrantPage() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
+    'USDC'
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
@@ -339,13 +351,13 @@ function ApplyGrantPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          program
-          projectName
-          teamInfo
-          proposalSummary
-          timeline
-          budgetAmount: Number(budgetAmount |0)
-          budgetCurrency
+program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
           supportingLinks: supportingLinks
             .split('\n')
             .map(s => s.trim())
@@ -362,31 +374,18 @@ function ApplyGrantPage() {
     } catch (e: any) {
       setError(e.message);
     } finally {
-      setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
-          budgetCurrency;
-          supportingLinks: supportingLinks
-            .split('\n')
-            .map((s) => s.trim())
-            .filter(Boolean);
-          pitchDeckUrl;
-          region;
-          sector: (sector as any) |undefined
-          submit})});
-      const data = await resp.json();
-      if (!resp.ok) throw new Error(data?.error |'Failed');
-      router.push(`/grants/${data.id}`)
-    } catch (e: any) {
-      setError(e.message)
-    } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }
+<<<<<<< HEAD
 
   };
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
-      <h1 className='text-2xl font-semibold mb-4'>
+<h1 className='text-2xl font-semibold mb-4'>
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
       </h1>
       <div className='grid gap-4 max-w-3xl'>
@@ -531,10 +530,12 @@ function ApplyGrantPage() {
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
           >
             Submit for Review
-          </button>        </div>
+          </button>
+        </div>
       </div>
     </EnhancedLayout>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -631,3 +632,6 @@ function ApplyGrantPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

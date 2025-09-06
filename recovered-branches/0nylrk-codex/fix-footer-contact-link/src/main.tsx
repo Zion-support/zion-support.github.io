@@ -35,7 +35,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
-<<<<<<< HEAD
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -43,7 +42,6 @@ import App from './App ;
 import './index ;
 import {HelmetProvider} from 'react-helmet-async';
 import {BrowserRouter, as, Router} from 'react-router-dom';
-
 
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
@@ -115,7 +113,3 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
       </WhitelabelProvider>;
     </HelmetProvider>;
   </React.StrictMode>);
-=======
-  </React.StrictMode>,
-);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

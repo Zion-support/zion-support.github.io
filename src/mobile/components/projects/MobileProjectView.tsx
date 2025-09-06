@@ -1,4 +1,44 @@
+<<<<<<< HEAD
 id: string;
+=======
+
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from 'lucide-react'
+import { Progress } from "@/components/ui/progress",
+import { SeverityIndicator } from "../common/SeverityIndicator";
+import { useRouter  } from 'next/router';
+import { toast } from "sonner";
+import React from 'react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import {
+  CheckCircle
+  ChevronRight
+  FileText
+  MessageSquare
+  Video
+} from 'lucide-react'
+import { Progress } from '@/components/ui/progress'
+import { SeverityIndicator } from '../common/SeverityIndicator'
+import { useRouter } from 'next/router'
+import { toast } from 'sonner'
+interface Milestone {
+  id: string;
+  title: string;
+  dueDate: string;
+  status: "completed" | "in_progress" | "pending";
+  paymentStatus: "paid" | "pending" | "overdue";
+  amount: string
+interface ProjectViewProps {
+  project: {
+    id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     title: string;
     client: {
       name: string;
@@ -9,6 +49,7 @@ id: string;
     status: string;
     totalAmount: string;
     progress: number;
+<<<<<<< HEAD
 
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -156,6 +197,13 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   
 
 
+=======
+    description: string
+  }
+  milestones: Milestone[]
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 
@@ -660,6 +708,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
               </CardContent>;
             </Card>;
           ))}
+<<<<<<< HEAD
         </div>;
       </section>;
     </div>;
@@ -670,3 +719,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
 
 ;
+=======
+        </div>
+      </section>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

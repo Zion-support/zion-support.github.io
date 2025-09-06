@@ -6,6 +6,6 @@ const Advanced-cybersecurity-suite = ({ className }) => {
       <h1>Advanced-cybersecurity-suite</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

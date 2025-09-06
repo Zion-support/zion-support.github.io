@@ -6,6 +6,6 @@ const ProductsAdminPage = ({ className }) => {
       <h1>ProductsAdminPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

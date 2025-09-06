@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 className
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -12,6 +13,21 @@ className
           <div className="flex items-center">;
             <span className="font-medium">;
 <<<<<<< HEAD
+=======
+import { formatDistanceToNow } from 'date-fns';
+import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,;
+} from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ForumReply } from '@/types/community';
+import { cn } from '@/lib/utils';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -19,6 +35,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
   className?: string
 }
 
@@ -222,3 +239,12 @@ export const ReplyCard = ({
 =======
 export default ReplyCard;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { ForumReply } from "@/types/community";
+import { cn } from "@/lib/utils";
+interface ReplyCardProps {
+  );
+};
+export default ReplyCard;
+"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

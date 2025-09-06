@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,10 +49,23 @@ const NotificationCenter = dynamic (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import dynamic from 'next/dynamic';
+const NotificationCenter = null;
+const NotificationCenter = dynamic(
+  () => import('../components/notifications/NotificationCenter')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   {
     ssr: false
   }
 );
+<<<<<<< HEAD
+=======
+export default function NotificationsPage() {
+  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
+  ssr: false})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function NotificationsPage() {
 const NotificationCenter = dynamic(;
   () => import('../components/notifications/NotificationCenter'),;
@@ -64,6 +78,7 @@ export default function NotificationsPage() {;
   ssr: false}),;
 export default function NotificationsPage() {;
   return <NotificationCenter />;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -86,3 +101,5 @@ function NotificationsPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

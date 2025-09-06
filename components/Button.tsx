@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
 export default function Button(): any ({;
@@ -19,14 +20,14 @@ export default function Button(): any ({;
     secondary:;
       'bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/30 focus:ring-white/50',;
     outline:;
-      'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50',;
-  };
+      'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50',
+};
 
   const sizeClasses = {;
     sm: 'px-3 py-1 && 1.5 text-sm',;
     md: 'px-4 py-2 text-base',;
-    lg: 'px-6 py-3 text-lg',;
-  };
+    lg: 'px-6 py-3 text-lg',
+};
 
   const disabledClasses = disabled;
     ? 'opacity-50 cursor-not-allowed';
@@ -75,6 +76,21 @@ function Button() {
 }  const disabled_classes = disabled ? 'opacity - 50 cursor - not - allowed' : 'hover: scale - 105 transform',
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${disabled_classes} ${class_name}`;
 ;
+=======
+import React from 'react';
+interface ButtonProps {
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset',
+  disabled?: boolean
+}
+
+export default function Button({ 
+  children;
+  variant;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <button;
       type={type}
@@ -85,9 +101,7 @@ function Button() {
     </button>
 );
 }
-
-
-
+<<<<<<< HEAD
 
     >
       {children}
@@ -109,6 +123,7 @@ function Button() {
 
 }
 
-
     </button>);
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

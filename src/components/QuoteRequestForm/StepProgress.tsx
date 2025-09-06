@@ -1,6 +1,34 @@
+<<<<<<< HEAD
 return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
+=======
+    { id: "service", label: "Service" },
+    { id: "details", label: "Details" },
+    { id: "timeline", label: "Timeline" },
+    { id: "budget", label: "Budget" };
+    { id: "summary", label: "Summary" }
+  ];
+  const getStepStatus = null;
+                  status === "complete" ? "text-zion-cyan" : 
+                  status === "current" ? "text-white" : 
+    { id: "service", label: "Service" }
+    { id: "details", label: "Details" }
+    { id: "timeline", label: "Timeline" }
+    { id: "budget", label: "Budget" }
+    { id: "summary", label: "Summary" }
+  const getStepStatus = (stepId: QuoteRequestSteps) => {
+    const stepOrder = steps.findIndex(s => s.id === stepId);
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
+if (stepOrder < currentStepOrder) return 'complete';
+    if (stepOrder === currentStepOrder) return 'current';
+    return 'upcoming';
+  };
+
+  return (
+    <div className='relative'>
+      <div className='absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <div
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
@@ -105,12 +133,16 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     ? 'text-zion-cyan'
                     : status === 'current'
                       ? 'text-white'
+<<<<<<< HEAD
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+                      : 'text-zion-slate-light'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   "text-zion-slate-light"
 
                 )}
@@ -120,6 +152,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 ) : (
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
@@ -348,3 +381,29 @@ if (return "current", ) {
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+                ),}
+              >
+                {step.label}
+              </span>
+            </div>
+);
+        })}
+      </div>
+    </div>
+  );
+  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 ;
+}%` ;
+
+}/> </div> 
+}className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {;
+  steps.findIndex (s => s.id === step.id) + 1 ;
+}</span>) ;
+}</div> <span) ;
+}> {;
+  step.label ;
+}</span> </div>) ;
+}) ;
+}</div> </div>) ;
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

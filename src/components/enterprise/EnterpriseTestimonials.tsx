@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
 
 <<<<<<< HEAD
@@ -58,6 +59,27 @@ export function EnterpriseTestimonials() {
     image: "/placeholder.svg"}],
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import { Quote } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,;
+} from '@/components/ui/carousel';
+
+import React from "react";
+import { Quote } from 'lucide-react'
+import {
+          <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
+            See how enterprise teams are transforming their hiring process
+          </p>
+        </div>
+
+<Carousel className='w-full'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -105,6 +127,7 @@ export function EnterpriseTestimonials() {
                     </div>
                     <div>
                       <p className='font-bold'>{testimonial.author}</p>
+<<<<<<< HEAD
                       <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}
 
 import React from "react",
@@ -288,11 +311,25 @@ export function EnterpriseTestimonials() {;
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+                      <p className='text-sm text-muted-foreground'>
+                        {testimonial.title}, {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+<div className='flex justify-center gap-2 mt-8'>
+            <CarouselPrevious />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <CarouselNext />
           </div>
         </Carousel>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -417,3 +454,7 @@ function EnterpriseTestimonials() {
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

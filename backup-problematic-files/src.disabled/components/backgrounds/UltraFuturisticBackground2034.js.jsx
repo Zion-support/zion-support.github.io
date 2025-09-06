@@ -6,6 +6,6 @@ const UltraFuturisticBackground2034.js = ({ className }) => {
       <h1>UltraFuturisticBackground2034.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

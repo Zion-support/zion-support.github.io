@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -129,6 +130,11 @@ export default function EnhancedButton({
   size = "md"
   fullWidth
 
+=======
+import React from 'react';
+import clsx from 'clsx';
+export type EnhancedButtonProps = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ...props
 }: EnhancedButtonProps) {
   return (
@@ -214,6 +220,7 @@ function EnhancedButton() {
 =======
     />
   );
+<<<<<<< HEAD
 >>>>>>> main
 }
 
@@ -233,3 +240,6 @@ export default EnhancedButton;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

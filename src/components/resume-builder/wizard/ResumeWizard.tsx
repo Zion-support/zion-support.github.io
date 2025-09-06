@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">;
@@ -6,23 +7,59 @@ if (isLoading) {
     );
   }
 
-
-  
-
-
   if (error) {
 
   if (error) {;
+=======
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useResume } from '@/hooks/useResume';
+import { Tabs } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Resume } from '@/types/resume';
+
+import { useState, useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useResume  } from '@/hooks/useResume';
+import { Tabs  } from '@/components/ui/tabs';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Resume  } from '@/types/resume';
+// Import components
+import { ResumeProgress  } from './ResumeProgress';
+import { EmptyResumeState  } from './EmptyResumeState';
+import { CreateResumeForm  } from './CreateResumeForm';
+import { ResumeSteps  } from './ResumeSteps';
+import { ResumeStepContent  } from './ResumeStepContent';
+import { useResumeProgress  } from './useResumeProgress';
+import { ResumeVersionSelector  } from './ResumeVersionSelector';
+import { RESUME_STEPS } from './constants';
+export function ResumeWizard() {
+  const { user } = useAuth();
+  const { 
+    isLoading;
+    error;
+    resume;
+    fetchResume;
+    createResume
+  } = useResume();
+  const [activeTab, setActiveTab] = useState('basic-info');
+  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
+  // Use the extracted hook for progress calculation
+  const progress = null;
+  if (isLoading) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return (
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     )
   }
-
-
-  
-
 
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
@@ -44,10 +81,6 @@ if (isLoading) {
     );
   }
 
-
-
-  
-
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -62,27 +95,13 @@ if (isLoading) {
       />;
     );
   }
-  
-
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">;
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
-        <h1 className="text-2xl font-bold">Resume Builder</h1>;
-        <div className="flex gap-4 flex-wrap items-center">;
-=======
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <h1 className="text-2xl font-bold">Resume Builder</h1>
-        <div className="flex gap-4 flex-wrap items-center">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
 
+          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
 
           <Button;
             onClick={() => setShowNewResumeForm(true)}
-
 
             variant="outline"
             size="sm"
@@ -94,20 +113,12 @@ if (isLoading) {
         </div>
       </div>
 
-
-      
-
-
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
-
-
-          
-
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             variant="outline";
@@ -181,11 +192,18 @@ if ( {) {
                 onPrevStep = {prevStep,}
               />
             )}
+<<<<<<< HEAD
 
           </Tabs>;
         </CardContent>;
       </Card>;
     </div>;
+=======
+          </Tabs>
+        </CardContent>
+      </Card>
+    </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 };
@@ -196,11 +214,16 @@ if ( {) {
 }</AlertDescription> </Alert>) ;
 
 }if (showNewResumeForm) {;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   () => setShowNewResumeForm (false) ;
 }isLoading= {;
   isLoading ;
 }/>) ;
+<<<<<<< HEAD
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabsvalue= {
   activeTab 
 }onValueChange= {
@@ -270,9 +293,31 @@ if ( {) {
   next_step;
 }onPrevStep= {
 
-
-
   prev_step;
 }/>);
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
+=======
+}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {;
+  activeTab ;
+}onValueChange= {;
+  setActiveTab ;
+}> <ResumeSteps steps= {;
+  RESUME STEPS ;
+}activeTab= {;
+  activeTab ;
+}onChange= {;
+  setActiveTab ;
+}/> {;
+  resume && (<ResumeStepContent activeTab= {;
+  activeTab ;
+}resume= {;
+  resume as Resume ;
+}onNextStep= {;
+  nextStep ;
+}onPrevStep= {;
+  prevStep ;
+}/>) ;
+}</Tabs> </CardContent> </Card> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

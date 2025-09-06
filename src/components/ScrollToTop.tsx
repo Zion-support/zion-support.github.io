@@ -1,14 +1,18 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { ChevronUp } from 'lucide-react';
 
 const ScrollToTop: React.FC = () => {
-  const { pathname } = useLocation();
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
 
-<<<<<<< HEAD
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
@@ -33,9 +37,6 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   );
-=======
-  return null;
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 };
 
 export default ScrollToTop;

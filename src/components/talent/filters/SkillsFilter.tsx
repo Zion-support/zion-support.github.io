@@ -1,8 +1,10 @@
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox";
-import { SkillsFilterProps } from "@/types/filters";
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
+import { SkillsFilterProps } from '@/types/filters';
+
 // Common skills in AI and tech
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const POPULAR_SKILLS = [
@@ -59,6 +61,9 @@ export function SkillsFilter(): any ({;
   "Security"
 ],
 
+=======
+            <div key={skill} className='flex items-center'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
 
   return (
@@ -177,11 +182,21 @@ const POPULAR_SKILLS = [;
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
+<<<<<<< HEAD
 
 
                 {skill}
               ">
                 {skill}
+=======
+className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
+              />
+              <label
+                htmlFor={`skill-${skill}`}
+                className='ml-2 text-sm text-zion-slate-light cursor-pointer'
+              >
+                {skill}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </label>
             </div>
           ))}
@@ -196,6 +211,7 @@ const POPULAR_SKILLS = [;
     </div>
   );
 }
+<<<<<<< HEAD
 export /**
  * SkillsFilter - Function description
  */
@@ -252,3 +268,5 @@ function SkillsFilter() {
 ;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

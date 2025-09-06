@@ -72,6 +72,7 @@ import { Check, ExternalLink } from "lucide-react";
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function SecretsRotationAutomationPage() {
+<<<<<<< HEAD
 
   const features = [
     "Automated key and secret rotation"
@@ -275,6 +276,9 @@ return (
 	const features = [
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 	];
+=======
+	const features = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 	return (
 		<>
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />
@@ -306,6 +310,7 @@ return (
 		</>
 );
 }
+<<<<<<< HEAD
     </>);
 }
   return (
@@ -344,36 +349,39 @@ return (
             <a
               href="/contact"
               className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200"
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Start from $199/mo
             </a>
             <a
-              href="/pricing"
-              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10"
+              href='/pricing'
+              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'
             >
               Pricing
             </a>
             <a
-              href="https://developer.hashicorp.com/vault"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              href='https://developer.hashicorp.com/vault'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
             >
-              <ExternalLink className="w-4 h-4" /> HashiCorp Vault Docs
+              <ExternalLink className='w-4 h-4' /> HashiCorp Vault Docs
             </a>
             <a
-              href="https://cloud.google.com/kms"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              href='https://cloud.google.com/kms'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
             >
-              <ExternalLink className="w-4 h-4" /> Google Cloud KMS
+              <ExternalLink className='w-4 h-4' /> Google Cloud KMS
             </a>
           </div>
         </section>
       </main>
     </>
   );
+<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -447,3 +455,5 @@ return (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

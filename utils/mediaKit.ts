@@ -190,6 +190,7 @@ function titleCase(s: string) {
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 function titleCase(s: string) {
@@ -271,3 +272,6 @@ function title_case() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

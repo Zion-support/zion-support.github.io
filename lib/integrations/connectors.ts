@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +55,28 @@ async function mockProviderCall<T>(
 
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+async function callProvider<T>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record<string, any>
+): Promise<{ log: SyncLogEntry; result: T }> {
+  const log: SyncLogEntry = {
+    id: uuidv4(),
+    timestamp: Date.now(),
+    providerId: connection.providerId,
+    level: 'info',
+    action,
+    details,
+  };
+  // In a real implementation, call provider SDK/API here using connection.accessToken
+  return { log, result: { ok: true } as unknown as T };
+}
+
+// CRM actions
+export const crm = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   async syncContact(
     connection: ProviderConnection
     contact: Record<string, any>
@@ -70,11 +93,19 @@ async function mockProviderCall<T>(
     connection: ProviderConnection
     note: Record<string, any>
   ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  }
-}
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addEmailTouchpoint(
+    connection: ProviderConnection,
+    touch: Record<string, any>
+  ) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  },
+};
+
 // ATS actions
 export const ats = {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const log: SyncLogEntry = {
     id: uuidv4(),
@@ -146,10 +177,27 @@ export const ats = {
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+async pushApplicant(
+    connection: ProviderConnection,
+    applicant: Record<string, any>
+  ) {
+    return simulateAction(connection, 'ats.pushApplicant', { applicant });
+  },
+  async uploadResume(
+    connection: ProviderConnection,
+    resume: Record<string, any>
+  ) {
+    return simulateAction(connection, 'ats.uploadResume', {
+      resumeMeta: { name: resume?.name },
+    });
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   async updateStatus(
     connection: ProviderConnection
     status: Record<string, any>
   ) {
+<<<<<<< HEAD
     connection: ProviderConnection,
     status: Record<string, any>,
   ) {;
@@ -275,3 +323,8 @@ export const email = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    return simulateAction(connection, 'ats.updateStatus', { change });
+  },
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

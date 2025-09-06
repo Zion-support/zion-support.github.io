@@ -13,6 +13,7 @@ export type ProjectParticipants = {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   clientUserId: string;
   talentUserId: string;
+<<<<<<< HEAD
 }
 export type Project = {  id: string;
 <<<<<<< HEAD
@@ -149,3 +150,24 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+};
+
+export type Project = {
+  id: string;
+  name: string;
+  participants: ProjectParticipants;
+  milestones: Milestone[];
+  createdAt: string;
+  updatedAt: string;
+};
+
+export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  return (
+    value === 'Pending' ||
+    value === 'In Progress' ||
+    value === 'Submitted' ||
+    value === 'Approved' ||
+    value === 'Paid'
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

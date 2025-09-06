@@ -61,6 +61,7 @@ export function getUserFromRequest(req: any): User | null {
     return null;
   }
   return user;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
@@ -91,3 +92,5 @@ export function getUserFromRequest (req: any): User | null {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

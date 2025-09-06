@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,3 +121,6 @@ export default function NewPost() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<div> <h1>NewPost</h1> <p>Component placeholder - needs implementation</p> </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

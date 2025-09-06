@@ -1,9 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+import React from 'react';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import Skeleton from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { NotificationItem } from './NotificationItem';
+import { Notification } from '@/context/notifications';
+import { EmptyState } from '@/components/ui/empty-state';
+import { Bell } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 <<<<<<< HEAD
@@ -160,6 +171,7 @@ import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react'
 interface NotificationListProps {
+<<<<<<< HEAD
 }; import React from 'react'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import Skeleton from '@/components/ui/skeleton'
@@ -452,3 +464,13 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+  loading: boolean;
+  error: string | null;
+  notifications: Notification[];
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
+  onRetry: () => void
+}
+export const NotificationList: React.FC<NotificationListProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

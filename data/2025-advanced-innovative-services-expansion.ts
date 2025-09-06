@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -6,6 +7,10 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { ServiceVariant } from '../types/service-variants';
+export interface AdvancedInnovativeService {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   tagline: string;
@@ -37,6 +42,7 @@
     email: string;
     address: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -49,11 +55,19 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -86,6 +100,12 @@ const contact = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
+=======
+  marketAdvantage: string
+}
+
+const contact = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     tagline:
       'Self-healing DevOps with intelligent automation and predictive maintenance'
     price: '$1,299'
@@ -595,13 +615,10 @@ const contact = {
       'Custom model development'
     ]
     marketAdvantage:
-      'Most advanced AI climate prediction platform with research-grade accuracy'
-  }
-];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ];
-    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
-  }
+      'Most advanced AI climate prediction platform with research-grade accuracy',
+  },
 ];
+<<<<<<< HEAD
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -1834,3 +1851,5 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

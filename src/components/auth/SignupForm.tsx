@@ -104,6 +104,7 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -223,3 +224,32 @@ type SignupFormData = z.infer < typeof signup_schema>;
 =======
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+
+}/> </div> ✓ 8+ characters </span> <span className= {';
+  /[A-Z]/.test (watchedFields.password || '') ? 'text-green-600': 'text-gray-400' ;
+}> ✓ Uppercase letter </span> <span className= {';
+  /[a-z]/.test (watchedFields.password || '') ? 'text-green-600': 'text-gray-400' ;
+}> ✓ Lowercase letter </span> <span className= {';
+  /[0-9]/.test (watchedFields.password || '') ? 'text-green-600': 'text-gray-400' ;
+}> ✓ Number </span> <span className= {';
+  /[^A-Za-z0-9]/.test (watchedFields.password || '') ? 'text-green-600': 'text-gray-400' ;
+}> ✓ Special character </span> </div> </div> </div>) ;
+}{;
+  errors.password.message ;
+}</p>) ";
+}</div> </Label> <div className=" relative"> <Input) : (<Eye className=" h-4 w-4"/>) ;
+}</Button> </div> </div> {;
+  errors.confirmPassword.message ;
+}</p>) ;
+}</div> {;
+  errors.root.message ;
+}</div>) ;
+}{;
+  /* Submit Button */ ;
+}<Button > {'";
+  isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
+}</Button> </form>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

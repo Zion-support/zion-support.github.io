@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 export interface VerifiedRealService2025Batch2 {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export interface VerifiedRealService2025Batch2 {
@@ -9,6 +10,9 @@ export interface VerifiedRealService2025Batch2 {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
+=======
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -20,6 +24,7 @@ export interface VerifiedRealService2025Batch2 {
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -136,10 +141,24 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
       'AI-powered quality assurance platform that automates testing and ensures software quality.'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    address: string
+  }
+}
+
+export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
+  {
+    id: "ai-quality-assurance";
+    name: "AI Quality Assurance Platform";
+    tagline: "Automated testing and quality control";
+    price: "$79/month";
+    description: "AI-powered quality assurance platform that automates testing and ensures software quality.";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
       "Automated testing";
       "AI defect detection";
       "Performance monitoring";
+<<<<<<< HEAD
       "Quality metrics";
       "Continuous integration"
     ];
@@ -148,10 +167,22 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     contactInfo: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+      "Quality metrics",
+      "Continuous integration"
+    ],
+    link: "/services/ai-quality-assurance";
+    category: "Verified Services 2025";
+    realImplementation: true;
+    contactInfo: {
+      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -203,3 +234,5 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

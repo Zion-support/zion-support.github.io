@@ -6,6 +6,6 @@ const UltimateServicesShowcase2025 = ({ className }) => {
       <h1>UltimateServicesShowcase2025</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

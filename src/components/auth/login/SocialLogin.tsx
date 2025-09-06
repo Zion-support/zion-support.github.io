@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,6 +10,14 @@ import { Button } from "@/components/ui/button";
 import { Web3Login } from "./Web3Login";
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
+=======
+import { Facebook, Twitter, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Web3Login } from './Web3Login';
+import { useState } from 'react';
+import { openAuthPopup } from '@/api/authSocial';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -234,6 +243,7 @@ function SocialLogin() {
         <Web3Login />
       </div>
     </div>
+<<<<<<< HEAD
   )
 
           disabled={isLoading}        >;
@@ -381,3 +391,6 @@ export function SocialLogin() {;
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

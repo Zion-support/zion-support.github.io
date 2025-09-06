@@ -6,6 +6,6 @@ const ServicesComparisonTable.js = ({ className }) => {
       <h1>ServicesComparisonTable.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

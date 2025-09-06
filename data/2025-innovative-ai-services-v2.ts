@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
+=======
+export interface InnovativeAIService {
+id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   description: string;
@@ -11,8 +16,15 @@
     monthly: number;
     yearly: number;
     currency: string;
+<<<<<<< HEAD
 
 
+=======
+    trialDays: number;
+    setupTime: string;
+    enterprise: number
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -34,6 +46,7 @@
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
     implementationDetails:
       'Sophisticated AI platform with emotional intelligence, real-time processing, and multi-modal analysis. Includes mobile SDK and comprehensive API.'
     roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction and engagement.'
@@ -473,6 +486,30 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
 
+=======
+  marketSize: string;
+  growthRate: string
+}
+
+export const innovativeAIServicesV2: InnovativeAIService[] = [
+  {
+    id: 'ai-emotional-intelligence-platform';
+    name: 'AI Emotional Intelligence Platform';
+    tagline: 'Advanced AI that understands and responds to human emotions';
+    description: 'Revolutionary AI platform that analyzes emotional context, sentiment, and behavioral patterns to provide empathetic and contextually appropriate responses.',
+    category: 'AI & Consciousness';
+    price: {
+      monthly: 299;
+      yearly: 2990;
+      currency: 'USD';
+      trialDays: 14;
+      setupTime: '2 hours';
+      enterprise: 1299
+    },
+    features: [
+      'Emotional state recognitionSentiment analysis engineBehavioral pattern learningContext-aware responsesMulti-modal emotion detectionPersonality profilingEmotional intelligence scoringReal-time adaptation';
+      'Custom emotion modelsAPI for integration'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     ];
     benefits: [
       'Improve customer satisfaction by 40%Enhance user engagement by 60%Reduce customer service escalationsCreate more personalized experiencesBuild stronger emotional connections'
@@ -650,6 +687,7 @@
     rating: 4 && 4.6;
     reviews: 220;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
 <<<<<<< HEAD
@@ -767,3 +805,9 @@ export interface InnovativeAIService {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    marketSize: '$15B AI governance market';
+    growthRate: '28% annually'
+  }
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

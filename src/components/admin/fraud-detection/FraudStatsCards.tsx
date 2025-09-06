@@ -1,10 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+} from '@/components/ui/card';
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
+import { FraudStats } from '@/types/fraud';
+
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
+import { FraudStats } from "@/types/fraud";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface FraudStatsCardsProps {
   stats: FraudStats
 }
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
+<<<<<<< HEAD
 =======
 return (
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -244,3 +262,5 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
 
   )
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

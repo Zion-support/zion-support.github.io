@@ -1,6 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-05T23:46:02.066Z",
   "metrics": {},
   "performanceIssues": [
@@ -143,4 +145,105 @@
     "totalOptimizations": 1
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+  "timestamp": "2025-09-03T17:02:57.562Z",
+  "duration": "5148ms",
+  "metrics": {
+    "bundleSize": 0,
+    "buildTime": 4118,
+    "testTime": 1029,
+    "memoryUsage": {
+      "rss": 47849472,
+      "heapTotal": 5570560,
+      "heapUsed": 4374488,
+      "external": 1554631,
+      "arrayBuffers": 10515
+    },
+    "cpuUsage": {
+      "user": 14141,
+      "system": 4713
+    }
+  },
+  "codeAnalysis": {
+    "totalFiles": 14,
+    "totalLines": 979,
+    "totalSize": 52876,
+    "fileTypes": {
+      ".tsx": {
+        "count": 9,
+        "lines": 846,
+        "size": 39052
+      },
+      ".css": {
+        "count": 4,
+        "lines": 46,
+        "size": 10805
+      },
+      ".disabled": {
+        "count": 1,
+        "lines": 87,
+        "size": 3019
+      }
+    },
+    "largestFiles": [
+      {
+        "path": "/src/pages/services/index.tsx",
+        "size": 9436,
+        "lines": 207
+      },
+      {
+        "path": "/src/pages/services/comprehensive-micro-saas-showcase.tsx",
+        "size": 9217,
+        "lines": 191
+      },
+      {
+        "path": "/src/pages/index.tsx",
+        "size": 5982,
+        "lines": 115
+      },
+      {
+        "path": "/src/pages/contact.tsx",
+        "size": 5592,
+        "lines": 120
+      },
+      {
+        "path": "/src/styles/mobile.css",
+        "size": 4318,
+        "lines": 1
+      },
+      {
+        "path": "/src/styles/accessibility.css",
+        "size": 3628,
+        "lines": 1
+      },
+      {
+        "path": "/src/main.js.jsx.disabled",
+        "size": 3019,
+        "lines": 87
+      },
+      {
+        "path": "/src/components/Footer.tsx",
+        "size": 2962,
+        "lines": 74
+      },
+      {
+        "path": "/src/pages/about.tsx",
+        "size": 2702,
+        "lines": 55
+      },
+      {
+        "path": "/src/styles/performance.css",
+        "size": 2265,
+        "lines": 1
+      }
+    ]
+  },
+  "recommendations": []
+}
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

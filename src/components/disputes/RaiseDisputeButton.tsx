@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { 
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+  DialogDescription} from "@/components/ui/dialog",
+import { DisputeForm } from "./DisputeForm";
+import { useRouter } from 'next/router';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -8,11 +22,14 @@ import {  Dialog
   DialogDescription
 } from '@/components/ui/dialog'
 import { DisputeForm } from './DisputeForm'
+<<<<<<< HEAD
 Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { ShieldAlert } from 'lucide-react'
   DialogDescription} from "@/components/ui/dialog"
 import { DisputeForm } from "./DisputeForm"
@@ -23,6 +40,7 @@ interface RaiseDisputeButtonProps {
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string
+<<<<<<< HEAD
 
 export function RaiseDisputeButton({
 Dialog,
@@ -79,6 +97,14 @@ export function RaiseDisputeButton({
     router.push(`/dashboard/disputes/${disputeId}`)
   },
   
+=======
+}
+
+export function RaiseDisputeButton({ 
+  projectId;
+  milestoneId;
+  variant;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Button 
@@ -147,6 +173,7 @@ export function RaiseDisputeButton({
         </DialogContent>
       </Dialog>
     </>
+<<<<<<< HEAD
   )
 }
 =======
@@ -226,3 +253,6 @@ export function RaiseDisputeButton({;
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

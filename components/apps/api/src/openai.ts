@@ -1,5 +1,6 @@
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -131,3 +132,11 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    model: 'gpt-4o-mini',
+    input: prompt,
+  });
+  return completion.output_text;
+  return completion.output_text
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

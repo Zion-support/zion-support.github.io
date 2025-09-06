@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -18,6 +19,9 @@ export type EnterpriseITSolution = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
+=======
+export type EnterpriseITSolution = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline?: string;
   description: string;
@@ -207,6 +211,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'DevOps & Automation',
     pricing: { starter: '$3,499/mo' },
     features: [
+<<<<<<< HEAD
       'Self-service templates',
 <<<<<<< HEAD
 =======
@@ -1355,3 +1360,26 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Lifecycle automation'
+      'Access reviews'
+      'RBAC & SoD'
+      'Provisioning workflows'
+    ]
+    integrations: ['Okta', 'Azure AD', 'Google Workspace']
+    useCases: ['Audit readiness', 'Insider risk reduction']
+    link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub'
+    realService: true
+  }
+];
+realService: true;
+launchDate: '2025-11-01'
+}
+link: 'https://ziontechgroup.com/services/platform-engineering-foundation';
+realService: true;
+rating: 4.8
+}
+link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub';
+realService: true 
+}];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

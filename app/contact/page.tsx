@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Contact | Zion Tech Group",
-  description:
-    "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
+  description: "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
+  keywords: "contact, support, AI services, micro SaaS, IT services, consulting"
 };
 
 export default function ContactPage() {
@@ -13,7 +13,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Ready to transform your business with cutting-edge technology? Let&apos;s
+            Ready to transform your business with cutting-edge technology? Let's
             discuss how we can help you achieve your goals.
           </p>
         </div>

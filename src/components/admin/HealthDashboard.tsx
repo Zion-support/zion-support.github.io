@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,11 +21,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+<<<<<<< HEAD
 import {;
   AlertTriangle,;
   CheckCircle,;
@@ -35,6 +39,10 @@ import {;
 } from 'lucide-react';
 interface HealthData {;
 <<<<<<< HEAD
+=======
+import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -48,6 +56,7 @@ import {
   TrendingUp
   Activity
 } from 'lucide-react'
+<<<<<<< HEAD
 
 =======
 import React, { useState, useEffect } from 'react';
@@ -64,6 +73,8 @@ import {
   Activity,
 } from 'lucide-react';
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
@@ -123,6 +134,7 @@ interface HealthData {
       solution?: string
     }>
     byCategory: { [category: string]: number }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       low: number;
@@ -1374,3 +1386,10 @@ export default HealthDashboard;
 export default HealthDashboard,
 export default HealthDashboard,
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  }
+  );
+};
+
+export default HealthDashboard;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
