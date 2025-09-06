@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
@@ -30,17 +29,6 @@ export default function App() {
           <Footer />
         </div>
       </Router>
-    </ErrorBoundary>;
+    </ErrorBoundary>
   );
 }
-=======
-import React, { JSX } from 'react';
-
-export default function App(): JSX.Element {
-  return (
-    <main>
-      <h1>Hello App</h1>
-    </main>
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
