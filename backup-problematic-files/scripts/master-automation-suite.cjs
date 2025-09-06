@@ -2,8 +2,6 @@
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,7 +196,6 @@ module.exports = MasterAutomationSuite;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -231,9 +228,6 @@ const path = require('path')
         "description"
       "successRate"
 <<<<<<< HEAD
-      console.error('Fatal "error")
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -263,4 +257,3 @@ const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

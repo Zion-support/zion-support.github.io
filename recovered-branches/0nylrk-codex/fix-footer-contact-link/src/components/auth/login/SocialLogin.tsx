@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Facebook, Twitter } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -27,6 +28,37 @@ export function SocialLogin() {
         </div>
       </div>
       <div className="mt-6 grid grid-cols-4 gap-3">
+=======
+
+
+import { Facebook, Twitter } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+import { useAuth } from "@/hooks/useAuth";
+import { Web3Login } from "./Web3Login";
+export function SocialLogin() {
+
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
+
+
+    useAuth();
+
+  return (
+    <div className="mt-6">
+      <div className="relative">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-zion-blue-light" />
+        </div>
+        <div className="relative flex justify-center text-sm">
+          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
+            Or continue with
+          </span>
+        </div>
+      </div>
+      <div className="mt-6 grid grid-cols-4 gap-3">
+
+=======
+>>>>>>> main
         <Button
           type="button"
           variant="outline"
@@ -67,25 +99,40 @@ export function SocialLogin() {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> main
 =======
   )
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Web3Login } from "./Web3Login",;
+<<<<<<< HEAD
 export function SocialLogin() {;
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
   return (;
+=======
+
+export function SocialLogin() {;
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
+    useAuth();
+
+  return (
+>>>>>>> main
     <div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
         </div>;
         <div className="relative flex justify-center text-sm">;
+<<<<<<< HEAD
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
         </div>;
       </div>;
@@ -98,7 +145,45 @@ export function SocialLogin() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
+=======
+import { Facebook, Twitter  } from './lucide-react';
+import { Button  } from '@/components / ui / button';
+import { use_auth  } from '@/hooks / use_auth';
+import { Web3Login  } from './Web3Login';
+export /**
+ * SocialLogin - Function description
+ */
+function SocialLogin() {
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading } =;
+    use_auth ();
+;
+  return (
+    <div className="mt - 6">;
+      <div className="relative">;
+        <div className="absolute inset - 0 flex items - center">;
+          <div className="w - full border - t border - zion - blue - light" />;
+        </div>;
+        <div className="relative flex justify - center text - sm">;
+          <span className="px - 2 bg - zion - blue - dark text - zion - slate - light">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            Or continue with;
+          </span>;
+        </div>;
+      </div>;
+
+      <div className="mt - 6 grid grid - cols - 4 gap - 3">;
+        <Button;
+          type="button";
+          variant="outline";
+
+>>>>>>> main
   );
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

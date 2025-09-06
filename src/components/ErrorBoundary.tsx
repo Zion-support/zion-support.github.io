@@ -7,7 +7,10 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
+<<<<<<< HEAD
   errorInfo?: ErrorInfo;
+=======
+>>>>>>> main
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -21,13 +24,18 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
+=======
+    console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> main
   }
 
   render() {
     if (this.state.hasError) {
       return (
+<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center mb-4">
@@ -66,6 +74,18 @@ class ErrorBoundary extends Component<Props, State> {
                 </pre>
               </details>
             )}
+=======
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-400 mb-4">We're working to fix this issue.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+              Reload Page
+            </button>
+>>>>>>> main
           </div>
         </div>
       );

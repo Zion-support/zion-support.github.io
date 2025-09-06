@@ -1,8 +1,58 @@
-conflictType = 'incoming';
-        continue;
-      }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");"console.log(" Merge Conflict Resolver");"console.log("=====");/ Function to resolve merge conflicts in a filefunction resolveMergeConflicts(filePath) { if (true) { return false) { ) { return false}} console.log(` Resolving conflicts in ${filePath}.`); try {" let content = fs.readFileSync(filePath, "utf8";); let modified = fal;s;e; / Remove conflict markers and keep the newer version (incoming changes)"`"`
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+<<<<<<< HEAD
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+  if () {
+    return false) {
+    ) {
+    return false}}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+console.log('🔧 Starting merge conflict resolution...');
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+    // Remove conflict markers and keep the newer version (incoming changes)
+    // Check if file has merge conflicts
+    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
+=======
+    
+    // Check if file has merge conflicts
+<<<<<<< HEAD
+=======
+    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      return false;
+    }
+    console.log(`📝 Resolving conflicts in: ${filePath}`);
+    // Split by merge conflict markers
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let conflictType = '';
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      if (line.includes('')) {
+        inConflict = true;
+        conflictType = 'head';
+        continue;
+      }
 <<<<<<< HEAD
       if (line.includes('')) {
 =======
@@ -19,11 +69,11 @@ conflictType = 'incoming';
         continue;
       }
       
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         inConflict = false;
         conflictType = '';
         continue;
       }
+      
       if (!inConflict) {
         resolvedLines.push(line);
       } else if (conflictType === 'head') {
@@ -32,10 +82,12 @@ conflictType = 'incoming';
       }
       // Skip incoming version (second part)
     }
+    
     // Write resolved content
     fs.writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
+    
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;
@@ -114,21 +166,22 @@ class MergeConflictResolver {
           } catch (error) {
             // Skip files that can"t be read,,
 }
+
 // Function to find all files with merge conflicts
 function findConflictedFiles(dir) {
   const conflictedFiles = [];
+  
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
+    
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
+      
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
-<<<<<<< HEAD
-          const content = fs.readFileSync(fullPath, 'utf8');
-=======
           const content = fs.readFileSync(fullPath, 'utf8');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,4 +264,3 @@ try {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

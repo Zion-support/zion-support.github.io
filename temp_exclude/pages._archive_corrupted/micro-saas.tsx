@@ -1,3 +1,4 @@
+
       ],
       \"pricing\": \'$199 - $799/month\',
       \"delivery\": \'1-3 weeks\',
@@ -450,6 +451,7 @@
       ],
       \"pricing\": \'$19.99 - $99.99/month\',
       \"delivery\": \'3-5 weeks\',
+
       \"category\": \'Fitness SaaS\';
 },
     {
@@ -472,7 +474,9 @@
       \"delivery\": \'3-5 weeks\',
       \"category\": \'Pet Care SaaS\';
 }
+
   ]
+
   ];
   const benefits = [{
       \"title\": \'Faster Development\',
@@ -728,3 +732,5 @@
     </PageTransition>
   )
 }
+
+

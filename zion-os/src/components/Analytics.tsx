@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use client",
 import { useEffect  } from './react';,
 interface FirstInputEntry extends PerformanceEntry {
@@ -11,16 +11,9 @@ export /**
  */
 function Analytics() {
   useEffect (() => {
+
 =======
-<<<<<<< HEAD
-"use client";
-import { useEffect } from "react";
-interface FirstInputEntry extends PerformanceEntry {processingStart: number;
-  processingEnd: number;
-  target?: Element;
-}
-export function Analytics() {useEffect(() => {;
-=======
+
 "use client",;
 import { useEffect } from "react",;
 interface FirstInputEntry extends PerformanceEntry {;
@@ -31,8 +24,8 @@ interface FirstInputEntry extends PerformanceEntry {;
 ;
 export function Analytics() {;
   useEffect(() => {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -47,7 +40,7 @@ if ( {) {
 }
             // // // console.log ("LCP:", entry.start_time);
           }
-<<<<<<< HEAD
+
           // Check condition
 if ( {) {
   $2
@@ -55,10 +48,11 @@ if ( {) {
             const firstInputEntry = entry as FirstInputEntry,
             // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
 =======
-<<<<<<< HEAD
-          if (entry.entryType === "first-input") {const firstInputEntry = entry as FirstInputEntry;
+
+          if (entry.entryType === "first-input") {;
+            const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
           }
         }
       }),
@@ -82,41 +76,12 @@ if ( {) {
         // // // console.log ("CLS:", cls);
       }),
       // Cleanup;
-<<<<<<< HEAD
-      return () => {
-        observer.disconnect ();
-        observer2.disconnect ();
-=======
-      return () => {observer.disconnect();
-=======
-          if (entry.entryType === "first-input") {;
-            const firstInputEntry = entry as FirstInputEntry,;
-            // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
-          }
-        }
-      }),;
-      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] }),;
-      // Cumulative Layout Shift monitoring;
-      let cls = 0,;
-      const observer2 = new PerformanceObserver((list) => {;
-        for (const entry of list.getEntries()) {;
-          if (entry.entryType === "layout-shift") {;
-            const layoutShiftEntry = entry as any,;
-            cls += layoutShiftEntry.value;
-          }
-        }
-      }),;
-      observer2.observe({ entryTypes: ["layout-shift"] }),;
-      // Report metrics on page unload;
-      window.addEventListener("beforeunload", () => {;
-        // // // console.log("CLS:", cls);
-      }),;
-      // Cleanup;
+
       return () => {;
         observer.disconnect();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         observer2.disconnect();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       }
     }
   }, []);

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
@@ -10,6 +11,10 @@ import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
 <<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> main
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -24,7 +29,11 @@ export function MilestoneSuggestions({;
   startDate;
   endDate;
   projectType;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> main
 =======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -41,7 +50,12 @@ interface MilestoneSuggestionsProps {;
   projectType: string,;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 
   projectName: string
   scopeSummary: string
@@ -52,6 +66,7 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
+<<<<<<< HEAD
   projectName,
   scopeSummary,
   startDate,
@@ -73,6 +88,40 @@ export function MilestoneSuggestions({
     }
     const milestones = await generateMilestones(input);
 =======
+=======
+=======
+import {Button} from '@/components/ui/button';
+import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Loader2, Sparkles, Check} from 'lucide-react';
+import {Badge} from '@/components/ui/badge';
+import {format, parseISO} from 'date-fns';
+
+interface MilestoneSuggestionsProps {;
+  projectName: string,;
+  scopeSummary: string,;
+  startDate: Date,;
+  endDate?: Date;
+  projectType: string,;
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
+
+export function MilestoneSuggestions(): any ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  projectName;
+  scopeSummary;
+  startDate;
+  endDate;
+  projectType;
+  onMilestonesGenerated;
+}: MilestoneSuggestionsProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+
+=======
+
+>>>>>>> main
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -81,11 +130,16 @@ export function MilestoneSuggestions({
 
     const milestones = await generateMilestones(input),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> main
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     }
@@ -102,6 +156,11 @@ export function MilestoneSuggestions({
   };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+  };
+
+>>>>>>> main
+=======
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -113,6 +172,7 @@ export function MilestoneSuggestions({;
 }: MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
+<<<<<<< HEAD
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;
       scope: `${projectName}: ${scopeSummary}`,;
@@ -123,16 +183,90 @@ export function MilestoneSuggestions({;
     const milestones = await generateMilestones(input),;
     if (milestones.length > 0) {;
       setShowSuggestions(true),;
+=======
+
+  const handleGenerateMilestones = async () => {;
+    const input: MilestoneInput = {;
+      scope: `${projectName}: ${scopeSummary}`,;
+      startDate: startDate && startDate.toISOString(),;
+      endDate: endDate ? endDate && endDate.toISOString() : null,;
+      projectType: projectType || "Other";
+    };
+
+    const milestones = await generateMilestones(input);
+
+    if (milestones && milestones.length > 0) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      setShowSuggestions(true);
+>>>>>>> main
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
       }
     }
+<<<<<<< HEAD
   };
+=======
+
+import {Button} from '@/components / ui / button';
+import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
+import {Loader2, Sparkles, Check} from 'lucide-react';
+import {Badge} from '@/components / ui / badge';
+import {format, parseISO} from 'date - fns';
+interface MilestoneSuggestionsProps {
+  project_name: string,
+  scope_summary: string,
+  start_date: Date,
+  end_date?: Date;
+  project_type: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
+export /**
+ * MilestoneSuggestions - Function description
+ */
+function MilestoneSuggestions() {
+  const { generate_milestones, generated_milestones, is_generating } = useMilestoneGenerator ();
+  const [show_suggestions, setShowSuggestions] = useState (false);
+;
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {
+      scope: `${project_name}: ${scope_summary}`,
+      start_date: start_date.toISOString (),
+      end_date: end_date ? end_date.toISOString () : null,
+      project_type: project_type || "Other";
+    }
+;
+    const milestones = await generate_milestones (input);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      setShowSuggestions (true);
+      // Check condition
+if ( {) {
+  $2
+}
+        onMilestonesGenerated (milestones);
+      }
+    }
+  }
+;
+  const format_date = (date_string: string) =>: any {
+
+    try {
+      return format (parseISO (date_string), 'MMM dd, yyyy');
+    } catch (error) {
+
+  };
+
+>>>>>>> main
   const formatDate = (dateString: string) => {;
     try {;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
+<<<<<<< HEAD
     }
   },
 <<<<<<< HEAD
@@ -167,6 +301,45 @@ export function MilestoneSuggestions({;
 =======
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+    }
+
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+    <div className="space-y-4">;
+      {!showSuggestions && (;
+        <Button
+          variant="outline"
+          onClick={handleGenerateMilestones}
+
+          disabled={isGenerating || !scopeSummary || !startDate}
+          className="w-full">;
+          {isGenerating ? (;
+            <>;
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+              Generating milestones...;
+            </>;
+          ) : (;
+            <>;
+              <Sparkles className="mr-2 h-4 w-4" />;
+              Suggest Project Milestones with AI;
+            </>;
+
+          )}
+        </Button>;
+      )}
+
+
+
+
+
+>>>>>>> main
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -205,12 +378,120 @@ export function MilestoneSuggestions({;
         </Card>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
   )
 }
 =======
+=======
+
+
+      {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
+        <Card>;
+          <CardHeader className="pb-3">;
+            <CardTitle className="text-lg flex items-center">;
+              <Sparkles className="h-5 w-5 mr-2 text-primary" />;
+              AI-Suggested Milestones;
+            </CardTitle>;
+          </CardHeader>;
+          <CardContent>;
+            <div className="space-y-3">;
+              {generatedMilestones && generatedMilestones.map((milestone, index) => (;
+                <div key={index} className="p-3 border rounded-lg bg-muted/10">;
+                  <div className="flex items-center justify-between mb-1">;
+                    <div className="font-medium flex items-center">;
+                      {milestone && milestone.title}
+                      <Badge variant="secondary" className="ml-2 text-xs">;
+                        AI Suggested;
+                      </Badge>;
+                    </div>;
+                    <div className="text-sm text-muted-foreground">;
+                      Due: {formatDate(milestone && milestone.dueDate)}
+                    </div>;
+                  </div>;
+                  <p className="text-sm text-muted-foreground">{milestone && milestone.description}</p>;
+                  <div className="flex justify-between items-center mt-2 text-sm">;
+                    <span>Estimated: {milestone && milestone.estimatedHours} hours</span>;
+                  </div>;
+                </div>;
+              ))}
+
+              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
+                <Check className="h-4 w-4 mr-1 text-green-500" />;
+=======
+      return date_string;
+    }
+  }
+;
+  return (
+    <div className="space - y-4">;
+      {!show_suggestions && (
+        <Button;
+          variant="outline";
+          on_click={handleGenerateMilestones}
+          disabled={is_generating || !scope_summary || !start_date}
+          className="w - full";
+        >;
+          {is_generating ? (
+            <>;
+              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+              Generating milestones...;
+            </>) : (
+            <>;
+              <Sparkles className="mr - 2 h - 4 w - 4" />;
+              Suggest Project Milestones with AI;
+            </>)}
+        </Button>)}
+      {show_suggestions && generated_milestones.length > 0 && (
+        <Card>;
+          <CardHeader className="pb - 3">;
+            <CardTitle className="text - lg flex items - center">;
+              <Sparkles className="h - 5 w - 5 mr - 2 text - primary" />;
+              AI - Suggested Milestones;
+            </CardTitle>;
+          </CardHeader>;
+          <CardContent>;
+            <div className="space - y-3">;
+              {generated_milestones.map ((milestone, index) => (
+                <div key={index} className="p - 3 border rounded - lg bg - muted / 10">;
+                  <div className="flex items - center justify - between mb - 1">;
+                    <div className="font - medium flex items - center">;
+                      {milestone.title}
+                      <Badge variant="secondary" className="ml - 2 text - xs">;
+                        AI Suggested;
+                      </Badge>;
+                    </div>;
+                    <div className="text - sm text - muted - foreground">;
+                      Due: {format_date (milestone.due_date)}
+                    </div>;
+                  </div>;
+                  <p className="text - sm text - muted - foreground">{milestone.description}</p>;
+                  <div className="flex justify - between items - center mt - 2 text - sm">;
+                    <span > Estimated: {milestone.estimated_hours} hours</span>;
+                  </div>;
+                </div>))}
+              <div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground">;
+                <Check className="h - 4 w - 4 mr - 1 text - green - 500" />;
+
+                These milestones will be added to your contract;
+              </div>;
+            </div>;
+          </CardContent>;
+
+        </Card>)}
+    </div>);
+}
+
+=======
+
+>>>>>>> main
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

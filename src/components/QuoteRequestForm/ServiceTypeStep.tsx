@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -240,6 +241,26 @@ const listingSchema = z.object({
   )
 }
 =======
+=======
+}
+
+
+  )
+}
+
+
+const listing_schema = z.object ({
+  id: z.string (),
+  title: z.string (),
+  category: z.string (),
+  image: z.string ().optional ()}),
+      const max_retries = 3;
+  const source_listings = listings;
+}
+  );
+}
+
+>>>>>>> main
     },;
     fetchServices();
   }, [formData.serviceType, debouncedQuery, isMounted]),;
@@ -359,9 +380,13 @@ const listingSchema = z.object({
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+>>>>>>> main

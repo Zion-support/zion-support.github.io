@@ -11,6 +11,5 @@ export default function IoTEdge({ }: IoTEdgeProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
+
+

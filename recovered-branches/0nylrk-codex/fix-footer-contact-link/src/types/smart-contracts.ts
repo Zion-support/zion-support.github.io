@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
 <<<<<<< HEAD
@@ -8,6 +9,14 @@ export interface SmartContractInfo {
 
 export interface SmartContractInfo {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+export interface SmartContractInfo {;
+
+
+>>>>>>> main
   id: string;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
@@ -18,6 +27,7 @@ export interface SmartContractInfo {;
   createdAt: string;
   createdBy: string
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 export interface EscrowContractDetails {
@@ -25,11 +35,37 @@ export interface EscrowContractDetails {
 
 export interface EscrowContractDetails {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+;
+export interface SmartContractInfo {
+  id: string;
+  transaction_hash?: string;
+  network_name?: BlockchainNetwork;
+  block_number?: number;
+  deployed_address?: string;
+  contract_type: 'escrow' | 'milestone' | 'simple_agreement';
+  metadata_url?: string;
+  created_at: string;
+  created_by: string,
+  status: 'draft' | 'deployed' | 'executed' | 'cancelled';
+
+}
+export interface EscrowContractDetails {
+=======
+}
+
+
+export interface EscrowContractDetails {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   client: string;
   talent: string;
   amount: number;
   currency: string;
   deliverables: string;
+<<<<<<< HEAD
   completionDeadline: string
   arbitrator?: string
 }
@@ -39,11 +75,20 @@ export interface DeploymentOptions {
 
 export interface DeploymentOptions {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+export interface DeploymentOptions {;
+
+
+>>>>>>> main
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
 
   deployToChain: boolean
+<<<<<<< HEAD
 }
 =======
 ;
@@ -83,3 +128,21 @@ export interface DeploymentOptions {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+  completion_deadline: string,
+  arbitrator?: string;
+}
+export interface DeploymentOptions {
+  network: BlockchainNetwork;
+  wallet_address?: string;
+  use_escrow: boolean,
+  deployToChain: boolean;
+
+}
+;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

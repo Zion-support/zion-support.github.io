@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -682,7 +680,6 @@ problematicFiles.forEach(fixFile);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -708,9 +705,6 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
 <<<<<<< HEAD
         <meta name="description" content="
 =======
-<<<<<<< HEAD
-        <meta name="description" content="
-=======
         <meta name="description" content="
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -718,4 +712,3 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

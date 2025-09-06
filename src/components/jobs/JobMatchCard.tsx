@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -43,6 +44,8 @@ interface JobMatchProps {
   onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void
 <<<<<<< HEAD
+=======
+>>>>>>> main
 }
 
 
@@ -57,6 +60,7 @@ interface JobMatchProps {
 
 }
 }
+<<<<<<< HEAD
 =======
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
@@ -201,3 +205,17 @@ export function JobMatchCard({;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+  talent_id,
+  name,
+  title,
+  company,
+  avatar,
+  location,
+  category,
+  match_percent,
+}
+}
+>>>>>>> main

@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -107,11 +105,12 @@ class FinalSyntaxCleanup {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require('fs');
 const { execSync } = require('child_process');
+
 console.log('🔧 Final Syntax Cleanup');
 console.log('=');
+
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -186,11 +185,9 @@ for (const file of filesToFix) {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
+<<<<<<< HEAD
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
-<<<<<<< HEAD
-console.log('🎉 Final syntax cleanup completed!');
-=======
 // Try to build
 console.log('\n🔨 Testing build...');
 try {
@@ -454,4 +451,3 @@ console.log('🎉 Final syntax cleanup completed!');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

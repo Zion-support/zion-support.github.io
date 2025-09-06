@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import '@testing-library/jest-dom'
 import { afterEach, vi } from 'vitest';
@@ -35,3 +36,22 @@ afterEach(() => {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+import '@testing - library / jest - dom',
+import { after_each, vi } from 'vitest',
+import { cleanup } from '@testing - library / react',
+// Ensure React Testing Library cleans up and mocks are restored between tests;
+after_each (() => {
+  cleanup (),
+  vi.restoreAllMocks ();
+}),
+
+=======
+
+import '@testing-library/jest-dom',;
+import { afterEach, vi } from 'vitest',;
+import { cleanup } from '@testing-library/react',;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

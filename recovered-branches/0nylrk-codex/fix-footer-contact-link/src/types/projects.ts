@@ -1,15 +1,22 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type ProjectStatus =
 =======
 export type ProjectStatus = 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export type ProjectStatus = 
+
+
+>>>>>>> main
   | 'offer_sent'
   | 'offer_accepted'
   | 'changes_requested'
   | 'in_progress'
+<<<<<<< HEAD
   | 'completed';
   | 'canceled';
 <<<<<<< HEAD
@@ -18,6 +25,24 @@ export interface Project {
 
 export interface Project {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  | 'completed'
+  | 'canceled';
+=======
+export type ProjectStatus =;
+  | 'offer_sent';
+  | 'offer_accepted';
+  | 'changes_requested';
+  | 'in_progress';
+  | 'completed';
+  | 'canceled';
+
+
+
+export interface Project {;
+
+
+>>>>>>> main
   id: string;
   client_id: string;
   talent_id: string;
@@ -30,6 +55,7 @@ export interface Project {;
   created_at: string;
   updated_at: string;
   job?: {
+<<<<<<< HEAD
     title: string
     description: string
   }
@@ -49,12 +75,36 @@ export interface ProjectNote {
 
 export interface ProjectNote {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+    title: string,
+    description: string;
+  }
+  talent_profile?: {
+    full_name: string;
+    professional_title?: string,
+    profile_picture_url?: string;
+  }
+  client_profile?: {
+    display_name: string,
+    avatar_url?: string;
+
+  }
+}
+
+
+
+export interface ProjectNote {;
+
+
+>>>>>>> main
   id: string;
   project_id: string;
   user_id: string;
   content: string;
   created_at: string;
   created_by_profile?: {
+<<<<<<< HEAD
     display_name: string
 
     avatar_url?: string
@@ -107,5 +157,12 @@ export interface ProjectNote {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+    display_name: string,
+    avatar_url?: string;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   }
 }

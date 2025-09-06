@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
   dir: './',
 });
+=======
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './',
+})
+>>>>>>> main
 
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
+<<<<<<< HEAD
   testMatch: [
     '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
     '**/*.(test|spec).(js|jsx|ts|tsx)',
@@ -45,3 +54,30 @@ const customJestConfig = {
 };
 
 module.exports = createJestConfig(customJestConfig);
+=======
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
+  collectCoverageFrom: [
+    'components/**/*.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+    'utils/**/*.{js,jsx,ts,tsx}',
+    '!**/node_modules/**',
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/out/',
+    '<rootDir>/__tests__.disabled/',
+    '<rootDir>/tests.disabled/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/test.disabled/',
+    '<rootDir>/plugins.disabled/',
+    '<rootDir>/supabase.disabled/',
+    '<rootDir>/dao/',
+    '<rootDir>/pages.disabled/',
+  ],
+}
+
+module.exports = createJestConfig(customJestConfig)
+>>>>>>> main

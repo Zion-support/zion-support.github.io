@@ -1,4 +1,16 @@
-<<<<<<< HEAD
+
+
+import Link from "next/link",;
+export const metadata = {;
+  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
+  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",;
+  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
+export default function EnterpriseITPage() {;
+  return (;
+
+
+    <div className="min-h-screen">;
+=======
 import Link from './next / link';,
 export const metadata = {
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
@@ -10,24 +22,7 @@ export default /**
 function EnterpriseITPage() {
   return (
     <div className="min - h-screen">;
-=======
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services";
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.";
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"}
-export default function EnterpriseITPage() {return (;
-=======
-import Link from "next/link",;
-export const metadata = {;
-  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",;
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
-export default function EnterpriseITPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    <div className="min-h-screen">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -50,17 +45,16 @@ export default function EnterpriseITPage() {;
                 <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                   Modernize Your Enterprise Infrastructure;
                 </h2>;
-<<<<<<< HEAD
+
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   In today's digital - first world, enterprises need agile, scalable,
+
 =======
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
-<<<<<<< HEAD
-                  In today's digital-first world, enterprises need agile, scalable;
-=======
+
                   In today's digital-first world, enterprises need agile, scalable,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   and secure IT infrastructure to compete and thrive. Our comprehensive;
                   solutions help organizations modernize their technology stack while;
                   maintaining operational excellence.;
@@ -117,19 +111,16 @@ export default function EnterpriseITPage() {;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1 - 9.999 5.002 5.002 0 10 - 9.78 2.096A4.001 4.001 0 003 15z" />;
                 </svg>;
               </div>;
-<<<<<<< HEAD
+
               <h3 className="text - xl font - semibold mb - 3">Cloud Migration & Strategy</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Seamless migration to cloud platforms with strategic planning,
+
 =======
-              <h3 className="text-xl font-semibold mb-3">Cloud Migration & Strategy</h3>;
-              <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                Seamless migration to cloud platforms with strategic planning;
-=======
+
                 Seamless migration to cloud platforms with strategic planning,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 cost optimization, and performance tuning.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -150,19 +141,16 @@ export default function EnterpriseITPage() {;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M15 12a3 3 0 11 - 6 0 3 3 0 016 0z" />;
                 </svg>;
               </div>;
-<<<<<<< HEAD
+
               <h3 className="text - xl font - semibold mb - 3">DevOps & Automation</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Streamline development and operations with automated CI / CD pipelines,
+
 =======
-              <h3 className="text-xl font-semibold mb-3">DevOps & Automation</h3>;
-              <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                Streamline development and operations with automated CI/CD pipelines;
-=======
+
                 Streamline development and operations with automated CI/CD pipelines,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -182,19 +170,16 @@ export default function EnterpriseITPage() {;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01 - 2 2H5a2 2 0 01 - 2-2v - 6a2 2 0 012 - 2m14 0V9a2 2 0 00 - 2-2M5 11V9a2 2 0 012 - 2m0 0V5a2 2 0 012 - 2h6a2 2 0 012 2v2M7 7h10" />;
                 </svg>;
               </div>;
-<<<<<<< HEAD
+
               <h3 className="text - xl font - semibold mb - 3">Infrastructure Management</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Comprehensive infrastructure management including server provisioning,
+
 =======
-              <h3 className="text-xl font-semibold mb-3">Infrastructure Management</h3>;
-              <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                Comprehensive infrastructure management including server provisioning;
-=======
+
                 Comprehensive infrastructure management including server provisioning,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 network configuration, and performance optimization.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -214,19 +199,16 @@ export default function EnterpriseITPage() {;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M4 7v10c0 2.21 3.582 4 8 4s8 - 1.79 8 - 4V7M4 7c0 2.21 3.582 4 8 4s8 - 1.79 8 - 4M4 7c0 - 2.21 3.582 - 4 8 - 4s8 1.79 8 4m0 5c0 2.21 - 3.582 4 - 8 4s - 8-1.79 - 8-4" />;
                 </svg>;
               </div>;
-<<<<<<< HEAD
+
               <h3 className="text - xl font - semibold mb - 3">Data Management</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Enterprise data solutions including warehousing, analytics,
+
 =======
-              <h3 className="text-xl font-semibold mb-3">Data Management</h3>;
-              <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                Enterprise data solutions including warehousing, analytics;
-=======
+
                 Enterprise data solutions including warehousing, analytics,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and business intelligence platforms.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -268,19 +250,16 @@ export default function EnterpriseITPage() {;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M17 20h5v - 2a3 3 0 00 - 5.356 - 1.857M17 20H7m10 0v - 2c0-.656-.126 - 1.283-.356 - 1.857M7 20H2v - 2a3 3 0 015.356 - 1.857M7 20v - 2c0-.656.126 - 1.283.356 - 1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11 - 6 0 3 3 0 016 0zm6 3a2 2 0 11 - 4 0 2 2 0 014 0zM7 10a2 2 0 11 - 4 0 2 2 0 014 0z" />;
                 </svg>;
               </div>;
-<<<<<<< HEAD
+
               <h3 className="text - xl font - semibold mb - 3">Managed Services</h3>;
               <p className="text - gray - 400 mb - 4">;
                 24 / 7 managed IT services including monitoring, maintenance,
+
 =======
-              <h3 className="text-xl font-semibold mb-3">Managed Services</h3>;
-              <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                24/7 managed IT services including monitoring, maintenance;
-=======
+
                 24/7 managed IT services including monitoring, maintenance,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and support for enterprise infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -363,19 +342,16 @@ export default function EnterpriseITPage() {;
               <div className="w - 20 h - 20 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
               </div>;
-<<<<<<< HEAD
+
               <h3 className="text - xl font - semibold mb - 3">Assessment</h3>;
               <p className="text - gray - 400">;
                 Comprehensive evaluation of current infrastructure,
+
 =======
-              <h3 className="text-xl font-semibold mb-3">Assessment</h3>;
-              <p className="text-gray-400">;
-<<<<<<< HEAD
-                Comprehensive evaluation of current infrastructure;
-=======
+
                 Comprehensive evaluation of current infrastructure,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 identifying opportunities and challenges.;
               </p>;
             </div>;

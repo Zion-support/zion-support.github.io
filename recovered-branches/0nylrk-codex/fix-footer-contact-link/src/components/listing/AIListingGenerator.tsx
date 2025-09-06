@@ -1,7 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -10,6 +17,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
@@ -104,12 +112,15 @@ import { supabase } from "@/integrations/supabase/client",;
 import { AIListingForm } from "./AIListingForm",;
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
+=======
+>>>>>>> main
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
   suggestedPrice: {;
     min: number,;
     max: number;
+<<<<<<< HEAD
   },;
   keyPoints: string[];
 }
@@ -151,14 +162,100 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  };
+  keyPoints: string[];
+}
+
+interface AIListingGeneratorProps {;
+  onApplyGenerated?: (content: GeneratedContent) => void,;
+  initialValues?: {;
+
+    title?: string;
+    category?: string;
+    keyFeatures?: string;
+    targetAudience?: string;
+  }
+}
+
+export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+
+import React, { useState } from './react';
+import { use_toast } from '@/hooks / use - toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Sparkles } from './lucide-react';
+import { supabase } from '@/integrations / supabase / client';
+import { AIListingForm } from './AIListingForm';
+import { GeneratedContentDisplay } from './GeneratedContentDisplay';
+import { LoadingContentSkeleton } from './LoadingContentSkeleton';
+interface GeneratedContent {
+  description: string,
+  tags: string[],
+  suggested_price: {
+    min: number,
+    max: number;
+  }
+  key_points: string[];
+}
+interface AIListingGeneratorProps {
+  onApplyGenerated?: (content: GeneratedContent) => void,
+  initial_values?: {
+    title?: string;
+    category?: string;
+    key_features?: string;
+    target_audience?: string;
+  }
+}
+export /**
+ * AIListingGenerator - Function description
+ */
+function AIListingGenerator() {
+  const { toast } = use_toast ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [generated_content, setGeneratedContent] = useState < GeneratedContent | null>(null);
+;
+  const handle_generate = async ({
+
+    title;
+    category;
+    key_features;
+    target_audience;
+  }: {
+
+    title: string,
+    category: string,
+    key_features: string,
+    target_audience: string;
+  }) => {
+    setIsLoading (true);
+;
+
+    try {
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+
+
+>>>>>>> main
       }
       if (data.error) {
         throw new Error(data.error)
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+
+
+>>>>>>> main
       setGeneratedContent(data.generated);
       toast({
         title: "Content Generated"
@@ -171,6 +268,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
+<<<<<<< HEAD
     } finally {
       setIsLoading(false)
     }
@@ -217,20 +315,90 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       setGeneratedContent(data.generated),;
+=======
+=======
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (data.error);
+      }
+      setGeneratedContent (data.generated);
+      toast ({
+        title: "Content Generated",
+        description: "AI has created optimized listing content for you.";
+      });
+    } catch (error) {
+      console.error ("Error generating content:", error);
+      toast ({
+        title: "Generation Failed",
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
+        variant: "destructive";
+      });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      setIsLoading (false);
+    }
+  }
+
+
+  const handleGenerate = async ({;
+    title;
+    category;
+    keyFeatures;
+    targetAudience;
+  }: {;
+    title: string,;
+    category: string,;
+    keyFeatures: string,;
+    targetAudience: string;
+  }) => {;
+    setIsLoading(true);
+
+    try {;
+      const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
+        body: { title, category, keyFeatures, targetAudience }
+      });
+
+      if (error) {;
+        throw new Error(error && error.message);
+      }
+
+      if (data && data.error) {;
+        throw new Error(data && data.error);
+      }
+
+      setGeneratedContent(data && data.generated);
+>>>>>>> main
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
       });
     } catch (error) {;
+<<<<<<< HEAD
       console.error("Error generating content:", error),;
       toast({;
         title: "Generation Failed",;
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
+=======
+      console && console.error("Error generating content:", error);
+      toast({;
+        title: "Generation Failed",;
+        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
+>>>>>>> main
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
   },;
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
@@ -242,6 +410,29 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     }
   };
   return (;
+=======
+  };
+
+  const handleApply = () => {;
+    if (generatedContent && onApplyGenerated) {;
+      onApplyGenerated(generatedContent);
+      toast({;
+        title: "Content Applied",;
+        description: "The generated content has been applied to your listing.";
+      });
+
+    }
+  }
+=======
+    }
+
+  },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+
+>>>>>>> main
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -254,6 +445,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           </p>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
@@ -280,3 +472,37 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+          <AIListingForm
+            onSubmit={handleGenerate} 
+            isLoading={isLoading} 
+=======
+
+          <AIListingForm 
+            onSubmit={handleGenerate} 
+            isLoading={isLoading} 
+
+
+            initialValues={initialValues}
+          />;
+        </CardContent>;
+      </Card>;
+
+      {isLoading && <LoadingContentSkeleton />}
+
+      {generatedContent && !isLoading && (;
+        <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
+      )}
+
+
+
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+
+
+
+>>>>>>> main

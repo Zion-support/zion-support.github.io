@@ -1,24 +1,20 @@
+
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
+
 let totalFixed = 0;
+
 files && files.forEach((file) => {
+
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
-<<<<<<< HEAD
+
     content = content ;/g,
-=======
-<<<<<<< HEAD
-    content = content.replace(
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
-=======
-    content = content.replace(;
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       (match) => {
         return match && match.replace(",;", ";");
+=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -40,14 +36,18 @@ files.for_each ((file) => {
       /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
       (match) => {
         return match.replace (",", ";");
+
       },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
-<<<<<<< HEAD
+
     content = content && content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+
       (match) => {
         if (!match ;")) {
           return match && match.trim() + ";";
+=======
 ;
     // Fix import statements missing semicolons;
     content = content.replace (
@@ -58,25 +58,33 @@ if (.ends_with (") {
   $2
 }")) {
           return match.trim () + ";";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+
+      (match) => {
+        return match.replace(";", ";");
+      }
+    );
     // Fix import statements missing semicolons
     content = content.replace(
-<<<<<<< HEAD
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
-      (match) => {
-=======
+
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         return match;
       }
     );
+
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -95,6 +103,7 @@ if (.ends_with (") {
           !match && match.includes("export") &&
           !match && match.includes("import")
         ) {
+=======
 ;
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
@@ -119,12 +128,17 @@ if (&&) {
           !match.includes ("debugger") &&;
           !match.includes ("export") &&;
           !match.includes ("import")) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           return match + ";";
         }
         return match;
       }
     );
+
+
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
+
+=======
 ;
     // Check condition
 if ( {) {
@@ -141,3 +155,4 @@ if ( {) {
 ;
 console.log (`\n_total files fixed: ${total_fixed}`);
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

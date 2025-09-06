@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,11 +145,20 @@ import { serve } from https: import Stripe from';https: import { createClient} f
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 =======
+=======
+
+
+
+
+
+=======
+>>>>>>> main
           .eq('id', orderId)};
     };
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
   return new Response('Not found', { "status": 404 })}),
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -156,9 +166,18 @@ import { serve } from https: import Stripe from';https: import { createClient} f
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
+=======
 .eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
   return new Response('Not found', { "status": 404 })});
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/main
 =======
@@ -169,3 +188,17 @@ import { serve } from https: import Stripe from';https: import { createClient} f
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+.eq ('id', order_id)}} return new Response (JSON.stringify ({ "received": true }), { "status": 200 })} return new Response ('Not found', { "status": 404 })}); return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+  return new Response ('Not found', { "status": 404 })});
+    return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

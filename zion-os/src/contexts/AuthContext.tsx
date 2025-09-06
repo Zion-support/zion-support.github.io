@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
 import { use_session, sign_in, sign_out  } from './next - auth / react';,
@@ -9,18 +9,6 @@ interface User {
   email: string,
   role: string,
   onboarding_completed: boolean;
-=======
-<<<<<<< HEAD
-"use client";
-import { createContext, useContext, useEffect, useState } from "react";
-import { useSession, signIn, signOut } from "next-auth/react";
-import { useRouter } from "next/navigation";
-interface User {id: string;
-  name?: string;
-  email: string;
-  role: string;
-  onboardingCompleted: boolean;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 interface AuthContextType {
   user: User | null,
@@ -147,8 +135,12 @@ if ( {) {
   $2
 }
     throw new Error ("use_auth must be used within an AuthProvider");
+
   }
 =======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
@@ -267,6 +259,6 @@ export function useAuth() {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return context;
 }

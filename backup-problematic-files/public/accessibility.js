@@ -1,8 +1,4 @@
-<<<<<<< HEAD:public/accessibility.js
-// Accessibility enhancements for Zion Tech Group;
-const accessibility_enhancements = {
-  // Add ARIA labels to interactive elements;
-  "addAriaLabels": () => {
+
   const buttons = document && document.querySelectorAll("button:not([aria-label])");
     buttons && buttons.forEach(button => {
   if (!button && button.getAttribute("aria-label")) {
@@ -16,6 +12,7 @@ const accessibility_enhancements = {
   if (e && e.key === "Enter" || e && e.key === " ") {
   e && e.preventDefault();
           element && element.click()}
+=======
   const buttons = document.querySelectorAll ("button:not ([aria - label])");
     buttons.for_each (button => {
   if () {) {
@@ -34,85 +31,59 @@ if ( {) {
 }
   e.prevent_default ();
           element.click ()}
+
       })})},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Add high contrast mode support;
   "addHighContrastMode": () => {
+
   const style = document.create_element ("style");
     style.text_content = ";
       @media (prefers - contrast: high) {
+
   * {
   background - color: white !important;
           color: black !important;
           border - color: black !important}
       }
     ";
-<<<<<<< HEAD
-=======
-    document.head.appendChild(style)}
-  // Initialize all enhancements;
-  "init": () => {
-  this.addAriaLabels();
-    this.addKeyboardNavigation();
-    this.addHighContrastMode()}
-}
-=======
+
+
 // Accessibility utility
 export const Accessibility = () => {
   // Implementation here
   return null;
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/public/accessibility.js
+
+
 // Auto-initialize when DOM is ready;
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", accessibilityEnhancements.init)} else {
   accessibilityEnhancements.init()}
-<<<<<<< HEAD
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},; addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === ) { e.preventDefault(); element.click()} })})},; addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important;,} } `; document.head.appendChild(style)},; init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-<<<<<<< HEAD
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-=======
-const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
+
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-<<<<<<< HEAD
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent |"Button")} })}; addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" |e.key === ) { e.preventDefault(); element.click()} })})}; addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important;,} } `; document.head.appendChild(style)}; init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent |"Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" |e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent |"Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" |e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
@@ -120,7 +91,7 @@ const accessibilityEnhancements = { addAriaLabels: () => { const buttons = docum
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent |"Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" |e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent |"Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" |e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document.querySelectorAll("button:not([aria-label])"); buttons.forEach(button => { if (!button.getAttribute("aria-label")) { button.setAttribute("aria-label",button.textContent |"Button")} })},addKeyboardNavigation: () => { const focusableElements = document.querySelectorAll("a,button,input,textarea,select"); focusableElements.forEach(element => { element.addEventListener("keydown",(e) => { if (e.key === "Enter" |e.key === " ") { e.preventDefault(); element.click()} })})},addHighContrastMode: () => { const style = document.createElement("style"); style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document.head.appendChild(style)},init: () => { this.addAriaLabels(); this.addKeyboardNavigation(); this.addHighContrastMode()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",accessibilityEnhancements.init)} else { accessibilityEnhancements.init()}
-<<<<<<< HEAD
+
     document && document.head.appendChild(style)},
   // Initialize all enhancements;
   "init": () => {
@@ -139,6 +110,8 @@ const accessibilityEnhancements = { addAriaLabels: () => { const buttons = docum
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document && document.querySelectorAll("button:not([aria-label])"); buttons && buttons.forEach(button => { if (!button && button.getAttribute("aria-label")) { button && button.setAttribute("aria-label",button && button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document && document.querySelectorAll("a,button,input,textarea,select"); focusableElements && focusableElements.forEach(element => { element && element.addEventListener("keydown",(e) => { if (e && e.key === "Enter" || e && e.key === " ") { e && e.preventDefault(); element && element.click()} })})},addHighContrastMode: () => { const style = document && document.createElement("style"); style && style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document && document.head.appendChild(style)},init: () => { this && this.addAriaLabels(); this && this.addKeyboardNavigation(); this && this.addHighContrastMode()} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",accessibilityEnhancements && accessibilityEnhancements.init)} else { accessibilityEnhancements && accessibilityEnhancements.init()}
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document && document.querySelectorAll("button:not([aria-label])"); buttons && buttons.forEach(button => { if (!button && button.getAttribute("aria-label")) { button && button.setAttribute("aria-label",button && button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document && document.querySelectorAll("a,button,input,textarea,select"); focusableElements && focusableElements.forEach(element => { element && element.addEventListener("keydown",(e) => { if (e && e.key === "Enter" || e && e.key === " ") { e && e.preventDefault(); element && element.click()} })})},addHighContrastMode: () => { const style = document && document.createElement("style"); style && style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document && document.head.appendChild(style)},init: () => { this && this.addAriaLabels(); this && this.addKeyboardNavigation(); this && this.addHighContrastMode()} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",accessibilityEnhancements && accessibilityEnhancements.init)} else { accessibilityEnhancements && accessibilityEnhancements.init()}
 const accessibilityEnhancements = { addAriaLabels: () => { const buttons = document && document.querySelectorAll("button:not([aria-label])"); buttons && buttons.forEach(button => { if (!button && button.getAttribute("aria-label")) { button && button.setAttribute("aria-label",button && button.textContent || "Button")} })},addKeyboardNavigation: () => { const focusableElements = document && document.querySelectorAll("a,button,input,textarea,select"); focusableElements && focusableElements.forEach(element => { element && element.addEventListener("keydown",(e) => { if (e && e.key === "Enter" || e && e.key === " ") { e && e.preventDefault(); element && element.click()} })})},addHighContrastMode: () => { const style = document && document.createElement("style"); style && style.textContent = `; @media (prefers-contrast: high) { * { background-color: white !important; color: black !important; border-color: black !important,} } `; document && document.head.appendChild(style)},init: () => { this && this.addAriaLabels(); this && this.addKeyboardNavigation(); this && this.addHighContrastMode()} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",accessibilityEnhancements && accessibilityEnhancements.init)} else { accessibilityEnhancements && accessibilityEnhancements.init()}
+
+=======
     document.head.append_child (style)},
   // Initialize all enhancements;
   "init": () => {
@@ -203,10 +176,9 @@ const accessibility_enhancements = { addAriaLabels: () => { const buttons = docu
 ) {
   $2
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -42,12 +43,37 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+
+} from "@/components/ui/card";
+
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+
+interface PageViewsChartProps {;
+  data: Array<{ date: string; views: number }>;
+
+  timeRange: string;
+  onTimeRangeChange: (range: string) => void
+}
+
+=======
+
+>>>>>>> main
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
   timeRange: string,
   onTimeRangeChange: (range: string) => void
 }
 
+<<<<<<< HEAD
 export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -71,6 +97,29 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+export function PageViewsChart(): any ({;
+  data,;
+  timeRange,;
+  onTimeRangeChange,;
+}: PageViewsChartProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
+      <CardHeader className="pb-2">;
+        <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>;
+        <CardDescription className="text-zion-slate-light">;
+          Daily page view statistics;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent className="p-0 pb-4">;
+        <AnalyticsChart
+          title=""
+
+
+
+>>>>>>> main
+=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -91,13 +140,20 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
         <AnalyticsChart;
           title="";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> main
           data={data || []}
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -114,4 +170,51 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
+=======
+
+
+    </Card>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+=======
+import React from './react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
+interface PageViewsChartProps {
+  data: Array<{ date: string; views: number }>;
+  time_range: string;
+  onTimeRangeChange: (range: string) => void;
+}
+export /**
+ * PageViewsChart - Function description
+ */
+function PageViewsChart() {
+  return (
+    <Card className="bg - zion - blue - dark border - zion - blue - light overflow - hidden">;
+      <CardHeader className="pb - 2">;
+        <CardTitle className="text - white text - lg">Page Views Trend</CardTitle>;
+        <CardDescription className="text - zion - slate - light">;
+          Daily page view statistics;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent className="p - 0 pb - 4">;
+        <AnalyticsChart;
+          title="";
+          data={data || []}
+          data_keys={["views"]}
+          time_range={time_range}
+          onTimeRangeChange={onTimeRangeChange}
+        />;
+      </CardContent>;
+    </Card>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main
 }

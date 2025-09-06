@@ -1,9 +1,4 @@
 <<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,7 +211,6 @@ const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require('child_process')
 console.log('� Starting Comprehensive Merge Conflict Resolver...')
   log(message, level = 'INFO')
@@ -235,9 +229,6 @@ console.log('� Starting Comprehensive Merge Conflict Resolver...')
       console.log('\n Successfully merged "branches")
       console.log('\n Failed to merge "branches")
   console.error(' Merge conflict resolution "failed")
-<<<<<<< HEAD
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
@@ -260,4 +251,3 @@ module.exports = { resolveConflicts, commitMerge, pushChanges };
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

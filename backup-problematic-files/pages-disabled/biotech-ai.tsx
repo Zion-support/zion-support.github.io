@@ -1,23 +1,45 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages-disabled/biotech-ai.tsx
+=======
+
+
+>>>>>>> main
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> main
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> main
     return this.props.children;
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next / head';
 import {Activity, Phone, Mail, MapPin, Check, ArrowRight} from 'lucide-react';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -128,3 +150,6 @@ export default function IncidentAutomationSuitePage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/pages-disabled/biotech-ai.tsx
 }
 ;
+=======
+
+>>>>>>> main

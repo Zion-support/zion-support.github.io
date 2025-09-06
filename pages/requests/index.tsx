@@ -1,9 +1,10 @@
-<<<<<<< HEAD
+
 import EmptyState from '../../components / ui / EmptyState';
 export default /**
  * RequestsPage - Function description
  */
 function RequestsPage() {
+
   return (
     <div>;
       <h2 className=&quot;text - xl font - semibold mb - 2&quot;>Requests</h2>;
@@ -11,19 +12,14 @@ function RequestsPage() {
     </div>);
 }
 =======
-import EmptyState from '../../components/ui/EmptyState'
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function RequestsPage() {
-  return (
-=======
+
 
 export default function RequestsPage() {
   return (;
     <div>;
       <h2 className=&quot;text-xl font-semibold mb-2&quot;>Requests</h2>
       <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Submit a quote or respond to invitations to see them here.&quot; ctaLabel=&quot;Submit a quote&quot; ctaHref=&quot;/dashboard&quot; />
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 export default function RequestsPage() {_return (
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -37,4 +33,4 @@ export default function RequestsPage() {_return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

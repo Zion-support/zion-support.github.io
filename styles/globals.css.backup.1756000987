@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -23,7 +21,6 @@
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -50,24 +47,18 @@ a {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Enhanced scrollbar */
-
-<<<<<<< HEAD
-::-webkit-scrollbar {
-/* Enhanced scrollbar */::-webkit-scrollbar {
-
-::-webkit-scrollbar {
-
 =======
+/* Import Inter font for modern typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 /* CSS Variables for modern theming */
 :root {
   --background: #000000;
@@ -129,14 +120,10 @@ a {
 /* Enhanced scrollbar */::-webkit-scrollbar {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -156,7 +143,6 @@ a {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   background: rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(10px);
 }
@@ -295,9 +281,6 @@ a {
 
 /* Quantum Field Effects */
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -306,11 +289,13 @@ a {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .quantum-field-2029 {
-
-<<<<<<< HEAD
 =======
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
   border-radius: 6px;
@@ -1065,7 +1050,6 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: relative;
   overflow: hidden;
 }
@@ -1076,22 +1060,24 @@ body::after {
 }
 
 .quantum-field-2029::before {  content: '';
-
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 .quantum-field-2029 {  position: relative;
   overflow: hidden;
 }
 
 .quantum-field-2029::before {  content: '';
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: absolute;
   top: -50%;
   left: -50%;
@@ -1100,9 +1086,6 @@ body::after {
   background: conic-gradient(
     from 0deg,
     transparent,
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1122,7 +1105,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     rgba(0, 255, 255, 0.1),
     transparent,
     rgba(139, 92, 246, 0.1),
@@ -1330,24 +1312,26 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Hover effects */
-
-<<<<<<< HEAD
-.hover-lift {
-/* Hover effects */.hover-lift {
-
-.hover-lift {
-
 =======
+    rgba(59, 130, 246, 0.1),
+    transparent,
+    rgba(147, 51, 234, 0.1),
+    transparent,
+    rgba(16, 185, 129, 0.1),
+    transparent,
+    rgba(239, 68, 68, 0.1),
+    transparent
+  );
+  animation: quantumRotate 10s linear infinite;
+}
+
 @keyframes quantumRotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -1374,14 +1358,10 @@ body::after {
 /* Hover effects */.hover-lift {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1401,7 +1381,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
@@ -1457,11 +1436,6 @@ body::after {
 .card-hover {
   @apply card hover:bg-white/20 hover:transform hover:scale-105 hover:shadow-xl;
 <<<<<<< HEAD
-
-}
-}
-=======
-<<<<<<< HEAD
 }
 =======
   transform: translateY(-8px) scale(1.02);
@@ -1482,7 +1456,6 @@ body::after {
 }
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 .hover-glow:hover {
   box-shadow: 
@@ -1655,9 +1628,6 @@ body::after {
     background: none !important;
   }
 }
-<<<<<<< HEAD
-
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 <<<<<<< HEAD
 =======
@@ -1673,4 +1643,3 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

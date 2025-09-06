@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import React from 'react';
-;
-=======
 
         };
       };
@@ -119,4 +115,3 @@ import React from 'react';
           <button,;
             onClick={() => setIsVisible(false)};
 '"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -21,7 +21,9 @@ export default defineConfig({
     postcss: false
   },
   esbuild: {
-    jsx: 'automatic',
+    loader: 'tsx',
+    include: /src\/.*\.[jt]sx?$/,
+    exclude: [],
   },
   build: {
     target: 'esnext',
@@ -36,14 +38,37 @@ export default defineConfig({
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
           const name = assetInfo.name || '';
+          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
-          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
           return 'assets/[name]-[hash].[ext]';
         }
       }
     },
-    chunkSizeWarningLimit: 1000
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 2,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+      },
+      mangle: {
+        safari10: true,
+        properties: {
+          regex: /^_/
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: false,
+    emptyOutDir: true,
+    assetsInlineLimit: 4096,
   },
   optimizeDeps: {
     include: [
@@ -55,16 +80,44 @@ export default defineConfig({
       'clsx',
       'tailwind-merge'
     ],
-    exclude: ['@radix-ui/react-icons']
+    exclude: ['@radix-ui/react-icons'],
+    esbuildOptions: {
+      target: 'esnext'
+    }
   },
-  server: { 
-    port: 3000, 
-    host: true, 
-    open: true 
+  esbuild: {
+    jsx: 'automatic',
   },
-  preview: { 
-    port: 4173, 
-    host: true, 
-    open: true 
+  server: {
+    port: 3000,
+    host: true,
+    open: true,
+    cors: true,
+    hmr: {
+      overlay: false,
+    },
+    fs: {
+      allow: ['..']
+    }
+  },
+  preview: {
+    port: 4173,
+    host: true,
+    open: true,
+  },
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+  },
+  envPrefix: ['VITE_', 'ZION_'],
+  experimental: {
+    renderBuiltUrl(filename, { hostType }) {
+      if (hostType === 'js') {
+        return { js: `__ASSET__${filename}__` };
+      } else {
+        return { relative: true };
+      }
+    }
   }
 });

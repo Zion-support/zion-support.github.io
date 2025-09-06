@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import {Link} from "react-router-dom";
@@ -43,6 +44,12 @@ import { ForumCategory, ForumCategoryInfo } from "@/types/community",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+>>>>>>> main
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -51,7 +58,12 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Briefcase"
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   {
 
     id: "project-help"
@@ -60,6 +72,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "MessageSquare"
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   {
@@ -72,6 +85,10 @@ const categories: ForumCategoryInfo[] = [
     icon: "Code"
   }
 =======
+=======
+
+
+>>>>>>> main
   },
   {
     id: "ai-tools",
@@ -80,7 +97,12 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Code"
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+>>>>>>> main
   {
 
     id: "feedback"
@@ -90,10 +112,18 @@ const categories: ForumCategoryInfo[] = [
 
     icon: "FileText"
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+  },
+
+
+>>>>>>> main
   {
 
     id: "announcements"
@@ -103,17 +133,33 @@ const categories: ForumCategoryInfo[] = [
     icon: "Megaphone"
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 ],
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+import {Link} from "react-router-dom";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
+import {ForumCategory, ForumCategoryInfo} from "@/types/community";
+
+=======
+
+],
+
+
+>>>>>>> main
 const iconMap = {
   Briefcase,
   MessageSquare,
   Code,
   FileText,
   Megaphone
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export const ForumCategories = () => {
@@ -140,6 +186,12 @@ export const ForumCategories = () => {
   ),
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+},
+
+
+>>>>>>> main
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
       {visibleCategories.map((category) => {
@@ -160,6 +212,7 @@ export const ForumCategories = () => {
           </Link>
         )
 <<<<<<< HEAD
+<<<<<<< HEAD
       })}
     </div>
   )
@@ -167,6 +220,9 @@ export const ForumCategories = () => {
 export default ForumCategories;
 
 =======
+=======
+
+>>>>>>> main
 import { Link } from "react-router-dom",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -178,20 +234,32 @@ import {;
   Megaphone;
 } from "@/components/icons",;
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
     name: "Getting Hired",;
+<<<<<<< HEAD
     description: "Tips, strategies, and questions about getting hired on the platform.",;
     adminOnly: false,;
     icon: "Briefcase";
   },;
+=======
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    adminOnly: false,;
+    icon: "Briefcase";
+  };
+>>>>>>> main
   {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
+<<<<<<< HEAD
   },;
   {;
     id: "ai-tools",;
@@ -200,13 +268,27 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: false,;
     icon: "Code";
   },;
+=======
+  };
+  {;
+    id: "ai-tools",;
+    name: "AI Tools Discussion",;
+    description: "Discuss AI tools, frameworks, and best practices.";
+    adminOnly: false,;
+    icon: "Code";
+  };
+>>>>>>> main
   {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
+<<<<<<< HEAD
   },;
+=======
+  };
+>>>>>>> main
   {;
     id: "announcements",;
     name: "Announcements",;
@@ -214,6 +296,7 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,;
     icon: "Megaphone";
   }
+<<<<<<< HEAD
 ],;
 const iconMap = {;
   Briefcase,;
@@ -234,20 +317,104 @@ export const ForumCategories = () => {;
         const Icon = iconMap[category.icon as keyof typeof iconMap],;
         return (;
           <Link key={category.id} to={`/community/category/${category.id}`}>;
+=======
+];
+
+const iconMap = {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { Link } from './react-router-dom';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
+import { use_auth } from '@/hooks / use_auth';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';
+import { ForumCategory, ForumCategoryInfo } from '@/types / community';
+const categories: ForumCategoryInfo[] = [;
+  {
+    id: "getting - hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    admin_only: false,
+    icon: "Briefcase";
+  }
+  {
+    id: "project - help",
+    name: "Project Help",
+    description: "Get help with your ongoing projects and collaboration.",
+    admin_only: false,
+    icon: "MessageSquare";
+  }
+  {
+    id: "ai - tools",
+    name: "AI Tools Discussion",
+    description: "Discuss AI tools, frameworks, and best practices.";
+    admin_only: false,
+    icon: "Code";
+  }
+  {
+    id: "feedback",
+    name: "Feedback & Feature Requests",
+    description: "Share your feedback and suggest new features.",
+    admin_only: false,
+    icon: "FileText";
+  }
+  {
+    id: "announcements",
+    name: "Announcements",
+    description: "Official announcements from the Zion team.",
+    admin_only: true,
+    icon: "Megaphone";
+  }
+];
+;
+const icon_map = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  Briefcase;
+  MessageSquare;
+  Code;
+  FileText;
+
+  Megaphone;
+};
+
+export const ForumCategories = () => {;
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+
+  const visibleCategories = categories && categories.filter(;
+    category => !category && category.adminOnly || isAdmin;
+
+  );
+  return (
+
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
+      {visibleCategories && visibleCategories.map((category) => {;
+        const Icon = iconMap[category && category.icon as keyof typeof iconMap],;
+
+        return (
+          <Link key={category && category.id} to={`/community/category/${category && category.id}`}>;
+>>>>>>> main
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
               <CardHeader className="flex flex-row items-center gap-4">;
                 <div className="p-2 bg-zion-purple/10 rounded-full">;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
+<<<<<<< HEAD
                 <CardTitle className="text-xl">{category.name}</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <CardDescription className="text-base">{category.description}</CardDescription>;
+=======
+                <CardTitle className="text-xl">{category && category.name}</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <CardDescription className="text-base">{category && category.description}</CardDescription>;
+>>>>>>> main
               </CardContent>;
             </Card>;
           </Link>;
         );
       })}
+<<<<<<< HEAD
     </div>;
   );
 };
@@ -257,3 +424,49 @@ export const ForumCategories = () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ForumCategories;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+    </div>;
+  );
+};
+
+
+export default ForumCategories;
+
+=======
+  Megaphone;
+}
+;
+export const ForumCategories = () =>: any {
+  const { user } = use_auth ();
+  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+;
+  const visible_categories = categories.filter (
+    category => !category.admin_only || is_admin);
+;
+  return (
+    <div className="grid gap - 4 md: grid - cols - 2 lg:grid - cols - 3">;
+      {visible_categories.map ((category) => {
+        const Icon = icon_map[category.icon as keyof typeof icon_map],
+        return (
+          <Link key={category.id} to={`/community / category/${category.id}`}>;
+            <Card className="h - full transition - all hover:shadow - md hover:border - zion - purple / 50 cursor - pointer">;
+              <CardHeader className="flex flex - row items - center gap - 4">;
+                <div className="p - 2 bg - zion - purple / 10 rounded - full">;
+                  <Icon className="h - 6 w - 6 text - zion - purple" />;
+                </div>;
+                <CardTitle className="text - xl">{category.name}</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <CardDescription className="text - base">{category.description}</CardDescription>;
+              </CardContent>;
+            </Card>;
+          </Link>);
+      })}
+    </div>);
+}
+;
+export default ForumCategories;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

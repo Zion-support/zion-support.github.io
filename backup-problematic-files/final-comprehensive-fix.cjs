@@ -2,8 +2,6 @@
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,7 +22,6 @@ const fs = require('fs');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Function to fix all remaining syntax errors
 function fixSyntaxErrors(content) {
   // Fix extra commas in JSX attributes
@@ -77,8 +74,6 @@ console.log('✅ Fixed SEO.tsx');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
@@ -90,7 +85,6 @@ console.log('✅ Fixed SEO.tsx');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
 const talentFixed = talentContent
@@ -116,8 +110,6 @@ fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -144,7 +136,6 @@ const filesToFix = [
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
@@ -161,8 +152,6 @@ console.log('✅ Fixed use-toast.ts');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
@@ -174,7 +163,6 @@ console.log('✅ Fixed use-toast.ts');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
 const servicesFixed = servicesContent
@@ -188,6 +176,7 @@ const servicesFixed = servicesContent
   .replace(/createdAt: "2024-01-15T10:00:00\.000Z"/g, '"createdAt": "2024-01-15T10:00:00.000Z"')
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
+
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
 const authFixed = authContent
@@ -196,8 +185,6 @@ const authFixed = authContent
   .replace(/:src\/hooks\/useAuth\.tsx/g, '')
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -225,7 +212,6 @@ console.log(`\n📊 Syntax fixing complete:`)) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ) {
     ) {
     if (processFile(file)) {
@@ -233,14 +219,14 @@ console.log(`\n📊 Syntax fixing complete:`)) {
   }
 }
 }
+
 if ( {
   ) {
      {
+<<<<<<< HEAD
 console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -280,7 +266,6 @@ console.log('✨ Final comprehensive fixes completed!');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')
@@ -322,9 +307,6 @@ const fs = require('fs')
   .replace(/reviewCount: 156/g, '"reviewCount")
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
 <<<<<<< HEAD
-  .replace(/"isLoading": fals e/g, '"isLoading")
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   .replace(/"isLoading": fals e/g, '"isLoading")
@@ -346,4 +328,3 @@ const fs = require('fs')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

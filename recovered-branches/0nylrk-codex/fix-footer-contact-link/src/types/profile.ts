@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ProfileSkill {
 
   name: string
@@ -30,10 +31,35 @@ export interface ProfileExperience {
 
 export interface ProfileExperience {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+
+  name: string,
+  level: number, // 1 - 5;
+  endorsements?: number;
+
+}
+export interface ProfileProject {
+  id: string;
+  title: string;
+  description: string;
+  image_url?: string;
+  tags?: string[];
+
+  url?: string,
+  date: string;
+
+}
+export interface ProfileExperience {
+>>>>>>> main
   id: string;
   role: string;
   company: string;
   description: string;
+<<<<<<< HEAD
   startDate: string;
 
   endDate?: string
@@ -63,18 +89,44 @@ export interface ProfileData {;
   name: string;
   title: string;
   avatarUrl: string;
+=======
+
+  start_date: string;
+  end_date?: string,
+  current?: boolean;
+}
+export interface Availability {
+  status: 'available' | 'limited' | 'unavailable';
+  next_available?: string;
+  message?: string,
+  available_hours?: { day: string, hours: string }[];
+
+}
+export interface ProfileData {
+  id: string;
+  name: string;
+  title: string;
+  avatar_url: string;
+>>>>>>> main
   coverImageUrl?: string;
   bio: string;
   location?: string;
   rating?: number;
+<<<<<<< HEAD
   reviewCount?: number;
   aiScore?: number;
   profileType: 'service' | 'talent';
+=======
+  review_count?: number;
+  ai_score?: number;
+  profile_type: 'service' | 'talent';
+>>>>>>> main
   skills: ProfileSkill[];
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
 
+<<<<<<< HEAD
   hourlyRate?: number
 
   contactEmail?: string
@@ -141,3 +193,11 @@ export interface ProfileData {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  hourly_rate?: number,
+  contact_email?: string;
+
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

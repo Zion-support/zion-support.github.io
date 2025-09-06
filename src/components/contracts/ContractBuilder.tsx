@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -83,10 +84,46 @@ export function ContractBuilder({
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
   const handleLoadTemplate = null;
           onClose()
+=======
+isOpen;
+  onClose;
+  talent;
+  clientName;
+
+  onContractGenerated;
+}: ContractBuilderProps) {;
+  const [activeTab, setActiveTab] = useState<string>("form");
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
+    undefined;
+  );
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+
+  const handleLoadTemplate = (templateData: ContractFormValues,) => {;
+    setFormValues(templateData);
+  };
+
+  const handleContractGenerated = (contract: string) => {;
+    setGeneratedContract(contract);
+    setActiveTab("preview");    if (onContractGenerated) {;
+      onContractGenerated(contract);
+    }
+  };
+
+  if (showSmartContractBuilder) {;
+    return (
+      <SmartContractBuilder
+        isOpen={isOpen}
+        onClose={() => {;
+          setShowSmartContractBuilder(false);          onClose();
+
+>>>>>>> main
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
+<<<<<<< HEAD
       />
     )
   }
@@ -120,16 +157,36 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      />;
+    );
+  }
+
+
+  }
+
+  return (
+
+
+            
+
+
+>>>>>>> main
             <div className="flex gap-2">
               <Button
                 variant="outline"
                 size="sm"
+<<<<<<< HEAD
                 onClick={() => setTemplateManagerOpen(true)}
+=======
+                onClick = {(,) => setTemplateManagerOpen(true),}
+>>>>>>> main
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               
@@ -154,11 +211,59 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 =======
             <ContractForm 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
+        <DialogHeader>;
+          <DialogTitle>Contract Builder</DialogTitle>;
+        </DialogHeader>;
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
+          <div className="flex justify-between items-center">;
+            <TabsList className="grid grid-cols-2">;
+              <TabsTrigger value="form">Contract Details</TabsTrigger>;
+              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
+            </TabsList>;
+
+            <div className="flex gap-2">;
+              <Button
+                variant="outline" 
+                size="sm"
+                onClick = {(,) => setTemplateManagerOpen(true),}
+                className="flex gap-1";
+              >;
+                <Save className="h-4 w-4" />;
+                Templates;
+              </Button>;
+
+
+
+              
+
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick = {() => setShowSmartContractBuilder(true),}
+
+              >;
+                Smart Contract Builder;
+              </Button>;
+            </div>;
+          </div>;
+
+          <TabsContent value="form" className="pt-4">;
+
+            <ContractForm
+
+            <ContractForm 
+
+>>>>>>> main
               talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
               onContractGenerated = {handleContractGenerated,}
+<<<<<<< HEAD
             />
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
@@ -168,19 +273,43 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 =======
               <ContractPreview 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+            />;
+          </TabsContent>;
+
+          <TabsContent value="preview" className="pt-4">;
+            {generatedContract && (;
+
+              <ContractPreview
+
+              <ContractPreview 
+
+>>>>>>> main
                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
                 status="ready"
+<<<<<<< HEAD
               />
             )}
           </TabsContent>
         </Tabs>
+=======
+              />;
+            )}
+
+          </TabsContent>;
+        </Tabs>;
+
+
+>>>>>>> main
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
+<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>
@@ -236,10 +365,14 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+=======
+
+>>>>>>> main
         />;
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
@@ -247,3 +380,20 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+  handleContractGenerated;
+}/> </TabsContent> />);
+}</TabsContent> </Tabs> <TemplateManager is_open= {
+  templateManagerOpen;
+}on_close= {
+  () => setTemplateManagerOpen (false);
+}onSelectTemplate= {
+  handleLoadTemplate;
+}current_values= {
+  form_values;
+}/> </DialogContent> </Dialog>);
+}"}
+}
+;
+>>>>>>> main

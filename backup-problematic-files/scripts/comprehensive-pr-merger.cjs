@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -92,7 +90,6 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require('child_process')
 // console.log('� Comprehensive PR Merger & Conflict Resolver')
 console.log('====')
@@ -124,9 +121,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
-<<<<<<< HEAD
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -134,4 +128,3 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -108,7 +106,6 @@ module.exports = WorkingAutomationSuite;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -129,9 +126,6 @@ console.log('====')
 <<<<<<< HEAD
       this.log(` Automation suite "failed"`)
 =======
-<<<<<<< HEAD
-      this.log(` Automation suite "failed"`)
-=======
       this.log(` Automation suite "failed"`)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -139,4 +133,3 @@ console.log('====')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

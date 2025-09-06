@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export { WorkExperienceSection } from "./WorkExperienceSection";
 export { EducationSection } from "./EducationSection";
 export { SkillsSection } from "./SkillsSection";
@@ -13,3 +14,10 @@ export { ResumeBasicInfoSection } from './ResumeBasicInfo',;
 
 export { PreviewHeader } from './PreviewHeader';
 
+=======
+
+
+
+export { PreviewHeader } from './PreviewHeader';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> main

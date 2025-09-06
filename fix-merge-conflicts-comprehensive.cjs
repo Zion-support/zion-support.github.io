@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 class MergeConflictFixer {
@@ -115,6 +116,8 @@ const fixer = new MergeConflictFixer();
 fixer.run().catch(console.error);
 module.exports = MergeConflictFixer;
 =======
+=======
+>>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
@@ -247,5 +250,9 @@ try {
   console.log('Build error:', error.message);
 }
 
+<<<<<<< HEAD
 console.log('\n✨ Merge conflict resolution script completed!');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+console.log('\n✨ Merge conflict resolution script completed!');
+>>>>>>> main

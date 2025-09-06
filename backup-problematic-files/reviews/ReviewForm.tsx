@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
 import React, { useState } from 'react';
 =======
@@ -69,6 +71,13 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+=======
+
+
+=======
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
@@ -76,6 +85,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
 }
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewForm.tsx
 import StarRating from './StarRating';
 export type ReviewFormValues = {
@@ -101,16 +111,33 @@ export type ReviewFormValues = {
   text: string,
   categories?: {
 =======
+=======
+import StarRating from './StarRating';
+export type ReviewFormValues = {
+
+>>>>>>> main
   projectId: string,
   fromRole: 'client' | 'talent',
   fromId: string,
   rating: number,
   text: string,
   categories?: {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
+========
+
+
+  categories?: {
+    communication?: number;
+    qualityOfWork?: number;
+    timeliness?: number;
+
+
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -153,6 +180,19 @@ export type ReviewFormValues = {;
 type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
+=======
+
+    communication?: number;
+    qualityOfWork?: number;
+    timeliness?: number;
+    wouldWorkWithAgain?: boolean
+  }
+  anonymous?: boolean
+}
+type Props = {
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+const ReviewForm: React.FC<Props> = ({ initial }) => {
+>>>>>>> main
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -162,6 +202,11 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
     wouldWorkWithAgain?: boolean;
   }
   anonymous?: boolean;
@@ -198,14 +243,45 @@ function handle_submit() {
           rating,
           text,
           anonymous,
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
           categories: {
 communication
+========
+
+          categories: {
+            communication
+>>>>>>>> main:components/reviews/ReviewForm.tsx
+=======
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSubmitting(true);
+    setMessage(null)
+    try {
+      const res = await fetch('/api/reviews/submit', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          projectId: initial.projectId
+          fromRole: initial.fromRole
+          fromId: initial.fromId
+          rating
+          text
+          anonymous
+          categories: {
+            communication
+>>>>>>> main
             qualityOfWork
             timeliness
             wouldWorkWithAgain
           }
         })
       });
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     setSubmitting(true);
@@ -231,6 +307,10 @@ communication
       });
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -238,13 +318,18 @@ communication
       setSubmitting(false);    }
   }
   return (
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
     <form onSubmit={handleSubmit} className='space-y-6'>;
       <div>;
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;
       </div>;
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
           projectId: initial.projectId,
           fromRole: initial.fromRole,
           fromId: initial.fromId,
@@ -252,6 +337,10 @@ communication
           text;
           anonymous;
           categories: {
+========
+
+=======
+>>>>>>>> main:components/reviews/ReviewForm.tsx
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -269,19 +358,37 @@ communication
       </div>;
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
 =======
+=======
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
+      setMessage('Review submitted! Pending admin approval.');
+    } catch (err: any) {
+      setMessage(err.message);
+    } finally {
+      setSubmitting(false);    }
+  }
+  return (
+>>>>>>> main
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />
       </div>
       <div>
+<<<<<<< HEAD
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewForm.tsx
+========
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>>> main:components/reviews/ReviewForm.tsx
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
@@ -373,6 +480,16 @@ communication
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
         <label className='block text-sm font-medium mb-2'>Your Review</label>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+  }
+  return (
+
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -381,20 +498,37 @@ communication
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
         <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
+========
+
+=======
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>>> main:components/reviews/ReviewForm.tsx
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
           onChange={(e) => setText(e && e.target.value)}
           required;
         />;
       </div>;
       <div className='flex items-center gap-3'>;
+========
+
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
           onChange={e => setAnonymous(e && e.target.checked)}
         />;
         <label htmlFor='anonymous'>Submit anonymously</label>;
@@ -402,6 +536,10 @@ communication
         <div className='enhanced-card'>;
           <div className='flex items-center justify-between mb-2'>;
             <span className='text-sm'>Communication</span>;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
             <StarRating
               value={communication |0}
               onChange={v => setCommunication(v)}
@@ -452,26 +590,46 @@ communication
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Quality of Work</span>;
             <StarRating;
               value={qualityOfWork || 0}
               on_change={v => setQualityOfWork (v)}
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Timeliness</span>;
             <StarRating;
               value={timeliness || 0}
               on_change={v => set_timeliness (v)}
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
               onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
@@ -480,17 +638,33 @@ communication
               type='checkbox';
               checked={wouldWorkWithAgain}
               on_change={e => setWouldWorkWithAgain (e.target.checked)}
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
             />;
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
       </button>;
       {message && <p className='text-sm'>{message}</p>}
     </form>;
   );
+========
+
+      </button>;
+
+
+      {message && <p className='text-sm'>{message}</p>}
+    </form>;
+  );
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
 };
 export default ReviewForm;    </form>;
   );
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
 };
 export default ReviewForm;
       <div className="flex items-center gap-3">
@@ -542,6 +716,13 @@ export default ReviewForm;
         disabled={submitting}
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}
+========
+
+        disabled={submitting}
+      >;
+        {submitting ? 'Submitting...' : 'Submit Review'}
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
       </button>;
       {message && <p className='text - sm'>{message}</p>}
     </form>);
@@ -552,6 +733,7 @@ export default ReviewForm;    </form>);
 ;
 export default ReviewForm;
 ;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
       </div>
 
       <div>
@@ -760,11 +942,31 @@ export default ReviewForm,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+=======
+
+=======
+        <label className='block text-sm font-medium mb-2'>Your Review</label>
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  }
+  return (
+
+
+        <StarRating value={rating} onChange={setRating} />
+      </div>
+      <div>
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
       {message && <p className='text-sm'>{message}</p>}
+<<<<<<< HEAD
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
 =======
 
@@ -772,6 +974,11 @@ export default ReviewForm,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+=======
+
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </form>
   );
@@ -780,15 +987,26 @@ export default ReviewForm;    </form>
   )
 }
 export default ReviewForm;
+<<<<<<< HEAD
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
 <<<<<<< HEAD
 
 =======
 >>>>>>> main:components/reviews/ReviewForm.tsx
+=======
+
+
+>>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
 =======
 =======
 >>>>>>> main:components/reviews/ReviewForm.tsx
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewForm.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewForm.tsx
+=======
+>>>>>>> main

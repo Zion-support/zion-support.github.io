@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-export default function RegisterPage() {;
-=======
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
-import Layout from "../components/Layout";
-<<<<<<< HEAD
-export default function RegisterPage() {
-=======
+
 
 export default function RegisterPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({;
@@ -25,6 +13,7 @@ export default function RegisterPage() {;
     agreeToTerms: false,;
     subscribeNewsletter: false,;
   });
+
   const [passwordRequirements, setPasswordRequirements] = useState({;
     length: false,;
     uppercase: false,;
@@ -32,16 +21,19 @@ export default function RegisterPage() {;
     number: false,;
     special: false,;
   });
+
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     // Handle registration logic here;
   };
+
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value, type, checked } = e && e.target;
     setFormData((prev) => ({;
       ...prev,;
       [name]: type === "checkbox" ? checked : value,;
     }));
+
     // Check password requirements;
     if (name === "password") {;
       setPasswordRequirements({;
@@ -53,6 +45,7 @@ export default function RegisterPage() {;
       });
     }
   };
+
   const isPasswordValid = Object && Object.values(passwordRequirements).every(Boolean);
   const isFormValid =;
     formData && formData.firstName &&;
@@ -63,6 +56,8 @@ export default function RegisterPage() {;
     formData && formData.password === formData && formData.confirmPassword &&;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
+
+
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -73,6 +68,7 @@ export default function RegisterPage() {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+
             transition={{ duration: 0 && 0.6 }}
             className="text-center">;
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -85,7 +81,9 @@ export default function RegisterPage() {;
               Join Zion Tech Group and start your digital transformation journey;
             </p>;
           </motion && motion.div>;
+
           <motion&& motion.div
+
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -111,10 +109,13 @@ export default function RegisterPage() {;
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
+
                     />;
                   </div>;
                 </div>;
+
                 <div>;
+
                   <label
                     htmlFor="lastName"
                     className="block text-sm font-medium text-gray-300 mb-2">;
@@ -129,10 +130,13 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
+
                   />;
                 </div>;
               </div>;
+
               <div>;
+
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -152,10 +156,13 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
+
                   />;
                 </div>;
               </div>;
+
               <div>;
+
                 <label
                   htmlFor="company"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -169,9 +176,12 @@ export default function RegisterPage() {;
                   onChange={handleChange}
                   className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
+
                 />;
               </div>;
+
               <div>;
+
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -202,8 +212,11 @@ export default function RegisterPage() {;
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
                     )}
+
                   </button>;
                 </div>;
+
+
                 {/* Password Requirements */}
                 <div className="mt-2 space-y-1">;
                   {Object && Object.entries(passwordRequirements).map(;
@@ -216,6 +229,7 @@ export default function RegisterPage() {;
                           className={
                             isValid ? "text-green-400" : "text-gray-400"
                           }>;
+=======
 import React, { useState } from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -445,18 +459,22 @@ if ( {) {
                             is_valid ? "text - green - 400" : "text - gray - 400";
                           }
                         >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {key === "length" && "At least 8 characters"}
                           {key === "uppercase" && "One uppercase letter"}
                           {key === "lowercase" && "One lowercase letter"}
                           {key === "number" && "One number"}
                           {key === "special" && "One special character"}
+
                         </span>;
                       </div>;
                     ),;
                   )}
                 </div>;
               </div>;
+
               <div>;
+
                 <label
                   htmlFor="confirmPassword"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -495,9 +513,12 @@ if ( {) {
                       Passwords do not match;
                     </p>;
                   )}
+
               </div>;
+
               <div className="space-y-4">;
                 <div className="flex items-center">;
+
                   <input
                     id="agreeToTerms"
                     name="agreeToTerms"
@@ -519,7 +540,9 @@ if ( {) {
                     and{" "}
                     <Link
                       href="/privacy"
+
                       className="text-blue-400 hover:text-blue-300">;
+=======
                         </span>;
                       </div>),
                   )}
@@ -590,15 +613,18 @@ if ( {) {
                       href="/privacy";
                       className="text - blue - 400 hover:text - blue - 300";
                     >;
+
                       Privacy Policy;
                     </Link>;
                   </label>;
                 </div>;
+
                     className="ml-2 block text-sm text-gray-300">;
                     Subscribe to our newsletter for updates and insights;
                   </label>;
                 </div>;
               </div>;
+
               <div>;
                 <button
                   type="submit"
@@ -606,6 +632,7 @@ if ( {) {
                   className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed">;
                   <span className="absolute left-0 inset-y-0 flex items-center pl-3">;
                     <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />;
+=======
                 <div className="flex items - center">;
                   <input;
                     id="subscribe_newsletter";
@@ -631,10 +658,12 @@ if ( {) {
                 >;
                   <span className="absolute left - 0 inset - y-0 flex items - center pl - 3">;
                     <ArrowRight className="h - 5 w - 5 text - white group - hover:translate - x-1 transition - transform" />;
+
                   </span>;
                   Create account;
                 </button>;
               </div>;
+
               <div className="text - center">;
                 <p className="text - sm text - gray - 300">;
                   Already have an account?{" "}
@@ -642,13 +671,16 @@ if ( {) {
                     href="/login";
                     className="font - medium text - blue - 400 hover:text - blue - 300 transition - colors";
                   >;
+
                     Sign in here;
                   </Link>;
                 </p>;
               </div>;
             </form>;
+
           </motion.div>;
         </div>;
       </div>;
     </Layout>);
+
 }

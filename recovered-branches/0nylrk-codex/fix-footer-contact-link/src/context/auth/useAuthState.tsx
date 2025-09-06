@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -22,10 +23,15 @@ import type { UserProfile } from "@/types/auth",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> main
 /**
  * Custom hook to manage auth state
  */
 export function useAuthState() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -37,6 +43,15 @@ export function useAuthState() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+  const [user, setUser] = useState<UserProfile | null>(null),
+  const [isLoading, setIsLoading] = useState<boolean>(true),
+  const [onboardingStep, setOnboardingStep] = useState<string | null>(null),
+
+  
+
+>>>>>>> main
   return {
     user,
     setUser,
@@ -46,6 +61,7 @@ export function useAuthState() {
     setOnboardingStep
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
@@ -53,10 +69,35 @@ export function useAuthState() {
 =======
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
+=======
+
+
+=======
+import React, { useState } from "react",;
+import type { UserProfile } from "@/types/auth",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 /**;
  * Custom hook to manage auth state;
  */;
 export function useAuthState() {;
+<<<<<<< HEAD
+=======
+
+import React, { useState } from './react';
+import type { UserProfile } from "@/types / auth";
+/**;
+* Custom hook to manage auth state;
+*/;
+export /**
+ * useAuthState - Function description
+ */
+function useAuthState() {
+  const [user, set_user] = useState < UserProfile | null>(null);
+  const [is_loading, setIsLoading] = useState < boolean>(true);
+  const [onboarding_step, setOnboardingStep] = useState < string | null>(null);
+=======
+>>>>>>> main
   const [user, setUser] = useState<UserProfile | null>(null),;
   const [isLoading, setIsLoading] = useState<boolean>(true),;
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),;
@@ -68,6 +109,7 @@ export function useAuthState() {;
     onboardingStep;
     setOnboardingStep;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -75,3 +117,28 @@ export function useAuthState() {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return {
+=======
+
+  return {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    user;
+    set_user;
+    is_loading;
+    setIsLoading;
+
+    onboarding_step;
+
+    setOnboardingStep;
+  }
+}
+>>>>>>> main

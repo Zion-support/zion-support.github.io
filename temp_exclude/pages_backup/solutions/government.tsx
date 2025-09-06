@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -42,6 +43,7 @@ const features = [
 ];
 
 export default function GovernmentSolutionsPage() {
+
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -73,6 +75,7 @@ export default function GovernmentSolutionsPage() {
         </section>
 
         {/* Features Section */}
+
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -98,12 +101,14 @@ export default function GovernmentSolutionsPage() {
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+
                         {benefit}
                       </div>
                     ))}
                   </div>
                 </motion.div>
               ))}
+
             </div>
           </div>
         </section>
@@ -131,5 +136,6 @@ export default function GovernmentSolutionsPage() {
       </div>
     </>
     </>
+
   );
 }

@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -31,7 +29,6 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // console.log(' Targeted Syntax Fixer')
 console.log('===')
       const content = fs.readFileSync(filePath, 'utf8')
@@ -39,8 +36,6 @@ console.log('===')
         if (trimmedLine.includes('function ') || trimmedLine.includes('=> {'})
         if (inFunction && braceCount === 0 && trimmedLine === '}')
           const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : ''
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -185,7 +180,6 @@ fixer.run().catch(console.error)
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           if (nextLine === '' || nextLine.startsWith('export') || nextLine.startsWith('}')
         if (line.includes('content="The page you"re looking for doesn"t exist.")
           fixedLines.push(line.replace('content="The page you"re looking for doesn"t exist."', 'content="The page you\'re looking for doesn\'t exist.')
@@ -206,9 +200,6 @@ fixer.run().catch(console.error)
 <<<<<<< HEAD
     console.log('\n� Report saved "to")
 =======
-<<<<<<< HEAD
-    console.log('\n� Report saved "to")
-=======
     console.log('\n� Report saved "to")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -216,4 +207,3 @@ fixer.run().catch(console.error)
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -2,8 +2,6 @@
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,7 +80,6 @@ module.exports = PerformanceMonitor;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -90,9 +87,6 @@ const path = require('path')
       window.addEventListener('load')
     if (typeof process !== 'undefined')
     const reportPath = path.join(process.cwd(), 'performance-report.json'
-<<<<<<< HEAD
-    this.log(' Starting performance monitoring...')
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -115,4 +109,3 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

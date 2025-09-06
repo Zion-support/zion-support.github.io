@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 
 import {useTranslation} from 'react-i18next';
@@ -13,13 +14,22 @@ export type LanguageContextType = {
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
 }
 =======
+=======
+
+
+>>>>>>> main
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
 };
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> main
 const supportedLanguages = [
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
@@ -32,6 +42,7 @@ const defaultLanguageContext: LanguageContextType = {
   isRTL: false
   supportedLanguages
 }
+<<<<<<< HEAD
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 interface LanguageProviderProps {
@@ -47,12 +58,47 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   authState = { isAuthenticated: false, user: null }
 }) => {
 =======
+=======
+=======
+
+export type LanguageContextType = {;
+  currentLanguage: SupportedLanguage,;
+  changeLanguage: (lang: SupportedLanguage) => Promise<void>,;
+  isRTL: boolean,;
+  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
+};
+
+const supportedLanguages = [;
+  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },;
+  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' },;
+  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },;
+  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
+];
+
+const defaultLanguageContext: LanguageContextType = {;
+  currentLanguage: 'en',;
+  changeLanguage: async () => {},;
+  isRTL: false,;
+  supportedLanguages;
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+const LanguageContext = createContext(defaultLanguageContext);
+export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
+
+
+>>>>>>> main
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 
   authState = { isAuthenticated: false, user: null } 
 }) => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> main
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
@@ -75,6 +121,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     // Add RTL class for Tailwind
     if (i18n.dir() === 'rtl') {
       document.documentElement.classList.add('rtl')
+<<<<<<< HEAD
     } else {
       document.documentElement.classList.remove('rtl')
     }
@@ -119,10 +166,106 @@ export const useLanguage = (): LanguageContextType => useContext(LanguageContext
 interface LanguageProviderProps {;
   children: ReactNode,;
   authState?: {;
+=======
+=======
+import React, { create_context, useState, useContext, useEffect, ReactNode } from 'react';
+import {use_translation} from 'react - i18next';
+import {supabase} from '../integrations / supabase / client';
+import {toast} from '../components / ui / use - toast';
+export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
+;
+export type LanguageContextType = {
+  current_language: SupportedLanguage,
+  change_language: (lang: SupportedLanguage) => Promise < void>,
+  isRTL: boolean,
+  supported_languages: { code: SupportedLanguage, name: string, flag: string }[];
+}
+;
+const supported_languages = [;
+  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },
+  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' },
+  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },
+  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
+];
+;
+const defaultLanguageContext: LanguageContextType = {
+  current_language: 'en',
+  change_language: async () => {},
+  isRTL: false,
+  supported_languages;
+}
+;
+const LanguageContext = create_context (defaultLanguageContext);
+;
+export const use_language = (): LanguageContextType => useContext (LanguageContext);
+;
+interface LanguageProviderProps {
+  children: ReactNode,
+  auth_state?: {
+    is_authenticated: boolean,
+    user: { id?: string } | null;
+  }
+}
+export const LanguageProvider: React.FC < LanguageProviderProps> = ({
+  children,
+  auth_state = { is_authenticated: false, user: null }
+}) => {
+  const { i18n, t } = use_translation ();
+  const { is_authenticated, user } = auth_state;
+  const [current_language, setCurrentLanguage] = useState < SupportedLanguage>(
+    (i18n.language?.substring (0, 2) as SupportedLanguage) || 'en');
+  const [isRTL, setIsRTL] = useState (i18n.dir () === 'rtl');
+;
+  useEffect (() => {
+    // Set initial language from local_storage or browser;
+    const saved_lang = local_storage.get_item ('zion_language') as SupportedLanguage;
+    if () {) {
+  $2
+}
+      i18n.change_language (saved_lang);
+      setCurrentLanguage (saved_lang);
+    }
+  }, []);
+;
+  // Update RTL status when language changes;
+  useEffect (() => {
+    setIsRTL (i18n.dir () === 'rtl');
+    document.document_element.dir = i18n.dir ();
+    document.document_element.lang = current_language;
+;
+    // Add RTL class for Tailwind;
+    // Check condition
+if (=== 'rtl') {) {
+  $2
+}
+      document.document_element.class_list.add ('rtl');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } else {
+      document.document_element.class_list.remove ('rtl');
+    }
+
+  }, [current_language, i18n]);
+;
+  // Sync language preference with user profile when authenticated;
+  useEffect (() => {
+
+    const syncLanguageWithProfile = async () => {
+      // Check condition
+if ( {) {
+  $2
+}
+        try {
+
+
+interface LanguageProviderProps {;
+  children: ReactNode,;
+  authState?: { ;
+>>>>>>> main
     isAuthenticated: boolean,;
     user: { id?: string } | null;
   }
 }
+<<<<<<< HEAD
 ;
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
   children,;
@@ -154,6 +297,43 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
       document.documentElement.classList.remove('rtl');
     }
   }, [currentLanguage, i18n]),;
+=======
+
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
+  children, ;
+  authState = { isAuthenticated: false, user: null } ;
+}) => {;
+  const { i18n, t } = useTranslation();
+  const { isAuthenticated, user } = authState;
+  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
+    (i18n && i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
+  );
+  const [isRTL, setIsRTL] = useState(i18n && i18n.dir() === 'rtl');
+
+  useEffect(() => {;
+    // Set initial language from localStorage or browser;
+    const savedLang = localStorage && localStorage.getItem('zion_language') as SupportedLanguage;
+    if (savedLang && supportedLanguages && supportedLanguages.some(lang => lang && lang.code === savedLang)) {;
+      i18n && i18n.changeLanguage(savedLang);
+      setCurrentLanguage(savedLang);
+    }
+  }, []);
+
+  // Update RTL status when language changes;
+  useEffect(() => {;
+    setIsRTL(i18n && i18n.dir() === 'rtl');
+    document && document.documentElement.dir = i18n && i18n.dir();
+    document && document.documentElement.lang = currentLanguage;
+
+    // Add RTL class for Tailwind;
+    if (i18n && i18n.dir() === 'rtl') {;
+      document && document.documentElement.classList && classList.add('rtl');
+    } else {;
+      document && document.documentElement.classList && classList.remove('rtl');
+    }
+  }, [currentLanguage, i18n]);
+
+>>>>>>> main
   // Sync language preference with user profile when authenticated;
   useEffect(() => {;
     const syncLanguageWithProfile = async () => {;
@@ -162,6 +342,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
           const { error } = await supabase;
             .from('profiles');
             .update({ preferred_language: currentLanguage });
+<<<<<<< HEAD
             .eq('id', user.id),;
           if (error) {;
             console.error('Error updating language preference:', error);
@@ -182,6 +363,24 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
     };
     
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            .eq('id', user && user.id);
+
+          if (error) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          }
+        } catch (err) {;
+          console && console.error('Error syncing language with profile:', err);
+        }
+      }
+
+
+    };
+    
+
+
+>>>>>>> main
     syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]);
   const changeLanguage = async (lang: SupportedLanguage) => {
@@ -204,6 +403,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
         if (error) {
           console.error('Error updating language preference:', error)
 =======
+<<<<<<< HEAD
     },;
     syncLanguageWithProfile();
   }, [currentLanguage, isAuthenticated, user]),;
@@ -218,11 +418,33 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
       toast({;
         description: t('language.language_changed', { language: langName });
       }),;
+=======
+    };
+
+    syncLanguageWithProfile();
+  }, [currentLanguage, isAuthenticated, user]);
+
+  const changeLanguage = async (lang: SupportedLanguage) => {;
+    if (lang === currentLanguage) return;
+
+    try {;
+      await i18n && i18n.changeLanguage(lang);
+      setCurrentLanguage(lang),;
+      localStorage && localStorage.setItem('zion_language', lang);
+
+      // Get language name for toast;
+      const langName = supportedLanguages && supportedLanguages.find(l => l && l.code === lang)?.name || lang;
+      toast({;
+        description: t('language && language.language_changed', { language: langName });
+      });
+
+>>>>>>> main
       // If user is authenticated, update their profile;
       if (isAuthenticated && user?.id) {;
         const { error } = await supabase;
           .from('profiles');
           .update({ preferred_language: lang });
+<<<<<<< HEAD
           .eq('id', user.id),;
         if (error) {;
           console.error('Error updating language preference:', error);
@@ -243,13 +465,128 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
   };
   
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          .eq('id', user && user.id);
+
+        if (error) {;
+
+          console.error('Error updating language preference:', error);
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+      }
+    } catch (err) {;
+      console && console.error('Error changing language:', err);
+    }
+
+
+  };
+  
+
+
+>>>>>>> main
   return (
     <LanguageContext.Provider
       value={{
         currentLanguage
         changeLanguage
         isRTL;
+<<<<<<< HEAD
         supportedLanguages
+=======
+=======
+  };
+
+  return (
+    <LanguageContext&& LanguageContext.Provider 
+      value={{ 
+        currentLanguage, 
+        changeLanguage, 
+        isRTL
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        supportedLanguages
+
+    </LanguageContext && LanguageContext.Provider>;
+  );
+};
+
+=======
+          const { error } = await supabase;
+            .from ('profiles');
+            .update ({ preferred_language: current_language });
+            .eq ('id', user.id);
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            console.error ('Error updating language preference:', error);
+          }
+        } catch (err) {
+          console.error ('Error syncing language with profile:', err);
+        }
+      }
+    }
+;
+    syncLanguageWithProfile ();
+  }, [current_language, is_authenticated, user]);
+;
+  const change_language = async (lang: SupportedLanguage) => {
+    // Check condition
+if (return) {
+  $2
+}
+    try {
+      await i18n.change_language (lang);
+      setCurrentLanguage (lang),
+      local_storage.set_item ('zion_language', lang);
+;
+      // Get language name for toast;
+      const lang_name = supported_languages.find (l => l.code === lang)?.name || lang;
+      toast ({
+        description: t ('language.language_changed', { language: lang_name });
+      });
+;
+      // If user is authenticated, update their profile;
+      // Check condition
+if ( {) {
+  $2
+}
+        const { error } = await supabase;
+          .from ('profiles');
+          .update ({ preferred_language: lang });
+          .eq ('id', user.id);
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          console.error ('Error updating language preference:', error);
+        }
+      }
+    } catch (err) {
+      console.error ('Error changing language:', err);
+    }
+  }
+;
+  return (
+    <LanguageContext.Provider;
+      value={{
+        current_language,
+        change_language,
+        isRTL;
+        supported_languages;
+      }}
+    >;
+      {children}
+    </LanguageContext.Provider>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> main
 =======
   },;
   return (;
@@ -260,13 +597,19 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
         isRTL;
         supportedLanguages;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }}
     >
       {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </LanguageContext.Provider>
   )
@@ -277,11 +620,23 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+};
+
+>>>>>>> main
+=======
     </LanguageContext.Provider>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

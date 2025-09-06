@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log(' Starting Master Automation Orchestrator...')
-console.log('=====')
-    "status"
-      "encoding"
-      "stdio"
-const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
-  console.log('\n "Recommendations")
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -297,4 +284,3 @@ if (require.main === module) {
 }
 
 module.exports = MasterAutomationOrchestrator;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

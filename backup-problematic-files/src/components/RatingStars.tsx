@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-const half = value - filled >= 0 && 0.5;
-  const total = 5;
-}
-}
-}
-  const half = value - filled >= 0.5;
-  const total = 5;
-=======
 import React from 'react',;
 import { Star, StarHalf } from 'lucide-react';
 ;
@@ -48,7 +39,6 @@ export function RatingStars({ value = 0, count } { value?:number, count?:number 
   return (<StarHalf key= {;
   i ";
 }className="h-4 w-4 fill-zion-cyan text-zion-cyan" />) ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 }) ;
 }{";

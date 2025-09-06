@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -371,15 +369,12 @@ monitor.run().catch(error => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 /**
  * Health Monitor Script for PM2;
  * Replaces GitHub Actions health monitoring workflows;
  * Runs every 5 minutes to monitor system health;
  */
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -392,14 +387,11 @@ monitor.run().catch(error => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require('child_process');
 const fs = require('fs');
 const log = (message) => {}
   const timestamp = new Date().toISOString();
 };
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -440,7 +432,6 @@ const log = (message) => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const runCommand = (command, description) => {}
   try {}
     log(`Starting: ${description}`);
@@ -461,8 +452,6 @@ const runCommand = (command, description) => {}
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -471,7 +460,6 @@ const runCommand = (command, description) => {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const checkSystemHealth = () => {}
   log('Checking system health');
   // Check if the application is running;
@@ -480,8 +468,6 @@ const checkSystemHealth = () => {}
   const diskCheck = runCommand('df -h .', 'Checking disk space');
   // Check memory usage;
   const memoryCheck = runCommand('free -m', 'Checking memory usage');
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -529,7 +515,6 @@ const checkSystemHealth = () => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return {}
     app: appCheck.success,
     disk: diskCheck.success,
@@ -537,8 +522,6 @@ const checkSystemHealth = () => {}
     overall: appCheck.success && diskCheck.success && memoryCheck.success;
   };
 };
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -567,7 +550,6 @@ const checkSystemHealth = () => {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const generateHealthReport = (results) => {}
   const report = {}
     timestamp: new Date().toISOString(),
@@ -579,8 +561,6 @@ const generateHealthReport = (results) => {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   
   
 =======
@@ -606,13 +586,10 @@ const generateHealthReport = (results) => {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // Save report;
   const reportPath = 'logs/pm2/health-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   log(`Health report saved to ${reportPath}`);
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -625,15 +602,12 @@ const generateHealthReport = (results) => {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return report;
 };
 const main = async () => {}
   log('Starting Health Monitor Process');
   // Check system health;
   const systemResults = checkSystemHealth();
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -676,14 +650,10 @@ const main = async () => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // Generate comprehensive report;
   const results = {}
     system: systemResults;
   };
-<<<<<<< HEAD
-  const report = generateHealthReport(results);
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -723,7 +693,6 @@ const main = async () => {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (report.overall.status === 'HEALTHY') {}
     log('System health check passed: All systems operational');
   } else {}
@@ -734,8 +703,6 @@ const main = async () => {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 =======
@@ -761,7 +728,6 @@ const main = async () => {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Handle process termination;
 process.on('SIGINT', () => {}
   log('Health Monitor Process interrupted');
@@ -771,8 +737,6 @@ process.on('SIGINT', () => {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 =======
@@ -798,7 +762,6 @@ process.on('SIGINT', () => {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 process.on('SIGTERM', () => {}
   log('Health Monitor Process terminated');
   process.exit(0);
@@ -807,8 +770,6 @@ process.on('SIGTERM', () => {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 =======
@@ -834,14 +795,10 @@ process.on('SIGTERM', () => {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run the main function;
 main().catch(error => {})
   log(`Health Monitor Process failed: ${error.message}`);
   process.exit(1);
-<<<<<<< HEAD
-}
-=======
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -878,4 +835,3 @@ main().catch(error => {})
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

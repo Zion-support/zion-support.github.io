@@ -1,3 +1,4 @@
+
   return (
     <EnhancedLayout>
       <h1 className=\"text-3xl font-bold mb-4\">Our Services</h1>
@@ -183,6 +184,7 @@
       ],
       \"href\": \'/services/cybersecurity\',
       \"color\": \'from-gray-500 to-slate-500\'
+
     }
   ];
   const process = [{
@@ -224,6 +226,7 @@
         </div>
       </section>
       {/* Services Grid */}
+
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -252,10 +255,13 @@
                   </p>
                   <ul className=\"space-y-2 mb-6\">
                     {service.features.slice(0, 3).map((feature) => (
+
                         {feature}
                       </li>
                     ))}
+
                   </ul>
+
                   <Link
                     href={service.href}
                     className=\"text-blue-600 \"hover\": text-blue-700 font-medium flex items-center\"
@@ -270,6 +276,7 @@
         </div>
       </section>
       {/* Process Section */}
+
       <section className=\"py-20 bg-gray-50\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -293,11 +300,13 @@
                   {step.description}
                 </p>
               </div>
+
             ))}
           </div>
         </div>
       </section>
       {/* Why Choose Us */}
+
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12 items-center\">
@@ -347,6 +356,7 @@
                 achieve your business goals with our technology solutions.
               </p>
               <div className=\"space-y-4\">
+
                 <Link
                   href=\"/contact\"
                   className=\"block w-full bg-blue-600 \"hover\": bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold text-center transition-colors\"
@@ -394,3 +404,5 @@
   );
 };
 export default Services;
+
+

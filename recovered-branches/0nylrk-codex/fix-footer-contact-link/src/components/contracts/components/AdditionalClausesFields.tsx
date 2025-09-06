@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -12,20 +13,43 @@ import {
   FormControl
   FormDescription
 =======
+=======
+
+
+
+
+import { UseFormReturn } from "react-hook-form";
+
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription,;
+
+=======
+
+>>>>>>> main
   FormField,
   FormItem,
   FormLabel,
   FormControl,
+<<<<<<< HEAD
 <<<<<<< HEAD
   FormDescription,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
   FormDescription,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 } from "@/components/ui/form";
 
 import { Checkbox } from "@/components/ui/checkbox";
 import { ContractFormValues } from "./ContractForm";
+<<<<<<< HEAD
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 }
@@ -46,6 +70,20 @@ export function AdditionalClausesFields({
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+interface AdditionalClausesFieldsProps {;
+  form: UseFormReturn<ContractFormValues>;
+}
+
+
+
+
+
+
+=======
+=======
+
+>>>>>>> main
 import { UseFormReturn } from "react-hook-form",
 import { 
   FormField,
@@ -75,6 +113,7 @@ interface AdditionalClausesFieldsProps {;
 export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {;
   return (;
     <FormField;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -108,13 +147,97 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda")
 =======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      control={form.control}
+=======
+
+export function AdditionalClausesFields(): any ({;
+  form,;
+}: AdditionalClausesFieldsProps) {;
+  return (
+    <FormField
+      control={form && form.control}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      name="additionalClauses"
+      render={() => (;
+        <FormItem>;
+          <div className="mb-4">;
+            <FormLabel>Additional Clauses</FormLabel>;
+=======
+import { UseFormReturn  } from './react - hook - form';
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+} from '@/components / ui / form';
+import { Checkbox  } from '@/components / ui / checkbox';
+import { ContractFormValues  } from './ContractForm';
+interface AdditionalClausesFieldsProps {
+  form: UseFormReturn < ContractFormValues>;
+}
+export /**
+ * AdditionalClausesFields - Function description
+ */
+function AdditionalClausesFields() {
+  return (
+    <FormField;
+      control={form.control}
+      name="additional_clauses";
+      render={() => (
+        <FormItem>;
+          <div className="mb - 4">;
+            <FormLabel > Additional Clauses</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            <FormDescription>;
+              Select additional clauses to include in your contract;
+            </FormDescription>;
+          </div>;
+
+                      checked={field && field.value?.includes("nda")}
+                      onCheckedChange={(checked) => {;
+                        const currentValues = field && field.value || [];
+                        return checked;
+                          ? field && field.onChange([...currentValues, "nda"]);
+                          : field && field.onChange(;
+                              currentValues && currentValues.filter((value) => value !== "nda"),;
+
+=======
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+            <FormField;
+              control={form.control}
+              name="additional_clauses";
+              render={({ field }) => (
+                <FormItem className="flex flex - row items - start space - x-3 space - y-0">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value?.includes ("nda")}
+                      onCheckedChange={(checked) => {
+                        const current_values = field.value || [];
+                        return checked;
+                          ? field.on_change ([...current_values, "nda"]);
+                          : field.on_change (
+                              current_values.filter ((value) => value !== "nda"),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> main
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> main
 =======
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
@@ -123,6 +246,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'nda']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'nda');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -231,6 +355,148 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                               ),
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                            );
+                      }}
+                    />;
+                  </FormControl>;
+
+                  <div className="space - y-1 leading - none">;
+                    <FormLabel > Confidentiality (NDA)</FormLabel>;
+
+                    <FormDescription>;
+                      Protect sensitive information;
+                    </FormDescription>;
+                  </div>;
+
+            />;
+
+
+            <FormField
+              control={form && form.control}
+=======
+
+            />;
+            <FormField;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              control={form.control}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              name="additionalClauses"
+              render={({ field }) => (;
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
+                  <FormControl>;
+                    <Checkbox
+
+                      checked={field && field.value?.includes("ip")}
+=======
+
+                              currentValues.filter((value) => value !== "ip"),
+
+=======
+                      checked={field.value?.includes('ip')}
+
+                      onCheckedChange={(checked) => {;
+                        const currentValues = field && field.value || [];
+                        return checked;
+
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+              name="additional_clauses";
+              render={({ field }) => (
+                <FormItem className="flex flex - row items - start space - x-3 space - y-0">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value?.includes ("ip")}
+                      onCheckedChange={(checked) => {
+                        const current_values = field.value || [];
+                        return checked;
+                          ? field.on_change ([...current_values, "ip"]);
+                          : field.on_change (
+                              current_values.filter ((value) => value !== "ip"),
+
+=======
+                          ? field.onChange([...currentValues, 'ip']);
+                          : field.onChange(;
+                              currentValues.filter((value) => value !== 'ip');
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                            );
+                      }}
+                    />;
+                  </FormControl>;
+
+                  <div className="space - y-1 leading - none">;
+                    <FormLabel > Intellectual Property Transfer</FormLabel>;
+
+                    <FormDescription>;
+                      Transfer ownership of work products;
+                    </FormDescription>;
+                  </div>;
+
+            />;
+
+
+            <FormField
+              control={form && form.control}
+=======
+
+            />;
+            <FormField;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              control={form.control}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              name="additionalClauses"
+              render={({ field }) => (;
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
+                  <FormControl>;
+                    <Checkbox
+
+                      checked={field && field.value?.includes("termination")}
+                      onCheckedChange={(checked) => {;
+                        const currentValues = field && field.value || [];
+                        return checked;
+                          ? field && field.onChange([...currentValues, "termination"]);
+                          : field && field.onChange(;
+                              currentValues && currentValues.filter(;
+                                (value) => value !== "termination",;
+                              ),;
+
+=======
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+              name="additional_clauses";
+              render={({ field }) => (
+                <FormItem className="flex flex - row items - start space - x-3 space - y-0">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value?.includes ("termination")}
+                      onCheckedChange={(checked) => {
+                        const current_values = field.value || [];
+                        return checked;
+                          ? field.on_change ([...current_values, "termination"]);
+                          : field.on_change (
+                              current_values.filter (
+                                (value) => value !== "termination",
+                              ),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+                                (value) => value !== "termination",
+                              ),
+
+>>>>>>> main
+=======
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -238,6 +504,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'termination']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'termination');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -291,6 +558,79 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                               ),
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                            );
+                      }}
+                    />;
+                  </FormControl>;
+
+                  <div className="space - y-1 leading - none">;
+                    <FormLabel > Termination Clause</FormLabel>;
+
+                    <FormDescription>;
+                      Define conditions for ending the contract;
+                    </FormDescription>;
+                  </div>;
+
+            />;
+
+
+            <FormField
+              control={form && form.control}
+=======
+
+            />;
+            <FormField;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              control={form.control}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              name="additionalClauses"
+              render={({ field }) => (;
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
+                  <FormControl>;
+                    <Checkbox
+
+
+                      checked={field && field.value?.includes("revisions")}
+                      onCheckedChange={(checked) => {;
+                        const currentValues = field && field.value || [];
+                        return checked;
+                          ? field && field.onChange([...currentValues, "revisions"]);
+                          : field && field.onChange(;
+                              currentValues && currentValues.filter(;
+                                (value) => value !== "revisions",;
+                              ),;
+
+=======
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+              name="additional_clauses";
+              render={({ field }) => (
+                <FormItem className="flex flex - row items - start space - x-3 space - y-0">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value?.includes ("revisions")}
+                      onCheckedChange={(checked) => {
+                        const current_values = field.value || [];
+                        return checked;
+                          ? field.on_change ([...current_values, "revisions"]);
+                          : field.on_change (
+                              current_values.filter (
+                                (value) => value !== "revisions",
+                              ),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                                (value) => value !== "revisions",
+                              ),
+
+>>>>>>> main
+=======
                       checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -298,6 +638,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'revisions']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'revisions');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -331,4 +672,36 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                            );
+                      }}
+                    />;
+                  </FormControl>;
+
+                  <div className="space - y-1 leading - none">;
+                    <FormLabel > Revisions & Amendments</FormLabel>;
+
+                    <FormDescription>;
+                      Define how changes to the contract are handled;
+                    </FormDescription>;
+                  </div>;
+
+
+    />;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+=======
+                </FormItem>)}
+            />;
+          </div>;
+        </FormItem>)}
+    />);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main
 }

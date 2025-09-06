@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import {formatDistanceToNow} from "date-fns";
@@ -33,6 +34,12 @@ import { ProfileBadge } from "@/components/profile/ProfileBadge",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 interface PostCardProps {
 
   post: ForumPost
@@ -41,6 +48,7 @@ interface PostCardProps {
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Card className={cn(;
       "transition-shadow hover: shadow-md";
@@ -54,6 +62,13 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       post.isPinned && "border-zion-purple/50",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+    <Card className={cn(
+
+
+>>>>>>> main
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -68,6 +83,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             </Link>
             {post.isAnswered && (
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
+<<<<<<< HEAD
             )}
             {post.isPinned && (
               <Pin className="h-4 w-4 text-amber-500 ml-2" />
@@ -84,6 +100,55 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
 <<<<<<< HEAD
 =======
+=======
+=======
+import {formatDistanceToNow} from "date-fns";
+import {Link} from "react-router-dom";
+import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {cn} from "@/lib/utils";
+import {ForumPost} from "@/types/community";
+import {ProfileBadge} from "@/components/profile/ProfileBadge";
+interface PostCardProps {;
+  post: ForumPost,;
+  compact?: boolean;
+}
+
+export const PostCard = ({ post, compact = false }: PostCardProps) => {;
+  const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
+
+  return (
+    <CardclassName={cn(
+      "transition-shadow hover: shadow-md"
+      post && post.isPinned && "border-zion-purple/50",
+      post && post.isFeatured && "bg-zion-purple/5"
+    )}>;
+      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
+        <Avatar className="h-10 w-10">;
+          <AvatarImage src={post && post.authorAvatar} />;
+          <AvatarFallback>{post && post.authorName.charAt(0)}</AvatarFallback>;
+        </Avatar>;
+        <div className="flex-1">;
+          <div className="flex items-center">;
+            <Link to={`/community/post/${post && post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">;
+              {post && post.title}
+            </Link>;
+            {post && post.isAnswered && (;
+              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            )}
+            {post && post.isPinned && (;
+              <Pin className="h-4 w-4 text-amber-500 ml-2" />;
+            )}
+            {post && post.isLocked && (;
+              <Lock className="h-4 w-4 text-red-500 ml-2" />;
+            )}
+
+
+>>>>>>> main
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
@@ -134,10 +199,16 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
                 {tag}
               </Badge>
             ))}
@@ -172,6 +243,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           </div>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </CardFooter>
     </Card>
   )
@@ -179,13 +251,153 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 export default PostCard;
 
 =======
+=======
+
+          </div>;
+          <div className="text-sm text-muted-foreground">;
+            Posted by {post && post.authorName} {timeAgo}
+          </div>;
+
+          <div className="flex flex-wrap gap-2 mt-2">;
+            {post && post.tags?.map(tag => (;
+              <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
+                {tag}
+              </Badge>;
+            ))}
+          </div>;
+        </div>;
+      </CardHeader>;
+
+      {!compact && (;
+        <CardContent>;
+          <div className="line-clamp-3">{post && post.content}</div>;
+        </CardContent>;
+      )}
+
+      <CardFooter className="flex justify-between">;
+        <div className="flex items-center gap-4">;
+          <div className="flex items-center gap-1">;
+            <Button variant="ghost" size="sm" className="px-2">;
+              <ThumbsUp className="h-4 w-4 mr-1" />;
+              <span>{post && post.upvotes}</span>;
+            </Button>;
+            <Button variant="ghost" size="sm" className="px-2">;
+              <ThumbsDown className="h-4 w-4 mr-1" />;
+              <span>{post && post.downvotes}</span>;
+            </Button>;
+          </div>;
+          <div className="flex items-center gap-1">;
+            <MessageSquare className="h-4 w-4" />;
+            <span className="text-sm">{post && post.replyCount} replies</span>;
+          </div>;
+        </div>;
+
+        {post && post.isFeatured && (;
+          <div>;
+            <Badge className="bg-zion-purple">Featured</Badge>;
+          </div>;
+        )}
+=======
+
+
+>>>>>>> main
       </CardFooter>;
     </Card>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default PostCard;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+export default PostCard;
+
+=======
+import { formatDistanceToNow } from './date - fns';
+import { Link } from './react-router-dom';
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from './lucide-react';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Button } from '@/components / ui / button';
+import { cn } from '@/lib / utils';
+import { ForumPost } from '@/types / community';
+import { ProfileBadge } from '@/components / profile / ProfileBadge';
+interface PostCardProps {
+  post: ForumPost,
+  compact?: boolean;
+}
+export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {
+  const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
+  return (
+    <Card className={cn (
+      "transition - shadow hover: shadow - md";
+      post.is_pinned && "border - zion - purple / 50",
+      post.is_featured && "bg - zion - purple / 5")}>;
+      <CardHeader className="flex flex - row items - start gap - 4 space - y-0">;
+        <Avatar className="h - 10 w - 10">;
+          <AvatarImage src={post.author_avatar} />;
+          <AvatarFallback>{post.author_name.char_at (0)}</AvatarFallback>;
+        </Avatar>;
+        <div className="flex - 1">;
+          <div className="flex items - center">;
+            <Link to={`/community / post/${post.id}`} className="font - semibold text - lg hover:text - zion - purple transition - colors">;
+              {post.title}
+            </Link>;
+            {post.is_answered && (
+              <CheckCircle className="h - 4 w - 4 text - green - 500 ml - 2" />)}
+            {post.is_pinned && (
+              <Pin className="h - 4 w - 4 text - amber - 500 ml - 2" />)}
+            {post.is_locked && (
+              <Lock className="h - 4 w - 4 text - red - 500 ml - 2" />)}
+          </div>;
+          <div className="text - sm text - muted - foreground">;
+            Posted by {post.author_name} {time_ago}
+          </div>;
+          <div className="flex flex - wrap gap - 2 mt - 2">;
+            {post.tags?.map (tag => (
+              <Badge key={tag} variant="outline" className="bg - zion - purple / 10 hover:bg - zion - purple / 20">;
+                {tag}
+              </Badge>))}
+          </div>;
+        </div>;
+      </CardHeader>;
+      {!compact && (
+        <CardContent>;
+          <div className="line - clamp - 3">{post.content}</div>;
+        </CardContent>)}
+      <CardFooter className="flex justify - between">;
+        <div className="flex items - center gap - 4">;
+          <div className="flex items - center gap - 1">;
+            <Button variant="ghost" size="sm" className="px - 2">;
+              <ThumbsUp className="h - 4 w - 4 mr - 1" />;
+              <span>{post.upvotes}</span>;
+            </Button>;
+            <Button variant="ghost" size="sm" className="px - 2">;
+              <ThumbsDown className="h - 4 w - 4 mr - 1" />;
+              <span>{post.downvotes}</span>;
+            </Button>;
+          </div>;
+          <div className="flex items - center gap - 1">;
+            <MessageSquare className="h - 4 w - 4" />;
+            <span className="text - sm">{post.reply_count} replies</span>;
+          </div>;
+        </div>;
+        {post.is_featured && (
+          <div>;
+            <Badge className="bg - zion - purple">Featured</Badge>;
+          </div>)}
+      </CardFooter>;
+    </Card>);
+}
+;
+export default PostCard;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

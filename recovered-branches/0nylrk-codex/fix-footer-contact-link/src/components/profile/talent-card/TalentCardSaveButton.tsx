@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from "react";
@@ -21,6 +22,12 @@ import { useToast } from "@/hooks/use-toast",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 interface TalentCardSaveButtonProps {
 
   profileId: string
@@ -29,6 +36,7 @@ interface TalentCardSaveButtonProps {
   onToggleSave?: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function TalentCardSaveButton({
   profileId
@@ -58,6 +66,14 @@ export function TalentCardSaveButton({
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved),
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+export function TalentCardSaveButton({ 
+
+
+>>>>>>> main
   // Handle save toggle
 
   const handleSaveToggle = (e: React.MouseEvent) => {
@@ -67,6 +83,7 @@ export function TalentCardSaveButton({
         title: "Authentication required"
         description: "Please log in to save talents to your favorites"
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
       });
       return
@@ -88,12 +105,27 @@ export function TalentCardSaveButton({
     
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+import React from "react";
+import {Heart} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useToast} from "@/hooks/use-toast";
+=======
+
+    
+
+>>>>>>> main
+=======
       }),
       return
 import React from "react",;
 import { Heart } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { useToast } from "@/hooks/use-toast",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 interface TalentCardSaveButtonProps {;
   profileId: string,;
   profileName: string,;
@@ -101,6 +133,10 @@ interface TalentCardSaveButtonProps {;
   onToggleSave?: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 ;
 export function TalentCardSaveButton({;
   profileId,;
@@ -114,11 +150,27 @@ export function TalentCardSaveButton({;
   // Handle save toggle;
   const handleSaveToggle = (e: React.MouseEvent) => {;
     e.stopPropagation(),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
     if (!isAuthenticated) {;
       toast({;
         title: "Authentication required",;
         description: "Please log in to save talents to your favorites",;
         variant: "destructive";
+<<<<<<< HEAD
+=======
+
+
+
+    setLocalIsSaved(!localIsSaved);
+    if (onToggleSave) {;
+      onToggleSave(profileId, !localIsSaved);
+    }
+
+=======
+>>>>>>> main
       }),;
       return;
     }
@@ -129,9 +181,15 @@ export function TalentCardSaveButton({;
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> main
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved 
@@ -140,19 +198,41 @@ export function TalentCardSaveButton({;
       variant: "default"
     })
   },
+<<<<<<< HEAD
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+    toast({;
+      title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
+      description: localIsSaved ;
+        ? `${profileName} has been removed from your favorites` ;
+        : `${profileName} has been added to your favorites`;
+      variant: "default";
+    });
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> main
   return (
     <button
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
       onClick={handleSaveToggle}
+<<<<<<< HEAD
       aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}
     >
+=======
+
+      aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}>;
+
+>>>>>>> main
       <Heart
         className={cn(
           "h-4 w-4 transition-colors"
 
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
+<<<<<<< HEAD
         )}
       />
     </button>
@@ -162,6 +242,16 @@ export function TalentCardSaveButton({;
 }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+        )} 
+      />;
+    </button>;
+  );
+=======
+
+
+>>>>>>> main
 =======
 ;
     toast({;
@@ -187,9 +277,81 @@ export function TalentCardSaveButton({;
     </button>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React from './react';
+import { Heart } from './lucide-react';
+import { cn } from '@/lib / utils';
+import { use_toast } from '@/hooks / use - toast';
+interface TalentCardSaveButtonProps {
+  profile_id: string,
+  profile_name: string,
+  is_saved: boolean,
+  onToggleSave?: (id: string, is_saved: boolean) => void,
+  is_authenticated: boolean;
+}
+export /**
+ * TalentCardSaveButton - Function description
+ */
+function TalentCardSaveButton() {
+  const { toast } = use_toast ();
+  const [localIsSaved, setLocalIsSaved] = React.useState (is_saved);
+;
+  // Handle save toggle;
+  const handleSaveToggle = (e: React.MouseEvent) =>: any {
+    e.stop_propagation (),
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",
+        variant: "destructive";
+      });
+      return;
+    }
+    setLocalIsSaved (!localIsSaved);
+    // Check condition
+if ( {) {
+  $2
+}
+      onToggleSave (profile_id, !localIsSaved);
+    }
+    toast ({
+      title: localIsSaved ? "Removed from favorites" : "Added to favorites",
+      description: localIsSaved;
+        ? `${profile_name} has been removed from your favorites`;
+        : `${profile_name} has been added to your favorites`;
+      variant: "default";
+    });
+  }
+;
+  return (
+    <button;
+      className="absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors";
+      on_click={handleSaveToggle}
+      aria - label={localIsSaved ? "Remove from favorites" : "Save to favorites"}
+    >;
+      <Heart;
+        className={cn (
+          "h - 4 w - 4 transition - colors",
+          localIsSaved ? "fill - red - 500 text - red - 500" : "text - zion - slate")}
+      />;
+    </button>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

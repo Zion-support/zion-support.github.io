@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 
 interface 5gsolutionsProps {
@@ -13,3 +15,5 @@ export default function 5gsolutions({ }: 5gsolutionsProps) {
   );
 }
 }
+
+

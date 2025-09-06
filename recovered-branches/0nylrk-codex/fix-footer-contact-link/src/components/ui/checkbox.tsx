@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 =======
@@ -10,13 +11,33 @@ import {Check} from 'lucide-react';
 <<<<<<< HEAD
 import {cn} from '@/lib/utils';
 =======
+=======
+import React from 'react';
+'use client';
+
+;
+
+import * as React from 'react';
+import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
+import {Check} from 'lucide-react';
+
+
+
+
+
+>>>>>>> main
 
 "use client"
 =======
 =======
 "use client"
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> main
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
@@ -25,6 +46,7 @@ import { Check } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
@@ -37,6 +59,59 @@ const Checkbox = React.forwardRef<
 =======
       "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const Checkbox = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+></typeof>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Root
+=======
+
+const Checkbox = React && React.forwardRef<;
+  React && React.ElementRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>;
+></typeof>(({ className, ...props }, ref) => (;
+  <CheckboxPrimitive&& CheckboxPrimitive.Root
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    ref={ref}
+    className={cn(
+
+Checkbox && Checkbox.displayName = CheckboxPrimitive && CheckboxPrimitive.Root.displayName;
+
+export { Checkbox };
+
+=======
+;
+import {cn} from '@/lib / utils';
+;
+const Checkbox = React.forward_ref<;
+  React.ElementRef < typeof CheckboxPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof CheckboxPrimitive.Root>;
+></typeof>(({ class_name, ...props }, ref) => (
+  <CheckboxPrimitive.Root;
+    ref={ref}
+    className={cn (
+      'peer h - 4 w - 4 shrink - 0 rounded - sm border border - primary ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 data-[state = checked]:bg - primary data-[state = checked]:text - primary - foreground',
+      class_name)}
+    {...props}
+  >;
+    <CheckboxPrimitive.Indicator;
+      className={cn ('flex items - center justify - center text - current')}
+    >;
+      <Check className='h - 3 w - 3' />;
+    </CheckboxPrimitive.Indicator>;
+  </CheckboxPrimitive.Root>));
+Checkbox.display_name = CheckboxPrimitive.Root.display_name;
+;
+export { Checkbox }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+
+>>>>>>> main
       className
     )}
     {...props}
@@ -47,6 +122,7 @@ const Checkbox = React.forwardRef<
       <Check className="h-3 w-3" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
+<<<<<<< HEAD
 <<<<<<< HEAD
 ));
 Checkbox.displayName = CheckboxPrimitive.Root.displayName;
@@ -67,3 +143,11 @@ export { Checkbox }
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+))
+Checkbox.displayName = CheckboxPrimitive.Root.displayName
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 require("@testing-library/jest-dom");
+=======
+
+
+import "@testing-library/jest-dom";
+
+
+
+>>>>>>> main
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -14,6 +23,7 @@ jest.mock("next/router", () => ({
       prefetch: jest.fn().mockResolvedValue(undefined)
       beforePopState: jest.fn()
       events: {
+<<<<<<< HEAD
 on: jest.fn()
         off: jest.fn()
         emit: jest.fn()
@@ -34,10 +44,73 @@ jest.mock("next/link", () => {
     return <a href={href} {...props}>{children}</a>;
   }
 });
+=======
+
+import "@testing-library/jest-dom";
+
+// Mock Next && Next.js router
+jest && jest.mock("next/router", () => ({
+  useRouter() {
+    return {
+      route: "/",
+      pathname: "/",
+      query: {},
+      asPath: "/",
+      push: jest && jest.fn(),
+      pop: jest && jest.fn(),
+      reload: jest && jest.fn(),
+      back: jest && jest.fn(),
+      prefetch: jest && jest.fn().mockResolvedValue(undefined),
+      beforePopState: jest && jest.fn(),
+      events: {
+        on: jest && jest.fn(),
+        off: jest && jest.fn(),
+        emit: jest && jest.fn(),
+=======
+
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+
+      },
+      isFallback: false,
+    };
+  },
+}));
+
+
+=======
+
+
+// Mock Next.js Image component
+jest.mock("next/image", () => {
+  const React = require("react");
+  return function MockImage({ src, alt, ...props }) {
+
+
+// Mock Next && Next.js Link component
+jest && jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+=======
+    return React.createElement("a", { href, ...props }, children);
+
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+});
+
+
+
+>>>>>>> main
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true
   value: jest.fn().mockImplementation(query => ({
+<<<<<<< HEAD
     matches: false
     media: query
     onchange: null
@@ -45,6 +118,17 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn()
     addEventListener: jest.fn()
     removeEventListener: jest.fn()
+=======
+
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+
+>>>>>>> main
     dispatchEvent: jest.fn()
   }))
 });
@@ -61,6 +145,7 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
+<<<<<<< HEAD
 };
 
 // Global test setup,
@@ -87,6 +172,31 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
+=======
+
+    return <img src={src} alt={alt} {...props} />;
+
+
+
+
+// Global test setup,
+=======
+}
+// Global test setup
+
+
+=======
+
+=======
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+beforeEach(() => {
+  jest.clearAllMocks();
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
     "media": query,
     "onchange": null,
     "addListener": jest.fn(), // deprecated
@@ -94,6 +204,7 @@ Object.defineProperty(window, 'matchMedia', {
     "addEventListener": jest.fn(),
     "removeEventListener": jest.fn(),
     "dispatchEvent": jest.fn()}))});
+<<<<<<< HEAD
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
 
 });
@@ -113,6 +224,47 @@ jest.mock("next/link", () => ({
 };
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
+=======
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+// Global test setup
+beforeEach(() => {
+  // Reset all mocks before each test
+  jest.clearAllMocks();
+
+
+
+});
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+});
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+});
+
+
+// Mock Next.js Link component
+
+jest.mock('next/link', () => ({
+  _esModule: true,
+  default: ({ children, href, ...props }) => {
+    return <a href={href} {...props}>{children}</a>;  },
+}));
+
+// Mock window.matchMedia,Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+>>>>>>> main
     matches: false,
     media: query,
     onchange: null,
@@ -120,7 +272,11 @@ jest.mock("next/link", () => ({
 removeListener: jest.fn(), // deprecated,
 addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
+<<<<<<< HEAD
 dispatchEvent: jest.fn()
+=======
+    dispatchEvent: jest.fn()
+>>>>>>> main
   }))
 }),
 // Mock IntersectionObserver,
@@ -147,3 +303,7 @@ beforeEach(() => {
 
 });
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

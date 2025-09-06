@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
@@ -146,6 +147,9 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               }
+=======
+}
+>>>>>>> main
               onClose(), // Close mobile menu on any click
             }}
           >
@@ -167,6 +171,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -176,3 +181,21 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+    name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
+}
+  );
+}
+
+
+
+name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
+}
+  );
+}
+
+}
+;
+>>>>>>> main

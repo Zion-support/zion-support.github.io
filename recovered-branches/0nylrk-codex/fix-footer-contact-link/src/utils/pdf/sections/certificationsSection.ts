@@ -1,24 +1,34 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addCertificationsSection(
 =======
+=======
+
+>>>>>>> main
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> main
   doc: jsPDF;
   certifications: Certification[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
+<<<<<<< HEAD
   if (certifications.length === 0) return startY;
   let yPos = startY;
   // Check if we need to add a new page
@@ -32,10 +42,32 @@ export function addCertificationsSection(;
   yPos += 8;
   doc.setDrawColor(colors.accent);
   doc.line(20, yPos, 80, yPos);
+=======
+  if (certifications && certifications.length === 0) return startY;
+  
+
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
+
+    doc && doc.addPage(),
+    yPos = 20
+  }
+  
+  doc && doc.setFontSize(16);
+  doc && doc.setTextColor(colors && colors.heading);
+  doc && doc.text('Certifications', 20, yPos);
+  yPos += 8;
+  
+  doc && doc.setDrawColor(colors && colors.accent);
+  doc && doc.line(20, yPos, 80, yPos);
+
+>>>>>>> main
   yPos += 8;
   for (const cert of certifications) {
     // Check if we need to add a new page
     if (yPos > 260) {
+<<<<<<< HEAD
       doc.addPage();
       yPos = 20
     }
@@ -100,8 +132,82 @@ export function addCertificationsSection(;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      doc && doc.addPage();
+      yPos = 20
+    }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
     }
     yPos += 16
   }
   return yPos
+<<<<<<< HEAD
+=======
+=======
+import {jsPDF} from 'jspdf';
+import {Certification} from '@/types / resume';
+import {PdfThemeColors} from '../theme_config';
+import {format_date} from '../formatters';
+export function addCertificationsSection (
+  doc: jsPDF;
+  certifications: Certification[];
+  colors: PdfThemeColors;
+  start_y: number): number {
+  // Check condition
+if (return start_y) {
+  $2
+}
+  let y_pos = start_y;
+;
+  // Check if we need to add a new page;
+  // Check condition
+if ( {) {
+  $2
+}
+    doc.add_page (),
+    y_pos = 20;
+  }
+  doc.setFontSize (16);
+  doc.setTextColor (colors.heading);
+  doc.text ('Certifications', 20, y_pos);
+  y_pos += 8;
+;
+  doc.setDrawColor (colors.accent);
+  doc.line (20, y_pos, 80, y_pos);
+  y_pos += 8;
+;
+  for (const cert of certifications) {
+    // Check if we need to add a new page;
+    // Check condition
+if ( {) {
+  $2
+}
+      doc.add_page ();
+      y_pos = 20;
+    }
+    doc.setFontSize (12);
+    doc.setTextColor (colors.subheading);
+    doc.text (cert.name, 20, y_pos);
+;
+    doc.setFontSize (11);
+    doc.setTextColor (colors.text);
+    doc.text (cert.issuing_organization, 20, y_pos + 5);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      const issue_date = format_date (cert.issue_date);
+      const expiration_text = cert.expiration_date ? ` - ${format_date (cert.expiration_date)}` : '';
+      doc.setFontSize (10);
+      doc.text (`${issue_date}${expiration_text}`, 20, y_pos + 10);
+    }
+    y_pos += 16;
+  }
+  return y_pos;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main
 }

@@ -11,6 +11,5 @@ export default function Partners({ }: PartnersProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
+
+

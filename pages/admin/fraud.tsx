@@ -1,26 +1,32 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-import React, { useEffect, useMemo, useState } from 'react';
-=======
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react',;
-;
-=======
-import React, { useEffect, useMemo, useState } from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
 interface FraudItem {
-<<<<<<< HEAD
-  id: string,
-  user_id: string | null,
-  source: string,
-  created_at: string,
-  heuristic: { reasons: string[], severity: string },
-  gpt?: { label: string, reason: string, confidence: number },
-  status: string;
-}
+
+
+export default function FraudAdminPage() {
+  const [items, setItems] = useState<FraudItem[]>([])
+  const [adminToken, setAdminToken] = useState<string>('')
+  const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
+  useEffect(() => {
+
+    const saved = localStorage.getItem('admin-token') || '';
+    setAdminToken(saved)
+  }, []);
+
+
+    const saved = localStorage.getItem('admin-token') |''
+    setAdminToken(saved)
+  }, [])
+  const fetchItems = async () => {
+    setLoading(true)
+    setError(null)
+    try {
+
+
+=======
 export default /**
  * FraudAdminPage - Function description
  */
@@ -45,56 +51,20 @@ function FraudAdminPage() {
       set_items (json.items || []);
     } catch (e: any) {
       set_error (e.message || 'Failed to load');
-=======
-
-  id: string
-  userId: string | null
-  source: string
-  createdAt: string
-  heuristic: { reasons: string[], severity: string }
-  gpt?: { label: string, reason: string, confidence: number }
-
-  status: string
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export default function FraudAdminPage() {
-<<<<<<< HEAD
-  const [items, setItems] = useState<FraudItem[]>([])
-  const [adminToken, setAdminToken] = useState<string>('')
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<string | null>(null)
-  useEffect(() => {
-
-    const saved = localStorage.getItem('admin-token') |''
-    setAdminToken(saved)
-  }, [])
-  const fetchItems = async () => {
-    setLoading(true)
-    setError(null)
-    try {
-      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} })
-      const json = await res.json()
-      if (!res.ok) throw new Error(json.error |'Failed to load')
-      setItems(json.items |[])
-    } catch (e: any) {
-      setError(e.message |'Failed to load')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
+
       set_loading (false);
+
     }
-<<<<<<< HEAD
+
     fetchItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken]);
+
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken);
-=======
-  }
-  useEffect(() => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken])
@@ -102,10 +72,9 @@ export default function FraudAdminPage() {
     localStorage.setItem('admin-token', adminToken)
     fetchItems()
   }
-<<<<<<< HEAD
-const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
 =======
-=======
+export default function FraudAdminPage() {
+
   const [items, setItems] = useState<FraudItem[]>([]);
   const [adminToken, setAdminToken] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
@@ -140,24 +109,14 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
     localStorage.setItem('admin-token', adminToken);
     fetchItems();
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST'
       headers: {
-<<<<<<< HEAD
-        'Content-Type': 'application/json'
-        ...(adminToken ? { 'x-admin-token': adminToken } : {})}
-      body: JSON.stringify({ fraudId: id, action })})
-    const json = await res.json()
-    if (res.ok) fetchItems()
-    else alert(json.error |'Action failed')
-  }
-<<<<<<< HEAD
-=======
 
-=======
+
         'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})
       },
@@ -167,8 +126,8 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
     if (res.ok) fetchItems();
     else alert(json.error || 'Action failed');
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -176,10 +135,8 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
-<<<<<<< HEAD
-          value={adminToken}
-          onChange={(e) => setAdminToken(e.target.value)}
-=======
+
+
           value={adminToken  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -190,26 +147,17 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
-<<<<<<< HEAD
-{loading && <div>Loading...</div>}
-      {error && <div className="text-red-600">{error}</div>}
-=======
-<<<<<<< HEAD
-      {loading && <div>Loading...</div>}
-      {error && <div className="text-red-600">{error}</div>}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 =======
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
@@ -221,12 +169,10 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -243,47 +189,36 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
           <tbody>
             {items.map((it) => (
               <tr key={it.id} className="border-t">
-<<<<<<< HEAD
-<td className="p-2 border">{it.userId |'—'}</td>
-=======
-<<<<<<< HEAD
-                <td className="p-2 border">{it.userId |'—'}</td>
-=======
+
+
                 <td className="p-2 border">{it.userId || '—'}</td>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
-<<<<<<< HEAD
-                    ))}
-=======
+
+
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </td>
                 <td className="p-2 border">
                   <div className="text-sm">
-<<<<<<< HEAD
-<div className="font-semibold">{it.gpt?.label |'—'}</div>
-=======
-<<<<<<< HEAD
-                    <div className="font-semibold">{it.gpt?.label |'—'}</div>
-=======
+
+
                     <div className="font-semibold">{it.gpt?.label || '—'}</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>
@@ -296,18 +231,16 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
                   </div>
                 </td>
               </tr>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            ))}
           </tbody>
         </table>
       </div>
     </div>
-<<<<<<< HEAD
-  )
+
+=======
 }
+
+=======
   },
   useEffect (() => {
     fetch_items (),
@@ -390,19 +323,14 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
       </div>;
     </div>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
   );
-<<<<<<< HEAD
-};
-=======
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,79 +1,130 @@
-<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-=======
-<<<<<<< HEAD
-import React from 'react',
-=======
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-export default function CareersPage() {
 
-  const openPositions = [
+import Head from 'next / head';
+import {motion} from 'framer-motion';
+import {Users, Rocket, Brain, Atom, Shield, Cloud, ArrowRight, MapPin, Clock, DollarSign, Star, Zap} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
+export default /**
+ * CareersPage - Function description
+ */
+function CareersPage() {
+  const open_positions = [;
+
     {
-<<<<<<< HEAD
-      title: "Senior AI Engineer"
-      department: "AI & Machine Learning"
-=======
+
+
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       location: "San Francisco, CA / Remote";
-      type: "Full-time"
-      experience: "5+ years"
+
+export default function CareersPage() {;
+  const openPositions = [;
+    {;
+      title: "Senior AI Engineer",;
+      department: "AI & Machine Learning",;
+      location: "San Francisco, CA / Remote";
+      type: "Full-time",;
+      experience: "5+ years",;
       salary: "$150,000 - $200,000";
-      description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients"
-      requirements: [
+      description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",;
+      requirements: [;
+
         "Advanced degree in Computer Science, AI, or related field";
         "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
         "Experience with large-scale AI model deployment";
-        "Strong background in machine learning algorithms"
+        "Strong background in machine learning algorithms";
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
-      icon: Brain
-      color: "from-purple-500 to-pink-500"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+      type: "Full - time",
+      experience: "5+ years",
+      salary: "$150, 000 - $200, 000";
+      description: "Lead the development of cutting - edge AI solutions and neural networks for enterprise clients",
+      requirements: [;
+        "Advanced degree in Computer Science, AI, or related field";
+        "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
+        "Experience with large - scale AI model deployment";
+        "Strong background in machine learning algorithms";
+      ];
+      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
+      icon: Brain,
+      color: "from - purple - 500 to - pink - 500";
+
     }
-    return this.props.children;
-  }
-}
-import React from 'react';
+    {
+      title: "Quantum Computing Researcher"
+      department: "Quantum Computing"
+      location: "San Francisco, CA / Remote";
+
+      icon: Brain,;
+      color: "from-purple-500 to-pink-500";
+    };
+    {;
+      title: "Quantum Computing Researcher",;
+      department: "Quantum Computing",;
+      location: "San Francisco, CA / Remote";
+      type: "Full-time",;
+      experience: "3+ years",;
+      salary: "$120,000 - $180,000";
+      description: "Research and develop quantum algorithms and quantum-resistant cryptography solutions",;
+      requirements: [;
+
+=======
       type: "Full - time",
       experience: "3+ years",
       salary: "$120, 000 - $180, 000";
       description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",
       requirements: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "PhD in Physics, Computer Science, or related field";
         "Experience with quantum computing frameworks (Qiskit, Cirq)";
         "Knowledge of quantum algorithms and cryptography";
         "Strong mathematical and analytical skills";
       ];
       benefits: ["Competitive salary", "Research funding", "Conference attendance", "Health insurance"];
+
       icon: Atom,
       color: "from - blue - 500 to - cyan - 500";
+
     }
     {
       title: "Cybersecurity Architect"
       department: "Cybersecurity"
       location: "San Francisco, CA / Remote";
+
       type: "Full - time",
       experience: "7+ years",
       salary: "$160, 000 - $220, 000";
@@ -87,11 +138,13 @@ import React from 'react';
       benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
       icon: Shield,
       color: "from - red - 500 to - orange - 500";
+
     }
     {
       title: "Cloud Infrastructure Engineer"
       department: "Cloud Infrastructure"
       location: "San Francisco, CA / Remote";
+
       icon: Atom,;
       color: "from-blue-500 to-cyan-500";
     };
@@ -123,11 +176,13 @@ import React from 'react';
       description: "Build and maintain scalable cloud infrastructure and DevOps automation systems",;
       requirements: [;
         "Bachelor's degree in Computer Science or related field",;
+
         "Expertise in AWS, Azure, or GCP";
         "Experience with Kubernetes, Docker, and CI/CD";
         "Strong knowledge of infrastructure as code";
       ];
       benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
+
       type: "Full - time",
       experience: "4+ years",
       salary: "$130, 000 - $180, 000";
@@ -141,11 +196,13 @@ import React from 'react';
       benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
       icon: Cloud,
       color: "from - emerald - 500 to - teal - 500";
+
     }
     {
       title: "Data Scientist"
       department: "Data Analytics"
       location: "San Francisco, CA / Remote";
+
       icon: Cloud,;
       color: "from-emerald-500 to-teal-500";
     };
@@ -158,12 +215,14 @@ import React from 'react';
       salary: "$110,000 - $160,000";
       description: "Develop predictive analytics models and data-driven insights for business clients",;
       requirements: [;
+
         "Master's degree in Data Science, Statistics, or related field";
         "Proficiency in Python, R, and SQL";
         "Experience with machine learning and statistical modeling";
         "Strong analytical and problem-solving skills";
       ];
       benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
+
       type: "Full - time",
       experience: "3+ years",
       salary: "$110, 000 - $160, 000";
@@ -177,11 +236,13 @@ import React from 'react';
       benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
       icon: Zap,
       color: "from - indigo - 500 to - purple - 500";
+
     }
     {
       title: "Product Manager"
       department: "Product"
       location: "San Francisco, CA / Remote";
+
       icon: Zap,;
       color: "from-indigo-500 to-purple-500";
     };
@@ -194,17 +255,21 @@ import React from 'react';
       salary: "$140,000 - $190,000";
       description: "Lead product strategy and development for our technology solutions portfolio",;
       requirements: [;
+
+=======
       type: "Full - time",
       experience: "5+ years",
       salary: "$140, 000 - $190, 000";
       description: "Lead product strategy and development for our technology solutions portfolio",
       requirements: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Bachelor's degree in Business, Engineering, or related field";
         "Experience in B2B SaaS or technology products";
         "Strong analytical and strategic thinking skills";
         "Excellent communication and leadership abilities";
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Professional development"];
+
       icon: Rocket,
       color: "from - yellow - 500 to - orange - 500";
     }
@@ -216,10 +281,12 @@ import React from 'react';
       description: "Above - market salaries with equity options and performance bonuses",
       icon: DollarSign,
       color: "from - green - 500 to - emerald - 500";
+
     }
     {
       title: "Health & Wellness"
       description: "Comprehensive health, dental, and vision insurance for you and your family";
+
       icon: Star,
       color: "from - blue - 500 to - cyan - 500";
     }
@@ -228,14 +295,17 @@ import React from 'react';
       description: "Remote work options and flexible hours to support work - life balance",
       icon: Clock,
       color: "from - purple - 500 to - pink - 500";
+
     }
     {
       title: "Professional Growth"
       description: "Continuous learning opportunities, conferences, and career development";
+
       icon: Rocket,;
       color: "from-yellow-500 to-orange-500";
     }
   ];
+
   const benefits = [;
     {;
       title: "Competitive Compensation",;
@@ -260,22 +330,28 @@ import React from 'react';
       description: "Continuous learning opportunities, conferences, and career development";
       icon: Rocket,;
       color: "from-orange-500 to-red-500";
+
     }
   ];
   return (
+
     <UltraAdvancedFuturisticBackground>;
       <div className="min-h-screen">;
         <Head>;
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />;
         </Head>;
+
       <EnhancedNavigation />;
+
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+
             transition={{ duration: 0 && 0.8 }}
             className="mb-8">;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
@@ -285,6 +361,7 @@ import React from 'react';
               Build the future of technology with cutting-edge AI, quantum computing, and cybersecurity solutions;
             </p>;
           </motion && motion.div>;
+
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -301,6 +378,8 @@ import React from 'react';
           </motion && motion.div>;
         </div>;
       </section>;
+
+
       {/* Benefits Section */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -309,16 +388,19 @@ import React from 'react';
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-6">Why Work at Zion Tech Group?</h2>;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
               We offer competitive benefits and a collaborative environment that fosters innovation and growth;
             </p>;
           </motion && motion.div>;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
                 key={benefit && benefit.title}
+
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -331,23 +413,18 @@ import React from 'react';
                 <p className="text-white/70">{benefit && benefit.description}</p>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
+
           </div>;
         </div>;
       </section>;
-=======
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
+
+
 =======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -356,20 +433,24 @@ import React from 'react';
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
               Join our team of innovators and help build the future of technology;
             </p>;
           </motion && motion.div>;
+
           <div className="space-y-6">;
             {openPositions && openPositions.map((position, index) => (;
               <motion&& motion.div
                 key={position && position.title}
+
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300">;
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">;
                   <div className="flex-1">;
@@ -382,7 +463,9 @@ import React from 'react';
                         <p className="text-white/70">{position && position.department}</p>;
                       </div>;
                     </div>;
+
                     <p className="text-white/80 mb-4">{position && position.description}</p>;
+
                     <div className="flex flex-wrap gap-4 mb-4">;
                       <div className="flex items-center gap-2 text-white/70">;
                         <MapPin className="w-4 h-4" />;
@@ -401,31 +484,38 @@ import React from 'react';
                         <span>{position && position.salary}</span>;
                       </div>;
                     </div>;
+
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>;
                       <ul className="space-y-1">;
                         {position && position.requirements.map((req, idx) => (;
                           <li key={idx} className="text-sm text-white/80 flex items-center">;
                             <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2" />;
+
                             {req}
                           </li>;
                         ))}
+
                       </ul>;
                     </div>;
+
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex-wrap gap-2">;
                         {position && position.benefits.map((benefit) => (;
                           <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">;
+
                             {benefit}
                           </span>;
                         ))}
-<<<<<<< HEAD
+
                       </div>;
                     </div>;
                   </div>;
+
                   <div className="lg:flex-shrink-0">;
                     <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">;
+=======
       icon: Rocket,
       color: "from - orange - 500 to - red - 500";
     }
@@ -478,36 +568,6 @@ import React from 'react';
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
-=======
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lg:flex-shrink-0">
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
-                      Apply Now
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text - center mb - 16";
@@ -613,10 +673,24 @@ import React from 'react';
                   </div>;
                   <div className="lg:flex - shrink - 0">;
                     <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - white transition - all duration - 300 transform hover:scale - 105">;
+
                       Apply Now;
                     </button>;
                   </div>;
                 </div>;
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* CTA Section */}
+      <section className="py-20 px-6">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className="text-4xl font-bold text-white mb-6">;
@@ -639,11 +713,13 @@ import React from 'react';
     </UltraAdvancedFuturisticBackground>;
   );
 };
+
       <EnhancedFooter />;
     </div>;
   );
 }
-<<<<<<< HEAD
+
+=======
               </motion.div>))}
           </div>;
         </div>;
@@ -680,14 +756,9 @@ import React from 'react';
       <EnhancedFooter />;
     </div>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
-      <EnhancedFooter />
-    </div>
-  )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

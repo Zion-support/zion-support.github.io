@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -17,6 +18,10 @@ export default defineConfig({;
   use:{;
     baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
     trace:'on-first-retry'}
+=======
+
+
+>>>>>>> main
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -31,6 +36,7 @@ export default defineConfig({;
       use:{;
         browserName:'webkit'}
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     {name:'Mobile Chrome';
       use:{;
@@ -133,6 +139,12 @@ import { defineConfig, devices } from '@playwright/test';  },
       use: {
         browserName: 'chromium';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+    {name:'Mobile Chrome';
+      use:{;
+        browserName:'chromium';
+>>>>>>> main
         ...devices['Pixel 5']}
     }
     {name:'Mobile Safari';
@@ -142,6 +154,7 @@ import { defineConfig, devices } from '@playwright/test';  },
     }
   ];
   reporter:[;
+<<<<<<< HEAD
 =======
 ]
 =======
@@ -219,13 +232,28 @@ import { defineConfig, devices } from '@playwright/test';
       use: {
         browserName: 'chromium'
         channel: 'chrome'
+=======
+    ['list'];
+
+    {
+      name: "Desktop Chrome"
+      use: {
+
+        browser_name: 'chromium',
+        channel: 'chrome';
+
+>>>>>>> main
 }
     }
     {
       name: "Desktop Firefox"
 
       use: {
+<<<<<<< HEAD
         browserName: 'firefox'
+=======
+        browser_name: 'firefox';
+>>>>>>> main
 }
     }
     {
@@ -233,20 +261,32 @@ import { defineConfig, devices } from '@playwright/test';
       name: "Desktop Safari"
 
       use: {
+<<<<<<< HEAD
         browserName: 'webkit'
+=======
+        browser_name: 'webkit';
+>>>>>>> main
 }
     }
     {
 
       name: "Mobile Chrome"
       use: {
+<<<<<<< HEAD
         browserName: 'chromium'
         ...devices['Pixel 5']
+=======
+
+        browser_name: 'chromium',
+        ...devices['Pixel 5'];
+
+>>>>>>> main
 }
     }
     {
       name: "Mobile Safari"
       use: {
+<<<<<<< HEAD
         browserName: 'webkit'
         ...devices['iPhone 12']
       }
@@ -268,3 +308,33 @@ import { defineConfig, devices } from '@playwright/test';
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+        browser_name: 'webkit',
+        ...devices['i_phone 12'];
+
+      }
+
+    }
+
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+});
+
+=======
+
+
+    ['list'];
+
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+});
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  ],
+  reporter: [;
+    ['list'],
+    ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> main

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface JobData {
 =======
 export interface JobData {;
@@ -25,6 +26,15 @@ export interface TalentProfile {
 
 export interface TalentProfile {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    min: number,
+    max: number;
+  }
+  deadline: string;
+
+}
+export interface TalentProfile {
+>>>>>>> main
   id: string;
   full_name: string;
   professional_title: string;
@@ -32,6 +42,7 @@ export interface TalentProfile {;
   skills: string[];
   years_experience: number;
 
+<<<<<<< HEAD
   hourly_rate?: number
 
   availability_type?: string
@@ -42,10 +53,18 @@ export interface TalentMatch {
 
 export interface TalentMatch {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  hourly_rate?: number,
+  availability_type?: string;
+
+}
+export interface TalentMatch {
+>>>>>>> main
   talent_id: string;
   job_id: string;
   match_score: number;
 
+<<<<<<< HEAD
   matched_skills: string[]
 
   created_at: string
@@ -111,3 +130,23 @@ export interface MatchResult {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  matched_skills: string[],
+  created_at: string;
+
+}
+export interface MatchResult {
+  talent_id: string;
+  score: number;
+
+  matched_skills: string[],
+  reason?: string;
+
+}
+=======
+
+
+export interface JobData {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

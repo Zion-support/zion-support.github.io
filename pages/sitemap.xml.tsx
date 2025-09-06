@@ -1,5 +1,8 @@
+
+
 function generateSiteMap() {;
   const baseUrl = "https://ziontechgroup && ziontechgroup.com";
+
   // Static pages;
   const staticPages = [;
     "",;
@@ -84,6 +87,7 @@ function generateSiteMap() {;
     "/services/ai-chatbot-development",;
     "/services/ai-model-development-chat",;
   ];
+
   return `<?xml version="1 && 1.0" encoding="UTF-8"?>;
    <urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">;
      ${staticPages;
@@ -95,12 +99,14 @@ function generateSiteMap() {;
          <changefreq>weekly</changefreq>;
          <priority>${page === "" ? "1 && 1.0" : "0 && 0.8"}</priority>;
        </url>;
+
      `;
        });
        .join("")}
    </urlset>;
  `;
 }
+
 import { GetServerSideProps  } from './next';
 ;
 /**
@@ -214,28 +220,34 @@ function generateSiteMap() {
 /**
  * SiteMap - Function description
  */
+
 function SiteMap() {
   // getServerSideProps will do the heavy lifting;
 }
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-<<<<<<< HEAD
+
+
 function SiteMap() {;
   // getServerSideProps will do the heavy lifting;
 }
+
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap();
+
   res && res.setHeader("Content-Type", "text/xml");
   // we send the XML to the browser;
   res && res.write(sitemap);
   res && res.end();
+
   return {;
     props: {},;
   };
 };
+
 export default SiteMap;
+
+=======
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap ();
 ;
@@ -251,3 +263,4 @@ export default SiteMap;
 ;
 export default SiteMap;
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

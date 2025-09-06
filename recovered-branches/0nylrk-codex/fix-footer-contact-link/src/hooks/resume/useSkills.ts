@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Skill  } from '@/types/resume';
@@ -8,13 +9,21 @@ import { useAuth  } from '@/hooks/useAuth';
 import { handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useSkills() {
 =======
+=======
+
+>>>>>>> main
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> main
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,11 +33,17 @@ export function useSkills() {;
       setError('You must be logged in to add skills')
       return false
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> main
 =======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -44,19 +59,30 @@ export function useSkills() {;
       setError('You must be logged in to add skills'),;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> main
     }
     
     setIsLoading(true),
     setError(null),
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
     try {
       const { error } = await supabase
         .from('resume_skills')
         .insert({
+<<<<<<< HEAD
 <<<<<<< HEAD
           resume_id: resumeId;
           name: skill.name;
@@ -66,6 +92,18 @@ export function useSkills() {;
         });
       if (error) throw error;
 =======
+=======
+
+          name: skill && skill.name;
+          proficiency: skill && skill.proficiency;
+          category: skill && skill.category,
+          years_experience: skill && skill.years_experience
+
+        });
+      if (error) throw error;
+=======
+
+>>>>>>> main
           resume_id: resumeId,
           name: skill.name,
           proficiency: skill.proficiency,
@@ -75,12 +113,18 @@ export function useSkills() {;
       
       if (error) throw error,
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -94,6 +138,11 @@ export function useSkills() {;
     setError(null);
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> main
 =======
 ;
     setIsLoading(true),;
@@ -121,33 +170,54 @@ export function useSkills() {;
       setError('You must be logged in to delete skills'),;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> main
     }
     
     setIsLoading(true),
     setError(null),
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
     try {
       const { error } = await supabase
         .from('resume_skills')
         .delete()
 <<<<<<< HEAD
+<<<<<<< HEAD
         .eq('id', skillId);
       if (error) throw error;
 =======
+=======
+
+
+>>>>>>> main
         .eq('id', skillId),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+>>>>>>> main
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -178,12 +248,42 @@ export function useSkills() {;
     } finally {;
       setIsLoading(false);
     }
+=======
+
+
+
+
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {Skill} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+import {handleResumeError, showSuccessToast} from './useResumeUtils';
+export /**
+ * use_skills - Function description
+ */
+function use_skills() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const add_skill = async (resume_id: string, skill: Skill): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to add skills'),
+      return false;
+    }
+
+>>>>>>> main
   },;
   return {;
     isLoading,;
     error;
     addSkill;
     deleteSkill;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -192,3 +292,72 @@ export function useSkills() {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+    try {
+      const { error } = await supabase;
+        .from ('resume_skills');
+        .insert ({
+          resume_id: resume_id;
+          name: skill.name;
+          proficiency: skill.proficiency;
+          category: skill.category,
+          years_experience: skill.years_experience;
+        });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      return showSuccessToast ("Skill added", "Your skill has been added to your resume");
+    } catch (e: any) {
+      return handleResumeError (e, 'Could not add skill');
+    } finally {
+      setIsLoading (false);
+    }
+  }
+;
+  const delete_skill = async (skill_id: string): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to delete skills'),
+      return false;
+    }
+    setIsLoading (true);
+    set_error (null);
+;
+    try {
+      const { error } = await supabase;
+        .from ('resume_skills');
+        .delete ();
+        .eq ('id', skill_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      return showSuccessToast ("Skill deleted", "Your skill has been removed from your resume");
+    } catch (e: any) {
+      return handleResumeError (e, 'Could not delete skill');
+    } finally {
+      setIsLoading (false);
+    }
+  }
+;
+  return {
+    is_loading;
+    error;
+    add_skill;
+    delete_skill;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+}
+>>>>>>> main

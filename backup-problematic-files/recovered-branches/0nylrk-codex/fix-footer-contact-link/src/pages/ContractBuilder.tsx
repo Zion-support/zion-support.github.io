@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-import {SEO} from '@/components/SEO';
-import {AppHeader} from '@/layout/AppHeader';
-import {Footer} from '@/components/Footer';
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-import {ContractBuilderContent} from '@/components/contracts/page/ContractBuilderContent';
-function ContractBuilderPage() {;
-  return (
-    <ProtectedRoute>;
-      <>;
-        <SEO
-          title="Smart Contract Builder | Zion AI Marketplace" 
-          description="Create and deploy blockchain-backed smart contracts for your projects"
-        />;
-        <AppHeader />;
-        <main className="container mx-auto py-10 px-4">;
-          <ContractBuilderContent />;
-        </main>;
-        <Footer />;
-      </>;
-    </ProtectedRoute>;
-  );
-}
-export default ContractBuilderPage;
-import React from 'react';
-import {SEO} from '@/components / SEO';
-import {AppHeader} from '@/layout / AppHeader';
-import {Footer} from '@/components / Footer';
-import {ProtectedRoute} from '@/components / ProtectedRoute';
-import {ContractBuilderContent} from '@/components / contracts / page / ContractBuilderContent';
-/**
- * ContractBuilderPage - Function description
- */
-function ContractBuilderPage() {
-  return (
-    <ProtectedRoute>;
-      <>;
-        <SEO;
-          title="Smart Contract Builder | Zion AI Marketplace";
-          description="Create and deploy blockchain - backed smart contracts for your projects";
-        />;
-        <AppHeader />;
-        <main className="container mx - auto py - 10 px - 4">;
-          <ContractBuilderContent />;
-        </main>;
-        <Footer />;
-      </>;
-    </ProtectedRoute>);
-}
-export default ContractBuilderPage;
-;
-=======
 
 import React from 'react',;
 import { SEO } from '@/components/SEO',;
@@ -79,4 +27,3 @@ function ContractBuilderPage() {;
 }
 ;
 export default ContractBuilderPage,; <ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects" /> <AppHeader /> <main className="container mx-auto py-10 px-4" > <ContractBuilderContent /> </main> <Footer /> </> </ProtectedRoute> export default ContractBuilderPage;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

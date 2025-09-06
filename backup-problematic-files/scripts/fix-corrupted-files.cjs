@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -315,7 +313,6 @@ filesToFix.forEach(({ "path": filePath, content }) => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -336,9 +333,6 @@ const filesToFix = [{ "path"}]
 <<<<<<< HEAD
   { "path"}
 =======
-<<<<<<< HEAD
-  { "path"}
-=======
   { "path"}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -346,4 +340,3 @@ const filesToFix = [{ "path"}]
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

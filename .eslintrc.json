@@ -1,27 +1,12 @@
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-=======
-<<<<<<< HEAD
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  "extends": [
-    "next/core-web-vitals",
-    "@typescript-eslint/recommended"
-  ],
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
+
     "es2021": true
   },
   "globals": {
@@ -31,30 +16,19 @@
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
+
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   },
   "ignorePatterns": [
     "node_modules/",
@@ -127,14 +101,9 @@
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
+
     "pages.disabled_auto/"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   ]
 }

@@ -1,22 +1,32 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { TALENT_PROFILES  } from '@/data/talentData';
 import { TalentProfile } from '@/types/talent';
 export function useTalentData() {
 =======
+=======
+
+>>>>>>> main
 import {useState} from 'react';
 import {TALENT_PROFILES} from '@/data/talentData';
 import {TalentProfile} from '@/types/talent';
 export function useTalentData() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> main
   const [isLoading, setIsLoading] = useState(false);
 
   const [talents] = useState<TalentProfile[]>(TALENT_PROFILES);
 
   // In a real app, we would fetch data from an API here
   // For now, we'll just return our mock data
+<<<<<<< HEAD
   return {
     talents;
     isLoading
@@ -37,5 +47,29 @@ export function useTalentData() {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+import {useState} from 'react';
+import {TALENT_PROFILES} from '@/data / talent_data';
+import {TalentProfile} from '@/types / talent';
+export /**
+ * useTalentData - Function description
+ */
+function useTalentData() {
+  const [is_loading, setIsLoading] = useState (false);
+  const [talents] = useState < TalentProfile[]>(TALENT_PROFILES);
+;
+  // In a real app, we would fetch data from an API here;
+  // For now, we'll just return our mock data;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return {
+    talents;
+
+    isLoading;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   }
 }

@@ -166,22 +166,11 @@ h2 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-weight: 700;
-}
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-weight: 700;}
-
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-weight: 700;
-
 /* Line Clamp Utilities */
 .line-clamp-1 {
   overflow: hidden;
@@ -233,10 +222,8 @@ body {
   color: white;
   overflow-x: hidden;
   position: relative;
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b6e9
 }
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 =======
@@ -276,7 +263,6 @@ h3 {
   font-weight: 700;}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 /* Futuristic font for special elements */
 .futuristic-font {

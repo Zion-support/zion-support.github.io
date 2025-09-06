@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +68,19 @@ export default function Jest.setup({ }: Jest.setupProps) {
 }}},;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}}}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+}}}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

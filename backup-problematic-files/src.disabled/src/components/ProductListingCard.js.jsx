@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-;,"});"})"; """
-;,"});"})"; """
-=======
 import React from 'react';
 
 const ProductListingCard.js = ({ className }) => {
@@ -14,4 +10,3 @@ const ProductListingCard.js = ({ className }) => {
 };
 
 export default ProductListingCard.js;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

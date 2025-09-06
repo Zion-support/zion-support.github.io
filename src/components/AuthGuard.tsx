@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       const redirectTo = options?.redirectTo || '/login'
       const returnUrl = options?.returnUrl || router.asPath
@@ -33,6 +34,9 @@ interface AuthGuardProps {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
       const redirectTo = options?.redirectTo |'/login'
+=======
+const redirectTo = options?.redirectTo |'/login'
+>>>>>>> main
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
@@ -43,13 +47,23 @@ interface AuthGuardProps {;
     user
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     isLoading}
 }
 =======
+=======
+
+
+      const redirectTo = options?.redirectTo || '/login';
+      const returnUrl = options?.returnUrl || router && router.asPath;
+          if (!requireAuth({ showToast: false })) return false,;
+
+>>>>>>> main
   useEffect(() => {
     // Don't redirect while auth is still loading
     if (isLoading) return,
 
+<<<<<<< HEAD
     // If authentication is required but user is not authenticated
     if (requireAuth && !isAuthenticated && !allowGuest) {
       if (showToast) {
@@ -278,13 +292,40 @@ export function useAuthGuard() {;
     requireAuth,;
     requireRole,;
     checkPermission,;
+=======
+    const userRoles = user?.role ? [user && user.role] : [];
+
+    requireAuth;
+    requireRole;
+    checkPermission;
+>>>>>>> main
     isAuthenticated;
     user;
     isLoading}
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+      const redirect_to = options?.redirect_to || '/login';
+      const return_url = options?.return_url || router.as_path;
+          if () return false, ) {
+  $2
+}
+    const user_roles = user?.role ? [user.role] : [];
+    require_auth;
+    require_role;
+    check_permission;
+    is_authenticated;
+    user;
+    is_loading}
+}
+;
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages-disabled/quantum-logistics.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -73,6 +74,8 @@ if (return null) {
       </div>;
     </UltraFuturisticBackground>);
 =======
+=======
+>>>>>>> main
 import React from 'react',
 import Head from 'next/head',
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react',
@@ -125,6 +128,9 @@ export default function ApiObservabilityPage() {
       </div>
     </UltraFuturisticBackground>
   )
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/pages-disabled/quantum-logistics.tsx
+=======
+>>>>>>> main
 }
 ;

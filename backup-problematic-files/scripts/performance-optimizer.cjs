@@ -3,16 +3,12 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require('child_process');
+
 class PerformanceOptimizer {
   constructor() {
-<<<<<<< HEAD
-=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
@@ -72,24 +68,23 @@ const { execSync } = require('child_process');
 class PerformanceOptimizer {
   constructor() {
 >>>>>>> origin/automation-improvements-final
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     this.optimizations = [];
     this.logFile = path.join(__dirname, '..', 'logs', 'performance-optimizer.log');
     this.ensureLogDirectory();
   }
+
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
+
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -98,11 +93,9 @@ class PerformanceOptimizer {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
+
   async optimizePerformance() {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -161,15 +154,18 @@ class PerformanceOptimizer {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     try {
       this.log('Starting performance optimization...');
+      
       // Analyze bundle size
       const bundleAnalysis = this.analyzeBundleSize();
+      
       // Optimize images
       const imageOptimization = this.optimizeImages();
+      
       // Check for unused dependencies
       const dependencyAnalysis = this.analyzeDependencies();
+      
       // Generate optimization report
       const report = {
         timestamp: new Date().toISOString(),
@@ -178,6 +174,7 @@ class PerformanceOptimizer {
         dependencies: dependencyAnalysis,
         recommendations: this.generateRecommendations()
       };
+      
       this.saveReport(report);
       this.log('Performance optimization completed');
       return report;
@@ -186,6 +183,7 @@ class PerformanceOptimizer {
       return null;
     }
   }
+
   analyzeBundleSize() {
     try {
       // Check if dist directory exists
@@ -193,15 +191,19 @@ class PerformanceOptimizer {
       if (!fs.existsSync(distPath)) {
         return { error: 'Build directory not found. Run npm run build first.' };
       }
+
       const files = this.getFilesRecursively(distPath);
       let totalSize = 0;
       let gzippedSize = 0;
+      
       files.forEach(file => {
         const stats = fs.statSync(file);
         totalSize += stats.size;
+        
         // Estimate gzipped size (roughly 30% of original)
         gzippedSize += Math.floor(stats.size * 0.3);
       });
+
       return {
         totalSize: this.formatBytes(totalSize),
         gzippedSize: this.formatBytes(gzippedSize),
@@ -212,22 +214,24 @@ class PerformanceOptimizer {
       return { error: error.message };
     }
   }
+
   getFilesRecursively(dir) {
     let files = [];
     const items = fs.readdirSync(dir);
+    
     items.forEach(item => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+      
       if (stat.isDirectory()) {
         files = files.concat(this.getFilesRecursively(fullPath));
       } else {
         files.push(fullPath);
       }
     });
+    
     return files;
   }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -265,7 +269,6 @@ const path = require('path')
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
@@ -275,43 +278,55 @@ const path = require('path')
   }
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
+
   getBundleRecommendations(totalSize, fileCount) {
     const recommendations = [];
+    
     if (totalSize > 1024 * 1024) { // > 1MB
       recommendations.push('Consider code splitting to reduce initial bundle size');
     }
+    
     if (fileCount > 50) {
       recommendations.push('Consider consolidating small files');
     }
+    
     recommendations.push('Enable gzip compression on your server');
     recommendations.push('Use CDN for static assets');
+    
     return recommendations;
   }
+
   optimizeImages() {
     try {
       const publicPath = path.join(__dirname, '..', 'public');
       if (!fs.existsSync(publicPath)) {
         return { error: 'Public directory not found' };
       }
+
       const imageFiles = this.getImageFiles(publicPath);
       let totalSize = 0;
       let optimizedCount = 0;
+      
       imageFiles.forEach(file => {
         const stats = fs.statSync(file);
         totalSize += stats.size;
+        
         // Check if image is already optimized (WebP, compressed)
         if (file.endsWith('.webp') || file.endsWith('.avif')) {
           optimizedCount++;
         }
       });
+
       return {
         totalImages: imageFiles.length,
         optimizedImages: optimizedCount,
         totalSize: this.formatBytes(totalSize),
         recommendations: this.getImageRecommendations(imageFiles)
       };
+      
       checkDirectory(srcDir);
       checkDirectory(pagesDir);
+      
       this.results.codeSplitting = {
         success: true,
         dynamicImports,
@@ -322,32 +337,42 @@ const path = require('path')
       return { error: error.message };
     }
   }
+
   getImageFiles(dir) {
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif', '.svg'];
     const files = this.getFilesRecursively(dir);
+    
     return files.filter(file => {
     const ext = path.extname(file).toLowerCase(),
     return imageExtensions.includes(ext)
   });
   }
+
   getImageRecommendations(imageFiles) {
     const recommendations = [];
+    
     const unoptimizedImages = imageFiles.filter(file => 
       !file.endsWith('.webp') && !file.endsWith('.avif')
     );
+    
     if (unoptimizedImages.length > 0) {
       recommendations.push(`Convert ${unoptimizedImages.length} images to WebP format`);
     }
+    
     recommendations.push('Use responsive images with srcset');
     recommendations.push('Implement lazy loading for images');
+    
     return recommendations;
   }
+
   analyzeDependencies() {
     try {
       const packageJsonPath = path.join(__dirname, '..', 'package.json');
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+      
       const dependencies = Object.keys(packageJson.dependencies || {});
       const devDependencies = Object.keys(packageJson.devDependencies || {});
+      
       return {
         totalDependencies: dependencies.length + devDependencies.length,
         productionDependencies: dependencies.length,
@@ -359,9 +384,11 @@ const path = require('path')
       return { error: error.message };
     }
   }
+
   findUnusedDependencies(dependencies) {
     // This is a simplified check - in a real scenario, you'd use tools like depcheck
     const potentiallyUnused = [];
+    
     // Check for common unused dependencies
     const commonUnused = ['lodash', 'moment', 'jquery'];
     commonUnused.forEach(dep => {
@@ -369,20 +396,27 @@ const path = require('path')
         potentiallyUnused.push(dep);
       }
     });
+    
     return potentiallyUnused;
   }
+
   getDependencyRecommendations(dependencies, devDependencies) {
     const recommendations = [];
+    
     if (dependencies.length > 20) {
       recommendations.push('Consider removing unused dependencies to reduce bundle size');
     }
+    
     if (devDependencies.length > 30) {
       recommendations.push('Review dev dependencies for unused packages');
     }
+    
     recommendations.push('Use npm audit to check for security vulnerabilities');
     recommendations.push('Consider using lighter alternatives for heavy dependencies');
+    
     return recommendations;
   }
+
   generateRecommendations() {
     return [
       'Implement code splitting for better performance',
@@ -397,18 +431,22 @@ const path = require('path')
       'Implement proper error boundaries'
     ];
   }
+
   saveReport(report) {
     const reportFile = path.join(__dirname, '..', 'logs', 'performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Performance report saved to: ${reportFile}`);
   }}
+
 ;  async checkCaching() {
     try {
       // Check Next.js caching configuration
       const nextConfigPath = path.join(__dirname, '..', 'next.config.js');
       const nextConfig = fs.readFileSync(nextConfigPath, 'utf8');
+      
       const hasCaching = nextConfig.includes('cache') || nextConfig.includes('Cache');
       const hasImageOptimization = nextConfig.includes('images');
+      
       this.results.caching = {
         success: true,
         hasCaching,
@@ -422,6 +460,7 @@ const path = require('path')
     }
   }
 }
+
 // Run the optimizer
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report => {
@@ -441,9 +480,6 @@ optimizer.optimizePerformance().then(report => {
 }).catch(error => {
   console.error('Error running performance optimizer:', error.message);
   process.exit(1);
-<<<<<<< HEAD
-});
-=======
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -775,4 +811,3 @@ optimizer.run().catch(console.error)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

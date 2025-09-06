@@ -2,8 +2,6 @@
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,7 +77,6 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs')
 console.log(' Applying final ultimate fixes...')
@@ -117,9 +114,6 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
   .replace(/"isAuthenticated": tru e/g, '"isAuthenticated")
   .replace(/isLoading: fals e/g, '"isLoading")
 <<<<<<< HEAD
-  .replace(/user: nul l/g, '"user")
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   .replace(/user: nul l/g, '"user")
@@ -141,4 +135,3 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

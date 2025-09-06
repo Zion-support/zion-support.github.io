@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:hooks/useAutoTranslate.ts
 <<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
@@ -57,22 +58,43 @@ export type UseAutoTranslateResult = {
 =======
 export type UseAutoTranslateResult = {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+=======
+
+
+import { useEffect, useMemo, useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts
+import { translateTextViaAI } from '../utils/translation';
+
+export type UseAutoTranslateResult = {;
+
+>>>>>>> main
   translations: Record<string, string>;
   loading: boolean;
   error?: string;
 }
 export function useAutoTranslate(
 <<<<<<< HEAD
+<<<<<<< HEAD
   text: string
   targets: string[]
   debounceMs = 600
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
 =======
+=======
+
+>>>>>>> main
   text: string,
   targets: string[],
   debounceMs = 600;
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> main
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -105,6 +127,7 @@ export function useAutoTranslate(
   }, [key, debounceMs]);
 
   return { translations, loading, error }
+<<<<<<< HEAD
 <<<<<<< HEAD:hooks/useAutoTranslate.ts
     }
   }, [key, debounceMs]);
@@ -113,4 +136,9 @@ export function useAutoTranslate(
 =======
 }
 >>>>>>> main:hooks/useAutoTranslate.ts
+=======
+
+}
+
+>>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts

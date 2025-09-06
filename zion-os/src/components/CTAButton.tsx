@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -9,18 +9,6 @@ interface CTAButtonProps {
   children: ReactNode,
   class_name?: string,
   on_click?: () => void;
-=======
-<<<<<<< HEAD
-"use client";
-import Link from "next/link";
-import { ReactNode } from "react";
-interface CTAButtonProps {href: string;
-  variant?: "primary" | "secondary" | "outline";
-  size?: "small" | "medium" | "large";
-  children: ReactNode;
-  className?: string;
-  onClick?: () => void;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export /**
  * CTAButton - Function description
@@ -39,9 +27,13 @@ function CTAButton() {
   }
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;
   return (
+
     <Link;
       href={href}
 =======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -77,7 +69,7 @@ export function CTAButton({;
   return (;
     <Link;
       href={href} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       className={classes}
       on_click={on_click}
       role="button";

@@ -1,5 +1,3 @@
-<<<<<<< HEAD:deployments/deployment-2025-09-04T07-04-19-733Z/next.config.cjs
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -22,7 +20,6 @@ const nextConfig = { reactStrictMode: true,"" outputFileTracingRoot: "/workspace
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/deployments/deployment-2025-09-04T07-04-19-733Z/next.config.cjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
   "reactStrictMode": true,
@@ -67,8 +64,6 @@ const nextConfig = {}
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
         ];
       },
-<<<<<<< HEAD:deployments/deployment-2025-09-04T07-04-19-733Z/next.config.cjs
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -99,7 +94,6 @@ const nextConfig = {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/deployments/deployment-2025-09-04T07-04-19-733Z/next.config.cjs
       {}
         "source": '/public/(.*)',
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
@@ -107,9 +101,6 @@ const nextConfig = {}
       };
     ]};
 };
-<<<<<<< HEAD:deployments/deployment-2025-09-04T07-04-19-733Z/next.config.cjs
-module.exports = nextConfig;
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -144,4 +135,3 @@ module.exports = nextConfig;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/deployments/deployment-2025-09-04T07-04-19-733Z/next.config.cjs

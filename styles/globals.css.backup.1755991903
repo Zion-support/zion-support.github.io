@@ -352,8 +352,6 @@ body::after {
 }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -372,7 +370,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 @keyframes particleFloat {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-100px); }
@@ -797,11 +794,6 @@ body::after {
     color: black;
   }
 <<<<<<< HEAD
-
-}
-}
-=======
-<<<<<<< HEAD
 }
 =======
 /* Advanced Holographic Effects */
@@ -826,7 +818,6 @@ body::after {
 }
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 @keyframes holographicShift {
   0%, 100% { 
@@ -1217,9 +1208,6 @@ body::after {
   0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
   100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
 }
-<<<<<<< HEAD
-
-=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
 <<<<<<< HEAD
 =======
@@ -1235,4 +1223,3 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

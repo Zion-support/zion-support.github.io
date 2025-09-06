@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TenantInfo {
 =======
 export interface TenantInfo {;
@@ -66,3 +67,21 @@ export interface TenantResponse {
 }
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    subtitle: string,
+    cta: string;
+  }
+  is_active: boolean;
+}
+export interface TenantResponse {
+  tenant: TenantInfo | null,
+  error?: string;
+
+}
+=======
+
+
+export interface TenantInfo {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

@@ -1,21 +1,32 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
 <<<<<<< HEAD
 import {cn} from '@/lib/utils';
 =======
+=======
+
+
+>>>>>>> main
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 =======
 =======
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> main
 
 import { cn } from "@/lib/utils"
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
@@ -29,10 +40,39 @@ const Separator = React.forwardRef<
     ref
   ) => (
     <SeparatorPrimitive.Root
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const Separator = React.forwardRef<
+  React.ElementRef<typeof SeparatorPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+></typeof>(
+  (
+
+
+    { className, orientation = "horizontal", decorative = true, ...props },
+
+
+    ref
+  ) => (
+    <SeparatorPrimitive.Root
+=======
+
+const Separator = React && React.forwardRef<;
+  React && React.ElementRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>;
+></typeof>(;
+  (;
+    { className, orientation = 'horizontal', decorative = true, ...props },;
+    ref;
+  ) => (;
+    <SeparatorPrimitive&& SeparatorPrimitive.Root
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> main
       ref={ref}
       decorative={decorative}
       orientation={orientation}
       className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
         'shrink-0 bg-border'
         orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]'
@@ -62,3 +102,56 @@ export { Separator }
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+        "shrink-0 bg-border",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+
+
+        className
+      )}
+      {...props}
+    />;
+  );
+);
+
+Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
+=======
+
+export { Separator }
+;
+
+=======
+
+
+export { Separator };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import * as SeparatorPrimitive from '@radix - ui / react - separator';
+;
+import {cn} from '@/lib / utils';
+;
+const Separator = React.forward_ref<;
+  React.ElementRef < typeof SeparatorPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof SeparatorPrimitive.Root>;
+></typeof>(
+  (
+    { class_name, orientation = 'horizontal', decorative = true, ...props },
+    ref) => (
+    <SeparatorPrimitive.Root;
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn (
+        'shrink - 0 bg - border',
+        orientation === 'horizontal' ? 'h-[1px] w - full' : 'h - full w-[1px]',
+        class_name)}
+      {...props}
+    />));
+Separator.display_name = SeparatorPrimitive.Root.display_name;
+;
+export { Separator }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

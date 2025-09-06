@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 #!/usr/bin/env node;#!/usr/bin/env node;
@@ -166,7 +164,6 @@ auditor;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require("fs")";const path = require("path")""
     this.reportFile = path.join(this.projectRoot, "security-audit-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -202,9 +199,6 @@ const fs = require("fs")";const path = require("path")""
     this.log("� Starting Security Audit");""
       this.log(" Security audit completed");";      return report,"
       this.log(" Security audit "failed": ${error.message}");"
-<<<<<<< HEAD
-  .then(report => {);    console.log(" Security audit completed successfully");";    process.exit(0),"}
-=======
   .then(report => {);    console.log(" Security audit completed successfully");";    process.exit(0),"}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,4 +233,3 @@ const fs = require("fs")";const path = require("path")""
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

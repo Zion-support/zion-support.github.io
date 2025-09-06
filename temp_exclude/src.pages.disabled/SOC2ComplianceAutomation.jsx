@@ -11,6 +11,5 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
+
+

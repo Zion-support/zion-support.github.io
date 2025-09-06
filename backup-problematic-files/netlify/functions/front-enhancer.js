@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:netlify/functions/front-enhancer.js
 =======
 <<<<<<< HEAD:backup-problematic-files/netlify/functions/front-enhancer.js
@@ -34,6 +35,10 @@ exports.handler = async () => {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/front-enhancer.js
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/front-enhancer.js
+=======
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -70,6 +75,7 @@ exports.handler = async () => {
   );
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+<<<<<<< HEAD
 <<<<<<< HEAD:netlify/functions/front-enhancer.js
   return { statusCode: 200, body: logs.join('\n') }
 };function runNode(relPath, args = []) {
@@ -100,6 +106,9 @@ exports.handler = async () => {
 }
 
 =======
+=======
+
+>>>>>>> main
 
   return { statusCode: 200, body: logs.join('\n') };
 };function runNode(relPath, args = []) {
@@ -111,6 +120,7 @@ exports.handler = async () => {
 exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -143,4 +153,9 @@ exports.handler = async () => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/front-enhancer.js
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/front-enhancer.js
+=======
+
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

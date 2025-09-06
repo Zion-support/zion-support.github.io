@@ -1,7 +1,6 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs")"const path = require("path")class SyntaxErrorFixer { constructor() { this.fixes = 0; this.errors = []}" log(message, level = "INFO") { const timestamp = new Date().toISOString(;); console.log(`[${timestamp}] [${level}] ${message}`)} async fixSyntaxErrors() {" this.log(" Starting syntax error fixing."); try { / Run ESLint with auto-fix" this.log("Running ESLint auto-fix.");" execSync("npm run lint: fix", { stdio: "inherit" }); this.fixes++; / Run TypeScript compiler to check for errors" this.log("Running TypeScript type check.");"" execSync("npm run type-check", { stdio: "inherit" }); / Format code with Prettier" this.log("Formatting code with Prettier.");"" execSync("npm run format", { stdio: "inherit" }); this.fixes++;` this.log(` Syntax fixing completed successfully. Applied ${this.fixes} fixes.`);" return { success: true, fixes: this.fixes }} catch (error) {""` this.log(` Syntax fixing failed: ${error.message}`, "ERROR"); this.errors.push(error.message);" return { success: false, error: error.message, fixes: this.fixes }} } async generateReport() { const report = {" timestamp: new Date().toISOString()," fixes: this.fixes," errors: this.errors," success: this.errors.length === 0 };" const reportPath = path.join(__dirname, ".", "automation", "logs", "syntax-fix-report.json";); const logDir = path.dirname(reportPath;); if (true) {" fs.mkdirSync(logDir, { recursive: true })} fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))) { ) {" fs.mkdirSync(logDir, { recursive: true })} fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}"` this.log(` Report saved to: ${reportPath}`); return report} async run() { try { const result = await this.fixSyntaxErrors(;); const report = await this.generateReport(;); if ( {" this.log(" Syntax error fixing completed successfully!")} else {" this.log(" Syntax error fixing completed with some issues")} return report) { {" this.log(" Syntax error fixing completed successfully!")} else {" this.log(" Syntax error fixing completed with some issues")} return report}} catch (error) {""` this.log(` Syntax error fixing failed: ${error.message}`, "ERROR"); throw error} }}/ Run if called directlyif ( { const fixer = new SyntaxErrorFixer) { { const fixer = new SyntaxErrorFixer}(;); fixer.run().catch(console.error)}module.exports = SyntaxErrorFixer;""`"`
@@ -25,15 +24,13 @@ class SyntaxErrorFixer {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
  * Syntax Error Fixer;
  * Automatically fixes common syntax errors in the codebase;
  */
+
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -136,20 +133,25 @@ class SyntaxErrorFixer {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
+    
     // Fix missing commas in objects
     content = content.replace(/([^,}])\n\s*}/g, '$1,\n}');
+    
     // Fix missing commas in arrays
     content = content.replace(/([^,])\n\s*]/g, '$1,\n]');
+    
     return content;
   }
+
   async fixDirectory(dirPath) {
     const files = fs.readdirSync(dirPath);
+    
     for (const file of files) {
       const filePath = path.join(dirPath, file);
       const stat = fs.statSync(filePath);
+      
       if (stat.isDirectory()) {
         await this.fixDirectory(filePath);
       } else if (file.match(/\.(tsx?|jsx?)$/)) {
@@ -157,10 +159,9 @@ class SyntaxErrorFixer {
       }
     }
   }
+
   generateReport() {
     const report = {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -186,24 +187,26 @@ class SyntaxErrorFixer {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       "timestamp": new Date().toISOString(),
       "fixes": this.fixes,
       "errors": this.errors,
       "success": this.errors.length === 0
    };
+
     const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fix-report.json';);
     const logDir = path.dirname(reportPath;);
+    
     if () {
       fs.mkdirSync(logDir, { "recursive": true })}
+    
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))) {
     ) {
       fs.mkdirSync(logDir, { "recursive": true })}
+    
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
     this.log(`📄 Report saved "to": ${reportPath}`);
+    
     return report}
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 
 =======
@@ -216,15 +219,13 @@ class SyntaxErrorFixer {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async run() {
     this.log('🚀 Starting syntax error fixing...');
+    
     try {
       await this.fixDirectory('components');
       await this.fixDirectory('pages');
       await this.fixDirectory('lib');
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
       
 =======
@@ -242,19 +243,21 @@ class SyntaxErrorFixer {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       if ( {
         this.log('🎉 Syntax error fixing completed successfully!')} else {
         this.log('⚠️ Syntax error fixing completed with some issues')}
+      
       return report) {
      {
         this.log('🎉 Syntax error fixing completed successfully!')} else {
         this.log('⚠️ Syntax error fixing completed with some issues')}
+      
       return report}} catch (error) {
       this.log(`💥 Syntax error fixing "failed": ${error.message}`, 'ERROR');
       throw error}
   }
 }
+
 if (require.main === module) {
   const fixer = new SyntaxErrorFixer();
   fixer.run().catch(error => {
@@ -262,6 +265,7 @@ if (require.main === module) {
     process.exit(1);
   });
 }
+
 module.exports = SyntaxErrorFixer;
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')
@@ -276,9 +280,6 @@ module.exports = SyntaxErrorFixer;
 <<<<<<< HEAD
       this.log(`� Syntax error fixing "failed"`)
 =======
-<<<<<<< HEAD
-      this.log(`� Syntax error fixing "failed"`)
-=======
       this.log(`� Syntax error fixing "failed"`)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -286,4 +287,3 @@ module.exports = SyntaxErrorFixer;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

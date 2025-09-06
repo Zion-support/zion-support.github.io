@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:scripts/intelligent/resource-monitor.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node
@@ -278,7 +276,6 @@ resourceMonitor.start().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/resource-monitor.cjs
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -304,9 +301,6 @@ const os = require('os')
       "severity"
       "severity"
       console.error('Error saving "analysis")
-<<<<<<< HEAD
-      console.error('Error saving "alert")
-=======
 <<<<<<< HEAD:scripts/intelligent/resource-monitor.cjs
 <<<<<<< HEAD
       console.error('Error saving "alert")
@@ -316,4 +310,3 @@ const os = require('os')
 =======
       console.error('Error saving "alert")
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/resource-monitor.cjs
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

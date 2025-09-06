@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare module "cmdk";
 declare module "@radix-ui/react-context-menu";
 declare module "vaul";
@@ -15,6 +16,37 @@ declare module '@tanstack/react-query';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+
+declare module "@radix - ui / react - hover - card";
+declare module "input - otp";
+declare module "react - markdown";
+declare module "@radix - ui / react - menubar";
+declare module "@radix - ui / react - navigation - menu";
+declare module "react - resizable - panels";
+declare module "@radix - ui / react - toggle - group";
+declare module "@radix - ui / react - toggle";
+;
+declare module '@tanstack / react - query';
+declare module 'react - day - picker' {
+
+  export interface DateRange {
+    from?: Date;
+    to?: Date;
+  }
+
+  // Minimal placeholder for the DayPicker component used in the app;
+  // The actual library provides full typings but we stub them here so the;
+  // TypeScript compiler can understand the imports without requiring the real;
+  // type definitions.;
+  // eslint - disable - next - line @typescript - eslint / no - explicit - any;
+  export const DayPicker: any;
+
+}
+=======
+
+>>>>>>> main
+=======
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -27,19 +59,28 @@ declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 declare module '@tanstack/react-query',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 declare module 'react-day-picker' {
 <<<<<<< HEAD
+<<<<<<< HEAD
   export interface DateRange {
     from?: Date,
     to?: Date
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> main
 declare module "cmdk",;
 declare module "@radix-ui/react-context-menu",;
 declare module "vaul",;
@@ -56,6 +97,7 @@ declare module 'react-day-picker' {;
   export interface DateRange {;
     from?: Date,;
     to?: Date;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
@@ -76,12 +118,28 @@ declare module 'react-day-picker' {;
 =======
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+=======
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 declare module 'sonner';
 declare module 'lucide-react' {
 
 import {FC, SVGProps} from 'react';
+<<<<<<< HEAD
   export type LucideProps = SVGProps<SVGSVGElement>;
   export type LucideIcon = FC<LucideProps>;
+=======
+
+  export type LucideProps = SVGProps < SVGSVGElement>;
+  export type LucideIcon = FC < LucideProps>;
+;
+
+>>>>>>> main
   export const AlertCircle: LucideIcon;
   export const AlertTriangle: LucideIcon;
   export const Apple: LucideIcon;
@@ -272,6 +330,7 @@ import {FC, SVGProps} from 'react';
   export const Webhook: LucideIcon;
   export const X: LucideIcon;
   export const XCircle: LucideIcon;
+<<<<<<< HEAD
 <<<<<<< HEAD
   export const Zap: LucideIcon
   const icons: { [key: string]: LucideIcon }
@@ -730,3 +789,154 @@ declare module 'tailwind-merge';
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+  export const Zap: LucideIcon,;
+  const icons: { [key: string]: LucideIcon };
+
+
+  export default icons
+=======
+  export const Zap: LucideIcon,
+  const icons: { [key: string]: LucideIcon }
+  export default icons;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+declare module 'child_process';
+declare module 'date - fns';
+declare module 'jspdf' {
+
+  export const jsPDF: any,
+  export default jsPDF;
+
+}
+declare module '@hookform / resolvers / zod';
+declare module '@radix - ui / react - accordion';
+declare module '@radix - ui / react - alert - dialog';
+declare module '@radix - ui / react - aspect - ratio';
+declare module '@radix - ui / react - avatar';
+declare module '@radix - ui / react - checkbox';
+declare module '@radix - ui / react - collapsible';
+declare module '@radix - ui / react - dialog';
+declare module '@radix - ui / react - dropdown - menu';
+declare module '@radix - ui / react - label';
+declare module '@radix - ui / react - popover';
+declare module '@radix - ui / react - progress';
+declare module '@radix - ui / react - radio - group';
+declare module '@radix - ui / react - scroll - area';
+declare module '@radix - ui / react - select';
+declare module '@radix - ui / react - separator';
+declare module '@radix - ui / react - slider';
+declare module '@radix - ui / react - slot';
+declare module '@radix - ui / react - switch';
+declare module '@radix - ui / react - tabs';
+declare module '@radix - ui / react - toast';
+declare module '@radix - ui / react - tooltip';
+declare module '@supabase / supabase - js';
+declare module 'class - variance - authority' {
+  export function cva (...inputs: any[]): any;
+  export type VariantProps < T extends (...args: any) => any> = any;
+}
+declare module 'clsx' {
+  export type ClassValue = any;
+  export default function clsx (...classes: ClassValue[]): string;
+}
+declare module 'embla - carousel - react';
+declare module 'framer-motion';
+declare module 'i18next';
+declare module 'i18next - browser - languagedetector';
+declare module 'react - helmet - async';
+declare module 'react - hook - form' {
+  import type { ComponentType, ReactElement, ReactNode } from 'react';
+
+;
+  // Minimal generic typings to satisfy local usage without full type defs;
+  export type FieldValues = Record < string, any>;
+  export type FieldPath < TFieldValues extends FieldValues> =;
+    keyof TFieldValues & string;
+  export type Control < TFieldValues extends FieldValues = FieldValues> = any;
+  export interface UseFormReturn<;
+
+=======
+
+
+  export interface UseFormReturn<;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    TFieldValues extends FieldValues = FieldValues;
+  > {
+    control: Control < TFieldValues>;
+    handle_submit: any;
+    register: any;
+    form_state: any;
+    [key: string]: any;
+  }
+
+
+
+  export function useForm<;
+    TFieldValues extends FieldValues = FieldValues;
+  >(options?: any): UseFormReturn<TFieldValues>
+  export function useFieldArray<;
+    TFieldValues extends FieldValues = FieldValues;
+  >(options: any): any
+
+  export interface ControllerProps<;
+
+
+    TFieldValues extends FieldValues = FieldValues;
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
+=======
+  export function use_form<;
+    TFieldValues extends FieldValues = FieldValues;
+  >(options?: any): UseFormReturn < TFieldValues>;
+  export function useFieldArray<;
+    TFieldValues extends FieldValues = FieldValues;
+  >(options: any): any;
+  export interface ControllerProps<;
+    TFieldValues extends FieldValues = FieldValues;
+    TName extends FieldPath < TFieldValues> = FieldPath < TFieldValues>,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  > {
+    name: TName;
+    control?: Control < TFieldValues>;
+    rules?: any;
+    default_value?: any;
+    render: (props: any) => ReactElement;
+  }
+
+  export const Controller: ComponentType < ControllerProps < any, any>>;
+  export interface FormProviderProps<;
+
+=======
+  export const Controller: ComponentType<ControllerProps<any, any>>
+
+
+  export interface FormProviderProps<;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    TFieldValues extends FieldValues = FieldValues;
+  > {
+    children?: ReactNode;
+    [key: string]: any;
+  }
+
+  export const FormProvider: ComponentType < FormProviderProps < any>>;
+  export function useFormContext<;
+    TFieldValues extends FieldValues = FieldValues,
+  >(): UseFormReturn < TFieldValues>;
+
+}
+declare module 'react - i18next';
+declare module 'react-dom / client';
+declare module 'react-dom';
+declare module 'react - beautiful - dnd';
+declare module 'react - redux';
+declare module 'semver';
+declare module 'ws';
+declare module 'recharts';
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

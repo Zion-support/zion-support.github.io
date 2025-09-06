@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:netlify/functions/component-props-runner.js
 =======
 <<<<<<< HEAD:backup-problematic-files/netlify/functions/component-props-runner.js
@@ -29,6 +30,10 @@ exports.handler = async () => {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/component-props-runner.js
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/component-props-runner.js
+=======
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -60,6 +65,7 @@ exports.handler = async () => {
     runNode('automation/component-props-docs.cjs')
   );
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+<<<<<<< HEAD
 <<<<<<< HEAD:netlify/functions/component-props-runner.js
   return { statusCode: 200, body: logs.join('\n') }
 };function runNode(relPath, args = []) {
@@ -83,6 +89,9 @@ exports.handler = async () => {
 }
 
 =======
+=======
+
+>>>>>>> main
 
   return { statusCode: 200, body: logs.join('\n') };
 };function runNode(relPath, args = []) {
@@ -108,6 +117,7 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') }
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main:netlify/functions/component-props-runner.js
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/component-props-runner.js
 =======
@@ -116,5 +126,11 @@ exports.handler = async () => {
 }
 =======
 >>>>>>> main:netlify/functions/component-props-runner.js
+=======
+
+=======
+
+
+>>>>>>> main
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/component-props-runner.js
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

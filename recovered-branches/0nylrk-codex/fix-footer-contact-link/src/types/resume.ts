@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ResumeBasicInfo {
 =======
 export interface ResumeBasicInfo {;
@@ -19,6 +20,13 @@ export interface WorkExperience {
 
 export interface WorkExperience {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  headline?: string,
+  summary?: string;
+
+}
+export interface WorkExperience {
+>>>>>>> main
   id?: string;
   company_name: string;
   role_title: string;
@@ -27,6 +35,7 @@ export interface WorkExperience {;
   is_current: boolean;
   description?: string;
 
+<<<<<<< HEAD
   company_logo_url?: string
 
   location?: string
@@ -37,6 +46,13 @@ export interface Education {
 
 export interface Education {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  company_logo_url?: string,
+  location?: string;
+
+}
+export interface Education {
+>>>>>>> main
   id?: string;
   institution: string;
   degree: string;
@@ -46,6 +62,7 @@ export interface Education {;
   is_current: boolean;
   description?: string;
 
+<<<<<<< HEAD
   institution_logo_url?: string
 
   location?: string
@@ -56,10 +73,18 @@ export interface Skill {
 
 export interface Skill {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  institution_logo_url?: string,
+  location?: string;
+
+}
+export interface Skill {
+>>>>>>> main
   id?: string;
   name: string;
   proficiency?: number;
 
+<<<<<<< HEAD
   category?: string
 
   years_experience?: number
@@ -70,12 +95,20 @@ export interface Certification {
 
 export interface Certification {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  category?: string,
+  years_experience?: number;
+
+}
+export interface Certification {
+>>>>>>> main
   id?: string;
   name: string;
   issuing_organization: string;
   issue_date?: Date | string;
   expiration_date?: Date | string;
 
+<<<<<<< HEAD
   credential_id?: string
 
   credential_url?: string
@@ -86,6 +119,13 @@ export interface PortfolioProject {
 
 export interface PortfolioProject {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  credential_id?: string,
+  credential_url?: string;
+
+}
+export interface PortfolioProject {
+>>>>>>> main
   id?: string;
   title: string;
   description?: string;
@@ -93,6 +133,7 @@ export interface PortfolioProject {;
   image_url?: string;
   github_url?: string;
 
+<<<<<<< HEAD
   demo_url?: string
 
   pdf_url?: string
@@ -103,6 +144,13 @@ export interface Resume {
 
 export interface Resume {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  demo_url?: string,
+  pdf_url?: string;
+
+}
+export interface Resume {
+>>>>>>> main
   id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
@@ -111,6 +159,7 @@ export interface Resume {;
   skills: Skill[];
   certifications: Certification[];
 
+<<<<<<< HEAD
   portfolio_projects?: PortfolioProject[]
 
   is_active: boolean
@@ -197,3 +246,15 @@ export interface Resume {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  portfolio_projects?: PortfolioProject[],
+  is_active: boolean;
+
+}
+=======
+
+
+export interface ResumeBasicInfo {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

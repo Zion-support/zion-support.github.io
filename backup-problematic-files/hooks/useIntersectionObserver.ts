@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:hooks/useIntersectionObserver.ts
 <<<<<<< HEAD
 import { useEffect, useRef, useState } from 'react';
@@ -14,11 +15,23 @@ import {useEffect, useRef, useState} from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useIntersectionObserver.ts
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
+
+import {useEffect, useRef, useState} from 'react';
+
+=======
+
+import {useEffect, useRef, useState} from 'react';
+
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
   freezeOnceVisible?: boolean;
 }
@@ -86,10 +99,17 @@ export function useIntersectionObserver({;
       currentObserver.disconnect()
     }
 >>>>>>> main:hooks/useIntersectionObserver.ts
+=======
+
+  freezeOnceVisible?: boolean
+}
+
+>>>>>>> main
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
   useEffect(() => {
     if (prevNode.current) {
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/hooks/useIntersectionObserver.ts
       observer.current?.unobserve(prevNode.current);
     }
@@ -107,6 +127,12 @@ export function useIntersectionObserver({;
   return [setNode, entry] as const
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+  return [setNode, entry] as const
+};
+
+>>>>>>> main
 =======
   return [setNode, entry] as const;
 }
@@ -165,7 +191,12 @@ export function useIntersectionObserver({;
 }
 >>>>>>> main:hooks/useIntersectionObserver.ts
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useIntersectionObserver.ts
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

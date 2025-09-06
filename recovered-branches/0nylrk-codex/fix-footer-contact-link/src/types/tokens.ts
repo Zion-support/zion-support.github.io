@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Wallet {
 =======
 export interface Wallet {;
@@ -18,10 +19,20 @@ export interface TokenTransaction {
 
 export interface TokenTransaction {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  balance: number,
+  updated_at: string;
+}
+export type TransactionType = 'earn' | 'burn';
+;
+
+export interface TokenTransaction {
+>>>>>>> main
   id: string;
   user_id: string;
   amount: number;
   transaction_type: TransactionType;
+<<<<<<< HEAD
   reason: string | null
 
   created_at: string
@@ -51,3 +62,16 @@ export interface TokenTransaction {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+  reason: string | null,
+  created_at: string;
+
+}
+=======
+
+
+export interface Wallet {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

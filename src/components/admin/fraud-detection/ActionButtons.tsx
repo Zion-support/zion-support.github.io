@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -121,12 +122,25 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 }
 
 =======
+=======
+>
+        <Eye className="h-4 w-4" />
+      </Button>
+      <Button
+
+
+>>>>>>> main
 };
 '"},;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+
+
+>>>>>>> main
         variant="ghost"
         size="icon"
         title="Send Warning"
@@ -160,6 +174,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         <Button
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
@@ -228,3 +243,90 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          onClick={() => onAction(flagId, 'ignore')}
+        >
+          Ignore
+        </Button>
+      )}
+
+    </div>
+  )
+
+
+  );
+};
+
+
+
+import React from 'react';
+import { Button } from '@/components / ui / button';
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
+interface ActionButtonsProps {
+  flag_id: string;
+  status: string;
+  on_action: (
+    flag_id: string,
+    action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+export const ActionButtons: React.FC < ActionButtonsProps> = ({
+  flag_id,
+  status,
+  on_action,
+}) => {  return (
+    <div className='flex space - x-2'>;
+      <Button;
+        variant='ghost';
+        size='icon';
+        title='View Details';
+        aria - label='View details';
+        on_click={() => alert ('View details (would open a detailed view)')}        variant="ghost";
+        size="icon";
+        title="View Details";
+        aria - label="View details";
+        on_click = {(, ) => alert ("View details (would open a detailed view)"), }
+      >;
+        <Eye className='h - 4 w - 4' />;
+      </Button>;
+      <Button;
+        variant='ghost';
+        size='icon';
+        title='Send Warning';
+        aria - label='Send warning';
+        on_click={() => on_action (flag_id, 'warning')}
+        disabled={status === 'actioned' || status === 'ignored'}      >;
+        <Info className='h - 4 w - 4' />;
+      </Button>;
+      <Button;
+        variant='ghost';
+        size='icon';
+        title='Suspend User';
+        aria - label='Suspend user';
+        on_click={() => on_action (flag_id, 'suspension')}
+        disabled={status === 'actioned' || status === 'ignored'}      >;
+        <AlertTriangle className='h - 4 w - 4' />;
+      </Button>;
+      <Button;
+        variant='ghost';
+        size='icon';
+        title='Ban User';
+        aria - label='Ban user';
+        on_click={() => on_action (flag_id, 'ban')}
+        disabled={status === 'actioned' || status === 'ignored'}      >;
+        <Ban className='h - 4 w - 4' />;
+      </Button>;
+      {status === 'pending' && (
+        <Button;
+          variant='ghost';
+          size='sm'          on_click={() => on_action (flag_id, 'ignore')}          variant="ghost";
+          size="sm";
+          on_click={() => on_action (flag_id, 'ignore')}
+          on_click = {(, ) => on_action (flag_id, 'ignore'), }
+        >;
+          Ignore;
+        </Button>)}
+    </div>);
+}
+'"},
+  );
+}
+>>>>>>> main

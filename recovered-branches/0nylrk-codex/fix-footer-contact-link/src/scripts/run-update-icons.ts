@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // This is a simple script wrapper to execute our icon update script
 <<<<<<< HEAD
 import { exec  } from 'child_process';
@@ -7,11 +8,20 @@ import path from 'path';
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js');
 console.log('Running icon import updater...');
 =======
+=======
+const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-imports && imports.js');
+
+console && console.log('Running icon import updater...');
+
+=======
+
+>>>>>>> main
 import { exec } from 'child_process',
 import path from 'path',
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
 
 // // // console.log('Running icon import updater...'),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {
@@ -27,12 +37,60 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
 });
 
 =======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+exec(`node ${scriptPath}`, (error, stdout, stderr) => {
+  if (error) {
+    console && console.error(`Error executing script: ${error}`);
+    return
+  }
+
+  
+  console && console.log(stdout);
+
+  if (stderr) {
+    console && console.error(stderr)
+  }
+
+  
+  console && console.log('Icon imports updated successfully!')
+
+});
+
+=======
+// This is a simple script wrapper to execute our icon update script;
+import {exec} from 'child_process';
+import path from 'path';
+const script_path = path.join (__dirname, '../../scripts / update - icon - imports.js');
+;
+console.log ('Running icon import updater...');
+exec (`node ${script_path}`, (error, stdout, stderr) => {
+  // Check condition
+if ( {) {
+  $2
+}
+    console.error (`Error executing script: ${error}`);
+    return;
+  }
+  console.log (stdout);
+  // Check condition
+if ( {) {
+  $2
+}
+    console.error (stderr);
+  }
+  console.log ('Icon imports updated successfully!');
+=======
+
+>>>>>>> main
   
   // // // console.log(stdout),
   if (stderr) {
     console.error(stderr)
   }
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -64,3 +122,10 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -18,6 +19,21 @@ import { Button } from "@/components/ui/button",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+interface VideoCallRoomProps {;
+
+  room?: string;
+  token?: string;
+  serverUrl?: string;
+  onDisconnect?: () => void;
+  className?: string;
+=======
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface VideoCallRoomProps {
   room?: string,
@@ -25,6 +41,7 @@ interface VideoCallRoomProps {
   serverUrl?: string,
   onDisconnect?: () => void,
   className?: string
+<<<<<<< HEAD
 }
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
   return (
@@ -49,6 +66,17 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
+
+export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
+  return (
+=======
+
+
+>>>>>>> main
+=======
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -62,6 +90,10 @@ interface VideoCallRoomProps {;
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
     <Card className={className || "w-full max-w-3xl mx-auto"}>;
       <CardHeader>;
         <CardTitle>Video Call</CardTitle>;
@@ -77,6 +109,7 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 <<<<<<< HEAD
@@ -85,3 +118,43 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
 =======
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+}
+
+import React from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+interface VideoCallRoomProps {
+  room?: string;
+  token?: string;
+  server_url?: string;
+  on_disconnect?: () => void;
+  class_name?: string;
+}
+export /**
+ * VideoCallRoom - Function description
+ */
+function VideoCallRoom() {
+  return (
+    <Card className={class_name || "w - full max - w-3xl mx - auto"}>;
+      <CardHeader>;
+        <CardTitle > Video Call</CardTitle>;
+      </CardHeader>;
+      <CardContent className="flex flex - col items - center justify - center p - 8">;
+        <p className="text - center mb - 4">;
+          Video calling functionality is currently unavailable.;
+          Please check back later or use an alternative communication method.;
+        </p>;
+        <div className="flex gap - 2">;
+          <Button on_click={on_disconnect}>Close</Button>;
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+
+=======
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

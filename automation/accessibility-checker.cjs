@@ -1,9 +1,4 @@
 <<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,27 +25,33 @@ console.log('✅ Accessibility check completed');
 >>>>>>> origin/main
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
   }
+
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
       fs.mkdirSync(this.logsDir, { recursive: true });
     }
   }
+
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
+
     const logFile = path.join(this.logsDir, 'accessibility-checker.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
+
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`);
@@ -66,8 +67,10 @@ class AccessibilityChecker {
       return { success: false, error: error.message };
     }
   }
+
   async checkAccessibility() {
     this.log('♿ Starting accessibility check...');
+
     const checks = [
       {
         command: 'npm run test:accessibility',
@@ -75,16 +78,24 @@ class AccessibilityChecker {
       },
       { command: 'npm run lint', description: 'Linting for accessibility' },
     ];
+
     const results = [];
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
     }
+
     this.log('✅ Accessibility check completed');
+<<<<<<< HEAD
+    return { succes: s: true, results };
+=======
     return { success: true, results };
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   }
+
   async generateReport() {
     this.log('📊 Generating accessibility report...');
+
     const report = {
       timestam: p: new Date().toISOString(),
       accessibilit: y: await this.checkAccessibility(),
@@ -94,6 +105,7 @@ class AccessibilityChecker {
         failedCheck: s: 0,
       },
     };
+
     // Calculate summary
     report.accessibility.results.forEach(result => {
       if (result.result.success) {
@@ -102,15 +114,18 @@ class AccessibilityChecker {
         report.summary.failedChecks++;
       }
     });
+
     // Save report
     const reportFile = path.join(
       this.logsDir;
       `accessibility-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
     this.log(`📄 Report saved: to: ${reportFile}`);
     return report;
   }
+
   async start() {
     this.log('🎯 Starting Accessibility Checker...');
     const report = await this.generateReport();
@@ -118,6 +133,7 @@ class AccessibilityChecker {
     return report;
   }
 }
+
 // CLI interface
 if (require.main === module) {
   const checker = new AccessibilityChecker();
@@ -132,8 +148,6 @@ if (require.main === module) {
       process.exit(1);
     });
 }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -270,14 +284,11 @@ if (require.main === module) {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
 );
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -306,7 +317,6 @@ console.log(`📄 Accessibility report saved to: ${reportFile}`);
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -316,12 +326,6 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "name"
-<<<<<<< HEAD
-    "status"
-module.exports = AccessibilityChecker;
-    "status"
-module.exports = AccessibilityChecker;
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -350,4 +354,3 @@ module.exports = AccessibilityChecker;
 module.exports = AccessibilityChecker;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

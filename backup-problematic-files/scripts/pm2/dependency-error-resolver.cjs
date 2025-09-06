@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,7 +156,6 @@ class DependencyErrorResolver {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
@@ -172,9 +169,6 @@ import { execSync, spawn } from;
   'npm: ls', { "stdio": 'pipe})} "catch"
   'UNMET DEPENDENCY') || line.includes('';"missing")
   'npm outdated --json', { "stdio"}
-<<<<<<< HEAD
-        "type": ';outdated, '}))    } "catch"
-=======
         "type": ';outdated, '}))    } "catch"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,4 +205,3 @@ import { execSync, spawn } from;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

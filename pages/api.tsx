@@ -1,47 +1,18 @@
-<<<<<<< HEAD
-import React from 'react';
-import React from './react';
-import MainLayout from "../src / components / layout / MainLayout";
-import { motion  } from './framer-motion';
-import {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
+
 import {
-<<<<<<< HEAD
-  Code
-  Check
-  Globe
-  Shield
-  Zap
-  Database
-  Cpu
-  Cloud
-  XCircle
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   Code,
   Check,
   Globe,
@@ -50,7 +21,73 @@ import {
   Database,
   Cpu,
   Cloud,
-<<<<<<< HEAD
+  XCircle,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+} from "lucide-react";
+export default function APIPage() {
+  const apiEndpoints = [
+    {
+      id: "auth"
+      title: "Authentication"
+      description: "Secure authentication and authorization endpoints"
+      baseUrl: "/api/v1/auth"
+      methods: [
+        {
+          method: "POST"
+          endpoint: "/login"
+          description: "Authenticate user with email and password"
+          code: `curl -X POST https://api.ziontechgroup.com/v1/auth/login \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "email": "user@example.com"
+    "password": "your_password"
+  }'`
+        }
+        {
+          method: "POST"
+          endpoint: "/register"
+          description: "Register a new user account"
+          code: `curl -X POST https://api.ziontechgroup.com/v1/auth/register \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "email": "user@example.com"
+    "password": "your_password"
+    "name": "John Doe"
+  }'`
+        }
+      ]
+    }
+    {
+      id: "ai-services"
+      title: "AI Services"
+      description: "Access our AI-powered services and models"
+      baseUrl: "/api/v1/ai"
+      methods: [
+        {
+          method: "POST"
+          endpoint: "/chat"
+          description: "Send messages to our AI chat service"
+          code: `curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "message": "Hello, how can you help me?"
+    "model": "gpt-4"
+    "temperature": 0.7
+
+import React from './react';
+import MainLayout from "../src / components / layout / MainLayout";
+import { motion  } from './framer-motion';
+import {
+  Code,
+  Check,
+  Globe,
+  Shield,
+  Zap,
+  Database,
+  Cpu,
+  Cloud,
   XCircle,
 } from './lucide-react';
 ;
@@ -59,13 +96,6 @@ export default /**
  */
 function APIPage() {
   const api_endpoints = [;
-=======
-  XCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from "lucide-react";
-export default function APIPage() {
-  const apiEndpoints = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: "auth",
       title: "Authentication",
@@ -111,7 +141,6 @@ export default function APIPage() {
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\;
   -H "Content - Type: application / json" \\;
   -d '{
-<<<<<<< HEAD
     "message": "Hello, how can you help me?",
     "model": "gpt - 4",
     "temperature": 0.7;
@@ -120,56 +149,57 @@ export default function APIPage() {
       ],
     },
 =======
-    "message": "Hello, how can you help me?"
-    "model": "gpt-4"
-    "temperature": 0.7
-<<<<<<< HEAD
-  }'`
-        }
-      ]
-    }
-=======
+
   }'`,
         },
       ],
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
   ];
 ;
   const response_examples = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     success: {
       status: 200
       data: {
         message: "Request successful"
         data: {
+
           id: "12345",
           name: "Example Response",
           created_at: "2024 - 01 - 01T00:00:00Z",
         },
       },
     },
+
     error: {
       status: 400
       error: {
         code: "VALIDATION_ERROR"
         message: "Invalid request parameters"
         details: {
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -187,6 +217,7 @@ import {;
   Cloud,;
   XCircle,;
 } from "lucide-react";
+
 export default function APIPage() {;
   const apiEndpoints = [;
     {;
@@ -242,6 +273,7 @@ export default function APIPage() {;
       ],;
     },;
   ];
+
   const responseExamples = {;
     success: {;
       status: 200,;
@@ -266,6 +298,8 @@ export default function APIPage() {;
       },;
     },;
   };
+
+
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -273,19 +307,23 @@ export default function APIPage() {;
       keywords="API documentation, REST API, AI API, cloud API, developer resources">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
+
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
+
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
+
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 API{" "}
+
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
                   Documentation;
                 </span>;
@@ -297,6 +335,8 @@ export default function APIPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
+
+
         {/* Quick Start */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -304,6 +344,7 @@ export default function APIPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -314,6 +355,7 @@ export default function APIPage() {;
                 to make your first API call.;
               </p>;
             </motion && motion.div>;
+
             <div className="max-w-4xl mx-auto">;
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
                 <motion&& motion.div
@@ -332,6 +374,7 @@ export default function APIPage() {;
                     Sign up and obtain your API key from the dashboard;
                   </p>;
                 </motion && motion.div>;
+
                 <motion&& motion.div
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -348,6 +391,7 @@ export default function APIPage() {;
                     Use our RESTful APIs with your preferred language;
                   </p>;
                 </motion && motion.div>;
+
                 <motion&& motion.div
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -364,6 +408,7 @@ export default function APIPage() {;
                     Create powerful applications with our APIs;
                   </p>;
                 </motion && motion.div>;
+=======
           field: "email",
           issue: "Invalid email format",
         },
@@ -475,10 +520,12 @@ export default function APIPage() {;
                     Create powerful applications with our APIs;
                   </p>;
                 </motion.div>;
+
               </div>;
             </div>;
           </div>;
         </section>;
+
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -489,6 +536,7 @@ export default function APIPage() {;
                 examples.;
               </p>;
             </motion && motion.div>;
+
             <div className="max-w-4xl mx-auto">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 <motion&& motion.div
@@ -511,6 +559,7 @@ export default function APIPage() {;
                     </pre>;
                   </div>;
                 </motion && motion.div>;
+
                 <motion&& motion.div
                   className="bg-white border border-gray-200 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
@@ -531,6 +580,7 @@ export default function APIPage() {;
                     </pre>;
                   </div>;
                 </motion && motion.div>;
+=======
         {/* Response Examples */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -593,13 +643,17 @@ export default function APIPage() {;
                     </pre>;
                   </div>;
                 </motion.div>;
+
               </div>;
             </div>;
           </div>;
         </section>;
+
 import Head from 'next/head';
 import Layout from '../components/Layout';
+
 export default function APIPage() {
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -616,7 +670,8 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
+
+=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
                   View Documentation;
                 </a>;
@@ -626,15 +681,15 @@ export default function APIPage() {
         </section>;
       </div>;
     </MainLayout>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
+
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
+=======
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -671,4 +726,5 @@ export default function APIPage() {
         </section>;
       </div>;
     </MainLayout>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

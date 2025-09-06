@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge";
 =======
@@ -39,6 +40,48 @@ interface DisputeStatusBadgeProps {
 import { Badge } from "@/components/ui/badge",
 import { ShieldAlert } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
+=======
+status: 'open' | 'under_review' | 'resolved' | 'closed';
+
+export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
+  let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
+    'destructive';
+  let message = 'This item has an open dispute';
+
+
+import { Badge } from '@/components / ui / badge';
+import { ShieldAlert } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components / ui / tooltip';
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed';
+export /**
+ * DisputeStatusBadge - Function description
+ */
+function DisputeStatusBadge() {
+  let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
+    'destructive';
+  let message = 'This item has an open dispute';
+  switch (status) {
+
+    case 'under_review':;
+      variant = 'secondary';
+      message = 'This dispute is under review by our team';
+      break;
+    case 'resolved':;
+      variant = 'outline';
+      message = 'This dispute has been resolved';
+      break;
+    case 'closed':;
+      variant = 'outline';
+      message = 'This dispute has been closed';
+      break;
+    default:;
+      break;
+>>>>>>> main
 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
@@ -61,6 +104,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       variant = "outline",
       message = "This dispute has been closed",
       break,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -129,11 +173,35 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
+=======
+
+
+
+    default:
+      break
+  }
+  return (
+
+    <Tooltip>;
+      <TooltipTrigger asChild>;
+        <Badge variant={variant} className='flex items-center gap-1'>;
+          <ShieldAlert className='h-3 w-3' />;
+          <span>Under Dispute</span>;
+  }
+  return (
+    <Tooltip>;
+      <TooltipTrigger as_child>;
+        <Badge variant={variant} className='flex items - center gap - 1'>;
+          <ShieldAlert className='h - 3 w - 3' />;
+          <span > Under Dispute</span>;
+
+>>>>>>> main
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+<<<<<<< HEAD
     </Tooltip>;
   );
 }
@@ -143,3 +211,15 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+    </Tooltip>);
+}
+
+      </TooltipContent>
+    </Tooltip>
+  )
+>>>>>>> main

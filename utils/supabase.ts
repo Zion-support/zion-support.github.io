@@ -2,11 +2,13 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
+
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>;
   };
 }
+
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
@@ -42,12 +44,16 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
     }
   };
 }
+
 // Default configuration
 const supabaseConfig: SupabaseConfig = {
   url: process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://your-project && project.supabase.co',
   anonKey: process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key'
 };
+
 export const supabase = createSupabaseClient(supabaseConfig);
+
+=======
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -60,21 +66,15 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
-<<<<<<< HEAD
         single: () => null;
       });
     });
   });
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-        single: () => null
-      })
-    })
-<<<<<<< HEAD
-  })
-}
-=======
+
   });
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

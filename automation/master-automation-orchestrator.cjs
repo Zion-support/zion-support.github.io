@@ -4,8 +4,6 @@ const path = require('path');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -236,9 +234,10 @@ class MasterAutomationOrchestrator {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require('child_process');
+
 console.log('🚀 Starting Master Automation Orchestrator');
+
 // Run all automation tasks
 async function runAllAutomations() {
   const tasks = [
@@ -278,17 +277,21 @@ async function runAllAutomations() {
       critical: false,
     },
   ];
+
   const results = [];
   let successCount = 0;
   let failureCount = 0;
+
   for (const task of tasks) {
     try {
       console.log(`\n🔧 Running: ${task.name}`);
       const startTime = Date.now();
+
       execSync(task.command, {
         stdio: 'pipe',
         cwd: '/workspace',
       });
+
       const duration = Date.now() - startTime;
       results.push({
         task: task.name,
@@ -309,6 +312,7 @@ async function runAllAutomations() {
       });
       failureCount++;
       console.log(`❌ ${task.name} failed: ${error.message}`);
+
       if (task.critical) {
         console.log(`⚠️ Critical task failed: ${task.name}`);
       }
@@ -318,17 +322,16 @@ async function runAllAutomations() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
   }
+
   return { results, successCount, failureCount };
+>>>>>>> origin/automation-improvements-final
 }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/main
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Generate comprehensive report
 function generateReport(results) {
   const report = {
@@ -350,27 +353,30 @@ function generateReport(results) {
       'Implement security recommendations',
     ],
   };
+
   // Ensure reports directory exists
   const reportsDir = '/workspace/automation/reports';
   if (!fs.existsSync(reportsDir)) {
     fs.mkdirSync(reportsDir, { recursive: true });
   }
+
   fs.writeFileSync(
     '/workspace/automation/reports/master-automation-report.json',
     JSON.stringify(report, null, 2)
   );
+
   return report;
 }
+
 // Main execution
 async function main() {
   try {
     console.log('🎯 Starting comprehensive automation run...\n');
+
     const results = await runAllAutomations();
     const report = generateReport(results);
+
     console.log('\n📊 AUTOMATION SUMMARY');
-<<<<<<< HEAD
-    console.log('======');
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     console.log('====================');
@@ -381,19 +387,17 @@ async function main() {
     console.log('====================');
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
     console.log(`Failed: ${report.summary.failed}`);
     console.log(`Success Rate: ${report.summary.successRate}`);
+
     if (results.failureCount > 0) {
       console.log('\n❌ FAILED TASKS: '),
       results.results
         .filter(r => r.status === 'failed')
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
@@ -403,12 +407,13 @@ async function main() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
+
     console.log('\n✅ Master automation orchestration completed');
     console.log(
       '📄 Detailed report saved to: /workspace/automation/reports/master-automation-report.json'
     );
+
     // Return success/failure based on critical tasks
     const criticalFailures = results.results.filter(
       r => r.critical && r.status === 'failed'
@@ -425,9 +430,6 @@ async function main() {
     process.exit(1);
   }
 }
-<<<<<<< HEAD
-main();
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -478,4 +480,3 @@ main();
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

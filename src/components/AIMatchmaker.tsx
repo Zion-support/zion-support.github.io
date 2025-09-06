@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { useState } from 'react'
@@ -51,12 +52,34 @@ toast ({
   //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { Sparkles, Search } from 'lucide-react'
+import React from 'react';
+import { useState } from 'react';
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { AIMatchingResults } from '@/components/AIMatchingResults';
+import { findMatches, MatchResult } from '@/lib/ai-matchmaking';
+import { Textarea } from '@/components/ui/textarea';
+import { Sparkles, Search } from 'lucide-react';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+interface AIMatchmakerProps {
+
+
+
+  //Set empty matches to show no results found UI setMatches ([]) ;
+}finally {;
+
+
+>>>>>>> main
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
   serviceType?: string
   onMatchSelect?: (match: any,) => void
   className?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -120,6 +143,12 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       })
 =======
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState(""),
@@ -127,11 +156,16 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         variant: "destructive"}),
@@ -192,12 +226,100 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
 
 =======
+=======
+
+
+
+      // Set empty matches to show no results found UI
+      setMatches([])
+import { useState } from 'react';
+import { toast } from '@/hooks / use - toast';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { AIMatchingResults } from '@/components / AIMatchingResults';
+import { find_matches, MatchResult } from '@/lib / ai - matchmaking';
+import { Textarea } from '@/components / ui / textarea';
+import { Sparkles, Search } from 'lucide-react';
+import { log_info, logErrorToProduction } from '@/utils / production_logger';
+interface AIMatchmakerProps {
+  service_type?: string;
+onMatchSelect?: (match: any) => void;
+class_name?: string;
+}if () {) {
+  $2
+}
+  toast ({
+  return;
+}setIsMatchmaking (true);
+setHasSearched (true);
+service_type;
+3);
+}catch (error) {';
+  logErrorToProduction ('Error during AI matching:', {
+  data: error;
+});
+toast ({
+  //Set empty matches to show no results found UI set_matches ([]);
+}finally {
+  setIsMatchmaking (false) ; import { log_info, logErrorToProduction } from '@/utils / production_logger';
+interface AIMatchmakerProps {
+  service_type?: string,
+  onMatchSelect?: (match: any, ) => void,
+  class_name?: string;
+}
+export /**
+ * AIMatchmaker - Function description
+ */
+function AIMatchmaker() {
+  const [query, set_query] = useState ('');
+  const [is_matchmaking, setIsMatchmaking] = useState (false);
+  const [matches, set_matches] = useState ([] as MatchResult[]);
+  const [has_searched, setHasSearched] = useState (false);
+  const handle_search = async () => {
+    if () {) {
+  $2
+}
+      toast ({
+        title: 'Please enter a description',
+        description: "Tell us what you're looking for so we can find matches.",
+        variant: 'destructive',
+      });
+      return;
+    }
+    setIsMatchmaking (true);
+    setHasSearched (true);
+    try {
+      log_info ('Starting AI matching', { data: { query, service_type } });
+      // Get AI matches;
+      const results = await find_matches (query, service_type, 3);
+      log_info ('AI matching results:', { data: results });
+      set_matches (results);
+      toast ({
+        title: 'Matches Found',
+        description: `Found ${results.length} matches based on your description.`,
+      });
+    } catch (error) {
+      logErrorToProduction ('Error during AI matching:', { data: error });
+      toast ({
+        title: 'Matching Error',
+        description:;
+          "We couldn't find matches for your request. Please try again.",
+        variant: 'destructive',
+      });
+      // Set empty matches to show no results found UI;
+      set_matches ([]);
+    } finally {
+
+      setIsMatchmaking(false)
+
+>>>>>>> main
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
         <p className='text-sm text-zion-slate-light'>;
           Describe what you&apos;re looking for and our AI will find the best
           matches
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",;
@@ -250,20 +372,135 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         title: "Matching Error",;
         description: "We couldn't find matches for your request. Please try again.",;
         variant: "destructive"}),;
+=======
+
+
+interface AIMatchmakerProps {;
+  serviceType?: string;
+onMatchSelect?: (match: any) => void;
+className?: string ;
+}if (!query && query.trim () ) {;
+  toast ({;
+  return;
+}setIsMatchmaking (true);
+setHasSearched (true);
+serviceType;
+3);
+}catch (error) {';
+  logErrorToProduction ('Error during AI matching:', {;
+  data: error ;
+});
+toast ({;
+  //Set empty matches to show no results found UI setMatches ([]) ;
+}finally {;
+  setIsMatchmaking (false) ;import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+interface AIMatchmakerProps {;
+  serviceType?: string,;
+  onMatchSelect?: (match: any,) => void,;
+  className?: string;
+}
+
+export function AIMatchmaker(): any ({;
+  serviceType = '',;
+  onMatchSelect,;
+  className,;
+}: AIMatchmakerProps) {;
+  const [query, setQuery] = useState('');
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+
+  const handleSearch = async () => {;
+    if (!query && query.trim()) {;
+      toast({;
+        title: 'Please enter a description',;
+        description: "Tell us what you're looking for so we can find matches.",;
+        variant: 'destructive',;
+      });
+      return;
+    }
+
+    setIsMatchmaking(true);
+    setHasSearched(true);
+
+    try {;
+      logInfo('Starting AI matching', { data: { query, serviceType } });
+
+      // Get AI matches;
+      const results = await findMatches(query, serviceType, 3);
+
+      logInfo('AI matching results:', { data: results });
+      setMatches(results);
+
+      toast({;
+        title: 'Matches Found',;
+        description: `Found ${results && results.length} matches based on your description.`,;
+      });
+    } catch (error) {;
+      logErrorToProduction('Error during AI matching:', { data: error });
+      toast({;
+        title: 'Matching Error',;
+        description:;
+          "We couldn't find matches for your request. Please try again.",;
+        variant: 'destructive',;
+      });
+>>>>>>> main
       // Set empty matches to show no results found UI;
       setMatches([]);
     } finally {;
       setIsMatchmaking(false);
     }
+<<<<<<< HEAD
   },;
   const handleItemSelect = (item: any) => {;
     if (onMatchSelect) {;
       // Find the original MatchResult that contains this item;
       const matchResult = matches.find(match => match.item.id === item.id),;
+=======
+  };
+
+  const handleItemSelect = (item: any) => {    if (onMatchSelect) {;
+      // Find the original MatchResult that contains this item;
+      const matchResult = matches && matches.find(match => match && match.item.id === item && item.id),;
+>>>>>>> main
       if (matchResult) {;
         onMatchSelect(matchResult);
       }
     }
+<<<<<<< HEAD
+=======
+
+  const handleItemSelect = (item: any) =>: any {    // Check condition
+if ( {) {
+  $2
+}
+      // Find the original MatchResult that contains this item;
+      const match_result = matches.find (match => match.item.id === item.id),
+      // Check condition
+if ( {) {
+  $2
+}
+        onMatchSelect (match_result);
+      }
+    }
+  }
+  // Extract just the items from each MatchResult;
+  const match_items = matches.map (match => match.item);
+    >;
+      <CardHeader className='pb - 2'>;
+        <CardTitle className='flex items - center text - white'>;
+          <Sparkles className='h - 5 w - 5 mr - 2 text - zion - cyan' />;
+          AI Matchmaker;
+        </CardTitle>;
+        <p className='text - sm text - zion - slate - light'>;
+          Describe what you & apos;re looking for and our AI will find the best;
+
+          matches;
+        </p>;
+      </CardHeader>;
+      <CardContent>;
+
+>>>>>>> main
   },
   
   // Extract just the items from each MatchResult
@@ -275,20 +512,30 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         <CardTitle className="flex items-center text-white">
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> main
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
           Describe what you're looking for and our AI will find the best matches
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> main
         </p>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
             <Textarea
+<<<<<<< HEAD
               placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
@@ -316,10 +563,28 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
             >;
+=======
+              placeholder="Describe what you need... (e && e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+              value={query}
+              onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
+                setQuery(e && e.target.value);
+              }
+              className='min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white';
+            />;
+            <Button
+              onClick={handleSearch}
+              disabled={isMatchmaking}
+
+
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+            >;
+
+>>>>>>> main
               {isMatchmaking ? (;
                 <>Analyzing your needs...</>;
               ) : (;
                 <>;
+<<<<<<< HEAD
                   <Search className="h-4 w-4 mr-2" />;
                   Find Matches;
                 </>;
@@ -333,10 +598,23 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                  <Search className='h-4 w-4 mr-2' />;
+                  Find Matches;
+                </>;
+              )}
+
+            </Button>;
+          </div>;
+
+          {hasSearched && (;
+
+>>>>>>> main
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
+<<<<<<< HEAD
 <<<<<<< HEAD
               projectDescription={query}            />
           )}
@@ -355,13 +633,64 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
               projectDescription={query}
             />;
           )}
+=======
+
+
+
+}
+}
+
+              projectDescription={query}
+            />;
+          )}
+
+>>>>>>> main
         </div>;
       </CardContent>;
     </Card>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+        <div className='space - y-4'>;
+          <div className='space - y-2'>;
+            <Textarea;
+              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
+              value={query}
+              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) =>;
+                set_query (e.target.value);
+              }
+              className='min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white';
+            />;
+            <Button;
+              on_click={handle_search}
+              disabled={is_matchmaking}
+              className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white'            >;
+              {is_matchmaking ? (
+                <>Analyzing your needs...</>) : (
+                <>;
+                  <Search className='h - 4 w - 4 mr - 2' />;
+                  Find Matches;
+                </>)}
+            </Button>;
+          </div>;
+          {has_searched && (
+            <AIMatchingResults;
+              matches={match_items}
+              onSelectMatch={handleItemSelect}
+              is_loading={is_matchmaking}
+              service_type={service_type}
+              project_description={query}            />)}
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+>>>>>>> main

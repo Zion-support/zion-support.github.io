@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewSummary.tsx
 <<<<<<< HEAD:components/reviews/ReviewSummary.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -19,6 +21,10 @@ class ErrorBoundary extends React.Component {
 }
  </div> </div> </div>) };
 const ReviewSummary: React.FC<Props> = ({ summary }) => {;
+========
+
+
+>>>>>>>> main:components/reviews/ReviewSummary.tsx
   return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
 import React from 'react';
@@ -31,9 +37,17 @@ const ReviewSummary: React.FC < Props> = ({ summary }) => {
 import type { ReviewsSummary } from '../../types / reviews';
 import StarRating from './StarRating';
 import {Star} from 'lucide-react';
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewSummary.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewSummary.tsx
 type Props = {;
   summary: ReviewsSummary;
 const ReviewSummary: React.FC<Props> = ({ summary }) => {;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewSummary.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewSummary.tsx
   return (
     <div className='enhanced-card flex items-center justify-between'>;
       <div>;
@@ -53,6 +67,10 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {;
       </div>;
     </div>;
   );
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewSummary.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewSummary.tsx
 };
 =======
 <<<<<<< HEAD:components/reviews/ReviewSummary.tsx
@@ -74,6 +92,10 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
     <div className="enhanced-card flex items-center justify-between">
       <div>
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewSummary.tsx
+========
+
+>>>>>>>> main:components/reviews/ReviewSummary.tsx
         <div className="flex items-center gap-3">
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
 <<<<<<< HEAD:components/reviews/ReviewSummary.tsx
@@ -87,8 +109,13 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
         </div>
       </div>
     </div>
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewSummary.tsx
   )
 },
+========
+
+};
+>>>>>>>> main:components/reviews/ReviewSummary.tsx
 
 export default ReviewSummary,
 =======
@@ -97,6 +124,15 @@ export default ReviewSummary,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewSummary.tsx
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewSummary.tsx
+=======
+
+ </div> </div> </div>) };
+
+=======
+
+</div> </div> </div>) };
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
  </div> </div> </div>) }
@@ -133,7 +169,10 @@ export default ReviewSummary;      <div>
         <div className="flex items-center gap-3">
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewSummary.tsx
+=======
+>>>>>>> main
         </div>
         <div className="text-sm text-gray-600 mt-1">
           <span className="mr-3">{summary.totalReviews} reviews</span>
@@ -141,6 +180,7 @@ export default ReviewSummary;      <div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:components/reviews/ReviewSummary.tsx
 };
 export default ReviewSummary;      <div>;
@@ -157,9 +197,19 @@ export default ReviewSummary;      <div>;
   );
 };
 export default ReviewSummary;  );
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewSummary.tsx
   )
+========
+
+>>>>>>>> main:components/reviews/ReviewSummary.tsx
 };
 export default ReviewSummary;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewSummary.tsx
+========
+
+
+=======
+>>>>>>>> main:components/reviews/ReviewSummary.tsx
   summary: ReviewsSummary;
 const ReviewSummary: React.FC < Props> = ({ summary }) => {
   return (
@@ -200,6 +250,7 @@ export default ReviewSummary);
 ;
 export default ReviewSummary;
 ;
+<<<<<<<< HEAD:backup-problematic-files/reviews/ReviewSummary.tsx
         </div>
       </div>
     </div>
@@ -219,10 +270,20 @@ export default ReviewSummary;
 
 =======
 >>>>>>> main:components/reviews/ReviewSummary.tsx
+=======
+
+
+>>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewSummary.tsx
 =======
 =======
 >>>>>>> main:components/reviews/ReviewSummary.tsx
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewSummary.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewSummary.tsx
+========
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>>> main:components/reviews/ReviewSummary.tsx
+=======
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Add basic type definitions for Node.js globals used in the project;
 <<<<<<< HEAD
@@ -7,10 +8,28 @@ interface Process {env: {;
     PORT?: string;
     SLACK_SIGNING_SECRET?: string;
     SLACK_BOT_TOKEN?: string;
+=======
+// Add basic type definitions for Node.js globals used in the project;
+
+interface Process {
+  env: {
+    [key: string]: string | undefined,
+    NODE_ENV: 'development' | 'production' | 'test',
+    PORT?: string,
+    SLACK_SIGNING_SECRET?: string,
+    SLACK_BOT_TOKEN?: string,
+
+>>>>>>> main
     OPENAI_API_KEY?: string;
   }
 }
 =======
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 interface Process {;
   env: {;
     [key: string]: string | undefined,;
@@ -22,6 +41,7 @@ interface Process {;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -39,3 +59,6 @@ declare let __dirname: string,;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> main

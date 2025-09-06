@@ -39,10 +39,14 @@ export default function SecretsRotationAutomationPage() {
 import React from 'react',;
 import SEO from '../components/SEO',;
 import { Check, ExternalLink } from 'lucide-react',;
+;
 export default function SecretsRotationAutomationPage() {;
 	const features = [;
-		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support';
-	];
+		'Automated key and secret rotationJIT credentials with expirations',;
+		'Policy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)',;
+		'Cloud KMS and Vault support';
+	],;
+;
 	return (;
 		<>;
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />;
@@ -59,7 +63,7 @@ export default function SecretsRotationAutomationPage() {;
 						))}
 					</div>;
 					<div className="mt-8 flex flex-wrap items-center gap-4">;
-						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $199/mo</a>;
+						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200">Start from $199/mo</a>;
 						<a href="/pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Pricing</a>;
 						<a href="https://developer.hashicorp.com/vault" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">;
 							<ExternalLink className="w-4 h-4" /> HashiCorp Vault Docs;

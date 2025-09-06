@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-id: 'content-generation-scale',
+
+    id: 'content-generation-scale',
+=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -9,146 +10,21 @@ export default /**
 function CaseStudyPage() {
   const case_study = {
     id: 'content - generation - scale',
+
     title: 'Scaling Content Generation 10x',
     company: 'Digital Marketing Agency',
     industry: 'Marketing',
+
     challenge: 'Unable to meet client demand for high - quality content at scale',
+
     solution: 'Deployed autonomous content generation systems with human oversight and quality control',
-  };
-  return (
-    <>
-      <Head>
-        <title>{caseStudy.title} - Case Study | Zion Tech Group</title>
-        <meta name="description" content={`Learn how ${caseStudy.company} achieved ${caseStudy.results[0]} with AI automation.`} />
-        <meta name="keywords" content="AI automation, content generation, marketing, case study, NLP, SEO automation" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
-        <main className="pt-20 pb-16">
-          <div className="max-w-4xl mx-auto px-6">
-            {/* Breadcrumb */}
-            <nav className="mb-8">
-              <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Case Studies
-              </Link>
-            </nav>
-            {/* Header */}
-            <header className="mb-12 text-center">
-              <div className="mb-4">
-                <span className="px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30">
-                  {caseStudy.industry}
-                </span>
-              </div>
-              <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
-              <p className="text-xl text-purple-400 font-semibold">{caseStudy.company}</p>
-              <div className="mt-4 text-white/60">
-                <span className="mr-6">Duration: {caseStudy.duration}</span>
-                <span>Team: {caseStudy.teamSize}</span>
-              </div>
-            </header>
-            {/* Challenge */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
-              <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
-                <p className="text-white/90 text-lg">{caseStudy.challenge}</p>
-              </div>
-            </section>
-            {/* Solution */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
-              <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
-                <p className="text-white/90 text-lg">{caseStudy.solution}</p>
-              </div>
-            </section>
-            {/* Technologies */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {caseStudy.technologies.map((tech, index) => (
-                  <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">
-                    <span className="text-blue-400 font-semibold">{tech}</span>
 
-  return (_<>
-      <Head>
-        <title>{caseStudy.title} - Case Study | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content={`Learn how ${caseStudy.company} achieved ${caseStudy.results[0]} with AI automation.`} />
-        <meta name=&quot;keywords&quot; content=&quot;AI automation, content generation, marketing, case study, NLP, SEO automation&quot; />
-      </Head>
-      
-      <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900&quot;>
-        <main className=&quot;pt-20 pb-16&quot;>
-          <div className=&quot;max-w-4xl mx-auto px-6&quot;>
-            {/* Breadcrumb */}
-            <nav className=&quot;mb-8&quot;>
-              <Link href=&quot;/case-studies&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
-                ← Back to Case Studies
-              </Link>
-            </nav>
-
-            {/* Header */}
-            <header className=&quot;mb-12 text-center&quot;>
-              <div className=&quot;mb-4&quot;>
-                <span className=&quot;px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30&quot;>
-                  {caseStudy.industry}
-                </span>
-              </div>
-              <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>{caseStudy.title}</h1>
-              <p className=&quot;text-xl text-purple-400 font-semibold&quot;>{caseStudy.company}</p>
-              <div className=&quot;mt-4 text-white/60&quot;>
-                <span className=&quot;mr-6&quot;>Duration: {caseStudy.duration}</span>
-                <span>Team: {caseStudy.teamSize}</span>
-              </div>
-            </header>
-
-            {/* Challenge */}
-            <section className=&quot;mb-12&quot;>
-              <h2 className=&quot;text-2xl font-semibold mb-6 text-red-400&quot;>The Challenge</h2>
-              <div className=&quot;bg-red-500/10 rounded-lg p-6 border border-red-500/20&quot;>
-                <p className=&quot;text-white/90 text-lg&quot;>{caseStudy.challenge}</p>
-              </div>
-            </section>
-
-            {/* Solution */}
-            <section className=&quot;mb-12&quot;>
-              <h2 className=&quot;text-2xl font-semibold mb-6 text-green-400&quot;>Our Solution</h2>
-              <div className=&quot;bg-green-500/10 rounded-lg p-6 border border-green-500/20&quot;>
-                <p className=&quot;text-white/90 text-lg&quot;>{caseStudy.solution}</p>
-              </div>
-            </section>
-
-            {/* Technologies */}
-            <section className=&quot;mb-12&quot;>
-              <h2 className=&quot;text-2xl font-semibold mb-6 text-blue-400&quot;>Technologies Used</h2>
-              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-4&quot;>
-                {caseStudy.technologies.map((tech, index) => (
-                  <div key={index} className=&quot;bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center&quot;>
-                    <span className=&quot;text-blue-400 font-semibold&quot;>{tech}</span>
 
 =======
 
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function CaseStudyPage() {
-  const caseStudy = {
-    id: 'content-generation-scale'
-    title: 'Scaling Content Generation 10x'
-    company: 'Digital Marketing Agency'
-    industry: 'Marketing'
-    challenge: 'Unable to meet client demand for high-quality content at scale'
-    solution: 'Deployed autonomous content generation systems with human oversight and quality control'
-    results: [
-      '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate'
-    ]
-    technologies: ['Natural Language ProcessingContent OptimizationSEO AutomationAnalytics']
-    duration: '4 months'
-    teamSize: '5 engineers + 3 content specialists'
-    featured: false
-<<<<<<< HEAD
-  }
-
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
     <>
       <Head>
@@ -159,31 +35,23 @@ export default function CaseStudyPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
         <main className="pt-20 pb-16">
           <div className="max-w-4xl mx-auto px-6">
-<<<<<<< HEAD
-            {/* Breadcrumb */}
-=======
+
+
             {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Case Studies
               </Link>
             </nav>
-<<<<<<< HEAD
-            {/* Header */}
-            <header className="mb-12 text-center">
-              <div className="mb-4">
-                <span className="px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30">
-                  {caseStudy.industry}
-=======
+
+
             {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -197,11 +65,9 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
@@ -211,74 +77,57 @@ export default function CaseStudyPage() {
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
-<<<<<<< HEAD
-            {/* Challenge */}
-=======
+
+
             {/* Challenge */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
               <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.challenge}</p>
               </div>
             </section>
-<<<<<<< HEAD
-            {/* Solution */}
-=======
+
+
             {/* Solution */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.solution}</p>
               </div>
             </section>
-<<<<<<< HEAD
-            {/* Technologies */}
-=======
+
+
             {/* Technologies */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {caseStudy.technologies.map((tech, index) => (
                   <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">
                     <span className="text-blue-400 font-semibold">{tech}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>
-<<<<<<< HEAD
-                ))}
-              </div>
-            </section>
-<<<<<<< HEAD
-{/* Results */}
-=======
-            {/* Results */}
-=======
+
+
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -291,12 +140,9 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -309,15 +155,8 @@ export default function CaseStudyPage() {
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
                   </div>
-<<<<<<< HEAD
-                ))}
-              </div>
-            </section>
-<<<<<<< HEAD
-{/* Call to Action */}
-=======
-            {/* Call to Action */}
-=======
+
+
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -330,64 +169,28 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  This case study demonstrates the real impact of AI automation in content generation. 
-                  Let's discuss how we can help you achieve similar results.
-                </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <Link 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  This case study demonstrates the real impact of AI automation in content generation.
-                  Let's discuss how we can help you achieve similar results.
-                </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <Link
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
                     href="/contact"
                     className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
-<<<<<<< HEAD
-                  <Link
-=======
-<<<<<<< HEAD
-                  <Link 
-=======
-                  <Link
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300"
-<<<<<<< HEAD
-                  <Link 
-                    href=&quot;/contact&quot;
-                    className=&quot;bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300&quot;
-                  >
-                    Get Started
-                  </Link>
-                  <Link 
-                    href=&quot;/case-studies&quot;
-                    className=&quot;px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300&quot;
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >
                     View More Case Studies
                   </Link>
@@ -398,16 +201,11 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
+
 =======
-<<<<<<< HEAD
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  )
-<<<<<<< HEAD
 }
+
+=======
     results: [;
       '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate';
     ],
@@ -497,30 +295,12 @@ export default function CaseStudyPage() {
                   <Link;
                     href="/contact";
                     className="bg - gradient - to - r from - purple - 400 to - cyan - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - purple - 500 hover:to - cyan - 500 transition - all duration - 300";
-=======
-            <section className="text-center">;
-              <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">;
-                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>;
-                <p className="text-white/80 mb-6 max-w-2xl mx-auto">;
-                  This case study demonstrates the real impact of AI automation in content generation.;
-                  Let's discuss how we can help you achieve similar results.;
-                </p>;
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-                  <Link;
-                    href="/contact";
-                    className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >;
                     Get Started;
                   </Link>;
                   <Link;
-<<<<<<< HEAD
                     href="/case - studies";
                     className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - purple - 400 / 50 transition - all duration - 300";
-=======
-                    href="/case-studies";
-                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >;
                     View More Case Studies;
                   </Link>;
@@ -530,20 +310,11 @@ export default function CaseStudyPage() {
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
     </>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProfileData } from "@/types/profile";
 import { TalentProfile } from "@/types/talent";
 =======
@@ -8,11 +9,18 @@ import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+
+import { ProfileData } from "@/types/profile",
+import { TalentProfile } from "@/types/talent",
+
+>>>>>>> main
+=======
 import {ProfileData} from "@/types/profile";
 import {TalentProfile} from "@/types/talent";
 =======
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
@@ -44,6 +52,54 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
   }
 }
 =======
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
+  // Handle both ProfileData and existing TalentProfile inputs
+  // If this is already a TalentProfile, just return it
+  if (profile && profile.professional_title !== undefined) {
+    return profile
+
+import { ProfileData } from '@/types / profile';
+import { TalentProfile } from '@/types / talent';
+export function convertProfileToTalentProfile (profile: ProfileData | any): TalentProfile {
+  // Handle both ProfileData and existing TalentProfile inputs;
+  // If this is already a TalentProfile, just return it;
+  // Check condition
+if ( {) {
+  $2
+}
+    return profile;
+  }
+  // Convert ProfileData to TalentProfile;
+
+  return {
+
+    id: profile && profile.id;
+    user_id: profile && profile.id;
+    full_name: profile && profile.name;
+    professional_title: profile && profile.title;
+    bio: profile && profile.bio || '',
+    summary: profile && profile.bio?.substring(0, 150);
+    profile_picture_url: profile && profile.avatarUrl,
+    years_experience: 3, // Default value
+    skills: profile && profile.skills?.map((skill: { name: string }) => skill && skill.name) || [];
+    availability_type: profile && profile.availability?.status === 'available' ? 'full_time' :
+                      profile && profile.availability?.status === 'limited' ? 'part_time' : 'unavailable';
+    timezone: 'UTC';
+    hourly_rate: profile && profile.hourlyRate || 0;
+    rating_count: profile && profile.reviewCount || 0,
+    average_rating: profile && profile.rating || 0
+
+=======
+    bio: profile.bio || '',
+    summary: profile.bio?.substring (0, 150);
+    profile_picture_url: profile.avatar_url,
+=======
+
+>>>>>>> main
 import { ProfileData } from "@/types/profile",;
 import { TalentProfile } from "@/types/talent",;
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {;
@@ -62,6 +118,7 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     bio: profile.bio || '',;
     summary: profile.bio?.substring(0, 150),;
     profile_picture_url: profile.avatarUrl,;
+<<<<<<< HEAD
     years_experience: 3, // Default value;
     skills: profile.skills?.map((skill: { name: string }) => skill.name) || [],;
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
@@ -78,3 +135,22 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    years_experience: 3, // Default value;
+    skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
+    availability_type: profile.availability?.status === 'available' ? 'full_time' :;
+                      profile.availability?.status === 'limited' ? 'part_time' : 'unavailable';
+    timezone: 'UTC';
+    hourly_rate: profile.hourly_rate || 0;
+    rating_count: profile.review_count || 0,
+    average_rating: profile.rating || 0;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+
+}
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

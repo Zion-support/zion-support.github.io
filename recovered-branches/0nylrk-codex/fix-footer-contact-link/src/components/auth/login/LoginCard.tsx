@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { Link } from "react-router-dom";
@@ -53,6 +54,15 @@ import { LoginForm } from "./LoginForm",;
 import { SocialLogin } from "./SocialLogin";
 export function LoginCard() {;
   return (;
+=======
+
+
+
+
+export function LoginCard() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+>>>>>>> main
     <div className="mx-auto w-full max-w-sm lg:w-96">;
       <div className="text-center mb-10">;
         <h2 className="text-3xl font-bold tracking-tight text-white">;
@@ -60,11 +70,40 @@ export function LoginCard() {;
         </h2>;
         <p className="mt-2 text-sm text-zion-slate-light">;
           Don't have an account?{" "}
+<<<<<<< HEAD
           <Link to="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
+=======
+          <Link
+            to="/signup"
+
+            className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
+=======
+import { Link  } from './react-router-dom';
+import { LoginForm  } from './LoginForm';
+import { SocialLogin  } from './SocialLogin';
+export /**
+ * LoginCard - Function description
+ */
+function LoginCard() {
+  return (
+    <div className="mx - auto w - full max - w-sm lg:w - 96">;
+      <div className="text - center mb - 10">;
+        <h2 className="text - 3xl font - bold tracking - tight text - white">;
+          Welcome back;
+        </h2>;
+        <p className="mt - 2 text - sm text - zion - slate - light">;
+          Don't have an account?{" "}
+          <Link;
+            to="/signup";
+            className="font - medium text - zion - cyan hover: text - zion - cyan - light";
+          >;
+
+>>>>>>> main
             Sign up;
           </Link>;
         </p>;
       </div>;
+<<<<<<< HEAD
       <div className="bg-zion-blue-dark rounded-lg p-6">;
         <LoginForm />;
         <SocialLogin />;
@@ -75,3 +114,21 @@ export function LoginCard() {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+    </div>
+
+
+    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  );
+=======
+      <div className="bg - zion - blue - dark rounded - lg p - 6">;
+        <LoginForm />;
+        <SocialLogin />;
+      </div>;
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> main

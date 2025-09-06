@@ -1,30 +1,34 @@
-<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useMemo } from 'react';
+
 =======
-<<<<<<< HEAD
-import React, { useMemo } from 'react',
-=======
+
 import React, { useMemo } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
@@ -51,21 +55,14 @@ import { nextGenAIServices  } from '../data/next-gen-ai-services';
 import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
-<<<<<<< HEAD
-export default function DynamicServicePage() {
-<<<<<<< HEAD
-=======
-=======
-export default function DynamicServicePage() {;
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
     if (!slug) return undefined;
+
     const all: any[] = ([] as any[])
       .concat(
         enhancedRealMicroSaasServices as any;
@@ -96,6 +93,8 @@ export default function DynamicServicePage() {;
         ultimateFuturisticServices2025 as any
       );
     const byLink = all.find(s => {
+
+=======
 import React, { useMemo } from 'react';
 import Head from 'next / head';
 import {use_router} from 'next / router';
@@ -162,13 +161,17 @@ if (return undefined) {
       realQ4Services2025 as any,
       real2026Q1Additions as any,
       ultimateFuturisticServices2025 as any);    const by_link = all.find (string => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       try {
         const url = new URL (s.link);
         return url.pathname.replace (/^\/+|\/+$/g, '') === slug.replace (/^\/+|\/+$/g, '');
       } catch {
+
+
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
+
   const service = useMemo(() => {;
     if (!slug) return undefined;
     const all: any[] = ([] as any[]).concat(;
@@ -204,70 +207,50 @@ export default function DynamicServicePage() {;
         return url && url.pathname.replace(/^\/+|\/+$/g, '') === slug && slug.replace(/^\/+|\/+$/g, '');
       } catch {;
         return false;        return false;
+
+
+=======
         return false
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     });
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug);
     if (byId) return byId;
-    return undefined
+
+
   }, [slug]);
-<<<<<<< HEAD
 
-  if (!service) {_return (
-      <UltraAdvancedFuturisticBackground>
 
-        <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
-        <div className='min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-3xl mx-auto text-center'>
-            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
-              Service not found
-            </h1>
-            <p className='text-gray-300 mb-8'>
-              We couldn't find the service you were looking for. Explore all
-              services below.
-            </p>
-            <Button href='/services' variant='quantum' size='lg'>
-              Browse Services
-            </Button>
-          </div>
-        </div>
-      </UltraAdvancedFuturisticBackground>
-    );  }        <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+        <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
+
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
             <Button href="/services" variant="quantum" size="lg">Browse Services</Button>
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>
         </div>
       </UltraAdvancedFuturisticBackground>
     )
-<<<<<<< HEAD
-  }
-const canonicalUrl = `https://ziontechgroup.com/${slug}`;
 
-=======
+  }
+
+
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-return false;        return false;
+
+        return false;        return false;
       }
     });
     // Check condition
@@ -323,21 +306,15 @@ if ( {) {
           <div className='text - center mb - 10'>;
             <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - indigo - 400 via - cyan - 400 to - purple - 400 bg - clip - text text - transparent flex items - center justify - center gap - 3'>;
               <span className='text - 5xl' aria - hidden>;
-=======
-        <meta name='description' content={service.description} />
-        <link rel='canonical' href={canonicalUrl} />
-      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-6xl mx-auto'>
-          <div className='text-center mb-10'>
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
-              <span className='text-5xl' aria-hidden>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                 {service.icon}
               </span>;
               {service.name}
             </h1>;
             <p className='mt - 4 text - xl text - slate - 300 max - w-3xl mx - auto'>;
               {service.tagline}
+
+
   if (!service) {;
     return (
       <UltraAdvancedFuturisticBackground>;
@@ -365,7 +342,9 @@ if ( {) {
         </div>;
       </UltraAdvancedFuturisticBackground>;
     );
+
   const canonicalUrl = `https://ziontechgroup && ziontechgroup.com/${slug}`;
+
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -385,12 +364,14 @@ if ( {) {
               {service && service.tagline}
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>;
             <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6'>;
               <h2 className='text-2xl font-semibold mb-4'>What you get</h2>;
               <p className='text-slate-300 mb-6'>{service && service.description}</p>;
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
                 {service && service.features.slice(0, 16).map((feat, i) => (;
+
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
@@ -446,6 +427,7 @@ if ( {) {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
+=======
             </p>;
           </div>;
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 12'>;
@@ -510,10 +492,27 @@ if ( {) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
       </div>;
+
+
+
+
+=======
+
+// Static export support: generate root-level pages for service slugs;
+type Svc = (typeof enhancedRealMicroSaasServices)[number];
+
+function normalizeSlug(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
+=======
+=======
         <meta name="description" content={service.description} />
         <link rel="canonical" href={canonicalUrl} />
       </Head>
@@ -525,6 +524,7 @@ if ( {) {
             </h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
           </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>
@@ -548,18 +548,16 @@ if ( {) {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-<<<<<<< HEAD
               </div>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-);
+  );
 }
+
+
 function collectAllServices(): any (): Svc[] {;
   return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
     extraServices as Svc[],;
@@ -577,75 +575,56 @@ function collectAllServices(): any (): Svc[] {;
     realMarketServices as Svc[],;
     realVerifiedServices as unknown as Svc[];
   );
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 function normalizeSlug(): any (value: string): string {;
   return value;
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, '-');
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
-=======
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-// Static export support: generate root-level pages for service slugs;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-// Static export support: generate root-level pages for service slugs
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-type Svc = (typeof enhancedRealMicroSaasServices)[number];
-function collectAllServices(): Svc[] {
-  return enhancedRealMicroSaasServices.concat(
-    extraServices as Svc[]
-    additionalEnhancedServices as Svc[]
-    innovativeAIServices as Svc[]
-    quantumSpaceServices as Svc[]
-    enterpriseITServices as Svc[]
-    newRealServices as Svc[]
-    marketReadyServices as Svc[]
-    nextGenerationAIServices as Svc[]
-    emergingTechnologyServices as Svc[]
-    comprehensiveITSolutions as Svc[]
-    marketValidatedServices as Svc[]
-    newRealInnovations as Svc[]
-    realMarketServices as Svc[]
-    realVerifiedServices as unknown as Svc[]
-  );
-function normalizeSlug(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!link) return null;
   try {;
     const url = new URL(link);
-<<<<<<< HEAD
+
     const path = url && url.pathname.replace(/^\/+|\/+$/g, '');
     // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";
     if (path && !path && path.includes('/')) return path;
     return null;
   } catch {;
     return null;
+=======
+
+
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-export const getStaticPaths: GetStaticPaths = async () => {
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const services = collectAllServices();
+
   const candidateSlugs = new Set<string>(),;
+
   // Gather existing root-level page slugs to avoid conflicts;
   const pagesDir = path && path.join(process && process.cwd(), 'pages');
+
   const staticSlugs = new Set<string>();
   try {;
     const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
           }
     }
   } catch {}
+
   const staticSlugs = new Set<string>();
   try {
     const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
+
+=======
     </UltraAdvancedFuturisticBackground>);
 // Static export support: generate root - level pages for service slugs;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
@@ -700,6 +679,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
   } catch {}
       const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     for (const entry of entries) {
       if (&& /\.tsx?$/.test (entry.name)) {) {
   $2
@@ -710,6 +690,50 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
           static_slugs.add (base.toLowerCase ());
         }
+
+
+
+
+
+  // Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter(
+    slug => !staticSlugs.has(slug)
+  );
+  return {
+
+
+    paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
+    fallback: true,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {;
+  // No dynamic fetching needed; the component resolves the service client-side.
+  return { props: {} };};
+  // Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
+
+  return {
+    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
+
+
+    fallback: true
+  }
+}
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // No dynamic fetching needed; the component resolves the service client-side.
+  return { props: {} };}
+  // Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
+  return {
+    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } }))
+    fallback: true
+  }
+}
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // No dynamic fetching needed, the component resolves the service client-side.
+
+
       const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
     for (const entry of entries) {;
       if (entry && entry.isFile() && /\.tsx?$/.test(entry && entry.name)) {;
@@ -719,39 +743,46 @@ export const getStaticPaths: GetStaticPaths = async () => {
         }
     }
   } catch {}
+
+
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter(;
     slug => !staticSlugs && staticSlugs.has(slug);
   );
+
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug } })),;
     fallback: true,;
   };
 };
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.;
   return { props: {} };};
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter((slug) => !staticSlugs && staticSlugs.has(slug));
-      }
-    }
-  } catch {}
-  for (const s of services) {
-    const fromLink = extractRootSlugFromLink((s as any).link);
-    const slugCandidate = fromLink || (s.id ? normalizeSlug(s.id) : (s.name ? normalizeSlug(s.name) : ''));
-    if (!slugCandidate) continue;
-    if (reservedTopLevelSlugs.has(slugCandidate)) continue, // skip conflicts
-    candidateSlugs.add(slugCandidate)
-  }
+
+
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug } })),;
     fallback: true;
   }
 };
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed, the component resolves the service client-side.;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return { props: {} }
+
 };
+
+=======
+
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from (candidate_slugs).filter (
     slug => !static_slugs.has (slug));
@@ -779,126 +810,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: {} }
 }
 ;
-      }
-    }
-  } catch {}
-
-  for (const s of services) {
-    const fromLink = extractRootSlugFromLink((s as any).link)
-    const slugCandidate = fromLink || (s.id ? normalizeSlug(s.id) : (s.name ? normalizeSlug(s.name) : ''))
-    if (!slugCandidate) continue,
-    if (reservedTopLevelSlugs.has(slugCandidate)) continue, // skip conflicts
-    candidateSlugs.add(slugCandidate)
-  }
-
-  // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug))
-
-  return {_paths: uniqueNonConflicting.map(_(slug) => ({ params: { slug} })),
-    fallback: true
-  }
-},
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // No dynamic fetching needed, the component resolves the service client-side.
-  return { props: {} }
-},
-
-=======
-    const path = url.pathname.replace(/^\/+|\/+$/g, '');
-    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
-    if (path && !path.includes('/')) return path;
-    return null
-  } catch {
-    return null
-<<<<<<< HEAD
-  }
-}
-=======
-  };
-}
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export const getStaticPaths: GetStaticPaths = async () => {
-=======
-export const getStaticPaths: GetStaticPaths = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const services = collectAllServices();
-  const candidateSlugs = new Set<string>()
-  // Gather existing root-level page slugs to avoid conflicts
-  const pagesDir = path.join(process.cwd(), 'pages');
-  const staticSlugs = new Set<string>();
-  try {
-    const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
-          }
-    }
-  } catch {}
-      const entries = fs.readdirSync(pagesDir, { withFileTypes: true })
-    for (const entry of entries) {
-      if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
-        const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
-        if (base !== 'index' && base !== '[slug]' && !base.startsWith('_')) {
-          staticSlugs.add(base.toLowerCase())
-        }
-    }
-  } catch {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter(
-    slug => !staticSlugs.has(slug)
-  );
-  return {
-<<<<<<< HEAD
-    paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
-=======
-    paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
-    fallback: true,
-  };
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {;
-  // No dynamic fetching needed; the component resolves the service client-side.
-  return { props: {} };};
-  // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
-
-  return {
-    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    fallback: true
-  }
-}
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // No dynamic fetching needed; the component resolves the service client-side.
-  return { props: {} };}
-  // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
-  return {
-    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } }))
-    fallback: true
-  }
-}
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // No dynamic fetching needed, the component resolves the service client-side.
-<<<<<<< HEAD
-  return { props: {} }
-}
-
-=======
-
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-  return { props: {} };
-};
-=======
-
-};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

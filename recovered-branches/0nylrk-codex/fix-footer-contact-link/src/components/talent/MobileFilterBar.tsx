@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from "react";
@@ -21,6 +22,12 @@ import { Input } from "@/components/ui/input",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -28,6 +35,7 @@ interface MobileFilterBarProps {
 
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function MobileFilterBar({
   searchTerm;
@@ -47,6 +55,15 @@ export function MobileFilterBar({
   setSearchTerm, 
   setIsMobileFilterOpen 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+
+
+
+
+>>>>>>> main
 }: MobileFilterBarProps) {
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
@@ -70,17 +87,32 @@ export function MobileFilterBar({
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Search, Sliders} from "lucide-react";
+import {Input} from "@/components/ui/input";
+=======
+
+>>>>>>> main
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 interface MobileFilterBarProps {;
   searchTerm: string,;
   setSearchTerm: (value: string) => void,;
   setIsMobileFilterOpen: (isOpen: boolean) => void;
 }
+<<<<<<< HEAD
 ;
 export function MobileFilterBar({;
   searchTerm;
@@ -90,6 +122,17 @@ export function MobileFilterBar({;
   return (;
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">;
       <Button;
+=======
+
+export function MobileFilterBar(): any ({ ;
+  searchTerm;
+  setSearchTerm, ;
+  setIsMobileFilterOpen ;
+}: MobileFilterBarProps) {;
+  return (
+    <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">;
+      <Button
+>>>>>>> main
         onClick={() => setIsMobileFilterOpen(true)} ;
         variant="outline";
         className="w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light";
@@ -97,21 +140,75 @@ export function MobileFilterBar({;
         <Sliders className="h-4 w-4" />;
         Filter Talents;
       </Button>;
+<<<<<<< HEAD
       <div className="relative mt-4">;
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />;
         <Input;
           placeholder="Search talents...";
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
+=======
+
+      <div className="relative mt-4">;
+        <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />;
+        <Input
+          placeholder="Search talents..."
+          value={searchTerm}
+          onChange={e => setSearchTerm(e && e.target.value)}
+>>>>>>> main
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate";
         />;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+import React from './react';
+import { Button } from '@/components / ui / button';
+import { Search, Sliders } from './lucide-react';
+import { Input } from '@/components / ui / input';
+interface MobileFilterBarProps {
+  search_term: string,
+  setSearchTerm: (value: string) => void,
+  setIsMobileFilterOpen: (is_open: boolean) => void;
+}
+export /**
+ * MobileFilterBar - Function description
+ */
+function MobileFilterBar() {
+  return (
+    <div className="lg:hidden mb - 4 sticky top - 0 z - 20 bg - zion - blue pt - 2 pb - 4">;
+      <Button;
+        on_click={() => setIsMobileFilterOpen (true)}
+        variant="outline";
+        className="w - full flex items - center justify - center gap - 2 border - zion - blue - light text - zion - slate - light";
+      >;
+        <Sliders className="h - 4 w - 4" />;
+        Filter Talents;
+      </Button>;
+      <div className="relative mt - 4">;
+        <Search className="absolute left - 2 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate" />;
+        <Input;
+          placeholder="Search talents...";
+          value={search_term}
+          on_change={e => setSearchTerm (e.target.value)}
+          className="pl - 8 bg - zion - blue border - zion - blue - light text - white placeholder: text - zion - slate";
+        />;
+      </div>;
+    </div>);
+}
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main

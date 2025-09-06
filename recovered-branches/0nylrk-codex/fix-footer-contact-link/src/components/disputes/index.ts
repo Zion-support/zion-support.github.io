@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { DisputeDashboard } from "./DisputeDashboard";
 export { DisputeDetail } from "./DisputeDetail";
 export { DisputeForm } from "./DisputeForm";
@@ -6,6 +7,9 @@ export { DisputesList } from "./DisputesList";
 export { RaiseDisputeButton } from "./RaiseDisputeButton";
 export { DisputeStatusBadge } from "./DisputeStatusBadge";
 =======
+=======
+
+>>>>>>> main
 
 export { DisputeDashboard } from './DisputeDashboard',;
 export { DisputeDetail } from './DisputeDetail',;
@@ -14,7 +18,11 @@ export { DisputesList } from './DisputesList',;
 export { RaiseDisputeButton } from './RaiseDisputeButton',;
 export { DisputeStatusBadge } from './DisputeStatusBadge';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

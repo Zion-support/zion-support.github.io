@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -581,7 +578,6 @@ improver.run().catch(console.error)
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -775,9 +771,6 @@ scanner.runSecurityScan().catch(console.error);"
     this.log("======")
   // Step "1"
       this.log("\\n� Comprehensive App Improvement completed!")
-<<<<<<< HEAD
-  this.log(`Fatal "error": ${error.message}`, ``)
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1064,7 +1057,6 @@ module.exports = ComprehensiveAppImprover;
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -1106,6 +1098,7 @@ class $1 {
   "npm install --legacy-peer-deps --force",
       "npm install --force",
       "yarn install --ignore-engines" ]
+
     for (const method of methods) {
   const result = await this.runCommand(method, { silent: true })
       if (result !== null) {
@@ -1146,6 +1139,7 @@ class $1 {
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
       this.log(`Package.json fixed: ${fixes.join(", ")}`)
       this.fixesApplied.push(...fixes)
+
 } catch (error) {
   this.log(`Failed to fix package.json: ${error.message}`, "ERROR"),
 }
@@ -1199,6 +1193,7 @@ const nextConfig = {
 module.exports = nextConfig`;
 }
     ]
+
     for (const config of configs) {
   const configPath = path.join(this.projectRoot, config.file)
       if (!fs.existsSync(configPath)) {
@@ -1482,6 +1477,7 @@ class SecurityScanner {
       /secret\\s*[:=]\\s*[""][^""]+[""]/gi,
       /token\\s*[:=]\\s*[""][^""]+[""]/gi;
     ]
+
     const files = this.findSourceFiles()
     for (const file of files) {
   try {
@@ -1570,6 +1566,7 @@ const scanner = new SecurityScanner()
 scanner.runSecurityScan().catch(console.error)`;
 }
     ]
+
     for (const script of scripts) {
   const scriptPath = path.join(this.projectRoot, script.name)
       const scriptDir = path.dirname(scriptPath)
@@ -1598,6 +1595,7 @@ scanner.runSecurityScan().catch(console.error)`;
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
       this.log("Updated package.json scripts")
       this.fixesApplied.push("Updated package.json scripts")
+
 } catch (error) {
   this.log(`Failed to update package.json: ${error.message}`, "ERROR"),
 }
@@ -1661,6 +1659,7 @@ scanner.runSecurityScan().catch(console.error)`;
       // Step 9: Generate report;
       await this.generateReport()
       this.log("\\n🎉 Comprehensive App Improvement completed!")
+
 } catch (error) {
   this.log(`Fatal error: ${error.message}`, "ERROR')
       await this.generateReport()
@@ -1668,8 +1667,6 @@ scanner.runSecurityScan().catch(console.error)`;
 }
   }
 }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 // Run the improver;
 const improver = new ComprehensiveAppImprover()
@@ -1682,7 +1679,6 @@ const improver = new ComprehensiveAppImprover()
 improver.run().catch(console.error)
 =======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run the improver
 if (require.main === module) {
   const improver = new ComprehensiveAppImprover();
@@ -1691,13 +1687,9 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-<<<<<<< HEAD
-module.exports = ComprehensiveAppImprover;
-=======
 
 module.exports = ComprehensiveAppImprover;
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

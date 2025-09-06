@@ -2,8 +2,6 @@
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,7 +151,6 @@ try {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -165,9 +162,6 @@ console.log(" Starting comprehensive lint error fixes...")
         const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["']lucide-react[']
     if (content.includes('')
         if (line.includes('')
-<<<<<<< HEAD
-          lines[i] = line.replace(/"[^"]*$/, '"")
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -190,4 +184,3 @@ console.log(" Starting comprehensive lint error fixes...")
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

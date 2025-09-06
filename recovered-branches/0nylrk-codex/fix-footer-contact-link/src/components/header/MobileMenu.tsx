@@ -1,7 +1,10 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> main
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";
@@ -9,6 +12,7 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
+<<<<<<< HEAD
   unreadCount?: number;
   onClose: () => void
 }
@@ -33,12 +37,27 @@ import { Button } from "@/components/ui/button",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+  unreadCount?: number;
+  onClose: () => void;
+}
+
+export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+
+
+
+>>>>>>> main
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
 }
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const location = useLocation();
   const { user } = useAuth();
@@ -50,12 +69,23 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+  const location = useLocation(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> main
   const navItems = [
     {
       name: "Home"
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     {
@@ -71,6 +101,10 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
 =======
+=======
+
+
+>>>>>>> main
     },
     {
       name: "Browse",
@@ -84,7 +118,12 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+>>>>>>> main
     {
       name: "Post Job"
       href: "/post-job"
@@ -92,10 +131,18 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/post-job")
       authRequired: true
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
     },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+    },
+
+
+>>>>>>> main
     {
       name: "Messages"
       href: "/messages"
@@ -104,10 +151,18 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       badge: unreadCount
       authRequired: true
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
     },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+    },
+
+
+>>>>>>> main
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -115,6 +170,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   ];
   // Filter items based on auth status
@@ -140,16 +196,79 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       </div>
       <nav className="space-y-1">
         {visibleItems.map(item => (
+=======
+
+=======
+
+  ],
+
+
+  const navItems = [;
+    {;
+      name: "Home",;
+      href: "/",;
+      icon: Home,;
+      matches: (path: string) => path === "/";
+    };
+    {;
+      name: "Browse",;
+      href: "/talent",;
+      icon: Search,;
+      matches: (path: string) => path && path.startsWith("/talent") || path && path.startsWith("/categories") || path && path.startsWith("/marketplace");
+    };
+    {;
+      name: "Community",;
+      href: "/community",;
+      icon: MessageCircle,;
+      matches: (path: string) => path && path.startsWith("/community") || path && path.startsWith("/forum");
+    };
+    {;
+      name: "Post Job",;
+      href: "/post-job",;
+      icon: BriefcaseIcon,;
+      matches: (path: string) => path && path.startsWith("/post-job"),;
+      authRequired: true;
+    };
+    {;
+      name: "Messages",;
+      href: "/messages",;
+      icon: MessageSquare,;
+      matches: (path: string) => path && path.startsWith("/messages") || path && path.startsWith("/inbox"),;
+      badge: unreadCount,;
+      authRequired: true;
+    };
+    {;
+      name: "Dashboard",;
+      href: "/dashboard",;
+      icon: User,;
+      matches: (path: string) => path && path.startsWith("/dashboard"),;
+      authRequired: true;
+    }
+  ];
+
+
+
+
+  return (
+
+=======
+>>>>>>> main
           <Link
             key={item.name}
             to={item.href}
             className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
               "flex items-center px-6 py-3 text-base font-medium";
 
 =======
               "flex items-center px-6 py-3 text-base font-medium",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+              "flex items-center px-6 py-3 text-base font-medium",
+
+>>>>>>> main
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -161,9 +280,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
               {item.badge && item.badge > 0 && (
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
 =======
+=======
+
+>>>>>>> main
 import { Link } from "react-router-dom",;
 import { useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",;
@@ -226,6 +349,10 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
     !item.authRequired || (item.authRequired && isAuthenticated);
   );
   return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
     <div className="py-6">;
       <div className="flex justify-between items-center px-6 mb-6">;
         <h2 className="text-xl font-bold">Menu</h2>;
@@ -233,7 +360,27 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
           <X className="h-5 w-5" />;
         </Button>;
       </div>;
+<<<<<<< HEAD
       <nav className="space-y-1">;
+=======
+
+      <nav className="space-y-1">;
+
+              "flex items-center px-6 py-3 text-base font-medium"
+              item && item.matches(location && location.pathname)
+
+                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
+                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+            )}
+            onClick={onClose}>;
+            <div className="relative mr-4">;
+              <item && item.icon className="h-5 w-5" />;
+              {item && item.badge && item && item.badge > 0 && (;
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+                  {item && item.badge > 9 ? '9+' : item && item.badge}
+                </span>;
+=======
+>>>>>>> main
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -253,6 +400,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -271,9 +419,24 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              )}
+            </div>;
+            {item && item.name}
+          </Link>;
+        ))}
+
+
+
+
+>>>>>>> main
+=======
       </nav>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -281,3 +444,111 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { Link } from './react-router-dom';
+import { use_location } from './react-router-dom';
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from './lucide-react';
+import { cn } from '@/lib / utils';
+import { use_auth } from '@/hooks / use_auth';
+import { Button } from '@/components / ui / button';
+export interface MobileMenuProps {
+  unread_count?: number;
+  on_close: () => void;
+}
+export /**
+ * MobileMenu - Function description
+ */
+function MobileMenu() {
+  const location = use_location ();
+  const { user } = use_auth ();
+  const is_authenticated = !!user;
+;
+  const nav_items = [;
+    {
+      name: "Home",
+      href: "/",
+      icon: Home,
+      matches: (path: string) => path === "/";
+    }
+    {
+      name: "Browse",
+      href: "/talent",
+      icon: Search,
+      matches: (path: string) => path.starts_with ("/talent") || path.starts_with ("/categories") || path.starts_with ("/marketplace");
+    }
+    {
+      name: "Community",
+      href: "/community",
+      icon: MessageCircle,
+      matches: (path: string) => path.starts_with ("/community") || path.starts_with ("/forum");
+    }
+    {
+      name: "Post Job",
+      href: "/post - job",
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.starts_with ("/post - job"),
+      auth_required: true;
+    }
+    {
+      name: "Messages",
+      href: "/messages",
+      icon: MessageSquare,
+      matches: (path: string) => path.starts_with ("/messages") || path.starts_with ("/inbox"),
+      badge: unread_count,
+      auth_required: true;
+    }
+    {
+      name: "Dashboard",
+      href: "/dashboard",
+      icon: User,
+      matches: (path: string) => path.starts_with ("/dashboard"),
+      auth_required: true;
+    }
+  ];
+;
+  // Filter items based on auth status;
+  const visible_items = nav_items.filter (item =>;
+    !item.auth_required || (item.auth_required && is_authenticated));
+;
+  return (
+    <div className="py - 6">;
+      <div className="flex justify - between items - center px - 6 mb - 6">;
+        <h2 className="text - xl font - bold">Menu</h2>;
+        <Button variant="ghost" size="icon" on_click={on_close}>;
+          <X className="h - 5 w - 5" />;
+        </Button>;
+      </div>;
+      <nav className="space - y-1">;
+        {visible_items.map (item => (
+          <Link;
+            key={item.name}
+            to={item.href}
+            className={cn (
+              "flex items - center px - 6 py - 3 text - base font - medium";
+              item.matches (location.pathname);
+                ? "bg - zion - purple / 20 text - zion - cyan border - l-4 border - zion - cyan";
+                : "text - white hover:bg - zion - purple / 10 hover:text - zion - cyan")}
+            on_click={on_close}
+          >;
+            <div className="relative mr - 4">;
+              <item.icon className="h - 5 w - 5" />;
+              {item.badge && item.badge > 0 && (
+                <span className="absolute -top - 2 -right - 2 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center">;
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>)}
+            </div>;
+            {item.name}
+          </Link>))}
+      </nav>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main

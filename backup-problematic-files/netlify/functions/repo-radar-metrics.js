@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:netlify/functions/repo-radar-metrics.js
 =======
 <<<<<<< HEAD:backup-problematic-files/netlify/functions/repo-radar-metrics.js
@@ -29,6 +30,10 @@ exports.handler = async () => {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/repo-radar-metrics.js
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/repo-radar-metrics.js
+=======
+
+
+>>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -67,6 +72,7 @@ exports.handler = async () => {
     body: logs.join('\n')
   }
 };function runNode(relPath, args = []) {
+<<<<<<< HEAD
 <<<<<<< HEAD:netlify/functions/repo-radar-metrics.js
   const abs = path.resolve(__dirname, '....', relPath)
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
@@ -89,6 +95,9 @@ exports.handler = async () => {
 }
 
 =======
+=======
+
+>>>>>>> main
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
@@ -113,6 +122,7 @@ exports.handler = async () => {
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main:netlify/functions/repo-radar-metrics.js
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/repo-radar-metrics.js
 =======
@@ -121,5 +131,11 @@ exports.handler = async () => {
 }
 =======
 >>>>>>> main:netlify/functions/repo-radar-metrics.js
+=======
+
+=======
+
+
+>>>>>>> main
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/repo-radar-metrics.js
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

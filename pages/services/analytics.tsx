@@ -1,101 +1,11 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import Head from 'next / head';
-import { motion } from 'framer-motion';
-import {
-=======
-<<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import Head from 'next/head';
+
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  BarChart3
-  Database
-  Zap
-  Shield
-  Rocket
-  Cpu
-  ArrowRight
-  CheckCircle
-  Star
-  Users
-  Clock
-  TrendingUp;
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-export default function AnalyticsServicesPage() {
-  const services = [
-    {
-      title: 'Big Data Processing'
-      description: 'Scalable data processing and analytics platforms'
-      features: [
-        'Data Pipeline Engineering'
-        'Real-time Processing'
-        'Batch Processing'
-        'Data Quality'
-      ]
-      price: 'From $8,000'
-      icon: Database
-      color: 'from-indigo-500 to-purple-500'
-    }
-    {
-      title: 'Business Intelligence'
-      description: 'Interactive dashboards and reporting solutions'
-      features: [
-        'Custom Dashboards'
-        'KPI Tracking'
-        'Data Visualization'
-        'Automated Reports'
-      ]
-      price: 'From $5,000'
-      icon: BarChart3
-      color: 'from-blue-500 to-cyan-500'
-    }
-    {
-      title: 'Predictive Analytics'
-      description: 'AI-powered predictive modeling and forecasting'
-      features: [
-        'Machine Learning Models'
-        'Forecasting'
-        'Risk Assessment'
-        'Trend Analysis'
-      ]
-      price: 'From $12,000'
-      icon: Zap
-      color: 'from-purple-500 to-pink-500'
-    }
-    {
-      title: 'Data Strategy & Governance'
-      description: 'Comprehensive data strategy and governance frameworks'
-      features: [
-        'Data Architecture'
-        'Governance Policies'
-        'Compliance'
-        'Data Quality'
-      ]
-      price: 'From $10,000'
-      icon: Shield
-      color: 'from-emerald-500 to-teal-500'
-    }
-  ];
-  const stats = [
-    { number: '1M+', label: 'Data Points Processed', icon: Database }
-    { number: '95%', label: 'Accuracy Rate', icon: CheckCircle }
-    { number: '24/7', label: 'Real-time Analytics', icon: Clock }
-    { number: '300%', label: 'ROI Improvement', icon: TrendingUp }
-  ];
 
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   BarChart3,
   Database,
   Zap,
@@ -106,9 +16,9 @@ export default function AnalyticsServicesPage() {
   CheckCircle,
   Star,
   Users,
-<<<<<<< HEAD
   Clock,
   TrendingUp,
+
 } from 'lucide-react';
 import EnhancedNavigation from '../../components / EnhancedNavigation';
 import EnhancedFooter from '../../components / EnhancedFooter';
@@ -118,27 +28,35 @@ export default /**
 function AnalyticsServicesPage() {
   const services = [;
     {
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+
+=======
       title: 'Big Data Processing',
       description: 'Scalable data processing and analytics platforms',
       features: [;
@@ -197,257 +115,45 @@ import { motion } from 'framer-motion';
     { number: '95%', label: 'Accuracy Rate', icon: CheckCircle },
     { number: '24 / 7', label: 'Real - time Analytics', icon: Clock },
     { number: '300%', label: 'ROI Improvement', icon: TrendingUp },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
+
           href='https://ziontechgroup && ziontechgroup.com/services/analytics'
         />      </Head>;
+
       <EnhancedNavigation />;
+
+
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-import { 
-  BarChart3, Database, Zap, Shield, Rocket, Cpu, 
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-=======
-  Clock,;
-  TrendingUp,;
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-=======
-import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import {
-  BarChart3, Database, Zap, Shield, Rocket, Cpu,
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react',
-import EnhancedNavigation from '../../components/EnhancedNavigation',
-import EnhancedFooter from '../../components/EnhancedFooter',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export default function AnalyticsServicesPage() {
-  const services = [
-    {
-      title: "Big Data Processing",
-      description: "Scalable data processing and analytics platforms",
-<<<<<<< HEAD
-      features: ["Data Pipeline Engineering", "Real-time Processing", "Batch Processing", "Data Quality"];
-      price: "From $8,000";
-      icon: Database,
-      color: "from-indigo-500 to-purple-500"
-    };
-    {
-      title: "Business Intelligence",
-      description: "Interactive dashboards and reporting solutions",
-      features: ["Custom Dashboards", "KPI Tracking", "Data Visualization", "Automated Reports"];
-      price: "From $5,000";
-      icon: BarChart3,
-      color: "from-blue-500 to-cyan-500"
-    };
-    {
-      title: "Predictive Analytics",
-      description: "AI-powered predictive modeling and forecasting",
-      features: ["Machine Learning Models", "Forecasting", "Risk Assessment", "Trend Analysis"];
-      price: "From $12,000";
-      icon: Zap,
-      color: "from-purple-500 to-pink-500"
-    };
-    {
-      title: "Data Strategy & Governance",
-      description: "Comprehensive data strategy and governance frameworks",
-      features: ["Data Architecture", "Governance Policies", "Compliance", "Data Quality"];
-      price: "From $10,000";
-      icon: Shield,
-      color: "from-emerald-500 to-teal-500"
-    }
-  ];
-=======
-      features: ["Data Pipeline Engineering", "Real-time Processing", "Batch Processing", "Data Quality"],
-      price: "From $8,000",
-      icon: Database,
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Business Intelligence",
-      description: "Interactive dashboards and reporting solutions",
-      features: ["Custom Dashboards", "KPI Tracking", "Data Visualization", "Automated Reports"],
-      price: "From $5,000",
-      icon: BarChart3,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "AI-powered predictive modeling and forecasting",
-      features: ["Machine Learning Models", "Forecasting", "Risk Assessment", "Trend Analysis"],
-      price: "From $12,000",
-      icon: Zap,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Data Strategy & Governance",
-      description: "Comprehensive data strategy and governance frameworks",
-      features: ["Data Architecture", "Governance Policies", "Compliance", "Data Quality"],
-      price: "From $10,000",
-      icon: Shield,
-<<<<<<< HEAD
-      color: 'from-emerald-500 to-teal-500',
-    },;
-  ];
 
-=======
-      color: "from-emerald-500 to-teal-500"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  const stats = [
-    { number: "1M+", label: "Data Points Processed", icon: Database },
-    { number: "95%", label: "Accuracy Rate", icon: CheckCircle },
-    { number: "24/7", label: "Real-time Analytics", icon: Clock },
-<<<<<<< HEAD
-    { number: "300%", label: "ROI Improvement", icon: TrendingUp }
-];
-=======
-    { number: "300%", label: "ROI Improvement", icon: TrendingUp   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <Head>
-        <title>Data Analytics Services - Zion Tech Group</title>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <meta
-          name='description'
-          content='Advanced data analytics solutions from Zion Tech Group. Big data processing, business intelligence, predictive analytics, and data strategy services.'
-        />
-        <meta
-          property='og:title'
-          content='Data Analytics Services - Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Advanced data analytics solutions for data-driven decision making.'
-        />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/services/analytics'
-        />      </Head>
-      <EnhancedNavigation />
-      {/* Hero Section */}
-      <section className='relative pt-32 pb-20 px-6'>
-        <div className='max-w-7xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='mb-8'
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        <meta name="description" content="Advanced data analytics solutions from Zion Tech Group. Big data processing, business intelligence, predictive analytics, and data strategy services." />
-        <meta property="og:title" content="Data Analytics Services - Zion Tech Group" />
-        <meta property="og:description" content="Advanced data analytics solutions for data-driven decision making." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/analytics" />
-      </Head>
-      <EnhancedNavigation />
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
 
-  return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
-      <Head>
-        <title>Data Analytics Services - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced data analytics solutions from Zion Tech Group. Big data processing, business intelligence, predictive analytics, and data strategy services.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Data Analytics Services - Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Advanced data analytics solutions for data-driven decision making.&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/services/analytics&quot; />
-      </Head>
-
-      <EnhancedNavigation />
-
-      {/* Hero Section */}
-      <section className=&quot;relative pt-32 pb-20 px-6&quot;>
-        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-className="mb-8"
-=======
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-8"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
               Data Analytics
             </h1>
-<<<<<<< HEAD
+
+
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Transform raw data into actionable insights that drive business growth
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </p>
-=======
-<<<<<<< HEAD
-            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
-              Transform raw data into actionable insights that drive business
-              growth            </p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            <button className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
+              Data Consultation
+              <ArrowRight className='w-5 h-5' />            </button>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-transition={{ duration: 0 && 0.8 }}
+        </div>
+      </section>
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6'>;
               Data Analytics;
@@ -456,12 +162,14 @@ transition={{ duration: 0 && 0.8 }}
               Transform raw data into actionable insights that drive business;
               growth            </p>;
           </motion && motion.div>;
+
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             className='mb-12'>;
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
+=======
     <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
       <Head>;
         <title > Data Analytics Services - Zion Tech Group</title>;
@@ -504,52 +212,17 @@ transition={{ duration: 0 && 0.8 }}
             className='mb - 12';
           >;
             <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               From big data processing to predictive analytics, we help;
               businesses harness the power of their data to make informed;
               decisions and gain competitive advantages.;
             </p>;
+
+=======
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From big data processing to predictive analytics, we help businesses harness the power 
-=======
-            className='mb-12'
-          >
-            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
-              From big data processing to predictive analytics, we help
-              businesses harness the power of their data to make informed
-              decisions and gain competitive advantages.
-=======
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Transform raw data into actionable insights that drive business growth
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-12"
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              From big data processing to predictive analytics, we help businesses harness the power
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               of their data to make informed decisions and gain competitive advantages.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -559,315 +232,57 @@ transition={{ duration: 0 && 0.8 }}
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-{/* Stats Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-=======
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className='py-16 px-6'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-<<<<<<< HEAD
-                className="text-center"
-=======
-                className='text-center'
-=======
-      {/* Stats Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div;
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {;
-  BarChart3, Database, Zap, Shield, Rocket, Cpu,;
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp;
-} from 'lucide-react',;
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-export default function AnalyticsServicesPage(req, res) {
-  try {
-  const services = [;
-    {;
-      title: "Big Data Processing";
-      description: "Scalable data processing and analytics platforms";
-      features: ["Data Pipeline Engineering", "Real-time Processing", "Batch Processing", "Data Quality"],;
-      price: "From $8,000",;
-      icon: Database,;
-      color: "from-indigo-500 to-purple-500";
-    },;
-    {;
-      title: "Business Intelligence",;
-      description: "Interactive dashboards and reporting solutions",;
-      features: ["Custom Dashboards", "KPI Tracking", "Data Visualization", "Automated Reports"],;
-      price: "From $5,000",;
-      icon: BarChart3,;
-      color: "from-blue-500 to-cyan-500";
-    },;
-    {;
-      title: "Predictive Analytics",;
-      description: "AI-powered predictive modeling and forecasting",;
-      features: ["Machine Learning Models", "Forecasting", "Risk Assessment", "Trend Analysis"],;
-      price: "From $12,000",;
-      icon: Zap,;
-      color: "from-purple-500 to-pink-500";
-    },;
-    {;
-      title: "Data Strategy & Governance",;
-      description: "Comprehensive data strategy and governance frameworks",;
-      features: ["Data Architecture", "Governance Policies", "Compliance", "Data Quality"],;
-      price: "From $10,000",;
-      icon: Shield,;
-      color: "from-emerald-500 to-teal-500";
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],;
-  const stats = [;
-    { number: "1M+", label: "Data Points Processed", icon: Database },;
-    { number: "95%", label: "Accuracy Rate", icon: CheckCircle },;
-    { number: "24/7", label: "Real-time Analytics", icon: Clock };
-    { number: "300%", label: "ROI Improvement", icon: TrendingUp   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
-      <Head>;
-        <title>Data Analytics Services - Zion Tech Group</title>;
-        <meta name="description" content="Advanced data analytics solutions from Zion Tech Group. Big data processing, business intelligence, predictive analytics, and data strategy services." />;
-        <meta property="og:title" content="Data Analytics Services - Zion Tech Group" />;
-        <meta property="og:description" content="Advanced data analytics solutions for data-driven decision making." />;
-        <link rel="canonical" href="https://ziontechgroup.com/services/analytics" />;
-      </Head>;
-      <EnhancedNavigation />;
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="relative pt-32 pb-20 px-6">;
-        <div className="max-w-7xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-8";
-          >;
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">;
-              Data Analytics;
-            </h1>;
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">;
-              Transform raw data into actionable insights that drive business growth;
-            </p>;
-          </motion.div>;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-12";
-          >;
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">;
-              From big data processing to predictive analytics, we help businesses harness the power;
-              of their data to make informed decisions and gain competitive advantages.;
-            </p>;
-            <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">;
-              Data Consultation;
-              <ArrowRight className="w-5 h-5" />;
-            </button>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Stats Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-16 px-6">;
-        <div className="max-w-7xl mx-auto">;
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-            {stats.map((stat, index) => (;
-              <motion.div;
-                key={stat.label  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="text-center"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-purple-400" />
                 </div>
-<<<<<<< HEAD
+
+
+
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+
           </div>;
         </div>;
       </section>;
+
+
       {/* Services Grid */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+=======
+
       {/* Services Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-=======
-<<<<<<< HEAD
-                <div className='text-3xl font-bold text-white mb-2'>
-                  {stat.number}
-                </div>
-                <div className='text-white/70'>{stat.label}</div>              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Services Grid */}
-      <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className="text-center mb-16"
-=======
-            className='text-center mb-16'
-=======
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-white/70">{stat.label}</div>
-              </motion.div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Services Grid */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
           >
             <h2 className="text-4xl font-bold text-white mb-6">Data Analytics Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive analytics solutions designed to unlock the value of your data
             </p>
           </motion.div>
-<<<<<<< HEAD
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-=======
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
-                key={service.title}
+
+
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Data Analytics Services;
@@ -877,88 +292,33 @@ export default function AnalyticsServicesPage(req, res) {
               your data;
             </p>;
           </motion && motion.div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.title}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300"
-=======
-                className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300'
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                <h3 className='text-2xl font-bold text-white mb-4'>
-                  {service.title}
-                </h3>
-                <p className='text-white/70 mb-6'>{service.description}</p>
-                <ul className='space-y-3 mb-6'>
-                  {service.features.map(feature => (
-                    <li
-                      key={feature}
-                      className='flex items-center text-white/80'
-                    >
-                      <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' />                      {feature}
-                    </li>
-                  ))}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-white/80">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-<div className="flex items-center justify-between">
-=======
+
                       {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -970,63 +330,41 @@ export default function AnalyticsServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span className="text-2xl font-bold text-purple-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                     Get Started
                   </button>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-            ))}
-<<<<<<< HEAD
-</div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='py-20 px-6'>;
-        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-      {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+
 =======
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className='py-20 px-6'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
+
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           </div>;
         </div>;
       </section>;
-      {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* CTA Section */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+=======
+
+      {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1047,13 +385,11 @@ export default function AnalyticsServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Unlock Your Data's Potential?
             </h2>
@@ -1062,28 +398,27 @@ export default function AnalyticsServicesPage(req, res) {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
-Data Assessment
-              </button>
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
-                Data Assessment
-              </button>
-              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
-
-=======
                 Data Assessment
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 View Demos
+
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-<EnhancedFooter />
+      <EnhancedFooter />
     </div>
+
+
+),
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+
+
+}</div> </div> </section> <motion.div initial= {
+=======
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -1103,25 +438,14 @@ Data Assessment
           </motion && motion.div>;
         </div>;
       </section>;
+
       <EnhancedFooter />;
     </div>;
   ),;
+
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-=======
-      <EnhancedFooter />
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-)
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion.div> Get Started </button> </div> </motion.div>) )
-=======
-),
-
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}</div> </div> </section> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -1129,14 +453,20 @@ Data Assessment
   opacity: 1, y: 0
 }transition= {
   {
+
   duration: 0 && 0.8 
+
 }viewport= {
   {
-<<<<<<< HEAD
   once: true 
+
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your Data's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
+
+=======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
             <button className='px - 8 py - 4 bg - gradient - to - r from - indigo - 600 to - purple - 600 hover:from - indigo - 700 hover:to - purple - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
               Data Consultation;
               <ArrowRight className='w - 5 h - 5' />            </button>;
@@ -1240,55 +570,13 @@ Data Assessment
                 Data Assessment;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Demos;
-=======
-  once: true
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your Data's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
-<<<<<<< HEAD
-=======
-
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  )
-          >;
-            <h2 className="text-4xl font-bold text-white mb-6">;
-              Ready to Unlock Your Data's Potential?;
-            </h2>;
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
-              Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making.;
-            </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
-                Data Assessment;
-              </button>;
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
-                View Demos;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
-    </div>),
-}</div> </div> </section> > <h2 className="text - 4xl font - bold text - white mb - 6" >Data Analytics Services</h2> <p className="text - xl text - white / 70 max - w-3xl mx - auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion.div> Get Started </button> </div> </motion.div>) );
-}</div> </div> </section> <motion.div initial= {
-  {
-  opacity: 0, coordinate_y: 30;
-}whileInView= {
-  {
-  opacity: 1, coordinate_y: 0;
-}transition= {
-  {
-  duration: 0.8;
-}viewport= {
-  {
-  once: true;
-}> <h2 className="text - 4xl font - bold text - white mb - 6" > Ready to Unlock Your Data's Potential? </h2> <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data - driven decision making. </p> Data Assessment </button> <button className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > View Demos </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>);
-=======
+
     </div>;
   );
   } catch (error) {
@@ -1296,9 +584,7 @@ Data Assessment
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
