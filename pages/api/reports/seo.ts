@@ -1,15 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
-;
-const p = path.join(process.cwd(), 'datareports', 'seoweekly-seo.json'),;
-;
-export default function handler(_req:NextApiRequest, res:NextApiResponse) {;
-  try {;
-    if (!fs.existsSync(p)) return res.status(200).json({}),;
-    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8'))),;
-  } catch (e:any) {;
-    res.status(500).json({ error:e?.message || 'Failed to read SEO report' }),;
-  } 
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+const p = path.join(process.cwd(), 'datareports', 'seo.json');
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (!fs.existsSync(p)) return res.status(200).json({});
+    const data = fs.readFileSync(p, 'utf8');
+    res.status(200).json(JSON.parse(data));
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to read seo' });
+  }
 }
