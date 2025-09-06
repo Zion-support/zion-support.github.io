@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
   "fs");
@@ -62,6 +63,8 @@ analyzeBundleSize() {
       return {
   optimized: 0, totalImages: 0, savings:;
   "0KB";
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   analyzeBundleSize() {}
     try {
       // Placeholder for bundle analysis}
@@ -90,7 +93,11 @@ analyzeBundleSize() {
     return ['example-unused-package'];',
   }
   generateRecommendations() {
+<<<<<<< HEAD
 #!/usr/bin/env node
+=======
+;#!/usr/bin/env node
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -141,8 +148,12 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
       // Placeholder for bundle analysis
       return {
   "totalSize": "2.1MB, "gzippedSize": ;
+<<<<<<< HEAD
   "650KB"
 "totalSize": '2.1MB',
+=======
+  "650KB""totalSize": '2.1MB',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
         "gzippedSize": '650KB',
         "recommendations": ['Consider code splitting', 'Remove unused dependencies']
       };
@@ -159,10 +170,13 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
     }
   }
   analyzeDependencies() {
+<<<<<<< HEAD
   try {
   const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url, "../package.json"), "utf8"));
       const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
       const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 try {
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
       const dependencies = Object.keys(packageJson.dependencies || {});
@@ -182,6 +196,7 @@ try {
     return ['example-unused-package'];
   }
   generateRecommendations() {
+<<<<<<< HEAD
   return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components";
     // // // // // // // // console.log(;
   "Performance report:", report);
@@ -189,6 +204,8 @@ try {
 ;,
 });
 }}}}}}}}}}}}}}}
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
     // // // // // // // // }
 })}}}}}}}}}}}}}}}
 return ['Implement code splitting for better performance',

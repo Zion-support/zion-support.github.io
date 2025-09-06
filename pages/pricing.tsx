@@ -83,7 +83,10 @@ const PricingPage: React.FC = () => {
   );
 }
 export default PricingPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
 import Head from 'next/head';
 import {
@@ -909,7 +912,10 @@ export default function PricingPage() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
     </UltraFuturisticBackground>
   )
 }

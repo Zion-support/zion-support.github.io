@@ -287,6 +287,7 @@ export default function CaseStudiesPage() {
       </div>
     </MainLayout>
   );
+<<<<<<< HEAD
 }
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -315,6 +316,9 @@ export default function CaseStudiesPage() {
 
  </Head> </section> </Layout> 
 	return (
+=======
+}	return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 		<Layout>
 			<Head>
 				<title>Case Studies | Zion Tech Group</title>
