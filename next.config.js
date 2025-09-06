@@ -7,6 +7,57 @@ const nextConfig = {
     ignoreDuringBuilds: true
   }
   typescript: {
+<<<<<<< HEAD
+    ignoreBuildErrors: true,
+  },
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+  trailingSlash: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+<<<<<<< HEAD
+  // Performance optimizations
+  experimental: {
+    scrollRestoration: true,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
+  },
+  
+=======
+>>>>>>> origin/resolved-all-conflicts-clean
+  // Image optimization
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+  images: {
+    domains: [
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
+      "via.placeholder.com",
+    ],
+    formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-all-conflicts-clean
+=======
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+  },
+=======
 
     ignoreBuildErrors: true
   }
@@ -25,6 +76,7 @@ const nextConfig = {
     minimumCacheTTL: 31536000
   }
 
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {

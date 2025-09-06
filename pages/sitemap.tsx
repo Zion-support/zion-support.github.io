@@ -2,6 +2,26 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+import { 
+  Home, 
+  Brain, 
+  Network, 
+  Target, 
+  Users, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
+  Settings, 
+  Globe, 
+  ArrowRight 
+} from 'lucide-react';
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
 import {
   Home
@@ -120,7 +140,15 @@ export default function SitemapPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
 import {
   Home
@@ -656,7 +684,18 @@ export default function SitemapPage() {
       </section>
       <SmartFooter />
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  ),
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+>>>>>>> origin/automation-improvements-final
+
+=======
   )
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }animate= {
   {
   opacity: 1, y: 0

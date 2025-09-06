@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
 
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import React from 'react';
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -1590,10 +1597,130 @@ export default function Services(): React.JSX.Element {
             }}>
               <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>40+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>IT Solutions</div>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+    icon: Brain,
+
+export default function Services() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+=======
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+export default function Services() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer)
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  }, []);
+
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+    site: 'https://ziontechgroup.com',
+  };
+
+            </div>
+          </div>
+        </section>
+
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Our Services
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
+                Comprehensive technology solutions designed to transform your business and drive growth.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View Pricing
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                What We Offer
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                From micro SaaS development to enterprise IT solutions, we provide comprehensive technology services.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                      <service.icon className="h-8 w-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="text-blue-600 font-semibold mb-4">
+                    {service.pricing}
+                  </div>
+                  <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    Learn More
+                  </button>
+                </motion.div>
+              ))}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
       <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
       <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
@@ -1632,6 +1759,7 @@ export default function Services(): React.JSX.Element {
         </div>
       </section>
     </main>
+<<<<<<< HEAD
   );
 }
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
@@ -1720,6 +1848,13 @@ export default function Services() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -2114,6 +2249,10 @@ export default function Services() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   );
   )
 >>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4

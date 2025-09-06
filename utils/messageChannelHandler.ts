@@ -1,3 +1,64 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}}}};
+;
+;
+=======
+
+}
+}
+}
+<<<<<<< HEAD
+},
+
+,
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+},;
+,;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+export const messageChannelHandler = {
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
+  sendMessage: (message: any) => {},
+  receiveMessage: (callback: any) => {},
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+type MessageHandler = {
+  sendMessage: (message: unknown) => void;
+  receiveMessage: (callback: (message: unknown) => void) => void;
+};
+export const messageChannelHandler: MessageHandler = {
+  sendMessage: (_message) => {
+    // No-op: placeholder for message channel integration
+  },
+  receiveMessage: (_callback) => {
+    // No-op: placeholder for message listener registration
+  }
+<<<<<<< HEAD
+};
+=======
+};
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+};
+};
+};
+};
+,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
 // Message channel handler for real-time communication
 export class MessageChannelHandler {
   private channels: Map<string, MessageChannel> = new Map();
@@ -21,3 +82,4 @@ export class MessageChannelHandler {
   }
 }
 export default MessageChannelHandler;
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

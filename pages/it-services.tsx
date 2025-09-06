@@ -3,6 +3,10 @@ import Head from 'next/head';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import {
   Server
   Shield
@@ -51,12 +55,22 @@ const itServices = [{
     popular: true
   }
   {
+<<<<<<< HEAD
+    title: 'Cybersecurity Solutions',
+    description: 'Enterprise-grade security services to protect your digital assets and data.',
+    icon: Shield,
+    features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
+    pricing: '$5,000 - $40,000/project',
+<<<<<<< HEAD
+    category: 'Security',
+=======
     title: 'Cybersecurity Solutions'
     description: 'Enterprise-grade security services to protect your digital assets and data.'
     icon: Shield
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response']
     pricing: '$5,000 - $40,000/project'
     category: 'Security'
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     popular: true
   }
   {
@@ -635,6 +649,48 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+import { 
+  Server, 
+  Shield, 
+  Cloud, 
+  Database, 
+  Network, 
+  Code, 
+  Settings, 
+  CheckCircle, 
+  Users, 
+  DollarSign, 
+  Brain, 
+  Cpu, 
+  Wifi, 
+  Monitor, 
+  AlertTriangle, 
+  TrendingUp, 
+  Lock, 
+  Globe, 
+  HardDrive, 
+  Smartphone, 
+  Building, 
+  BarChart3,
+  Package,
+  GraduationCap,
+  Atom,
+  Leaf,
+  Link as LinkIcon,
+  ArrowRight, 
+  Clock, 
+  Award, 
+  Star, 
+  Zap,
+  Search, 
+  ShoppingCart, 
+  BookOpen, 
+  Rocket,
+=======
 import {
   Server
   Shield
@@ -672,6 +728,7 @@ import {
   ShoppingCart
   BookOpen
   Rocket
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   Laptop;
 } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -689,6 +746,21 @@ const itServices = [
     link: '/contact'
   }
   {
+<<<<<<< HEAD
+    title: 'Cybersecurity Solutions',
+    description: 'Comprehensive security services to protect your business from cyber threats',
+    icon: Shield,
+    features: ['Security Assessment', 'Threat Monitoring', 'Incident Response', 'Compliance'],
+    pricing: '$1,500 - $8,000/month',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+    category: 'Security',
+    popular: true,
+    benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
+    marketPrice: '$4,000/month',
+=======
     title: 'Cybersecurity Solutions'
     description: 'Comprehensive security services to protect your business from cyber threats'
     icon: Shield
@@ -698,6 +770,7 @@ const itServices = [
     popular: true
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection']
     marketPrice: '$4,000/month'
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     link: '/contact'
   }
   {
@@ -1002,6 +1075,7 @@ export default function ITServices() {
       : services.filter(service => service.category === selectedCategory);
 
   return (
+<<<<<<< HEAD
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -1113,6 +1187,19 @@ export default function ITServices() {
                     </div>
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
+=======
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                  <Head>
+                  <title>IT Services - Zion Tech Group</title>
+                  <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />
+                  <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />
+                  </Head>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
+<div className="absolute inset-0">
+                  <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+>>>>>>> origin/automation-improvements-final
                   </div>
                 ))}
               </div>
@@ -1427,6 +1514,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
               >
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {level.name}
@@ -1436,6 +1524,379 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 </p>
                   <div className="text-3xl font-bold text-green-600 mb-6">
                   {level.pricing}
+=======
+=======
+    <Layout>
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting.'
+        />
+        <meta
+          name='keywords'
+          content='IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure'
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='robots' content='index, follow' />
+        <link rel='canonical' href={`${contact.site}/it-services`} />
+      </Head>
+
+      <ErrorBoundary level='page'>
+        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
+          {/* Hero Section */}
+          <section className='py-20 px-4 text-center' role='banner'>
+            <div className='max-w-4xl mx-auto'>
+              <h1
+=======
+      description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
+      category: 'quantum',
+      features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
+      price: 'Custom Pricing',
+      popular: true,
+      benefits: ['Exponential SpeedupAdvanced CryptographyOptimization SolutionsFuture-Proof Technology']
+    };
+    {
+      id: 2,
+      name: 'Blockchain & Web3 Solutions',
+      description: 'Comprehensive blockchain development and Web3 integration services for modern businesses.',
+      category: 'blockchain',
+      features: ['Smart Contract DevelopmentDApp CreationDeFi IntegrationNFT Platforms'],
+      price: 'Custom Pricing',
+      popular: true,
+      benefits: ['Decentralized SolutionsEnhanced SecurityTransparencyInnovation']
+    };
+    {
+      id: 3,
+      name: 'DevSecOps & Security Automation',
+      description: 'Integrated development, security, and operations with automated security testing and deployment.',
+    category: 'devops',
+      features: ['CI/CD PipelinesSecurity ScanningAutomated TestingInfrastructure as Code'],
+      price: '$199/month',
+      popular: false,
+      benefits: ['Faster DeploymentEnhanced SecurityReduced RiskAutomated Compliance']
+    };
+    {
+      id: 4,
+      name: 'Enterprise Data Platform',
+      description: 'Comprehensive data management and analytics platform for enterprise-scale operations.',
+      category: 'enterprise',
+      features: ['Data WarehousingReal-time AnalyticsData GovernanceMachine Learning Integration'],
+      price: '$299/month',
+      popular: true,
+      benefits: ['Data-Driven InsightsScalable ArchitectureCompliance ReadyAdvanced Analytics']
+    };
+    {
+      id: 5,
+      name: 'High-Performance Computing Solutions',
+      description: 'Optimized computing infrastructure for demanding computational workloads and research.',
+      category: 'cloud',
+      features: ['GPU ComputingParallel ProcessingDistributed ComputingPerformance Monitoring'],
+      price: '$399/month',
+      popular: false,
+      benefits: ['Massive Processing PowerScalable ResourcesCost OptimizationAdvanced Capabilities']
+    };
+    {
+      id: 6,
+      name: 'Cloud Migration Services',
+      description: 'Seamless migration of applications and infrastructure to cloud platforms with zero downtime.',
+      category: 'cloud',
+      features: ['Assessment & PlanningData MigrationApplication ModernizationPerformance Optimization'],
+      price: 'Custom Pricing',
+      popular: true,
+      benefits: ['Reduced CostsEnhanced ScalabilityImproved SecurityBetter Performance']
+    };
+    {
+      id: 7,
+      name: 'Infrastructure as Code',
+      description: 'Automated infrastructure provisioning and management using modern DevOps practices.',
+      category: 'devops',
+      features: ['Terraform AutomationConfiguration ManagementVersion ControlEnvironment Provisioning'],
+      price: '$149/month',
+      popular: false,
+      benefits: ['Consistent EnvironmentsFaster ProvisioningVersion ControlReduced Errors']
+    };
+    {
+      id: 8,
+      name: 'Disaster Recovery Solutions',
+      description: 'Comprehensive backup and disaster recovery strategies to ensure business continuity.',
+      category: 'security',
+      features: ['Automated BackupsMulti-site ReplicationRecovery TestingRTO/RPO Optimization'],
+      price: '$179/month',
+      popular: true,
+      benefits: ['Business ContinuityData ProtectionMinimal DowntimeCompliance Ready']
+    };
+    {
+      id: 9,
+      name: 'Cybersecurity Assessment',
+      description: 'Comprehensive security evaluation and penetration testing for enterprise systems.',
+      category: 'security',
+      features: ['Vulnerability AssessmentPenetration TestingCompliance AuditingSecurity Recommendations'],
+      price: '$249/month',
+      popular: false,
+      benefits: ['Risk IdentificationCompliance AssuranceSecurity HardeningThreat Mitigation']
+    };
+    {
+      id: 10,
+      name: 'API Development & Integration',
+      description: 'Custom API development and third-party integration services for seamless connectivity.',
+      category: 'enterprise',
+      features: ['RESTful APIsGraphQL ServicesThird-party IntegrationAPI Documentation'],
+      price: '$129/month',
+      popular: true,
+      benefits: ['System IntegrationImproved EfficiencyScalable ArchitectureDeveloper Experience']
+    };
+    {
+      id: 11,
+      name: 'Microservices Architecture',
+      description: 'Design and implementation of microservices-based applications for scalable systems.',
+      category: 'enterprise',
+      features: ['Service DesignContainer OrchestrationService MeshMonitoring & Logging'],
+      price: '$199/month',
+      popular: false,
+      benefits: ['Scalable ArchitectureIndependent DeploymentTechnology DiversityFault Isolation']
+    };
+    {
+      id: 12,
+      name: 'Edge Computing Solutions',
+      description: 'Distributed computing infrastructure for low-latency applications and IoT systems.',
+      category: 'cloud',
+      features: ['Edge DeploymentIoT IntegrationReal-time ProcessingBandwidth Optimization'],
+      price: '$159/month',
+      popular: true,
+      benefits: ['Reduced LatencyBandwidth SavingsOffline CapabilityEnhanced Performance']
+    }
+  ];
+
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
+
+  return (
+    <>
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting." />
+        <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`${contact.site}/it-services`} />
+      </Head>
+      
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          {/* Hero Section */}
+          <section className="py-20 px-4 text-center" role="banner">
+            <div className="max-w-4xl mx-auto">
+              <h1 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+              >
+                IT Services
+              </h1>
+<<<<<<< HEAD
+              <p
+                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                100+ Comprehensive IT Solutions
+              </p>
+              <p
+                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                Transform your business with our enterprise-grade IT services.
+                From cloud infrastructure to quantum computing, we provide
+                cutting-edge technology solutions that scale with your business
+                and drive innovation.
+=======
+              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                100+ Comprehensive IT Solutions
+              </p>
+              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                Transform your business with our enterprise-grade IT services. From cloud infrastructure 
+                to quantum computing, we provide cutting-edge technology solutions that scale with your 
+                business and drive innovation.
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+              </p>
+            </div>
+<<<<<<< HEAD
+          </motion.div>
+        </div>
+      </section>
+                  </div>
+=======
+          </section>
+
+          {/* Category Filter */}
+<<<<<<< HEAD
+          <section className='py-8 px-4'>
+            <div className='max-w-6xl mx-auto'>
+              <div className='flex flex-wrap justify-center gap-4 mb-8'>
+                {categories.map(category => (
+=======
+          <section className="py-8 px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                {categories.map((category) => (
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-green-600 text-white'
+                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                    }`}
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Services Grid */}
+<<<<<<< HEAD
+          <section className='py-16 px-4' role='main'>
+            <div className='max-w-7xl mx-auto'>
+              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                {filteredServices.map((service, index) => (
+                  <div
+=======
+          <section className="py-16 px-4" role="main">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredServices.map((service, index) => (
+                  <div 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                    key={service.id}
+                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    {service.popular && (
+<<<<<<< HEAD
+                      <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
+                        Popular
+                      </div>
+                    )}
+
+                    <h3 className='text-xl font-bold mb-3'>{service.name}</h3>
+                    <p className='text-slate-300 mb-4 text-sm'>
+                      {service.description}
+                    </p>
+
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-green-400 mb-2'>
+                        Key Features:
+                      </h4>
+                      <ul className='text-slate-400 text-sm space-y-1'>
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className='flex items-center'>
+                            <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>
+=======
+                      <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        Popular
+                      </div>
+                    )}
+                    
+                    <h3 className="text-xl font-bold mb-3">{service.name}</h3>
+                    <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
+                    
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-green-400 mb-2">Key Features:</h4>
+                      <ul className="text-slate-400 text-sm space-y-1">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center">
+                            <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+<<<<<<< HEAD
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>
+                        Benefits:
+                      </h4>
+                      <div className='flex flex-wrap gap-1'>
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <span
+                            key={benefitIndex}
+                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
+                          >
+=======
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-blue-400 mb-2">Benefits:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <span key={benefitIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+<<<<<<< HEAD
+
+                    <div className='flex items-center justify-between mb-4'>
+                      <span className='text-2xl font-bold text-green-400'>
+                        {service.price}
+                      </span>
+                      <span className='text-xs text-slate-500 capitalize'>
+                        {service.category.replace('-', ' ')}
+                      </span>
+                    </div>
+
+                    <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>
+=======
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-2xl font-bold text-green-400">{service.price}</span>
+                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>
+                    </div>
+                    
+                    <button className="w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                      Learn More
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Technology Stack Section */}
+<<<<<<< HEAD
+          <section className='py-16 px-4 bg-slate-900/40'>
+            <div className='max-w-6xl mx-auto'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
+                Our Technology Stack
+              </h2>
+
+              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                    <svg
+                      className='w-8 h-8 text-white'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                      />
+                    </svg>
+                  </div>
+                  <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>
+                  <p className='text-slate-400'>
+                    AWS, Azure, GCP, and hybrid cloud solutions
+                  </p>
+>>>>>>> origin/automation-improvements-final
                 </div>
                   <ul className="space-y-3 mb-8">
                   {level.features.map((feature, featureIndex) => (
@@ -1553,6 +2014,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </address>
             </motion.div>
           </div>
+<<<<<<< HEAD
           <motion.div
             className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -1576,6 +2038,12 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
         </div>
       </section>
                   </div>
+=======
+        </section>
+      </div>
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   );
 }
           </section>

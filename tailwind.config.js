@@ -1,4 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 module.exports = {
   darkMode: "class"
   content: [
@@ -9,6 +16,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
+=======
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
         primary: {
 
           50: '#eff6ff'
@@ -79,8 +92,27 @@ module.exports = {
     }
   }
   plugins: [
+<<<<<<< HEAD
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+<<<<<<< HEAD
+};
+=======
+};
+=======
+      },
+    },
+  },
+  plugins: [],
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
     require('@tailwindcss/forms')
     require('@tailwindcss/typography')
     require('@tailwindcss/aspect-ratio')
   ]
 }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

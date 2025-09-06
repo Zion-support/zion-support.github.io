@@ -12,7 +12,6 @@ const Services = lazy(() => import('./src/pages/Services'));
 const Pricing = lazy(() => import('./src/pages/Pricing'));
 const Contact = lazy(() => import('./src/pages/Contact'));
 const NotFound = lazy(() => import('./src/pages/NotFound'));
-
 export default function App() {
   return (
     <Router>
