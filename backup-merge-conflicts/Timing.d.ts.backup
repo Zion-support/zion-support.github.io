@@ -32,11 +32,11 @@ export interface BoundsIncludeTimeRange {
  * "has any overlap":
  *         |------------------------|
  *      ==                                     no overlap (entirely before)
- *       =========                             overlap
- *            =========                        overlap
- *                             =========       overlap
+ *       ==                             overlap
+ *            ==                        overlap
+ *                             ==       overlap
  *                                     ====    no overlap (entirely after)
- *        ==============================       overlap (time range is larger than bounds)
+ *        ==       overlap (time range is larger than bounds)
  *         |------------------------|
  */
 export declare function boundsIncludeTimeRange(data: BoundsIncludeTimeRange): boolean;

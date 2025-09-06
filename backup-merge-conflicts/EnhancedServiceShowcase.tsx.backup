@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 =======
 =======
+=======
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 import React from 'react';
 
 interface EnhancedServiceShowcaseProps {
@@ -14,5 +19,9 @@ export default function EnhancedServiceShowcase({ }: EnhancedServiceShowcaseProp
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

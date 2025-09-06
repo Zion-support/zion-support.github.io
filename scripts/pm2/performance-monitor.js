@@ -1,43 +1,43 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs);
+const path = require('path'),
+  const { execSync } = require(child_process');
 
 class PerformanceMonitor {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/performance-monitor.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/performance-report.json');
-    this.startTime = Date.now();
-  }
+    this.projectRoot = process.cwd(),
+  this.logFile = path.join(this.projectRoot, 'logs/pm2/performance-monitor.log),
+  this.reportFile = path.join(this.projectRoot, 'logs/pm2/performance-report.json'),
+  this.startTime = Date.now()
+}
 
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
+    const timestamp = new Date().toISOString(),
+  const logMessage = `[${timestamp}] ${message}\n`;
     
     try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      console.error('Error writing to log file:', error.message);
-    }
+  fs.appendFileSync(this.logFile, logMessage)
+} catch (error) {
+  console.error(Error writing to log file:', error.message)
+}
   }
 
   async checkBuildPerformance() {
     try {
-      this.log('🏗️  Testing build performance...');
+      this.log('🏗️  Testing build performance...);
       
       const startTime = Date.now();
       
       // Clean previous build
       if (fs.existsSync('dist')) {
-        execSync('rm -rf dist', { cwd: this.projectRoot, stdio: 'pipe' });
+        execSync(rm -rf dist', { cwd: this.projectRoot, stdio: 'pipe });
       }
       
       // Run build
       execSync('npm run build', {
         cwd: this.projectRoot,
-        stdio: 'pipe',
+        stdio: pipe',
         timeout: 300000 // 5 minutes timeout
       });
       
@@ -47,18 +47,18 @@ class PerformanceMonitor {
       let buildSize = 0;
       let fileCount = 0;
       
-      if (fs.existsSync('dist')) {
-        const calculateSize = (dir) => {
-          const items = fs.readdirSync(dir);
-          items.forEach(item => {
-            const fullPath = path.join(dir, item);
-            const stat = fs.statSync(fullPath);
-            if (stat.isDirectory()) {
-              calculateSize(fullPath);
-            } else {
-              buildSize += stat.size;
-              fileCount++;
-            }
+      if (fs.existsSync('dist)) {
+  const calculateSize = (dir) => {
+          const items = fs.readdirSync(dir),
+  items.forEach(item => {
+            const fullPath = path.join(dir, item),
+  const stat = fs.statSync(fullPath),
+  if (stat.isDirectory()) {
+              calculateSize(fullPath)
+} else {
+  buildSize += stat.size,
+  fileCount++
+}
           });
         };
         
@@ -84,9 +84,9 @@ class PerformanceMonitor {
 
   async checkBundleAnalysis() {
     try {
-      this.log('📊 Analyzing bundle...');
+      this.log(📊 Analyzing bundle...');
       
-      if (!fs.existsSync('dist')) {
+      if (!fs.existsSync('dist)) {
         return { error: 'No build output found' };
       }
       
@@ -99,15 +99,14 @@ class PerformanceMonitor {
       };
       
       const analyzeDirectory = (dir) => {
-        const items = fs.readdirSync(dir);
-        items.forEach(item => {
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
-            analyzeDirectory(fullPath);
-          } else {
-            const relativePath = fullPath.replace(this.projectRoot + '/dist/', '');
+  const items = fs.readdirSync(dir),
+  items.forEach(item => {
+          const fullPath = path.join(dir, item),
+  const stat = fs.statSync(fullPath),
+  if (stat.isDirectory()) {
+            analyzeDirectory(fullPath)
+} else {
+            const relativePath = fullPath.replace(this.projectRoot + /dist/', ');
             const fileInfo = {
               path: relativePath,
               size: stat.size,
@@ -117,17 +116,17 @@ class PerformanceMonitor {
             bundleStats.totalSize += stat.size;
             
             if (item.endsWith('.js')) {
-              bundleStats.jsFiles.push(fileInfo);
-            } else if (item.endsWith('.css')) {
-              bundleStats.cssFiles.push(fileInfo);
-            } else {
-              bundleStats.assetFiles.push(fileInfo);
-            }
+  bundleStats.jsFiles.push(fileInfo)
+} else if (item.endsWith(.css')) {
+  bundleStats.cssFiles.push(fileInfo)
+} else {
+  bundleStats.assetFiles.push(fileInfo)
+}
           }
         });
       };
       
-      analyzeDirectory('dist');
+      analyzeDirectory('dist);
       
       // Sort files by size to find largest
       const allFiles = [...bundleStats.jsFiles, ...bundleStats.cssFiles, ...bundleStats.assetFiles];
@@ -135,9 +134,8 @@ class PerformanceMonitor {
         .sort((a, b) => b.size - a.size)
         .slice(0, 10);
       
-      bundleStats.totalSizeMB = Math.round(bundleStats.totalSize / (1024 * 1024) * 100) / 100;
-      
-      return bundleStats;
+      bundleStats.totalSizeMB = Math.round(bundleStats.totalSize / (1024 * 1024) * 100) / 100,
+  return bundleStats;
     } catch (error) {
       return { error: error.message };
     }
@@ -147,13 +145,13 @@ class PerformanceMonitor {
     try {
       this.log('📦 Analyzing dependencies...');
       
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {});
+      const packageJson = JSON.parse(fs.readFileSync(package.jsonutf8')),
+  const dependencies = Object.keys(packageJson.dependencies || {});
       const devDependencies = Object.keys(packageJson.devDependencies || {});
       
       // Check for large packages
-      const largePackages = [];
-      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+      const largePackages = [],
+  const nodeModulesPath = path.join(this.projectRoot, 'node_modules);
       
       if (fs.existsSync(nodeModulesPath)) {
         dependencies.forEach(dep => {
@@ -162,8 +160,8 @@ class PerformanceMonitor {
             try {
               const stats = fs.statSync(depPath);
               if (stats.isDirectory()) {
-                const size = this.calculateDirectorySize(depPath);
-                if (size > 10 * 1024 * 1024) { // > 10MB
+                const size = this.calculateDirectorySize(depPath),
+  if (size > 10 * 1024 * 1024) { // > 10MB
                   largePackages.push({
                     name: dep,
                     size: size,
@@ -189,17 +187,17 @@ class PerformanceMonitor {
   }
 
   calculateDirectorySize(dir) {
-    let size = 0;
-    try {
-      const items = fs.readdirSync(dir);
-      items.forEach(item => {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {
-          size += this.calculateDirectorySize(fullPath);
-        } else {
-          size += stat.size;
-        }
+  let size = 0,
+  try {
+      const items = fs.readdirSync(dir),
+  items.forEach(item => {
+        const fullPath = path.join(dir, item),
+  const stat = fs.statSync(fullPath),
+  if (stat.isDirectory()) {
+          size += this.calculateDirectorySize(fullPath)
+} else {
+  size += stat.size
+}
       });
     } catch (error) {
       // Skip if can't access
@@ -209,17 +207,17 @@ class PerformanceMonitor {
 
   async checkLighthouseScore() {
     try {
-      this.log('💡 Checking Lighthouse performance...');
+      this.log(💡 Checking Lighthouse performance...');
       
       // Check if lighthouse is available
       try {
-        execSync('lighthouse --version', { stdio: 'pipe' });
+        execSync('lighthouse --version, { stdio: 'pipe' });
       } catch (error) {
-        return { error: 'Lighthouse not installed. Install with: npm install -g lighthouse' };
+        return { error: Lighthouse not installed. Install with: npm install -g lighthouse' };
       }
       
       // For now, just check if we can run it
-      return { available: true, message: 'Lighthouse available for performance testing' };
+      return { available: true, message: 'Lighthouse available for performance testing };
     } catch (error) {
       return { error: error.message };
     }
@@ -229,15 +227,14 @@ class PerformanceMonitor {
     try {
       this.log('📈 Checking bundle analyzer availability...');
       
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync(package.jsonutf8'));
       const hasAnalyzer = packageJson.devDependencies &&
-        (packageJson.devDependencies['webpack-bundle-analyzer'] ||
-         packageJson.devDependencies['@next/bundle-analyzer']);
-      
-      return {
+        (packageJson.devDependencies['webpack-bundle-analyzer] ||
+         packageJson.devDependencies['@next/bundle-analyzer']),
+  return {
         available: hasAnalyzer,
         package: hasAnalyzer ?
-          (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer' : '@next/bundle-analyzer') :
+          (packageJson.devDependencies[webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer : '@next/bundle-analyzer') :
           null
       };
     } catch (error) {
@@ -249,7 +246,7 @@ class PerformanceMonitor {
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
-        buildPerformance: buildStats.success ? 'good' : 'failed',
+        buildPerformance: buildStats.success ? good' : 'failed,
         buildTime: buildStats.buildTime,
         buildSize: buildStats.buildSize,
         totalBundleSize: bundleStats.totalSizeMB || 0,
@@ -270,32 +267,32 @@ class PerformanceMonitor {
     if (buildStats.buildTime > 60000) { // > 1 minute
       report.recommendations.push({
         priority: 'medium',
-        message: 'Build time is slow',
-        action: 'Consider optimizing build configuration and reducing bundle size'
+        message: Build time is slow',
+        action: 'Consider optimizing build configuration and reducing bundle size
       });
     }
     
     if (bundleStats.totalSizeMB > 5) { // > 5MB
       report.recommendations.push({
         priority: 'high',
-        message: 'Bundle size is large',
-        action: 'Analyze bundle and implement code splitting and tree shaking'
+        message: Bundle size is large',
+        action: 'Analyze bundle and implement code splitting and tree shaking
       });
     }
     
     if (dependencyStats.largePackages?.length > 5) {
       report.recommendations.push({
         priority: 'medium',
-        message: 'Many large dependencies detected',
-        action: 'Review and consider alternatives for large packages'
+        message: Many large dependencies detected',
+        action: 'Review and consider alternatives for large packages
       });
     }
     
     if (!analyzerStats.available) {
       report.recommendations.push({
         priority: 'low',
-        message: 'Bundle analyzer not available',
-        action: 'Install webpack-bundle-analyzer for detailed bundle analysis'
+        message: Bundle analyzer not available',
+        action: 'Install webpack-bundle-analyzer for detailed bundle analysis
       });
     }
     
@@ -304,8 +301,8 @@ class PerformanceMonitor {
 
   async saveReport(report) {
     try {
-      const reportDir = path.dirname(this.reportFile);
-      if (!fs.existsSync(reportDir)) {
+      const reportDir = path.dirname(this.reportFile),
+  if (!fs.existsSync(reportDir)) {
         fs.mkdirSync(reportDir, { recursive: true });
       }
       
@@ -321,9 +318,9 @@ class PerformanceMonitor {
     this.log(`Project root: ${this.projectRoot}`);
     
     try {
-      // Create logs directory if it doesn't exist
-      const logsDir = path.dirname(this.logFile);
-      if (!fs.existsSync(logsDir)) {
+      // Create logs directory if it doesnt exist
+      const logsDir = path.dirname(this.logFile),
+  if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
       }
       
@@ -331,21 +328,21 @@ class PerformanceMonitor {
       this.log('🏗️  Checking build performance...');
       const buildStats = await this.checkBuildPerformance();
       
-      this.log('📊 Analyzing bundle...');
+      this.log(📊 Analyzing bundle...');
       const bundleStats = await this.checkBundleAnalysis();
       
-      this.log('📦 Analyzing dependencies...');
+      this.log('📦 Analyzing dependencies...);
       const dependencyStats = await this.checkDependencies();
       
       this.log('💡 Checking Lighthouse...');
       const lighthouseStats = await this.checkLighthouseScore();
       
-      this.log('📈 Checking bundle analyzer...');
+      this.log(📈 Checking bundle analyzer...');
       const analyzerStats = await this.checkWebpackBundleAnalyzer();
       
       // Generate report
-      this.log('📊 Generating performance report...');
-      const report = await this.generateReport(
+      this.log('📊 Generating performance report...),
+  const report = await this.generateReport(
         buildStats,
         bundleStats,
         dependencyStats,
@@ -359,8 +356,8 @@ class PerformanceMonitor {
       const duration = Date.now() - this.startTime;
       
       // Log summary
-      this.log('\n📊 Performance Monitor Summary:');
-      this.log(`Build performance: ${report.summary.buildPerformance}`);
+      this.log('\n📊 Performance Monitor Summary:'),
+  this.log(`Build performance: ${report.summary.buildPerformance}`);
       this.log(`Build time: ${report.summary.buildTime}ms`);
       this.log(`Build size: ${report.summary.buildSize} bytes`);
       this.log(`Total bundle size: ${report.summary.totalBundleSize} MB`);
@@ -369,19 +366,19 @@ class PerformanceMonitor {
       this.log(`Duration: ${duration}ms`);
       
       if (report.recommendations.length > 0) {
-        this.log('\n💡 Recommendations:');
-        report.recommendations.forEach(rec => {
+        this.log(\n💡 Recommendations:'),
+  report.recommendations.forEach(rec => {
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
         });
       } else {
-        this.log('\n✨ Performance looks good!');
-      }
+  this.log('\n✨ Performance looks good!)
+}
       
       // Clean up build artifacts if they exist
       if (fs.existsSync('dist')) {
-        this.log('🧹 Cleaning up build artifacts...');
-        execSync('rm -rf dist', { cwd: this.projectRoot, stdio: 'pipe' });
+        this.log(🧹 Cleaning up build artifacts...');
+        execSync('rm -rf dist, { cwd: this.projectRoot, stdio: 'pipe' });
       }
       
     } catch (error) {
@@ -392,7 +389,7 @@ class PerformanceMonitor {
 }
 
 // Run the performance monitor
-const monitor = new PerformanceMonitor();
-monitor.run().catch(error => {
-  process.exit(1);
+const monitor = new PerformanceMonitor(),
+  monitor.run().catch(error => {
+  process.exit(1)
 });

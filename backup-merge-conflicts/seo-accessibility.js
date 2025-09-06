@@ -1,27 +1,29 @@
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs);
+const path = require('path'),
+  const { execSync } = require(child_process');
 
 class SEOAccessibilityChecker {
   constructor() {
-    this.processName = process.env.PM2_PROCESS_NAME || 'seo-accessibility';
-    this.checkSEO = process.env.CHECK_SEO === 'true';
-    this.checkAccessibility = process.env.CHECK_ACCESSIBILITY === 'true';
-    this.checkPerformance = process.env.CHECK_PERFORMANCE === 'true';
-    this.lighthouseAudit = process.env.LIGHTHOUSE_AUDIT === 'true';
-    this.logFile = path.join(process.cwd(), 'logs/pm2/seo-accessibility.log');
-  }
+    this.processName = process.env.PM2_PROCESS_NAME || 'seo-accessibility,
+  this.checkSEO = process.env.CHECK_SEO === 'true',
+  this.checkAccessibility = process.env.CHECK_ACCESSIBILITY === true',
+  this.checkPerformance = process.env.CHECK_PERFORMANCE === 'true,
+  this.lighthouseAudit = process.env.LIGHTHOUSE_AUDIT === 'true',
+  this.logFile = path.join(process.cwd(), logs/pm2/seo-accessibility.log')
+}
 
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
+    const timestamp = new Date().toISOString(),
+  const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     console.log(logMessage.trim());
     
     // Ensure log directory exists
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
+    const logDir = path.dirname(this.logFile),
+  if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
     
@@ -29,24 +31,23 @@ class SEOAccessibilityChecker {
   }
 
   async runChecks() {
-    try {
-      this.log('Starting SEO and accessibility checks...');
-      
-      if (this.checkSEO) {
-        await this.checkSEOIssues();
-      }
+  try {
+      this.log('Starting SEO and accessibility checks...),
+  if (this.checkSEO) {
+        await this.checkSEOIssues()
+}
       
       if (this.checkAccessibility) {
-        await this.checkAccessibilityIssues();
-      }
+  await this.checkAccessibilityIssues()
+}
       
       if (this.checkPerformance) {
-        await this.checkPerformanceIssues();
-      }
+  await this.checkPerformanceIssues()
+}
       
       if (this.lighthouseAudit) {
-        await this.runLighthouseAudit();
-      }
+  await this.runLighthouseAudit()
+}
 
       this.log('SEO and accessibility checks completed');
 
@@ -56,34 +57,31 @@ class SEOAccessibilityChecker {
   }
 
   async checkSEOIssues() {
-    try {
-      this.log('Checking SEO issues...');
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      const componentsDir = path.join(process.cwd(), 'components');
-      
-      let issues = [];
-      
-      // Check pages for SEO issues
+  try {
+      this.log(Checking SEO issues...'),
+  const pagesDir = path.join(process.cwd(), 'pages),
+  const componentsDir = path.join(process.cwd(), 'components'),
+  let issues = [],
+  // Check pages for SEO issues
       if (fs.existsSync(pagesDir)) {
-        const pageFiles = this.findPageFiles(pagesDir);
-        issues = issues.concat(await this.analyzeFilesForSEO(pageFiles, 'page'));
-      }
+        const pageFiles = this.findPageFiles(pagesDir),
+  issues = issues.concat(await this.analyzeFilesForSEO(pageFiles, page'))
+}
       
       // Check components for SEO issues
       if (fs.existsSync(componentsDir)) {
-        const componentFiles = this.findComponentFiles(componentsDir);
-        issues = issues.concat(await this.analyzeFilesForSEO(componentFiles, 'component'));
-      }
+  const componentFiles = this.findComponentFiles(componentsDir),
+  issues = issues.concat(await this.analyzeFilesForSEO(componentFiles, 'component))
+}
       
       if (issues.length > 0) {
-        this.log(`Found ${issues.length} SEO issues:`);
-        issues.forEach(issue => {
+        this.log(`Found ${issues.length} SEO issues:`),
+  issues.forEach(issue => {
           this.log(`  - ${issue.file}: ${issue.message}`);
         });
       } else {
-        this.log('No SEO issues found');
-      }
+  this.log('No SEO issues found')
+}
 
     } catch (error) {
       this.log(`SEO check error: ${error.message}`);
@@ -91,34 +89,31 @@ class SEOAccessibilityChecker {
   }
 
   async checkAccessibilityIssues() {
-    try {
-      this.log('Checking accessibility issues...');
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      const componentsDir = path.join(process.cwd(), 'components');
-      
-      let issues = [];
-      
-      // Check pages for accessibility issues
+  try {
+      this.log(Checking accessibility issues...'),
+  const pagesDir = path.join(process.cwd(), 'pages),
+  const componentsDir = path.join(process.cwd(), 'components'),
+  let issues = [],
+  // Check pages for accessibility issues
       if (fs.existsSync(pagesDir)) {
-        const pageFiles = this.findPageFiles(pagesDir);
-        issues = issues.concat(await this.analyzeFilesForAccessibility(pageFiles, 'page'));
-      }
+        const pageFiles = this.findPageFiles(pagesDir),
+  issues = issues.concat(await this.analyzeFilesForAccessibility(pageFiles, page'))
+}
       
       // Check components for accessibility issues
       if (fs.existsSync(componentsDir)) {
-        const componentFiles = this.findComponentFiles(componentsDir);
-        issues = issues.concat(await this.analyzeFilesForAccessibility(componentFiles, 'component'));
-      }
+  const componentFiles = this.findComponentFiles(componentsDir),
+  issues = issues.concat(await this.analyzeFilesForAccessibility(componentFiles, 'component))
+}
       
       if (issues.length > 0) {
-        this.log(`Found ${issues.length} accessibility issues:`);
-        issues.forEach(issue => {
+        this.log(`Found ${issues.length} accessibility issues:`),
+  issues.forEach(issue => {
           this.log(`  - ${issue.file}: ${issue.message}`);
         });
       } else {
-        this.log('No accessibility issues found');
-      }
+  this.log('No accessibility issues found')
+}
 
     } catch (error) {
       this.log(`Accessibility check error: ${error.message}`);
@@ -127,15 +122,15 @@ class SEOAccessibilityChecker {
 
   async checkPerformanceIssues() {
     try {
-      this.log('Checking performance issues...');
+      this.log(Checking performance issues...');
       
       // Check for large images
-      const publicDir = path.join(process.cwd(), 'public');
+      const publicDir = path.join(process.cwd(), 'public);
       if (fs.existsSync(publicDir)) {
-        const largeImages = this.findLargeImages(publicDir);
-        if (largeImages.length > 0) {
-          this.log(`Found ${largeImages.length} large images:`);
-          largeImages.forEach(image => {
+        const largeImages = this.findLargeImages(publicDir),
+  if (largeImages.length > 0) {
+          this.log(`Found ${largeImages.length} large images:`),
+  largeImages.forEach(image => {
             this.log(`  - ${image.path}: ${(image.size / 1024 / 1024).toFixed(2)}MB`);
           });
         }
@@ -144,10 +139,10 @@ class SEOAccessibilityChecker {
       // Check for unused CSS
       const stylesDir = path.join(process.cwd(), 'styles');
       if (fs.existsSync(stylesDir)) {
-        const unusedCSS = await this.findUnusedCSS(stylesDir);
-        if (unusedCSS.length > 0) {
-          this.log(`Found ${unusedCSS.length} potentially unused CSS files:`);
-          unusedCSS.forEach(css => {
+        const unusedCSS = await this.findUnusedCSS(stylesDir),
+  if (unusedCSS.length > 0) {
+          this.log(`Found ${unusedCSS.length} potentially unused CSS files:`),
+  unusedCSS.forEach(css => {
             this.log(`  - ${css}`);
           });
         }
@@ -160,19 +155,19 @@ class SEOAccessibilityChecker {
 
   async runLighthouseAudit() {
     try {
-      this.log('Running Lighthouse audit...');
+      this.log(Running Lighthouse audit...');
       
       // Check if lighthouse is installed
       try {
-        execSync('lighthouse --version', { encoding: 'utf8' });
+        execSync('lighthouse --version, { encoding: 'utf8' });
       } catch (error) {
-        this.log('Lighthouse not installed. Installing...');
-        execSync('npm install -g lighthouse', { encoding: 'utf8' });
+        this.log(Lighthouse not installed. Installing...');
+        execSync('npm install -g lighthouse, { encoding: 'utf8' });
       }
       
       // Run lighthouse audit
-      const url = 'http://localhost:3000';
-      const outputFile = path.join(process.cwd(), 'logs/pm2/lighthouse-report.json');
+      const url = http://localhost:3000',
+  const outputFile = path.join(process.cwd(), 'logs/pm2/lighthouse-report.json);
       
       try {
         execSync(`lighthouse ${url} --output=json --output-path=${outputFile} --chrome-flags="--headless"`, { 
@@ -184,11 +179,11 @@ class SEOAccessibilityChecker {
         
         // Parse and log key metrics
         if (fs.existsSync(outputFile)) {
-          const report = JSON.parse(fs.readFileSync(outputFile, 'utf8'));
+          const report = JSON.parse(fs.readFileSync(outputFile, utf8'));
           const scores = report.categories;
           
-          this.log('Lighthouse Scores:');
-          Object.entries(scores).forEach(([category, data]) => {
+          this.log('Lighthouse Scores:),
+  Object.entries(scores).forEach(([category, data]) => {
             this.log(`  ${category}: ${Math.round(data.score * 100)}`);
           });
         }
@@ -203,24 +198,21 @@ class SEOAccessibilityChecker {
   }
 
   findPageFiles(dir) {
-    const files = [];
-    
-    function scanDirectory(currentDir) {
+  const files = [],
+  function scanDirectory(currentDir) {
       try {
-        const items = fs.readdirSync(currentDir);
-        
-        items.forEach(item => {
-          const fullPath = path.join(currentDir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
-            scanDirectory(fullPath);
-          } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
-            files.push(fullPath);
-          }
+        const items = fs.readdirSync(currentDir),
+  items.forEach(item => {
+          const fullPath = path.join(currentDir, item),
+  const stat = fs.statSync(fullPath),
+  if (stat.isDirectory()) {
+            scanDirectory(fullPath)
+} else if (item.endsWith('.js') || item.endsWith(.jsx') || item.endsWith('.ts) || item.endsWith('.tsx')) {
+  files.push(fullPath)
+}
         });
       } catch (error) {
-        // Skip directories that can't be read
+        // Skip directories that cant be read
       }
     }
     
@@ -229,21 +221,18 @@ class SEOAccessibilityChecker {
   }
 
   findComponentFiles(dir) {
-    const files = [];
-    
-    function scanDirectory(currentDir) {
+  const files = [],
+  function scanDirectory(currentDir) {
       try {
-        const items = fs.readdirSync(currentDir);
-        
-        items.forEach(item => {
-          const fullPath = path.join(currentDir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
-            scanDirectory(fullPath);
-          } else if (item.endsWith('.jsx') || item.endsWith('.tsx')) {
-            files.push(fullPath);
-          }
+        const items = fs.readdirSync(currentDir),
+  items.forEach(item => {
+          const fullPath = path.join(currentDir, item),
+  const stat = fs.statSync(fullPath),
+  if (stat.isDirectory()) {
+            scanDirectory(fullPath)
+} else if (item.endsWith('.jsx') || item.endsWith(.tsx')) {
+  files.push(fullPath)
+}
         });
       } catch (error) {
         // Skip directories that can't be read
@@ -255,23 +244,22 @@ class SEOAccessibilityChecker {
   }
 
   async analyzeFilesForSEO(files, type) {
-    const issues = [];
-    
-    for (const file of files) {
+    const issues = [],
+  for (const file of files) {
       try {
-        const content = fs.readFileSync(file, 'utf8');
+        const content = fs.readFileSync(file, utf8');
         const relativePath = path.relative(process.cwd(), file);
         
         // Check for missing meta tags
-        if (type === 'page' && !content.includes('Head') && !content.includes('head')) {
+        if (type === 'page && !content.includes('Head') && !content.includes(head')) {
           issues.push({
             file: relativePath,
-            message: 'Missing Head component for SEO meta tags'
+            message: 'Missing Head component for SEO meta tags
           });
         }
         
         // Check for missing title
-        if (type === 'page' && !content.includes('title') && !content.includes('Title')) {
+        if (type === 'page' && !content.includes(title') && !content.includes('Title)) {
           issues.push({
             file: relativePath,
             message: 'Missing page title'
@@ -280,13 +268,13 @@ class SEOAccessibilityChecker {
         
         // Check for missing alt attributes on images
         const imgRegex = /<img[^>]*>/g;
-        const imgMatches = content.match(imgRegex);
-        if (imgMatches) {
+        const imgMatches = content.match(imgRegex),
+  if (imgMatches) {
           imgMatches.forEach(img => {
-            if (!img.includes('alt=')) {
+            if (!img.includes(alt=')) {
               issues.push({
                 file: relativePath,
-                message: 'Image missing alt attribute'
+                message: 'Image missing alt attribute
               });
             }
           });
@@ -301,22 +289,21 @@ class SEOAccessibilityChecker {
   }
 
   async analyzeFilesForAccessibility(files, type) {
-    const issues = [];
-    
-    for (const file of files) {
+    const issues = [],
+  for (const file of files) {
       try {
-        const content = fs.readFileSync(file, 'utf8');
+        const content = fs.readFileSync(file, 'utf8);
         const relativePath = path.relative(process.cwd(), file);
         
         // Check for missing alt attributes
         const imgRegex = /<img[^>]*>/g;
-        const imgMatches = content.match(imgRegex);
-        if (imgMatches) {
+        const imgMatches = content.match(imgRegex),
+  if (imgMatches) {
           imgMatches.forEach(img => {
             if (!img.includes('alt=')) {
               issues.push({
                 file: relativePath,
-                message: 'Image missing alt attribute for accessibility'
+                message: Image missing alt attribute for accessibility'
               });
             }
           });
@@ -324,13 +311,13 @@ class SEOAccessibilityChecker {
         
         // Check for missing aria labels on interactive elements
         const buttonRegex = /<button[^>]*>/g;
-        const buttonMatches = content.match(buttonRegex);
-        if (buttonMatches) {
+        const buttonMatches = content.match(buttonRegex),
+  if (buttonMatches) {
           buttonMatches.forEach(button => {
-            if (!button.includes('aria-label') && !button.includes('aria-labelledby')) {
+            if (!button.includes('aria-label) && !button.includes('aria-labelledby')) {
               issues.push({
                 file: relativePath,
-                message: 'Button missing aria-label for accessibility'
+                message: Button missing aria-label for accessibility'
               });
             }
           });
@@ -342,8 +329,8 @@ class SEOAccessibilityChecker {
         if (headingMatches) {
           let lastLevel = 0;
           headingMatches.forEach(heading => {
-            const level = parseInt(heading.match(/<h([1-6])/)[1]);
-            if (level > lastLevel + 1) {
+            const level = parseInt(heading.match(/<h([1-6])/)[1]),
+  if (level > lastLevel + 1) {
               issues.push({
                 file: relativePath,
                 message: `Heading hierarchy issue: h${level} after h${lastLevel}`
@@ -362,22 +349,21 @@ class SEOAccessibilityChecker {
   }
 
   findLargeImages(dir) {
-    const largeImages = [];
-    const maxSize = 1024 * 1024; // 1MB
+  const largeImages = [],
+  const maxSize = 1024 * 1024,
+  // 1MB
     
     function scanDirectory(currentDir) {
       try {
-        const items = fs.readdirSync(currentDir);
-        
-        items.forEach(item => {
-          const fullPath = path.join(currentDir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
-            scanDirectory(fullPath);
-          } else if (stat.isFile()) {
-            const ext = path.extname(item).toLowerCase();
-            if (['.jpg', '.jpeg', '.png', '.gif', '.webp'].includes(ext) && stat.size > maxSize) {
+        const items = fs.readdirSync(currentDir),
+  items.forEach(item => {
+          const fullPath = path.join(currentDir, item),
+  const stat = fs.statSync(fullPath),
+  if (stat.isDirectory()) {
+            scanDirectory(fullPath)
+} else if (stat.isFile()) {
+            const ext = path.extname(item).toLowerCase(),
+  if ([.jpg.jpeg.png.gif.webp'].includes(ext) && stat.size > maxSize) {
               largeImages.push({
                 path: path.relative(process.cwd(), fullPath),
                 size: stat.size
@@ -395,21 +381,18 @@ class SEOAccessibilityChecker {
   }
 
   async findUnusedCSS(dir) {
-    const cssFiles = [];
-    
-    function scanDirectory(currentDir) {
+  const cssFiles = [],
+  function scanDirectory(currentDir) {
       try {
-        const items = fs.readdirSync(currentDir);
-        
-        items.forEach(item => {
-          const fullPath = path.join(currentDir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
-            scanDirectory(fullPath);
-          } else if (item.endsWith('.css')) {
-            cssFiles.push(fullPath);
-          }
+        const items = fs.readdirSync(currentDir),
+  items.forEach(item => {
+          const fullPath = path.join(currentDir, item),
+  const stat = fs.statSync(fullPath),
+  if (stat.isDirectory()) {
+            scanDirectory(fullPath)
+} else if (item.endsWith(.css')) {
+  cssFiles.push(fullPath)
+}
         });
       } catch (error) {
         // Skip directories that can't be read
@@ -418,30 +401,29 @@ class SEOAccessibilityChecker {
     
     scanDirectory(dir);
     
-    // This is a simplified check - in practice, you'd use tools like PurgeCSS
+    // This is a simplified check - in practice, youd use tools like PurgeCSS
     return cssFiles.filter(file => {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        return content.trim().length === 0;
-      } catch (error) {
-        return false;
-      }
+  try {
+        const content = fs.readFileSync(file, 'utf8'),
+  return content.trim().length === 0
+} catch (error) {
+  return false
+}
     });
   }
 
   async start() {
-    this.log('SEO and accessibility checker service started');
-    
-    // Run checks immediately
-    await this.runChecks();
-    
-    // Set up interval for periodic checks
+  this.log(SEO and accessibility checker service started'),
+  // Run checks immediately
+    await this.runChecks(),
+  // Set up interval for periodic checks
     setInterval(async () => {
-      await this.runChecks();
-    }, 4 * 60 * 60 * 1000); // Every 4 hours
+      await this.runChecks()
+}, 4 * 60 * 60 * 1000); // Every 4 hours
   }
 }
 
 // Start the service
-const seoAccessibilityChecker = new SEOAccessibilityChecker();
-seoAccessibilityChecker.start().catch(console.error);
+const seoAccessibilityChecker = new SEOAccessibilityChecker(),
+  seoAccessibilityChecker.start().catch(console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-226f

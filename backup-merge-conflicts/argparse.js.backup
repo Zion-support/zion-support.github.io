@@ -77,10 +77,9 @@ const PARSER = 'A...'
 const REMAINDER = '...'
 const _UNRECOGNIZED_ARGS_ATTR = '_unrecognized_args'
 
-
-// ==================================
+// ======
 // Utility functions used for porting
-// ==================================
+// ======
 const assert = require('assert')
 const util = require('util')
 const fs = require('fs')
@@ -372,10 +371,9 @@ function deprecate(id, string) {
     _deprecations[id]()
 }
 
-
-// =============================
+// =
 // Utility functions and classes
-// =============================
+// =
 function _AttributeHolder(cls = Object) {
     /*
      *  Abstract base class that provides __repr__.
@@ -421,7 +419,6 @@ function _AttributeHolder(cls = Object) {
     }
 }
 
-
 function _copy_items(items) {
     if (items === undefined) {
         return []
@@ -429,10 +426,9 @@ function _copy_items(items) {
     return items.slice(0)
 }
 
-
-// ===============
+// =
 // Formatting Help
-// ===============
+// =
 const HelpFormatter = _camelcase_alias(_callable(class HelpFormatter {
     /*
      *  Formatter for generating usage messages and argument help strings.
@@ -477,9 +473,9 @@ const HelpFormatter = _camelcase_alias(_callable(class HelpFormatter {
         this._long_break_matcher = /\n\n\n+/g
     }
 
-    // ===============================
+    // ===
     // Section and indentation methods
-    // ===============================
+    // ===
     _indent() {
         this._current_indent += this._indent_increment
         this._level += 1
@@ -495,9 +491,9 @@ const HelpFormatter = _camelcase_alias(_callable(class HelpFormatter {
         this._current_section.items.push([ func, args ])
     }
 
-    // ========================
+    // ===
     // Message building methods
-    // ========================
+    // ===
     start_section(heading) {
         this._indent()
         let section = this._Section(this, this._current_section, heading)
@@ -549,9 +545,9 @@ const HelpFormatter = _camelcase_alias(_callable(class HelpFormatter {
         }
     }
 
-    // =======================
+    // ==
     // Help-formatting methods
-    // =======================
+    // ==
     format_help() {
         let help = this._root_section.format_help()
         if (help) {
@@ -1041,7 +1037,6 @@ HelpFormatter.prototype._Section = _callable(class _Section {
     }
 })
 
-
 const RawDescriptionHelpFormatter = _camelcase_alias(_callable(class RawDescriptionHelpFormatter extends HelpFormatter {
     /*
      *  Help message formatter which retains any formatting in descriptions.
@@ -1055,7 +1050,6 @@ const RawDescriptionHelpFormatter = _camelcase_alias(_callable(class RawDescript
     }
 }))
 
-
 const RawTextHelpFormatter = _camelcase_alias(_callable(class RawTextHelpFormatter extends RawDescriptionHelpFormatter {
     /*
      *  Help message formatter which retains formatting of all help text.
@@ -1068,7 +1062,6 @@ const RawTextHelpFormatter = _camelcase_alias(_callable(class RawTextHelpFormatt
         return splitlines(text)
     }
 }))
-
 
 const ArgumentDefaultsHelpFormatter = _camelcase_alias(_callable(class ArgumentDefaultsHelpFormatter extends HelpFormatter {
     /*
@@ -1093,7 +1086,6 @@ const ArgumentDefaultsHelpFormatter = _camelcase_alias(_callable(class ArgumentD
     }
 }))
 
-
 const MetavarTypeHelpFormatter = _camelcase_alias(_callable(class MetavarTypeHelpFormatter extends HelpFormatter {
     /*
      *  Help message formatter which uses the argument 'type' as the default
@@ -1112,10 +1104,9 @@ const MetavarTypeHelpFormatter = _camelcase_alias(_callable(class MetavarTypeHel
     }
 }))
 
-
-// =====================
+// 
 // Options and Arguments
-// =====================
+// 
 function _get_action_name(argument) {
     if (argument === undefined) {
         return undefined
@@ -1129,7 +1120,6 @@ function _get_action_name(argument) {
         return undefined
     }
 }
-
 
 const ArgumentError = _callable(class ArgumentError extends Error {
     /*
@@ -1159,7 +1149,6 @@ const ArgumentError = _callable(class ArgumentError extends Error {
     }
 })
 
-
 const ArgumentTypeError = _callable(class ArgumentTypeError extends Error {
     /*
      * An error from trying to convert a command line string to a type.
@@ -1171,10 +1160,9 @@ const ArgumentTypeError = _callable(class ArgumentTypeError extends Error {
     }
 })
 
-
-// ==============
+// 
 // Action classes
-// ==============
+// 
 const Action = _camelcase_alias(_callable(class Action extends _AttributeHolder(Function) {
     /*
      *  Information about how to convert command line strings to Python objects.
@@ -1291,7 +1279,6 @@ const Action = _camelcase_alias(_callable(class Action extends _AttributeHolder(
     }
 }))
 
-
 const BooleanOptionalAction = _camelcase_alias(_callable(class BooleanOptionalAction extends Action {
 
     constructor() {
@@ -1353,7 +1340,6 @@ const BooleanOptionalAction = _camelcase_alias(_callable(class BooleanOptionalAc
     }
 }))
 
-
 const _StoreAction = _callable(class _StoreAction extends Action {
 
     constructor() {
@@ -1408,7 +1394,6 @@ const _StoreAction = _callable(class _StoreAction extends Action {
     }
 })
 
-
 const _StoreConstAction = _callable(class _StoreConstAction extends Action {
 
     constructor() {
@@ -1446,7 +1431,6 @@ const _StoreConstAction = _callable(class _StoreConstAction extends Action {
     }
 })
 
-
 const _StoreTrueAction = _callable(class _StoreTrueAction extends _StoreConstAction {
 
     constructor() {
@@ -1475,7 +1459,6 @@ const _StoreTrueAction = _callable(class _StoreTrueAction extends _StoreConstAct
     }
 })
 
-
 const _StoreFalseAction = _callable(class _StoreFalseAction extends _StoreConstAction {
 
     constructor() {
@@ -1503,7 +1486,6 @@ const _StoreFalseAction = _callable(class _StoreFalseAction extends _StoreConstA
         })
     }
 })
-
 
 const _AppendAction = _callable(class _AppendAction extends Action {
 
@@ -1562,7 +1544,6 @@ const _AppendAction = _callable(class _AppendAction extends Action {
     }
 })
 
-
 const _AppendConstAction = _callable(class _AppendConstAction extends Action {
 
     constructor() {
@@ -1604,7 +1585,6 @@ const _AppendConstAction = _callable(class _AppendConstAction extends Action {
     }
 })
 
-
 const _CountAction = _callable(class _CountAction extends Action {
 
     constructor() {
@@ -1641,7 +1621,6 @@ const _CountAction = _callable(class _CountAction extends Action {
     }
 })
 
-
 const _HelpAction = _callable(class _HelpAction extends Action {
 
     constructor() {
@@ -1671,7 +1650,6 @@ const _HelpAction = _callable(class _HelpAction extends Action {
         parser.exit()
     }
 })
-
 
 const _VersionAction = _callable(class _VersionAction extends Action {
 
@@ -1711,7 +1689,6 @@ const _VersionAction = _callable(class _VersionAction extends Action {
         parser.exit()
     }
 })
-
 
 const _SubParsersAction = _camelcase_alias(_callable(class _SubParsersAction extends Action {
 
@@ -1832,7 +1809,6 @@ const _SubParsersAction = _camelcase_alias(_callable(class _SubParsersAction ext
     }
 }))
 
-
 _SubParsersAction.prototype._ChoicesPseudoAction = _callable(class _ChoicesPseudoAction extends Action {
     constructor(name, aliases, help) {
         let metavar = name, dest = name
@@ -1843,7 +1819,6 @@ _SubParsersAction.prototype._ChoicesPseudoAction = _callable(class _ChoicesPseud
     }
 })
 
-
 const _ExtendAction = _callable(class _ExtendAction extends _AppendAction {
     call(parser, namespace, values/*, option_string = undefined*/) {
         let items = getattr(namespace, this.dest, undefined)
@@ -1853,10 +1828,9 @@ const _ExtendAction = _callable(class _ExtendAction extends _AppendAction {
     }
 })
 
-
-// ==============
+// 
 // Type classes
-// ==============
+// 
 const FileType = _callable(class FileType extends Function {
     /*
      *  Factory for creating file object types
@@ -1971,9 +1945,9 @@ const FileType = _callable(class FileType extends Function {
     }
 })
 
-// ===========================
+// ======
 // Optional and Positional Parsing
-// ===========================
+// ======
 const Namespace = _callable(class Namespace extends _AttributeHolder() {
     /*
      *  Simple object for storing attributes.
@@ -1990,7 +1964,6 @@ const Namespace = _callable(class Namespace extends _AttributeHolder() {
 
 // unset string tag to mimic plain object
 Namespace.prototype[Symbol.toStringTag] = undefined
-
 
 const _ActionsContainer = _camelcase_alias(_callable(class _ActionsContainer {
 
@@ -2058,9 +2031,9 @@ const _ActionsContainer = _camelcase_alias(_callable(class _ActionsContainer {
         this._has_negative_number_optionals = []
     }
 
-    // ====================
+    // ======
     // Registration methods
-    // ====================
+    // ======
     register(registry_name, value, object) {
         let registry = setdefault(this._registries, registry_name, {})
         registry[value] = object
@@ -2070,9 +2043,9 @@ const _ActionsContainer = _camelcase_alias(_callable(class _ActionsContainer {
         return getattr(this._registries[registry_name], value, default_value)
     }
 
-    // ==================================
+    // ======
     // Namespace default accessor methods
-    // ==================================
+    // ======
     set_defaults(kwargs) {
         Object.assign(this._defaults, kwargs)
 
@@ -2094,10 +2067,9 @@ const _ActionsContainer = _camelcase_alias(_callable(class _ActionsContainer {
         return this._defaults[dest]
     }
 
-
-    // =======================
+    // ==
     // Adding argument actions
-    // =======================
+    // ==
     add_argument() {
         /*
          *  add_argument(dest, ..., name=value, ...)
@@ -2416,7 +2388,6 @@ const _ActionsContainer = _camelcase_alias(_callable(class _ActionsContainer {
     }
 }))
 
-
 const _ArgumentGroup = _callable(class _ArgumentGroup extends _ActionsContainer {
 
     constructor() {
@@ -2464,7 +2435,6 @@ const _ArgumentGroup = _callable(class _ArgumentGroup extends _ActionsContainer 
     }
 })
 
-
 const _MutuallyExclusiveGroup = _callable(class _MutuallyExclusiveGroup extends _ArgumentGroup {
 
     constructor() {
@@ -2496,7 +2466,6 @@ const _MutuallyExclusiveGroup = _callable(class _MutuallyExclusiveGroup extends 
         _array_remove(this._group_actions, action)
     }
 })
-
 
 const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _AttributeHolder(_ActionsContainer) {
     /*
@@ -2662,9 +2631,9 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         }
     }
 
-    // =======================
+    // ==
     // Pretty __repr__ methods
-    // =======================
+    // ==
     _get_kwargs() {
         let names = [
             'prog',
@@ -2677,9 +2646,9 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         return names.map(name => [ name, getattr(this, name) ])
     }
 
-    // ==================================
+    // ======
     // Optional/Positional adding methods
-    // ==================================
+    // ======
     add_subparsers() {
         let [
             kwargs
@@ -2741,9 +2710,9 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         return this._actions.filter(action => !action.option_strings.length)
     }
 
-    // =====================================
+    // ==
     // Command line argument parsing methods
-    // =====================================
+    // ==
     parse_args(args = undefined, namespace = undefined) {
         let argv
         [ args, argv ] = this.parse_known_args(args, namespace)
@@ -3337,9 +3306,9 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         return nargs_pattern
     }
 
-    // ========================
+    // ===
     // Alt command line argument parsing, allowing free intermix
-    // ========================
+    // ===
 
     parse_intermixed_args(args = undefined, namespace = undefined) {
         let argv
@@ -3445,9 +3414,9 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         return [ namespace, extras ]
     }
 
-    // ========================
+    // ===
     // Value conversion methods
-    // ========================
+    // ===
     _get_values(action, arg_strings) {
         // for everything but PARSER, REMAINDER args, strip out first '--'
         if (![PARSER, REMAINDER].includes(action.nargs)) {
@@ -3568,9 +3537,9 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         }
     }
 
-    // =======================
+    // ==
     // Help-formatting methods
-    // =======================
+    // ==
     format_usage() {
         let formatter = this._get_formatter()
         formatter.add_usage(this.usage, this._actions,
@@ -3608,9 +3577,9 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         return new this.formatter_class({ prog: this.prog })
     }
 
-    // =====================
+    // 
     // Help-printing methods
-    // =====================
+    // 
     print_usage(file = undefined) {
         if (file === undefined) file = process.stdout
         this._print_message(this.format_usage(), file)
@@ -3628,9 +3597,9 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         }
     }
 
-    // ===============
+    // =
     // Exiting methods
-    // ===============
+    // =
     exit(status = 0, message = undefined) {
         if (message) {
             this._print_message(message, process.stderr)
@@ -3657,7 +3626,6 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         this.exit(2, sub('%(prog)s: error: %(message)s\n', args))
     }
 }))
-
 
 module.exports = {
     ArgumentParser,

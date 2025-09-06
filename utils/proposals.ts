@@ -1,0 +1,1 @@
+export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted';

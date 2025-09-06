@@ -1786,7 +1786,7 @@ Object.prototype.hasOwnProperty = function(name) {
   }
 }
 
-// ============= Reflection module =============
+// ====== Reflection module ======
 // see http://wiki.ecmascript.org/doku.php?id=harmony:reflect_api
 
 var Reflect = {

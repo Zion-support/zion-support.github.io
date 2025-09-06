@@ -125,6 +125,131 @@ module.exports = {
       out_file: './logs/lint-checker-out.log',
       log_file: './logs/lint-checker-combined.log',
       time: true
+    },
+    {
+      name: "zion-app",
+      script: "npm",
+      args: "start",
+      interpreter: "none",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 10,
+      exp_backoff_restart_delay: 500,
+      env: {
+        NODE_ENV: "production",
+        PORT: process.env.PORT || 3000
+      },
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/zion-app-error.log",
+      out_file: "automation/logs/zion-app-out.log",
+      time: true
+    },
+    {
+      name: "zion-auto-sync",
+      script: "automation/pm2-auto-sync.js",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 10,
+      exp_backoff_restart_delay: 500,
+      env: {
+        NODE_ENV: "production",
+        AUTO_SYNC_REMOTE: process.env.AUTO_SYNC_REMOTE || "origin",
+        AUTO_SYNC_BRANCH: process.env.AUTO_SYNC_BRANCH || "main",
+        AUTO_SYNC_STRATEGY: process.env.AUTO_SYNC_STRATEGY || "hardreset",
+        AUTO_SYNC_CLEAN: process.env.AUTO_SYNC_CLEAN || "1",
+        AUTO_SYNC_GC: process.env.AUTO_SYNC_GC || "0"
+      },
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/zion-auto-sync-error.log",
+      out_file: "automation/logs/zion-auto-sync-out.log",
+      time: true
+    },
+    {
+      name: "zion-build-monitor",
+      script: "automation/continuous-build-monitor.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/build-monitor-error.log",
+      out_file: "automation/logs/build-monitor-out.log",
+      time: true
+    },
+    {
+      name: "performance-optimizer",
+      script: "automation/performance-optimizer.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "0 */2 * * *", // Every 2 hours
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/performance-optimizer-error.log",
+      out_file: "automation/logs/performance-optimizer-out.log",
+      time: true
+    },
+    {
+      name: "seo-optimizer",
+      script: "automation/seo-optimizer.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "0 */6 * * *", // Every 6 hours
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/seo-optimizer-error.log",
+      out_file: "automation/logs/seo-optimizer-out.log",
+      time: true
+    },
+    {
+      name: "health-check",
+      script: "automation/health-check.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "*/5 * * * *", // Every 5 minutes
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/health-check-error.log",
+      out_file: "automation/logs/health-check-out.log",
+      time: true
+    },
+    {
+      name: "security-scanner",
+      script: "automation/security-scanner.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "0 */4 * * *", // Every 4 hours
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/security-scanner-error.log",
+      out_file: "automation/logs/security-scanner-out.log",
+      time: true
     }
   ]
 };

@@ -2,9 +2,9 @@ company:
   name: Zion Tech Group
   domain: https://ziontechgroup.com
   contact:
-    phone: "+1 302 464 0950"
+    phone: '+1 302 464 0950'
     email: kleber@ziontechgroup.com
-    address: "364 E Main St STE 1008 Middletown DE 19709"
+    address: '364 E Main St STE 1008 Middletown DE 19709'
 
 categories:
   - id: micro-saas
@@ -36,7 +36,7 @@ categories:
                 - 10 data sources
                 - Priority support
             - name: Enterprise
-              price_usd: "Custom"
+              price_usd: 'Custom'
               unit: per month
               includes:
                 - SSO, SLA, Private Cloud
@@ -100,7 +100,7 @@ categories:
               price_usd: 0.05
               unit: per record
             - name: Volume
-              price_usd: "Custom"
+              price_usd: 'Custom'
               unit: per month
         links:
           landing: https://ziontechgroup.com/services/lead-enrichment-api
@@ -194,4 +194,3 @@ categories:
           fixed_price_from_usd: 8000
         links:
           landing: https://ziontechgroup.com/services/security-assessments-and-pentest
-

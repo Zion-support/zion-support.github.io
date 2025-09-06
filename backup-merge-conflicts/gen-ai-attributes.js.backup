@@ -4,9 +4,9 @@
  * @see https://opentelemetry.io/docs/specs/semconv/gen-ai/
  */
 
-// =============================================================================
+// 
 // OPENTELEMETRY SEMANTIC CONVENTIONS FOR GENAI
-// =============================================================================
+// 
 
 /**
  * The Generative AI system being used
@@ -87,9 +87,9 @@ const GEN_AI_REQUEST_MESSAGES_ATTRIBUTE = 'gen_ai.request.messages';
  */
 const GEN_AI_RESPONSE_TEXT_ATTRIBUTE = 'gen_ai.response.text';
 
-// =============================================================================
+// 
 // OPENAI-SPECIFIC ATTRIBUTES
-// =============================================================================
+// 
 
 /**
  * The response ID from OpenAI
@@ -116,9 +116,9 @@ const OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE = 'openai.usage.completion_tokens
  */
 const OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE = 'openai.usage.prompt_tokens';
 
-// =============================================================================
+// 
 // OPENAI OPERATIONS
-// =============================================================================
+// 
 
 /**
  * OpenAI API operations

@@ -64,13 +64,13 @@ const runAll = async ( name, buffer ) => {
 
 const run = async () => {
   runAllDummy ();
-  console.log ( '===================' );
+  console.log ( '=====' );
   await runAll ( '100kb', Buffer.allocUnsafe ( 100 * 1024 ) );
-  console.log ( '===================' );
+  console.log ( '=====' );
   await runAll ( '10kb', Buffer.allocUnsafe ( 10 * 1024 ) );
-  console.log ( '===================' );
+  console.log ( '=====' );
   await runAll ( '1kb', Buffer.allocUnsafe ( 1024 ) );
-  console.log ( '===================' );
+  console.log ( '=====' );
 };
 
 run ();
