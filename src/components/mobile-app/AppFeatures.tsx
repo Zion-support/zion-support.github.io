@@ -23,7 +23,7 @@ const features = [
 ]
 import React from "react",
 import { Brain, Clock, Award, Zap } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from "@/components/ui/card";
 
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />,

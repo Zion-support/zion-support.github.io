@@ -4,8 +4,8 @@ import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppS
 import { logInfo } from '@/utils/productionLogger'
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
-import { AppStoreButtons } from "./AppStoreButtons",
-import { logInfo } from '@/utils/productionLogger',
+import { AppStoreButtons  } from "./AppStoreButtons";
+import { logInfo  } from "@/utils/productionLogger";
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -57,8 +57,8 @@ export const DownloadSection: React.FC = () => {
 },
 import React from "react",;
 import { QrCodeIcon } from 'lucide-react';
-import { AppStoreButtons } from "./AppStoreButtons",;
-import { logInfo } from '@/utils/productionLogger',;
+import { AppStoreButtons  } from "./AppStoreButtons";;
+import { logInfo  } from "@/utils/productionLogger";;
 export const DownloadSection: React.FC = () => {;
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;

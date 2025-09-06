@@ -15,8 +15,8 @@ const Home: React.FC = () => {
         url="/"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+        {/* Hero Section */}
+        <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div 
             className="text-center"
@@ -228,6 +228,7 @@ const Home: React.FC = () => {
               Start Your Journey Today
             </Link>
           </motion.div>
+        </div>
         </div>
       </div>
     </>

@@ -1,8 +1,8 @@
 import React from "react",
-import { useRouter } from "next/router",
+import { useRouter  } from "next/router";
 import Link from "next/link",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
+import { cn  } from "@/lib/utils";
+import { useAuth  } from "@/hooks/useAuth";
 import { useWishlist } from "@/hooks/useWishlist";
 import { useCart  } from '@/context/CartContext';
 import { logWarn } from '@/utils/productionLogger';
@@ -48,7 +48,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
       name: 'Home'
       href: '/'
       icon: Home
-      matches: (path: string) => path === '/',    }
+      matches: (path: string) => path === '/',    },
     {
       name: 'Browse'
       href: '/talent'
@@ -56,20 +56,20 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
       matches: (path: string) =>
         path.startsWith('/talent') |
         path.startsWith('/categories') |
-        path.startsWith('/marketplace'),    }
+        path.startsWith('/marketplace'),    },
     {
       name: 'Community'
       href: '/community'
       icon: MessageCircle
       matches: (path: string) =>
-        path.startsWith('/community') |path.startsWith('/forum'),    }
+        path.startsWith('/community') |path.startsWith('/forum'),    },
     {
       name: 'Wishlist'
       href: '/wishlist'
       icon: Heart
       matches: (path: string) => path.startsWith('/wishlist'),      badge: favoritesCount
       authRequired: true
-    }
+    },
     {
       name: 'Messages'
       href: '/messages'
@@ -77,13 +77,13 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
       matches: (path: string) =>
         path.startsWith('/messages') |path.startsWith('/inbox'),      badge: unreadCount
       authRequired: true
-    }
+    },
     {
       name: 'Cart'
       href: '/cart'
       icon: ShoppingCart
       matches: (path: string) => path.startsWith('/cart')
-      badge: cartCount,    }
+      badge: cartCount,    },
     {
       name: 'Dashboard'
       href: '/dashboard'

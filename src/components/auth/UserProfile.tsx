@@ -6,6 +6,7 @@ import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card'
 import {Badge} from '@/components/ui/badge'
 import {User, LogOut, LogIn} from 'lucide-react'
 import {useRouter} from 'next/navigation'
+import { Button } from './ui/button';
 import type {
   User as SupabaseUser
   AuthChangeEvent

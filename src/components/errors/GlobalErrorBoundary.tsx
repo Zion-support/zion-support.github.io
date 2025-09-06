@@ -820,7 +820,6 @@ export default GlobalErrorBoundary
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
   return WrappedComponent
 }
-export default GlobalErrorBoundary
   const [error, setError] = React.useState<Error | null>(null);
   React.useEffect(() => {;
     if (error) {;
@@ -847,4 +846,3 @@ export const withErrorBoundary = <P extends object>(;
   return WrappedComponent;
 }
 ;
-export default GlobalErrorBoundary;
