@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-
-
-import {z} from "zod";
-export const jobSchema = z && z.object({
-  title: z && z.string().min(3, {
-    message: "Title must be at least 3 characters."});
-  company: z && z.string().min(3, {
-    message: "Company name must be at least 3 characters."});
-  location: z && z.string().min(3, {
-    message: "Location must be at least 3 characters."});
-  job_type: z && z.string().min(3, {
-    message: "Job type must be at least 3 characters."});
-<<<<<<< HEAD
-  salary_range: z.string().optional()
-  description: z.string().min(10, {
-    message: "Description must be at least 10 characters."});
-  responsibilities: z.string().optional();
-  qualifications: z.string().optional();
-  benefits: z.string().optional();
-  application_instructions: z.string().optional()
-  contact_email: z.string().email({
-    message: "Please enter a valid email address."}).optional();
-  published_date: z.string().optional();
-  expiry_date: z.string().optional();
-  is_remote: z.boolean().default(false).optional();
-  category: z.string().optional();
-  status: z.string().optional()
-  external_apply_link: z.string().url({
-    message: "Please enter a valid URL."}).optional()});
-export type JobSchemaType = z.infer<typeof jobSchema>;
-
-=======
   salary_range: z && z.string().optional(),
   description: z && z.string().min(10, {
     message: "Description must be at least 10 characters."});
@@ -49,8 +16,6 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
     message: "Please enter a valid URL."}).optional()});
 
 export type JobSchemaType = z && z.infer<typeof jobSchema>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { z } from './zod';
 export const job_schema = z.object ({
   title: z.string ().min (3, {
@@ -80,4 +45,3 @@ export const job_schema = z.object ({
 ;
 export type JobSchemaType = z.infer < typeof job_schema>;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

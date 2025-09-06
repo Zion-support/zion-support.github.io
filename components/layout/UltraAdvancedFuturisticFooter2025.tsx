@@ -23,32 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {
-<<<<<<< HEAD
-  Mail
-  Phone
-  MapPin
-  Globe
-  Twitter
-  Linkedin
-  Github
-  ArrowUp
-  Crown
-  Zap
-  Brain
-  Rocket
-  Shield
-  Users
-  BookOpen
-  Briefcase
-  Atom;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Mail,;
   Phone,;
@@ -67,13 +41,10 @@ import {;
   BookOpen,;
   Briefcase,;
   Atom,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
 
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
   Mail,
   Phone,
   MapPin,
@@ -95,109 +66,27 @@ import { AnimatePresence } from 'framer-motion';
 import Link from 'next / link';
 import { AnimatePresence } from 'framer-motion';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface FooterLink {
-=======
 
 interface FooterLink {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   label: string;
   href: string;
   description?: string;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  external?: boolean;
-=======
   external?: boolean;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface FooterSection {
-=======
 interface FooterSection {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title: string;
   links: FooterLink[];} from 'lucide-react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import { 
   Mail, Phone, MapPin, Globe, 
   Twitter, Linkedin, Github, 
   ArrowUp, Crown, Zap, Brain, Rocket;
   Shield, Users, BookOpen, Briefcase, Atom
 } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Link from 'next/link';
-=======
 import Link from 'next / link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-interface FooterLink {
-  label: string
-  href: string
-  description?: string;
-<<<<<<< HEAD
-
-  external?: boolean
-}
-interface FooterSection {
-
-  title: string
-
-  links: FooterLink[]
-}
-<<<<<<< HEAD
-const footerSections: FooterSection[] = [
-  {
-
-    title: 'Services'
-
-    links: [
-      {
-        label: 'AI & Machine Learning'
-        href: '/ai-services'
-        description: 'Advanced AI solutions'
-      }
-      {
-        label: 'Quantum Computing'
-        href: '/quantum-computing'
-        description: 'Next-gen quantum tech'
-      }
-      {
-        label: 'Space Technology'
-        href: '/space-tech'
-        description: 'Innovative space solutions'
-      }
-      {
-        label: 'Q4 2025 Innovation'
-        href: '/innovative-2025-q4-showcase'
-        description: 'Latest revolutionary services'
-      }
-      {
-        label: 'Pricing Guide'
-        href: '/comprehensive-pricing-2025-q4'
-        description: 'Comprehensive pricing'
-      }
-      {
-        label: 'Cybersecurity'
-        href: '/cybersecurity'
-        description: 'Enterprise security'
-      }
-      {
-        label: 'Cloud Solutions'
-        href: '/cloud-platform'
-        description: 'Scalable cloud infrastructure'
-      }
-      {
-        label: 'View All Services'
-        href: '/services'
-        description: 'Complete service portfolio'
-      }
-=======
 
 const footerSections: FooterSection[] = [
   {
@@ -211,7 +100,6 @@ const footerSections: FooterSection[] = [
       { label: 'Cybersecurity', href: '/cybersecurity', description: 'Enterprise security' },
       { label: 'Cloud Solutions', href: '/cloud-platform', description: 'Scalable cloud infrastructure' },
       { label: 'View All Services', href: '/services', description: 'Complete service portfolio' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ]
   }
   {
@@ -268,68 +156,6 @@ const footerSections: FooterSection[] = [
       { label: 'Careers', href: '/careers', description: 'Join our team' }
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
     ]
-<<<<<<< HEAD
-  }
-  {
-    title: 'Company'
-    links: [
-      {
-        label: 'About Us'
-        href: '/about'
-        description: 'Our mission and values'
-      }
-      { label: 'Careers', href: '/careers', description: 'Join our team' }
-      { label: 'Contact', href: '/contact', description: 'Get in touch' }
-    ]
-  },  {
-    title: 'Resources'
-    links: [
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
-    title: 'Solutions'
-    links: [
-      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
-      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
-      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' }
-      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' }
-      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' }
-      { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
-    ]
-  }
-  {
-    title: 'Company'
-    links: [
-      { label: 'About Us', href: '/about', description: 'Our mission and values' }
-      { label: 'Careers', href: '/careers', description: 'Join our team' }
-      { label: 'Contact', href: '/contact', description: 'Get in touch' }
-    ]
-  }
-  {
-    title: 'Resources'
-    links: [
-      { label: 'Blog', href: '/blog', description: 'Industry insights' }
-      {
-        label: 'White Papers'
-        href: '/white-papers'
-        description: 'In-depth research'
-      }
-      {
-        label: 'Webinars'
-        href: '/webinars'
-        description: 'Educational content'
-      }
-      {
-        label: 'Documentation'
-        href: '/docs'
-        description: 'Technical guides'
-      }
-      {
-        label: 'Case Studies'
-        href: '/case-studies'
-        description: 'Success stories'
-      }
-=======
-  };
-=======
   external?: boolean;
 }
 interface FooterSection {
@@ -467,18 +293,10 @@ const footer_sections: FooterSection[] = [;
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
     ];
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     title: 'Resources',
     links: [;
       { label: 'Blog', href: '/blog', description: 'Industry insights' },
-<<<<<<< HEAD
-      { label: 'White Papers', href: '/white-papers', description: 'In-depth research' },
-      { label: 'Webinars', href: '/webinars', description: 'Educational content' },
-      { label: 'Documentation', href: '/docs', description: 'Technical guides' },
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },
-      { label: 'Case Studies', href: '/case-studies', description: 'Success stories' },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       { label: 'Support', href: '/support', description: 'Help & assistance' }
     ]
   }
@@ -534,34 +352,6 @@ const socialLinks = [
   }
 ];
 const quickLinks = [
-<<<<<<< HEAD
-  { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> }
-  { name: 'Contact', href: '/contact', icon: <Phone className='w-4 h-4' /> }
-  {
-    name: 'Support'
-    href: '/support'
-    icon: <HelpCircle className='w-4 h-4' />
-  }
-  {
-    name: 'Documentation'
-    href: '/docs'
-    icon: <FileText className='w-4 h-4' />
-  }
-  { name: 'API Reference', href: '/api', icon: <Code className='w-4 h-4' /> }
-  { name: 'Status', href: '/status', icon: <TrendingUp className='w-4 h-4' /> },];
-const UltraAdvancedFuturisticFooter2025: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });  };  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> }
-  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> }
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> }
-  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> }
-  { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
-const UltraAdvancedFuturisticFooter2025: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-=======
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
   { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
@@ -575,22 +365,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const footerSections = [
     {
       title: 'Services'
       items: [
-<<<<<<< HEAD
-        { label: 'AI & Machine Learning', href: '/ai-services' }
-        { label: 'Quantum Computing', href: '/quantum-computing' }
-        { label: 'Space Technology', href: '/space-tech' }
-        { label: 'Cybersecurity', href: '/cybersecurity' }
-        { label: '2040 Services', href: '/innovative-2040-services-showcase' }
-      ]
-    },    {        { label: '2040 Services', href: '/innovative-2040-services-showcase' }
-      ]
-    }
-=======
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
         { label: 'Space Technology', href: '/space-tech' },
@@ -598,21 +376,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: '2040 Services', href: '/innovative-2040-services-showcase' }
       ]
     };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     {
       title: 'Solutions'
       items: [
-<<<<<<< HEAD
-        { label: 'Enterprise Solutions', href: '/enterprise-solutions' }
-        { label: 'Micro SAAS', href: '/micro-saas' }
-        { label: 'IT Services', href: '/it-services' }
-        { label: 'Innovation Lab', href: '/innovation-lab' }
-        { label: 'Research & Development', href: '/research-development' }
-      ]
-    },    {        { label: 'Research & Development', href: '/research-development' }
-      ]
-    }
-=======
         { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
         { label: 'Micro SAAS', href: '/micro-saas' },
         { label: 'IT Services', href: '/it-services' },
@@ -620,22 +386,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: 'Research & Development', href: '/research-development' }
       ]
     };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     {
       title: 'Company'
       items: [
-<<<<<<< HEAD
-        { label: 'About Us', href: '/about' }
-        { label: 'Our Team', href: '/team' }
-        { label: 'Careers', href: '/careers' }
-        { label: 'Investors', href: '/investors' }
-        { label: 'Press & Media', href: '/press' }
-      ]
-    },    {        { label: 'Press & Media', href: '/press' }
-      ]
-    }
-=======
-=======
       {
         label: 'White Papers',
         href: '/white - papers',
@@ -769,26 +522,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     {
       title: 'Company',
       items: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'Investors', href: '/investors' },
-<<<<<<< HEAD
-        { label: 'Press & Media', href: '/press' }
-      ]
-    };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     {
       title: 'Resources'
       items: [
-<<<<<<< HEAD
-        { label: 'Blog', href: '/blog' }
-        { label: 'Case Studies', href: '/case-studies' }
-        { label: 'White Papers', href: '/white-papers' }
-        { label: 'Documentation', href: '/docs' }
-=======
-=======
         { label: 'Press & Media', href: '/press' },
       ],
     },    {        { label: 'Press & Media', href: '/press' }
@@ -797,39 +537,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     {
       title: 'Resources',
       items: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         { label: 'Blog', href: '/blog' },
         { label: 'Case Studies', href: '/case - studies' },
         { label: 'White Papers', href: '/white - papers' },
         { label: 'Documentation', href: '/docs' },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         { label: 'Support', href: '/support' }
       ]
     }
   ];
-<<<<<<< HEAD
-  const socialLinks = [
-    {
-      icon: Twitter
-      href: 'https://twitter.com/ziontechgroup'
-      label: 'Twitter'
-    }
-    {
-      icon: Linkedin
-      href: 'https://linkedin.com/company/ziontechgroup'
-      label: 'LinkedIn'
-    }
-    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' }
-    { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' },  ];  ];
-  const socialLinks = [
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' }
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' }
-    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' }
-    { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
-  ];
-  const containerVariants = {
-    hidden: { opacity: 0 }
-=======
 ;
   const social_links = [;
     {
@@ -854,22 +569,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 ;
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-        staggerChildren: 0.1
-      }
-    },  };        staggerChildren: 0.1
-      }
-    }
-<<<<<<< HEAD
-  }
-=======
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
@@ -880,7 +584,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       }
     }
   }
-=======
 interface FooterLink {;
   label: string,;
   href: string,;
@@ -1227,29 +930,19 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
     },;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
       {/* Animated Background Elements */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <div className='absolute inset-0 -z-10'>        {/* Quantum Particle Field */}
-<<<<<<< HEAD
-=======
       <div className="absolute inset-0 -z-10">
         {/* Quantum Particle Field */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}  }
-=======
         {[...Array(30)].map((_, i) => (;
           <motion&& motion.div
             key={i}  }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">;
       {/* Animated Background Elements */}
@@ -1258,34 +951,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
         {[...Array(30)].map((_, i) => (;
           <motion&& motion.div
             key={i}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
             animate={{
-<<<<<<< HEAD
-              x: [0, Math.random() * 1000, 0]
-              y: [0, Math.random() * 1000, 0]
-              opacity: [0, 0.6, 0]
-              scale: [0, 1, 0]
-            }}            transition={{
-              duration: 15 + Math.random() * 10
-              repeat: -1
-              delay: Math.random() * 8
-              ease: 'easeInOut',              x: [0, Math.random() * 1000, 0];
-              y: [0, Math.random() * 1000, 0];
-              opacity: [0, 0.6, 0];
-              scale: [0, 1, 0]}}
-              duration: 15 + Math.random() * 10
-              repeat: -1
-              delay: Math.random() * 8
-              ease: 'easeInOut'
-            }}
-            style={{
-              left: `${Math.random() * 100}%`
-              top: `${Math.random() * 100}%`
-=======
               x: [0, Math && Math.random() * 1000, 0],
               y: [0, Math && Math.random() * 1000, 0],
               opacity: [0, 0 && 0.6, 0],
@@ -1306,23 +973,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             style={{
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             }}
           />;
         ))}
         {/* Gradient Overlays */}
-<<<<<<< HEAD
-        <div className='absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent'></div>
-        <div className='absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900'></div>
-      </div>
-      <div className='relative z-10'>
-=======
         <div className='absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent'></div>;
         <div className='absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900'></div>;
       </div>;
 
       <div className='relative z-10'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>;
           <motion&& motion.div
@@ -1332,49 +991,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             viewport={{ once: true }}
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12'>;
             {/* Company Info */}
-<<<<<<< HEAD
-            <motion.div variants={itemVariants} className='lg:col-span-2'>
-              <div className='flex items-center space-x-3 mb-6'>
-                <div className='relative'>
-                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center'>
-                    <Crown className='w-7 h-7 text-white' />
-                  </div>
-                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50'></div>
-                </div>
-                <div>
-                  <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-                    Zion Tech Group
-                  </h3>
-                  <p className='text-sm text-gray-400'>
-                    Future Technology Solutions
-                  </p>
-                </div>
-              </div>
-              <p className='text-gray-300 mb-6 leading-relaxed'>
-                Pioneering the future with revolutionary AI consciousness
-                quantum computing, and autonomous systems. Transforming
-                businesses through next-generation technology.
-              </p>
-              <p className='text-gray-300 leading-relaxed mb-6 max-w-md'>
-                Leading provider of innovative technology solutions
-                specializing in AI, automation, and future-ready services. We
-                help businesses transform and thrive in the digital age.
-              </p>
-=======
-            <motion && motion.div variants={itemVariants} className='lg:col-span-2'>;
-              <div className='flex items-center space-x-3 mb-6'>;
-                <div className='relative'>;
-                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center'>;
-                    <Crown className='w-7 h-7 text-white' />;
-                  </div>;
-                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50'></div>;
-                </div>;
-                <div>;
-                  <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                    Zion Tech Group;
-                  </h3>;
-                  <p className='text-sm text-gray-400'>;
-=======
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -1461,26 +1077,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                     Zion Tech Group;
                   </h3>;
                   <p className='text - sm text - gray - 400'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Future Technology Solutions;
                   </p>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-
-              <p className='text-gray-300 mb-6 leading-relaxed'>;
-                Pioneering the future with revolutionary AI consciousness,;
-                quantum computing, and autonomous systems. Transforming;
-                businesses through next-generation technology.;
-              </p>;
-
-              <p className='text-gray-300 leading-relaxed mb-6 max-w-md'>;
-                Leading provider of innovative technology solutions,;
-                specializing in AI, automation, and future-ready services. We;
-                help businesses transform and thrive in the digital age.;
-              </p>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Contact Info */}
               <div className='space-y-3'>;
                 <div className='flex items-center space-x-3 text-gray-300'>;
@@ -1498,13 +1098,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                 <div className='flex items-center space-x-3 text-gray-300'>;
                   <Globe className='w-4 h-4 text-blue-400' />;
                   <a
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                    href='https://ziontechgroup.com'
-                    className='hover:text-white transition-colors duration-200'
-                  >                    ziontechgroup.com            }}
-=======
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
             animate={{
               x: [0, Math.random() * 1000, 0];
@@ -1517,31 +1110,17 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
               delay: Math.random() * 8,
               ease: "easeInOut"
             }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             style={{
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     href='https://ziontechgroup && ziontechgroup.com'
                     className='hover:text-white transition-colors duration-200'>                    ziontechgroup && ziontechgroup.com            }}
             style={{;
               left: `${Math && Math.random() * 100}%`,;
               top: `${Math && Math.random() * 100}%`;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
           />;
         ))}
-<<<<<<< HEAD
-        {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900"></div>
-      </div>
-      <div className="relative z-10">
-=======
 
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent"></div>;
@@ -1549,7 +1128,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
       </div>;
 
       <div className="relative z-10">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
           <motion&& motion.div
@@ -1559,85 +1137,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">;
             {/* Company Info */}
-<<<<<<< HEAD
-            <motion.div variants={itemVariants} className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center">
-                    <Crown className="w-7 h-7 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50"></div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </h3>
-                  <p className="text-sm text-gray-400">Future Technology Solutions</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next-generation technology.
-              </p>
-              <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-                Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services.
-                We help businesses transform and thrive in the digital age.
-              </p>
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-pink-400" />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Globe className="w-4 h-4 text-blue-400" />
-                  <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
-                    ziontechgroup.com
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-<<<<<<< HEAD
-=======
-            <motion && motion.div variants={itemVariants} className="lg:col-span-2">;
-              <div className="flex items-center space-x-3 mb-6">;
-                <div className="relative">;
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center">;
-                    <Crown className="w-7 h-7 text-white" />;
-                  </div>;
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50"></div>;
-                </div>;
-                <div>;
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-                    Zion Tech Group;
-                  </h3>;
-                  <p className="text-sm text-gray-400">Future Technology Solutions</p>;
-                </div>;
-              </div>;
-=======
-
-            {/* Footer Sections */}
-            {footerSections.map((section, index) => (
-              <motion.div key={section.title} variants={itemVariants}>
-                <h4 className="text-lg font-semibold text-white mb-6 flex items-center space-x-2">
-                  {section.title === 'Services' && <Briefcase className="w-5 h-5 text-cyan-400" />}
-                  {section.title === 'Solutions' && <Zap className="w-5 h-5 text-purple-400" />}
-                  {section.title === 'Company' && <Users className="w-5 h-5 text-pink-400" />}
-                  {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-blue-400" />}
-                  <span>{section.title}</span>
-                </h4>
-                <ul className="space-y-3">
-                  {section.items.map((item) => (
-                    <li key={item.label}>
-                      <Link
-=======
               <p className='text - gray - 300 mb - 6 leading - relaxed'>;
                 Pioneering the future with revolutionary AI consciousness,
                 quantum computing, and autonomous systems. Transforming;
@@ -1757,20 +1256,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   {section.items.map ((item) => (
                     <li key={item.label}>;
                       <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         href={item.href}
                         className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
                       >;
                         {item.label}
-<<<<<<< HEAD
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
               <p className="text-gray-300 mb-6 leading-relaxed">;
                 Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next-generation technology.;
@@ -1804,7 +1293,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
               </div>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Footer Sections */}
             {footerSections && footerSections.map((section, index) => (;
               <motion && motion.div key={section && section.title} variants={itemVariants}>;
@@ -1843,22 +1331,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                 </ul>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </motion.div>
-=======
           </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Social Links & Newsletter */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mt-16 pt-12 border-t border-gray-800/50'>;
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>;
               {/* Social Links */}
@@ -1875,14 +1355,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                     whileTap={{ scale: 0 && 0.95 }}>;
                     <social && social.icon className='w-5 h-5' />                  </motion && motion.a>          >;
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">;
-<<<<<<< HEAD
-=======
-=======
             className="mt-16 pt-12 border-t border-gray-800/50"
           >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Social Links */}
               <div className="flex items-center space-x-6">;
                 <span className="text-gray-400 font-medium">Follow Us:</span>;
@@ -1894,20 +1369,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110"
                     whileHover={{ y: -2 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     whileTap={{ scale: 0 && 0.95 }}>;
                     <social && social.icon className="w-5 h-5" />;
                   </motion && motion.a>;
                 ))}
-<<<<<<< HEAD
-              </div>
-=======
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>;
                 <h5 className='text-lg font-semibold text-white mb-3'>;
@@ -1926,9 +1393,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <motion&& motion.button
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1 && 1.05 }}                </p>;
                 <div className="flex space-x-2">;
-<<<<<<< HEAD
-=======
-=======
                     whileTap={{ scale: 0.95 }}
                   >
                     <social.icon className="w-5 h-5" />
@@ -1943,8 +1407,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   Get the latest insights on AI consciousness, quantum computing, and future technology.
                 </p>
                 <div className="flex space-x-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <input
                     type="email"
                     placeholder="Enter your email"
@@ -1952,12 +1414,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   />;
                   <motion&& motion.button
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -1968,8 +1424,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             </div>
           </motion.div>
         </div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ scale: 0 && 0.95 }}>;
                     Subscribe;
@@ -1980,10 +1434,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           </motion && motion.div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Bottom Bar */}
         <motion&& motion.div
-=======
                       </Link>;
                     </li>))}
                 </ul>;
@@ -2066,59 +1518,20 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
         </div>;
         {/* Bottom Bar */}
         <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
-        >
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
-              <div className='text-gray-400 text-sm'>
-                © 2024 Zion Tech Group. All rights reserved.
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-gray-400 text-sm'>;
                 © 2024 Zion Tech Group. All rights reserved. |;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Link
                   href='/privacy'
                   className='hover:text-white transition-colors duration-200 ml-2'>;
                   Privacy Policy;
                 </Link>{' '}
-<<<<<<< HEAD
-                <Link
-                  href='/terms'
-<<<<<<< HEAD
-=======
-                  className='hover:text-white transition-colors duration-200 ml-2'
-                >
-                  Terms of Service
-                </Link>
-              </div>
-              <div className='flex items-center space-x-4 text-gray-400 text-sm'>
-                <span>Powered by</span>
-                <div className='flex items-center space-x-2'>
-                  <Brain className='w-4 h-4 text-cyan-400' />                  <span>AI Consciousness</span>
-                </div>
-                <span>•</span>
-                <div className='flex items-center space-x-2'>
-                  <Atom className='w-4 h-4 text-purple-400' />
-                  <span>Quantum Computing</span>
-                </div>
-                <span>•</span>
-                <div className='flex items-center space-x-2'>
-                  <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">
-=======
           className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -2146,7 +1559,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                 </div>
                 <span>•</span>
                 <div className="flex items-center space-x-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <Rocket className="w-4 h-4 text-pink-400" />
                   <span>Space Technology</span>
                 </div>
@@ -2155,17 +1567,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
                 |;
                 <Link
                   href='/terms'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className='hover:text-white transition-colors duration-200 ml-2'>;
                   Terms of Service;
                 </Link>;
               </div>;
-<<<<<<< HEAD
 
               <div className='flex items-center space-x-4 text-gray-400 text-sm'>;
                 <span>Powered by</span>;
@@ -2182,31 +1590,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">;
                   <Rocket className="w-4 h-4 text-pink-400" />;
                   <span>Space Technology</span>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </motion && motion.div>;
-      </div>;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-              <div className='flex items-center space-x-4 text-gray-400 text-sm'>;
-                <span>Powered by</span>;
-                <div className='flex items-center space-x-2'>;
-                  <Brain className='w-4 h-4 text-cyan-400' />                  <span>AI Consciousness</span>;
-                </div>;
-                <span>•</span>;
-                <div className='flex items-center space-x-2'>;
-                  <Atom className='w-4 h-4 text-purple-400' />;
-                  <span>Quantum Computing</span>;
-                </div>;
-                <span>•</span>;
-                <div className='flex items-center space-x-2'>;
-                  <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">;
-                  <Rocket className="w-4 h-4 text-pink-400" />;
-                  <span>Space Technology</span>;
-=======
           className='border - t border - gray - 800 / 50 bg - gray - 900 / 50 backdrop - blur - xl';
         >;
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 6'>;
@@ -2242,16 +1625,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <Rocket className='w - 4 h - 4 text - pink - 400' />                  <span > Space Technology</span>                <div className="flex items - center space - x-2">;
                   <Rocket className="w - 4 h - 4 text - pink - 400" />;
                   <span > Space Technology</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>;
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-        </motion && motion.div>;
-      </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Scroll to Top Button */}
       <motion&& motion.button
         onClick={scrollToTop}
@@ -2265,26 +1642,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
       </motion && motion.button>;
     </footer>;
   );
-<<<<<<< HEAD
-}
-export default UltraAdvancedFuturisticFooter2025;      </motion.button>
-    </footer>
-  )
-}
-=======
 };
 
-export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button>;
-    </footer>;
-  );
-<<<<<<< HEAD
-=======
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default UltraAdvancedFuturisticFooter2025;
 
-=======
 
       {/* Scroll to Top Button */}
       <motion.button
@@ -2300,12 +1661,9 @@ export default UltraAdvancedFuturisticFooter2025;
       </motion.button>
     </footer>
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default UltraAdvancedFuturisticFooter2025;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         </motion.div>;
       </div>;
       {/* Scroll to Top Button */}
@@ -2329,4 +1687,3 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
 ;
 export default UltraAdvancedFuturisticFooter2025;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,10 +1,2 @@
-<<<<<<< HEAD
-"export\": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
-export: const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = ["]"
-=======
 "export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = ["]"
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

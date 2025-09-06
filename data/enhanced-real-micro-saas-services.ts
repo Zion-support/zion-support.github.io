@@ -1,10 +1,3 @@
-<<<<<<< HEAD
- name: string;
-=======
-<<<<<<< HEAD
-
-name: string;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 tagline: string;
 price: string;
 period: string;
@@ -28,11 +21,6 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
 export interface MicroSaasService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1740,8 +1728,4 @@ export const serviceCategories = [
   'Customer Service & SupportSupply Chain & LogisticsHuman ResourcesLegal TechnologySales & MarketingBlockchain & Web3IoT & Edge ComputingCloud & Infrastructure';
   'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

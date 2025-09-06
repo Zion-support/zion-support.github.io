@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +20,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
@@ -32,25 +27,11 @@ import {SEO} from "@/components/SEO";
 import {MetadataManager} from "@/components/mobile-app/admin/MetadataManager";
 const AppMetadataManager: React.FC = () => {;
   return (
-<<<<<<< HEAD
-    <AppLayout>
-=======
     <AppLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <SEO
         title="App Metadata Manager"
         description="Manage app store metadata for the Zion mobile application"
         noindex={true}
-<<<<<<< HEAD
-      />
-      <div className="container py-8">
-        <h1 className="text-3xl font-bold text-zion-cyan mb-8">App Metadata Manager</h1>
-        <MetadataManager />
-      </div>
-    </AppLayout>
-  )
-}
-=======
       />;
 
       <div className="container py-8">;
@@ -62,10 +43,8 @@ const AppMetadataManager: React.FC = () => {;
   );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default AppMetadataManager;
 
-=======
 import React from './react';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -87,4 +66,3 @@ const AppMetadataManager: React.FC = () => {
 ;
 export default AppMetadataManager;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

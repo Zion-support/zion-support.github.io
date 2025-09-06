@@ -1,27 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { agendaItems } from '../../../../data/expo/agenda';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-  const { id } = req.query as { id?: string }
-  const item = agendaItems.find(i => i.id === id);
-  if (!item) return res.status(404).send('Not found');
-  const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00:00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
-  res.setHeader('Content-Type', 'text/plain');
-  res.status(200).send(transcript);export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id?: string }
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id?: string };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const item = agendaItems.find(i => i.id === id);
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
@@ -29,8 +13,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).send(transcript)
 }
-<<<<<<< HEAD
-=======
   try {
   const { id } = req && req.query as { id?: string };
   const item = agendaItems && agendaItems.find(i => i && i.id === id);
@@ -46,10 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res && res.setHeader('Content-Typetext/plain'),
   res && res.status(200).send(transcript)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { agenda_items } from '../../../../data / expo / agenda';
 ;
 export default async /**
@@ -76,4 +54,3 @@ function handler() {
   res.set_header ('Content - Typetext / plain'),
   res.status (200).send (transcript);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

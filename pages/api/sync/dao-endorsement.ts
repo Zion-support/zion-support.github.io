@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -22,39 +14,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { fromDAO, toDAO, resolutionId, decision, timestamp } = req.body as {
     fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number
-<<<<<<< HEAD
-=======
-  };
-
-  if (!fromDAO || !toDAO || !resolutionId || !decision) {
-    return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   if (!fromDAO |!toDAO |!resolutionId |!decision) {
     return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
   }
   const version = nextVersionFor(state, resolutionId)
   const event = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    eventId: uuidv4()
-    type: "dao_endorsement" as const
-    payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp |Date.now() }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: Date.now()}
-  upsertEvent(state, event)
-  writeState(state)
-  const body = { ...event, propagate: false }
-  const headers: Record<string, string> = {}
-  const sig = signPayload(body)
-  if (sig) headers["x-zion-signature"] = sig
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     eventId: uuidv4(), type: "dao_endorsement" as const,
     payload: {
        id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() 
@@ -70,24 +35,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-<<<<<<< HEAD
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
-        try {
-          await axios.post(url, body, { headers, timeout: 5000 })
-        } catch {}
-      })
-  );
-
-  return res.status(200).json({ status: "created", version, eventId: event.eventId })
-}
-=======
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
 import { sign_payload  } from '../../../utils / sync / signature';,
@@ -139,24 +90,11 @@ if (headers["x - zion - signature"] = sig, ) {
       .filter ((p) => !p.paused);
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
-<<<<<<< HEAD
-      })
-  )
-
-  return res.status(200).json({ status: "created", version, eventId: event.eventId })
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       })),
   return res.status (200).json ({ status: "created", version, event_id: event.event_id });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

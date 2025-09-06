@@ -1,84 +1,24 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Head from 'next/head';
-interface Slide {
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-
-interface Slide {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 ;
 interface Slide {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   content: string;
   chart?: {;
     type: string;
     data: Array<{ label: string; value: number }>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-function SlidePreview({
-  slide
-  isActive
-  onClick
-=======
   }
 ;
 function SlidePreview ({
   slide,
   is_active,
   on_click,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }: {
   slide: Slide;
   is_active: boolean;
   on_click: () => void;
 }) {
-<<<<<<< HEAD
-    >
-      <div className='font-semibold text-sm line-clamp-2'>
-        {slide.title |'Untitled'}
-      </div>
-      <div className='text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap'>
-        {slide.content |'—'}
-      </div>
-    </button>
-  );
-export const getServerSideProps: GetServerSideProps = async ctx => {
-=======
   };
 
 function SlidePreview(): any ({;
@@ -102,22 +42,10 @@ function SlidePreview(): any ({;
   );
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const result = await requireAdminRole(ctx);
   // @ts-ignore;
   if ('redirect' in result) return result;
   return result;
-<<<<<<< HEAD
-}
-export default function PitchGenerator() {
-  const [builder, setBuilder] = useState<BuilderState>({
-    mission: ''
-    fundingStage: ''
-    vision: ''
-    roundType: ''
-    targetRaise: ''
-    assets: []
-=======
 };
 
 export default function PitchGenerator() {;
@@ -128,7 +56,6 @@ export default function PitchGenerator() {;
     roundType: '',;
     targetRaise: '',;
     assets: [],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -136,10 +63,6 @@ export default function PitchGenerator() {;
   const [history, setHistory] = useState<;
     { id: string; createdAt: string, version: string }[];
   >([]);
-<<<<<<< HEAD
-  const activeSlide = slides[activeIndex];
-=======
-=======
 import React, { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -192,24 +115,7 @@ export default function PitchGenerator() {
   const [versionTag, setVersionTag] = useState<string | null>(null);
   const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const activeSlide = slides[activeIndex];
-<<<<<<< HEAD
-  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-<<<<<<< HEAD
-    const files = Array.from(e.dataTransfer.files |[]);
-    setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));  }, []);
-  const prevent = (e: React.DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
-  }
-  const operatorPrompt = useMemo(
-    () =>
-      `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`
-    []
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const onAssetDrop = useCallback((e: React && React.DragEvent<HTMLDivElement>) => {;
     e && e.preventDefault();
@@ -225,17 +131,8 @@ export default function PitchGenerator() {
     () =>;
       `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,;
     [];
-<<<<<<< HEAD
   );
   const autoFetchMetrics = useCallback(async () => {;
-    setLoading(true);
-    try {;
-      const res = await fetch('/api/admin/pitch/metrics');
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-  const autoFetchMetrics = useCallback(async () => {;
-=======
     const files = Array.from(e.dataTransfer.files || []);
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
   }, []);
@@ -248,14 +145,10 @@ export default function PitchGenerator() {
   const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
 
   const autoFetchMetrics = useCallback(async () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/metrics');
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const data = await res && res.json();
-=======
     >;
       <div className='font - semibold text - sm line - clamp - 2'>;
         {slide.title || 'Untitled'}
@@ -314,24 +207,7 @@ function PitchGenerator() {
     try {
       const res = await fetch ('/api / admin / pitch / metrics');
       const data = await res.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return data;
-<<<<<<< HEAD
-    } catch (e) {
-      return {}
-    } finally {
-      set_loading (false);    }
-  }, []);
-<<<<<<< HEAD
-  const buildDeck = useCallback(async () => {
-=======
-    } catch (e) {;
-      return {};
-    } finally {;
-      setLoading(false);    }
-<<<<<<< HEAD
-=======
-=======
       const data = await res.json();
       return data
     } catch (e) {
@@ -339,31 +215,12 @@ function PitchGenerator() {
     } finally {
       setLoading(false)
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
   const buildDeck = useCallback(async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setLoading(true);
     try {;
       const metrics = await autoFetchMetrics();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const res = await fetch('/api/admin/pitch/generate', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          operatorPrompt
-          inputs: builder
-          metrics
-        })
-      });
-      const json = await res.json();
-      const newSlides: Slide[] = json.slides |[];      setSlides(newSlides);
-=======
       const res = await fetch('/api/admin/pitch/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -374,16 +231,9 @@ function PitchGenerator() {
       const json = await res.json();
       const newSlides: Slide[] = json.slides || [],
       setSlides(newSlides);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setActiveIndex(0);
       const v = json.version |`v${new Date().toISOString()}`;
       setVersionTag(v);
-<<<<<<< HEAD
-      setHistory(h => [
-        { id: uid(), createdAt: new Date().toISOString(), version: v }
-        ...h
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const res = await fetch('/api/admin/pitch/generate', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
@@ -401,7 +251,6 @@ function PitchGenerator() {
       setHistory(h => [;
         { id: uid(), createdAt: new Date().toISOString(), version: v },;
         ...h,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ]);
     } catch (e) {;
       // noop;
@@ -409,17 +258,6 @@ function PitchGenerator() {
       setLoading(false);
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
-<<<<<<< HEAD
-  const rephraseSlide = useCallback(
-    async (idx: number) => {
-      if (!slides[idx]) return;
-      setLoading(true)
-      try {
-        const res = await fetch('/api/admin/pitch/rewrite', {
-          method: 'POST'
-          headers: { 'Content-Type': 'application/json' }
-          body: JSON.stringify({ slide: slides[idx] })
-=======
 ;
   const build_deck = useCallback (async () => {
     set_loading (true);
@@ -462,7 +300,6 @@ if (return) {
           method: 'POST',
           headers: { 'Content - Type': 'application / json' },
           body: JSON.stringify ({ slide: slides[idx] }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         });
         const json = await res.json ();
         set_slides (arr =>;
@@ -472,7 +309,6 @@ if (return) {
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
-=======
 
   const rephraseSlide = useCallback(;
     async (idx: number) => {;
@@ -492,38 +328,14 @@ if (return) {
                   ...s,;
                   title: json && json.title || s && s.title,;
                   content: json && json.content || s && s.content,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }
-<<<<<<< HEAD
-              : s;
-          );
-        );
-      } catch (e) {;
-      } finally {;
-        setLoading(false);
-      }
-<<<<<<< HEAD
-    }
-    [slides]
-=======
     },;
     [slides];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   const addSlide = useCallback(async () => {;
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
-<<<<<<< HEAD
-      const json = await res.json();
-      setSlides(arr => [
-        ...arr
-        {
-          id: uid()
-          title: json.title |'New Slide'
-          content: json.content |''
-        }
-=======
       const json = await res && res.json();
       setSlides(arr => [;
         ...arr,;
@@ -532,16 +344,11 @@ if (return) {
           title: json && json.title || 'New Slide',;
           content: json && json.content || '',;
         },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ]);
       setActiveIndex(slides && slides.length);
     } catch (e) {;
     } finally {;
       setLoading(false);    }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h])
     } catch (e) {
       // noop
@@ -577,53 +384,26 @@ if (return) {
     } finally {
       setLoading(false)
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [slides.length]);
   const exportPdf = useCallback(async () => {
     setLoading(true);
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/admin/pitch/export', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ slides, format: 'pdf', version: versionTag })
-      });      const blob = await res.blob();
-=======
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),
       const blob = await res.blob();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
-<<<<<<< HEAD
-      URL.revokeObjectURL(url);
-    } catch (e) {
-    } finally {
-      setLoading(false);    }
-=======
       URL.revokeObjectURL(url)
     } catch (e) {
     } finally {
       setLoading(false)
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [slides, versionTag]);
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/admin/pitch/export', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          slides
-          format: 'gslides'
-          version: versionTag
-        })
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, [slides && slides.length]);
 
   const exportPdf = useCallback(async () => {;
@@ -656,7 +436,6 @@ if (return) {
           format: 'gslides',;
           version: versionTag,;
         }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const json = await res && res.json();
       if (json && json.url) {;
@@ -666,14 +445,6 @@ if (return) {
     } finally {;
       setLoading(false);    }
   }, [slides, versionTag]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const updateActiveSlide = (updates: Partial<Slide>) => {
-    setSlides(arr =>
-      arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
-    );  }
-=======
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),
       const json = await res.json();
       if (json && json.url) {
@@ -689,12 +460,9 @@ if (return) {
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null
     const { type, data } = slide.chart;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const updateActiveSlide = (updates: Partial<Slide>) => {;
     setSlides(arr =>;
@@ -704,12 +472,7 @@ if (return) {
   const renderChartPreview = (slide: Slide) => {;
     if (!slide && slide.chart) return null,;
     const { type, data } = slide && slide.chart;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <div className='mt-3'>;
         <div className='text-xs text-gray-500 dark:text-gray-400'>;
           Chart preview: {type}
@@ -743,12 +506,6 @@ if (return) {
                 <div key={d && d.label} className='border p-1 rounded'>;
                   <div className='font-medium'>{d && d.label}</div>                  <div>{d && d.value}</div>;
                 </div>;
-<<<<<<< HEAD
-              ))}
-            </div>;
-          )}
-=======
-=======
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
@@ -771,12 +528,9 @@ if (return) {
                   <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
             </div>;
           )}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         </div>;
       </div>;
     );
@@ -800,36 +554,6 @@ if (return) {
             </button>;
             <button
               onClick={exportPdf}
-<<<<<<< HEAD
-              disabled={loading |slides.length === 0}
-              className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'
-            >
-              Download PDF
-            </button>
-            <button
-              onClick={exportGoogleSlides}
-              disabled={loading |slides.length === 0}
-              className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'
-            >
-              Export to Google Slides
-            </button>
-          </div>
-        </div>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-          <div className='lg:col-span-1 space-y-4'>
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='font-medium mb-2'>Inputs</div>
-              <label className='block text-sm mb-1'>Company mission</label>
-=======
-              disabled={loading || slides && slides.length === 0}
-              className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'>;
-              Download PDF;
-            </button>;
-            <button
-              onClick={exportGoogleSlides}
-              disabled={loading || slides && slides.length === 0}
-              className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'>;
-=======
               : s));
       } catch (e) {
       } finally {
@@ -976,19 +700,10 @@ if (return null, ) {
               disabled={loading || slides.length === 0}
               className='px - 3 py - 2 rounded bg - green - 600 text - white disabled:opacity - 50';
             >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Export to Google Slides;
             </button>;
           </div>;
         </div>;
-<<<<<<< HEAD
-
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
-          <div className='lg:col-span-1 space-y-4'>;
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
-              <div className='font-medium mb-2'>Inputs</div>;
-              <label className='block text-sm mb-1'>Company mission</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <input
                 value={builder && builder.mission}
                 onChange={e =>;
@@ -1035,39 +750,13 @@ if (return null, ) {
                 onChange={e =>;
                   setBuilder({ ...builder, targetRaise: e && e.target.value });
                 }
-<<<<<<< HEAD
-                className='w-full border rounded px-2 py-1 bg-transparent'
-              />
-=======
                 className='w-full border rounded px-2 py-1 bg-transparent';
               />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <div
                 onDrop={onAssetDrop}
                 onDragOver={prevent}
                 onDragEnter={prevent}
-<<<<<<< HEAD
-                className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'
-              >
-                Drag & drop logos, photos here
-                <div className='text-xs mt-1'>
-                  {builder.assets.length} file(s) added
-                </div>
-              </div>
-            </div>
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='font-medium mb-2'>Auto Data</div>
-              <button
-                onClick={autoFetchMetrics}
-<<<<<<< HEAD
-=======
-                className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'
-              >
-                Refresh
-              </button>
-              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
-=======
         </div>
       </div>
     )
@@ -1119,7 +808,6 @@ if (return null, ) {
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -1127,15 +815,6 @@ if (return null, ) {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-<<<<<<< HEAD
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='font-medium mb-2'>History</div>
-              <div className='text-xs text-gray-500 dark:text-gray-400'>
-                Version: {versionTag |'—'}
-              </div>
-              <ul className='mt-2 space-y-1 text-sm'>
-                {history.map(h => (
-=======
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
                 Drag & drop logos, photos here;
                 <div className='text-xs mt-1'>;
@@ -1148,7 +827,6 @@ if (return null, ) {
               <div className='font-medium mb-2'>Auto Data</div>;
               <button
                 onClick={autoFetchMetrics}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'>;
                 Refresh;
               </button>;
@@ -1168,10 +846,6 @@ if (return null, ) {
               </div>;
               <ul className='mt-2 space-y-1 text-sm'>;
                 {history && history.map(h => (;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <li
                     key={h && h.id}
                     className='flex justify-between border rounded px-2 py-1'>;
@@ -1179,9 +853,6 @@ if (return null, ) {
                     <span className='text-gray-500 dark:text-gray-400'>;
                       {new Date(h && h.createdAt).toLocaleString()}
                     </span>                  </li>;
-<<<<<<< HEAD
-=======
-=======
 
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
@@ -1192,25 +863,7 @@ if (return null, ) {
                     <span>{h.version}</span>
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
                   </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
-<<<<<<< HEAD
-              </ul>
-            </div>
-          </div>
-<<<<<<< HEAD
-          <div className='lg:col-span-2 space-y-4'>
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='flex items-center justify-between'>
-                <div className='font-medium'>Slides</div>
-                <div className='text-sm text-gray-500 dark:text-gray-400'>
-                  {slides.length} total
-                </div>
-              </div>
-              <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
-                {slides.map((s, i) => (
-=======
               </ul>;
             </div>;
           </div>;
@@ -1225,7 +878,6 @@ if (return null, ) {
               </div>;
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>;
                 {slides && slides.map((s, i) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <SlidePreview
                     key={s && s.id}
                     slide={s}
@@ -1235,16 +887,6 @@ if (return null, ) {
                 ))}
                 <button
                   onClick={addSlide}
-<<<<<<< HEAD
-                  className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'
-                >
-                  + Add Slide
-                </button>
-              </div>
-            </div>
-=======
-                  className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'>;
-=======
         <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6'>;
           <div className='lg:col - span - 1 space - y-4'>;
             <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
@@ -1364,14 +1006,10 @@ if (return null, ) {
                   on_click={add_slide}
                   className='w - 56 shrink - 0 border rounded - md p - 3 text - left bg - gray - 50 dark:bg - gray - 800 border - dashed border - 2 text - gray - 500';
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   + Add Slide;
                 </button>;
               </div>;
             </div>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Active Slide Editor */}
             {activeSlide && (;
               <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
@@ -1386,7 +1024,6 @@ if (return null, ) {
                       onClick={() => rephraseSlide(activeIndex)}
                       disabled={loading}
                       className='px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50';
-=======
             {/* Active Slide Editor */}
             {active_slide && (
               <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
@@ -1401,35 +1038,11 @@ if (return null, ) {
                       on_click={() => rephrase_slide (active_index)}
                       disabled={loading}
                       className='px - 2 py - 1 rounded bg - blue - 600 text - white text - sm disabled:opacity - 50';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     >;
                       Rephrase;
                     </button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-                <textarea
-                  value={activeSlide && activeSlide.content}
-                  onChange={e => updateActiveSlide({ content: e && e.target.value })}
-                  className='w-full mt-3 border rounded px-2 py-1 bg-transparent';
-                  rows={10}
-<<<<<<< HEAD
-                />
-                <div className='mt-4 grid grid-cols-3 gap-2 text-sm'>
-                  <button
-                    onClick={() =>
-                      updateActiveSlide({
-                        chart: {
-                          type: 'bar'
-                          data: [
-                            { label: 'Q1', value: 20 }
-                            { label: 'Q2', value: 40 }
-                            { label: 'Q3', value: 60 }
-                            { label: 'Q4', value: 80 }
-                          ]
-                        }
-                      })
-=======
                 />;
 
                 <div className='mt-4 grid grid-cols-3 gap-2 text-sm'>;
@@ -1446,26 +1059,12 @@ if (return null, ) {
                           ],;
                         },;
                       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Bar Chart;
                   </button>;
                   <button
-<<<<<<< HEAD
-                    onClick={() =>
-                      updateActiveSlide({
-                        chart: {
-                          type: 'funnel'
-                          data: [
-                            { label: 'Visitors', value: 100 }
-                            { label: 'Signups', value: 40 }
-                            { label: 'Projects', value: 15 }
-                          ]
-                        }
-                      })
-=======
                     onClick={() =>;
                       updateActiveSlide({;
                         chart: {;
@@ -1477,26 +1076,12 @@ if (return null, ) {
                           ],;
                         },;
                       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Funnel;
                   </button>;
                   <button
-<<<<<<< HEAD
-                    onClick={() =>
-                      updateActiveSlide({
-                        chart: {
-                          type: 'timeline'
-                          data: [
-                            { label: 'MVP', value: 2023 }
-                            { label: 'Seed', value: 2024 }
-                            { label: 'Series A', value: 2025 }
-                          ]
-                        }
-                      })
-=======
                     onClick={() =>;
                       updateActiveSlide({;
                         chart: {;
@@ -1508,17 +1093,12 @@ if (return null, ) {
                           ],;
                         },;
                       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Timeline;
                   </button>;
                 </div>              </div>;
-<<<<<<< HEAD
-            )}
-=======
-=======
 
           <div className="lg:col-span-2 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
@@ -1552,32 +1132,16 @@ if (return null, ) {
 
                 {renderChartPreview(activeSlide)}
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-<<<<<<< HEAD
-</main>
-    </>
-  );
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           </div>;
         </div>;
       </main>;
     </>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       </div>
     </EnhancedLayout>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 <textarea;
                   value={active_slide.content}
                   on_change={e => updateActiveSlide ({ content: e.target.value })}
@@ -1643,5 +1207,3 @@ if (return null, ) {
 </main>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

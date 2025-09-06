@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useState } from 'react'
-import { Dispute, DisputeStatus } from '@/types/disputes'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import {  Table,  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from '@/components/ui/table'
-import Skeleton from '@/components/ui/skeleton'
-import { formatDistanceToNow } from 'date-fns'
-import { ShieldAlert } from 'lucide-react'
-import Link from 'next/link'
-type DisputesListProps = {
-  disputes: Dispute[]
-isLoading: boolean
-=======
 import React, { useState } from 'react';
 import { Dispute, DisputeStatus } from '@/types / disputes';
 import { Button } from '@/components / ui / button';
@@ -41,7 +16,6 @@ import Link from 'next / link';
 type DisputesListProps = {
   disputes: Dispute[];
 is_loading: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export /**
  * DisputesList - Function description
@@ -80,28 +54,6 @@ import Skeleton from "@/components / ui / skeleton";
 import { formatDistanceToNow  } from './date - fns';
 import Link from './next / link';
 type DisputesListProps = {
-<<<<<<< HEAD
-  disputes: Dispute[]
-  isLoading: boolean
-}
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all")
-  const filteredDisputes = statusFilter === "all"
-    ? disputes
-    : disputes.filter(dispute => dispute.status === statusFilter)
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-      case "open": return "default"
-      case "under_review":
-        return "secondary"
-      case "resolved":
-        return "outline", // Changed from "success" to "outline"
-      case "closed":
-        return "outline"
-      default:
-        return "default"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useState } from 'react';
 import { Dispute, DisputeStatus } from '@/types/disputes';
 import { Button } from '@/components/ui/button';
@@ -144,9 +96,6 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
         return 'outline';
       default:;
         return 'default';
-<<<<<<< HEAD
-=======
-=======
 
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
@@ -160,8 +109,6 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
@@ -192,7 +139,6 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
-=======
   disputes: Dispute[],
   is_loading: boolean;
 }
@@ -206,22 +152,15 @@ function DisputesList() {
     : disputes.filter (dispute => dispute.status === status_filter);
   const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
     switch (status) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "open": return "default";
       case "under_review":;
         return "secondary";
       case "resolved":;
-<<<<<<< HEAD
-        return "outline", // Changed from "success" to "outline";
-=======
         return "outline", // Changed from './success'; to "outline";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "closed":;
         return "outline";
       default:;
         return "default";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -239,10 +178,6 @@ function DisputesList() {
           {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (;
             <Skeleton key={status} className="h-10 w-24" />;
           ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         </div>;
         <div className="border rounded-md">;
           <Table>;
@@ -282,10 +217,6 @@ function DisputesList() {
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
-<<<<<<< HEAD
-              ))}
-=======
-=======
         </div>
         <div className="border rounded-md">
           <Table>
@@ -309,68 +240,30 @@ function DisputesList() {
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
                 </TableRow>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
-<<<<<<< HEAD
-            </TableBody>
-          </Table>
-        </div>
-      </div>
-<<<<<<< HEAD
-    ) }
-  if (disputes.length === 0) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </TableBody>;
           </Table>;
         </div>;
       </div>;
     );  }
-<<<<<<< HEAD
-
-  if (disputes && disputes.length === 0) {;
-    return (
-      <div className='text-center py-12 border rounded-md bg-muted/20'>;
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
-        <h3 className='text-xl font-medium'>No disputes found</h3>;
-        <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
-=======
-=======
     )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (disputes && disputes.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
         <h3 className='text-xl font-medium'>No disputes found</h3>;
         <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
   }
-<<<<<<< HEAD
-  if (disputes.length === 0) {
-    return (
-<<<<<<< HEAD
-      <div className='text-center py-12 border rounded-md bg-muted/20'>
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
-        <h3 className='text-xl font-medium'>No disputes found</h3>
-        <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">
-        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-        <h3 className="text-xl font-medium">No disputes found</h3>
-        <p className="text-muted-foreground mt-2">
-=======
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
           No active disputes match the selected filter
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </p>
       </div>
     )
-=======
 
   if (disputes && disputes.length === 0) {;
     return (
@@ -384,13 +277,8 @@ function DisputesList() {
         </p>;
       </div>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='space-y-4'>;
       <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>;
         <Button
@@ -425,7 +313,6 @@ function DisputesList() {
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
           onClick={() => setStatusFilter("all")}
-=======
     }
   }
   // Check condition
@@ -547,55 +434,34 @@ if ( {) {
         <Button;
           variant={status_filter === "all" ? "default" : "outline"}
           on_click={() => setStatusFilter ("all")}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           size="sm";
         >;
           All;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={statusFilter === "open" ? "default" : "outline"}
-          onClick={() => setStatusFilter("open")}
-=======
         <Button;
           variant={status_filter === "open" ? "default" : "outline"}
           on_click={() => setStatusFilter ("open")}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           size="sm";
           size="sm";
         >;
           Open;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={statusFilter === "under_review" ? "default" : "outline"}
-          onClick={() => setStatusFilter("under_review")}
-=======
         <Button;
           variant={status_filter === "under_review" ? "default" : "outline"}
           on_click={() => setStatusFilter ("under_review")}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           size="sm";
           size="sm";
         >;
           Under Review;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={statusFilter === "resolved" ? "default" : "outline"}
-          onClick={() => setStatusFilter("resolved")}
-=======
         <Button;
           variant={status_filter === "resolved" ? "default" : "outline"}
           on_click={() => setStatusFilter ("resolved")}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           size="sm";
           size="sm";
         >;
           Resolved;
         </Button>;
-<<<<<<< HEAD
-=======
     <div className="space-y-4">
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
@@ -626,23 +492,11 @@ if ( {) {
         >
           Resolved
         </Button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <Button
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
-<<<<<<< HEAD
-          size="sm"
-          size="sm"
-        >
-          Closed
-        </Button>
-      </div>
-<<<<<<< HEAD
-      <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">
-=======
 
       <div className="border rounded-md overflow-hidden">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <Table>
           <TableHeader>
             <TableRow>
@@ -651,38 +505,6 @@ if ( {) {
               <TableHead>Parties</TableHead>
               <TableHead>Created</TableHead>
               <TableHead>Status</TableHead>
-<<<<<<< HEAD
-              <TableHead className='text-right'>Actions</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {filteredDisputes.map(dispute => (            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {filteredDisputes.map((dispute) => (
-              <TableRow key={dispute.id}>
-                <TableCell className='font-mono text-xs'>
-                  {dispute.id.split('-')[0]}
-                </TableCell>
-                <TableCell>
-                  {dispute.project?.title |'Unknown Project'}
-                </TableCell>
-                <TableCell>
-                  <div className='flex flex-col text-sm'>
-                    <span>
-                      Client:{' '}
-                      {dispute.client_profile?.display_name |'Unknown Client'}
-                    </span>
-                    <span>
-                      Talent:{' '}
-                      {dispute.talent_profile?.display_name |'Unknown Talent'}                    </span>
-                  </div>
-                </TableCell>
-                <TableCell>
-                  {formatDistanceToNow(new Date(dispute.created_at), {
-                    addSuffix: true
-                  })}                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
-=======
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -702,62 +524,10 @@ if ( {) {
                     </span>
                     <span>
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     </span>
                   </div>
                 </TableCell>
                 <TableCell>
-<<<<<<< HEAD
-                  {formatDistanceToNow(new Date(dispute.created_at), {
-                    addSuffix: true
-=======
-          size="sm";
-          size="sm";
-        >;
-          Closed;
-        </Button>;
-      </div>;
-
-      <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead>Case ID</TableHead>;
-              <TableHead>Project</TableHead>;
-              <TableHead>Parties</TableHead>;
-              <TableHead>Created</TableHead>;
-              <TableHead>Status</TableHead>;
-              <TableHead className='text-right'>Actions</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {filteredDisputes && filteredDisputes.map(dispute => (            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {filteredDisputes && filteredDisputes.map((dispute) => (;
-              <TableRow key={dispute && dispute.id}>;
-                <TableCell className='font-mono text-xs'>;
-                  {dispute && dispute.id.split('-')[0]}
-                </TableCell>;
-                <TableCell>;
-                  {dispute && dispute.project?.title || 'Unknown Project'}
-                </TableCell>;
-                <TableCell>;
-                  <div className='flex flex-col text-sm'>;
-                    <span>;
-                      Client:{' '}
-                      {dispute && dispute.client_profile?.display_name || 'Unknown Client'}
-                    </span>;
-                    <span>;
-                      Talent:{' '}
-                      {dispute && dispute.talent_profile?.display_name || 'Unknown Talent'}                    </span>;
-                  </div>;
-                </TableCell>;
-                <TableCell>;
-                  {formatDistanceToNow(new Date(dispute && dispute.created_at), {;
-                    addSuffix: true,;
-                  })}                      Talent: {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
-=======
         <Button;
           variant={status_filter === "closed" ? "default" : "outline"}
           on_click={() => setStatusFilter ("closed")}
@@ -806,15 +576,10 @@ if ( {) {
                   {formatDistanceToNow (new Date (dispute.created_at), {
                     add_suffix: true,
                   })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </span>;
                   </div>;
                 </TableCell>;
                 <TableCell>;
-<<<<<<< HEAD
-                  {formatDistanceToNow(new Date(dispute && dispute.created_at), {;
-                    addSuffix: true,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   })}
                 </TableCell>;
                 <TableCell>;
@@ -838,9 +603,6 @@ if ( {) {
                   </Button>;
                 </TableCell>;
               </TableRow>;
-<<<<<<< HEAD
-=======
-=======
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
                 </TableCell>
                 <TableCell>
@@ -854,16 +616,7 @@ if ( {) {
                   </Button>
                 </TableCell>
               </TableRow>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-<<<<<<< HEAD
-          </TableBody>
-        </Table>
-      </div>
-    </div>
-  )
-=======
                   {formatDistanceToNow (new Date (dispute.created_at), {
                     add_suffix: true,
                   })}
@@ -893,7 +646,6 @@ if ( {) {
         </Table>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 // Check condition
 if ( {") {
@@ -905,30 +657,6 @@ if ( {") {
 }className="h - 10 w - 24" /> ";
 }</div> <div className="border rounded - md" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   [...Array (5) ].map ( (, i) => (<TableRow key= {
-<<<<<<< HEAD
-  i "
-}> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-4 w-40" /></TableCell> <TableCell><Skeleton className="h-4 w-32" /></TableCell> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-6 w-20" /></TableCell> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /></TableCell> </TableRow>) )
-}</TableBody> </Table> </div> </div>) "
-}> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  filteredDisputes.map ( (dispute) => (<TableRow key= {
-  dispute.id "
-}> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {
-  formatDistanceToNow (new Date (dispute.created at), {
-  addSuffix: true
-})
-}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) )
-}</TableBody> </Table> </div> </div>)
-}"}
-=======
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>;
-  );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 };
 if (isLoading) {";
@@ -951,13 +679,7 @@ if (isLoading) {";
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
 }"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   i ";
 }> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 4 w - 40" /></TableCell> <TableCell><Skeleton className="h - 4 w - 32" /></TableCell> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 6 w - 20" /></TableCell> <TableCell className="text - right" ><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>) ";
@@ -971,5 +693,3 @@ if (isLoading) {";
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

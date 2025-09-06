@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-import * as React from "react";
-<<<<<<< HEAD
-import { Toaster as SonnerToaster } from "sonner";
-export function Toaster() {
-  return (
-
-=======
 import {Toaster, as, SonnerToaster} from "sonner";
 export function Toaster() {;
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <SonnerToaster
       position="top-right"
       toastOptions={{
@@ -23,16 +12,9 @@ export function Toaster() {;
         duration: 4000
 
         descriptionClassName: "text-zion-slate-light"}}
-<<<<<<< HEAD
-    />
-  )
-}
-=======
     />;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import * as React from './react';
 import { Toaster, as, SonnerToaster } from './sonner';
 export /**
@@ -52,4 +34,3 @@ function Toaster() {
         descriptionClassName: "text - zion - slate - light"}}
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,34 +1,14 @@
 import type { GetServerSideProps } from 'next';
-<<<<<<< HEAD
-import { FormEvent, useState } from 'react';
-import type { Vendor } from '../../utils/vendor-types';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-=======
 type Props = { vendor: Vendor | null },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function VendorProfilePage({ vendor }: Props) {
-=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
 export default function VendorProfilePage(): any ({ vendor }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
-  if (!vendor) return <div className='text-gray-500'>Vendor not found.</div>;  if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
   if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function submitLead(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
@@ -38,12 +18,6 @@ export default function VendorProfilePage(): any ({ vendor }: Props) {;
     setMessage(null)
     try {
       const res = await fetch('/api/vendors/lead', {
-<<<<<<< HEAD
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ vendorId: vendor.id, title })
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function submitLead(): any (e: FormEvent<HTMLFormElement>) {;
     e && e.preventDefault();
@@ -57,7 +31,6 @@ export default function VendorProfilePage(): any ({ vendor }: Props) {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ vendorId: vendor && vendor.id, title }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       if (!res && res.ok) throw new Error('Failed to submit');
       setMessage('Thanks! We will contact you soon.');
@@ -76,16 +49,6 @@ export default function VendorProfilePage(): any ({ vendor }: Props) {;
       setMessage(e && e.message);
     } finally {;
       setLoading(false);
-<<<<<<< HEAD
-=======
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ vendorId: vendor.id, title })});
-      if (!res.ok) throw new Error('Failed to submit');
-      setMessage('Thanks! We will contact you soon.');
-      form.reset()
-=======
 import {FormEvent, useState} from 'react';
 import type { Vendor } from '../../utils / vendor - types';
 ;
@@ -137,21 +100,12 @@ function submit_lead() {
 }
       set_message ('Thanks! We will contact you soon.');
       form.reset ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e: any) {
       set_message (e.message);
     } finally {
-<<<<<<< HEAD
-      setLoading(false)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='space-y-8'>;
       <div className='flex items-center gap-4'>;
         {vendor && vendor.logoUrl ? (;
@@ -172,24 +126,9 @@ function submit_lead() {
                 Verified;
               </span>;
             )}
-<<<<<<< HEAD
-          </div>
-          <div className='text-sm text-gray-500'>
-            {vendor.servicesOffered?.join(', ')}
-          </div>        </div>
-      </div>
-      <div>
-        <h2 className='text-lg font-medium mb-2'>About</h2>
-        <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>
-          {vendor.about |'No description provided.'}
-        </p>      </div>
-      {vendor.packages && vendor.packages.length > 0 && (
-        <div>        {vendor.logoUrl ? (
-=======
     <div className="space-y-8">
       <div className="flex items-center gap-4">
         {vendor.logoUrl ? (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           // eslint-disable-next-line @next/next/no-img-element
           <img src={vendor.logoUrl} alt={vendor.name} className="w-16 h-16 rounded" />
         ) : (
@@ -204,30 +143,11 @@ function submit_lead() {
         </div>
       </div>
       <div>
-<<<<<<< HEAD
-        <h2 className='text-lg font-medium mb-2'>About</h2>
-        <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>
-          {vendor.about |'No description provided.'}
-        </p>        <h2 className="text-lg font-medium mb-2">About</h2>
-        <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">{vendor.about |'No description provided.'}</p>
-=======
         <h2 className="text-lg font-medium mb-2">About</h2>
         <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">{vendor.about || 'No description provided.'}</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
       {vendor.packages && vendor.packages.length > 0 && (
         <div>
-<<<<<<< HEAD
-          <h2 className='text-lg font-medium mb-2'>Packages</h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {vendor.packages.map(p => (
-=======
-          </div>;
-          <div className='text-sm text-gray-500'>;
-            {vendor && vendor.servicesOffered?.join(', ')}
-          </div>        </div>;
-      </div>;
-=======
           <h2 className="text-lg font-medium mb-2">Packages</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {vendor.packages.map(p => (
@@ -240,7 +160,6 @@ function submit_lead() {
           </div>
         </div>
       )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       <div>;
         <h2 className='text-lg font-medium mb-2'>About</h2>;
@@ -277,7 +196,6 @@ function submit_lead() {
           <h2 className='text-lg font-medium mb-2'>Packages</h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>;
             {vendor && vendor.packages.map(p => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <div
                 key={p && p.id}
                 className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -293,21 +211,12 @@ function submit_lead() {
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-      {vendor.sampleProjects && vendor.sampleProjects.length > 0 && (
-        <div>
-<<<<<<< HEAD
-          <h2 className='text-lg font-medium mb-2'>Sample Projects</h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {vendor.sampleProjects.map(sp => (
-=======
 
       {vendor && vendor.sampleProjects && vendor && vendor.sampleProjects.length > 0 && (;
         <div>;
           <h2 className='text-lg font-medium mb-2'>Sample Projects</h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>;
             {vendor && vendor.sampleProjects.map(sp => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <div
                 key={sp && sp.id}
                 className='border border-gray-200 dark:border-gray-800 rounded overflow-hidden'>;
@@ -336,22 +245,10 @@ function submit_lead() {
                   <div className="text-sm text-gray-500">{sp && sp.description}</div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
-            ))}
-          </div>;
-        </div>;
-      )}
-<<<<<<< HEAD
-      <div>
-        <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
-        <form onSubmit={submitLead} className='space-y-3'>
-=======
 
       <div>;
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>;
         <form onSubmit={submitLead} className='space-y-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <input
             name='title'
             required
@@ -364,15 +261,6 @@ function submit_lead() {
             {loading ? 'Submitting...' : 'Send'}
           </button>;
           {message && <div className='text-sm'>{message}</div>}
-<<<<<<< HEAD
-        </form>
-      </div>
-      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
-    </div>
-  );
-export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
-  const slug = String(ctx.params?.slug |'');
-=======
         </form>;
       </div>;
 
@@ -382,13 +270,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
   const slug = String(ctx && ctx.params?.slug || '');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
 };            {loading ? 'Submitting...' : 'Send'}
           </button>;
-=======
           <h2 className="text-lg font-medium mb-2">Sample Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {vendor.sampleProjects.map(sp => (
@@ -404,43 +290,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
                   <div className="text-sm text-gray-500">{sp.description}</div>
                 </div>
               </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
       )}
 
-<<<<<<< HEAD
-      <div>;
-        <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>;
-        <form onSubmit={submitLead} className='space-y-3'>;
-          <input
-            name='title'
-            required
-            placeholder='What do you need?'
-            className='w-full border rounded px-3 py-2 bg-transparent'
-          />;
-          <button
-            disabled={loading}
-            className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
-            {loading ? 'Submitting...' : 'Send'}
-          </button>;
-          {message && <div className='text-sm'>{message}</div>}
-        </form>;
-      </div>;
-
-      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>;
-    </div>;
-  );
-
-export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
-  const slug = String(ctx && ctx.params?.slug || '');
-  const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
-};            {loading ? 'Submitting...' : 'Send'}
-          </button>;
-=======
       <div>
         <h2 className="text-lg font-medium mb-2">Request a Quote</h2>
         <form onSubmit={submitLead} className="space-y-3">
@@ -448,19 +302,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
           <button disabled={loading} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">
             {loading ? 'Submitting...' : 'Send'}
           </button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {message && <div className="text-sm">{message}</div>}
-<<<<<<< HEAD
-        </form>
-      </div>
-      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
-    </div>
-  );
-}
-export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
-  const slug = String(ctx.params?.slug |'');
-=======
         </form>;
       </div>;
 
@@ -471,17 +313,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   const slug = String(ctx && ctx.params?.slug || '');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
-<<<<<<< HEAD
-}
-
-=======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       set_loading (false);
     }
   }
@@ -625,4 +460,3 @@ export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
   return { props: { vendor } }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

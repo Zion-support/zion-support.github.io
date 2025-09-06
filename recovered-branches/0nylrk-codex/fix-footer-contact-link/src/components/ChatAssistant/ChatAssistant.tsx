@@ -1,68 +1,4 @@
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
-<<<<<<< HEAD
-import { ChatMessage  } from './ChatMessage';
-import { ChatInput  } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-export interface Message {
-
-  id: string
-  role: 'user' | 'assistant'
-  message: string
-  timestamp: Date
-
-  read?: boolean
-}
-export interface ChatAssistantProps {
-
-  isOpen: boolean
-  onClose: () => void
-  recipient: {
-    id: string
-    name: string
-    avatarUrl?: string;
-    role?: string
-  }
-
-  conversationId?: string;
-  initialMessages?: Message[],
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>,
-  contextHeader?: ReactNode
-}
-export function ChatAssistant({
-=======
-import {ChatMessage} from './ChatMessage';
-import {ChatInput} from './ChatInput';
-<<<<<<< HEAD
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {X} from "lucide-react";
-export interface Message {;
-  id: string,;
-  role: 'user' | 'assistant',;
-  message: string,;
-  timestamp: Date,;
-  read?: boolean;
-}
-
-export interface ChatAssistantProps {;
-  isOpen: boolean,;
-  onClose: () => void,;
-  recipient: {;
-    id: string,;
-    name: string,;
-    avatarUrl?: string;
-    role?: string;
-  };
-  conversationId?: string;
-  initialMessages?: Message[];
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>;
-  contextHeader?: ReactNode;
-}
-
-export function ChatAssistant(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   isOpen;
   onClose;
   recipient;
@@ -74,32 +10,6 @@ export function ChatAssistant(): any ({;
 }: ChatAssistantProps) {;
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-<<<<<<< HEAD
-  useEffect(() => {
-    if (initialMessages.length > 0) {
-      setMessages(initialMessages)
-    }
-  }, [initialMessages]);
-  useEffect(() => {
-    scrollToBottom()
-  }, [messages]);
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
-  const handleSendMessage = async (message: string) => {
-    if (!message.trim()) return
-    // Add user message to the chat
-    const newMessage: Message = {
-      id: Date.now().toString()
-      role: 'user'
-      message;
-      timestamp: new Date()
-    }
-    setMessages((prev: Message[]) => [...prev, newMessage]);
-    // Send message to recipient via the provided handler
-    await onSendMessage(message, conversationId)
-  }
-=======
 
   useEffect(() => {;
     if (initialMessages && initialMessages.length > 0) {;
@@ -132,7 +42,6 @@ export function ChatAssistant(): any ({;
     await onSendMessage(message, conversationId);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!isOpen) return null;
 
   return (
@@ -152,19 +61,6 @@ export function ChatAssistant(): any ({;
               {recipient && recipient.role && (;
                 <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
               )}
-<<<<<<< HEAD
-            </div>
-          </div>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick={onClose}
-          >
-            <X className="h-5 w-5" />
-          </Button>
-        </div>
-=======
             </div>;
           </div>;
           <Button
@@ -176,17 +72,13 @@ export function ChatAssistant(): any ({;
           </Button>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
           </div>;
         )}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">;
           {messages && messages.length === 0 ? (;
@@ -196,16 +88,6 @@ export function ChatAssistant(): any ({;
           ) : (;
             messages && messages.map((msg) => (;
               <ChatMessage
-<<<<<<< HEAD
-                key={msg.id}
-                role={msg.role}
-                message={msg.message}
-              />
-            ))
-          )}
-          <div ref={messagesEndRef} />
-        </div>
-=======
                 key={msg && msg.id} 
                 role={msg && msg.role}
                 message={msg && msg.message}
@@ -215,7 +97,6 @@ export function ChatAssistant(): any ({;
           <div ref={messagesEndRef} />;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
           <ChatInput onSend={handleSendMessage} />;
@@ -223,7 +104,6 @@ export function ChatAssistant(): any ({;
       </div>;
     </div>;
   );
-=======
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
 import { X } from './lucide-react';
@@ -346,5 +226,4 @@ if (return null) {
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -22,33 +22,17 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import TalentGrid from '../../components/seo/TalentGrid';
-import FAQ from '../../components/seo/FAQ';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export type LandingPayload = {;
-=======
 import {use_router} from 'next / router';
 import TalentGrid from '../../components / seo / TalentGrid';
 import FAQ from '../../components / seo / FAQ';
 export type LandingPayload = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   title: string;
   h1: string;
   body_html: string;
   region?: string;
   service?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  faq: Array<{ q: string; a: string }>;}
-=======
 export type LandingPayload = {
   title: string,
   h1: string,
@@ -58,7 +42,6 @@ export type LandingPayload = {
   faq: Array<{ q: string, a: string }>
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function SEOLandingPage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
@@ -69,21 +52,6 @@ export default function SEOLandingPage() {
     if (dataParam) {
       try {
         setPayload(JSON.parse(decodeURIComponent(dataParam)));
-<<<<<<< HEAD
-        return;
-      } catch {}
-    }
-    // Fallback: render a basic placeholder until a generated page is deployed
-    setPayload({
-      title: String(slug).replace(/-/g, ' ')
-      h1: String(slug).replace(/-/g, ' ')
-      bodyHtml: '<p>Localized marketplace landing page.</p>'
-      region: undefined
-      service: undefined
-      faq: []
-    });  }, [router.isReady, slug]);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   faq: Array<{ q: string; a: string }>;};
 
 export default function SEOLandingPage() {;
@@ -110,26 +78,16 @@ export default function SEOLandingPage() {;
       service: undefined,;
       faq: [],;
     });  }, [router && router.isReady, slug]);
-<<<<<<< HEAD
-=======
-=======
         return
       } catch {}
     }
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!payload) return null;
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='max-w-4xl mx-auto'>;
       <head>;
         <title>{payload && payload.title}</title>;
@@ -141,14 +99,6 @@ export default function SEOLandingPage() {;
       <h1 className='text-2xl font-semibold mb-4'>{payload && payload.h1}</h1>;
       <div
         className='prose dark:prose-invert max-w-none'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
-      />
-      <div className='mt-8'>
-        <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />
-=======
     <div className="max-w-4xl mx-auto">
       <head>
         <title>{payload.title}</title>
@@ -160,14 +110,9 @@ export default function SEOLandingPage() {;
       <div className="mt-8">
         <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
         <TalentGrid region={payload.region} service={payload.service} />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
       <FAQ items={payload.faq} />
     </div>
-<<<<<<< HEAD
-);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         dangerouslySetInnerHTML={{ __html: payload && payload.bodyHtml }}
       />;
 
@@ -178,14 +123,8 @@ export default function SEOLandingPage() {;
       <FAQ items={payload && payload.faq} />;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   faq: Array<{ q: string; array: string }>;}
 ;
 export default /**
@@ -246,5 +185,3 @@ if (return null) {
       <FAQ items={payload.faq} />;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

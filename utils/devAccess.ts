@@ -1,39 +1,22 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import fs from 'fs';
 import path from 'path';
 import { exec_sync } from 'child_process';
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-export type DevRole = 'admin' | 'maintainer' | 'contributor';
-=======
 ;
 export type DevRole = 'admin' | 'maintainer' | 'contributor';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface DevIdentity {
   is_authenticated: boolean;
   roles: DevRole[];
   user_id?: string;
 }
-<<<<<<< HEAD
-export function getGitStatus(): { connected: boolean; branch?: string } {
-  try {
-<<<<<<< HEAD
-    const gitDir = path.join(process.cwd(), '.git');
-    if (!fs.existsSync(gitDir)) return { connected: false }
-=======
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
       .toString()
       .trim();
-=======
 export function getGitStatus (): { connected: boolean; branch?: string } {
   try {
     const git_dir = path.join (process.cwd (), '.git');
@@ -45,22 +28,13 @@ export function getGitStatus (): { connected: boolean; branch?: string } {
     });
       .to_string ();
       .trim ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { connected: true, branch }
   } catch {
     return { connected: false }
   }
 }
-<<<<<<< HEAD
-export function getDevIdentity(req: NextApiRequest): DevIdentity {
-  // TODO: integrate real auth; for now, check a header and env var for dev
-<<<<<<< HEAD
-  const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
-  const adminToken = process.env.ADMIN_TOKEN;
-=======
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (token && adminToken && token === adminToken) {
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
   }
@@ -82,10 +56,6 @@ export function requireRoles(
     return undefined;
   }
   return identity;
-<<<<<<< HEAD
-=======
-}
-=======
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -219,8 +189,6 @@ export function getClientIp(req: any): string {
          (req.connection.socket ? req.connection.socket.remoteAddress : null) ||
          'unknown';
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -255,5 +223,3 @@ if ( {) {
   }
   return identity;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

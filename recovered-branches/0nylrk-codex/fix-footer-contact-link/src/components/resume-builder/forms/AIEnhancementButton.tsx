@@ -1,40 +1,11 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Sparkles, Loader2  } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-interface AIEnhancementButtonProps {
-
-  currentContent: string
-  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general'
-  context?: string;
-  onEnhanced: (enhancedContent: string) => void
-
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
-<<<<<<< HEAD
-import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
-interface AIEnhancementButtonProps {;
-  currentContent: string,;
-  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',;
-  context?: string;
-  onEnhanced: (enhancedContent: string) => void,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   buttonText?: string;
   className?: string;
 }
-<<<<<<< HEAD
-export function AIEnhancementButton({
-=======
 
 export function AIEnhancementButton(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   currentContent;
   enhancementType;
   context;
@@ -45,39 +16,24 @@ export function AIEnhancementButton(): any ({;
 }: AIEnhancementButtonProps) {;
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-  const handleEnhance = async () => {
-    if (!currentContent |currentContent.trim().length < 10) {
-=======
 
   const handleEnhance = async () => {;
     if (!currentContent || currentContent && currentContent.trim().length < 10) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setError('Please enter at least some basic content before enhancing');
       return;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setError(null);
     const enhancedContent = await enhanceContent(;
       currentContent;
       enhancementType;
       context;
     );
-<<<<<<< HEAD
-    if (enhancedContent) {
-      onEnhanced(enhancedContent)
-    }
-  }
-=======
 
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
     }
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <Button
@@ -92,18 +48,10 @@ export function AIEnhancementButton(): any ({;
       ) : (;
         <Sparkles className="h-3 w-3" />;
       )}
-<<<<<<< HEAD
-      <span className="text-xs">{buttonText}</span>
-    </Button>
-  )
-}
-=======
       <span className="text-xs">{buttonText}</span>;
     </Button>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 interface AIEnhancementButtonProps {
   current_content: string,
@@ -157,4 +105,3 @@ if ( {) {
       <span className="text - xs">{button_text}</span>;
     </Button>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

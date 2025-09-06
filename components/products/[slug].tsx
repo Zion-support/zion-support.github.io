@@ -1,53 +1,22 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
-import Head from 'next/head';
-import { useRouter  } from 'next/router';
-import Link from 'next/link';
-import EnhancedLayout from '@/components/layout/EnhancedLayout';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import equipment from '@/data/equipment.json';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
-<<<<<<< HEAD
-  const item = items.find(e => e.slug === slug);  const item = items.find((e) => e.slug === slug);
-=======
   const item = items.find((e) => e.slug === slug);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!item) {
     return (
       <EnhancedLayout>
         <Head>
           <title>Equipment Not Found - Zion Tech Solutions</title>
         </Head>
-<<<<<<< HEAD
-        <div className='space-y-4'>
-          <h1 className='text-xl font-semibold'>Equipment not found</h1>
-          <Link href='/products'>
-            <a className='text-blue-600 hover:underline'>Back to Equipment</a>
-          </Link>
-        </div>
-      </EnhancedLayout>
-    );  }        <div className="space-y-4">
-=======
         <div className="space-y-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
       </EnhancedLayout>
     )
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import equipment from '@/data/equipment ;
 const EquipmentDetail: NextPage = () => {;
   const router = useRouter(),;
@@ -75,7 +44,6 @@ const EquipmentDetail: NextPage = () => {;
       </EnhancedLayout>;
     );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <EnhancedLayout>;
       <Head>;
@@ -137,11 +105,6 @@ const EquipmentDetail: NextPage = () => {;
       </div>;
     </EnhancedLayout>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-};export default EquipmentDetail;          <div>
-=======
   }
 
   return (
@@ -153,7 +116,6 @@ const EquipmentDetail: NextPage = () => {;
         <div className="md:col-span-2 space-y-4">
           <img src={`https://picsum.photos/seed/${encodeURIComponent(item.slug)}/1200/600`} alt={item.name} className="w-full rounded-lg border border-gray-200 dark:border-gray-800" />
           <div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <h1 className="text-2xl font-semibold">{item.name}</h1>
             <p className="opacity-80">Category: {item.category}</p>
           </div>
@@ -174,17 +136,10 @@ const EquipmentDetail: NextPage = () => {;
     </EnhancedLayout>
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default EquipmentDetail;
 
-=======
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import Link from 'next / link';
@@ -280,4 +235,3 @@ if ( {) {
 ;
 export default EquipmentDetail;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

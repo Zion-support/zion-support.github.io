@@ -1,40 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}}}};
-;
-;
-=======
-
-}
-}
-}
-<<<<<<< HEAD
-},
-
-,
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
 },;
 ,;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export const messageChannelHandler = {
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -46,20 +16,12 @@ export const messageChannelHandler: MessageHandler = {
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
   }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-=======
 };
 };
 };
 };
 ,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 // Message channel handler for real-time communication
 export class MessageChannelHandler {
   private channels: Map<string, MessageChannel> = new Map();
@@ -78,7 +40,6 @@ export class MessageChannelHandler {
     this.channels.forEach((channel, id) => {
       if (id !== excludeChannel) {
         channel.port1.postMessage(message);
-=======
 // Message channel handler for real - time communication;
 export class MessageChannelHandler {
   private channels: Map < string, MessageChannel> = new Map ();
@@ -101,14 +62,9 @@ if ( {) {
   $2
 }
         channel.port1.post_message (message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     });
   }
 }
 export default MessageChannelHandler;
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

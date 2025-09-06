@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-useEffect ( () => {
-  const load = async () => {
-  try {
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
  useEffect ( () => {;
   const load = async () => {;
   try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (loading) return <div>Loading episodes…</div>;
   return (
     <div className='space-y-6'>;
@@ -99,9 +87,6 @@ useEffect ( () => {
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
           </li>;
-<<<<<<< HEAD
-=======
-=======
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = {
@@ -176,18 +161,11 @@ export default function PodcastIndexPage() {
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
             </div>
           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
       </ul>;
     </div>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if (return <div > Loading episodes…</div>) {
   $2
@@ -280,4 +258,3 @@ if (return <div > Loading episodes…</div>) {
       </ul>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,30 +1,9 @@
-<<<<<<< HEAD
-
-import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button";
-import { Download  } from 'lucide-react';
-import { Resume } from "@/types/resume";
-interface ResumePreviewCardProps {;
-  resume: Resume;
-  onDownload: () => void;
-  isLoading: boolean
-}
-<<<<<<< HEAD
-export function ResumePreviewCard({
-  resume
-  onDownload
-  isLoading
-}: ResumePreviewCardProps) {
-=======
 
 export function ResumePreviewCard(): any ({;
   resume,;
   onDownload,;
   isLoading,;
 }: ResumePreviewCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
       <CardContent className="p-4">;
@@ -44,14 +23,6 @@ export function ResumePreviewCard(): any ({;
             size="sm"
             onClick={onDownload}
             disabled={isLoading}
-<<<<<<< HEAD
-            className="h-8 w-8 p-0"
-          >
-            <Download className="h-4 w-4 text-zion-cyan" />
-            <span className="sr-only">Download Resume</span>
-          </Button>
-        </div>
-=======
 import React from './react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
@@ -91,17 +62,9 @@ function ResumePreviewCard() {
             <span className="sr - only">Download Resume</span>;
           </Button>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {resume.basic_info.summary && (
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
             {resume.basic_info.summary}
-<<<<<<< HEAD
-          </p>
-        )}
-        {resume.skills && resume.skills.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-2">
-            {resume.skills.slice(0, 5).map((skill, index) => (
-=======
             className="h-8 w-8 p-0">;
             <Download className="h-4 w-4 text-zion-cyan" />;
             <span className="sr-only">Download Resume</span>;
@@ -117,7 +80,6 @@ function ResumePreviewCard() {
         {resume && resume.skills && resume && resume.skills.length > 0 && (;
           <div className="flex flex-wrap gap-1 mt-2">;
             {resume && resume.skills.slice(0, 5).map((skill, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Badge
                 key={index}
                 variant="outline"
@@ -137,7 +99,6 @@ function ResumePreviewCard() {
       </CardContent>;
     </Card>;
   );
-=======
           </p>)}
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex - wrap gap - 1 mt - 2">;
@@ -159,5 +120,4 @@ function ResumePreviewCard() {
           </div>)}
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

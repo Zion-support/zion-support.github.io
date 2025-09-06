@@ -15,7 +15,6 @@ export default function CloudAutomationsPage() {
       .catch(() => setData({ ok: false }))
   }, []),
 
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
   const items = data?.data ? Object.entries(data.data) : []
 
   return (

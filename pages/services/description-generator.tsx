@@ -22,53 +22,27 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function ServiceDescriptionGeneratorPage() {
-=======
 
 export default function ServiceDescriptionGeneratorPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
-<<<<<<< HEAD
-  const [tone, setTone] = useState<;
-    'professional' | 'friendly' | 'persuasive' | 'technical';
-  >('professional');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
-=======
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
   const [tone, setTone] = useState<;
     'professional' | 'friendly' | 'persuasive' | 'technical';
   >('professional');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const keyFeatures = useMemo(() => {;
     return featuresInput;
       .split('\n');
       .map(f => f && f.trim());
       .filter(Boolean);  }, [featuresInput]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   const keyFeatures = useMemo(() => {
     return featuresInput
       .split('\n')
@@ -76,7 +50,6 @@ export default function ServiceDescriptionGeneratorPage() {;
       .filter(Boolean)
   }, [featuresInput]);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
@@ -87,25 +60,6 @@ export default function ServiceDescriptionGeneratorPage() {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
-          title
-          keyFeatures
-          targetAudience
-          additionalNotes: additionalNotes |undefined
-          tone
-        })
-      });
-      if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.error |'Failed to generate');
-      }
-      const data = (await response.json()) as { description: string }
-      setGenerated(data.description |'');
-    } catch (err: any) {
-      setError(err.message |'Something went wrong');
-    } finally {
-      setLoading(false);    }
-=======
           title;
           keyFeatures;
           targetAudience;
@@ -124,16 +78,8 @@ export default function ServiceDescriptionGeneratorPage() {;
     } finally {
       setLoading(false)
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   function handleAccept() {
-<<<<<<< HEAD
-    setAccepted(true);  }
-  function handleCopy() {
-    if (!generated) return;
-    navigator.clipboard.writeText(generated).catch(() => {});
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
@@ -174,20 +120,9 @@ export default function ServiceDescriptionGeneratorPage() {;
     if (!generated) return;
     navigator && navigator.clipboard.writeText(generated).catch(() => {});
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   }
   return (
-<<<<<<< HEAD
-    <div className='max-w-3xl mx-auto'>
-      <h1 className='text-2xl font-semibold mb-4'>
-        Service Description Generator
-      </h1>
-      <p className='text-sm text-gray-600 dark:text-gray-300 mb-6'>
-        Enter your service details. We will generate a polished description
-        using GPT-4. You can edit it on the page and accept when ready.
-      </p>
-=======
     <div className='max-w-3xl mx-auto'>;
       <h1 className='text-2xl font-semibold mb-4'>;
         Service Description Generator;
@@ -197,7 +132,6 @@ export default function ServiceDescriptionGeneratorPage() {;
         using GPT-4. You can edit it on the page and accept when ready.;
       </p>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <form
         onSubmit={handleSubmit}
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
@@ -210,14 +144,6 @@ export default function ServiceDescriptionGeneratorPage() {;
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e && e.g., On-Demand Web Performance Audit'
             value={title}
-<<<<<<< HEAD
-            onChange={e => setTitle(e.target.value)}            required
-=======
-    setAccepted(true)
-  }
-
-<<<<<<< HEAD
-=======
   function handleCopy() {
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {})
@@ -240,38 +166,22 @@ export default function ServiceDescriptionGeneratorPage() {;
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           />
         </div>
         <div>
-<<<<<<< HEAD
-          <label className='block text-sm font-medium mb-1'>
-            Target Audience
-          </label>
-=======
             onChange={e => setTitle(e && e.target.value)}            required;
           />;
         </div>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <div>;
           <label className='block text-sm font-medium mb-1'>;
             Target Audience;
           </label>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <input
             type='text'
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e && e.g., CTOs and product teams at growth-stage SaaS'
             value={targetAudience}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            onChange={e => setTargetAudience(e.target.value)}            required
-=======
           <label className="block text-sm font-medium mb-1">Target Audience</label>
           <input
             type="text"
@@ -280,16 +190,9 @@ export default function ServiceDescriptionGeneratorPage() {;
             value={targetAudience}
             onChange={(e) => setTargetAudience(e.target.value)}
             required
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           />
         </div>
         <div>
-<<<<<<< HEAD
-          <label className='block text-sm font-medium mb-1'>
-            Key Features (one per line)
-          </label>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             onChange={e => setTargetAudience(e && e.target.value)}            required;
           />;
         </div>;
@@ -298,21 +201,12 @@ export default function ServiceDescriptionGeneratorPage() {;
           <label className='block text-sm font-medium mb-1'>;
             Key Features (one per line);
           </label>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <textarea
             className='w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder={
               'e && e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'
             }
             value={featuresInput}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            onChange={e => setFeaturesInput(e.target.value)}            required
-=======
           <label className="block text-sm font-medium mb-1">Key Features (one per line)</label>
           <textarea
             className="w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -320,22 +214,9 @@ export default function ServiceDescriptionGeneratorPage() {;
             value={featuresInput}
             onChange={(e) => setFeaturesInput(e.target.value)}
             required
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           />
         </div>
         <div>
-<<<<<<< HEAD
-          <label className='block text-sm font-medium mb-1'>Tone</label>
-          <select
-            className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-            value={tone}
-            onChange={e => setTone(e.target.value as any)}
-          >
-            <option value='professional'>Professional</option>
-            <option value='friendly'>Friendly</option>
-            <option value='persuasive'>Persuasive</option>
-            <option value='technical'>Technical</option>          </select>
-=======
           <label className="block text-sm font-medium mb-1">Tone</label>
           <select
             className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -347,15 +228,8 @@ export default function ServiceDescriptionGeneratorPage() {;
             <option value="persuasive">Persuasive</option>
             <option value="technical">Technical</option>
           </select>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
         <div>
-<<<<<<< HEAD
-          <label className='block text-sm font-medium mb-1'>
-            Additional Notes (optional)
-          </label>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             onChange={e => setFeaturesInput(e && e.target.value)}            required;
           />;
         </div>;
@@ -366,9 +240,6 @@ export default function ServiceDescriptionGeneratorPage() {;
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             value={tone}
             onChange={e => setTone(e && e.target.value as any)}
-<<<<<<< HEAD
-=======
-=======
 export default /**
  * ServiceDescriptionGeneratorPage - Function description
  */
@@ -497,67 +368,31 @@ if (return) {
             className='w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - transparent px - 3 py - 2 focus:outline - none focus:ring - 2 focus:ring - blue - 500';
             value={tone}
             on_change={e => set_tone (e.target.value as any)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           >;
             <option value='professional'>Professional</option>;
             <option value='friendly'>Friendly</option>;
             <option value='persuasive'>Persuasive</option>;
             <option value='technical'>Technical</option>          </select>;
         </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         <div>;
           <label className='block text-sm font-medium mb-1'>;
             Additional Notes (optional);
           </label>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <textarea
             className='w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.'
             value={additionalNotes}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            onChange={e => setAdditionalNotes(e.target.value)}
-          />
-        </div>
-        <div className='flex items-center gap-3'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             onChange={e => setAdditionalNotes(e && e.target.value)}
           />;
         </div>;
 
         <div className='flex items-center gap-3'>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <button
             type='submit'
             disabled={loading}
             className='inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60'>;
             {loading ? 'Generating…' : 'Generate Description'}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          </button>
-          {error && <span className='text-red-600 text-sm'>{error}</span>}        </div>
-      </form>
-      {generated && (
-        <div className='mt-8 space-y-3'>
-          <div className='flex items-center justify-between'>
-            <h2 className='text-xl font-semibold'>Generated Description</h2>
-            <div className='flex items-center gap-2'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           </button>;
           {error && <span className='text-red-600 text-sm'>{error}</span>}        </div>;
       </form>;
@@ -567,10 +402,6 @@ if (return) {
           <div className='flex items-center justify-between'>;
             <h2 className='text-xl font-semibold'>Generated Description</h2>;
             <div className='flex items-center gap-2'>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <button
                 onClick={handleCopy}
                 className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'>;
@@ -578,11 +409,6 @@ if (return) {
               </button>;
               <button
                 onClick={handleAccept}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'              >
-=======
           <label className="block text-sm font-medium mb-1">Additional Notes (optional)</label>
           <textarea
             className="w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -619,22 +445,11 @@ if (return) {
                 onClick={handleAccept}
                 className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Accept
               </button>
             </div>
           </div>
           <textarea
-<<<<<<< HEAD
-            className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-            value={generated}
-            onChange={e => setGenerated(e.target.value)}
-          />
-          {accepted && (
-            <div className='text-emerald-700 dark:text-emerald-400 text-sm'>
-              Accepted. You can copy and paste this into your CMS.
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'>;
                 Accept;
               </button>;
@@ -650,25 +465,11 @@ if (return) {
           {accepted && (;
             <div className='text-emerald-700 dark:text-emerald-400 text-sm'>;
               Accepted. You can copy and paste this into your CMS.;
-<<<<<<< HEAD
             </div>          )}
         </div>;
       )}
     </div>;
   );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            </div>          )}
-        </div>;
-      )}
-<<<<<<< HEAD
-    </div>
-);
-=======
-    </div>;
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={generated}
             onChange={(e) => setGenerated(e.target.value)}
@@ -682,8 +483,6 @@ if (return) {
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <div>;
           <label className='block text - sm font - medium mb - 1'>;
             Additional Notes (optional);
@@ -734,5 +533,3 @@ if (return) {
         </div>)}
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

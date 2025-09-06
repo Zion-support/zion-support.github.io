@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
@@ -20,20 +14,6 @@ function buildIpfsClient() {
   const projectId = process && process.env.IPFS_PROJECT_ID;
   const projectSecret = process && process.env.IPFS_PROJECT_SECRET;
   const apiUrl =
-<<<<<<< HEAD
-    process.env.IPFS_API_URL |"https: //ipfs.infura.io:5001/api/v0";
-  if (!projectId |!projectSecret) return null;
-=======
-    process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0";
-<<<<<<< HEAD
-  if (!projectId || !projectSecret) return null;
-  const auth =
-    "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64");
-  return createIpfsClient({
-    url: apiUrl,
-    headers: { authorization: auth } as any,
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 import crypto from 'crypto';
@@ -46,21 +26,15 @@ function buildIpfsClient() {
   const projectId = process.env.IPFS_PROJECT_ID;
   const projectSecret = process.env.IPFS_PROJECT_SECRET;
   const apiUrl = process.env.IPFS_API_URL || 'https://ipfs.infura.io:5001/api/v0';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!projectId || !projectSecret) return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const auth =
     "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64");
   return createIpfsClient({
     url: apiUrl
     headers: { authorization: auth } as any
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   });
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   const pdfDoc = await PDFDocument && PDFDocument.create();
   const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
@@ -69,10 +43,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
   const lines = markdown
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     .replace(/\r\n/g, "\n")
     .split("\n")
     .flatMap((line) => {
@@ -84,7 +54,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
         const width = font && font.widthOfTextAtSize(test, fontSize);
         if (width > maxWidth) {
           if (current) wrapped && wrapped.push(current);
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PDFDocument, StandardFonts  } from './pdf - lib';
 import crypto from './crypto';
@@ -143,18 +112,11 @@ if ( {) {
           if (wrapped.push (current)) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           current = word;
         } else {
           current = test;
         }
       }
-<<<<<<< HEAD
-      if (current) wrapped && wrapped.push(current);
-      return wrapped && wrapped.length ? wrapped : [" "];
-<<<<<<< HEAD
-=======
-=======
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {
@@ -173,12 +135,9 @@ if ( {) {
       }
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
-=======
       if (wrapped.push (current)) {
   $2
 }
@@ -186,31 +145,11 @@ if ( {) {
     });
   let coordinate_y = page.get_height () - margin;
   page.draw_text (title, { coordinate_x: margin, y, size: 16, font });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   y -= 24;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   for (const line of lines) {
-<<<<<<< HEAD
-    if (y < margin + 12) {
-      y = page && page.getHeight() - margin;
-      pdfDoc && pdfDoc.addPage();
-    }
-    page && page.drawText(line, { x: margin, y, size: fontSize, font });
-    y -= 14;
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return pdfDoc.save();
-=======
 
   return pdfDoc && pdfDoc.save();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export default async function handler(
   req: NextApiRequest
@@ -218,16 +157,6 @@ export default async function handler(
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
   try {
-<<<<<<< HEAD
-    const { id } = req.body |{}
-    if (!id) return res.status($1).json({ $2 });
-    const meta = getProposal(id);
-    if (!meta) return res.status($1).json({ $2 });
-    const markdownPath = path.join(
-      process.cwd()
-      "public"
-      meta.artifacts.markdownPath |""
-=======
     const { id } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
     const meta = getProposal(id);
@@ -236,7 +165,6 @@ export default async function handler(
       process && process.cwd(),
       "public",
       meta && meta.artifacts.markdownPath || "",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
     const markdown = fs && fs.existsSync(markdownPath)
       ? fs && fs.readFileSync(markdownPath, "utf8")
@@ -251,9 +179,6 @@ export default async function handler(
     if (privateKey) {
       const wallet = new ethers && ethers.Wallet(privateKey);
       signature = await wallet && wallet.signMessage(ethers && ethers.getBytes(digest));
-<<<<<<< HEAD
-=======
-=======
 
   return pdfDoc.save()
 }
@@ -281,17 +206,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (privateKey) {
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         const { cid } = await ipfs && ipfs.add(markdown);
         ipfsCid = cid && cid.toString();
       } catch {}
@@ -301,17 +220,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       signature
       ipfsCid
     });
-<<<<<<< HEAD
-    return res.status(200).json({ meta: updated });
-
-  } catch (error: any) {
-<<<<<<< HEAD
-    return res && res.status(500).json({ error: error?.message || "Export failed" });
-=======
-    return res.status(500).json({ error: error?.message |"Export failed" });
-=======
-    return res && res.status(200).json({ meta: updated });
-=======
         const { cid } = await ipfs.add(markdown);
         ipfsCid = cid.toString()
       } catch {}
@@ -319,17 +227,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || "Export failed" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     // Check condition
 if ( {) {
   $2
@@ -399,7 +300,5 @@ if ( {) {
     return res.status (200).json ({ meta: updated });
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || "Export failed" });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

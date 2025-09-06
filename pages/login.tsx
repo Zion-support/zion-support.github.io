@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,207 +21,22 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
->>>>>>> origin/automation-improvements-final
-=======
 import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
-<<<<<<< HEAD
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
-  ArrowRight,
-  CheckCircle,
-  AlertCircle,
-  User,
-  Shield,
-  Globe,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Cloud,
-  Brain,
-  Code,
-  Settings,
-  Wrench,
-  Cog,
-  Activity,
-  PieChart,
-  BarChart,
-  TrendingUp,
-  DollarSign,
-  ShoppingCart,
-  Home,
-  Trash2,
-  Camera,
-  Heart,
-  ClipboardList,
-  TreePine,
-  Droplets,
-  Building,
-  Rocket,
-  Lightbulb,
-  Target,
-  MessageSquare,
-  HelpCircle,
-  Info,
-  XCircle,
-  Plus,
-  Minus,
-  ChevronUp,
-  ChevronRight,
-  ChevronLeft,
-  ChevronDown,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,
-  Pause,
-  Stop,
-  SkipForward,
-  SkipBack,
-  Volume2,
-  VolumeX,
-  Maximize,
-  Minimize,
-  RotateCcw,
-  RotateCw,
-  RefreshCw,
-  Upload,
-  Share,
-  Copy,
-  Edit,
-  Trash,
-  Save,
-  Unlock,
-  Bell,
-  BellOff,
-  Star as StarIcon,
-  Heart as HeartIcon,
-  ThumbsUp,
-  ThumbsDown,
-  MessageCircle,
-  Send,
-  Paperclip,
-  Smile,
-  Frown,
-  Meh,
-  Laugh,
-  Angry,
-  Sad,
-  Surprised,
-  Wink,
-  Kiss,
-  Tongue,
-  Wink2,
-  KissWinkHeart,
-  KissClosedEyes,
-  StuckOutTongue,
-  StuckOutTongueWinkingEye,
-  StuckOutTongueClosedEyes,
-  Disappointed,
-  Worried,
-  Angry2,
-  Rage,
-  Cry,
-  Scream,
-  Confounded,
-  Hugging,
-  Smirk,
-  NoMouth,
-  NeutralFace,
-  Expressionless,
-  Unamused,
-  RollingEyes,
-  Thinking,
-  LyingFace,
-  HandOverMouth,
-  ShushingFace,
-  ExplodingHead,
-  CowboyHatFace,
-  DisguisedFace,
-  Sunglasses,
-  NerdFace,
-  MonocleFace,
-  Confused,
-  WorriedFace,
-  SlightlyFrowningFace,
-  OpenMouth,
-  Hushed,
-  Astonished,
-  Flushed,
-  PleadingFace,
-  FrowningFace,
-  AnguishedFace,
-  FearfulFace,
-  ColdSweat,
-  DisappointedRelieved,
-  CryFace,
-  LoudlyCryingFace,
-  ScreamFace,
-  StuckOutTongueFace,
-  DroolingFace,
-  UnamusedFace,
-  SweatSmile,
-  Sweat,
-  WearyFace,
-  TiredFace,
-  SleepyFace,
-  YawningFace,
-  DizzyFace,
-  ExplodingHeadFace,
-  CowboyHatFace2,
-  DisguisedFace2,
-  SunglassesFace,
-  NerdFace2,
-  MonocleFace2,
-  ConfusedFace,
-  WorriedFace2,
-  SlightlyFrowningFace2,
-  OpenMouthFace,
-  HushedFace,
-  AstonishedFace,
-  FlushedFace,
-  PleadingFace2,
-  FrowningFace2,
-  AnguishedFace2,
-  FearfulFace2,
-  ColdSweatFace,
-  DisappointedRelievedFace,
-  CryFace2,
-  LoudlyCryingFace2,
-  ScreamFace2,
-  StuckOutTongueFace2,
-  DroolingFace2,
-  UnamusedFace2,
-  SweatSmileFace,
-  SweatFace,
-  WearyFace2,
-  TiredFace2,
-  SleepyFace2,
-  YawningFace2,
-<<<<<<< HEAD
-  DizzyFace2,
-<<<<<<< HEAD
-=======
 import {;
   Mail,;
   Lock,;
@@ -402,15 +213,10 @@ import {;
   SleepyFace2,;
   YawningFace2,;
   DizzyFace2,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "lucide-react";
-=======
   DizzyFace2
 } from 'lucide-react';
->>>>>>> origin/automation-improvements-final
 
-<<<<<<< HEAD
-=======
   Mail
   Lock
   Eye
@@ -587,28 +393,17 @@ import {;
   YawningFace2
   DizzyFace2
 } from "lucide-react";
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function LoginPage() {
   const [formData, setFormData] = useState({
     email: ""
     password: ""
-=======
 export default function LoginPage() {;
   const [formData, setFormData] = useState({;
     email: "",;
     password: "",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState("");
-<<<<<<< HEAD
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-<<<<<<< HEAD
-=======
 } from './lucide-react';
 ;
 export default /**
@@ -626,10 +421,8 @@ function LoginPage() {
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
     const { name, value } = e.target;
     setFormData ((prev) => ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       ...prev,
       [name]: value,
-=======
   const [error, setError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -637,16 +430,12 @@ function LoginPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
->>>>>>> origin/automation-improvements-final
-=======
       ...prev
       [name]: value
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-=======
 
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e && e.target;
@@ -654,25 +443,7 @@ function LoginPage() {
       ...prev,;
       [name]: value,;
     }));
-<<<<<<< HEAD
-  };
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsLoading(true);
-<<<<<<< HEAD
-    setError("");
-<<<<<<< HEAD
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      // For demo purposes, accept any email/password
-      if (formData.email && formData.password) {
-        // Redirect to dashboard or home page
-        window.location.href = "/";
-      } else {
-=======
 
     try {;
       // Simulate API call;
@@ -683,13 +454,10 @@ function LoginPage() {
         // Redirect to dashboard or home page;
         window && window.location.href = "/";
       } else {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setError("Please fill in all fields");
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
-<<<<<<< HEAD
-=======
     setError('');
 
     try {
@@ -705,27 +473,13 @@ function LoginPage() {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
->>>>>>> origin/automation-improvements-final
     } finally {
-=======
     } finally {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsLoading(false);
     }
   }
   return (
-<<<<<<< HEAD
-    <Layout>
-      <Head>
-        <title>Login - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta
-          name="description"
-          content="Sign in to your Zion Tech Group account to access your dashboard and services."
-        />
-=======
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
->>>>>>> origin/automation-improvements-final
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -742,8 +496,6 @@ function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-<<<<<<< HEAD
-=======
     <Layout>;
       <Head>;
         <title>Login - Zion Tech Group</title>;
@@ -767,22 +519,10 @@ function LoginPage() {
               Sign in to your account;
             </h2>;
             <p className="mt-2 text-sm text-gray-600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               Or{" "}
-=======
               Or{' '}
->>>>>>> origin/automation-improvements-final
               <Link
                 href="/contact"
-<<<<<<< HEAD
-                className="font-medium text-blue-600 hover:text-blue-500"
-              >
-                contact us for access
-              </Link>
-            </p>
-          </motion.div>
-          <motion.div
-=======
                 className="font-medium text-blue-600 hover:text-blue-500">;
                 contact us for access;
               </Link>;
@@ -790,7 +530,6 @@ function LoginPage() {
           </motion && motion.div>;
 
           <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -806,23 +545,13 @@ function LoginPage() {
                   {error}
                 </motion && motion.div>;
               )}
-<<<<<<< HEAD
-              <div>
-<<<<<<< HEAD
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-=======
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> origin/automation-improvements-final
                   Email address
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
-=======
 
               <div>;
                 <label
@@ -834,7 +563,6 @@ function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
                     <Mail className="h-5 w-5 text-gray-400" />;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="email"
                     name="email"
@@ -845,26 +573,13 @@ function LoginPage() {
                     onChange={handleInputChange}
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
-<<<<<<< HEAD
-                  />
-                </div>
-              </div>
-              <div>
-<<<<<<< HEAD
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-=======
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> origin/automation-improvements-final
                   Password
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
-=======
                   />;
                 </div>;
               </div>;
@@ -879,7 +594,6 @@ function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
                     <Lock className="h-5 w-5 text-gray-400" />;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="password"
                     name="password"
@@ -901,35 +615,18 @@ function LoginPage() {
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
-<<<<<<< HEAD
-                  </button>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-=======
                   </button>;
                 </div>;
               </div>;
 
               <div className="flex items-center justify-between">;
                 <div className="flex items-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-<<<<<<< HEAD
-                  />
-<<<<<<< HEAD
-                  <label
-                    htmlFor="remember-me"
-                    className="ml-2 block text-sm text-gray-900"
-                  >
-=======
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
->>>>>>> origin/automation-improvements-final
                     Remember me
                   </label>
                 </div>
@@ -943,7 +640,6 @@ function LoginPage() {
                 </div>
               </div>
               <div>
-=======
                   />;
                   <label
                     htmlFor="remember-me"
@@ -956,7 +652,6 @@ function LoginPage() {
                   <Link
                     href="/forgot-password"
                     className="font-medium text-blue-600 hover:text-blue-500">;
-=======
   }
 ;
   const handle_submit = async (e: React.FormEvent) => {
@@ -1112,15 +807,10 @@ if ( {) {
                     href="/forgot - password";
                     className="font - medium text - blue - 600 hover:text - blue - 500";
                   >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Forgot your password?;
                   </Link>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-
-              <div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <button
                   type="submit"
                   disabled={isLoading}
@@ -1136,23 +826,7 @@ if ( {) {
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />;
                     </div>;
                   )}
-<<<<<<< HEAD
-                </button>
-              </div>
-            </form>
-            <div className="mt-6">
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-gray-300" />
-                </div>
-                <div className="relative flex justify-center text-sm">
-<<<<<<< HEAD
-                  <span className="px-2 bg-white text-gray-500">
-                    Or continue with
-                  </span>
-=======
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
->>>>>>> origin/automation-improvements-final
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -1174,8 +848,6 @@ if ( {) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
-<<<<<<< HEAD
-=======
                 </button>;
               </div>;
             </form>;
@@ -1212,11 +884,8 @@ if ( {) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
             <p className="text-sm text-gray-600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               Don't have an account?{" "}
-=======
               Don't have an account?{' '}
->>>>>>> origin/automation-improvements-final
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;
@@ -1228,7 +897,6 @@ if ( {) {
       </div>;
     </Layout>;
   );
-=======
               <div>;
                 <button;
                   type="submit";
@@ -1289,5 +957,4 @@ if ( {) {
         </div>;
       </div>;
     </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

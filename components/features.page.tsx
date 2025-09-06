@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
-export default function FeaturesPage() {
-=======
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 
 export default function FeaturesPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold'>Features</h1>;
       <div className='mt-6 grid md:grid-cols-3 gap-6'>;
@@ -44,11 +33,6 @@ export default function FeaturesPage() {;
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>;
       </div>;
     </EnhancedLayout>;
-<<<<<<< HEAD
-=======
-  );
-}
-=======
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold">Features</h1>
       <div className="mt-6 grid md: grid-cols-3 gap-6">
@@ -69,11 +53,8 @@ export default function FeaturesPage() {;
         </div>
       </div>
     </EnhancedLayout>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 export default /**
@@ -112,4 +93,3 @@ function FeaturesPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

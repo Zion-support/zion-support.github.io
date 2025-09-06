@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +20,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
@@ -57,18 +52,11 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:;
       return <Bell className={cn(className, "text-gray-500")} />;
   }
-<<<<<<< HEAD
-}
-const getNotificationTypeBadge = (type: NotificationType) => {
-  switch (type) {
-    case 'message':
-=======
 };
 
 const getNotificationTypeBadge = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return <Badge className="bg-blue-500">Message</Badge>;
     case 'quote_request':;
       return <Badge className="bg-purple-500">Quote Request</Badge>;
@@ -78,14 +66,6 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
       return <Badge className="bg-zion-purple">Hire Request</Badge>;
     case 'onboarding':;
       return <Badge className="bg-zion-cyan">Onboarding</Badge>;
-<<<<<<< HEAD
-    case 'system':
-      return <Badge className="bg-yellow-500">System</Badge>
-    default:
-      return <Badge variant="outline">Notification</Badge>
-  }
-}
-=======
 import React, { useState } from 'react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -138,7 +118,6 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 const NotificationCard: React.FC<{
   notification: {
     id: string
@@ -148,22 +127,6 @@ const NotificationCard: React.FC<{
     read: boolean
     created_at: string
     action_url?: string;
-<<<<<<< HEAD
-    action_text?: string
-  }
-  onMarkAsRead: (id: string) => Promise<void>
-  onDismiss: (id: string) => Promise<void>
-}> = ({ notification, onMarkAsRead, onDismiss }) => {
-  const navigate = useNavigate();
-  const handleAction = () => {
-    if (!notification.read) {
-      onMarkAsRead(notification.id)
-    }
-    if (notification.action_url) {
-      navigate(notification.action_url)
-    }
-  }
-=======
     case 'system':;
       return <Badge className="bg-yellow-500">System</Badge>,;
     default:;
@@ -197,7 +160,6 @@ const NotificationCard: React.FC<{;
     }
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -219,18 +181,11 @@ const NotificationCard: React.FC<{;
                 {!notification && notification.read && (;
                   <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>;
                 )}
-<<<<<<< HEAD
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              {!notification.read && (
-=======
               </div>;
             </div>;
 
             <div className="flex items-center gap-2">;
               {!notification && notification.read && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   variant="ghost"
                   size="sm"
@@ -245,17 +200,6 @@ const NotificationCard: React.FC<{;
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
-<<<<<<< HEAD
-                onClick={() => onDismiss(notification.id)}
-              >
-                <Trash2 className="h-4 w-4 text-red-400" />
-                <span className="sr-only">Dismiss</span>
-              </Button>
-            </div>
-          </div>
-          <p className="text-zion-slate-light mb-3">{notification.message}</p>
-          {notification.action_url && notification.action_text && (
-=======
                 onClick={() => onDismiss(notification && notification.id)}
               >;
                 <Trash2 className="h-4 w-4 text-red-400" />;
@@ -267,7 +211,6 @@ const NotificationCard: React.FC<{;
           <p className="text-zion-slate-light mb-3">{notification && notification.message}</p>;
 
           {notification && notification.action_url && notification && notification.action_text && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               variant="outline"
               size="sm"
@@ -277,15 +220,6 @@ const NotificationCard: React.FC<{;
               <ChevronRight className="ml-1 h-4 w-4" />;
             </Button>;
           )}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </div>
-  )
-}
-export default function NotificationsPage() {
-  const {
-=======
         </div>;
       </div>;
     </div>;
@@ -294,10 +228,8 @@ export default function NotificationsPage() {
 
 export default function NotificationsPage() {;
   const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     filteredNotifications;
     unreadCount;
-=======
     action_text?: string;
   }
   onMarkAsRead: (id: string) => Promise < void>,
@@ -386,37 +318,11 @@ function NotificationsPage() {
   const {
     filtered_notifications;
     unread_count;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     markAsRead;
     markAllAsRead;
     dismiss_notification;
     loading;
     filter;
-<<<<<<< HEAD
-    setFilter;
-  } = useNotifications() as NotificationContextType;
-
-  return (
-<<<<<<< HEAD
-    <>
-      <SEO
-        title="Notifications | Zion AI Marketplace"
-        description="View and manage your notifications on the Zion AI Marketplace."
-      />
-      <AppHeader />
-      <main className="container mx-auto px-4 py-8 min-h-screen">
-        <div className="flex justify-between items-center mb-6">
-          <div>
-            <h1 className="text-3xl font-bold flex items-center">
-              <Bell className="mr-3 h-7 w-7" /> Notifications
-              {unreadCount > 0 && (
-                <Badge className="ml-3 bg-zion-cyan">{unreadCount} unread</Badge>
-              )}
-            </h1>
-            <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>
-          </div>
-          {unreadCount > 0 && (
-=======
     <>;
       <SEO
         title="Notifications | Zion AI Marketplace" 
@@ -436,7 +342,6 @@ function NotificationsPage() {
           </div>;
 
           {unreadCount > 0 && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               variant="outline"
               onClick={() => markAllAsRead()}
@@ -445,30 +350,6 @@ function NotificationsPage() {
               Mark all as read;
             </Button>;
           )}
-<<<<<<< HEAD
-        </div>
-        <div className="mb-8">
-          <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value as any)}>
-            <TabsList className="grid w-full max-w-md grid-cols-5">
-              <TabsTrigger value="all">All</TabsTrigger>
-              <TabsTrigger value="unread">Unread</TabsTrigger>
-              <TabsTrigger value="onboarding">Onboarding</TabsTrigger>
-              <TabsTrigger value="messages">Messages</TabsTrigger>
-              <TabsTrigger value="system">System</TabsTrigger>
-            </TabsList>
-            <TabsContent value={filter} className="mt-6">
-              {loading ? (
-                <div className="space-y-4">
-                  <Skeleton className="h-24 w-full rounded-lg" />
-                  <Skeleton className="h-24 w-full rounded-lg" />
-                  <Skeleton className="h-24 w-full rounded-lg" />
-                </div>
-              ) : filteredNotifications.length === 0 ? (
-                <div className="text-center py-12 bg-muted rounded-lg">
-                  <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />
-                  <h3 className="text-xl font-medium">No notifications found</h3>
-                  <p className="text-muted-foreground mt-1">
-=======
         </div>;
 
         <div className="mb-8">;
@@ -492,7 +373,6 @@ function NotificationsPage() {
                   <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />;
                   <h3 className="text-xl font-medium">No notifications found</h3>;
                   <p className="text-muted-foreground mt-1">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {filter === 'all' ? "You don't have any notifications yet" : `You don't have any ${filter} notifications`}
                   </p>;
                 </div>;
@@ -508,17 +388,6 @@ function NotificationsPage() {
                   ))}
                 </div>;
               )}
-<<<<<<< HEAD
-            </TabsContent>
-          </Tabs>
-        </div>
-      </main>
-      <Footer />
-    </>
-  )
-}
-=======
-=======
     set_filter;
   } = use_notifications () as NotificationContextType;
 ;
@@ -580,18 +449,10 @@ function NotificationsPage() {
                       on_dismiss={dismiss_notification}
                     />))}
                 </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </TabsContent>;
           </Tabs>;
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

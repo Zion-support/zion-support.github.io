@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-export default function SitemapPage() {
-<<<<<<< HEAD
-
-  const links = [
-    { name: "Home", href: "/" }
-    { name: "Services", href: "/services" }
-    {
-      name: "All Services Showcase"
-      href: "/comprehensive-services-showcase-2025"
-    }
-    { name: "Pricing", href: "/pricing" }
-    { name: "Market Pricing", href: "/market-pricing" }
-    { name: "Services Advertising", href: "/services-advertising" }
-    { name: "Resources", href: "/resources" }
-    { name: "Support", href: "/support" }
-    { name: "Contact", href: "/contact" }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -62,7 +38,6 @@ export default function SitemapPage() {;
     { name: "Resources", href: "/resources" },;
     { name: "Support", href: "/support" },;
     { name: "Contact", href: "/contact" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -92,21 +67,6 @@ export default function SitemapPage() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-  const links = [
-    { name: "Home", href: "/" }
-    { name: "Services", href: "/services" }
-    {
-      name: "All Services Showcase"
-      href: "/comprehensive-services-showcase-2025"
-    }
-    { name: "Pricing", href: "/pricing" }
-    { name: "Market Pricing", href: "/market-pricing" }
-    { name: "Services Advertising", href: "/services-advertising" }
-    { name: "Resources", href: "/resources" }
-    { name: "Support", href: "/support" }
-    { name: "Contact", href: "/contact" }
-=======
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -120,7 +80,6 @@ export default function SitemapPage() {;
     { name: "Resources", href: "/resources" },;
     { name: "Support", href: "/support" },;
     { name: "Contact", href: "/contact" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -150,11 +109,6 @@ export default function SitemapPage() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-}
-
-=======
 	const links = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Services', href: '/services' },
@@ -183,10 +137,7 @@ export default function SitemapPage() {;
 			</div>
 		</div>
 	);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -276,4 +227,3 @@ function SitemapPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

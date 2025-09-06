@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
-export default function EnterpriseITPage() {
-  const features = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation']
-  const solutions = [
-    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' }
-    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
-    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' }
-    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }]
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'];
 
   const solutions = [
@@ -25,10 +5,6 @@ export default function EnterpriseITPage() {
     { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
     { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
     { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
       <Head>
@@ -75,14 +51,7 @@ export default function EnterpriseITPage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -143,5 +112,3 @@ function EnterpriseITPage() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -16,21 +10,6 @@ const AiModelDevelopmentChat: NextPage = () => {;
           name="description"
           content="AiModelDevelopmentChat service"
         />{" "}
-<<<<<<< HEAD
-      </Head>;
-
-      <main>;
-        <h1>AiModelDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>;
-  );
-};
-=======
-<<<<<<< HEAD
-      </Head>
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -42,16 +21,13 @@ const AiModelDevelopmentChat: NextPage = () => {
         <meta name="description" content="AiModelDevelopmentChat service" />
       </Head>
       
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <main>
         <h1>AiModelDevelopmentChat</h1>
         <p>Service details coming soon...</p>
         <a href="/services">Back to Services</a>
       </main>
     </div>
-=======
       </Head>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <main>;
         <h1>AiModelDevelopmentChat</h1>;
@@ -59,15 +35,9 @@ const AiModelDevelopmentChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default AiModelDevelopmentChat;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -91,4 +61,3 @@ const AiModelDevelopmentChat: NextPage = () => {
 ;
 export default AiModelDevelopmentChat;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

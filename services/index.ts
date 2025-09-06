@@ -4,50 +4,34 @@ export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';
-<<<<<<< HEAD
-// Export service types and interfaces
-=======
 ;
 // Export service types and interfaces;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type {
   ShortUrl;
   UrlAnalytics;
   ClickEvent;
   CreateShortUrlRequest;
 } from './urlShortenerService';
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type {
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;
 } from './passwordGeneratorService';
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type {
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate;
 } from './qrCodeService';
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type {
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
   FileInfo;
 } from './fileConverterService';
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type {
   TextAnalysisResult;
   BasicTextStats;
@@ -58,31 +42,6 @@ export type {
   EntityExtraction;
   TextSummary;
 } from './textAnalysisService';
-<<<<<<< HEAD
-// Service categories for easy discovery
-
-export const SERVICE_CATEGORIES = {
-  UTILITIES: {
-    name: 'Utility Tools';
-    description: 'Essential tools for everyday tasks'
-    services: ['urlShortenerpasswordGeneratorqrCodeGenerator']
-  }
-  MEDIA: {
-    name: 'Media & Files';
-    description: 'File conversion and media processing tools'
-    services: ['fileConverter']
-  }
-  ANALYSIS: {
-    name: 'Analysis & Insights';
-    description: 'Text analysis and content insights'
-    services: ['textAnalysis']
-  }
-} as const;
-// Service metadata for the application
-export const SERVICES_METADATA = {
-  urlShortener: {
-    name: 'URL Shortener'
-=======
 ;
 // Service categories for easy discovery;
 export const SERVICE_CATEGORIES = {
@@ -107,24 +66,16 @@ export const SERVICE_CATEGORIES = {
 export const SERVICES_METADATA = {
   url_shortener: {
     name: 'URL Shortener',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
     category: 'UTILITIES';
     features: [;
       'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation';
     ];
-<<<<<<< HEAD
-    pricing: 'Free'
-    apiEndpoint: '/api/url-shortener'
-  }
-  passwordGenerator: {
-=======
     pricing: 'Free',
     api_endpoint: '/api / url - shortener';
   }
   password_generator: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'Password Generator';
     description: 'Generate secure passwords with strength analysis';
     icon: '🔐';
@@ -132,13 +83,8 @@ export const SERVICES_METADATA = {
     features: [;
       'Multiple generation modes_strength analysis_custom character sets_password history_security recommendations';
     ];
-<<<<<<< HEAD
-    pricing: 'Free'
-    apiEndpoint: '/api/password-generator'
-=======
     pricing: 'Free',
     api_endpoint: '/api / password - generator';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   qrCodeGenerator: {
     name: 'QR Code Generator';
@@ -148,17 +94,10 @@ export const SERVICES_METADATA = {
     features: [;
       'Multiple QR code types_custom styling_logo integration_error correction_template library';
     ];
-<<<<<<< HEAD
-    pricing: 'Free'
-    apiEndpoint: '/api/qr-code-generator'
-  }
-  fileConverter: {
-=======
     pricing: 'Free',
     api_endpoint: '/api / qr - code - generator';
   }
   file_converter: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'File Converter';
     description: 'Convert files between different formats';
     icon: '🔄';
@@ -166,21 +105,14 @@ export const SERVICES_METADATA = {
     features: [;
       'Multiple file formats_batch conversion_quality settings_metadata preservation_cloud processing';
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-    pricing: 'Free (Basic) / $9.99/month (Pro)'
-=======
     pricing: 'Free (Basic) / $9 && 9.99/month (Pro)',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     apiEndpoint: '/api/file-converter'
   }
   textAnalysis: {
-=======
     pricing: 'Free (Basic) / $9.99 / month (Pro)',
     api_endpoint: '/api / file - converter';
   }
   text_analysis: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'Text Analysis';
     description: 'Analyze text for insights and optimization';
     icon: '📊';
@@ -188,31 +120,18 @@ export const SERVICES_METADATA = {
     features: [;
       'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection';
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-    pricing: 'Free (Basic) / $19.99/month (Pro)'
-=======
     pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
 // Service availability and status
 export const getServiceStatus = () => {
   return {
-<<<<<<< HEAD
-    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-=======
     urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 }
 // Service usage statistics
@@ -231,7 +150,6 @@ export const getServiceStats = () => {
   }
 }
 
-=======
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
   }
@@ -264,4 +182,3 @@ export const getServiceStats = () =>: any {
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

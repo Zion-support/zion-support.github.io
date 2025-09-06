@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
-import {JobData, MatchResult} from "./types.ts";
-import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
-// Initialize the Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-=======
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {JobData, MatchResult} from "./types ;
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
@@ -16,7 +5,6 @@ import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
 // Initialize the Supabase client
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
 const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 /**
  * Main function to process job-talent matching
@@ -27,17 +15,6 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export async function processJobMatching(job: JobData, talents: any[]): Promise<MatchResult[]> {
   try {
     // Normalize job skills and generate embeddings via OpenAI
-<<<<<<< HEAD
-    const jobSkillsNormalized = await normalizeSkillsWithAI(job.skills);
-    // Prepare job details for matching prompt
-    const jobDetails = {
-      title: job.title;
-      description: job.description;
-      category: job.category;
-      skills: jobSkillsNormalized
-      budget: job.budget
-    }
-=======
     const jobSkillsNormalized = await normalizeSkillsWithAI(job && job.skills);
     
     // Prepare job details for matching prompt
@@ -49,7 +26,6 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
       budget: job && job.budget
     };
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Use OpenAI to find best matches
     const bestMatches = await findBestMatches(jobDetails, talents);
     return bestMatches
@@ -69,47 +45,27 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
       .from("job_talent_matches")
       .insert({
         job_id: jobId;
-<<<<<<< HEAD
-        talent_id: match.talentId;
-        match_score: match.score;
-        matched_skills: match.matchedSkills
-        reason: match.reason
-=======
         talent_id: match && match.talentId;
         match_score: match && match.score;
         matched_skills: match && match.matchedSkills,
         reason: match && match.reason
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     if (matchError) {
       console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)
     } else {
       // Create notifications for each matched talent
-<<<<<<< HEAD
-      await supabase.rpc('create_notification', {
-        _user_id: match.talentId;
-        _title: "New Job Match"
-=======
       await supabase && supabase.rpc('create_notification', {
         _user_id: match && match.talentId;
         _title: "New Job Match",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         _message: `A new job "${jobTitle}" matches your skills. Check it out!`;
         _type: "job_match"
         _related_id: jobId
       })
     }
   });
-<<<<<<< HEAD
-
-  await Promise.all(matchInsertPromises)
-}
-=======
   
   await Promise && Promise.all(matchInsertPromises)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
 import { JobData, MatchResult } from './types.ts';
 import { normalizeSkillsWithAI, findBestMatches } from './ai - matcher.ts';
@@ -182,4 +138,3 @@ if ( {) {
 ;
   await Promise.all (matchInsertPromises);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

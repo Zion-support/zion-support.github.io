@@ -23,31 +23,11 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export type PaginationProps = {;
   page: number;
   page_size: number;
   total: number;
-<<<<<<< HEAD
-  onChange: (nextPage: number) => void;
-<<<<<<< HEAD
-}
-export default function Pagination({
-  page
-  pageSize
-  total
-  onChange
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number
-  pageSize: number
-  total: number
-=======
-export type PaginationProps = {
-=======
   on_change: (next_page: number) => void;
 }
 ;
@@ -55,12 +35,9 @@ export default /**
  * Pagination - Function description
  */
 function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / page_size));export type PaginationProps = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   page: number,
   page_size: number,
   total: number,
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   onChange: (nextPage: number) => void
 }
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
@@ -68,8 +45,6 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
-<<<<<<< HEAD
-=======
 };
 
 export default function Pagination(): any ({;
@@ -90,7 +65,6 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
   const canNext = page < totalPages;
 
   const goTo = (p: number) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (p >= 1 && p <= totalPages) onChange(p);
   }
   return (
@@ -115,15 +89,8 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
       </EnhancedButton>;
     </div>;
   );
-<<<<<<< HEAD
-}  };
-=======
-}  }
-=======
     if (p >= 1 && p <= totalPages) onChange(p)
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
@@ -132,25 +99,12 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
       </EnhancedButton>;
       <div className="text-sm">;
         Page {page} of {totalPages}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </div>
-      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
-        Next
-      </EnhancedButton>
-    </div>
-<<<<<<< HEAD
-);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       </div>;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>;
         Next;
       </EnhancedButton>;
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -159,23 +113,6 @@ interface PaginationProps {;
   baseUrl: string;
   className?: string;
 }
-<<<<<<< HEAD
-const Pagination: React.FC<PaginationProps> = ({currentPage
-  totalPages
-  baseUrl
-  className = '' ;
-}) => {
-  const getPageNumbers = () => {const pages = [];
-=======
-
-const Pagination: React.FC<PaginationProps> = ({ ;
-  currentPage,;
-  totalPages,;
-  baseUrl,;
-  className = '' ;
-}) => {;
-  const getPageNumbers = () => {;
-=======
   on_change: (next_page: number) => void;
 }
 ;
@@ -243,35 +180,17 @@ const Pagination: React.FC < PaginationProps> = ({
   class_name = '' ;
 }) => {
   const getPageNumbers = () =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const pages = [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const maxVisiblePages = 5;
-<<<<<<< HEAD
-    if (totalPages <= maxVisiblePages) {;
-      for (let i = 1; i <= totalPages; i++) {;
-        pages && pages.push(i);
-}
-<<<<<<< HEAD
-    } else {const startPage = Math.max(1, currentPage - 2);
-      const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-=======
     } else {;
       const startPage = Math && Math.max(1, currentPage - 2);
       const endPage = Math && Math.min(totalPages, startPage + maxVisiblePages - 1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (startPage > 1) {;
         pages && pages.push(1);
         if (startPage > 2) {;
           pages && pages.push('...');
 }
       }
-<<<<<<< HEAD
-      for (let i = startPage; i <= endPage; i++) {pages.push(i);
-}
-      if (endPage < totalPages) {if (endPage < totalPages - 1) {;
-          pages.push('...');
-=======
 
       for (let i = startPage; i <= endPage; i++) {;
         pages && pages.push(i);
@@ -280,7 +199,6 @@ const Pagination: React.FC < PaginationProps> = ({
       if (endPage < totalPages) {;
         if (endPage < totalPages - 1) {;
           pages && pages.push('...');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
         pages && pages.push(totalPages);
 }
@@ -306,14 +224,9 @@ const Pagination: React.FC < PaginationProps> = ({
       )}
       {/* Page Numbers */}
       <div className="flex items-center space-x-1">;
-<<<<<<< HEAD
-        {getPageNumbers().map((page, index) => {if (page === '...') {;
-            return (;
-=======
         {getPageNumbers().map((page, index) => {;
           if (page === '...') {;
             return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <span key={index} className="px-3 py-2 text-sm text-gray-500">;
                 ...;
               </span>;
@@ -325,19 +238,11 @@ const Pagination: React.FC < PaginationProps> = ({
             <Link
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
-<<<<<<< HEAD
-              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${isCurrentPage;
-                  ? 'bg-blue-600 text-white border border-blue-600';
-                  : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900';
-}`}
-            >;
-=======
               className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 isCurrentPage
                   ? 'bg-blue-600 text-white border border-blue-600'
                   : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900'
 }`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {pageNumber}
             </Link>;
           );
@@ -348,7 +253,6 @@ const Pagination: React.FC < PaginationProps> = ({
         <Link
           href={`${baseUrl}?page=${currentPage + 1}`}
           className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
-=======
     // Check condition
 if ( {) {
   $2
@@ -441,35 +345,19 @@ if ( {) {
         <Link;
           href={`${base_url}?page=${current_page + 1}`}
           className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray - 700 transition - colors">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Next;
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </Link>) : (
         <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
           Next;
-<<<<<<< HEAD
-          <ChevronRight className="w-4 h-4 ml-1" />;
-        </span>;
-      )}
-    </nav>;
-  );
-<<<<<<< HEAD
-};
-export default Pagination;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export default Pagination;
 }
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
 export default Pagination;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -22,18 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function CommunityPage() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function CommunityPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -69,7 +59,6 @@ export default function CommunityPage() {;
                 className='text-purple-400'
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
-=======
 import Head from 'next / head';
 export default /**
  * CommunityPage - Function description
@@ -111,22 +100,10 @@ function CommunityPage() {
                 href='mailto: kleber@ziontechgroup.com';
               >;
                 kleber@ziontechgroup.com;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </a>;
               .;
             </p>;
           </div>;
-<<<<<<< HEAD
-          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>;
-            <h2 className='text-white text-xl font-semibold mb-2'>Follow Us</h2>;
-            <ul className='text-slate-300 space-y-1'>;
-              <li>;
-                <a
-                  className='text-cyan-400'
-                  href='https://linkedin && linkedin.com/company/ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'>;
-=======
           <div className='p - 6 rounded - 2xl bg - white / 5 border border - white / 10'>;
             <h2 className='text - white text - xl font - semibold mb - 2'>Follow Us</h2>;
             <ul className='text - slate - 300 space - y-1'>;
@@ -137,74 +114,36 @@ function CommunityPage() {
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   LinkedIn;
                 </a>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <a
-                  className='text-cyan-400'
-                  href='https://github && github.com/Zion-Holdings'
-                  target='_blank'
-                  rel='noopener noreferrer'>;
-=======
                 <a;
                   className='text - cyan - 400';
                   href='https://github.com / Zion - Holdings';
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   GitHub;
                 </a>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <a
-                  className='text-cyan-400'
-                  href='https://instagram && instagram.com/ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'>;
-=======
                 <a;
                   className='text - cyan - 400';
                   href='https://instagram.com / ziontechgroup';
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Instagram;
                 </a>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <a
-                  className='text-cyan-400'
-                  href='https://youtube && youtube.com/@ziontechgroup'
-                  target='_blank'
-<<<<<<< HEAD
-                  rel='noopener noreferrer'
-                >
-                  YouTube
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-=======
-                  rel='noopener noreferrer'>;
-=======
                 <a;
                   className='text - cyan - 400';
                   href='https://youtube.com/@ziontechgroup';
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   YouTube;
                 </a>;
               </li>;
@@ -212,13 +151,6 @@ function CommunityPage() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -250,9 +182,5 @@ export default function CommunityPage() {
 		</div>
 	)
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

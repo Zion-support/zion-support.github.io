@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -1511,18 +1505,6 @@ export default function Services() {;
 			</section>;
 
 			{/* CTA Section */}
-<<<<<<< HEAD:pages.disabled_full/services.tsx
-			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32'>
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
-					<div className='mx-auto max-w-2xl text-center'>
-						<h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-							Ready to get started?
-						</h2>
-						<p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>
-							Let&aposs discuss your project requirements and how we can help you achieve your goals.
-						</p>
-						<div className='mt-10 flex items-center justify-center gap-x-6'>
-=======
 			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32'>;
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
 					<div className='mx-auto max-w-2xl text-center'>;
@@ -1533,7 +1515,6 @@ export default function Services() {;
 							Let&aposs discuss your project requirements and how we can help you achieve your goals.;
 						</p>;
 						<div className='mt-10 flex items-center justify-center gap-x-6'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled_full/services.tsx
 							<Link
 								href='/contact'
 								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105'
@@ -1544,20 +1525,6 @@ export default function Services() {;
 							<Link
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
-<<<<<<< HEAD:pages.disabled_full/services.tsx
-								aria-label='Back to homepage'
-							>
-								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
-							</Link>
-						</div>
-					</div>
-				</div>
-			</section>
-		</PageTransition>
-		</Layout>
-	);
-<<<<<<< HEAD
-=======
 								aria-label='Back to homepage'>;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
 							</Link>;
@@ -1568,8 +1535,4 @@ export default function Services() {;
 		</PageTransition>;
 		</Layout>;
 	),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled_full/services.tsx
 }
->>>>>>> origin/chore/merge-open-prs
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

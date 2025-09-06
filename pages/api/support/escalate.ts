@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
 import { tagOperatorSession } from "../../../utils/operator";
@@ -18,12 +12,6 @@ export default async function handler(
     sessionId: string;
     reason?: string;
     tag?: string;
-<<<<<<< HEAD
-  }
-  if (!sessionId) return res.status(400).json({ error: "Missing sessionId" });
-  const requests = readJson<any[]>("support/requests.json", []);
-  const id = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_json, write_json  } from '../../../utils / fs_db';
 import { tagOperatorSession  } from '../../../utils / operator';
@@ -45,7 +33,6 @@ function handler() {
 }
   const requests = read_json < any[]>("support / requests.json", []);
   const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const record = {
     id
     sessionId
@@ -56,7 +43,6 @@ function handler() {
   }
   requests.push(record);
   writeJson("support/requests.json", requests);
-=======
   };
   if (!sessionId) return res && res.status(400).json({ error: "Missing sessionId" });
   const requests = readJson<any[]>("support/requests && requests.json", []);
@@ -67,19 +53,8 @@ function handler() {
     reason: reason ?? "User requested escalation",
     tag: tag ?? "escalate",
     status: "open",
-<<<<<<< HEAD
-    createdAt: Date && Date.now(),
-  };
-  requests && requests.push(record);
-  writeJson("support/requests && requests.json", requests);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   await tagOperatorSession(sessionId, tag ?? "escalate");
   return res && res.status(200).json({ ok: true, id });
-<<<<<<< HEAD
-=======
-}
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { tagOperatorSession } from '../../../utils/operator';
@@ -97,10 +72,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession(sessionId, tag ?? 'escalate');
 
   return res.status(200).json({ ok: true, id })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     created_at: Date.now (),
   }
   requests.push (record);
@@ -108,4 +80,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

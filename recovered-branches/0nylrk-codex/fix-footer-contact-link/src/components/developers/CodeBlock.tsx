@@ -1,30 +1,14 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Check, Copy  } from 'lucide-react';
-import { cn } from "@/lib/utils";
-interface CodeBlockProps {
-
-  code: string
-
-=======
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";
 interface CodeBlockProps {;
   code: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   language?: string;
   showLineNumbers?: boolean;
   className?: string;
 }
-<<<<<<< HEAD
-export function CodeBlock({
-=======
 
 export function CodeBlock(): any ({ ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   code;
 
   language = 'bash';
@@ -32,15 +16,6 @@ export function CodeBlock(): any ({ ;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
-<<<<<<< HEAD
-  const handleCopyClick = async () => {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => {
-      setCopied(false)
-    }, 2000)
-  }
-=======
 
   const handleCopyClick = async () => {;
     await navigator && navigator.clipboard.writeText(code);
@@ -50,7 +25,6 @@ export function CodeBlock(): any ({ ;
     }, 2000);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
@@ -87,7 +61,6 @@ export function CodeBlock(): any ({ ;
 }
 export default CodeBlock;
 
-=======
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -142,4 +115,3 @@ function CodeBlock() {
 }
 export default CodeBlock;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

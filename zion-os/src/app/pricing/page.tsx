@@ -1,226 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import { useState } from "react";
-interface PricingTier {name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  cta: string;
-  ctaLink: string;
-}
-interface ServicePricing {serviceName: string;
-  category: string;
-  description: string;
-  tiers: PricingTier[];
-  features: string[];
-  benefits: string[];
-}
-const servicePricing: ServicePricing[] = [;
-  {serviceName: "Zion OS Platform";
-    category: "Core Platform";
-    description: "Unified deployment protocol for sovereign AI-powered digital economies";
-    features: ["Instance deployment", "Feature toggles", "Multi-vertical support", "Governance systems", "API management", "Multi-region support"];
-    benefits: ["Reduce deployment time from months to minutes", "Built-in compliance and governance", "Scalable architecture"];
-    tiers: [;
-      {;
-        name: "Starter";
-        price: "$99";
-        period: "/month";
-        description: "Perfect for small businesses and startups";
-        features: ["Up to 3 instances", "Basic feature set", "Community support", "Standard deployment", "Basic analytics"];
-        cta: "Start Free Trial";
-        ctaLink: "/multiverse/launch";
-      }
-      {name: "Professional";
-        price: "$299";
-        period: "/month";
-        description: "Ideal for growing businesses";
-        features: ["Up to 10 instances", "Advanced features", "Priority support", "Custom domains", "Advanced analytics", "API access"];
-        popular: true;
-        cta: "Get Started";
-        ctaLink: "/multiverse/launch";
-      }
-      {name: "Enterprise";
-        price: "$999";
-        period: "/month";
-        description: "For large organizations with complex needs";
-        features: ["Unlimited instances", "All features", "24/7 support", "Custom integrations", "White-label options", "Dedicated account manager"];
-        cta: "Contact Sales";
-        ctaLink: "mailto:kleber@ziontechgroup.com";
-      }
-    ];
-  }
-  {serviceName: "ZionGPT Core";
-    category: "AI Services";
-    description: "Advanced AI language model optimized for business applications";
-    features: ["Custom fine-tuning", "Multi-language support", "Industry-specific models", "API access", "Enterprise security", "Real-time processing"];
-    benefits: ["Improve customer service efficiency by 60%", "Reduce content creation time", "Ensure compliance accuracy"];
-    tiers: [;
-      {;
-        name: "Starter";
-        price: "$49";
-        period: "/month";
-        description: "For small teams and individual users";
-        features: ["100 API calls/day", "Basic models", "Email support", "Standard response time", "Basic documentation"];
-        cta: "Start Free Trial";
-        ctaLink: "/services/zion-gpt";
-      }
-      {name: "Professional";
-        price: "$149";
-        period: "/month";
-        description: "For growing businesses";
-        features: ["1,000 API calls/day", "Advanced models", "Priority support", "Custom fine-tuning", "Multi-language support", "Analytics dashboard"];
-        cta: "Get Started";
-        ctaLink: "/services/zion-gpt";
-      }
-      {name: "Enterprise";
-        price: "$499";
-        period: "/month";
-        description: "For large organizations";
-        features: ["Unlimited API calls", "Custom models", "24/7 support", "Dedicated infrastructure", "SLA guarantee", "Custom integrations"];
-        cta: "Contact Sales";
-        ctaLink: "mailto:kleber@ziontechgroup.com";
-      }
-    ];
-  }
-  {serviceName: "AI Content Hub";
-    category: "AI Services";
-    description: "Comprehensive content creation and management platform powered by AI";
-    features: ["AI content generation", "SEO optimization", "Multi-platform publishing", "Content calendar", "Performance analytics", "Team collaboration"];
-    benefits: ["Generate 10x more content", "Improve SEO rankings", "Save 20+ hours per week"];
-    tiers: [;
-      {;
-        name: "Starter";
-        price: "$39";
-        period: "/month";
-        description: "For content creators and small teams";
-        features: ["50 AI-generated articles/month", "Basic SEO tools", "Social media integration", "Content calendar", "Basic analytics"];
-        cta: "Start Free Trial";
-        ctaLink: "/services/ai-content-hub";
-      }
-      {name: "Professional";
-        price: "$99";
-        period: "/month";
-        description: "For growing content teams";
-        features: ["200 AI-generated articles/month", "Advanced SEO optimization", "Multi-platform publishing", "Team collaboration", "Advanced analytics", "API access"];
-        cta: "Get Started";
-        ctaLink: "/services/ai-content-hub";
-      }
-      {name: "Enterprise";
-        price: "$299";
-        period: "/month";
-        description: "For large content operations";
-        features: ["Unlimited content generation", "Custom AI models", "White-label options", "Advanced integrations", "Dedicated support", "Custom workflows"];
-        cta: "Contact Sales";
-        ctaLink: "mailto:kleber@ziontechgroup.com";
-      }
-    ];
-  }
-  {serviceName: "Digital Marketplace Platform";
-    category: "E-commerce & Services";
-    description: "Complete marketplace solution for jobs, talent, projects, and services";
-    features: ["Job posting & matching", "Talent marketplace", "Project management", "Payment processing", "Rating system", "Analytics dashboard"];
-    benefits: ["Launch marketplace in 24 hours", "Reduce operational costs by 30%", "Increase revenue through commissions"];
-    tiers: [;
-      {;
-        name: "Starter";
-        price: "$79";
-        period: "/month";
-        description: "For small marketplaces";
-        features: ["Up to 100 users", "Basic marketplace features", "Payment processing", "Basic analytics", "Email support"];
-        cta: "Start Free Trial";
-        ctaLink: "/services/marketplace";
-      }
-      {name: "Professional";
-        price: "$199";
-        period: "/month";
-        description: "For growing marketplaces";
-        features: ["Up to 1,000 users", "Advanced features", "Custom branding", "Advanced analytics", "API access", "Priority support"];
-        cta: "Get Started";
-        ctaLink: "/services/marketplace";
-      }
-      {name: "Enterprise";
-        price: "$599";
-        period: "/month";
-        description: "For large marketplaces";
-        features: ["Unlimited users", "Custom development", "White-label options", "Advanced integrations", "Dedicated support", "Custom workflows"];
-        cta: "Contact Sales";
-        ctaLink: "mailto:kleber@ziontechgroup.com";
-      }
-    ];
-  }
-  {serviceName: "Cloud Migration Services";
-    category: "IT Services";
-    description: "Professional cloud migration and optimization services";
-    features: ["Infrastructure assessment", "Migration planning", "Data migration", "Performance optimization", "24/7 support", "Post-migration support"];
-    benefits: ["Reduce infrastructure costs by 40%", "Improve scalability", "Enhanced security"];
-    tiers: [;
-      {;
-        name: "Basic Migration";
-        price: "$2,500";
-        period: "one-time";
-        description: "Simple infrastructure migration";
-        features: ["Infrastructure assessment", "Basic migration plan", "Data migration", "Basic testing", "Documentation"];
-        cta: "Get Quote";
-        ctaLink: "mailto:kleber@ziontechgroup.com";
-      }
-      {name: "Standard Migration";
-        price: "$7,500";
-        period: "one-time";
-        description: "Comprehensive migration with optimization";
-        features: ["Detailed assessment", "Comprehensive plan", "Data migration", "Performance optimization", "Testing & validation", "Training"];
-        cta: "Get Quote";
-        ctaLink: "mailto:kleber@ziontechgroup.com";
-      }
-      {name: "Enterprise Migration";
-        price: "$15,000+";
-        period: "one-time";
-        description: "Complex enterprise migration";
-        features: ["Full assessment", "Custom migration strategy", "Advanced optimization", "Custom integrations", "Ongoing support", "SLA guarantee"];
-        cta: "Contact Sales";
-        ctaLink: "mailto:kleber@ziontechgroup.com";
-      }
-    ];
-  }
-  {serviceName: "Cybersecurity Audit & Compliance";
-    category: "IT Services";
-    description: "Comprehensive security assessments and compliance consulting";
-    features: ["Security assessment", "Penetration testing", "Compliance audit", "Security training", "Incident response planning", "Ongoing monitoring"];
-    benefits: ["Protect against cyber threats", "Meet compliance requirements", "Reduce security risks"];
-    tiers: [;
-      {;
-        name: "Basic Audit";
-        price: "$1,500";
-        period: "one-time";
-        description: "Essential security assessment";
-        features: ["Basic security scan", "Vulnerability assessment", "Compliance checklist", "Basic report", "Email support"];
-        cta: "Get Quote";
-        ctaLink: "mailto:kleber@ziontechgroup.com";
-      }
-      {name: "Standard Audit";
-        price: "$4,500";
-        period: "one-time";
-        description: "Comprehensive security assessment";
-        features: ["Full security audit", "Penetration testing", "Compliance audit", "Detailed report", "Remediation guidance", "Phone support"];
-        cta: "Get Quote";
-        ctaLink: "mailto:kleber@ziontechgroup.com";
-      }
-      {name: "Enterprise Audit";
-        price: "$9,000+";
-        period: "one-time";
-        description: "Advanced security assessment";
-        features: ["Advanced testing", "Custom compliance", "Ongoing monitoring", "Security training", "Incident response", "Dedicated support"];
-        cta: "Contact Sales";
-        ctaLink: "mailto:kleber@ziontechgroup.com";
-      }
-    ];
-  }
-];
-const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"];
-export default function PricingPage() {const [selectedCategory, setSelectedCategory] = useState("All");
-=======
 "use client",;
 import { useState } from "react",;
 interface PricingTier {;
@@ -465,7 +242,6 @@ const servicePricing: ServicePricing[] = [;
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"],;
 export default function PricingPage() {;
   const [selectedCategory, setSelectedCategory] = useState("All");
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const filteredServices = selectedCategory === "All";
     ? servicePricing;
     : servicePricing.filter(service => service.category === selectedCategory);
@@ -474,7 +250,6 @@ export default function PricingPage() {;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
-=======
 "use client",
 import { useState  } from './react';,
 interface PricingTier {
@@ -728,7 +503,6 @@ function PricingPage() {
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">Pricing & Plans</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Choose the perfect plan for your business needs. All plans include our core features with transparent pricing and no hidden fees.;
         </p>;
       </div>;
@@ -738,23 +512,15 @@ function PricingPage() {
           {categories.map (category => (
             <button;
               key={category}
-<<<<<<< HEAD
-              onClick={() => setSelectedCategory(category)}
-<<<<<<< HEAD
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === category;
-=======
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${;
                 selectedCategory === category;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   ? 'bg-blue-600 text-white';
                   : 'text-gray-300 hover:text-white hover:bg-zinc-700';
-=======
               on_click={() => setSelectedCategory (category)}
               className={`px - 4 py - 2 rounded - md text - sm font - medium transition - colors ${
                 selected_category === category;
                   ? 'bg - blue - 600 text - white';
                   : 'text - gray - 300 hover:text - white hover:bg - zinc - 700';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }`}
             >;
               {category}
@@ -796,23 +562,15 @@ function PricingPage() {
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
               {service.tiers.map ((tier, tier_index) => (
                 <div;
-<<<<<<< HEAD
-                  key={tierIndex}
-<<<<<<< HEAD
-                  className={`relative border rounded-lg p-6 ${tier.popular;
-=======
                   className={`relative border rounded-lg p-6 ${;
                     tier.popular;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ? 'border-blue-500 bg-blue-500/10';
                       : 'border-white/10';
-=======
                   key={tier_index}
                   className={`relative border rounded - lg p - 6 ${
                     tier.popular;
                       ? 'border - blue - 500 bg - blue - 500 / 10';
                       : 'border - white / 10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }`}
                 >;
                   {tier.popular && (
@@ -820,20 +578,12 @@ function PricingPage() {
                       <span className="bg - blue - 500 text - white px - 3 py - 1 rounded - full text - xs font - medium">;
                         Most Popular;
                       </span>;
-<<<<<<< HEAD
-                    </div>;
-                  )}
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   <div className="text-center space-y-4">;
                     <h3 className="text-xl font-semibold">{tier.name}</h3>;
-=======
                     </div>)}
                   <div className="text - center space - y-4">;
                     <h3 className="text - xl font - semibold">{tier.name}</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <div>;
                       <span className="text - 3xl font - bold">{tier.price}</span>;
                       <span className="text - lg opacity - 80">{tier.period}</span>;
@@ -849,23 +599,15 @@ function PricingPage() {
                   </ul>;
                   <div className="mt - 6">;
                     <a;
-<<<<<<< HEAD
-                      href={tier.ctaLink}
-<<<<<<< HEAD
-                      className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${tier.popular;
-=======
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${;
                         tier.popular;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           ? 'bg-blue-600 hover:bg-blue-700 text-white';
                           : 'bg-zinc-700 hover:bg-zinc-600 text-white';
-=======
                       href={tier.cta_link}
                       className={`block w - full text - center py - 3 px - 4 rounded - lg font - medium transition - colors ${
                         tier.popular;
                           ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
                           : 'bg - zinc - 700 hover:bg - zinc - 600 text - white';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       }`}
                     >;
                       {tier.cta}

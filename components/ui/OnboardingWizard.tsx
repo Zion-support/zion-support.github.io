@@ -1,118 +1,42 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react',
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function OnboardingWizard() {;
-=======
 export default function OnboardingWizard() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const { role, setRole } = useRole();
   const [open, setOpen] = useState(false);
-<<<<<<< HEAD
-  useEffect(() => {
-    try {
-<<<<<<< HEAD
-
-      const has =
-        typeof window !== 'undefined'
-          ? window.localStorage.getItem('zion_has_onboarded')
-=======
 
   useEffect(() => {;
     try {;
       const has =;
         typeof window !== 'undefined';
           ? window && window.localStorage.getItem('zion_has_onboarded');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           : 'true';
       if (!has) {;
         setOpen(true);      const has = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {;
         setOpen(true);
-<<<<<<< HEAD
-=======
-=======
       const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {
         setOpen(true)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch {}
   }, []);
-<<<<<<< HEAD
-  function completeOnboarding() {
-    try {
-      if (typeof window !== 'undefined') {
-<<<<<<< HEAD
-        window.localStorage.setItem('zion_has_onboarded', '1');
-=======
 
   function completeOnboarding() {;
     try {;
       if (typeof window !== 'undefined') {;
         window && window.localStorage.setItem('zion_has_onboarded', '1');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         window.localStorage.setItem('zion_has_onboarded1')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
     } catch {}
     setOpen(false);  }        window && window.localStorage.setItem('zion_has_onboarded1');
       }
     } catch {}
-<<<<<<< HEAD
-    setOpen(false);
-=======
-<<<<<<< HEAD
-    setOpen(false)
-<<<<<<< HEAD
-=======
-    setOpen(false);
-=======
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!open) return null;
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4'>;
       <div className='w-full max-w-xl rounded-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 shadow-xl'>;
         <div className='p-4 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between'>;
@@ -218,11 +142,6 @@ export default function OnboardingWizard() {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">
-=======
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
       <div className="w-full max-w-xl rounded-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 shadow-xl">
         <div className="p-4 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between">
@@ -264,16 +183,10 @@ export default function OnboardingWizard() {
           )}
         </div>
         <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <button onClick={completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-);
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">;
           <button onClick={completeOnboarding} className="px-3 py-1 && 1.5 rounded-md border">Done</button>;
         </div>;
@@ -281,12 +194,8 @@ export default function OnboardingWizard() {
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Link from 'next / link';
 import { use_role } from '../context / RoleContext';
 export default /**
@@ -445,4 +354,3 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

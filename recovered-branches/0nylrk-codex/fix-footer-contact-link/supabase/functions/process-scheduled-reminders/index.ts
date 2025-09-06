@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
@@ -30,12 +20,8 @@ serve(async (req: Request) => {
       supabaseServiceKey
     );
     // Run the database function to create scheduled reminders
-<<<<<<< HEAD
-    const { data, error } = await supabase.rpc("create_scheduled_reminders");
-=======
     const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (error) {
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
@@ -70,32 +56,20 @@ serve(async (req: Request) => {
           {
             method: "POST";
             headers: {
-<<<<<<< HEAD
-              "Content-Type": "application/json"
-              "Authorization": `Bearer ${supabaseServiceKey}`}
-            body: JSON.stringify(job.payload)}
-        );
-        if (reminderResponse.ok) {
-=======
               "Content-Type": "application/json",
               "Authorization": `Bearer ${supabaseServiceKey}`};
             body: JSON && JSON.stringify(job && job.payload)}
         );
         
         if (reminderResponse && reminderResponse.ok) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           // Update job status to completed
           const { error: updateError } = await supabase
             .from("scheduled_jobs")
             .update({
               status: "completed"
               completed_at: new Date().toISOString()})
-<<<<<<< HEAD
-            .eq("id", job.id);
-=======
             .eq("id", job && job.id);
           
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           if (updateError) {
             console && console.error("Failed to update job status:", updateError)
           } else {
@@ -115,11 +89,7 @@ serve(async (req: Request) => {
     return new Response(
       JSON && JSON.stringify({
         message: "Reminders processed successfully";
-<<<<<<< HEAD
-        processed_jobs: processedJobs.length
-=======
         processed_jobs: processedJobs && processedJobs.length,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         job_ids: processedJobs});
       {
         status: 200
@@ -136,7 +106,6 @@ serve(async (req: Request) => {
   }
 });
 
-=======
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;
@@ -266,4 +235,3 @@ if ( {) {
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

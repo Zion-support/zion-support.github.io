@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect, useMemo } from 'react'
-import { useRouter } from 'next/router'
-import {
-  Search
-  Filter
-  X
-  SortAsc
-  SortDesc
-  GridIcon
-  List
-  Loader2
-} from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Badge } from '@/components/ui/badge'
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-import { Checkbox } from '@/components/ui/checkbox'
-import { Slider } from '@/components/ui/slider'
-import { Separator } from '@/components/ui/separator'
-  Sheet
-  SheetContent
-  SheetHeader
-  SheetTitle
-  SheetTrigger
-} from '@/components/ui/sheet'
-import { EnhancedSearchInput } from './EnhancedSearchInput'
-import { generateSearchSuggestions } from '@/data/marketplaceData'
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
-
-interface SearchResult {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -99,8 +56,6 @@ import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface SearchResult {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState, useEffect, useMemo } from 'react';
 import { use_router } from 'next / router';
 import {
@@ -135,7 +90,6 @@ import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { logErrorToProduction, log_info } from '@/utils / production_logger';
 interface SearchResult {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   description: string;
@@ -147,48 +101,22 @@ interface SearchResult {
   currency?: string;
   rating?: number;
   tags?: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-  date?: string
-interface SearchFilters {
-=======
   date?: string;
 
 interface SearchFilters {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   types: string[];
   category: string;
   minPrice: number;
   maxPrice: number;
   minRating: number;
-<<<<<<< HEAD
-  sort: string
-interface SearchResponse {
-=======
   sort: string;
 
 interface SearchResponse {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   results: SearchResult[];
   totalCount: number;
   page: number;
   limit: number;
   query: string;
-<<<<<<< HEAD
-  hasMore: boolean
-// Highlight search terms in text
-
-const HighlightText: React.FC<{
-  text: string
-  searchTerm: string
-  className?: string
-}> = ({ text, searchTerm, className = '' }) => {  if (!searchTerm.trim()) {
-    return <span className={className}>{text}</span>
-  }
-  const parts = text.split(
-    new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')
-  )
-=======
   hasMore: boolean;
 
 // Highlight search terms in text;
@@ -204,7 +132,6 @@ const HighlightText: React.FC<{;
     new RegExp(`(${searchTerm && searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
   );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <span className={className}>;
       {parts && parts.map((part, index) =>        part && part.toLowerCase() === searchTerm && searchTerm.toLowerCase() ? (;
@@ -215,10 +142,6 @@ const HighlightText: React.FC<{;
           part;
         );
       )}
-<<<<<<< HEAD
-    </span>
-  )
-=======
   date?: string;
 interface SearchFilters {
   types: string[];
@@ -241,7 +164,6 @@ const HighlightText: React.FC<{
   class_name?: string;
 }> = ({ text, search_term, class_name = '' }) => {  if () {) {
   $2
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
     return <span className={class_name}>{text}</span>;
   }
@@ -271,12 +193,6 @@ if ( {) {
       router.push (result.url);
     }
   }
-<<<<<<< HEAD
-  const cardClass =
-    viewMode === 'grid'
-      ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer'
-      : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4'
-=======
     </span>;
   );
 };
@@ -299,7 +215,6 @@ const SearchResultCard: React.FC<{;
       ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer';
       : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div onClick={handleClick} className={cardClass}>;
       {result && result.image && (;
@@ -314,15 +229,6 @@ const SearchResultCard: React.FC<{;
             }          />;
         </div>;
       )}
-<<<<<<< HEAD
-      <div className='flex-1'>
-        <div className='flex items-start justify-between mb-2'>
-          <div>
-            <h3 className='font-semibold text-lg mb-1'>
-              <HighlightText text={result.title} searchTerm={searchTerm} />
-            </h3>
-            <Badge variant='secondary' className='text-xs'>
-=======
   const card_class =;
     view_mode === 'grid';
       ? 'bg - card border rounded - lg p - 4 hover:shadow - lg transition - shadow cursor - pointer';
@@ -347,7 +253,6 @@ const SearchResultCard: React.FC<{;
               <HighlightText text={result.title} search_term={search_term} />;
             </h3>;
             <Badge variant='secondary' className='text - xs'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {result.type}
             </Badge>;
           </div>;
@@ -358,9 +263,6 @@ const SearchResultCard: React.FC<{;
                 {result.price}
               </span>;
               {result.type === 'talent' && (
-<<<<<<< HEAD
-                <span className='text-sm text-muted-foreground'>/hr</span>
-=======
 
       <div className='flex-1'>;
         <div className='flex items-start justify-between mb-2'>;
@@ -380,18 +282,9 @@ const SearchResultCard: React.FC<{;
               </span>;
               {result && result.type === 'talent' && (;
                 <span className='text-sm text-muted-foreground'>/hr</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
           )}
-<<<<<<< HEAD
-        </div>
-        <p className='text-muted-foreground mb-3 line-clamp-2'>
-          <HighlightText text={result.description} searchTerm={searchTerm} />
-        </p>
-        <div className='flex items-center justify-between'>
-          <div className='flex gap-2 flex-wrap'>
-=======
                 <span className='text - sm text - muted - foreground'>/hr</span>)}
             </div>)}
         </div>;
@@ -400,13 +293,9 @@ const SearchResultCard: React.FC<{;
         </p>;
         <div className='flex items - center justify - between'>;
           <div className='flex gap - 2 flex - wrap'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {result.category && (
               <Badge variant='outline' className='text - xs'>;
                 {result.category}
-<<<<<<< HEAD
-              </Badge>
-=======
         </div>;
 
         <p className='text-muted-foreground mb-3 line-clamp-2'>;
@@ -419,21 +308,16 @@ const SearchResultCard: React.FC<{;
               <Badge variant='outline' className='text-xs'>;
                 {result && result.category}
               </Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
             {result && result.tags?.slice(0, 3).map((tag, index) => (;
               <Badge key={index} variant='outline' className='text-xs'>                <HighlightText text={tag} searchTerm={searchTerm} />;
               </Badge>;
             ))}
-<<<<<<< HEAD
-          </div>
-=======
               </Badge>)}
             {result.tags?.slice (0, 3).map ((tag, index) => (
               <Badge key={index} variant='outline' className='text - xs'>                <HighlightText text={tag} search_term={search_term} />;
               </Badge>))}
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {result.rating && (
             <div className='flex items - center gap - 1'>;
               <span className='text - yellow - 500'>★</span>;
@@ -445,28 +329,6 @@ const SearchResultCard: React.FC<{;
 }
 // Filter Sidebar Component;
 const FilterSidebar: React.FC<{
-<<<<<<< HEAD
-  filters: SearchFilters
-  onFiltersChange: (filters: SearchFilters) => void
-  availableCategories: string[]
-}> = ({ filters, onFiltersChange, availableCategories }) => {  const typeOptions = [
-    { id: 'product', label: 'Products' }
-    { id: 'talent', label: 'Talent' }
-    { id: 'service', label: 'Services' }
-    { id: 'blog', label: 'Blog Posts' }
-  ]
-  const handleTypeChange = (typeId: string, checked: boolean) => {
-    const newTypes = checked      ? [...filters.types, typeId]
-      : filters.types.filter(t => t !== typeId)
-    onFiltersChange({ ...filters, types: newTypes })
-  }
-  const handlePriceChange = (values: number[]) => {
-    onFiltersChange({
-      ...filters
-      minPrice: values[0] ?? 0
-      maxPrice: values[1] ?? 10000
-    })
-=======
   filters: SearchFilters;
   onFiltersChange: (filters: SearchFilters) => void;
   available_categories: string[];
@@ -487,9 +349,7 @@ const FilterSidebar: React.FC<{
       min_price: values[0] ?? 0,
       max_price: values[1] ?? 10000,
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
           </div>;
 
           {result && result.rating && (;
@@ -530,40 +390,7 @@ const FilterSidebar: React.FC<{;
       maxPrice: values[1] ?? 10000,;
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-    <div className='space-y-6'>;
-      <div>;
-        <h3 className='font-semibold mb-3'>Content Type</h3>;
-        <div className='space-y-2'>;
-          {typeOptions && typeOptions.map(option => (;
-            <div key={option && option.id} className='flex items-center space-x-2'>;
-              <Checkbox
-                id={option && option.id}
-                checked={filters && filters.types.includes(option && option.id)}
-                onCheckedChange={checked =>;
-                  handleTypeChange(option && option.id, !!checked);
-                }              />;
-              <label htmlFor={option && option.id} className='text-sm'>;
-                {option && option.label}
-              </label>;
-            </div>;
-          ))}
-<<<<<<< HEAD
-        </div>
-      </div>
-      <Separator />
-      <div>
-        <h3 className='font-semibold mb-3'>Category</h3>
-        <Select
-          value={filters.category}
-          onValueChange={value =>
-            onFiltersChange({
-              ...filters
-              category: value === 'all' ? '' : value
-            })
-=======
         </div>;
       </div>;
 
@@ -578,8 +405,6 @@ const FilterSidebar: React.FC<{;
               ...filters,;
               category: value === 'all' ? '' : value,;
             });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <div className='space - y-6'>;
       <div>;
         <h3 className='font - semibold mb - 3'>Content Type</h3>;
@@ -608,28 +433,12 @@ const FilterSidebar: React.FC<{;
               ...filters,
               category: value === 'all' ? '' : value,
             });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
         >          <SelectTrigger>;
             <SelectValue placeholder='All Categories' />;
           </SelectTrigger>;
           <SelectContent>;
             <SelectItem value='all'>All Categories</SelectItem>;
-<<<<<<< HEAD
-            {availableCategories && availableCategories.map(category => (;
-              <SelectItem key={category} value={category}>;
-                {category}
-              </SelectItem>;
-            ))}
-<<<<<<< HEAD
-          </SelectContent>
-        </Select>
-      </div>
-      <Separator />
-      <div>
-        <h3 className='font-semibold mb-3'>Price Range</h3>
-        <div className='px-2'>
-=======
           </SelectContent>;
         </Select>;
       </div>;
@@ -639,10 +448,8 @@ const FilterSidebar: React.FC<{;
       <div>;
         <h3 className='font-semibold mb-3'>Price Range</h3>;
         <div className='px-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Slider
             value={[filters && filters.minPrice, filters && filters.maxPrice]}
-=======
             {available_categories.map (category => (
               <SelectItem key={category} value={category}>;
                 {category}
@@ -656,24 +463,10 @@ const FilterSidebar: React.FC<{;
         <div className='px - 2'>;
           <Slider;
             value={[filters.min_price, filters.max_price]}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             onValueChange={handlePriceChange}
             min={0}
             max={10000}
             step={50}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='mb-2'          />
-          <div className='flex justify-between text-sm text-muted-foreground'>
-            <span>${filters.minPrice}</span>
-            <span>${filters.maxPrice}</span>
-          </div>
-        </div>
-      </div>
-      <Separator />
-      <div>
-        <h3 className='font-semibold mb-3'>Minimum Rating</h3>
-=======
             className='mb-2'          />;
           <div className='flex justify-between text-sm text-muted-foreground'>;
             <span>${filters && filters.minPrice}</span>;
@@ -686,29 +479,11 @@ const FilterSidebar: React.FC<{;
 
       <div>;
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Select
           value={filters && filters.minRating.toString()}
           onValueChange={value =>;
             onFiltersChange({ ...filters, minRating: parseFloat(value) });
           }
-<<<<<<< HEAD
-        >          <SelectTrigger>
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value='0'>Any Rating</SelectItem>
-            <SelectItem value='1'>1+ Stars</SelectItem>
-            <SelectItem value='2'>2+ Stars</SelectItem>
-            <SelectItem value='3'>3+ Stars</SelectItem>
-            <SelectItem value='4'>4+ Stars</SelectItem>
-            <SelectItem value='4.5'>4.5+ Stars</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-    </div>
-  )
-=======
             className='mb - 2'          />;
           <div className='flex justify - between text - sm text - muted - foreground'>;
             <span>${filters.min_price}</span>;
@@ -738,37 +513,9 @@ const FilterSidebar: React.FC<{;
         </Select>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 // No Results Component;
 const NoResultsState: React.FC<{
-<<<<<<< HEAD
-  searchTerm: string
-  onNewSearch: (term: string) => void
-}> = ({ searchTerm, onNewSearch }) => {  const suggestions = [
-    'AI & Machine Learning'
-    'Web Development'
-    'Mobile App Development'
-    'Data Analysis'
-    'UI/UX Design'
-    'Blockchain Development'
-  ]
-  return (
-    <div className='text-center py-12'>
-      <div className='mb-6'>
-        <Search className='mx-auto h-16 w-16 text-muted-foreground mb-4' />
-        <h2 className='text-2xl font-semibold mb-2'>No results found</h2>
-        <p className='text-muted-foreground mb-6'>
-          We couldn't find anything matching "{searchTerm}". Try adjusting your
-          search or filters.
-        </p>
-      </div>
-      <div className='max-w-md mx-auto space-y-4'>
-        <div>
-          <h3 className='font-semibold mb-3'>Search Suggestions:</h3>
-          <div className='flex flex-wrap gap-2 justify-center'>
-            {suggestions.map((suggestion, index) => (
-=======
         >          <SelectTrigger>;
             <SelectValue />;
           </SelectTrigger>;
@@ -815,7 +562,6 @@ const NoResultsState: React.FC<{;
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>;
           <div className='flex flex-wrap gap-2 justify-center'>;
             {suggestions && suggestions.map((suggestion, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 key={index}
                 variant='outline'
@@ -824,22 +570,6 @@ const NoResultsState: React.FC<{;
                 {suggestion}
               </Button>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-        <div className='text-sm text-muted-foreground'>
-          <p>Tips for better results:</p>
-          <ul className='mt-2 space-y-1'>
-            <li>• Try different keywords</li>
-            <li>• Check your spelling</li>
-            <li>• Use fewer filters</li>
-            <li>• Search for broader terms</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  )
-=======
   search_term: string;
   onNewSearch: (term: string) => void;
 }> = ({ search_term, onNewSearch }) => {  const suggestions = [;
@@ -885,64 +615,9 @@ const NoResultsState: React.FC<{;
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 // Main Search Results Page Component;
 export const AdvancedSearchResults: React.FC = () => {
-<<<<<<< HEAD
-  const router = useRouter()
-  const [searchTerm, setSearchTerm] = useState('')
-  const [results, setResults] = useState<SearchResult[]>([])
-  const [loading, setLoading] = useState(false)
-  const [totalCount, setTotalCount] = useState(0)
-  const [currentPage, setCurrentPage] = useState(1)
-  const [hasMore, setHasMore] = useState(false)
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
-  const [showFilters, setShowFilters] = useState(false)
-  const [filters, setFilters] = useState<SearchFilters>({
-    types: []
-    category: ''
-    minPrice: 0
-    maxPrice: 10000
-    minRating: 0
-    sort: 'relevance'
-  })
-  const suggestions = generateSearchSuggestions()
-  // Extract available categories from results for filter
-  const availableCategories = useMemo(() => {
-    const categories = new Set<string>();    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    })
-    return Array.from(categories).sort()
-  }, [results])
-  // Sync search term with URL
-  useEffect((,) => {
-    if (router.isReady && router.query.q) {
-      const urlTerm = router.query.q as string
-      setSearchTerm(urlTerm)
-    }
-  }, [router.isReady, router.query.q])
-  // Search function
-  const performSearch = async (
-    term: string
-    page: number = 1
-    newFilters?: SearchFilters
-  ) => {    if (!term.trim()) {
-      setResults([])
-      setTotalCount(0)
-      return
-    }
-    setLoading(true)
-    try {
-      const searchFilters = newFilters |filters
-      const params = new URLSearchParams({
-        query: term
-        page: page.toString()
-        limit: '20'
-      })
-      if (searchFilters.types.length > 0) {
-        params.append('type', searchFilters.types.join(','))
-=======
   const router = use_router ();
   const [search_term, setSearchTerm] = useState ('');
   const [results, set_results] = useState < SearchResult[]>([]);
@@ -1004,7 +679,6 @@ if ( {) {
   $2
 }
         params.append ('type', search_filters.types.join (', '));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       // Check condition
 if ( {) {
@@ -1036,12 +710,6 @@ if ( {) {
 }
         params.append ('sort', search_filters.sort);
       }
-<<<<<<< HEAD
-      const response = await fetch(`/api/search?${params}`)
-      const data: SearchResponse = await response.json()
-      if (page === 1) {
-        setResults(data.results)
-=======
       const response = await fetch (`/api / search?${params}`);
       const data: SearchResponse = await response.json ();
       // Check condition
@@ -1049,20 +717,9 @@ if ( {) {
   $2
 }
         set_results (data.results);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         set_results (prev => [...prev, ...data.results]);
       }
-<<<<<<< HEAD
-      setTotalCount(data.totalCount)
-      setCurrentPage(data.page)
-      setHasMore(data.hasMore)
-      logInfo('Search completed', {
-        term
-        resultCount: data.results.length
-        totalCount: data.totalCount
-      })
-=======
       setTotalCount (data.total_count);
       setCurrentPage (data.page);
       setHasMore (data.has_more);
@@ -1071,7 +728,6 @@ if ( {) {
         result_count: data.results.length,
         total_count: data.total_count,
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       logErrorToProduction ('Search failed', { data: error });
       set_results ([]);
@@ -1088,15 +744,6 @@ if ( {) {
       perform_search (search_term, 1, filters);
       setCurrentPage (1);
     }
-<<<<<<< HEAD
-  }, [searchTerm, filters])
-  // Handle search input
-  const handleSearch = (term: string) => {
-    setSearchTerm(term)
-    router.push(`/search?q=${encodeURIComponent(term)}`, undefined, {
-      shallow: true
-    })
-=======
   }, [search_term, filters]);
   // Handle search input;
   const handle_search = (term: string) =>: any {
@@ -1104,7 +751,6 @@ if ( {) {
     router.push (`/search?q=${encodeURIComponent (term)}`, undefined, {
       shallow: true,
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   // Handle filter changes;
   const handleFiltersChange = (new_filters: SearchFilters) =>: any {
@@ -1119,14 +765,6 @@ if ( {) {
       perform_search (search_term, current_page + 1);
     }
   }
-<<<<<<< HEAD
-  // Active filters count
-  const activeFiltersCount =
-    filters.types.length +
-    (filters.category ? 1 : 0) +
-    (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) +
-    (filters.minRating > 0 ? 1 : 0)
-=======
           </div>;
         </div>;
 
@@ -1283,7 +921,6 @@ export const AdvancedSearchResults: React.FC = () => {;
     (filters && filters.minPrice > 0 || filters && filters.maxPrice < 10000 ? 1 : 0) +;
     (filters && filters.minRating > 0 ? 1 : 0);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='container mx-auto px-4 py-6'>;
       {/* Search Header */}
@@ -1299,24 +936,6 @@ export const AdvancedSearchResults: React.FC = () => {;
           </div>;
           <Button
             onClick={() => handleSearch(searchTerm)}
-<<<<<<< HEAD
-            disabled={!searchTerm.trim()}
-          >
-            <Search className='h-4 w-4' />
-          </Button>
-        </div>
-        {searchTerm && (
-          <div className='flex items-center justify-between'>
-            <div>
-              <h1 className='text-2xl font-bold'>Search Results</h1>
-              <p className='text-muted-foreground'>
-                {loading
-                  ? 'Searching...'
-                  : `${totalCount} results for "${searchTerm}"`}
-              </p>
-            </div>
-            <div className='flex items-center gap-2'>
-=======
             disabled={!searchTerm && searchTerm.trim()}
           >;
             <Search className='h-4 w-4' />;
@@ -1335,26 +954,10 @@ export const AdvancedSearchResults: React.FC = () => {;
             </div>;
 
             <div className='flex items-center gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Sort Options */}
               <Select
                 value={filters && filters.sort}
                 onValueChange={value => setFilters({ ...filters, sort: value })}
-<<<<<<< HEAD
-              >
-                <SelectTrigger className='w-40'>                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value='relevance'>Relevance</SelectItem>
-                  <SelectItem value='price_asc'>Price: Low to High</SelectItem>
-                  <SelectItem value='price_desc'>Price: High to Low</SelectItem>
-                  <SelectItem value='rating'>Highest Rated</SelectItem>
-                </SelectContent>
-              </Select>
-=======
-              >;
-                <SelectTrigger className='w-40'>                  <SelectValue />;
-=======
   // Active filters count;
   const activeFiltersCount =;
     filters.types.length +;
@@ -1398,7 +1001,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                 onValueChange={value => set_filters ({ ...filters, sort: value })}
               >;
                 <SelectTrigger className='w - 40'>                  <SelectValue />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </SelectTrigger>;
                 <SelectContent>;
                   <SelectItem value='relevance'>Relevance</SelectItem>;
@@ -1407,9 +1009,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                   <SelectItem value='rating'>Highest Rated</SelectItem>;
                 </SelectContent>;
               </Select>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* View Mode Toggle */}
               <div className='flex border rounded-md'>;
                 <Button
@@ -1421,24 +1020,16 @@ export const AdvancedSearchResults: React.FC = () => {;
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'ghost'}
                   size='sm'
-<<<<<<< HEAD
-                  onClick={() => setViewMode('list')}                >
-                  <List className='h-4 w-4' />
-                </Button>
-              </div>
-=======
                   onClick={() => setViewMode('list')}                >;
                   <List className='h-4 w-4' />;
                 </Button>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Mobile Filter Toggle */}
               <Sheet open={showFilters} onOpenChange={setShowFilters}>;
                 <SheetTrigger asChild>;
                   <Button variant='outline' className='lg:hidden'>;
                     <Filter className='h-4 w-4 mr-2' />;
-=======
               {/* View Mode Toggle */}
               <div className='flex border rounded - md'>;
                 <Button;
@@ -1459,22 +1050,10 @@ export const AdvancedSearchResults: React.FC = () => {;
                 <SheetTrigger as_child>;
                   <Button variant='outline' className='lg:hidden'>;
                     <Filter className='h - 4 w - 4 mr - 2' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Filters{' '}
                     {activeFiltersCount > 0 && `(${activeFiltersCount})`}
                   </Button>;
                 </SheetTrigger>;
-<<<<<<< HEAD
-                <SheetContent side='left' className='w-80'>;
-                  <SheetHeader>;
-                    <SheetTitle>Search Filters</SheetTitle>;
-                  </SheetHeader>;
-                  <div className='mt-6'>;
-                    <FilterSidebar
-                      filters = {filters,}
-                      onFiltersChange = {handleFiltersChange,}
-                      availableCategories = {availableCategories,}
-=======
                 <SheetContent side='left' className='w - 80'>;
                   <SheetHeader>;
                     <SheetTitle > Search Filters</SheetTitle>;
@@ -1484,25 +1063,15 @@ export const AdvancedSearchResults: React.FC = () => {;
                       filters = {filters, }
                       onFiltersChange = {handleFiltersChange, }
                       available_categories = {available_categories, }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     />;
                   </div>;
                 </SheetContent>;
               </Sheet>;
             </div>;
-<<<<<<< HEAD
-          </div>;
-        )}
-<<<<<<< HEAD
-      </div>
-      {searchTerm && (
-        <div className='flex gap-6'>
-=======
       </div>;
 
       {searchTerm && (;
         <div className='flex gap-6'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Desktop Filters Sidebar */}
           <div className='hidden lg:block w-64 flex-shrink-0'>;
             <div className='bg-card border rounded-lg p-4 sticky top-4'>;
@@ -1512,20 +1081,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                   <Button
                     variant='ghost'
                     size='sm'
-<<<<<<< HEAD
-                    onClick={() =>
-                      setFilters({
-                        types: []
-                        category: ''
-                        minPrice: 0
-                        maxPrice: 10000
-                        minRating: 0
-                        sort: 'relevance'
-                      })
-                    }                  >
-                    Clear All
-                  </Button>
-=======
                     onClick={() =>;
                       setFilters({;
                         types: [],;
@@ -1538,23 +1093,16 @@ export const AdvancedSearchResults: React.FC = () => {;
                     }                  >;
                     Clear All;
                   </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
               </div>;
               <FilterSidebar
                 filters = {filters,}
                 onFiltersChange = {handleFiltersChange,}
                 availableCategories = {availableCategories,}
-<<<<<<< HEAD
-              />
-            </div>
-          </div>
-=======
               />;
             </div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Main Content */}
           <div className='flex-1'>;
             {loading && results && results.length === 0 ? (;
@@ -1581,12 +1129,8 @@ export const AdvancedSearchResults: React.FC = () => {;
                       viewMode = {viewMode,}
                     />;
                   ))}
-<<<<<<< HEAD
-                </div>
-=======
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Load More Button */}
                 {hasMore && (;
                   <div className='text-center'>;
@@ -1610,144 +1154,6 @@ export const AdvancedSearchResults: React.FC = () => {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-  )
-}
-export default AdvancedSearchResults
-  suggestion
-}</Button>) )
-}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>)
-}
-//Main Search Results Page Component setTotalCount (data.totalCount)
-setCurrentPage (data.page)
-setHasMore (data.hasMore)
-//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
-}> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
-  /* Mobile Filter Toggle */
-}<Sheet open= {
-  showFilters
-}onOpenChange= {
-  setShowFilters "
-}> <SheetTrigger asChild> </Button> </SheetTrigger> <SheetContent side="left" className="w-80" > <SheetHeader> <SheetTitle>Search Filters</SheetTitle> </SheetHeader> <div className="mt-6" > <FilterSidebar filters= {
-  filters
-}onFiltersChange= {
-  handleFiltersChange
-}availableCategories= {
-  availableCategories
-}/> </div> </SheetContent> </Sheet> </div> </div>) "
-}</div> <Button variant="ghost" size="sm" onClick={
-  () => setFilters ({'
-  types: [], category: '', minPrice: 0, maxPrice: 10000,  minRating: 0, sort: 'relevance'
-})
-}> Clear All </Button>)
-}</div> <FilterSidebar filters= {
-  filters
-}onFiltersChange= {
-  handleFiltersChange
-}availableCategories= {
-  availableCategories
-}/> </div> </div> </div>) : results.length === 0 && searchTerm ? (<NoResultsState searchTerm= {
-  searchTerm
-}onNewSearch= {
-  handleSearch
-}/> <SearchResultCard key= {
-  `$ {
-  result.type
-}-$ {
-  result.id
-}`
-}result= {
-  result
-}searchTerm= {
-  searchTerm
-}viewMode= {
-  viewMode
-}/>) )
-}</div> > {'"
-  loading ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Loading... </>) : ('Load More Results')
-}</Button> </div>)
-}</>)
-}</div> </div>)
-}</div>)
-}
-export default AdvancedSearchResults
-'"
-export default AdvancedSearchResults
-export default AdvancedSearchResults
-
-=======
-    </div>;
-  );
-};
-
-export default AdvancedSearchResults;
-  suggestion ;
-}</Button>) ) ;
-}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>) ;
-};
-//Main Search Results Page Component setTotalCount (data && data.totalCount);
-setCurrentPage (data && data.page);
-setHasMore (data && data.hasMore);
-//Active filters count const activeFiltersCount = filters && filters.types.length + (filters && filters.category ? 1 : 0) + (filters && filters.minPrice > 0 || filters && filters.maxPrice < 10000 ? 1 : 0) + (filters && filters.minRating > 0 ? 1 : 0);";
-}> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {;
-  /* Mobile Filter Toggle */ ;
-}<Sheetopen= {
-  showFilters 
-}onOpenChange= {
-  setShowFilters "
-}> <SheetTrigger asChild> </Button> </SheetTrigger> <SheetContent side="left" className="w-80" > <SheetHeader> <SheetTitle>Search Filters</SheetTitle> </SheetHeader> <div className="mt-6" > <FilterSidebarfilters= {
-  filters 
-}onFiltersChange= {
-  handleFiltersChange 
-}availableCategories= {
-  availableCategories 
-}/> </div> </SheetContent> </Sheet> </div> </div>) ";
-}</div> <Buttonvariant="ghost" size="sm" onClick={
-  () => setFilters ({';
-  types: [], category: '', minPrice: 0, maxPrice: 10000,  minRating: 0, sort: 'relevance' ;
-}) ;
-}> Clear All </Button>) ;
-}</div> <FilterSidebarfilters= {
-  filters 
-}onFiltersChange= {
-  handleFiltersChange 
-}availableCategories= {
-  availableCategories 
-}/> </div> </div> </div>) : results && results.length === 0 && searchTerm ? (<NoResultsStatesearchTerm= {
-  searchTerm 
-}onNewSearch= {
-  handleSearch 
-}/> <SearchResultCardkey= {
-  `$ {
-  result && result.type 
-}-$ {
-  result && result.id 
-}` 
-}result= {
-  result 
-}searchTerm= {
-  searchTerm 
-}viewMode= {
-  viewMode 
-}/>) ) ;
-}</div> > {'";
-  loading ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Loading... </>) : ('Load More Results') ;
-}</Button> </div>) ;
-}</>) ;
-}</div> </div>) ;
-}</div>) ;
-};
-export default AdvancedSearchResults;
-'";
-export default AdvancedSearchResults, ;
-export default AdvancedSearchResults, ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </div>)}
       </div>;
       {search_term && (
@@ -1887,5 +1293,3 @@ export default AdvancedSearchResults;
 '";
 export default AdvancedSearchResults,
 export default AdvancedSearchResults,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

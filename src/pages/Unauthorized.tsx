@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import Link from "next/link",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header";
-import { ShieldAlert } from 'lucide-react'
-import { useTranslation } from "react-i18next";
-export default function Unauthorized() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/Header';
 import { ShieldAlert } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 export default function Unauthorized() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { t } = useTranslation();
   return (
     <>;
@@ -52,12 +37,6 @@ export default function Unauthorized() {;
             <Link
               href='/auth/login'
               className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
-<<<<<<< HEAD
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
-              {t('errors && errors.login_different_account')}
-=======
-<<<<<<< HEAD
-=======
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -90,7 +69,6 @@ export default function Unauthorized() { const { t  } = useTranslation(),
             </Link>
             <Link
               href="/auth/login"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
               {t('errors.login_different_account')}
@@ -99,13 +77,6 @@ export default function Unauthorized() { const { t  } = useTranslation(),
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  )
-}
-=======
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
-              {t('errors && errors.login_different_account')}
-=======
 import Link from 'next / link';
 import { Button } from '@/components / ui / button';
 import { Header } from '@/components / Header';
@@ -151,25 +122,14 @@ function Unauthorized() {
               className="w - full border border - zion - blue - light text - zion - slate - light hover:bg - zion - blue hover:text - white px - 4 py - 2 rounded inline - flex items - center justify - center";
             >;
               {t ('errors.login_different_account')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </Link>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,34 +1,18 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
-<<<<<<< HEAD
-type TalentItem = {
-=======
 
 type TalentItem = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   talentSlug: string;
   talentName: string;
   averageRating: number;
   totalReviews: number;
-<<<<<<< HEAD
-}
-type Props = { items: TalentItem[] }
-const TopTalentsPage: NextPage<Props> = ({ items }) => {
-=======
 };
 
 type Props = { items: TalentItem[] };
 
 const TopTalentsPage: NextPage<Props> = ({ items }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <main className="space-y-6">;
       <h1 className="text-2xl font-semibold">Top Talents — Auto Generated</h1>;
@@ -50,25 +34,6 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {;
       </div>;
     </main>;
   );
-<<<<<<< HEAD
-}
-export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(
-    process.cwd()
-    "public"
-    "automations"
-    "top-talents.json"
-  );
-<<<<<<< HEAD
-  let items: TalentItem[] = [];
-  try {;
-    const raw = fs && fs.readFileSync(p, "utf8");
-    const data = JSON && JSON.parse(raw);
-    items = data && data.items || [];
-  } catch {}
-  return { props: { items } };
-=======
-=======
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -99,15 +64,10 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join(process.cwd(), 'publicautomationstop-talents.json');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   let items: TalentItem[] = [];
   try {
     const raw = fs.readFileSync(p, "utf8");
     const data = JSON.parse(raw);
-<<<<<<< HEAD
-    items = data.items |[];
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {;
@@ -122,19 +82,11 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     const raw = fs && fs.readFileSync(p, "utf8");
     const data = JSON && JSON.parse(raw);
     items = data && data.items || [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     items = data.items || []
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch {}
   return { props: { items } }
 }
 export default TopTalentsPage;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage, GetServerSideProps } from './next';
 import fs from './fs';
 import path from './path';
@@ -189,4 +141,3 @@ export const getServerSideProps: GetServerSideProps = async () => {
 ;
 export default TopTalentsPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

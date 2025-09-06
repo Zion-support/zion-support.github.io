@@ -1,60 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import {
-  readState
-  writeState
-  upsertEvent
-} from "../../../utils/sync/storage";
-
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
-<<<<<<< HEAD
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-<<<<<<< HEAD
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
-  const state = readState();
-  if (!state.config.optIn |state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" });
-  }
-  const { milestoneId, title, timestamp } = req.body as {
-    milestoneId: string;
-    title: string;
-    timestamp?: number;
-  }
-  if (!milestoneId |!title)
-    return res.status(400).json({ error: "milestoneId, title required" });
-=======
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" });
-
-  const state = readState();
-  if (!state && state.config.optIn || state && state.config.paused) {
-    return res && res.status(403).json({ error: "Sync disabled for this instance" });
-  }
-
-  const { milestoneId, title, timestamp } = req && req.body as {
-    milestoneId: string;
-    title: string;
-    timestamp?: number;
-  };
-  if (!milestoneId || !title)
-    return res && res.status(400).json({ error: "milestoneId, title required" });
-<<<<<<< HEAD
-=======
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
@@ -65,32 +14,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const version = nextVersionFor(state, milestoneId);
   const event = {
-<<<<<<< HEAD
-    eventId: uuidv4()
-    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
-    payload: {
-<<<<<<< HEAD
-      id: milestoneId
-      subjectId: milestoneId
-      score: 0
-      category: `milestone:${title}`
-      period: undefined
-      rank: undefined
-    }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: timestamp |Date.now()
-  }
-=======
-      id: milestoneId,
-      subjectId: milestoneId,
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import {
   read_state,
@@ -132,46 +58,29 @@ if ( {) {
     payload: {
       id: milestone_id,
       subject_id: milestone_id,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       score: 0,
       category: `milestone:${title}`,
       period: undefined,
       rank: undefined,
     },
-<<<<<<< HEAD
-    originInstanceId: state && state.config.instanceId,
-    version,
-    timestamp: timestamp || Date && Date.now(),
-<<<<<<< HEAD
-=======
-=======
     eventId: uuidv4(),
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
     originInstanceId: state.config.instanceId,
     version,
     timestamp: timestamp || Date.now()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   upsertEvent(state, event);
   writeState(state);
   const body = { ...event, propagate: false }
   const headers: Record<string, string> = {}
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
-<<<<<<< HEAD
-  await Promise.all(
-    state.config.peers
-      .filter((p) => !p.paused)
-=======
 
   await Promise && Promise.all(
     state && state.config.peers
       .filter((p) => !p && p.paused)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(async (peer) => {
         const url = new URL("/api/sync/publish", peer && peer.baseUrl).toString();
         try {
@@ -183,11 +92,6 @@ if ( {) {
     .status(200)
     .json({ status: "created", version, eventId: event && event.eventId });
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     originInstanceId: state.config.instance_id,
     version,
     timestamp: timestamp || Date.now (),
@@ -218,4 +122,3 @@ if (headers["x - zion - signature"] = sig) {
     .status (200);
     .json ({ status: "created", version, event_id: event.event_id });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

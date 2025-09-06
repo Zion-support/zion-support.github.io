@@ -1,18 +1,4 @@
 
-<<<<<<< HEAD
-import {
-<<<<<<< HEAD
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-=======
   FormField,
   FormItem,
   FormLabel,
@@ -22,13 +8,9 @@ import { BasicInfoFormData } from "./schema";
 import { Input  } from '@/components / ui / input';
 import { Control  } from './react - hook - form';
 import { BasicInfoFormData  } from './schema';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ContactFieldsProps {
   control: Control < BasicInfoFormData>;
 }
-<<<<<<< HEAD
-export function ContactFields({ control }: ContactFieldsProps) {
-=======
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
@@ -38,7 +20,6 @@ interface ContactFieldsProps {;
 }
 
 export function ContactFields(): any ({ control }: ContactFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField
@@ -47,7 +28,6 @@ export function ContactFields(): any ({ control }: ContactFieldsProps) {;
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Location</FormLabel>;
-=======
 export /**
  * ContactFields - Function description
  */
@@ -60,20 +40,12 @@ function ContactFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Location</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormControl>;
               <Input placeholder="San Francisco, CA" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
-        )}
-<<<<<<< HEAD
-      />
-=======
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="website"
@@ -86,10 +58,6 @@ function ContactFields() {
             <FormMessage />;
           </FormItem>;
         )}
-<<<<<<< HEAD
-      />
-      <FormField
-=======
           </FormItem>)}
       />;
       <FormField;
@@ -105,7 +73,6 @@ function ContactFields() {
           </FormItem>)}
       />;
       <FormField;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         control={control}
         name="linkedin";
         render={({ field }) => (
@@ -115,14 +82,6 @@ function ContactFields() {
               <Input;
                 placeholder="https://linkedin.com / in / username";
                 {...field}
-<<<<<<< HEAD
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-=======
       />;
 
       <FormField
@@ -139,7 +98,6 @@ function ContactFields() {
         )}
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="github"
@@ -152,18 +110,10 @@ function ContactFields() {
             <FormMessage />;
           </FormItem>;
         )}
-<<<<<<< HEAD
-      />
-    </div>
-  );
-}
-=======
       />;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               />;
             </FormControl>;
             <FormMessage />;
@@ -183,4 +133,3 @@ function ContactFields() {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

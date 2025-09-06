@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,14 +21,3 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src && src.pages.disabled/IndustrySolutions && IndustrySolutions.jsx
-<<<<<<< \"HEAD\": src && src.pages.disabled/IndustrySolutions && IndustrySolutions.jsx import React from \'react\'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedIndustry,setSelectedIndustry] = useState (\"all\") ; const [selectedSolutionType,setSelectedSolutionType] = useState (\"all\") ; import React from \'react\'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedIndustry,setSelectedIndustry] = useState (\"all\") ; const [selectedSolutionType,setSelectedSolutionType] = useState (\"all\") ;\"";
-<<<<<<< HEAD
-<<<<<<< "HEAD": src && src.pages.disabled/IndustrySolutions && IndustrySolutions.jsx import _React from 'react'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedIndustry,setSelectedIndustry] = useState ("all") ; const [selectedSolutionType,setSelectedSolutionType] = useState ("all") ; import _React from 'react'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedIndustry,setSelectedIndustry] = useState ("all") ; const [selectedSolutionType,setSelectedSolutionType] = useState ("all") ;"";
-=======
-<<<<<<< "HEAD": src && src.pages.disabled/IndustrySolutions && IndustrySolutions.jsx import _React from 'react'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedIndustry,setSelectedIndustry] = useState ("all") ; const [selectedSolutionType,setSelectedSolutionType] = useState ("all") ; import _React from 'react'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedIndustry,setSelectedIndustry] = useState ("all") ; const [selectedSolutionType,setSelectedSolutionType] = useState ("all") ;"";
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

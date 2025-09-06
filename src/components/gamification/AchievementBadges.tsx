@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { BadgeCheck } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-export interface Achievement {
-
-  id: string
-  title: string
-  description: string
-  achieved: boolean
-=======
 import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 export interface Achievement {
@@ -19,7 +5,6 @@ export interface Achievement {
   title: string;
   description: string;
   achieved: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface AchievementBadgesProps {
   achievements: Achievement[];
   achievements: Achievement[];
@@ -35,8 +20,6 @@ interface AchievementBadgesProps {
   achievements: Achievement[]
 }
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export interface Achievement {;
@@ -48,20 +31,6 @@ export interface Achievement {;
 interface AchievementBadgesProps {;
   achievements: Achievement[];
   achievements: Achievement[];
-<<<<<<< HEAD
-=======
-=======
-import { BadgeCheck } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-export interface Achievement {
-  id: string,
-  title: string,
-  description: string,
-<<<<<<< HEAD
-  achieved: boolean
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export interface Achievement {;
@@ -76,12 +45,7 @@ interface AchievementBadgesProps {;
 }
 
 export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <Card>;
       <CardHeader>;
         <CardTitle>Achievements</CardTitle>;
@@ -104,9 +68,6 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
               <p className="text-sm text-muted-foreground">{a && a.description}</p>;
             </div>;
           </div>;
-<<<<<<< HEAD
-=======
-=======
     <Card>
       <CardHeader>
         <CardTitle>Achievements</CardTitle>
@@ -122,26 +83,13 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
               <p className="text-sm text-muted-foreground">{a.description}</p>
             </div>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
-<<<<<<< HEAD
-      </CardContent>
-    </Card>
-<<<<<<< HEAD
-  )
-}
-=======
       </CardContent>;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   achieved: boolean;
 }
 interface AchievementBadgesProps {
@@ -177,4 +125,3 @@ function AchievementBadges() {
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

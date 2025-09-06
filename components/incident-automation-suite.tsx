@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-<<<<<<< HEAD
-  service.name
-}- Zion Tech Group</title>) )
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,29 +24,15 @@ class ErrorBoundary extends React.Component {
  return (<UltraAdvancedFuturisticBackground> <Head> <title> {;
   service && service.name ;
 }- Zion Tech Group</title>) ) ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
-<<<<<<< HEAD
-=======
-
-=======
 import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function IncidentAutomationSuitePage() {
-
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
-=======
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function IncidentAutomationSuitePage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/incident-automation-suite'));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!service) return null;
 
   return (
@@ -94,7 +70,6 @@ export default function IncidentAutomationSuitePage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
   service.name;
 }- Zion Tech Group</title>) );
 }</ul> </div> <div className="bg - black / 30 rounded - 2xl border border - emerald - 500 / 30 p - 6 h - fit" > <div className="flex items - end justify - between mb - 3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
@@ -146,29 +121,13 @@ if (return null) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </UltraAdvancedFuturisticBackground>;
-  );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraAdvancedFuturisticBackground>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

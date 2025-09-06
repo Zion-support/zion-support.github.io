@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,14 +21,3 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src && src.pages.disabled/DisputeManagement && DisputeManagement.jsx
-<<<<<<< \"HEAD\": src && src.pages.disabled/DisputeManagement && DisputeManagement.jsx import React from \'react\'; export default function DisputeManagement () { const [activeTab,setActiveTab] = useState (\"overview\") ; return (<> <SEOtitle=\"Dispute Management | Zion Tech Group\" description=\"Admin dashboard for managing and resolving marketplace disputes and conflicts\" keywords=\"dispute management,admin dashboard,conflict resolution,marketplace admin,Zion Tech Group\" canonical=\""https\": import React from \'react\' export default function DisputeManagement () { const [activeTab,setActiveTab] = useState (\"overview\")  return (<> <SEOtitle=\"Dispute Management | Zion Tech Group\" description=\"Admin dashboard for managing and resolving marketplace disputes and conflicts\" keywords=\"dispute management,admin dashboard,conflict resolution,marketplace admin,Zion Tech Group\" canonical=\""https\": \""
-<<<<<<< HEAD
-<<<<<<< "HEAD": src && src.pages.disabled/DisputeManagement && DisputeManagement.jsx import _React from 'react' export default function DisputeManagement () { const [activeTab,setActiveTab] = useState ("overview")  return (<> <SEOtitle="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management,admin dashboard,conflict resolution,marketplace admin,Zion Tech Group" canonical=""https": import _React from 'react' export default function DisputeManagement () { const [activeTab,setActiveTab] = useState ("overview")  return (<> <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management,admin dashboard,conflict resolution,marketplace admin,Zion Tech Group" canonical=""https": "";
-=======
-<<<<<<< "HEAD": src && src.pages.disabled/DisputeManagement && DisputeManagement.jsx import _React from 'react' export default function DisputeManagement () { const [activeTab,setActiveTab] = useState ("overview")  return (<> <SEOtitle="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management,admin dashboard,conflict resolution,marketplace admin,Zion Tech Group" canonical=""https": import _React from 'react' export default function DisputeManagement () { const [activeTab,setActiveTab] = useState ("overview")  return (<> <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management,admin dashboard,conflict resolution,marketplace admin,Zion Tech Group" canonical=""https": "";
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

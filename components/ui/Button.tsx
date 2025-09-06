@@ -1,29 +1,16 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from "react";
 
-<<<<<<< HEAD
-=======
 import React from './react';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
-=======
 interface ButtonProps {;
   children: React && React.ReactNode;
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
-<<<<<<< HEAD
-  className?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   onClick?: () => void;
   className?: string;
   disabled?: boolean;
@@ -32,28 +19,6 @@ interface ButtonProps {;
   iconPosition?: 'left' | 'right',
   style?: React.CSSProperties
 }
-<<<<<<< HEAD
-const Button: React.FC<ButtonProps> = ({
-
-  children
-  variant = "primary"
-  size = "md"
-  className = ""
-  onClick
-  disabled = false
-  type = "button"
-  asChild = false
-  ...props
-}) => {
-  const baseClasses =
-    "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
-  const variantClasses = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700"
-    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300"
-    outline: "border border-gray-300 bg-transparent hover:bg-gray-50"
-    ghost: "hover:bg-gray-100"
-  }
-=======
 import React from 'react';
 interface ButtonProps {
   children: React.ReactNode,
@@ -79,7 +44,6 @@ const Button: React.FC<ButtonProps> = ({
     ghost: 'text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500',
   };
   
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const sizeClasses = {
     sm: "h-8 px-3 text-xs"
     md: "h-10 px-4 py-2"
@@ -93,7 +57,6 @@ const Button: React.FC<ButtonProps> = ({
       disabled
       type
       ...props
-=======
 
 const Button: React.FC<ButtonProps> = ({;
   children,;
@@ -121,30 +84,12 @@ const Button: React.FC<ButtonProps> = ({;
     md: "h-10 px-4 py-2",;
     lg: "h-12 px-8 text-lg",;
   };
-<<<<<<< HEAD
-
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
-  if (asChild) {;
-    return React && React.cloneElement(children as React && React.ReactElement, {;
-      className: classes,;
-      onClick,;
-      disabled,;
-      type,;
-      ...props,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
   }
-<<<<<<< HEAD
-=======
-=======
   
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 active:scale-95';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   class_name?: string;
   on_click?: () => void;
   disabled?: boolean;
@@ -192,29 +137,13 @@ if ( {) {
       ...props,
     });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <button;
       className={classes}
       on_click={on_click}
       disabled={disabled}
       type={type}
-<<<<<<< HEAD
-      {...props}>;
-      {children}
-    </button>;
-  );
-}
-export { Button }
-
-<<<<<<< HEAD
-export { Button };
-=======
-<<<<<<< HEAD
-=======
 export default Button;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       {...props}
     >;
       {children}
@@ -223,5 +152,3 @@ export default Button;
 ;
 export { Button }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

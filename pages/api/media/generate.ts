@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildPressRelease } from "../../../utils/mediaKit";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { buildPressRelease  } from '../../../utils / media_kit';
 ;
@@ -18,34 +11,8 @@ export default async /**
  * handler - Function description
  */
 function handler() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const {
-<<<<<<< HEAD
-      type = "launch"
-      companyName = "Zion"
-      date = new Date().toISOString().substring(0, 10)
-      raiseAmount
-      description = "Innovative technology company"
-      contactEmail = "press@zion.com"
-    } = req.body |{}
-    if (req.method !== "POST") {
-      res.setHeader("Allow", "POST");
-      return res.status(405).json({ error: "Method not allowed" });
-=======
-      type = "launch",
-      company_name = "Zion",
-      date = new Date ().toISOString ().substring (0, 10),
-      raise_amount,
-      description = "Innovative technology company",
-<<<<<<< HEAD
-      contactEmail = "press@zion && zion.com",
-    } = req && req.body || {};
-
-    if (req && req.method !== "POST") {
-      res && res.setHeader("Allow", "POST");
-      return res && res.status(405).json({ error: "Method not allowed" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     const pressRelease = await buildPressRelease({
       type
@@ -55,28 +22,6 @@ function handler() {
       description
       contactEmail
     });
-<<<<<<< HEAD
-    return res.status(200).json({
-      ok: true
-      pressRelease
-      downloadUrl: `/api/media/download/${pressRelease.id}`
-    });
-  } catch (error: any) {
-    console.error("Press release generation error:", error);
-    return res.status(500).json({
-      ok: false
-      error: "Failed to generate press release"
-=======
-
-    return res && res.status(200).json({
-      ok: true,
-      pressRelease,
-      downloadUrl: `/api/media/download/${pressRelease && pressRelease.id}`,
-    });
-  } catch (error: any) {
-    console && console.error("Press release generation error:", error);
-    return res && res.status(500).json({
-=======
       contact_email = "press@zion.com",
     } = req.body || {}
 ;
@@ -104,18 +49,9 @@ if ( {) {
   } catch (error: any) {
     console.error ("Press release generation error:", error);
     return res.status (500).json ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       ok: false,
       error: "Failed to generate press release",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-<<<<<<< HEAD
-=======
-
-  }
-<<<<<<< HEAD
-}
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildPressRelease } from '../../../utils/mediaKit';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -150,10 +86,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ ok: true, text, fallback: true })
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

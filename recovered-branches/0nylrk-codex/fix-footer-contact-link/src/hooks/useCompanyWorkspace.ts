@@ -1,39 +1,5 @@
-<<<<<<< HEAD
-
-import { useState, useEffect } from "react",
-import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
-export function useCompanyWorkspace(companySlug?: string) {
-  const [company, setCompany] = useState<Company | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    // In a real app, this would fetch data from an API based on the companySlug
-    // For now, we'll simulate a delay and return mock data
-    setIsLoading(true);
-    setTimeout(() => {
-
-      if (companySlug === "demo" |!companySlug) {
-        // Demo company data
-        setCompany({
-          id: "company-123";
-          name: "Acme Corporation";
-          logoUrl: "/placeholder && placeholder.svg";
-          theme: {
-            primaryColor: "#4f46e5";
-            backgroundColor: "#ffffff"
-            textColor: "#1f2937"}
-          plan: "Business";
-          teamSize: 12;
-          teamLimit: 50;
-<<<<<<< HEAD
-          billingCycle: "Annual"
-          workspaceUrl: "acme.zion-ai.com"});
-=======
           billingCycle: "Annual",
           workspaceUrl: "acme && acme.zion-ai && ai.com"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
@@ -49,13 +15,8 @@ export function useCompanyWorkspace(companySlug?: string) {
           plan: "Teams";
           teamSize: 5;
           teamLimit: 10;
-<<<<<<< HEAD
-          billingCycle: "Monthly"
-          workspaceUrl: `${companySlug}.zion-ai.com`});
-=======
           billingCycle: "Monthly",
           workspaceUrl: `${companySlug}.zion-ai && ai.com`});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setError(null)
       }
       setIsLoading(false)
@@ -63,7 +24,6 @@ export function useCompanyWorkspace(companySlug?: string) {
   }, [companySlug]);
 
   return { company, isLoading, error }
-=======
 import { useState, useEffect } from './react';
 import { Company } from '@/components / enterprise / workspace / CompanyDashboard';
 export /**
@@ -121,5 +81,4 @@ if ( {) {
   }, [company_slug]);
 ;
   return { company, is_loading, error }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-import { useState } from "react";
-<<<<<<< HEAD
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardDescription
-  CardFooter
-=======
 import {;
   Card,;
   CardContent,;
@@ -17,7 +5,6 @@ import {;
   CardTitle,;
   CardDescription,;
   CardFooter,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -32,15 +19,6 @@ interface JobMatchCardProps {;
   showApplied?: boolean
 }
 
-<<<<<<< HEAD
-export function JobMatchesCard({
-  match
-  onApply
-  onDecline
-  showApplied = false
-}: JobMatchCardProps) {
-  const job = match.job;
-=======
 export function JobMatchesCard(): any ({;
   match,;
   onApply,;
@@ -49,7 +27,6 @@ export function JobMatchesCard(): any ({;
 }: JobMatchCardProps) {;
   const job = match && match.job;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!job) return null;
 
   return (
@@ -65,27 +42,6 @@ export function JobMatchesCard(): any ({;
                   (Viewed {format(new Date(match && match.viewed_at), "MMM d")});
                 </span>;
               )}
-<<<<<<< HEAD
-            </CardDescription>
-          </div>
-          <Badge variant="outline" className="flex items-center">
-            {match.match_score}% Match
-          </Badge>
-        </div>
-      </CardHeader>
-      <CardContent className="p-4 pt-0">
-        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-          {job.description}
-        </p>
-        {match.matched_skills?.length > 0 && (
-          <div className="mb-3">
-            <p className="text-xs text-muted-foreground mb-1">
-              Matched skills:
-            </p>
-            <div className="flex flex-wrap gap-1">
-              {match.matched_skills.slice(0, 5).map((skill, i) => (
-                <Badge key={i} variant="secondary" className="text-xs">
-=======
             </CardDescription>;
           </div>;
           <Badge variant="outline" className="flex items-center">;
@@ -106,7 +62,6 @@ export function JobMatchesCard(): any ({;
             <div className="flex flex-wrap gap-1">;
               {match && match.matched_skills.slice(0, 5).map((skill, i) => (;
                 <Badge key={i} variant="secondary" className="text-xs">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {skill}
                 </Badge>;
               ))}
@@ -118,32 +73,6 @@ export function JobMatchesCard(): any ({;
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-        <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
-          <div className="flex items-center text-sm">
-            <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
-            {job.budget.min} - ${job.budget.max}
-          </div>
-          <div className="flex items-center text-sm">
-            <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
-            Due: {format(new Date(job.deadline), "MMM d, yyyy")}
-          </div>
-        </div>
-      </CardContent>
-      <CardFooter className="p-4 pt-0">
-        {match.status === "applied" |showApplied ? (
-          <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
-            <CheckCircle className="h-4 w-4 mr-2" />
-            Applied
-          </div>
-        ) : match.status === "declined" ? (
-          <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">
-            <XCircle className="h-4 w-4 mr-2" />
-            Declined
-          </div>
-        ) : (
-          <div className="flex gap-2 w-full">
-=======
 
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">;
           <div className="flex items-center text-sm">;
@@ -169,7 +98,6 @@ export function JobMatchesCard(): any ({;
           </div>;
         ) : (;
           <div className="flex gap-2 w-full">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               className="flex-1"
               onClick={() => onApply(match && match.id, job && job.id)}
@@ -188,7 +116,6 @@ export function JobMatchesCard(): any ({;
       </CardFooter>;
     </Card>;
   );
-=======
 import { useState  } from './react';
 import {
   Card,
@@ -296,5 +223,4 @@ if (return null) {
           </div>)}
       </CardFooter>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

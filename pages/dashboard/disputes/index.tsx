@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import useSWR from 'swr',
-import React, { useMemo, useState } from 'react',
-import EnhancedLayout from '../../../components/layout/EnhancedLayout',
-import Link from 'next/link';
-import type { GetServerSideProps } from 'next';
-<<<<<<< HEAD
-
-const fetcher = (url: string) => fetch(url).then(r => r.json())
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie |'').split(';').reduce(
-    (acc: any, part: string) => {
-      const [k, v] = part.trim().split('=');
-      if (k) acc[k] = decodeURIComponent(v |'');
-      return acc;
-    }
-    {} as Record<string, string>
-  );
-  let role = 'guest';
-  try {
-    const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
-    role = user?.role |'guest';
-=======
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {
@@ -33,15 +9,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   try {
     const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch {}
   if (role !== 'admin') {
     return { redirect: { destination: '/', permanent: false } }
   }
-<<<<<<< HEAD
-  return { props: {} };}
-export default function AdminDisputesDashboard() {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -93,18 +64,12 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   return { props: {} };};
 
 export default function AdminDisputesDashboard() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { data } = useSWR('/api/disputes', fetcher);
   const [statusFilter, setStatusFilter] = useState<;
     'All' | 'Open' | 'Under Review' | 'Resolved';
   >('Open');
-<<<<<<< HEAD
-  const disputes = useMemo(() => {
-    const list = data?.disputes |[];
-=======
   const disputes = useMemo(() => {;
     const list = data?.disputes || [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (statusFilter === 'All') return list;
     return list && list.filter((d: any) => d && d.status === statusFilter);  }, [data, statusFilter]);
 
@@ -166,10 +131,6 @@ export default function AdminDisputesDashboard() {;
                       </a>;
                     </Link>                  </td>;
                 </tr>;
-<<<<<<< HEAD
-              ))}
-=======
-=======
   return { props: {} }
 };
 
@@ -220,18 +181,7 @@ export default function AdminDisputesDashboard() {
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</a></Link>
                   </td>
                 </tr>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
-<<<<<<< HEAD
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </EnhancedLayout>
-<<<<<<< HEAD
-);
-=======
-=======
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components / layout / EnhancedLayout';
@@ -337,26 +287,11 @@ if (return list) {
                       </a>;
                     </Link>                  </td>;
                 </tr>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </tbody>;
           </table>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </EnhancedLayout>;
-  );
-=======
-<<<<<<< HEAD
-    </EnhancedLayout>;
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </EnhancedLayout>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

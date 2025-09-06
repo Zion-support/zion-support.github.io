@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
@@ -22,52 +17,14 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
     return true;
   return false;
 }
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const user = getDemoUser(req);
-    const { id } = (req && req.method === "GET" ? req && req.query : req && req.body) as {
-      id?: string;
-    }
-=======
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const user = getDemoUser(req);
-<<<<<<< HEAD
-    const { id } = (req && req.method === "GET" ? req && req.query : req && req.body) as {
-      id?: string;
-    };
-=======
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     if (req && req.method === "GET") {
       return res && res.json({ ok: true, project });
     }
-<<<<<<< HEAD
-    if (req.method === "PATCH") {
-      const { action } = req.body as { action: string }
-      if (action === "add_note") {
-        const { content } = req.body as { content: string }
-        if (!content) return bad(res, "Missing content");
-        const note: ProjectNote = {
-          id: uuidv4()
-          authorId: user.id
-          authorRole: user.role
-          content
-          createdAtIso: new Date().toISOString()
-        }
-        project.notes.push(note);
-=======
 
     if (req && req.method === "PATCH") {
       const { action } = req && req.body as { action: string };
@@ -82,25 +39,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           createdAtIso: new Date().toISOString(),
         };
         project && project.notes.push(note);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         saveProject(project);
         return res && res.json({ ok: true, project });
       }
       if (action === "add_document") {
-<<<<<<< HEAD
-        const { name, url } = req.body as { name: string; url?: string }
-        if (!name) return bad(res, "Missing name");
-        const doc: ProjectDocument = {
-          id: uuidv4()
-          name
-          url
-          uploadedAtIso: new Date().toISOString()
-        }
-        project.documents.push(doc);
-=======
-        const { name, url } = req && req.body as { name: string; url?: string };
-        if (!name) return bad(res, "Missing name");
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import { getDemoUser  } from '../../../utils / marketplace / auth';
@@ -188,27 +130,16 @@ if ( {) {
         if (return bad (res, "Missing name")) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         const doc: ProjectDocument = {
           id: uuidv4 (),
           name,
           url,
-<<<<<<< HEAD
-          uploadedAtIso: new Date().toISOString(),
-        };
-        project && project.documents.push(doc);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         saveProject(project);
         return res && res.json({ ok: true, project });
       }
       if (action === "update_timeline") {
-<<<<<<< HEAD
-        const { timeline } = req.body as { timeline: Project["timeline"] }
-        project.timeline = Array.isArray(timeline)
-=======
         const { timeline } = req && req.body as { timeline: Project["timeline"] };
         project && project.timeline = Array && Array.isArray(timeline)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           ? timeline
           : project && project.timeline;
         saveProject(project);
@@ -226,14 +157,6 @@ if ( {) {
     const status = e?.statusCode |500;
     return res
       .status(status)
-<<<<<<< HEAD
-      .json({ ok: false, error: e?.message || "Server error" });
-=======
-      .json({ ok: false, error: e?.message |"Server error" });
-
-  }
-}
-=======
 
     if (req.method === "GET") {
       return res.json({ ok: true, project })
@@ -286,11 +209,8 @@ if ( {) {
   } catch (e: any) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           uploadedAtIso: new Date ().toISOString (),
         }
         project.documents.push (doc);
@@ -326,4 +246,3 @@ if ( {) {
       .json ({ ok: false, error: e?.message || "Server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
-const contactInfo = {
-<<<<<<< HEAD
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-const serviceCategories = [
-  {
-    title: 'AI & Consciousness'
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence'
-    services: cuttingEdgeAIServices2025
-    icon: Brain
-    color: 'from-violet-500 to-purple-600'
-    bgColor: 'from-violet-900/20 to-purple-900/20'
-=======
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-const serviceCategories = [
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -51,114 +15,38 @@ const contact_info = {
   website: 'https://ziontechgroup.com';
 },
 const service_categories = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     title: 'AI & Consciousness',
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
     services: cuttingEdgeAIServices2025,
     icon: Brain,
-<<<<<<< HEAD
-    color: 'from-violet-500 to-purple-600',
-    bgColor: 'from-violet-900/20 to-purple-900/20',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     borderColor: 'border-violet-500/30'
   }
-=======
     color: 'from - violet - 500 to - purple - 600',
     bg_color: 'from - violet - 900 / 20 to - purple - 900 / 20',
     border_color: 'border - violet - 500 / 30';
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
-<<<<<<< HEAD
-    title: 'Quantum & Emerging Tech'
-    description: 'Breakthrough quantum computing and space technology solutions'
-    services: cuttingEdgeEmergingTechServices2025
-    icon: Atom
-    color: 'from-indigo-500 to-blue-600'
-    bgColor: 'from-indigo-900/20 to-blue-900/20'
-    borderColor: 'border-indigo-500/30'
-  }
-  {
-    title: 'Enterprise IT'
-    description: 'Advanced enterprise infrastructure and security solutions'
-    services: cuttingEdgeITServices2025
-    icon: Shield
-    color: 'from-blue-500 to-cyan-600'
-    bgColor: 'from-blue-900/20 to-cyan-900/20'
-    borderColor: 'border-blue-500/30'
-  }
-  {
-    title: 'Micro SAAS'
-    description: 'Innovative business solutions for modern enterprises'
-    services: cuttingEdgeMicroSaasServices2025
-    icon: Rocket
-    color: 'from-teal-500 to-emerald-600'
-    bgColor: 'from-teal-900/20 to-emerald-900/20'
-    borderColor: 'border-teal-500/30'
-  }
-]
-=======
-    title: 'Quantum & Emerging Tech',
-    description: 'Breakthrough quantum computing and space technology solutions',
-    services: cuttingEdgeEmergingTechServices2025,
-    icon: Atom,
-<<<<<<< HEAD
-    color: 'from-indigo-500 to-blue-600',
-    bgColor: 'from-indigo-900/20 to-blue-900/20',
-    borderColor: 'border-indigo-500/30'
-  };
-<<<<<<< HEAD
-=======
-=======
     color: 'from - indigo - 500 to - blue - 600',
     bg_color: 'from - indigo - 900 / 20 to - blue - 900 / 20',
     border_color: 'border - indigo - 500 / 30';
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   {
     title: 'Enterprise IT',
     description: 'Advanced enterprise infrastructure and security solutions',
     services: cuttingEdgeITServices2025,
     icon: Shield,
-<<<<<<< HEAD
-    color: 'from-blue-500 to-cyan-600',
-    bgColor: 'from-blue-900/20 to-cyan-900/20',
-    borderColor: 'border-blue-500/30'
-  };
-<<<<<<< HEAD
-=======
-=======
     color: 'from - blue - 500 to - cyan - 600',
     bg_color: 'from - blue - 900 / 20 to - cyan - 900 / 20',
     border_color: 'border - blue - 500 / 30';
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
     services: cuttingEdgeMicroSaasServices2025,
     icon: Rocket,
-<<<<<<< HEAD
-    color: 'from-teal-500 to-emerald-600',
-    bgColor: 'from-teal-900/20 to-emerald-900/20',
-    borderColor: 'border-teal-500/30'
-  }
-=======
-    color: 'from - teal - 500 to - emerald - 600',
-    bg_color: 'from - teal - 900 / 20 to - emerald - 900 / 20',
-    border_color: 'border - teal - 500 / 30';
-  }
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function CuttingEdgeServices2025() {
   return (
     <Layout>
@@ -216,18 +104,6 @@ export default function CuttingEdgeServices2025() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-
-      {/* Service Categories */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
-=======
 ],
 export default /**
  * CuttingEdgeServices2025 - Function description
@@ -288,7 +164,6 @@ function CuttingEdgeServices2025() {
           </motion.div>;
         </div>;
       </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Service Categories */}
       <section className="py - 20 bg - gradient - to - b from - gray - 900 to - black">;
         <div className="max - w-7xl mx - auto px - 6">;
@@ -297,8 +172,6 @@ function CuttingEdgeServices2025() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
@@ -312,7 +185,6 @@ function CuttingEdgeServices2025() {
           <div className="space-y-16">
             {serviceCategories.map((category, index) => (
               <motion.div
-=======
             className="text - center mb - 16";
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - purple - 600 bg - clip - text text - transparent">;
@@ -326,16 +198,11 @@ function CuttingEdgeServices2025() {
           <div className="space - y-16">;
             {service_categories.map ((category, index) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={category.title}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${category.color} p-5 mb-6`}>
@@ -347,19 +214,6 @@ function CuttingEdgeServices2025() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
-<<<<<<< HEAD
-                      key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
-                      className="group"
-                    >
-                      <div className={`bg-gradient-to-br ${category.bgColor} p-8 rounded-2xl border ${category.borderColor} hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105`}>
-                        <div className="flex items-start justify-between mb-4">
-                          <h4 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
-=======
-=======
               >;
                 <div className="text - center mb - 12">;
                   <div className={`inline - flex items - center justify - center w - 20 h - 20 rounded - 2xl bg - gradient - to - r ${category.color} p - 5 mb - 6`}>;
@@ -371,7 +225,6 @@ function CuttingEdgeServices2025() {
                 <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
                   {category.services.map ((service, service_index) => (
                     <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       key={service.id}
                       initial={{ opacity: 0, coordinate_y: 20 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -382,76 +235,11 @@ function CuttingEdgeServices2025() {
                       <div className={`bg - gradient - to - br ${category.bg_color} p - 8 rounded - 2xl border ${category.border_color} hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105`}>;
                         <div className="flex items - start justify - between mb - 4">;
                           <h4 className="text - xl font - semibold text - white group - hover:text - cyan - 400 transition - colors">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             {service.name}
                           </h4>;
                           <div className="text - right">;
                             <div className="text - 2xl font - bold text - cyan - 400">;
                               ${service.pricing.starter.price}
-<<<<<<< HEAD
-                            </div>
-                            <div className="text-sm text-gray-400">/month</div>
-                          </div>
-                        </div>
-                        <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                        <div className="mb-6">
-                          <h5 className="text-white font-semibold mb-3">Key Features:</h5>
-                          <div className="space-y-2">
-                            {service.features.slice(0, 4).map((feature, featureIndex) => (
-                              <div key={featureIndex} className="flex items-center space-x-3 text-sm">
-                                <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                                <span className="text-gray-300">{feature}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                        <div className="mb-6">
-                          <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
-                            <span>Market Size:</span>
-                            <span className="text-cyan-400 font-semibold">{service.marketSize}</span>
-                          </div>
-                          <div className="flex items-center justify-between text-sm text-gray-400">
-                            <span>Category:</span>
-                            <span className="text-purple-400">{service.category}</span>
-                          </div>
-                        </div>
-                        <div className="flex flex-col sm:flex-row gap-3">
-                          <a
-                            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                            className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 text-sm"
-                          >
-                            <Mail className="w-4 h-4 mr-2" />
-                            Get Quote
-                          </a>
-                          <a
-                            href={service.website}
-                            className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm"
-                          >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Learn More
-                          </a>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-
-      {/* Pricing Comparison */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
-=======
                             </div>;
                             <div className="text - sm text - gray - 400">/month</div>;
                           </div>;
@@ -500,7 +288,6 @@ function CuttingEdgeServices2025() {
           </div>;
         </div>;
       </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Pricing Comparison */}
       <section className="py - 20 bg - black">;
         <div className="max - w-7xl mx - auto px - 6">;
@@ -509,8 +296,6 @@ function CuttingEdgeServices2025() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
@@ -524,7 +309,6 @@ function CuttingEdgeServices2025() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {['StarterProfessionalEnterprise'].map((plan, index) => (
               <motion.div
-=======
             className="text - center mb - 16";
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent">;
@@ -538,59 +322,22 @@ function CuttingEdgeServices2025() {
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             {['StarterProfessionalEnterprise'].map ((plan, index) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={plan}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="group"
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan}</h3>
                   <div className="space-y-4 mb-8">
-=======
                 className="group";
               >;
                 <div className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 p - 8 rounded - 2xl border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
                   <h3 className="text - 2xl font - bold text - white mb - 4">{plan}</h3>;
                   <div className="space - y-4 mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {plan === 'Starter' && (
-<<<<<<< HEAD
-                      <>
-                        <div className="text-sm text-gray-400">Perfect for small businesses and startups</div>
-                        <div className="text-sm text-gray-400">Basic features and standard support</div>
-                        <div className="text-sm text-gray-400">Email support included</div>
-                      </>
-                    )}
-                    {plan === 'Professional' && (
-                      <>
-                        <div className="text-sm text-gray-400">Ideal for growing businesses</div>
-                        <div className="text-sm text-gray-400">Advanced features and priority support</div>
-                        <div className="text-sm text-gray-400">Custom configurations available</div>
-                      </>
-                    )}
-                    {plan === 'Enterprise' && (
-=======
-                      <>;
-                        <div className="text - sm text - gray - 400">Perfect for small businesses and startups</div>;
-                        <div className="text - sm text - gray - 400">Basic features and standard support</div>;
-                        <div className="text - sm text - gray - 400">Email support included</div>;
-                      </>)}
-                    {plan === 'Professional' && (
-                      <>;
-                        <div className="text - sm text - gray - 400">Ideal for growing businesses</div>;
-                        <div className="text - sm text - gray - 400">Advanced features and priority support</div>;
-                        <div className="text - sm text - gray - 400">Custom configurations available</div>;
-                      </>)}
-                    {plan === 'Enterprise' && (
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       <>
                         <div className="text-sm text-gray-400">For large enterprises and organizations</div>
                         <div className="text-sm text-gray-400">Full platform access and custom development</div>
@@ -598,14 +345,7 @@ function CuttingEdgeServices2025() {
                       </>
                     )}
                   </div>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <div className="text-center mb-8">
                     <div className="text-4xl font-bold text-cyan-400 mb-2">
                       {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'}
@@ -625,18 +365,6 @@ function CuttingEdgeServices2025() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
-=======
                       <>;
                         <div className="text - sm text - gray - 400">For large enterprises and organizations</div>;
                         <div className="text - sm text - gray - 400">Full platform access and custom development</div>;
@@ -661,7 +389,6 @@ function CuttingEdgeServices2025() {
           </div>;
         </div>;
       </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Contact Section */}
       <section className="py - 20 bg - gradient - to - r from - cyan - 900 / 20 to - blue - 900 / 20">;
         <div className="max - w-4xl mx - auto text - center px - 6">;
@@ -670,8 +397,6 @@ function CuttingEdgeServices2025() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
               Ready to Experience the Future?
@@ -722,14 +447,7 @@ function CuttingEdgeServices2025() {
       </section>
     </Layout>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 600 bg - clip - text text - transparent">;
               Ready to Experience the Future?;
@@ -780,5 +498,3 @@ function CuttingEdgeServices2025() {
       </section>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,54 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Data store utilities
-export const dataStore = {
-  // Add data store functionality here
-  getData: () => []
-  setData: (data: any) => null
-  updateData: (id: string, data: any) => null
-  deleteData: (id: string) => null
-}
-=======
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  status: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-interface Review {
-  id: string;
-  projectId: string;
-  fromRole: 'client' | 'talent';
-  fromId: string;
-  toRole: 'client' | 'talent';
-  toId: string;
-  rating: number;
-  text: string;
-  categories?: any;
-  anonymous: boolean;
-  approved: boolean;
-  removed: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-class DataStore {
-  private projects: Project[] = [];
-  private reviews: Review[] = [];
-
-  // Project methods
-  findProjectById(id: string): Project | undefined {
-    return this && this.projects.find(project => project && project.id === id);
-  }
-}
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   createProject(data: Partial<Project>): Project {
     const project: Project = {
       id: Math && Math.random().toString(36).substr(2, 9),
@@ -130,12 +79,7 @@ export const hasExistingReview = (projectId: string, fromRole: string, fromId: s
 export const upsertReview = (data: Partial<Review>) => store && store.upsertReview(data);
 export const getReviewsByProject = (projectId: string) => store && store.getReviewsByProject(projectId);
 export const getAllReviews = () => store && store.getAllReviews();
-<<<<<<< HEAD
 export const counterpartRole = (role: 'client' | 'talent') => store && store.counterpartRole(role);
-=======
-export const counterpartRole = (role: 'client' | 'talent') => store && store.counterpartRole(role);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export async function readProjects(): Promise<Project[]> {
   await ensureFilesExist();
   return fs.readJson(PROJECTS_PATH);
@@ -197,8 +141,6 @@ export async function hasExistingReview(
       !r.removed
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 // Data store utilities;
 export const data_store = {
   // Add data store functionality here;
@@ -207,5 +149,3 @@ export const data_store = {
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

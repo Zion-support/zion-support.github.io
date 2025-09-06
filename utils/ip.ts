@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest } from 'next';
-<<<<<<< HEAD
-export function extractClientIp(req: NextApiRequest): string | null {
-<<<<<<< HEAD
-  const xff = (req.headers['x-forwarded-for'] as string) |'';
-  const ip =
-    xff.split(',')[0]?.trim() |
-    (req.headers['x-real-ip'] as string) |
-    (req.socket?.remoteAddress ?? null);
-  if (!ip) return null;
-  if (ip.startsWith('::ffff:')) return ip.substring(7);
-  return ip;
-}
-<<<<<<< HEAD
-
-export function getClientIp(req: any): string {
-  const forwarded = req.headers['x-forwarded-for'];
-  const remoteAddress = req.socket?.remoteAddress;
-=======
   const xff = (req && req.headers['x-forwarded-for'] as string) || '';
   const ip =
     xff && xff.split(',')[0]?.trim() ||
@@ -31,13 +9,9 @@ export function getClientIp(req: any): string {
   return ip;export function getClientIp(req: any): string {
   const forwarded = req && req.headers['x-forwarded-for'];
   const remoteAddress = req && req.socket?.remoteAddress,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   
   if (forwarded) {
     return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim();
-<<<<<<< HEAD
-=======
-=======
 // IP address utilities
 export interface IpInfo {
   ip: string;
@@ -115,22 +89,16 @@ class IpManager {
            req.socket?.remoteAddress || 
            req.ip || 
            'unknown';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   
   return remoteAddress || 'unknown';
-=======
 export function getClientIp(req: any): string {
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
   }
-<<<<<<< HEAD
-  return remoteAddress |'unknown';
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
-=======
 
   // Check IP reputation
   async getIpReputation(ip: string): Promise<IpReputation | null> {
@@ -303,11 +271,8 @@ export function getClientIp(req: any): string {
       size: this.cache.size,
       entries: Array.from(this.cache.keys())
     };
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
-<<<<<<< HEAD
-=======
 
 // Singleton instance
 export const ipManager = new IpManager();
@@ -361,8 +326,6 @@ export const PRIVATE_IP_RANGES = [
   '127.0.0.0/8',
   '169.254.0.0/16'
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export function extractClientIp (req: NextApiRequest): string | null {
   const xff = (req.headers['x - forwarded - for'] as string) || '';
@@ -391,5 +354,3 @@ if ( {) {
   }
   return remote_address || 'unknown';
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

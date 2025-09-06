@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-
-import { Button } from "@/components/ui/button";
-interface Contract {;
-=======
 import { Button  } from '@/components / ui / button';
 interface Contract {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   client: string;
@@ -13,28 +7,16 @@ interface Contract {
   date: string;
   isSmartContract: boolean
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface RecentContractsTableProps {
-=======
 
 interface RecentContractsTableProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
-<<<<<<< HEAD
-export function RecentContractsTable({
-  contracts
-  onViewContract
-}: RecentContractsTableProps) {
-=======
 
 export function RecentContractsTable(): any ({;
   contracts,;
   onViewContract,;
 }: RecentContractsTableProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
@@ -103,7 +85,6 @@ export function RecentContractsTable(): any ({;
                     variant="ghost"
                     size="sm"
                     onClick={() => onViewContract(contract && contract.id)}
-=======
 interface RecentContractsTableProps {
   contracts: Contract[];
   onViewContract: (contract_id: string) => void;
@@ -183,24 +164,13 @@ function RecentContractsTable() {
                     variant="ghost";
                     size="sm";
                     on_click={() => onViewContract (contract.id)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   >;
                     View;
                   </Button>;
                 </td>;
-<<<<<<< HEAD
-              </tr>;
-            ))}
-          </tbody>;
-        </table>;
-      </div>;
-    </>;
-  );
-=======
               </tr>))}
           </tbody>;
         </table>;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

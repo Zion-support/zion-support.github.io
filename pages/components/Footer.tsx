@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  Mail
-  Phone
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -49,166 +33,10 @@ import {;
   Linkedin,;
   Instagram,;
   Github,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
-=======
-import React from 'react';
-import Link from 'next/link';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
-const Footer = () => {;
-  const currentYear = new Date().getFullYear();
-=======
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  ArrowRight,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  BarChart3,
-  Users,
-  Settings,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
-  BookOpen,
-  Building,
-  Heart,
-  DollarSign,
-  Target,
-  Zap,
-  Award,
-  Star,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  Eye,
-  Lock,
-  Code,
-  Home,
-  Camera,
-  Music,
-  Gamepad2,
-  Truck,
-  Calculator,
-  CreditCard,
-  Paintbrush,
-  HardDrive,
-  Activity,
-  Lightbulb,
-  Wrench,
-  PieChart,
-  ClipboardList,
-  Layers;
-} from 'lucide-react';
-
-<<<<<<< HEAD
-const footerSections = [
-  {
-    title: 'Services',
-    links: [
-      { title: 'AI Services', href: '/ai-services', icon: Brain },
-      { title: 'IT Services', href: '/it-services', icon: Network },
-      { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code },
-      { title: 'Blockchain', href: '/blockchain', icon: Lock },
-      { title: 'IoT Solutions', href: '/iot', icon: Globe },
-      { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye },
-      { title: 'Space Technology', href: '/space-tech', icon: Settings }
-    ]
-  },
-  {
-    title: 'Solutions',
-    links: [
-      { title: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-      { title: 'Startup Solutions', href: '/startup', icon: Settings },
-      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
-      { title: 'Automation', href: '/automation', icon: Zap },
-      { title: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp },
-      { title: 'Custom Development', href: '/custom-development', icon: Code }
-    ]
-  },
-  {
-    title: 'Industries',
-    links: [
-      { title: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { title: 'Finance', href: '/industries/finance', icon: DollarSign },
-      { title: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
-      { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
-      { title: 'Education', href: '/industries/education', icon: BookOpen },
-      { title: 'Real Estate', href: '/industries/real-estate', icon: Home },
-      { title: 'Agriculture', href: '/industries/agriculture', icon: Target },
-      { title: 'Energy', href: '/industries/energy', icon: Zap }
-    ]
-  },
-  {
-    title: 'Resources',
-    links: [
-      { title: 'Blog', href: '/blog', icon: FileText },
-      { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-      { title: 'White Papers', href: '/white-papers', icon: FileText },
-      { title: 'Webinars', href: '/webinars', icon: Calendar },
-      { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
-      { title: 'API Documentation', href: '/api-docs', icon: Code },
-      { title: 'Training', href: '/training', icon: BookOpen },
-      { title: 'FAQ', href: '/faq', icon: MessageSquare }
-    ]
-  },
-  {
-    title: 'Company',
-    links: [
-      { title: 'About Us', href: '/about', icon: Building },
-      { title: 'Team', href: '/team', icon: Users },
-      { title: 'Careers', href: '/careers', icon: Users },
-      { title: 'Partners', href: '/partners', icon: Globe },
-      { title: 'News', href: '/news', icon: FileText },
-      { title: 'Contact', href: '/contact', icon: MessageSquare },
-      { title: 'Privacy Policy', href: '/privacy', icon: Lock },
-      { title: 'Terms of Service', href: '/terms', icon: FileText }
-    ]
-  },
-  {
-    title: 'Support',
-    links: [
-      { title: 'Help Center', href: '/help', icon: MessageSquare },
-      { title: 'Documentation', href: '/docs', icon: FileText },
-      { title: 'API Reference', href: '/api', icon: Code },
-      { title: 'Status Page', href: '/status', icon: BarChart3 },
-      { title: 'Community', href: '/community', icon: Users },
-      { title: 'Training', href: '/training', icon: BookOpen },
-      { title: 'Free Consultation', href: '/consultation', icon: Calendar },
-      { title: 'Get Quote', href: '/quote', icon: FileText }
-    ]
-  }
-];
-
-const microSaasCategories = [
-  { title: 'Marketing Tools', icon: Target, count: 15 },
-  { title: 'Productivity', icon: Settings, count: 12 },
-  { title: 'Analytics', icon: BarChart3, count: 18 },
-  { title: 'Automation', icon: Zap, count: 22 },
-  { title: 'Security', icon: Shield, count: 8 },
-  { title: 'Finance', icon: DollarSign, count: 10 },
-  { title: 'Design', icon: Paintbrush, count: 6 },
-  { title: 'Development', icon: Code, count: 14 }
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -257,7 +85,6 @@ const microSaasCategories = [
     { name: "LinkedIn", href: "#", icon: Linkedin }
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
-=======
   const footerLinks = {;
     services: [;
       { name: "AI Services", href: "/ai-services" },;
@@ -307,7 +134,6 @@ const microSaasCategories = [
     { name: "LinkedIn", href: "#", icon: Linkedin },;
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
   return (
     <footer className="bg-gray-900 text-white">;
@@ -318,36 +144,6 @@ const microSaasCategories = [
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-            >
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">Z</span>
-                </div>
-                <span className="text-xl font-bold">Zion Tech Group</span>
-              </div>
-              <p className="text-gray-400 mb-6">
-                Leading provider of cutting-edge technology solutions, helping
-                businesses transform and grow through innovation.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-blue-400" />
-                  <span className="text-sm">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-4 h-4 text-blue-400" />
-                  <span className="text-sm">hello@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-4 h-4 text-blue-400" />
-                  <span className="text-sm">San Francisco, CA</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-=======
               transition={{ duration: 0 && 0.8 }}>;
               <div className="flex items-center space-x-2 mb-6">;
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -376,7 +172,6 @@ const microSaasCategories = [
             </motion && motion.div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Services */}
           <div>;
             <motion&& motion.div
@@ -394,16 +189,10 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-              </ul>
-            </motion.div>
-          </div>
-=======
               </ul>;
             </motion && motion.div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Solutions */}
           <div>;
             <motion&& motion.div
@@ -421,16 +210,10 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-              </ul>
-            </motion.div>
-          </div>
-=======
               </ul>;
             </motion && motion.div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -448,16 +231,10 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-              </ul>
-            </motion.div>
-          </div>
-=======
               </ul>;
             </motion && motion.div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Resources & Legal */}
           <div>;
             <motion&& motion.div
@@ -475,20 +252,12 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-              </ul>
-              <h3 className="text-lg font-semibold mb-6">Legal</h3>
-              <ul className="space-y-3">
-                {footerLinks.legal.map((link, index) => (
-                  <li key={index}>
-=======
               </ul>;
 
               <h3 className="text-lg font-semibold mb-6">Legal</h3>;
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
                   <li key={index}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Link
                       href={link && link.href}
                       className="text-gray-400 hover:text-white transition-colors">;
@@ -496,51 +265,24 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-              </ul>
-            </motion.div>
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
               </ul>;
             </motion && motion.div>;
           </div>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              className="text-gray-400 text-sm mb-4 md:mb-0"
-            >
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             <motion.div
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </motion && motion.div>;
 
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -554,10 +296,6 @@ const microSaasCategories = [
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
-<<<<<<< HEAD
-            </motion.div>
-=======
-=======
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -637,7 +375,6 @@ const microSaasCategories = [
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
@@ -650,22 +387,18 @@ const microSaasCategories = [
                 Cookie Policy
               </Link>
             </div>
->>>>>>> origin/automation-improvements-final
           </div>
         </div>
       </div>
     </footer>
-=======
             </motion && motion.div>;
           </div>;
         </div>;
       </div>;
     </footer>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default Footer;
-=======
 import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -903,4 +636,3 @@ const Footer = () =>: any {
 ;
 export default Footer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

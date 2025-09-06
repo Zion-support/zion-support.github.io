@@ -1,31 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-=======
-import Layout from '../components/layout/Layout';
-import SEOOptimizer from '../components/SEOOptimizer';
-import AnalyticsTracker from '../components/AnalyticsTracker';
-import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -49,22 +22,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-import {
-  Shield
-  Lock
-  Eye
-  Database
-  Mail
-  Phone
-  MapPin
-  Users
-=======
 import {;
   Shield,;
   Lock,;
@@ -74,118 +35,17 @@ import {;
   Phone,;
   MapPin,;
   Users,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025';
 
-  const privacySections = [
-    {
-      title: 'Information We Collect',
-      icon: <Database className="w-8 h-8" />,
-      color: 'from-cyan-500 to-blue-500',
-      content: [
-        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
-      ]
-    };
-    {
-      title: 'How We Use Your Information',
-      icon: <Settings className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500',
-      content: [
-        'Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
-      ]
-    };
-    {
-      title: 'Information Sharing',
-      icon: <Globe className="w-8 h-8" />,
-      color: 'from-green-500 to-emerald-500',
-      content: [
-        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)'
-      ]
-    };
-    {
-      title: 'Data Security',
-      icon: <Lock className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-500',
-      content: [
-        'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
-      ]
-    }
-  ];
-
-  const rights = [
-    {
-      title: 'Access',
-      description: 'Request access to your personal information',
-      icon: <Eye className="w-6 h-6" />
-    };
-    {
-      title: 'Correction',
-      description: 'Request correction of inaccurate information',
-      icon: <CheckCircle className="w-6 h-6" />
-    };
-    {
-      title: 'Deletion',
-      description: 'Request deletion of your personal information',
-      icon: <AlertTriangle className="w-6 h-6" />
-    };
-    {
-      title: 'Portability',
-      description: 'Request transfer of your data to another service',
-      icon: <Database className="w-6 h-6" />
-    };
-    {
-      title: 'Objection',
-      description: 'Object to processing of your personal information',
-      icon: <User className="w-6 h-6" />
-    };
-    {
-      title: 'Restriction',
-      description: 'Request restriction of processing activities',
-      icon: <Settings className="w-6 h-6" />
-    }
-  ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function PrivacyPage() {
-=======
 export default function PrivacyPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -198,27 +58,13 @@ export default function PrivacyPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-<<<<<<< HEAD
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Privacy Policy
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Your privacy is important to us. Learn how we collect, use, and
-                protect your information.
-=======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Your privacy is important to us. Learn how we collect, use, and protect your information.
->>>>>>> origin/automation-improvements-final
               </p>
             </motion.div>
           </div>
         </section>
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -232,31 +78,12 @@ export default function PrivacyPage() {;
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
-            >
-              <div className="prose prose-lg max-w-none">
-<<<<<<< HEAD
-                <h2 className="text-2xl font-bold mb-6">
-                  Information We Collect
-                </h2>
-                <p className="mb-6">
-                  We collect information you provide directly to us, such as
-                  when you create an account, use our services, or contact us
-                  for support.
-                </p>
-                <h3 className="text-xl font-semibold mb-4">
-                  Personal Information
-                </h3>
-=======
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
@@ -264,7 +91,6 @@ export default function PrivacyPage() {;
                 </p>
                 
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
->>>>>>> origin/automation-improvements-final
                 <ul className="list-disc pl-6 mb-6">
                   <li>Name and contact information</li>
                   <li>Email address</li>
@@ -272,17 +98,10 @@ export default function PrivacyPage() {;
                   <li>Company information</li>
                   <li>Payment information</li>
                 </ul>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
-=======
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
->>>>>>> origin/automation-improvements-final
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -290,11 +109,6 @@ export default function PrivacyPage() {;
                   <li>Browser type and version</li>
                   <li>Operating system</li>
                 </ul>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
@@ -302,17 +116,11 @@ export default function PrivacyPage() {;
                   We use the information we collect to provide, maintain, and
                   improve our services.
                 </p>
-<<<<<<< HEAD
-
-=======
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and improve our services.
                 </p>
                 
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -321,11 +129,6 @@ export default function PrivacyPage() {;
                   <li>Improve our services and develop new features</li>
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -333,50 +136,26 @@ export default function PrivacyPage() {;
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
-=======
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
->>>>>>> origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
-<<<<<<< HEAD
-                  We implement appropriate security measures to protect your
-                  personal information against unauthorized access, alteration
-                  disclosure, or destruction.
-=======
                   We implement appropriate security measures to protect your personal information against 
                   unauthorized access, alteration, disclosure, or destruction.
->>>>>>> origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
                 <p className="mb-6">
-<<<<<<< HEAD
-                  You have the right to access, update, or delete your personal
-                  information. You may also opt out of certain communications
-                  from us.
-=======
                   You have the right to access, update, or delete your personal information. You may also 
                   opt out of certain communications from us.
->>>>>>> origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
-<<<<<<< HEAD
-                  If you have any questions about this Privacy Policy, please
-                  contact us at:
-                </p>
-<<<<<<< HEAD
-
-=======
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -395,15 +174,8 @@ export default function PrivacyPage() {;
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 <p className="text-sm text-gray-600 mt-8">
-=======
                 <p className="text-sm text-gray-600 mt-8">
->>>>>>> origin/automation-improvements-final
                   Last updated: January 2024
                 </p>
               </div>
@@ -412,7 +184,6 @@ export default function PrivacyPage() {;
         </section>
       </div>
     </MainLayout>
-=======
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
@@ -420,7 +191,6 @@ export default function PrivacyPage() {;
                   Information We Collect;
                 </h2>;
                 <p className="mb-6">;
-=======
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -482,57 +252,10 @@ function PrivacyPage() {
                   Information We Collect;
                 </h2>;
                 <p className="mb - 6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
                   for support.;
                 </p>;
-<<<<<<< HEAD
-
-                <h3 className="text-xl font-semibold mb-4">;
-                  Personal Information;
-                </h3>;
-                <ul className="list-disc pl-6 mb-6">;
-                  <li>Name and contact information</li>;
-                  <li>Email address</li>;
-                  <li>Phone number</li>;
-                  <li>Company information</li>;
-                  <li>Payment information</li>;
-                </ul>;
-
-                <h3 className="text-xl font-semibold mb-4">;
-                  Usage Information;
-                </h3>;
-                <ul className="list-disc pl-6 mb-6">;
-                  <li>How you use our services</li>;
-                  <li>Device information</li>;
-                  <li>IP address</li>;
-                  <li>Browser type and version</li>;
-                  <li>Operating system</li>;
-                </ul>;
-
-                <h2 className="text-2xl font-bold mb-6 mt-12">;
-                  How We Use Your Information;
-                </h2>;
-                <p className="mb-6">;
-                  We use the information we collect to provide, maintain, and;
-                  improve our services.;
-                </p>;
-
-                <ul className="list-disc pl-6 mb-6">;
-                  <li>Provide and maintain our services</li>;
-                  <li>Process transactions</li>;
-                  <li>Send you technical notices and support messages</li>;
-                  <li>Respond to your comments and questions</li>;
-                  <li>Improve our services and develop new features</li>;
-                  <li>Monitor and analyze usage and trends</li>;
-                </ul>;
-
-                <h2 className="text-2xl font-bold mb-6 mt-12">;
-                  Information Sharing;
-                </h2>;
-                <p className="mb-6">;
-=======
                 <h3 className="text - xl font - semibold mb - 4">;
                   Personal Information;
                 </h3>;
@@ -572,23 +295,10 @@ function PrivacyPage() {
                   Information Sharing;
                 </h2>;
                 <p className="mb - 6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   We do not sell, trade, or otherwise transfer your personal;
                   information to third parties without your consent, except as;
                   described in this policy.;
                 </p>;
-<<<<<<< HEAD
-
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>;
-                <p className="mb-6">;
-                  We implement appropriate security measures to protect your;
-                  personal information against unauthorized access, alteration,;
-                  disclosure, or destruction.;
-                </p>;
-
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>;
-                <p className="mb-6">;
-=======
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
                 <p className="mb - 6">;
                   We implement appropriate security measures to protect your;
@@ -597,60 +307,13 @@ function PrivacyPage() {
                 </p>;
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
                 <p className="mb - 6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   You have the right to access, update, or delete your personal;
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
-<<<<<<< HEAD
-
-                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>;
-                <p className="mb-6">;
-                  If you have any questions about this Privacy Policy, please;
-                  contact us at:;
-                </p>;
-
-                <div className="bg-gray-50 rounded-lg p-6">;
-                  <div className="flex items-center mb-4">;
-                    <Mail className="w-5 h-5 text-blue-600 mr-3" />;
-                    <span>kleber@ziontechgroup && ziontechgroup.com</span>;
-                  </div>;
-                  <div className="flex items-center mb-4">;
-                    <Phone className="w-5 h-5 text-blue-600 mr-3" />;
-                    <span>+1 302 464 0950</span>;
-                  </div>;
-                  <div className="flex items-start">;
-                    <Users className="w-5 h-5 text-blue-600 mr-3 mt-1" />;
-                    <div>;
-                      <p>Zion Tech Group</p>;
-                      <p>364 E Main St STE 1008</p>;
-                      <p>Middletown, DE 19709</p>;
-                    </div>;
-                  </div>;
-                </div>;
-
-                <p className="text-sm text-gray-600 mt-8">;
-                  Last updated: January 2024;
-                </p>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
  
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
-=======
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -989,16 +652,7 @@ function PrivacyPage() {
 export default PrivacyPage;
 
  
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
                 <p className="mb - 6">;
                   If you have any questions about this Privacy Policy, please;
@@ -1032,5 +686,3 @@ export default PrivacyPage;
       </div>;
     </MainLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

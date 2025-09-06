@@ -25,177 +25,6 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:pages_backup/services/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-const ServicesIndex: NextPage = () => {
-  const services = [
-    {
-      id: 'ai-development',
-      title: 'AI Development & Machine Learning',
-      description: 'Custom AI solutions, machine learning models, and intelligent automation systems tailored to your business needs.',
-      features: [
-        'Natural Language Processing (NLP)',
-        'Computer Vision & Image Recognition',
-        'Predictive Analytics & Forecasting',
-        'Chatbots & Virtual Assistants',
-        'Recommendation Systems',
-        'Fraud Detection & Risk Assessment'
-      ],
-      pricing: 'Starting at $2,500/month',
-      icon: '🧠',
-      link: '/services/ai-development'
-    },
-    {
-      id: 'cloud-solutions',
-      title: 'Cloud Solutions & Infrastructure',
-      description: 'Scalable cloud infrastructure, migration services, and DevOps automation for modern applications.',
-      features: [
-        'AWS, Azure, GCP Migration',
-        'Container Orchestration (Kubernetes)',
-        'Serverless Architecture',
-        'Cloud Security & Compliance',
-        'Auto-scaling & Load Balancing',
-        'Disaster Recovery & Backup'
-      ],
-      pricing: 'Starting at $1,800/month',
-      icon: '☁️',
-      link: '/services/cloud-solutions'
-    },
-    {
-      id: 'blockchain',
-      title: 'Blockchain & Cryptocurrency Solutions',
-      description: 'Secure blockchain development, smart contracts, and DeFi applications for the decentralized future.',
-      features: [
-        'Smart Contract Development',
-        'DeFi Applications & Protocols',
-        'NFT Marketplaces & Platforms',
-        'Cryptocurrency Integration',
-        'Token Development & ICOs',
-        'Blockchain Security Audits'
-      ],
-      pricing: 'Starting at $3,500/month',
-      icon: '🔗',
-      link: '/services/blockchain'
-    },
-    {
-      id: 'iot-platforms',
-      title: 'IoT Platforms & Connected Solutions',
-      description: 'Connected device solutions, sensor networks, and real-time data processing for smart environments.',
-      features: [
-        'Device Management & Monitoring',
-        'Real-time Analytics & Dashboards',
-        'Edge Computing Solutions',
-        'Industrial IoT (IIoT)',
-        'Sensor Data Processing',
-        'Remote Device Control'
-      ],
-      pricing: 'Starting at $2,200/month',
-      icon: '🌐',
-      link: '/services/iot-platforms'
-    },
-    {
-      id: 'micro-saas',
-      title: 'Micro SAAS Solutions',
-      description: 'Custom micro SAAS platforms and automation tools designed to streamline business processes.',
-      features: [
-        'Workflow Automation Tools',
-        'Data Processing & Analytics',
-        'API Integration Services',
-        'Custom Dashboard Solutions',
-        'Business Process Optimization',
-        'Third-party Integrations'
-      ],
-      pricing: 'Starting at $1,500/month',
-      icon: '⚡',
-      link: '/products/micro-saas'
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity & Compliance',
-      description: 'Comprehensive security solutions and compliance services to protect your digital assets.',
-      features: [
-        'Security Audits & Assessments',
-        'Penetration Testing',
-        'Compliance Management (GDPR, HIPAA)',
-        'Incident Response & Recovery',
-        'Security Training & Awareness',
-        'Vulnerability Management'
-      ],
-      pricing: 'Starting at $2,000/month',
-      icon: '🔒',
-      link: '/services/cybersecurity'
-    },
-    {
-      id: 'web-development',
-      title: 'Web & Mobile Development',
-      description: 'Modern web applications, mobile apps, and progressive web apps built with cutting-edge technologies.',
-      features: [
-        'React, Vue.js, Angular Development',
-        'Native & Cross-platform Mobile Apps',
-        'Progressive Web Apps (PWA)',
-        'E-commerce Solutions',
-        'API Development & Integration',
-        'Performance Optimization'
-      ],
-      pricing: 'Starting at $1,200/month',
-      icon: '💻',
-      link: '/services/web-development'
-    },
-    {
-      id: 'data-analytics',
-      title: 'Data Analytics & Business Intelligence',
-      description: 'Transform your data into actionable insights with advanced analytics and business intelligence solutions.',
-      features: [
-        'Data Warehousing & ETL',
-        'Business Intelligence Dashboards',
-        'Real-time Data Processing',
-        'Machine Learning Analytics',
-        'Data Visualization',
-        'Custom Reporting Solutions'
-      ],
-      pricing: 'Starting at $1,800/month',
-      icon: '📊',
-      link: '/services/data-analytics'
-  const microSaasServices = [
-    {
-      name: "AI-Powered Analytics Dashboard",
-      description: "Real-time business intelligence with predictive analytics and automated reporting",
-      features: ["Custom dashboards", "Predictive modeling", "Automated alerts", "Multi-platform integration"],
-      pricing: "Starting at $299/month",
-      link: "/services/ai-analytics-dashboard"
-    },
-    {
-      name: "Smart Document Processor",
-      description: "Automated document processing with OCR, classification, and data extraction",
-      features: ["OCR technology", "Document classification", "Data extraction", "API integration"],
-      pricing: "Starting at $199/month",
-      link: "/services/smart-document-processor"
-    },
-    {
-      name: "Customer Experience Optimizer",
-      description: "AI-driven customer journey mapping and optimization platform",
-      features: ["Journey mapping", "Sentiment analysis", "A/B testing", "ROI tracking"],
-      pricing: "Starting at $399/month",
-      link: "/services/customer-experience-optimizer"
-    },
-    {
-      name: "Automated Social Media Manager",
-      description: "AI-powered social media scheduling, content creation, and engagement tracking",
-      features: ["Content generation", "Optimal timing", "Engagement tracking", "Multi-platform support"],
-      pricing: "Starting at $149/month",
-      link: "/services/automated-social-media-manager"
-    },
-    {
-      name: "Intelligent Inventory Manager",
-      description: "Smart inventory optimization with demand forecasting and automated reordering",
-      features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],
-      pricing: "Starting at $249/month",
-      link: "/services/intelligent-inventory-manager"
-=======
 const ServicesIndex: NextPage = () => {;
   const services = [;
     {;
@@ -360,7 +189,6 @@ const ServicesIndex: NextPage = () => {;
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],;
       pricing: "Starting at $249/month",;
       link: "/services/intelligent-inventory-manager";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
     }
   ];
   const itServices = [;
@@ -437,7 +265,6 @@ const ServicesIndex: NextPage = () => {;
       link: "/services/ai-automation";
     }
   ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -484,10 +311,6 @@ const services = [;
   }
 ];
 
-<<<<<<< HEAD:pages_backup/services/index.tsx
-export default function ServicesIndex() {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -652,7 +475,6 @@ const ServicesIndex: NextPage = () => {
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],
       pricing: "Starting at $249/month",
       link: "/services/intelligent-inventory-manager"
-=======
 export default function ServicesIndex() {;
 const ServicesIndex: NextPage = () => {;
   const services = [;
@@ -818,7 +640,6 @@ const ServicesIndex: NextPage = () => {;
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],;
       pricing: "Starting at $249/month",;
       link: "/services/intelligent-inventory-manager";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
     }
   ];
   const itServices = [;
@@ -895,11 +716,6 @@ const ServicesIndex: NextPage = () => {;
       link: "/services/ai-automation";
     }
   ];
-<<<<<<< HEAD:pages_backup/services/index.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <>
       <Head>
@@ -907,12 +723,6 @@ const ServicesIndex: NextPage = () => {;
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -967,7 +777,6 @@ export default function ServicesIndex() {;
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />;
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />;
       </Head>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
         <div className="container mx-auto px-4">;
@@ -1167,18 +976,10 @@ export default function ServicesIndex() {;
                   {service && service.features.map((feature, idx) => (;
                     <li key={idx} className="mb-1">• {feature}</li>;
                   ))}
-<<<<<<< HEAD:pages_backup/services/index.tsx
-                </ul>
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
-                  <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
                 </ul>;
                 <div className="flex justify-between items-center">;
                   <span className="text-lg font-semibold text-green-600">{service && service.pricing}</span>;
                   <Link href={service && service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
 
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
@@ -1224,13 +1025,6 @@ export default function ServicesIndex() {;
                     ))}
                   </div>;
                   <Link
-<<<<<<< HEAD:pages_backup/services/index.tsx
-                    href={service.link}
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -1434,10 +1228,6 @@ export default function ServicesIndex() {;
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     Learn More
                   </Link>
                 </div>
@@ -1458,38 +1248,21 @@ export default function ServicesIndex() {;
             </Link>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </div>
-    </>
-  );
-}
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       </main>
     </div>
   );
 };
-<<<<<<< HEAD
 export default ServicesIndex;
-=======
-export default ServicesIndex;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
                     Learn More
                   </Link>
                 </div>
               </div>
-=======
                     href={service && service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                     Learn More;
                   </Link>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
             ))}
           </div>;
         </section>;
@@ -1512,8 +1285,6 @@ export default ServicesIndex;
   );
 };
 export default ServicesIndex;
-<<<<<<< HEAD:pages_backup/services/index.tsx
-=======
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
         <div className="container mx-auto px-4">;
@@ -1797,19 +1568,11 @@ export default ServicesIndex;
   ),;
 };
 export default ServicesIndex;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
 export default ServicesIndex;
       </div>;
     </>;
   );
-<<<<<<< HEAD:pages_backup/services/index.tsx
-
-      </div>
-    </>
-=======
 }
       </div>;
     </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

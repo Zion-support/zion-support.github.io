@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-export default function CookiesPage() {return (;
-=======
 export default function CookiesPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20">;
-=======
 export default /**
  * CookiesPage - Function description
  */
 function CookiesPage() {
   return (
     <div className="min - h-screen py - 20">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative mb - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

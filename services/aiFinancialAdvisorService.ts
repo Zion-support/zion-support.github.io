@@ -4,29 +4,14 @@ export interface InvestmentPortfolio {
   name: string;
   total_value: number;
   currency: string;
-<<<<<<< HEAD
-
-  riskTolerance: 'conservative' | 'moderate' | 'aggressive'
-
-  investmentHorizon: number, // in years
-  targetReturn: number;
-=======
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years;
   target_return: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
-<<<<<<< HEAD
-
-  createdAt: Date
-
-  updatedAt: Date
-=======
   created_at: Date,
   updated_at: Date;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface PortfolioAsset {
   id: string;
@@ -34,23 +19,6 @@ export interface PortfolioAsset {
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
-<<<<<<< HEAD
-  currentPrice: number;
-
-  marketValue: number
-
-  allocation: number, // percentage of portfolio
-  purchasePrice: number;
-  purchaseDate: Date;
-  performance: {
-    dailyReturn: number;
-    weeklyReturn: number;
-    monthlyReturn: number;
-
-    yearlyReturn: number
-
-    totalReturn: number
-=======
   current_price: number;
   market_value: number,
   allocation: number, // percentage of portfolio;
@@ -62,7 +30,6 @@ export interface PortfolioAsset {
     monthly_return: number;
     yearly_return: number,
     total_return: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
 export interface PortfolioPerformance {
@@ -73,17 +40,9 @@ export interface PortfolioPerformance {
   max_drawdown: number;
   beta: number;
   alpha: number;
-<<<<<<< HEAD
-  trackingError: number;
-
-  informationRatio: number
-
-  sortinoRatio: number
-=======
   tracking_error: number;
   information_ratio: number,
   sortino_ratio: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface InvestmentRecommendation {
   id: string;
@@ -92,21 +51,6 @@ export interface InvestmentRecommendation {
   asset: {
     symbol: string;
     name: string;
-<<<<<<< HEAD
-
-    type: string
-    currentPrice: number
-  }
-  confidence: number;
-  reasoning: string[];
-  expectedReturn: number;
-  riskLevel: 'low' | 'medium' | 'high'
-  timeHorizon: number, // in months
-  alternatives: string[];
-  createdAt: Date
-
-  expiresAt: Date
-=======
     type: string,
     current_price: number;
   }
@@ -118,7 +62,6 @@ export interface InvestmentRecommendation {
   alternatives: string[];
   created_at: Date,
   expires_at: Date;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface FinancialGoal {
   id: string;
@@ -129,73 +72,31 @@ export interface FinancialGoal {
   target_date: Date;
   priority: 'low' | 'medium' | 'high';
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
-<<<<<<< HEAD
-  monthlyContribution: number;
-  expectedReturn: number;
-
-  riskTolerance: 'conservative' | 'moderate' | 'aggressive'
-  progress: number, // percentage
-  createdAt: Date
-
-  updatedAt: Date
-=======
   monthly_contribution: number;
   expected_return: number;
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   progress: number, // percentage;
   created_at: Date,
   updated_at: Date;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface MarketAnalysis {
   id: string;
   market: string;
-<<<<<<< HEAD
-
-  analysis: string
-  keyMetrics: Record<string, number>;
-
-=======
   analysis: string,
   key_metrics: Record < string, number>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   trends: string[];
   risks: string[];
   opportunities: string[];
   recommendations: string[];
   confidence: number;
-<<<<<<< HEAD
-
-  lastUpdated: Date
-
-  nextUpdate: Date
-=======
   last_updated: Date,
   next_update: Date;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface FinancialPlan {
   id: string;
   user_id: string;
   name: string;
   summary: string;
-<<<<<<< HEAD
-
-  goals: FinancialGoal[]
-  investmentStrategy: {
-    assetAllocation: Record<string, number>;
-    rebalancingFrequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually'
-
-    riskManagement: string[]
-  }
-  cashFlow: {
-    monthlyIncome: number;
-    monthlyExpenses: number;
-
-    savingsRate: number
-
-    emergencyFund: number
-=======
   goals: FinancialGoal[],
   investment_strategy: {
     asset_allocation: Record < string, number>;
@@ -207,45 +108,11 @@ export interface FinancialPlan {
     monthly_expenses: number;
     savings_rate: number,
     emergency_fund: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   insurance: {
     life: boolean;
     health: boolean;
     disability: boolean;
-<<<<<<< HEAD
-
-    property: boolean
-
-    recommendations: string[]
-  }
-  tax: {
-    estimatedTaxLiability: number;
-
-    taxOptimizationStrategies: string[]
-
-    deductions: string[]
-  }
-  retirement: {
-    targetAge: number;
-    estimatedNeeds: number;
-    currentSavings: number;
-
-    monthlyContribution: number
-    projectedValue: number
-  }
-  createdAt: Date
-
-  updatedAt: Date
-}
-export interface FinancialRequest {
-  userId: string;
-
-  requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
-  parameters: Record<string, any>;
-
-  preferences?: Record<string, any>
-=======
     property: boolean,
     recommendations: string[];
   }
@@ -269,7 +136,6 @@ export interface FinancialRequest {
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record < string, any>;
   preferences?: Record < string, any>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface FinancialResponse {
   success: boolean;
@@ -277,43 +143,14 @@ export interface FinancialResponse {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
-<<<<<<< HEAD
-
-    analysis?: MarketAnalysis
-    goals?: FinancialGoal[]
-  }
-  insights: string[];
-  nextSteps: string[];
-  riskWarnings: string[]
-
-  estimatedFees: number
-}
-export class AIFinancialAdvisorService {
-  private apiKey: string;
-
-<<<<<<< HEAD
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
-=======
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
-<<<<<<< HEAD
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.portfolio
-=======
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -322,7 +159,6 @@ export class AIFinancialAdvisorService {
 
       const data = await response && response.json();
       return data && data.portfolio
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       console && console.error('Error analyzing portfolio:', error);
       throw error
@@ -330,19 +166,6 @@ export class AIFinancialAdvisorService {
   }
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify({ userId, riskTolerance, investmentHorizon })});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.recommendations |[]
-=======
       const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {
         method: 'POST',
         headers: {
@@ -356,7 +179,6 @@ export class AIFinancialAdvisorService {
 
       const data = await response && response.json();
       return data && data.recommendations || []
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       console && console.error('Error getting investment recommendations:', error);
       throw error
@@ -364,19 +186,6 @@ export class AIFinancialAdvisorService {
   }
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/financial/plan`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify(request)});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.plan
-=======
       const response = await fetch(`${this && this.baseUrl}/api/financial/plan`, {
         method: 'POST',
         headers: {
@@ -390,7 +199,6 @@ export class AIFinancialAdvisorService {
 
       const data = await response && response.json();
       return data && data.plan
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       console && console.error('Error creating financial plan:', error);
       throw error
@@ -400,14 +208,6 @@ export class AIFinancialAdvisorService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
-<<<<<<< HEAD
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.goals |[]
-=======
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -416,7 +216,6 @@ export class AIFinancialAdvisorService {
 
       const data = await response && response.json();
       return data && data.goals || []
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       console && console.error('Error tracking financial goals:', error);
       throw error
@@ -426,14 +225,6 @@ export class AIFinancialAdvisorService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
-<<<<<<< HEAD
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.analysis
-=======
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -442,7 +233,6 @@ export class AIFinancialAdvisorService {
 
       const data = await response && response.json();
       return data && data.analysis
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       console && console.error('Error getting market analysis:', error);
       throw error
@@ -461,19 +251,6 @@ export class AIFinancialAdvisorService {
     expectedImpact: string
   }> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify({ targetAllocation })});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.rebalancing
-=======
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST',
         headers: {
@@ -487,7 +264,6 @@ export class AIFinancialAdvisorService {
 
       const data = await response && response.json();
       return data && data.rebalancing
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       console && console.error('Error rebalancing portfolio:', error);
       throw error
@@ -501,19 +277,6 @@ export class AIFinancialAdvisorService {
     recommendations: string[]
   }> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/financial/retirement-calculator`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify({ userId, targetAge, desiredIncome })});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.calculation
-=======
       const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-calculator`, {
         method: 'POST',
         headers: {
@@ -527,14 +290,12 @@ export class AIFinancialAdvisorService {
 
       const data = await response && response.json();
       return data && data.calculation
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       console && console.error('Error calculating retirement needs:', error);
       throw error
     }
   }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
-=======
     analysis?: MarketAnalysis,
     goals?: FinancialGoal[];
   }
@@ -713,28 +474,9 @@ if ( {) {
     }
   }
   async getTaxOptimizationStrategies (user_id: string, tax_year: number): Promise<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     strategies: string[];
     estimated_savings: number;
     implementation: string[];
-<<<<<<< HEAD
-    risks: string[]
-    deadlines: Record<string, Date>
-  }> {
-    try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/financial/tax-optimization`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify({ userId, taxYear })});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.optimization
-=======
       const response = await fetch(`${this && this.baseUrl}/api/financial/tax-optimization`, {
         method: 'POST',
         headers: {
@@ -748,7 +490,6 @@ if ( {) {
 
       const data = await response && response.json();
       return data && data.optimization
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       console && console.error('Error getting tax optimization strategies:', error);
       throw error
@@ -763,19 +504,6 @@ if ( {) {
     nextSteps: string[]
   }> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/financial/report`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify({ userId, reportType })});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.report
-=======
       const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
         method: 'POST',
         headers: {
@@ -789,7 +517,6 @@ if ( {) {
 
       const data = await response && response.json();
       return data && data.report
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       console && console.error('Error generating financial report:', error);
       throw error
@@ -798,11 +525,7 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
-<<<<<<< HEAD
-=======
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     risks: string[],
     deadlines: Record < string, Date>;
   }> {
@@ -859,4 +582,3 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

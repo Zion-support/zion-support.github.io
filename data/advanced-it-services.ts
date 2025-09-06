@@ -1,8 +1,4 @@
 export interface AdvancedITService {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   id: string;
   name: string;
   tagline: string;
@@ -36,44 +32,6 @@ export interface AdvancedITService {
 
     website: string;
   }
-<<<<<<< HEAD
-
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-
-  reviews: number;
-export const advancedITServices: AdvancedITService[] = [
-  {
-    id: 'quantum-cloud-platform'
-    name: 'Quantum Cloud Platform'
-    tagline: 'Next-generation quantum computing in the cloud'
-    price: '$9,999'
-    period: '/month'
-    description:
-      'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.'
-    features: [
-<<<<<<< HEAD
-      'Quantum computing resources'
-      'Quantum algorithm library'
-      'Hybrid classical-quantum workflows'
-      'Quantum machine learning'
-      'Quantum cryptography'
-      'Performance optimization'
-      'Real-time quantum monitoring'
-      'Advanced analytics dashboard'
-      'API for integration'
-      '24/7 quantum support'
-    ]
-    popular: true
-    icon: '☁️'
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/quantum-cloud-platform'
-=======
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -91,7 +49,6 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical - quantum workflows for enterprise applications.',
     features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum computing resources',
       'Quantum algorithm library',
       'Hybrid classical - quantum workflows',
@@ -105,11 +62,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '☁️',
-<<<<<<< HEAD
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'First comprehensive quantum cloud platform, competing with IBM Quantum and AWS Braket'
     targetAudience:
@@ -148,22 +100,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '500% annual growth'
     variant: 'quantum-cloud'
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.'
-    launchDate: '2024-12-01'
-    customers: 8
-    rating: 4.9
-    reviews: 4
-  }
-=======
-=======
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - platform',
@@ -205,7 +141,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '500% annual growth',
     variant: 'quantum - cloud',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -219,36 +154,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.9,
     reviews: 4,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'edge-computing-orchestrator'
-    name: 'Edge Computing Orchestrator'
-    tagline: 'Intelligent edge computing management and optimization'
-    price: '$1,999'
-    period: '/month'
-    description:
-      'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real-time applications.'
-    features: [
-<<<<<<< HEAD
-      'Intelligent resource allocation'
-      'Real-time performance optimization'
-      'Edge device management'
-      'Load balancing'
-      'Security and compliance'
-      'Monitoring and analytics'
-      'Automated scaling'
-      'API gateway'
-      'Integration tools'
-      '24/7 support'
-    ]
-    popular: true
-    icon: '🌐'
-    color: 'from-green-600 to-emerald-700'
-    textColor: 'text-green-400'
-    link: 'https://ziontechgroup.com/edge-computing-orchestrator'
-=======
-=======
     id: 'edge - computing - orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
@@ -257,7 +163,6 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
     features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Intelligent resource allocation',
       'Real - time performance optimization',
       'Edge device management',
@@ -271,11 +176,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🌐',
-<<<<<<< HEAD
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestrator',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Advanced edge orchestration platform competing with AWS Greengrass and Azure IoT Edge'
     targetAudience:
@@ -314,22 +214,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '250% annual growth'
     variant: 'edge-futuristic'
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.'
-    launchDate: '2024-10-01'
-    customers: 156
-    rating: 4.7
-    reviews: 89
-  }
-=======
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / edge - computing - orchestrator',
@@ -371,7 +255,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '250% annual growth',
     variant: 'edge - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -385,36 +268,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.7,
     reviews: 89,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'zero-trust-security-platform'
-    name: 'Zero Trust Security Platform'
-    tagline: 'Comprehensive zero trust security implementation'
-    price: '$3,999'
-    period: '/month'
-    description:
-      'Enterprise-grade zero trust security platform implementing the latest security principles with continuous verification, micro-segmentation, and advanced threat detection.'
-    features: [
-<<<<<<< HEAD
-      'Continuous identity verification'
-      'Micro-segmentation'
-      'Advanced threat detection'
-      'Behavioral analytics'
-      'Compliance tools'
-      'Real-time monitoring'
-      'Automated response'
-      'Integration APIs'
-      'Security dashboard'
-      '24/7 security support'
-    ]
-    popular: true
-    icon: '🛡️'
-    color: 'from-red-600 to-orange-700'
-    textColor: 'text-red-400'
-    link: 'https://ziontechgroup.com/zero-trust-security-platform'
-=======
-=======
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Comprehensive zero trust security implementation',
@@ -423,7 +277,6 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Enterprise - grade zero trust security platform implementing the latest security principles with continuous verification, micro - segmentation, and advanced threat detection.',
     features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Continuous identity verification',
       'Micro - segmentation',
       'Advanced threat detection',
@@ -437,11 +290,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🛡️',
-<<<<<<< HEAD
-    color: 'from-red-600 to-orange-700',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Comprehensive zero trust platform competing with Palo Alto Networks and CrowdStrike'
     targetAudience:
@@ -480,22 +328,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '200% annual growth'
     variant: 'zero-trust-futuristic'
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.'
-    launchDate: '2024-09-01'
-    customers: 89
-    rating: 4.8
-    reviews: 45
-  }
-=======
-=======
     color: 'from - red - 600 to - orange - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / zero - trust - security - platform',
@@ -537,7 +369,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '200% annual growth',
     variant: 'zero - trust - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -551,37 +382,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.8,
     reviews: 45,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'ai-powered-devops-platform'
-    name: 'AI-Powered DevOps Platform'
-    tagline: 'Intelligent DevOps automation and optimization'
-    price: '$2,499'
-    period: '/month'
-    description:
-      'Revolutionary AI-powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.'
-    features: [
-<<<<<<< HEAD
-      'AI-powered automation'
-      'Intelligent testing'
-      'Predictive monitoring'
-      'Performance optimization'
-      'Security scanning'
-      'Compliance automation'
-      'Real-time analytics'
-      'Integration APIs'
-      'Mobile applications'
-      '24/7 support'
-    ]
-    popular: true
-    icon: '⚡'
-    color: 'from-purple-600 to-pink-700'
-    textColor: 'text-purple-400'
-    link: 'https://ziontechgroup.com/ai-powered-devops-platform'
-=======
-      'AI-powered automation',
-=======
     id: 'ai - powered - devops - platform',
     name: 'AI - Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation and optimization',
@@ -591,7 +392,6 @@ export const advancedITServices: AdvancedITService[] = [;
       'Revolutionary AI - powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.',
     features: [;
       'AI - powered automation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Intelligent testing',
       'Predictive monitoring',
       'Performance optimization',
@@ -604,11 +404,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '⚡',
-<<<<<<< HEAD
-    color: 'from-purple-600 to-pink-700',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-devops-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'AI-enhanced DevOps platform competing with GitLab and GitHub Actions'
     targetAudience:
@@ -649,22 +444,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '180% annual growth'
     variant: 'ai-devops-futuristic'
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.'
-    launchDate: '2024-08-01'
-    customers: 234
-    rating: 4.6
-    reviews: 123
-  }
-=======
-=======
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - devops - platform',
@@ -708,7 +487,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '180% annual growth',
     variant: 'ai - devops - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -722,36 +500,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.6,
     reviews: 123,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'blockchain-enterprise-platform'
-    name: 'Blockchain Enterprise Platform'
-    tagline: 'Enterprise-grade blockchain solutions and infrastructure'
-    price: '$4,999'
-    period: '/month'
-    description:
-      'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.'
-    features: [
-<<<<<<< HEAD
-      'Enterprise blockchain networks'
-      'Smart contract development'
-      'Token management'
-      'Compliance tools'
-      'Security features'
-      'Performance optimization'
-      'Integration APIs'
-      'Analytics dashboard'
-      'Mobile applications'
-      '24/7 support'
-    ]
-    popular: true
-    icon: '🔗'
-    color: 'from-yellow-600 to-orange-700'
-    textColor: 'text-yellow-400'
-    link: 'https://ziontechgroup.com/blockchain-enterprise-platform'
-=======
-=======
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions and infrastructure',
@@ -760,7 +509,6 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.',
     features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Enterprise blockchain networks',
       'Smart contract development',
       'Token management',
@@ -774,11 +522,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🔗',
-<<<<<<< HEAD
-    color: 'from-yellow-600 to-orange-700',
-    textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-enterprise-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Enterprise blockchain platform competing with IBM Blockchain and ConsenSys'
     targetAudience:
@@ -817,22 +560,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '300% annual growth'
     variant: 'blockchain-futuristic'
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.'
-    launchDate: '2024-07-01'
-    customers: 67
-    rating: 4.7
-    reviews: 34
-  }
-=======
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -874,7 +601,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '300% annual growth',
     variant: 'blockchain - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -888,36 +614,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.7,
     reviews: 34,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'quantum-data-center'
-    name: 'Quantum Data Center'
-    tagline: 'Next-generation quantum-enhanced data center infrastructure'
-    price: '$15,999'
-    period: '/month'
-    description:
-      'Revolutionary quantum-enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.'
-    features: [
-<<<<<<< HEAD
-      'Quantum computing integration'
-      'AI-powered optimization'
-      'Advanced security'
-      'Energy efficiency'
-      'Performance monitoring'
-      'Scalability'
-      'Compliance tools'
-      'Integration APIs'
-      '24/7 support'
-      'Quantum support team'
-    ]
-    popular: true
-    icon: '🏢'
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-400'
-    link: 'https://ziontechgroup.com/quantum-data-center'
-=======
-=======
     id: 'quantum - data - center',
     name: 'Quantum Data Center',
     tagline: 'Next - generation quantum - enhanced data center infrastructure',
@@ -926,7 +623,6 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Revolutionary quantum - enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.',
     features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum computing integration',
       'AI - powered optimization',
       'Advanced security',
@@ -940,11 +636,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🏢',
-<<<<<<< HEAD
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-data-center',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'First quantum-enhanced data center, competing with AWS, Azure, and Google Cloud'
     targetAudience:
@@ -983,22 +674,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '150% annual growth'
     variant: 'quantum-infrastructure'
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Quantum-enhanced data center with quantum computing integration and AI optimization capabilities.'
-    launchDate: '2024-11-01'
-    customers: 12
-    rating: 4.9
-    reviews: 6
-  }
-=======
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / quantum - data - center',
@@ -1040,7 +715,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '150% annual growth',
     variant: 'quantum - infrastructure',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1054,36 +728,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.9,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'ai-powered-network-security'
-    name: 'AI-Powered Network Security'
-    tagline: 'Intelligent network security with AI threat detection'
-    price: '$2,999'
-    period: '/month'
-    description:
-      'Advanced AI-powered network security platform providing real-time threat detection, automated response, and intelligent security analytics for enterprise networks.'
-    features: [
-<<<<<<< HEAD
-      'AI threat detection'
-      'Real-time monitoring'
-      'Automated response'
-      'Behavioral analytics'
-      'Network segmentation'
-      'Compliance tools'
-      'Performance analytics'
-      'Integration APIs'
-      'Security dashboard'
-      '24/7 security support'
-    ]
-    popular: true
-    icon: '🔒'
-    color: 'from-indigo-600 to-purple-700'
-    textColor: 'text-indigo-400'
-    link: 'https://ziontechgroup.com/ai-powered-network-security'
-=======
-=======
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network security with AI threat detection',
@@ -1092,7 +737,6 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Advanced AI - powered network security platform providing real - time threat detection, automated response, and intelligent security analytics for enterprise networks.',
     features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'AI threat detection',
       'Real - time monitoring',
       'Automated response',
@@ -1106,11 +750,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🔒',
-<<<<<<< HEAD
-    color: 'from-indigo-600 to-purple-700',
-    textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-network-security',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'AI-enhanced network security competing with Cisco and Palo Alto Networks'
     targetAudience:
@@ -1149,22 +788,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '180% annual growth'
     variant: 'ai-network-futuristic'
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'AI-powered network security platform with real-time threat detection and automated response capabilities.'
-    launchDate: '2024-09-15'
-    customers: 178
-    rating: 4.7
-    reviews: 89
-  }
-=======
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - powered - network - security',
@@ -1206,7 +829,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '180% annual growth',
     variant: 'ai - network - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1220,36 +842,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.7,
     reviews: 89,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'quantum-iot-platform'
-    name: 'Quantum IoT Platform'
-    tagline: 'Quantum-enhanced IoT with AI intelligence'
-    price: '$3,499'
-    period: '/month'
-    description:
-      'Revolutionary quantum-enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI-powered analytics.'
-    features: [
-<<<<<<< HEAD
-      'Quantum encryption'
-      'AI-powered analytics'
-      'Real-time monitoring'
-      'Device management'
-      'Security features'
-      'Performance optimization'
-      'Integration APIs'
-      'Analytics dashboard'
-      'Mobile applications'
-      '24/7 support'
-    ]
-    popular: true
-    icon: '📱'
-    color: 'from-green-600 to-teal-700'
-    textColor: 'text-green-400'
-    link: 'https://ziontechgroup.com/quantum-iot-platform'
-=======
-=======
     id: 'quantum - iot - platform',
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - enhanced IoT with AI intelligence',
@@ -1258,7 +851,6 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Revolutionary quantum - enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI - powered analytics.',
     features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum encryption',
       'AI - powered analytics',
       'Real - time monitoring',
@@ -1272,11 +864,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '📱',
-<<<<<<< HEAD
-    color: 'from-green-600 to-teal-700',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-iot-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Quantum-enhanced IoT platform competing with AWS IoT and Azure IoT'
     targetAudience:
@@ -1315,22 +902,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '250% annual growth'
     variant: 'quantum-iot-futuristic'
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Quantum-enhanced IoT platform with quantum encryption and AI-powered analytics capabilities.'
-    launchDate: '2024-08-15'
-    customers: 234
-    rating: 4.6
-    reviews: 123
-  }
-=======
-=======
     color: 'from - green - 600 to - teal - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / quantum - iot - platform',
@@ -1372,7 +943,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '250% annual growth',
     variant: 'quantum - iot - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1386,36 +956,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.6,
     reviews: 123,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'ai-powered-cloud-migration'
-    name: 'AI-Powered Cloud Migration'
-    tagline: 'Intelligent cloud migration and optimization'
-    price: '$5,999'
-    period: '/month'
-    description:
-      'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.'
-    features: [
-<<<<<<< HEAD
-      'AI migration planning'
-      'Cost optimization'
-      'Performance analysis'
-      'Security assessment'
-      'Compliance tools'
-      'Automated migration'
-      'Real-time monitoring'
-      'Integration APIs'
-      'Migration dashboard'
-      '24/7 support'
-    ]
-    popular: true
-    icon: '☁️'
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/ai-powered-cloud-migration'
-=======
-=======
     id: 'ai - powered - cloud - migration',
     name: 'AI - Powered Cloud Migration',
     tagline: 'Intelligent cloud migration and optimization',
@@ -1424,7 +965,6 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Advanced AI - powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.',
     features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'AI migration planning',
       'Cost optimization',
       'Performance analysis',
@@ -1438,11 +978,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '☁️',
-<<<<<<< HEAD
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-cloud-migration',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'AI-enhanced cloud migration competing with Accenture and Deloitte'
     targetAudience:
@@ -1481,28 +1016,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '200% annual growth'
     variant: 'ai-migration-futuristic'
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
-    launchDate: '2024-10-01'
-    customers: 89
-    rating: 4.8
-    reviews: 45
-  }
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-
-=======
-=======
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - powered - cloud - migration',
@@ -1544,7 +1057,6 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '200% annual growth',
     variant: 'ai - migration - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1561,23 +1073,10 @@ export const advancedITServices: AdvancedITService[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-      website: 'https://ziontechgroup && ziontechgroup.com'
-    };
-=======
-<<<<<<< HEAD
-      website: 'https://ziontechgroup && ziontechgroup.com'
-    };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     realImplementation: true;
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
     launchDate: '2024-10-01';
     customers: 89;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1603,16 +1102,11 @@ export const advancedITServices: AdvancedITService[] = [;
   rating: number,
   reviews: number
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     rating: 4.8
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     rating: 4 && 4.8,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 45
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1621,14 +1115,6 @@ export const advancedITServices: AdvancedITService[] = [;
     customers: 89;
     rating: 4.8,
     reviews: 45;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-<<<<<<< HEAD
 ];
-<<<<<<< HEAD
-=======
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

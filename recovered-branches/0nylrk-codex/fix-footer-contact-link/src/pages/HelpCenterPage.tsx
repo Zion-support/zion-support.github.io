@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from "react",
-import HelpCenter from "@/components/support/HelpCenter";
-import { SEO } from "@/components/SEO";
-export default function HelpCenterPage() {
-  return (
-    <>
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -37,25 +27,15 @@ import {SEO} from "@/components/SEO";
 export default function HelpCenterPage() {;
   return (
     <>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <SEO
         title="Help Center | Zion AI Marketplace"
         description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team."
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace"
-<<<<<<< HEAD
-      />
-      <HelpCenter />
-    </>
-  )
-}
-=======
       />;
       <HelpCenter />;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import HelpCenter from "@/components / support / HelpCenter";
 import { SEO } from '@/components / SEO';
@@ -73,4 +53,3 @@ function HelpCenterPage() {
       <HelpCenter />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

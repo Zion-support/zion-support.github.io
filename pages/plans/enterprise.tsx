@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' }
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' }
@@ -34,61 +27,35 @@ const tiers = [
     highlights: ['Unlimited seatsCustom SLADedicated CSM']
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}]
 
-=======
 const features = [
-=======
 import Link from 'next / link',
 const features = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
   { key: 'custom_sla', label: 'Custom SLA' },
   { key: 'branded_onboarding', label: 'Branded onboarding' },
   { key: 'admin_dashboards', label: 'Admin dashboards' }],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const tiers = [
-=======
 const tiers = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'teams',
     name: 'Teams',
     price: '$199 / mo',
     blurb: 'Up to 10 users, core collaboration features',
-<<<<<<< HEAD
-    highlights: ['10 seatsPrivate portalAdmin dashboard'],
-=======
     highlights: ['10 seats_private portal_admin dashboard'],
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     includes: { private_portal: true, dedicated_talent_pool: false, custom_sla: false, branded_onboarding: true, admin_dashboards: true }},
   {
     id: 'business',
     name: 'Business',
     price: '$499 / mo',
     blurb: 'Up to 50 users, advanced controls and limits',
-<<<<<<< HEAD
-    highlights: ['50 seatsDedicated talent poolSLA options'],
-=======
     highlights: ['50 seats_dedicated talent poolSLA options'],
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }},
   {
     id: 'enterprise - custom',
     name: 'Enterprise',
     price: 'Custom',
     blurb: 'Unlimited users, custom contracts and SLAs',
-<<<<<<< HEAD
-    highlights: ['Unlimited seatsCustom SLADedicated CSM'],
-    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
-=======
-    highlights: ['Unlimited seats_custom SLADedicated CSM'],
-    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -143,14 +110,7 @@ export default function EnterprisePlans() {
           </table>
         </div>
       </section>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: 8 }}>
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
@@ -163,14 +123,7 @@ export default function EnterprisePlans() {
       </section>
     </main>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * EnterprisePlans - Function description
  */
@@ -235,5 +188,3 @@ function EnterprisePlans() {
       </section>;
     </main>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

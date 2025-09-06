@@ -7,7 +7,6 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-internet-security-platform'))
   if (!service) return null,
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
     <UltraAdvancedFuturisticBackground>

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,20 +25,8 @@ import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe;
-  Twitter, Linkedin, Facebook, Instagram;
-  ArrowRight, Rocket, Brain, Cpu, Shield;
-  Star, Users, TrendingUp, Zap
- } from 'lucide-react';
-const contactInfo = null;
-  ];
-=======
 const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   const company = null;
   ];
@@ -147,41 +130,6 @@ export default function EnhancedFooter() {
 
   ];
   return (
-<<<<<<< HEAD
-    <footer className;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      className="w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover: text-cyan-400 hover:border-cyan-500/50 transition-all duration-200"
-                    >
-                      <Icon className="w-5 h-5" />
-                    </a>
-                  )
-                })}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Newsletter Signup */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-12 pt-12 border-t border-gray-700/50"
-        >
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Latest Innovations
-            </h3>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
-              Be the first to know about new services and breakthrough technologies.
-            </p>
-            <div className="flex space-x-4">
-=======
     <footer className="bg-gray-900 text-white">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
@@ -196,7 +144,6 @@ export default function EnhancedFooter() {
               their digital presence.;
             </p>;
             <div className="flex space-x-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <a
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors">;
@@ -211,7 +158,6 @@ export default function EnhancedFooter() {
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors">;
                 <Github className="h-5 w-5" />;
-=======
 import React from './react';
 import Link from './next / link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github  } from './lucide-react';
@@ -348,20 +294,10 @@ function EnhancedFooter() {
                 className="text - gray - 400 hover:text - white transition - colors";
               >;
                 <Github className="h - 5 w - 5" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </a>;
             </div>;
           </div>;
           {/* Services */}
-<<<<<<< HEAD
-          <div className="space-y-4">;
-            <h3 className="text-lg font-semibold">Services</h3>;
-            <ul className="space-y-2">;
-              <li>;
-                <Link
-                  href="/services/web-development"
-                  className="text-gray-300 hover:text-white transition-colors">;
-=======
           <div className="space - y-4">;
             <h3 className="text - lg font - semibold">Services</h3>;
             <ul className="space - y-2">;
@@ -370,64 +306,36 @@ function EnhancedFooter() {
                   href="/services / web - development";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Web Development;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <Link
-                  href="/services/mobile-apps"
-                  className="text-gray-300 hover:text-white transition-colors">;
-=======
                 <Link;
                   href="/services / mobile - apps";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Mobile Apps;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <Link
-                  href="/services/ai-solutions"
-                  className="text-gray-300 hover:text-white transition-colors">;
-=======
                 <Link;
                   href="/services / ai - solutions";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   AI Solutions;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <Link
-                  href="/services/cloud-services"
-                  className="text-gray-300 hover:text-white transition-colors">;
-=======
                 <Link;
                   href="/services / cloud - services";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Cloud Services;
                 </Link>;
               </li>;
             </ul>;
           </div>;
           {/* Company */}
-<<<<<<< HEAD
-          <div className="space-y-4">;
-            <h3 className="text-lg font-semibold">Company</h3>;
-            <ul className="space-y-2">;
-              <li>;
-                <Link
-                  href="/about"
-                  className="text-gray-300 hover:text-white transition-colors">;
-=======
           <div className="space - y-4">;
             <h3 className="text - lg font - semibold">Company</h3>;
             <ul className="space - y-2">;
@@ -436,97 +344,36 @@ function EnhancedFooter() {
                   href="/about";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   About Us;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <Link
-                  href="/careers"
-                  className="text-gray-300 hover:text-white transition-colors">;
-=======
                 <Link;
                   href="/careers";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Careers;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <Link
-                  href="/blog"
-                  className="text-gray-300 hover:text-white transition-colors">;
-=======
                 <Link;
                   href="/blog";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Blog;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <Link
-                  href="/contact"
-                  className="text-gray-300 hover:text-white transition-colors">;
-=======
                 <Link;
                   href="/contact";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Contact;
                 </Link>;
               </li>;
             </ul>;
           </div>;
           {/* Contact Info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Contact</h3>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-300">info@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-300">New York, NY</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-<p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-=======
-          <div className="space-y-4">;
-            <h3 className="text-lg font-semibold">Contact</h3>;
-            <div className="space-y-2">;
-              <div className="flex items-center space-x-2">;
-                <Mail className="h-4 w-4 text-gray-400" />;
-                <span className="text-gray-300">info@ziontechgroup && ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items-center space-x-2">;
-                <Phone className="h-4 w-4 text-gray-400" />;
-                <span className="text-gray-300">+1 (555) 123-4567</span>;
-              </div>;
-              <div className="flex items-center space-x-2">;
-                <MapPin className="h-4 w-4 text-gray-400" />;
-                <span className="text-gray-300">New York, NY</span>;
-=======
           <div className="space - y-4">;
             <h3 className="text - lg font - semibold">Contact</h3>;
             <div className="space - y-2">;
@@ -541,20 +388,10 @@ function EnhancedFooter() {
               <div className="flex items - center space - x-2">;
                 <MapPin className="h - 4 w - 4 text - gray - 400" />;
                 <span className="text - gray - 300">New York, NY</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
-
-        <div className="border-t border-gray-800 mt-8 pt-8">;
-          <div className="flex flex-col md:flex-row justify-between items-center">;
-            <p className="text-gray-400 text-sm">;
-              © {currentYear} Zion Tech Group. All rights reserved.;
-            </p>;
-            <div className="flex space-x-6 mt-4 md:mt-0">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white text-sm transition-colors">;
@@ -563,7 +400,6 @@ function EnhancedFooter() {
               <Link
                 href="/terms"
                 className="text-gray-400 hover:text-white text-sm transition-colors">;
-=======
         <div className="border - t border - gray - 800 mt - 8 pt - 8">;
           <div className="flex flex - col md:flex - row justify - between items - center">;
 <p className="text - gray - 400 text - sm">;
@@ -580,27 +416,14 @@ function EnhancedFooter() {
                 href="/terms";
                 className="text - gray - 400 hover:text - white text - sm transition - colors";
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Terms of Service;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </footer>;
-  );
-}
-export default EnhancedFooter;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </footer>);
 }
 ;
 export default EnhancedFooter;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,19 +21,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
 import Layout from "../components/Layout";
-<<<<<<< HEAD
-=======
-import React from 'react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';
->>>>>>> origin/automation-improvements-final
 
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function AIServices() {
   return (
     <Layout
@@ -47,20 +33,6 @@ export default function AIServices() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions and
-              services.
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">
-              AI Services page is under construction.
-            </p>
-=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
@@ -68,12 +40,10 @@ export default function AIServices() {
           </div>
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
->>>>>>> origin/automation-improvements-final
           </div>
         </div>
       </div>
     </Layout>
-=======
 export default function AIServices() {;
   return (
     <Layout
@@ -92,7 +62,6 @@ export default function AIServices() {;
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -118,21 +87,12 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -225,12 +185,6 @@ export default function AIServices() {
       </div>
     </Layout>
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

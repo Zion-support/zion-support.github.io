@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readReviews, readProjects } from "../../../utils/dataStore";
 import type { PublicReview, ReviewsSummary } from "../../../types/reviews";
@@ -12,39 +6,12 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-  if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" });
-=======
   if (req && req.method !== "GET") {
     return res && res.status(405).json({ error: "Method not allowed" });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   }
   try {
-<<<<<<< HEAD
-
-    const { targetType, targetId } = req.query as {
-      targetType?: string;
-      targetId?: string;
-    }
-    if (!targetType |!targetId) {
-
-      return res.status(400).json({ error: "Missing targetType or targetId" });
-=======
-    const { targetType, targetId } = req && req.query as {
-      targetType?: string;
-      targetId?: string;
-    };
-<<<<<<< HEAD
-    if (!targetType || !targetId) {
-      return res && res.status(400).json({ error: "Missing targetType or targetId" });
-    }
-    if (targetType !== "talent" && targetType !== "client") {
-      return res && res.status(400).json({ error: "Invalid targetType" });
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readReviews, readProjects } from '../../../utils/dataStore';
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
@@ -57,63 +24,34 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (!targetType || !targetId) {
       return res && res.status(400).json({ error: "Missing targetType or targetId" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-<<<<<<< HEAD
-    if (targetType !== "talent" && targetType !== "client") {
-      return res && res.status(400).json({ error: "Invalid targetType" });
-=======
     if (targetType !== 'talent' && targetType !== 'client') {
       return res.status(400).json({ error: 'Invalid targetType' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const filtered = all.filter((r) => {
       if (r.removed |!r.approved) return false;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const matchesTarget =
         r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
       if (!matchesTarget) return false;
       const counterpartExists = all && all.some(
         (x) =>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           x.projectId === r.projectId &&
           x.fromRole !== r.fromRole &&
           x.toRole !== r.toRole &&
           x.approved &&
           !x.removed
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           x && x.projectId === r && r.projectId &&
           x && x.fromRole !== r && r.fromRole &&
           x && x.toRole !== r && r.toRole &&
           x && x.approved &&
           !x && x.removed,
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_reviews, read_projects  } from '../../../utils / data_store';
 import type { PublicReview, ReviewsSummary } from "../../../types / reviews";
@@ -167,29 +105,14 @@ if (return false) {
           x.to_role !== r.to_role &&;
           x.approved &&;
           !x.removed,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       );
       return counterpart_exists;
     });
-<<<<<<< HEAD
-    // Map to public reviews (mask anonymous author)
-    const publicReviews: PublicReview[] = filtered
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       .sort(
         (a, b) =>
-<<<<<<< HEAD
-          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-=======
           new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       )
-=======
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === "talent") {
@@ -197,12 +120,6 @@ if (return false) {
           authorName = t ? t && t.name : r && r.fromId;
         }
         if (r && r.anonymous) authorName = "Anonymous";
-<<<<<<< HEAD
-        return {
-          ...r,
-          authorName,
-=======
-=======
 ;
     // Map to public reviews (mask anonymous author);
     const public_reviews: PublicReview[] = filtered;
@@ -223,61 +140,19 @@ if ( {) {
 if (author_name = "Anonymous") {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return {
-<<<<<<< HEAD
-          ...r
-          authorName
-        }
-=======
-          ...r,
-<<<<<<< HEAD
-          authorName
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       });
     const totalReviews = publicReviews && publicReviews.length;
     const averageRating = totalReviews
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      ? Math.round(
-          (publicReviews.reduce((sum, r) => sum + r.rating, 0) / totalReviews) *
-            10
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       ? Math && Math.round(
           (publicReviews && publicReviews.reduce((sum, r) => sum + r && r.rating, 0) / totalReviews) *
             10,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         ) / 10
       : 0;
     const projects = await readProjects();
     const totalCompletedProjects = projects && projects.filter(
       (p) =>
-<<<<<<< HEAD
-        p.status === "Completed" &&
-        ((targetType === "talent" && p.talentSlug === targetId) |
-          (targetType === "client" && p.clientId === targetId))
-    ).length;
-    const summary: ReviewsSummary = {
-      averageRating
-      totalReviews
-      totalCompletedProjects
-      mostRecent: publicReviews.slice(0, 5)
-    }
-    return res.status(200).json({ summary, reviews: publicReviews });
-
-=======
-        p && p.status === "Completed" &&
-        ((targetType === "talent" && p && p.talentSlug === targetId) ||
-          (targetType === "client" && p && p.clientId === targetId)),
-    ).length;
-<<<<<<< HEAD
-=======
-=======
       ? Math.round((publicReviews.reduce((sum, r) => sum + r.rating, 0) / totalReviews) * 10) / 10
       : 0;
 
@@ -287,8 +162,6 @@ if (author_name = "Anonymous") {
       (targetType === 'client' && p.clientId === targetId)
     )).length;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           author_name,
         }
       });
@@ -309,50 +182,24 @@ if (author_name = "Anonymous") {
           (target_type === "client" && p.client_id === target_id)),
     ).length;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const summary: ReviewsSummary = {
       average_rating,
       total_reviews,
       totalCompletedProjects,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       mostRecent: publicReviews && publicReviews.slice(0, 5),
     };
     return res && res.status(200).json({ summary, reviews: publicReviews });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       most_recent: public_reviews.slice (0, 5),
     }
 ;
     return res.status (200).json ({ summary, reviews: public_reviews });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error: any) {
-<<<<<<< HEAD
-    return res
-      .status(500)
-      .json({ error: "Internal server error", details: error?.message });
-=======
-    return res;
-      .status (500);
-      .json ({ error: "Internal server error", details: error?.message });
-  }
-<<<<<<< HEAD
-}
-=======
       mostRecent: publicReviews.slice(0, 5)
     };
 
     return res.status(200).json({ summary, reviews: publicReviews })
   } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

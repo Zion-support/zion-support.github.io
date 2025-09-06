@@ -1,59 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { logErrorToProduction } from '@/utils/productionLogger'
-import {
-  getClientBudgetSuggestion
-  PricingSuggestion
-  ClientBudgetParams
-  trackPricingSuggestion
-} from '@/services/pricingSuggestionService'
-import { PricingSuggestionBox } from './PricingSuggestionBox'
-import { useAuth } from '@/hooks/useAuth'
-import { Sparkles } from 'lucide-react'
-interface ClientBudgetRecommenderProps {
-  jobTitle: string
-  category: string
-  timeline?: string
-  scope?: string
-  experienceLevel?: string
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {
-  jobTitle: string
-  category: string
-  timeline?: string
-  scope?: string
-  experienceLevel?: string
-  onSuggestionApplied: (minValue: number, maxValue: number,) => void
-}
-export const ClientBudgetRecommender: React.FC<
-  ClientBudgetRecommenderProps
-> = ({
-  jobTitle
-  category
-  timeline
-  scope
-  experienceLevel
-  onSuggestionApplied
-}) => {
-  const [isLoading, setIsLoading] = useState(false)
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)
-  const { user } = useAuth()
-  const generateSuggestion = async () => {
-    if (!jobTitle |!category) {
-      return
-    }
-    setIsLoading(true)
-    try {
-      const params: ClientBudgetParams = {
-        jobTitle
-        category
-      };        jobTitle
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { logErrorToProduction } from '@/utils / production_logger';
@@ -106,7 +50,6 @@ if ( {) {
         job_title,
         category,
       }        job_title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         category}
       // Check condition
 if (params.timeline = timeline) {
@@ -123,34 +66,13 @@ if (params.experience_level = experience_level) {
       const result = await getClientBudgetSuggestion (params);
       set_suggestion (result);
     } catch (error) {
-<<<<<<< HEAD
-      logErrorToProduction('Error generating budget suggestion:', {
-        data: error
-      })
-=======
       logErrorToProduction ('Error generating budget suggestion:', {
         data: error,
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-  const handleApplySuggestion = () => {
-    if (suggestion) {
-      onSuggestionApplied(suggestion.minRate, suggestion.maxRate)
-      // Track this suggestion application
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id
-          suggestionType: 'client'
-          suggestedMin: suggestion.minRate
-          suggestedMax: suggestion.maxRate
-          accepted: true
-        })
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -233,8 +155,6 @@ export const ClientBudgetRecommender: React.FC<;
           suggestedMax: suggestion && suggestion.maxRate,;
           accepted: true,;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   const handleApplySuggestion = () =>: any {
     // Check condition
 if ( {) {
@@ -253,34 +173,16 @@ if ( {) {
           suggested_max: suggestion.max_rate,
           accepted: true,
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
   }
   return (
-<<<<<<< HEAD
-    <div className='space-y-4'>;
-      <div>;
-        {!suggestion && !isLoading ? (;
-          <Button
-            type='button'
-            variant='outline'
-            onClick={generateSuggestion}
-<<<<<<< HEAD
-            disabled={!jobTitle |!category}
-            className='w-full'          >
-            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
-          </Button>
-        ) : (
-=======
             disabled={!jobTitle || !category}
             className='w-full'>;
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
           </Button>;
         ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <PricingSuggestionBox
-=======
     <div className='space - y-4'>;
       <div>;
         {!suggestion && !is_loading ? (
@@ -293,18 +195,9 @@ if ( {) {
             <Sparkles className='h - 4 w - 4 mr - 2' /> Get Budget Recommendation;
           </Button>) : (
           <PricingSuggestionBox;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
-<<<<<<< HEAD
-            rateType='hourly'          />;
-        )}
-<<<<<<< HEAD
-      </div>
-    </div>
-  )
-=======
             rate_type='hourly'          />)}
       </div>;
     </div>);
@@ -320,49 +213,12 @@ if (params.experience_level = experience_level) {
 //Track this suggestion application // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
   trackPricingSuggestion ({
 }
-<<<<<<< HEAD
-return (<div className="space-y-4" > <div> {"
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={
-  generateSuggestion "
-}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />)
-}</div> </div>)
-}
-'"  )
-}
-
-=======
-      </div>;
-    </div>;
-  );
-};
-if (scope) params && params.scope = scope;
-if (experienceLevel) params && params.experienceLevel = experienceLevel;
-//Track this suggestion application if (user && user.id) {;
-  trackPricingSuggestion ({;
-
-
-};
-return (<div className="space-y-4" > <div> {";
-  !suggestion && !isLoading ? (<Buttontype="button" variant="outline" onClick={
-  generateSuggestion "
-}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
-}</div> </div>) ;
-};
-'"  );
-},;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 return (<div className="space - y-4" > <div> {";
   !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
   generate_suggestion ";
@@ -371,5 +227,3 @@ return (<div className="space - y-4" > <div> {";
 }
 '"  );
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

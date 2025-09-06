@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-// Mock rate limiting utility
-export function rateLimit(req: any, res: any, next: any) {
-  // Mock implementation - in a real app, this would implement rate limiting
-  if (next) {
-    next();
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -31,7 +20,6 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   }
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
     res.status(429).json({ error: 'Too Many Requests' });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 const rateLimitMap = new Map < string, { count: number; reset_time: number }>();
@@ -62,18 +50,11 @@ if ( {) {
   $2
 }
     res.status (429).json ({ error: 'Too Many Requests' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return false;
   }
   current.count++;
   rateLimitMap.set (key, current);
   return true;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-
-=======
 // Rate limiting utilities
 export interface RateLimitConfig {
   windowMs: number;
@@ -179,8 +160,4 @@ export function rateLimit(config: RateLimitConfig) {
     next();
   };
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

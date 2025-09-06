@@ -1,36 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const CONTENT_PATH = path.join(process.cwd(), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json');
-=======
 const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json');
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const token = req.headers['x-admin-token'] as string | undefined
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-=======
   const token = req.headers['x-admin-token'] as string | undefined,
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(403).json({ error: 'Forbidden' });
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = req && req.headers['x-admin-token'] as string | undefined,
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   try {
     const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');
@@ -38,18 +20,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content' });
   }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content' })
   }  } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content' })
   }
 }
-=======
   try {
     const data = fs.readFileSync(CONTENT_PATH, 'utf8');
     res.status(200).json(JSON.parse(data))
@@ -57,8 +33,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: 'Failed to read content' })
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');
 ;
@@ -85,4 +59,3 @@ if ( {) {
     res.status (500).json ({ error: 'Failed to read content' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

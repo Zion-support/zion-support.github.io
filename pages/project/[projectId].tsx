@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -31,7 +23,6 @@ export default function ProjectPage() {
         const json = await res.json()
         if (!json.ok) throw new Error(json.error |"Failed to load project")
         setProject(json.project)
-=======
 import { useEffect, useState  } from './react';,
 import { use_router  } from './next / router';,
 import FeedbackModal from "../../components / ui / FeedbackModal",
@@ -68,40 +59,12 @@ if (return, ) {
   $2
 }
         set_project (json.project);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (e: any) {
         set_error (e.message);
       } finally {
         set_loading (false);
       }
     }
-<<<<<<< HEAD
-    load()
-  }, [projectId])
-  const [showFeedback, setShowFeedback] = useState(false)
-  async function addNote() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH"
-      headers: { "Content-Type": "application/json", ...headers }
-      body: JSON.stringify({ id: projectId, action: "add_note", content: note })})
-    const json = await res.json()
-    if (json.ok) {
-      setProject(json.project)
-      setNote("")
-      setShowFeedback(true)
-    }
-  }
-  async function markCompleted() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH"
-      headers: { "Content-Type": "application/json", ...headers }
-      body: JSON.stringify({ id: projectId, action: "mark_completed" })})
-    const json = await res.json()
-    if (json.ok) {
-      setProject(json.project)
-
-      setShowFeedback(true)
-=======
     load ();
   }, [project_id]),
   const [show_feedback, setShowFeedback] = useState (false),
@@ -138,7 +101,6 @@ if ( {) {
 }
       set_project (json.project),
       setShowFeedback (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
   return (
@@ -151,22 +113,6 @@ if ( {) {
             <h1 className="text - 2xl font - semibold">Project Kickoff</h1>;
             <span className={`px - 2 py - 0.5 rounded text - xs ${project.status === "ACTIVE" ? "bg - emerald - 100 text - emerald - 700" : "bg - gray - 200"}`}>;
               {project.status}
-<<<<<<< HEAD
-            </span>
-          </div>
-          <section className="rounded border p-4">
-            <h2 className="font-medium mb-2">Project Summary</h2>
-            <div className="text-sm">
-              <div><b>Client</b>: {project.clientId}</div>
-              <div><b>Talent</b>: {project.talentSlug}</div>
-              <div><b>Start</b>: {new Date(project.startDateIso).toLocaleDateString()}</div>
-              <div className="mt-2">{project.summary}</div>
-            </div>
-          </section>
-          <section className="rounded border p-4">
-            <h2 className="font-medium mb-2">Timeline</h2>
-            <ul className="list-disc pl-6 space-y-1 text-sm">
-=======
             </span>;
           </div>;
           <section className="rounded border p - 4">;
@@ -181,7 +127,6 @@ if ( {) {
           <section className="rounded border p - 4">;
             <h2 className="font - medium mb - 2">Timeline</h2>;
             <ul className="list - disc pl - 6 space - y-1 text - sm">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {project.timeline?.length ? (
                 project.timeline.map ((m: any) => (
                   <li key={m.id}>;
@@ -189,18 +134,6 @@ if ( {) {
                     {m.dueDateIso && <span> • due {new Date (m.dueDateIso).toLocaleDateString ()}</span>}
                     {m.amount_usd && <span> • ${m.amount_usd}</span>}
                     {m.status && <span> • {m.status}</span>}
-<<<<<<< HEAD
-                  </li>
-                ))
-              ) : (
-                <li>No timeline defined</li>
-              )}
-            </ul>
-          </section>
-          <section className="rounded border p-4">
-            <h2 className="font-medium mb-2">Documents</h2>
-            <ul className="list-disc pl-6 space-y-1 text-sm">
-=======
                   </li>))) : (
                 <li > No timeline defined</li>)}
             </ul>;
@@ -208,66 +141,11 @@ if ( {) {
           <section className="rounded border p - 4">;
             <h2 className="font - medium mb - 2">Documents</h2>;
             <ul className="list - disc pl - 6 space - y-1 text - sm">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {project.documents?.length ? (
                 project.documents.map ((d: any) => (
                   <li key={d.id}>;
                     {d.url ? (
-<<<<<<< HEAD
-                      <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</a>
-                    ) : (
-                      <span>{d.name}</span>
-                    )}
-                    <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
-                  </li>
-                ))
-              ) : (
-                <li>No documents</li>
-              )}
-            </ul>
-          </section>
-          <section className="rounded border p-4 space-y-3">
-            <h2 className="font-medium">Shared notes/messages</h2>
-            <div className="space-y-2">
-              {project.notes?.length ? (
-                project.notes.map((n: any) => (
-                  <div key={n.id} className="text-sm">
-                    <span className="font-medium">{n.authorRole}</span>: {n.content}
-                    <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
-                  </div>
-                ))
-              ) : (
-                <div className="text-sm text-gray-600">No notes yet.</div>
-              )}
-            </div>
-            <div className="flex gap-2">
-              <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
-              <button onClick={addNote} className="px-3 py-2 rounded bg-gray-900 text-white">Add</button>
-            </div>
-          </section>
-          <div className="flex justify-end">
-            {project.status !== "COMPLETED" && (
-              <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
-            )}
-          </div>
-        </div>
-      )}
-      <FeedbackModal
-        isOpen={showFeedback}
-        onClose={() => setShowFeedback(false)}
-        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
-        userHeaders={headers}
-      />
-    </div>
-  )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                       <a href={d.url} className="text - indigo - 600 underline" target="_blank" rel="noreferrer">{d.name}</a>) : (
                       <span>{d.name}</span>)}
                     <span className="text - gray - 500"> • uploaded {new Date (d.uploadedAtIso).toLocaleString ()}</span>;
@@ -304,5 +182,3 @@ if ( {) {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

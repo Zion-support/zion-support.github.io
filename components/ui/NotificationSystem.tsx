@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,87 +22,23 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from "react";
-<<<<<<< HEAD
-=======
 import React from './react';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface Notification {
-=======
 
 export interface Notification {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
   message: string;
   duration?: number;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface NotificationSystemProps {
-=======
 
 interface NotificationSystemProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   notifications: Notification[];
   on_dismiss?: (id: string) => void;
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-          key;
-
-
-const getNotificationStyles = (type: Notification["type"]): string => {
-  const baseStyles = "border-l-4";
-  const typeStyles = {
-    success: "bg-green-50 border-green-400 text-green-800"
-    error: "bg-red-50 border-red-400 text-red-800"
-    warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
-    info: "bg-blue-50 border-blue-400 text-blue-800"
-  }
-  return `${baseStyles} ${typeStyles[type]}`;
-}
-export default function NotificationSystem({
-  notifications
-  onDismiss
-key={notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
-        >
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-              {notification.title && (
-                <h4 className="font-medium mb-1">{notification.title}</h4>)}
-              <p className="text-sm">{notification.message}</p>
-            </div>
-            {onDismiss && (
-              <button
-                onClick={() => onDismiss(notification.id)}
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' }
-type NotificationContextValue = {
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
-}
-const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} })
-export function useToast() {
-  return useContext(NotificationContext)
-}
-export function NotificationProvider({ children }: { children: ReactNode }) {
-  const [toasts, setToasts] = useState<Toast[]>([])
-  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
-    const id = Math.random().toString(36).slice(2)
-    setToasts((prev) => [...prev, { id, message, tone }])
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id))
-    }, 3000)
-  }, [])
-}: NotificationSystemProps) {
-  if (notifications.length === 0) return null;
-=======
 const getNotificationStyles = (type: Notification["type"]): string => {;
   const baseStyles = "border-l-4";
   const typeStyles = {;
@@ -124,7 +55,6 @@ export default function NotificationSystem(): any ({;
   onDismiss,;
 }: NotificationSystemProps) {;
   if (notifications && notifications.length === 0) return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">;
@@ -153,9 +83,6 @@ export default function NotificationSystem(): any ({;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 
 interface Notification {
@@ -223,8 +150,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
 };
 
 export default NotificationSystem;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 const getNotificationStyles = (type: Notification["type"]): string => {
   const base_styles = "border - l-4";
   const type_styles = {
@@ -306,5 +231,3 @@ if (return null) {
         </div>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

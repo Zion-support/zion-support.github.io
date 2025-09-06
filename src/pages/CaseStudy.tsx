@@ -1,41 +1,5 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import { useRouter  } from 'next/router';
-import { CASE_STUDIES  } from '@/data/case-studies';
-import { SEO  } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { ArrowLeft } from 'lucide-react'
 
-<<<<<<< HEAD
-import {  Breadcrumb
-  BreadcrumbList
-  BreadcrumbItem
-  BreadcrumbLink
-  BreadcrumbSeparator
-} from '@/components/ui/breadcrumb'
-import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
-import { getBreadcrumbsForPath } from '@/utils/routeUtils'
-export default function CaseStudy() {
-  const router = useRouter()
-  const slug = router.query.slug as string
-  const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb
-  BreadcrumbList
-  BreadcrumbItem
-  BreadcrumbLink
-  BreadcrumbSeparator} from '@/components/ui/breadcrumb'
-export default function CaseStudy() {
-  const router = useRouter()
-  const slug = router.query.slug as string
-  const study = CASE_STUDIES.find((s,) => s.slug === slug)
-  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { ArrowLeft } from 'lucide-react';
 import {  Breadcrumb,;
   BreadcrumbList,;
@@ -54,16 +18,11 @@ export default function CaseStudy() {;
   BreadcrumbItem,;
   BreadcrumbLink,;
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',;
-<<<<<<< HEAD
-=======
-=======
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {;
@@ -71,22 +30,7 @@ export default function CaseStudy() {;
   const slug = router && router.query.slug as string,;
   const study = CASE_STUDIES && CASE_STUDIES.find((s,) => s && s.slug === slug),;
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-<<<<<<< HEAD
-  if (!study) {;
-    return (
-<<<<<<< HEAD
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
-export default function CaseStudy() {
-  const router = useRouter()
-  const slug = router.query.slug as string
-  const study = CASE_STUDIES.find((s) => s.slug === slug)
-  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
-  if (!study) {
-    return (
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
-=======
   const router = useRouter();
   const slug = router.query.slug as string,
   const study = CASE_STUDIES.find((s) => s.slug === slug);
@@ -96,11 +40,9 @@ export default function CaseStudy() {
   if (!study) {
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         Case study not found.
       </div>
     )
-=======
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found && found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {;
@@ -115,13 +57,8 @@ export default function CaseStudy() {;
         Case study not found.;
       </div>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <>;
       <SEO title={study && study.title} description={study && study.excerpt} />;
       <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>;
@@ -191,16 +128,6 @@ export default function CaseStudy() {;
           )}
           <div
             className='prose prose-invert'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            dangerouslySetInnerHTML={{ __html: study.content }}
-          />
-          <p className='mt-8 text-white font-semibold'>            — {study.author}, {study.role}            className="prose prose-invert"
-            dangerouslySetInnerHTML={{ __html: study.content }}
-          />
-          <p className="mt-8 text-white font-semibold">
-=======
     <>
       <SEO title={study.title} description={study.excerpt} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -257,16 +184,10 @@ export default function CaseStudy() {;
           />
           <p className="mt-8 text-white font-semibold">
             — {study.author}, {study.role}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </p>
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             dangerouslySetInnerHTML={{ __html: study && study.content }}
           />;
           <p className='mt-8 text-white font-semibold'>            — {study && study.author}, {study && study.role}            className="prose prose-invert";
@@ -279,12 +200,8 @@ export default function CaseStudy() {;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { CASE_STUDIES } from '@/data / case - studies';
@@ -422,4 +339,3 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

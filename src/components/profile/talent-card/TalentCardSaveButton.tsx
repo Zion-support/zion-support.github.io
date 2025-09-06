@@ -1,63 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useToast } from '@/hooks/use-toast';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import { Heart } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useToast } from "@/hooks/use-toast";
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useRouter } from 'next/router';
 interface TalentCardSaveButtonProps {;
   profileId: string;
   profileName: string;
   isSaved: boolean;
   onToggleSave?: (id: string, isSaved: boolean) => void;
-<<<<<<< HEAD
-  isAuthenticated: boolean
-export function TalentCardSaveButton({
-
-  profileId
-  profileName
-  isSaved
-  onToggleSave
-  isAuthenticated
-}: TalentCardSaveButtonProps) {
-  const { toast } = useToast()
-  const router = useRouter()
-  // Using router.asPath for current path
-  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved)
-  // Handle save toggle
-  const handleSaveToggle = (e: React.MouseEvent) => {
-    e.stopPropagation()
-    if (!isAuthenticated) {
-      toast({
-        title: 'Authentication required'
-        description: 'Please log in to save talents to your favorites'
-        variant: 'destructive'
-      })
-      const returnTo = encodeURIComponent(router.asPath)
-      router.push(`/auth/login?returnTo=${returnTo}`)
-      return
-    }
-    setLocalIsSaved(!localIsSaved)
-    if (onToggleSave) {
-      onToggleSave(profileId, !localIsSaved)
-    }
-    toast({
-      title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
-      description: localIsSaved
-        ? `${profileName} has been removed from your favorites`
-        : `${profileName} has been added to your favorites`
-      variant: 'default'
-    })
-  }
-    >
-=======
   isAuthenticated: boolean;
 export function TalentCardSaveButton(): any ({;
   profileId,;
@@ -101,18 +47,13 @@ export function TalentCardSaveButton(): any ({;
 
 
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Heart
         className={cn(
           'h-4 w-4 transition-colors'
           localIsSaved ? 'fill-red-500 text-red-500' : 'text-zion-slate'
-<<<<<<< HEAD
-        )}      />
-=======
         )}      />;
     </button>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     </button>
   )
@@ -122,11 +63,8 @@ export function TalentCardSaveButton(): any ({;
 }/> </button>)
 }"
 }
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -189,7 +127,3 @@ if ( {) {
 }/> </button>);
 }";
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

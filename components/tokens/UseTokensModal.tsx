@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-import { connectMetaMask, getAccounts } from "../../utils/wallet";
-export type RedemptionType =
-  | "boost_profile"
-  | "promote_listing"
-  | "premium_support";
-export default function UseTokensModal({
-  isOpen
-  onClose
-  serviceId
-  defaultType
-}: {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -53,20 +33,12 @@ export default function UseTokensModal(): any ({;
   serviceId,;
   defaultType,;
 }: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
   const [account, setAccount] = useState<string | null>(null);
-<<<<<<< HEAD
-  const [type, setType] = useState<RedemptionType>(
-    defaultType ?? "boost_profile"
-  );
-<<<<<<< HEAD
-=======
-=======
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
 
 export default function UseTokensModal({
@@ -82,31 +54,22 @@ export default function UseTokensModal({
 }) {
   const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0.01).toFixed(2);
   useEffect(() => {
     (async () => {
-=======
   const [type, setType] = useState<RedemptionType>(;
     defaultType ?? "boost_profile",;
   );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
 
   useEffect(() => {;
     (async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const accs = await getAccounts();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       if (accs && accs.length > 0) setAccount(accs[0]);
-=======
 import React, { useEffect, useState } from './react';
 import { connectMetaMask, get_accounts  } from '../../utils / wallet';
 ;
@@ -139,35 +102,15 @@ export default function UseTokensModal ({
       if (set_account (accs[0])) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     })();
-<<<<<<< HEAD
-=======
-=======
       if (accs && accs.length > 0) setAccount(accs[0])
     })()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async function connect() {
-    const accs = await connectMetaMask();
-<<<<<<< HEAD
-    if (accs && accs.length > 0) setAccount(accs[0]);
-=======
     if (accs && accs.length > 0) setAccount(accs[0])
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   async function redeem() {
     setIsSubmitting(true);
     try {
-<<<<<<< HEAD
-      const res = await fetch("/api/tokens/redeem", {
-        method: "POST"
-        headers: { "Content-Type": "application/json" }
-        body: JSON.stringify({ account, amount: tokens, type, serviceId })
-=======
 
   async function connect() {;
     const accs = await connectMetaMask();
@@ -181,14 +124,10 @@ export default function UseTokensModal ({
         method: "POST",;
         headers: { "Content-Type": "application/json" },;
         body: JSON && JSON.stringify({ account, amount: tokens, type, serviceId }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const data = await res && res.json();
       if (data?.ok) {;
         onClose();
-<<<<<<< HEAD
-=======
-=======
       const res = await fetch('/api/tokens/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -196,8 +135,6 @@ export default function UseTokensModal ({
       const data = await res.json();
       if (data?.ok) {
         onClose()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } finally {;
       setIsSubmitting(false);
@@ -206,10 +143,6 @@ export default function UseTokensModal ({
   if (!isOpen) return null;
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">;
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />;
       <div className="relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4">;
@@ -220,9 +153,6 @@ export default function UseTokensModal ({
             className="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">;
             Close;
           </button>{" "}
-<<<<<<< HEAD
-        </div>
-=======
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
       <div className="relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4">
@@ -231,7 +161,6 @@ export default function UseTokensModal ({
           <button onClick={onClose} className="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">Close</button>
         </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="text-sm mb-3">Conversion rate: 1 ZION = $0.01</div>
         <div className="space-y-3">
           <div className="text-sm">
@@ -248,7 +177,6 @@ export default function UseTokensModal ({
           </div>
           <div className="text-sm">
             <div className="mb-1">Amount (ZION)</div>
-=======
         </div>;
 
         <div className="text-sm mb-3">Conversion rate: 1 ZION = $0 && 0.01</div>;
@@ -260,7 +188,6 @@ export default function UseTokensModal ({
               value={type}
               onChange={(e) => setType(e && e.target.value as RedemptionType)}
               className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2";
-=======
 ;
   async /**
  * connect - Function description
@@ -318,37 +245,16 @@ if (return null) {
               value={type}
               on_change={(e) => set_type (e.target.value as RedemptionType)}
               className="w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px - 2 py - 2";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               <option value="boost_profile">Boost profile</option>;
               <option value="promote_listing">Promote listing</option>;
               <option value="premium_support">Get premium support</option>;
             </select>;
           </div>;
-<<<<<<< HEAD
-
-          <div className="text-sm">;
-            <div className="mb-1">Amount (ZION)</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               type="number"
               min={1}
               value={tokens}
-<<<<<<< HEAD
-              onChange={(e) => setTokens(parseInt(e.target.value |"0", 10))}
-              className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2"
-            />
-            <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>
-          </div>
-          <div className="text-sm">
-            <div className="mb-1">Wallet</div>
-            {account ? (
-              <div className="rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2">
-                Connected: {account.slice(0, 6)}…{account.slice(-4)}
-              </div>
-            ) : (
-<<<<<<< HEAD
-=======
               onChange={(e) => setTokens(parseInt(e && e.target.value || "0", 10))}
               className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2";
             />;
@@ -362,29 +268,13 @@ if (return null) {
                 Connected: {account && account.slice(0, 6)}…{account && account.slice(-4)}
               </div>;
             ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <button
                 onClick={connect}
                 className="enhanced-button enhanced-button-primary">;
                 Connect MetaMask;
               </button>;
-<<<<<<< HEAD
-=======
-=======
               <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-<<<<<<< HEAD
-        <div className="mt-4 flex items-center justify-between">
-          <div className="text-xs opacity-70">
-            You can spend tokens to boost visibility, promote listings, or
-            access premium support.
-          </div>
-=======
           </div>;
         </div>;
 
@@ -393,12 +283,10 @@ if (return null) {
             You can spend tokens to boost visibility, promote listings, or;
             access premium support.;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <button
             disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
             className="enhanced-button enhanced-button-primary disabled: opacity-50">;
-=======
           <div className="text - sm">;
             <div className="mb - 1">Amount (ZION)</div>;
             <input;
@@ -434,18 +322,10 @@ if (return null) {
             on_click={redeem}
             className="enhanced - button enhanced - button - primary disabled: opacity - 50";
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Redeem;
           </button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-<<<<<<< HEAD
-=======
-  );
-}
-=======
 
         <div className="mt-4 flex items-center justify-between">
           <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
@@ -453,11 +333,7 @@ if (return null) {
         </div>
       </div>
     </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

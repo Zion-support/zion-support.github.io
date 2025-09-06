@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Skill  } from '@/types/resume';
-import { Button  } from '@/components/ui/button';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { useResume  } from '@/hooks/useResume';
-import { SkillsFormProps  } from './types';
-import { SkillsList  } from './SkillsList';
-import { AddSkillForm  } from './AddSkillForm';
-import { BulkAddSkills } from './BulkAddSkills';
-export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {Skill} from '@/types / resume';
 import {Button} from '@/components / ui / button';
@@ -23,47 +7,19 @@ import {SkillsFormProps} from './types';
 import {SkillsList} from './SkillsList';
 import {AddSkillForm} from './AddSkillForm';
 import {BulkAddSkills} from './BulkAddSkills';
-<<<<<<< HEAD
-export function SkillsForm(): any ({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { addSkill, deleteSkill, fetchResume } = useResume();
 
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
-<<<<<<< HEAD
-  const handleAddSkill = async (data: Skill) => {
-    try {
-      setError(null)
-=======
 
   const handleAddSkill = async (data: Skill) => {;
     try {;
       setError(null),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const success = await addSkill(resumeId, data);
       if (success) {;
         // Refresh the skills list;
         await refreshSkills();
       }
-<<<<<<< HEAD
-      return success
-    } catch (err: any) {
-      setError(err.message |'An error occurred')
-      return false
-    }
-  }
-  const handleDeleteSkill = async (id: string, category: string = 'Other') => {
-    if (confirm('Are you sure you want to delete this skill?')) {
-      const success = await deleteSkill(id)
-      if (success) {
-        // Update local state
-        setLocalSkills(localSkills.filter(skill => skill.id !== id))
-      }
-    }
-  }
-  const refreshSkills = async () => {
-    try {
-=======
       return success;
     } catch (err: any) {;
       setError(err && err.message || 'An error occurred'),;
@@ -83,52 +39,16 @@ export function SkillsForm(): any ({ resumeId, skills, onComplete, onBack }: Ski
 
   const refreshSkills = async () => {;
     try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
       }
-<<<<<<< HEAD
-    } catch (err: any) {
-      setError(err.message |'Failed to refresh skills')
-=======
     } catch (err: any) {;
       setError(err && err.message || 'Failed to refresh skills');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Skills</h2>
-        <p className="text-muted-foreground">
-          Add your technical and professional skills.
-        </p>
-      </div>
-      {/* Display skills by category */}
-      <SkillsList skills={localSkills} onDeleteSkill={handleDeleteSkill} />
-      <div className="space-y-6">
-        <div className="bg-muted/40 p-6 rounded-lg">
-          <h3 className="text-md font-medium mb-4">Add Skills One by One</h3>
-          <AddSkillForm resumeId={resumeId} onAddSkill={handleAddSkill} />
-        </div>
-        <BulkAddSkills resumeId={resumeId} onSuccess={refreshSkills} />
-      </div>
-      {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      <div className="flex justify-between">
-        <Button variant="outline" onClick={onBack}>
-          Back
-        </Button>
-        <Button onClick={onComplete} disabled={localSkills.length === 0}>
-          Next
-        </Button>
-      </div>
-    </div>
-  )
-}
-=======
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Skills</h2>;
@@ -162,8 +82,6 @@ export function SkillsForm(): any ({ resumeId, skills, onComplete, onBack }: Ski
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * SkillsForm - Function description
  */
@@ -247,4 +165,3 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

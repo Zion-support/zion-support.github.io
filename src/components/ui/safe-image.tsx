@@ -1,61 +1,10 @@
-<<<<<<< HEAD
-'use client',
-
-import Image from 'next/image';
-import { useState } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ImageIcon } from 'lucide-react'
-=======
 'use client';
 import Image from 'next / image';
 import { useState } from 'react';
 import { ImageIcon } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface SafeImageProps {
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
-<<<<<<< HEAD
-  src: string
-  alt: string
-interface SafeImageProps {
-
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  fallbackSrc?: string
-  priority?: boolean
-  sizes?: string
-  quality?: number
-export function SafeImage({
-  src
-  alt
-  width
-  height
-  className = ''
-  fallbackSrc
-  priority = false
-  sizes
-  quality = 75
-}: SafeImageProps) {
-  const [hasError, setHasError] = useState(false)
-  const [currentSrc, setCurrentSrc] = useState(src)
-  const handleError = () => {
-    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
-      setCurrentSrc(fallbackSrc)
-      setHasError(true)
-      // Try serving the image directly through our custom API route
-      const fallbackUrl = `/api/image${src}`
-      setCurrentSrc(fallbackUrl)
-      setHasError(true)
-    } else if (!hasError) {
-      setHasError(true)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { ImageIcon } from 'lucide-react';
 
 interface SafeImageProps {;
@@ -68,26 +17,17 @@ import { ImageIcon } from 'lucide-react';
 interface SafeImageProps {;
   src: string,;
   alt: string,;
-<<<<<<< HEAD
-=======
-=======
 import { ImageIcon } from 'lucide-react'
 
 interface SafeImageProps {
   src: string,
   alt: string,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   width?: number;
   height?: number;
   className?: string;
   fallbackSrc?: string;
   priority?: boolean;
   sizes?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   quality?: number;
 export function SafeImage(): any ({;
   src,;
@@ -112,31 +52,16 @@ export function SafeImage(): any ({;
       setHasError(true);
     } else if (!hasError) {;
       setHasError(true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
-<<<<<<< HEAD
-  // If we have an error and no fallback, show a placeholder
-  if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
-=======
   // If we have an error and no fallback, show a placeholder;
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img"
-<<<<<<< HEAD
-        aria-label = {alt,}
-      >
-        <ImageIcon className='w-6 h-6' />      </div>
-    )
-  }
-<<<<<<< HEAD
-=======
-=======
   quality?: number
 }
 
@@ -195,7 +120,6 @@ export function SafeImage({
       priority={priority}
       // Add unoptimized as fallback for problematic images
       unoptimized={hasError}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     />
   );        aria-label={alt}
       >
@@ -205,12 +129,10 @@ export function SafeImage({
   }
     />
   ); return (
-=======
         aria-label = {alt,}>;
         <ImageIcon className='w-6 h-6' />      </div>;
     );
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
     />;
@@ -224,10 +146,6 @@ export function SafeImage({
 
     />;
   );  return (
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -238,23 +156,7 @@ export function SafeImage({
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
-<<<<<<< HEAD
-    />
-  )
-}
-=======
-    />;
-  );
-<<<<<<< HEAD
-} ;
-=======
-<<<<<<< HEAD
-} ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 } 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   src: string,
   alt: string,
 interface SafeImageProps {
@@ -322,5 +224,3 @@ if ( {) {
       unoptimized = {has_error, }
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

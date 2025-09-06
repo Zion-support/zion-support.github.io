@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
-  DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
-} from 'lucide-react'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
@@ -22,42 +5,11 @@ import {
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
 } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';
 import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations';
 export default function AdvancedServicesShowcase2025() {
-<<<<<<< HEAD
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity')
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000])
-  // Combine all services
-  const allServices = [...advancedInnovativeServices, ...emergingTechInnovations]
-  const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' }
-    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') |s.category.includes('Machine Learning')).length, icon: '🧠' }
-    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s => s.category.includes('Quantum')).length, icon: '⚛️' }
-    { id: 'Cybersecurity', name: 'Security', count: allServices.filter(s => s.category.includes('Cybersecurity') |s.category.includes('Security')).length, icon: '🛡️' }
-    { id: 'Edge Computing & IoT', name: 'Edge & IoT', count: allServices.filter(s => s.category.includes('Edge') |s.category.includes('IoT')).length, icon: '🌐' }
-    { id: 'Space Technology & Innovation', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length, icon: '🚀' }
-    { id: 'Neural Technology & BCI', name: 'Neural & BCI', count: allServices.filter(s => s.category.includes('Neural') |s.category.includes('BCI')).length, icon: '🧠' }
-    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s => s.category.includes('Healthcare')).length, icon: '🏥' }
-    { id: 'Climate & Sustainability', name: 'Climate', count: allServices.filter(s => s.category.includes('Climate') |s.category.includes('Sustainability')).length, icon: '🌍' }
-    { id: 'Blockchain & DeFi', name: 'Blockchain', count: allServices.filter(s => s.category.includes('Blockchain') |s.category.includes('DeFi')).length, icon: '🔗' }
-    { id: 'Metaverse & VR/AR', name: 'Metaverse', count: allServices.filter(s => s.category.includes('Metaverse') |s.category.includes('VR/AR')).length, icon: '🌐' }
-  ]
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory)
-      const price = parseFloat(service.price.replace('$', '').replace(, ''))
-      const matchesPrice = price >= priceRange[0] && price <= priceRange[1]
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -89,7 +41,6 @@ export default function AdvancedServicesShowcase2025() {
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
       const price = parseFloat(service.price.replace('$', '').replace(, ''));
       const matchesPrice = price >= priceRange[0] && price <= priceRange[1];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       return matchesSearch && matchesCategory && matchesPrice
     })
     .sort((a, b) => {
@@ -97,37 +48,15 @@ export default function AdvancedServicesShowcase2025() {
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
-        case 'rating':
-          return b.rating - a.rating
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         default: return 0
       }
     })
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-=======
-    hidden: { opacity: 0 }
-=======
 import React, { useState, useEffect } from 'react',
 import Head from 'next / head',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -191,52 +120,26 @@ function AdvancedServicesShowcase2025() {
     }),
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
         stagger_children: 0.1;
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
-=======
   },
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
       opacity: 1,
       coordinate_y: 0,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       transition: {
-<<<<<<< HEAD
-        duration: 0.5
-      }
-    }
-=======
-        duration: 0.5;
-      }
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category)
-    return categoryData?.icon |'🚀'
-  }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
   const getCategoryIcon = (category: string) => {
@@ -244,7 +147,6 @@ function AdvancedServicesShowcase2025() {
     return categoryData?.icon || '🚀'
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -256,7 +158,6 @@ function AdvancedServicesShowcase2025() {
         <link rel="canonical" href="https://ziontechgroup.com/2025-advanced-services-showcase" />
       </Head>
       <EnhancedNavigation />
-=======
   },
   const getCategoryIcon = (category: string) =>: any {
     const category_data = categories.find (cat => cat.id === category),
@@ -273,24 +174,7 @@ function AdvancedServicesShowcase2025() {
         <link rel="canonical" href="https://ziontechgroup.com / 2025 - advanced - services - showcase" />;
       </Head>;
       <EnhancedNavigation />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-=======
-      <section className="relative py - 20 px - 6">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Advanced Services Showcase
@@ -321,7 +205,6 @@ function AdvancedServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-=======
           >;
             <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent">;
               2025 Advanced Services Showcase;
@@ -352,30 +235,7 @@ function AdvancedServicesShowcase2025() {
           </motion.div>;
         </div>;
       </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Search and Filters */}
-<<<<<<< HEAD
-      <section className="px-6 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
-          >
-            {/* Search Bar */}
-=======
-      <section className="px - 6 pb - 12">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
-          >;
-            {/* Search Bar */}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <div className="mb-6">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
@@ -388,12 +248,6 @@ function AdvancedServicesShowcase2025() {
                 />
               </div>
             </div>
-<<<<<<< HEAD
-
-            {/* Filters Row */}
-            <div className="flex flex-col lg:flex-row gap-6">
-=======
-=======
             <div className="mb - 6">;
               <div className="relative">;
                 <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - white / 50 w - 5 h - 5" />;
@@ -406,61 +260,9 @@ function AdvancedServicesShowcase2025() {
                 />;
               </div>;
             </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Filters Row */}
             <div className="flex flex - col lg:flex - row gap - 6">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Category Filter */}
-<<<<<<< HEAD
-              <div className="flex-1">
-                <label className="block text-sm font-medium text-white/70 mb-3">Category</label>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
-                >
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
-                </select>
-              </div>
-              {/* Sort By */}
-              <div className="flex-1">
-                <label className="block text-sm font-medium text-white/70 mb-3">Sort By</label>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
-                >
-                  <option value="popularity">Popularity</option>
-                  <option value="price">Price (Low to High)</option>
-                  <option value="rating">Rating</option>
-                  <option value="newest">Newest</option>
-                </select>
-              </div>
-              {/* Price Range */}
-              <div className="flex-1">
-                <label className="block text-sm font-medium text-white/70 mb-3">Price Range</label>
-                <div className="flex gap-2">
-                  <input
-                    type="number"
-                    placeholder="Min"
-                    value={priceRange[0]}
-                    onChange={(e) => setPriceRange([parseInt(e.target.value) |0, priceRange[1]])}
-                    className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
-                  />
-                  <input
-                    type="number"
-                    placeholder="Max"
-                    value={priceRange[1]}
-                    onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) |10000])}
-                    className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
-                  />
-                </div>
-              </div>
-=======
               <div className="flex - 1">;
                 <label className="block text - sm font - medium text - white / 70 mb - 3">Category</label>;
                 <select;
@@ -508,42 +310,7 @@ function AdvancedServicesShowcase2025() {
                   />;
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* View Mode Toggle */}
-<<<<<<< HEAD
-              <div className="flex items-end">
-                <div className="flex bg-white/10 rounded-xl p-1">
-                  <button
-                    onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-lg transition-all duration-300 ${
-                      viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                    }`}
-                  >
-                    <Grid className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-lg transition-all duration-300 ${
-                      viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                    }`}
-=======
-              <div className="flex items - end">;
-                <div className="flex bg - white / 10 rounded - xl p - 1">;
-                  <button;
-                    on_click={() => setViewMode ('grid')}
-                    className={`p - 2 rounded - lg transition - all duration - 300 ${
-                      view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'text - white / 70 hover:text - white';
-                    }`}
-                  >;
-                    <Grid className="w - 5 h - 5" />;
-                  </button>;
-                  <button;
-                    on_click={() => setViewMode ('list')}
-                    className={`p - 2 rounded - lg transition - all duration - 300 ${
-                      view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'text - white / 70 hover:text - white';
-                    }`}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   >
                     <List className="w-5 h-5" />
                   </button>
@@ -556,9 +323,6 @@ function AdvancedServicesShowcase2025() {
       {/* Services Grid/List */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-=======
-=======
                   >;
                     <List className="w - 5 h - 5" />;
                   </button>;
@@ -571,17 +335,11 @@ function AdvancedServicesShowcase2025() {
       {/* Services Grid / List */}
       <section className="px - 6 pb - 20">;
         <div className="max - w-7xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {/* Results Count */}
           <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className="mb-8"
           >
             <p className="text-white/70">
@@ -596,7 +354,6 @@ function AdvancedServicesShowcase2025() {
             className={viewMode === 'grid'
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
-=======
             className="mb - 8";
           >;
             <p className="text - white / 70">;
@@ -611,38 +368,19 @@ function AdvancedServicesShowcase2025() {
             className={view_mode === 'grid';
               ? "grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
               : "space - y-6";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }
-<<<<<<< HEAD
-          >
-            <AnimatePresence mode="wait">
-              {filteredServices.map((service, index) => (
-                <motion.div
-=======
           >;
             <AnimatePresence mode="wait">;
               {filtered_services.map ((service, index) => (
                 <motion.div;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={service.id}
-<<<<<<< HEAD
-                  variants={itemVariants}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  className={viewMode === 'grid'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className={viewMode === 'grid' 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     ? "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     : "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl"
-=======
                   variants={item_variants}
                   className={view_mode === 'grid';
                     ? "group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
                     : "group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 hover:shadow - 2xl";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }
                 >;
                   {/* Service Header */}
@@ -658,47 +396,6 @@ function AdvancedServicesShowcase2025() {
                         </div>;
                       </div>;
                       {service.popular && (
-<<<<<<< HEAD
-                        <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full">
-                          Popular
-                        </span>
-                      )}
-                    </div>
-                    {/* Description */}
-                    <p className="text-white/80 mb-4 leading-relaxed">{service.description}</p>
-                    {/* Price and Details */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-2">
-                          <DollarSign className="w-4 h-4 text-green-400" />
-                          <span className="text-2xl font-bold text-green-400">{service.price}</span>
-                          <span className="text-white/60">{service.period}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <UsersIcon className="w-4 h-4 text-blue-400" />
-                          <span className="text-white/70">{service.customers}+ customers</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <StarIcon className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-white font-medium">{service.rating}</span>
-                        <span className="text-white/60">({service.reviews})</span>
-                      </div>
-                    </div>
-<<<<<<< HEAD
-
-                    {/* Features */}
-                    <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-3">Key Features:</h4>
-                      <div className="grid grid-cols-1 gap-2">
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                            <span className="text-white/80 text-sm">{feature}</span>
-                          </div>
-                        ))}
-=======
-=======
                         <span className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs font - medium px - 3 py - 1 rounded - full">;
                           Popular;
                         </span>)}
@@ -724,7 +421,6 @@ function AdvancedServicesShowcase2025() {
                         <span className="text - white / 60">({service.reviews})</span>;
                       </div>;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {/* Features */}
                     <div className="mb - 6">;
                       <h4 className="text - white font - semibold mb - 3">Key Features:</h4>;
@@ -734,34 +430,12 @@ function AdvancedServicesShowcase2025() {
                             <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
                             <span className="text - white / 80 text - sm">{feature}</span>;
                           </div>))}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         {service.features.length > 3 && (
-<<<<<<< HEAD
-                          <div className="text-white/60 text-sm">
-                            +{service.features.length - 3} more features
-                          </div>
-                        )}
-                      </div>
-                    </div>
-<<<<<<< HEAD
-
-                    {/* Category and Technology */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs bg-white/10 text-white/70 px-3 py-1 rounded-full">
-                          {getCategoryIcon(service.category)} {service.category}
-                        </span>
-                      </div>
-                      <div className="text-white/60 text-sm">
-                        {service.technology.slice(0, 2).join()}
-=======
-=======
                           <div className="text - white / 60 text - sm">;
                             +{service.features.length - 3} more features;
                           </div>)}
                       </div>;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {/* Category and Technology */}
                     <div className="flex items - center justify - between mb - 6">;
                       <div className="flex items - center gap - 2">;
@@ -771,26 +445,9 @@ function AdvancedServicesShowcase2025() {
                       </div>;
                       <div className="text - white / 60 text - sm">;
                         {service.technology.slice (0, 2).join ()}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         {service.technology.length > 2 && '...'}
-<<<<<<< HEAD
-                      </div>
-                    </div>
-<<<<<<< HEAD
-
-                    {/* ROI and Benefits */}
-                    <div className="mb-6">
-                      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-4 border border-cyan-500/20">
-                        <h4 className="text-cyan-400 font-semibold mb-2">ROI & Benefits</h4>
-                        <p className="text-white/80 text-sm mb-3">{service.roi}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {service.benefits.slice(0, 2).map((benefit, idx) => (
-                            <span key={idx} className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full">
-=======
-=======
                       </div>;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {/* ROI and Benefits */}
                     <div className="mb - 6">;
                       <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - xl p - 4 border border - cyan - 500 / 20">;
@@ -799,53 +456,15 @@ function AdvancedServicesShowcase2025() {
                         <div className="flex flex - wrap gap - 2">;
                           {service.benefits.slice (0, 2).map ((benefit, idx) => (
                             <span key={idx} className="text - xs bg - cyan - 500 / 20 text - cyan - 300 px - 2 py - 1 rounded - full">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                               {benefit}
-<<<<<<< HEAD
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-<<<<<<< HEAD
-
-                    {/* Action Buttons */}
-                    <div className="flex gap-3">
-                      <a
-=======
-=======
                             </span>))}
                         </div>;
                       </div>;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {/* Action Buttons */}
                     <div className="flex gap - 3">;
                       <a;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         href={service.link}
-<<<<<<< HEAD
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Learn More
-                      </a>
-                      <a
-                        href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
-                        className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
-                      >
-                        <ZapIcon className="w-4 h-4" />
-                        Contact
-                      </a>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
-=======
                         target="_blank";
                         rel="noopener noreferrer";
                         className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text - white font - semibold py - 3 px - 4 rounded - xl transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap - 2";
@@ -865,16 +484,11 @@ function AdvancedServicesShowcase2025() {
                 </motion.div>))}
             </AnimatePresence>;
           </motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* No Results */}
           {filtered_services.length === 0 && (
             <motion.div;
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center py-20"
             >
               <div className="text-6xl mb-4">🔍</div>
@@ -882,17 +496,6 @@ function AdvancedServicesShowcase2025() {
               <p className="text-white/70 mb-6">Try adjusting your search criteria or filters</p>
               <button
                 onClick={() => {
-<<<<<<< HEAD
-                  setSearchTerm('')
-                  setSelectedCategory('all')
-
-=======
-                  setSearchTerm('');
-                  setSelectedCategory('all');
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   setPriceRange([0, 10000])
                 }}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
@@ -903,18 +506,6 @@ function AdvancedServicesShowcase2025() {
           )}
         </div>
       </section>
-<<<<<<< HEAD
-
-      {/* CTA Section */}
-      <section className="px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
-=======
               className="text - center py - 20";
             >;
               <div className="text - 6xl mb - 4">🔍</div>;
@@ -933,7 +524,6 @@ function AdvancedServicesShowcase2025() {
             </motion.div>)}
         </div>;
       </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* CTA Section */}
       <section className="px - 6 py - 20">;
         <div className="max - w-4xl mx - auto text - center">;
@@ -942,8 +532,6 @@ function AdvancedServicesShowcase2025() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -972,14 +560,7 @@ function AdvancedServicesShowcase2025() {
       <EnhancedFooter />
     </div>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - cyan - 100 bg - clip - text text - transparent">;
               Ready to Transform Your Business?;
@@ -1008,5 +589,3 @@ function AdvancedServicesShowcase2025() {
       <EnhancedFooter />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

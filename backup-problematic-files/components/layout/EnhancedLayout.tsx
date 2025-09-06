@@ -13,7 +13,6 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr'),
     document.documentElement.setAttribute('lang', lng)
   }, []),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
     <div className="min-h-screen flex flex-col">

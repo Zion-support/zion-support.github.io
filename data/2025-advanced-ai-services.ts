@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-export const advancedAIServices2025 = [
-  {
-<<<<<<< HEAD
-    id: 'ai-powered-business-intelligence-suite',
-    name: 'BusinessIntelligence AI Pro',
-=======
-<<<<<<< HEAD
-    id: 'ai-powered-business-intelligence-suite'
-    name: 'BusinessIntelligence AI Pro'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     description:
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
       'Natural language query processing'
@@ -21,7 +9,6 @@ export const advancedAIServices2025 = [
       'Custom AI model training'
       'Advanced security and compliance'
     ]
-=======
 export const advancedAIServices2025 = [;
   {
     id: 'ai - powered - business - intelligence - suite',
@@ -37,7 +24,6 @@ export const advancedAIServices2025 = [;
       'Custom AI model training',
       'Advanced security and compliance',
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     pricing: {
       starter: {
         price: 199
@@ -45,38 +31,6 @@ export const advancedAIServices2025 = [;
         features: ['Up to 10 users', 'Basic AI insights', 'Standard reports']
       }
       professional: {
-<<<<<<< HEAD
-        price: 499
-        period: 'month'
-        features: [
-          'Up to 50 users'
-          'Advanced AI models'
-          'Custom dashboards'
-          'Predictive analytics'
-        ]
-      }
-      enterprise: {
-        price: 1299
-        period: 'month'
-        features: [
-<<<<<<< HEAD
-          'Unlimited users'
-          'Custom AI training'
-          'White-label solution'
-          'Dedicated support'
-        ]
-      }
-    }
-    category: 'Business Intelligence'
-    tags: ['AI', 'Business Intelligence', 'Analytics', 'Data Visualization']
-    website: 'https://ziontechgroup.com/business-intelligence-ai-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$27.3B'
-=======
-=======
         price: 499,
         period: 'month',
         features: [;
@@ -90,7 +44,6 @@ export const advancedAIServices2025 = [;
         price: 1299,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Unlimited users',
           'Custom AI training',
           'White - label solution',
@@ -100,18 +53,11 @@ export const advancedAIServices2025 = [;
     },
     category: 'Business Intelligence',
     tags: ['AI', 'Business Intelligence', 'Analytics', 'Data Visualization'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/business-intelligence-ai-pro',
-=======
     website: 'https://ziontechgroup.com / business - intelligence - ai - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$27 && 27.3B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Business analysts, data scientists, executives, enterprise businesses'
     competitiveAdvantage:
@@ -156,24 +102,6 @@ export const advancedAIServices2025 = [;
         price: 999
         period: 'month'
         features: [
-<<<<<<< HEAD
-          'Unlimited customers'
-          'Custom AI training'
-          'White-label solution'
-          'Dedicated support'
-        ]
-      }
-    }
-    category: 'Customer Analytics'
-    tags: ['AI', 'Customer Analytics', 'Personalization', 'Behavior Analysis']
-    website: 'https://ziontechgroup.com/customer-analytics-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$15.8B'
-=======
-=======
     market_size: '$27.3B',
     target_audience:;
       'Business analysts, data scientists, executives, enterprise businesses',
@@ -219,7 +147,6 @@ export const advancedAIServices2025 = [;
         price: 999,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Unlimited customers',
           'Custom AI training',
           'White - label solution',
@@ -229,18 +156,11 @@ export const advancedAIServices2025 = [;
     },
     category: 'Customer Analytics',
     tags: ['AI', 'Customer Analytics', 'Personalization', 'Behavior Analysis'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/customer-analytics-ai',
-=======
     website: 'https://ziontechgroup.com / customer - analytics - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$15 && 15.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Marketing teams, customer success managers, e-commerce businesses, SaaS companies'
     competitiveAdvantage:
@@ -285,24 +205,6 @@ export const advancedAIServices2025 = [;
         price: 1999
         period: 'month'
         features: [
-<<<<<<< HEAD
-          'Custom AI training'
-          'White-label solution'
-          'Dedicated support'
-          'Regulatory consultation'
-        ]
-      }
-    }
-    category: 'Financial Risk Management'
-    tags: ['AI', 'Financial Risk', 'Fraud Detection', 'Compliance']
-    website: 'https://ziontechgroup.com/financial-risk-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$12.4B'
-=======
-=======
     market_size: '$15.8B',
     target_audience:;
       'Marketing teams, customer success managers, e - commerce businesses, SaaS companies',
@@ -348,7 +250,6 @@ export const advancedAIServices2025 = [;
         price: 1999,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Custom AI training',
           'White - label solution',
           'Dedicated support',
@@ -358,93 +259,21 @@ export const advancedAIServices2025 = [;
     },
     category: 'Financial Risk Management',
     tags: ['AI', 'Financial Risk', 'Fraud Detection', 'Compliance'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/financial-risk-ai',
-=======
     website: 'https://ziontechgroup.com / financial - risk - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$12 && 12.4B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Banks, financial institutions, insurance companies, fintech startups'
     competitiveAdvantage:
-<<<<<<< HEAD
-      'Advanced AI fraud detection with 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation'
-  }
-=======
-      'Advanced AI fraud detection with 99 && 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
-=======
     market_size: '$12.4B',
     target_audience:;
       'Banks, financial institutions, insurance companies, fintech startups',
     competitive_advantage:;
       'Advanced AI fraud detection with 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'intelligent-supply-chain-optimization'
-    name: 'SupplyChain AI'
-    description:
-      'AI-powered supply chain optimization platform that predicts demand, optimizes inventory, and automates logistics operations.'
-    features: [
-      'Demand forecasting with 95% accuracy'
-      'Inventory optimization'
-      'Route optimization'
-      'Supplier performance analytics'
-      'Real-time tracking'
-      'Integration with ERP systems'
-      'Advanced analytics and reporting'
-      'Custom optimization models'
-    ]
-    pricing: {
-      starter: {
-        price: 179
-        period: 'month'
-        features: [
-          'Up to 5 locations'
-          'Basic forecasting'
-          'Standard reports'
-        ]
-      }
-      professional: {
-        price: 449
-        period: 'month'
-        features: [
-          'Up to 25 locations'
-          'Advanced AI'
-          'Custom models'
-          'Full optimization suite'
-        ]
-      }
-      enterprise: {
-        price: 1199
-        period: 'month'
-        features: [
-<<<<<<< HEAD
-          'Unlimited locations'
-          'Custom AI training'
-          'White-label solution'
-          'Dedicated support'
-        ]
-      }
-    }
-    category: 'Supply Chain Optimization'
-    tags: ['AI', 'Supply Chain', 'Logistics', 'Optimization']
-    website: 'https://ziontechgroup.com/supply-chain-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$18.7B'
-=======
-=======
     id: 'intelligent - supply - chain - optimization',
     name: 'SupplyChain AI',
     description:;
@@ -483,7 +312,6 @@ export const advancedAIServices2025 = [;
         price: 1199,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Unlimited locations',
           'Custom AI training',
           'White - label solution',
@@ -493,18 +321,11 @@ export const advancedAIServices2025 = [;
     },
     category: 'Supply Chain Optimization',
     tags: ['AI', 'Supply Chain', 'Logistics', 'Optimization'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/supply-chain-ai',
-=======
     website: 'https://ziontechgroup.com / supply - chain - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$18 && 18.7B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Manufacturers, distributors, logistics companies, retail chains'
     competitiveAdvantage:
@@ -549,24 +370,6 @@ export const advancedAIServices2025 = [;
         price: 2499
         period: 'month'
         features: [
-<<<<<<< HEAD
-          'Unlimited scans'
-          'Custom AI training'
-          'White-label solution'
-          'Dedicated support'
-        ]
-      }
-    }
-    category: 'Healthcare AI'
-    tags: ['AI', 'Healthcare', 'Medical Imaging', 'Diagnostics']
-    website: 'https://ziontechgroup.com/healthcare-diagnostics-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$45.2B'
-=======
-=======
     market_size: '$18.7B',
     target_audience:;
       'Manufacturers, distributors, logistics companies, retail chains',
@@ -612,7 +415,6 @@ export const advancedAIServices2025 = [;
         price: 2499,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Unlimited scans',
           'Custom AI training',
           'White - label solution',
@@ -622,18 +424,11 @@ export const advancedAIServices2025 = [;
     },
     category: 'Healthcare AI',
     tags: ['AI', 'Healthcare', 'Medical Imaging', 'Diagnostics'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/healthcare-diagnostics-ai',
-=======
     website: 'https://ziontechgroup.com / healthcare - diagnostics - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$45 && 45.2B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Hospitals, clinics, diagnostic centers, healthcare providers'
     competitiveAdvantage:
@@ -678,24 +473,6 @@ export const advancedAIServices2025 = [;
         price: 1499
         period: 'month'
         features: [
-<<<<<<< HEAD
-          'Unlimited documents'
-          'Custom AI training'
-          'White-label solution'
-          'Legal consultation'
-        ]
-      }
-    }
-    category: 'Legal AI'
-    tags: ['AI', 'Legal Tech', 'Document Analysis', 'Compliance']
-    website: 'https://ziontechgroup.com/legal-document-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$8.9B'
-=======
-=======
     market_size: '$45.2B',
     target_audience:;
       'Hospitals, clinics, diagnostic centers, healthcare providers',
@@ -741,7 +518,6 @@ export const advancedAIServices2025 = [;
         price: 1499,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Unlimited documents',
           'Custom AI training',
           'White - label solution',
@@ -751,18 +527,11 @@ export const advancedAIServices2025 = [;
     },
     category: 'Legal AI',
     tags: ['AI', 'Legal Tech', 'Document Analysis', 'Compliance'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/legal-document-ai',
-=======
     website: 'https://ziontechgroup.com / legal - document - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$8 && 8.9B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Law firms, legal departments, compliance officers, legal tech companies'
     competitiveAdvantage:
@@ -812,20 +581,6 @@ export const advancedAIServices2025 = [;
     }
     category: 'Marketing AI'
     tags: [
-<<<<<<< HEAD
-      'AI'
-      'Marketing Automation'
-      'Personalization'
-      'Campaign Optimization'
-    ]
-    website: 'https://ziontechgroup.com/marketing-automation-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$22.1B'
-=======
-=======
     market_size: '$8.9B',
     target_audience:;
       'Law firms, legal departments, compliance officers, legal tech companies',
@@ -876,24 +631,16 @@ export const advancedAIServices2025 = [;
     },
     category: 'Marketing AI',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'AI',
       'Marketing Automation',
       'Personalization',
       'Campaign Optimization',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/marketing-automation-ai',
-=======
     website: 'https://ziontechgroup.com / marketing - automation - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$22 && 22.1B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Marketing teams, agencies, e-commerce businesses, SaaS companies'
     competitiveAdvantage:
@@ -938,24 +685,6 @@ export const advancedAIServices2025 = [;
         price: 799
         period: 'month'
         features: [
-<<<<<<< HEAD
-          'Unlimited sales reps'
-          'Custom AI training'
-          'White-label solution'
-          'Dedicated support'
-        ]
-      }
-    }
-    category: 'Sales AI'
-    tags: ['AI', 'Sales Optimization', 'Lead Scoring', 'Forecasting']
-    website: 'https://ziontechgroup.com/sales-optimization-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$16.3B'
-=======
-=======
     market_size: '$22.1B',
     target_audience:;
       'Marketing teams, agencies, e - commerce businesses, SaaS companies',
@@ -1001,7 +730,6 @@ export const advancedAIServices2025 = [;
         price: 799,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Unlimited sales reps',
           'Custom AI training',
           'White - label solution',
@@ -1011,18 +739,11 @@ export const advancedAIServices2025 = [;
     },
     category: 'Sales AI',
     tags: ['AI', 'Sales Optimization', 'Lead Scoring', 'Forecasting'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/sales-optimization-ai',
-=======
     website: 'https://ziontechgroup.com / sales - optimization - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$16 && 16.3B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Sales teams, sales managers, sales operations, enterprise businesses'
     competitiveAdvantage:
@@ -1076,20 +797,6 @@ export const advancedAIServices2025 = [;
     }
     category: 'HR AI'
     tags: [
-<<<<<<< HEAD
-      'AI'
-      'HR Recruitment'
-      'Candidate Screening'
-      'Hiring Optimization'
-    ]
-    website: 'https://ziontechgroup.com/hr-recruitment-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$11.7B'
-=======
-=======
     market_size: '$16.3B',
     target_audience:;
       'Sales teams, sales managers, sales operations, enterprise businesses',
@@ -1144,24 +851,16 @@ export const advancedAIServices2025 = [;
     },
     category: 'HR AI',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'AI',
       'HR Recruitment',
       'Candidate Screening',
       'Hiring Optimization',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/hr-recruitment-ai',
-=======
     website: 'https://ziontechgroup.com / hr - recruitment - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$11 && 11.7B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'HR departments, recruitment agencies, talent acquisition teams, enterprise businesses'
     competitiveAdvantage:
@@ -1206,24 +905,6 @@ export const advancedAIServices2025 = [;
         price: 1299
         period: 'month'
         features: [
-<<<<<<< HEAD
-          'Unlimited endpoints'
-          'Custom AI training'
-          'White-label solution'
-          'Dedicated SOC team'
-        ]
-      }
-    }
-    category: 'Cybersecurity AI'
-    tags: ['AI', 'Cybersecurity', 'Threat Detection', 'Incident Response']
-    website: 'https://ziontechgroup.com/cybersecurity-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$173.5B'
-=======
-=======
     market_size: '$11.7B',
     target_audience:;
       'HR departments, recruitment agencies, talent acquisition teams, enterprise businesses',
@@ -1269,7 +950,6 @@ export const advancedAIServices2025 = [;
         price: 1299,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Unlimited endpoints',
           'Custom AI training',
           'White - label solution',
@@ -1279,36 +959,14 @@ export const advancedAIServices2025 = [;
     },
     category: 'Cybersecurity AI',
     tags: ['AI', 'Cybersecurity', 'Threat Detection', 'Incident Response'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/cybersecurity-ai',
-=======
     website: 'https://ziontechgroup.com / cybersecurity - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$173 && 173.5B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
     competitiveAdvantage:
-<<<<<<< HEAD
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$173.5B'
-=======
-      'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },
-];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com'
-<<<<<<< HEAD
-=======
-=======
     id: 'ai-powered-business-intelligence-suite', name: 'BusinessIntelligence AI Pro',
     description: 'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.',
     features: [
@@ -1320,20 +978,12 @@ export const advancedAIServices2025 = [;
     },
     professional: { price: 499, period: 'month', features: ['Up to 50 usersAdvanced AI modelsCustom dashboardsPredictive analytics'] };
       enterprise: { price: 1299, period: 'month', features: ['Unlimited usersCustom AI trainingWhite-label solutionDedicated support'] }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
     marketSize: '$173 && 173.5B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
     competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     market_size: '$173.5B',
     target_audience:;
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
@@ -1349,4 +999,3 @@ export const advancedAIServices2025 = [;
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

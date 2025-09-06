@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -28,10 +24,3 @@ class ErrorBoundary extends React.Component {
 import React from \'react\' export default AIServicesShowcase const \"AIServicesShowcase\": React.FC = () : JSX ;
 import _React from 'react' export default AIServicesShowcase const "AIServicesShowcase": _React && _React.FC = () : JSX ;
 import React from \'react\' export default AIServicesShowcase const \"AIServicesShowcase\": React.FC = () : JSX ;
-<<<<<<< HEAD
-import _React from 'react' export default AIServicesShowcase const "AIServicesShowcase": _React && _React.FC = () : JSX ;
-=======
-import _React from 'react' export default AIServicesShowcase const "AIServicesShowcase": _React && _React.FC = () : JSX ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

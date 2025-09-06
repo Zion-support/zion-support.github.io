@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Brain
-  Star;
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Phone,;
   Mail,;
@@ -49,21 +6,14 @@ import {;
   ArrowRight,;
   Brain,;
   Star,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-export default function QuantumAIBCIPage() {
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-ai-brain-computer-interface')
-=======
 
 export default function QuantumAIBCIPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s =>;
     s && s.link.endsWith('/quantum-ai-brain-computer-interface');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -155,11 +105,6 @@ export default function QuantumAIBCIPage() {;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
-<<<<<<< HEAD
-=======
-  );
-}
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -210,11 +155,8 @@ export default function QuantumAIBCIPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 import {
   Phone,
@@ -334,4 +276,3 @@ if (return null) {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

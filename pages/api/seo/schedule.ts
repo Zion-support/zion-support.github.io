@@ -2,21 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs',
 import path from 'path';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |'' });
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY || '' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
@@ -41,46 +29,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const region = regionMatch ? regionMatch[1].trim() : undefined;
       const serviceMatch = prompt && prompt.match(/^(.*?)\s+in\s+/i);
       const service = serviceMatch ? serviceMatch[1].trim() : undefined;
-<<<<<<< HEAD
-      const genReq = await fetch(`${process.env.SELF_HOST |'http://localhost:3000'}/api/seo/generate`, {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ prompt, region, service })
-=======
       const genReq = await fetch(`${process && process.env.SELF_HOST || 'http://localhost:3000'}/api/seo/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON && JSON.stringify({ prompt, region, service })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const gen = await genReq && genReq.json();
       if (gen?.slug && gen?.payload) {
         fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2))
       }
     }
-<<<<<<< HEAD
-    return res.status(200).json({ ok: true, count: 4 })
-  } catch (e) {
-    console.error(e)
-
-    return res.status(500).json({ error: 'Failed to schedule landing pages' })
-=======
 
     return res && res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
     console && console.error(e),
     return res && res.status(500).json({ error: 'Failed to schedule landing pages' })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || '' });
 export default async /**
  * handler - Function description
@@ -131,5 +96,3 @@ if ( {) {
     return res.status (500).json ({ error: 'Failed to schedule landing pages' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,43 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-
-import { FileText, ShieldCheck } from 'lucide-react'
-interface ContractTypeCardsProps {
-  onStandardClick: () => void
-  onSmartClick: () => void
-export function ContractTypeCards({
-  onStandardClick
-  onSmartClick
-}: ContractTypeCardsProps) {
-  return (
-    <div className='grid md:grid-cols-2 gap-6 mb-10'>
-      <Card>
-        <CardHeader>
-          <CardTitle className='flex items-center gap-2'>
-            <FileText className='h-5 w-5' />            Standard Contracts
-          <CardTitle className="flex items-center gap-2">
-            <FileText className="h-5 w-5" />
-=======
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, ShieldCheck } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 interface ContractTypeCardsProps {
 
   onStandardClick: () => void
@@ -58,21 +24,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-          <ul className='space-y-2'>
-            <li className='text-sm'>✓ Legally binding templates</li>
-            <li className='text-sm'>✓ Milestone-based payment terms</li>
-            <li className='text-sm'>✓ IP rights and confidentiality clauses</li>
-            <li className='text-sm'>✓ DocuSign integration</li>
-          </ul>
-        </CardContent>
-        <CardFooter>
-          <Button variant='outline' onClick={onStandardClick}>            Create Standard Contract
-          </Button>
-        </CardFooter>
-      </Card>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <ul className="space-y-2">
             <li className="text-sm">✓ Legally binding templates</li>
             <li className="text-sm">✓ Milestone-based payment terms</li>
@@ -82,26 +33,12 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardContent>
         <CardFooter>
           <Button variant="outline" onClick={onStandardClick}>
-<<<<<<< HEAD
-          </Button>
-        </CardFooter>
-      </Card>
-      <Card>
-        <CardHeader className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>
-          <div className='flex justify-between items-center'>
-            <CardTitle className='flex items-center gap-2'>
-              <ShieldCheck className='h-5 w-5 text-primary' />
-              Smart Contracts
-            </CardTitle>
-            <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>              Blockchain Powered      <Card>
-=======
             Create Standard Contract
           </Button>
         </CardFooter>
       </Card>
       
       <Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -117,21 +54,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-          <ul className='space-y-2'>
-            <li className='text-sm'>✓ All standard contract features</li>
-            <li className='text-sm'>✓ Automatic escrow payment release</li>
-            <li className='text-sm'>✓ Transaction verification</li>
-            <li className='text-sm'>✓ Permanent on-chain record</li>
-            <li className='text-sm'>✓ Multi-signature approval flow</li>
-          </ul>
-        </CardContent>
-        <CardFooter>
-          <Button
-            className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'            onClick={onSmartClick}          <ul className="space-y-2">
-=======
           <ul className="space-y-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <li className="text-sm">✓ All standard contract features</li>
             <li className="text-sm">✓ Automatic escrow payment release</li>
             <li className="text-sm">✓ Transaction verification</li>
@@ -140,26 +63,15 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
-<<<<<<< HEAD
-          <Button
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
-            onClick = {onSmartClick,}
-=======
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
             onClick={onSmartClick}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           >
             Create Smart Contract
           </Button>
         </CardFooter>
       </Card>
     </div>
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -199,7 +111,6 @@ export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: Con
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
-=======
 import { Button } from '@/components / ui / button';
 import {
   Card,
@@ -239,7 +150,6 @@ function ContractTypeCards() {
         <CardHeader>;
           <CardTitle className="flex items - center gap - 2">;
             <FileText className="h - 5 w - 5" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Standard Contracts;
           </CardTitle>;
           <CardDescription>;
@@ -247,48 +157,6 @@ function ContractTypeCards() {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-          <ul className='space-y-2'>;
-            <li className='text-sm'>✓ Legally binding templates</li>;
-            <li className='text-sm'>✓ Milestone-based payment terms</li>;
-            <li className='text-sm'>✓ IP rights and confidentiality clauses</li>;
-            <li className='text-sm'>✓ DocuSign integration</li>;
-          </ul>;
-        </CardContent>;
-        <CardFooter>;
-          <Button variant='outline' onClick={onStandardClick}>            Create Standard Contract;
-          </Button>;
-        </CardFooter>;
-      </Card>;
-          <ul className="space-y-2">;
-            <li className="text-sm">✓ Legally binding templates</li>;
-            <li className="text-sm">✓ Milestone-based payment terms</li>;
-            <li className="text-sm">✓ IP rights and confidentiality clauses</li>;
-            <li className="text-sm">✓ DocuSign integration</li>;
-          </ul>;
-        </CardContent>;
-        <CardFooter>;
-          <Button variant="outline" onClick={onStandardClick}>;
-          </Button>;
-        </CardFooter>;
-      </Card>;
-
-      <Card>;
-        <CardHeader className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>;
-          <div className='flex justify-between items-center'>;
-            <CardTitle className='flex items-center gap-2'>;
-              <ShieldCheck className='h-5 w-5 text-primary' />;
-              Smart Contracts;
-            </CardTitle>;
-            <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>              Blockchain Powered      <Card>;
-        <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">;
-          <div className="flex justify-between items-center">;
-            <CardTitle className="flex items-center gap-2">;
-              <ShieldCheck className="h-5 w-5 text-primary" />;
-              Smart Contracts;
-            </CardTitle>;
-            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">;
-=======
           <ul className='space - y-2'>;
             <li className='text - sm'>✓ Legally binding templates</li>;
             <li className='text - sm'>✓ Milestone - based payment terms</li>;
@@ -328,7 +196,6 @@ function ContractTypeCards() {
               Smart Contracts;
             </CardTitle>;
             <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Blockchain Powered;
             </span>;
           </div>;
@@ -337,30 +204,6 @@ function ContractTypeCards() {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-          <ul className='space-y-2'>;
-            <li className='text-sm'>✓ All standard contract features</li>;
-            <li className='text-sm'>✓ Automatic escrow payment release</li>;
-            <li className='text-sm'>✓ Transaction verification</li>;
-            <li className='text-sm'>✓ Permanent on-chain record</li>;
-            <li className='text-sm'>✓ Multi-signature approval flow</li>;
-          </ul>;
-        </CardContent>;
-        <CardFooter>;
-          <Button
-            className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'            onClick={onSmartClick}          <ul className="space-y-2">;
-            <li className="text-sm">✓ All standard contract features</li>;
-            <li className="text-sm">✓ Automatic escrow payment release</li>;
-            <li className="text-sm">✓ Transaction verification</li>;
-            <li className="text-sm">✓ Permanent on-chain record</li>;
-            <li className="text-sm">✓ Multi-signature approval flow</li>;
-          </ul>;
-        </CardContent>;
-        <CardFooter>;
-          <Button
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
-            onClick = {onSmartClick,}>;
-=======
           <ul className='space - y-2'>;
             <li className='text - sm'>✓ All standard contract features</li>;
             <li className='text - sm'>✓ Automatic escrow payment release</li>;
@@ -384,21 +227,11 @@ function ContractTypeCards() {
             className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600";
             on_click = {onSmartClick, }
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
-<<<<<<< HEAD
-    </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-type ProposalListItem = {
-  id: string
-  title: string
-  targetInstitution: string
-  regionalScope: string
-  type: string
-  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
-  createdAt: string
-}
-=======
-=======
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 type ProposalListItem = {
   id: string,
   title: string,
@@ -27,11 +7,6 @@ type ProposalListItem = {
   regional_scope: string,
   type: string,
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
-<<<<<<< HEAD
-  createdAt: string
-};
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([])
   const [filter, setFilter] = useState('All')
@@ -80,14 +55,7 @@ export default function InternationalProposalsPage() {
       </div>
     </EnhancedLayout>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   created_at: string;
 },
 export default /**
@@ -139,5 +107,3 @@ function InternationalProposalsPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

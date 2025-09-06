@@ -24,11 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface AdvancedInnovativeServicesShowcase2025Props {
   // Add props here as needed
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInnovativeServicesShowcase2025Props) {
   return (
     <div>
@@ -36,32 +32,13 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-=======
-<<<<<<< HEAD:src && src.pages.disabled/AdvancedInnovativeServicesShowcase2025 && AdvancedInnovativeServicesShowcase2025.jsx
-}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src && src.pages.disabled/AdvancedInnovativeServicesShowcase2025 && AdvancedInnovativeServicesShowcase2025.jsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx
-=======
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 :src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx
 }
 }
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx

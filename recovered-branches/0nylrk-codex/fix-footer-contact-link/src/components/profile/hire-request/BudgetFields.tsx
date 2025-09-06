@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-
-import React from "react";
-<<<<<<< HEAD
-import { UseFormReturn } from "react-hook-form";
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-import { TalentProfile } from "@/types/talent";
-import { FormValues } from "./useHireRequestForm";
-interface BudgetFieldsProps {
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile
-}
-export function BudgetFields({ form, talent }: BudgetFieldsProps) {
-=======
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -31,14 +9,11 @@ interface BudgetFieldsProps {;
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <FormField
         control={form && form.control}
         name="budgetMin"
-<<<<<<< HEAD
-=======
 import React from './react';
 import { UseFormReturn  } from './react - hook - form';
 import {
@@ -64,7 +39,6 @@ function BudgetFields() {
       <FormField;
         control={form.control}
         name="budget_min";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         render={({ field }) => (
           <FormItem>;
             <FormLabel className="text - white">Budget (Min)</FormLabel>;
@@ -77,15 +51,6 @@ function BudgetFields() {
                   type="number";
                   className="pl - 7 bg - zion - blue border - zion - blue - light text - white";
                   {...field}
-<<<<<<< HEAD
-                />
-              </div>
-            </FormControl>
-            <FormMessage className="text-red-400" />
-          </FormItem>
-        )}
-      />
-=======
         render={({ field }) => (;
           <FormItem>;
             <FormLabel className="text-white">Budget (Min)</FormLabel>;
@@ -104,12 +69,9 @@ function BudgetFields() {
         )}
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={form && form.control}
         name="budgetMax"
-<<<<<<< HEAD
-=======
                 />;
               </div>;
             </FormControl>;
@@ -119,7 +81,6 @@ function BudgetFields() {
       <FormField;
         control={form.control}
         name="budget_max";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         render={({ field }) => (
           <FormItem>;
             <FormLabel className="text - white">Budget (Max)</FormLabel>;
@@ -132,18 +93,6 @@ function BudgetFields() {
                   type="number";
                   className="pl - 7 bg - zion - blue border - zion - blue - light text - white";
                   {...field}
-<<<<<<< HEAD
-                />
-              </div>
-            </FormControl>
-            <FormMessage className="text-red-400" />
-          </FormItem>
-        )}
-      />
-    </>
-  );
-}
-=======
         render={({ field }) => (;
           <FormItem>;
             <FormLabel className="text-white">Budget (Max)</FormLabel>;
@@ -164,8 +113,6 @@ function BudgetFields() {
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                 />;
               </div>;
             </FormControl>;
@@ -174,4 +121,3 @@ function BudgetFields() {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

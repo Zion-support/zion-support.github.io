@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-
-import { useState } from 'react';
-export function useAuthStatus() {
-  // Mock authenticated status
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // Mock user details
-  const [userDetails, setUserDetails] = useState({
-    id: 'user-123';
-    name: 'Demo User';
-<<<<<<< HEAD
-
-    email: 'demo@example.com'
-
-=======
     email: 'demo@example && example.com',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     avatar: ''
   });
   // Mock saved talents
@@ -45,7 +29,6 @@ export function useAuthStatus() {
 
     toggleAuth
   }
-=======
 import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
@@ -97,5 +80,4 @@ if ( {) {
     handleToggleSave;
     toggle_auth;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

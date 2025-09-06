@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export type WatchlistMatch = {
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
-<<<<<<< HEAD
-  score: number; // 0-1 match confidence
-  referenceId?: string;
-  detailsUrl?: string;
-}
-=======
   score: number; // 0 - 1 match confidence;
   reference_id?: string;
   details_url?: string;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
@@ -28,38 +17,6 @@ export interface AmlProvider {
   check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
 }
 class MockAmlProvider implements AmlProvider {
-<<<<<<< HEAD
-  async checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-<<<<<<< HEAD
-    const name = params.fullLegalName.toLowerCase();
-    if (name.includes('test') |name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } }
-=======
-    const name = params && params.fullLegalName.toLowerCase();
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } };
-<<<<<<< HEAD
-    }
-    return { status: 'clear' };
-  }
-
-  async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-    const name = params && params.businessName.toLowerCase();
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } };
-    }
-    return { status: 'clear' };
-  }
-}
-
-export function getAmlProvider(): AmlProvider {
-  return provider;  return new MockAmlProvider();
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 // AML (Anti-Money Laundering) utilities
 export interface AmlCheck {
   id: string;
@@ -181,30 +138,18 @@ class AmlManager {
     const profile = this.profiles.get(userId);
     if (!profile) {
       throw new Error('Profile not found');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     return { status: 'clear' }
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
-<<<<<<< HEAD
-    const name = params.businessName.toLowerCase();
-    if (name.includes('test') |name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } }
-=======
     const name = params && params.businessName.toLowerCase();
     if (name && name.includes('test') || name && name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test business name detected' } };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     return { status: 'clear' }
   }
 }
-<<<<<<< HEAD
-export function getAmlProvider(): AmlProvider {
-  return new MockAmlProvider();
-}
-=======
 
 // Singleton instance
 export const amlManager = new AmlManager();
@@ -241,8 +186,6 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   };
   return colors[riskLevel];
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
     // Mock implementation - in production, this would call a real AML service;
     const name = params.fullLegalName.toLowerCase ();
@@ -267,5 +210,3 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

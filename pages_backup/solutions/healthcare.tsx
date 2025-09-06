@@ -1,10 +1,3 @@
-<<<<<<< HEAD:pages_backup/solutions/healthcare.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -65,7 +58,6 @@ import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {Heart,, Shield,, Database,, Users,, Activity,, CheckCircle,, ArrowRight} from 'lucide-react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/healthcare.tsx
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
 import React from 'react';
@@ -98,8 +90,6 @@ const features = [;
     description: 'AI-powered analytics for population health management and predictive insights.'';
 import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD:pages_backup/solutions/healthcare.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -114,8 +104,6 @@ import {
   ArrowRight ;
 } from 'lucide-react';
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
 import React from 'react';
@@ -148,10 +136,6 @@ const features = [;
     description: 'AI-powered analytics for population health management and predictive insights.'';
 import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const features = [
   {
     icon: Heart,
@@ -170,24 +154,6 @@ const features = [
   },
   {
     icon: Users,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    title: 'Provider Portal',
-    description: 'Streamlined workflows for healthcare providers and staff'
-  },
-  {
-    icon: FileText,
-    title: 'Electronic Records',
-    description: 'Secure electronic health records management system'
-  },
-  {
-    icon: CheckCircle,
-    title: 'Quality Assurance',
-    description: 'Built-in quality metrics and compliance monitoring'
-=======
 const features = [;
   {;
     icon: Heart,;
@@ -320,7 +286,6 @@ export default function HealthcareSolutionsPage() {;
     icon: CheckCircle,;
     title: 'Quality Assurance',;
     description: 'Built-in quality metrics and compliance monitoring';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/healthcare.tsx
   }
 ;];
 const solutions = [;
@@ -397,9 +362,6 @@ const benefits = [;
   'Better resource utilization',;
   'Real-time health monitoring and alerts';
 ];
-<<<<<<< HEAD:pages_backup/solutions/healthcare.tsx
-export default function HealthcareSolutions() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     title: 'Provider Management',
     description: 'Comprehensive provider and staff management solutions',
     benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
@@ -407,9 +369,6 @@ export default function HealthcareSolutions() {
 ];
 
 export default function HealthcareSolutionsPage() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     title: 'Provider Portal',
     description: 'Streamlined workflows for healthcare providers and staff'
   },
@@ -500,13 +459,7 @@ const benefits = [
   'Real-time health monitoring and alerts'
 ];
 export default function HealthcareSolutions() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 export default function HealthcareSolutions() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/healthcare.tsx
   return (
     <Layout
       title="Healthcare Solutions - Zion Tech Group"
@@ -514,13 +467,10 @@ export default function HealthcareSolutions() {;
       keywords="healthcare solutions, HIPAA compliance, electronic health records, patient management, healthcare technology">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-<<<<<<< HEAD:pages_backup/solutions/healthcare.tsx
-=======
   
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className="bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -552,45 +502,21 @@ export default function HealthcareSolutions() {;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Built specifically for healthcare organizations with compliance, security, and patient care in mind.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
-=======
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-=======
         <section className="bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -779,7 +705,6 @@ export default function HealthcareSolutions() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/healthcare.tsx
               ))}
             </div>,;
           </div>;
@@ -884,21 +809,6 @@ export default function HealthcareSolutions() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-<<<<<<< HEAD:pages_backup/solutions/healthcare.tsx
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-green-600 to-blue-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Transform Healthcare?</h3>
-                <p className="text-lg mb-6">
-                  Let our healthcare technology experts help you implement solutions that improve
-                  patient care and operational efficiency.
-                </p>
-                <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Demo
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -911,8 +821,6 @@ export default function HealthcareSolutions() {;
                   </div>
                 </motion.div>
               ))}
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -998,7 +906,6 @@ export default function HealthcareSolutions() {;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Healthcare Guide;
-=======
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-green-600 to-blue-700 p-8 rounded-xl text-white">;
@@ -1010,51 +917,11 @@ export default function HealthcareSolutions() {;
                 <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
                   Schedule Demo;
                   <ArrowRight className="w-5 h-5 ml-2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/healthcare.tsx
                 </button>;
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD:pages_backup/solutions/healthcare.tsx
-      </div>;
-    </Layout>;
-        {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Improving Healthcare Delivery
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our healthcare solutions are designed to improve patient outcomes, streamline operations,
-                  and ensure compliance with healthcare regulations.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-green-600 to-blue-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Transform Healthcare?</h3>
-                <p className="text-lg mb-6">
-                  Let our healthcare technology experts help you implement solutions that improve
-                  patient care and operational efficiency.
-                </p>
-                <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Demo
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -1079,23 +946,12 @@ export default function HealthcareSolutions() {;
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </Layout>
-=======
-<<<<<<< HEAD
-=======
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </>
-=======
     </Layout>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -1127,4 +983,3 @@ export default function HealthcareSolutions() {;
     </>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/healthcare.tsx

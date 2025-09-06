@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {
-  Atom, Brain, Cpu, Zap, Shield, Globe
-  Rocket, Target, TrendingUp, Users, CheckCircle
-  ArrowRight, Star, Award, Clock, DollarSign
-} from 'lucide-react'
-const QuantumNeuralNetworkPlatform = () => {
-  const features = [
-    {
-      icon: Brain
-      title: "Quantum Consciousness Integration"
-      description: "Advanced AI consciousness with quantum processing capabilities"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { 
   Atom, Brain, Cpu, Zap, Shield, Globe, 
   Rocket, Target, TrendingUp, Users, CheckCircle;
@@ -28,7 +6,6 @@ import {
 
 const QuantumNeuralNetworkPlatform = () => {
   const features = [
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -40,13 +17,10 @@ import {
 } from 'lucide-react',
 const QuantumNeuralNetworkPlatform = () =>: any {
   const features = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       icon: Brain,
       title: "Quantum Consciousness Integration",
       description: "Advanced AI consciousness with quantum processing capabilities",
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       color: "from-purple-500 to-pink-500"
     }
     {
@@ -75,21 +49,11 @@ const QuantumNeuralNetworkPlatform = () =>: any {
     "Real-time quantum decision making"
     "Advanced pattern recognition"
     "Future-proof technology foundation"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  ]
-  const useCases = [
-    {
-      title: "AI Research & Development"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
   const useCases = [
     {
       title: "AI Research & Development",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       description: "Accelerate AI breakthroughs with quantum processing power"
     }
     {
@@ -104,15 +68,8 @@ const QuantumNeuralNetworkPlatform = () =>: any {
       title: "Financial Modeling"
       description: "Advanced risk assessment and market prediction algorithms"
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  ]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
       <Head>
@@ -125,17 +82,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
         <meta property="og:url" content="https://ziontechgroup.com/quantum-neural-network-platform" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
-=======
       color: "from - purple - 500 to - pink - 500";
     },
     {
@@ -195,7 +141,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
         <meta property="og:url" content="https://ziontechgroup.com / quantum - neural - network - platform" />;
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 20 to - blue - 600 / 20"></div>;
@@ -204,8 +149,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             >
               <div className="flex justify-center mb-6">
                 <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full">
@@ -234,18 +177,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
             >;
               <div className="flex justify - center mb - 6">;
                 <div className="p - 3 bg - gradient - to - r from - purple - 500 to - blue - 500 rounded - full">;
@@ -274,7 +205,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -283,8 +213,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -297,7 +225,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -310,16 +237,11 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {features.map ((feature, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -332,18 +254,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
                   className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50 hover:border - purple - 500 / 50 transition - all duration - 300";
                 >;
                   <div className={`inline - flex p - 3 bg - gradient - to - r ${feature.color} rounded - lg mb - 4`}>;
@@ -355,7 +265,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Benefits Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
           <div className="max - w-7xl mx - auto">;
@@ -364,8 +273,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -375,18 +282,10 @@ const QuantumNeuralNetworkPlatform = () =>: any {
                 Transform your operations with quantum-powered AI capabilities
               </p>
             </motion.div>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <motion.div
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -399,16 +298,11 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
               {benefits.map ((benefit, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
@@ -418,18 +312,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
                   className="flex items - center space - x-3";
                 >;
                   <CheckCircle className="w - 6 h - 6 text - green - 400 flex - shrink - 0" />;
@@ -438,7 +320,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Use Cases Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -447,8 +328,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -461,7 +340,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -474,16 +352,11 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
               {use_cases.map ((use_case, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
@@ -493,18 +366,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
                   className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 8 rounded - xl border border - slate - 700 / 50";
                 >;
                   <h3 className="text - 2xl font - semibold text - white mb - 4">{use_case.title}</h3>;
@@ -513,7 +374,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -522,8 +382,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             >
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Experience the Future?
@@ -546,18 +404,8 @@ const QuantumNeuralNetworkPlatform = () =>: any {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-=======
-};
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default QuantumNeuralNetworkPlatform;
 
-=======
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Experience the Future?;
@@ -582,4 +430,3 @@ export default QuantumNeuralNetworkPlatform;
 },
 export default QuantumNeuralNetworkPlatform,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

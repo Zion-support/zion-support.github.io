@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {
-  Monitor, Brain, Cpu, Zap, Shield, Globe
-  Rocket, Target, TrendingUp, Users, CheckCircle
-  ArrowRight, Star, Award, Clock, DollarSign
-  Database, Network, Server, Laptop, Smartphone
-} from 'lucide-react'
-const AIPoweredITAssetManagement = () => {
-  const features = [
-    {
-      icon: Brain
-      title: "AI-Powered Asset Discovery"
-      description: "Intelligent detection and cataloging of all IT assets across your network"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { 
   Monitor, Brain, Cpu, Zap, Shield, Globe, 
   Rocket, Target, TrendingUp, Users, CheckCircle;
@@ -30,7 +7,6 @@ import {
 
 const AIPoweredITAssetManagement = () => {
   const features = [
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -43,19 +19,8 @@ import {
 } from 'lucide-react',
 const AIPoweredITAssetManagement = () =>: any {
   const features = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       icon: Brain,
-<<<<<<< HEAD
-      title: "AI-Powered Asset Discovery",
-      description: "Intelligent detection and cataloging of all IT assets across your network",
-      color: "from-purple-500 to-pink-500"
-    };
-=======
-      title: "AI - Powered Asset Discovery",
-      description: "Intelligent detection and cataloging of all IT assets across your network",
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       color: "from-purple-500 to-pink-500"
     }
     {
@@ -84,21 +49,8 @@ const AIPoweredITAssetManagement = () =>: any {
     "Cloud resources and virtual machines"
     "Security devices and appliances"
     "Peripheral devices and accessories"
-<<<<<<< HEAD
-  ]
-  const benefits = [
-    {
-      icon: DollarSign
-      title: "Cost Optimization"
-      value: "35%"
-=======
-  ];
-
-  const benefits = [
-=======
       color: "from - purple - 500 to - pink - 500";
     },
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     {
       icon: Monitor,
       title: "Real - Time Monitoring",
@@ -117,20 +69,6 @@ const AIPoweredITAssetManagement = () =>: any {
       description: "AI - driven insights for asset lifecycle management and optimization",
       color: "from - red - 500 to - orange - 500";
     }
-<<<<<<< HEAD
-  ];
-
-  const assetTypes = [
-    "Hardware devices (servers, workstations, mobile devices)";
-    "Software licenses and applications";
-    "Network infrastructure and equipment";
-    "Cloud resources and virtual machines";
-    "Security devices and appliances";
-    "Peripheral devices and accessories"
-  ];
-
-  const benefits = [
-=======
   ],
   const asset_types = [;
     "Hardware devices (servers, workstations, mobile devices)",
@@ -141,14 +79,10 @@ const AIPoweredITAssetManagement = () =>: any {
     "Peripheral devices and accessories";
   ],
   const benefits = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     {
       icon: DollarSign,
       title: "Cost Optimization",
       value: "35%",
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       description: "Reduction in IT asset costs"
     }
     {
@@ -179,15 +113,8 @@ const AIPoweredITAssetManagement = () =>: any {
     "Asset lifecycle optimization"
     "Cost allocation and tracking"
     "Integration with existing IT tools"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  ]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
       <Head>
@@ -200,17 +127,6 @@ const AIPoweredITAssetManagement = () =>: any {
         <meta property="og:url" content="https://ziontechgroup.com/ai-powered-it-asset-management" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
-<<<<<<< HEAD
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
-=======
       description: "Reduction in IT asset costs";
     },
     {
@@ -254,7 +170,6 @@ const AIPoweredITAssetManagement = () =>: any {
         <meta property="og:url" content="https://ziontechgroup.com / ai - powered - it - asset - management" />;
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - indigo - 900 to - slate - 900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - indigo - 600 / 20 to - purple - 600 / 20"></div>;
@@ -263,8 +178,6 @@ const AIPoweredITAssetManagement = () =>: any {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             >
               <div className="flex justify-center mb-6">
                 <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full">
@@ -293,18 +206,6 @@ const AIPoweredITAssetManagement = () =>: any {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
             >;
               <div className="flex justify - center mb - 6">;
                 <div className="p - 3 bg - gradient - to - r from - indigo - 500 to - purple - 500 rounded - full">;
@@ -333,7 +234,6 @@ const AIPoweredITAssetManagement = () =>: any {
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -342,8 +242,6 @@ const AIPoweredITAssetManagement = () =>: any {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -356,7 +254,6 @@ const AIPoweredITAssetManagement = () =>: any {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -369,16 +266,11 @@ const AIPoweredITAssetManagement = () =>: any {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {features.map ((feature, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -391,18 +283,6 @@ const AIPoweredITAssetManagement = () =>: any {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Asset Types Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
                   className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50 hover:border - indigo - 500 / 50 transition - all duration - 300";
                 >;
                   <div className={`inline - flex p - 3 bg - gradient - to - r ${feature.color} rounded - lg mb - 4`}>;
@@ -414,7 +294,6 @@ const AIPoweredITAssetManagement = () =>: any {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Asset Types Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
           <div className="max - w-7xl mx - auto">;
@@ -423,8 +302,6 @@ const AIPoweredITAssetManagement = () =>: any {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -434,18 +311,10 @@ const AIPoweredITAssetManagement = () =>: any {
                 Manage every type of IT asset across your entire infrastructure
               </p>
             </motion.div>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {assetTypes.map((assetType, index) => (
                 <motion.div
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -458,16 +327,11 @@ const AIPoweredITAssetManagement = () =>: any {
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
               {asset_types.map ((asset_type, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -477,18 +341,6 @@ const AIPoweredITAssetManagement = () =>: any {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
                   className="flex items - center space - x-3";
                 >;
                   <CheckCircle className="w - 6 h - 6 text - indigo - 400 flex - shrink - 0" />;
@@ -497,7 +349,6 @@ const AIPoweredITAssetManagement = () =>: any {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Benefits Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -506,8 +357,6 @@ const AIPoweredITAssetManagement = () =>: any {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -520,7 +369,6 @@ const AIPoweredITAssetManagement = () =>: any {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -533,16 +381,11 @@ const AIPoweredITAssetManagement = () =>: any {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {benefits.map ((benefit, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -558,18 +401,6 @@ const AIPoweredITAssetManagement = () =>: any {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Capabilities Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
                   className="text - center";
                 >;
                   <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50">;
@@ -584,7 +415,6 @@ const AIPoweredITAssetManagement = () =>: any {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Capabilities Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
           <div className="max - w-7xl mx - auto">;
@@ -593,8 +423,6 @@ const AIPoweredITAssetManagement = () =>: any {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -607,7 +435,6 @@ const AIPoweredITAssetManagement = () =>: any {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {capabilities.map((capability, index) => (
                 <motion.div
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -620,16 +447,11 @@ const AIPoweredITAssetManagement = () =>: any {
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
               {capabilities.map ((capability, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -639,18 +461,6 @@ const AIPoweredITAssetManagement = () =>: any {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
                   className="flex items - center space - x-3";
                 >;
                   <CheckCircle className="w - 6 h - 6 text - indigo - 400 flex - shrink - 0" />;
@@ -659,7 +469,6 @@ const AIPoweredITAssetManagement = () =>: any {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -668,8 +477,6 @@ const AIPoweredITAssetManagement = () =>: any {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             >
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Your IT Asset Management?
@@ -692,18 +499,8 @@ const AIPoweredITAssetManagement = () =>: any {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-=======
-};
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default AIPoweredITAssetManagement;
 
-=======
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Transform Your IT Asset Management?;
@@ -728,4 +525,3 @@ export default AIPoweredITAssetManagement;
 },
 export default AIPoweredITAssetManagement,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

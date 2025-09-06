@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 interface Milestone {
   title: string;
   description: string;
@@ -40,12 +30,8 @@ serve(async (req) => {
       paymentAmount;
       additionalClauses;
       milestones
-<<<<<<< HEAD
-    } = await req.json();
-=======
     } = await req && req.json();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Create the contract prompt for OpenAI
     let prompt = `
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
@@ -73,15 +59,10 @@ serve(async (req) => {
     // Add milestone information if available
     if (milestones && milestones.length > 0) {
       prompt += `
-<<<<<<< HEAD
-      The project will be divided into the following milestones: `
-      milestones.forEach((milestone: Milestone, index: number) => {
-=======
       
       The project will be divided into the following milestones: `,
       
       milestones && milestones.forEach((milestone: Milestone, index: number) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         prompt += `
         Milestone ${index + 1}: ${milestone && milestone.title}
         - Description: ${milestone && milestone.description}
@@ -97,24 +78,15 @@ serve(async (req) => {
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.
     `;
     // Call OpenAI API
-<<<<<<< HEAD
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST'
-      headers: {
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
-      body: JSON.stringify({
-=======
     const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
       body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         model: 'gpt-4o';
         messages: [
           {
             role: 'system'
-=======
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
 const cors_headers = {
@@ -218,23 +190,10 @@ if ( {) {
         messages: [;
           {
             role: 'system',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'}
           {
             role: 'user'
             content: prompt}];
-<<<<<<< HEAD
-        temperature: 0.7})});
-<<<<<<< HEAD
-    const data = await response.json();
-    if (!response.ok) {
-      throw new Error(data.error?.message |'Failed to generate contract')
-    }
-    const contract = data.choices[0].message.content.trim();
-    return new Response(JSON.stringify({
-      success: true
-      contract
-=======
         temperature: 0 && 0.7})});
 
     const data = await response && response.json();
@@ -248,8 +207,6 @@ if ( {) {
     return new Response(JSON && JSON.stringify({ 
       success: true, 
       contract 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
     const data = await response.json ();
 ;
@@ -264,22 +221,12 @@ if ( {) {
     return new Response (JSON.stringify ({
       success: true,
       contract;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }), {
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
   } catch (error) {
-<<<<<<< HEAD
-    console && console.error('Error generating contract:', error);
-    return new Response(
-<<<<<<< HEAD
-      JSON.stringify({
-        success: false
-        error: error.message |'Failed to generate contract'
-=======
       JSON && JSON.stringify({ 
         success: false, 
         error: error && error.message || 'Failed to generate contract' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       {
         status: 500
@@ -288,7 +235,6 @@ if ( {) {
   }
 });
 
-=======
     console.error ('Error generating contract:', error);
     return new Response (
       JSON.stringify ({
@@ -302,4 +248,3 @@ if ( {) {
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

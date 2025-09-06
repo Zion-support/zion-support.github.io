@@ -1,111 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  Brain
-  Network
-  Cloud
-  Shield
-  Zap
-  Target
-  Users
-  BarChart3
-  ArrowRight
-  CheckCircle
-  Star
-  Award
-  Clock
-  Globe
-} from "lucide-react";
-import Layout from "../components/Layout";
-const serviceCategories = [
-  {
-    title: "AI Services"
-    description:
-      "Cutting-edge artificial intelligence solutions for modern businesses"
-    icon: Brain
-    services: [
-      "AI Analytics"
-      "Machine Learning"
-      "Natural Language Processing"
-      "Computer Vision"
-    ]
-    link: "/ai-services"
-    color: "from-blue-500 to-purple-600"
-  }
-  {
-    title: "IT Services"
-    description: "Comprehensive IT solutions and infrastructure management"
-    icon: Network
-    services: [
-      "Cloud Migration"
-      "System Integration"
-      "Network Security"
-      "Data Management"
-    ]
-    link: "/it-services"
-    color: "from-green-500 to-blue-600"
-  }
-  {
-    title: "Micro SAAS"
-    description:
-      "Innovative micro software solutions for specific business needs"
-    icon: Cloud
-    services: [
-      "Workflow Automation"
-      "Project Management"
-      "Customer Analytics"
-      "API Integration"
-    ]
-    link: "/micro-saas"
-    color: "from-purple-500 to-pink-600"
-  }
-  {
-    title: "Security"
-    description: "Advanced cybersecurity and data protection solutions"
-    icon: Shield
-    services: [
-      "Threat Detection"
-      "Data Encryption"
-      "Access Control"
-      "Compliance Management"
-    ]
-    link: "/security"
-    color: "from-red-500 to-orange-600"
-  }
-  {
-    title: "Automation"
-    description: "Intelligent automation solutions to streamline operations"
-    icon: Zap
-    services: [
-      "Process Automation"
-      "Workflow Optimization"
-      "Task Scheduling"
-      "Integration Hub"
-    ]
-    link: "/automation"
-    color: "from-yellow-500 to-red-600"
-  }
-  {
-    title: "Analytics"
-    description: "Data-driven insights and business intelligence solutions"
-    icon: BarChart3
-    services: [
-      "Business Intelligence"
-      "Predictive Analytics"
-      "Data Visualization"
-      "Reporting"
-    ]
-    link: "/analytics"
-    color: "from-indigo-500 to-purple-600"
-  }
-];
-const stats = [
-<<<<<<< HEAD
-=======
 import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -211,12 +103,10 @@ const service_categories = [;
 ];
 ;
 const stats = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { number: "500+", label: "Projects Completed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24 / 7", label: "Support Available" },
   { number: "50+", label: "Countries Served" },
-=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -273,63 +163,30 @@ const serviceCategories = [
     color: 'from-indigo-500 to-purple-600'
   }
 ];
-<<<<<<< HEAD
-
-const stats = [
-  { number: '500+', label: 'Projects Completed' },
-  { number: '99.9%', label: 'Uptime Guarantee' },
-  { number: '24/7', label: 'Support Available' },
-  { number: '50+', label: 'Countries Served' }
->>>>>>> origin/automation-improvements-final
-=======
   { number: "500+", label: "Projects Completed" }
   { number: "99.9%", label: "Uptime Guarantee" }
   { number: "24/7", label: "Support Available" }
   { number: "50+", label: "Countries Served" }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 const benefits = [
-=======
 ;
 const benefits = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: "Expert Team",
-    description: "Experienced professionals with deep industry knowledge",
-    icon: Users,
-  },
-=======
     title: "Expert Team"
     description: "Experienced professionals with deep industry knowledge"
     icon: Users
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   {
-<<<<<<< HEAD
-    title: "Cutting-Edge Technology"
-    description: "Latest technologies and innovative solutions"
-    icon: Target
-  }
-=======
     title: "Cutting - Edge Technology",
     description: "Latest technologies and innovative solutions",
     icon: Target,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     title: "Scalable Solutions"
     description: "Solutions that grow with your business"
     icon: Globe
   }
   {
-<<<<<<< HEAD
-    title: "Proven Results",
-    description: "Track record of successful implementations",
-    icon: Award,
-  },
-=======
     title: 'Expert Team',
     description: 'Experienced professionals with deep industry knowledge',
     icon: Users
@@ -349,16 +206,12 @@ const benefits = [;
     description: 'Track record of successful implementations',
     icon: Award
   }
->>>>>>> origin/automation-improvements-final
-=======
     title: "Proven Results"
     description: "Track record of successful implementations"
     icon: Award
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 export default function ServicesOverviewPage() {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -485,40 +338,6 @@ const serviceCategories = [;
     color: "from-indigo-500 to-purple-600",;
   },;
 ];
-<<<<<<< HEAD
-
-const stats = [;
-  { number: "500+", label: "Projects Completed" },;
-  { number: "99 && 99.9%", label: "Uptime Guarantee" },;
-  { number: "24/7", label: "Support Available" },;
-  { number: "50+", label: "Countries Served" },;
-];
-
-const benefits = [;
-  {;
-    title: "Expert Team",;
-    description: "Experienced professionals with deep industry knowledge",;
-    icon: Users,;
-  },;
-  {;
-    title: "Cutting-Edge Technology",;
-    description: "Latest technologies and innovative solutions",;
-    icon: Target,;
-  },;
-  {;
-    title: "Scalable Solutions",;
-    description: "Solutions that grow with your business",;
-    icon: Globe,;
-  },;
-  {;
-    title: "Proven Results",;
-    description: "Track record of successful implementations",;
-    icon: Award,;
-  },;
-];
-
-export default function ServicesOverviewPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Layout
       title="Services Overview - Zion Tech Group"
@@ -526,21 +345,7 @@ export default function ServicesOverviewPage() {;
       keywords="services, technology solutions, AI, IT, micro SAAS, security, automation, analytics">;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
           
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -549,28 +354,15 @@ export default function ServicesOverviewPage() {;
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-                Our{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                  Services
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive technology services designed to transform your
-                business operations, enhance security, and drive innovation
-                across all technology domains.
-=======
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Comprehensive technology services designed to transform your business operations, 
                 enhance security, and drive innovation across all technology domains.
->>>>>>> origin/automation-improvements-final
               </p>
             </motion.div>
           </div>
         </section>
-=======
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -591,7 +383,6 @@ export default function ServicesOverviewPage() {;
                 </span>;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-=======
 ;
 export default /**
  * ServicesOverviewPage - Function description
@@ -625,17 +416,10 @@ function ServicesOverviewPage() {
                 </span>;
               </h1>;
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Comprehensive technology services designed to transform your;
                 business operations, enhance security, and drive innovation;
                 across all technology domains.;
               </p>;
-<<<<<<< HEAD
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Stats Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -645,8 +429,6 @@ function ServicesOverviewPage() {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
             </motion.div>;
           </div>;
         </section>;
@@ -659,27 +441,19 @@ function ServicesOverviewPage() {
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text - center";
                 >;
                   <div className="text - 3xl md:text - 4xl font - bold text - blue - 600 mb - 2">;
                     {stat.number}
-<<<<<<< HEAD
-                  </div>
-<<<<<<< HEAD
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-=======
                   <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
->>>>>>> origin/automation-improvements-final
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-=======
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   className="text-center">;
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;
@@ -692,33 +466,18 @@ function ServicesOverviewPage() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Service Categories */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Service Categories
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                We offer a comprehensive range of technology services to meet
-                all your business needs.
-=======
                 We offer a comprehensive range of technology services to meet all your business needs.
->>>>>>> origin/automation-improvements-final
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (
                 <motion.div
-=======
                   </div>;
                   <div className="text - gray - 600 font - medium">{stat.label}</div>;
                 </motion.div>))}
@@ -745,39 +504,18 @@ function ServicesOverviewPage() {
             <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
               {service_categories.map ((category, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-                >
-<<<<<<< HEAD
-                  <div
-                    className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}
-                  >
-                    <category.icon className="w-16 h-16 text-white" />
-                  </div>
-<<<<<<< HEAD
-
-=======
                   <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
                   
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -791,7 +529,6 @@ function ServicesOverviewPage() {
                             key={idx}
                             className="flex items-center text-sm text-gray-600"
                           >
-=======
                     
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
@@ -802,9 +539,7 @@ function ServicesOverviewPage() {
                       <ul className="space-y-1">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
->>>>>>> origin/automation-improvements-final
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -848,25 +583,13 @@ function ServicesOverviewPage() {
                             key={idx}
                             className="flex items-center text-sm text-gray-600">;
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             {service}
                           </li>;
                         ))}
-<<<<<<< HEAD
-                      </ul>
-                    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                       </ul>;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
                     
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                     <Link
                       href={category && category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
@@ -876,46 +599,24 @@ function ServicesOverviewPage() {
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-=======
             </div>;
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                We deliver exceptional results through innovation, expertise,
-=======
                 We deliver exceptional results through innovation, expertise
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 and unwavering commitment to your success.
-=======
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
->>>>>>> origin/automation-improvements-final
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
-=======
                   className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 overflow - hidden group";
                 >;
                   <div;
@@ -977,31 +678,17 @@ function ServicesOverviewPage() {
             <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {benefits.map ((benefit, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-<<<<<<< HEAD
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">
-                    {benefit.title}
-                  </h3>
-=======
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
->>>>>>> origin/automation-improvements-final
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -1034,29 +721,15 @@ function ServicesOverviewPage() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
-                Let's discuss how our comprehensive services can help you
-                achieve your business goals.
-=======
                 Let's discuss how our comprehensive services can help you achieve your business goals.
->>>>>>> origin/automation-improvements-final
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Ready to Transform Your Business?;
@@ -1066,7 +739,6 @@ function ServicesOverviewPage() {
                 achieve your business goals.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Link
                   href="/contact"
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center">;
@@ -1085,7 +757,6 @@ function ServicesOverviewPage() {
       </div>;
     </Layout>;
   );
-=======
                   className="text - center";
                 >;
                   <div className="w - 16 h - 16 bg - blue - 100 rounded - full flex items - center justify - center mx - auto mb - 4">;
@@ -1134,5 +805,4 @@ function ServicesOverviewPage() {
         </section>;
       </div>;
     </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

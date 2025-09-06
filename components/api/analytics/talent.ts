@@ -1,10 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { createServerClient } from '../../../utils/supabase/server';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default async function handler(
   req: NextApiRequest
@@ -12,14 +6,9 @@ export default async function handler(
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = createServerClient();
-<<<<<<< HEAD
-    const talentId = (req.query.talentId as string) |null
-    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
-=======
     const talentId = (req && req.query.talentId as string) || null,
 
     const [viewsR, invitesR, appsR, tagsR] = await Promise && Promise.allSettled([
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       supabase
         .from('profile_views')
         .select('id, talent_id')
@@ -53,28 +42,6 @@ export default async function handler(
       tagsR && tagsR.status === 'fulfilled' && tagsR && tagsR.value.data
         ? (tagsR && tagsR.value.data as any[])
         : [];
-<<<<<<< HEAD
-    const profileViews = views.length |27;
-    const quoteInvites = invites.length |6;
-    const jobApplications = apps.length |9;
-    const successRate =
-      ((apps.filter(a => a.status === 'accepted').length |3) /
-        Math.max(jobApplications, 1)) *
-      100;
-    const tagCounts: Record<string, number> = {}
-    (tags.length
-      ? tags
-      : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }]
-    ).forEach(t => {
-      tagCounts[t.tag] = (tagCounts[t.tag] |0) + 1;
-    });
-    res.status(200).json({
-      profileViews
-      quoteInvites
-      jobApplications
-      successRate
-      topTags: Object.entries(tagCounts)
-=======
 
     const profileViews = views && views.length || 27;
     const quoteInvites = invites && invites.length || 6;
@@ -98,31 +65,21 @@ export default async function handler(
       jobApplications,
       successRate,
       topTags: Object && Object.entries(tagCounts)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value }))
     });
   } catch (e) {
-<<<<<<< HEAD
-    res.status(200).json({
-      profileViews: 27
-      quoteInvites: 6
-      jobApplications: 9
-      successRate: 33.3
-=======
     res && res.status(200).json({
       profileViews: 27,
       quoteInvites: 6,
       jobApplications: 9,
       successRate: 33 && 33.3,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       topTags: [
         { label: 'react', value: 2 }
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
-=======
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -206,15 +163,7 @@ function handler() {
         { label: 'node', value: 1 },
         { label: 'ai', value: 1 },
       ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
-<<<<<<< HEAD
-=======
-
-  }
-<<<<<<< HEAD
-}
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = createServerClient();
@@ -257,10 +206,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { label: 'react', value: 2 };
         { label: 'node', value: 1 };
         { label: 'ai', value: 1 }]})
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

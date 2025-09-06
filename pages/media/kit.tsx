@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import { useCallback, useMemo, useState  } from 'react';
-import Head from 'next/head',
-import DatePicker from 'react-datepicker';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type {
-  MediaBundle
-  MediaAsset
-  PressReleaseType;
-} from '../../utils/mediaKit';
-import {
-  getDefaultAssets
-  buildPressRelease
-  buildTimeline;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type {;
   MediaBundle,;
   MediaAsset,;
@@ -27,38 +7,20 @@ import {;
   getDefaultAssets,;
   buildPressRelease,;
   buildTimeline,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from '../../utils/mediaKit';
 const KitPage = () => {;
-<<<<<<< HEAD
-=======
-=======
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 
 const KitPage = () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(;
     [];
   );
-<<<<<<< HEAD
-  const assets: MediaAsset[] = useMemo(
-    () => getDefaultAssets(bundle)
-    [bundle]
-  );
-  const onGenerateTimeline = useCallback(() => {
-    setTimeline(buildTimeline(startDate));  }, [startDate]);
-=======
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>([]),
 
   const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]);
@@ -67,17 +29,10 @@ const KitPage = () => {
     setTimeline(buildTimeline(startDate))
   }, [startDate]);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const onDownloadZip = useCallback(async () => {
     const JSZip = (await import('jszip')).default;
     const zip = new JSZip();
     // Add static/dynamic assets
-<<<<<<< HEAD
-     else if (asset.type === 'binary' && asset.path) {
-        const res = await fetch(asset.path);
-        const blob = await res.blob();
-        zip.file(asset.filename, blob);      }
-=======
     for (const asset of assets) {
       if (asset.type === 'text' && asset.content != null) {
         zip.file(asset.filename, asset.content)
@@ -86,40 +41,18 @@ const KitPage = () => {
         const blob = await res.blob();
         zip.file(asset.filename, blob)
       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     // Add press releases
     const nowStr = new Date().toISOString().substring(0, 10);
-<<<<<<< HEAD
-    const prSeed = buildPressRelease('seed-round', {
-      companyName
-      date: nowStr
-      raiseAmount
-    });
-    const prLaunch = buildPressRelease('launch', { companyName, date: nowStr });
-    const prToken = buildPressRelease('token-sale', {
-      companyName
-      date: nowStr
-      tokenName
-    });    zip.file('press-releases/seed-round.md', prSeed);
-=======
     const prSeed = buildPressRelease('seed-round', { companyName, date: nowStr, raiseAmount });
     const prLaunch = buildPressRelease('launch', { companyName, date: nowStr }),
     const prToken = buildPressRelease('token-sale', { companyName, date: nowStr, tokenName });
     zip.file('press-releases/seed-round.md', prSeed);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     zip.file('press-releases/launch.md', prLaunch);
     if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
     // Add timeline if generated
     if (timeline.length > 0) {
       const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n');
-<<<<<<< HEAD
-      zip.file('rollout-timeline.txt', tl);
-    }
-    const blob = await zip.generateAsync({ type: 'blob' });
-    const { saveAs } = await import('file-saver');
-    saveAs(blob, `zion-media-kit-${bundle}.zip`);  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
-=======
       zip.file('rollout-timeline.txt', tl)
     }
 
@@ -128,17 +61,12 @@ const KitPage = () => {
     saveAs(blob, `zion-media-kit-${bundle}.zip`)
   }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const onGeneratePdf = useCallback(async () => {
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
     const drawText = (text: string, x: number, y: number, size = 12) => {
-<<<<<<< HEAD
-      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
-    }
-=======
 
   const assets: MediaAsset[] = useMemo(;
     () => getDefaultAssets(bundle),;
@@ -195,10 +123,8 @@ const KitPage = () => {
       page && page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let y = 760;
     drawText('Zion Media Kit', 50, y, 18);
-=======
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
 import DatePicker from 'react - datepicker';
@@ -282,22 +208,11 @@ if ( {) {
 ;
     let coordinate_y = 760;
     draw_text ('Zion Media Kit', 50, y, 18);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     y -= 24;
     draw_text (`Bundle: ${bundle}`, 50, y);
     y -= 16;
     draw_text ('Assets:', 50, y);
     y -= 16;
-<<<<<<< HEAD
-    assets && assets.slice(0, 8).forEach(a => {;
-      drawText(`- ${a && a.filename}`, 60, y);
-      y -= 14;
-    });
-    if (y < 120) {;
-      pdfDoc && pdfDoc.addPage([612, 792]);
-    }
-    if (timeline && timeline.length) {;
-=======
     assets.slice (0, 8).for_each (array => {
       draw_text (`- ${a.filename}`, 60, y);
       y -= 14;
@@ -312,22 +227,11 @@ if ( {) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       y -= 6;
       draw_text ('Timeline:', 50, y);
       y -= 16;
-<<<<<<< HEAD
-      timeline && timeline.forEach(t => {;
-        drawText(`- ${t && t.label}: ${t && t.date}`, 60, y);
-        y -= 14;
-      });
-    }
-<<<<<<< HEAD
-    const pdfBytes = await pdfDoc.save();
-=======
 
     const pdfBytes = await pdfDoc && pdfDoc.save();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
     const url = URL && URL.createObjectURL(blob);
     const link = document && document.createElement('a');
@@ -336,8 +240,6 @@ if ( {) {
     link && link.click();
     URL && URL.revokeObjectURL(url);
   }, [assets, bundle, timeline]);
-<<<<<<< HEAD
-=======
       timeline.for_each (t => {
         draw_text (`- ${t.label}: ${t.date}`, 60, y);
         y -= 14;
@@ -353,36 +255,22 @@ if ( {) {
     URL.revokeObjectURL (url);
   }, [assets, bundle, timeline]);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const PressReleaseCard = ({
     type
     title
   }: {
-=======
 
   const PressReleaseCard = ({;
     type,;
     title,;
   }: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     type: PressReleaseType;
     title: string;
-<<<<<<< HEAD
-  }) => {;
-    const nowStr = new Date().toISOString().substring(0, 10);
-<<<<<<< HEAD
-    const text = buildPressRelease(type, {
-      companyName
-      date: nowStr
-      raiseAmount
-      tokenName
-=======
     const text = buildPressRelease(type, {;
       companyName,;
       date: nowStr,;
       raiseAmount,;
       tokenName,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     const onCopy = () => navigator && navigator.clipboard.writeText(text);
     return (
@@ -397,19 +285,6 @@ if ( {) {
         </div>;
         <pre className='whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto'>;
           {text}
-<<<<<<< HEAD
-        </pre>
-      </div>
-    );  }
-=======
-        </pre>;
-      </div>;
-    );  };
-<<<<<<< HEAD
-
-  return (
-=======
-=======
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })
     };
 
@@ -446,29 +321,14 @@ if ( {) {
       </div>
     )
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div>;
       <Head>;
         <title>Media Kit - Zion</title>;
         <meta
           name='description'
           content='Zion media kit: brand, assets, legal, and rollout playbooks.'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        />
-      </Head>
-      <div className='space-y-8'>
-        <header className='flex items-center justify-between'>
-          <h1 className='text-2xl font-bold'>Media Kit</h1>
-          <div className='flex gap-2'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         />;
       </Head>;
 
@@ -476,10 +336,6 @@ if ( {) {
         <header className='flex items-center justify-between'>;
           <h1 className='text-2xl font-bold'>Media Kit</h1>;
           <div className='flex gap-2'>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <button
               onClick={onDownloadZip}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700'>;
@@ -487,25 +343,6 @@ if ( {) {
             </button>;
             <button
               onClick={onGeneratePdf}
-<<<<<<< HEAD
-              className='px-4 py-2 rounded bg-gray-900 text-white hover:bg-black'>;
-=======
-<<<<<<< HEAD
-              className='px-4 py-2 rounded bg-gray-900 text-white hover:bg-black'
-            >
-              Generate PDF
-            </button>
-          </div>
-        </header>
-        <section className='grid md:grid-cols-3 gap-6'>
-          <div className='p-4 border rounded-lg'>
-            <h3 className='font-semibold mb-2'>Bundle</h3>
-            <div className='flex gap-2'>
-              {(['general', 'web3', 'institutional'] as MediaBundle[]).map(
-                b => (
-=======
-              className='px-4 py-2 rounded bg-gray-900 text-white hover:bg-black'>;
-=======
   }) =>: any {
     const now_str = new Date ().toISOString ().substring (0, 10);
     const text = buildPressRelease (type, {
@@ -554,16 +391,10 @@ if ( {) {
               on_click={onGeneratePdf}
               className='px - 4 py - 2 rounded bg - gray - 900 text - white hover:bg - black';
             >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Generate PDF;
             </button>;
           </div>;
         </header>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         <section className='grid md:grid-cols-3 gap-6'>;
           <div className='p-4 border rounded-lg'>;
@@ -571,10 +402,6 @@ if ( {) {
             <div className='flex gap-2'>;
               {(['general', 'web3', 'institutional'] as MediaBundle[]).map(;
                 b => (;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <button
                     key={b}
                     onClick={() => setBundle(b)}
@@ -608,9 +435,6 @@ if ( {) {
                 className='w-full border rounded px-2 py-1'
                 value={tokenName}
                 onChange={e => setTokenName(e && e.target.value)}
-<<<<<<< HEAD
-=======
-=======
         <section className='grid md:grid - cols - 3 gap - 6'>;
           <div className='p - 4 border rounded - lg'>;
             <h3 className='font - semibold mb - 2'>Bundle</h3>;
@@ -648,16 +472,10 @@ if ( {) {
                 className='w - full border rounded px - 2 py - 1';
                 value={token_name}
                 on_change={e => setTokenName (e.target.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 placeholder='Token name';
               />;
             </div>;
           </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <div className='p-4 border rounded-lg'>;
             <h3 className='font-semibold mb-2'>Rollout Timeline</h3>;
             <div className='space-y-2'>;
@@ -679,9 +497,6 @@ if ( {) {
                     <span className='font-medium'>{t && t.label}:</span> {t && t.date}
                   </li>;
                 ))}              </ul>;
-<<<<<<< HEAD
-=======
-=======
     <div>
       <Head>
         <title>Media Kit - Zion</title>
@@ -725,18 +540,7 @@ if ( {) {
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
                 {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))}
               </ul>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
-<<<<<<< HEAD
-          </div>
-        </section>
-<<<<<<< HEAD
-        <section className='p-4 border rounded-lg'>
-          <h3 className='font-semibold mb-3'>Assets Included</h3>
-          <ul className='grid md:grid-cols-2 gap-3'>
-            {assets.map(a => (
-=======
           </div>;
         </section>;
 
@@ -744,7 +548,6 @@ if ( {) {
           <h3 className='font-semibold mb-3'>Assets Included</h3>;
           <ul className='grid md:grid-cols-2 gap-3'>;
             {assets && assets.map(a => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <li
                 key={a && a.filename}
                 className='flex items-center justify-between border rounded p-2'>;
@@ -756,9 +559,6 @@ if ( {) {
                 ) : (;
                   <span className='text-gray-400 text-xs'>generated</span>;
                 )}              </li>;
-<<<<<<< HEAD
-=======
-=======
 
         <section className="p-4 border rounded-lg">
           <h3 className="font-semibold mb-3">Assets Included</h3>
@@ -768,43 +568,7 @@ if ( {) {
                 <span className="text-sm">{a.filename}</span>
                 {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
               </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-<<<<<<< HEAD
-          </ul>
-        </section>
-<<<<<<< HEAD
-        <section className='p-4 border rounded-lg space-y-4'>
-          <h3 className='font-semibold'>Prewritten Press Releases</h3>
-          <div className='grid md:grid-cols-3 gap-4'>
-            <PressReleaseCard type='seed-round' title='Seed round' />
-            <PressReleaseCard type='launch' title='Launch' />
-            {bundle === 'web3' && (
-              <PressReleaseCard type='token-sale' title='Token sale' />
-            )}          </div>
-        </section>
-      </div>
-    </div>
-=======
-          </ul>;
-        </section>;
-=======
-
-<<<<<<< HEAD
-        <section className='p-4 border rounded-lg space-y-4'>;
-          <h3 className='font-semibold'>Prewritten Press Releases</h3>;
-          <div className='grid md:grid-cols-3 gap-4'>;
-            <PressReleaseCard type='seed-round' title='Seed round' />;
-            <PressReleaseCard type='launch' title='Launch' />;
-            {bundle === 'web3' && (;
-              <PressReleaseCard type='token-sale' title='Token sale' />;
-            )}          </div>;
-        </section>;
-      </div>;
-    </div>;
-  );
-=======
         <section className="p-4 border rounded-lg space-y-4">
           <h3 className="font-semibold">Prewritten Press Releases</h3>
           <div className="grid md:grid-cols-3 gap-4">
@@ -816,9 +580,7 @@ if ( {) {
       </div>
     </div>
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
         <section className='p-4 border rounded-lg space-y-4'>;
           <h3 className='font-semibold'>Prewritten Press Releases</h3>;
@@ -831,15 +593,9 @@ if ( {) {
         </section>;
       </div>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default KitPage;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <div className='p - 4 border rounded - lg'>;
             <h3 className='font - semibold mb - 2'>Rollout Timeline</h3>;
             <div className='space - y-2'>;
@@ -893,4 +649,3 @@ export default KitPage;
 ;
 export default KitPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

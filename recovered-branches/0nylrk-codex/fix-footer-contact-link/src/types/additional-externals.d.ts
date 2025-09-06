@@ -20,12 +20,7 @@ declare module 'react - beautiful - dnd';
 declare module 'react - redux';
 declare module 'semver';
 declare module 'ws';
-<<<<<<< HEAD
-declare module 'vite/client';
-declare module 'react-router-dom';
-=======
 ;
 declare module 'vite / client';
 declare module 'react-router-dom';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

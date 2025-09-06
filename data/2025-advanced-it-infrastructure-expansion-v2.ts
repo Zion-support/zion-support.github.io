@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-
-export const advancedITInfrastructureExpansion2025V2 = [
-  {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    name: 'Autonomous DevOps Platform'
-    description: 'Self-managing DevOps automation platform'
-    category: 'Cloud & FinOps'
-    pricing: '$399/month'
-      'Automated deployment'
-      'Self-healing infrastructure'
-      'Performance optimization'
-      'Cost management'
-=======
     name: 'Autonomous DevOps Platform', description: 'Self-managing DevOps automation platform',
     category: 'Cloud & FinOps', pricing: '$399/month',
     features: [
       'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ]
   }
   {
@@ -637,14 +620,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ]
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export const advancedITInfrastructureExpansion2025V2 = [;
   {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     name: 'Autonomous DevOps Platform',
     description: 'Self - managing DevOps automation platform',
     category: 'Cloud & FinOps',
@@ -1267,15 +1244,8 @@ export const advancedITInfrastructureExpansion2025V2 = [;
       'Performance monitoring',
     ],
   },
-<<<<<<< HEAD
-];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
-    ]
-
-=======
 ];      'Identity verification_access control_threat detection_performance monitoring';
     ];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

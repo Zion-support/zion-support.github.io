@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Use the shared icon wrapper
-
-=======
 // Use the shared icon wrapper;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
@@ -13,15 +7,6 @@ import {useNotifications} from '@/context/notifications/NotificationContext';
 import {toast} from 'sonner';
 import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components/notifications';
 import {FilterType} from '@/components/notifications/NotificationFilter';
-<<<<<<< HEAD
-export const NotificationCenter: React.FC = () => {
-  const {
-    filteredNotifications
-    unreadCount
-    markAsRead
-    markAllAsRead;
-    dismissNotification
-=======
 export const NotificationCenter: React.FC = () => {;
   const { ;
     filteredNotifications,;
@@ -29,21 +14,11 @@ export const NotificationCenter: React.FC = () => {;
     markAsRead, ;
     markAllAsRead;
     dismissNotification, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     loading;
     filter;
     setFilter;
     fetchNotifications;
   } = useNotifications();
-<<<<<<< HEAD
-  const [open, setOpen] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  // Refresh notifications when popover opens
-  useEffect(() => {
-    if (open) {
-      const loadNotifications = async () => {
-        try {
-=======
 
   const [open, setOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -53,7 +28,6 @@ export const NotificationCenter: React.FC = () => {;
     if (open) {;
       const loadNotifications = async () => {;
         try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           await fetchNotifications();
           setError(null);
         } catch (err) {;
@@ -61,14 +35,6 @@ export const NotificationCenter: React.FC = () => {;
           setError("Couldn't load notifications");
           toast && toast.error("Failed to load notifications");
         }
-<<<<<<< HEAD
-      }
-      loadNotifications()
-    }
-  }, [open, fetchNotifications]);
-  const handleMarkAllAsRead = async () => {
-    try {
-=======
       };
 
       loadNotifications();
@@ -77,26 +43,18 @@ export const NotificationCenter: React.FC = () => {;
 
   const handleMarkAllAsRead = async () => {;
     try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       await markAllAsRead();
       toast && toast.success("All notifications marked as read");
     } catch (err) {;
       console && console.error("Failed to mark notifications as read:", err);
       toast && toast.error("Failed to update notifications");
     }
-<<<<<<< HEAD
-  }
-  const handleFilterChange = (newFilter: FilterType) => {
-    setFilter(newFilter as any)
-  }
-=======
   };
 
   const handleFilterChange = (newFilter: FilterType) => {;
     setFilter(newFilter as any);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Popover open={open} onOpenChange={setOpen}>;
       <PopoverTrigger asChild>;
@@ -107,19 +65,6 @@ export const NotificationCenter: React.FC = () => {;
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
           )}
-<<<<<<< HEAD
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
-        <NotificationHeader
-          unreadCount={unreadCount}
-          onMarkAllAsRead={handleMarkAllAsRead}
-        />
-        <NotificationFilter
-          filter={filter as FilterType}
-          onFilterChange={handleFilterChange}
-        />
-=======
         </Button>;
       </PopoverTrigger>;
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
@@ -133,9 +78,7 @@ export const NotificationCenter: React.FC = () => {;
           onFilterChange={handleFilterChange} 
         />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <NotificationList
-=======
 // Use the shared icon wrapper;
 import {Bell} from '@/components / icons';
 import {Button} from '@/components / ui / button';
@@ -216,23 +159,10 @@ if ( {) {
           onFilterChange={handleFilterChange}
         />;
         <NotificationList;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           loading={loading}
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
-<<<<<<< HEAD
-          onDismiss={dismissNotification}
-          onRetry={fetchNotifications}
-<<<<<<< HEAD
-        />
-        <NotificationFooter onClose={() => setOpen(false)} />
-      </PopoverContent>
-    </Popover>
-  )
-}
-
-=======
         />;
 
         <NotificationFooter onClose={() => setOpen(false)} />;
@@ -240,8 +170,6 @@ if ( {) {
     </Popover>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           on_dismiss={dismiss_notification}
           on_retry={fetch_notifications}
         />;
@@ -250,4 +178,3 @@ if ( {) {
     </Popover>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

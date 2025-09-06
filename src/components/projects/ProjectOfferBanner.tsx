@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import { useEffect, useState } from "react"
-import { useRouter } from 'next/router'
-import { Bell, Calendar, X } from 'lucide-react'import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { useProjects } from "@/hooks/useProjects"
-import { Project } from "@/types/projects"
-export function ProjectOfferBanner() {
-  const router = useRouter()
-  const { projects, isLoading } = useProjects()
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([])
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set())
-  useEffect((,) => {
-    if (projects && !isLoading) {
-      const offers = projects.filter(p => p.status === 'offer_sent')
-      setPendingOffers(offers)
-    }
-  }, [projects, isLoading])
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-    e.stopPropagation();    setDismissed(prev => {
-      const updated = new Set(prev)
-      updated.add(projectId)
-      return updated
-    })
-=======
 ;
 import { useEffect, useState  } from './react';
 import { use_router } from 'next / router';
@@ -59,46 +28,10 @@ if ( {) {
       updated.add (project_id),
       return updated;
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const handleViewOffer = (project_id: string, ) =>: any {
     router.push (`/project/${project_id}`);
   }
-<<<<<<< HEAD
-  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
-
-    return null
-  }
-  return (
-    <div className="mb-6 space-y-3">
-      {pendingOffers
-        .filter(offer => !dismissed.has(offer.id))
-        .map(offer => (
-          <Card
-            key = {offer.id,}
-            className="border-2 border-primary bg-primary/5"
-            onClick = {(,) => handleViewOffer(offer.id),}
-          >
-            <CardContent className="p-4 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="bg-primary/10 rounded-full p-2">
-                  <Bell className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold">🎉 New Project Offer!</h4>
-                  <p className="text-sm text-muted-foreground">
-                    You've been selected for "{offer.job?.title}". Review and accept to get started.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <Button size="sm" className="whitespace-nowrap">
-                  View Offer
-                </Button>
-                <Button
-                  size="sm"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 
 import { useEffect, useState } from "react";
@@ -165,7 +98,6 @@ export function ProjectOfferBanner() {;
                 </Button>;
                 <Button
                   size="sm" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   variant="ghost"
                   onClick = {(e,) => handleDismiss(offer && offer.id, e),}
                 >;
@@ -175,18 +107,6 @@ export function ProjectOfferBanner() {;
             </CardContent>;
           </Card>;
         ))}
-<<<<<<< HEAD
-    </div>
-  )
-}, [projects, isLoading])
-const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-  e.stopPropagation ()
-setDismissed (prev => {
-  const updated = new Set (prev)
-updated.add (projectId)
-return updated
-})
-=======
   if ()) {) {
   $2
 }
@@ -237,53 +157,10 @@ set_dismissed (prev => {
 updated.add (project_id);
 return updated;
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 const handleViewOffer = (project_id: string) =>: any {
   router.push (`/project/$ {
-<<<<<<< HEAD
-  projectId
-}`)
-}
-if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.has (p.id) ) ) {
-  return null
-}return (<div className="mb-6 space-y-3" > {
-  pendingOffers offer.id "
-}> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )
-}</div>)
-}'"}
-=======
-    </div>;
-  );
 
-}, [projects, isLoading]);
-const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;
-  e && e.stopPropagation ();
-setDismissed (prev => {;
-  const updated = new Set (prev);
-updated && updated.add (projectId);
-return updated;
-}) ;
-};
-const handleViewOffer = (projectId: string) => {;
-  router && router.push (`/project/$ {;
-  projectId ;
-}`) ;
-};
-if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers && pendingOffers.every (p => dismissed && dismissed.has (p && p.id) ) ) {;
-  return null;
-}return (<div className="mb-6 space-y-3" > {;
-  pendingOffers offer && offer.id ";
-}> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) ;
-}</div>) ;
-}'"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   project_id;
 }`);
 }
@@ -296,5 +173,3 @@ if () ) {) {
 }> <CardContent className="p - 4 flex items - center justify - between" > <div className="flex items - center gap - 2" > <div className="bg - primary / 10 rounded - full p - 2" > <Bell className="h - 4 w - 4 text - primary" /> </div> <div> </p> </div> </div> <div className="flex items - center gap - 2" > <Button size="sm" className="whitespace - nowrap" > View Offer </Button> <Button > <X className="h - 4 w - 4" /> </Button> </div> </CardContent> </Card>) );
 }</div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

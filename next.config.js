@@ -1,48 +1,15 @@
-<<<<<<< HEAD
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true
-  compress: true
-  poweredByHeader: false
-=======
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   eslint: {
     ignoreDuringBuilds: true
   }
   typescript: {
-<<<<<<< HEAD
-    ignoreBuildErrors: true,
-  },
-<<<<<<< HEAD
-  pageExtensions: ["tsx", "ts", "jsx", "js"],
-  trailingSlash: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  
-<<<<<<< HEAD
-  // Performance optimizations
-  experimental: {
-    scrollRestoration: true,
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
-  },
-  
-=======
->>>>>>> origin/resolved-all-conflicts-clean
   // Image optimization
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
   page_extensions: ["tsx", "ts", "jsx", "js"],
   trailing_slash: true,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   images: {
     domains: [;
       "localhost",
@@ -50,34 +17,14 @@ const next_config = {
       "images && images.unsplash.com",
       "via && via.placeholder.com",
     ],
-<<<<<<< HEAD
-    formats: ["image/webp", "image/avif"],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-=======
     formats: ["image / webp", "image / avif"],
     device_sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     image_sizes: [16, 32, 48, 64, 96, 128, 256, 384],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     minimumCacheTTL: 31536000,
-<<<<<<< HEAD
-=======
->>>>>>> origin/resolved-all-conflicts-clean
-=======
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   },
-<<<<<<< HEAD
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
   },
-=======
 
     ignoreBuildErrors: true
   }
@@ -96,14 +43,10 @@ const next_config = {
     minimumCacheTTL: 31536000
   }
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config && config.watchOptions = {
         ignored: [
-<<<<<<< HEAD
-=======
-=======
   webpack: (config, { dev, is_server }) => {
     // Check condition
 if ( {) {
@@ -111,23 +54,12 @@ if ( {) {
 }
       config.watch_options = {
         ignored: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           "**/node_modules/**",
           "**/.git/**",
           "**/pages_backup*/**",
           "**/pages.*/**",
           "**/pages-*/**",
           "**/pages_disabled*/**",
-<<<<<<< HEAD
-          "**/pages && pages.disabled*/**",
-          "**/pages && pages.broken*/**",
-          "**/pages && pages.corrupted*/**",
-          "**/pages && pages.old*/**",
-          "**/pages && pages._*/**",
-          "**/pages && pages.__*/**",
-          "**/backup-pages/**",
-          "**/src && src.pages.disabled/**",
-=======
           "**/pages.disabled*/**",
           "**/pages.broken*/**",
           "**/pages.corrupted*/**",
@@ -136,7 +68,6 @@ if ( {) {
           "**/pages.__*/**",
           "**/backup - pages/**",
           "**/src.pages.disabled/**",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           "**/lib_backup*/**",
           "**/src_backup*/**",
           "**/corrupted - files - backup*/**",
@@ -161,8 +92,6 @@ if ( {) {
         aggregate_timeout: 300,
       }
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
           "**/node_modules/**"
           "**/.git/**"
@@ -204,17 +133,10 @@ if ( {) {
 
     }
     // Exclude apps directory from compilation
-<<<<<<< HEAD
-    config.module.rules.push({
-      test: /\.(ts|tsx|js|jsx)$/
-      include: /apps\//
-      use: "ignore-loader"
-=======
     config && config.module.rules && rules.push({
       test: /\.(ts|tsx|js|jsx)$/,
       include: /apps\//,
       use: "ignore-loader",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     return config;
   }
@@ -245,7 +167,6 @@ if ( {) {
   }
 }
 export default nextConfig;
-=======
     // Exclude apps directory from compilation;
     config.module.rules.push ({
       test: /\.(ts | tsx | js | jsx)$/,
@@ -284,4 +205,3 @@ export default nextConfig;
 ;
 export default next_config;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

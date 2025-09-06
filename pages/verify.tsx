@@ -1,46 +1,14 @@
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react',
-import Head from 'next/head';
-import { getBadgeLabels  } from '../utils/kyc';
-import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc';
-<<<<<<< HEAD
-import { VerifiedBadge  } from '../components/ui/VerifiedBadge';
-export default function VerifyPage() {
-  const [userId, setUserId] = useState<string>('demo-user'),
-  const [role, setRole] = useState<KycRole>('client'),
-  const [profile, setProfile] = useState<KycProfile | null>(null),
-=======
-import { VerifiedBadge } from '../components/ui/VerifiedBadge';
-<<<<<<< HEAD
-=======
 export default function VerifyPage() {
   const [userId, setUserId] = useState<string>('demo-user');
   const [role, setRole] = useState<KycRole>('client');
   const [profile, setProfile] = useState<KycProfile | null>(null);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [fullLegalName, setFullLegalName] = useState('');
   const [businessName, setBusinessName] = useState('');
   const [businessReg, setBusinessReg] = useState('');
   const [busy, setBusy] = useState(false);
 
-<<<<<<< HEAD
-  const [message, setMessage] = useState<string>('');
-  const progress = useMemo(() => {
-    if (!profile) return 0;
-<<<<<<< HEAD
-    const uploaded = new Set((profile.documents |[]).map(d => d.kind));
-    const required = requiredDocs.length;
-    const have = Array.from(uploaded).filter(k =>
-      requiredDocs.includes(k as any)
-    ).length;
-    const base = required > 0 ? Math.round((have / required) * 80) : 0; // up to 80%
-    const submitted = profile.status === 'submitted' ? 90 : 0;
-    const approved = profile.status === 'approved' ? 100 : 0;
-    return Math.max(base, submitted, approved);  }, [profile, requiredDocs]);
-=======
     const uploaded = new Set((profile.documents || []).map((d) => d.kind));
     const required = requiredDocs.length;
     const have = Array.from(uploaded).filter((k) => requiredDocs.includes(k as any)).length;
@@ -50,31 +18,10 @@ export default function VerifyPage() {
     return Math.max(base, submitted, approved)
   }, [profile, requiredDocs]);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function start() {
     setBusy(true);
     setMessage('');
     const res = await fetch('/api/kyc/start', {
-<<<<<<< HEAD
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({
-        userId
-        role
-        fullLegalName
-        businessName
-        businessRegistrationNumber: businessReg
-      })
-    });    const data = await res.json();
-    if (data.ok) {
-      setProfile(data.profile);
-      setRequiredDocs(data.requiredDocuments);
-      setOptionalDocs(data.optionalDocuments);
-    } else {
-      setMessage(data.error |'Failed to start');
-    }
-    setBusy(false);  }
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg })}),
@@ -89,17 +36,11 @@ export default function VerifyPage() {
     setBusy(false)
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function upload(kind: KycDocumentMeta['kind']) {
     const filename = prompt(`Enter filename for ${kind}`) |'';
     if (!filename) return;
     setBusy(true);
     const res = await fetch('/api/kyc/upload', {
-<<<<<<< HEAD
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId, kind, filename })
-=======
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next / head';
 import {getBadgeLabels} from '../utils / kyc';
@@ -167,7 +108,6 @@ if (return) {
       method: 'POST',
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ user_id, kind, filename }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
     const data = await res.json ();
     // Check condition
@@ -176,71 +116,6 @@ if ( {) {
 }
       set_profile (data.profile);
     } else {
-<<<<<<< HEAD
-      setMessage(data.error |'Upload failed');
-    }
-    setBusy(false);  }
-  async function submit() {
-    setBusy(true);
-    const res = await fetch('/api/kyc/submit', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId })
-=======
-  const progress = useMemo(() => {;
-    if (!profile) return 0;
-    const uploaded = new Set((profile && profile.documents || []).map(d => d && d.kind));
-    const required = requiredDocs && requiredDocs.length;
-    const have = Array && Array.from(uploaded).filter(k =>;
-      requiredDocs && requiredDocs.includes(k as any);
-    ).length;
-    const base = required > 0 ? Math && Math.round((have / required) * 80) : 0; // up to 80%;
-    const submitted = profile && profile.status === 'submitted' ? 90 : 0;
-    const approved = profile && profile.status === 'approved' ? 100 : 0;
-    return Math && Math.max(base, submitted, approved);  }, [profile, requiredDocs]);
-
-  async function start() {;
-    setBusy(true);
-    setMessage('');
-    const res = await fetch('/api/kyc/start', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({;
-        userId,;
-        role,;
-        fullLegalName,;
-        businessName,;
-        businessRegistrationNumber: businessReg,;
-      }),;
-    });    const data = await res && res.json();
-    if (data && data.ok) {;
-      setProfile(data && data.profile);
-      setRequiredDocs(data && data.requiredDocuments);
-      setOptionalDocs(data && data.optionalDocuments);
-    } else {;
-      setMessage(data && data.error || 'Failed to start');
-    }
-    setBusy(false);  }
-<<<<<<< HEAD
-
-  async function upload(): any (kind: KycDocumentMeta['kind']) {;
-    const filename = prompt(`Enter filename for ${kind}`) || '';
-    if (!filename) return;
-    setBusy(true);
-    const res = await fetch('/api/kyc/upload', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ userId, kind, filename }),;
-    });
-    const data = await res && res.json();
-    if (data && data.ok) {;
-      setProfile(data && data.profile);
-    } else {;
-      setMessage(data && data.error || 'Upload failed');
-    }
-    setBusy(false);  }
-=======
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, kind, filename })});
@@ -252,25 +127,9 @@ if ( {) {
     }
     setBusy(false)
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function submit() {
     setBusy(true);
-<<<<<<< HEAD
-    const res = await fetch('/api/kyc/submit', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ userId }),;
-    });
-    const data = await res && res.json();
-    if (data && data.ok) {;
-      setProfile(data && data.profile);
-      setMessage('Submitted. AML check performed.');
-    } else {;
-      setMessage(data && data.error || 'Submit failed');
-    }
-    setBusy(false);  }
-=======
     const res = await fetch('/api/kyc/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -284,8 +143,6 @@ if ( {) {
     }
     setBusy(false)
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function upload(): any (kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
@@ -304,26 +161,13 @@ if ( {) {
     }
     setBusy(false);  }
 
-<<<<<<< HEAD
-  async function submit() {;
-    setBusy(true);
-    const res = await fetch('/api/kyc/submit', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ userId }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     const data = await res && res.json();
     if (data && data.ok) {;
       setProfile(data && data.profile);
       setMessage('Submitted. AML check performed.');
-<<<<<<< HEAD
-    } else {
-      setMessage(data.error |'Submit failed');
-=======
     } else {;
       setMessage(data && data.error || 'Submit failed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     setBusy(false);  }
   const labels = getBadgeLabels(profile |undefined);
@@ -334,23 +178,6 @@ if ( {) {
         <meta
           name='description'
           content='Complete KYC/AML verification to secure marketplace trust'
-<<<<<<< HEAD
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-      </Head>
-      <main className='max-w-3xl mx-auto px-4 py-8'>
-        <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>
-        <p className='text-sm text-gray-600 mb-6'>
-          Guided step-by-step KYC/AML verification with progress tracking.
-        </p>
-        {labels.length > 0 && (
-          <div className='mb-4'>            <VerifiedBadge labels={labels} />
-          </div>
-        )}
-        <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <div>
-            <label className='block text-sm font-medium'>User ID</label>
-=======
         />;
         <meta name='viewport' content='width=device-width, initial-scale=1' />;
       </Head>;
@@ -368,7 +195,6 @@ if ( {) {
         <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>User ID</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               className='mt-1 w-full border rounded px-3 py-2'
               value={userId}
@@ -381,7 +207,6 @@ if ( {) {
               className='mt-1 w-full border rounded px-3 py-2'
               value={role}
               onChange={e => setRole(e && e.target.value as KycRole)}
-=======
       set_message (data.error || 'Upload failed');
     }
     set_busy (false);  }
@@ -441,58 +266,12 @@ if ( {) {
               className='mt - 1 w - full border rounded px - 3 py - 2';
               value={role}
               on_change={e => set_role (e.target.value as KycRole)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               <option value='client'>Client</option>;
               <option value='talent'>Talent</option>;
               <option value='enterprise'>Enterprise</option>;
             </select>;
           </div>;
-<<<<<<< HEAD
-          <div className='md:col-span-2'>;
-            <label className='block text-sm font-medium'>Full legal name</label>;
-            <input
-              className='mt-1 w-full border rounded px-3 py-2'
-              value={fullLegalName}
-              onChange={e => setFullLegalName(e && e.target.value)}
-            />          </div>;
-          {role === 'enterprise' && (;
-            <>;
-              <div>;
-                <label className='block text-sm font-medium'>;
-                  Business name;
-                </label>;
-                <input
-                  className='mt-1 w-full border rounded px-3 py-2'
-                  value={businessName}
-                  onChange={e => setBusinessName(e && e.target.value)}
-                />;
-              </div>;
-              <div>;
-                <label className='block text-sm font-medium'>;
-                  Registration number;
-                </label>;
-                <input
-                  className='mt-1 w-full border rounded px-3 py-2'
-                  value={businessReg}
-                  onChange={e => setBusinessReg(e && e.target.value)}
-                />              </div>;
-            </>;
-<<<<<<< HEAD
-=======
-          )}
-<<<<<<< HEAD
-        </div>
-        <div className='mb-6'>
-          <button
-            disabled={busy}
-            onClick={start}
-            className='rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50'
-          >
-            Start/Update
-          </button>
-        </div>
-=======
           <div className='md:col - span - 2'>;
             <label className='block text - sm font - medium'>Full legal name</label>;
             <input;
@@ -532,7 +311,6 @@ if ( {) {
             Start / Update;
           </button>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {profile && (
           <div className='space - y-6'>;
             <div>;
@@ -547,9 +325,6 @@ if ( {) {
                 <div;
                   className='bg - blue - 600 h - 3';
                   style={{ width: `${progress}%` }}
-<<<<<<< HEAD
-                />              </div>
-=======
   return (
     <>
       <Head>
@@ -595,7 +370,6 @@ if ( {) {
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
               </div>
             </>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
         </div>
 
@@ -613,21 +387,8 @@ if ( {) {
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
             <section>
-<<<<<<< HEAD
-              <h2 className='font-semibold mb-2'>Required documents</h2>
-              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
-                {requiredDocs.map(k => {
-                  const hasIt = (profile.documents |[]).some(
-                    d => d.kind === k
-                  );
-                    >
-                      <div>
-                        <div className='text-sm font-medium'>{k}</div>
-                        <div className='text-xs text-gray-500'>
-=======
         </div>;
 
         <div className='mb-6'>;
@@ -668,7 +429,6 @@ if ( {) {
                       <div>;
                         <div className='text-sm font-medium'>{k}</div>;
                         <div className='text-xs text-gray-500'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           {hasIt ? 'Uploaded' : 'Missing'}
                         </div>;
                       </div>;
@@ -681,8 +441,6 @@ if ( {) {
                       </button>;
                     </div>;
                   );                })}
-<<<<<<< HEAD
-=======
               <h2 className="font-semibold mb-2">Required documents</h2>
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                 {requiredDocs.map((k) => {
@@ -697,24 +455,10 @@ if ( {) {
                     </div>
                   )
                 })}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </section>
             {optionalDocs.length > 0 && (
               <section>
-<<<<<<< HEAD
-                <h2 className='font-semibold mb-2'>Optional documents</h2>
-                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
-                  {optionalDocs.map(k => {
-                    const hasIt = (profile.documents |[]).some(
-                      d => d.kind === k
-                    );
-                      >
-
-                        <div>
-                          <div className='text-sm font-medium'>{k}</div>
-                          <div className='text-xs text-gray-500'>
-=======
               </div>;
             </section>;
 
@@ -731,7 +475,6 @@ if ( {) {
                         <div>;
                           <div className='text-sm font-medium'>{k}</div>;
                           <div className='text-xs text-gray-500'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             {hasIt ? 'Uploaded' : 'Optional'}
                           </div>;
                         </div>;
@@ -747,49 +490,6 @@ if ( {) {
                 </div>;
               </section>;
             )}
-<<<<<<< HEAD
-            <div>
-              <button
-                disabled={
-                  busy |
-                  profile.status === 'submitted' |
-                  profile.status === 'approved'
-                }
-                onClick={submit}
-                className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
-              >
-                Submit for review
-              </button>
-            </div>
-            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
-        )}
-      </main>
-    </>
-);
-=======
-
-            <div>;
-              <button
-                disabled={
-                  busy ||
-                  profile && profile.status === 'submitted' ||
-                  profile && profile.status === 'approved'
-                }
-                onClick={submit}
-                className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'>;
-                Submit for review;
-              </button>;
-            </div>;
-
-            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>;
-        )}
-      </main>;
-    </>;
-  );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
@@ -819,8 +519,6 @@ if ( {) {
     </>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 />              </div>;
             </div>;
             <section>;
@@ -889,5 +587,3 @@ if ( {) {
       </main>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

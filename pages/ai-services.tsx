@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,42 +21,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
 import Layout from "../components/Layout";
 export default function AIServices() {
   return (
 <Layout
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Layout from '../components/Layout';
-
-export default function AIServices() {;
-  return (
-    <Layout
->>>>>>> origin/automation-improvements-final
       title="AI Services - Zion Tech Group"
-<<<<<<< HEAD
-      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions and
-              services.
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">
-              AI Services page is under construction.
-            </p>
-=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
@@ -69,8 +34,6 @@ export default function AIServices() {;
           </div>
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
->>>>>>> origin/automation-improvements-final
-=======
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
@@ -87,12 +50,10 @@ export default function AIServices() {
                 <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
               </Link>
             ))}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           </div>
         </div>
       </div>
     </Layout>
-=======
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -107,7 +68,6 @@ export default function AIServices() {
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
-=======
 import React from './react';
 import Layout from "../components / Layout";
 export default /**
@@ -132,20 +92,12 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -532,13 +484,7 @@ export default function AIServicesPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
 }
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-
-import React from "react";
-import { format } from "date-fns";
-import { 
-  Card;
-  CardContent;
-  CardHeader;
-  CardTitle;
-  CardDescription
-} from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
-import type { QuoteRequest } from "@/types/quotes";
-<<<<<<< HEAD
-
-type QuoteRequestCardProps = {
-  quote: QuoteRequest
-  onViewDetails: (quote: QuoteRequest) => void
-  onMarkAsResponded?: (id: string) => void
-  onToggleArchive: (id: string, isArchived: boolean) => void
-}
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
-  quote;
-  onViewDetails;
-  onMarkAsResponded
-  onToggleArchive
-=======
 import React from './react';
 import { format } from './date - fns';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
@@ -46,16 +17,12 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
   onViewDetails;
   onMarkAsResponded,
   onToggleArchive;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
   // Format date for display;
   const format_date = (date_string: string) =>: any {
     try {
       return format (new Date (date_string), 'PP');
     } catch (e) {
-<<<<<<< HEAD
-      return dateString
-=======
 type QuoteRequestCardProps = {;
   quote: QuoteRequest,;
   onViewDetails: (quote: QuoteRequest) => void,;
@@ -75,35 +42,9 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
       return format(new Date(dateString), 'PP');
     } catch (e) {;
       return dateString;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
-<<<<<<< HEAD
-    <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-      <CardHeader className="pb-2">
-        <div className="flex justify-between items-start">
-          <div>
-            <CardTitle className="text-white">{quote.project_name}</CardTitle>
-            <CardDescription className="text-zion-slate-light">
-              {formatDate(quote.created_at)}
-            </CardDescription>
-          </div>
-          <QuoteStatusBadge status={quote.status} />
-        </div>
-      </CardHeader>
-      <CardContent>
-        <div className="text-sm text-zion-slate-light mb-3">
-          <span className="text-white font-medium">From: </span>
-          {quote.requester_name}
-        </div>
-        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
-        <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
-          <CalendarIcon className="h-4 w-4" />
-          <span>Timeline: {quote.timeline}</span>
-        </div>
-        <div className="flex justify-between items-center mt-4">
-=======
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-start">;
@@ -130,20 +71,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
         </div>;
 
         <div className="flex justify-between items-center mt-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             variant="outline"
             size="sm"
             onClick={() => onViewDetails(quote)}
-<<<<<<< HEAD
-            className="flex items-center gap-1"
-          >
-            <Eye className="h-4 w-4" />
-            View Details
-          </Button>
-          <div className="flex items-center">
-            {quote.status !== 'responded' && onMarkAsResponded && (
-=======
             className="flex items-center gap-1";
           >;
             <Eye className="h-4 w-4" />;
@@ -152,7 +83,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 
           <div className="flex items-center">;
             {quote && quote.status !== 'responded' && onMarkAsResponded && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 variant="ghost"
                 size="sm"
@@ -163,10 +93,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 Mark Responded;
               </Button>;
             )}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               variant="ghost"
               size="sm"
@@ -178,17 +105,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               ) : (;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
-<<<<<<< HEAD
-            </Button>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-
-=======
-=======
       return date_string;
     }
   }
@@ -246,18 +162,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               {quote.is_archived ? (
                 <RefreshCw className="h - 4 w - 4" />) : (
                 <ArchiveIcon className="h - 4 w - 4" />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </div>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>;
-  );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

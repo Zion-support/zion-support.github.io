@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,31 +21,19 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 "use client";
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-<<<<<<< HEAD
-=======
 "use client";
 ;
 import React, { useState, useEffect } from './react';
 import Link from './next / link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
-<<<<<<< HEAD
-  Menu,
-=======
-<<<<<<< HEAD
-=======
 
 'use client';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -63,7 +46,6 @@ import {
   Instagram, 
   ChevronDown, 
   Menu, 
->>>>>>> origin/automation-improvements-final
   X,
   ChevronDown,
   Code,
@@ -79,8 +61,6 @@ import {
   Factory,
   Truck,
   CreditCard,
-<<<<<<< HEAD
-=======
   Menu
   X
   ChevronDown
@@ -97,8 +77,6 @@ import {
   Factory
   Truck
   CreditCard
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import {;
   Menu,;
   X,;
@@ -116,7 +94,6 @@ import {;
   Factory,;
   Truck,;
   CreditCard,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "lucide-react";
 
 export default function Header() {;
@@ -127,14 +104,6 @@ export default function Header() {;
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
-<<<<<<< HEAD
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    }
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-=======
 } from './lucide-react';
 ;
 export default /**
@@ -156,126 +125,14 @@ function Header() {
     }
     window.addEventListener ("scroll", handle_scroll);
     return () => window.removeEventListener ("scroll", handle_scroll);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }, []);
 ;
   const services_dropdown = [;
     {
-<<<<<<< HEAD
-      title: "Web Development"
-      description: "Custom websites and web applications"
-      href: "/services/web-development"
-      icon: Code
-    }
-    {
-      title: "Mobile Development"
-      description: "iOS and Android applications"
-      href: "/services/mobile-development"
-      icon: Smartphone
-    }
-    {
-      title: "Cloud Solutions"
-      description: "Scalable cloud infrastructure"
-      href: "/services/cloud-solutions"
-      icon: Cloud
-    }
-    {
-      title: "Database Management"
-      description: "Database design and optimization"
-      href: "/services/database-management"
-      icon: Database
-    }
-    {
-      title: "Security Services"
-      description: "Cybersecurity and data protection"
-      href: "/services/security"
-      icon: Shield
-    }
-    {
-      title: "Performance Optimization"
-      description: "Speed and efficiency improvements"
-      href: "/services/performance"
-      icon: Zap
-    }
-  ];
-  const solutionsDropdown = [
-    {
-      title: "Enterprise Solutions"
-      description: "Comprehensive business technology solutions"
-      href: "/solutions/enterprise"
-      icon: Building
-    }
-    {
-      title: "E-commerce Platforms"
-      description: "Online store development and management"
-      href: "/solutions/ecommerce"
-      icon: ShoppingCart
-    }
-    {
-      title: "Healthcare Technology"
-      description: "Specialized healthcare IT solutions"
-      href: "/solutions/healthcare"
-      icon: Heart
-    }
-    {
-      title: "Educational Platforms"
-      description: "Learning management systems"
-      href: "/solutions/education"
-      icon: GraduationCap
-    }
-  ];
-  const industriesDropdown = [
-    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory }
-    { name: "Logistics", href: "/industries/logistics", icon: Truck }
-    { name: "Finance", href: "/industries/finance", icon: CreditCard }
-    { name: "Healthcare", href: "/industries/healthcare", icon: Heart }
-    { name: "Education", href: "/industries/education", icon: GraduationCap }
-    { name: "Retail", href: "/industries/retail", icon: ShoppingCart }
-  ];
-  const navigation = [
-    { name: "Home", href: "/" }
-    {
-      name: "Services"
-      href: "/services"
-      submenu: [
-        { name: "AI Services", href: "/ai-services", icon: Brain }
-        { name: "IT Services", href: "/it-services", icon: Network }
-        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud }
-      ]
-    }
-    { name: "About", href: "/about" }
-    { name: "Services", href: "/services" }
-    { name: "Solutions", href: "/solutions" }
-    { name: "Industries", href: "/industries" }
-    { name: "Contact", href: "/contact" }
-
-  ];
-  const handleServiceClick = (href: string) => {
-    closeMenu();
-    window.location.href = href;
-  }
-  return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-<<<<<<< HEAD
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              Zion Tech Group
-            </Link>
-=======
-            <Link href="/" className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
-                <Brain className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-            </Link>
-=======
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -299,44 +156,8 @@ function Header() {
                 <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
               </div>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
           </div>
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <nav className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
-=======
-<<<<<<< HEAD
-          <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-                >
-                  {item.name}
-                </Link>
-                {item.submenu && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-1">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                        >
-                          <subItem.icon className="h-4 w-4 mr-2" />
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-=======
           <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative group">
@@ -448,8 +269,6 @@ function Header() {
 
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
->>>>>>> origin/automation-improvements-final
-=======
 
   useEffect(() => {;
     const handleScroll = () => {;
@@ -571,7 +390,6 @@ function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">;
             {navigation && navigation.map((item) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 key={item && item.name}
                 href={item && item.href}
@@ -579,48 +397,19 @@ function Header() {
                 {item && item.name}
               </Link>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </nav>
-<<<<<<< HEAD
-=======
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
           </nav>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
               href="/contact"
-<<<<<<< HEAD
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
-            >
-              Get Started
-            </Link>
-          </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        </div>
-<<<<<<< HEAD
-=======
       </nav>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
               Get Started;
             </Link>;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -630,14 +419,9 @@ function Header() {
             ) : (;
               <Menu className="h-6 w-6" />;
             )}
-<<<<<<< HEAD
-          </button>
-        </div>
-=======
           </button>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -669,7 +453,6 @@ function Header() {
       </div>;
     </header>;
   );
-=======
       title: "Web Development",
       description: "Custom websites and web applications",
       href: "/services / web - development",
@@ -837,5 +620,4 @@ function Header() {
         </AnimatePresence>;
       </div>;
     </header>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

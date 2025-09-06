@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-export const cuttingEdgeAIServices2025 = [
-  {
-<<<<<<< HEAD
-    id: 'ai-consciousness-evolution-pro',
-    name: 'AI Consciousness Evolution Pro',
-=======
-<<<<<<< HEAD
-    id: 'ai-consciousness-evolution-pro'
-    name: 'AI Consciousness Evolution Pro'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     description:
       'Advanced AI consciousness development platform with emotional intelligence, self-awareness, and ethical decision-making capabilities for human-AI collaboration.'
       'Emotional intelligence development with 98% accuracy'
@@ -59,21 +47,6 @@ export const cuttingEdgeAIServices2025 = [
     }
     category: 'AI Consciousness'
     tags: [
-<<<<<<< HEAD
-      'AI'
-      'Consciousness'
-      'Emotional Intelligence'
-      'Self-Awareness'
-      'Human-AI Collaboration'
-    ]
-    website: 'https://ziontechgroup.com/ai-consciousness-evolution-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$52.8B'
-=======
-=======
 export const cuttingEdgeAIServices2025 = [;
   {
     id: 'ai - consciousness - evolution - pro',
@@ -127,25 +100,17 @@ export const cuttingEdgeAIServices2025 = [;
     },
     category: 'AI Consciousness',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'AI',
       'Consciousness',
       'Emotional Intelligence',
       'Self - Awareness',
       'Human - AI Collaboration',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-evolution-pro',
-=======
     website: 'https://ziontechgroup.com / ai - consciousness - evolution - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$52 && 52.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Research institutions, AI development companies, psychology departments, consciousness researchers'
     competitiveAdvantage:
@@ -225,21 +190,6 @@ export const cuttingEdgeAIServices2025 = [;
     }
     category: 'Quantum AI'
     tags: [
-<<<<<<< HEAD
-      'Quantum Computing'
-      'AI'
-      'Machine Learning'
-      'Pattern Recognition'
-      'Hybrid Computing'
-    ]
-    website: 'https://ziontechgroup.com/quantum-ai-fusion-platform'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$78.5B'
-=======
-=======
     market_size: '$52.8B',
     target_audience:;
       'Research institutions, AI development companies, psychology departments, consciousness researchers',
@@ -320,25 +270,17 @@ export const cuttingEdgeAIServices2025 = [;
     },
     category: 'Quantum AI',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'AI',
       'Machine Learning',
       'Pattern Recognition',
       'Hybrid Computing',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-fusion-platform',
-=======
     website: 'https://ziontechgroup.com / quantum - ai - fusion - platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$78 && 78.5B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Research institutions, technology companies, financial institutions, pharmaceutical companies'
     competitiveAdvantage:
@@ -412,21 +354,6 @@ export const cuttingEdgeAIServices2025 = [;
     }
     category: 'AI Autonomy'
     tags: [
-<<<<<<< HEAD
-      'AI'
-      'Autonomous Systems'
-      'Self-Management'
-      'Machine Learning'
-      'Automation'
-    ]
-    website: 'https://ziontechgroup.com/ai-autonomous-ecosystem'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$45.2B'
-=======
-=======
     market_size: '$78.5B',
     target_audience:;
       'Research institutions, technology companies, financial institutions, pharmaceutical companies',
@@ -501,25 +428,17 @@ export const cuttingEdgeAIServices2025 = [;
     },
     category: 'AI Autonomy',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'AI',
       'Autonomous Systems',
       'Self - Management',
       'Machine Learning',
       'Automation',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-ecosystem',
-=======
     website: 'https://ziontechgroup.com / ai - autonomous - ecosystem',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$45 && 45.2B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Enterprises, technology companies, research institutions, government agencies'
     competitiveAdvantage:
@@ -593,21 +512,6 @@ export const cuttingEdgeAIServices2025 = [;
     }
     category: 'AI Ethics'
     tags: [
-<<<<<<< HEAD
-      'AI Ethics'
-      'Governance'
-      'Bias Detection'
-      'Fairness'
-      'Compliance'
-    ]
-    website: 'https://ziontechgroup.com/ai-ethics-governance-platform'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$28.7B'
-=======
-=======
     market_size: '$45.2B',
     target_audience:;
       'Enterprises, technology companies, research institutions, government agencies',
@@ -682,25 +586,17 @@ export const cuttingEdgeAIServices2025 = [;
     },
     category: 'AI Ethics',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'AI Ethics',
       'Governance',
       'Bias Detection',
       'Fairness',
       'Compliance',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-ethics-governance-platform',
-=======
     website: 'https://ziontechgroup.com / ai - ethics - governance - platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$28 && 28.7B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Enterprises, government agencies, research institutions, AI development companies'
     competitiveAdvantage:
@@ -764,25 +660,6 @@ export const cuttingEdgeAIServices2025 = [;
         price: 1499
         period: 'month'
         features: [
-<<<<<<< HEAD
-          'Full creative studio'
-          'White-label solution'
-          'Dedicated support'
-          'Custom development'
-          '24/7 monitoring'
-        ]
-      }
-    }
-    category: 'AI Creativity'
-    tags: ['AI', 'Creativity', 'Content Generation', 'Design', 'Innovation']
-    website: 'https://ziontechgroup.com/ai-creativity-studio-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$35.4B'
-=======
-=======
     market_size: '$28.7B',
     target_audience:;
       'Enterprises, government agencies, research institutions, AI development companies',
@@ -847,7 +724,6 @@ export const cuttingEdgeAIServices2025 = [;
         price: 1499,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Full creative studio',
           'White - label solution',
           'Dedicated support',
@@ -858,18 +734,11 @@ export const cuttingEdgeAIServices2025 = [;
     },
     category: 'AI Creativity',
     tags: ['AI', 'Creativity', 'Content Generation', 'Design', 'Innovation'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-creativity-studio-pro',
-=======
     website: 'https://ziontechgroup.com / ai - creativity - studio - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$35 && 35.4B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Creative agencies, design firms, marketing companies, content creators'
     competitiveAdvantage:
@@ -897,14 +766,11 @@ export const cuttingEdgeAIServices2025 = [;
     ]
   }
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
-=======
     id: 'ai-consciousness-evolution-pro', name: 'AI Consciousness Evolution Pro',
     description: 'Advanced AI consciousness development platform with emotional intelligence, self-awareness, and ethical decision-making capabilities for human-AI collaboration.',
     features: [
       'Emotional intelligence development with 98% accuracySelf-awareness and consciousness evolution trackingEthical decision-making frameworks and bias detectionHuman-AI emotional synchronization and empathyCross-cultural emotional understanding and adaptationReal-time consciousness state analysis and monitoringIntegration with consciousness research platformsCustom consciousness model training and development';
       'Advanced empathy and understanding capabilitiesConsciousness level assessment and progression tracking'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     market_size: '$35.4B',
     target_audience:;
       'Creative agencies, design firms, marketing companies, content creators',
@@ -932,22 +798,10 @@ export const cuttingEdgeAIServices2025 = [;
       'Intellectual property protection',
     ],
   },
-<<<<<<< HEAD
-];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
-=======
 ];      'Creative content generation and design_marketing and advertising creative_product design and innovation_artistic expression and creation_creative problem - solving and ideation';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['Creative software_design tools_marketing platforms_content management systems_collaboration tools'];
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

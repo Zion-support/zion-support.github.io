@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Loader2, Sparkles } from 'lucide-react'
-
-import { useState } from 'react'
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
-import { useResume } from '@/hooks/useResume'
-import { BulkAddSkillsProps } from './types'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { Textarea } from '@/components/ui/textarea'
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
-  const [bulkSkills, setBulkSkills] = useState('')
-  const [error, setError] = useState<string | null>(null)
-  const { enhanceContent, isEnhancing } = useResumeEnhancer()
-  const { addSkill } = useResume()
-  const handleCategorizeSkills = async () => {
-    if (!bulkSkills |bulkSkills.trim().length === 0) {
-      setError('Please enter some skills to categorize')
-      return
-    }
-    setError(null)
-=======
 ;
 } import { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -50,7 +22,6 @@ if (.length === 0) {) {
       return;
     }
     set_error (null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       const enhanced_content = await enhance_content (
         bulk_skills;
@@ -60,25 +31,6 @@ if ( {) {
   $2
 }
         try {
-<<<<<<< HEAD
-          // Parse the JSON response
-          const categorizedSkills = JSON.parse(enhancedContent)
-          // Add the categorized skills
-          for (const [category, skillsList] of Object.entries(categorizedSkills)) {
-            if (Array.isArray(skillsList)) {
-              for (const skillName of skillsList as string[]) {
-                await addSkill(resumeId, {
-                  name: skillName
-                  category: category
-                  proficiency: 3})
-              }
-            }
-          }
-          // Reset the form and bulk input
-          setBulkSkills('')
-          // Refresh the skills
-          await onSuccess()
-=======
           // Parse the JSON response;
           const categorized_skills = JSON.parse (enhanced_content);
           // Add the categorized skills;
@@ -98,16 +50,11 @@ if ( {) {
           setBulkSkills ('');
           // Refresh the skills;
           await on_success ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } catch (err) {
           set_error ('Failed to parse categorized skills. Please try again.');
         }
       }
     } catch (err: any) {
-<<<<<<< HEAD
-      setError(err.message |'Failed to categorize skills')
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 
 };import { useState } from 'react';
@@ -167,47 +114,18 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
-<<<<<<< HEAD
-    <div className="bg-muted/40 p-6 rounded-lg">
-      <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
-      <div className="space-y-4">
-        <div className="space-y-2">
-          <label className="text-sm font-medium" htmlFor="input-Enter multiple skills (comma separated)">Enter multiple skills (comma separated)</label>
-=======
     <div className="bg-muted/40 p-6 rounded-lg">;
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>;
       <div className="space-y-4">;
         <div className="space-y-2">;
           <label className="text-sm font-medium" htmlFor="input-Enter multiple skills (comma separated)">Enter multiple skills (comma separated)</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Textarea
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value = {bulkSkills,}
-<<<<<<< HEAD
-            onChange = {(e,) => setBulkSkills(e.target.value),}
-          />
-        </div>
-        <Button
-          onClick = {handleCategorizeSkills,}
-          disabled = {isEnhancing |!bulkSkills.trim(),}
-          className="gap-2"
-        >
-          {isEnhancing ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
-          ) : (
-            <Sparkles className="h-4 w-4" />
-          )}
-          Categorize with AI
-        </Button>
-        <p className="text-xs text-muted-foreground mt-1">
-          AI will identify skills and categorize them automatically. This may take a moment to process.
-        </p>
-=======
       set_error (err.message || 'Failed to categorize skills');
     }
   }
@@ -237,49 +155,10 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
         <p className="text - xs text - muted - foreground mt - 1">;
           AI will identify skills and categorize them automatically. This may take a moment to process.;
         </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>;
     </div>);
 }
-<<<<<<< HEAD
 '"
 
-=======
-            onChange = {(e,) => setBulkSkills(e && e.target.value),}
-          />;
-        </div>;
-
-        <Button
-          onClick = {handleCategorizeSkills,}
-          disabled = {isEnhancing || !bulkSkills && bulkSkills.trim(),}
-          className="gap-2">;
-          {isEnhancing ? (;
-            <Loader2 className="h-4 w-4 animate-spin" />;
-          ) : (;
-            <Sparkles className="h-4 w-4" />;
-          )}
-          Categorize with AI;
-        </Button>;
-
-        <p className="text-xs text-muted-foreground mt-1">;
-          AI will identify skills and categorize them automatically. This may take a moment to process.;
-        </p>;
-
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>;
-  );
-};
-<<<<<<< HEAD
-'"
-=======
-'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 '";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

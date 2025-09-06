@@ -1,41 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import React from 'react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';
-<<<<<<< HEAD
-=======
-export default function Training() {
-  return (
-    <Layout
-      title="Training & Education - Zion Tech Group"
-      description="Professional training and education services for technology professionals."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Training & Education</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional training and education services for technology professionals.
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">Training page is under construction.</p>
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
-=======
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -289,11 +253,8 @@ export default function TrainingPage() {
   const toggleProgram = (id: number) => {
     setExpandedProgram(expandedProgram === id ? null : id)
   };
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
-<<<<<<< HEAD
-=======
     <Layout>
       <SEO 
         title="Training & Certification - Zion Tech Group"
@@ -749,12 +710,8 @@ export default function TrainingPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
       </div>
     </Layout>
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -783,7 +740,6 @@ import Layout from '../components/Layout';
 
 export default function Training() {;
   return (
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <Layout
       title="Training & Education - Zion Tech Group"
       description="Professional training and education services for technology professionals.">;
@@ -801,97 +757,19 @@ export default function Training() {;
         </div>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
   );
 }
-};
-  );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-<<<<<<< HEAD
-=======
-}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   )
 }
 export default Training;
 };export default Training;
-<<<<<<< HEAD
-=======
-=======
-
-  {
-  opacity: 0, y: 20 
-
-}animate= {
-  {
-  opacity: 1, y: 0 
-
-}transition= {
-  {
-  duration: 0.8 
-
-}> <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6" > Training & Certification </h1> </p> <div className="flex flex-wrap justify-center gap-4 text-gray-400" > <div className="flex items-center gap-2" > <GraduationCap className="w-5 h-5" /> <span>Expert-Led Training</span> </div> <div className="flex items-center gap-2" > <Award className="w-5 h-5" /> <span>Industry Certifications</span> </div> <div className="flex items-center gap-2" > <Users className="w-5 h-5" /> <span>Global Community</span> </div> </div> </motion.div> </div> </section> key= {
-  category.id 
-}onClick= {
-  () => setSelectedCategory (category.id) 
-}className= {
-  `px-6 py-3 rounded-xl font-medium transition-all duration-300 $ {
-  selectedCategory === category.id ? 'bg-cyan-500 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600' 
-}` 
-}> {
-  category.name 
-}({
-  category.count 
-}) </button>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > Featured Programs </h2> <p className="text-xl text-gray-400" > Our most popular and comprehensive training programs </p> </motion.div> </div>) ) 
-}</div> <a href="#" className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Enroll Now <ArrowRight className="w-4 h-4" /> </Link> </div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > All Training Programs </h2> <p className="text-xl text-gray-400" > Comprehensive collection of training programs across all technology domains </p> </motion.div> </div> </div> </div>) : (<ChevronDown className="w-5 h-5" />) 
-}</button> </div> </div> {
-  expandedProgram === program.id && (<motion.div > <div className="grid md:grid-cols-2 gap-6" > <div> <h4 className="text-white font-semibold mb-3" >What You'll Learn</h4> <ul className="space-y-2 text-sm text-gray-300" > <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Core concepts and principles</span> </li> <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Hands-on practical exercises</span> </li> <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Real-world project implementation</span> </li> <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Industry best practices</span> </li> </ul> </div> <div> <h4 className="text-white font-semibold mb-3" >Program Details</h4> <div className="space-y-2 text-sm text-gray-300" > <div className="flex justify-between" > <span>Duration:</span> </div> <div className="flex justify-between" > <span>Level:</span> </div> <div className="flex justify-between" > <span>Format:</span> <span className="text-white" >Online + Live Sessions</span> </div> <div className="flex justify-between" > <span>Support:</span> <span className="text-white" >24/7 Community + Mentors</span> </div> </div> </div> </div> <div className="mt-6 flex gap-3" > <a href="#" className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300" > Enroll Now <ArrowRight className="w-4 h-4" /> </Link> <a href="#" className="inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Learn More </Link> </div> </motion.div>) 
-}</div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > Learning Paths </h2> <p className="text-xl text-gray-400" > Structured learning journeys to master complete technology domains </p> </motion.div> </div> </div> </div> </div>) ) 
-}</div> <a > Start Learning Path <ArrowRight className="w-4 h-4" /> </Link> </motion.div>) ) 
-}</div> </div> </section> <motion.div initial= {
-  {
-  opacity: 0, y: 20 
-
-}whileInView= {
-  {
-  opacity: 1, y: 0 
-
-}transition= {
-  {
-  duration: 0.8 
-
-}viewport= {
-  {
-  once: true 
-
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
-};
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   )
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default Training;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import Layout from '../components / Layout';
 ;
 export default /**
@@ -925,4 +803,3 @@ function Training() {
 export default Training;
 }export default Training;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

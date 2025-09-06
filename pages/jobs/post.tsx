@@ -1,23 +1,4 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
-import Head from 'next/head';
-import { useState } from 'react';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <Head>
-        <title>Post a Job - Zion</title>
-      </Head>
-      <h1 className='text-2xl font-semibold'>Post a Job</h1>
-      <div className='grid md:grid-cols-2 gap-6'>
-        <form className='space-y-4'>
-          <div>
-            <label className='block text-sm font-medium mb-1'>Title</label>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <Head>;
         <title>Post a Job - Zion</title>;
       </Head>;
@@ -28,7 +9,6 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
         <form className='space-y-4'>;
           <div>;
             <label className='block text-sm font-medium mb-1'>Title</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               value={title}
               onChange={e => setTitle(e && e.target.value)}
@@ -67,36 +47,6 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
               onClick={() => setPreview(p => !p)}
             >;
               {preview ? 'Edit' : 'Preview'}
-<<<<<<< HEAD
-            </EnhancedButton>
-            <EnhancedButton type='submit'>Post Job</EnhancedButton>
-          </div>
-        </form>
-        <aside className='border rounded-md p-4'>
-          <h2 className='font-semibold mb-2'>Preview</h2>
-          {preview ? (
-            <div className='space-y-2'>
-              <div>
-                <div className='text-sm opacity-70'>Title</div>
-                <div className='font-medium'>{title |'Untitled job'}</div>
-              </div>
-              <div>
-                <div className='text-sm opacity-70'>Budget</div>
-                <div className='font-medium'>
-                  {budget ? `$${budget}` : 'Not specified'}
-                </div>
-              </div>
-              <div>
-                <div className='text-sm opacity-70'>Description</div>
-                <p className='whitespace-pre-wrap'>
-                  {description |'No description provided.'}
-                </p>
-              </div>
-            </div>
-          ) : (
-            <p className='text-sm opacity-80'>
-              Click Preview to see how your job will appear to talent.
-=======
             </EnhancedButton>;
             <EnhancedButton type='submit'>Post Job</EnhancedButton>;
           </div>;
@@ -126,18 +76,11 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
           ) : (;
             <p className='text-sm opacity-80'>;
               Click Preview to see how your job will appear to talent.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             </p>          )}
         </aside>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-}
-export default PostJob;
-
-=======
 const PostJob: NextPage = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -198,12 +141,9 @@ const PostJob: NextPage = () => {
       </div>
     </div>
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default PostJob;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 import {useState} from 'react';
 import EnhancedButton from '../../components / ui / EnhancedButton';
@@ -288,4 +228,3 @@ import EnhancedButton from '../../components / ui / EnhancedButton';
 ;
 export default PostJob;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

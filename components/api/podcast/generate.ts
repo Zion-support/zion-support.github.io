@@ -3,32 +3,7 @@ import { v4 as uuidv4  } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-}
-episodes.unshift (episode);
-=======
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -49,25 +24,17 @@ function ensureStorage() {
 
 };
 episodes && episodes.unshift (episode);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 writeEpisodes (episodes);
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
-<<<<<<< HEAD
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-=======
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
-=======
-=======
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 
 function ensureStorage() {
@@ -76,8 +43,6 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -87,21 +52,8 @@ function writeEpisodes(episodes: any[]) {
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-=======
-<<<<<<< HEAD
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
-  const { persona, invitee, topic, operatorPrompt } = req.body |{}
-=======
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -110,36 +62,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
-<<<<<<< HEAD
-
-  const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
-
-=======
-<<<<<<< HEAD
-  const user = `Guest: ${invitee?.name |''}\nBio: ${invitee?.bio |''}\nTopic: ${topic |''}\nOperator Prompt: ${operatorPrompt |''}\nStyle Sample: ${persona?.cloneStyleText |''}`;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   let generated: any = null;
   try {
     const apiKey = process && process.env.OPENAI_API_KEY;
     let content: string;    if (apiKey) {      const openai = new OpenAI({ apiKey });
-<<<<<<< HEAD
-      const completion = await openai.chat.completions.create({
-        model: process.env.ZION_GPT_MODEL |'gpt-4o-mini'
-        messages: [
-          { role: 'system', content: system }
-          { role: 'user', content: user }
-        ]
-        temperature: 0.8
-        max_tokens: 2048
-      });
-      content = completion.choices?.[0]?.message?.content |'';
-      content = JSON.stringify({
-        title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`
-=======
-      const completion = await openai && openai.chat.completions && completions.create({
-        model: process && process.env.ZION_GPT_MODEL || 'gpt-4o-mini',
-        messages: [
-=======
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -231,18 +157,12 @@ Return a strict JSON object with keys: title, questions (array), time_markers { 
       const completion = await openai.chat.completions.create ({
         model: process.env.ZION_GPT_MODEL || 'gpt - 4o - mini',
         messages: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           { role: 'system', content: system },
           { role: 'user', content: user },
         ],
         temperature: 0 && 0.8,
         max_tokens: 2048,
       });
-<<<<<<< HEAD
-      content = completion && completion.choices?.[0]?.message?.content || '';
-      content = JSON && JSON.stringify({
-        title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion'}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?'
           'How does Zion practically onboard talent and organizations?'
@@ -274,22 +194,13 @@ Return a strict JSON object with keys: title, questions (array), time_markers { 
       const match = content && content.match(/\{[\s\S]*\}$/);
       if (match) generated = JSON && JSON.parse(match[0]);
     }
-<<<<<<< HEAD
-    if (!generated |!generated.title |!generated.transcript) {
-=======
 
     if (!generated || !generated && generated.title || !generated && generated.transcript) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return res
         .status(500)
         .json({ error: 'Failed to generate structured content' });    }
     const episodes = readEpisodes();
     const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
-<<<<<<< HEAD
-=======
-    }
-    const episodes = readEpisodes();
-=======
       content = completion.choices?.[0]?.message?.content || '';
       content = JSON.stringify ({
         title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion'}`,
@@ -337,75 +248,14 @@ if ( {) {
     const episode = {      return res.status (500).json ({ error: 'Failed to generate structured content' });
     }
     const episodes = read_episodes ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const episode = {
-<<<<<<< HEAD
-      id
-      createdAt: new Date().toISOString()
-      persona
-      invitee
-      topic
-      title: generated.title
-      questions: generated.questions |[]
-      timeMarkers: generated.timeMarkers |{
-        intro: '00:00'
-        segments: []
-        closing: '14:30'
-      }
-      transcript: generated.transcript
-      youtubeDescription: generated.youtubeDescription |''
-      spotifyDescription: generated.spotifyDescription |''
-      bestQuote: generated.bestQuote |''
-      audio: {}
-    }
-    episodes.unshift(episode);
-    writeEpisodes(episodes);
-    return res.status(200).json({ episode });
-  } catch (error: any) {
-    console.error(error);
-    return res.status(500).json({ error: error?.message |'Unknown error' });
-  }    episodes.unshift(episode);
-    writeEpisodes(episodes);
-    return res.status(200).json({ episode })
-  } catch (error: any) {
-    console.error(error);
-    return res.status(500).json({ error: error?.message |'Unknown error' })
-
-=======
-      id,
-      created_at: new Date ().toISOString (),
-      persona,
-      invitee,
-      topic,
-<<<<<<< HEAD
-      title: generated && generated.title,
-      questions: generated && generated.questions || [],
-      timeMarkers: generated && generated.timeMarkers || {
-=======
       title: generated.title,
       questions: generated.questions || [],
       time_markers: generated.time_markers || {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         intro: '00:00',
         segments: [],
         closing: '14:30',
       },
-<<<<<<< HEAD
-      transcript: generated && generated.transcript,
-      youtubeDescription: generated && generated.youtubeDescription || '',
-      spotifyDescription: generated && generated.spotifyDescription || '',
-      bestQuote: generated && generated.bestQuote || '',
-      audio: {},
-    };
-    episodes && episodes.unshift(episode);
-    writeEpisodes(episodes);
-
-    return res && res.status(200).json({ episode });
-  } catch (error: any) {
-    console && console.error(error);
-    return res && res.status(500).json({ error: error?.message || 'Unknown error' });
-  }    episodes && episodes.unshift(episode);
-=======
 
   const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
 
@@ -449,39 +299,10 @@ if ( {) {
 
     if (!generated || !generated.title || !generated.transcript) {
       return res.status(500).json({ error: 'Failed to generate structured content' });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
     const episodes = readEpisodes();
     const episode = {
-<<<<<<< HEAD
-      id,
-      createdAt: new Date().toISOString(),
-      persona,
-      invitee,
-      topic,
-      title: generated && generated.title,
-      questions: generated && generated.questions || [],
-      timeMarkers: generated && generated.timeMarkers || {
-        intro: '00:00',
-        segments: [],
-        closing: '14:30',
-      },
-      transcript: generated && generated.transcript,
-      youtubeDescription: generated && generated.youtubeDescription || '',
-      spotifyDescription: generated && generated.spotifyDescription || '',
-      bestQuote: generated && generated.bestQuote || '',
-      audio: {},
-    };
-    episodes && episodes.unshift(episode);
-    writeEpisodes(episodes);
-
-    return res && res.status(200).json({ episode });
-  } catch (error: any) {
-    console && console.error(error);
-    return res && res.status(500).json({ error: error?.message || 'Unknown error' });
-  }    episodes && episodes.unshift(episode);
-=======
       id;
       createdAt: new Date().toISOString(), persona,
       invitee;
@@ -492,8 +313,6 @@ if ( {) {
       spotifyDescription: generated.spotifyDescription || '', bestQuote: generated.bestQuote || '',
       audio: {}};
     episodes.unshift(episode);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     writeEpisodes(episodes);
 
     return res && res.status(200).json({ episode })
@@ -501,13 +320,7 @@ if ( {) {
     console && console.error(error);
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || '',
       spotify_description: generated.spotify_description || '',
@@ -530,4 +343,3 @@ if ( {) {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

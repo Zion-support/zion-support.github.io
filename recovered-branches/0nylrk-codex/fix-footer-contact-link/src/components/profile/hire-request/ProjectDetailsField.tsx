@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-
-import React from "react";
-<<<<<<< HEAD
-import { UseFormReturn } from "react-hook-form";
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-
-import { Textarea } from "@/components/ui/textarea";
-import { FormValues } from "./useHireRequestForm";
-=======
 import React from './react';
 import { UseFormReturn  } from './react - hook - form';
 import {
@@ -25,13 +9,9 @@ import {
 } from '@/components / ui / form';
 import { Textarea  } from '@/components / ui / textarea';
 import { FormValues  } from './useHireRequestForm';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ProjectDetailsFieldProps {
   form: UseFormReturn < FormValues>;
 }
-<<<<<<< HEAD
-export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
-=======
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Textarea} from "@/components/ui/textarea";
@@ -41,13 +21,10 @@ interface ProjectDetailsFieldProps {;
 }
 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <FormField
       control={form && form.control}
       name="projectOverview"
-<<<<<<< HEAD
-=======
 export /**
  * ProjectDetailsField - Function description
  */
@@ -56,7 +33,6 @@ function ProjectDetailsField() {
     <FormField;
       control={form.control}
       name="project_overview";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       render={({ field }) => (
         <FormItem>;
           <FormLabel className="text - white">Project Overview</FormLabel>;
@@ -65,16 +41,6 @@ function ProjectDetailsField() {
               placeholder="Describe your project, goals, and requirements";
               className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
               {...field}
-<<<<<<< HEAD
-            />
-          </FormControl>
-          <FormMessage className="text-red-400" />
-        </FormItem>
-      )}
-    />
-  );
-}
-=======
       render={({ field }) => (;
         <FormItem>;
           <FormLabel className="text-white">Project Overview</FormLabel>;
@@ -91,12 +57,9 @@ function ProjectDetailsField() {
     />;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             />;
           </FormControl>;
           <FormMessage className="text - red - 400" />;
         </FormItem>)}
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

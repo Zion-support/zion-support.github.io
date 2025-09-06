@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-
-import React, { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-<<<<<<< HEAD
-import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-=======
 import {;
   Table,;
   TableBody,;
@@ -32,28 +12,10 @@ import {;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
-<<<<<<< HEAD
-import {
-  Edit
-  MoreHorizontal
-  ExternalLink
-  Power
-  PowerOff
-  Users
-  RefreshCcw
-} from "@/components/icons";
-import { format } from "date-fns";
-
-export function TenantsList() {
-  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-=======
 import {;
   Edit,;
   MoreHorizontal,;
@@ -69,7 +31,6 @@ export function TenantsList() {;
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     loadTenants();
   }, []);
 
@@ -82,79 +43,16 @@ export function TenantsList() {;
         .order("created_at", { ascending: false });
       if (error) throw error;
       setTenants(data as WhitelabelTenant[]);
-<<<<<<< HEAD
-    } catch (error: any) {
-      console.error("Error loading tenants:", error);
-      toast({
-        variant: "destructive"
-        title: "Failed to load tenants"
-        description: error.message
-=======
     } catch (error: any) {;
       console && console.error("Error loading tenants:", error);
       toast({;
         variant: "destructive",;
         title: "Failed to load tenants",;
         description: error && error.message,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
-  }
-  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
-    try {
-      const { error } = await supabase
-        .from("whitelabel_tenants")
-        .update({ is_active: !tenant.is_active })
-        .eq("id", tenant.id);
-      if (error) throw error;
-      // Update local state
-      setTenants(
-        tenants.map((t) =>
-          t.id === tenant.id ? { ...t, is_active: !t.is_active } : t
-        )
-      );
-      toast({
-        title: `Tenant ${tenant.is_active ? "deactivated" : "activated"}`
-        description: `${tenant.brand_name} has been ${tenant.is_active ? "deactivated" : "activated"} successfully.`
-      });
-    } catch (error: any) {
-      console.error("Error toggling tenant status:", error);
-      toast({
-        variant: "destructive"
-        title: "Failed to update tenant"
-        description: error.message
-      });
-    }
-  }
-  const verifyDns = async (tenant: WhitelabelTenant) => {
-    try {
-      // In a real implementation, this would verify DNS records
-      // For now, we'll just mark it as verified
-      const { error } = await supabase
-        .from("whitelabel_tenants")
-        .update({ dns_verified: true })
-        .eq("id", tenant.id);
-      if (error) throw error;
-      // Update local state
-      setTenants(
-        tenants.map((t) =>
-          t.id === tenant.id ? { ...t, dns_verified: true } : t
-        )
-      );
-      toast({
-        title: "DNS verified"
-        description: `Custom domain for ${tenant.brand_name} has been verified.`
-      });
-    } catch (error: any) {
-      console.error("Error verifying DNS:", error);
-      toast({
-        variant: "destructive"
-        title: "Failed to verify DNS"
-        description: error.message
-=======
   };
 
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {;
@@ -215,42 +113,11 @@ export function TenantsList() {;
         variant: "destructive",;
         title: "Failed to verify DNS",;
         description: error && error.message,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
   }
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-4">
-      <div className="flex justify-between items-center">
-        <h2 className="text-xl font-semibold">White-Label Tenants</h2>
-        <Button onClick={loadTenants} variant="outline" size="sm">
-          <RefreshCcw className="mr-2 h-4 w-4" />
-          Refresh
-        </Button>
-      </div>
-      {isLoading ? (
-        <div className="flex justify-center p-8">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>
-        </div>
-      ) : (
-        <div className="rounded-md border">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Brand</TableHead>
-                <TableHead>Subdomain</TableHead>
-                <TableHead>Custom Domain</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead>Created At</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {tenants.length === 0 ? (
-                <TableRow>
-=======
     <div className="space-y-4">;
       <div className="flex justify-between items-center">;
         <h2 className="text-xl font-semibold">White-Label Tenants</h2>;
@@ -280,7 +147,6 @@ export function TenantsList() {;
             <TableBody>;
               {tenants && tenants.length === 0 ? (;
                 <TableRow>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <TableCell
                     colSpan={6}
                     className="text-center py-8 text-muted-foreground">;
@@ -355,7 +221,6 @@ export function TenantsList() {;
                           <Button variant="ghost" size="sm">;
                             <MoreHorizontal className="h-4 w-4" />;
                             <span className="sr-only">Actions</span>;
-=======
 import React, { useState, useEffect } from './react';
 import { supabase  } from '@/integrations / supabase / client';
 import {
@@ -591,34 +456,10 @@ if (throw error) {
                           <Button variant="ghost" size="sm">;
                             <MoreHorizontal className="h - 4 w - 4" />;
                             <span className="sr - only">Actions</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           </Button>;
                         </DropdownMenuTrigger>;
                         <DropdownMenuContent align="end">;
                           <DropdownMenuItem>;
-<<<<<<< HEAD
-                            <Edit className="mr-2 h-4 w-4" />;
-                            Edit Tenant;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem>;
-                            <Users className="mr-2 h-4 w-4" />;
-                            Manage Admins;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem
-                            onClick={() => toggleTenantStatus(tenant)}
-                          >;
-                            {tenant && tenant.is_active ? (;
-                              <>;
-                                <PowerOff className="mr-2 h-4 w-4" />;
-                                Disable Tenant;
-                              </>;
-                            ) : (;
-                              <>;
-                                <Power className="mr-2 h-4 w-4" />;
-                                Enable Tenant;
-                              </>;
-                            )}
-=======
                             <Edit className="mr - 2 h - 4 w - 4" />;
                             Edit Tenant;
                           </DropdownMenuItem>;
@@ -638,26 +479,13 @@ if (throw error) {
                                 <Power className="mr - 2 h - 4 w - 4" />;
                                 Enable Tenant;
                               </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
                     </TableCell>;
-<<<<<<< HEAD
-                  </TableRow>;
-                ));
-              )}
-            </TableBody>;
-          </Table>;
-        </div>;
-      )}
-    </div>;
-  );
-=======
                   </TableRow>)))}
             </TableBody>;
           </Table>;
         </div>)}
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

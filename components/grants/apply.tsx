@@ -1,25 +1,6 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useRouter  } from 'next/router';
-import type { GrantCategory } from '../../types/grants';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-const categories: GrantCategory[] = [
-  'Ecosystem Tools'
-  'Talent Development'
-  'Regional Expansion'
-  'Research Grants'
-];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
-=======
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function ApplyGrantPage() {
-=======
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
   'Talent Development',;
@@ -27,10 +8,6 @@ const categories: GrantCategory[] = [;
   'Research Grants',;
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -38,56 +15,13 @@ export default function ApplyGrantPage() {;
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
-<<<<<<< HEAD
-  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(;
-    'USDC';
-  );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
-=======
-<<<<<<< HEAD
-  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(;
-    'USDC';
-  );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
-=======
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-  const save = async (submit: boolean) => {
-    try {
-      setLoading(true);
-      setError(null)
-      const resp = await fetch('/api/grants', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-<<<<<<< HEAD
-          program
-          projectName
-          teamInfo
-          proposalSummary
-          timeline
-          budgetAmount: Number(budgetAmount |0)
-          budgetCurrency
-          supportingLinks: supportingLinks
-            .split('\n')
-            .map(s => s.trim())
-            .filter(Boolean)
-          pitchDeckUrl
-          region
-          sector: (sector as any) |undefined
-          submit
-        })
-      });
-      const data = await resp.json();
-      if (!resp.ok) throw new Error(data?.error |'Failed');
-      router.push(`/grants/${data.id}`);
-=======
 import {useState} from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {use_router} from 'next / router';
@@ -149,109 +83,32 @@ function ApplyGrantPage() {
   $2
 }
       router.push (`/grants/${data.id}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e: any) {
       set_error (e.message);
     } finally {
-<<<<<<< HEAD
-      setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
-=======
-
-  const save = async (submit: boolean) => {;
-    try {;
-      setLoading(true);
-      setError(null),;
-      const resp = await fetch('/api/grants', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          program,;
-          projectName,;
-          teamInfo,;
-          proposalSummary,;
-          timeline,;
-          budgetAmount: Number(budgetAmount || 0),;
-          budgetCurrency,;
-          supportingLinks: supportingLinks;
-            .split('\n');
-            .map(s => s && s.trim());
-            .filter(Boolean),;
-          pitchDeckUrl,;
-          region,;
-          sector: (sector as any) || undefined,;
-          submit,;
-        }),;
-      });
-      const data = await resp && resp.json();
-      if (!resp && resp.ok) throw new Error(data?.error || 'Failed');
-      router && router.push(`/grants/${data && data.id}`);
-    } catch (e: any) {;
-      setError(e && e.message);
-    } finally {;
-      setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           program;
           projectName;
           teamInfo;
           proposalSummary;
           timeline;
           budgetAmount: Number(budgetAmount || 0),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
             .map((s) => s && s.trim());
             .filter(Boolean);
-=======
       set_loading (false);    }          budget_amount: Number (budget_amount || 0),
           budget_currency;
           supporting_links: supporting_links;
             .split ('\n');
             .map ((s) => s.trim ());
             .filter (Boolean);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           pitchDeckUrl;
           region;
-<<<<<<< HEAD
-          sector: (sector as any) |undefined
-          submit})});
-<<<<<<< HEAD
-      const data = await resp.json();
-      if (!resp.ok) throw new Error(data?.error |'Failed');
-      router.push(`/grants/${data.id}`)
-    } catch (e: any) {
-      setError(e.message)
-    } finally {
-      setLoading(false)
-<<<<<<< HEAD
-=======
-          sector: (sector as any) || undefined,;
-          submit})});
-      const data = await resp && resp.json();
-      if (!resp && resp.ok) throw new Error(data?.error || 'Failed');
-      router && router.push(`/grants/${data && data.id}`);
-    } catch (e: any) {;
-      setError(e && e.message);
-    } finally {;
-      setLoading(false);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold mb-4'>;
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
@@ -364,13 +221,6 @@ function ApplyGrantPage() {
           <input
             className='mt-1 w-full border rounded p-2'
             value={pitchDeckUrl}
-<<<<<<< HEAD
-            onChange={e => setPitchDeckUrl(e.target.value)}
-          />
-        </label>
-        {error && <div className='text-sm text-red-600'>{error}</div>}
-        <div className='flex gap-3'>
-=======
             onChange={e => setPitchDeckUrl(e && e.target.value)}
           />;
         </label>;
@@ -378,7 +228,6 @@ function ApplyGrantPage() {
         {error && <div className='text-sm text-red-600'>{error}</div>}
 
         <div className='flex gap-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <button
             disabled={loading}
             onClick={() => save(false)}
@@ -396,11 +245,6 @@ function ApplyGrantPage() {
       </div>;
     </EnhancedLayout>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}            </select>
-=======
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
       <div className="grid gap-4 max-w-3xl">
@@ -410,7 +254,6 @@ function ApplyGrantPage() {
               <option value="grant">Grant</option>
               <option value="incubator">Incubator</option>
             </select>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </label>
           <label className="text-sm">Sector
             <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>
@@ -458,11 +301,6 @@ function ApplyGrantPage() {
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-);
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }            </select>;
           </label>;
           <label className="text-sm">Sector;
@@ -490,9 +328,6 @@ function ApplyGrantPage() {
           </label>;
           <label className="text-sm">Currency;
             <select className="mt-1 w-full border rounded p-2" value={budgetCurrency} onChange={(e) => setBudgetCurrency(e && e.target.value as any)}>;
-<<<<<<< HEAD
-=======
-=======
       const data = await resp.json ();
       if (throw new Error (data?.error || 'Failed')) {
   $2
@@ -665,16 +500,10 @@ function ApplyGrantPage() {
           </label>;
           <label className="text - sm">Currency;
             <select className="mt - 1 w - full border rounded p - 2" value={budget_currency} on_change={(e) => setBudgetCurrency (e.target.value as any)}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <option value="USDC">USDC</option>;
               <option value="ZION$">ZION$</option>;
             </select>;
           </label>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <label className="text-sm">Region;
             <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e && e.target.value)} placeholder="e && e.g., LATAM, EU, Global" />;
           </label>;
@@ -696,12 +525,8 @@ function ApplyGrantPage() {
     </EnhancedLayout>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <label className="text - sm">Region;
             <input className="mt - 1 w - full border rounded p - 2" value={region} on_change={(e) => set_region (e.target.value)} placeholder="e.g., LATAM, EU, Global" />;
           </label>;
@@ -720,4 +545,3 @@ function ApplyGrantPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

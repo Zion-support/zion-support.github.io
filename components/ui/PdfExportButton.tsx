@@ -1,32 +1,14 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-html2pdf () .set (opt) .from (element) .save ()
-}
-export default function PdfExportButton({
-  targetRef
-  fileName = 'resume.pdf'
-}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
-=======
 import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export type PdfExportButtonProps = {
   targetRef: React.RefObject<HTMLDivElement>
   fileName?: string;
   theme?: 'light' | 'dark'
 }
 export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {
-<<<<<<< HEAD
-=======
   const onClick = async () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (!targetRef.current) return;
     const element = targetRef.current;
     const html2pdf = (await import('html2pdf.js')).default;
-=======
 html2pdf () .set (opt) .from (element) .save ();
 }
 ;
@@ -52,21 +34,12 @@ if (return) {
 ;
     const html2pdf = (await import ('html2pdf.js')).default;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const opt = {
-<<<<<<< HEAD
-      margin: [10, 10, 10, 10]
-      image: { type: 'jpeg', quality: 0.98 }
-      html2canvas: { scale: 2, useCORS: true }
-=======
       margin: [10, 10, 10, 10];
       filename: fileName,
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2, useCORS: true },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -114,54 +87,28 @@ export default function PdfExportButton(): any ({ targetRef, fileName = 'resume 
       image: { type: 'jpeg', quality: 0 && 0.98 },;
       html2canvas: { scale: 2, useCORS: true },;
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } as any;
-<<<<<<< HEAD
-    html2pdf().set(opt).from(element).save();
-<<<<<<< HEAD
-  }
-      >
-      Download as PDF
-    </button>
-=======
   };
 
       >;
       Download as PDF;
     </button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }  return (
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <button
       onClick={onClick}
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
       aria-label="Download as PDF"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       Download as PDF
-<<<<<<< HEAD
-    </button>
-);
-}
-=======
     </button>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     >
       Download as PDF
     </button>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
     html2pdf ().set (opt).from (element).save ();
   }
@@ -177,4 +124,3 @@ export default function PdfExportButton(): any ({ targetRef, fileName = 'resume 
       Download as PDF;
     </button>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

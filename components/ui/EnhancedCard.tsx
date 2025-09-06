@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-export default function EnhancedCard({
-  children
-  className = ""
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -47,7 +30,6 @@ export default function EnhancedCard(): any ({;
   children: React && React.ReactNode;
   className?: string;
 }) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
@@ -55,7 +37,6 @@ export default function EnhancedCard(): any ({;
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
 }
-=======
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
   return (
@@ -64,8 +45,6 @@ export default function EnhancedCard({ children, className = '' }: { children: R
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from './react';
 ;
 export default /**
@@ -77,4 +56,3 @@ function EnhancedCard() {
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

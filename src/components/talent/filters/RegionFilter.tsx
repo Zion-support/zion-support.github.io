@@ -1,32 +1,4 @@
-<<<<<<< HEAD
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from '@/components/ui/checkbox';
-import { RegionFilterProps } from '@/types/filters';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ChevronDown, ChevronUp } from 'lucide-react'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-import { Checkbox } from '@/components/ui/checkbox'
-import { RegionFilterProps } from '@/types/filters'
-const REGION_OPTIONS = [
-  { id: 'North America', label: 'North America' }
-  { id: 'Europe', label: 'Europe' }
-  { id: 'Asia', label: 'Asia' }
-  { id: 'South America', label: 'South America' }
-  { id: 'Australia', label: 'Australia' }
-  { id: 'Africa', label: 'Africa' }
-]
-export function RegionFilter({
-  selectedRegions
-  toggleRegion
-  expanded
-  toggleSection
-  isMobileFilterOpen
-}: RegionFilterProps) {
-=======
 const REGION_OPTIONS = [;
   { id: 'North America', label: 'North America' },;
   { id: 'Europe', label: 'Europe' },;
@@ -43,7 +15,6 @@ export function RegionFilter(): any ({;
   toggleSection,;
   isMobileFilterOpen,;
 }: RegionFilterProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
@@ -55,9 +26,6 @@ export function RegionFilter(): any ({;
         ) : (;
           <ChevronDown className='h-4 w-4 text-zion-slate-light' />;
         )}
-<<<<<<< HEAD
-      </button>
-=======
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from '@/components / ui / checkbox';
 import { RegionFilterProps } from '@/types / filters';
@@ -83,28 +51,11 @@ function RegionFilter() {
           <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {REGION_OPTIONS.map (region => (
             <div key={region.id} className='flex items - center'>              <Checkbox;
                 id={`region-${region.id}`}
-<<<<<<< HEAD
-                checked={selectedRegions.includes(region.id)}
-                onCheckedChange={() => toggleRegion(region.id)}
-            <div key={region.id} className="flex items-center">
-import { Checkbox } from "@/components/ui/checkbox"
-import { RegionFilterProps } from "@/types/filters"
-const REGION_OPTIONS = [
-  { id: "North America", label: "North America" }
-  { id: "Europe", label: "Europe" }
-  { id: "Asia", label: "Asia" }
-  { id: "South America", label: "South America" }
-  { id: "Australia", label: "Australia" }
-=======
-      </button>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -124,7 +75,6 @@ const REGION_OPTIONS = [;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { id: "Africa", label: "Africa" }
 ]
 
@@ -140,24 +90,12 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </button>
-      {expanded && (
-        <div className="mt-4 space-y-2">
-          {REGION_OPTIONS.map(region => (
-            <div key={region.id} className="flex items-center">
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       </button>;
 
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {REGION_OPTIONS && REGION_OPTIONS.map(region => (;
             <div key={region && region.id} className="flex items-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Checkbox
                 id={`region-${region && region.id}`}
                 checked={selectedRegions && selectedRegions.includes(region && region.id)}
@@ -171,9 +109,6 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
               ">;
               </label>;
             </div>;
-<<<<<<< HEAD
-=======
-=======
               <Checkbox
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
@@ -189,50 +124,12 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
                 {region.label}
               </label>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-  )
-  toggleSection
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)
-}</button> {
-  REGION OPTIONS.map (region => (<div key= {
-  region.id "
-}className="flex items-center" > <Checkbox > {
-  region.label
-}</label> </div>) )
-}</div>)
-}</div>)
-}"}
-=======
-    </div>;
-  );
-
-  toggleSection ;
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
-}</button> {;
-  REGION OPTIONS && OPTIONS.map (region => (<divkey= {
-  region && region.id "
-}className="flex items-center"> <Checkbox > {;
-  region && region.label ;
-}</label> </div>) ) ;
-}</div>) ;
-}</div>) ;
-}"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 checked={selected_regions.includes (region.id)}
                 onCheckedChange={() => toggle_region (region.id)}
             <div key={region.id} className="flex items - center">;
@@ -292,5 +189,3 @@ function RegionFilter() {
 }</div>);
 }</div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

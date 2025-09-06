@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { formatDistanceToNow } from 'date-fns'
-import { Calendar, User, FileText, BarChart } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
-import { TableRow, TableCell } from '@/components/ui/table'
-import { JobApplication, ApplicationStatus } from '@/types/jobs'
-import { StatusBadge } from './StatusBadge'
-import { ScoreBadge } from './ScoreBadge'
-import { ApplicationActions } from './ApplicationActions'
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useState
-=======
 import { formatDistanceToNow } from 'date - fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from '@/components / ui / button';
@@ -27,37 +9,11 @@ import { ScoreBadge } from './ScoreBadge';
 import { ApplicationActions } from './ApplicationActions';
 import Image from 'next / image'; // Import next / image;
 import React, { useState } from 'react'; // Import useState;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ApplicationRowProps {
   application: JobApplication;
   processing_id: string | null;
   onViewApplication: (application_id: string) => Promise < void>;
   onStatusChange: (
-<<<<<<< HEAD
-    applicationId: string
-    newStatus: ApplicationStatus
-  ) => Promise<void>
-  onViewScore: (application: JobApplication) => void
-interface ApplicationRowProps {
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string,) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>
-  onViewScore: (application: JobApplication,) => void
-
-}
-export function ApplicationRow({
-
-  application
-  processingId
-  onViewApplication
-  onStatusChange
-  onViewScore
-}: ApplicationRowProps) {
-  const [avatarError, setAvatarError] = useState(false)
-  const talentName = application.talent_profile?.full_name |'Unknown'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -96,7 +52,6 @@ export function ApplicationRow(): any ({;
 }: ApplicationRowProps) {;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <TableRow key={application && application.id}>;
@@ -117,29 +72,6 @@ export function ApplicationRow(): any ({;
             ) : (;
               <User className='h-5 w-5 text-gray-400' />;
             )}
-<<<<<<< HEAD
-          </AvatarPrimitive>
-          <div>
-            <div className='font-medium'>{talentName}</div>
-            <div className='text-xs text-muted-foreground'>
-              {application.talent_profile?.professional_title |'Talent'}
-            </div>
-          </div>
-        </div>
-      </TableCell>
-      <TableCell>
-        <div className='flex items-center gap-1'>
-          <Calendar className='h-4 w-4 text-muted-foreground' />
-          <span>
-            {formatDistanceToNow(new Date(application.created_at), {
-              addSuffix: true
-=======
-          </AvatarPrimitive>;
-          <div>;
-            <div className='font-medium'>{talentName}</div>;
-            <div className='text-xs text-muted-foreground'>;
-              {application && application.talent_profile?.professional_title || 'Talent'}
-=======
     application_id: string,
     new_status: ApplicationStatus) => Promise < void>;
   onViewScore: (application: JobApplication) => void;
@@ -178,42 +110,21 @@ function ApplicationRow() {
             <div className='font - medium'>{talent_name}</div>;
             <div className='text - xs text - muted - foreground'>;
               {application.talent_profile?.professional_title || 'Talent'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
       </TableCell>;
       <TableCell>;
-<<<<<<< HEAD
-        <div className='flex items-center gap-1'>;
-          <Calendar className='h-4 w-4 text-muted-foreground' />;
-          <span>;
-            {formatDistanceToNow(new Date(application && application.created_at), {;
-              addSuffix: true,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         <div className='flex items - center gap - 1'>;
           <Calendar className='h - 4 w - 4 text - muted - foreground' />;
           <span>;
             {formatDistanceToNow (new Date (application.created_at), {
               add_suffix: true,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             })}
           </span>;
         </div>;
       </TableCell>;
       <TableCell>;
-<<<<<<< HEAD
-        <StatusBadge status={application && application.status} />;
-      </TableCell>;
-      <TableCell>;
-        <Button
-          variant='ghost'
-          size='sm'
-          onClick={() => onViewScore(application)}
-          className='flex items-center gap-1'        >;
-          <BarChart className='h-4 w-4 mr-1' />;
-=======
         <StatusBadge status={application.status} />;
       </TableCell>;
       <TableCell>;
@@ -223,20 +134,11 @@ function ApplicationRow() {
           on_click={() => onViewScore (application)}
           className='flex items - center gap - 1'        >;
           <BarChart className='h - 4 w - 4 mr - 1' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
-<<<<<<< HEAD
-        {application && application.resume ? (;
-          <Button variant='ghost' size='sm' asChild>;
-            <a
-<<<<<<< HEAD
-              href={application.resume.file_url |'#'}
-=======
               href={application && application.resume.file_url || '#'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               target='_blank'
               rel='noopener noreferrer'>;
               <FileText className='h-4 w-4 mr-1' /> View;
@@ -252,25 +154,7 @@ function ApplicationRow() {
           processingId = {processingId,}
           onViewApplication = {onViewApplication,}
           onStatusChange = {onStatusChange,}
-<<<<<<< HEAD
-        />
-      </TableCell>
-    </TableRow>
-  )
-}
-=======
-        />;
-      </TableCell>;
-    </TableRow>;
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {application.resume ? (
           <Button variant='ghost' size='sm' as_child>;
             <a;
@@ -293,5 +177,3 @@ function ApplicationRow() {
       </TableCell>;
     </TableRow>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

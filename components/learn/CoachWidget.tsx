@@ -1,57 +1,15 @@
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-<<<<<<< HEAD
-export default function CoachWidget() {
-=======
 
 export default function CoachWidget() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [input, setInput] = useState('');
   const [reply, setReply] = useState<string | null>(null),
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
-  async function ask() {
-    if (!input.trim()) return;
-    setLoading(true);
-    try {
-
-      const resp = await fetch('/api/learn/coach', {
-<<<<<<< HEAD
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
       setReply(data.text |'');
     } finally {
-=======
 
   async function ask() {;
     if (!input && input.trim()) return;
@@ -65,35 +23,12 @@ export default function CoachWidget() {;
       const data = await resp && resp.json();
       setReply(data && data.text || '');
     } finally {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setLoading(false);    }
   }
   return (      });
-<<<<<<< HEAD
-      const data = await resp.json();
-      setReply(data.text |'')
-
-    } finally {
-      setLoading(false)
-<<<<<<< HEAD
-=======
-      const data = await resp && resp.json();
-      setReply(data && data.text || '');
-    } finally {;
-      setLoading(false);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='border rounded p-3'>;
       <div className='font-medium mb-2'>ZionGPT Coach</div>;
       <div className='flex gap-2'>;
@@ -114,18 +49,8 @@ export default function CoachWidget() {;
           {reply}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-);
-}
-=======
-    </div>;
-<<<<<<< HEAD
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <div className="border rounded p-3">
       <div className="font-medium mb-2">ZionGPT Coach</div>
       <div className="flex gap-2">
@@ -134,11 +59,8 @@ export default function CoachWidget() {;
       </div>
       {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useState } from 'react';
 export default /**
  * CoachWidget - Function description
@@ -197,4 +119,3 @@ function ask() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from "react",
-import { MatchResultItem } from "@/lib/ai-matchmaking",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
-import { Skeleton } from "@/components/ui/skeleton";
-import { cn } from "@/lib/utils";
-interface AIMatchingResultsProps {
-
-  matches: MatchResultItem[]
-  onSelectMatch?: (match: MatchResultItem) => void
-
-=======
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -27,17 +10,12 @@ import {cn} from "@/lib/utils";
 interface AIMatchingResultsProps {;
   matches: MatchResultItem[],;
   onSelectMatch?: (match: MatchResultItem) => void,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
 }
-<<<<<<< HEAD
-export function AIMatchingResults({
-=======
 
 export function AIMatchingResults(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   matches;
   onSelectMatch;
 
@@ -46,23 +24,6 @@ export function AIMatchingResults(): any ({;
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
-<<<<<<< HEAD
-  // Group matches by category
-  const categories = {
-    all: matches
-    talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
-    services: matches.filter(match => match.category.toLowerCase().includes("service"))
-    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
-  }
-  // Get the icon for a category
-  const getCategoryIcon = (category: string) => {
-    const lowerCategory = category.toLowerCase();
-    if (lowerCategory.includes("talent")) return User;
-    if (lowerCategory.includes("equipment")) return Monitor
-    return BriefcaseIcon
-  }
-  if (isLoading) {
-=======
 
   // Group matches by category;
   const categories = {;
@@ -81,7 +42,6 @@ export function AIMatchingResults(): any ({;
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="space-y-4">;
         <Skeleton className="h-10 w-full" />;
@@ -93,12 +53,8 @@ export function AIMatchingResults(): any ({;
       </div>;
     );
   }
-<<<<<<< HEAD
-  if (matches.length === 0) {
-=======
 
   if (matches && matches.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
         <CardContent className="pt-6">;
@@ -117,27 +73,6 @@ export function AIMatchingResults(): any ({;
       </Card>;
     );
   }
-<<<<<<< HEAD
-  return (
-    <div className="space-y-4">
-      <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
-          <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">
-            All ({categories.all.length})
-          </TabsTrigger>
-          <TabsTrigger value="talent" className="data-[state=active]:bg-zion-purple/20">
-            Talent ({categories.talent.length})
-          </TabsTrigger>
-          <TabsTrigger value="services" className="data-[state=active]:bg-zion-purple/20">
-            Services ({categories.services.length})
-          </TabsTrigger>
-          <TabsTrigger value="equipment" className="data-[state=active]:bg-zion-purple/20">
-            Equipment ({categories.equipment.length})
-          </TabsTrigger>
-        </TabsList>
-        {Object.entries(categories).map(([tab, items]) => (
-          <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
-=======
 import { useState } from './react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -233,24 +168,10 @@ if ( {) {
         </TabsList>;
         {Object.entries (categories).map (([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt - 4 space - y-3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {items.length > 0 ? (
               items.map ((match) => {
                 const CategoryIcon = getCategoryIcon (match.category);
                 return (
-<<<<<<< HEAD
-                  <Card
-                    key={match.id}
-                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
-                    onClick={() => onSelectMatch && onSelectMatch(match)}
-                  >
-                    <div className="flex">
-                      <div className={cn(
-                        "w-2"
-                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :
-                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" :
-
-=======
 
   return (
     <div className="space-y-4">;
@@ -286,7 +207,6 @@ if ( {) {
                         "w-2", 
                         match && match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match && match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         "bg-green-500"
                       )} />;
                       <div className="flex-1 p-4">;
@@ -299,30 +219,6 @@ if ( {) {
                                 <CategoryIcon className="h-6 w-6 text-zion-purple" />;
                               </AvatarFallback>;
                             )}
-<<<<<<< HEAD
-                          </Avatar>
-                          <div className="flex-1">
-                            <div className="flex justify-between">
-                              <div>
-                                <h3 className="font-medium text-white">{match.title}</h3>
-                                <p className="text-zion-slate-light text-sm">{match.description}</p>
-                              </div>
-                              {match.price && (
-                                <div className="text-right ml-2">
-                                  <div className="font-medium text-white">${match.price}</div>
-                                  <div className="text-xs text-zion-slate-light">
-                                    {match.category.toLowerCase().includes("talent") ? "/hour" : ""}
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                            <div className="mt-2 flex flex-wrap gap-1">
-                              <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">
-                                {match.category}
-                              </Badge>
-                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
-                                <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">
-=======
                           </Avatar>;
 
                           <div className="flex-1">;
@@ -347,11 +243,9 @@ if ( {) {
                               </Badge>;
                               {match && match.skills && match && match.skills.slice(0, 3).map((skill: string, i: number) => (;
                                 <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                   {skill}
                                 </Badge>;
                               ))}
-=======
                   <Card;
                     key={match.id}
                     className="bg - zion - blue - dark border - zion - blue - light overflow - hidden transition - all hover:border - zion - purple / 50 cursor - pointer";
@@ -394,27 +288,11 @@ if ( {) {
                                 <Badge key={i} variant="outline" className="text - xs bg - zion - blue - dark text - white border - zion - blue - light">;
                                   {skill}
                                 </Badge>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             </div>;
                           </div>;
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-                  </Card>;
-                );
-              });
-            ) : (;
-              <div className="text-center py-8 text-zion-slate-light">;
-                No {tab} matches found.;
-              </div>;
-            )}
-          </TabsContent>;
-        ))}
-      </Tabs>;
-    </div>;
-  );
-=======
                   </Card>);
               })) : (
               <div className="text - center py - 8 text - zion - slate - light">;
@@ -423,5 +301,4 @@ if ( {) {
           </TabsContent>))}
       </Tabs>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

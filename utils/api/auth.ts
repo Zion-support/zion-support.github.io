@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-export function getUserFromRequest(req: any): User | null {
-  // Mock implementation - in production, this would extract user from JWT or session
-<<<<<<< HEAD
-  const authHeader = req.headers.authorization;
-  if (!authHeader |!authHeader.startsWith('Bearer ')) {
-=======
   const authHeader = req && req.headers.authorization;
   if (!authHeader || !authHeader && authHeader.startsWith('Bearer ')) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return null;
   }
   return user;
 }
-<<<<<<< HEAD
-=======
-=======
 // API authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../supabaseClient';
@@ -302,8 +287,6 @@ export function verifySessionToken(token: string): AuthenticatedUser | null {
     return null;
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function getUserFromRequest (req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
   const auth_header = req.headers.authorization;
@@ -314,5 +297,3 @@ export function getUserFromRequest (req: any): User | null {
   }
   return user;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

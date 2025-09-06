@@ -1,31 +1,14 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from "react",
-import { cn } from "@/lib/utils";
-import { CheckIcon } from "lucide-react";
-interface StepProps {
-
-  status: "incomplete" | "current" | "complete"
-  label: string
-
-=======
 import React from "react";
 import {cn} from "@/lib/utils";
 import {CheckIcon} from "lucide-react";
 interface StepProps {;
   status: "incomplete" | "current" | "complete",;
   label: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   description?: string;
   className?: string;
 }
-<<<<<<< HEAD
-export function Step({
-=======
 
 export function Step(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   status;
   label;
   description;
@@ -57,15 +40,6 @@ export function Step(): any ({;
             {/* Step number would go here */}
           </span>;
         )}
-<<<<<<< HEAD
-      </div>
-      <div className="ml-4 min-w-0">
-        <h3
-          className={cn("text-sm font-medium", {
-            "text-zion-slate-light": status === "incomplete";
-            "text-white": status === "current" |status === "complete"})}
-        >
-=======
       </div>;
 
       <div className="ml-4 min-w-0">;
@@ -73,7 +47,6 @@ export function Step(): any ({;
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {label}
         </h3>;
         {description && (;
@@ -83,46 +56,12 @@ export function Step(): any ({;
     </li>;
   );
 }
-<<<<<<< HEAD
-interface StepsProps {
-  currentStep: number
-=======
 
 interface StepsProps {;
   currentStep: number,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className?: string;
   children: React && React.ReactNode;
 }
-<<<<<<< HEAD
-export function Steps({ currentStep, className, children }: StepsProps) {
-  const childrenArray = React.Children.toArray(children);
-  return (
-    <div className={cn("w-full", className)}>
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
-        {React.Children.map(childrenArray, (child, index) => {
-          if (!React.isValidElement(child)) return null;
-          let status: "incomplete" | "current" | "complete" = "incomplete"
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-
-          return React.cloneElement(child as React.ReactElement<StepProps>, {
-            status})
-        })}
-      </ol>
-      <div className="hidden md:flex md:mt-4">
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
-          <div
-            className="h-full bg-zion-purple transition-all"
-            style={{
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
-          />
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
 
 export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React && React.Children.toArray(children);
@@ -154,8 +93,6 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { cn } from '@/lib / utils';
 import { CheckIcon } from './lucide-react';
@@ -250,4 +187,3 @@ if (status = "current") {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

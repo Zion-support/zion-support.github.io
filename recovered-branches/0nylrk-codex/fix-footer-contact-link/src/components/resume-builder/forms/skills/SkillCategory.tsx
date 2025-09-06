@@ -1,15 +1,6 @@
 import { SkillCategoryProps  } from './types';
 import { SkillItem  } from './SkillItem';
 export const SkillCategory = ({
-<<<<<<< HEAD
-  category
-  skills
-  onDelete
-}: SkillCategoryProps) => {
-
-<<<<<<< HEAD
-  if (!skills |skills.length === 0) return null;
-=======
   category,
   skills,
   on_delete,
@@ -18,7 +9,6 @@ export const SkillCategory = ({
 if (return null) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="space - y-2">;
       <h4 className="text - sm font - medium text - muted - foreground">{category}</h4>;
@@ -28,16 +18,6 @@ if (return null) {
             key={skill.id}
             skill={skill}
             category={category}
-<<<<<<< HEAD
-            onDelete={onDelete}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-=======
 import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;
@@ -59,12 +39,9 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
     </div>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             on_delete={on_delete}
           />))}
       </div>;
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

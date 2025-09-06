@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SEOEnhancer from '../components/SEOEnhancer.dynamic';
-<<<<<<< HEAD
-describe('SEOEnhancer', () => {
-  test('renders without crashing', () => {
-    render(<SEOEnhancer />);
-    expect(screen.getByTestId('seo-enhancer')).toBeInTheDocument();
-=======
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
 import SEOEnhancer from '../components / SEOEnhancer.dynamic';
@@ -20,27 +6,15 @@ describe ('SEOEnhancer', () => {
   test ('renders without crashing', () => {
     render (<SEOEnhancer />);
     expect (screen.getByTestId ('seo - enhancer')).toBeInTheDocument ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 });
-=======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import SEOEnhancerdynamic from '../components/SEOEnhancer && SEOEnhancer.dynamic'
 describe('SEOEnhancerdynamic'
   test('renders without crashing'
-<<<<<<< HEAD
-    expect(screen.getByTestId('seoenhancer.dynamic'
-  test('displays correct content'
-  test('handles user interactions'
-  test('applies correct styling'
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOEnhancerdynamic from "./components/SEOEnhancer.dynamic"; describe('SEOEnhancerdynamic', () => { test("renders without crashing",() => { render(<SEOEnhancerdynamic />); expect(screen.getByTestId("seoenhancer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOEnhancerdynamic />)}); test("handles user interactions",() => { render(<SEOEnhancerdynamic />)}); test("applies correct styling"
->>>>>>> origin/automation-improvements-final
-=======
     expect(screen && screen.getByTestId('seoenhancer ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOEnhancerdynamic from "./components/SEOEnhancer ; describe('SEOEnhancerdynamic', () => { test("renders without crashing",() => { render(<SEOEnhancerdynamic />); expect(screen && screen.getByTestId("seoenhancer && seoenhancer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOEnhancerdynamic />)}); test("handles user interactions",() => { render(<SEOEnhancerdynamic />)}); test("applies correct styling"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 describe('SEOEnhancer', () => {
   test('renders without crashing', () => {
@@ -63,4 +37,3 @@ describe('SEOEnhancer', () => {
     // Add styling tests here
   });
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580

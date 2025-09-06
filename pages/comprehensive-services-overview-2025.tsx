@@ -1,59 +1,11 @@
-<<<<<<< HEAD
-
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {
-  Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom
-  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { 
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom;
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   Filter, Grid, List, BarChart3, DollarSign, Target as TargetIcon
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 export default function ComprehensiveServicesOverviewPage() {
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [searchTerm, setSearchTerm] = useState('')
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity')
-  // Combine all services
-  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices]
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length }
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length }
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s => s.category === 'Fintech AI').length }
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length }
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length }
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length }
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing').length }
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices.filter(s => s.category === 'Space Technology').length }
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices.filter(s => s.category === 'Autonomous Systems').length }
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length }
-    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices.filter(s => s.category === '5G/6G Networks').length }
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices.filter(s => s.category === 'Biotechnology AI').length }
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices.filter(s => s.category === 'Renewable Energy').length }
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length }
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length }
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
-  ]
-  // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-=======
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -89,7 +41,6 @@ export default function ComprehensiveServicesOverviewPage() {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       return matchesCategory && matchesSearch
     })
     .sort((a, b) => {
@@ -97,37 +48,15 @@ export default function ComprehensiveServicesOverviewPage() {
         case 'popularity':
           return b.popular ? 1 : -1
         case 'price':
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
-        case 'rating':
-          return b.rating - a.rating
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         default: return 0
       }
     })
   const getCategoryIcon = (category: string) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    const categoryData = categories.find(cat => cat.id === category)
-    return categoryData?.icon |'🚀'
-  }
-  // Calculate market statistics
-  const totalMarketSize = allServices.reduce((sum, service) => {
-    const marketSize = service.marketSize.match(/\$([\d.]+)B/)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon || '🚀'
   };
@@ -135,26 +64,11 @@ export default function ComprehensiveServicesOverviewPage() {
   // Calculate market statistics
   const totalMarketSize = allServices.reduce((sum, service) => {
     const marketSize = service.marketSize.match(/\$([\d.]+)B/);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return sum + (marketSize ? parseFloat(marketSize[1]) : 0)
   }, 0)
   const averageROI = allServices.reduce((sum, service) => {
     const roi = service.roi.match(/(\d+)%/)
     return sum + (roi ? parseInt(roi[1]) : 0)
-<<<<<<< HEAD
-  }, 0) / allServices.length
-  const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0)
-=======
-  }, 0) / allServices.length;
-
-  const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <>
@@ -165,16 +79,6 @@ export default function ComprehensiveServicesOverviewPage() {
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-overview-2025" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-<<<<<<< HEAD
-        {/* Hero Section */}
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -259,7 +163,6 @@ function ComprehensiveServicesOverviewPage() {
         <link rel="canonical" href="https://ziontechgroup.com / comprehensive - services - overview - 2025" />;
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <section className="py - 20 px - 6">;
           <div className="max - w-7xl mx - auto text - center">;
@@ -267,8 +170,6 @@ function ComprehensiveServicesOverviewPage() {
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
                 Revolutionary Micro SAAS Services 2025
@@ -316,7 +217,6 @@ function ComprehensiveServicesOverviewPage() {
             </motion.div>
           </div>
         </section>
-=======
             >;
               <h1 className="text - 5xl md:text - 6xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
                 Revolutionary Micro SAAS Services 2025;
@@ -364,30 +264,7 @@ function ComprehensiveServicesOverviewPage() {
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Search and Filters */}
-<<<<<<< HEAD
-        <section className="px-6 mb-16">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col lg:flex-row gap-6 items-center justify-between"
-            >
-              {/* Search */}
-=======
-        <section className="px - 6 mb - 16">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex - col lg:flex - row gap - 6 items - center justify - between";
-            >;
-              {/* Search */}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
                 <input
@@ -415,17 +292,6 @@ function ComprehensiveServicesOverviewPage() {
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all ${
                       viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
-<<<<<<< HEAD
-                    }`}
-                  >
-                    <Grid className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-lg transition-all ${
-                      viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
-=======
-=======
               <div className="relative flex - 1 max - w-md">;
                 <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - white / 40 w - 5 h - 5" />;
                 <input;
@@ -453,8 +319,6 @@ function ComprehensiveServicesOverviewPage() {
                     on_click={() => setViewMode ('grid')}
                     className={`p - 2 rounded - lg transition - all ${
                       view_mode === 'grid' ? 'bg - blue - 600 text - white' : 'text - white / 60 hover:text - white';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }`}
                   >;
                     <Grid className="w - 5 h - 5" />;
@@ -464,16 +328,6 @@ function ComprehensiveServicesOverviewPage() {
                     className={`p - 2 rounded - lg transition - all ${
                       view_mode === 'list' ? 'bg - blue - 600 text - white' : 'text - white / 60 hover:text - white';
                     }`}
-<<<<<<< HEAD
-                  >
-                    <List className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-=======
                   >;
                     <List className="w - 5 h - 5" />;
                   </button>;
@@ -482,20 +336,7 @@ function ComprehensiveServicesOverviewPage() {
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Category Filter */}
-<<<<<<< HEAD
-        <section className="px-6 mb-16">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-wrap justify-center gap-3"
-            >
-              {categories.map((category) => (
-                <button
-=======
         <section className="px - 6 mb - 16">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
@@ -506,7 +347,6 @@ function ComprehensiveServicesOverviewPage() {
             >;
               {categories.map ((category) => (
                 <button;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -517,33 +357,18 @@ function ComprehensiveServicesOverviewPage() {
                 >;
                   <span>{category.icon}</span>;
                   {category.name}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
                 </button>
               ))}
             </motion.div>
           </div>
         </section>
-=======
                   <span className="text - xs bg - white / 20 px - 2 py - 1 rounded - full">{category.count}</span>;
                 </button>))}
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Services Display */}
-<<<<<<< HEAD
-        <section className="px-6 pb-20">
-          <div className="max-w-7xl mx-auto">
-            {viewMode === 'grid' ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <AnimatePresence mode="wait">
-                  {filteredServices.map((service, index) => (
-                    <motion.div
-=======
         <section className="px - 6 pb - 20">;
           <div className="max - w-7xl mx - auto">;
             {view_mode === 'grid' ? (
@@ -551,24 +376,11 @@ function ComprehensiveServicesOverviewPage() {
                 <AnimatePresence mode="wait">;
                   {filtered_services.map ((service, index) => (
                     <motion.div;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       key={service.id}
                       initial={{ opacity: 0, coordinate_y: 30 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: -30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-                      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                    >
-                      {/* Popular Badge */}
-                      {service.popular && (
-=======
-                      className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
-                    >;
-                      {/* Popular Badge */}
-                      {service.popular && (
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
                           <Star className="w-3 h-3" />
                           Popular
@@ -585,7 +397,6 @@ function ComprehensiveServicesOverviewPage() {
                         </div>
                         <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                         <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
-=======
                         <div className="absolute top - 4 right - 4 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1 z - 10">;
                           <Star className="w - 3 h - 3" />;
                           Popular;
@@ -601,40 +412,12 @@ function ComprehensiveServicesOverviewPage() {
                         </div>;
                         <h3 className="text - xl font - bold text - white mb - 2">{service.name}</h3>;
                         <p className="text - white / 70 text - sm mb - 4">{service.tagline}</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* Features */}
-<<<<<<< HEAD
-                        <div className="space-y-2 mb-6">
-                          {service.features.slice(0, 3).map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
-                              <Check className="w-4 h-4 text-green-400" />
-=======
                         <div className="space - y-2 mb - 6">;
                           {service.features.slice (0, 3).map ((feature, idx) => (
                             <div key={idx} className="flex items - center gap - 2 text - sm text - white / 60">;
                               <Check className="w - 4 h - 4 text - green - 400" />;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                               {feature}
-<<<<<<< HEAD
-                            </div>
-                          ))}
-                        </div>
-                        {/* Stats */}
-                        <div className="grid grid-cols-3 gap-4 mb-6 text-center">
-                          <div>
-                            <div className="text-lg font-bold text-blue-400">{service.rating}</div>
-                            <div className="text-xs text-white/60">Rating</div>
-                          </div>
-                          <div>
-                            <div className="text-lg font-bold text-green-400">{service.customers}+</div>
-                            <div className="text-xs text-white/60">Customers</div>
-                          </div>
-                          <div>
-                            <div className="text-lg font-bold text-purple-400">{service.trialDays}d</div>
-                            <div className="text-xs text-white/60">Trial</div>
-                          </div>
-                        </div>
-=======
                             </div>))}
                         </div>;
                         {/* Stats */}
@@ -652,29 +435,9 @@ function ComprehensiveServicesOverviewPage() {
                             <div className="text - xs text - white / 60">Trial</div>;
                           </div>;
                         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* CTA */}
                         <a;
                           href={service.link}
-<<<<<<< HEAD
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-                        >
-                          Learn More
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      </div>
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </div>
-            ) : (
-              <div className="space-y-6">
-                <AnimatePresence mode="wait">
-                  {filteredServices.map((service, index) => (
-                    <motion.div
-=======
                           target="_blank";
                           rel="noopener noreferrer";
                           className="w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white py - 3 px - 4 rounded - xl font - medium text - center block hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 flex items - center justify - center gap - 2";
@@ -690,30 +453,11 @@ function ComprehensiveServicesOverviewPage() {
                 <AnimatePresence mode="wait">;
                   {filtered_services.map ((service, index) => (
                     <motion.div;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       key={service.id}
                       initial={{ opacity: 0, coordinate_x: -30 }}
                       animate={{ opacity: 1, coordinate_x: 0 }}
                       exit={{ opacity: 0, coordinate_x: 30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-                      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
-                    >
-                      <div className="flex flex-col lg:flex-row gap-6">
-                        {/* Left Side - Icon and Basic Info */}
-                        <div className="flex-shrink-0">
-                          <div className="text-6xl mb-4">{service.icon}</div>
-                          {service.popular && (
-=======
-                      className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 p - 6";
-                    >;
-                      <div className="flex flex - col lg:flex - row gap - 6">;
-                        {/* Left Side - Icon and Basic Info */}
-                        <div className="flex - shrink - 0">;
-                          <div className="text - 6xl mb - 4">{service.icon}</div>;
-                          {service.popular && (
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center">
                               Popular
                             </div>
@@ -782,7 +526,6 @@ function ComprehensiveServicesOverviewPage() {
                 </AnimatePresence>
               </div>
             )}
-=======
                             <div className="bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full text - center">;
                               Popular;
                             </div>)}
@@ -847,16 +590,11 @@ function ComprehensiveServicesOverviewPage() {
                     </motion.div>))}
                 </AnimatePresence>;
               </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* No Results */}
             {filtered_services.length === 0 && (
               <motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -866,18 +604,6 @@ function ComprehensiveServicesOverviewPage() {
             )}
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Contact CTA */}
-        <section className="px-6 pb-20">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
                 className="text - center py - 20";
               >;
                 <div className="text - 6xl mb - 4">🔍</div>;
@@ -886,7 +612,6 @@ function ComprehensiveServicesOverviewPage() {
               </motion.div>)}
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Contact CTA */}
         <section className="px - 6 pb - 20">;
           <div className="max - w-4xl mx - auto">;
@@ -895,8 +620,6 @@ function ComprehensiveServicesOverviewPage() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -928,14 +651,7 @@ function ComprehensiveServicesOverviewPage() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               className="text - center";
             >;
               <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30">;
@@ -967,5 +683,3 @@ function ComprehensiveServicesOverviewPage() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

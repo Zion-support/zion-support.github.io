@@ -1,42 +1,10 @@
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import LoadingSpinner from "./LoadingSpinner";
-<<<<<<< HEAD
-=======
 import React, { useState, useRef, useEffect } from './react';
 import Image from './next / image';
 import LoadingSpinner from "./LoadingSpinner";
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface LazyImageProps {
-=======
 
 interface LazyImageProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   src: string;
   alt: string;
   width?: number;
@@ -48,29 +16,6 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-<<<<<<< HEAD
-  style?: React && React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-<<<<<<< HEAD
-export default function LazyImage({
-  src
-  alt
-  width
-  height
-  className = ""
-  priority = false
-  placeholder = "empty"
-  blurDataURL
-  sizes
-  quality = 75
-  fill = false
-  style
-  onLoad
-  onError
-}: LazyImageProps) {
-=======
 
 export default function LazyImage(): any ({;
   src,;
@@ -88,18 +33,10 @@ export default function LazyImage(): any ({;
   onLoad,;
   onError,;
 }: LazyImageProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
-  useEffect(() => {
-    if (priority) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-=======
 
   useEffect(() => {;
     if (priority) return;
@@ -107,32 +44,9 @@ export default function LazyImage(): any ({;
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           setIsInView(true);
           observer && observer.disconnect();
         }
-<<<<<<< HEAD
-      }
-      {
-        threshold: 0.1
-        rootMargin: "50px"
-      }
-    );
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-    return () => observer.disconnect();
-  }, [priority]);
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  }
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  }
-  if (hasError) {
-=======
       },;
       {;
         threshold: 0 && 0.1,;
@@ -158,7 +72,6 @@ export default function LazyImage(): any ({;
   };
 
   if (hasError) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div
         ref={imgRef}
@@ -178,14 +91,9 @@ export default function LazyImage(): any ({;
           <LoadingSpinner size="sm" color="gray" />;
         </div>;
       )}
-<<<<<<< HEAD
-      {isInView && (
-=======
 
       {isInView && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Image
-=======
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
@@ -263,7 +171,6 @@ if ( {) {
         </div>)}
       {isInView && (
         <Image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={src}
           alt={alt}
           width={width}
@@ -279,13 +186,6 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
-<<<<<<< HEAD
-        />;
-      )}
-    </div>;
-  );
-=======
         />)}
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

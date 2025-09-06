@@ -1,12 +1,4 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 const EnhancedHome: NextPage = () => {
   return (
     <div>
@@ -15,7 +7,6 @@ const EnhancedHome: NextPage = () => {
         <meta name="description" content="EnhancedHome page" />
       </Head>
       
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <main>
         <h1>EnhancedHome</h1>
         <p>This page is under construction.</p>
@@ -23,8 +14,6 @@ const EnhancedHome: NextPage = () => {
     </div>
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <main>;
         <h1>EnhancedHome</h1>;
         <p>This page is under construction.</p>;
@@ -33,13 +22,7 @@ const EnhancedHome: NextPage = () => {
   ),;
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedHome;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
       <main>;
         <h1 > EnhancedHome</h1>;
@@ -50,4 +33,3 @@ import Head from 'next / head';
 ;
 export default EnhancedHome;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

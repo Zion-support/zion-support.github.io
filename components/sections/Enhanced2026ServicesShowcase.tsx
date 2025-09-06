@@ -24,103 +24,11 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-<<<<<<< HEAD
-  ArrowRight
-  Brain
-  Zap
-  Shield
-  Rocket
-  Sparkles
-  Star
-  TrendingUp
-  Globe
-  Cpu
-  Lock
-  Cloud;
-} from 'lucide-react';
-import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
-=======
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Link from 'next/link';
 const Enhanced2026ServicesShowcase = () => {
   const featuredServices = [
     {
-<<<<<<< HEAD
-      id: 'ai-business-intelligence-elite-2026'
-      name: 'AI Business Intelligence Elite 2026'
-      description:
-        'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',      price: '$299',      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.'
-      price: '$299'
-      period: '/month'
-      icon: Brain
-      color: 'from-purple-500 to-pink-500'
-      category: 'AI & Analytics'
-      features: [
-        'Predictive Analytics'
-        'Real-time Insights'
-        'Custom Dashboards'
-        'AI-powered Reports'
-      ]
-    }
-    {
-      id: 'autonomous-ai-agents-platform-2026'
-      name: 'Autonomous AI Agents Platform 2026'
-      description:
-        'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.'
-      price: '$199',      period: '/month'
-      icon: Zap
-      color: 'from-blue-500 to-cyan-500'
-      category: 'AI & Automation'
-      features: [
-        'Task Automation'
-        'Process Optimization'
-        '24/7 Operation'
-        'Scalable Architecture'
-      ]
-    }
-    {
-      id: 'quantum-cybersecurity-suite-2026'
-      name: 'Quantum Cybersecurity Suite 2026'
-      description:
-        'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture']
-    }
-    {
-      id: 'quantum-cybersecurity-suite-2026'
-      name: 'Quantum Cybersecurity Suite 2026'
-      description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.'
-      period: '/month'
-      icon: Shield
-      color: 'from-red-500 to-orange-500'
-      category: 'Security'
-      features: [
-        'Quantum Encryption'
-        'Threat Detection'
-        'Zero Trust'
-        'Compliance Ready'
-      ]
-    }
-    {
-      id: 'neuromorphic-computing-platform-2026'
-      name: 'Neuromorphic Computing Platform 2026',    {
-      id: 'neuromorphic-computing-platform-2026'
-      name: 'Neuromorphic Computing Platform 2026'
-      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.'
-      price: '$1,499';
-      period: '/month'
-      icon: Cpu
-      color: 'from-green-500 to-emerald-500'
-      category: 'Emerging Tech'
-=======
-      id: 'ai-business-intelligence-elite-2026',
-      name: 'AI Business Intelligence Elite 2026',
-      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
-=======
   ArrowRight,
   Brain,
   Zap,
@@ -143,16 +51,11 @@ const Enhanced2026ServicesShowcase = () =>: any {
       name: 'AI Business Intelligence Elite 2026',
       description:;
         'Transform your business data into actionable intelligence with our advanced AI - powered analytics platform.',      price: '$299',      description: 'Transform your business data into actionable intelligence with our advanced AI - powered analytics platform.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       price: '$299',
       period: '/month',
       icon: Brain,
       color: 'from - purple - 500 to - pink - 500',
       category: 'AI & Analytics',
-<<<<<<< HEAD
-      features: ['Predictive AnalyticsReal-time InsightsCustom DashboardsAI-powered Reports']
-    };
-=======
       features: [;
         'Predictive Analytics',
         'Real - time Insights',
@@ -160,26 +63,15 @@ const Enhanced2026ServicesShowcase = () =>: any {
         'AI - powered Reports',
       ],
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       id: 'autonomous - ai - agents - platform - 2026',
       name: 'Autonomous AI Agents Platform 2026',
-<<<<<<< HEAD
-      description: 'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
-    price: '$199',
-      period: '/month',
-=======
       description:;
         'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
       price: '$199',      period: '/month',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       icon: Zap,
       color: 'from - blue - 500 to - cyan - 500',
       category: 'AI & Automation',
-<<<<<<< HEAD
-      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture']
-    };
-=======
       features: [;
         'Task Automation',
         'Process Optimization',
@@ -193,30 +85,14 @@ const Enhanced2026ServicesShowcase = () =>: any {
       description:;
         'Next - generation cybersecurity platform that uses quantum - resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24 / 7 OperationScalable Architecture'];
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       id: 'quantum - cybersecurity - suite - 2026',
       name: 'Quantum Cybersecurity Suite 2026',
-<<<<<<< HEAD
-      description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',
-      price: '$599',
-=======
       description: 'Next - generation cybersecurity platform that uses quantum - resistant algorithms to protect against current and future cyber threats.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       period: '/month',
       icon: Shield,
       color: 'from - red - 500 to - orange - 500',
       category: 'Security',
-<<<<<<< HEAD
-      features: ['Quantum EncryptionThreat DetectionZero TrustCompliance Ready']
-    };
-    {
-      id: 'neuromorphic-computing-platform-2026',
-      name: 'Neuromorphic Computing Platform 2026',
-      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
-      price: '$1,499',
-    period: '/month',
-=======
       features: [;
         'Quantum Encryption',
         'Threat Detection',
@@ -255,12 +131,9 @@ const Enhanced2026ServicesShowcase = () =>: any {
         'Brain - inspired computing for next - generation AI with ultra - low power consumption and cognitive capabilities.',
       price: '$1, 499',
       period: '/month',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       icon: Cpu,
       color: 'from - green - 500 to - emerald - 500',
       category: 'Emerging Tech',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']
     }
     {
@@ -275,61 +148,6 @@ const Enhanced2026ServicesShowcase = () =>: any {
       features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready']
     }
     {
-<<<<<<< HEAD
-      id: 'space-debris-tracking-system'
-      name: 'Space Debris Tracking System 2026'
-      description:
-        'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.'
-      price: '$1,499'
-      period: '/month'
-      icon: Cpu
-      color: 'from-green-500 to-emerald-500'
-      category: 'Emerging Tech'
-      features: [
-        'Brain-like Processing'
-        'Low Power'
-        'Real-time Learning'
-        'Cognitive Computing'
-      ]
-    }
-    {
-      id: 'dna-computing-platform-2026'
-      name: 'DNA Computing Platform 2026'
-      description:
-        'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.'
-      price: '$2,999'
-      period: '/month'
-      icon: Globe
-      color: 'from-indigo-500 to-purple-500'
-      category: 'Emerging Tech'
-      features: [
-        'Molecular Processing'
-        'Exponential Speed'
-        'Complex Algorithms'
-        'Research Ready'
-      ]
-    }
-    {
-      id: 'space-debris-tracking-system'
-      name: 'Space Debris Tracking System 2026'
-      description:
-        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899',      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.'
-      price: '$899'
-      period: '/month'
-      icon: Rocket
-      color: 'from-yellow-500 to-orange-500'
-      category: 'Space Tech'
-      features: [
-        'Real-time Tracking'
-        'Collision Prediction'
-        'Satellite Safety'
-        'Space Traffic Management'
-      ]
-=======
-      id: 'space-debris-tracking-system',
-      name: 'Space Debris Tracking System 2026',
-      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',
-=======
       features: [;
         'Brain - like Processing',
         'Low Power',
@@ -359,15 +177,11 @@ const Enhanced2026ServicesShowcase = () =>: any {
       name: 'Space Debris Tracking System 2026',
       description:;
         'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899',      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       price: '$899',
       period: '/month',
       icon: Rocket,
       color: 'from - yellow - 500 to - orange - 500',
       category: 'Space Tech',
-<<<<<<< HEAD
-      features: ['Real-time TrackingCollision PredictionSatellite SafetySpace Traffic Management']
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   ];
   const categories = [
@@ -395,8 +209,6 @@ const Enhanced2026ServicesShowcase = () =>: any {
       icon: Cloud
       color: 'from-yellow-500 to-orange-500'
     }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   ArrowRight,;
   Brain,;
@@ -571,19 +383,10 @@ const Enhanced2026ServicesShowcase = () => {;
       icon: Cloud,;
       color: 'from-yellow-500 to-orange-500',;
     },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Background Effects */}
-<<<<<<< HEAD
-      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>
-      <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ];
-  const categories = [
-    { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' }
-    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' }
-    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' }
-=======
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>;
 
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ];
@@ -592,53 +395,22 @@ const Enhanced2026ServicesShowcase = () => {;
     { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' },;
     { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' },;
     { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
   ];
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
       {/* Background Effects */}
-<<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>;
 
       <div className="max-w-7xl mx-auto relative z-10">;
-=======
-<<<<<<< HEAD
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
-      <div className="max-w-7xl mx-auto relative z-10">
-<<<<<<< HEAD
-=======
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>;
-
-      <div className="max-w-7xl mx-auto relative z-10">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Section Header */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className='text-center mb-16'
-        >
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-              2026 Revolutionary Services
-            </span>
-          </h2>
-          <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>
-            Experience the future with our cutting-edge AI, quantum, and
-            emerging technology services designed to transform your business          </p>        >
-=======
           className="text-center mb-16"
         >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               2026 Revolutionary Services
@@ -648,8 +420,6 @@ const Enhanced2026ServicesShowcase = () => {;
             Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
           </p>
         </motion.div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className='text-center mb-16'>;
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -669,34 +439,18 @@ const Enhanced2026ServicesShowcase = () => {;
           </p>;
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Category Overview */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16";
         >;
           {categories && categories.map((category, index) => (;
             <motion&& motion.div
               key={category && category.name}
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-<<<<<<< HEAD
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }}
-              viewport={{ once: true }}
-=======
-=======
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-        >
-          {categories.map((category, index) => (
-            <motion.div
-=======
       features: [;
         'Real - time Tracking',
         'Collision Prediction',
@@ -786,16 +540,11 @@ const Enhanced2026ServicesShowcase = () => {;
         >;
           {categories.map ((category, index) => (
             <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={category.name}
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               whileHover={{ scale: 1 && 1.05, y: -5 }}
               className='group text-center'>;
               <div
@@ -814,9 +563,6 @@ const Enhanced2026ServicesShowcase = () => {;
               <h3 className="text-lg font-bold text-white mb-2">{category && category.name}</h3>;
               <p className="text-2xl font-bold text-cyan-400">{category && category.count}</p>;
             </motion && motion.div>;
-<<<<<<< HEAD
-=======
-=======
               whileHover={{ scale: 1.05, y: -5 }}
               className="group text-center"
             >
@@ -826,28 +572,15 @@ const Enhanced2026ServicesShowcase = () => {;
               <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
               <p className="text-2xl font-bold text-cyan-400">{category.count}</p>
             </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ))}
-<<<<<<< HEAD
-        </motion.div>
-<<<<<<< HEAD
-=======
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices && featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
           {featuredServices && featuredServices.map((service, index) => (;
             <motion&& motion.div
               key={service && service.id}
               initial={{ opacity: 0, scale: 0 && 0.8, y: 20 }}
-<<<<<<< HEAD
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-              viewport={{ once: true }}
-=======
-=======
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -855,12 +588,9 @@ const Enhanced2026ServicesShowcase = () => {;
             <motion.div
               key={service.id}
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               whileHover={{ scale: 1 && 1.02, y: -5 }}
               className='group relative'>;
               <div
@@ -869,26 +599,9 @@ const Enhanced2026ServicesShowcase = () => {;
                 {/* Service Header */}
                 <div className='flex items-center space-x-3 mb-4'>;
                   <div
-<<<<<<< HEAD
-                    className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center`}
-                  >
-                    <service.icon className='w-6 h-6 text-white' />
-                  </div>
-                  <div>
-                    <h3 className='text-lg font-bold text-white'>
-                      {service.name}
-                    </h3>
-                    <p className='text-gray-400 text-sm'>{service.category}</p>                  </div>
-                </div>
-                {/* Description */}
-                <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                  {service.description}
-                </p>
-                {/* Features */}            >
-=======
               whileHover={{ scale: 1.02, y: -5 }}
               className="group relative"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
                 {/* Service Header */}
@@ -902,14 +615,9 @@ const Enhanced2026ServicesShowcase = () => {;
                   </div>
                 </div>
                 {/* Description */}
-<<<<<<< HEAD
-                <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-=======
                 <p className="text-gray-300 text-sm mb-4 leading-relaxed">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   {service.description}
                 </p>
-=======
                     className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`}>;
                     <service && service.icon className='w-6 h-6 text-white' />;
                   </div>;
@@ -943,24 +651,7 @@ const Enhanced2026ServicesShowcase = () => {;
                   {service && service.description}
                 </p>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Features */}
-<<<<<<< HEAD
-                <div className='mb-4'>;
-                  <ul className='space-y-1'>;
-                    {service && service.features.slice(0, 2).map((feature, i) => (;
-                      <li
-                        key={i}
-                        className='flex items-center text-gray-400 text-xs'>;
-                        <Star className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />                        {feature}                <div className="mb-4">;
-                  <ul className="space-y-1">;
-                    {service && service.features.slice(0, 2).map((feature, i) => (;
-                      <li key={i} className="flex items-center text-gray-400 text-xs">;
-                        <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />;
-                      </li>;
-<<<<<<< HEAD
-=======
-=======
                 <div className="mb-4">
                   <ul className="space-y-1">
                     {service.features.slice(0, 2).map((feature, i) => (
@@ -968,22 +659,11 @@ const Enhanced2026ServicesShowcase = () => {;
                         <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
-<<<<<<< HEAD
-                  </ul>
-                </div>
-=======
                   </ul>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Price and CTA */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <div className='flex items-center justify-between'>;
                   <div>;
                     <span className='text-2xl font-bold text-cyan-400'>;
@@ -994,15 +674,8 @@ const Enhanced2026ServicesShowcase = () => {;
                     </span>;
                   </div>;
                   <Link
-<<<<<<< HEAD
-                    href={`/${service.id}`}
-                    className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'
-                  >
-                    Learn More <ArrowRight className='w-4 h-4 ml-1' />                  </Link>                  <div>
-=======
                 <div className="flex items-center justify-between">
                   <div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                     <span className="text-gray-400 text-sm">{service.period}</span>
                   </div>
@@ -1017,7 +690,6 @@ const Enhanced2026ServicesShowcase = () => {;
             </motion.div>
           ))}
         </div>
-=======
                     href={`/${service && service.id}`}
                     className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'>;
                     Learn More <ArrowRight className='w-4 h-4 ml-1' />                  </Link>                  <div>;
@@ -1035,17 +707,12 @@ const Enhanced2026ServicesShowcase = () => {;
           ))}
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className='text-center'>;
           <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'>;
             <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1096,17 +763,6 @@ const Enhanced2026ServicesShowcase = () => {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-};
-
-export default Enhanced2026ServicesShowcase;  );
-=======
-<<<<<<< HEAD
-}
-export default Enhanced2026ServicesShowcase;  )
-}
-=======
-=======
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8">
@@ -1149,20 +805,12 @@ export default Enhanced2026ServicesShowcase;  )
       </div>
     </section>
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default Enhanced2026ServicesShowcase;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Enhanced2026ServicesShowcase;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               while_hover={{ scale: 1.05, coordinate_y: -5 }}
               className='group text - center';
             >;
@@ -1344,4 +992,3 @@ export default Enhanced2026ServicesShowcase);
 ;
 export default Enhanced2026ServicesShowcase;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,71 +1,33 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ContentGenerationRequest {
   content_type: 'blog' | 'newsletter';
   prompt?: string;
   topic?: string;
-<<<<<<< HEAD
-  autoPublish?: boolean
-  includeImage?: boolean
-=======
   auto_publish?: boolean,
   include_image?: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
-<<<<<<< HEAD
-  tweetSummary?: string
-  imagePrompt?: string
-}
-interface GeneratedNewsletterContent {
-  subject: string;
-  previewText: string;
-  body: string
-  cta: string
-}
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-    if (!openAIApiKey) {
-      throw new Error("OpenAI API key is not set in environment variables")
-    }
-<<<<<<< HEAD
-    const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest;
-=======
 
     const { contentType, prompt, topic, autoPublish, includeImage } = await req && req.json() as ContentGenerationRequest;
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Default topic if none provided
     const contentTopic = topic |"AI freelancing marketplace trends";
     // Build the prompt based on content type
@@ -90,15 +52,6 @@ serve(async (req) => {
       Keep it concise with clear sections and an engaging call-to-action to browse jobs or talent.`
     }
     // Call OpenAI API
-<<<<<<< HEAD
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST"
-      headers: {
-        "Authorization": `Bearer ${openAIApiKey}`;
-        "Content-Type": "application/json"}
-      body: JSON.stringify({
-        model: "gpt-4o"
-=======
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -106,11 +59,9 @@ serve(async (req) => {
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
         model: "gpt-4o",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         messages: [
           { role: "system", content: systemPrompt }
           { role: "user", content: userPrompt }
-=======
   tweet_summary?: string,
   image_prompt?: string;
 }
@@ -178,69 +129,7 @@ if ( {) {
         messages: [;
           { role: "system", content: system_prompt }
           { role: "user", content: user_prompt }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ];
-<<<<<<< HEAD
-        temperature: 0.7})});
-<<<<<<< HEAD
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
-    const data = await response.json();
-    const generatedContent = JSON.parse(data.choices[0].message.content);
-    // If image is requested for blog post, generate an image prompt
-    if (contentType === 'blog' && includeImage) {
-      const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST"
-        headers: {
-          "Authorization": `Bearer ${openAIApiKey}`;
-          "Content-Type": "application/json"}
-        body: JSON.stringify({
-          model: "gpt-4o-mini"
-          messages: [
-            {
-              role: "system"
-              content: "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail."
-            }
-            {
-              role: "user"
-              content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"`
-            }
-          ];
-          temperature: 0.7
-          max_tokens: 100})});
-      const imagePromptData = await imagePromptResponse.json();
-      generatedContent.imagePrompt = imagePromptData.choices[0].message.content
-=======
-        temperature: 0 && 0.7})});
-
-    if (!response && response.ok) {
-      const errorData = await response && response.json();
-      throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
-    }
-
-    const data = await response && response.json();
-    const generatedContent = JSON && JSON.parse(data && data.choices[0].message && message.content);
-    
-    // If image is requested for blog post, generate an image prompt
-    if (contentType === 'blog' && includeImage) {
-      const imagePromptResponse = await fetch("https://api && api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${openAIApiKey}`;
-          "Content-Type": "application/json"};
-        body: JSON && JSON.stringify({
-          model: "gpt-4o-mini",
-          messages: [
-            { 
-              role: "system", 
-              content: "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail." 
-            };
-            { 
-              role: "user", 
-              content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent && generatedContent.title}"` 
-=======
 ;
     // Check condition
 if ( {) {
@@ -272,29 +161,17 @@ if ( {) {
             {
               role: "user",
               content: `Create a DALL - E prompt for a thumbnail image for this blog post title: "${generated_content.title}"`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }
           ];
           temperature: 0 && 0.7,
           max_tokens: 100})});
-<<<<<<< HEAD
-      
-      const imagePromptData = await imagePromptResponse && imagePromptResponse.json();
-      generatedContent && generatedContent.imagePrompt = imagePromptData && imagePromptData.choices[0].message && message.content
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
-<<<<<<< HEAD
-      const supabaseUrl = Deno.env.get("SUPABASE_URL");
-      const supabaseKey = Deno.env.get("SUPABASE_ANON_KEY");
-      if (!supabaseUrl |!supabaseKey) {
-=======
       const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");
       const supabaseKey = Deno && Deno.env.get("SUPABASE_ANON_KEY");
       
       if (!supabaseUrl || !supabaseKey) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         throw new Error("Supabase credentials are not set in environment variables")
       }
       const supabase = createClient(supabaseUrl, supabaseKey);
@@ -310,14 +187,9 @@ if ( {) {
         year: 'numeric'
       });
       // Auto-calculate read time (rough estimate: 200 words per minute)
-<<<<<<< HEAD
-      const wordCount = generatedContent.body.split(/\s+/).length
-      const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read";
-=======
       const wordCount = generatedContent && generatedContent.body.split(/\s+/).length,
       const readTime = Math && Math.max(1, Math && Math.ceil(wordCount / 200)) + " min read";
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       // Insert into blog_posts table
       const { data: blogPost, error } = await supabase
         .from('blog_posts')
@@ -328,15 +200,6 @@ if ( {) {
           content: generatedContent && generatedContent.body;
           author: {
             name: "Zion AI Team";
-<<<<<<< HEAD
-            title: "Content Team"
-            avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
-          }
-          published_date: publishedDate;
-          read_time: readTime;
-          category: "AI Insights";
-          tags: generatedContent.tags
-=======
             title: "Content Team",
             avatarUrl: "https://images && images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
           };
@@ -344,7 +207,6 @@ if ( {) {
           read_time: readTime;
           category: "AI Insights";
           tags: generatedContent && generatedContent.tags,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           featured_image: "", // To be updated if image is generated
           is_featured: false;
           is_published: true;
@@ -356,31 +218,18 @@ if ( {) {
       if (error) {
         console && console.error("Error saving blog post:", error)
       } else {
-<<<<<<< HEAD
-        console.log("Blog post saved successfully:", blogPost);
-=======
         console && console.log("Blog post saved successfully:", blogPost);
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         // Create notification about new blog post
         await supabase
           .from('notifications')
           .insert({
             user_id: null, // System notification visible to admins
-<<<<<<< HEAD
-            title: "New Blog Post Generated"
-            message: `AI-generated blog post "${generatedContent.title}" has been published.`;
-            type: "system";
-            read: false;
-            related_id: blogPost.id
-=======
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent && generatedContent.title}" has been published.`;
             type: "system";
             read: false;
             related_id: blogPost && blogPost.id,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
       const imagePromptData = await imagePromptResponse.json ();
       generated_content.image_prompt = imagePromptData.choices[0].message.content;
@@ -462,22 +311,11 @@ if ( {) {
             type: "system";
             read: false;
             related_id: blog_post.id,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             action_url: `/blog/${slug}`;
             action_text: "View Post";
           });
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return new Response(JSON.stringify(generatedContent), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-      status: 200})
-  } catch (error) {
-    console.error("Error in generate-content function:", error);
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
 
     return new Response(JSON && JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
@@ -487,12 +325,10 @@ if ( {) {
     
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       status: 500})
   }
 });
 
-=======
     return new Response (JSON.stringify (generated_content), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 200});
@@ -505,4 +341,3 @@ if ( {) {
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

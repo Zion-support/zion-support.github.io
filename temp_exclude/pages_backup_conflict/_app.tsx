@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,13 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from \'react\'; import type { AppProps } from \'next/app\'; import \'../src/index ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 const React from "react"; import type { AppProps } from "next/app"; import "./src/index ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''";
-<<<<<<< HEAD
-import _React from 'react'; import type { AppProps } from 'next/app'; import '../src/index ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
-=======
-import _React from 'react'; import type { AppProps } from 'next/app'; import '../src/index ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
-=======
 import React from \'react\'; import type { AppProps } from \'next/app\'; import \'../src/index.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 const React from "react"; import type { AppProps } from "next/app"; import "./src/index.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
 import _React from 'react'; import type { AppProps } from 'next/app'; import '../src/index.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -15,5 +15,4 @@ export async function trackEvent(_payload: TrackEventPayload) {_try {
   }
       keepalive: true as any});
   } catch (e) {_// swallow}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

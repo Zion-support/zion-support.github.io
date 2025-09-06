@@ -1,31 +1,10 @@
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import useSWR from 'swr';
-import { TALENT_PROFILES  } from '../../../../data/talent';
-import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-export default function JobApplicantsPage() {
-  const router = useRouter()
-  const { id } = router.query;
-  const { data: appsData } = useSWR(
-    id ? `/api/applications?jobId=${id}` : null
-    fetcher
-=======
-const fetcher = (url: string) => fetch(url).then(r => r && r.json());
-=======
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 export default function JobApplicantsPage() {
   const router = useRouter();
   const { id } = router.query;
   const { data: appsData } = useSWR(id ? `/api/applications?jobId=${id}` : null, fetcher);
   const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function JobApplicantsPage() {;
   const router = useRouter(),;
@@ -33,19 +12,10 @@ export default function JobApplicantsPage() {;
   const { data: appsData } = useSWR(;
     id ? `/api/applications?jobId=${id}` : null,;
     fetcher;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
-<<<<<<< HEAD
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;
         <h1 className='text-2xl font-semibold'>Applicants</h1>;
@@ -58,16 +28,6 @@ export default function JobApplicantsPage() {;
         {applications && applications.length === 0 && (;
           <p className='text-sm text-gray-500'>No applicants yet.</p>;
         )}
-<<<<<<< HEAD
-        {applications.map(a => {
-          const talent = TALENT_PROFILES.find(t => t.slug === a.talentSlug);
-            >
-              <div className='flex items-center justify-between'>
-
-                <div>
-                  <p className='font-medium'>{talent?.name |a.talentSlug}</p>
-                  <p className='text-xs text-gray-500'>
-=======
 import {use_router} from 'next / router';
 import useSWR from 'swr';
 import {TALENT_PROFILES} from '../../../../data / talent';
@@ -108,7 +68,6 @@ function JobApplicantsPage() {
                 <div>;
                   <p className='font - medium'>{talent?.name || a.talent_slug}</p>;
                   <p className='text - xs text - gray - 500'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Status: {a.status} • Applied:{' '}
                     {new Date (a.createdAtIso).toLocaleString ()}
                   </p>;
@@ -119,37 +78,6 @@ function JobApplicantsPage() {
               </div>;
             </div>);
         })}
-<<<<<<< HEAD
-      </div>
-    </div>
-);
-=======
-        {applications && applications.map(a => {;
-          const talent = TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === a && a.talentSlug);
-
-            >;
-              <div className='flex items-center justify-between'>;
-                <div>;
-                  <p className='font-medium'>{talent?.name || a && a.talentSlug}</p>;
-                  <p className='text-xs text-gray-500'>;
-                    Status: {a && a.status} • Applied:{' '}
-                    {new Date(a && a.createdAtIso).toLocaleString()}
-                  </p>;
-                </div>;
-                <button className='px-2 py-1 text-sm border rounded'>;
-                  Message;
-                </button>;
-              </div>;
-            </div>;
-          );
-        })}
-      </div>;
-    </div>;
-  );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Applicants</h1>
@@ -176,10 +104,6 @@ function JobApplicantsPage() {
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       </div>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

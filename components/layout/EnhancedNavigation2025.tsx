@@ -1,66 +1,5 @@
 
 'use client';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-]
-}];
-</div> </div> </div> </div> {
-  /* Main Navigation */
-}<nav className= {
-  `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
-  isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" ></div> </div> <div> <h1 className="text-xl font-bold text-white" >Zion Tech Group</h1> <p className="text-xs text-gray-400" >Innovation • Intelligence • Impact</p> </div> </a> </button> {
-  /* Submenu */
-}<AnimatePresence> <span key= {
-  service
-}className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md" > {
-  service
-}</span>) )
-}+ {
-  subitem.services.length - 2
-}more </span>)
-}</div>)
-}</div> </div> </a>) )
-}</div> </motion.div>)
-}</AnimatePresence> </div>) )
-}</div> <Link href="/pricing" className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200" > Pricing </a> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started </a> </div> {
-  /* Mobile Menu Button */
-}<button </button> </div> </div> </nav> {
-  /* Mobile Menu */
-}<AnimatePresence> {
-  isOpen && (<motion.div {
-  item.badge
-}</span>)
-}</div> <ChevronDown className= {
-  `w-4 h-4 transition-transform duration-200 $ {
-  activeDropdown === item.name ? 'rotate-180' : ''
-}`
-}/> </button> > {
-  item.children?.map ( (child) => (<Link key= {
-  child.name
-}</span> </a>) )
-}</motion.div>)
-}</div>) )
-}> Get Started </a> className="fixed inset-0 z-50 lg:hidden" > {
-  /* Backdrop */
-}<div > <X className="w-6 h-6" /> </button> </div> </div> <ChevronDown className= {
-  `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
-  activeSubmenu === item.name ? 'rotate-180': ''
-}`
-}/> </button> {
-  /* Mobile Submenu */
-}<AnimatePresence> > {
-  item.submenu?.map ( (subitem) => (<Link key= {
-  subitem.name
-}) )
-}</motion.div>)
-}</AnimatePresence> </div>) )
-}</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>)
-}</AnimatePresence> </>)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ] ;
 }];
 </div> </div> </div> </div> {;
@@ -115,12 +54,8 @@
 }</AnimatePresence> </div>) ) ;
 }</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion && motion.div>) ;
 }</AnimatePresence> </>) ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {;
-<<<<<<< HEAD
-=======
-=======
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -486,19 +421,9 @@ const contactInfo = {
 };
 
 export default function EnhancedNavigation2025() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-=======
 
   useEffect(() => {;
     const handleScroll = () => {;
@@ -506,39 +431,12 @@ export default function EnhancedNavigation2025() {
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
   return (
     <>;
       {/* Top Contact Bar */}
-<<<<<<< HEAD
-      <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center gap-4 mb-2 sm:mb-0">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-cyan-300" />
-                <span>{contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-purple-300" />
-                <span>{contactInfo.email}</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-green-300" />
-              <span className="text-xs">{contactInfo.address}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Main Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50'
-=======
       <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">;
         <div className="container mx-auto px-4">;
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm">;
@@ -564,26 +462,11 @@ export default function EnhancedNavigation2025() {
       <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           : 'bg-transparent'
       }`}>;
         <div className="container mx-auto px-4">;
           <div className="flex items-center justify-between h-20">;
             {/* Logo */}
-<<<<<<< HEAD
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
-                <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>
-              </div>
-            </Link>
-=======
             <Link href="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
@@ -597,23 +480,11 @@ export default function EnhancedNavigation2025() {
               </div>;
             </Link>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">;
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="relative group">;
                   <button
-<<<<<<< HEAD
-                    onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
-                  >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeSubmenu === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-=======
                     onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2";
                   >;
@@ -624,7 +495,6 @@ export default function EnhancedNavigation2025() {
                     }`} />;
                   </button>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Submenu */}
                   <AnimatePresence>;
                     {activeSubmenu === item && item.name && (;
@@ -681,12 +551,8 @@ export default function EnhancedNavigation2025() {
                   </AnimatePresence>;
                 </div>;
               ))}
-<<<<<<< HEAD
-            </div>
-=======
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <Link
@@ -696,31 +562,16 @@ export default function EnhancedNavigation2025() {
               </Link>;
               <Link
                 href="/contact"
-<<<<<<< HEAD
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-              </Link>
-            </div>
-=======
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                 Get Started;
               </Link>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-<<<<<<< HEAD
-            </button>
-          </div>
-        </div>
-      </nav>
-=======
-=======
 ];
 }];
 </div> </div> </div> </div> {
@@ -926,14 +777,10 @@ function EnhancedNavigation2025() {
               className="lg:hidden p - 2 text - gray - 300 hover:text - white transition - colors duration - 200";
             >;
               {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </button>;
           </div>;
         </div>;
       </nav>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -947,15 +794,6 @@ function EnhancedNavigation2025() {
                           {item && item.badge}
                         </span>;
                       )}
-<<<<<<< HEAD
-                    </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-                  {activeDropdown === item.name && (
-                    <motion.div
-=======
                     </div>;
                     <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item && item.name ? 'rotate-180' : ''
@@ -964,7 +802,6 @@ function EnhancedNavigation2025() {
 
                   {activeDropdown === item && item.name && (;
                     <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
@@ -1003,12 +840,8 @@ function EnhancedNavigation2025() {
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
-<<<<<<< HEAD
-            />
-=======
             />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
               <div className="p-6">;
@@ -1016,37 +849,16 @@ function EnhancedNavigation2025() {
                 <div className="flex justify-end mb-6">;
                   <button
                     onClick={closeMenu}
-<<<<<<< HEAD
-                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
-=======
                     className="p-2 text-gray-400 hover:text-white transition-colors duration-200">;
                     <X className="w-6 h-6" />;
                   </button>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mobile Navigation Items */}
                 <div className="space-y-4">;
                   {navigationItems && navigationItems.map((item) => (;
                     <div key={item && item.name}>;
                       <button
-<<<<<<< HEAD
-                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                      >
-                        <div className="flex items-center space-x-3">
-                          <item.icon className="w-5 h-5 text-cyan-400" />
-                          <span className="text-white font-medium">{item.name}</span>
-                        </div>
-                        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                          activeSubmenu === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-=======
                         onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
                         className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200";
                       >;
@@ -1059,7 +871,6 @@ function EnhancedNavigation2025() {
                         }`} />;
                       </button>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
                         {activeSubmenu === item && item.name && (;
@@ -1084,12 +895,8 @@ function EnhancedNavigation2025() {
                       </AnimatePresence>;
                     </div>;
                   ))}
-<<<<<<< HEAD
-                </div>
-=======
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">;
                   <Link
@@ -1101,19 +908,11 @@ function EnhancedNavigation2025() {
                   <Link
                     href="/contact"
                     onClick={closeMenu}
-<<<<<<< HEAD
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Contact Us
-                  </Link>
-                </div>
-=======
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">;
                     Contact Us;
                   </Link>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-gray-700/50">;
                   <div className="space-y-3 text-sm">;
@@ -1128,7 +927,6 @@ function EnhancedNavigation2025() {
                     <div className="flex items-start space-x-3 text-gray-400">;
                       <MapPin className="w-4 h-4 text-green-400 mt-0 && 0.5" />;
                       <span className="text-xs">{contactInfo && contactInfo.address}</span>;
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -1268,39 +1066,12 @@ function EnhancedNavigation2025() {
                     <div className="flex items - start space - x-3 text - gray - 400">;
                       <MapPin className="w - 4 h - 4 text - green - 400 mt - 0.5" />;
                       <span className="text - xs">{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
-          </motion && motion.div>;
-        )}
-<<<<<<< HEAD
-      </AnimatePresence>
-      {/* Spacer for fixed navigation */}
-      <div className="h-20" />
-    </>
-  )
-}
-
-<<<<<<< HEAD
-=======
-      </AnimatePresence>;
-
-      {/* Spacer for fixed navigation */}
-      <div className="h-20" />;
-    </>;
-  );
-};
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default EnhancedNavigation2025;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </motion.div>)}
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
@@ -1308,5 +1079,3 @@ export default EnhancedNavigation2025;
     </>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from "react";
-import { completeSitemap, dynamicPaths } from "@/config/sitemap";
-import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
-import { SEO } from "./SEO";
-import { AppLayout } from "@/layout/AppLayout";
-=======
 import React from './react';
 import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';
 import { Link  } from './react-router-dom';
 import { ChevronRight  } from './lucide-react';
 import { SEO  } from './SEO';
 import { AppLayout  } from '@/layout / AppLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const SitemapPage: React.FC = () => {
-=======
 import React from 'react';
 import {completeSitemap, dynamicPaths} from '@/config/sitemap';
 import {Link} from 'react-router-dom';
@@ -24,21 +12,8 @@ import {ChevronRight} from 'lucide-react';
 import {SEO} from './SEO';
 import {AppLayout} from '@/layout/AppLayout';
 export const SitemapPage: React.FC = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <AppLayout>;
-<<<<<<< HEAD
-      <SEO
-        title="Sitemap | Zion AI Marketplace"
-        description="Complete sitemap of the Zion AI Marketplace"
-        keywords="sitemap, zion, ai marketplace, navigation"
-<<<<<<< HEAD
-        canonical="https://app.ziontechgroup.com/sitemap-page"
-      />
-      <div className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
       <SEO;
         title="Sitemap | Zion AI Marketplace";
         description="Complete sitemap of the Zion AI Marketplace";
@@ -48,7 +23,6 @@ export const SitemapPage: React.FC = () => {;
       <div className="container mx - auto px - 4 py - 12">;
         <h1 className="text - 3xl font - bold mb - 8">Sitemap</h1>;
         <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Public Pages */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">;
@@ -65,31 +39,6 @@ export const SitemapPage: React.FC = () => {;
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
-<<<<<<< HEAD
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </div>
-          {/* Talent Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
-              Talent Pages
-            </h2>
-            <p className="text-sm text-zion-slate mb-4">
-              Requires talent or creator account
-            </p>
-            <ul className="space-y-2">
-              {completeSitemap
-                .filter(
-                  (route) =>
-                    route.requiredRoles?.includes("jobSeeker") |
-                    route.requiredRoles?.includes("creator")
-                )
-                .map((route) => (
-                  <li key={route.path}>
-                    <Link
-=======
                     </Link>;
                   </li>))}
             </ul>;
@@ -112,37 +61,11 @@ export const SitemapPage: React.FC = () => {;
                 .map ((route) => (
                   <li key={route.path}>;
                     <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       to={route.path}
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
-<<<<<<< HEAD
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </div>
-          {/* Client Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
-              Client Pages
-            </h2>
-            <p className="text-sm text-zion-slate mb-4">
-              Requires employer or buyer account
-            </p>
-            <ul className="space-y-2">
-              {completeSitemap
-                .filter(
-                  (route) =>
-                    route.requiredRoles?.includes("employer") |
-                    route.requiredRoles?.includes("buyer")
-                )
-                .map((route) => (
-                  <li key={route.path}>
-                    <Link
-=======
                     </Link>;
                   </li>))}
             </ul>;
@@ -165,37 +88,11 @@ export const SitemapPage: React.FC = () => {;
                 .map ((route) => (
                   <li key={route.path}>;
                     <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       to={route.path}
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
-<<<<<<< HEAD
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </div>
-          {/* Shared Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
-              Authenticated User Pages
-            </h2>
-            <p className="text-sm text-zion-slate mb-4">
-              Requires any account type
-            </p>
-            <ul className="space-y-2">
-              {completeSitemap
-                .filter(
-                  (route) =>
-                    route.requiredAuth &&
-                    (!route.requiredRoles |route.requiredRoles.length === 0)
-                )
-                .map((route) => (
-                  <li key={route.path}>
-                    <Link
-=======
                     </Link>;
                   </li>))}
             </ul>;
@@ -218,24 +115,15 @@ export const SitemapPage: React.FC = () => {;
                 .map ((route) => (
                   <li key={route.path}>;
                     <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       to={route.path}
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
-<<<<<<< HEAD
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </div>
-=======
                     </Link>;
                   </li>))}
             </ul>;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Admin Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">;
@@ -255,173 +143,6 @@ export const SitemapPage: React.FC = () => {;
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
-<<<<<<< HEAD
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </div>
-          {/* Dynamic Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
-              Dynamic Pages
-            </h2>
-            <p className="text-sm text-zion-slate mb-4">
-              Pages with dynamic parameters
-            </p>
-            <ul className="space-y-2">
-              {Object.entries(dynamicPaths).map(([key, path]) => (
-                <li key={key}>
-                  <div className="flex items-center text-zion-slate">
-                    <ChevronRight className="h-4 w-4 mr-2" />
-                    {path} <span className="ml-2 text-xs italic">({key})</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </AppLayout>
-  );
-}
-
-=======
-        canonical="https://app && app.ziontechgroup.com/sitemap-page"
-      />;
-      <div className="container mx-auto px-4 py-12">;
-        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>;
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-          {/* Public Pages */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>;
-            <ul className="space-y-2">;
-              {completeSitemap;
-                .filter(route => !route && route.requiredAuth);
-                .map(route => (;
-                  <li key={route && route.path}>;
-                    <Link
-                      to={route && route.path} 
-                      className="flex items-center hover:text-zion-purple">;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
-                      {route && route.label}
-                    </Link>;
-                  </li>;
-                ));
-              }
-            </ul>;
-          </div>;
-
-          {/* Talent Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>;
-            <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>;
-            <ul className="space-y-2">;
-              {completeSitemap;
-                .filter(route => ;
-                  route && route.requiredRoles?.includes('jobSeeker') || ;
-                  route && route.requiredRoles?.includes('creator');
-                );
-                .map(route => (;
-                  <li key={route && route.path}>;
-                    <Link
-                      to={route && route.path} 
-                      className="flex items-center hover:text-zion-purple">;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
-                      {route && route.label}
-                    </Link>;
-                  </li>;
-                ));
-              }
-            </ul>;
-          </div>;
-
-          {/* Client Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>;
-            <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>;
-            <ul className="space-y-2">;
-              {completeSitemap;
-                .filter(route => ;
-                  route && route.requiredRoles?.includes('employer') || ;
-                  route && route.requiredRoles?.includes('buyer');
-                );
-                .map(route => (;
-                  <li key={route && route.path}>;
-                    <Link
-                      to={route && route.path} 
-                      className="flex items-center hover:text-zion-purple">;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
-                      {route && route.label}
-                    </Link>;
-                  </li>;
-                ));
-              }
-            </ul>;
-          </div>;
-
-          {/* Shared Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>;
-            <p className="text-sm text-zion-slate mb-4">Requires any account type</p>;
-            <ul className="space-y-2">;
-              {completeSitemap;
-                .filter(route => ;
-                  route && route.requiredAuth && ;
-                  (!route && route.requiredRoles || route && route.requiredRoles.length === 0);
-                );
-                .map(route => (;
-                  <li key={route && route.path}>;
-                    <Link
-                      to={route && route.path} 
-                      className="flex items-center hover:text-zion-purple">;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
-                      {route && route.label}
-                    </Link>;
-                  </li>;
-                ));
-              }
-            </ul>;
-          </div>;
-
-          {/* Admin Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>;
-            <p className="text-sm text-zion-slate mb-4">Requires admin account</p>;
-            <ul className="space-y-2">;
-              {completeSitemap;
-                .filter(route => ;
-                  route && route.requiredRoles?.includes('admin');
-                );
-                .map(route => (;
-                  <li key={route && route.path}>;
-                    <Link
-                      to={route && route.path} 
-                      className="flex items-center hover:text-zion-purple">;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
-                      {route && route.label}
-                    </Link>;
-                  </li>;
-                ));
-              }
-            </ul>;
-          </div>;
-
-          {/* Dynamic Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>;
-            <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>;
-            <ul className="space-y-2">;
-              {Object && Object.entries(dynamicPaths).map(([key, path]) => (;
-                <li key={key}>;
-                  <div className="flex items-center text-zion-slate">;
-                    <ChevronRight className="h-4 w-4 mr-2" />;
-                    {path} <span className="ml-2 text-xs italic">({key})</span>;
-                  </div>;
-                </li>;
-              ))}
-=======
                     </Link>;
                   </li>))}
             </ul>;
@@ -442,18 +163,10 @@ export const SitemapPage: React.FC = () => {;
                     {path} <span className="ml - 2 text - xs italic">({key})</span>;
                   </div>;
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </ul>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </AppLayout>;
-  );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

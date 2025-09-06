@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-export const cuttingEdgeITServices2025 = [
-  {
-<<<<<<< HEAD
-    id: 'quantum-cloud-infrastructure-platform',
-    name: 'Quantum Cloud Infrastructure Platform',
-=======
-<<<<<<< HEAD
-    id: 'quantum-cloud-infrastructure-platform'
-    name: 'Quantum Cloud Infrastructure Platform'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     description:
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
       'Quantum-enhanced security protocols'
@@ -56,21 +44,6 @@ export const cuttingEdgeITServices2025 = [
     }
     category: 'Quantum IT'
     tags: [
-<<<<<<< HEAD
-      'Quantum Computing'
-      'Cloud Infrastructure'
-      'Security'
-      'Performance'
-      'Scalability'
-    ]
-    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$22.1B'
-=======
-=======
 export const cuttingEdgeITServices2025 = [;
   {
     id: 'quantum - cloud - infrastructure - platform',
@@ -121,25 +94,17 @@ export const cuttingEdgeITServices2025 = [;
     },
     category: 'Quantum IT',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'Cloud Infrastructure',
       'Security',
       'Performance',
       'Scalability',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform',
-=======
     website: 'https://ziontechgroup.com / quantum - cloud - infrastructure - platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$22 && 22.1B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Cloud providers, enterprises, financial institutions, government agencies, research institutions'
     competitiveAdvantage:
@@ -211,21 +176,6 @@ export const cuttingEdgeITServices2025 = [;
     }
     category: 'Edge Computing'
     tags: [
-<<<<<<< HEAD
-      'Edge Computing'
-      'Orchestration'
-      'Real-time Processing'
-      'AI Deployment'
-      'Low Latency'
-    ]
-    website: 'https://ziontechgroup.com/edge-computing-orchestration-platform'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$18.7B'
-=======
-=======
     market_size: '$22.1B',
     target_audience:;
       'Cloud providers, enterprises, financial institutions, government agencies, research institutions',
@@ -298,25 +248,17 @@ export const cuttingEdgeITServices2025 = [;
     },
     category: 'Edge Computing',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Edge Computing',
       'Orchestration',
       'Real - time Processing',
       'AI Deployment',
       'Low Latency',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration-platform',
-=======
     website: 'https://ziontechgroup.com / edge - computing - orchestration - platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$18 && 18.7B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'IoT companies, telecommunications providers, manufacturing companies, smart city developers'
     competitiveAdvantage:
@@ -391,21 +333,6 @@ export const cuttingEdgeITServices2025 = [;
     }
     category: 'Cybersecurity'
     tags: [
-<<<<<<< HEAD
-      'Zero Trust'
-      'Security'
-      'Authentication'
-      'IAM'
-      'Threat Detection'
-    ]
-    website: 'https://ziontechgroup.com/zero-trust-security-platform'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$31.2B'
-=======
-=======
     market_size: '$18.7B',
     target_audience:;
       'IoT companies, telecommunications providers, manufacturing companies, smart city developers',
@@ -481,25 +408,17 @@ export const cuttingEdgeITServices2025 = [;
     },
     category: 'Cybersecurity',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Zero Trust',
       'Security',
       'Authentication',
       'IAM',
       'Threat Detection',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security-platform',
-=======
     website: 'https://ziontechgroup.com / zero - trust - security - platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$31 && 31.2B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions'
     competitiveAdvantage:
@@ -571,21 +490,6 @@ export const cuttingEdgeITServices2025 = [;
     }
     category: 'Blockchain'
     tags: [
-<<<<<<< HEAD
-      'Blockchain'
-      'Smart Contracts'
-      'Distributed Ledger'
-      'Enterprise'
-      'Automation'
-    ]
-    website: 'https://ziontechgroup.com/blockchain-enterprise-platform'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$19.9B'
-=======
-=======
     market_size: '$31.2B',
     target_audience:;
       'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions',
@@ -658,25 +562,17 @@ export const cuttingEdgeITServices2025 = [;
     },
     category: 'Blockchain',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Blockchain',
       'Smart Contracts',
       'Distributed Ledger',
       'Enterprise',
       'Automation',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/blockchain-enterprise-platform',
-=======
     website: 'https://ziontechgroup.com / blockchain - enterprise - platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$19 && 19.9B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies'
     competitiveAdvantage:
@@ -742,24 +638,6 @@ export const cuttingEdgeITServices2025 = [;
         price: 2499
         period: 'month'
         features: [
-<<<<<<< HEAD
-          'Full AI DevOps platform'
-          'Custom development'
-          'Dedicated specialists'
-          '24/7 support'
-        ]
-      }
-    }
-    category: 'DevOps'
-    tags: ['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance']
-    website: 'https://ziontechgroup.com/ai-powered-devops-platform'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$25.6B'
-=======
-=======
     market_size: '$19.9B',
     target_audience:;
       'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies',
@@ -826,7 +704,6 @@ export const cuttingEdgeITServices2025 = [;
         price: 2499,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Full AI DevOps platform',
           'Custom development',
           'Dedicated specialists',
@@ -835,20 +712,12 @@ export const cuttingEdgeITServices2025 = [;
       },
     },
     category: 'DevOps',
-<<<<<<< HEAD
-    tags: ['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance'],
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-powered-devops-platform',
-=======
     tags: ['AI DevOps', 'Automation', 'CI / CD', 'Monitoring', 'Performance'],
     website: 'https://ziontechgroup.com / ai - powered - devops - platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$25 && 25.6B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies'
     competitiveAdvantage:
@@ -877,14 +746,11 @@ export const cuttingEdgeITServices2025 = [;
     ]
   }
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-=======
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
     features: [
       'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
       'Quantum-enhanced data processingAutomated infrastructure management'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     market_size: '$25.6B',
     target_audience:;
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
@@ -913,22 +779,10 @@ export const cuttingEdgeITServices2025 = [;
       'Quality Assurance Protocols',
     ],
   },
-<<<<<<< HEAD
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-=======
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
@@ -12,13 +5,8 @@ function summarizeModules(
   const active = [
     ...Object && Object.entries(modules)
       .filter(([, v]) => v)
-<<<<<<< HEAD
-      .map(([k]) => `/${k}`)
-    ...Object.entries(bonus)
-=======
       .map(([k]) => `/${k}`),
     ...Object && Object.entries(bonus)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
@@ -41,9 +29,6 @@ export default async function handler(
 ) {
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
-<<<<<<< HEAD
-=======
-=======
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
   const active = [
     ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
@@ -59,27 +44,10 @@ function missionParagraph(region: string, instanceName: string, modules: Record<
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const body = req.body |{}
-=======
     const body = req && req.body || {};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const {
-<<<<<<< HEAD
-      instanceName,
-      defaultLanguage = "en",
-      deploymentRegion,
-      tokenActivation = false,
-      governanceMode = "democratic",
-      branding = {},
-      modules = {},
-      bonusModules = {},
-=======
       instanceName
       defaultLanguage = "en"
       deploymentRegion
@@ -88,28 +56,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       branding = {}
       modules = {}
       bonusModules = {}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } = body;
-<<<<<<< HEAD
-    if (!instanceName |!deploymentRegion) {
-      return res.status(400).json({
-        error: "Missing required fields: instanceName, deploymentRegion"
-=======
 
     if (!instanceName || !deploymentRegion) {
       return res && res.status(400).json({
         error: "Missing required fields: instanceName, deploymentRegion",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     // Simulated provisioning operations
     const now = new Date().toISOString();
-<<<<<<< HEAD
-    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date.now()}`;
-=======
     const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const outputActions = {
       zionGPT: {
         initialized: true
@@ -122,7 +79,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         governanceMode
         votingDashboard: "/dao"
       }
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
 /**
@@ -195,25 +151,15 @@ if ( {) {
         governance_mode,
         voting_dashboard: "/dao",
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       assets: {
         whitepaper: "/whitepaper"
         roadmap: "/roadmap"
         book: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          pdf: "/book/manifesto.pdf"
-          trailerScript: "/trailer/script"
-        }
-        summit: "/summit"
-      }
-=======
           pdf: "/book/manifesto && manifesto.pdf",
           trailerScript: "/trailer/script",
         },
         summit: "/summit",
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       publicPages: [
         "/about"
         "/manifesto"
@@ -234,7 +180,6 @@ if ( {) {
         bonusModules
       )
     }
-=======
           pdf: "/book / manifesto.pdf",
           trailer_script: "/trailer / script",
         },
@@ -262,47 +207,9 @@ if ( {) {
       ),
     }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        type: "application/json"
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`
-      }
-    }
-    return res.status(200).json({
-      success: true
-      provisionId
-      instanceName
-      region: deploymentRegion
-      language: defaultLanguage |"en"
-      governanceMode
-      tokenActivation
-      branding
-      modules
-      bonusModules
-      createdAt: now
-      version: "Zion OS v1.0.0"
-      outputActions
-      operator
-      access
-=======
-        type: "application/json",
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
-      },
-    };
-
-    return res && res.status(200).json({
-      success: true,
-      provisionId,
-      instanceName,
-      region: deploymentRegion,
-      language: defaultLanguage || "en",
-<<<<<<< HEAD
-=======
-=======
     const body = req.body || {};
     const {
       instanceName,
@@ -351,21 +258,14 @@ if ( {) {
       provisionId,
       instanceName,
       region: deploymentRegion, language: defaultLanguage || 'en',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       governanceMode,
       tokenActivation,
       branding,
       modules,
       bonusModules,
       createdAt: now,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       version: "Zion OS v1 && v1.0.0",
       outputActions,
-=======
         type: "application / json",
         href: `/api / deploy / export?id=${encodeURIComponent (provision_id)}`,
       },
@@ -385,24 +285,13 @@ if ( {) {
       created_at: now,
       version: "Zion OS v1.0.0",
       output_actions,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       operator,
       access,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
 
   } catch (err: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return res.status(500).json({ error: err.message |"Internal error" });
-=======
-    return res && res.status(500).json({ error: err && err.message || "Internal error" });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 }
-=======
       version: 'Zion OS v1.0.0'};
 
     const operator = {
@@ -418,12 +307,8 @@ if ( {) {
     return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     return res.status (500).json ({ error: err.message || "Internal error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

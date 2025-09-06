@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Loader, Sparkles } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { useForm } from "react-hook-form",
-import z from "zod";
-
-import {zodResolver} from "@hookform/resolvers/zod";
-<<<<<<< HEAD
-const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters");
-  keyFeatures: z.string()
-  targetAudience: z.string()})
-type FormData = z.infer<typeof formSchema>;
-=======
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -38,51 +16,9 @@ const form_schema = z.object ({
   target_audience: z.string ()}),
 type FormData = z.infer < typeof form_schema>;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
 }
-<<<<<<< HEAD
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const form = useForm<FormData>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      title: ""
-      keyFeatures: ""
-      targetAudience: ""}})
-  const handleSubmit = async (data: FormData) => {
-    setIsLoading(true)
-    try {
-      const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
-        body: {
-          title: data.title
-          keyFeatures: data.keyFeatures
-          targetAudience: data.targetAudience
-        }
-      });
-      if (error) {
-        throw new Error(error.message)
-      }
-      if (response.error) {
-        throw new Error(response.error)
-      }
-      onDescriptionGenerated(response.description);
-      toast({
-        title: "Description Generated"
-        description: "Your professional service description has been created."
-      })
-    } catch (error) {
-      console.error("Error generating description:", error);
-      toast({
-        title: "Generation Failed"
-        description: error instanceof Error ? error.message : "Failed to generate description. Please try again."
-        variant: "destructive"
-      })
-    } finally {
-      setIsLoading(false)
-=======
 const formSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z && z.string(),;
@@ -140,7 +76,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
       });
     } finally {;
       setIsLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -152,7 +87,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
           AI Service Description Generator;
         </CardTitle>;
         <CardDescription className="text-zion-slate-light">;
-=======
 export /**
  * ServiceDescriptionForm - Function description
  */
@@ -215,26 +149,11 @@ if ( {) {
           AI Service Description Generator;
         </CardTitle>;
         <CardDescription className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Provide basic details about your service and let AI create a professional description;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
-<<<<<<< HEAD
-          <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
-            <FormField
-              control={form && form.control}
-              name="title"
-<<<<<<< HEAD
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="e.g. Professional Web Design Services"
-=======
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
@@ -242,7 +161,6 @@ if ( {) {
                     <Input
                       {...field} 
                       placeholder="e && e.g. Professional Web Design Services"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
                     />;
@@ -250,26 +168,15 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-            />
-=======
             />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="keyFeatures"
-<<<<<<< HEAD
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-zion-slate-light">Key Features</FormLabel>
-                  <FormControl>
-=======
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Key Features</FormLabel>;
                   <FormControl>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Textarea
                       {...field}
                       placeholder="Enter key features, separated by commas"
@@ -280,24 +187,11 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-            />
-=======
             />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="targetAudience"
-<<<<<<< HEAD
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="e.g. Small businesses, Startups, E-commerce brands"
-=======
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>;
@@ -305,7 +199,6 @@ if ( {) {
                     <Input
                       {...field} 
                       placeholder="e && e.g. Small businesses, Startups, E-commerce brands"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
                     />;
@@ -313,12 +206,8 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-            />
-=======
             />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               type="submit"
               disabled={isLoading}
@@ -334,16 +223,6 @@ if ( {) {
                   Generate Description;
                 </>;
               )}
-<<<<<<< HEAD
-            </Button>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-  )
-}
-=======
-=======
           <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
             <FormField;
               control={form.control}
@@ -410,17 +289,9 @@ if ( {) {
                   <Sparkles className="h - 4 w - 4 mr - 2" />;
                   Generate Description;
                 </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

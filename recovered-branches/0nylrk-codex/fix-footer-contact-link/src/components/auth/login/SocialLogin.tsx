@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-
-import { Facebook, Twitter } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth";
-import { Web3Login } from "./Web3Login";
-<<<<<<< HEAD
-export function SocialLogin() {
-
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =
-    useAuth();
-
-  return (
-    <div className="mt-6">
-      <div className="relative">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-zion-blue-light" />
-        </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
-            Or continue with
-          </span>
-        </div>
-      </div>
-      <div className="mt-6 grid grid-cols-4 gap-3">
-=======
-export function SocialLogin() {;
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
-    useAuth();
-
-  return (
-    <div className="mt-6">;
-      <div className="relative">;
-        <div className="absolute inset-0 flex items-center">;
-          <div className="w-full border-t border-zion-blue-light" />;
-        </div>;
-        <div className="relative flex justify-center text-sm">;
-          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
-=======
 import { Facebook, Twitter  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 import { use_auth  } from '@/hooks / use_auth';
@@ -56,15 +17,10 @@ function SocialLogin() {
         </div>;
         <div className="relative flex justify - center text - sm">;
           <span className="px - 2 bg - zion - blue - dark text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Or continue with;
           </span>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-      <div className="mt-6 grid grid-cols-4 gap-3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Button
           type="button"
           variant="outline"
@@ -120,7 +76,6 @@ function SocialLogin() {
       </div>;
     </div>;
   );
-=======
       <div className="mt - 6 grid grid - cols - 4 gap - 3">;
         <Button;
           type="button";
@@ -177,5 +132,4 @@ function SocialLogin() {
         <Web3Login />;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

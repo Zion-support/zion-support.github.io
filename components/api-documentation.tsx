@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-
-import {
-  Code
-  Database
-  Shield
-  Zap
-  Globe
-  Cpu
-  BookOpen
-  CheckCircle
-  ArrowRight
-  BarChart3
-  Lock
-  Brain;
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Layout from '../components / layout / Layout';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Code,;
   Database,;
@@ -61,7 +11,6 @@ import {;
   BarChart3,;
   Lock,;
   Brain,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
 
 export default function APIDocumentation() {;
@@ -85,7 +34,6 @@ export default function APIDocumentation() {;
         <ul className='list-disc list-inside text-slate-300 space-y-2'>;
           <li>;
             <a className='text-cyan-400' href='/api-docs'>;
-=======
 import {
   Code,
   Database,
@@ -125,35 +73,21 @@ function APIDocumentation() {
         <ul className='list - disc list - inside text - slate - 300 space - y-2'>;
           <li>;
             <a className='text - cyan - 400' href='/api - docs'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               API Reference;
             </a>;
           </li>;
           <li>;
-<<<<<<< HEAD
-            <a className='text-cyan-400' href='/api-documentation-generator'>;
-=======
             <a className='text - cyan - 400' href='/api - documentation - generator'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               API Documentation Generator;
             </a>;
           </li>;
           <li>;
-<<<<<<< HEAD
-            <a className='text-cyan-400' href='/docs'>;
-=======
             <a className='text - cyan - 400' href='/docs'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Developer Docs;
             </a>;
           </li>;
         </ul>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );	return (
-<<<<<<< HEAD
-=======
 import { 
   Code, Database, Shield, Zap, Globe, Cpu, 
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
@@ -161,7 +95,6 @@ import {
 
 export default function APIDocumentation() {
 	return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>
@@ -179,8 +112,6 @@ export default function APIDocumentation() {
 		</div>
 	)
 }
-<<<<<<< HEAD
-=======
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
 			<Head>;
 				<title>API Documentation | Zion Tech Group</title>;
@@ -198,10 +129,6 @@ export default function APIDocumentation() {
 		</div>;
 	),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);	return (
   <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
   <Head>;
@@ -219,4 +146,3 @@ export default function APIDocumentation() {
   </div>;
   </div>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

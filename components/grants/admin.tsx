@@ -1,55 +1,13 @@
-<<<<<<< HEAD
-import { useEffect, useMemo, useState  } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GrantApplication, Milestone } from '../../types/grants';
-<<<<<<< HEAD
-export default function GrantsAdminPage() {
-=======
 
 export default function GrantsAdminPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [token, setToken] = useState('');
 
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const headers = useMemo(
-    () =>
-      token
-        ? {
-            Authorization: `Bearer ${token}`
-            'Content-Type': 'application/json'
-          }
-        : { 'Content-Type': 'application/json' }
-    [token]
-  );
-  const load = () => {
-    fetch('/api/grants?status=Submitted')
-      .then(r => r.json())
-      .then(d => setItems(d.items |[]));
-  }
-  useEffect(() => {
-    load();
-  }, []);
-  const setStatus = async (
-    id: string
-    status: 'Under Review' | 'Approved' | 'Rejected'
-  ) => {
-    await fetch(`/api/grants/${id}/status`, {
-      method: 'POST'
-      headers
-      body: JSON.stringify({ status })
-    });
-    load();  }
-  const saveMilestones = async () => {
-    if (!selected) return;
-=======
 
   const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const load = () => {
     fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
   }
@@ -59,51 +17,6 @@ export default function GrantsAdminPage() {;
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) })
     load()
-<<<<<<< HEAD
-  }
-  const saveMilestones = async () => {
-    if (!selected) return;
-    await fetch(`/api/grants/${selected.id}/milestones`, {
-      method: 'POST'
-      headers
-      body: JSON.stringify({ milestones })
-    });
-    alert('Milestones saved');  }
-  const markComplete = async (milestoneId: string) => {
-    if (!selected) return;    await fetch(`/api/grants/${selected.id}/milestones`, { method: 'POST', headers, body: JSON.stringify({ milestones }) })
-    alert('Milestones saved')
-  }
-  const markComplete = async (milestoneId: string) => {
-    if (!selected) return;
-    await fetch(
-      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`
-      { method: 'POST', headers }
-    );
-    const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
-    setSelected(r.record);  }
-  return (
-    <EnhancedLayout>    await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
-    const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
-    setSelected(r.record)
-  }
-=======
-
-  const headers = useMemo(;
-    () =>;
-      token;
-        ? {;
-            Authorization: `Bearer ${token}`,;
-            'Content-Type': 'application/json',;
-          }
-        : { 'Content-Type': 'application/json' },;
-    [token];
-  );
-
-  const load = () => {;
-    fetch('/api/grants?status=Submitted');
-      .then(r => r && r.json());
-      .then(d => setItems(d && d.items || []));
-=======
   };
 
   const saveMilestones = async () => {
@@ -117,7 +30,6 @@ export default function GrantsAdminPage() {;
     await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
     const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
     setSelected(r.record)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   useEffect(() => {;
@@ -174,12 +86,6 @@ export default function GrantsAdminPage() {;
     setSelected(r && r.record);  };
 
   return (
-<<<<<<< HEAD
-    <EnhancedLayout>    await fetch(`/api/grants/${selected && selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
-    const r = await fetch(`/api/grants/${selected && selected.id}`).then((x) => x && x.json());
-    setSelected(r && r.record);
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <EnhancedLayout>;
@@ -228,7 +134,6 @@ export default function GrantsAdminPage() {;
                     <button
                       className='px-2 py-1 border rounded'
                       onClick={() => setSelected(g)}
-=======
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types / grants';
@@ -375,50 +280,10 @@ if (return) {
                     <button;
                       className='px - 2 py - 1 border rounded';
                       on_click={() => set_selected (g)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     >;
                       Milestones;
                     </button>                  </div>;
                 </div>;
-<<<<<<< HEAD
-              </div>;
-            ))}                  <div className="flex gap-2">;
-                    <button className="px-2 py-1 border rounded" onClick={() => setStatus(g && g.id, 'Under Review')}>Under Review</button>;
-                    <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={() => setStatus(g && g.id, 'Approved')}>Approve</button>;
-                    <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={() => setStatus(g && g.id, 'Rejected')}>Reject</button>;
-                    <button className="px-2 py-1 border rounded" onClick={() => setSelected(g)}>Milestones</button>;
-                </div>;
-              </div>;
-            ))}
-            {items && items.length === 0 && (;
-              <div className='text-sm text-gray-600'>;
-                No submitted applications.;
-              </div>;
-            )}
-<<<<<<< HEAD
-          </div>
-        </div>
-        <div>
-          <div className='border rounded p-3'>
-            <h2 className='font-medium mb-2'>Milestone Planner</h2>
-            {selected ? (
-              <div className='space-y-2'>
-                {(milestones.length === 0
-                  ? selected.milestones |[]
-                  : milestones
-                ).map((m, idx) => (
-                  <div key={m.id |idx} className='border rounded p-2'>
-                    <input
-                      className='w-full border rounded p-2 mb-2'
-                      placeholder='Title'
-                      value={m.title}
-                      onChange={e =>
-                        setMilestones(ms => {
-                          const copy = ms.length
-                            ? [...ms]
-                            : [...(selected.milestones |[])];
-                          copy[idx] = { ...copy[idx], title: e.target.value }
-=======
           </div>;
         </div>;
         <div>;
@@ -441,8 +306,6 @@ if (return) {
                             ? [...ms];
                             : [...(selected && selected.milestones || [])];
                           copy[idx] = { ...copy[idx], title: e && e.target.value };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               </div>))}                  <div className="flex gap - 2">;
                     <button className="px - 2 py - 1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
                     <button className="px - 2 py - 1 bg - emerald - 600 text - white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
@@ -475,27 +338,10 @@ if (return) {
                             ? [...ms];
                             : [...(selected.milestones || [])];
                           copy[idx] = { ...copy[idx], title: e.target.value }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return copy;
                         });
                       }
                     />;
-<<<<<<< HEAD
-                    <textarea
-                      className='w-full border rounded p-2 mb-2'
-                      placeholder='Description'
-<<<<<<< HEAD
-                      value={m.description |''}
-                      onChange={e =>
-                        setMilestones(ms => {
-                          const copy = ms.length
-                            ? [...ms]
-                            : [...(selected.milestones |[])];
-                          copy[idx] = {
-                            ...copy[idx]
-                            description: e.target.value
-                          }
-=======
                       value={m && m.description || ''}
                       onChange={e =>;
                         setMilestones(ms => {;
@@ -506,8 +352,6 @@ if (return) {
                             ...copy[idx],;
                             description: e && e.target.value,;
                           };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                     <textarea;
                       className='w - full border rounded p - 2 mb - 2';
                       placeholder='Description';
@@ -521,28 +365,10 @@ if (return) {
                             ...copy[idx],
                             description: e.target.value,
                           }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return copy;
                         });
                       }
                     />;
-<<<<<<< HEAD
-                    <div className='grid grid-cols-2 gap-2'>;
-                      <input
-                        className='border rounded p-2'
-                        placeholder='Due date (YYYY-MM-DD)'
-<<<<<<< HEAD
-                        value={m.dueDate |''}
-                        onChange={e =>
-                          setMilestones(ms => {
-                            const copy = ms.length
-                              ? [...ms]
-                              : [...(selected.milestones |[])];
-                            copy[idx] = {
-                              ...copy[idx]
-                              dueDate: e.target.value
-                            }
-=======
                         value={m && m.dueDate || ''}
                         onChange={e =>;
                           setMilestones(ms => {;
@@ -553,8 +379,6 @@ if (return) {
                               ...copy[idx],;
                               dueDate: e && e.target.value,;
                             };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                     <div className='grid grid - cols - 2 gap - 2'>;
                       <input;
                         className='border rounded p - 2';
@@ -569,28 +393,10 @@ if (return) {
                               ...copy[idx],
                               due_date: e.target.value,
                             }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             return copy;
                           });
                         }
                       />;
-<<<<<<< HEAD
-                      <input
-                        className='border rounded p-2'
-                        placeholder='Tranche (amount)'
-                        type='number'
-<<<<<<< HEAD
-                        value={m.trancheAmount |0}
-                        onChange={e =>
-                          setMilestones(ms => {
-                            const copy = ms.length
-                              ? [...ms]
-                              : [...(selected.milestones |[])];
-                            copy[idx] = {
-                              ...copy[idx]
-                              trancheAmount: Number(e.target.value)
-                            }
-=======
                         value={m && m.trancheAmount || 0}
                         onChange={e =>;
                           setMilestones(ms => {;
@@ -601,8 +407,6 @@ if (return) {
                               ...copy[idx],;
                               trancheAmount: Number(e && e.target.value),;
                             };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                       <input;
                         className='border rounded p - 2';
                         placeholder='Tranche (amount)';
@@ -617,47 +421,20 @@ if (return) {
                               ...copy[idx],
                               tranche_amount: Number (e.target.value),
                             }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             return copy;
                           });
                         }
                       />;
                     </div>;
-<<<<<<< HEAD
-                    <div className='mt-2 flex items-center gap-2'>;
-                      <button
-                        className='px-2 py-1 border rounded'
-                        onClick={() => markComplete(m && m.id!)}
-                        disabled={!m && m.id}
-=======
                     <div className='mt - 2 flex items - center gap - 2'>;
                       <button;
                         className='px - 2 py - 1 border rounded';
                         on_click={() => mark_complete (m.id!)}
                         disabled={!m.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       >;
                         Mark Complete;
                       </button>;
                     </div>;
-<<<<<<< HEAD
-                  </div>;
-                ))}
-                <div className='flex gap-2 mt-2'>;
-                  <button
-                    className='px-2 py-1 border rounded'
-<<<<<<< HEAD
-                    onClick={() =>
-                      setMilestones(ms => [
-                        ...(ms.length ? ms : selected.milestones |[])
-                        {
-                          id: `${Date.now()}-${Math.random()}`
-                          title: ''
-                          trancheAmount: 0
-                          trancheCurrency: 'USDC'
-                        } as any
-                      ])
-=======
                     onClick={() =>;
                       setMilestones(ms => [;
                         ...(ms && ms.length ? ms : selected && selected.milestones || []),;
@@ -668,8 +445,6 @@ if (return) {
                           trancheCurrency: 'USDC',;
                         } as any,;
                       ]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                   </div>))}
                 <div className='flex gap - 2 mt - 2'>;
                   <button;
@@ -684,26 +459,10 @@ if (return) {
                           tranche_currency: 'USDC',
                         } as any,
                       ]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     }
                   >;
                     Add Milestone;
                   </button>;
-<<<<<<< HEAD
-                  <button
-                    className='px-2 py-1 bg-blue-600 text-white rounded'
-<<<<<<< HEAD
-                    onClick={saveMilestones}
-                  >
-                    Save Milestones
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className='text-sm text-gray-600'>
-                Select a grant to plan milestones.
-              </div>            )}          </div>
-=======
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
       <div className="grid md:grid-cols-3 gap-6">
@@ -730,7 +489,6 @@ if (return) {
             ))}
             {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
         <div>
           <div className="border rounded p-3">
@@ -762,10 +520,6 @@ if (return) {
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-);
-}
-=======
                     onClick={saveMilestones}>;
                     Save Milestones;
                   </button>;
@@ -808,12 +562,8 @@ if (return) {
     </EnhancedLayout>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <button;
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}
@@ -854,4 +604,3 @@ if (return) {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

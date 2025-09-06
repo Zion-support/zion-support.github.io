@@ -4,28 +4,14 @@ import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function DocsPage() {
-=======
-export default function DocsPage() {
-=======
 export default /**
  * DocsPage - Function description
  */
 function DocsPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-    website: 'https://ziontechgroup.com'
-  };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const contact = {
     mobile: '+1 302 464 0950'
@@ -37,58 +23,20 @@ function DocsPage() {
     {
       title: 'Getting Started'
       links: [
-<<<<<<< HEAD
-        { name: 'Overview', href: '/enhanced-services-showcase' }
-        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' }
-        { name: 'Contact Sales', href: '/contact' }
-      ]
-    },    {        { name: 'Contact Sales', href: '/contact' }]
-    }
-=======
         { name: 'Overview', href: '/enhanced-services-showcase' },
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
         { name: 'Contact Sales', href: '/contact' }]
     };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     {
       title: 'AI Services Docs'
       links: [
-<<<<<<< HEAD
-        { name: 'AI Guardrails', href: '/ai-guardrails' }
-        { name: 'AI Evals', href: '/ai-evals' }
-        { name: 'Agentic RAG', href: '/agentic-rag' }
-      ]
-    },    {        { name: 'Agentic RAG', href: '/agentic-rag' }]
-    }
-=======
         { name: 'AI Guardrails', href: '/ai-guardrails' },
         { name: 'AI Evals', href: '/ai-evals' },
         { name: 'Agentic RAG', href: '/agentic-rag' }]
     };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     {
       title: 'IT & Platform Docs'
       links: [
-<<<<<<< HEAD
-        { name: 'API Observability', href: '/api-observability' }
-        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
-        { name: 'Status Pages & SLO', href: '/status-pages-slo' }
-      ]
-    }
-  ];        { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
-    }];
-  const external = [
-    { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' }
-    { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' }
-    { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' }
-    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }
-  ];    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }]
-  const quickLinks = [
-    {
-      title: 'API Status'
-      description: 'Check service availability and performance'
-      icon: <CheckCircle className='w-6 h-6' />
-=======
         { name: 'API Observability', href: '/api-observability' },
         { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
         { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
@@ -105,7 +53,6 @@ function DocsPage() {
       description: 'Check service availability and performance',
       icon: <CheckCircle className="w-6 h-6" />,
       href: '/status',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       color: 'text-green-400'
     }
     {
@@ -142,19 +89,12 @@ function DocsPage() {
                          doc.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' |doc.category === selectedCategory;
     return matchesSearch && matchesCategory
-<<<<<<< HEAD
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'Beginner':
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function DocsPage() {;
   const contact = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
-=======
   });
 
   const getDifficultyColor = (difficulty: string) => {
@@ -164,7 +104,6 @@ export default function DocsPage() {;
       case 'Advanced': return 'bg-red-500/20 text-red-400';
       default: return 'bg-gray-500/20 text-gray-400'
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   const sections = [;
@@ -250,7 +189,6 @@ export default function DocsPage() {;
   const getDifficultyColor = (difficulty: string) => {;
     switch (difficulty) {;
       case 'Beginner':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':;
         return 'bg-yellow-500/20 text-yellow-400';
@@ -259,29 +197,11 @@ export default function DocsPage() {;
       default:;
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
-<<<<<<< HEAD
-      case 'Advanced': return 'bg-red-500/20 text-red-400'
-      default: return 'bg-gray-500/20 text-gray-400'
-  }
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-<<<<<<< HEAD
-      year: 'numeric'
-      month: 'short'
-=======
       year: 'numeric',
       month: 'short',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       day: 'numeric'
     });  };      day: 'numeric'
     })
-<<<<<<< HEAD
-  }
-=======
-      case 'Advanced': return 'bg-red-500/20 text-red-400',;
-      default: return 'bg-gray-500/20 text-gray-400';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   const formatDate = (dateString: string) => {;
@@ -292,33 +212,8 @@ export default function DocsPage() {;
     });  };      day: 'numeric';
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
-<<<<<<< HEAD
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
-        <title>Documentation | Zion Tech Group</title>;
-        <meta
-          name='description'
-          content='Guides and references for Zion Tech Group AI, platform, and IT services.'
-<<<<<<< HEAD
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/docs' />
-      </Head>
-      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-6xl mx-auto space-y-10'>
-          <div className='text-center'>
-            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-              Documentation
-            </h1>
-            <p className='text-slate-300 mt-4'>
-              Quick links, references, and integration guides for our services.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            {sections.map(s => (
-=======
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/docs' />;
       </Head>;
@@ -336,7 +231,6 @@ export default function DocsPage() {;
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
             {sections && sections.map(s => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={s && s.title}
                 className='p-6 bg-black/40 border border-gray-700/50'>;
@@ -347,15 +241,6 @@ export default function DocsPage() {;
                   {s && s.links.map(l => (;
                     <li key={l && l.name}>;
                       <a
-<<<<<<< HEAD
-                        href={l && l.href}
-                        className='text-cyan-400 hover:underline'>;
-                        {l && l.name}
-                      </a>                    </li>      </Head>;
-
-=======
-<<<<<<< HEAD
-=======
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
 ;
@@ -495,14 +380,10 @@ export default function DocsPage() {;
                   {s.links.map (l => (
                     <li key={l.name}>;
                       <a;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         href={l.href}
                         className='text - cyan - 400 hover:underline';
                       >;
                         {l.name}
-<<<<<<< HEAD
-                      </a>                    </li>      </Head>
-=======
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Documentation | Zion Tech Group</title>
@@ -510,7 +391,6 @@ export default function DocsPage() {;
         <link rel="canonical" href="https://ziontechgroup.com/docs" />
       </Head>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10">
           <div className="text-center">
@@ -526,14 +406,11 @@ export default function DocsPage() {;
                     <li key={l.name}>
                       <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>
                     </li>
-=======
                         href={l && l.href}
                         className='text-cyan-400 hover:underline'>;
                         {l && l.name}
                       </a>                    </li>      </Head>;
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-6xl mx-auto space-y-10">;
           <div className="text-center">;
@@ -550,24 +427,10 @@ export default function DocsPage() {;
                     <li key={l && l.name}>;
                       <a href={l && l.href} className="text-cyan-400 hover:underline">{l && l.name}</a>;
                     </li>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </ul>;
               </Card>;
             ))}
-<<<<<<< HEAD
-          </div>
-          <Card className='p-6 bg-black/40 border border-gray-700/50'>
-            <h2 className='text-xl font-semibold mb-4 text-white'>
-              External References
-            </h2>
-            <ul className='grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300'>
-              {external.map(e => (
-                <li key={e.name}>
-=======
           </div>;
 
           <Card className='p-6 bg-black/40 border border-gray-700/50'>;
@@ -577,7 +440,6 @@ export default function DocsPage() {;
             <ul className='grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300'>;
               {external && external.map(e => (;
                 <li key={e && e.name}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <a
                     href={e && e.url}
                     target='_blank'
@@ -586,25 +448,11 @@ export default function DocsPage() {;
                     {e && e.name}
                   </a>;
                 </li>              ))}
-<<<<<<< HEAD
-            </ul>
-          </Card>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
               {external.map((e) => (
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
-<<<<<<< HEAD
-            </ul>
-          </Card>
-          <Card className='p-6 bg-black/40 border border-gray-700/50'>
-            <h2 className='text-xl font-semibold mb-4 text-white'>
-              Need help?
-            </h2>
-            <div className='flex flex-col sm:flex-row gap-3'>
-=======
             </ul>;
           </Card>;
           <Card className="p-6 bg-black/40 border border-gray-700/50">;
@@ -620,7 +468,6 @@ export default function DocsPage() {;
               Need help?;
             </h2>;
             <div className='flex flex-col sm:flex-row gap-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 href='/contact'
                 className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'>;
@@ -650,11 +497,6 @@ export default function DocsPage() {;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
-<<<<<<< HEAD
-=======
-  );
-}
-=======
               ))}
             </ul>
           </Card>
@@ -671,11 +513,8 @@ export default function DocsPage() {;
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                       </a>                    </li>      </Head>;
       <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-6xl mx - auto space - y-10">;
@@ -758,4 +597,3 @@ export default function DocsPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

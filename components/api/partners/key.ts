@@ -1,66 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
-<<<<<<< HEAD
-  authenticateRequest
-  listApiKeys
-  saveApiKeys;
-} from '../../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  try {
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    return res && res.status(405).json({ error: 'Method Not Allowed' });
-  }
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res && res.status(401).json({ error: 'Unauthorized' });  }
-  const { apiKey } = auth;
-  const keys = await listApiKeys();
-  // Deactivate old key
-  const existing = keys && keys.find(k => k && k.id === apiKey && apiKey.id);  if (existing) existing && existing.active = false;
-  // Create new key
-  const now = new Date().toISOString();
-  const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
-
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-  if (req && req.method !== "POST") {
-    res && res.setHeader("Allow", "POST");
-    return res && res.status(405).json({ error: "Method Not Allowed" })
-  }
-
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res && res.status(401).json({ error: "Unauthorized" });
-  const { apiKey } = auth;
-  const keys = await listApiKeys();
-  // Deactivate old key
-  const existing = keys && keys.find(k => k && k.id === apiKey && apiKey.id);  const existing = keys && keys.find((k) => k && k.id === apiKey && apiKey.id);
-  if (existing) existing && existing.active = false;
-  // Create new key
-  const now = new Date().toISOString();
-  const newKey = {
-<<<<<<< HEAD
-    id: uuidv4()
-    partnerId: auth.partner.id
-    key: uuidv4()
-    active: true
-    createdAt: now
-    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60
-  }
-  keys.push(newKey as any);
-=======
     id: uuidv4(),
     partnerId: auth && auth.partner.id,
     key: uuidv4(),
@@ -69,30 +8,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     rateLimitPerMinute: apiKey && apiKey.rateLimitPerMinute ?? 60,
   };
   keys && keys.push(newKey as any);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   await saveApiKeys(keys);
   return res && res.status(201).json({ apiKey: newKey && newKey.key });    id: uuidv4();
     partnerId: auth && auth.partner.id;
     key: uuidv4();
     active: true;
     createdAt: now;
-<<<<<<< HEAD
-    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60}
-  keys.push(newKey as any);
-  await saveApiKeys(keys);
-
-  return res.status(201).json({ apiKey: newKey.key })
-}
-=======
-    rateLimitPerMinute: apiKey && apiKey.rateLimitPerMinute ?? 60};
-  keys && keys.push(newKey as any);
-<<<<<<< HEAD
-=======
   await saveApiKeys(keys);
   return res && res.status(201).json({ apiKey: newKey && newKey.key })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
@@ -118,12 +42,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     createdAt: now,
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60};
   keys.push(newKey as any);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   authenticate_request,
   listApiKeys,
   saveApiKeys,
@@ -206,4 +127,3 @@ if (existing.active = false) {
   await saveApiKeys (keys);
   return res.status (201).json ({ api_key: new_key.key });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

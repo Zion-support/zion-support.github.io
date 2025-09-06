@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {useEffect, useState} from 'react'
-import {ProductListingCard} from '@/components/ProductListingCard'
-import {useAuth} from '@/hooks/useAuth'
-import {fetchRecommendations} from '@/api/recommendations'
-import type { ProductListing } from '@/types/listings'
-import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
-} from '@/components/ui/dialog'
-import { Button } from '@/components/ui/button'
-
-import { Loader2 } from 'lucide-react'
-import Link from 'next/link';
-import { ErrorState } from '@/components/jobs/applications';
-export default function EquipmentRecommendations() {
-
-  const { isAuthenticated, user } = useAuth()
-  const [listings, setListings] = useState<ProductListing[]>([])
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<boolean>(false)
-  useEffect(() => {
-export default function EquipmentRecommendations() {
-  const { isAuthenticated, user } = useAuth()
-  const [listings, setListings] = useState<ProductListing[]>([])
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<boolean>(false)
-=======
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components/ProductListingCard';
 import {useAuth} from '@/hooks/useAuth';
@@ -58,14 +25,9 @@ export default function EquipmentRecommendations() {;
   const [listings, setListings] = useState<ProductListing[]>([]),;
   const [loading, setLoading] = useState<boolean>(false),;
   const [error, setError] = useState<boolean>(false),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   useEffect((,) => {;
     if (isAuthenticated && user?.id) {;
-<<<<<<< HEAD
-      setLoading(true);
-=======
-=======
 import { useEffect, useState } from 'react';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { useAuth } from '@/hooks/useAuth';
@@ -85,43 +47,19 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
 
   useEffect(() => {
     if (isAuthenticated && user?.id) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setLoading(true);
-<<<<<<< HEAD
-      fetchRecommendations(user.id)
-        .then(setListings)
-        .catch(() => setError(true))
-<<<<<<< HEAD
-        .finally(() => setLoading(false)) }        .catch((,) => setError(true))
-        .finally((,) => setLoading(false))
-        .finally(() => setLoading(false))
-    }
-  }, [isAuthenticated, user])
-  if (!isAuthenticated) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       fetchRecommendations(user && user.id);
         .then(setListings);
         .catch(() => setError(true));
         .finally(() => setLoading(false));    }        .catch((,) => setError(true));
         .finally((,) => setLoading(false));
         .finally(() => setLoading(false));
-<<<<<<< HEAD
-=======
-=======
         .finally(() => setLoading(false))
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, [isAuthenticated, user]);
 
   if (!isAuthenticated) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <Dialog open>;
         <DialogContent className='bg-zion-blue border-zion-blue-light text-white'>          <DialogHeader>;
             <DialogTitle>Authentication required</DialogTitle>;
@@ -133,13 +71,6 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
           <p>Please sign in to get personalized AI picks.</p>;
           <Button
             asChild
-<<<<<<< HEAD
-            className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'
-          >
-            <Link href='/auth/login?returnTo=/equipment/recommendations'>
-              Sign In
-            </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
-=======
       <Dialog open>
         <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
           <DialogHeader>
@@ -147,13 +78,11 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
           </Button>
         </DialogContent>
       </Dialog>
     )
-=======
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>;
             <Link href='/auth/login?returnTo=/equipment/recommendations'>;
               Sign In;
@@ -163,13 +92,8 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
         </DialogContent>;
       </Dialog>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='min-h-screen bg-zion-blue py-8 px-4'>;
       <h1 className='text-2xl font-bold text-white mb-6'>;
         AI Equipment Recommendations;
@@ -186,9 +110,6 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
         {listings && listings.map((listing,) => (;
           <div key={listing && listing.id} className="break-inside-avoid mb-4">;
           </div>;
-<<<<<<< HEAD
-=======
-=======
     <div className="min-h-screen bg-zion-blue py-8 px-4">
       <h1 className="text-2xl font-bold text-white mb-6">AI Equipment Recommendations</h1>
       {loading && (
@@ -202,26 +123,13 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
           <div key={listing.id} className="break-inside-avoid mb-4">
             <ProductListingCard listing={listing} />
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
-<<<<<<< HEAD
-      </div>
-    </div>
-<<<<<<< HEAD
-  )
-}
-=======
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components / ProductListingCard';
 import {use_auth} from '@/hooks / use_auth';
@@ -313,4 +221,3 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -12,26 +7,6 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
-<<<<<<< HEAD
-interface ReplyCardProps {
-
-  reply: ForumReply
-  onMarkAnswer?: () => void
-  canMarkAnswer?: boolean
-  className?: string
-}
-export const ReplyCard = ({
-  reply
-  onMarkAnswer
-  canMarkAnswer = false
-  className
-}: ReplyCardProps,) => {
-  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
-  return (
-    <Card className={cn(
-      "transition-shadow"
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20"
-=======
 interface ReplyCardProps {;
   reply: ForumReply,;
   onMarkAnswer?: () => void;
@@ -51,7 +26,6 @@ export const ReplyCard = ({ ;
     <CardclassName={cn(
       "transition-shadow"
       reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       className
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
@@ -78,36 +52,6 @@ export const ReplyCard = ({ ;
           </div>;
           <div className="text-xs text-muted-foreground">;
             {timeAgo}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </CardHeader>
-      <CardContent>
-        <div>{reply.content}</div>
-      </CardContent>
-      <CardFooter className="flex justify-between">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" className="px-2">
-            <ThumbsUp className="h-4 w-4 mr-1" />
-            <span>{reply.upvotes}</span>
-          </Button>
-          <Button variant="ghost" size="sm" className="px-2">
-            <ThumbsDown className="h-4 w-4 mr-1" />
-            <span>{reply.downvotes}</span>
-          </Button>
-        </div>
-        {canMarkAnswer && !reply.isAnswer && (
-          <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">
-            <CheckCircle className="h-4 w-4 mr-1" />
-            Mark as Answer
-          </Button>
-        )}
-      </CardFooter>
-    </Card>
-  )
-}
-export default ReplyCard
-=======
           </div>;
         </div>;
       </CardHeader>;
@@ -138,17 +82,10 @@ export default ReplyCard
     </Card>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-<<<<<<< HEAD
-export default ReplyCard;
-=======
-=======
 
       "transition-shadow";
       reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { formatDistanceToNow  } from './date - fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'import { Card, CardContent, CardFooter, CardHeader  } from '@/components / ui / card';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
@@ -222,5 +159,3 @@ export const ReplyCard = ({
     </Card>);
 }
 export default ReplyCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

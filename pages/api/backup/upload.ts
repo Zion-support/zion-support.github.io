@@ -1,26 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { Web3Storage, File } from 'web3.storage';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const TOKEN = process.env.WEB3_STORAGE_TOKEN |''
-export const config = { api: { bodyParser: { sizeLimit: '2mb' } } }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const TOKEN = process.env.WEB3_STORAGE_TOKEN || '';
 
 export const config = { api: { bodyParser: { sizeLimit: '2mb' } } };
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end()
   if (!TOKEN) return res.status(400).json({ error: 'Missing WEB3_STORAGE_TOKEN' })
@@ -34,12 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |'Backup failed' })
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { Web3Storage, File } from 'web3.storage',
 ;
@@ -65,8 +45,4 @@ function handler() {
     return res.status (500).json ({ error: e?.message || 'Backup failed' });
   }
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

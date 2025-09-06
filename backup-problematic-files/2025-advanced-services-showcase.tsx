@@ -21,7 +21,6 @@ const contactInfo = {
 // Import our new service data
 
 const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 const _allServices = [
   ...advancedEnterpriseServices2025,
@@ -114,7 +113,6 @@ export default function AdvancedServicesShowcase() {
         if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant'),
         return false
       })
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
     }
 
     // Filter by search term
@@ -126,7 +124,6 @@ export default function AdvancedServicesShowcase() {
       )
     }
       );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     setFilteredServices(filtered)
   }, [selectedCategory, searchTerm]),

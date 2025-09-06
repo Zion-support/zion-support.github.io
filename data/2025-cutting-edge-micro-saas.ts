@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-export const cuttingEdgeMicroSaasServices2025 = [
-  {
-<<<<<<< HEAD
-    id: 'customer-success-ai-pro',
-    name: 'Customer Success AI Pro',
-=======
-<<<<<<< HEAD
-    id: 'customer-success-ai-pro'
-    name: 'Customer Success AI Pro'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     description:
       'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.'
       'AI-powered churn prediction with 92% accuracy'
@@ -56,21 +44,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
     }
     category: 'Customer Success'
     tags: [
-<<<<<<< HEAD
-      'Customer Success'
-      'AI'
-      'Churn Prediction'
-      'Engagement'
-      'Analytics'
-    ]
-    website: 'https://ziontechgroup.com/customer-success-ai-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$11.8B'
-=======
-=======
 export const cuttingEdgeMicroSaasServices2025 = [;
   {
     id: 'customer - success - ai - pro',
@@ -121,25 +94,17 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     },
     category: 'Customer Success',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Customer Success',
       'AI',
       'Churn Prediction',
       'Engagement',
       'Analytics',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/customer-success-ai-pro',
-=======
     website: 'https://ziontechgroup.com / customer - success - ai - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$11 && 11.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'SaaS companies, subscription businesses, customer success teams, growth companies'
     competitiveAdvantage:
@@ -211,21 +176,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     }
     category: 'Supply Chain'
     tags: [
-<<<<<<< HEAD
-      'Supply Chain'
-      'Quantum Computing'
-      'Logistics'
-      'Optimization'
-      'Analytics'
-    ]
-    website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$15.4B'
-=======
-=======
     market_size: '$11.8B',
     target_audience:;
       'SaaS companies, subscription businesses, customer success teams, growth companies',
@@ -298,25 +248,17 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     },
     category: 'Supply Chain',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Supply Chain',
       'Quantum Computing',
       'Logistics',
       'Optimization',
       'Analytics',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-supply-chain-optimizer',
-=======
     website: 'https://ziontechgroup.com / quantum - supply - chain - optimizer',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$15 && 15.4B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks'
     competitiveAdvantage:
@@ -391,21 +333,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     }
     category: 'Identity Verification'
     tags: [
-<<<<<<< HEAD
-      'Identity Verification'
-      'Blockchain'
-      'Biometrics'
-      'Security'
-      'Compliance'
-    ]
-    website: 'https://ziontechgroup.com/blockid-verify-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$13.7B'
-=======
-=======
     market_size: '$15.4B',
     target_audience:;
       'Manufacturing companies, logistics providers, retail chains, e - commerce companies, distribution networks',
@@ -481,25 +408,17 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     },
     category: 'Identity Verification',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Identity Verification',
       'Blockchain',
       'Biometrics',
       'Security',
       'Compliance',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/blockid-verify-pro',
-=======
     website: 'https://ziontechgroup.com / blockid - verify - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$13 && 13.7B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups'
     competitiveAdvantage:
@@ -576,21 +495,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     }
     category: 'HR Analytics'
     tags: [
-<<<<<<< HEAD
-      'HR Analytics'
-      'AI'
-      'Performance Management'
-      'Employee Engagement'
-      'Predictive Analytics'
-    ]
-    website: 'https://ziontechgroup.com/hr-analytics-ai-suite'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$9.8B'
-=======
-=======
     market_size: '$13.7B',
     target_audience:;
       'Financial institutions, healthcare organizations, government agencies, e - commerce companies, fintech startups',
@@ -668,25 +572,17 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     },
     category: 'HR Analytics',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'HR Analytics',
       'AI',
       'Performance Management',
       'Employee Engagement',
       'Predictive Analytics',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/hr-analytics-ai-suite',
-=======
     website: 'https://ziontechgroup.com / hr - analytics - ai - suite',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$9 && 9.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies'
     competitiveAdvantage:
@@ -762,21 +658,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     }
     category: 'Financial Risk Management'
     tags: [
-<<<<<<< HEAD
-      'Risk Management'
-      'Quantum Computing'
-      'Financial Analytics'
-      'Portfolio Optimization'
-      'Compliance'
-    ]
-    website: 'https://ziontechgroup.com/quantum-risk-financial-manager'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$28.9B'
-=======
-=======
     market_size: '$9.8B',
     target_audience:;
       'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies',
@@ -853,25 +734,17 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     },
     category: 'Financial Risk Management',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Risk Management',
       'Quantum Computing',
       'Financial Analytics',
       'Portfolio Optimization',
       'Compliance',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-risk-financial-manager',
-=======
     website: 'https://ziontechgroup.com / quantum - risk - financial - manager',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$28 && 28.9B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Investment firms, banks, hedge funds, asset management companies, financial institutions'
     competitiveAdvantage:
@@ -899,14 +772,11 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     ]
   }
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
-=======
     id: 'customer-success-ai-pro', name: 'Customer Success AI Pro',
     description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
     features: [
       'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows';
       'Performance metrics and reportingCustom AI model training'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     market_size: '$28.9B',
     target_audience:;
       'Investment firms, banks, hedge funds, asset management companies, financial institutions',
@@ -934,22 +804,10 @@ export const cuttingEdgeMicroSaasServices2025 = [;
       'Risk Management Standards',
     ],
   },
-<<<<<<< HEAD
-];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
-=======
 ];      'Portfolio risk assessment_investment strategy optimization_regulatory compliance reporting_risk model development_performance analysis and attribution';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     compliance: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards'];
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

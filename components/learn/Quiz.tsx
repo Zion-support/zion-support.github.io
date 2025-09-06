@@ -23,44 +23,19 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 type Question = {;
   id: string;
   question: string;
   options: string[];
-<<<<<<< HEAD
-  answerIndex: number;
-<<<<<<< HEAD
-}
-type Props = {
-  questions: Question[];
-  onComplete: (score: number) => void;};  id: string
-  question: string
-  options: string[]
-=======
 type Question = {
   id: string,
   question: string,
   options: string[],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   answerIndex: number
 }
 type Props = {
   questions: Question[]
   onComplete: (score: number) => void
-<<<<<<< HEAD
-export default function Quiz({ questions, onComplete }: Props) {
-  const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [submitted, setSubmitted] = useState(false);
-  const score = questions.reduce(
-    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0)
-    0
-  );
-  function submit() {
-=======
 };
 
 type Props = {;
@@ -85,7 +60,6 @@ export default function Quiz(): any ({ questions, onComplete }: Props) {;
   );
 
   function submit() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setSubmitted(true);
     onComplete(score);
   }
@@ -101,9 +75,6 @@ export default function Quiz(): any ({ questions, onComplete }: Props) {;
               <label key={i} className='flex items-center gap-2'>;
                 <input
                   type='radio'                  name={q && q.id}
-<<<<<<< HEAD
-=======
-=======
 };
 
 export default function Quiz({ questions, onComplete }: Props) {
@@ -112,15 +83,8 @@ export default function Quiz({ questions, onComplete }: Props) {
 
   const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   function submit() {
-<<<<<<< HEAD
-    setSubmitted(true);
-
-=======
     setSubmitted(true)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     onComplete(score)
   }
   return (
@@ -133,10 +97,6 @@ export default function Quiz({ questions, onComplete }: Props) {
               <label key={i} className="flex items-center gap-2">;
                 <input
                   type="radio"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   name={q && q.id}
                   checked={answers[q && q.id] === i}
                   onChange={() => setAnswers({ ...answers, [q && q.id]: i })}
@@ -154,10 +114,6 @@ export default function Quiz({ questions, onComplete }: Props) {
                 <span className="text-green-600">Correct</span>;
               ) : (;
                 <span className="text-red-600">Incorrect</span>;
-<<<<<<< HEAD
-=======
-=======
-=======
   answer_index: number;
 }
 ;
@@ -219,7 +175,6 @@ function submit() {
               <label key={i} className="flex items - center gap - 2">;
                 <input;
                   type="radio";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   name={q.id}
                   checked={answers[q.id] === i}
                   on_change={() => set_answers ({ ...answers, [q.id]: i })}
@@ -228,23 +183,11 @@ function submit() {
               </label>))}
           </div>;
           {submitted && (
-<<<<<<< HEAD
-            <div className="mt-2 text-sm">
-              {answers[q.id] === q.answerIndex ? (
-                <span className="text-green-600">Correct</span>
-              ) : (
-                <span className="text-red-600">Incorrect</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
             </div>;
           )}
         </div>;
       ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <button
         onClick={submit}
         className='px-4 py-2 bg-blue-600 text-white rounded'>;
@@ -255,28 +198,17 @@ function submit() {
           Score: {score} / {questions && questions.length}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-  );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
-=======
       <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
 );
 }
-=======
     </div>;
   );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>;
       {submitted && <div className="text-sm">Score: {score} / {questions && questions.length}</div>}
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <div className='mt - 2 text - sm'>;
               {answers[q.id] === q.answer_index ? (
                 <span className='text - green - 600'>Correct</span>) : (
@@ -299,4 +231,3 @@ function submit() {
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

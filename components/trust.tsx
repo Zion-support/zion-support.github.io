@@ -22,17 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-import TrustBadge from '../components/ui/TrustBadge';
-import TrustRadar from '../components/ui/TrustRadar';
-import RiskIndicator from '../components/ui/RiskIndicator';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [data, setData] = useState<any>(null),
@@ -46,41 +35,25 @@ export default function TrustPage() {
   }, []);
   useEffect(() => {
     async function load() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   useEffect(() => {;
     const params = new URLSearchParams(window && window.location.search);
     const u = params && params.get('user');
     if (u) setUserId(u);    if (u) setUserId(u);
-<<<<<<< HEAD
-=======
-=======
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
     if (u) setUserId(u)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
   useEffect(() => {;
     async function load() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setLoading(true);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const res = await fetch(;
         `/api/trust/${encodeURIComponent(userId)}?analyze=true`;
       );
@@ -90,14 +63,6 @@ export default function TrustPage() {;
     }
     load();
   }, [userId]);
-<<<<<<< HEAD
-  async function submitPeer(type: 'endorse' | 'flag') {
-    await fetch('/api/trust/peer', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type })
-=======
-=======
       const res = await fetch(`/api/trust/${encodeURIComponent(userId)}?analyze=true`);
       const json = await res.json();
       setData(json);
@@ -105,14 +70,12 @@ export default function TrustPage() {;
     }
     load()
   }, [userId]);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   async function submitPeer(): any (type: 'endorse' | 'flag') {;
     await fetch('/api/trust/peer', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
       setData(json);
@@ -120,41 +83,13 @@ export default function TrustPage() {;
     }
     load();
   }, [userId]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  async function submitPeer(type: 'endorse' | 'flag') {
-    await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged')
-  }
-  async function submitAppeal(e: React.FormEvent) {
-    e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    const message = formData.get('message');
-    const contactEmail = formData.get('email');
-<<<<<<< HEAD
-    await fetch('/api/trust/appeal', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId, message, contactEmail })
-    });
-    alert('Appeal submitted');
-    form.reset();  }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function submitPeer(): any (type: 'endorse' | 'flag') {;
     await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
-<<<<<<< HEAD
-=======
-=======
     await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
     form.reset()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
   async function submitAppeal(): any (e: React && React.FormEvent) {;
@@ -171,17 +106,8 @@ export default function TrustPage() {;
     alert('Appeal submitted');
     form && form.reset();  }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ userId, message, contactEmail }) });
-    alert('Appeal submitted');
-<<<<<<< HEAD
-
-    form.reset()
-=======
     form && form.reset();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <EnhancedLayout>;
@@ -195,23 +121,14 @@ export default function TrustPage() {;
                 checked={showLogic}
                 onChange={() => setShowLogic(!showLogic)}
               />{' '}
-<<<<<<< HEAD
-              Transparent logic
-            </label>          </div>      <div className="space-y-6">
-=======
     <EnhancedLayout>
       <div className="space-y-6">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Trust & Reputation</h1>
           <div className="flex items-center gap-3">
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
-<<<<<<< HEAD
-=======
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
-=======
               Transparent logic;
             </label>          </div>      <div className="space-y-6">;
         <div className="flex items-center justify-between">;
@@ -220,49 +137,13 @@ export default function TrustPage() {;
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {loading && <div>Loading...</div>}
-<<<<<<< HEAD
-        {!loading && data && (;
-          <div className='grid md:grid-cols-3 gap-6'>;
-            <div className='md:col-span-2 space-y-4'>;
-              <div className='flex items-center gap-3'>;
-                <TrustBadge
-                  score={data && data.total}
-                  reason={data && data.reasonSummary}
-                  communityVerified={data && data.communityVerified}
-                />;
-                <RiskIndicator status={data && data.riskLevel} />;
-              </div>;
-              <div className='bg-white dark:bg-gray-900 rounded border p-4'>;
-                <h2 className='font-medium mb-2'>Trust Metrics</h2>;
-                <TrustRadar
-<<<<<<< HEAD
-                  metrics={(data.components |[]).map((c: any) => ({
-                    label: c.key
-                    value: Math.round(c.raw * 100)
-                  }))}
-                />
-              </div>
-              {showLogic && (
-                <div className='bg-white dark:bg-gray-900 rounded border p-4 text-sm'>
-                  <h3 className='font-medium mb-2'>Score Breakdown</h3>
-                  <ul className='space-y-1'>
-                    {data.components.map((c: any) => (
-                      <li key={c.key} className='flex justify-between'>
-                        <span>{c.key}</span>
-                        <span>
-                          {Math.round(c.raw * 100)} / weighted{' '}
-                          {c.weighted.toFixed(3)}
-                        </span>                      </li>                <RiskIndicator status={data.riskLevel} />
-=======
         {!loading && data && (
           <div className="grid md:grid-cols-3 gap-6">
             <div className="md:col-span-2 space-y-4">
               <div className="flex items-center gap-3">
                 <TrustBadge score={data.total} reason={data.reasonSummary} communityVerified={data.communityVerified} />
                 <RiskIndicator status={data.riskLevel} />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
@@ -277,43 +158,6 @@ export default function TrustPage() {;
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
-<<<<<<< HEAD
-=======
-                  metrics={(data && data.components || []).map((c: any) => ({;
-                    label: c && c.key,;
-                    value: Math && Math.round(c && c.raw * 100),;
-                  }))}
-                />;
-              </div>;
-              {showLogic && (;
-                <div className='bg-white dark:bg-gray-900 rounded border p-4 text-sm'>;
-                  <h3 className='font-medium mb-2'>Score Breakdown</h3>;
-                  <ul className='space-y-1'>;
-                    {data && data.components.map((c: any) => (;
-                      <li key={c && c.key} className='flex justify-between'>;
-                        <span>{c && c.key}</span>;
-                        <span>;
-                          {Math && Math.round(c && c.raw * 100)} / weighted{' '}
-                          {c && c.weighted.toFixed(3)}
-                        </span>                      </li>                <RiskIndicator status={data && data.riskLevel} />;
-              </div>;
-              <div className="bg-white dark:bg-gray-900 rounded border p-4">;
-                <h2 className="font-medium mb-2">Trust Metrics</h2>;
-                <TrustRadar metrics={(data && data.components || []).map((c: any) => ({ label: c && c.key, value: Math && Math.round(c && c.raw * 100) }))} />;
-              </div>;
-              {showLogic && (;
-                <div className="bg-white dark:bg-gray-900 rounded border p-4 text-sm">;
-                  <h3 className="font-medium mb-2">Score Breakdown</h3>;
-                  <ul className="space-y-1">;
-                    {data && data.components.map((c: any) => (;
-                      <li key={c && c.key} className="flex justify-between">;
-                        <span>{c && c.key}</span>;
-                        <span>{Math && Math.round(c && c.raw * 100)} / weighted {c && c.weighted.toFixed(3)}</span>;
-                      </li>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </ul>;
                 </div>;
@@ -371,9 +215,6 @@ export default function TrustPage() {;
                     <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w-full border rounded px-2 py-1 text-sm" rows={4} required />;
                     <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>;
                 </div>;
-<<<<<<< HEAD
-=======
-=======
                     ))}
                   </ul>
                 </div>
@@ -399,29 +240,16 @@ export default function TrustPage() {;
                     <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>
                   </form>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-      </div>
-    </EnhancedLayout>
-<<<<<<< HEAD
-);
-}
-=======
       </div>;
     </EnhancedLayout>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import TrustBadge from '../components / ui / TrustBadge';
 import TrustRadar from '../components / ui / TrustRadar';
@@ -628,4 +456,3 @@ function submit_appeal() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

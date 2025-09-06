@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,19 +22,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Head from "next/head";
 import Link from "next/link";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/automation-improvements-final
 
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -97,7 +83,6 @@ export default function FAQ() {
       answer:
         "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
-=======
 export default function FAQ() {;
   const contact = {;
     phone: "+1 302 464 0950",;
@@ -156,7 +141,6 @@ export default function FAQ() {;
       answer:;
         "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions.",;
     },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
   return (
     <>;
@@ -169,28 +153,6 @@ export default function FAQ() {;
         <meta
           name="keywords"
           content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions"
-<<<<<<< HEAD
-        />
-        <link rel="canonical" href={`${contact.site}/faq`} />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        {/* Hero Section */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-xl text-slate-300 mb-8">
-              Get Answers to Common Questions
-            </p>
-            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              Find answers to the most common questions about our services
-              pricing, implementation, and support. Can&apos;t find what
-              you&apos;re looking for? Contact us directly.
-            </p>
-          </div>
-        </section>
-=======
         />;
         <link rel="canonical" href={`${contact && contact.site}/faq`} />;
       </Head>;
@@ -213,7 +175,6 @@ export default function FAQ() {;
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* FAQ Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
@@ -228,35 +189,6 @@ export default function FAQ() {;
                   <p className="text-slate-300 leading-relaxed">{faq && faq.answer}</p>;
                 </div>;
               ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-        {/* Contact CTA */}
-        <section className="py-16 px-4 bg-slate-900/40">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Still Have Questions?
-            </h2>
-            <p className="text-lg text-slate-300 mb-8">
-              Our team is here to help. Contact us for personalized answers to
-              your specific questions and to discuss how we can help your
-              business.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-=======
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Contact CTA */}
-        <section className="py-16 px-4 bg-slate-900/40">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">;
-              Still Have Questions?;
-            </h2>;
-            <p className="text-lg text-slate-300 mb-8">;
-=======
 import Head from './next / head';
 import Link from './next / link';
 ;
@@ -378,15 +310,10 @@ function FAQ() {
               Still Have Questions?;
             </h2>;
             <p className="text - lg text - slate - 300 mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Our team is here to help. Contact us for personalized answers to;
               your specific questions and to discuss how we can help your;
               business.;
             </p>;
-<<<<<<< HEAD
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <a
                 href={`tel:${contact && contact.phone.replace(/[^\d+]/g, "")}`}
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">;
@@ -399,19 +326,6 @@ function FAQ() {
               </a>;
               <Link
                 href="/contact"
-<<<<<<< HEAD
-                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-              >
-                Contact Form
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -434,11 +348,7 @@ export default function FAQPage() {
         </section>
       </div>
     </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
                 className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
-=======
             <div className="flex flex - col sm:flex - row items - center justify - center gap - 4">;
               <a;
                 href={`tel:${contact.phone.replace (/[^\d+]/g, "")}`}
@@ -456,18 +366,12 @@ export default function FAQPage() {
                 href="/contact";
                 className="px - 8 py - 3 bg - slate - 800 hover:bg - slate - 700 border border - white / 10 rounded - lg font - semibold transition - colors";
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Contact Form;
               </Link>;
             </div>;
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
-    </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

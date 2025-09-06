@@ -22,13 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 import Layout from "../../components/Layout";";
 import {motion} from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -198,7 +191,6 @@ export default function DataAnalyticsPage() {;
       keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/data-analytics.tsx
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -312,18 +304,12 @@ export default function DataAnalyticsPage() {;
     </Layout>;
 import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-const features = [
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 
 const analyticsServices = [
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -442,10 +428,6 @@ export default function DataAnalyticsPage() {
 import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   {
     icon: BarChart3,
     title: 'Business Intelligence',
@@ -475,7 +457,6 @@ const features = [
     icon: ArrowRight,
     title: 'Data Visualization',
     description: 'Interactive charts, graphs, and visual data representations'
-=======
 const features = [;
   {;
     icon: BarChart3,;
@@ -506,17 +487,8 @@ const features = [;
     icon: ArrowRight,;
     title: 'Data Visualization',;
     description: 'Interactive charts, graphs, and visual data representations';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/data-analytics.tsx
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-export default function DataAnalyticsPage() {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const benefits = [
   'Data-driven decision making',
   'Improved business performance',
@@ -526,11 +498,6 @@ const benefits = [
   'Automated reporting and analytics'
 ];
 export default function DataAnalyticsServices() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 export default function DataAnalyticsPage() {;
 const benefits = [;
   'Data-driven decision making',;
@@ -541,7 +508,6 @@ const benefits = [;
   'Automated reporting and analytics';
 ];
 export default function DataAnalyticsServices() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/data-analytics.tsx
   return (
     <Layout
       title="Data Analytics Services - Zion Tech Group"
@@ -549,8 +515,6 @@ export default function DataAnalyticsServices() {;
       keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-=======
   {
     icon: BarChart3,
     title: 'Business Intelligence',
@@ -599,7 +563,6 @@ export default function DataAnalyticsPage() {
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -621,11 +584,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -643,8 +601,6 @@ export default function DataAnalyticsPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -683,7 +639,6 @@ export default function DataAnalyticsPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">;
                     <feature && feature.icon className="w-6 h-6 text-purple-600" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/data-analytics.tsx
 
         {/* Services Grid */}
         <section className="py-16 px-4">;
@@ -694,14 +649,6 @@ export default function DataAnalyticsPage() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -719,10 +666,6 @@ export default function DataAnalyticsPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -735,13 +678,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -777,12 +713,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-=======
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;
@@ -830,7 +760,6 @@ export default function DataAnalyticsPage() {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/data-analytics.tsx
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -867,8 +796,6 @@ export default function DataAnalyticsPage() {
           </div>;
         </section>;
 
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -890,23 +817,12 @@ export default function DataAnalyticsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </Layout>
-=======
-<<<<<<< HEAD
-=======
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </>
-=======
     </Layout>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
-=======
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -973,4 +889,3 @@ export default function DataAnalyticsPage() {
     </>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/data-analytics.tsx

@@ -23,41 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {
-<<<<<<< HEAD
-  Phone
-  Mail
-  MapPin
-  Globe
-  Clock
-  ChevronDown
-  ChevronUp
-  MessageCircle
-  Calendar
-  Star;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe
-  Clock, ChevronDown, ChevronUp;
-  MessageCircle, Calendar, Star
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-  hours: 'Mon-Fri: 9AM-6PM EST'
-=======
-import { 
-  Phone, Mail, MapPin, Globe, 
-  Clock, ChevronDown, ChevronUp;
-  MessageCircle, Calendar, Star
-} from 'lucide-react';
-
-const contactInfo = {
-=======
   Phone,
   Mail,
   MapPin,
@@ -72,14 +37,10 @@ const contactInfo = {
   Clock, ChevronDown, ChevronUp;
   MessageCircle, Calendar, Star;
 const contact_info = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-<<<<<<< HEAD
-  hours: 'Mon-Fri: 9AM-6PM EST',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   rating: '4.9/5 (200+ Reviews)'
 }
 const quickActions = [
@@ -100,8 +61,6 @@ const quickActions = [
   { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> }
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
 export default function TopContactBar() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Phone,;
   Mail,;
@@ -126,27 +85,11 @@ const contactInfo = {;
   rating: '4 && 4.9/5 (200+ Reviews)',;
 };
 
-<<<<<<< HEAD
-const quickActions = [;
-  {;
-    name: 'Get Quote',;
-    href: '/quote',;
-    icon: <MessageCircle className='w-4 h-4' />,;
-  },;
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className='w-4 h-4' /> },;
-  {;
-    name: 'Live Chat',;
-    href: '/chat',;
-    icon: <MessageCircle className='w-4 h-4' />,;
-  },];  rating: '4 && 4.9/5 (200+ Reviews)';
-};
-=======
 const quickActions = [
   { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },
   { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 const quickActions = [;
   { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },;
@@ -154,14 +97,9 @@ const quickActions = [;
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
 
 export default function TopContactBar() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='relative z-40'>;
       {/* Main Contact Bar */}
       <div className='bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-cyan-500/30'>;
@@ -178,30 +116,14 @@ export default function TopContactBar() {;
       <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-cyan-500/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex items-center justify-between h-12">;
-<<<<<<< HEAD
-            {/* Left Side - Contact Info */}
-            <div className="hidden md:flex items-center space-x-6 text-sm">;
-              {/* Phone */}
-=======
-=======
     <div className="relative z-40">
       {/* Main Contact Bar */}
       <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-cyan-500/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-12">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {/* Left Side - Contact Info */}
             <div className="hidden md:flex items-center space-x-6 text-sm">;
               {/* Phone */}
-<<<<<<< HEAD
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
-                <Phone className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
-                <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">
-                  {contactInfo.mobile}
-                </a>
-              </div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">;
                 <Phone className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />;
                 <a href={`tel:${contactInfo && contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">;
@@ -209,38 +131,20 @@ export default function TopContactBar() {;
                 </a>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Email */}
-<<<<<<< HEAD
-              <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>;
-                <Mail className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />;
-                <a
-<<<<<<< HEAD
-                  href={`mailto:${contactInfo.email}`}
-                  className='hover:text-cyan-400 transition-colors duration-200'
-                >                  {contactInfo.email}              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
-=======
               <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <Mail className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
                 <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
                   {contactInfo.email}
                 </a>
               </div>
               {/* Address */}
-<<<<<<< HEAD
-              <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>
-                <MapPin className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />
-                <span className='hover:text-cyan-400 transition-colors duration-200'>                  {contactInfo.address}              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
-=======
               <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <MapPin className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
                 <span className="hover:text-cyan-400 transition-colors duration-200">
                   {contactInfo.address}
                 </span>
               </div>
-=======
                   href={`mailto:${contactInfo && contactInfo.email}`}
                   className='hover:text-cyan-400 transition-colors duration-200'>                  {contactInfo && contactInfo.email}              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">;
                 <Mail className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />;
@@ -259,29 +163,14 @@ export default function TopContactBar() {;
                 </span>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Website */}
-<<<<<<< HEAD
-              <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>;
-                <Globe className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />;
-                <a
-                  href={contactInfo && contactInfo.website}
-                  target='_blank'
-                  rel='noopener noreferrer'
-<<<<<<< HEAD
-                  className='hover:text-cyan-400 transition-colors duration-200'
-                >                  {contactInfo.website.replace('https://', '')}              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
-=======
               <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <Globe className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
                 <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">
                   {contactInfo.website.replace('https://', '')}
                 </a>
               </div>
             </div>
-<<<<<<< HEAD
-=======
                   className='hover:text-cyan-400 transition-colors duration-200'>                  {contactInfo && contactInfo.website.replace('https://', '')}              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">;
                 <Globe className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />;
                 <a href={contactInfo && contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">;
@@ -290,62 +179,28 @@ export default function TopContactBar() {;
               </div>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Center - Business Hours & Rating */}
             <div className='hidden lg:flex items-center space-x-6 text-sm'>;
-=======
 
             {/* Center - Business Hours & Rating */}
             <div className="hidden lg:flex items-center space-x-6 text-sm">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               {/* Business Hours */}
-<<<<<<< HEAD
-              <div className='flex items-center space-x-2 text-gray-300'>
-                <Clock className='w-4 h-4 text-cyan-400' />                <span>{contactInfo.hours}</span>
-              </div>
-=======
               <div className='flex items-center space-x-2 text-gray-300'>;
                 <Clock className='w-4 h-4 text-cyan-400' />                <span>{contactInfo && contactInfo.hours}</span>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Rating */}
               <div className='flex items-center space-x-2 text-gray-300'>;
                 <Star className='w-4 h-4 text-yellow-400 fill-current' />                <span>{contactInfo && contactInfo.rating}</span>            <div className="hidden lg:flex items-center space-x-6 text-sm">;
               {/* Business Hours */}
-<<<<<<< HEAD
-              <div className="flex items-center space-x-2 text-gray-300">
-                <Clock className="w-4 h-4 text-cyan-400" />
-<<<<<<< HEAD
-=======
                 <span>{contactInfo.hours}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
               {/* Rating */}
-<<<<<<< HEAD
-              <div className='flex items-center space-x-2 text-gray-300'>
-                <Star className='w-4 h-4 text-yellow-400 fill-current' />              <div className="flex items-center space-x-2 text-gray-300">
-=======
               <div className="flex items-center space-x-2 text-gray-300">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <Star className="w-4 h-4 text-yellow-400 fill-current" />
                 <span>{contactInfo.rating}</span>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-              <div className="flex items-center space-x-2 text-gray-300">;
-                <Clock className="w-4 h-4 text-cyan-400" />;
-              </div>;
-=======
-
-            {/* Right Side - Quick Actions & Expand Button */}
-            <div className="flex items-center space-x-4">
-              {/* Quick Actions */}
-              <div className="hidden sm:flex items-center space-x-2">
-                {quickActions.map((action) => (
-                  <a
-=======
   hours: 'Mon - Fri: 9AM - 6PM EST',
   rating: '4.9 / 5 (200+ Reviews)',
 }
@@ -469,18 +324,11 @@ function TopContactBar() {
               <div className="hidden sm:flex items - center space - x-2">;
                 {quick_actions.map ((action) => (
                   <a;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     key={action.name}
                     href={action.href}
                     className="flex items - center space - x-2 px - 3 py - 1.5 text - xs text - gray - 300 hover:text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow - cyan - 500 / 30";
                   >;
                     {action.icon}
-<<<<<<< HEAD
-                    <span>{action.name}</span>
-                  </a>
-                ))}
-              </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
               {/* Rating */}
               <div className='flex items-center space-x-2 text-gray-300'>;
@@ -490,7 +338,6 @@ function TopContactBar() {
               </div>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Right Side - Quick Actions & Expand Button */}
             <div className='flex items-center space-x-4'>;
               {/* Quick Actions */}
@@ -510,19 +357,11 @@ function TopContactBar() {
                     <span>{action && action.name}</span>;
                   </a>;
                 ))}
-<<<<<<< HEAD
-              </div>
-=======
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Expand/Collapse Button */}
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className='flex items-center space-x-1 px-3 py-1 && 1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30';
               >;
                 <span>More Info</span>;
@@ -535,9 +374,6 @@ function TopContactBar() {
                   <ChevronUp className="w-4 h-4" />;
                 ) : (;
                   <ChevronDown className="w-4 h-4" />;
-<<<<<<< HEAD
-=======
-=======
                 className="flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30"
               >
                 <span>More Info</span>
@@ -545,17 +381,7 @@ function TopContactBar() {
                   <ChevronUp className="w-4 h-4" />
                 ) : (
                   <ChevronDown className="w-4 h-4" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 )}
-<<<<<<< HEAD
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
-=======
                     <span>{action.name}</span>;
                   </a>))}
               </div>;
@@ -572,15 +398,11 @@ function TopContactBar() {
                 {is_expanded ? (
                   <ChevronUp className="w - 4 h - 4" />) : (
                   <ChevronDown className="w - 4 h - 4" />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </button>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Expanded Information Panel */}
       <AnimatePresence>;
         {isExpanded && (;
@@ -588,10 +410,6 @@ function TopContactBar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             transition={{ duration: 0 && 0.3 }}
             className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden'>;
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
@@ -625,15 +443,12 @@ function TopContactBar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
                 {/* Contact Details */}
-<<<<<<< HEAD
-=======
             transition={{ duration: 0.3 }}
             className="bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden"
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Contact Details */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
                     <Phone className="w-5 h-5 text-cyan-400" />
@@ -658,7 +473,6 @@ function TopContactBar() {
                     </div>
                   </div>
                 </div>
-=======
                 <div className="space-y-4">;
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">;
                     <Phone className="w-5 h-5 text-cyan-400" />;
@@ -684,38 +498,11 @@ function TopContactBar() {
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Business Information */}
-<<<<<<< HEAD
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>;
-                    <Clock className='w-5 h-5 text-cyan-400' />;
-                    <span>Business Info</span>;
-                  </h3>;
-                  <div className='space-y-3'>;
-                    <div className='flex items-center space-x-3 text-gray-300'>;
-                      <Clock className='w-4 h-4 text-cyan-400' />;
-                      <span>{contactInfo && contactInfo.hours}</span>;
-                    </div>;
-                    <div className='flex items-center space-x-3 text-gray-300'>;
-                      <Star className='w-4 h-4 text-yellow-400 fill-current' />;
-                      <span>{contactInfo && contactInfo.rating}</span>;
-                    </div>;
-                    <div className='flex items-center space-x-3 text-gray-300'>;
-                      <Globe className='w-4 h-4 text-cyan-400' />;
-                      <a
-                        href={contactInfo && contactInfo.website}
-                        target='_blank'
-                        rel='noopener noreferrer'
-<<<<<<< HEAD
-                        className='hover:text-cyan-400 transition-colors duration-200'
-                      >                        Visit Website                    <span>Business Info</span>
-=======
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
                     <Clock className="w-5 h-5 text-cyan-400" />
                     <span>Business Info</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </h3>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3 text-gray-300">
@@ -734,23 +521,6 @@ function TopContactBar() {
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-                        className='hover:text-cyan-400 transition-colors duration-200'>                        Visit Website                    <span>Business Info</span>;
-                  </h3>;
-                  <div className="space-y-3">;
-                    <div className="flex items-center space-x-3 text-gray-300">;
-                      <Clock className="w-4 h-4 text-cyan-400" />;
-                      <span>{contactInfo && contactInfo.hours}</span>;
-                    </div>;
-                    <div className="flex items-center space-x-3 text-gray-300">;
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />;
-                      <span>{contactInfo && contactInfo.rating}</span>;
-                    </div>;
-                    <div className="flex items-center space-x-3 text-gray-300">;
-                      <Globe className="w-4 h-4 text-cyan-400" />;
-                      <a href={contactInfo && contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">;
-=======
       {/* Expanded Information Panel */}
       <AnimatePresence>;
         {is_expanded && (
@@ -854,15 +624,11 @@ function TopContactBar() {
                     <div className="flex items - center space - x-3 text - gray - 300">;
                       <Globe className="w - 4 h - 4 text - cyan - 400" />;
                       <a href={contact_info.website} target="_blank" rel="noopener noreferrer" className="hover:text - cyan - 400 transition - colors duration - 200">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         Visit Website;
                       </a>;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Quick Actions */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>;
@@ -891,20 +657,6 @@ function TopContactBar() {
                         </div>;
                         <span className="font-medium">{action && action.name}</span>;
                       </a>;
-<<<<<<< HEAD
-=======
-=======
-
-                {/* Quick Actions */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
-                    <MessageCircle className="w-5 h-5 text-cyan-400" />
-                    <span>Quick Actions</span>
-                  </h3>
-                  <div className="space-y-3">
-                    {quickActions.map((action) => (
-                      <a
-=======
                 {/* Quick Actions */}
                 <div className='space - y-4'>;
                   <h3 className='text - lg font - semibold text - white flex items - center space - x-2'>;
@@ -926,60 +678,17 @@ function TopContactBar() {
                   <div className="space - y-3">;
                     {quick_actions.map ((action) => (
                       <a;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         key={action.name}
                         href={action.href}
                         className="flex items - center space - x-3 p - 3 text - gray - 300 hover:text - white bg - gray - 800 / 30 hover:bg - cyan - 500 / 20 border border - gray - 700 / 30 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow - cyan - 500 / 30 group";
                       >;
                         <div className="text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 200">;
                           {action.icon}
-<<<<<<< HEAD
-                        </div>
-                        <span className="font-medium">{action.name}</span>
-                      </a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
-<<<<<<< HEAD
-                  </div>
-                </div>
-                {/* Company Highlights */}
-<<<<<<< HEAD
-                <div className='space-y-4'>
-                  <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
-                    <Star className='w-5 h-5 text-cyan-400' />
-                    <span>Why Choose Us</span>
-                  </h3>
-                  <div className='space-y-3'>
-                    <div className='p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg'>
-                      <div className='text-sm font-medium text-white mb-1'>
-                        15+ Years Experience
-                      </div>
-                      <div className='text-xs text-gray-400'>
-                        Industry expertise and proven track record
-                      </div>
-                    </div>
-                    <div className='p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg'>
-                      <div className='text-sm font-medium text-white mb-1'>
-                        500+ Services Delivered
-                      </div>
-                      <div className='text-xs text-gray-400'>
-                        Successful implementations worldwide
-                      </div>
-                    </div>
-                    <div className='p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg'>
-                      <div className='text-sm font-medium text-white mb-1'>
-                        24/7 Support
-                      </div>
-                      <div className='text-xs text-gray-400'>
-                        Round-the-clock technical assistance
-                      </div>                    </div>                    <span>Why Choose Us</span>
-=======
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
                     <Star className="w-5 h-5 text-cyan-400" />
                     <span>Why Choose Us</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </h3>
                   <div className="space-y-3">
                     <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg">
@@ -997,7 +706,6 @@ function TopContactBar() {
                   </div>
                 </div>
               </div>
-=======
                   </div>;
                 </div>;
 
@@ -1044,7 +752,6 @@ function TopContactBar() {
                     <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg">;
                       <div className="text-sm font-medium text-white mb-1">24/7 Support</div>;
                       <div className="text-xs text-gray-400">Round-the-clock technical assistance</div>;
-=======
                         </div>;
                         <span className="font - medium">{action.name}</span>;
                       </a>))}
@@ -1093,50 +800,11 @@ function TopContactBar() {
                     <div className="p - 3 bg - gradient - to - r from - green - 500 / 10 to - emerald - 600 / 10 border border - green - 500 / 30 rounded - lg">;
                       <div className="text - sm font - medium text - white mb - 1">24 / 7 Support</div>;
                       <div className="text - xs text - gray - 400">Round - the - clock technical assistance</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </div>;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Call to Action */}
-<<<<<<< HEAD
-              <div className='mt-6 pt-6 border-t border-cyan-500/30'>;
-                <div className='text-center'>;
-                  <h3 className='text-lg font-semibold text-white mb-3'>;
-                    Ready to Transform Your Business?;
-                  </h3>;
-                  <p className='text-gray-400 mb-4 max-w-2xl mx-auto'>;
-                    Get in touch with our team of experts to discuss how our;
-                    cutting-edge technology solutions can drive your business;
-                    forward.;
-                  </p>;
-                  <div className='flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4'>;
-                    <a
-                      href='/contact'
-                      className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'>;
-                      Get Started Today;
-                    </a>;
-                    <a
-                      href='/comprehensive-services-showcase-2025'
-                      className='px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10'>                    Ready to Transform Your Business?;
-                  </h3>;
-                  <p className="text-gray-400 mb-4 max-w-2xl mx-auto">;
-                    Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward.;
-                  </p>;
-                  <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">;
-                    <a
-                      href="/contact"
-                      className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">;
-                      Get Started Today;
-                    </a>;
-                    <a
-                      href='/comprehensive-services-showcase-2025'
-                      className='px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10'                      href="/comprehensive-services-showcase-2025"
-                      className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10">;
-=======
               {/* Call to Action */}
               <div className='mt - 6 pt - 6 border - t border - cyan - 500 / 30'>;
                 <div className='text - center'>;
@@ -1173,18 +841,12 @@ function TopContactBar() {
                       className='px - 6 py - 3 text - cyan - 400 hover:text - white border border - cyan - 500 / 50 hover:border - cyan - 400 rounded - lg transition - all duration - 300 hover:bg - cyan - 500 / 10'                      href="/comprehensive - services - showcase - 2025";
                       className="px - 6 py - 3 text - cyan - 400 hover:text - white border border - cyan - 500 / 50 hover:border - cyan - 400 rounded - lg transition - all duration - 300 hover:bg - cyan - 500 / 10";
                     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       View All Services;
                     </a>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
-          </motion && motion.div>;
-<<<<<<< HEAD
-=======
-=======
               <div className="mt-6 pt-6 border-t border-cyan-500/30">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-white mb-3">
@@ -1211,32 +873,10 @@ function TopContactBar() {
               </div>
             </div>
           </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
       </AnimatePresence>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  /* Main Contact Bar */
-}</a> </div> </div> > {
-  action.icon
-}<span> {
-  action.name
-}</span> </a>) )
-}</div> {
-  /* Expand/Collapse Button */
-}<button) : (<ChevronDown className="w-4 h-4" />)
-}</button> </div> </div> </div> </div> {
-  /* Expanded Information Panel */
-}<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) )
-}</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>)
-}</AnimatePresence> </div>) }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   /* Main Contact Bar */ ;
 }</a> </div> </div> > {;
@@ -1252,14 +892,8 @@ function TopContactBar() {
 }<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) ) ;
 }</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion && motion.div>) ;
 }</AnimatePresence> </div>) }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </motion.div>)}
       </AnimatePresence>;
     </div>);
@@ -1279,5 +913,3 @@ function TopContactBar() {
 }</div> </div> <span > Why Choose Us</span> </h3> <div className="space - y-3" > <div className="p - 3 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 600 / 10 border border - cyan - 500 / 30 rounded - lg" > <div className="text - sm font - medium text - white mb - 1" >15+ Years Experience</div> <div className="text - xs text - gray - 400" >Industry expertise and proven track record</div> </div> <div className="p - 3 bg - gradient - to - r from - purple - 500 / 10 to - pink - 600 / 10 border border - purple - 500 / 30 rounded - lg" > <div className="text - sm font - medium text - white mb - 1" >500+ Services Delivered</div> <div className="text - xs text - gray - 400" >Successful implementations worldwide</div> </div> <div className="p - 3 bg - gradient - to - r from - green - 500 / 10 to - emerald - 600 / 10 border border - green - 500 / 30 rounded - lg" > <div className="text - sm font - medium text - white mb - 1" >24 / 7 Support</div> <div className="text - xs text - gray - 400" >Round - the - clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text - gray - 400 mb - 4 max - w-2xl mx - auto" > Get in touch with our team of experts to discuss how our cutting - edge technology solutions can drive your business forward. </p> <div className="flex flex - col sm:flex - row items - center justify - center space - y-3 sm:space - y-0 sm:space - x-4" > <a href="/contact" className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:shadow - xl hover:shadow - cyan - 500 / 30 transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25" > Get Started Today </a> <a href="/comprehensive - services - showcase - 2025" className="px - 6 py - 3 text - cyan - 400 hover:text - white border border - cyan - 500 / 50 hover:border - cyan - 400 rounded - lg transition - all duration - 300 hover:bg - cyan - 500 / 10" > View All Services </a> </div> </div> </div> </div> </motion.div>);
 }</AnimatePresence> </div>) }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

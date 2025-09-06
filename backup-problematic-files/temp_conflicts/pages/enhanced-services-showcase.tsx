@@ -607,13 +607,5 @@ const Button = ({ ;
     <button onClick={onClick} className={classes}>;
       {children}
     </button>;
-<<<<<<< HEAD:temp_conflicts/pages/enhanced-services-showcase.tsx
-  );
-};
-}
-}
-}
-=======
   ),;
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/enhanced-services-showcase.tsx

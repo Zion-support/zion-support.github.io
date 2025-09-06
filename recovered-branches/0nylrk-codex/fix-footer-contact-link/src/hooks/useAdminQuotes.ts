@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-import { useToast } from '@/components/ui/use-toast';
-import type { DateRange } from '@/types/dateRange';
-
-export const useAdminQuotes = () => {
-  const { toast } = useToast();
-  const queryClient = useQueryClient();
-  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
-  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined);
-  // Fetch all quote requests
-  const { data: allQuotes = [], isLoading, error } = useQuery({
-    queryKey: ['quotesadmin'];
-<<<<<<< HEAD
-    queryFn: () => quoteRequestService.getAll()
-=======
     queryFn: () => quoteRequestService && quoteRequestService.getAll(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     enabled: true});
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
@@ -66,56 +44,25 @@ export const useAdminQuotes = () => {
   });
   // Update quote status mutation
   const updateStatusMutation = useMutation({
-<<<<<<< HEAD
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
-      quoteRequestService.updateStatus(id, status);
-=======
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     onSuccess: () => {
       toast({
         title: "Status updated"
         description: "The quote request status has been updated"
       });
-<<<<<<< HEAD
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
-    }
-    onError: (error: Error) => {
-      toast({
-        title: "Error";
-        description: "Failed to update status: " + error.message
-=======
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to update status: " + error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       })
     }
   });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
-<<<<<<< HEAD
-    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
-      quoteRequestService.toggleArchive(id, isArchived);
-    onSuccess: (_, variables) => {
-      toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived"
-        description: variables.isArchived
-          ? "The quote request has been archived"
-          : "The quote request has been moved back to active quotes"
-      });
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
-    }
-    onError: (error: Error) => {
-      toast({
-        title: "Error";
-        description: "Failed to update quote: " + error.message
-=======
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
@@ -131,7 +78,6 @@ export const useAdminQuotes = () => {
       toast({
         title: "Error";
         description: "Failed to update quote: " + error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       })
     }
@@ -144,26 +90,16 @@ export const useAdminQuotes = () => {
         title: "Quote deleted"
         description: "The quote request has been permanently deleted"
       });
-<<<<<<< HEAD
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
-    }
-    onError: (error: Error) => {
-      toast({
-        title: "Error";
-        description: "Failed to delete quote: " + error.message
-=======
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to delete quote: " + error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       })
     }
   });
-=======
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -312,7 +248,6 @@ if ( {) {
     }
   });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     quotes: filtered_quotes;
     is_loading;
@@ -323,18 +258,6 @@ if ( {) {
     setArchiveFilter;
     search_query;
     setSearchQuery;
-<<<<<<< HEAD
-    dateRange;
-<<<<<<< HEAD
-    setDateRange
-    updateStatus: (id: string, status: QuoteStatus) =>
-      updateStatusMutation.mutate({ id, status });
-    toggleArchive: (id: string, isArchived: boolean) =>
-      toggleArchiveMutation.mutate({ id, isArchived });
-    deleteQuote: (id: string) => deleteMutation.mutate(id)}
-}
-
-=======
     setDateRange,
     updateStatus: (id: string, status: QuoteStatus) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status });
@@ -342,8 +265,6 @@ if ( {) {
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     date_range;
     setDateRange,
     update_status: (id: string, status: QuoteStatus) =>;
@@ -353,4 +274,3 @@ if ( {) {
     delete_quote: (id: string) => delete_mutation.mutate (id)}
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

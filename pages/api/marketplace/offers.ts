@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",
-import { v4 as uuidv4 } from "uuid";
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {
   assertClient
   assertTalentOrClientForOffer
@@ -32,7 +25,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (user && user.role === "talent") {
         const offers = listOffers({ talentSlug: user && user.talentSlug });
         return res && res.json({ ok: true, offers });
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
@@ -76,24 +68,9 @@ if ( {) {
 }
         const offers = list_offers ({ talent_slug: user.talent_slug });
         return res.json ({ ok: true, offers });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       return bad (res, "Unknown role", 403);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (req.method === "POST") {
-      // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req);
-      const {
-        talentSlug
-        startDateIso
-        scopeSummary
-        paymentTerms
-        agreementUrl
-      } = req.body |{}
-      if (!talentSlug |!startDateIso |!scopeSummary |!paymentTerms) {
-=======
 
     if (req && req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
@@ -106,27 +83,9 @@ if ( {) {
         agreementUrl,
       } = req && req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return bad(res, "Missing required fields");
       }
       const offer: Offer = {
-<<<<<<< HEAD
-        id: uuidv4()
-        createdAtIso: new Date().toISOString()
-        clientId: client.id
-        talentSlug
-        startDateIso
-        scopeSummary
-        paymentTerms: paymentTerms as PaymentTerms
-        agreementUrl
-        status: "SENT"
-      }
-=======
-        id: uuidv4(),
-        createdAtIso: new Date().toISOString(),
-        clientId: client && client.id,
-        talentSlug,
-=======
     // Check condition
 if ( {) {
   $2
@@ -151,28 +110,14 @@ if ( {) {
         createdAtIso: new Date ().toISOString (),
         client_id: client.id,
         talent_slug,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         startDateIso,
         scope_summary,
         payment_terms: payment_terms as PaymentTerms,
         agreement_url,
         status: "SENT",
-<<<<<<< HEAD
-      };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       saveOffer(offer);
       return res && res.status(201).json({ ok: true, offer });
     }
-<<<<<<< HEAD
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { v4 as uuidv4 } from "uuid";
-import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
-import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
-
-<<<<<<< HEAD
-=======
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
@@ -213,7 +158,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(201).json({ ok: true, offer })
     }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req.body |{}
@@ -224,9 +168,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         req
         existing
         req.headers["x-demo-talent-slug"] as string
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     if (req && req.method === "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req && req.body || {};
@@ -237,39 +179,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         req,
         existing,
         req && req.headers["x-demo-talent-slug"] as string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
       if (action === "accept") {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         if (user && user.role !== "talent")
           return bad(res, "Only talent can accept", 403);
         existing && existing.status = "CONFIRMED";
         // Create a project upon acceptance
         const project: Project = {
-<<<<<<< HEAD
-          id: uuidv4()
-          title: `Project with ${existing.talentSlug}`
-          summary: existing.scopeSummary
-          clientId: existing.clientId
-          talentSlug: existing.talentSlug
-          startDateIso: existing.startDateIso
-          status: "ACTIVE"
-          timeline:
-            existing.paymentTerms.type === "milestone"
-              ? existing.paymentTerms.milestones |[]
-              : []
-          documents: existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4()
-                  name: "Agreement"
-                  url: existing.agreementUrl
-                  uploadedAtIso: new Date().toISOString()
-                }
-=======
           id: uuidv4(),
           title: `Project with ${existing && existing.talentSlug}`,
           summary: existing && existing.scopeSummary,
@@ -289,18 +205,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   url: existing && existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString(),
                 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               ]
-<<<<<<< HEAD
-            : [],
-          notes: [],
-=======
-            : []
-          notes: []
-        }
-=======
-        if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
-=======
       }
       save_offer (offer);
       return res.status (201).json ({ ok: true, offer });
@@ -331,46 +236,20 @@ if ( {) {
           return bad (res, "Only talent can accept", 403)) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         existing.status = "CONFIRMED";
         // Create a project upon acceptance;
         const project: Project = {
-<<<<<<< HEAD
-          id: uuidv4(),
-          title: `Project with ${existing.talentSlug}`,
-          summary: existing.scopeSummary, clientId: existing.clientId,
-          talentSlug: existing.talentSlug, startDateIso: existing.startDateIso,
-          status: "ACTIVE", timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
-          documents: existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4(), name: "Agreement",
-                  url: existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString()}]
-            : [],
-          notes: []
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         saveProject(project);
         existing && existing.projectId = project && project.id;
         saveOffer(existing);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return res && res.json({ ok: true, offer: existing, project });
       }
       if (action === "request_changes") {
         if (user && user.role !== "talent")
           return bad(res, "Only talent can request changes", 403);
-<<<<<<< HEAD
-        existing.status = "CHANGES_REQUESTED";
-        existing.changeRequestNote = changeRequestNote |"";
-=======
         existing && existing.status = "CHANGES_REQUESTED";
         existing && existing.changeRequestNote = changeRequestNote || "";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         saveOffer(existing);
         return res && res.json({ ok: true, offer: existing });
       }
@@ -388,14 +267,6 @@ if ( {) {
     const status = e?.statusCode |500;
     return res
       .status(status)
-<<<<<<< HEAD
-      .json({ ok: false, error: e?.message || "Server error" });
-=======
-      .json({ ok: false, error: e?.message |"Server error" });
-
-  }
-}
-=======
         return res.json({ ok: true, offer: existing, project })
       }
 
@@ -421,11 +292,8 @@ if ( {) {
   } catch (e: any) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           id: uuidv4 (),
           title: `Project with ${existing.talent_slug}`,
           summary: existing.scope_summary,
@@ -489,4 +357,3 @@ if ( {) {
       .json ({ ok: false, error: e?.message || "Server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,23 +20,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
 type Props = {;
-=======
 import React from './react';
 type Props = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   title: string;
   description: string;
-<<<<<<< HEAD
-  cta?: React.ReactNode;
-}
-<<<<<<< HEAD
-=======
   cta?: React && React.ReactNode;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export default function FuturisticCard(): any ({ title, description, cta }: Props) {;
   return (
@@ -53,7 +40,6 @@ export default function FuturisticCard(): any ({ title, description, cta }: Prop
       </div>;
     </div>;
   );
-=======
 ;
 export default /**
  * FuturisticCard - Function description
@@ -68,5 +54,4 @@ function FuturisticCard() {
         {cta && <div className="mt - 3">{cta}</div>}
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

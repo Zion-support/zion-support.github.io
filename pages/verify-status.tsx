@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
-import { AuthLayout } from '@/layout';
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
 import { AuthLayout } from '@/layout';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
@@ -23,16 +7,6 @@ export default function VerifyStatus() {
 
   const router = useRouter()
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
-<<<<<<< HEAD
-  const { email: emailParam } = router.query
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [error, setError] = useState('')
-  const [isResending, setIsResending] = useState(false)
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false)
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null)
-  const [countdown, setCountdown] = useState(0)
-=======
   const { email: emailParam } = router.query,
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -42,7 +16,6 @@ export default function VerifyStatus() {
   const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
   const [countdown, setCountdown] = useState(0);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   useEffect(() => {
     if (typeof emailParam === 'string') {
       setEmail(emailParam)
@@ -50,38 +23,18 @@ export default function VerifyStatus() {
   }, [emailParam])
   // Countdown timer for resend button
   useEffect(() => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    let interval: NodeJS.Timeout
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     let interval: NodeJS.Timeout,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (countdown > 0) {
       interval = setInterval(() => {
         setCountdown(prev => prev - 1)
       }, 1000)
     }
     return () => clearInterval(interval)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }, [countdown])
-  const handleResendEmail = async () => {
-    if (!email) {
-      setError('Please enter your email address')
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, [countdown]);
 
   const handleResendEmail = async () => {
     if (!email) {
       setError('Please enter your email address');
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return
     }
     setIsResending(true)
@@ -89,16 +42,6 @@ export default function VerifyStatus() {
     setMessage('')
     try {
       const response = await fetch('/api/resend-verification-email', {
-<<<<<<< HEAD
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ email })
-      })
-      const data = await response.json()
-      if (response.ok) {
-        setMessage('Verification email sent successfully! Please check your inbox.')
-        setLastSentTime(new Date())
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
@@ -109,11 +52,9 @@ export default function VerifyStatus() {
       if (response.ok) {
         setMessage('Verification email sent successfully! Please check your inbox.');
         setLastSentTime(new Date());
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         setCountdown(60), // 60 second cooldown
       } else {
         setError(data.message |'Failed to resend verification email')
-=======
 import { useState, useEffect } from 'react',
 import { use_router } from 'next / router',
 import { Input } from '@/components / ui / input',
@@ -187,30 +128,13 @@ if ( {) {
         set_countdown (60), // 60 second cooldown;
       } else {
         set_error (data.message || 'Failed to resend verification email');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } catch (err) {
       set_error ('Network error. Please try again.');
     } finally {
-<<<<<<< HEAD
-      setIsResending(false)
-=======
       setIsResending (false);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
-<<<<<<< HEAD
-  }
-  const handleCheckStatus = async () => {
-    if (!email) {
-<<<<<<< HEAD
       setError('Please enter your email address');
-=======
-<<<<<<< HEAD
-      setError('Please enter your email address')
-=======
-      setError('Please enter your email address');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return
     }
     setIsCheckingStatus(true)
@@ -218,18 +142,9 @@ if ( {) {
     setMessage('')
     try {
       // Attempt to refresh the session to get the latest user status
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      const { error: refreshError } = await supabase.auth.refreshSession()
-      if (refreshError) {
-        // Don't treat all refresh errors as critical for this check
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const { error: refreshError } = await supabase.auth.refreshSession(),
       if (refreshError) {
         // Don't treat all refresh errors as critical for this check;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         // as user might not have a session yet or it might be invalid.
         logWarn('Error during session refresh:', { data: refreshError.message })
       }
@@ -260,14 +175,6 @@ if ( {) {
     } catch (err: any) {
       logErrorToProduction('Error checking verification status:', { data: err })
       setError('An unexpected error occurred while checking status. Please try again.')
-<<<<<<< HEAD
-    } finally {
-      setIsCheckingStatus(false)
-    }
-  };
-
-=======
-=======
   },
   const handleCheckStatus = async () => {
     // Check condition
@@ -327,33 +234,16 @@ if ( {) {
     } catch (err: any) {
       logErrorToProduction ('Error checking verification status:', { data: err }),
       set_error ('An unexpected error occurred while checking status. Please try again.');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsCheckingStatus (false);
     }
-<<<<<<< HEAD
-  }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const handleTryLogin = () => {
     router.push(`/auth/login?email=${encodeURIComponent(email)}`)
   }
   const handleGoBack = () => {
     router.back()
-<<<<<<< HEAD
   };
 
-  return (
-    <AuthLayout>
-      <div className="flex min-h-screen items-center justify-center p-4">
-        <div className="w-full max-w-md space-y-6">
-=======
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-=======
   },
   const handleTryLogin = () =>: any {
     router.push (`/auth / login?email=${encodeURIComponent (email)}`);
@@ -361,49 +251,11 @@ if ( {) {
   const handleGoBack = () =>: any {
     router.back ();
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <AuthLayout>;
       <div className="flex min - h-screen items - center justify - center p - 4">;
         <div className="w - full max - w-md space - y-6">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {/* Header */}
-<<<<<<< HEAD
-          <div className="text-center">
-            <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <Mail className="h-6 w-6 text-blue-600" />
-            </div>
-            <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>
-            <p className="text-sm text-gray-600 mt-2">
-              Check and manage your email verification status
-            </p>
-          </div>
-          {/* Success Message */}
-          {message && (
-            <Alert className="border-green-500 bg-green-50 text-green-900">
-              <CheckCircle className="h-4 w-4" />
-              <AlertDescription>{message}</AlertDescription>
-            </Alert>
-          )}
-          {/* Error Message */}
-          {error && (
-            <Alert variant="destructive">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>{error}</AlertDescription>
-            </Alert>
-          )}
-<<<<<<< HEAD
-
-          {/* Email Input */}
-          <div className="space-y-2">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email Address
-            </label>
-            <Input
-              id="email"
-              type="email"
-=======
-=======
           <div className="text - center">;
             <div className="mx - auto h - 12 w - 12 bg - blue - 100 rounded - full flex items - center justify - center mb - 4">;
               <Mail className="h - 6 w - 6 text - blue - 600" />;
@@ -425,7 +277,6 @@ if ( {) {
               <AlertCircle className="h - 4 w - 4" />;
               <AlertDescription>{error}</AlertDescription>;
             </Alert>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Email Input */}
           <div className="space - y-2">;
             <label html_for="email" className="block text - sm font - medium text - gray - 700">;
@@ -434,47 +285,18 @@ if ( {) {
             <Input;
               id="email";
               type="email";
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               value={email}
               on_change={(e) => set_email (e.target.value)}
               placeholder="Enter your email address";
               className="w - full";
             />;
             {email && (
-<<<<<<< HEAD
-              <p className="text-xs text-gray-500">
-                We'll check the verification status for this email address
-              </p>
-            )}
-          </div>
-=======
               <p className="text - xs text - gray - 500">;
                 We'll check the verification status for this email address;
               </p>)}
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Status Info */}
           {email && (
-<<<<<<< HEAD
-            <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
-              <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
-              <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
-                <p>• Check your email inbox for a verification link</p>
-                <p>• Click the link in the email to verify your account</p>
-                <p>• Return here or try logging in after verification</p>
-              </div>
-              {lastSentTime && (
-=======
-            <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
-              <h3 className="text - sm font - medium text - slate - 900 dark:text - slate - 100 mb - 2">Verification Status</h3>;
-              <div className="text - sm text - slate - 700 dark:text - slate - 300 space - y-1">;
-                <p>• Check your email inbox for a verification link</p>;
-                <p>• Click the link in the email to verify your account</p>;
-                <p>• Return here or try logging in after verification</p>;
-              </div>;
-              {lastSentTime && (
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
                   <Clock className="h-3 w-3 mr-1" />
                   Last email sent: {lastSentTime.toLocaleTimeString()}
@@ -482,34 +304,15 @@ if ( {) {
               )}
             </div>
           )}
-<<<<<<< HEAD
-
-          {/* Action Buttons */}
-          <div className="space-y-3">
-=======
-=======
                 <p className="text - xs text - slate - 600 dark:text - slate - 400 mt - 2 flex items - center">;
                   <Clock className="h - 3 w - 3 mr - 1" />;
                   Last email sent: {lastSentTime.toLocaleTimeString ()}
                 </p>)}
             </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Action Buttons */}
           <div className="space - y-3">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Check Status Button */}
-<<<<<<< HEAD
-            <Button
-              onClick={handleCheckStatus}
-<<<<<<< HEAD
               disabled={!email || isCheckingStatus}
-=======
-<<<<<<< HEAD
-              disabled={!email |isCheckingStatus}
-=======
-              disabled={!email || isCheckingStatus}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="w-full"
               variant="outline"
             >
@@ -528,15 +331,7 @@ if ( {) {
             {/* Resend Email Button */}
             <Button
               onClick={handleResendEmail}
-<<<<<<< HEAD
               disabled={!email || isResending || countdown > 0}
-=======
-<<<<<<< HEAD
-              disabled={!email |isResending |countdown > 0}
-=======
-              disabled={!email || isResending || countdown > 0}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="w-full"
               variant="secondary"
             >
@@ -557,7 +352,6 @@ if ( {) {
                 </>
               )}
             </Button>
-=======
             <Button;
               on_click={handleCheckStatus}
               disabled={!email || isCheckingStatus}
@@ -595,15 +389,10 @@ if ( {) {
                   Resend Verification Email;
                 </>)}
             </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Try Login Button */}
             <Button;
               on_click={handleTryLogin}
               disabled={!email}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="w-full"
             >
               Try Login
@@ -645,14 +434,7 @@ if ( {) {
       </div>
     </AuthLayout>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               className="w - full";
             >;
               Try Login;
@@ -694,5 +476,3 @@ if ( {) {
       </div>;
     </AuthLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

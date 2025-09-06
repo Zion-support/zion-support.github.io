@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-export const advancedEmergingTechServices2025 = [
-  {
-<<<<<<< HEAD
-    id: 'space-mining-operations-platform',
-    name: 'SpaceMining Operations',
-=======
-<<<<<<< HEAD
-    id: 'space-mining-operations-platform'
-    name: 'SpaceMining Operations'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     description:
       'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.'
       'Asteroid mining operations'
@@ -54,20 +42,6 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Space Technology'
     tags: [
-<<<<<<< HEAD
-      'Space Mining'
-      'Asteroid Mining'
-      'Lunar Resources'
-      'Space Operations'
-    ]
-    website: 'https://ziontechgroup.com/space-mining-operations'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$3.8B'
-=======
-=======
 export const advancedEmergingTechServices2025 = [;
   {
     id: 'space - mining - operations - platform',
@@ -116,24 +90,16 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Space Technology',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Space Mining',
       'Asteroid Mining',
       'Lunar Resources',
       'Space Operations',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/space-mining-operations',
-=======
     website: 'https://ziontechgroup.com / space - mining - operations',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$3 && 3.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Space agencies, mining companies, aerospace firms, government agencies'
     competitiveAdvantage:
@@ -187,20 +153,6 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Quantum Bio-Computing'
     tags: [
-<<<<<<< HEAD
-      'Quantum Computing'
-      'Biological Computing'
-      'DNA Computing'
-      'Hybrid Processing'
-    ]
-    website: 'https://ziontechgroup.com/quantum-bio-computing'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$2.1B'
-=======
-=======
     market_size: '$3.8B',
     target_audience:;
       'Space agencies, mining companies, aerospace firms, government agencies',
@@ -255,24 +207,16 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Quantum Bio - Computing',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'Biological Computing',
       'DNA Computing',
       'Hybrid Processing',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing',
-=======
     website: 'https://ziontechgroup.com / quantum - bio - computing',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$2 && 2.1B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Research institutions, pharmaceutical companies, biotechnology firms, government agencies'
     competitiveAdvantage:
@@ -326,20 +270,6 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Brain-Computer Interface'
     tags: [
-<<<<<<< HEAD
-      'Neural Interface'
-      'Cognitive Enhancement'
-      'Neurological Research'
-      'Medical Technology'
-    ]
-    website: 'https://ziontechgroup.com/brain-interface-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$1.9B'
-=======
-=======
     market_size: '$2.1B',
     target_audience:;
       'Research institutions, pharmaceutical companies, biotechnology firms, government agencies',
@@ -394,24 +324,16 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Brain - Computer Interface',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Neural Interface',
       'Cognitive Enhancement',
       'Neurological Research',
       'Medical Technology',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/brain-interface-pro',
-=======
     website: 'https://ziontechgroup.com / brain - interface - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$1 && 1.9B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Medical research institutions, healthcare providers, neuroscience labs, government agencies'
     competitiveAdvantage:
@@ -465,20 +387,6 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Quantum Energy'
     tags: [
-<<<<<<< HEAD
-      'Fusion Power'
-      'Quantum Energy'
-      'Sustainable Energy'
-      'Energy Optimization'
-    ]
-    website: 'https://ziontechgroup.com/quantum-energy-fusion'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$4.7B'
-=======
-=======
     market_size: '$1.9B',
     target_audience:;
       'Medical research institutions, healthcare providers, neuroscience labs, government agencies',
@@ -533,24 +441,16 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Quantum Energy',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Fusion Power',
       'Quantum Energy',
       'Sustainable Energy',
       'Energy Optimization',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-fusion',
-=======
     website: 'https://ziontechgroup.com / quantum - energy - fusion',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$4 && 4.7B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Energy companies, power utilities, research institutions, government agencies'
     competitiveAdvantage:
@@ -604,20 +504,6 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Autonomous Vehicles'
     tags: [
-<<<<<<< HEAD
-      'Autonomous Vehicles'
-      'AI Navigation'
-      'Fleet Management'
-      'Transportation'
-    ]
-    website: 'https://ziontechgroup.com/autonomous-vehicle-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$54.2B'
-=======
-=======
     market_size: '$4.7B',
     target_audience:;
       'Energy companies, power utilities, research institutions, government agencies',
@@ -672,104 +558,26 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Autonomous Vehicles',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Autonomous Vehicles',
       'AI Navigation',
       'Fleet Management',
       'Transportation',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai',
-=======
     website: 'https://ziontechgroup.com / autonomous - vehicle - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$54 && 54.2B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Automotive companies, transportation firms, logistics companies, government agencies'
     competitiveAdvantage:
-<<<<<<< HEAD
-      'Advanced AI navigation with 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration'
-  }
-=======
-      'Advanced AI navigation with 99 && 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration',
-=======
     market_size: '$54.2B',
     target_audience:;
       'Automotive companies, transportation firms, logistics companies, government agencies',
     competitive_advantage:;
       'Advanced AI navigation with 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'quantum-materials-discovery-platform'
-    name: 'QuantumMaterials Discovery'
-    description:
-      'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI.'
-    features: [
-      'Quantum materials simulation'
-      'AI-powered discovery algorithms'
-      'Real-time material analysis'
-      'Advanced property prediction'
-      'Integration with research platforms'
-      'Advanced analytics and reporting'
-      'Custom discovery algorithms'
-      '24/7 discovery operations'
-    ]
-    pricing: {
-      starter: {
-        price: 699
-        period: 'month'
-        features: [
-          'Basic materials simulation'
-          'Standard discovery'
-          'Email support'
-        ]
-      }
-      professional: {
-        price: 1799
-        period: 'month'
-        features: [
-          'Advanced materials platform'
-          'Custom algorithms'
-          'Priority support'
-          'Dedicated research team'
-        ]
-      }
-      enterprise: {
-        price: 4499
-        period: 'month'
-        features: [
-          'Full materials platform'
-          'Custom solutions'
-          'White-label platform'
-          'Dedicated support team'
-        ]
-      }
-    }
-    category: 'Quantum Materials'
-    tags: [
-<<<<<<< HEAD
-      'Quantum Computing'
-      'Materials Science'
-      'AI Discovery'
-      'Research Platform'
-    ]
-    website: 'https://ziontechgroup.com/quantum-materials-discovery'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$2.8B'
-=======
-=======
     id: 'quantum - materials - discovery - platform',
     name: 'QuantumMaterials Discovery',
     description:;
@@ -817,24 +625,16 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Quantum Materials',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'Materials Science',
       'AI Discovery',
       'Research Platform',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-materials-discovery',
-=======
     website: 'https://ziontechgroup.com / quantum - materials - discovery',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$2 && 2.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Materials science companies, research institutions, manufacturing firms, government agencies'
     competitiveAdvantage:
@@ -888,20 +688,6 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Quantum Robotics'
     tags: [
-<<<<<<< HEAD
-      'Quantum Computing'
-      'Robotics'
-      'Automation'
-      'Intelligent Systems'
-    ]
-    website: 'https://ziontechgroup.com/quantum-robotics-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$3.2B'
-=======
-=======
     market_size: '$2.8B',
     target_audience:;
       'Materials science companies, research institutions, manufacturing firms, government agencies',
@@ -956,24 +742,16 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Quantum Robotics',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'Robotics',
       'Automation',
       'Intelligent Systems',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-robotics-pro',
-=======
     website: 'https://ziontechgroup.com / quantum - robotics - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$3 && 3.2B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Robotics companies, manufacturing firms, automation specialists, research institutions'
     competitiveAdvantage:
@@ -1027,20 +805,6 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Quantum Internet Security'
     tags: [
-<<<<<<< HEAD
-      'Quantum Internet'
-      'Cybersecurity'
-      'Encryption'
-      'Secure Communication'
-    ]
-    website: 'https://ziontechgroup.com/quantum-internet-security'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$8.9B'
-=======
-=======
     market_size: '$3.2B',
     target_audience:;
       'Robotics companies, manufacturing firms, automation specialists, research institutions',
@@ -1095,24 +859,16 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Quantum Internet Security',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Internet',
       'Cybersecurity',
       'Encryption',
       'Secure Communication',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-security',
-=======
     website: 'https://ziontechgroup.com / quantum - internet - security',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$8 && 8.9B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Internet service providers, telecommunications companies, government agencies, cybersecurity firms'
     competitiveAdvantage:
@@ -1166,20 +922,6 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Quantum Logistics'
     tags: [
-<<<<<<< HEAD
-      'Quantum Computing'
-      'Logistics'
-      'Supply Chain'
-      'Route Optimization'
-    ]
-    website: 'https://ziontechgroup.com/quantum-logistics-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$12.4B'
-=======
-=======
     market_size: '$8.9B',
     target_audience:;
       'Internet service providers, telecommunications companies, government agencies, cybersecurity firms',
@@ -1234,24 +976,16 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Quantum Logistics',
     tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'Logistics',
       'Supply Chain',
       'Route Optimization',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-logistics-pro',
-=======
     website: 'https://ziontechgroup.com / quantum - logistics - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$12 && 12.4B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Logistics companies, supply chain managers, transportation firms, e-commerce businesses'
     competitiveAdvantage:
@@ -1296,24 +1030,6 @@ export const advancedEmergingTechServices2025 = [;
         price: 2499
         period: 'month'
         features: [
-<<<<<<< HEAD
-          'Full metaverse platform'
-          'Custom solutions'
-          'White-label platform'
-          'Dedicated support team'
-        ]
-      }
-    }
-    category: 'Quantum Metaverse'
-    tags: ['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics']
-    website: 'https://ziontechgroup.com/quantum-metaverse-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$6.8B'
-=======
-=======
     market_size: '$12.4B',
     target_audience:;
       'Logistics companies, supply chain managers, transportation firms, e - commerce businesses',
@@ -1359,7 +1075,6 @@ export const advancedEmergingTechServices2025 = [;
         price: 2499,
         period: 'month',
         features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Full metaverse platform',
           'Custom solutions',
           'White - label platform',
@@ -1369,33 +1084,17 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Quantum Metaverse',
     tags: ['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-metaverse-pro',
-=======
     website: 'https://ziontechgroup.com / quantum - metaverse - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$6 && 6.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
 ];      phone: '+1 302 464 0950';
-<<<<<<< HEAD
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$6.8B'
-=======
-      email: 'kleber@ziontechgroup && ziontechgroup.com'
-<<<<<<< HEAD
-=======
-=======
     id: 'space-mining-operations-platform', name: 'SpaceMining Operations',
     description: 'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.',
     features: [
@@ -1407,20 +1106,12 @@ export const advancedEmergingTechServices2025 = [;
     },
     professional: { price: 2999, period: 'month', features: ['Advanced mining operationsCustom strategiesPriority supportDedicated operations team'] };
       enterprise: { price: 7999, period: 'month', features: ['Full mining operationsCustom space solutionsWhite-label platformDedicated support team'] }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
     marketSize: '$6 && 6.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -1436,4 +1127,3 @@ export const advancedEmergingTechServices2025 = [;
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-/** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
-module.exports = {
-  darkMode: ["class"]
-=======
 module && module.exports = {
   darkMode: ["class"],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   content: [
     './pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}']
   theme: {
@@ -43,7 +36,6 @@ module && module.exports = {
         md: "calc(var(--radius) - 2px)"
         sm: "calc(var(--radius) - 4px)"}}}
   plugins: []}
-=======
 /** @type {import ('tailwindcss').Config} */;
 module.exports = {
   dark_mode: ["class"],
@@ -83,4 +75,3 @@ module.exports = {
         md: "calc (var (--radius) - 2px)",
         sm: "calc (var (--radius) - 4px)"}}},
   plugins: []}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -22,25 +22,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-type ProgressBarProps = { value: number }
-export default function ProgressBar({ value }: ProgressBarProps) {
-  const pct = Math.max(0, Math.min(100, value));
-  return (
-    <div className='w-full h-3 bg-gray-200 dark:bg-gray-800 rounded'>
-      <div className='h-3 bg-blue-600 rounded' style={{ width: `${pct}%` }} />
-    </div>
-  );export default function ProgressBar({ value }: ProgressBarProps) {
-=======
 type ProgressBarProps = { value: number },
 export default function ProgressBar({ value }: ProgressBarProps) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const pct = Math.max(0, Math.min(100, value));
 
   return (
@@ -49,7 +33,6 @@ export default function ProgressBar({ value }: ProgressBarProps) {
     </div>
 );
 }
-=======
 type ProgressBarProps = { value: number };
 
 export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
@@ -66,11 +49,6 @@ export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 type ProgressBarProps = { value: number }
 ;
@@ -92,4 +70,3 @@ function ProgressBar() {
       <div className="h - 3 bg - blue - 600 rounded" style={{ width: `${pct}%` }} />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react',
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -31,19 +23,9 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const PricingPage: React.FC = () => {
-=======
 const PricingPage: React.FC = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Head>;
@@ -124,24 +106,10 @@ const PricingPage: React.FC = () => {;
   );
 }
 export default PricingPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import React from 'react';
 import Head from 'next / head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
   Check
   Star
@@ -249,22 +217,13 @@ import {
   Bot as BotIcon
     ChevronRight as ChevronRightIcon
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-<<<<<<< HEAD
-import {
-  enhancedRealMicroSaasServices
-  getServicesByCategory
-    getPopularServices
-=======
 import {;
   Check,;
   Star,;
@@ -379,22 +338,11 @@ import {;
   enhancedRealMicroSaasServices,;
   getServicesByCategory,;
   getPopularServices,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
 
-<<<<<<< HEAD
-export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
@@ -407,80 +355,11 @@ export default function PricingPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     website: 'https://ziontechgroup.com'
   }
   const popularServices = getPopularServices();
   // Combine all services for comprehensive pricing
   const allServices = [
-<<<<<<< HEAD
-    ...enhancedRealMicroSaasServices
-    ...nextGenerationAIServices
-    ...cuttingEdgeITServices
-    ...innovativeMicroSaasV2Services,  ];
-  // Enhanced service categories with pricing
-  const serviceCategories = [
-    {
-      name: 'Next-Generation AI'
-      description: 'Revolutionary AI platforms'
-      services: [
-        'AI Multimodal Fusion'
-        'AI Autonomous Decision Engine'
-        'AI Emotional Intelligence'
-      ]
-      avgPrice: '$3,199/month'
-      savings: 'Save 60-80% vs. competitors'
-    }
-    {
-      name: 'Cutting-Edge IT Infrastructure'
-      description: 'Advanced infrastructure solutions'
-      services: [
-        'Zero Trust Architecture'
-        'Edge Computing Orchestration'
-        '5G Private Networks'
-      ]
-      avgPrice: '$4,999/month'
-      savings: 'Save 50-70% vs. competitors'
-    }
-    {
-      name: 'Innovative Micro SaaS'
-      description: 'Creative and practical SaaS tools'
-      services: [
-        'AI Brand Personality'
-        'Virtual Event Holograms'
-        'AI Meeting Transcriber'
-      ]
-      avgPrice: '$199/month'
-      savings: 'Save 40-60% vs. competitors'
-    }
-    {
-      name: 'Quantum & Space Technology'
-      description: 'Quantum computing and space solutions'
-      services: [
-        'Quantum AI Hybrid'
-        'Space Technology Platform'
-        'Quantum Cybersecurity'
-      ]
-      avgPrice: '$5,999/month'
-      savings: 'Save 70-85% vs. competitors'
-    }
-    {
-      name: 'Enterprise IT Services'
-      description: 'Comprehensive enterprise solutions'
-      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening']
-      avgPrice: '$2,999/month'
-      savings: 'Save 45-65% vs. competitors'
-    },  ];
-=======
-    ...enhancedRealMicroSaasServices;
-    ...nextGenerationAIServices;
-    ...cuttingEdgeITServices;
-    ...innovativeMicroSaasV2Services
-  ];
-
-  // Enhanced service categories with pricing
-  const serviceCategories = [
-=======
 import Button from '../components / ui / Button';
 import Card from '../components / ui / Card';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -519,16 +398,9 @@ function PricingPage() {
 ;
   // Enhanced service categories with pricing;
   const service_categories = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       name: 'Next - Generation AI',
       description: 'Revolutionary AI platforms',
-<<<<<<< HEAD
-      services: ['AI Multimodal FusionAI Autonomous Decision EngineAI Emotional Intelligence'],
-      avgPrice: '$3,199/month',
-    savings: 'Save 60-80% vs. competitors'
-    };
-=======
       services: [;
         'AI Multimodal Fusion',
         'AI Autonomous Decision Engine',
@@ -537,39 +409,9 @@ function PricingPage() {
       avg_price: '$3, 199 / month',
       savings: 'Save 60 - 80% vs. competitors',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       name: 'Cutting - Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
-<<<<<<< HEAD
-      services: ['Zero Trust ArchitectureEdge Computing Orchestration5G Private Networks'],
-      avgPrice: '$4,999/month',
-    savings: 'Save 50-70% vs. competitors'
-    };
-    {
-      name: 'Innovative Micro SaaS',
-      description: 'Creative and practical SaaS tools',
-      services: ['AI Brand PersonalityVirtual Event HologramsAI Meeting Transcriber'],
-      avgPrice: '$199/month',
-      savings: 'Save 40-60% vs. competitors'
-    };
-    {
-      name: 'Quantum & Space Technology',
-      description: 'Quantum computing and space solutions',
-      services: ['Quantum AI HybridSpace Technology PlatformQuantum Cybersecurity'],
-      avgPrice: '$5,999/month',
-    savings: 'Save 70-85% vs. competitors'
-    };
-    {
-      name: 'Enterprise IT Services',
-      description: 'Comprehensive enterprise solutions',
-      services: ['Cloud MigrationDevOps AutomationSecurity Hardening'],
-      avgPrice: '$2,999/month',
-    savings: 'Save 45-65% vs. competitors'
-    }
-  ];
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -579,400 +421,6 @@ function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-<<<<<<< HEAD
-        'Access to 50+ Core Services'
-        'Basic AI Integration'
-        'Standard Support (24/7)'
-        '30-Day Free Trial'
-        'Basic Analytics Dashboard'
-        'Email Support'
-        '99.5% Uptime Guarantee'
-        'Standard Security Features'
-      ]
-      icon: <Sparkles className='w-8 h-8' />
-      variant: 'quantum' as const
-      popular: false
-      cta: 'Start Free Trial'
-      ctaVariant: 'secondary' as const
-    },    {
-      name: 'Professional'
-      description: 'Ideal for growing businesses and teams'
-      price: billingCycle === 'monthly' ? 149 : 119
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
-      features: [
-        'Access to 200+ Premium Services'
-        'Advanced AI & Quantum Computing'
-        'Priority Support (24/7)'
-        '60-Day Free Trial'
-        'Advanced Analytics & Reporting'
-        'Phone & Email Support'
-        '99.9% Uptime Guarantee'
-        'Enhanced Security & Compliance'
-        'Custom Integrations'
-        'Team Collaboration Tools'
-        'API Access'
-        'White-label Options'
-      ]
-      icon: <Crown className='w-8 h-8' />
-      variant: 'holographic' as const
-      popular: true
-      cta: 'Start Free Trial'
-      ctaVariant: 'primary' as const
-    },    {
-      name: 'Enterprise'
-      description: 'For large organizations and enterprises'
-      price: billingCycle === 'monthly' ? 499 : 399
-      period: billingCycle === 'monthly' ? '/month' : '/month'
-      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
-      features: [
-        'Access to ALL 500+ Services'
-        'Full Quantum AI & Autonomous Systems'
-        'Dedicated Support Team (24/7)'
-        '90-Day Free Trial'
-        'Enterprise Analytics & AI Insights'
-        'Dedicated Account Manager'
-        '99.99% Uptime SLA'
-        'Enterprise Security & Compliance'
-        'Custom Development Services'
-        'Advanced Team Management'
-        'Full API & SDK Access'
-        'Custom Branding & White-label'
-        'On-premise Deployment Options'
-        'Advanced AI Training & Customization'
-        'Priority Feature Development'
-        'Global Infrastructure Access'
-      ]
-      icon: <Rocket className='w-8 h-8' />
-      variant: 'neural' as const
-      popular: false
-      cta: 'Contact Sales'
-      ctaVariant: 'primary' as const
-    },  ];
-  // Service category pricing examples
-  const serviceCategoryPricing = [
-    {
-      category: 'Quantum AI & Computing'
-      services: [
-        'Quantum AI Platform'
-        'Neural Network Training'
-        'Quantum Optimization'
-      ]
-      startingPrice: '$99/month'
-      icon: <Brain className='w-6 h-6' />
-    }
-    {
-      category: 'Autonomous Systems'
-      services: [
-        'AI Factory Management'
-        'Robotic Process Automation'
-        'Smart Manufacturing'
-      ]
-      startingPrice: '$149/month'
-      icon: <Factory className='w-6 h-6' />
-    }
-    {
-      category: 'Healthcare & Biotech'
-      services: [
-        'Drug Discovery AI'
-        'Medical Imaging Analysis'
-        'Genomic Research Platform'
-      ]
-      startingPrice: '$199/month'
-      icon: <FlaskConical className='w-6 h-6' />
-    }
-    {
-      category: 'Cybersecurity'
-      services: [
-        'Quantum Encryption'
-        'Threat Intelligence'
-        'Zero-Trust Security'
-      ]
-      startingPrice: '$129/month'
-      icon: <Shield className='w-6 h-6' />
-    }
-    {
-      category: 'Financial Technology'
-      services: [
-        'AI Trading Platform'
-        'Risk Management'
-        'Portfolio Optimization'
-      ]
-      startingPrice: '$179/month'
-      icon: <DollarSign className='w-6 h-6' />
-    }
-    {
-      category: 'Space Technology'
-      services: [
-        'Satellite Management'
-        'Space Data Analytics'
-        'Mission Planning AI'
-      ]
-      startingPrice: '$299/month'
-      icon: <Rocket className='w-6 h-6' />
-    },  ];
-  // Value propositions
-  const valuePropositions = [
-    {
-      title: 'Unprecedented ROI'
-      description: 'Average 300% ROI within 6 months'
-      icon: <TrendingUp className='w-8 h-8' />
-      metric: '300%'
-      detail: 'Average ROI'
-    }
-    {
-      title: 'Time to Value'
-      description: 'Get up and running in under 24 hours'
-      icon: <Clock className='w-8 h-8' />
-      metric: '<24h'
-      detail: 'Setup Time'
-    }
-    {
-      title: 'Global Reach'
-      description: 'Available in 150+ countries worldwide'
-      icon: <Globe className='w-8 h-8' />
-      metric: '150+'
-      detail: 'Countries'
-    }
-    {
-      title: 'Enterprise Security'
-      description: 'Bank-level security with 99.99% uptime'
-      icon: <Shield className='w-8 h-8' />
-      metric: '99.99%'
-      detail: 'Uptime SLA'
-    }
-=======
-export default function PricingPage() {;
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(;
-    'monthly';
-  );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup && ziontechgroup.com',;
-  };
-
-  const popularServices = getPopularServices();
-
-  // Combine all services for comprehensive pricing;
-  const allServices = [;
-    ...enhancedRealMicroSaasServices,;
-    ...nextGenerationAIServices,;
-    ...cuttingEdgeITServices,;
-    ...innovativeMicroSaasV2Services,  ];
-
-  // Enhanced service categories with pricing;
-  const serviceCategories = [;
-    {;
-      name: 'Next-Generation AI',;
-      description: 'Revolutionary AI platforms',;
-      services: [;
-        'AI Multimodal Fusion',;
-        'AI Autonomous Decision Engine',;
-        'AI Emotional Intelligence',;
-      ],;
-      avgPrice: '$3,199/month',;
-      savings: 'Save 60-80% vs. competitors',;
-    },;
-    {;
-      name: 'Cutting-Edge IT Infrastructure',;
-      description: 'Advanced infrastructure solutions',;
-      services: [;
-        'Zero Trust Architecture',;
-        'Edge Computing Orchestration',;
-        '5G Private Networks',;
-      ],;
-      avgPrice: '$4,999/month',;
-      savings: 'Save 50-70% vs. competitors',;
-    },;
-    {;
-      name: 'Innovative Micro SaaS',;
-      description: 'Creative and practical SaaS tools',;
-      services: [;
-        'AI Brand Personality',;
-        'Virtual Event Holograms',;
-        'AI Meeting Transcriber',;
-      ],;
-      avgPrice: '$199/month',;
-      savings: 'Save 40-60% vs. competitors',;
-    },;
-    {;
-      name: 'Quantum & Space Technology',;
-      description: 'Quantum computing and space solutions',;
-      services: [;
-        'Quantum AI Hybrid',;
-        'Space Technology Platform',;
-        'Quantum Cybersecurity',;
-      ],;
-      avgPrice: '$5,999/month',;
-      savings: 'Save 70-85% vs. competitors',;
-    },;
-    {;
-      name: 'Enterprise IT Services',;
-      description: 'Comprehensive enterprise solutions',;
-      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],;
-      avgPrice: '$2,999/month',;
-      savings: 'Save 45-65% vs. competitors',;
-    },  ];
-
-  // Enhanced pricing tiers with more realistic and comprehensive offerings;
-  const pricingTiers = [;
-    {;
-      name: 'Starter',;
-      description: 'Perfect for small businesses and startups',;
-      price: billingCycle === 'monthly' ? 49 : 39,;
-      period: billingCycle === 'monthly' ? '/month' : '/month',;
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',;
-      features: [;
-        'Access to 50+ Core Services',;
-        'Basic AI Integration',;
-        'Standard Support (24/7)',;
-        '30-Day Free Trial',;
-        'Basic Analytics Dashboard',;
-        'Email Support',;
-        '99 && 99.5% Uptime Guarantee',;
-        'Standard Security Features',;
-      ],;
-      icon: <Sparkles className='w-8 h-8' />,;
-      variant: 'quantum' as const,;
-      popular: false,;
-      cta: 'Start Free Trial',;
-      ctaVariant: 'secondary' as const,;
-    },    {;
-      name: 'Professional',;
-      description: 'Ideal for growing businesses and teams',;
-      price: billingCycle === 'monthly' ? 149 : 119,;
-      period: billingCycle === 'monthly' ? '/month' : '/month',;
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',;
-      features: [;
-        'Access to 200+ Premium Services',;
-        'Advanced AI & Quantum Computing',;
-        'Priority Support (24/7)',;
-        '60-Day Free Trial',;
-        'Advanced Analytics & Reporting',;
-        'Phone & Email Support',;
-        '99 && 99.9% Uptime Guarantee',;
-        'Enhanced Security & Compliance',;
-        'Custom Integrations',;
-        'Team Collaboration Tools',;
-        'API Access',;
-        'White-label Options',;
-      ],;
-      icon: <Crown className='w-8 h-8' />,;
-      variant: 'holographic' as const,;
-      popular: true,;
-      cta: 'Start Free Trial',;
-      ctaVariant: 'primary' as const,;
-    },    {;
-      name: 'Enterprise',;
-      description: 'For large organizations and enterprises',;
-      price: billingCycle === 'monthly' ? 499 : 399,;
-      period: billingCycle === 'monthly' ? '/month' : '/month',;
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',;
-      features: [;
-        'Access to ALL 500+ Services',;
-        'Full Quantum AI & Autonomous Systems',;
-        'Dedicated Support Team (24/7)',;
-        '90-Day Free Trial',;
-        'Enterprise Analytics & AI Insights',;
-        'Dedicated Account Manager',;
-        '99 && 99.99% Uptime SLA',;
-        'Enterprise Security & Compliance',;
-        'Custom Development Services',;
-        'Advanced Team Management',;
-        'Full API & SDK Access',;
-        'Custom Branding & White-label',;
-        'On-premise Deployment Options',;
-        'Advanced AI Training & Customization',;
-        'Priority Feature Development',;
-        'Global Infrastructure Access',;
-      ],;
-      icon: <Rocket className='w-8 h-8' />,;
-      variant: 'neural' as const,;
-      popular: false,;
-      cta: 'Contact Sales',;
-      ctaVariant: 'primary' as const,;
-    },  ];
-
-  // Service category pricing examples;
-  const serviceCategoryPricing = [;
-    {;
-      category: 'Quantum AI & Computing',;
-      services: [;
-        'Quantum AI Platform',;
-        'Neural Network Training',;
-        'Quantum Optimization',;
-      ],;
-      startingPrice: '$99/month',;
-      icon: <Brain className='w-6 h-6' />,;
-    },;
-    {;
-      category: 'Autonomous Systems',;
-      services: [;
-        'AI Factory Management',;
-        'Robotic Process Automation',;
-        'Smart Manufacturing',;
-      ],;
-      startingPrice: '$149/month',;
-      icon: <Factory className='w-6 h-6' />,;
-    },;
-    {;
-      category: 'Healthcare & Biotech',;
-      services: [;
-        'Drug Discovery AI',;
-        'Medical Imaging Analysis',;
-        'Genomic Research Platform',;
-      ],;
-      startingPrice: '$199/month',;
-      icon: <FlaskConical className='w-6 h-6' />,;
-    },;
-    {;
-      category: 'Cybersecurity',;
-      services: [;
-        'Quantum Encryption',;
-        'Threat Intelligence',;
-        'Zero-Trust Security',;
-      ],;
-      startingPrice: '$129/month',;
-      icon: <Shield className='w-6 h-6' />,;
-    },;
-    {;
-      category: 'Financial Technology',;
-      services: [;
-        'AI Trading Platform',;
-        'Risk Management',;
-        'Portfolio Optimization',;
-      ],;
-      startingPrice: '$179/month',;
-      icon: <DollarSign className='w-6 h-6' />,;
-    },;
-    {;
-      category: 'Space Technology',;
-      services: [;
-        'Satellite Management',;
-        'Space Data Analytics',;
-        'Mission Planning AI',;
-      ],;
-      startingPrice: '$299/month',;
-      icon: <Rocket className='w-6 h-6' />,;
-    },  ];
-
-  // Value propositions;
-  const valuePropositions = [;
-    {;
-      title: 'Unprecedented ROI',;
-      description: 'Average 300% ROI within 6 months',;
-      icon: <TrendingUp className='w-8 h-8' />,;
-      metric: '300%',;
-      detail: 'Average ROI',;
-    },;
-    {;
-      title: 'Time to Value',;
-      description: 'Get up and running in under 24 hours',;
-      icon: <Clock className='w-8 h-8' />,;
-=======
       services: [;
         'Zero Trust Architecture',
         'Edge Computing Orchestration',
@@ -1166,27 +614,12 @@ export default function PricingPage() {;
       title: 'Time to Value',
       description: 'Get up and running in under 24 hours',
       icon: <Clock className='w - 8 h - 8' />,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       metric: '<24h',
       detail: 'Setup Time',
     },
     {
       title: 'Global Reach',
       description: 'Available in 150+ countries worldwide',
-<<<<<<< HEAD
-      icon: <Globe className='w-8 h-8' />,;
-      metric: '150+',;
-      detail: 'Countries',;
-    },;
-    {;
-      title: 'Enterprise Security',;
-      description: 'Bank-level security with 99 && 99.99% uptime',;
-      icon: <Shield className='w-8 h-8' />,;
-      metric: '99 && 99.99%',;
-      detail: 'Uptime SLA',;
-    },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       icon: <Globe className='w - 8 h - 8' />,
       metric: '150+',
       detail: 'Countries',
@@ -1198,7 +631,6 @@ export default function PricingPage() {;
       metric: '99.99%',
       detail: 'Uptime SLA',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -1208,24 +640,10 @@ export default function PricingPage() {;
           Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI &;
           Quantum Services;
         </title>;
-<<<<<<< HEAD
-        <meta
-          name='description'
-          content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans with generous free trials.'
-        />;
-        <meta
-          name='keywords'
-          content='pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing'
-<<<<<<< HEAD
-        />
-        <meta name='author' content='Zion Tech Group' />
-        <meta name='robots' content='index, follow' />
-=======
         />;
         <meta name='author' content='Zion Tech Group' />;
         <meta name='robots' content='index, follow' />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -1239,14 +657,9 @@ export default function PricingPage() {;
         <meta property='og:url' content='https://ziontechgroup && ziontechgroup.com/pricing' />;
         <meta
           property='og:image'
-<<<<<<< HEAD
-          content='https://ziontechgroup.com/og-image.jpg'
-        />
-=======
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />;
         <meta
@@ -1259,34 +672,6 @@ export default function PricingPage() {;
         />;
         <meta
           name='twitter:image'
-<<<<<<< HEAD
-          content='https://ziontechgroup.com/og-image.jpg'
-        />
-      </Head>
-      <div className='container mx-auto px-4 py-12'>
-        {/* Hero Section */}
-        <div className='text-center mb-16'>
-          <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-            Transparent Pricing
-          </h1>
-          <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-            Choose the perfect plan for your business. All plans include
-            generous free trials and access to our revolutionary AI & quantum
-            computing services.
-          </p>
-=======
-          content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
-        />;
-      </Head>;
-
-      <div className='container mx-auto px-4 py-12'>;
-        {/* Hero Section */}
-        <div className='text-center mb-16'>;
-          <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-            Transparent Pricing;
-          </h1>;
-          <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-=======
         <meta;
           name='description';
           content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49 / month), Professional ($149 / month), or Enterprise ($499 / month) plans with generous free trials.';
@@ -1334,14 +719,10 @@ export default function PricingPage() {;
             Transparent Pricing;
           </h1>;
           <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Choose the perfect plan for your business. All plans include;
             generous free trials and access to our revolutionary AI & quantum;
             computing services.;
           </p>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* New 2026 Pricing Link */}
           <div className='mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto'>;
             <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1356,26 +737,6 @@ export default function PricingPage() {;
               href='/comprehensive-pricing-2026'
               variant='primary'
               size='lg'
-<<<<<<< HEAD
-              className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30'
-            >
-              <span className='flex items-center'>
-                <Rocket className='mr-3 w-6 h-6' />                View 2026 Comprehensive Pricing
-              </span>
-            </Button>
-          </div>
-=======
-              className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30'>;
-              <span className='flex items-center'>;
-                <Rocket className='mr-3 w-6 h-6' />                View 2026 Comprehensive Pricing;
-              </span>;
-            </Button>;
-          </div>;
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ];
       icon: <Sparkles className="w-8 h-8" />,
@@ -1544,8 +905,6 @@ export default function PricingPage() {;
             </Button>
           </div>
           
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {/* Billing Toggle */}
           <div className='flex items-center justify-center gap-4 mb-8'>;
             <span
@@ -1553,84 +912,41 @@ export default function PricingPage() {;
               Monthly;
             </span>;
             <button
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               onClick={() =>;
                 setBillingCycle(;
                   billingCycle === 'monthly' ? 'yearly' : 'monthly';
                 );
               }
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >;
-<<<<<<< HEAD
-=======
-=======
               onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
                 }`}
-<<<<<<< HEAD
-              />;
-            </button>;
-            <span
-=======
-<<<<<<< HEAD
-              />;
-            </button>;
-            <span
-<<<<<<< HEAD
-              className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}
-            >
-              Yearly
-              <span className='ml-2 text-sm text-green-400'>Save 20%</span>            </span>
-=======
               />
             </button>
             <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
               Yearly
               <span className="ml-2 text-sm text-green-400">Save 20%</span>
             </span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>;
               Yearly;
               <span className='ml-2 text-sm text-green-400'>Save 20%</span>            </span>;
           </div>;
         </div>;
 
-<<<<<<< HEAD
         {/* Pricing Tiers */}
-        <div className='mb-20'>;
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers && pricingTiers.map((tier, index) => (;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        {/* Pricing Tiers */}
-<<<<<<< HEAD
-        <div className='mb-20'>;
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers && pricingTiers.map((tier, index) => (;
-=======
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {pricingTiers.map((tier, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <UltraFuturisticCard
                 key={tier && tier.name}
                 variant={tier && tier.variant}
                 interactive={true}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 glowIntensity={tier && tier.popular ? 'high' : 'medium'}
                 className={`relative h-full ${tier && tier.popular ? 'scale-105' : ''}`}>;
                 {tier && tier.popular && (;
@@ -1640,19 +956,6 @@ export default function PricingPage() {;
                     </span>;
                   </div>;
                 )}
-<<<<<<< HEAD
-                <div className='text-center p-8'>
-                  <div className='inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6'>
-                    {tier.icon}
-                  </div>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    {tier.name}
-                  </h3>
-                  <p className='text-gray-300 mb-6'>{tier.description}</p>
-                  <div className='mb-6'>
-                    <div className='flex items-baseline justify-center'>
-                      <span className='text-5xl font-bold text-cyan-400'>
-=======
           {/* New 2026 Pricing Link */}
           <div className='mb - 8 p - 6 bg - gradient - to - r from - purple - 800 / 60 to - pink - 800 / 60 border border - purple - 700 / 50 rounded - 2xl max - w-4xl mx - auto'>;
             <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1727,7 +1030,6 @@ export default function PricingPage() {;
                   <div className='mb - 6'>;
                     <div className='flex items - baseline justify - center'>;
                       <span className='text - 5xl font - bold text - cyan - 400'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         ${tier.price}
                       </span>;
                       <span className='text - xl text - gray - 400 ml - 2'>;
@@ -1737,46 +1039,6 @@ export default function PricingPage() {;
                     {tier.savings && (
                       <div className='text - green - 400 text - sm mt - 2'>;
                         {tier.savings}
-<<<<<<< HEAD
-                      </div>
-                    )}
-                  </div>
-                  <ul className='text-left space-y-3 mb-8'>
-                    {tier.features.map((feature, idx) => (
-                      <li key={idx} className='flex items-start'>
-                        <Check className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
-                        <span className='text-gray-300'>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-=======
-
-                <div className='text-center p-8'>;
-                  <div className='inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6'>;
-                    {tier && tier.icon}
-                  </div>;
-
-                  <h3 className='text-2xl font-bold text-white mb-2'>;
-                    {tier && tier.name}
-                  </h3>;
-                  <p className='text-gray-300 mb-6'>{tier && tier.description}</p>;
-
-                  <div className='mb-6'>;
-                    <div className='flex items-baseline justify-center'>;
-                      <span className='text-5xl font-bold text-cyan-400'>;
-                        ${tier && tier.price}
-                      </span>;
-                      <span className='text-xl text-gray-400 ml-2'>;
-                        {tier && tier.period}
-                      </span>;
-                    </div>;
-                    {tier && tier.savings && (;
-                      <div className='text-green-400 text-sm mt-2'>;
-                        {tier && tier.savings}
-                      </div>;
-<<<<<<< HEAD
-=======
-=======
                 glowIntensity={tier.popular ? 'high' : 'medium'}
                 className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}
               >
@@ -1804,8 +1066,6 @@ export default function PricingPage() {;
                     </div>
                     {tier.savings && (
                       <div className="text-green-400 text-sm mt-2">{tier.savings}</div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     )}
                   </div>;
 
@@ -1818,13 +1078,7 @@ export default function PricingPage() {;
                     ))}
                   </ul>;
 
-<<<<<<< HEAD
                   <Button
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                  <Button
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     href={tier && tier.name === 'Enterprise' ? '/contact' : '/services'}
                     variant={tier && tier.ctaVariant}
                     size='lg'
@@ -1833,9 +1087,6 @@ export default function PricingPage() {;
                     <ArrowRight className='ml-2 w-5 h-5' />                  </Button>;
                 </div>;
               </UltraFuturisticCard>;
-<<<<<<< HEAD
-=======
-=======
                     href={tier.name === 'Enterprise' ? '/contact' : '/services'}
                     variant={tier.ctaVariant}
                     size="lg"
@@ -1846,43 +1097,26 @@ export default function PricingPage() {;
                   </Button>
                 </div>
               </UltraFuturisticCard>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Value Propositions */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
             Why Choose Zion Tech Group?;
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions && valuePropositions.map((proposition, index) => (;
-<<<<<<< HEAD
-=======
-=======
 
         {/* Value Propositions */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valuePropositions.map((proposition, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <UltraFuturisticCard
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className='text-center p-6'>;
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4'>;
                   {proposition && proposition.icon}
@@ -1899,9 +1133,6 @@ export default function PricingPage() {;
                 <div className='text-sm text-gray-400'>;
                   {proposition && proposition.detail}
                 </div>              </UltraFuturisticCard>;
-<<<<<<< HEAD
-=======
-=======
                 className="text-center p-6"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
@@ -1912,22 +1143,11 @@ export default function PricingPage() {;
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{proposition.metric}</div>
                 <div className="text-sm text-gray-400">{proposition.detail}</div>
               </UltraFuturisticCard>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-=======
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Service Category Pricing Examples */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
             Service Category Pricing;
@@ -1935,7 +1155,6 @@ export default function PricingPage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {serviceCategoryPricing && serviceCategoryPricing.map((category, index) => (;
               <UltraFuturisticCard
-=======
                       </div>)}
                   </div>;
                   <ul className='text - left space - y-3 mb - 8'>;
@@ -1994,7 +1213,6 @@ export default function PricingPage() {;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {serviceCategoryPricing.map ((category, index) => (
               <UltraFuturisticCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 variant={
                   index % 3 === 0;
@@ -2004,33 +1222,15 @@ export default function PricingPage() {;
                       : 'neural';
                 }
                 interactive={true}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='p-6'
-              >
-                <div className='flex items-center mb-4'>
-                  <div className='inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4'>
-=======
                 className='p - 6';
               >;
                 <div className='flex items - center mb - 4'>;
                   <div className='inline - flex items - center justify - center w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 mr - 4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {category.icon}
                   </div>;
                   <div>;
                     <h3 className='text - lg font - bold text - white'>;
                       {category.category}
-<<<<<<< HEAD
-                    </h3>
-                    <div className='text-cyan-400 font-semibold'>
-                      {category.startingPrice}
-                    </div>
-                  </div>
-                </div>
-                <ul className='space-y-2 mb-4'>
-                  {category.services.map((service, idx) => (
-=======
                 className='p-6'>;
                 <div className='flex items-center mb-4'>;
                   <div className='inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4'>;
@@ -2048,19 +1248,14 @@ export default function PricingPage() {;
 
                 <ul className='space-y-2 mb-4'>;
                   {category && category.services.map((service, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <li
                       key={idx}
                       className='text-sm text-gray-300 flex items-center'>;
                       <Check className='w-4 h-4 text-green-400 mr-2' />                      {service}
                     </li>;
                   ))}
-<<<<<<< HEAD
-                </ul>
-=======
                 </ul>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   href='/services'
                   variant='secondary'
@@ -2069,9 +1264,6 @@ export default function PricingPage() {;
                   Explore Services;
                   <ChevronRight className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
-<<<<<<< HEAD
-=======
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -2111,49 +1303,26 @@ export default function PricingPage() {;
                   <ChevronRight className="ml-2 w-4 h-4" />
                 </Button>
               </UltraFuturisticCard>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Popular Services Pricing */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
             Popular Services Pricing;
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices && popularServices.slice(0, 6).map((service, index) => (;
-<<<<<<< HEAD
-=======
-=======
 
         {/* Popular Services Pricing */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Popular Services Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularServices.slice(0, 6).map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <UltraFuturisticCard
                 key={service && service.id}
                 variant={service && service.variant as any}
                 interactive={true}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='p-6'
-              >
-                <div className='text-center mb-4'>
-                  <div className='text-3xl mb-3'>{service.icon}</div>
-                  <h3 className='text-lg font-bold text-white mb-2'>
-=======
                     </h3>;
                     <div className='text - cyan - 400 font - semibold'>;
                       {category.starting_price}
@@ -2195,7 +1364,6 @@ export default function PricingPage() {;
                 <div className='text - center mb - 4'>;
                   <div className='text - 3xl mb - 3'>{service.icon}</div>;
                   <h3 className='text - lg font - bold text - white mb - 2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {service.name}
                   </h3>;
                   <div className='text - 2xl font - bold text - cyan - 400 mb - 2'>;
@@ -2203,18 +1371,6 @@ export default function PricingPage() {;
                   </div>;
                   <div className='text - sm text - gray - 400'>;
                     {service.category}
-<<<<<<< HEAD
-                  </div>
-                </div>
-                <div className='mb-4'>
-                  <div className='text-xs text-gray-400 mb-2'>
-                    Key Features:
-                  </div>
-                  <ul className='text-xs text-gray-300 space-y-1'>
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className='flex items-center'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className='p-6'>;
                 <div className='text-center mb-4'>;
                   <div className='text-3xl mb-3'>{service && service.icon}</div>;
@@ -2236,16 +1392,8 @@ export default function PricingPage() {;
                   <ul className='text-xs text-gray-300 space-y-1'>;
                     {service && service.features.slice(0, 3).map((feature, idx) => (;
                       <li key={idx} className='flex items-center'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         <Check className='w-3 h-3 text-green-400 mr-2' />                        {feature}
                       </li>;
-<<<<<<< HEAD
-                    ))}
-                  </ul>;
-                </div>;
-
-=======
-=======
                 className="p-6"
               >
                 <div className="text-center mb-4">
@@ -2263,18 +1411,10 @@ export default function PricingPage() {;
                         <Check className="w-3 h-3 text-green-400 mr-2" />
                         {feature}
                       </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     ))}
-<<<<<<< HEAD
-                  </ul>
-                </div>
-<<<<<<< HEAD
-=======
                   </ul>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Button
                   href={service && service.link}
                   variant='primary'
@@ -2283,9 +1423,6 @@ export default function PricingPage() {;
                   Learn More;
                   <ExternalLink className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
-<<<<<<< HEAD
-=======
-=======
                 
                 <Button
                   href={service.link}
@@ -2297,57 +1434,7 @@ export default function PricingPage() {;
                   <ExternalLink className="ml-2 w-4 h-4" />
                 </Button>
               </UltraFuturisticCard>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-        {/* FAQ Section */}
-<<<<<<< HEAD
-        <div className='mb-20'>
-          <h2 className='text-3xl font-bold text-white mb-12 text-center'>
-            Frequently Asked Questions
-          </h2>
-          <div className='max-w-4xl mx-auto space-y-4'>
-            <UltraFuturisticCard variant='quantum' className='p-6'>
-              <h3 className='text-lg font-bold text-white mb-3'>
-                What's included in the free trial?
-              </h3>
-              <p className='text-gray-300'>
-                All plans include a generous free trial period with full access
-                to the selected services. No credit card required to start your
-                trial.
-              </p>
-            </UltraFuturisticCard>
-            <UltraFuturisticCard variant='holographic' className='p-6'>
-              <h3 className='text-lg font-bold text-white mb-3'>
-                Can I change my plan later?
-              </h3>
-              <p className='text-gray-300'>
-                Yes, you can upgrade or downgrade your plan at any time. Changes
-                take effect immediately, and we'll prorate any billing
-                adjustments.
-              </p>
-            </UltraFuturisticCard>
-            <UltraFuturisticCard variant='neural' className='p-6'>
-              <h3 className='text-lg font-bold text-white mb-3'>
-                What support is included?
-              </h3>
-              <p className='text-gray-300'>
-                All plans include 24/7 support. Professional and Enterprise
-                plans include priority support with dedicated account managers.
-              </p>
-            </UltraFuturisticCard>
-            <UltraFuturisticCard variant='quantum' className='p-6'>
-              <h3 className='text-lg font-bold text-white mb-3'>
-                Is there a setup fee?
-              </h3>
-              <p className='text-gray-300'>
-                No setup fees for any plan. All services are designed for
-                instant deployment with our AI-powered setup wizards.
-              </p>            </UltraFuturisticCard>
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-4">
@@ -2370,45 +1457,9 @@ export default function PricingPage() {;
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
             </UltraFuturisticCard>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
         {/* Contact Information */}
-<<<<<<< HEAD
-        <div className='mb-16'>
-          <h2 className='text-3xl font-bold text-white mb-8 text-center'>
-            Get In Touch
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'>
-            <UltraFuturisticCard variant='quantum' className='text-center p-6'>
-              <Phone className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
-              <h3 className='text-xl font-bold text-white mb-3'>Phone</h3>
-              <p className='text-cyan-400 text-lg font-semibold'>
-                {contactInfo.mobile}
-              </p>
-              <p className='text-gray-400 text-sm mt-2'>Available 24/7</p>
-            </UltraFuturisticCard>
-            <UltraFuturisticCard
-              variant='holographic'
-              className='text-center p-6'
-            >
-              <Mail className='w-12 h-12 text-purple-400 mx-auto mb-4' />
-              <h3 className='text-xl font-bold text-white mb-3'>Email</h3>
-              <p className='text-purple-400 text-lg font-semibold'>
-                {contactInfo.email}
-              </p>
-              <p className='text-gray-400 text-sm mt-2'>
-                Quick response guaranteed
-              </p>
-            </UltraFuturisticCard>
-            <UltraFuturisticCard variant='neural' className='text-center p-6'>
-              <MapPin className='w-12 h-12 text-green-400 mx-auto mb-4' />
-              <h3 className='text-xl font-bold text-white mb-3'>Address</h3>
-              <p className='text-green-400 text-sm font-semibold leading-relaxed'>
-                {contactInfo.address}
-              </p>
-              <p className='text-gray-400 text-sm mt-2'>Global operations</p>            </UltraFuturisticCard>
-=======
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Get In Touch</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -2432,10 +1483,8 @@ export default function PricingPage() {;
               <p className="text-green-400 text-sm font-semibold leading-relaxed">{contactInfo.address}</p>
               <p className="text-gray-400 text-sm mt-2">Global operations</p>
             </UltraFuturisticCard>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
-=======
           </div>;
         </div>;
 
@@ -2526,31 +1575,7 @@ export default function PricingPage() {;
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* CTA Section */}
-<<<<<<< HEAD
-        <div className='text-center'>;
-          <UltraFuturisticCard
-            variant='quantum-holographic-advanced'
-<<<<<<< HEAD
-            className='p-12'
-          >
-            <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-              Ready to Get Started?
-            </h2>
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Start your free trial today and experience the power of
-              revolutionary AI & quantum computing services. No credit card
-              required, instant setup, and full support included.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-=======
-            className='p-12'>;
-            <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-              Ready to Get Started?;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
-=======
                   </div>;
                 </div>;
                 <div className='mb - 4'>;
@@ -2666,15 +1691,10 @@ export default function PricingPage() {;
               Ready to Get Started?;
             </h2>;
             <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Start your free trial today and experience the power of;
               revolutionary AI & quantum computing services. No credit card;
               required, instant setup, and full support included.;
             </p>;
-<<<<<<< HEAD
-
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 href='/services'
                 variant='primary'
@@ -2687,24 +1707,6 @@ export default function PricingPage() {;
                 href='/contact'
                 variant='secondary'
                 size='lg'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                className='text-lg px-8 py-4'
-              >
-                Contact Sales
-                <MessageSquare className='ml-2 w-5 h-5' />
-              </Button>
-            </div>
-            <div className='text-sm text-gray-400'>
-              <p>
-                ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant
-                Setup
-              </p>
-              <p className='mt-2'>
-                ✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure
-              </p>            </div>
-=======
         <div className="text-center">
           <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -2740,16 +1742,10 @@ export default function PricingPage() {;
               <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure</p>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </UltraFuturisticCard>
         </div>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className='text-lg px-8 py-4'>;
                 Contact Sales;
                 <MessageSquare className='ml-2 w-5 h-5' />;
@@ -2763,9 +1759,6 @@ export default function PricingPage() {;
               </p>;
               <p className='mt-2'>;
                 ✓ 24/7 Support • ✓ 99 && 99.99% Uptime SLA • ✓ Global Infrastructure;
-<<<<<<< HEAD
-=======
-=======
             <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
               <Button;
                 href='/services';
@@ -2793,40 +1786,19 @@ export default function PricingPage() {;
               </p>;
               <p className='mt - 2'>;
                 ✓ 24 / 7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               </p>            </div>;
           </UltraFuturisticCard>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     </Layout>;
   );
 
     </UltraFuturisticBackground>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
   );
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

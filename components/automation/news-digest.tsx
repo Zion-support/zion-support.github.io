@@ -1,35 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-</div> </div>) )
-=======
 </div> </div>) );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }</div> </div>) import fs from 'fs';
-=======
 import fs from 'fs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
-<<<<<<< HEAD
-type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
-export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'datanews-digest.json');
-  let items: NewsItem[] = [];  let generatedAt = '';
-  try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
-    items = json.items |[];
-    generatedAt = json.generatedAt |''
-
-  } catch {}
-  return { props: { items, generatedAt } }
-}
-export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
  </div> </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -42,7 +14,6 @@ export async function getServerSideProps() {;
     const json = JSON && JSON.parse(raw);
     items = json && json.items || [];
     generatedAt = json && json.generatedAt || '';
-=======
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async /**
  * getServerSideProps - Function description
@@ -55,14 +26,9 @@ function getServerSideProps() {
     const json = JSON.parse (raw);
     items = json.items || [];
     generated_at = json.generated_at || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {}
   return { props: { items, generated_at } }
 }
-<<<<<<< HEAD
-
-export default function NewsDigestPage(): any ({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>;
@@ -80,21 +46,6 @@ export default function NewsDigestPage(): any ({ items, generatedAt }: { items: 
             </div>;
           </div>;
         ))}
-<<<<<<< HEAD
-      </div>
-    </div>
-);
-}
-=======
-      </div>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * NewsDigestPage - Function description
  */
@@ -118,4 +69,3 @@ function NewsDigestPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

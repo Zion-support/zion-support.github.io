@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardFooter
-} from "@/components/ui/card";
-
-<<<<<<< HEAD
-import { Textarea } from "@/components/ui/textarea";
-import { Check, Pencil } from "lucide-react";
-interface GeneratedDescriptionDisplayProps {
-  description: string;
-  onSave: (editedDescription: string) => void
-}
-
-export function GeneratedDescriptionDisplay({
-  description
-  onSave
-
-}: GeneratedDescriptionDisplayProps) {
-=======
 interface GeneratedDescriptionDisplayProps {;
   description: string,;
   onSave: (editedDescription: string) => void;
@@ -34,7 +7,6 @@ export function GeneratedDescriptionDisplay(): any ({ ;
   description, ;
   onSave ;
 }: GeneratedDescriptionDisplayProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
@@ -42,22 +14,6 @@ export function GeneratedDescriptionDisplay(): any ({ ;
   const handleSave = () => {;
     onSave(editedDescription);
     setIsEditing(false);
-<<<<<<< HEAD
-    toast({
-      title: "Description Saved"
-      description: "Your edited description has been saved."
-    });
-  }
-
-  return (
-    <Card className="border border-zion-blue-light bg-zion-blue-dark">
-      <CardHeader>
-        <CardTitle className="text-white flex items-center justify-between">
-          Generated Description
-          <Button
-            variant="outline"
-            size="sm"
-=======
     toast({;
       title: "Description Saved",;
       description: "Your edited description has been saved.";
@@ -72,7 +28,6 @@ export function GeneratedDescriptionDisplay(): any ({ ;
           <Button
             variant="outline" 
             size="sm" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;
@@ -87,7 +42,6 @@ export function GeneratedDescriptionDisplay(): any ({ ;
                 Edit;
               </>;
             )}
-=======
 import React, { useState } from './react';
 import { use_toast  } from '@/hooks / use - toast';
 import { Button  } from '@/components / ui / button';
@@ -141,32 +95,13 @@ function GeneratedDescriptionDisplay() {
                 <Pencil className="h - 4 w - 4 mr - 1" />;
                 Edit;
               </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </Button>;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-        {isEditing ? (;
-          <Textarea
-            value={editedDescription}
-            onChange={(e) => setEditedDescription(e && e.target.value)}
-            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none";
-          />;
-        ) : (;
-          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">;
-            {editedDescription}
-          </div>;
-        )}
-<<<<<<< HEAD
-      </CardContent>
-      {isEditing && (
-        <CardFooter>
-=======
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             onClick={handleSave}
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white">;
@@ -174,16 +109,9 @@ function GeneratedDescriptionDisplay() {
           </Button>;
         </CardFooter>;
       )}
-<<<<<<< HEAD
-    </Card>
-  );
-}
-=======
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         {is_editing ? (
           <Textarea;
             value={edited_description}
@@ -205,4 +133,3 @@ function GeneratedDescriptionDisplay() {
         </CardFooter>)}
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

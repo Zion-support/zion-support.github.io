@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import { filterEventsByScope } from "../../../utils/sync/storage";
@@ -26,14 +22,7 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
   }
   return res.status(405).json({ error: "Method not allowed" })
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state  } from '../../../utils / sync / storage';,
 import { filterEventsByScope  } from '../../../utils / sync / storage';,
@@ -64,5 +53,3 @@ proposals: scoped_events.filter ((e) => e.type === "proposal").length,
   return res.status (405).json ({ error: "Method not allowed" });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

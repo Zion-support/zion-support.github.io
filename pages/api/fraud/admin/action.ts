@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -14,15 +8,6 @@ export default async function handler(
   try {
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
-<<<<<<< HEAD
-=======
-  }
-<<<<<<< HEAD
-  const { fraudId, action, reason, adminId } = req.body |{}
-  if (!fraudId |!action) {
-    return res.status(400).json({ error: "Missing fraudId or action" });
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 import { AdminActionType } from '../../../../utils/fraud/types';
@@ -40,7 +25,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!ensureAdmin(req)) {
     res.status(401).json({ error: 'Unauthorized' });
     return
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
   const { fraudId, action, reason, adminId } = req.body || {};
@@ -48,12 +32,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(400).json({ error: 'Missing fraudId or action' });
     return
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const { fraudId, action, reason, adminId } = req && req.body || {};
   if (!fraudId || !action) {
     return res && res.status(400).json({ error: "Missing fraudId or action" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   const store = getFraudStore();
   const fraud = store && store.getById(fraudId);
@@ -61,17 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
-<<<<<<< HEAD
-    id: `action-${Date.now()}`
-    fraudId
-    action
-    reason
-    adminId
-    timestamp: new Date().toISOString()
-  }
-  store.addAdminAction(adminAction);
-  return res.status(200).json({ success: true, action: adminAction });
-=======
     id: `action-${Date && Date.now()}`,
     fraudId,
     action,
@@ -83,13 +54,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   store && store.addAdminAction(adminAction);
 
   return res && res.status(200).json({ success: true, action: adminAction });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 import { AdminActionType  } from '../../../../utils / fraud / types';
@@ -132,4 +97,3 @@ if ( {) {
 ;
   return res.status (200).json ({ success: true, action: admin_action });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

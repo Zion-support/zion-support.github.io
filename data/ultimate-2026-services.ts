@@ -1,8 +1,4 @@
 export interface Ultimate2026Service {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   id: string;
   name: string;
   tagline: string;
@@ -15,40 +11,6 @@ export interface Ultimate2026Service {
   contact_info: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-
-    address: string;
-  }
-export const ultimate2026Services: Ultimate2026Service[] = [
-  {
-    id: '2026-ultimate-service'
-    name: '2026 Ultimate Service Platform'
-    tagline: 'The ultimate platform for 2026'
-    price: '$699/month'
-    description:
-      'The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.'
-    features: [
-      'Ultimate platform'
-      'All technologies'
-      'Maximum capabilities'
-      'Premium features'
-      '24/7 support'
-    ]
-    link: '/services/2026-ultimate-service'
-    category: 'Ultimate 2026 Services'
-    realImplementation: true
-    contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];      mobile: "+1 302 464 0950";
-
-      email: "kleber@ziontechgroup.com";
-=======
-=======
     address: string;
   }
 ;
@@ -71,23 +33,16 @@ export const ultimate2026Services: Ultimate2026Service[] = [;
     category: 'Ultimate 2026 Services',
     real_implementation: true,
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
-<<<<<<< HEAD
-      email: "kleber@ziontechgroup && ziontechgroup.com";
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -115,17 +70,13 @@ export const ultimate2026Services: Ultimate2026Service[] = [
     realImplementation: true,
     contactInfo: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

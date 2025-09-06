@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {
-<<<<<<< HEAD
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Trophy } from 'lucide-react'
-=======
   Card,
   CardContent,
   CardDescription,
@@ -24,7 +7,6 @@ import { Trophy } from 'lucide-react'
   CardTitle,
 } from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface LeaderboardEntry {
   name: string;
   points: number;
@@ -33,27 +15,14 @@ interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
 }
 export interface LeaderboardEntry {
-<<<<<<< HEAD
-
-  name: string
-
-  points: number
-=======
   name: string,
   points: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Card,;
   CardContent,;
@@ -81,12 +50,7 @@ interface UserLeaderboardProps {;
 }
 
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <Card>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
@@ -112,9 +76,6 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
               </span>;
               <span className='text-sm'>{e && e.points} pts</span>            </div>              <span className="text-sm">{e && e.points} pts</span>;
             </div>;
-<<<<<<< HEAD
-=======
-=======
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -134,28 +95,14 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
               </span>
               <span className="text-sm">{e.points} pts</span>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ))}
-<<<<<<< HEAD
-        </div>
-      </CardContent>
-    </Card>
-<<<<<<< HEAD
-  )
-}
-=======
         </div>;
       </CardContent>;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export /**
  * UserLeaderboard - Function description
  */
@@ -191,4 +138,3 @@ function UserLeaderboard() {
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

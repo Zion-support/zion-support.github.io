@@ -1,31 +1,13 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export type Course = {;
-=======
 import Link from 'next / link';
 export type Course = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
   category: string;
-<<<<<<< HEAD
-  certificationBadge: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  description?: string;}
-=======
-export type Course = {
-  id: string,
-=======
   certification_badge: string;
   description?: string;}
 ;
@@ -34,18 +16,11 @@ export default /**
  */
 function CourseCard() {
   return (  id: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   title: string,
   duration_minutes: number,
   level: string,
   is_free: boolean,
   category: string,
-<<<<<<< HEAD
-  certificationBadge: string,
-  description?: string
-};
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function CourseCard({ course }: { course: Course }) {
   return (  id: string
   title: string
@@ -55,8 +30,6 @@ export default function CourseCard({ course }: { course: Course }) {
   category: string
   certificationBadge: string
   description?: string
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   description?: string;};
 
 export default function CourseCard(): any ({ course }: { course: Course }) {;
@@ -68,14 +41,9 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
   category: string,;
   certificationBadge: string,;
   description?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export default function CourseCard(): any ({ course }: { course: Course }) {;
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='border rounded-lg p-4 hover:shadow-md transition'>;
       <div className='flex items-center justify-between'>;
         <h3 className='font-semibold text-lg'>{course && course.title}</h3>;
@@ -109,11 +77,6 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
         </Link>;
       </div>;
     </div>;
-<<<<<<< HEAD
-=======
-  );
-}
-=======
     <div className="border rounded-lg p-4 hover:shadow-md transition">
       <div className="flex items-center justify-between">
         <h3 className="font-semibold text-lg">{course.title}</h3>
@@ -130,11 +93,8 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
         </Link>
       </div>
     </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   certification_badge: string,
   description?: string;
 export default /**
@@ -175,4 +135,3 @@ function CourseCard() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-=======
-import React from 'react';
-<<<<<<< HEAD
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
->>>>>>> origin/automation-improvements-final
 import {
   Code
   Check
@@ -77,7 +65,6 @@ export default function APIPage() {
     }
   ];
   const responseExamples = {
-=======
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
 import { motion  } from './framer-motion';
@@ -153,41 +140,23 @@ function APIPage() {
   ];
 ;
   const response_examples = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     success: {
       status: 200
       data: {
         message: "Request successful"
         data: {
-<<<<<<< HEAD
-          id: "12345"
-          name: "Example Response"
-          created_at: "2024-01-01T00:00:00Z"
-        }
-      }
-    }
-=======
           id: "12345",
           name: "Example Response",
           created_at: "2024 - 01 - 01T00:00:00Z",
         },
       },
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     error: {
       status: 400
       error: {
         code: "VALIDATION_ERROR"
         message: "Invalid request parameters"
         details: {
-<<<<<<< HEAD
-          field: "email"
-          issue: "Invalid email format"
-        }
-      }
-    }
-  }
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -307,7 +276,6 @@ export default function APIPage() {;
     },;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -315,15 +283,6 @@ export default function APIPage() {;
       keywords="API documentation, REST API, AI API, cloud API, developer resources">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-=======
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -332,26 +291,12 @@ export default function APIPage() {;
 
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 API{" "}
-<<<<<<< HEAD
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                  Documentation
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Integrate with Zion Tech Group's powerful APIs to build amazing
-                applications with AI, cloud services, and enterprise solutions.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-=======
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
                   Documentation;
                 </span>;
@@ -364,7 +309,6 @@ export default function APIPage() {;
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Quick Start */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -372,140 +316,6 @@ export default function APIPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Quick Start Guide
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Get started with our APIs in minutes. Follow these simple steps
-                to make your first API call.
-              </p>
-            </motion.div>
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-8 h-8 text-indigo-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    1. Get API Key
-                  </h3>
-                  <p className="text-gray-600">
-                    Sign up and obtain your API key from the dashboard
-                  </p>
-                </motion.div>
-                <motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Code className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    2. Make Request
-                  </h3>
-                  <p className="text-gray-600">
-                    Use our RESTful APIs with your preferred language
-                  </p>
-                </motion.div>
-                <motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-green-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    3. Build & Scale
-                  </h3>
-                  <p className="text-gray-600">
-                    Create powerful applications with our APIs
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </section>
-=======
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Quick Start Guide;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                Get started with our APIs in minutes. Follow these simple steps;
-                to make your first API call.;
-              </p>;
-            </motion && motion.div>;
-
-            <div className="max-w-4xl mx-auto">;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-                <motion&& motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8 }}
-                  viewport={{ once: true }}>;
-                  <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <Shield className="w-8 h-8 text-indigo-600" />;
-                  </div>;
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">;
-                    1. Get API Key;
-                  </h3>;
-                  <p className="text-gray-600">;
-                    Sign up and obtain your API key from the dashboard;
-                  </p>;
-                </motion && motion.div>;
-
-                <motion&& motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-                  viewport={{ once: true }}>;
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <Code className="w-8 h-8 text-purple-600" />;
-                  </div>;
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">;
-                    2. Make Request;
-                  </h3>;
-                  <p className="text-gray-600">;
-                    Use our RESTful APIs with your preferred language;
-                  </p>;
-                </motion && motion.div>;
-
-                <motion&& motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-                  viewport={{ once: true }}>;
-                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <Zap className="w-8 h-8 text-green-600" />;
-                  </div>;
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">;
-                    3. Build & Scale;
-                  </h3>;
-                  <p className="text-gray-600">;
-                    Create powerful applications with our APIs;
-                  </p>;
-                </motion && motion.div>;
-=======
           field: "email",
           issue: "Invalid email format",
         },
@@ -617,14 +427,10 @@ export default function APIPage() {;
                     Create powerful applications with our APIs;
                   </p>;
                 </motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Response Examples */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -632,122 +438,6 @@ export default function APIPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Response Examples
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Understand the structure of our API responses with these
-                examples.
-              </p>
-            </motion.div>
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <motion.div
-                  className="bg-white border border-gray-200 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-center mb-4">
-                    <Check className="w-6 h-6 text-green-500 mr-3" />
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      Success Response
-                    </h3>
-                  </div>
-                  <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
-                    <pre className="text-green-400 text-sm font-mono">
-                      <code>
-                        {JSON.stringify(responseExamples.success, null, 2)}
-                      </code>
-                    </pre>
-                  </div>
-                </motion.div>
-                <motion.div
-                  className="bg-white border border-gray-200 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-center mb-4">
-                    <XCircle className="w-6 h-6 text-red-500 mr-3" />
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      Error Response
-                    </h3>
-                  </div>
-                  <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
-                    <pre className="text-red-400 text-sm font-mono">
-                      <code>
-                        {JSON.stringify(responseExamples.error, null, 2)}
-                      </code>
-                    </pre>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </section>
-=======
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Response Examples;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                Understand the structure of our API responses with these;
-                examples.;
-              </p>;
-            </motion && motion.div>;
-
-            <div className="max-w-4xl mx-auto">;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                <motion&& motion.div
-                  className="bg-white border border-gray-200 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8 }}
-                  viewport={{ once: true }}>;
-                  <div className="flex items-center mb-4">;
-                    <Check className="w-6 h-6 text-green-500 mr-3" />;
-                    <h3 className="text-lg font-semibold text-gray-900">;
-                      Success Response;
-                    </h3>;
-                  </div>;
-                  <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">;
-                    <pre className="text-green-400 text-sm font-mono">;
-                      <code>;
-                        {JSON && JSON.stringify(responseExamples && responseExamples.success, null, 2)}
-                      </code>;
-                    </pre>;
-                  </div>;
-                </motion && motion.div>;
-
-                <motion&& motion.div
-                  className="bg-white border border-gray-200 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-                  viewport={{ once: true }}>;
-                  <div className="flex items-center mb-4">;
-                    <XCircle className="w-6 h-6 text-red-500 mr-3" />;
-                    <h3 className="text-lg font-semibold text-gray-900">;
-                      Error Response;
-                    </h3>;
-                  </div>;
-                  <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">;
-                    <pre className="text-red-400 text-sm font-mono">;
-                      <code>;
-                        {JSON && JSON.stringify(responseExamples && responseExamples.error, null, 2)}
-                      </code>;
-                    </pre>;
-                  </div>;
-                </motion && motion.div>;
-=======
         {/* Response Examples */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -810,14 +500,10 @@ export default function APIPage() {;
                     </pre>;
                   </div>;
                 </motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -842,20 +528,6 @@ export default function APIPage() {;
                 </a>;
                 <a
                   href="/docs"
-<<<<<<< HEAD
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
-                >
-                  View Documentation
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </MainLayout>
-<<<<<<< HEAD
-=======
-=======
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -877,9 +549,6 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
                   View Documentation;
                 </a>;
@@ -889,9 +558,7 @@ export default function APIPage() {
         </section>;
       </div>;
     </MainLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -928,5 +595,4 @@ export default function APIPage() {
         </section>;
       </div>;
     </MainLayout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
