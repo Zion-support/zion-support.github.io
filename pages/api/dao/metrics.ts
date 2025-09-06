@@ -69,8 +69,8 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 
     const result = {
       updatedAt: now, tokenDistribution: distribution,
-      topHolders;
-      activeProposals;
+      topHolders,
+      activeProposals,
       governanceParticipationRate: participationRate
     };
 

@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
     const now = new Date().toISOString();
     const {
-      projectId;
+      projectId,
       entityType;
       entityId;
       clientUserId;

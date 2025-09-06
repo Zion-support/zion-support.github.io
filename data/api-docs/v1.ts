@@ -40,20 +40,21 @@ const v1: ApiDocsSpec = {
             { language: 'python', code: `import requests\nresp = requests.post('${baseUrl}/v1/auth/login', json={'email':'user@zion.os','password':'***'})\nprint(resp.json())` }
           ],
           errors: [
-            { code: 'INVALID_CREDENTIALS', httpStatus: 401, message: 'Email or password incorrect' }];
-          versions: ['v1']};
+            { code: 'INVALID_CREDENTIALS', httpStatus: 401, message: 'Email or password incorrect' }
+          ],
+          versions: ['v1']
+        },
         {
           id: 'oauth-token', title: 'OAuth Token',
           description: 'Exchange auth code for access token.', path: '/v1/oauth/token',
           method: 'POST', visibility: 'partner',
           auth: ['none'],
-          requestBodySchema: { type: 'object', properties: { code: { type: 'string' }, redirect_uri: { type: 'string' } }, required: ['coderedirect_uri']
-    };
-          responseBodySchema: { type: 'object', properties: { access_token: { type: 'string' }, refresh_token: { type: 'string' } } };
+          requestBodySchema: { type: 'object', properties: { code: { type: 'string' }, redirect_uri: { type: 'string' } },           required: ['code', 'redirect_uri']
+        },
+          responseBodySchema: { type: 'object', properties: { access_token: { type: 'string' }, refresh_token: { type: 'string' } } },
           samples: [
       
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/oauth/token -H 'Content-Type: application/json' -d '{"code":"AUTH_CODE","redirect_uri":"https://app.partner.com/callback"}'`
-      };
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/oauth/token -H 'Content-Type: application/json' -d '{"code":"AUTH_CODE","redirect_uri":"https://app.partner.com/callback"}'` }
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/oauth/token', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: 'AUTH_CODE', redirect_uri: 'https://app.partner.com/callback' }) }).then(r => r.json()),`
       };
             { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/oauth/token', json={'code':'AUTH_CODEredirect_uri':'https://app.partner.com/callback'}).json()` }
