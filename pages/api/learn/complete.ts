@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -10,10 +11,29 @@ function readJson(p: string) {
 
 function writeJson(p: string, data: any) {
   fs.writeFileSync(p, JSON.stringify(data, null, 2))
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+const p = path.join(process.cwd(), 'data', 'learn.json');
+
+function loadData() {
+  try {
+    return JSON.parse(fs.readFileSync(p, 'utf8'));
+  } catch {
+    return { completions: [] };
+  }
+}
+
+function saveData(data: any) {
+  fs.writeFileSync(p, JSON.stringify(data, null, 2));
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     res.setHeader('AllowPOST'),
     return res.status(405).end('Method Not Allowed')
   }
@@ -42,3 +62,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
   }
 };
+=======
+    res.setHeader('Allow', 'POST');
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  const { userId, courseId, score } = req.body;
+  if (!userId || !courseId) {
+    return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+  const data = loadData();
+  const completion = {
+    id: Date.now().toString(),
+    userId,
+    courseId,
+    score: score || 0,
+    completedAt: new Date().toISOString(),
+  };
+  
+  data.completions.push(completion);
+  saveData(data);
+  
+  res.status(200).json(completion);
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
