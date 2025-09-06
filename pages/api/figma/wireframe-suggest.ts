@@ -43,3 +43,5 @@ export default async function handler(
       : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
   }
+
+}

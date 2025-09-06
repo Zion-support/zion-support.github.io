@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import {
   Dialog,
@@ -527,14 +526,3 @@ else if (currentStep === 'contact') setCurrentStep ('timeline') ;
 }className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>) ;
 }</div> </DialogFooter> </form> </DialogContent> </Dialog>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-            ...formData;
-            startDate: startDate?.toISOString(),
-            endDate: endDate?.toISOString()}
-        }
-      });
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

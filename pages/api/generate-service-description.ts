@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-
 export type GenerateServiceDescriptionRequest = {
   title: string;
   keyFeatures: string[];
@@ -12,16 +10,6 @@ export type GenerateServiceDescriptionRequest = {
 
 export type GenerateServiceDescriptionResponse = {
   description: string;
-=======
-export type GenerateServiceDescriptionRequest = {
-  title: string, keyFeatures: string[],
-  targetAudience: string, additionalNotes?: string,
-  tone?: 'professional' | 'friendly' | 'persuasive' | 'technical'
-};
-
-export type GenerateServiceDescriptionResponse = {
-  description: string
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 };
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -31,8 +19,7 @@ export default async function handler(
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
 ) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-    return res.status(405).json({ error: 'Method not allowed' });
+return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { title, keyFeatures, targetAudience, additionalNotes, tone } =
@@ -57,23 +44,6 @@ export default async function handler(
     const toneInstruction = tone
       ? `Write in a ${tone} tone.`
       : 'Write in a professional, clear tone.';
-=======
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-  const { title, keyFeatures, targetAudience, additionalNotes, tone } = req.body as GenerateServiceDescriptionRequest;
-
-  if (!process.env.OPENAI_API_KEY) {
-    return res.status(500).json({ error: 'OpenAI API key not configured' })
-  }
-
-  if (!title || !Array.isArray(keyFeatures) || keyFeatures.length === 0 || !targetAudience) {
-    return res.status(400).json({ error: 'Missing required fields: title, keyFeatures, targetAudience' })
-  }
-
-  try {
-    const toneInstruction = tone ? `Write in a ${tone} tone.` : 'Write in a professional, clear tone.';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
     const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
 
@@ -93,38 +63,25 @@ Requirements:
 
     // Using Responses API for modern SDK
     const response = await openai.responses.create({
-<<<<<<< HEAD
-      model: 'gpt-4o-mini',
+model: 'gpt-4o-mini',
       input: prompt,
       temperature: 0.7,
     });
-=======
-      model: 'gpt-4o-mini', input: prompt,
-      temperature: 0.7
-      });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
     let description = '';
     const output = response.output?.[0];
     if (output && output.type === 'message') {
       // Aggregate all text parts from the first message
       description = output.content
-<<<<<<< HEAD
-        .filter(c => c.type === 'output_text')
+.filter(c => c.type === 'output_text')
         .map((c: any) => c.text)
         .join('\n');
-=======
-        .filter((c) => c.type === 'output_text')
-        .map((c: any) => c.text)
-        .join('\n')
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
 
     if (!description) {
       // Fallback to top-level text if available
       // @ts-ignore
-<<<<<<< HEAD
-      description =
+description =
         (response as any).content?.[0]?.text ||
         'Unable to generate description at this time.';
     }
@@ -134,14 +91,5 @@ Requirements:
     console.error('OpenAI generation error:', error);
     return res.status(500).json({ error: 'Failed to generate description' });
   }
-=======
-      description = (response as any).content?.[0]?.text || 'Unable to generate description at this time.'
-    }
 
-    return res.status(200).json({ description })
-  } catch (error: any) {
-    console.error('OpenAI generation error:', error);
-    return res.status(500).json({ error: 'Failed to generate description' })
-  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

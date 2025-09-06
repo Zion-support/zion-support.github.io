@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {
   createContext,
   useContext,
@@ -232,17 +231,3 @@ export function useErrorHandler() {
     handleApiError,
     handleAsyncOperation,
   };
-=======
-
-<<<<<<< HEAD
-
-    const errorKey = error.message;
-    const currentRetryCount = retryCount[errorKey] || 0;
-
-    reportError(error, { retryCount: currentRetryCount }),
-
-
-<<<<<<< HEAD
-      
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

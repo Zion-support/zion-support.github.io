@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Table,
@@ -174,11 +173,3 @@ const getCategoryBadge = (category: string) => {;
 }> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
 }"
-=======
-
-<<<<<<< HEAD
-    return <Badge variant={style.variant}>{category}</Badge>
-  };
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

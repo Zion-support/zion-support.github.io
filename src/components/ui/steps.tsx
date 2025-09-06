@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { CheckIcon } from 'lucide-react';
@@ -86,11 +85,3 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 
 }/> </div> </div> </div>) ;
 }"
-=======
-
-<<<<<<< HEAD
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-          
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

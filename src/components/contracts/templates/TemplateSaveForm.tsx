@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm, type ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -155,11 +154,3 @@ try {;
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

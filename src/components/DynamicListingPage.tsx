@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -611,15 +610,3 @@ setSelectedRating (null);
 > Clear All </Button> </div>) ;
 }</div> </div> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    max: 10000}),
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                        logInfo('Rating selected:', { data: rating }),
-                        setSelectedRating(rating);
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

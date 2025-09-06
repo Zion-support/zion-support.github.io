@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router'; // Changed from useParams
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -125,11 +124,3 @@ product.title ;
   product.images?.[0] ;
 }/> </Button> </div> </>) ;
 }'
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

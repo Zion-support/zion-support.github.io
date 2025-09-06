@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
@@ -358,17 +357,3 @@ return ;
   isResending ? 'Sending...': 'Resend / Verify e-mail' ;
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  rememberMe: z.boolean()}),
-
-
-type LoginFormValues = z.infer<typeof loginSchema>;
-
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

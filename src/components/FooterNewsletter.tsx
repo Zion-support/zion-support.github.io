@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -117,13 +116,3 @@ export function FooterNewsletter(): React.ReactElement {
       </Button>
     </form>
   );
-=======
-
-<<<<<<< HEAD
-
-
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

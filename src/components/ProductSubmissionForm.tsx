@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -630,19 +629,3 @@ const {;
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-type ProductFormValues = z.infer<typeof productSchema>;
-
-<<<<<<< HEAD
-        
-<<<<<<< HEAD
-        imagePublicUrl = publicUrlData.publicUrl;
-          
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

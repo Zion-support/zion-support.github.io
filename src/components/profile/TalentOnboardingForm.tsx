@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -227,20 +226,3 @@ return publicUrl;
 };
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'
-=======
-
-<<<<<<< HEAD
-
-    cv: z.any().optional()})}),
-
-type TalentFormValues = z.infer<typeof talentSchema>;
-
-
-<<<<<<< HEAD
-  
-  const totalSteps = 4;
-  
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

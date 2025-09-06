@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Control, UseFormSetValue } from 'react-hook-form';
 import {
@@ -64,10 +63,3 @@ export const RateOptimizationSection: React.FC<
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

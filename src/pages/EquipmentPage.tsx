@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -833,9 +832,3 @@ function EquipmentPageContent() {
 }</AnimatePresence> </div>) ;
 }//Main export with error boundary export default function EquipmentPage () {;
   return (<EquipmentErrorBoundary> <EquipmentPageContent /> </EquipmentErrorBoundary> '"
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

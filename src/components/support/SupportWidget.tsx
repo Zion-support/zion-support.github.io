@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -76,10 +75,3 @@ export function SupportWidget() {
       )}
     </>
   );
-=======
-
-<<<<<<< HEAD
-
-          className={cn(
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

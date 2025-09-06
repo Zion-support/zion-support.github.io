@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
@@ -1040,22 +1039,3 @@ return (<div className="container max-w-7xl py-10"> <div className="flex flex-co
 }<Button className="text-zion-slate-light hover:text-white" > <Settings className="h-4 w-4" /> <span className="sr-only" >Settings</span> </Button> <Button > View </Button> </div> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-        .order('created_at', { ascending: false }),
-        
-
-<<<<<<< HEAD
-
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-  partners, 
-  isLoading, 
-  onViewDetails, 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

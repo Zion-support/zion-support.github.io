@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '@/integrations/supabase/client';
@@ -310,7 +309,3 @@ if (isLoading) {";
   /* Placeholder for other sidebar elements */ ;
 }</div> </div> </div> </>) ;
 }'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

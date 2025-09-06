@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -45,18 +44,12 @@ export const ClientBudgetRecommender: React.FC<
         jobTitle,
         category,
       };
-=======
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
       if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
       if (experienceLevel) params.experienceLevel = experienceLevel;
 
-<<<<<<< HEAD
-      const result = await getClientBudgetSuggestion(params);
+const result = await getClientBudgetSuggestion(params);
       setSuggestion(result);
     } catch (error) {
       logErrorToProduction('Error generating budget suggestion:', {
@@ -124,7 +117,3 @@ return (<div className="space-y-4" > <div> {";
 }</div> </div>) ;
 };
 '"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

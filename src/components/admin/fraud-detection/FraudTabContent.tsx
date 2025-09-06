@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 
@@ -47,15 +46,3 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({
       return null;
   }
 };
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-    default:
-      return null
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -560,14 +559,3 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
 }</Button> </form>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-        setFieldStates(prev => ({
-          ...prev;
-
-<<<<<<< HEAD
-              <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

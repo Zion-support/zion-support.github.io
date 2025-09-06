@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -156,17 +155,3 @@ date: new Date () .toISOString () .split ('T') [0] || new Date () .toLocaleDateS
 }</div> </div> </CardContent> </Card>) ;
 };
 '"
-=======
-
-<<<<<<< HEAD
-  
-<<<<<<< HEAD
-
-  
-
-<<<<<<< HEAD
-  );
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useDisputes } from '@/hooks/useDisputes';
@@ -826,19 +825,3 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
   dispute.id ";
 }</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  resolution_type: "compromise"}),
-   
-<<<<<<< HEAD
-
-  const isAdmin = user?.userType === "admin";
-  
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
@@ -442,19 +441,3 @@ toast ({;
   (details) => handleCheckout (details) ;
 }/> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-        shipping_address: details?.address}),
-
-      const sessionId = data.sessionId as string | undefined;
-<<<<<<< HEAD
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
-
-  const total = subtotal + tax + shipping;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

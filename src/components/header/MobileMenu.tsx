@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -179,9 +178,3 @@ export function MobileMenu({
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

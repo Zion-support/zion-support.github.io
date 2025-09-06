@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { forwardRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -58,13 +57,3 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
 
 SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
-=======
-
-<<<<<<< HEAD
-
-
-
-SidebarGroup.displayName = "SidebarGroup",
-export { SidebarGroup };
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

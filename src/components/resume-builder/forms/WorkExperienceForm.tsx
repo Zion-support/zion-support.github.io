@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -112,27 +111,11 @@ export function WorkExperienceForm({
       setError(err.message || 'An error occurred');
     }
   };
-=======
-
-<<<<<<< HEAD
-
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-
-type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
-
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
-<<<<<<< HEAD
-      ...work,
+...work,
       start_date: formatDateValue(work.start_date),
       end_date:
         work.end_date && !work.is_current
@@ -418,12 +401,3 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
 }'"
-=======
-      ...work;
-      start_date: formatDateValue(work.start_date),
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
-  };
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

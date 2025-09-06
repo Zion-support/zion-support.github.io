@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Star, StarHalf } from 'lucide-react';
 
@@ -41,11 +40,3 @@ export function RatingStars({
 }) </span> ;
 }</div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  const half = value - filled >= 0.5;
-
-  const total = 5;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

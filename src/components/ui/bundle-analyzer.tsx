@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -70,23 +69,12 @@ export function BundleAnalyzer() {
       let totalSize = 0;
       let totalLoadTime = 0;
       const chunkData: ChunkInfo[] = [];
-=======
-
-<<<<<<< HEAD
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
         const cached = entry.transferSize === 0;
-<<<<<<< HEAD
-
-        totalSize += size;
+totalSize += size;
         totalLoadTime += loadTime;
 
         chunkData.push({
@@ -280,8 +268,3 @@ export function BundleAnalyzer() {
       </Card>
     </div>
   );
-=======
-        
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

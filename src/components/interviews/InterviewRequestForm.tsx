@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -449,7 +448,3 @@ toast ({;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
 }/> </Button> </div> </form> </Form>) ;
 }'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

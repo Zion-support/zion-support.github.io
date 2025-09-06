@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -839,23 +838,3 @@ default: return <Badge variant="outline"> {;
 }</Card> </div> </div> </main> </>) ;
 }export default function ProjectDetails () {;
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"
-=======
-
-<<<<<<< HEAD
-
-        .order("created_at", { ascending: false }),
-      
-
-<<<<<<< HEAD
-
-      
-
-    if (!project) return;
-    
-<<<<<<< HEAD
-
-        ...project;
-        status: newStatus}),
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -204,9 +203,3 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

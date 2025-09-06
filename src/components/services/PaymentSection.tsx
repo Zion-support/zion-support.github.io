@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { MapPin } from 'lucide-react';
 import { PaymentButton } from '@/components/transactions/PaymentButton';
 import { CountryPricing } from '@/data/onsiteServicePricing';
@@ -44,9 +43,3 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   );
 
 }"
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

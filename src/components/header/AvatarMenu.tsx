@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
@@ -86,12 +85,3 @@ export const AvatarMenu: React.FC = () => {
 };
 export default AvatarMenu;
 "
-=======
-
-<<<<<<< HEAD
-
-
-
-export default AvatarMenu;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

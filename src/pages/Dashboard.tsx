@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { useAuth } from '@/hooks/useAuth';
@@ -598,14 +597,3 @@ toast ({";
   roleForTour ;
 }/> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  const userWithExtendedProps = user as any;
-  const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent';
-  const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent';
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

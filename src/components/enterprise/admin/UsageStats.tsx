@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -193,7 +192,3 @@ export function UsageStats() {
   );
 
 }"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

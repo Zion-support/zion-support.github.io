@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
@@ -259,7 +258,3 @@ description: err.message;
 }</Button>) ;
 }</div> </form> </div> </div> </div> </div> </section>) ;
 }'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

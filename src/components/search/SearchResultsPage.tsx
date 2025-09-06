@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import {
@@ -752,20 +751,3 @@ setHasMore (data.hasMore);
 };
 export default SearchResultsPage;
 '"
-=======
-
-<<<<<<< HEAD
-
-
-// No Results Component
-const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
-  searchTerm,
-  onNewSearch ;
-
-<<<<<<< HEAD
-
-
-
-export default SearchResultsPage, 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

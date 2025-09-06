@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
@@ -68,10 +67,3 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

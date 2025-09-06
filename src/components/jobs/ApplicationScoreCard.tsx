@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -309,18 +308,3 @@ export function ApplicationScoreCard({
 }</Button> </div>) ;
 }</CardContent> </Card>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  const hasScore = typeof application.match_score === 'number';
-  
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-      let attempts = 0;
-      const maxAttempts = 10;
-      
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
