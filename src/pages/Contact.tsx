@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import { useToast } from '../hooks/useToast';
 
 const Contact: React.FC = () => {
+  const { success, error } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,7 +23,15 @@ const Contact: React.FC = () => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
+    success('Thank you for your message! We will get back to you soon.');
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      message: ''
+    });
   };
 
   return (

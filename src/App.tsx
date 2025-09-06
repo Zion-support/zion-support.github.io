@@ -6,6 +6,7 @@ import ServiceCard from './components/ServiceCard';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
+import ToastContainer from './components/ToastContainer';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
@@ -28,6 +29,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <ToastContainer />
         </div>
       </Router>
     </ErrorBoundary>
