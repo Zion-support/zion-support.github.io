@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
-import LoadingSpinner from './LoadingSpinner';
+import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
+import LoadingSpinner from "./LoadingSpinner";
 
 interface LazyImageProps {
   src: string;
@@ -9,7 +9,7 @@ interface LazyImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
-  placeholder?: 'blur' | 'empty';
+  placeholder?: "blur" | "empty";
   blurDataURL?: string;
   sizes?: string;
   quality?: number;
@@ -24,16 +24,16 @@ export default function LazyImage({
   alt,
   width,
   height,
-  className = '',
+  className = "",
   priority = false,
-  placeholder = 'empty',
+  placeholder = "empty",
   blurDataURL,
   sizes,
   quality = 75,
   fill = false,
   style,
   onLoad,
-  onError
+  onError,
 }: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -52,8 +52,8 @@ export default function LazyImage({
       },
       {
         threshold: 0.1,
-        rootMargin: '50px'
-      }
+        rootMargin: "50px",
+      },
     );
 
     if (imgRef.current) {
@@ -75,7 +75,7 @@ export default function LazyImage({
 
   if (hasError) {
     return (
-      <div 
+      <div
         ref={imgRef}
         className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
         style={style}
@@ -95,7 +95,7 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />
         </div>
       )}
-      
+
       {isInView && (
         <Image
           src={src}
@@ -111,7 +111,7 @@ export default function LazyImage({
           onLoad={handleLoad}
           onError={handleError}
           className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+            isLoaded ? "opacity-100" : "opacity-0"
           }`}
         />
       )}

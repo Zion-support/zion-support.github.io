@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -29,13 +28,7 @@
     process.exit(1)}
 }
 // Run the enhanced orchestrator
-<<<<<<< HEAD
-<<<<<<< HEAD:scripts/enhanced-master-automation-orchestrator.cjs
-<<<<<<< HEAD
 main();#!/usr/bin/env node;
-=======
-#!/usr/bin/env node;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
@@ -91,8 +84,4 @@ console.log('======')
       { "name": 'Test Suite', "command": 'npm test || echo "No tests configured"}
     const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."}]
       { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."}
-<<<<<<< HEAD
       log('info', '"Recommendations")
-=======
-      log('info', '"Recommendations")
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

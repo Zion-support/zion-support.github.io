@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -304,31 +303,7 @@ const ProductsIndex: NextPage = () => {
 };
 
 export default ProductsIndex;
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-      <main>
-        <h1>Index</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  ),
-};
-
-export default Index;
-<<<<<<< HEAD
-=======
   )
 };
 
 export default Index;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
-};
-
-export default Index;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

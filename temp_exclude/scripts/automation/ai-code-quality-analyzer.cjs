@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * AI-Powered Code Quality Analyzer;
@@ -25,5 +24,3 @@ const { execSync } = require('child_process')
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

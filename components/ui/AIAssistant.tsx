@@ -1,76 +1,80 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 export type AIAssistantProps = {
   buttonLabel?: string;
   title?: string;
-  defaultPrompt: string,
+  defaultPrompt: string;
   systemPrompt?: string;
-  onAccept: (markdown: string) => void,
-  authorizationToken?: string};
+  onAccept: (markdown: string) => void;
+  authorizationToken?: string;
+};
 
 export default function AIAssistant({
-  buttonLabel = 'Generate with AI',
-  title = 'AI Writing Assistant',
+  buttonLabel = "Generate with AI",
+  title = "AI Writing Assistant",
   defaultPrompt,
   systemPrompt,
   onAccept,
-  authorizationToken
+  authorizationToken,
 }: AIAssistantProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
-  const [output, setOutput] = useState('');
+  const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    setPrompt(defaultPrompt)
+    setPrompt(defaultPrompt);
   }, [defaultPrompt]);
 
   const callOperator = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/ai/operator', {
-        method: 'POST',
+      const res = await fetch("/api/ai/operator", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
           ...(authorizationToken
             ? { Authorization: `Bearer ${authorizationToken}` }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
-            ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}` }
-            : {})
+              ? {
+                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}`,
+                }
+              : {}),
         },
-        body: JSON.stringify({ prompt, system: systemPrompt })
+        body: JSON.stringify({ prompt, system: systemPrompt }),
       });
       const data = await res.json();
       if (!res.ok) {
-        throw new Error(data?.error || 'Failed to generate')
+        throw new Error(data?.error || "Failed to generate");
       }
-      setOutput(String(data.text || ''));
-      setIsEditing(false)
+      setOutput(String(data.text || ""));
+      setIsEditing(false);
     } catch (e: any) {
-      setError(e.message || 'Request failed')
+      setError(e.message || "Request failed");
     } finally {
-      setLoading(false)    }
+      setLoading(false);
+    }
   }, [authorizationToken, prompt, systemPrompt]);
 
   const onCopy = useCallback(async () => {
     try {
-      await navigator.clipboard.writeText(output)
+      await navigator.clipboard.writeText(output);
     } catch {}
   }, [output]);
 
   const onOpen = useCallback(() => {
     setIsOpen(true);
-    setOutput('');
+    setOutput("");
     setIsEditing(false);
-    setError(null)
+    setError(null);
   }, []);
 
   const onClose = useCallback(() => setIsOpen(false), []);
 
-  const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
+  const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
 
   return (
     <>
@@ -88,11 +92,22 @@ export default function AIAssistant({
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
               <h3 className="text-base font-semibold">{title}</h3>
-              <button onClick={onClose} className="text-sm opacity-70 hover:opacity-100">Close</button>            </div>
+              <button
+                onClick={onClose}
+                className="text-sm opacity-70 hover:opacity-100"
+              >
+                Close
+              </button>{" "}
+            </div>
 
             <div className="p-4 space-y-3">
               <div>
-                <label className="block text-xs font-medium mb-1" htmlFor="input-Operator prompt">Operator prompt</label>
+                <label
+                  className="block text-xs font-medium mb-1"
+                  htmlFor="input-Operator prompt"
+                >
+                  Operator prompt
+                </label>
                 <textarea
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
@@ -102,16 +117,37 @@ export default function AIAssistant({
               </div>
 
               <div className="flex items-center gap-2">
-                <button onClick={callOperator} disabled={loading} className="rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled:opacity-60">
-                  {loading ? 'Generating…' : 'Generate'}
-                </button>
-                <button onClick={callOperator} disabled={loading} className="rounded-md border px-3 py-1.5 text-sm">
-                  {loading ? '…' : 'Regenerate'}
-                </button>
-                <button onClick={() => setIsEditing((v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>
-                <button onClick={onCopy} disabled={!output} className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60">Copy</button>
                 <button
-                  onClick={() => { onAccept(output), onClose() }}
+                  onClick={callOperator}
+                  disabled={loading}
+                  className="rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled:opacity-60"
+                >
+                  {loading ? "Generating…" : "Generate"}
+                </button>
+                <button
+                  onClick={callOperator}
+                  disabled={loading}
+                  className="rounded-md border px-3 py-1.5 text-sm"
+                >
+                  {loading ? "…" : "Regenerate"}
+                </button>
+                <button
+                  onClick={() => setIsEditing((v) => !v)}
+                  className="rounded-md border px-3 py-1.5 text-sm"
+                >
+                  {isEditing ? "Preview" : "Edit"}
+                </button>
+                <button
+                  onClick={onCopy}
+                  disabled={!output}
+                  className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60"
+                >
+                  Copy
+                </button>
+                <button
+                  onClick={() => {
+                    (onAccept(output), onClose());
+                  }}
                   disabled={!canAccept}
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60"
                 >
@@ -119,11 +155,14 @@ export default function AIAssistant({
                 </button>
               </div>
 
-              {error && (
-                <div className="text-red-600 text-sm">{error}</div>
-              )}
+              {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>
-                <label className="block text-xs font-medium mb-1" htmlFor="input-Output (markdown)">Output (markdown)</label>
+                <label
+                  className="block text-xs font-medium mb-1"
+                  htmlFor="input-Output (markdown)"
+                >
+                  Output (markdown)
+                </label>
                 {isEditing ? (
                   <textarea
                     value={output}
@@ -132,7 +171,9 @@ export default function AIAssistant({
                     className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
                   />
                 ) : (
-                  <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
+                  <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">
+                    {output || "No content yet. Click Generate."}
+                  </pre>
                 )}
               </div>
             </div>

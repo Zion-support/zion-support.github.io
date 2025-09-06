@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node;
-/**
- * Continuous Integration Automation;
- * Comprehensive CI pipeline with build, test, and quality checks;
- */
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')

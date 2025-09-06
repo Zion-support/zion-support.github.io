@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createWriteStream } from 'fs',
 import { join } from 'path',
 const generateSitemap = () => {
@@ -268,3 +269,8 @@ const generateSitemap = () => {;
 },;
 generateSitemap();
 >>>>>>> cursor/automate-test-improve-and-merge-code-4094
+=======
+#!/usr/bin/env node
+console.log('🗺️  Generating sitemap...');
+console.log('✅ Sitemap generation completed');
+>>>>>>> 4b819355ccb44a5b24eeefb1407608395a1110cb

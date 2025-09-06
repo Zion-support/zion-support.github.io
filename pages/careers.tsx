@@ -1,6 +1,6 @@
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
 import {
   Users,
   MapPin,
@@ -16,8 +16,8 @@ import {
   Briefcase,
   GraduationCap,
   Globe,
-  CheckCircle
-} from 'lucide-react';
+  CheckCircle,
+} from "lucide-react";
 
 const jobOpenings = [
   {
@@ -27,15 +27,21 @@ const jobOpenings = [
     location: "Remote",
     type: "Full-time",
     experience: "5+ years",
-    description: "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
+    description:
+      "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
     requirements: [
       "Master's degree in Computer Science or related field",
       "5+ years experience in AI/ML development",
       "Proficiency in Python, TensorFlow, PyTorch",
       "Experience with cloud platforms (AWS, Azure, GCP)",
-      "Strong problem-solving and communication skills"
+      "Strong problem-solving and communication skills",
     ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
+    benefits: [
+      "Competitive salary",
+      "Health insurance",
+      "Remote work",
+      "Professional development",
+    ],
   },
   {
     id: 2,
@@ -44,14 +50,20 @@ const jobOpenings = [
     location: "New York, NY",
     type: "Full-time",
     experience: "3+ years",
-    description: "Build scalable web applications and microservices for our SaaS solutions.",
+    description:
+      "Build scalable web applications and microservices for our SaaS solutions.",
     requirements: [
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
-      "Knowledge of cloud deployment and DevOps"
+      "Knowledge of cloud deployment and DevOps",
     ],
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
+    benefits: [
+      "Competitive salary",
+      "Health insurance",
+      "Flexible hours",
+      "Stock options",
+    ],
   },
   {
     id: 3,
@@ -60,67 +72,82 @@ const jobOpenings = [
     location: "Remote",
     type: "Full-time",
     experience: "7+ years",
-    description: "Design and implement cloud infrastructure solutions for enterprise clients.",
+    description:
+      "Design and implement cloud infrastructure solutions for enterprise clients.",
     requirements: [
       "7+ years experience in cloud architecture",
       "Certifications in AWS, Azure, or GCP",
       "Experience with containerization (Docker, Kubernetes)",
-      "Strong understanding of security best practices"
+      "Strong understanding of security best practices",
     ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
-  }
+    benefits: [
+      "Competitive salary",
+      "Health insurance",
+      "Remote work",
+      "Certification support",
+    ],
+  },
 ];
 
 const benefits = [
   {
     icon: Heart,
     title: "Health & Wellness",
-    description: "Comprehensive health insurance, mental health support, and wellness programs"
+    description:
+      "Comprehensive health insurance, mental health support, and wellness programs",
   },
   {
     icon: DollarSign,
     title: "Competitive Compensation",
-    description: "Competitive salaries, performance bonuses, and equity participation"
+    description:
+      "Competitive salaries, performance bonuses, and equity participation",
   },
   {
     icon: GraduationCap,
     title: "Learning & Development",
-    description: "Professional development budget, conference attendance, and training programs"
+    description:
+      "Professional development budget, conference attendance, and training programs",
   },
   {
     icon: Globe,
     title: "Flexible Work",
-    description: "Remote work options, flexible hours, and work-life balance"
+    description: "Remote work options, flexible hours, and work-life balance",
   },
   {
     icon: Coffee,
     title: "Great Culture",
-    description: "Collaborative environment, team events, and inclusive workplace"
+    description:
+      "Collaborative environment, team events, and inclusive workplace",
   },
   {
     icon: Award,
     title: "Career Growth",
-    description: "Clear career paths, mentorship programs, and advancement opportunities"
-  }
+    description:
+      "Clear career paths, mentorship programs, and advancement opportunities",
+  },
 ];
 
 const values = [
   {
     title: "Innovation",
-    description: "We encourage creative thinking and embrace new technologies to solve complex problems."
+    description:
+      "We encourage creative thinking and embrace new technologies to solve complex problems.",
   },
   {
     title: "Collaboration",
-    description: "We believe in the power of teamwork and open communication across all levels."
+    description:
+      "We believe in the power of teamwork and open communication across all levels.",
   },
   {
     title: "Excellence",
-    description: "We strive for the highest quality in everything we do and continuously improve."
+    description:
+      "We strive for the highest quality in everything we do and continuously improve.",
   },
   {
     title: "Integrity",
-    description: "We conduct business with honesty, transparency, and ethical practices."
-  }
+    description:
+      "We conduct business with honesty, transparency, and ethical practices.",
+  },
 ];
 
 export default function CareersPage() {
@@ -146,20 +173,27 @@ export default function CareersPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Join Our{' '}
+                Join Our{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Amazing Team
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Be part of a team that's building the future of technology. 
-                We're looking for passionate individuals who want to make a difference.
+                Be part of a team that's building the future of technology.
+                We're looking for passionate individuals who want to make a
+                difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#open-positions" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                <a
+                  href="#open-positions"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                >
                   View Open Positions
                 </a>
-                <a href="#benefits" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                <a
+                  href="#benefits"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+                >
                   See Benefits
                 </a>
               </div>
@@ -181,8 +215,9 @@ export default function CareersPage() {
                 Why Join Zion Tech Group?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We're not just a company - we're a community of innovators, creators, and problem-solvers 
-                working together to build amazing technology solutions.
+                We're not just a company - we're a community of innovators,
+                creators, and problem-solvers working together to build amazing
+                technology solutions.
               </p>
             </motion.div>
 
@@ -203,9 +238,7 @@ export default function CareersPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       {benefit.title}
                     </h3>
-                    <p className="text-gray-600">
-                      {benefit.description}
-                    </p>
+                    <p className="text-gray-600">{benefit.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -227,7 +260,8 @@ export default function CareersPage() {
                 Our Values
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                These core values guide everything we do and shape our company culture.
+                These core values guide everything we do and shape our company
+                culture.
               </p>
             </motion.div>
 
@@ -245,9 +279,7 @@ export default function CareersPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       {value.title}
                     </h3>
-                    <p className="text-gray-600">
-                      {value.description}
-                    </p>
+                    <p className="text-gray-600">{value.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -269,7 +301,8 @@ export default function CareersPage() {
                 Open Positions
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Explore our current job openings and find the perfect role for you.
+                Explore our current job openings and find the perfect role for
+                you.
               </p>
             </motion.div>
 
@@ -294,9 +327,7 @@ export default function CareersPage() {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {job.title}
                     </h3>
-                    <p className="text-gray-600 mb-4">
-                      {job.description}
-                    </p>
+                    <p className="text-gray-600 mb-4">{job.description}</p>
 
                     <div className="space-y-2 mb-6">
                       <div className="flex items-center text-sm text-gray-600">
@@ -310,22 +341,34 @@ export default function CareersPage() {
                     </div>
 
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Requirements:</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Key Requirements:
+                      </h4>
                       <ul className="space-y-1">
-                        {job.requirements.slice(0, 3).map((requirement, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2" />
-                            {requirement}
-                          </li>
-                        ))}
+                        {job.requirements
+                          .slice(0, 3)
+                          .map((requirement, idx) => (
+                            <li
+                              key={idx}
+                              className="flex items-center text-sm text-gray-600"
+                            >
+                              <CheckCircle className="w-3 h-3 text-green-500 mr-2" />
+                              {requirement}
+                            </li>
+                          ))}
                       </ul>
                     </div>
 
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Benefits:
+                      </h4>
                       <div className="flex flex-wrap gap-2">
                         {job.benefits.map((benefit, idx) => (
-                          <span key={idx} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                          <span
+                            key={idx}
+                            className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
+                          >
                             {benefit}
                           </span>
                         ))}
@@ -360,8 +403,8 @@ export default function CareersPage() {
                 Don't See Your Dream Job?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                We're always looking for talented individuals. Send us your resume and let us know 
-                how you'd like to contribute to our team.
+                We're always looking for talented individuals. Send us your
+                resume and let us know how you'd like to contribute to our team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

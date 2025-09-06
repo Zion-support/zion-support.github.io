@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 interface User {
   id: string;
@@ -20,10 +20,10 @@ export const useAuth = () => {
     loading,
     login: (email: string, password: string) => {
       // Simulate login
-      setUser({ id: '1', email, name: 'User' });
+      setUser({ id: "1", email, name: "User" });
     },
     logout: () => {
       setUser(null);
-    }
+    },
   };
 };

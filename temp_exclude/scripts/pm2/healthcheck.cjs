@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -18,9 +17,6 @@ function pingPreview() {}
 		console.error('Healthcheck failed');
 		process.exit(1)};
 	console.log('Healthy')})();    // Check disk space
-=======
-    // Check disk space
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {

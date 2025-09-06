@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -167,10 +163,6 @@ class ErrorAnalyticsDashboard {
     }}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-    }
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     console.log("[${timestamp}] [${level}] ${message}")}
   async collectErrorReports() {
     try {
@@ -984,8 +976,4 @@ if (require.main === module) {
     dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
-<<<<<<< HEAD
 module.exports = ErrorAnalyticsDashboard
-=======
-module.exports = ErrorAnalyticsDashboard
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

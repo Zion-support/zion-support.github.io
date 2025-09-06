@@ -1,59 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/custom.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/custom.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/custom.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/custom.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Link from 'next/link';';
 import {motion} from 'framer-motion';
 import {Settings,, Code,, Zap,, Users,, ArrowRight,, CheckCircle,, Clock,, Target,, Wrench} from 'lucide-react';
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/custom.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/custom.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const features = [;
   {}
     title: 'Tailored Solutions,',
@@ -178,12 +132,7 @@ export default function CustomDevelopmentPage() {
                 We build custom solutions that perfectly match your business requirements and integrate seamlessly with your existing systems;
               </p>;
             </motion.div>;
-<<<<<<< HEAD:pages_backup/solutions/custom.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
-=======
-
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/custom.tsx
               {features.map((feature, index) => (,
                 <motion.div}),
                   key={feature.title}
@@ -229,12 +178,7 @@ export default function CustomDevelopmentPage() {
                 We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions,
               </p>;
             </motion.div>;
-<<<<<<< HEAD:pages_backup/solutions/custom.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-=======
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/custom.tsx
               {technologies.map((category, index) => (,
                 <motion.div}),
                   key={category.category}
@@ -274,12 +218,7 @@ export default function CustomDevelopmentPage() {
                 Our proven development process ensures your custom solution is delivered on time, on budget, and exceeds expectations,
               </p>;
             </motion.div>;
-<<<<<<< HEAD:pages_backup/solutions/custom.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-=======
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/custom.tsx
               {process.map((step, index) => (,
                 <motion.div}),
                   key={step.step}

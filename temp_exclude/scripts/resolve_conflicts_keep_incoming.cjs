@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");function getAllFiles(dir) { const entries = fs.readdirSync(dir, { withFileTypes: true }); const files = entries.flatMap((entry) => { const fullPath = path.join(dir, entry.name); if (entry.isDirectory()) return getAllFiles(fullPath); return [fullPath]}); return files}function resolveConflictsKeepIncoming(filePath) {" const text = fs.readFileSync(filePath, "utf8");'"'"
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -16,15 +12,6 @@ function getAllFiles(dir) {}
   return files};
 function resolveConflictsKeepIncoming(filePath) {}
   const text = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-=======
-      i++;
-      // skip the separator
-        out.push(lines[i]);
-        i++}
-      // skip the end marker
-      continue}
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
   if (!text.includes('')) return false;
   const lines = text.split('\n');
   const out = [];
@@ -59,14 +46,6 @@ function main() {}
     try {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
-<<<<<<< HEAD
-=======
-        }
-    } catch (e) {
-      console.error(`Failed to process ${f}: ${e.message}`)}
-  }
-  }
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         console.log(`Resolved conflicts "in": ${f}`)};
     } catch (e) {}
       console.error(`Failed to process ${f}: ${e.message}`)};
@@ -74,8 +53,4 @@ function main() {}
   console.log(`Done. Files "updated": ${count}`)};
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
-<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
-cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

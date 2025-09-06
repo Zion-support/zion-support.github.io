@@ -4,7 +4,6 @@ const path = require('path');
 // Function to fix common syntax issues;
 function fixFile(filePath) {;
   try {;
-<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
 ;
     // Fix common syntax patterns;
@@ -271,16 +270,6 @@ class ComprehensiveFixer {
       } else if (entry.isFile() && (entry.name.endsWith('.tsx') || entry.name.endsWith('.ts') || entry.name.endsWith('.jsx') || entry.name.endsWith('.js'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-          if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ') || content.includes('&quot;') || content.includes('&amp;') || content.includes('&lt;') || content.includes('&gt;')) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             files.push(fullPath);
           }
         } catch (error) {
@@ -386,7 +375,6 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveFixer;
-=======
   let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
     // Fix malformed function declarations with imports inside;
@@ -506,4 +494,3 @@ function processDirectory(dirPath) {;
 console.log("Starting comprehensive syntax fixes...");
 const fixedCount = processDirectory("./src');
 console.log(`Fixed ${fixedCount} files.`)}}}}}}}}))
->>>>>>> origin/automation-fixes

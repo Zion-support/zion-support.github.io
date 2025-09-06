@@ -27,7 +27,6 @@ for (const file of conflictedFiles) {
       const originalContent = content;
       
       // Remove merge conflict markers and keep "ours" version (current branch)
-      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n[\s\S]*?>>>>>>> [^\n]*\n/g, '$1');
       
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');

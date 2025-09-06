@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -195,8 +193,6 @@ scanner.runSecurityScan().catch(console.error);"
   // Step "1"
       this.log("\\n� Comprehensive App Improvement completed!")
   this.log(`Fatal "error": ${error.message}`, ``)
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 
 const fs = require("fs")
 const path = require("path")
@@ -811,6 +807,3 @@ scanner.runSecurityScan().catch(console.error)`;
 // Run the improver;
 const improver = new ComprehensiveAppImprover()
 improver.run().catch(console.error)
->>>>>>> origin/automation-fixes
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

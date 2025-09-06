@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node;
-/**
- * Master Automation Suite;
- * Orchestrates all automation scripts in a comprehensive workflow;
- */
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')

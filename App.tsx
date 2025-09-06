@@ -208,7 +208,6 @@ export default function App(): JSX.Element {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-<<<<<<< HEAD
                 <h2 className="text-4xl md:text-5xl font-bold mb-8">
                   Ready to Transform Your Business?
                 </h2>
@@ -501,9 +500,6 @@ interface Testimonial {
                 transition={{ duration: 0.8 }}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-8">
-=======
-                <h2 className="text-4xl md: text-5xl font-bold mb-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6efb
                   Ready to Transform Your Business?
                 </h2>
                 <p className="text-xl text-slate-400 mb-12">

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')      return size}}
-=======
-      return size}}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
     totalSize = getDirectorySize(buildDir);
 

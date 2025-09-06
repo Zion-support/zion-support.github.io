@@ -10,12 +10,8 @@ import { Menu, X, Home, Settings, User, LogOut } from 'lucide-react';
 import Link from 'next/link';
 
 interface SidebarProps {
-<<<<<<< HEAD
   isOpen: boolean;
   onClose: () => void;}
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const menuItems = [
@@ -53,16 +49,12 @@ export default Sidebar;`
   },
   {
     path: 'components/SimpleLayout.tsx',
-<<<<<<< HEAD
     content: `import React from 'react';
 import Header from './Header';
 import Footer from './layout/Footer';
 
 interface SimpleLayoutProps {
   children: React.ReactNode;}
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children }) => {
   return (
@@ -80,16 +72,12 @@ export default SimpleLayout;`
   },
   {
     path: 'components/SkeletonLoader.tsx',
-<<<<<<< HEAD
     content: `import React from 'react';
 
 interface SkeletonLoaderProps {
   className?: string;
   lines?: number;
 }
-=======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ 
   className = '', 
   lines = 3 
@@ -111,19 +99,11 @@ export default SkeletonLoader;`
   },
   {
     path: 'components/layout/EnhancedFooter.tsx',
-<<<<<<< HEAD
     content: `import React from 'react';import { Building, Mail, Phone, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
 const EnhancedFooter: React.FC = () => {
   return (    <footer className="bg-gray-900 text-white">
-=======
-import { Building, Mail, Phone, MapPin } from 'lucide-react';
-import Link from 'next/link';
-
-const EnhancedFooter: React.FC = () => {
-    <footer className="bg-gray-900 text-white">
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
@@ -164,21 +144,16 @@ const EnhancedFooter: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-<<<<<<< HEAD
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 };
-=======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 export default EnhancedFooter;`
   },
   {
     path: 'components/layout/Footer.tsx',
-<<<<<<< HEAD
     content: `import React from 'react';
 import Link from 'next/link';
 
@@ -193,19 +168,12 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-=======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 export default Footer;`
   },
   {
     path: 'components/layout/Header.tsx',
-<<<<<<< HEAD
     content: `import React from 'react';
 import Link from 'next/link';
-=======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const Header: React.FC = () => {
   return (
     <header className="bg-white shadow">
@@ -229,16 +197,12 @@ export default Header;`
   },
   {
     path: 'components/layout/Layout.tsx',
-<<<<<<< HEAD
     content: `import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
 interface LayoutProps {
   children: React.ReactNode;}
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
@@ -256,16 +220,12 @@ export default Layout;`
   },
   {
     path: 'components/layout/MainLayout.tsx',
-<<<<<<< HEAD
     content: `import React from 'react';
 import Header from '../Header';
 import Footer from './Footer';
 
 interface MainLayoutProps {
   children: React.ReactNode;}
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
@@ -308,16 +268,12 @@ export default LazyComponent;`
   },
   {
     path: 'components/performance/OptimizedImage.tsx',
-<<<<<<< HEAD
     content: `import React from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;  width?: number;
-=======
-  width?: number;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   height?: number;
   className?: string;
   priority?: boolean;
@@ -354,7 +310,6 @@ export default OptimizedImage;`
   },
   {
     path: 'components/ui/EnhancedMarketplaceCard.tsx',
-<<<<<<< HEAD
     content: `import React from 'react';
 import Image from 'next/image';import Link from 'next/link';
 import { Star, Users, Calendar } from 'lucide-react';
@@ -368,13 +323,6 @@ interface EnhancedMarketplaceCardProps {
   users: number;
   category: string;
   href: string;}
-=======
-import Link from 'next/link';
-import { Star, Users, Calendar } from 'lucide-react';
-
-interface EnhancedMarketplaceCardProps {
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   title,
@@ -438,7 +386,6 @@ import Link from 'next/link';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 
 interface NavigationItem {
-<<<<<<< HEAD
   label: string;
   href?: string;  children?: NavigationItem[];
 }
@@ -446,13 +393,6 @@ interface NavigationItem {
 interface InteractiveNavigationProps {
   items: NavigationItem[];
   className?: string;}
-=======
-  children?: NavigationItem[];
-}
-
-interface InteractiveNavigationProps {
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ 
   items, 
@@ -523,7 +463,6 @@ export default InteractiveNavigation;`
 import { X, CheckCircle, AlertCircle, Info, XCircle } from 'lucide-react';
 
 interface Notification {
-<<<<<<< HEAD
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
   title: string;
@@ -533,13 +472,6 @@ interface Notification {
 interface NotificationSystemProps {
   notifications: Notification[];
   onRemove: (id: string) => void;}
-=======
-  duration?: number;
-}
-
-interface NotificationSystemProps {
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({ 
   notifications, 

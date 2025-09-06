@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -34,13 +33,7 @@
     process.exit(1)}
 }
 // Run the enhanced performance monitor
-<<<<<<< HEAD
-<<<<<<< HEAD:scripts/enhanced-performance-monitor.cjs
-<<<<<<< HEAD
 main();#!/usr/bin/env node;
-=======
-#!/usr/bin/env node;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -92,8 +85,4 @@ console.log('=')
       "message"
       "action"
       log('warn', 'Performance "Alerts")
-<<<<<<< HEAD
       log('info', 'Performance "Recommendations")
-=======
-      log('info', 'Performance "Recommendations")
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

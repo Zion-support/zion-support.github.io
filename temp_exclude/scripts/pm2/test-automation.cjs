@@ -151,8 +151,4 @@ if (require.main === module) {}
   const testAutomation = new TestAutomation();
   testAutomation.start().catch(console.error);
 };
-<<<<<<< HEAD
 module.exports = TestAutomation;module.exports = TestAutomation;
-=======
-module.exports = TestAutomation;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

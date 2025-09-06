@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/real-2036-ai-services.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/real-2036-ai-services.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 export const real2036AIServices = [{
     id:,
   ai-emotion-intelligence-platform',

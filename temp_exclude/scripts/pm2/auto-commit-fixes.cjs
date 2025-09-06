@@ -26,8 +26,4 @@ const fs = require(,"}),"
         "encoding"
         "stdio"
       const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}``)
-<<<<<<< HEAD
         "stdio"        "stdio"
-=======
-        "stdio"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

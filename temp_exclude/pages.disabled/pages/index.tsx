@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const \"Home\": NextPage = () => {
 import React, { memo } from 'react';
 import Link from 'next/link';
@@ -50,10 +45,6 @@ const Home = memo(() => {
     { "number": '99.9%', "label": 'Uptime Guarantee' },
     { "number": '24/7', "label": 'Support Available' }
   ];
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const services = [{
       title: \'AI Development\',
       \"description\": \'Custom AI solutions and machine learning models for your business needs.\',
@@ -73,11 +64,6 @@ const Home = memo(() => {
       \"href\": \'/services/web-development\'
     },
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       \"title\": \'Mobile Apps\',
       \"description\": \'Native and cross-platform mobile applications for iOS and Android.\',
       \"icon\": \'📱\',
@@ -218,10 +204,6 @@ const "Home": NextPage = () => {
       "description": 'Custom AI solutions and machine learning models for your business needs.',
       "icon": '🤖',
       "href": '/services/ai-development'
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     },
     {
       \"title\": \'Blockchain Solutions\',
@@ -300,16 +282,8 @@ const "Home": NextPage = () => {
               Comprehensive technology solutions tailored to your business needs
             </p>
           </div>
-<<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
-=======
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {services.map((service) => (
               <div
                 key={service.title}
@@ -333,11 +307,6 @@ const "Home": NextPage = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <section className=\"py-20 bg-gradient-to-r from-blue-600 to-purple-600\">
           <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center\">
             <h2 className=\"text-3xl font-bold text-white mb-6\">Ready to Transform Your Business?</h2>
@@ -352,10 +321,6 @@ const "Home": NextPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get Free Consultation</Link>
               <Link href="/request-quote" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Request Quote</Link>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -444,11 +409,4 @@ const "Home": NextPage = () => {
   );
 });
 export default Home;
-<<<<<<< HEAD
    import React,{ memo } from 'react';  import type { NextPage } from 'next'; import EnhancedLayout from '../components/layout/EnhancedLayout';
-=======
-<<<<<<< HEAD
-=======
-   import React,{ memo } from 'react';  import type { NextPage } from 'next'; import EnhancedLayout from '../components/layout/EnhancedLayout';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

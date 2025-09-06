@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Intelligent Test Orchestrator;
@@ -32,5 +31,3 @@ const { execSync, spawn } = require('child_process')
         const documentedTests = execSync(`grep -r "describe\\|it\\|test" src/ | grep -c "//" 2>/dev/null || echo "0"`)
           const result = execSync(`grep -r "${pattern}"`)
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

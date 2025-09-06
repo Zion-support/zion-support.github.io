@@ -7,5 +7,4 @@ export default function ForgotPassword() {
       <p>Password reset functionality would go here.</p>
     </div>
   );
-<<<<<<< HEAD
 }

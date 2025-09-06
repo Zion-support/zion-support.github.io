@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+
+;
+};
+;
+export const apiClient = new ApiClient(),;
+;
+export type { ApiResponse, RequestOptions };;
+
+};
+}};
+export const apiClient = new ApiClient();
+};
+export const apiClient = new ApiClient();
+export type { ApiResponse, RequestOptions };
+;
+>>>>>>> 4b819355ccb44a5b24eeefb1407608395a1110cb
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;

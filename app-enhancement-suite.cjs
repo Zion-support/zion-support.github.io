@@ -34,18 +34,6 @@ class AppEnhancementSuite {
         inputSanitization: true,
         "sqlInjectionProtection": true,
         "xssProtection": true}};
-<<<<<<< HEAD
-=======
-          "default-src 'self'; script-src 'self' 'unsafe-inline'";
-      };
-      validation: {
-        inputSanitization: true;
-        sqlInjectionProtection: true;
-        xssProtection: true;
-      };
-    };
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-config.json'),
       JSON.stringify(securityConfig, null, 2)
@@ -157,7 +145,7 @@ class AppEnhancementSuite {
     };
     this.log(`Security headers configured: ${Object.keys(securityHeaders).join(', ')}`);
     this.enhancements.push('Security headers configuration created');
-  };
+  }
   createHealthCheck() {
     this.log('🏥 Creating Health Check Endpoint');
     const healthCheckConfig = {
@@ -184,6 +172,6 @@ class AppEnhancementSuite {
     };
     this.log(`Health check config: ${JSON.stringify(healthCheckConfig, null, 2)}`);
     this.enhancements.push('Health check endpoint created');
-  };
-};
+  }
+}
 module.exports = AppEnhancementSuite;

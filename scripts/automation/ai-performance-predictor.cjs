@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * AI-Powered Performance Predictor;
@@ -27,13 +25,7 @@ const { execSync } = require('child_process')
           const result = execSync(`grep -r "${pattern}"`)
         const memoryOps = execSync(`grep -r "JSON\\.parse\\|JSON\\.stringify"`)
           const result = execSync(`grep -r "${pattern}"`)
-<<<<<<< HEAD
           const result = execSync(`grep -r "${pattern}"`)
-=======
-          const result = execSync(`grep -r "${pattern}"`)
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -53,11 +45,7 @@ class AIPerformancePredictor {
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-<<<<<<< HEAD
       fs.mkdirSync(logDir, { recursiv: true });
-=======
-      fs.mkdirSync(logDir, { recursive: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
     }
   }
 
@@ -72,7 +60,6 @@ class AIPerformancePredictor {
     this.log('⚡ Analyzing performance...');
 
     const performanceAnalysis = {
-<<<<<<< HEAD
       timestam: new Date().toISOString(),
       bundleSiz: await this.analyzeBundleSize(),
       loadTim: await this.analyzeLoadTime(),
@@ -80,15 +67,6 @@ class AIPerformancePredictor {
       memor: await this.analyzeMemoryUsage(),
       prediction: this.generatePredictions(),
       recommendation: this.generatePerformanceRecommendations(),
-=======
-      timestamp: new Date().toISOString(),
-      bundleSize: await this.analyzeBundleSize(),
-      loadTime: await this.analyzeLoadTime(),
-      runtime: await this.analyzeRuntimePerformance(),
-      memory: await this.analyzeMemoryUsage(),
-      predictions: this.generatePredictions(),
-      recommendations: this.generatePerformanceRecommendations(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
     };
 
     return performanceAnalysis;
@@ -98,7 +76,6 @@ class AIPerformancePredictor {
     this.log('📦 Analyzing bundle size and optimization...');
 
     try {
-<<<<<<< HEAD
       // Try to get bundle size information
       const bundleAnalysis = {
         scor: 75,
@@ -111,44 +88,6 @@ class AIPerformancePredictor {
           { nam: 'ui', siz: '400KB' },
         ],
         suggestion: [
-=======
-      // Check if build exists
-      if (!fs.existsSync('.next')) {
-        this.log('⚠️ No build found, running build analysis on source files...');
-        const sourceFiles = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx" 2>/dev/null || echo ""', { encoding: 'utf8' });
-        const fileCount = sourceFiles.split('\n').filter(f => f.trim()).length;
-        
-        return {
-          score: Math.max(60, 100 - fileCount * 2),
-          totalSize: 'Unknown (no build)',
-          gzippedSize: 'Unknown (no build)',
-          chunks: 0,
-          largestChunks: [],
-          suggestions: [
-            'Run npm run build to get accurate bundle metrics',
-            'Implement code splitting',
-            'Use dynamic imports for large components',
-            'Optimize images and assets',
-          ],
-        };
-      }
-
-      // Analyze actual bundle
-      const nextBuildSize = execSync('du -sh .next/static 2>/dev/null | cut -f1 || echo "0"', { encoding: 'utf8' });
-      const packageSize = execSync('du -sh node_modules 2>/dev/null | cut -f1 || echo "0"', { encoding: 'utf8' });
-      
-      return {
-        score: 75,
-        totalSize: nextBuildSize.trim(),
-        gzippedSize: 'Unknown',
-        chunks: 12,
-        largestChunks: [
-          { name: 'main', size: '800KB' },
-          { name: 'vendor', size: '600KB' },
-          { name: 'ui', size: '400KB' },
-        ],
-        suggestions: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
           'Implement code splitting',
           'Use dynamic imports for large components',
           'Optimize images and assets',
@@ -158,21 +97,12 @@ class AIPerformancePredictor {
     } catch (error) {
       this.log(`⚠️ Bundle analysis failed: ${error.message}`);
       return {
-<<<<<<< HEAD
         scor: 70,
         totalSiz: 'Unknown',
         gzippedSiz: 'Unknown',
         chunk: 0,
         largestChunk: [],
         suggestion: ['Run build analysis to get accurate metrics'],
-=======
-        score: 70,
-        totalSize: 'Unknown',
-        gzippedSize: 'Unknown',
-        chunks: 0,
-        largestChunks: [],
-        suggestions: ['Run build analysis to get accurate metrics'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
       };
     }
   }
@@ -180,7 +110,6 @@ class AIPerformancePredictor {
   async analyzeLoadTime() {
     this.log('⏱️ Analyzing load time...');
 
-<<<<<<< HEAD
     const loadTimeAnalysis = {
       scor: 80,
       firstContentfulPain: '1.2s',
@@ -188,16 +117,6 @@ class AIPerformancePredictor {
       firstInputDela: '45ms',
       cumulativeLayoutShif: '0.05',
       suggestion: [
-=======
-    // Simulate load time analysis
-    return {
-      score: 80,
-      firstContentfulPaint: '1.2s',
-      largestContentfulPaint: '2.1s',
-      firstInputDelay: '45ms',
-      cumulativeLayoutShift: '0.05',
-      suggestions: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
         'Optimize critical rendering path',
         'Implement lazy loading',
         'Use CDN for static assets',
@@ -209,7 +128,6 @@ class AIPerformancePredictor {
   async analyzeRuntimePerformance() {
     this.log('🔄 Analyzing runtime performance...');
 
-<<<<<<< HEAD
     const runtimeAnalysis = {
       scor: 85,
       metric: {
@@ -225,16 +143,6 @@ class AIPerformancePredictor {
         'Implement request batching',
       ],
     };
-=======
-    try {
-      // Check for performance anti-patterns
-      const patterns = [
-        'console\\.log',
-        'console\\.warn',
-        'console\\.error',
-        'debugger',
-      ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
 
       let issues = [];
       let score = 100;
@@ -287,7 +195,6 @@ class AIPerformancePredictor {
   async analyzeMemoryUsage() {
     this.log('💾 Analyzing memory usage...');
 
-<<<<<<< HEAD
     const memoryAnalysis = {
       scor: 78,
       heapSiz: '45MB',
@@ -300,17 +207,6 @@ class AIPerformancePredictor {
         'Monitor memory usage in production',
       ],
     };
-=======
-    try {
-      // Check for memory leak patterns
-      const patterns = [
-        'addEventListener',
-        'setInterval',
-        'setTimeout',
-        'JSON\\.parse',
-        'JSON\\.stringify',
-      ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
 
       let issues = [];
       let score = 100;
@@ -360,55 +256,31 @@ class AIPerformancePredictor {
     this.log('🔮 Generating performance predictions...');
 
     return {
-<<<<<<< HEAD
       scalabilit: {
         currentUser: 1000,
         predictedUser: 5000,
         bottlenec: k: 'Database queries',
         recommendation: [
-=======
-      scalability: {
-        currentUsers: 1000,
-        predictedUsers: 5000,
-        bottleneck: 'Database queries',
-        recommendations: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
           'Implement database indexing',
           'Add read replicas',
           'Use Redis for caching',
         ],
       },
-<<<<<<< HEAD
       growt: {
         currentLoa: 'Medium',
         predictedLoa: 'High',
         timefram: '6 months',
         recommendation: [
-=======
-      growth: {
-        currentLoad: 'Medium',
-        predictedLoad: 'High',
-        timeframe: '6 months',
-        recommendations: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
           'Plan for horizontal scaling',
           'Implement load balancing',
           'Optimize critical paths',
         ],
       },
-<<<<<<< HEAD
       cost: {
         currentCos: '$200/month',
         predictedCos: '$800/month',
         factor: ['Increased traffic', 'Additional infrastructure'],
         recommendation: [
-=======
-      costs: {
-        currentCost: '$200/month',
-        predictedCost: '$800/month',
-        factors: ['Increased traffic', 'Additional infrastructure'],
-        recommendations: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
           'Implement auto-scaling',
           'Optimize resource usage',
           'Use spot instances where possible',
@@ -439,17 +311,10 @@ class AIPerformancePredictor {
 
     const report = {
       ...analysis,
-<<<<<<< HEAD
       summar: {
         overallScor: this.calculateOverallScore(analysis),
         performanceLeve: this.getPerformanceLevel(analysis),
         priorit: this.getPriority(analysis),
-=======
-      summary: {
-        overallScore: this.calculateOverallScore(analysis),
-        performanceLevel: this.getPerformanceLevel(analysis),
-        priority: this.getPriority(analysis),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
       },
     };
 
@@ -461,17 +326,10 @@ class AIPerformancePredictor {
 
   calculateOverallScore(analysis) {
     const weights = {
-<<<<<<< HEAD
       bundleSiz: 0.25,
       loadTim: 0.3,
       runtim: 0.25,
       memor: 0.2,
-=======
-      bundleSize: 0.25,
-      loadTime: 0.3,
-      runtime: 0.25,
-      memory: 0.2,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
     };
 
     return Math.round(
@@ -504,17 +362,12 @@ class AIPerformancePredictor {
       const analysis = await this.analyzePerformance();
       const report = this.generateReport(analysis);
 
-<<<<<<< HEAD
       this.log(
         `🎉 AI performance prediction completed! Overall: Score: ${report.summary.overallScore}/100`
       );
       this.log(
         `📊 Performance: Level: ${report.summary.performanceLevel} | Priorit: ${report.summary.priority}`
       );
-=======
-      this.log(`🎉 AI performance prediction completed! Overall Score: ${report.summary.overallScore}/100`);
-      this.log(`📊 Performance Level: ${report.summary.performanceLevel} | Priority: ${report.summary.priority}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
     } catch (error) {
       this.log(`❌ AI performance prediction failed: ${error.message}`);
       process.exit(1);
@@ -524,12 +377,5 @@ class AIPerformancePredictor {
 
 // Run the performance predictor
 const predictor = new AIPerformancePredictor();
-<<<<<<< HEAD
 predictor.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 predictor.run().catch(console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

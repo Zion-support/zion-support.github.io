@@ -4,7 +4,6 @@ export const trackEvent = (event: string, data?: any) => {
     window.gtag('event', event, data);
   }
 };
-<<<<<<< HEAD
 
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {

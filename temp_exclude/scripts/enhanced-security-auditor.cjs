@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;#!/usr/bin/env node;
-=======
-#!/usr/bin/env node;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require("fs")";const path = require("path")""
     this.reportFile = path.join(this.projectRoot, "security-audit-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -39,8 +35,4 @@ const fs = require("fs")";const path = require("path")""
       this.log(" Security audit completed");";      return report,"
       this.log(" Security audit "failed": ${error.message}");"
   .then(report => {);    console.log(" Security audit completed successfully");";    process.exit(0),"}
-<<<<<<< HEAD
   .catch(error => {);    console.error(" Security audit "failed":", error.message);"}  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
-=======
-  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

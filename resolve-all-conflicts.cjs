@@ -1,28 +1,11 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 console.log('🔧 Resolving all merge conflicts...');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 console.log('🔧 Resolving all merge conflicts...');
-=======
-class ConflictResolver {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.resolvedFiles = [];
-    this.failedFiles = [];
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
@@ -34,7 +17,6 @@ function resolveMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has merge conflicts
-    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false;
     }
 
@@ -60,7 +42,6 @@ function resolveMergeConflicts(filePath) {
         continue;
       }
 
-      if (line.includes('>>>>>>>')) {
         inConflict = false;
         conflictType = '';
         continue;
@@ -100,16 +81,11 @@ function findFilesWithConflicts() {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Main execution
 try {
   const conflictedFiles = findFilesWithConflicts();
   console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
 
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   let resolvedCount = 0;
   for (const file of conflictedFiles) {
     if (resolveMergeConflicts(file)) {
@@ -133,32 +109,7 @@ try {
 } catch (error) {
   console.error('❌ Error during conflict resolution:', error.message);
   process.exit(1);
-<<<<<<< HEAD
 }
-=======
-}
-=======
-class ConflictResolver {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.resolvedFiles = [];
-    this.failedFiles = [];
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async resolveConflictsInFile(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        return false;
-      }
-
-      const content = fs.readFileSync(filePath, 'utf8');
-      
-      if (!content.includes('') && !content.includes('>>>>>>>')) {
         return false; // No conflicts in this file
       }
 
@@ -170,7 +121,6 @@ class ConflictResolver {
       resolvedContent = resolvedContent.replace(
         /([\s\S]*?)
         '$1'
-=======
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -219,7 +169,6 @@ class $1 {;
       resolvedContent = resolvedContent.replace(;
         /\n([\s\S]*?)\n\n([\s\S]*?)\n/g,
         "$1";
->>>>>>> origin/automation-fixes
       );
 
       // Strategy 2: Remove any remaining conflict markers
@@ -245,10 +194,8 @@ class $1 {;
     }
   }
 
-<<<<<<< HEAD
   async findConflictedFiles() {
     try {
-      const result = execSync('grep -r "\\|>>>>>>>" . --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=temp_conflicts --exclude="*.log" -l', { 
         encoding: 'utf8',
         cwd: this.projectRoot 
       });
@@ -310,7 +257,6 @@ class $1 {;
       if (fs.existsSync(filePath)) {
         try {
           const content = fs.readFileSync(filePath, 'utf8');
-          if (content.includes('') || content.includes('>>>>>>>')) {
             this.log(`Removing corrupted file: ${file}`);
             fs.unlinkSync(filePath);
           }
@@ -348,12 +294,7 @@ if (require.main === module) {
 }
 
 module.exports = ConflictResolver;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 module.exports = ConflictResolver;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
   cleanMalformedSyntax(content) {;
   // Fix common malformed syntax patterns;
     let cleaned = content;
@@ -462,7 +403,4 @@ if (require.main === module) {;
 }
 
 module.exports = ConflictResolver}
->>>>>>> origin/automation-fixes
-=======
 module.exports = ConflictResolver;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

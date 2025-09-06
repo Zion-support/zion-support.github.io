@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -30,14 +29,8 @@
     log('error', 'Fatal error in enhanced security scanner', error.message);
     process.exit(1)}
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD:scripts/enhanced-security-scanner.cjs
 main();#!/usr/bin/env node;
-=======
-#!/usr/bin/env node;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -67,8 +60,4 @@ console.log('======')
     "message"
     "action"
       log('warn', 'Vulnerabilities "found")
-<<<<<<< HEAD
       log('info', 'Security "Recommendations")
-=======
-      log('info', 'Security "Recommendations")
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

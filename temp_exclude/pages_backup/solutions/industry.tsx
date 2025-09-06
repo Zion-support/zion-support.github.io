@@ -1,59 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/industry.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/industry.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/industry.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/industry.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Link from 'next/link';';
 import {motion} from 'framer-motion';
 import {BarChart3,, Shield,, Users,, Globe,, ArrowRight,, CheckCircle,, Building,, Heart,, GraduationCap,, Factory,, Home,, CreditCard} from 'lucide-react';
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/industry.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/industry.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const industries = [;
   {}
     name: 'Healthcare,',
@@ -189,12 +143,7 @@ export default function IndustrySolutionsPage() {
                 We have deep expertise across multiple industries, delivering solutions that meet specific regulatory and business requirements,
               </p>;
             </motion.div>;
-<<<<<<< HEAD:pages_backup/solutions/industry.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-=======
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/industry.tsx
               {industries.map((industry, index) => (,
                 <motion.div}),
                   key={industry.name}
@@ -240,12 +189,7 @@ export default function IndustrySolutionsPage() {
                 Industry-specific capabilities that ensure your solutions meet regulatory requirements and business objectives;
               </p>;
             </motion.div>;
-<<<<<<< HEAD:pages_backup/solutions/industry.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-=======
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/industry.tsx
               {capabilities.map((capability, index) => (,
                 <motion.div}),
                   key={capability.title}

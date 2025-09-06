@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     this.log(`Total improvements: ${this.improvements.length}`);
     this.log(`Total errors: ${this.errors.length}`);
     this.log(`Duration: ${duration}ms`);
@@ -19,13 +18,7 @@
 }
 // Run the improvements
 const improvements = new SimpleAppImprovements();
-<<<<<<< HEAD
-<<<<<<< HEAD:scripts/simple-app-improvements-fixed.cjs
-<<<<<<< HEAD
 improvements.runAllImprovements().catch(console.error);#!/usr/bin/env node;
-=======
-#!/usr/bin/env node;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -46,8 +39,4 @@ console.log('=====')
     this.log('===')
       this.log('\\n Improvements created:')
       this.log('\\n Errors encountered:')
-<<<<<<< HEAD
     this.log('\\n� App improvements completed!')
-=======
-    this.log('\\n� App improvements completed!')
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

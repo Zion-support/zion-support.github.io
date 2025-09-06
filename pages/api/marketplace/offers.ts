@@ -1,10 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
-import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
-import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
+import {
+  assertClient,
+  assertTalentOrClientForOffer,
+  getDemoUser,
+} from "../../../utils/marketplace/auth";
+import {
+  getOfferById,
+  listOffers,
+  saveOffer,
+  saveProject,
+} from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({ ok: false, error: message })
+  return res.status(code).json({ ok: false, error: message });
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,7 +34,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req);
-      const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
+      const {
+        talentSlug,
+        startDateIso,
+        scopeSummary,
+        paymentTerms,
+        agreementUrl,
+      } = req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
         return bad(res, "Missing required fields");
       }
@@ -39,7 +54,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl,
-        status: "SENT"
+        status: "SENT",
       };
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer });
@@ -51,9 +66,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (!id || !action) return bad(res, "Missing id or action");
       const existing = getOfferById(id);
       if (!existing) return bad(res, "Offer not found", 404);
-      const user = assertTalentOrClientForOffer(req, existing, req.headers["x-demo-talent-slug"] as string);
+      const user = assertTalentOrClientForOffer(
+        req,
+        existing,
+        req.headers["x-demo-talent-slug"] as string,
+      );
       if (action === "accept") {
-        if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
+        if (user.role !== "talent")
+          return bad(res, "Only talent can accept", 403);
         existing.status = "CONFIRMED";
         // Create a project upon acceptance
         const project: Project = {
@@ -64,18 +84,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           talentSlug: existing.talentSlug,
           startDateIso: existing.startDateIso,
           status: "ACTIVE",
-          timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
+          timeline:
+            existing.paymentTerms.type === "milestone"
+              ? existing.paymentTerms.milestones || []
+              : [],
           documents: existing.agreementUrl
             ? [
                 {
                   id: uuidv4(),
                   name: "Agreement",
                   url: existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString()
-                }
+                  uploadedAtIso: new Date().toISOString(),
+                },
               ]
             : [],
-          notes: []
+          notes: [],
         };
         saveProject(project);
         existing.projectId = project.id;
@@ -84,7 +107,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       if (action === "request_changes") {
-        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403);
+        if (user.role !== "talent")
+          return bad(res, "Only talent can request changes", 403);
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote || "";
         saveOffer(existing);
@@ -92,7 +116,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       if (action === "decline") {
-        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
+        if (user.role !== "talent")
+          return bad(res, "Only talent can decline", 403);
         existing.status = "DECLINED";
         saveOffer(existing);
         return res.json({ ok: true, offer: existing });
@@ -104,6 +129,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return bad(res, "Method not allowed", 405);
   } catch (e: any) {
     const status = e?.statusCode || 500;
-    return res.status(status).json({ ok: false, error: e?.message || "Server error" });
+    return res
+      .status(status)
+      .json({ ok: false, error: e?.message || "Server error" });
   }
 }

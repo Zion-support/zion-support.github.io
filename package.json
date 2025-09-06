@@ -89,7 +89,7 @@
     "quality:analyze": "node scripts/automation/ai-code-quality-analyzer.cjs",
     "quality:fix": "npm run lint:fix && npm run type-check",
     "security:scan": "node scripts/automation/ai-security-intelligence.cjs",
-    "security:audit": "node scripts/security-audit.js",
+    "security:audit": "node scripts/security-audit.cjs",
     "performance:analyze": "node scripts/automation/ai-performance-predictor.cjs",
     "performance:optimize": "node scripts/automation/advanced-performance-optimizer.cjs",
     "monitor:health": "node scripts/health-monitor-enhanced.cjs",
@@ -200,7 +200,7 @@
     "readme:generate": "node scripts/generate-readme.js",
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
-    "perf:monitor": "node scripts/performance-monitor.js",
+    "perf:monitor": "node scripts/performance-monitor.cjs",
     "perf:audit": "npm run perf:monitor",
     "perf:lighthouse": "lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
     "format": "prettier --write .",
@@ -244,7 +244,7 @@
     "build:production": "NODE_ENV=production npm run build",
     "error:detect": "node automation/intelligent-error-detector.cjs",
     "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
-    "optimize:images": "node scripts/optimize-images.js",
+    "optimize:images": "node scripts/optimize-images.cjs",
     "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
     "test:accessibility": "npx jest --testPathPatterns=accessibility",
     "test:performance": "npx jest --testPathPatterns=performance",
@@ -256,7 +256,10 @@
     "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
-    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
+    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
+    "security:headers": "node scripts/security-headers.js",
+    "automation:ultimate": "node automation/ultimate-automation-suite.cjs",
+    "automation:fix": "node simple-automation-fixer.cjs"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
