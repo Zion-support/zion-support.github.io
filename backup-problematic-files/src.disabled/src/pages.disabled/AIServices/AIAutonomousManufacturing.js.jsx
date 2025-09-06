@@ -9,4 +9,3 @@ const AIAutonomousManufacturing.js = ({ className }) => {
   );
 };
 
-export default AIAutonomousManufacturing.js;

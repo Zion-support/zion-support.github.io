@@ -9,4 +9,3 @@ const AIAutonomousOrchestration = ({ className }) => {
   );
 };
 
-export default AIAutonomousOrchestration;

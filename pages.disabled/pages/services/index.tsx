@@ -1,18 +1,9 @@
-
-
 const categories = [\'AI Services\', \'IT Services\', \'Development\', \'Security\'];
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
 const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ServicesIndex() {
   const services = [
     {
@@ -78,8 +69,6 @@ export default function ServicesIndex() {
         <title>Services - Zion Tech Group</title>
         <meta name=\"description\" content=\"Comprehensive technology services including AI, development, automation, and more.\" />
       </Head>
-
-
             {services.map((service, index) => (
               <div key={index} className=\"bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6\">
                 <div className=\"flex items-center mb-4\">
@@ -88,12 +77,9 @@ export default function ServicesIndex() {
                   </div>
                   <h3 className=\"text-xl font-semibold text-gray-900\">{service.name}</h3>
                 </div>
-
-
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">
                       <Check className=\"w-4 h-4 text-green-500 mr-2\" />
-=======
 export default function ServicesIndex() {;
   const services = [;
     {;
@@ -192,7 +178,6 @@ export default function ServicesIndex() {;
                   {service && service.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">;
                       <Check className=\"w-4 h-4 text-green-500 mr-2\" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled/pages/services/index.tsx
                       {feature}
                     </li>;
                   ))}
@@ -205,19 +190,6 @@ export default function ServicesIndex() {;
                 </Link>;
               </div>;
             ))}
-
-          </div>;
-          <div className=\"text-center mt-16\">;
-            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Ready to Get Started?</h2>;
-            <p className=\"text-lg text-gray-600 mb-8\">;
-          <div className="text-center mt-16">;
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>;
-            <p className="text-lg text-gray-600 mb-8">;
-              Contact us today to discuss your project and get a custom solution;
-            </p>;
-            <div className=\"flex flex-col sm:flex-row gap-4 justify-center\">;
-              <Link
-
                 href=\"/contact\"
                 className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\">;
                 Get Free Consultation;
@@ -233,7 +205,3 @@ export default function ServicesIndex() {;
       </div>;
     </>;
   );
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

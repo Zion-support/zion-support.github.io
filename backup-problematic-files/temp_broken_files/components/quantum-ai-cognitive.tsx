@@ -46,7 +46,7 @@ export default function QuantumAICognitivePage() {
               <div className=&quot;flex items-end justify-between mb-3&quot;>
                 <div>
                   <div className=&quot;text-3xl font-bold text-white&quot;>{service.price}<span className=&quot;text-slate-400 text-base&quot;>{service.period}</span></div>
-                  <div className=&quot;text-slate-400&quot;>{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                  <div className=&quot;text-slate-400&quot;>{service.trialDays}-day free trial  Setup: {service.setupTime}</div>
                 </div>
                 <div className=&quot;flex items-center text-yellow-400&quot;><Star className=&quot;w-4 h-4 mr-1&quot; />{service.rating.toFixed(1)}</div>
               </div>

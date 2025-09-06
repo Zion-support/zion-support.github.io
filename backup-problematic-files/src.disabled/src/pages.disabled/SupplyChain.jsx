@@ -9,4 +9,3 @@ const SupplyChain = ({ className }) => {
   );
 };
 
-export default SupplyChain;

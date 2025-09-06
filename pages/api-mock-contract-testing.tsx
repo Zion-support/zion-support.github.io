@@ -1,3 +1,21 @@
+import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import ServiceAds from '../components/sections/ServiceAds';
+export default function ApiMockContractTestingPage() {
+import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import ServiceAds from '../components/sections/ServiceAds';
+export default function ApiMockContractTestingPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
 
 
 class ErrorBoundary extends React.Component {
@@ -24,7 +42,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 import Head from 'next / head';
 import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
@@ -41,6 +58,78 @@ function ApiMockContractTestingPage() {
 ;
   const ad_items = [;
     {
+        'OpenAPI/GraphQL import and live mock server'
+        'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
+        'Dynamic data generators and scenario templates'
+        'Snapshot diffs and changelog with approvals'
+      ]
+      link: 'https://ziontechgroup.com/api-mock-contract-testing'
+      contactInfo
+    }
+        'OpenAPI/GraphQL import and live mock server',
+        'Contract tests gated in CI (GitHub/GitLab/Bitbucket)',
+        'Dynamic data generators and scenario templates',
+        'Snapshot diffs and changelog with approvals',
+      ],
+      link: 'https://ziontechgroup.com/api-mock-contract-testing',
+      contactInfo,;
+    },;
+  ];
+  const tiers = [
+    {
+      name: 'Starter'
+      price: '$69/month'
+      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks']
+    }
+    {
+      name: 'Team'
+      price: '$149/month'
+      items: ['5 projects', 'Unlimited mocks', 'Record/replay', 'Slack alerts']
+    }
+    {
+      name: 'Enterprise'
+      price: 'Custom'
+      items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
+    },  ];
+
+import React from 'react';
+import Head from 'next/head';
+import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import ServiceAds from '../components/sections/ServiceAds';
+export default function ApiMockContractTestingPage(req, res) {
+  try {
+  const contactInfo = {;
+    mobile: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
+  };
+  const adItems = [;
+    {;
+      title: '🧪 API Mock & Contract Testing Platform';
+      description: 'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',;
+      price: 'Starting at $69/month',;
+      features: [;
+        'OpenAPI/GraphQL import and live mock serverContract tests gated in CI (GitHub/GitLab/Bitbucket)Dynamic data generators and scenario templatesSnapshot diffs and changelog with approvals';
+      ],;
+      link: 'https://ziontechgroup.com/api-mock-contract-testing',;
+      contactInfo;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const tiers = [;
+    { name: 'Starter', price: '$69/month', items: ['1 project5 mocksOpenAPI importCI status checks'] },;
+    { name: 'Team', price: '$149/month', items: ['5 projectsUnlimited mocksRecord/replaySlack alerts'] };
+    { name: 'Enterprise', price: 'Custom', items: ['SAML/SSORBACPrivate cloud/VPCPremium support']   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
       title: '🧪 API Mock & Contract Testing Platform',
       description:;
         'Spin up OpenAPI / GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',
@@ -57,42 +146,20 @@ function ApiMockContractTestingPage() {
   ];
 ;
   const tiers = [;
-    {
-      name: 'Starter',
-      price: '$69 / month',
-      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks'],
-    },
-    {
-      name: 'Team',
-      price: '$149 / month',
-      items: ['5 projects', 'Unlimited mocks', 'Record / replay', 'Slack alerts'],
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      items: ['SAML / SSO', 'RBAC', 'Private cloud / VPC', 'Premium support'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     },  ];
 ;
   return (
-
-          href='https://ziontechgroup && ziontechgroup.com/api-mock-contract-testing'
-        />;
-      </Head>;
-
-      <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>;
-
+    <Layout>
+      <Head>
+        <title>API Mock & Contract Testing | Zion Tech Group</title>
+        <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
+        <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
+      </Head>
+      <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds
           heading='API Quality Fast-Track'
           subheading='Mock, validate, and ship with confidence.'
           items={adItems}
-
-        />;
-
-        <div className='max-w-5xl mx-auto mt-8'>;
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
-            {tiers && tiers.map(t => (;
-
               <div
                 key={t && t.name}
                 className='bg-black/30 border border-gray-700/50 rounded-2xl p-6'>;
@@ -110,12 +177,21 @@ function ApiMockContractTestingPage() {
                       className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
                       <Check /> <span>{i}</span>;
                     </li>                  ))}
-                </ul>;
-              </div>;
-
-            ))}
-
-            ))}
+          </div>
+          <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>
+              <div className='flex items-center justify-center gap-2 text-cyan-400 w-4 h-4'>
+                <Phone />
+                <span>{contactInfo.mobile}</span>
+              </div>
+              <div className='flex items-center justify-center gap-2 text-purple-400 w-4 h-4'>
+                <Mail />
+                <span>{contactInfo.email}</span>
+              </div>
+              <div className='flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs'>
+                <MapPin />
+                <span>{contactInfo.address}</span>
+              </div>
           </div>
 
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
@@ -126,12 +202,7 @@ function ApiMockContractTestingPage() {
             </div>
             <div className="text-center">
 
-              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
       </div>
@@ -158,7 +229,6 @@ function ApiMockContractTestingPage() {
               <a
                 href='/contact'
                 className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl'>;
-=======
     <Layout>;
       <Head>;
         <title > API Mock & Contract Testing | Zion Tech Group</title>;
@@ -228,25 +298,11 @@ function ApiMockContractTestingPage() {
           </div>;
         </div>;
       </div>;
-
-
-=======
-
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   )
 }
 
     </Layout>);
 ;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -9,4 +9,3 @@ const ComprehensiveServices = ({ className }) => {
   );
 };
 
-export default ComprehensiveServices;

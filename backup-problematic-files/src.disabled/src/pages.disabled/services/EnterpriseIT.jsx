@@ -9,4 +9,3 @@ const EnterpriseIT = ({ className }) => {
   );
 };
 
-export default EnterpriseIT;

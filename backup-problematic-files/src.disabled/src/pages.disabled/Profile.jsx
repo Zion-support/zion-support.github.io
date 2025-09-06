@@ -9,4 +9,3 @@ const Profile = ({ className }) => {
   );
 };
 
-export default Profile;

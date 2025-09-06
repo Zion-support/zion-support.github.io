@@ -9,4 +9,3 @@ const Dashboard.js = ({ className }) => {
   );
 };
 
-export default Dashboard.js;

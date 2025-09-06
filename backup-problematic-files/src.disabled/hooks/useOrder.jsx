@@ -9,4 +9,3 @@ const UseOrder = ({ className }) => {
   );
 };
 
-export default UseOrder;

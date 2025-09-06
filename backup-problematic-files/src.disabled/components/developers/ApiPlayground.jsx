@@ -9,4 +9,3 @@ const ApiPlayground = ({ className }) => {
   );
 };
 
-export default ApiPlayground;

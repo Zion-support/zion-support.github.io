@@ -9,4 +9,3 @@ const AIChatbot.js = ({ className }) => {
   );
 };
 
-export default AIChatbot.js;

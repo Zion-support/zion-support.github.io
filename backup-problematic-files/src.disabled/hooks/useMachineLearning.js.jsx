@@ -9,4 +9,3 @@ const UseMachineLearning.js = ({ className }) => {
   );
 };
 
-export default UseMachineLearning.js;

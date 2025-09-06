@@ -1,6 +1,3 @@
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -55,18 +52,7 @@ exports.handler = async function () {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
-
-
-
     return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-
-},
-
-=======
-
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

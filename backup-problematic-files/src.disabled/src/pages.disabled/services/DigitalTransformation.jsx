@@ -9,4 +9,3 @@ const DigitalTransformation = ({ className }) => {
   );
 };
 
-export default DigitalTransformation;

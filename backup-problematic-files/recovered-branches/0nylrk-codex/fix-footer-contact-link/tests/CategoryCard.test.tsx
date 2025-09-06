@@ -27,11 +27,11 @@ it('normalizes slug with special characters', () => {;
 it('removes accents from slug', () => {;
   render(;
     <MemoryRouter>;
-      <CategoryCard title="Crème Brûlée" description="desc" icon="*" />;
+      <CategoryCard title="Crme Brle" description="desc" icon="*" />;
     </MemoryRouter>;
   ),;
 ;
-  const link = screen.getByRole('link', { name:/crème brûlée/i }),;
+  const link = screen.getByRole('link', { name:/crme brle/i }),;
   expect(link).toHaveAttribute('href/category/creme-brulee'),;
 }),;
 ;
@@ -48,6 +48,6 @@ it('treats underscores as spaces in slug', () => {;
 it ('normalizes slug with special characters', () => {
   render (<MemoryRouter> <CategoryCard title="R&D Tools!" description="desc" icon="*" /> </MemoryRouter>);
 it ('removes accents from slug', () => {
-  render (<MemoryRouter> <CategoryCard title="Crème Brûlée" description="desc" icon="*" /> </MemoryRouter>);
+  render (<MemoryRouter> <CategoryCard title="Crme Brle" description="desc" icon="*" /> </MemoryRouter>);
 it ('treats underscores as spaces in slug', () => {
   render (<MemoryRouter> <CategoryCard title="AI Tools" description="desc" icon="*" /> </MemoryRouter>);

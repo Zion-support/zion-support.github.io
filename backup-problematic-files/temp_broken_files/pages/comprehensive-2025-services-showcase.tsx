@@ -77,14 +77,14 @@ export default function Comprehensive2025ServicesShowcase() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">;
       <Head>;
-        <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>;
+        <title>Comprehensive 2025 Innovative Services Showcase  Zion Tech Group</title>;
         <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />;
-        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />;
+        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase  Zion Tech Group" />;
         <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />;
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />;
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />;
       ;
-        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase — Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>;
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase  Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>;
 ;
       <EnhancedNavigation />;
 ;
@@ -269,7 +269,7 @@ export default function Comprehensive2025ServicesShowcase() {;
 ;
                 {/* ROI and Setup */}
                 <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">;
-                  <div className="text-cyan-400 font-semibold mb-2">🚀 Expected ROI:</div>;
+                  <div className="text-cyan-400 font-semibold mb-2"> Expected ROI:</div>;
                   <p className="text-white/80 text-sm">{service.roi}</p>;
                   <div className="mt-2 text-white/60 text-sm">;
                     Setup Time:{service.setupTime} | Trial:{service.trialDays} days;
@@ -297,10 +297,10 @@ export default function Comprehensive2025ServicesShowcase() {;
                   <div className="text-white/60 text-sm mb-2">Ready to get started?</div>;
                   <div className="flex items-center justify-center gap-4 text-sm">;
                     <a href={`tel:${service.contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300">;
-                      📞 {service.contactInfo.mobile}
+                       {service.contactInfo.mobile}
                     </a>;
                     <a href={`mailto:${service.contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">;
-                      ✉️ {service.contactInfo.email}
+                       {service.contactInfo.email}
                     </a>;
                   </div>;
                 </div>;
@@ -310,7 +310,7 @@ export default function Comprehensive2025ServicesShowcase() {;
           {/* No Results */}
           {filteredServices.length === 0 && (;
             <div className="text-center py-20">;
-              <div className="text-6xl mb-4">🔍</div>;
+              <div className="text-6xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
               <p className="text-white/70 mb-6">Try adjusting your search terms or filters</p>;
               <button;

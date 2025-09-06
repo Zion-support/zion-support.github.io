@@ -9,4 +9,3 @@ const Textarea = ({ className }) => {
   );
 };
 
-export default Textarea;

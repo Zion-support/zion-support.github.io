@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -162,6 +164,10 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 const { execSync } = require('child_process')
 // console.log(' Final Automation Orchestrator')
 console.log('=====')
@@ -184,6 +190,9 @@ console.log('=====')
 <<<<<<< HEAD
     console.error(' Final automation orchestrator "failed")
 =======
+<<<<<<< HEAD
+    console.error(' Final automation orchestrator "failed")
+=======
     console.error(' Final automation orchestrator "failed")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -191,3 +200,7 @@ console.log('=====')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

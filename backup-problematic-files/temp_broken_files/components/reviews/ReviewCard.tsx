@@ -30,13 +30,13 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
 
       <div className=&quot;flex flex-wrap gap-2 mt-3&quot;>
         {typeof review.categories?.communication === 'number' && (
-          <span className=&quot;pill&quot;>Communication: {review.categories.communication}★</span>
+          <span className=&quot;pill&quot;>Communication: {review.categories.communication}</span>
         )}
         {typeof review.categories?.qualityOfWork === 'number' && (
-          <span className=&quot;pill&quot;>Quality: {review.categories.qualityOfWork}★</span>
+          <span className=&quot;pill&quot;>Quality: {review.categories.qualityOfWork}</span>
         )}
         {typeof review.categories?.timeliness === 'number' && (
-          <span className=&quot;pill&quot;>Timeliness: {review.categories.timeliness}★</span>        )}
+          <span className=&quot;pill&quot;>Timeliness: {review.categories.timeliness}</span>        )}
       </div>
     </div>
   )

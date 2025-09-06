@@ -1,3 +1,6 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-all-remaining-files.cjs
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -680,6 +683,15 @@ problematicFiles.forEach(fixFile);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-all-remaining-files.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -699,6 +711,10 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
     "password"
     "confirmPassword"
     console.log('Signup "attempt")
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-all-remaining-files.cjs
+<<<<<<< HEAD
+        <meta name="description" content="
+=======
 <<<<<<< HEAD
         <meta name="description" content="
 =======
@@ -712,3 +728,13 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+        <meta name="description" content="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-all-remaining-files.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

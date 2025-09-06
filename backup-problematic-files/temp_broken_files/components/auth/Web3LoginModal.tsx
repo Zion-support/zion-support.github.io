@@ -114,10 +114,10 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
         )}
         <div className=&quot;space-y-3&quot;>
           <button onClick={handleEvmConnect} disabled={loading} className=&quot;w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black&quot;>
-            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+            {loading ? 'Connecting' : 'Connect MetaMask / WalletConnect'}
           </button>
           <button onClick={handlePhantomConnect} disabled={loading} className=&quot;w-full rounded-lg bg-purple-600 text-white py-2.5&quot;>
-            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}          </button>
+            {loading ? 'Connecting' : 'Connect Phantom (Solana)'}          </button>
         </div>
         <div className="mt-4 flex justify-end">
           <button onClick={onClose} className="text-sm text-gray-600 dark: text-gray-300">Cancel</button>          <button onClick={onClose} className="text-sm text-gray-600 dark:text-gray-300">Cancel</button>

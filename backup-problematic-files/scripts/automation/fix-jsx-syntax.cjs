@@ -60,4 +60,17 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('JSX Syntax Fixer "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
 module.exports = JSXSyntaxFixer;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+module.exports = JSXSyntaxFixer;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+module.exports = JSXSyntaxFixer;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

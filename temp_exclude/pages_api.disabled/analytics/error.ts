@@ -40,8 +40,6 @@ export default function handler("req": NextApiReques t, "res": NextApiRespons e)
 import {NextApiRequest,NextApiResponse} from 'next'; interface ErrorData { error: { message: string, stack?: string, name: string} }; errorInfo: {
        componentStack: string
     },
-
-
 import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorData { error: {
        message: string, stack?: string, name: string
     },

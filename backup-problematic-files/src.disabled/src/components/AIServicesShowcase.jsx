@@ -9,4 +9,3 @@ const AIServicesShowcase = ({ className }) => {
   );
 };
 
-export default AIServicesShowcase;

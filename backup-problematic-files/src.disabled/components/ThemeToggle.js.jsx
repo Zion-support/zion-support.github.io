@@ -9,4 +9,3 @@ const ThemeToggle.js = ({ className }) => {
   );
 };
 
-export default ThemeToggle.js;

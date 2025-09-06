@@ -2,6 +2,11 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +25,10 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 /**
  * Master Automation Script;
@@ -31,6 +40,11 @@ const path = require('path')
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,6 +214,10 @@ module.exports = MasterAutomation;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -232,6 +250,9 @@ module.exports = MasterAutomation;
     this.log(`� "Git"`)
       this.log(`Master Automation "failed"`)
 <<<<<<< HEAD
+    console.error('Master automation "failed")
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     console.error('Master automation "failed")
@@ -253,3 +274,7 @@ module.exports = MasterAutomation;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

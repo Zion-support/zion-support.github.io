@@ -36,7 +36,7 @@ export default function AILegalContractAnalyzerPage() {;
               <div className="flex items-end justify-between mb-3">;
                 <div>;
                   <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>;
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup:{service.setupTime}</div>;
+                  <div className="text-slate-400">{service.trialDays}-day free trial  Setup:{service.setupTime}</div>;
                 </div>;
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>;
               </div>;
@@ -67,10 +67,10 @@ export default function AILegalContractAnalyzerPage() {;
               Automatically analyze contracts to identify key terms, risks, and compliance issues.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Key term extraction</li>
-              <li>• Risk identification</li>
-              <li>• Compliance checking</li>
-              <li>• Clause analysis</li>
+              <li> Key term extraction</li>
+              <li> Risk identification</li>
+              <li> Compliance checking</li>
+              <li> Clause analysis</li>
             </ul>
           </div>
           <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12&quot;>
@@ -86,7 +86,7 @@ export default function AILegalContractAnalyzerPage() {;
               <div className=&quot;flex items-end justify-between mb-3&quot;>
                 <div>
                   <div className=&quot;text-3xl font-bold text-white text-slate-400 text-base&quot;>{service.price}<span >{service.period}</span></div>
-                  <div className=&quot;text-slate-400&quot;>{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                  <div className=&quot;text-slate-400&quot;>{service.trialDays}-day free trial  Setup: {service.setupTime}</div>
                 </div>
                 <div className=&quot;flex items-center text-yellow-400 w-4 h-4 mr-1&quot;><Star />{service.rating.toFixed(1)}</div>
               </div>

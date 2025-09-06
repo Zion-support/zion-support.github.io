@@ -9,4 +9,3 @@ const AIAutonomousSoftwareEngineer.js = ({ className }) => {
   );
 };
 
-export default AIAutonomousSoftwareEngineer.js;

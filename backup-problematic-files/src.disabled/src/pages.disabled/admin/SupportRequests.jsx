@@ -9,4 +9,3 @@ const SupportRequests = ({ className }) => {
   );
 };
 
-export default SupportRequests;

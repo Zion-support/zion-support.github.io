@@ -167,10 +167,10 @@ export default function URLShortenerPage() {;
                 </Button>
 
                 <div className="text-sm text-gray-400">
-                  <p>• Professional, branded short URLs</p>
-                  <p>• Click tracking and analytics</p>
-                  <p>• QR code generation</p>
-                  <p>• Custom aliases available</p>
+                  <p> Professional, branded short URLs</p>
+                  <p> Click tracking and analytics</p>
+                  <p> QR code generation</p>
+                  <p> Custom aliases available</p>
                 </div>
               </div>
             </Card>
@@ -200,7 +200,7 @@ export default function URLShortenerPage() {;
 
                 {shortenedUrls.length === 0 ? (
                   <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
-                    <div className="text-6xl mb-4">📊</div>
+                    <div className="text-6xl mb-4"></div>
                     <p className="text-gray-400">
                       Your URL statistics will appear here. Create your first short URL to get started.
                     </p>
@@ -360,7 +360,7 @@ export default function URLShortenerPage() {;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🔗</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Custom Aliases</h3>
               <p className="text-gray-400">
                 Create memorable, branded short URLs with custom aliases that reflect your brand.
@@ -368,7 +368,7 @@ export default function URLShortenerPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📊</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Click Analytics</h3>
               <p className="text-gray-400">
                 Track clicks, engagement, and performance metrics for all your shortened URLs.
@@ -376,7 +376,7 @@ export default function URLShortenerPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📱</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">QR Code Generation</h3>
               <p className="text-gray-400">
                 Generate QR codes for easy sharing and mobile access to your shortened URLs.
@@ -384,7 +384,7 @@ export default function URLShortenerPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🛡️</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Secure & Reliable</h3>
               <p className="text-gray-400">
                 Enterprise-grade infrastructure ensures your URLs are always accessible and secure.
@@ -392,7 +392,7 @@ export default function URLShortenerPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">⚡</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Fast Performance</h3>
               <p className="text-gray-400">
                 Lightning-fast redirects with global CDN for optimal user experience worldwide.
@@ -400,7 +400,7 @@ export default function URLShortenerPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🔧</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Easy Management</h3>
               <p className="text-gray-400">
                 Simple dashboard to manage, edit, and delete your shortened URLs as needed.
@@ -424,54 +424,54 @@ export default function URLShortenerPage() {;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📢</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Marketing Campaigns</h3>
               <p className="text-gray-400 mb-6">
                 Create trackable links for email marketing, social media campaigns, and advertising to measure ROI and engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
-                <li>• Track campaign performance</li>
-                <li>• Measure click-through rates</li>
-                <li>• Optimize marketing strategies</li>
+                <li> Track campaign performance</li>
+                <li> Measure click-through rates</li>
+                <li> Optimize marketing strategies</li>
               </ul>
             </Card>
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📱</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>
               <p className="text-gray-400 mb-6">
                 Share concise, professional links on social platforms with built-in analytics to understand audience engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
-                <li>• Professional appearance</li>
-                <li>• Engagement tracking</li>
-                <li>• Brand consistency</li>
+                <li> Professional appearance</li>
+                <li> Engagement tracking</li>
+                <li> Brand consistency</li>
               </ul>
             </Card>
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📧</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>
               <p className="text-gray-400 mb-6">
                 Include short, trackable URLs in newsletters and promotional emails to monitor subscriber engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
-                <li>• Clean email design</li>
-                <li>• Subscriber analytics</li>
-                <li>• A/B testing support</li>
+                <li> Clean email design</li>
+                <li> Subscriber analytics</li>
+                <li> A/B testing support</li>
               </ul>
             </Card>
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🏢</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Business Presentations</h3>
               <p className="text-gray-400 mb-6">
                 Use short URLs in presentations, business cards, and printed materials for easy access and tracking.
               </p>
               <ul className="space-y-2 text-gray-300">
-                <li>• Professional branding</li>
-                <li>• Easy sharing</li>
-                <li>• Access tracking</li>
+                <li> Professional branding</li>
+                <li> Easy sharing</li>
+                <li> Access tracking</li>
               </ul>
             </Card>
           </div>
@@ -521,42 +521,42 @@ export default function URLShortenerPage() {;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🔗</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Custom Aliases</h3>;
               <p className="text-gray-400">;
                 Create memorable, branded short URLs with custom aliases that reflect your brand.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📊</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Click Analytics</h3>;
               <p className="text-gray-400">;
                 Track clicks, engagement, and performance metrics for all your shortened URLs.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📱</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">QR Code Generation</h3>;
               <p className="text-gray-400">;
                 Generate QR codes for easy sharing and mobile access to your shortened URLs.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🛡️</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Secure & Reliable</h3>;
               <p className="text-gray-400">;
                 Enterprise-grade infrastructure ensures your URLs are always accessible and secure.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">⚡</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Fast Performance</h3>;
               <p className="text-gray-400">;
                 Lightning-fast redirects with global CDN for optimal user experience worldwide.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🔧</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Easy Management</h3>;
               <p className="text-gray-400">;
                 Simple dashboard to manage, edit, and delete your shortened URLs as needed.;
@@ -578,51 +578,51 @@ export default function URLShortenerPage() {;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📢</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">Marketing Campaigns</h3>;
               <p className="text-gray-400 mb-6">;
                 Create trackable links for email marketing, social media campaigns, and advertising to measure ROI and engagement.;
               </p>;
               <ul className="space-y-2 text-gray-300">;
-                <li>• Track campaign performance</li>;
-                <li>• Measure click-through rates</li>;
-                <li>• Optimize marketing strategies</li>;
+                <li> Track campaign performance</li>;
+                <li> Measure click-through rates</li>;
+                <li> Optimize marketing strategies</li>;
               </ul>;
             </Card>;
             <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📱</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>;
               <p className="text-gray-400 mb-6">;
                 Share concise, professional links on social platforms with built-in analytics to understand audience engagement.;
               </p>;
               <ul className="space-y-2 text-gray-300">;
-                <li>• Professional appearance</li>;
-                <li>• Engagement tracking</li>;
-                <li>• Brand consistency</li>;
+                <li> Professional appearance</li>;
+                <li> Engagement tracking</li>;
+                <li> Brand consistency</li>;
               </ul>;
             </Card>;
             <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📧</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>;
               <p className="text-gray-400 mb-6">;
                 Include short, trackable URLs in newsletters and promotional emails to monitor subscriber engagement.;
               </p>;
               <ul className="space-y-2 text-gray-300">;
-                <li>• Clean email design</li>;
-                <li>• Subscriber analytics</li>;
-                <li>• A/B testing support</li>;
+                <li> Clean email design</li>;
+                <li> Subscriber analytics</li>;
+                <li> A/B testing support</li>;
               </ul>;
             </Card>;
             <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🏢</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">Business Presentations</h3>;
               <p className="text-gray-400 mb-6">;
                 Use short URLs in presentations, business cards, and printed materials for easy access and tracking.;
               </p>;
               <ul className="space-y-2 text-gray-300">;
-                <li>• Professional branding</li>;
-                <li>• Easy sharing</li>;
-                <li>• Access tracking</li>;
+                <li> Professional branding</li>;
+                <li> Easy sharing</li>;
+                <li> Access tracking</li>;
               </ul>;
             </Card>;
           </div>;

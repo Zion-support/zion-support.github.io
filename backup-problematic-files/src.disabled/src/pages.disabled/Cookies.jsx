@@ -9,4 +9,3 @@ const Cookies = ({ className }) => {
   );
 };
 
-export default Cookies;

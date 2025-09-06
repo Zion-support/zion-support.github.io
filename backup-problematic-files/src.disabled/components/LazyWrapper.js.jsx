@@ -9,4 +9,3 @@ const LazyWrapper.js = ({ className }) => {
   );
 };
 
-export default LazyWrapper.js;

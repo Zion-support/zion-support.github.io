@@ -3,7 +3,7 @@ export default function SiteHealth() {
   return (
     <div className=&quot;relative min-h-screen overflow-hidden bg-slate-950 text-white&quot;>
       <Head>
-        <title>Site Health — A11y, Performance, Links</title>
+        <title>Site Health  A11y, Performance, Links</title>
         <meta name=&quot;description&quot; content=&quot;Dashboards and audits for accessibility, performance, and link integrity.&quot; />
       </Head>
 
@@ -35,7 +35,7 @@ export default function SiteHealth() {
         <section className=&quot;mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center&quot;>
           <div className=&quot;mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md&quot;>
             <span className=&quot;h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]&quot; />
-            Real‑time health signals: A11y, Performance, Links          </div>
+            Realtime health signals: A11y, Performance, Links          </div>
           <h1 className=&quot;mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl&quot;>
             <span className=&quot;gradient-text&quot;>Site Health</span>
           </h1>
@@ -59,7 +59,7 @@ export default function SiteHealth() {
                   <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
                   <h3 className=&quot;text-lg font-semibold&quot;>{card.title}</h3>
                   <p className=&quot;mt-1 text-sm text-white/75&quot;>{card.desc}</p>
-                  <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open →</div>                </a>
+                  <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open </div>                </a>
               </a>
             ))}
           </div>
@@ -68,13 +68,13 @@ export default function SiteHealth() {
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Artifacts</h2>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm: grid-cols-2">
-            <a href="/reports/seo/latest.json" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">Latest SEO Report JSON ↗</a>
-            <a href="/reports/seo/index.html" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">SEO Audit Dashboard →</a>          </div>
+            <a href="/reports/seo/latest.json" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">Latest SEO Report JSON </a>
+            <a href="/reports/seo/index.html" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">SEO Audit Dashboard </a>          </div>
         </section>
 
         <section className=&quot;mx-auto max-w-7xl px-6 pb-24&quot;>
           <div className=&quot;animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl&quot;>
-            <h3 className=&quot;text-2xl font-bold&quot;>Keep quality high — continuously</h3>
+            <h3 className=&quot;text-2xl font-bold&quot;>Keep quality high  continuously</h3>
             <p className=&quot;mx-auto mt-2 max-w-2xl text-white/80&quot;>Automations enforce guardrails and publish transparent artifacts for every run.</p>
             <div className=&quot;mt-6 flex flex-wrap justify-center gap-3&quot;>
               <Link href=&quot;/automation&quot;><a className=&quot;rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white&quot;>Get Started</a></a>

@@ -218,7 +218,7 @@ export default function TokenomicsWhitepaperBuilder() {;
               <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />;
               <div className="flex gap-3">;
                 <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50">;
-                  {isGenerating ? 'Generating…' :'Generate with GPT'}
+                  {isGenerating ? 'Generating' :'Generate with GPT'}
                 </button>;
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>;
               </div>;

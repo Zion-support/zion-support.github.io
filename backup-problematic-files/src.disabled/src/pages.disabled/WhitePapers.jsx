@@ -9,4 +9,3 @@ const WhitePapers = ({ className }) => {
   );
 };
 
-export default WhitePapers;

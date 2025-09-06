@@ -1,46 +1,36 @@
-
-import React, { useState, Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
+import { Header } from './components/Header';
 import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import LoadingSpinner from './components/LoadingSpinner';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 
-function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+export default function App() {
+  const handleMenuClick = () => {
+    // Handle menu click if needed
+  };
 
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-          <Header />
-          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          
-          <main className="pt-20">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </Suspense>
+        <div className="min-h-screen flex flex-col">
+          <Header onMenuClick={handleMenuClick} />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
           </main>
-          
           <Footer />
-          <PerformanceMonitor />
         </div>
+        <PerformanceMonitor />
       </Router>
     </ErrorBoundary>
   );
 }
-
-export default App;

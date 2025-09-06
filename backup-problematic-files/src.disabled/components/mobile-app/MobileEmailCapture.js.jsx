@@ -9,4 +9,3 @@ const MobileEmailCapture.js = ({ className }) => {
   );
 };
 
-export default MobileEmailCapture.js;

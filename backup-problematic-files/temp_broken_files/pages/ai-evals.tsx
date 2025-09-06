@@ -113,7 +113,7 @@ const AIEvals: React.FC = () => {
           <div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
             <div className="text-gray-400 text-sm mb-2">Testing</div>
             <div className="text-white text-xl font-semibold flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 text-cyan-400">🧪</span>
+              <span className="w-5 h-5 text-cyan-400"></span>
               Comprehensive Tests
             </div>
             <p className="text-gray-400 mt-2 text-sm">
@@ -124,7 +124,7 @@ const AIEvals: React.FC = () => {
           <div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
             <div className="text-gray-400 text-sm mb-2">Metrics</div>
             <div className="text-white text-xl font-semibold flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 text-purple-400">📊</span>
+              <span className="w-5 h-5 text-purple-400"></span>
               Real Metrics
             </div>
             <p className="text-gray-400 mt-2 text-sm">
@@ -135,7 +135,7 @@ const AIEvals: React.FC = () => {
           <div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
             <div className="text-gray-400 text-sm mb-2">Safety</div>
             <div className="text-white text-xl font-semibold flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 text-pink-400">🛡️</span>
+              <span className="w-5 h-5 text-pink-400"></span>
               Safety Checks
             </div>
             <p className="text-gray-400 mt-2 text-sm">

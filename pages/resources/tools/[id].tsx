@@ -1,5 +1,3 @@
-
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -14,32 +12,17 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
-
-      type: 'Interactive Tool',
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
-
-
       features: [
         'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
     }
     {
-
-      id: 'ai-maturity-model',
-      title: 'AI Maturity Model',
-      description: 'Assess your current AI capabilities and plan your transformation journey.',
-      type: 'Framework',
-      estimatedTime: '30 minutes',
-
       fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your
@@ -54,7 +37,6 @@ import { useRouter } from 'next/router';
           <li><strong>Level 4 - Optimization:</strong> Advanced AI systems with continuous improvement</li>
           <li><strong>Level 5 - Innovation:</strong> AI-driven business transformation and new capabilities</li>
         </ul>
-        <h2>Assessment Dimensions</h2>
         <p>The maturity model evaluates several key dimensions:</p>
         <ul>
           <li><strong>Strategy & Leadership:</strong> AI vision, executive support, and strategic alignment</li>
@@ -65,9 +47,6 @@ import { useRouter } from 'next/router';
         </ul>
         <h2>Using the Framework</h2>
         <p>To effectively use this framework: </p>
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -84,20 +63,11 @@ import { useRouter } from 'next/router';
           <li>Progress tracking and measurement</li>
           <li>Stakeholder alignment and communication</li>
         </ul>
-
-
       features: [
         '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
     }
     {
-
-      id: 'performance-benchmark',
-      title: 'Performance Benchmarking Tool',
-      description: 'Compare your automation performance against industry standards.',
-      type: 'Analytics Tool',
-      estimatedTime: '20 minutes',
-
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against
@@ -139,10 +109,6 @@ import { useRouter } from 'next/router';
           <li>Use results to drive continuous improvement initiatives</li>
         </ul>
         <h2>Action Planning</h2>
-        <p>Based on benchmark results, develop action plans that include: </p>
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -150,24 +116,14 @@ import { useRouter } from 'next/router';
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-
-
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
-
-
-
-=======
-
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
 export default function ToolResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -339,13 +295,8 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const tool = tools.find(t => t.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!tool) {
     return (
       <>
@@ -374,11 +325,6 @@ export default function ToolResourcePage(req, res) {
       </>
     )
   }
-
-
-}
-
-
   return (
     <>
       <Head>
@@ -392,22 +338,16 @@ export default function ToolResourcePage(req, res) {
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Resources
               </Link>
             </nav>
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
-
-
                   {tool.type  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -419,11 +359,18 @@ export default function ToolResourcePage(req, res) {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               <div className="lg:col-span-2">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                  <div
+                    className="prose prose-invert max-w-none"
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />
                 </div>
               </div>
@@ -436,8 +383,6 @@ export default function ToolResourcePage(req, res) {
                     {tool.features.map((feature, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-
-
   ];
   const tool = tools.find(t => t.id === id);
   if (!tool) {;
@@ -533,9 +478,6 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </div>
 
@@ -557,9 +499,6 @@ export default function ToolResourcePage(req, res) {
             </div>
 
 
-            <div className="text-center">
-
-
 
 
                 href="/contact"
@@ -573,10 +512,8 @@ export default function ToolResourcePage(req, res) {
       </div>
     </>
 
-=======
 }
 
-=======
       estimated_time: '15 minutes',
       full_content: `;
         <h2 > About This Tool</h2>;
@@ -825,22 +762,11 @@ if ( {) {
                 </div>;
               </div>;
             </div>;
-            <div className="text - center">;
-              <Link;
-                href="/contact";
-                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
               >;
                 Get Started with Your Project;
               </Link>;
             </div>;
           </div>;
         </main>;
-      </div>;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

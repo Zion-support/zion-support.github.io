@@ -87,37 +87,37 @@ export default function AgenticRAGPage() {;
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Intelligent Document Processing</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• Multi-format document ingestion</li>
-                <li>• Automatic content chunking and indexing</li>
-                <li>• Smart metadata extraction</li>
-                <li>• Real-time content updates</li>
+                <li> Multi-format document ingestion</li>
+                <li> Automatic content chunking and indexing</li>
+                <li> Smart metadata extraction</li>
+                <li> Real-time content updates</li>
               </ul>
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Advanced Retrieval</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• Hybrid search (semantic + keyword)</li>
-                <li>• Context-aware reranking</li>
-                <li>• Multi-vector similarity search</li>
-                <li>• Filtered and scoped queries</li>
+                <li> Hybrid search (semantic + keyword)</li>
+                <li> Context-aware reranking</li>
+                <li> Multi-vector similarity search</li>
+                <li> Filtered and scoped queries</li>
               </ul>
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Confident Generation</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• Source-attributed responses</li>
-                <li>• Chain-of-thought reasoning</li>
-                <li>• Confidence scoring</li>
-                <li>• Hallucination prevention</li>
+                <li> Source-attributed responses</li>
+                <li> Chain-of-thought reasoning</li>
+                <li> Confidence scoring</li>
+                <li> Hallucination prevention</li>
               </ul>
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Enterprise Ready</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• Scalable architecture</li>
-                <li>• Security and compliance</li>
-                <li>• API and SDK support</li>
-                <li>• Custom model fine-tuning</li>
+                <li> Scalable architecture</li>
+                <li> Security and compliance</li>
+                <li> API and SDK support</li>
+                <li> Custom model fine-tuning</li>
               </ul>
             </div>
           </div>

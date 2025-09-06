@@ -129,12 +129,12 @@ const useCases = [;
 ],;
 ;
 const integrations = [;
-  { name:'Bloomberg Terminal', logo:'🔵', category:'Market Data' },;
-  { name:'Reuters Eikon', logo:'🔴', category:'Market Data' },;
-  { name:'TradingView', logo:'📊', category:'Charting' },;
-  { name:'MetaTrader', logo:'📈', category:'Trading Platform' },;
-  { name:'Interactive Brokers', logo:'🏦', category:'Broker' },;
-  { name:'TD Ameritrade', logo:'💼', category:'Broker' }
+  { name:'Bloomberg Terminal', logo:'', category:'Market Data' },;
+  { name:'Reuters Eikon', logo:'', category:'Market Data' },;
+  { name:'TradingView', logo:'', category:'Charting' },;
+  { name:'MetaTrader', logo:'', category:'Trading Platform' },;
+  { name:'Interactive Brokers', logo:'', category:'Broker' },;
+  { name:'TD Ameritrade', logo:'', category:'Broker' }
 ],;
 ;
 const NeuralFinanceAI:React.FC = () => {;
@@ -380,12 +380,12 @@ const useCases = [
 ],
 
 const integrations = [
-  { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
-  { name: 'Reuters Eikon', logo: '🔴', category: 'Market Data' },
-  { name: 'TradingView', logo: '📊', category: 'Charting' },
-  { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },
-  { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },
-  { name: 'TD Ameritrade', logo: '💼', category: 'Broker' }
+  { name: 'Bloomberg Terminal', logo: '', category: 'Market Data' },
+  { name: 'Reuters Eikon', logo: '', category: 'Market Data' },
+  { name: 'TradingView', logo: '', category: 'Charting' },
+  { name: 'MetaTrader', logo: '', category: 'Trading Platform' },
+  { name: 'Interactive Brokers', logo: '', category: 'Broker' },
+  { name: 'TD Ameritrade', logo: '', category: 'Broker' }
 ],
 const NeuralFinanceAI: React.FC = () => {_return (
     <Layout>
@@ -735,8 +735,8 @@ const NeuralFinanceAI: React.FC = () => {_return (
             </div>;
             ;
             <div className="text-sm text-gray-400">;
-              <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>;
-              <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>;
+              <p> 30-Day Free Trial   No Credit Card Required   Instant Setup</p>;
+              <p className="mt-2"> 24/7 Support   99.9% Uptime SLA   Global Infrastructure</p>;
             </div>;
           </div>;
         </div>;
@@ -757,6 +757,6 @@ const NeuralFinanceAI: React.FC = () => {_return (
 }` 
 }> Get Started </Link> </motion.div>) ) 
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent" > Seamless Integrations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Connect with your existing trading platforms and tools for a unified trading experience. </p> </motion.div> </motion.div>) ) 
-}</div> </div> </section> <div className="max-w-7xl mx-auto"> <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center"> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> text-xl text-gray-300 mb-8 max-w-3xl mx-auto"> Join leading investment firms using Neural Finance AI to gain competitive advantages in today's dynamic financial markets. </p> <div className=" flex flex-col sm:flex-row gap-4 justify-center mb-8"> <Link href=" /contact"className=" bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"> Start Free Trial </Link> <Link href=" /contact"className=" border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200"> Schedule Demo </Link> </div> <div className=" text-sm text-gray-400"> <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p> <p className=" mt-2" >✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p> </div> </div> </div> </section> </Layout>) 
+}</div> </div> </section> <div className="max-w-7xl mx-auto"> <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center"> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> text-xl text-gray-300 mb-8 max-w-3xl mx-auto"> Join leading investment firms using Neural Finance AI to gain competitive advantages in today's dynamic financial markets. </p> <div className=" flex flex-col sm:flex-row gap-4 justify-center mb-8"> <Link href=" /contact"className=" bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"> Start Free Trial </Link> <Link href=" /contact"className=" border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200"> Schedule Demo </Link> </div> <div className=" text-sm text-gray-400"> <p> 30-Day Free Trial   No Credit Card Required   Instant Setup</p> <p className=" mt-2" > 24/7 Support   99.9% Uptime SLA   Global Infrastructure</p> </div> </div> </div> </section> </Layout>) 
 };
 export default NeuralFinanceAI;

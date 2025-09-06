@@ -9,4 +9,3 @@ const AIAutonomousComplianceSecurity = ({ className }) => {
   );
 };
 
-export default AIAutonomousComplianceSecurity;

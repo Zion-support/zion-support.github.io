@@ -9,4 +9,3 @@ const OptimizedImage = ({ className }) => {
   );
 };
 
-export default OptimizedImage;

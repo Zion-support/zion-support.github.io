@@ -9,4 +9,3 @@ const AIAutonomousSynthesis = ({ className }) => {
   );
 };
 
-export default AIAutonomousSynthesis;

@@ -9,4 +9,3 @@ const ExpandedServicesPage = ({ className }) => {
   );
 };
 
-export default ExpandedServicesPage;

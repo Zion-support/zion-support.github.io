@@ -4,4 +4,3 @@ export const Lighthouse.spec = () => {
   return null;
 };
 
-export default Lighthouse.spec;

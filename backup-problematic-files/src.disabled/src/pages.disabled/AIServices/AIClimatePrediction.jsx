@@ -9,4 +9,3 @@ const AIClimatePrediction = ({ className }) => {
   );
 };
 
-export default AIClimatePrediction;

@@ -9,4 +9,3 @@ const ScrollToTop.js = ({ className }) => {
   );
 };
 
-export default ScrollToTop.js;

@@ -55,6 +55,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   sections.forEach((s) => writeSection(doc, s.title, s.contentMd)),
   // End
   doc.addPage(),
-  doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),
+  doc.fontSize(10).fillColor('#444444').text(' Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),
 
   doc.end()}

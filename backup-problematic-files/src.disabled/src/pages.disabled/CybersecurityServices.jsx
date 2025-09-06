@@ -9,4 +9,3 @@ const CybersecurityServices = ({ className }) => {
   );
 };
 
-export default CybersecurityServices;

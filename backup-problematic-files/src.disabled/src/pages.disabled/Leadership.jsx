@@ -9,4 +9,3 @@ const Leadership = ({ className }) => {
   );
 };
 
-export default Leadership;

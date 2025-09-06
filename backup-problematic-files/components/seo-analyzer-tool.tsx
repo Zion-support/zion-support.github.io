@@ -41,7 +41,7 @@ export default function SEOAnalyzerToolPage() {
       factors: [
         'Title tags optimizationMeta descriptionsHeader structure (H1, H2, H3)Content quality and lengthInternal linking structureImage optimization (alt tags)'
       ],
-      icon: '📝',
+      icon: '',
       color: 'text-green-400'
     },
     {
@@ -49,7 +49,7 @@ export default function SEOAnalyzerToolPage() {
       factors: [
         'Page load speedMobile responsivenessXML sitemapRobots.txt configurationSSL certificateCore Web Vitals'
       ],
-      icon: '⚙️',
+      icon: '',
       color: 'text-blue-400'
     },
     {
@@ -57,7 +57,7 @@ export default function SEOAnalyzerToolPage() {
       factors: [
         'Keyword densityContent relevanceReadability scoresContent freshnessMultimedia optimizationSchema markup'
       ],
-      icon: '📊',
+      icon: '',
       color: 'text-purple-400'
     },
     {
@@ -65,7 +65,7 @@ export default function SEOAnalyzerToolPage() {
       factors: [
         'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
       ],
-      icon: '📍',
+      icon: '',
       color: 'text-orange-400'
     }
   ],;

@@ -9,4 +9,3 @@ const NewsletterSection.js = ({ className }) => {
   );
 };
 
-export default NewsletterSection.js;

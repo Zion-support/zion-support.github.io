@@ -179,10 +179,10 @@ export default function AIAutonomousResearchAssistantPage() {;
                 Accelerate drug discovery by analyzing molecular structures, predicting drug interactions, and identifying potential therapeutic targets.;
               </p>;
               <ul className="space-y-2 text-gray-600">;
-                <li>• Drug repurposing analysis</li>;
-                <li>• Clinical trial optimization</li>;
-                <li>• Adverse effect prediction</li>;
-                <li>• Biomarker identification</li>;
+                <li> Drug repurposing analysis</li>;
+                <li> Clinical trial optimization</li>;
+                <li> Adverse effect prediction</li>;
+                <li> Biomarker identification</li>;
               </ul>;
             </div>;
 ;
@@ -192,10 +192,10 @@ export default function AIAutonomousResearchAssistantPage() {;
                 Discover new materials with desired properties through computational modeling and experimental design optimization.;
               </p>;
               <ul className="space-y-2 text-gray-600">;
-                <li>• Novel material discovery</li>;
-                <li>• Property optimization</li>;
-                <li>• Manufacturing process design</li>;
-                <li>• Sustainability analysis</li>;
+                <li> Novel material discovery</li>;
+                <li> Property optimization</li>;
+                <li> Manufacturing process design</li>;
+                <li> Sustainability analysis</li>;
               </ul>;
             </div>;
 ;
@@ -205,10 +205,10 @@ export default function AIAutonomousResearchAssistantPage() {;
                 Develop advanced trading strategies, risk models, and market analysis through pattern recognition and predictive modeling.;
               </p>;
               <ul className="space-y-2 text-gray-600">;
-                <li>• Market trend analysis</li>;
-                <li>• Risk assessment models</li>;
-                <li>• Algorithmic trading strategies</li>;
-                <li>• Portfolio optimization</li>;
+                <li> Market trend analysis</li>;
+                <li> Risk assessment models</li>;
+                <li> Algorithmic trading strategies</li>;
+                <li> Portfolio optimization</li>;
               </ul>;
             </div>;
 ;
@@ -218,10 +218,10 @@ export default function AIAutonomousResearchAssistantPage() {;
                 Model complex climate systems, predict environmental changes, and develop sustainable solutions through advanced data analysis.;
               </p>;
               <ul className="space-y-2 text-gray-600">;
-                <li>• Climate modeling</li>;
-                <li>• Impact assessment</li>;
-                <li>• Adaptation strategies</li>;
-                <li>• Policy recommendations</li>;
+                <li> Climate modeling</li>;
+                <li> Impact assessment</li>;
+                <li> Adaptation strategies</li>;
+                <li> Policy recommendations</li>;
               </ul>;
             </div>;
           </div>;
@@ -327,7 +327,7 @@ export default function AIAutonomousResearchAssistantPage() {;
   2 
 }d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /> </svg> </div> <h3 className="text-xl font-semibold text-gray-900 mb-4">Report Generation</h3> <p className="text-gray-600"> Automatically generates comprehensive research reports, including methodology, results, conclusions, and recommendations. </p> </div> </div> </div> </section> {
   /* Use Cases */ 
-}<section className="py-20 bg-white"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> Research Applications </h2> <p className="text-xl text-gray-600 max-w-2xl mx-auto"> Our platform is transforming research across multiple industries and disciplines </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> <div className="border border-gray-200 rounded-xl p-8"> <h3 className="text-2xl font-bold text-gray-900 mb-4">Pharmaceutical Research</h3> <p className="text-gray-600 mb-4"> Accelerate drug discovery by analyzing molecular structures, predicting drug interactions, and identifying potential therapeutic targets. </p> <ul className="space-y-2 text-gray-600"> <li>• Drug repurposing analysis</li> <li>• Clinical trial optimization</li> <li>• Adverse effect prediction</li> <li>• Biomarker identification</li> </ul> </div> <div className="border border-gray-200 rounded-xl p-8"> <h3 className="text-2xl font-bold text-gray-900 mb-4">Materials Science</h3> <p className="text-gray-600 mb-4"> Discover new materials with desired properties through computational modeling and experimental design optimization. </p> <ul className="space-y-2 text-gray-600"> <li>• Novel material discovery</li> <li>• Property optimization</li> <li>• Manufacturing process design</li> <li>• Sustainability analysis</li> </ul> </div> <div className="border border-gray-200 rounded-xl p-8"> <h3 className="text-2xl font-bold text-gray-900 mb-4">Financial Research</h3> <p className="text-gray-600 mb-4"> Develop advanced trading strategies, risk models, and market analysis through pattern recognition and predictive modeling. </p> <ul className="space-y-2 text-gray-600"> <li>• Market trend analysis</li> <li>• Risk assessment models</li> <li>• Algorithmic trading strategies</li> <li>• Portfolio optimization</li> </ul> </div> <div className="border border-gray-200 rounded-xl p-8"> <h3 className="text-2xl font-bold text-gray-900 mb-4">Climate Science</h3> <p className="text-gray-600 mb-4"> Model complex climate systems, predict environmental changes, and develop sustainable solutions through advanced data analysis. </p> <ul className="space-y-2 text-gray-600"> <li>• Climate modeling</li> <li>• Impact assessment</li> <li>• Adaptation strategies</li> <li>• Policy recommendations</li> </ul> </div> </div> </div> </section> {
+}<section className="py-20 bg-white"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> Research Applications </h2> <p className="text-xl text-gray-600 max-w-2xl mx-auto"> Our platform is transforming research across multiple industries and disciplines </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> <div className="border border-gray-200 rounded-xl p-8"> <h3 className="text-2xl font-bold text-gray-900 mb-4">Pharmaceutical Research</h3> <p className="text-gray-600 mb-4"> Accelerate drug discovery by analyzing molecular structures, predicting drug interactions, and identifying potential therapeutic targets. </p> <ul className="space-y-2 text-gray-600"> <li> Drug repurposing analysis</li> <li> Clinical trial optimization</li> <li> Adverse effect prediction</li> <li> Biomarker identification</li> </ul> </div> <div className="border border-gray-200 rounded-xl p-8"> <h3 className="text-2xl font-bold text-gray-900 mb-4">Materials Science</h3> <p className="text-gray-600 mb-4"> Discover new materials with desired properties through computational modeling and experimental design optimization. </p> <ul className="space-y-2 text-gray-600"> <li> Novel material discovery</li> <li> Property optimization</li> <li> Manufacturing process design</li> <li> Sustainability analysis</li> </ul> </div> <div className="border border-gray-200 rounded-xl p-8"> <h3 className="text-2xl font-bold text-gray-900 mb-4">Financial Research</h3> <p className="text-gray-600 mb-4"> Develop advanced trading strategies, risk models, and market analysis through pattern recognition and predictive modeling. </p> <ul className="space-y-2 text-gray-600"> <li> Market trend analysis</li> <li> Risk assessment models</li> <li> Algorithmic trading strategies</li> <li> Portfolio optimization</li> </ul> </div> <div className="border border-gray-200 rounded-xl p-8"> <h3 className="text-2xl font-bold text-gray-900 mb-4">Climate Science</h3> <p className="text-gray-600 mb-4"> Model complex climate systems, predict environmental changes, and develop sustainable solutions through advanced data analysis. </p> <ul className="space-y-2 text-gray-600"> <li> Climate modeling</li> <li> Impact assessment</li> <li> Adaptation strategies</li> <li> Policy recommendations</li> </ul> </div> </div> </div> </section> {
   /* Technical Specifications */ 
 }<section className="py-20 bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> Technical Architecture </h2> <p className="text-xl text-gray-600 max-w-2xl mx-auto"> Built on cutting-edge AI and cloud technologies for maximum performance and scalability </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"> <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
   2 

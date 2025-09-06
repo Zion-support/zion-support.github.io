@@ -9,4 +9,3 @@ const Dialog = ({ className }) => {
   );
 };
 
-export default Dialog;

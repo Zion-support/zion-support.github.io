@@ -114,9 +114,9 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
-        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
+        <title>Zion Tech Group  Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
         <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
-        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
+        <meta property="og:title" content="Zion Tech Group  Leading-Edge Technology Solutions" />
         <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
@@ -309,9 +309,9 @@ export default function HomePage() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">;
       <Head>;
-        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>;
+        <title>Zion Tech Group  Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>;
         <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />;
-        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />;
+        <meta property="og:title" content="Zion Tech Group  Leading-Edge Technology Solutions" />;
         <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />;
         <meta name="twitter:card" content="summary_large_image" />;
         <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />;
@@ -481,26 +481,26 @@ export default function HomePage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold text-white">Autonomous Update — 2025: 08: 15: 0508</h3>
+              <h3 className="text-lg font-semibold text-white">Autonomous Update  2025: 08: 15: 0508</h3>
               <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300">
-                Open <span aria-hidden>→</span>
+                Open <span aria-hidden></span>
               </div>
             </a>
             <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold text-white">Autonomous Update — 2025: 08: 15: 0507</h3>
+              <h3 className="text-lg font-semibold text-white">Autonomous Update  2025: 08: 15: 0507</h3>
               <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300">
-                Open <span aria-hidden>→</span>
+                Open <span aria-hidden></span>
               </div>
             </a>
             <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold text-white">Autonomous Update — 2025: 08: 15: 0457</h3>
+              <h3 className="text-lg font-semibold text-white">Autonomous Update  2025: 08: 15: 0457</h3>
               <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300">
-                Open <span aria-hidden>→</span>
+                Open <span aria-hidden></span>
               </div>
             </a>
           </div>

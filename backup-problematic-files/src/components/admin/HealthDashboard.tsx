@@ -308,7 +308,7 @@ const HealthDashboard:React.FC = () => {;
                       <div key={index} className="border-l-4 border-red-400 pl-3 py-1">;
                         <p className="text-sm font-medium">{error.description}</p>;
                         <p className="text-xs text-gray-600">;
-                          {error.occurrences} occurrences • {error.severity}
+                          {error.occurrences} occurrences  {error.severity}
                         </p>;
                       </div>;
                     ))}

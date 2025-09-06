@@ -9,4 +9,3 @@ const AIAutonomousCodeReview.js = ({ className }) => {
   );
 };
 
-export default AIAutonomousCodeReview.js;

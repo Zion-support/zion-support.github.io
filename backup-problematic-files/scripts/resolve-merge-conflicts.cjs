@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/resolve-merge-conflicts.cjs
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");"console.log(" Merge Conflict Resolver");"console.log("=====");/ Function to resolve merge conflicts in a filefunction resolveMergeConflicts(filePath) { if (true) { return false) { ) { return false}} console.log(` Resolving conflicts in ${filePath}.`); try {" let content = fs.readFileSync(filePath, "utf8";); let modified = fal;s;e; / Remove conflict markers and keep the newer version (incoming changes)"`"`
@@ -51,8 +53,13 @@ function resolveMergeConflicts(filePath) {
       if (line.includes('')) {
         inConflict = true;
         conflictType = 'head';
+=======
+conflictType = 'incoming';
+>>>>>>> pr-12166
         continue;
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       if (line.includes('')) {
 =======
@@ -65,15 +72,17 @@ function resolveMergeConflicts(filePath) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/resolve-merge-conflicts.cjs
         conflictType = 'incoming';
         continue;
       }
       
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         inConflict = false;
         conflictType = '';
         continue;
       }
-      
       if (!inConflict) {
         resolvedLines.push(line);
       } else if (conflictType === 'head') {
@@ -82,12 +91,10 @@ function resolveMergeConflicts(filePath) {
       }
       // Skip incoming version (second part)
     }
-    
     // Write resolved content
     fs.writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
-    
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;
@@ -166,23 +173,23 @@ class MergeConflictResolver {
           } catch (error) {
             // Skip files that can"t be read,,
 }
-
 // Function to find all files with merge conflicts
 function findConflictedFiles(dir) {
   const conflictedFiles = [];
-  
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
+<<<<<<< HEAD
           const content = fs.readFileSync(fullPath, 'utf8');
+=======
+          const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD:backup-problematic-files/scripts/resolve-merge-conflicts.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -204,6 +211,8 @@ function findConflictedFiles(dir) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/resolve-merge-conflicts.cjs
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
@@ -250,6 +259,7 @@ try {
 } catch (error) {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
+<<<<<<< HEAD:backup-problematic-files/scripts/resolve-merge-conflicts.cjs
 <<<<<<< HEAD
 }
 =======
@@ -264,3 +274,13 @@ try {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/resolve-merge-conflicts.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

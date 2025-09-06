@@ -9,4 +9,3 @@ const UseAICodeGeneration.js = ({ className }) => {
   );
 };
 
-export default UseAICodeGeneration.js;

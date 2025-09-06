@@ -67,7 +67,7 @@ export default function ProjectPage() {;
   }
 ;
   return (;
-    <div className="max-w-4xl mx-auto p-6 space-y-6">;      {loading && <div>Loading…</div>}
+    <div className="max-w-4xl mx-auto p-6 space-y-6">;      {loading && <div>Loading</div>}
       {error && <div className="text-red-600">{error}</div>}
       {project && (;
         <div className="space-y-6">;
@@ -94,9 +94,9 @@ export default function ProjectPage() {;
               {project.timeline?.length ? (;
                 project.timeline.map((m:any) => (;
                   <li key={m.id}>;
-                    <span className="font-medium">{m.title}</span>;                    {m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>}
-                    {m.amountUsd && <span> • ${m.amountUsd}</span>}
-                    {m.status && <span> • {m.status}</span>}
+                    <span className="font-medium">{m.title}</span>;                    {m.dueDateIso && <span>  due {new Date(m.dueDateIso).toLocaleDateString()}</span>}
+                    {m.amountUsd && <span>  ${m.amountUsd}</span>}
+                    {m.status && <span>  {m.status}</span>}
                   </li>;
                 ));
               ) :(;
@@ -116,7 +116,7 @@ export default function ProjectPage() {;
                     ) :(;
                       <span>{d.name}</span>;
                     )}
-                    <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>;
+                    <span className="text-gray-500">  uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>;
                   </li>;
                 ));
               ) :(;
@@ -132,7 +132,7 @@ export default function ProjectPage() {;
                 project.notes.map((n:any) => (;
                   <div key={n.id} className="text-sm">;
                     <span className="font-medium">{n.authorRole}</span>:{n.content}
-                    <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>;
+                    <span className="text-gray-500">  {new Date(n.createdAtIso).toLocaleString()}</span>;
                   </div>;
                 ));
               ) :(;
@@ -188,7 +188,7 @@ const [showFeedback, setShowFeedback] = useState (false);
 setShowFeedback (true) 
 }
 }return (<div className=" max-w-4xl mx-auto p-6 space-y-6"> {
-  loading && <div>Loading…</div> 
+  loading && <div>Loading</div> 
 }{
   error && <div className=" text-red-600"> {
   error 
@@ -214,15 +214,15 @@ setShowFeedback (true)
 }> <span className=" font-medium"> {
   m.title 
 }</span> {
-  m.dueDateIso && <span> • due {
+  m.dueDateIso && <span>  due {
   new Date (m.dueDateIso) .toLocaleDateString () 
 }</span> 
 }{
-  m.amountUsd && <span> • $ {
+  m.amountUsd && <span>  $ {
   m.amountUsd 
 }</span> 
 }{
-  m.status && <span> • {
+  m.status && <span>  {
   m.status 
 }</span> 
 }

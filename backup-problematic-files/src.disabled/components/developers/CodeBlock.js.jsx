@@ -9,4 +9,3 @@ const CodeBlock.js = ({ className }) => {
   );
 };
 
-export default CodeBlock.js;

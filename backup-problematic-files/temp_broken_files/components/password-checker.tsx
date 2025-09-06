@@ -281,10 +281,10 @@ onClick={() => copyToClipboard(generatedPassword)}
                 )}
 
                 <div className="text-sm text-gray-400">
-                  <p>• Real-time strength analysis</p>
-                  <p>• Multiple security criteria</p>
-                  <p>• Detailed feedback and suggestions</p>
-                  <p>• Strong password generator</p>
+                  <p> Real-time strength analysis</p>
+                  <p> Multiple security criteria</p>
+                  <p> Detailed feedback and suggestions</p>
+                  <p> Strong password generator</p>
                 </div>
               </div>
             </Card>
@@ -351,7 +351,7 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
                 </div>;
               ) :(;
                 <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">;
-                  <div className="text-6xl mb-4">🔒</div>;
+                  <div className="text-6xl mb-4"></div>;
                   <p className="text-gray-400">;
                     Enter a password above to see the security analysis and get personalized suggestions.;
                   </p>;
@@ -376,7 +376,7 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🔍</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Real-time Analysis</h3>
               <p className="text-gray-400">
                 Get instant feedback on password strength as you type with our advanced security algorithms.
@@ -384,7 +384,7 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📊</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Comprehensive Scoring</h3>
               <p className="text-gray-400">
                 Multi-factor analysis including length, complexity, and common password detection.
@@ -392,7 +392,7 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">💡</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Smart Suggestions</h3>
               <p className="text-gray-400">
                 Personalized recommendations to improve your password security and strength.
@@ -400,7 +400,7 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🔐</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Password Generator</h3>
               <p className="text-gray-400">
                 Generate cryptographically secure passwords that meet all security requirements.
@@ -408,7 +408,7 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🛡️</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Security Standards</h3>
               <p className="text-gray-400">
                 Based on industry best practices and security standards for maximum protection.
@@ -416,7 +416,7 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🔒</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Privacy First</h3>
               <p className="text-gray-400">
                 Your passwords are never stored or transmitted - analysis happens locally in your browser.
@@ -440,7 +440,7 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8 bg-gray-800 border border-gray-700">
-              <div className="text-4xl mb-4">✅</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Do's</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
@@ -467,7 +467,7 @@ className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor(
             </Card>
 
             <Card className="p-8 bg-gray-800 border border-gray-700">
-              <div className="text-4xl mb-4">❌</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Don'ts</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">

@@ -9,4 +9,3 @@ const DisputeDashboard.js = ({ className }) => {
   );
 };
 
-export default DisputeDashboard.js;

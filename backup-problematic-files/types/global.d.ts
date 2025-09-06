@@ -72,4 +72,3 @@ declare namespace NodeJS {
   }
 }
 
-export {};

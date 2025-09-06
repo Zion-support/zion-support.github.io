@@ -9,4 +9,3 @@ const SidebarContext.js = ({ className }) => {
   );
 };
 
-export default SidebarContext.js;

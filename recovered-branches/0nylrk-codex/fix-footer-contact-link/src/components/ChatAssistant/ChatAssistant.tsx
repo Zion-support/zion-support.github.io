@@ -1,24 +1,33 @@
-
-
+import { ChatMessage  } from './ChatMessage';
+import { ChatInput  } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+export interface Message {
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
-=======
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
 import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
-
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
   read?: boolean
+}
+
+
+  read?: boolean
+}
+export interface ChatAssistantProps {
+
 
     id: string,
     name: string,;
@@ -37,6 +46,7 @@ export interface Message {
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
   isOpen;
   onClose;
   recipient;
@@ -44,6 +54,60 @@ import {ChatInput} from './ChatInput';
 
   initialMessages = [];
   onSendMessage;
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+import React, { useState, useEffect, useRef, ReactNode } from 'react',
+import { ChatMessage } from './ChatMessage',
+import { ChatInput } from './ChatInput',
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { X } from "lucide-react",
+export interface Message {
+  id: string,
+  role: 'user' | 'assistant',
+  message: string,
+  timestamp: Date,
+  read?: boolean
+import React, { useState, useEffect, useRef, ReactNode } from 'react',;
+import { ChatMessage } from './ChatMessage',;
+import { ChatInput } from './ChatInput',;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { X } from "lucide-react",;
+export interface Message {;
+  id: string,;
+  role: 'user' | 'assistant',;
+  message: string,;
+  timestamp: Date,;
+  read?: boolean;
+}
+;
+export interface ChatAssistantProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  recipient: {;
+    id: string,;
+    name: string,;
+    avatarUrl?: string,;
+    role?: string;
+  },;
+  conversationId?: string,;
+  initialMessages?: Message[],;
+  onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
+  contextHeader?: ReactNode;
+}
+;
+export function ChatAssistant({;
+  isOpen,;
+  onClose,;
+  recipient,;
+  conversationId,;
+  initialMessages = [],;
+  onSendMessage,;
   contextHeader;
 }: ChatAssistantProps) {;
 
@@ -58,69 +122,16 @@ import {ChatInput} from './ChatInput';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     scrollToBottom()
-  }, [messages]);
+  }, [messages]),
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {
-
-
-  useEffect(() => {;
-    if (initialMessages && initialMessages.length > 0) {;
-      setMessages(initialMessages);
-    }
-  }, [initialMessages]);
-
-  useEffect(() => {;
-    scrollToBottom();
-  }, [messages]);
-
-  const scrollToBottom = () => {;
-    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleSendMessage = async (message: string) => {;
-    if (!message && message.trim()) return,;
-
-    // Add user message to the chat;
-    const newMessage: Message = {;
-      id: Date && Date.now().toString(),;
-      role: 'user',;
-      message;
-      timestamp: new Date();
-    };
-
-    setMessages((prev: Message[]) => [...prev, newMessage]);
-
-    // Send message to recipient via the provided handler;
-    await onSendMessage(message, conversationId);
-  };
-
-
-  if (!isOpen) return null;
-=======
-
-      id: Date.now().toString(),
-      role: 'user',
-      message,
-      timestamp: new Date()
-    },
-    
-    setMessages((prev: Message[]) => [...prev, newMessage]),
-    
-    // Send message to recipient via the provided handler
-    await onSendMessage(message, conversationId)
-  },
-
-  if (!isOpen) return null,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
@@ -139,28 +150,12 @@ import {ChatInput} from './ChatInput';
               {recipient && recipient.role && (;
                 <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
               )}
-
-            </div>;
-          </div>;
-          <Button
-            variant="ghost" 
-            size="icon"
-            className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick={onClose}>;
-            <X className="h-5 w-5" />;
-          </Button>;
-        </div>;
-
-
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
           </div>;
         )}
-
-
-
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">;
           {messages && messages.length === 0 ? (;
@@ -170,11 +165,6 @@ import {ChatInput} from './ChatInput';
           ) : (;
             messages && messages.map((msg) => (;
               <ChatMessage
-
-
-                key={msg.id} 
-
-
                 role={msg.role}
                 message={msg.message}
               />
@@ -182,7 +172,6 @@ import {ChatInput} from './ChatInput';
           )}
           <div ref={messagesEndRef} />
         </div>
-=======
                 key={msg && msg.id} 
                 role={msg && msg.role}
                 message={msg && msg.message}
@@ -192,9 +181,13 @@ import {ChatInput} from './ChatInput';
           <div ref={messagesEndRef} />;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Input */}
-
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
+          <ChatInput onSend={handleSendMessage} />;
+        </div>;
+      </div>;
+    </div>;
+  );
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
 import { X } from './lucide-react';
@@ -317,15 +310,14 @@ if (return null) {
         </div>;
       </div>;
     </div>);
-
-}
-=======
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
         </div>
       </div>
     </div>
   )
+};
+}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

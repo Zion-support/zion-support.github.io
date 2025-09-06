@@ -9,4 +9,3 @@ const LoadingSkeleton = ({ className }) => {
   );
 };
 
-export default LoadingSkeleton;

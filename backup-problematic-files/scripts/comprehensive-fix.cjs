@@ -1,3 +1,6 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-fix.cjs
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -9,10 +12,24 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
+>>>>>>> origin/main
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-fix.cjs
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -25,8 +42,17 @@ const path = require('path');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-console.log('🔧 Comprehensive fix for all files...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+console.log('🔧 Comprehensive fix for all files...');
 // List of problematic files
 const filesToFix = [
   'pages/about.tsx',
@@ -35,6 +61,9 @@ const filesToFix = [
   'pages/services.tsx',
   'pages/talent.tsx'
 ];
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-fix.cjs
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -47,12 +76,27 @@ const filesToFix = [
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${filePath}`);
       return false;
     }
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-fix.cjs
+<<<<<<< HEAD
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Remove all merge conflict markers
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -157,8 +201,12 @@ function main() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove all merge conflict markers
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-fix.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
     content = content.replace(/\n?/g, '');
@@ -185,6 +233,18 @@ function main() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
     content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');
@@ -192,22 +252,18 @@ function main() {
     content = content.replace(/,\s*"description":/g, ',');
     content = content.replace(/,\s*"icon":/g, ',');
     content = content.replace(/,\s*"href":/g, ',');
-    
     // Clean up extra whitespace and newlines
     content = content.replace(/\n\n\n+/g, '\n\n');
     content = content.replace(/\s+$/gm, '');
-    
     // Write the fixed content
     fs.writeFileSync(filePath, content);
     console.log(`✅ Fixed: ${filePath}`);
     return true;
-    
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
-
 // Process all files
 let fixedCount = 0;
 for (const file of filesToFix) {
@@ -215,6 +271,10 @@ for (const file of filesToFix) {
     fixedCount++;
   }
 }
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-fix.cjs
+<<<<<<< HEAD
+console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
+=======
 <<<<<<< HEAD
 
 console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
@@ -230,3 +290,14 @@ console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

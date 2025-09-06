@@ -203,24 +203,24 @@ export default function ServicesIndexPage() {;
                   return (;
                     <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">;
                       <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">;
-                        <span className="text-3xl">;                          {category === 'AI & Data' && '🧠'}
-                          {category === 'Developer Tools' && '⚙️'}
-                          {category === 'Cloud & FinOps' && '☁️'}
-                          {category === 'Observability' && '📊'}
-                          {category === 'Quality & Monitoring' && '🔍'}
-                          {category === 'Quantum Computing' && '⚛️'}
-                          {category === 'Space Technology' && '🚀'}
-                          {category === 'Metaverse' && '🌐'}
-                          {category === 'Cybersecurity' && '🛡️'}
-                          {category === 'Supply Chain' && '📦'}
-                          {category === 'Financial Services' && '💰'}
-                          {category === 'Healthcare' && '🏥'}
-                          {category === 'Manufacturing' && '🏭'}
-                          {category === 'Retail' && '🛍️'}
-                          {category === 'Education' && '📚'}
-                          {category === 'Government' && '🏛️'}
-                          {category === 'Energy' && '⚡'}
-                          {category === 'Transportation' && '🚗'}
+                        <span className="text-3xl">;                          {category === 'AI & Data' && ''}
+                          {category === 'Developer Tools' && ''}
+                          {category === 'Cloud & FinOps' && ''}
+                          {category === 'Observability' && ''}
+                          {category === 'Quality & Monitoring' && ''}
+                          {category === 'Quantum Computing' && ''}
+                          {category === 'Space Technology' && ''}
+                          {category === 'Metaverse' && ''}
+                          {category === 'Cybersecurity' && ''}
+                          {category === 'Supply Chain' && ''}
+                          {category === 'Financial Services' && ''}
+                          {category === 'Healthcare' && ''}
+                          {category === 'Manufacturing' && ''}
+                          {category === 'Retail' && ''}
+                          {category === 'Education' && ''}
+                          {category === 'Government' && ''}
+                          {category === 'Energy' && ''}
+                          {category === 'Transportation' && ''}
                         </span>;
                         {category}
                         <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">;
@@ -353,24 +353,24 @@ export default function ServicesIndexPage() {;
                 return (;
                   <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">;
                     <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">;
-                      <span className="text-3xl">;                        {category === 'AI & Data' && '🧠'}
-                        {category === 'Developer Tools' && '⚙️'}
-                        {category === 'Cloud & FinOps' && '☁️'}
-                        {category === 'Observability' && '📊'}
-                        {category === 'Quality & Monitoring' && '🔍'}
-                        {category === 'Quantum Computing' && '⚛️'}
-                        {category === 'Space Technology' && '🚀'}
-                        {category === 'Metaverse' && '🌐'}
-                        {category === 'Cybersecurity' && '🛡️'}
-                        {category === 'Supply Chain' && '📦'}
-                        {category === 'Financial Services' && '💰'}
-                        {category === 'Healthcare' && '🏥'}
-                        {category === 'Manufacturing' && '🏭'}
-                        {category === 'Retail' && '🛍️'}
-                        {category === 'Education' && '🎓'}
-                        {category === 'Government' && '🏛️'}
-                        {category === 'Energy' && '⚡'}
-                        {category === 'Transportation' && '🚗'}
+                      <span className="text-3xl">;                        {category === 'AI & Data' && ''}
+                        {category === 'Developer Tools' && ''}
+                        {category === 'Cloud & FinOps' && ''}
+                        {category === 'Observability' && ''}
+                        {category === 'Quality & Monitoring' && ''}
+                        {category === 'Quantum Computing' && ''}
+                        {category === 'Space Technology' && ''}
+                        {category === 'Metaverse' && ''}
+                        {category === 'Cybersecurity' && ''}
+                        {category === 'Supply Chain' && ''}
+                        {category === 'Financial Services' && ''}
+                        {category === 'Healthcare' && ''}
+                        {category === 'Manufacturing' && ''}
+                        {category === 'Retail' && ''}
+                        {category === 'Education' && ''}
+                        {category === 'Government' && ''}
+                        {category === 'Energy' && ''}
+                        {category === 'Transportation' && ''}
                       </span>;
                       {category}
                       <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">;

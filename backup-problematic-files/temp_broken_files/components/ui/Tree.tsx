@@ -45,7 +45,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       <div className="flex items-center gap-2 py-1">
         {hasChildren ? (
           <button className="text-sm&quot; onClick={toggle} aria-label=&quot;Toggle&quot;>
-            {open ? &quot;▾&quot; : &quot;▸"}          </button>
+            {open ? &quot;&quot; : &quot;"}          </button>
         ) : (
           <span className="inline-block w-4" />
         )}

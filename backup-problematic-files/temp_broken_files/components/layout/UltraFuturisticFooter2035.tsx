@@ -35,7 +35,7 @@ const footerSections = [
       { name: 'SEO Automation Suite', href: '/seo-automation-suite' },
       { name: 'Helpdesk & Support', href: '/helpdesk-automation' },
       { name: 'Learning Management (LMS)', href: '/lms-platform' },
-      { name: 'E‑commerce Returns', href: '/ecommerce-returns-management' },
+      { name: 'Ecommerce Returns', href: '/ecommerce-returns-management' },
       { name: 'SEO Content Optimizer', href: '/seo-content-optimizer' },
       { name: 'Keyword Research Engine', href: '/keyword-research-engine' },
       { name: 'Privacy Analytics Suite', href: '/analytics-suite' },
@@ -279,7 +279,7 @@ initial={{ opacity: 0, y: 20 }}
             className=&quot;mt-16 pt-8 border-t border-gray-800/50&quot;          >
             <div className=&quot;flex flex-col md:flex-row items-center justify-between gap-4&quot;>
               <div className=&quot;text-sm text-gray-400&quot;>
-                © 2025 Zion Tech Group. All rights reserved.
+                 2025 Zion Tech Group. All rights reserved.
               </div>
               
               <div className=&quot;flex items-center gap-6 text-sm text-gray-400&quot;>
@@ -331,6 +331,6 @@ export default UltraFuturisticFooter2035,  /* Animated grid */
 }</ul> </motion.div>) ) 
 }</div> {
   /* Bottom Section */ 
-}<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>) 
+}<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>) 
 };
 export default UltraFuturisticFooter2035;

@@ -1,87 +1,46 @@
-
-
-=======
-
-
   if (isLoading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-      <div className="space-y-4">;
-        {[1, 2, 3].map((i,) => (;
-          <Card key={i}>;
-            <CardContent className="p-6">;
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
-            </CardContent>;
-          </Card>;
+      <div className="space-y-4">
+        {[1, 2, 3].map((i) => (
+          <Card key={i}>
+            <CardContent className="p-6">
+              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
+              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
+              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
+            </CardContent>
+          </Card>
         ))}
-      </div>;
-    );
+      </div>
+    )
   }
-
-
-  
-
-
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
-        icon = {<span className="text-3xl">📊</span>,}
+        icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
 
-=======
-
-        description={isClient ? 
-          "Break down the project into manageable milestones to track progress and payments." : 
-          "No milestones have been created for this project yet."}
-        action={isClient ? 
-          {
-            text: "Create First Milestone",
-            onClick: () => setShowAddForm(true)
-          } : undefined
-        }
-
   }
 
-
-  if (milestones && milestones.length === 0 && !showAddForm) {;
-    return (
-      <EmptyState
-        icon = {<span className="text-3xl">📊</span>,}
-        title="No Milestones Yet";
-        description = {isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." : ;
-          "No milestones have been created for this project yet.",}
-        action={isClient ? ;
-          {;
-            text: "Create First Milestone",;
-            onClick: (,) => setShowAddForm(true);
-          } : undefined;
-        }
-      />;
-    );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
   return (
-    <div className="space-y-6">;
-      {isClient && !showAddForm && (;
-        <div className="flex justify-end">;
-          <Button onClick={(,) => setShowAddForm(true)}>;
-            <Plus className="h-4 w-4 mr-2" />;
-            Add Milestone;
-          </Button>;
-        </div>;
+    <div className="space-y-6">
+      {isClient && !showAddForm && (
+        <div className="flex justify-end">
+          <Button onClick={() => setShowAddForm(true)}>
+            <Plus className="h-4 w-4 mr-2" />
+            Add Milestone
+          </Button>
+        </div>
       )}
-
-
-      
-
-
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
+              onSubmit = {handleSubmit,}
+              isSubmitting = {isSubmitting,}
+              onCancel = {(,) => setShowAddForm(false),}
+            />
+          </CardContent>
+        </Card>
 
 
       {showAddForm && (;
@@ -97,31 +56,43 @@
           </CardContent>;
         </Card>;
       )}
-
-
-      <div className="space-y-4">;
-        {milestones && milestones.map((milestone,) => (;
-
+      <div className="space-y-4">
+        {milestones.map((milestone,) => (
           <MilestoneCard
-            key = {milestone && milestone.id,}
-            id = {milestone && milestone.id,}
-            projectId = {milestone && milestone.project_id,}
-            title = {milestone && milestone.title,}
-            description = {milestone && milestone.description,}
-            amount = {parseFloat(milestone && milestone.amount.toString()),}
-            status = {milestone && milestone.status,}
-            dueDate = {milestone && milestone.due_date,}
-            onApprove = {onApprove,}
-            onReject = {onReject,}
+        ))}
+      </div>
+    </div>
+  )
+}
+"
+              onSubmit={handleSubmit}
+              isSubmitting={isSubmitting}
+              onCancel={() => setShowAddForm(false)}
+            />;
+          </CardContent>;
+        </Card>;
+      )}
+      
+      <div className="space-y-4">
+        {milestones.map((milestone) => (
+          <MilestoneCard
+            key={milestone.id}
+            id={milestone.id}
+            projectId={milestone.project_id}
+            title={milestone.title}
+            description={milestone.description}
+            amount={parseFloat(milestone.amount.toString())}
+            status={milestone.status}
+            dueDate={milestone.due_date}
+            onApprove={onApprove}
+            onReject={onReject}
           />;
         ))}
-
       </div>;
     </div>;
   );
 };
 
-=======
   // Check condition
 if ( {) {
   $2
@@ -144,7 +115,7 @@ if ( {) {
 }
     return (
       <EmptyState;
-        icon = {<span className="text - 3xl">📊</span>, }
+        icon = {<span className="text - 3xl"></span>, }
         title="No Milestones Yet";
         description = {is_client ?;
           "Break down the project into manageable milestones to track progress and payments." :;
@@ -195,10 +166,3 @@ if ( {) {
     </div>);
 }
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-            <AddMilestoneForm 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

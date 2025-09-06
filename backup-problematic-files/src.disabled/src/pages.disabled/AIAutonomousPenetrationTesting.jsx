@@ -9,4 +9,3 @@ const AIAutonomousPenetrationTesting = ({ className }) => {
   );
 };
 
-export default AIAutonomousPenetrationTesting;

@@ -9,4 +9,3 @@ const MainNavigation.js = ({ className }) => {
   );
 };
 
-export default MainNavigation.js;

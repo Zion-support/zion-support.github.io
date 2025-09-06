@@ -9,4 +9,3 @@ const AnalyticsDashboard.js = ({ className }) => {
   );
 };
 
-export default AnalyticsDashboard.js;

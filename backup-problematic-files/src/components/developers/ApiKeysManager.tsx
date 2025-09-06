@@ -210,7 +210,7 @@ export function ApiKeysManager() {;
                     <div>;
                       <h3 className="font-medium">{key.name}</h3>;
                       <div className="flex items-center space-x-2 mt-1">;
-                        <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>;
+                        <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}</span>;
                         {key.is_active ? (;
                           <Badge className="bg-green-700 text-white">Active</Badge>;
                         ) :(;

@@ -411,7 +411,7 @@ export default function NeoFuturisticNavigation() {
 												<div className=&quot;text-gray-400 text-sm mb-2&quot;>{category.description}</div>
 												<div className=&quot;space-y-1&quot;>
 													{category.services.slice(0, 2).map((service, serviceIndex) => (
-														<div key={serviceIndex} className=&quot;text-xs text-gray-500&quot;>• {service.name} - {service.price}</div>													))}
+														<div key={serviceIndex} className=&quot;text-xs text-gray-500&quot;> {service.name} - {service.price}</div>													))}
 												</div>
 											</div>
 										))}

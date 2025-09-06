@@ -43,12 +43,10 @@ export default async function handler(;
       }
 ;
       // Log performance metrics (in production, you would store these in a database);
-      // Removed // // // console.log('🔧 Performance Report:', { ... }),;
 ;
       // Log critical performance issues;
       const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor'),;
       if (poorMetrics.length > 0) {;
-        console.warn('⚠️ Poor Performance Metrics Detected:', poorMetrics.map(m => ;
           `${m.name} ${m.value}ms`;
         )),;
       }

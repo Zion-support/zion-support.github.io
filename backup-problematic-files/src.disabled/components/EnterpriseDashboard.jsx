@@ -9,4 +9,3 @@ const EnterpriseDashboard = ({ className }) => {
   );
 };
 
-export default EnterpriseDashboard;

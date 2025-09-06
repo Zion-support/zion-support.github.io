@@ -9,4 +9,3 @@ const Popover = ({ className }) => {
   );
 };
 
-export default Popover;

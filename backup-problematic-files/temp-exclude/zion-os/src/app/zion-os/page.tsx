@@ -303,7 +303,7 @@ export default function ZionOSPage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="card text-center">;
               <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">;
-                <span className="text-2xl font-bold text-blue-400">⚡</span>;
+                <span className="text-2xl font-bold text-blue-400"></span>;
               </div>;
               <h3 className="text-lg font-semibold mb-2">High Performance</h3>;
               <p className="text-gray-400 text-sm">;
@@ -313,7 +313,7 @@ export default function ZionOSPage() {;
             ;
             <div className="card text-center">;
               <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">;
-                <span className="text-2xl font-bold text-purple-400">🔒</span>;
+                <span className="text-2xl font-bold text-purple-400"></span>;
               </div>;
               <h3 className="text-lg font-semibold mb-2">Enterprise Security</h3>;
               <p className="text-gray-400 text-sm">;
@@ -323,7 +323,7 @@ export default function ZionOSPage() {;
             ;
             <div className="card text-center">;
               <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">;
-                <span className="text-2xl font-bold text-green-400">🌐</span>;
+                <span className="text-2xl font-bold text-green-400"></span>;
               </div>;
               <h3 className="text-lg font-semibold mb-2">Interoperable</h3>;
               <p className="text-gray-400 text-sm">;
@@ -333,7 +333,7 @@ export default function ZionOSPage() {;
             ;
             <div className="card text-center">;
               <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">;
-                <span className="text-2xl font-bold text-red-400">🤖</span>;
+                <span className="text-2xl font-bold text-red-400"></span>;
               </div>;
               <h3 className="text-lg font-semibold mb-2">AI-Powered</h3>;
               <p className="text-gray-400 text-sm">;
@@ -411,7 +411,7 @@ and building your digital community. </p> </div> </div> </div> </section> {
 token economics, and marketplace infrastructure. </p> </div> <div className="card"> <h3 className="text-xl font-semibold mb-3">Enterprises</h3> <p className="text-gray-400 mb-4"> Transform traditional business models with AI-powered governance and decentralized marketplace capabilities. </p> </div> <div className="card"> <h3 className="text-xl font-semibold mb-3">Communities & DAOs</h3> <p className="text-gray-400 mb-4"> Build thriving communities with transparent governance;
 fair token distribution, and collaborative decision-making. </p> </div> <div className="card"> <h3 className="text-xl font-semibold mb-3">Freelancers & Creators</h3> <p className="text-gray-400 mb-4"> Access global opportunities through decentralized marketplaces with built-in reputation and payment systems. </p> </div> <div className="card"> <h3 className="text-xl font-semibold mb-3">Investors & Traders</h3> <p className="text-gray-400 mb-4"> Participate in emerging digital economies with transparent governance and liquid token markets. </p> </div> <div className="card"> <h3 className="text-xl font-semibold mb-3">Researchers & Academics</h3> <p className="text-gray-400 mb-4"> Study and experiment with new economic models in a controlled, scalable environment. </p> </div> </div> </div> </section> {
   /* Technology Stack */ 
-}<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-7xl mx-auto"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold mb-4"> Built on Proven Technology </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto"> Zion OS leverages the latest blockchain and AI technologies for maximum performance and security </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> <div className="card text-center"> <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4"> <span className="text-2xl font-bold text-blue-400">⚡</span> </div> <h3 className="text-lg font-semibold mb-2">High Performance</h3> <p className="text-gray-400 text-sm"> Built for scale with sub-second transaction times </p> </div> <div className="card text-center"> <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4"> <span className="text-2xl font-bold text-purple-400">🔒</span> </div> <h3 className="text-lg font-semibold mb-2">Enterprise Security</h3> <p className="text-gray-400 text-sm"> Multi-layer security with audit trails </p> </div> <div className="card text-center"> <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4"> <span className="text-2xl font-bold text-green-400">🌐</span> </div> <h3 className="text-lg font-semibold mb-2">Interoperable</h3> <p className="text-gray-400 text-sm"> Works with existing blockchain networks </p> </div> <div className="card text-center"> <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mx-auto mb-4"> <span className="text-2xl font-bold text-red-400">🤖</span> </div> <h3 className="text-lg font-semibold mb-2">AI-Powered</h3> <p className="text-gray-400 text-sm"> Intelligent governance and automation </p> </div> </div> </div> </section> {
+}<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-7xl mx-auto"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold mb-4"> Built on Proven Technology </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto"> Zion OS leverages the latest blockchain and AI technologies for maximum performance and security </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> <div className="card text-center"> <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4"> <span className="text-2xl font-bold text-blue-400"></span> </div> <h3 className="text-lg font-semibold mb-2">High Performance</h3> <p className="text-gray-400 text-sm"> Built for scale with sub-second transaction times </p> </div> <div className="card text-center"> <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4"> <span className="text-2xl font-bold text-purple-400"></span> </div> <h3 className="text-lg font-semibold mb-2">Enterprise Security</h3> <p className="text-gray-400 text-sm"> Multi-layer security with audit trails </p> </div> <div className="card text-center"> <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4"> <span className="text-2xl font-bold text-green-400"></span> </div> <h3 className="text-lg font-semibold mb-2">Interoperable</h3> <p className="text-gray-400 text-sm"> Works with existing blockchain networks </p> </div> <div className="card text-center"> <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mx-auto mb-4"> <span className="text-2xl font-bold text-red-400"></span> </div> <h3 className="text-lg font-semibold mb-2">AI-Powered</h3> <p className="text-gray-400 text-sm"> Intelligent governance and automation </p> </div> </div> </div> </section> {
   /* CTA Section */ 
 }<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-4xl mx-auto text-center"> <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30"> <h2 className="text-3xl md:text-4xl font-bold mb-4"> Ready to Launch Your Digital Economy? </h2> <p className="text-xl text-gray-300 mb-8"> Join the future of sovereign, AI-powered digital economies. Deploy in minutes, scale infinitely. </p> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <Link href="/multiverse/launch" className="btn-primary text-lg px-8 py-4"> Start Deployment </Link> <Link href="/admin/instances" className="btn-secondary text-lg px-8 py-4"> View Examples </Link> </div> </div> </div> </section> </div>) 
 }

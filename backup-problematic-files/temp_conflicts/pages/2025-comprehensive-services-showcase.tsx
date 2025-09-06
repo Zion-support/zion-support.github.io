@@ -225,7 +225,7 @@ const allServices = [;
                         </span>;
                       </div>;
                       <div className="text-xs text-gray-500">;
-                        {(service as any).trialDays ? `${(service as any).trialDays} days free trial` :''} • {(service as any).setupTime ? `${(service as any).setupTime} setup` :'Custom setup'}
+                        {(service as any).trialDays ? `${(service as any).trialDays} days free trial` :''}  {(service as any).setupTime ? `${(service as any).setupTime} setup` :'Custom setup'}
                       </div>;
                     </div>;
                   </div>;

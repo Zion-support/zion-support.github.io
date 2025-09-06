@@ -1,17 +1,13 @@
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
 export type BudgetType = "fixed" | "hourly" | "range";
-
-;
 export interface ListingItem {
-=======
-
+  id: string;
+  title: string;
+  category: string
+  image?: string
+}
 
 export interface ListingItem {;
 
@@ -19,24 +15,16 @@ export interface ListingItem {;
   title: string;
   category: string,
   image?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
 export interface ContactInfo {;
-
-
   name: string;
   email: string;
 
   phone: string,
   company: string;
 }
-export interface Budget {
-  amount: number;
-  max_amount?: number,
-  type: BudgetType;
-
 }
 export interface QuoteFormData {
   service_type: ServiceType;
@@ -46,11 +34,15 @@ export interface QuoteFormData {
   project_description: string;
   start_date?: Date;
   end_date?: Date;
-=======
+  name: string;
+  email: string;
+  phone: string
+  company: string
+}
+export interface Budget {
 
 
 export interface Budget {;
-
   amount: number;
   maxAmount?: number
   type: BudgetType
@@ -66,22 +58,16 @@ export interface QuoteFormData {;
   projectDescription: string;
   startDate?: Date;
   endDate?: Date;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   timeline: TimelineType;
 
-  budget: Budget,
-  contact_info: ContactInfo;
-}
-export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
-;
-
+export interface QuoteRequest {;
 export interface QuoteRequest {
-=======
 
 
 export interface QuoteRequest {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  timeline: TimelineType;
+export interface QuoteRequest {
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -100,8 +86,4 @@ export interface QuoteRequest {;
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
-
-  created_at: string,
-  updated_at: string;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

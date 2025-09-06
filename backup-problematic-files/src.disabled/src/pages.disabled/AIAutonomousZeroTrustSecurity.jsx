@@ -9,4 +9,3 @@ const AIAutonomousZeroTrustSecurity = ({ className }) => {
   );
 };
 
-export default AIAutonomousZeroTrustSecurity;

@@ -9,4 +9,3 @@ const StatsSection = ({ className }) => {
   );
 };
 
-export default StatsSection;

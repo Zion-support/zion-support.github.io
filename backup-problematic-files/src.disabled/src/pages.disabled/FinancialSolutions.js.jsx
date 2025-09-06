@@ -9,4 +9,3 @@ const FinancialSolutions.js = ({ className }) => {
   );
 };
 
-export default FinancialSolutions.js;

@@ -9,4 +9,3 @@ const ResearchDevelopment = ({ className }) => {
   );
 };
 
-export default ResearchDevelopment;

@@ -9,4 +9,3 @@ const AdvancedPerformanceMonitor.js = ({ className }) => {
   );
 };
 
-export default AdvancedPerformanceMonitor.js;

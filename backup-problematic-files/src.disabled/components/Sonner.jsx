@@ -9,4 +9,3 @@ const Sonner = ({ className }) => {
   );
 };
 
-export default Sonner;

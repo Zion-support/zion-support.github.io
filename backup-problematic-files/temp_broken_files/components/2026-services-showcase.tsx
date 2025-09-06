@@ -266,7 +266,7 @@ initial={{ opacity: 0}}
                 animate={_{ opacity: 1}}
                 className="text-center py-16"
               >
-                <div className="text-6xl mb-4">🔍</div>
+                <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search terms or filters</p>
               </motion.div>
@@ -291,15 +291,15 @@ initial={_{ opacity: 0, y: 30}}
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3 text-cyan-300">
-                  <span className="text-2xl">📱</span>
+                  <span className="text-2xl"></span>
                   <span className="font-semibold">{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-purple-300">
-                  <span className="text-2xl">✉️</span>
+                  <span className="text-2xl"></span>
                   <span className="font-semibold">{contactInfo.email}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-pink-300">
-                  <span className="text-2xl">📍</span>
+                  <span className="text-2xl"></span>
                   <span className="font-semibold text-sm">{contactInfo.address}</span>
                 </div>
               </div>

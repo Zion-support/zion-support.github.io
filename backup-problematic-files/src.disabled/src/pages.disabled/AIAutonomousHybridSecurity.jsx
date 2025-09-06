@@ -9,4 +9,3 @@ const AIAutonomousHybridSecurity = ({ className }) => {
   );
 };
 
-export default AIAutonomousHybridSecurity;

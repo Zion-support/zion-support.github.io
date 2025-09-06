@@ -1,3 +1,6 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-all-corrupted-files.cjs
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -579,6 +582,15 @@ corruptedFiles.forEach(fixCorruptedFile);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-all-corrupted-files.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -595,6 +607,10 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
     "email"
     "address"
     "site"
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-all-corrupted-files.cjs
+<<<<<<< HEAD
+        <meta name="description" content="
+=======
 <<<<<<< HEAD
         <meta name="description" content="
 =======
@@ -608,3 +624,13 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+        <meta name="description" content="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-all-corrupted-files.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

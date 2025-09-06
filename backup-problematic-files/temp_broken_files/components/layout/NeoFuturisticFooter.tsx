@@ -46,7 +46,7 @@ export default function NeoFuturisticFooter() {
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6">
-          <div className="text-xs text-slate-500">© {_new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
+          <div className="text-xs text-slate-500"> {_new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
           <div className="text-xs text-slate-500 flex gap-4">
             <a href="/privacy" className="hover: text-slate-300">Privacy</a>
             <a href="/terms" className="hover:text-slate-300">Terms</a>          </div>

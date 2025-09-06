@@ -9,4 +9,3 @@ const OrderDetail = ({ className }) => {
   );
 };
 
-export default OrderDetail;

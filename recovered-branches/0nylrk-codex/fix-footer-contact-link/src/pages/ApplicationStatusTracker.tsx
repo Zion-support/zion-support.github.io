@@ -1,4 +1,15 @@
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { ApplicationsTracker } from "@/components/jobs/applications",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Briefcase, Inbox } from "lucide-react",
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useIsMobile } from "@/hooks/use-mobile";
+function ApplicationStatusTrackerContent() {
 
+
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useIsMobile } from "@/hooks/use-mobile",
 
 
 
@@ -6,8 +17,6 @@
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO
@@ -36,6 +45,16 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
+}
+export default function ApplicationStatusTracker() {
+  return (
+    <ProtectedRoute>
+      <AppLayout>
+        <ApplicationStatusTrackerContent />
+      </AppLayout>
+    </ProtectedRoute>
+  )
+}
 
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -44,10 +63,8 @@ import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Briefcase, Inbox} from "lucide-react";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
-=======
 
 
-=======
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -55,17 +72,6 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useIsMobile } from "@/hooks/use-mobile",;
-
-function ApplicationStatusTrackerContent() {;
-  const isMobile = useIsMobile();
-
-  return (
-    <>;
-      <SEO
-        title="Application Status Tracker | Zion AI Marketplace" 
-        description="Track the status of your job applications in the Zion AI marketplace." 
-      />;
-
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
           <div>;
@@ -81,6 +87,7 @@ function ApplicationStatusTrackerContent() {;
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications;
               </CardTitle>;
             </CardHeader>;
+            <CardContent className={`p-${isMobile ? '3' :'6'}`}>;
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>;
               <ApplicationsTracker />;
             </CardContent>;
@@ -88,20 +95,6 @@ function ApplicationStatusTrackerContent() {;
         </div>;
       </div>;
     </>;
-  );
-
-import { AppLayout } from '@/layout / AppLayout';
-import { SEO } from '@/components / SEO';
-import { ApplicationsTracker } from '@/components / jobs / applications';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
-import { Briefcase, Inbox } from './lucide-react';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { useIsMobile } from '@/hooks / use - mobile';
-/**
- * ApplicationStatusTrackerContent - Function description
- */
-function ApplicationStatusTrackerContent() {
-  const is_mobile = useIsMobile ();
 ;
   return (
     <>;
@@ -137,15 +130,13 @@ export default /**
 function ApplicationStatusTracker() {
   return (
 
+}
+;
+export default function ApplicationStatusTracker() {;
+  return (;
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
-
     </ProtectedRoute>);
-=======
-
-
-
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

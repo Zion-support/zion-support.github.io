@@ -9,4 +9,3 @@ const SearchModal.js = ({ className }) => {
   );
 };
 
-export default SearchModal.js;

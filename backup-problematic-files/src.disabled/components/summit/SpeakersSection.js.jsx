@@ -9,4 +9,3 @@ const SpeakersSection.js = ({ className }) => {
   );
 };
 
-export default SpeakersSection.js;

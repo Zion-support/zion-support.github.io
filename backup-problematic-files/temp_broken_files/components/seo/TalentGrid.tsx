@@ -44,7 +44,7 @@ export default function TalentGrid({ region, service }: Props) {
               <span key={sk} className=&quot;text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300&quot;>{sk}</span>
             ))}
           </div>
-          <div className=&quot;mt-3 text-sm&quot;>${p.hourlyRateUsd}/hr • {p.availability}</div>
+          <div className=&quot;mt-3 text-sm&quot;>${p.hourlyRateUsd}/hr  {p.availability}</div>
 import React from 'react';
 import type {TalentProfile} from '../../data/talent';
 
@@ -81,7 +81,7 @@ export default function TalentGrid(_{region, service}: Props) {const items = Rea
               <span key={sk} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">{sk}</span>
             ))}
           </div>;
-          <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>;
+          <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr  {p.availability}</div>;
         </div>;
       ))}
     </div>

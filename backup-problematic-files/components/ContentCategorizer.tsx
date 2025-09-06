@@ -362,7 +362,7 @@ const ContentCategorizer: React.FC = () => {;
                 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className="p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200"
               >
-                {sortOrder === 'asc' ? '↑' : '↓'}
+                {sortOrder === 'asc' ? '' : ''}
               </button>;
             </div>;
           </div>;
@@ -494,7 +494,7 @@ const ContentCategorizer: React.FC = () => {;
                   className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200 text-sm font-medium"
                 >
                   Open Content
-                  <span aria-hidden>→</span>
+                  <span aria-hidden></span>
                 </a>
               </div>
             </div>
@@ -521,7 +521,7 @@ const ContentCategorizer: React.FC = () => {;
                   className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200 text-sm font-medium";
                 >;
                   Open Content;
-                  <span aria-hidden>→</span>;
+                  <span aria-hidden></span>;
                 </a>;
               </div>;
             </div>;
@@ -531,7 +531,7 @@ const ContentCategorizer: React.FC = () => {;
       {/* No Results */}
       {filteredItems.length === 0 && (
         <div className="text-center py-12">
-          <div className="text-white/40 text-6xl mb-4">🔍</div>
+          <div className="text-white/40 text-6xl mb-4"></div>
           <h3 className="text-xl font-semibold text-white/70 mb-2">No content found</h3>
           <p className="text-white/50 mb-4">
             Try adjusting your search terms or filters to find what you're looking for.

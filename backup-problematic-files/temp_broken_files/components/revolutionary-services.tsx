@@ -559,7 +559,7 @@ className=&quot;text-center py-16&quot;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}              >
-                <div className=&quot;text-6xl mb-4&quot;>🔍</div>
+                <div className=&quot;text-6xl mb-4&quot;></div>
                 <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No Services Found</h3>
                 <p className=&quot;text-gray-400 mb-6&quot;>Try adjusting your search criteria or filters.</p>
                                          <Button,
@@ -605,7 +605,7 @@ className=&quot;bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-f
                     <button,
 onClick={() => setSelectedService(null)}
                       className=&quot;text-gray-400 hover:text-white text-2xl&quot;                    >
-                      ×
+                      
                     </button>
                   </div>
 

@@ -67,7 +67,7 @@ export default function DisputeDetailPage() {;
             <div className="space-y-6">;
               <div className="p-4 border rounded">;
                 <div className="font-medium mb-2">Reason</div>;
-                <div className="text-sm">{dispute.reason}{dispute.reasonDetails ? ` — ${dispute.reasonDetails}` :''}</div>;
+                <div className="text-sm">{dispute.reason}{dispute.reasonDetails ? `  ${dispute.reasonDetails}` :''}</div>;
               </div>;
               <div className="p-4 border rounded">;
                 <div className="font-medium mb-2">Description</div>;
@@ -108,7 +108,7 @@ export default function DisputeDetailPage() {;
                   <ul className="space-y-3">;
                     {dispute.messages.map((m:any) => (;
                       <li key={m.id} className="text-sm">;
-                        <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>;
+                        <div className="text-gray-500 text-xs">{m.authorRole}  {new Date(m.createdAt).toLocaleString()}</div>;
                         <div className="whitespace-pre-wrap">{m.body}</div>;
                       </li>;                    ))}
                   </ul>;
@@ -132,7 +132,7 @@ export default function DisputeDetailPage() {;
                     <li key={a.id} className="py-2 flex items-center justify-between">;
                       <div className="text-sm">;
                         <div className="font-medium">{a.fileName}</div>;
-                        <div className="text-xs text-gray-500">{a.mimeType} • {(a.fileSize / 1024).toFixed(1)} KB</div>;
+                        <div className="text-xs text-gray-500">{a.mimeType}  {(a.fileSize / 1024).toFixed(1)} KB</div>;
                       </div>;
                       <a className="text-blue-600 hover:underline" href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}>Download</a>;
                     </li>;                  ))}
@@ -175,7 +175,7 @@ export default function DisputeDetailPage() {;
   activeTab === 'Overview' && (<div className="space-y-6" > <div className="p-4 border rounded" > <div className="font-medium mb-2" >Reason</div> <div className="text-sm" > {
   dispute.reason 
 }{
-  dispute.reasonDetails ? `— $ {
+  dispute.reasonDetails ? ` $ {
   dispute.reasonDetails 
 }` : '' 
 }</div> </div> <div className="p-4 border rounded" > <div className="font-medium mb-2" >Description</div> <div className="text-sm whitespace-pre-wrap" > {

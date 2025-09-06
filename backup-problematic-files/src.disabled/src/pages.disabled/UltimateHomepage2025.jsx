@@ -9,4 +9,3 @@ const UltimateHomepage2025 = ({ className }) => {
   );
 };
 
-export default UltimateHomepage2025;

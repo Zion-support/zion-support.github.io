@@ -9,4 +9,3 @@ const ServiceComparison = ({ className }) => {
   );
 };
 
-export default ServiceComparison;

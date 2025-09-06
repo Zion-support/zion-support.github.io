@@ -9,4 +9,3 @@ const AIAutonomousIntegration = ({ className }) => {
   );
 };
 
-export default AIAutonomousIntegration;

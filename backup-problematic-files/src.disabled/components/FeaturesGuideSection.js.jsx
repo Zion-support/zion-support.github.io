@@ -9,4 +9,3 @@ const FeaturesGuideSection.js = ({ className }) => {
   );
 };
 
-export default FeaturesGuideSection.js;

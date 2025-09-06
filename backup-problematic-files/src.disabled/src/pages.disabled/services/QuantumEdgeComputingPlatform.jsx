@@ -9,4 +9,3 @@ const QuantumEdgeComputingPlatform = ({ className }) => {
   );
 };
 
-export default QuantumEdgeComputingPlatform;

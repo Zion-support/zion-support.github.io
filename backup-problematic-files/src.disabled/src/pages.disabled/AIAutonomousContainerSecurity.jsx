@@ -9,4 +9,3 @@ const AIAutonomousContainerSecurity = ({ className }) => {
   );
 };
 
-export default AIAutonomousContainerSecurity;

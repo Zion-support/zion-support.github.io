@@ -9,4 +9,3 @@ const CloudMigrationServices = ({ className }) => {
   );
 };
 
-export default CloudMigrationServices;

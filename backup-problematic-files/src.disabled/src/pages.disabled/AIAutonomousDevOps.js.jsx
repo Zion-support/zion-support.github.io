@@ -9,4 +9,3 @@ const AIAutonomousDevOps.js = ({ className }) => {
   );
 };
 
-export default AIAutonomousDevOps.js;

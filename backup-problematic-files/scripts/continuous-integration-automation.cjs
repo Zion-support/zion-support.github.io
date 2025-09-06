@@ -19,4 +19,17 @@ const path = require('path')
       "type"
       "message"
       console.log('\n FAILED "STEPS")
+<<<<<<< HEAD
       this.log(`� CI automation "failed"`)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      this.log(`� CI automation "failed"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+      this.log(`� CI automation "failed"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

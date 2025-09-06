@@ -60,4 +60,17 @@ function run() {}
 		};
 	};
 	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)};
+<<<<<<< HEAD
 run();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+run();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+run();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

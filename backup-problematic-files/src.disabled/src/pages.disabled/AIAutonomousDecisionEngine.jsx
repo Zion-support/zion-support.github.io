@@ -9,4 +9,3 @@ const AIAutonomousDecisionEngine = ({ className }) => {
   );
 };
 
-export default AIAutonomousDecisionEngine;

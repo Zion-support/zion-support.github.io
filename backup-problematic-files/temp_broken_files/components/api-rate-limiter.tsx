@@ -280,7 +280,7 @@ key={index}
                 </div>
               ) : (
                 <div className=&quot;bg-gray-900 p-6 rounded-lg border border-gray-700 text-center&quot;>
-                  <div className=&quot;text-6xl mb-4&quot;>📊</div>
+                  <div className=&quot;text-6xl mb-4&quot;></div>
                   <p className=&quot;text-gray-400&quot;>
                     Test results will appear here. Configure your settings and click &quot;Test Rate Limiting&quot; to see how it works.
                   </p>
@@ -304,7 +304,7 @@ key={index}
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🛡️</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>DDoS Protection</h3>
               <p className=&quot;text-gray-400&quot;>
                 Advanced algorithms detect and prevent distributed denial of service attacks in real-time.
@@ -312,7 +312,7 @@ key={index}
             </Card>
 
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>⚡</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>High Performance</h3>
               <p className=&quot;text-gray-400&quot;>
                 Built on Redis and optimized for high-throughput applications with minimal latency.
@@ -320,7 +320,7 @@ key={index}
             </Card>
 
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🎯</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Flexible Rules</h3>
               <p className=&quot;text-gray-400&quot;>
                 Configure different limits for different endpoints, users, or IP addresses.
@@ -328,7 +328,7 @@ key={index}
             </Card>
 
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>📊</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Real-time Analytics</h3>
               <p className=&quot;text-gray-400&quot;>
                 Monitor API usage, identify patterns, and optimize your rate limiting strategy.
@@ -336,7 +336,7 @@ key={index}
             </Card>
 
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🔧</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Easy Integration</h3>
               <p className=&quot;text-gray-400&quot;>
                 Simple REST API and SDKs for Node.js, Python, Go, and other popular languages.
@@ -344,7 +344,7 @@ key={index}
             </Card>
 
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🌍</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Global Distribution</h3>
               <p className=&quot;text-gray-400&quot;>
                 Edge locations worldwide ensure consistent performance and low latency for all users.

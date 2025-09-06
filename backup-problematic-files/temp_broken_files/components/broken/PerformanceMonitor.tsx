@@ -395,13 +395,13 @@ initial={{ height: 0, opacity: 0 }}
                       <h4 className=&quot;text-sm font-semibold text-white&quot;>Recommendations</h4>
                       <div className=&quot;text-xs text-gray-400 space-y-1&quot;>
                         {getPerformanceScore() < 90 && (                          <>
-                            <div>• Optimize images and assets</div>
-                            <div>• Minimize JavaScript bundles</div>
-                            <div>• Enable compression and caching</div>
+                            <div> Optimize images and assets</div>
+                            <div> Minimize JavaScript bundles</div>
+                            <div> Enable compression and caching</div>
                           </>
                         )}
                         {getPerformanceScore() >= 90 && (;
-                          <div>• Excellent performance! Keep monitoring for any regressions.</div>;
+                          <div> Excellent performance! Keep monitoring for any regressions.</div>;
                         )}
                       </div>;
                     </div>;

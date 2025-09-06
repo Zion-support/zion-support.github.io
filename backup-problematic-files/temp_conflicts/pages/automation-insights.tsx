@@ -129,7 +129,7 @@ export default function AutomationInsightsPage() {;
                       href={`/blog/${trend.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors";
                     >;
-                      Read More <span className="ml-1">→</span>;
+                      Read More <span className="ml-1"></span>;
                     </Link>;
                   </div>;
                 ))}
@@ -142,7 +142,7 @@ export default function AutomationInsightsPage() {;
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
                 {automationTools.map((tool, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">;
-                    <div className="text-4xl mb-4">🔧</div>;
+                    <div className="text-4xl mb-4"></div>;
                     <h3 className="text-xl font-bold mb-3 text-white">{tool.title}</h3>;
                     <p className="text-white/70 mb-4">{tool.description}</p>;
                     <div className="flex justify-center gap-2">;

@@ -169,7 +169,7 @@ export default function Footer() {;
         <div className="border-t border-white/10 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
             <div className="text-gray-400 text-sm">;
-              © {currentYear} Zion Tech Group. All rights reserved.;
+               {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
             <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm">;
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">;
@@ -243,7 +243,7 @@ export default function Footer() {;
   /* Newsletter Signup */ 
 }<div className="border-t border-white/10 pt-8 mb-8"> <div className="max-w-md"> <h3 className="text-white font-semibold mb-3">Stay Updated</h3> <p className="text-gray-400 text-sm mb-4"> Get the latest insights on AI technology and industry trends. </p> <div className="flex space-x-2"> <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" aria-label="Email address for newsletter" /> <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-200 transform hover:scale-105" aria-label="Subscribe to newsletter" > Subscribe </button> </div> </div> </div> {
   /* Bottom Footer */ 
-}<div className="border-t border-white/10 pt-8"> <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"> <div className="text-gray-400 text-sm"> © {
+}<div className="border-t border-white/10 pt-8"> <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"> <div className="text-gray-400 text-sm">  {
   currentYear 
 }Zion Tech Group. All rights reserved. </div> <div className="flex flex-wrap justify-center md: justify-end space-x-6 text-sm"> <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200"> Privacy Policy </Link> <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200"> Terms of Service </Link> <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200"> Cookie Policy </Link> <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors duration-200"> Accessibility </Link> </div> </div> </div> </div> </footer>) 
 }

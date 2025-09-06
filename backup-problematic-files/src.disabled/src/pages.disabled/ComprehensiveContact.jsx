@@ -9,4 +9,3 @@ const ComprehensiveContact = ({ className }) => {
   );
 };
 
-export default ComprehensiveContact;

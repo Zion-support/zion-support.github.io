@@ -1,11 +1,67 @@
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import type { Review } from '../../types/reviews';
+
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
+const AdminReviewsPage: NextPage = () => {
+  const [pending, setPending] = useState<Review[]>([])
+  const [all, setAll] = useState<Review[]>([])
+  const [adminKey, setAdminKey] = useState('')
+  async function refresh() {
+    const res = await fetch('/api/admin/debug/reviews')
+    const data = await res.json()
+    if (res.ok) {
+      setAll(data.reviews)
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
+    }
+  }
+  useEffect(() => { refresh() }, [])
+  async function moderate(action: 'approve' | 'remove', reviewId: string) {
+    const res = await fetch('/api/reviews/moderate', {
+      method: 'POST'
+      headers: {
+        'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
+      body: JSON.stringify({ action, reviewId })})
+    if (res.ok) refresh()
+  }
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
+const AdminReviewsPage: NextPage = () => {;
+  const [pending, setPending] = useState<Review[]>([]);
+  const [all, setAll] = useState<Review[]>([]);
+  const [adminKey, setAdminKey] = useState('');
+  async function refresh() {;
+    const res = await fetch('/api/admin/debug/reviews');
+    const data = await res.json();
+    if (res.ok) {;
+      setAll(data.reviews);
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed));
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
 
     if (res.ok) refresh()
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  useEffect(() => { refresh() }, []),;
+  async function moderate(action: 'approve' | 'remove', reviewId: string) {;
+    const res = await fetch('/api/reviews/moderate', {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},;
+      body: JSON.stringify({ action, reviewId })}),;
+    if (res.ok) refresh();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -29,8 +85,6 @@
           {!pending.length && <div>No pending reviews.</div>}
         </div>
       </section>
-
-
       <section className="enhanced-card">
         <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
@@ -38,17 +92,17 @@
     </main>
   )
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+},
+export default AdminReviewsPage,
+},
 
 },
 export default AdminReviewsPage,
 
-=======
+},
+export default AdminReviewsPage,
 },
 
+export default AdminReviewsPage,;
 export default AdminReviewsPage,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

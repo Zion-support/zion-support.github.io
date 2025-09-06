@@ -9,4 +9,3 @@ const ContactPublisherModal = ({ className }) => {
   );
 };
 
-export default ContactPublisherModal;

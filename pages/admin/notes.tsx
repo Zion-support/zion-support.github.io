@@ -8,9 +8,6 @@
     async function load() {
       setLoading(true)
       try {
-
-
-=======
   id: string,
   target_type: string,
   target_id: string,
@@ -32,21 +29,22 @@ function AdminNotesConsole() {
 function load() {
       set_loading (true),
       try {
-        const res = await fetch ('/api / admin / notes - all', { headers: { 'X - Admin': is_admin ? 'true' : 'false' } }),
-        // Check condition
-if (return, ) {
-  $2
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
+        if (!res.ok) return,;
+        const data = await res.json();
+        setNotes(data.notes || []);
+      } finally {;
+        setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-        const data = await res.json (),
-        set_notes (data.notes || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         set_loading (false);
       }
     }
 
-
-=======
 
 type Note = {
   id: string;
@@ -76,15 +74,6 @@ export default function AdminNotesConsole(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    if (isAdmin) load()
-  }, [isAdmin]),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -102,17 +91,18 @@ export default function AdminNotesConsole(req, res) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {notes.map((n) => (
             <div key={n.id} className="rounded border p-3 text-sm">
-              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
-              <div>{n.text}</div>
-            </div>
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
-=======
 }
-
-=======
-    if (load ()) {
-  $2
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 }
   }, [is_admin]),
   return (
@@ -137,9 +127,5 @@ export default function AdminNotesConsole(req, res) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

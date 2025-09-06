@@ -21,24 +21,24 @@ function fixFinalSyntaxIssues(filePath) {
       { from: /const baseUrl = "([^"]+)",/g, to: 'const baseUrl = "$1";' },
       
       // Fix try-catch blocks with duplicate catch
-      { from: /} catch \{  \} catch \(error\) \{/g, to: '} catch (error) {' },
-      { from: /} catch \{;\s*return \{  \} catch \(error\) \{/g, to: '} catch (error) {\n    return {};' },
+      { from: /} catch \{ {2}\} catch \(error\) \{/g, to: '} catch (error) {' },
+      { from: /} catch \{;\s*return \{ {2}\} catch \(error\) \{/g, to: '} catch (error) {\n    return {};' },
       
       // Fix missing closing braces
       { from: /if \(req\.method !== 'POST'\) \{\s*res\.setHeader\('Allow', 'POST'\);\s*return res\.status\(405\)\.end\('Method Not Allowed'\);\s*\} catch \(error\) \{/g, to: "if (req.method !== 'POST') {\n    res.setHeader('Allow', 'POST');\n    return res.status(405).end('Method Not Allowed');\n  }\n} catch (error) {" },
       
       // Fix nested try-catch blocks
-      { from: /try \{ ensureAdmin\(user\) \} catch \(e: any\) \{ return res\.status\(e\.statusCode \|\| 403\)\.json\(\{ error: 'Forbidden' \}\)   \} catch \(error\) \{/g, to: "try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }\n  } catch (error) {" },
+      { from: /try \{ ensureAdmin\(user\) \} catch \(e: any\) \{ return res\.status\(e\.statusCode \|\| 403\)\.json\(\{ error: 'Forbidden' \}\) {3}\} catch \(error\) \{/g, to: "try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }\n  } catch (error) {" },
       
       // Fix missing semicolons
       { from: /(\w+)\n(export|import|const|let|var|function|class)/g, to: '$1;\n$2' },
       
       // Fix extra spaces and formatting
-      { from: /  \} catch \(error\) \{/g, to: '  } catch (error) {' },
-      { from: /    return \{\};/g, to: '    return {};' },
+      { from: / {2}\} catch \(error\) \{/g, to: '  } catch (error) {' },
+      { from: / {4}return \{\};/g, to: '    return {};' },
       
       // Fix missing closing braces in try-catch
-      { from: /try \{\s*const user = parseUserFromRequest\(req\);\s*try \{ ensureAdmin\(user\) \} catch \(e: any\) \{ return res\.status\(e\.statusCode \|\| 403\)\.json\(\{ error: 'Forbidden' \}\)   \} catch \(error\) \{/g, to: 'try {\n  const user = parseUserFromRequest(req);\n  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: \'Forbidden\' }) }\n  // Add proper error handling here\n} catch (error) {' },
+      { from: /try \{\s*const user = parseUserFromRequest\(req\);\s*try \{ ensureAdmin\(user\) \} catch \(e: any\) \{ return res\.status\(e\.statusCode \|\| 403\)\.json\(\{ error: 'Forbidden' \}\) {3}\} catch \(error\) \{/g, to: 'try {\n  const user = parseUserFromRequest(req);\n  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: \'Forbidden\' }) }\n  // Add proper error handling here\n} catch (error) {' },
     ];
 
     fixes.forEach(fix => {
@@ -56,12 +56,12 @@ function fixFinalSyntaxIssues(filePath) {
     }
 
     if (filePath.includes('admin/analytics/summary.ts')) {
-      content = content.replace(/} catch \{  \} catch \(error\) \{/g, '} catch (error) {');
+      content = content.replace(/} catch \{ {2}\} catch \(error\) \{/g, '} catch (error) {');
       changesMade = true;
     }
 
     if (filePath.includes('admin/kyc-queue.ts')) {
-      content = content.replace(/} catch \{;\s*return \{  \} catch \(error\) \{/g, '} catch (error) {\n    return {};');
+      content = content.replace(/} catch \{;\s*return \{ {2}\} catch \(error\) \{/g, '} catch (error) {\n    return {};');
       changesMade = true;
     }
 
@@ -72,7 +72,7 @@ function fixFinalSyntaxIssues(filePath) {
     }
 
     if (filePath.includes('admin/moderation/flags/[id].ts')) {
-      content = content.replace(/try \{ ensureAdmin\(user\) \} catch \(e: any\) \{ return res\.status\(e\.statusCode \|\| 403\)\.json\(\{ error: 'Forbidden' \}\)   \} catch \(error\) \{/g, 
+      content = content.replace(/try \{ ensureAdmin\(user\) \} catch \(e: any\) \{ return res\.status\(e\.statusCode \|\| 403\)\.json\(\{ error: 'Forbidden' \}\) {3}\} catch \(error\) \{/g, 
         "try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }\n  } catch (error) {");
       changesMade = true;
     }

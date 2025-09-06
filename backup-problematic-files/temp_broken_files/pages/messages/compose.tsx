@@ -55,7 +55,7 @@ export default function ComposePage() {;
           <div className="p-4 border-b">;
             <h1 className="text-xl font-semibold">{headerTitle}</h1>;
             <p className="text-sm text-gray-500">;
-              {type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project:${jobTitle}` :null}
+              {type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, Id like to invite you to discuss a project:${jobTitle}` :null}
               {type === 'apply' && jobTitle ? `Applying to:${jobTitle}` :null}
             </p>;
           </div>;
@@ -65,7 +65,7 @@ export default function ComposePage() {;
               onChange={(e) => setMessage(e.target.value)}
               rows={6}
               className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500";
-              placeholder={type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project:${jobTitle}` :'Write your message...'}
+              placeholder={type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, Id like to invite you to discuss a project:${jobTitle}` :'Write your message...'}
             />;
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />;
             <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />;

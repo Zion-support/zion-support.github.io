@@ -30,7 +30,7 @@
 
   suggestion ;
 }</Button>) ) ;
-}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>) ;
+}</div> </div> <li> Try different keywords</li> <li> Check your spelling</li> <li> Use fewer filters</li> <li> Search for broader terms</li> </ul> </div> </div> </div>) ;
 };
 //Main Search Results Page Component setTotalCount (data.totalCount);
 setCurrentPage (data.page);

@@ -9,4 +9,3 @@ const AdminDashboard = ({ className }) => {
   );
 };
 
-export default AdminDashboard;

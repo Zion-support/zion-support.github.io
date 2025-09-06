@@ -46,7 +46,7 @@ export default function AdminKycPage() {;
               <div className="flex items-center justify-between">;
                 <div>;
                   <div className="font-semibold">{p.fullLegalName || p.businessName || p.userId}</div>;
-                  <div className="text-xs text-gray-500">Role:{p.role} • Status:{p.status} • AML:{p.amlStatus}</div>;
+                  <div className="text-xs text-gray-500">Role:{p.role}  Status:{p.status}  AML:{p.amlStatus}</div>;
                   {p.flags && p.flags.length > 0 && (;
                     <div className="text-xs mt-1">Flags:{p.flags.join()}</div>;
                   )}
@@ -136,7 +136,7 @@ const AdminKYCPage: React.FC = () => {
               <div className=&quot;flex items-center justify-between&quot;>
                 <div>
                   <div className=&quot;font-semibold&quot;>{p.fullLegalName || p.businessName || p.userId}</div>
-                  <div className=&quot;text-xs text-gray-500&quot;>Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
+                  <div className=&quot;text-xs text-gray-500&quot;>Role: {p.role}  Status: {p.status}  AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
                     <div className="text-xs mt-1">Flags: {p.flags.join()}</div>                  )}
                 </div>
@@ -165,7 +165,7 @@ const AdminKYCPage: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="font-semibold">{p.fullLegalName || p.businessName || p.userId}</div>
-                  <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
+                  <div className="text-xs text-gray-500">Role: {p.role}  Status: {p.status}  AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
                     <div className="text-xs mt-1">Flags: {p.flags.join(', _')}</div>
                   )}

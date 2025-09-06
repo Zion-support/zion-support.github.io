@@ -9,4 +9,3 @@ const IoTEdge = ({ className }) => {
   );
 };
 
-export default IoTEdge;

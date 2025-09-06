@@ -1,33 +1,37 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  CheckCircle
+  ArrowRight
+  Zap
+  Shield
+  Rocket
+  Brain
+  Globe
+  Lock
+  Code
+  Database
+  Cloud;
 
-
-interface Service {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Shield,
+  Rocket,
+  Brain,
+  Globe,
+  Lock,
+  Code,
+  Database,;
+  Cloud,;
 import {;
   Star,;
   Users,;
@@ -45,13 +49,8 @@ import {;
   Code,;
   Database,;
   Cloud,;
-
-
-
 import Button from '../ui/Button';
-
 interface Service {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   name: string;
   tagline: string;
@@ -78,151 +77,18 @@ interface Service {;
   market_size: string;
   growth_rate: string;
   variant: string;
-
-  contact_info: {
-
-    mobile: string;
-    email: string;
-    address: string;
-
-    website: string;
-  }
-
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-
-  customers: number;
-  rating: number;
-
-  reviews: number;
-
-;
-interface EnhancedServiceShowcaseProps {
-
   title: string;
   subtitle: string;
   show_filters?: boolean;
   services?: Service[];
-
-=======
-import { 
-  Star, Users, TrendingUp, DollarSign, Clock, 
-  CheckCircle, ArrowRight, Zap, Shield, Rocket;
-  Brain, Globe, Lock, Code, Database, Cloud
-} from 'lucide-react';
-import Button from '../ui/Button';
-interface Service {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: string,
-  contactInfo: {
-      
-    mobile: string,
-    email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number
-}
-
-interface EnhancedServiceShowcaseProps {
-  title: string,
-  subtitle: string,
-  showFilters?: boolean;
-  services?: Service[];
-  maxServices?: number
-}
-
-const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
-  title;
-
   subtitle;
   showFilters = false;
   services = []
   maxServices = 12
-
-}) => {
-
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('popular');
   const categories = [
-
-=======
-  max_services?: number;
-;
-const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
-  title,
-  subtitle,
-  show_filters = false,
-  services = [],
-  max_services = 12, }) => {  title;
-  subtitle;
-  show_filters = false;
-  services = [],
-  max_services = 12;
-  const [selected_category, setSelectedCategory] = useState < string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState < string>('all');
-  const [sort_by, setSortBy] = useState < string>('popular');
-;
-  const categories = [;
-
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'ai', name: 'AI & ML', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum', icon: '⚛️' },
-    { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
-    { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
-    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  ];
-
-    { id: 'all', name: 'All Prices' },
-    { id: 'low', name: 'Under $1K/month' },
-    { id: 'medium', name: '$1K - $5K/month' },
-    { id: 'high', name: '$5K - $20K/month' },
-    { id: 'premium', name: '$20K+/month' }
-
-  ];
-  const sortOptions = [
-
-    { id: 'popular', name: 'Most Popular' },
-    { id: 'rating', name: 'Highest Rated' },
-    { id: 'roi', name: 'Best ROI' },
-    { id: 'price-low', name: 'Price Low to High' },
-    { id: 'price-high', name: 'Price High to Low' }
-  ];
-
-
   const filteredServices = useMemo(() => {
     const filtered = services.filter(service => {
       const matchesCategory = selectedCategory === 'all' |
@@ -248,14 +114,6 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
         break;
       case 'roi':
         filtered.sort((a, b) => {
-
-const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
-  title,;
-  subtitle,;
-  showFilters = false,;
-  services = [],;
-  maxServices = 12,}) => {  title;
-
   subtitle;
   showFilters = false;
   services = [],;
@@ -263,7 +121,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('popular');
-
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀' },;
     { id: 'ai', name: 'AI & ML', icon: '🧠' },;
@@ -272,7 +129,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },;
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' },  ];    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
   ];
-
   const priceRanges = [;
     { id: 'all', name: 'All Prices' },;
     { id: 'low', name: 'Under $1K/month' },;
@@ -280,7 +136,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
     { id: 'high', name: '$5K - $20K/month' },;
     { id: 'premium', name: '$20K+/month' },  ];    { id: 'premium', name: '$20K+/month' }
   ];
-
   const sortOptions = [;
     { id: 'popular', name: 'Most Popular' },;
     { id: 'rating', name: 'Highest Rated' },;
@@ -288,7 +143,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
     { id: 'price-low', name: 'Price Low to High' },;
     { id: 'price-high', name: 'Price High to Low' },;
   ];
-
   const filteredServices = useMemo(() => {;
     let filtered = services && services.filter(service => {;
       const matchesCategory =;
@@ -311,7 +165,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             service && service.category.includes('Autonomous') ||;
             service && service.category.includes('Space') ||;
             service && service.category.includes('Biotech')));
-
       const matchesPrice =;
         selectedPriceRange === 'all' ||;
         (selectedPriceRange === 'low' &&;
@@ -324,9 +177,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           parseFloat(service && service.price.replace(/[$]/g, '')) < 20000) ||;
         (selectedPriceRange === 'premium' &&;
           parseFloat(service && service.price.replace(/[$]/g, '')) >= 20000);
-
-      return matchesCategory && matchesPrice;    });  ];
-
   const filteredServices = useMemo(() => {;
     const filtered = services && services.filter(service => {;
       const matchesCategory = selectedCategory === 'all' || ;
@@ -335,16 +185,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                              (selectedCategory === 'blockchain' && (service && service.category.includes('Blockchain') || service && service.category.includes('DeFi') || service && service.category.includes('NFT'))) ||;
                              (selectedCategory === 'enterprise' && (service && service.category.includes('Enterprise') || service && service.category.includes('IT'))) ||;
                              (selectedCategory === 'emerging' && (service && service.category.includes('Neural') || service && service.category.includes('Autonomous') || service && service.category.includes('Space') || service && service.category.includes('Biotech')));
-
       const matchesPrice = selectedPriceRange === 'all' ||;
                           (selectedPriceRange === 'low' && parseFloat(service && service.price.replace(/[$]/g, '')) < 1000) ||;
                           (selectedPriceRange === 'medium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;
                           (selectedPriceRange === 'high' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 20000) ||;
                           (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 20000);
-
-      return matchesCategory && matchesPrice;
-    });
-
     // Sort services;
     switch (sortBy) {;
       case 'popular':;
@@ -357,7 +202,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         filtered && filtered.sort((a, b) => {;
           const aROI = parseInt(a && a.roi.match(/\d+/)?.[0] || '0');
           const bROI = parseInt(b && b.roi.match(/\d+/)?.[0] || '0');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           return bROI - aROI;
         });
         break;
@@ -374,7 +218,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             parseFloat(b && b.price.replace(/[$]/g, '')) -;
             parseFloat(a && a.price.replace(/[$]/g, ''));
         );
-=======
 ;
   const price_ranges = [;
     { id: 'all', name: 'All Prices' },
@@ -474,58 +317,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           (a, b) =>;
             parse_float (b.price.replace (/[$]/g, '')) -;
             parse_float (a.price.replace (/[$]/g, '')));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         break;
       default:;
         break;
     }
-
-          const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
-          const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
-          return bROI - aROI
-        });
-=======
-    return filtered.slice (0, max_services);
-  }, [services, selected_category, selectedPriceRange, sort_by, max_services]);
-;
-  const stats = [;
-    {
-      label: 'Total Services',
-      value: services.length,
-      icon: Rocket,
-      color: 'text - blue - 400',
-    },
-    {
-      label: 'Active Customers',
-      value: services.reduce ((sum, s) => sum + (s.customers || 0), 0),
-      icon: Users,
-      color: 'text - green - 400',
-    },
-    {
-      label: 'Average Rating',
-      value: (
-        services.reduce ((sum, s) => sum + (s.rating || 0), 0) / services.length).to_fixed (1),
-      icon: Star,
-      color: 'text - yellow - 400',
-    },
-    {
-      label: 'Market Growth',
-      value: '300%+',
-      icon: TrendingUp,
-      color: 'text - purple - 400',
-    },
-  ];
-;
-  return (
-    <section className='py - 20 px - 4 sm:px - 6 lg:px - 8'>;
-      <div className='max - w-7xl mx - auto'>;
-        {/* Header */}
-        <div className='text - center mb - 16'>          <motion.h2;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='text - 4xl md:text - 5xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6'          >        });
-
         break;
       case 'price - low':;
         filtered.sort ((a, b) => parse_float (a.price.replace (/[$]/g, '')) - parse_float (b.price.replace (/[$]/g, '')));
@@ -533,8 +328,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
       case 'price - high':;
         filtered.sort ((a, b) => parse_float (b.price.replace (/[$]/g, '')) - parse_float (a.price.replace (/[$]/g, '')));
         break;
-
-
     return filtered && filtered.slice(0, maxServices);
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
 
@@ -565,14 +358,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
       icon: TrendingUp,;
       color: 'text-purple-400',;
     },;
-
-  ];
-=======
-  ];
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
@@ -591,44 +376,22 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         break;
       default: break;
     }
-
-
-    return filtered && filtered.slice(0, maxServices);
-  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
-
-  const stats = [;
-    { label: 'Total Services', value: services && services.length, icon: Rocket, color: 'text-blue-400' },;
-    { label: 'Active Customers', value: services && services.reduce((sum, s) => sum + (s && s.customers || 0), 0), icon: Users, color: 'text-green-400' },;
-    { label: 'Average Rating', value: (services && services.reduce((sum, s) => sum + (s && s.rating || 0), 0) / services && services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },;
-
     { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
   ];
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          >
             {subtitle}
-
-          </motion && motion.p>;
-
-
-=======
-
+          </motion.p>
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
 
           >
@@ -636,9 +399,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             {subtitle}
           </motion.p>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {subtitle}
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -647,6 +408,28 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
           >
             {stats.map((stat, index) => (
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+          >
+            {stats.map((stat, index) => (
+              <div key={index} className='text-center'>
+                <div className={`${stat.color} mb-2 flex justify-center`}>
+                  <stat.icon className='w-8 h-8' />
+                </div>
+                <div className='text-2xl font-bold text-white'>
+                  {stat.value}
+                </div>
+                <div className='text-sm text-gray-400'>{stat.label}</div>              </div>          >
+            {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
                   <stat.icon className="w-8 h-8" />
@@ -654,145 +437,142 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </div>
-
-          </motion && motion.div>;
-        </div>;
-
-
-=======
-
-
             ))}
           </motion.div>
         </div>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
         {/* Filters */}
         {showFilters && (;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
-
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Category Filter */}
-                <div>;
-                  <label className='block text-sm font-medium text-gray-300 mb-3'>;
-                    Category;
-                  </label>;
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Category
+                  </label>
                   <select
                     value={selectedCategory}
-
-=======
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-12"
-          >
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {/* Category Filter */}
                 <div>;
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>;
                   <select
                     value={selectedCategory}
-
-
                         {category.icon} {category.name}
                       </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
+                  </select>
+                </div>
 
                   </select>;
                 </div>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Price Range Filter */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Price Range
+                  </label>
+                  <select
+                    value={selectedPriceRange}
+                    onChange={e => setSelectedPriceRange(e.target.value)}
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                  >
+                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>                  <select
+                    value={selectedPriceRange}
+                    onChange={(e) => setSelectedPriceRange(e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    {priceRanges.map((range) => (
+                      <option key={range.id} value={range.id}>
+                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {range.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
 
                   </select>;
                 </div>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Sort Options */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Sort By
+                  </label>
+                  <select
+                    value={sortBy}
+                    onChange={e => setSortBy(e.target.value)}
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                  >
+                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    {sortOptions.map((option) => (
+                      <option key={option.id} value={option.id}>
+                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
 
 
                         {option.name}
                       </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
-
-                      </option>))}
-                  </select>;
-                </div>;
-                {/* Sort Options */}
+                {/* Price Range Filter */}
                 <div>;
-                  <label className='block text - sm font - medium text - gray - 300 mb - 3'>;
-                    Sort By;
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>;
+                    Price Range;
                   </label>;
-                  <select;
-                    value={sort_by}
-                    on_change={e => setSortBy (e.target.value)}
-                    className='w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
+                  <select
+                    value={selectedPriceRange}
+                    onChange={e => setSelectedPriceRange(e && e.target.value)}
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
                   >;
-                    {sort_options.map (option => (                      <option key={option.id} value={option.id}>                  <select;
-                    value={sort_by}
-                    on_change={(e) => setSortBy (e.target.value)}
+                    {priceRanges && priceRanges.map(range => (                      <option key={range && range.id} value={range && range.id}>                  <select
+                    value={selectedPriceRange}
+                    onChange={(e) => setSelectedPriceRange(e && e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                  >;
+                    {priceRanges && priceRanges.map((range) => (;
+                      <option key={range && range.id} value={range && range.id}>;
+                        {range && range.name}
+                      </option>;
+                    value={selectedPriceRange}
+                    on_change={(e) => setSelectedPriceRange (e.target.value)}
                     className="w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
                   >;
-                    {sort_options.map ((option) => (
-                      <option key={option.id} value={option.id}>;
-                        {option.name}
-                      </option>))}
-
+                    {price_ranges.map ((range) => (
+                      <option key={range.id} value={range.id}>;
+                        {range.name}
+                    ))}
+                {/* Sort Options */}
+                <div>;
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>;
+                    Sort By;
+                  </label>;
+                  <select
+                    value={sortBy}
                   </select>;
                 </div>;
               </div>;
             </div>;
-
-                  </select>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-
-
-
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
-
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
-=======
           </motion.div>)}
         {/* Services Grid */}
         <motion.div;
@@ -804,113 +584,34 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           <AnimatePresence>;
             {filtered_services.map ((service, index) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={service.id}
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                className='group'
-
-
-
-
               >
                 <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
                   {/* Popular Badge */}
                   {service.popular && (
-
-
-=======
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
 
                       ⭐ Most Popular
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Header */}
-
-                while_hover={{ coordinate_y: -5, scale: 1.02 }}
-                className='group';
-              >;
-                <div className='relative bg - gray - 900 / 50 backdrop - blur - sm rounded - 2xl p - 6 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 h - full'>;
-                  {/* Popular Badge */}
-                  {service.popular && (
-                    <div className='absolute -top - 3 left - 6 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white text - xs font - bold px - 3 py - 1 rounded - full'>                      ⭐ Most Popular              >;
-                <div className="relative bg - gray - 900 / 50 backdrop - blur - sm rounded - 2xl p - 6 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 h - full">;
-                  {/* Popular Badge */}
-                  {service.popular && (
-                    <div className="absolute -top - 3 left - 6 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white text - xs font - bold px - 3 py - 1 rounded - full">;
-                      ⭐ Most Popular;
-                    </div>)}
-                  {/* Header */}
-                  <div className='mb - 6'>;
-                    <div className='flex items - center justify - between mb - 4'>;
-                      <div className='text - 3xl'>{service.icon}</div>;
-                      <div className='text - right'>;
-                        <div className='text - 2xl font - bold text - white'>;
-
                           {service.price}
                         </div>;
                         <div className='text - sm text - gray - 400'>;
                           {service.period}
-
-                  <div className="mb-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-3xl">{service.icon}</div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-white">{service.price}</div>
-                        <div className="text-sm text-gray-400">{service.period}</div>
-                      </div>
-
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-=======
                     </h3>;
                     <p className='text - gray - 300 text - sm leading - relaxed'>                      {service.tagline}                      </div>;
                     </div>;
                     <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {service.name}
                     </h3>;
                     <p className="text - gray - 300 text - sm leading - relaxed">;
                       {service.tagline}
-
-                  <div className='mb-6'>;
-                    <div className='flex items-center justify-between mb-4'>;
-                      <div className='text-3xl'>{service && service.icon}</div>;
-                      <div className='text-right'>;
-                        <div className='text-2xl font-bold text-white'>;
-                          {service && service.price}
-                        </div>;
-                        <div className='text-sm text-gray-400'>;
-                          {service && service.period}
-                        </div>;
-                      </div>;
-                    </div>;
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
-                      {service && service.name}
-                    </h3>;
-                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service && service.tagline}                      </div>;
-                    </div>;
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
-                      {service && service.name}
-                    </h3>;
-                    <p className="text-gray-300 text-sm leading-relaxed">;
-                      {service && service.tagline}
-                    </p>;
-                  </div>;
-
-
-                  {/* Features */}
-
-                        </div>
 
 
 
@@ -920,13 +621,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                       {service.name}
                     </h3>
-
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
 
                       {service.tagline}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                   {/* Features */}
@@ -934,14 +632,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                     <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
                       <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Key Features
                     </h4>
                     <ul className='space-y-2'>
                       {service.features.slice(0, 4).map((feature, idx) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <li
                           key={idx}
                           className='text-sm text-gray-400 flex items-start'>;
@@ -950,12 +644,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                     <ul className="space-y-2">;
                       {service && service.features.slice(0, 4).map((feature, idx) => (;
                         <li key={idx} className="text-sm text-gray-400 flex items-start">;
-                          <span className="text-cyan-400 mr-2">•</span>;
-
-=======
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                    </p>
+                  </div>
+                  {/* Features */}
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
+                      <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
                       Key Features
                     </h4>
                     <ul className="space-y-2">
@@ -963,19 +657,13 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                         <li key={idx} className="text-sm text-gray-400 flex items-start">
                           <span className="text-cyan-400 mr-2">•</span>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {feature}
                         </li>;
                       ))}
 
-
-
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -995,10 +683,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>
                   </div>
                   {/* ROI Highlight */}                    <div>
-=======
-                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
-                    <div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                          {feature}
+                        </li>;
+                      ))}
                       <div className="text-lg font-bold text-white">{service.rating}</div>
                       <div className="text-xs text-gray-400">Rating</div>
                     </div>
@@ -1013,19 +700,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   </div>
                   {/* ROI Highlight */}
 
-                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
-
-                    <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
-                    <div className="text-xs text-gray-300 leading-relaxed">
-                      {service.roi}
-=======
-
 
                       {service.roi}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
                   {/* Market Position */}
@@ -1037,10 +714,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       {service.marketPosition}
                     </div>
                   </div>
-
-                    </ul>;
-                  </div>;
-
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
                     <div>;
@@ -1061,7 +734,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       </div>;
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>;
                   </div>;
-
                   {/* ROI Highlight */}                    <div>;
                       <div className="text-lg font-bold text-white">{service && service.rating}</div>;
                       <div className="text-xs text-gray-400">Rating</div>;
@@ -1075,7 +747,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       <div className="text-xs text-gray-400">Trial Days</div>;
                     </div>;
                   </div>;
-
                   {/* ROI Highlight */}
                   <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>;
                     <div className='text-sm text-green-400 font-semibold mb-1'>;
@@ -1087,7 +758,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       {service && service.roi}
                     </div>;
                   </div>;
-
                   {/* Market Position */}
                   <div className='mb-6 p-4 bg-gray-800/30 rounded-lg'>;
                     <div className='text-sm text-cyan-400 font-semibold mb-2'>;
@@ -1101,15 +771,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   </div>;
 
 
-                  {/* CTA */}
-
-                  {/* CTA */}
-                  <div className='mt-auto'>
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Button
                       href={service && service.link}
                       variant='primary'
@@ -1122,20 +785,13 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
                   {/* Contact Info */}                    <Button
                       href={service && service.link}
-=======
+                  <div className="mt-auto">
+                  {/* Contact Info */}                    <Button
+                      href={service && service.link}
                   <div className="mt-auto">
                     <Button
                       href={service.link}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       variant="primary"
-
-                      className="w-full group-hover:bg-cyan-500 transition-colors">;
-                      Get Started;
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />;
-                    </Button>;
-                  </div>;
-
-
                   {/* Contact Info */}
                   <div className='mt-4 text-center'>;
                     <div className='text-xs text-gray-500'>;
@@ -1157,40 +813,14 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   </div>;
                 </div>;
               </motion && motion.div>;
-
-=======
-
-                  {/* Contact Info */}
-                  <div className="mt-4 text-center">
-                    <div className="text-xs text-gray-500">
-                      Contact: <span className="text-cyan-400">{service.contactInfo.mobile}</span>
-                    </div>
-                    <div className="text-xs text-gray-500">
-                      Email: <span className="text-cyan-400">{service.contactInfo.email}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            ))}
-
           </AnimatePresence>;
         </motion && motion.div>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-
-
               <Button
                 href='/contact'
                 variant='primary'
@@ -1227,18 +857,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
       </div>;
     </section>;
   );
-
-
 };
 
 export default EnhancedServiceShowcase;  );
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedServiceShowcase;
-
-
-=======
                     </p>;
                   </div>;
                   {/* Features */}
@@ -1419,13 +1042,8 @@ export default EnhancedServiceShowcase);
 }
 ;
 export default EnhancedServiceShowcase;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

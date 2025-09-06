@@ -9,4 +9,3 @@ const UseAnalytics.js = ({ className }) => {
   );
 };
 
-export default UseAnalytics.js;

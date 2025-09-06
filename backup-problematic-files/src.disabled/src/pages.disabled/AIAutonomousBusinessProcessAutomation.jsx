@@ -9,4 +9,3 @@ const AIAutonomousBusinessProcessAutomation = ({ className }) => {
   );
 };
 
-export default AIAutonomousBusinessProcessAutomation;

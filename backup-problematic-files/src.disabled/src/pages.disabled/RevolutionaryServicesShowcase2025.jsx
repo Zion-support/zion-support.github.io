@@ -9,4 +9,3 @@ const RevolutionaryServicesShowcase2025 = ({ className }) => {
   );
 };
 
-export default RevolutionaryServicesShowcase2025;

@@ -57,7 +57,7 @@ export default function RequestToHirePage() {
 
   return (
     <div className=&quot;max-w-xl mx-auto&quot;>
-      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>
+      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Request to Hire{selected ? `  ${selected.name}` : ''}</h1>
       <form className=&quot;space-y-4&quot; onSubmit={onSubmit}>
         <div>
           <label className=&quot;block text-sm font-medium mb-1&quot;>Your Name</label>
@@ -81,7 +81,7 @@ export default function RequestToHirePage() {
         </div>
         {error && <div className=&quot;text-sm text-red-600&quot;>{error}</div>}
         <button disabled={submitting} className=&quot;px-4 py-2 rounded bg-black text-white&quot;>
-          {submitting ? 'Submitting…' : 'Submit Request'}        </button>
+          {submitting ? 'Submitting' : 'Submit Request'}        </button>
       </form>
     </div>
   )}

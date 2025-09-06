@@ -9,4 +9,3 @@ const AdvancedServicesPage = ({ className }) => {
   );
 };
 
-export default AdvancedServicesPage;

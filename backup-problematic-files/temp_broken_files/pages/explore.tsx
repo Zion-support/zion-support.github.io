@@ -366,7 +366,7 @@ export default function ExplorePage() {;
                       {category.featured && (;
                         <div className="absolute top-4 right-4">;
                           <span className="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white">;
-                            ⭐ Featured;
+                             Featured;
                           </span>;
                         </div>;                      )}
                       ;
@@ -390,7 +390,7 @@ export default function ExplorePage() {;
                         </div>;
                         <div className="text-center">;
                           <div className="text-2xl font-bold text-purple-400">;
-                            {category.featured ? '⭐' :'🚀'}
+                            {category.featured ? '' :''}
                           </div>;
                           <div className="text-xs text-white/60">;
                             {category.featured ? 'Featured' :'Active'}
@@ -566,7 +566,7 @@ case 'featured': </Head> <SmartHeader /> <motion.div initial= {
 }> {
   service.status 
 }</span> > Learn More <ChevronRight className="w-4 h-4 ml-1" /> </Link> </div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4" > Technology Categories </h2> > <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center" > <Search className="w-12 h-12 text-white/40" /> </div> <h3 className="text-2xl font-semibold text-white mb-2" >No categories found</h3> <p className="text-white/60 mb-6" > Try adjusting your search terms </p> <button > Clear Search </button> </motion.div> ⭐ Featured </span> </div>) 
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4" > Technology Categories </h2> > <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center" > <Search className="w-12 h-12 text-white/40" /> </div> <h3 className="text-2xl font-semibold text-white mb-2" >No categories found</h3> <p className="text-white/60 mb-6" > Try adjusting your search terms </p> <button > Clear Search </button> </motion.div>  Featured </span> </div>) 
 }</div> </div> </div> Explore Category </span> <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" /> </div> </div> </motion.div>) ) 
 }</div>) 
 }</AnimatePresence> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Emerging Technology Trends </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay ahead of the curve with our insights into the latest technology developments </p> </motion.div> {

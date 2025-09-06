@@ -61,17 +61,17 @@ export default function ServicesShowcase2027() {;
   }),;
 ;
   const categories = [;
-    { id:'all', name:'All Services', icon:'🚀', count:allServices.length },;
-    { id:'AI Consciousness Evolution', name:'AI Consciousness', icon:'🧠', count:allServices.filter(s => s.category.includes('AI Consciousness')).length },;
-    { id:'Quantum Consciousness', name:'Quantum Consciousness', icon:'⚛️', count:allServices.filter(s => s.category.includes('Quantum Consciousness')).length },;
-    { id:'AI Civilization', name:'AI Civilization', icon:'🏛️', count:allServices.filter(s => s.category.includes('AI Civilization')).length },;
-    { id:'Quantum Time', name:'Quantum Time', icon:'⏰', count:allServices.filter(s => s.category.includes('Quantum Time')).length },;
-    { id:'AI Multiverse', name:'AI Multiverse', icon:'🌌', count:allServices.filter(s => s.category.includes('AI Multiverse')).length },;
-    { id:'Customer Success Automation', name:'Customer Success', icon:'🎯', count:allServices.filter(s => s.category.includes('Customer Success')).length },;
-    { id:'Content Marketing Automation', name:'Content Marketing', icon:'📝', count:allServices.filter(s => s.category.includes('Content Marketing')).length },;
-    { id:'Inventory Management', name:'Inventory Management', icon:'📦', count:allServices.filter(s => s.category.includes('Inventory Management')).length },;
-    { id:'HR Automation', name:'HR Automation', icon:'👥', count:allServices.filter(s => s.category.includes('HR Automation')).length },;
-    { id:'Financial Automation', name:'Financial Automation', icon:'💰', count:allServices.filter(s => s.category.includes('Financial Automation')).length }
+    { id:'all', name:'All Services', icon:'', count:allServices.length },;
+    { id:'AI Consciousness Evolution', name:'AI Consciousness', icon:'', count:allServices.filter(s => s.category.includes('AI Consciousness')).length },;
+    { id:'Quantum Consciousness', name:'Quantum Consciousness', icon:'', count:allServices.filter(s => s.category.includes('Quantum Consciousness')).length },;
+    { id:'AI Civilization', name:'AI Civilization', icon:'', count:allServices.filter(s => s.category.includes('AI Civilization')).length },;
+    { id:'Quantum Time', name:'Quantum Time', icon:'', count:allServices.filter(s => s.category.includes('Quantum Time')).length },;
+    { id:'AI Multiverse', name:'AI Multiverse', icon:'', count:allServices.filter(s => s.category.includes('AI Multiverse')).length },;
+    { id:'Customer Success Automation', name:'Customer Success', icon:'', count:allServices.filter(s => s.category.includes('Customer Success')).length },;
+    { id:'Content Marketing Automation', name:'Content Marketing', icon:'', count:allServices.filter(s => s.category.includes('Content Marketing')).length },;
+    { id:'Inventory Management', name:'Inventory Management', icon:'', count:allServices.filter(s => s.category.includes('Inventory Management')).length },;
+    { id:'HR Automation', name:'HR Automation', icon:'', count:allServices.filter(s => s.category.includes('HR Automation')).length },;
+    { id:'Financial Automation', name:'Financial Automation', icon:'', count:allServices.filter(s => s.category.includes('Financial Automation')).length }
   ],;
 ;
   const priceRanges = [;
@@ -149,7 +149,7 @@ export default function ServicesShowcase2027() {;
               </div>;
               <div className="text-center">;
                 <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">;
-                  4.9★;
+                  4.9;
                 </div>;
                 <div className="text-green-300">Rating</div>;
               </div>;
@@ -296,7 +296,7 @@ export default function ServicesShowcase2027() {;
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-4 mb-6 text-center">;
                       <div>;
-                        <div className="text-cyan-400 font-semibold">{service.rating}★</div>;
+                        <div className="text-cyan-400 font-semibold">{service.rating}</div>;
                         <div className="text-gray-400 text-xs">Rating</div>;
                       </div>;
                       <div>;
@@ -338,7 +338,7 @@ export default function ServicesShowcase2027() {;
             <motion.div;
               initial={{ opacity:0 }}
               animate={{ opacity:1 }} className="text-center py-20">;
-              <div className="text-6xl mb-4">🔍</div>;
+              <div className="text-6xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
               <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>;
               <button;
@@ -411,9 +411,9 @@ export default function ServicesShowcase2027() {;
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;
             <p className="mt-2">;
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>;
-              {' • '}
+              {'  '}
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</Link>;
-              {' • '}
+              {'  '}
               <Link href="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact Us</Link>;
             </p>;
           </div>;

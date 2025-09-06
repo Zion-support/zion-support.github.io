@@ -44,7 +44,6 @@ export const ReputationDisplay = ({ ;
       </div>;
       <Progress value={progress} className={sizeClasses[size].progress} />;
       <div className="text-xs text-muted-foreground">;
-        Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up;
       </div>;
     </div>;
   ),;

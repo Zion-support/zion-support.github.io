@@ -377,7 +377,6 @@ class SecurityMonitor {
       this.log(`Fatal error in security "monitor": ${error.message}`, 'ERROR');
       throw error}
   }
-}
 // Run the security monitor if called directly
 if (require.main === module) {
   const monitor = new SecurityMonitor();

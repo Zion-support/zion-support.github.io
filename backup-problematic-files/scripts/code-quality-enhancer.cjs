@@ -15,4 +15,17 @@ s*(w+)/g, '
       improvements.push('Arrow functions optimized')
       improvements.push('Semicolons added')
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+<<<<<<< HEAD
       // Skip directories that can'
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      // Skip directories that can'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+      // Skip directories that can'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

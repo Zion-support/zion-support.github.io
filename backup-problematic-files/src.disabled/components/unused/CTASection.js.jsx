@@ -9,4 +9,3 @@ const CTASection.js = ({ className }) => {
   );
 };
 
-export default CTASection.js;

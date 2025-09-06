@@ -9,4 +9,3 @@ const SEOOptimizer.js = ({ className }) => {
   );
 };
 
-export default SEOOptimizer.js;

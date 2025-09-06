@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-auditor.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 #!/usr/bin/env node;#!/usr/bin/env node;
@@ -164,6 +171,17 @@ auditor;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+#!/usr/bin/env node;#!/usr/bin/env node;
+#!/usr/bin/env node;#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-security-auditor.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 const fs = require("fs")";const path = require("path")""
     this.reportFile = path.join(this.projectRoot, "security-audit-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -199,6 +217,12 @@ const fs = require("fs")";const path = require("path")""
     this.log("� Starting Security Audit");""
       this.log(" Security audit completed");";      return report,"
       this.log(" Security audit "failed": ${error.message}");"
+<<<<<<< HEAD
+  .then(report => {);    console.log(" Security audit completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-auditor.cjs
+=======
+=======
   .then(report => {);    console.log(" Security audit completed successfully");";    process.exit(0),"}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -212,6 +236,19 @@ const fs = require("fs")";const path = require("path")""
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+>>>>>>> pr-12166
 <<<<<<< HEAD
   .catch(error => {);    console.error(" Security audit "failed":", error.message);"}  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
 =======
@@ -233,3 +270,13 @@ const fs = require("fs")";const path = require("path")""
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-security-auditor.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

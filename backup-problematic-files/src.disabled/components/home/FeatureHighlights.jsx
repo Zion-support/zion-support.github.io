@@ -9,4 +9,3 @@ const FeatureHighlights = ({ className }) => {
   );
 };
 
-export default FeatureHighlights;

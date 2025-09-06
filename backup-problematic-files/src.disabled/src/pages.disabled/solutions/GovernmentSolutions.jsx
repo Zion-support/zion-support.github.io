@@ -9,4 +9,3 @@ const GovernmentSolutions = ({ className }) => {
   );
 };
 
-export default GovernmentSolutions;

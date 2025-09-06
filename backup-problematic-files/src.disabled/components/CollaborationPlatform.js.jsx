@@ -9,4 +9,3 @@ const CollaborationPlatform.js = ({ className }) => {
   );
 };
 
-export default CollaborationPlatform.js;

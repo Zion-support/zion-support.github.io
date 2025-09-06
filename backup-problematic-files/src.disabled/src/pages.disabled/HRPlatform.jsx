@@ -9,4 +9,3 @@ const HRPlatform = ({ className }) => {
   );
 };
 
-export default HRPlatform;

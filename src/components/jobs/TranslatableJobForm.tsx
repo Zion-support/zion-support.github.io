@@ -1,23 +1,3 @@
-
-
-    }
-  }
-  // Ensure all translations are available;
-  const ensureAllTranslations = async () => {
-
-interface TranslatableJobFormProps {;
-  onSubmit: (formData: any) => void;
-  isSubmitting?: boolean;}
-
-export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;
-  const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
-
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
-
-  // Form fields with translations;
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({;
     en: "",;
     es: "",;
     fr: "",;
@@ -26,11 +6,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
   });
     ar: "";
   });
-
-
-    let sourceLanguage: SupportedLanguage = 'en';
-    let content = '';
-
         content = title[lang];
         sourceLanguage = lang;
         break;      } else if (field === 'description' && description[lang]) {;
@@ -55,22 +30,13 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     } catch (error) {;
       logErrorToProduction('Error translating ${field}:', { data: error });
       toast({;
-        title: t('translation && translation.translation_failed'),;
-        description: error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;
-        variant: "destructive";
-      });
     }
-  };
-
-  // Ensure all translations are available;
-  const ensureAllTranslations = async () => {;
-    const promises = [];
-
-}
-  );
+  }
+  // Ensure all translations are available
+  const ensureAllTranslations = async () => {
+    const promises = []
 
 }
-
 
 export function TranslatableJobForm({ onSubmit, isSubmitting;
   return (
@@ -262,16 +228,3 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
           ) : (
             t('jobs.post_job_button')
           )}
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-        </Button>;
-      </div>;
-    </form>;
-  );
-}
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

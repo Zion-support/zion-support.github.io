@@ -9,4 +9,3 @@ const AIAutonomousFinance = ({ className }) => {
   );
 };
 
-export default AIAutonomousFinance;

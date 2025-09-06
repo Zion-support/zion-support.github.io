@@ -9,4 +9,3 @@ const ProductsAdminPage = ({ className }) => {
   );
 };
 
-export default ProductsAdminPage;

@@ -168,8 +168,6 @@ export async function getErrorReports() {
 import {NextApiRequest,NextApiResponse} from 'next'; interface ErrorReport { error: { message: string, stack?: string, name: string} }; errorInfo: {
        componentStack?: string
     },
-
-
 import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorReport { error: {
        message: string, stack?: string, name: string
     },

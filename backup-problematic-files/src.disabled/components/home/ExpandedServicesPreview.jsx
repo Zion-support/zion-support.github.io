@@ -9,4 +9,3 @@ const ExpandedServicesPreview = ({ className }) => {
   );
 };
 
-export default ExpandedServicesPreview;

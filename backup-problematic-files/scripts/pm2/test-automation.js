@@ -8,7 +8,7 @@ const { execSync } = require('child_process');
 ;
   async runTests() {;
     try {;
-      this.log('🧪 Running test suite...');
+      this.log(' Running test suite...');
 ;
       const startTime = Date.now();
 ;
@@ -36,7 +36,7 @@ const { execSync } = require('child_process');
 ;
   async runLintTests() {;
     try {;
-      this.log('🔍 Running lint tests...');
+      this.log(' Running lint tests...');
 ;
       const lintResult = execSync('npm run lint', {;
         cw:d:this.projectRoot;
@@ -58,7 +58,7 @@ const { execSync } = require('child_process');
 ;
   async runTypeCheck() {;
     try {;
-      this.log('📝 Running type check...');
+      this.log(' Running type check...');
 ;
       const typeResult = execSync('npm run type-check', {;
         cw:d:this.projectRoot;
@@ -132,7 +132,7 @@ const { execSync } = require('child_process');
 };
 ;
   async run() {;
-    this.log('🚀 Starting Test Automation...');
+    this.log(' Starting Test Automation...');
     this.log(`Project:root:${this.projectRoot}`);;
     try {;
       // Create logs directory if it doesn't exist;
@@ -146,7 +146,7 @@ const { execSync } = require('child_process');
       const typeResults = await this.runTypeCheck();
 ;
       // Generate report;
-      this.log('📊 Generating test report...');
+      this.log(' Generating test report...');
       const report = await this.generateReport(testResults, lintResults, typeResults);
 ;
       // Save report;
@@ -155,7 +155,7 @@ const { execSync } = require('child_process');
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n📊 Test Automation:Summary:');
+      this.log('\n Test Automation:Summary:');
       this.log(`Test:s:${report.summary.tests}`);
       this.log(`Lin:t:${report.summary.lint}`);
       this.log(`Type:Check:${report.summary.typeCheck}`);
@@ -163,16 +163,16 @@ const { execSync } = require('child_process');
       this.log(`Duratio:n:${duration}ms`);
 ;
       if (report.recommendations.length > 0) {;
-        this.log('\n💡 Recommendation:s:');
+        this.log('\n Recommendation:s:');
         report.recommendations.forEach(rec => {;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Actio:n:${rec.action}`);        });
       } else {;
-        this.log('\n✨ All tests passed!');
+        this.log('\n All tests passed!');
       };
 ;
     } catch (error) {;
-      this.log(`❌ Error running test:automation:${error.message}`);      process.exit(1);
+      this.log(` Error running test:automation:${error.message}`);      process.exit(1);
 };
 };
 };
@@ -208,7 +208,7 @@ class TestAutomation {,;
 ,;
   async runTests() {,;
     try {,;
-      this.log('🧪 Running test suite...'),;
+      this.log(' Running test suite...'),;
 ,;
       const startTime = Date.now(),;
 ,;
@@ -238,7 +238,7 @@ class TestAutomation {,;
 ,;
   async runLintTests() {,;
     try {,;
-      this.log('🔍 Running lint tests...'),;
+      this.log(' Running lint tests...'),;
 ,;
       const lintResult = execSync('npm run lint', {,;
         cw:d:this.projectRoot,;
@@ -261,7 +261,7 @@ class TestAutomation {,;
 ,;
   async runTypeCheck() {,;
     try {,;
-      this.log('📝 Running type check...'),;
+      this.log(' Running type check...'),;
 ,;
       const typeResult = execSync('npm run type-check', {,;
         cw:d:this.projectRoot,;
@@ -342,7 +342,7 @@ class TestAutomation {,;
   };
 ,;
   async run() {,;
-    this.log('🚀 Starting Test Automation...'),;
+    this.log(' Starting Test Automation...'),;
     this.log(`Project:root:${this.projectRoot}`),;
 ,;
     try {,;
@@ -358,7 +358,7 @@ class TestAutomation {,;
       const typeResults = await this.runTypeCheck(),;
 ,;
       // Generate report,;
-      this.log('📊 Generating test report...'),;
+      this.log(' Generating test report...'),;
       const report = await this.generateReport(testResults, lintResults, typeResults),;
 ,;
       // Save report,;
@@ -367,7 +367,7 @@ class TestAutomation {,;
       const duration = Date.now() - this.startTime,;
 ,;
       // Log summary,;
-      this.log('\n📊 Test Automation:Summary:'),;
+      this.log('\n Test Automation:Summary:'),;
       this.log(`Test:s:${report.summary.tests}`),;
       this.log(`Lin:t:${report.summary.lint}`),;
       this.log(`Type:Check:${report.summary.typeCheck}`),;
@@ -375,17 +375,17 @@ class TestAutomation {,;
       this.log(`Duratio:n:${duration}ms`),;
 ,;
       if (report.recommendations.length > 0) {,;
-        this.log('\n💡 Recommendation:s:'),;
+        this.log('\n Recommendation:s:'),;
         report.recommendations.forEach(rec => {,;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
           this.log(`    Actio:n:${rec.action}`),;
         }),;
       } else {,;
-        this.log('\n✨ All tests passed!'),;
+        this.log('\n All tests passed!'),;
       };
 ,;
     } catch (error) {,;
-      this.log(`❌ Error running test:automation:${error.message}`),;
+      this.log(` Error running test:automation:${error.message}`),;
       process.exit(1),;
     };
   };
@@ -422,7 +422,7 @@ class TestAutomation {,
 ,
   async runTests() {,
     try {,
-      this.log('🧪 Running test suite...'),
+      this.log(' Running test suite...'),
 ,
       const startTime = Date.now(),
 ,
@@ -452,7 +452,7 @@ class TestAutomation {,
 ,
   async runLintTests() {,
     try {,
-      this.log('🔍 Running lint tests...'),
+      this.log(' Running lint tests...'),
 ,
       const lintResult = execSync('npm run lint', {,
         cwd: this.projectRoot,
@@ -475,7 +475,7 @@ class TestAutomation {,
 ,
   async runTypeCheck() {,
     try {,
-      this.log('📝 Running type check...'),
+      this.log(' Running type check...'),
 ,
       const typeResult = execSync('npm run type-check', {,
         cwd: this.projectRoot,
@@ -556,7 +556,7 @@ class TestAutomation {,
   };
 ,
   async run() {,
-    this.log('🚀 Starting Test Automation...'),
+    this.log(' Starting Test Automation...'),
     this.log(`Project root: ${this.projectRoot}`),
 ,
     try {,
@@ -572,7 +572,7 @@ class TestAutomation {,
       const typeResults = await this.runTypeCheck(),
 ,
       // Generate report,
-      this.log('📊 Generating test report...'),
+      this.log(' Generating test report...'),
       const report = await this.generateReport(testResults, lintResults, typeResults),
 ,
       // Save report,
@@ -581,7 +581,7 @@ class TestAutomation {,
       const duration = Date.now() - this.startTime,
 ,
       // Log summary,
-      this.log('\n📊 Test Automation Summary: '),
+      this.log('\n Test Automation Summary: '),
       this.log(`Tests: ${report.summary.tests}`),
       this.log(`Lint: ${report.summary.lint}`),
       this.log(`Type Check: ${report.summary.typeCheck}`),
@@ -589,17 +589,17 @@ class TestAutomation {,
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.recommendations.length > 0) {,
-        this.log('\n💡 Recommendations: '),
+        this.log('\n Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
           this.log(`    Action: ${rec.action}`)
         })
       } else {,
-        this.log('\n✨ All tests passed!')
+        this.log('\n All tests passed!')
       };
 
     } catch (error) {,
-      this.log(`❌ Error running test automation: ${error.message}`),
+      this.log(` Error running test automation: ${error.message}`),
       process.exit(1)
     };
   };

@@ -1,6 +1,3 @@
-
-
-
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -34,9 +31,22 @@
               or email{' '}
               <a
                 className='text-purple-400'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  YouTube
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+}
+import React from 'react',
+import Head from 'next/head',
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
-=======
 import Head from 'next / head';
 export default /**
  * CommunityPage - Function description
@@ -78,7 +88,6 @@ function CommunityPage() {
                 href='mailto: kleber@ziontechgroup.com';
               >;
                 kleber@ziontechgroup.com;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </a>;
               .;
             </p>;
@@ -125,7 +134,6 @@ function CommunityPage() {
               <li>;
 
                   rel='noopener noreferrer'>;
-=======
                 <a;
                   className='text - cyan - 400';
                   href='https://youtube.com/@ziontechgroup';
@@ -142,12 +150,6 @@ function CommunityPage() {
       </div>;
 
 
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -168,25 +170,13 @@ export default function CommunityPage() {
 					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
 						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>
 						<ul className="text-slate-300 space-y-1">
-							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-	)
-}
 
-    </div>);
-;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

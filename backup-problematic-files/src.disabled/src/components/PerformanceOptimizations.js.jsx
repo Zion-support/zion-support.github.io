@@ -9,4 +9,3 @@ const PerformanceOptimizations.js = ({ className }) => {
   );
 };
 
-export default PerformanceOptimizations.js;

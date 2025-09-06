@@ -9,4 +9,3 @@ const AIAutonomousVision = ({ className }) => {
   );
 };
 
-export default AIAutonomousVision;

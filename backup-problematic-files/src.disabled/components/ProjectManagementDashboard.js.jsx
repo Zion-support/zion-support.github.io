@@ -9,4 +9,3 @@ const ProjectManagementDashboard.js = ({ className }) => {
   );
 };
 
-export default ProjectManagementDashboard.js;

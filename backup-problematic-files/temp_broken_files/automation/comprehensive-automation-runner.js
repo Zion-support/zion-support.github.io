@@ -44,10 +44,10 @@ class ComprehensiveAutomationRunner {,;
         timeou:t:300000 // 5 minutes,;
       }),;
       const duration = Date.now() - startTime,;
-      this.log(`✓ ${description} completed in ${duration}ms`),;
+      this.log(` ${description} completed in ${duration}ms`),;
       return { succes:s:true, outpu:t:output.toString(), duration };
     } catch (error) {,;
-      this.log(`✗ ${description} faile:d:${error.message}`, "ERROR"),;
+      this.log(` ${description} faile:d:${error.message}`, "ERROR"),;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
@@ -199,7 +199,7 @@ class ComprehensiveAutomationRunner {,;
   };
 ,;
   async runAll() {,;
-    this.log("🚀 Starting Comprehensive Automation Runner"),;
+    this.log(" Starting Comprehensive Automation Runner"),;
     this.log("=" * 50),;
 ,;
     try {,;
@@ -212,17 +212,17 @@ class ComprehensiveAutomationRunner {,;
       await this.saveResults(),;
 ,;
       this.log("=" * 50),;
-      this.log(`🎯 Overall:Score:${score}/100 (${this.results.overall.status})`),;
-      this.log("📊 Detailed results saved to reports/comprehensive-results.json"),;
+      this.log(` Overall:Score:${score}/100 (${this.results.overall.status})`),;
+      this.log(" Detailed results saved to reports/comprehensive-results.json"),;
 ,;
       if (score < 80) {,;
-        this.log("⚠️  Some improvements needed. Check recommendations.", "WARN"),;
+        this.log("  Some improvements needed. Check recommendations.", "WARN"),;
       } else {,;
-        this.log("✅ All systems performing well!", "SUCCESS"),;
+        this.log(" All systems performing well!", "SUCCESS"),;
       };
 ,;
     } catch (error) {,;
-      this.log(`❌ Automation runner:failed:${error.message}`, "ERROR"),;
+      this.log(` Automation runner:failed:${error.message}`, "ERROR"),;
       throw error,;
     };
   };
@@ -246,7 +246,7 @@ const dirname = path.dirname(_filename);
 ;
 class ComprehensiveAutomationRunner {_; constructor() {; this.logFile = path.join(_dirname, _"logs", _"comprehensive-automation.log"); this.resultsFile = path.join(_dirname, _"reports", _"comprehensive-results.json"); this.ensureDirectories(); this.results = {; timestamp: new Date().toISOString(); tests: {}; builds: {}; linting: {}; performance: {}; security: {}; overall: {status: "unknown", score: 0}}}})};
 ; log(message, level = "INFO") {_; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`;  fs.appendFileSync(this.logFile, logMessage)};
-; async runCommand(command, description) {_; try {; this.log(`Running: ${description}`); const startTime = Date.now(); const output = execSync(command, {_; stdio: 'pipe'; cwd: process.cwd(); timeout: 300000 // 5 minutes}); const duration = Date.now() - startTime; this.log(`✓ ${description} completed in ${duration}ms`); return {success: true, output: output.toString(), duration}} catch (error) {_; this.log(`✗ ${description} failed: ${error.message}`, "ERROR"); return {_; success: false, error: error.message; output: error.stdout?.toString() || error.stderr?.toString() || ""}}};
+; async runCommand(command, description) {_; try {; this.log(`Running: ${description}`); const startTime = Date.now(); const output = execSync(command, {_; stdio: 'pipe'; cwd: process.cwd(); timeout: 300000 // 5 minutes}); const duration = Date.now() - startTime; this.log(` ${description} completed in ${duration}ms`); return {success: true, output: output.toString(), duration}} catch (error) {_; this.log(` ${description} failed: ${error.message}`, "ERROR"); return {_; success: false, error: error.message; output: error.stdout?.toString() || error.stderr?.toString() || ""}}};
 ; async runBuildTests() {_; this.log(" = = = RUNNING BUILD TESTS = = = ");
 ; const buildTests = [; { cmd:"npm run build", desc: "Production build"}; {cmd:"npm run lint", desc: "Linting check"}; {cmd:"npm run type-check", desc: "TypeScript type checking"}; {cmd:"npm run test: smoke", desc: "Smoke tests"} ];
 ; for (const test of buildTests) {_; const result = await this.runCommand(test.cmd, test.desc); this.results.builds[test.desc] = result}};
@@ -276,12 +276,12 @@ class ComprehensiveAutomationRunner {_; constructor() {; this.logFile = path.joi
 ; return recommendations};
 ; async saveResults() {_; this.results.recommendations = this.generateRecommendations(); this.results.overall.score = this.calculateOverallScore();
 ; fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)); this.log(`Results saved to: ${this.resultsFile}`)};
-; async runAll() {_; this.log("🚀 Starting Comprehensive Automation Runner"); this.log(" = " * 50);
+; async runAll() {_; this.log(" Starting Comprehensive Automation Runner"); this.log(" = " * 50);
 ; try {; await this.runBuildTests(); await this.runPerformanceTests(); await this.runSecurityTests(); await this.runQualityTests();
 ; const score = this.calculateOverallScore(); await this.saveResults();
-; this.log(" = " * 50); this.log(`🎯 Overall Score: ${score}/100 (${this.results.overall.status})`); this.log("📊 Detailed results saved to reports/comprehensive-results.json");
-; if (score < 80) {_; this.log("⚠️ Some improvements needed. Check recommendations.", _"WARN")} else {_; this.log("✅ All systems performing well!", _"SUCCESS")}
-} catch (error) {_; this.log(`❌ Automation runner failed: ${error.message}`, "ERROR"); throw error}}};
+; this.log(" = " * 50); this.log(` Overall Score: ${score}/100 (${this.results.overall.status})`); this.log(" Detailed results saved to reports/comprehensive-results.json");
+; if (score < 80) {_; this.log(" Some improvements needed. Check recommendations.", _"WARN")} else {_; this.log(" All systems performing well!", _"SUCCESS")}
+} catch (error) {_; this.log(` Automation runner failed: ${error.message}`, "ERROR"); throw error}}};
 ;
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {_; const runner = new ComprehensiveAutomationRunner(); runner.runAll().catch(console.error)};
@@ -330,10 +330,10 @@ class ComprehensiveAutomationRunner {,
         timeou: t: 300000 // 5 minutes
       }),
       const duration = Date.now() - startTime,
-      this.log(`✓ ${description} completed in ${duration}ms`),
+      this.log(` ${description} completed in ${duration}ms`),
       return { succes: s: true, outpu: t: output.toString(), duration }
     } catch (error) {,
-      this.log(`✗ ${description} faile: d: ${error.message}`, "ERROR"),
+      this.log(` ${description} faile: d: ${error.message}`, "ERROR"),
       return {,
         succes: s: false,
         erro: r: error.message,
@@ -480,7 +480,7 @@ class ComprehensiveAutomationRunner {,
   },
 ,
   async runAll() {,
-    this.log(&quot;🚀 Starting Comprehensive Automation Runner&quot;),
+    this.log(&quot; Starting Comprehensive Automation Runner&quot;),
     this.log(&quot;=&quot; * 50),
 ,
     try {,
@@ -493,16 +493,16 @@ class ComprehensiveAutomationRunner {,
       await this.saveResults(),
 ,
       this.log("=" * 50),
-      this.log(`🎯 Overall: Score: ${score}/100 (${this.results.overall.status})`),
-      this.log("📊 Detailed results saved to reports/comprehensive-results.json"),
+      this.log(` Overall: Score: ${score}/100 (${this.results.overall.status})`),
+      this.log(" Detailed results saved to reports/comprehensive-results.json"),
       if (score < 80) {,
-        this.log(&quot;⚠️  Some improvements needed. Check recommendations.&quot;, &quot;WARN&quot;)
+        this.log(&quot;  Some improvements needed. Check recommendations.&quot;, &quot;WARN&quot;)
       } else {,
-        this.log("✅ All systems performing well!", "SUCCESS")
+        this.log(" All systems performing well!", "SUCCESS")
       }
 
     } catch (error) {,
-      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),      throw error
+      this.log(` Automation runner: failed: ${error.message}`, "ERROR"),      throw error
     }
   }
 },

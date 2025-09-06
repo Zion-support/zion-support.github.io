@@ -9,4 +9,3 @@ const Accessibility-panel = ({ className }) => {
   );
 };
 
-export default Accessibility-panel;

@@ -64,8 +64,9 @@ import React from 'react';
     </>;
   );
 
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredCybersecurityPage() {
 	return (
@@ -97,13 +98,6 @@ export default function AIPoweredCybersecurityPage() {
 	)
 }
 
-=======
-import Head from 'next / head';
-import Layout from '../components / layout / Layout';
-export default /**
- * AIPoweredCybersecurityPage - Function description
- */
-function AIPoweredCybersecurityPage() {
   return (
     <>;
       <Head>;
@@ -143,9 +137,5 @@ function AIPoweredCybersecurityPage() {
       />;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

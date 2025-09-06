@@ -9,4 +9,3 @@ const WhitelabelManager = ({ className }) => {
   );
 };
 
-export default WhitelabelManager;

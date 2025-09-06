@@ -9,4 +9,3 @@ const ChatBotPanel = ({ className }) => {
   );
 };
 
-export default ChatBotPanel;

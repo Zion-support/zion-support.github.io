@@ -9,4 +9,3 @@ const Consulting = ({ className }) => {
   );
 };
 
-export default Consulting;

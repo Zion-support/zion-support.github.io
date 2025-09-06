@@ -9,4 +9,3 @@ const InteractivePortfolio = ({ className }) => {
   );
 };
 
-export default InteractivePortfolio;

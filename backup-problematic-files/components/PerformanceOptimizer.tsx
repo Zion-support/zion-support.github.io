@@ -318,11 +318,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-          <li>• Use WebP images for better compression</li>
-          <li>• Implement lazy loading for images</li>
-          <li>• Minimize CSS and JavaScript bundles</li>
-          <li>• Use CDN for static assets</li>
-          <li>• Enable gzip compression</li>
+          <li> Use WebP images for better compression</li>
+          <li> Implement lazy loading for images</li>
+          <li> Minimize CSS and JavaScript bundles</li>
+          <li> Use CDN for static assets</li>
+          <li> Enable gzip compression</li>
         </ul>
       </div>
     </div>

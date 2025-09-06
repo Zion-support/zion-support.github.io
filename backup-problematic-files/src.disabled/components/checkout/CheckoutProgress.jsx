@@ -9,4 +9,3 @@ const CheckoutProgress = ({ className }) => {
   );
 };
 
-export default CheckoutProgress;

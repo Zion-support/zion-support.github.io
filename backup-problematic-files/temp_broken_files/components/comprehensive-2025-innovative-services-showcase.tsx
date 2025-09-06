@@ -90,7 +90,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 <div className=&quot;text-gray-300 text-sm&quot;>Autonomous Operations</div>
               </div>
               <div className=&quot;p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20&quot;>
-                <div className=&quot;text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors&quot;>∞</div>
+                <div className=&quot;text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors&quot;></div>
                 <div className=&quot;text-gray-300 text-sm&quot;>Future Possibilities</div>
               </div>
             </motion.div>

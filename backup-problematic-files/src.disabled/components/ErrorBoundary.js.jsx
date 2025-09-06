@@ -9,4 +9,3 @@ const ErrorBoundary.js = ({ className }) => {
   );
 };
 
-export default ErrorBoundary.js;

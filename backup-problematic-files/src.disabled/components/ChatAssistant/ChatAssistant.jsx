@@ -9,4 +9,3 @@ const ChatAssistant = ({ className }) => {
   );
 };
 
-export default ChatAssistant;

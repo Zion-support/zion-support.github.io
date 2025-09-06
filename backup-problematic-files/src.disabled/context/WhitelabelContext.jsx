@@ -9,4 +9,3 @@ const WhitelabelContext = ({ className }) => {
   );
 };
 
-export default WhitelabelContext;

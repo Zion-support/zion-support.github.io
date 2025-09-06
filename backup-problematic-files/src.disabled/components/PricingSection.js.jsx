@@ -9,4 +9,3 @@ const PricingSection.js = ({ className }) => {
   );
 };
 
-export default PricingSection.js;

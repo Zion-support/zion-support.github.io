@@ -50,7 +50,7 @@ export default function GrantsAdminPage() {;
                 <div className="flex items-center justify-between">;
                   <div>;
                     <div className="font-medium">{g.projectName}</div>;
-                    <div className="text-xs text-gray-600">{g.sector} • {g.region} • {g.program}</div>;
+                    <div className="text-xs text-gray-600">{g.sector}  {g.region}  {g.program}</div>;
                   </div>;
                   <div className="flex gap-2">;
                     <button className="px-2 py-1 border rounded" onClick={() => setStatus(g.id, 'Under Review')}>Under Review</button>;

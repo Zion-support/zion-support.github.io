@@ -7,7 +7,7 @@ export default function PerformanceDocRedirect() {;
         <meta httpEquiv="refresh" content="0, url=/PERFORMANCE.md" />;
       </Head>;
       <main style={{ padding:24 }}>;
-        <p>Redirecting to Performance documentation…</p>;
+        <p>Redirecting to Performance documentation</p>;
       </main>;
     </>;
   ),;}
@@ -16,5 +16,5 @@ export default function PerformanceDocRedirect() {;
   {
   padding: 24 
 }
-}> <p>Redirecting to Performance documentation…</p> </main> </>) 
+}> <p>Redirecting to Performance documentation</p> </main> </>) 
 }

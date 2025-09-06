@@ -9,4 +9,3 @@ const ContentCreation = ({ className }) => {
   );
 };
 
-export default ContentCreation;

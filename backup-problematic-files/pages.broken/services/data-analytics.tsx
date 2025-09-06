@@ -13,4 +13,3 @@ const Data-analytics: React.FC<Data-analyticsProps> = ({ className }) => {
     </div>
   );
 }
-}

@@ -9,4 +9,3 @@ const Docs.js = ({ className }) => {
   );
 };
 
-export default Docs.js;

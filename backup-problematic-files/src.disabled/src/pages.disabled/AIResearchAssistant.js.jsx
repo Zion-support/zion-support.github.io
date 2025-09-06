@@ -9,4 +9,3 @@ const AIResearchAssistant.js = ({ className }) => {
   );
 };
 
-export default AIResearchAssistant.js;

@@ -101,7 +101,7 @@ const EnhancedFooter: React.FC = () => {
           <div className=&quot;flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0&quot;>
             {/* Copyright */}
             <div className=&quot;text-white/60 text-sm&quot;>
-              © {currentYear} Zion Tech Group. All rights reserved.
+               {currentYear} Zion Tech Group. All rights reserved.
             </div>
 
             {/* Social Links */}

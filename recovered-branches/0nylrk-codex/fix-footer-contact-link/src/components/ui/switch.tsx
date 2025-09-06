@@ -1,18 +1,11 @@
-
-
+import {cn} from '@/lib/utils';
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
-=======
-=======
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
-
-
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
@@ -28,41 +21,18 @@ const Switch = React && React.forwardRef<;
 
     className={cn(
       'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input'
-=======
-    className={cn(
-
       "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
     {...props}
     ref={ref}>;
     <SwitchPrimitives&& SwitchPrimitives.Thumb
       className={cn(
-
-
-        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
     />;
   </SwitchPrimitives && SwitchPrimitives.Root>;
 ));
-
-Switch && Switch.displayName = SwitchPrimitives && SwitchPrimitives.Root.displayName;
-=======
-
-export { Switch }
-;
-
-=======
-
-
 export { Switch };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import * as SwitchPrimitives from '@radix - ui / react - switch';
 ;
 import {cn} from '@/lib / utils';
@@ -87,4 +57,3 @@ Switch.display_name = SwitchPrimitives.Root.display_name;
 ;
 export { Switch }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

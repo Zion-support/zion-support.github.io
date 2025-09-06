@@ -1,10 +1,15 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              Something went wrong on our end. We&apos,re working to fix it.
+              Something went wrong on our end. We're working to fix it.
+              Something went wrong on our end. We&apos,re working to fix it. 
+              Something went wrong on our end. We're working to fix it.
               Please try again in a few moments.
             </p>
           </div>
           <div className="space-y-4">
+            <Link 
+              href="/" 
+            <Link
+              href="/"
 
 
 
@@ -14,6 +19,10 @@
               Go Home
             </Link>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/about" 
+              <Link
+                href="/about"
 
 
 
@@ -22,6 +31,10 @@
               >
                 About Us
               </Link>
+              <Link 
+                href="/services" 
+              <Link
+                href="/services"
 
 
 
@@ -30,6 +43,10 @@
               >
                 Services
               </Link>
+              <Link 
+                href="/contact" 
+              <Link
+                href="/contact"
 
 
 
@@ -44,28 +61,6 @@
       </div>
     </>
   )
-
-=======
-}
-
-=======
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * Custom500 - Function description
- */
-function Custom500() {
-  return (
-=======
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function Custom500(req, res) {
-  try {
-  return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;
@@ -119,6 +114,3 @@ export default function Custom500(req, res) {
       </div>;
     </>);
 }
-
-
-

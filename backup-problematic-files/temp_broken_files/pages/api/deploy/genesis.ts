@@ -33,7 +33,7 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
       return res.status(400).json({ error:'Missing required fields:instanceName, deploymentRegion' }),;
     }
 ;
-    // Simulated provisioning operations – replace with real infra hooks later;
+    // Simulated provisioning operations  replace with real infra hooks later;
     const now = new Date().toISOString(),;
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`,;
 ;
@@ -112,7 +112,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
     }
 
-    // Simulated provisioning operations – replace with real infra hooks later,
+    // Simulated provisioning operations  replace with real infra hooks later,
 const now = new Date().toISOString(),
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`,
     const outputActions = {
@@ -147,7 +147,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!instanceName || !deploymentRegion) {return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion'})
     }
 
-    // Simulated provisioning operations – replace with real infra hooks later,
+    // Simulated provisioning operations  replace with real infra hooks later,
 const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, _'-')}-${Date.now()}`;
 

@@ -10,12 +10,12 @@ export default function AutomationInsightsPage() {
   }, []),
   return (
     <div>
-      <Head><title>Automation Insights — Zion</title></Head>
+      <Head><title>Automation Insights  Zion</title></Head>
       <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Automation Insights</h1>
       <section className=&quot;mb-8&quot;>
         <h2 className=&quot;font-medium&quot;>Market Intelligence</h2>
         {!intel ? (
-          <div className=&quot;text-sm text-gray-500&quot;>Loading…</div>
+          <div className=&quot;text-sm text-gray-500&quot;>Loading</div>
         ) : (
           <div className=&quot;mt-3 text-sm&quot;>
             <div className=&quot;text-xs text-gray-500&quot;>Generated at {intel.generatedAt}</div>
@@ -41,7 +41,7 @@ export default function AutomationInsightsPage() {
       <section id=&quot;talent&quot; className=&quot;mb-8&quot;>
         <h2 className=&quot;font-medium&quot;>Talent Highlights</h2>
         {!talentMd ? (
-          <div className=&quot;text-sm text-gray-500&quot;>Loading…</div>        ) : (
+          <div className=&quot;text-sm text-gray-500&quot;>Loading</div>        ) : (
           <pre className=&quot;mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800&quot;>{talentMd}</pre>
         )}
       </section>

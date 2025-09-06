@@ -9,4 +9,3 @@ const EnhancedServicesShowcase.js = ({ className }) => {
   );
 };
 
-export default EnhancedServicesShowcase.js;

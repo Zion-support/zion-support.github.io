@@ -101,9 +101,9 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">;
       <Head>;
-        <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>;
+        <title>Comprehensive 2025 Innovative Services Showcase  Zion Tech Group</title>;
         <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />;
-        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />;
+        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase  Zion Tech Group" />;
         <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />;
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />;
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />;
@@ -288,7 +288,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
 ;
             {filteredServices.length === 0 ? (;
               <div className="text-center py-20">;
-                <div className="text-6xl mb-4">🔍</div>;
+                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-white/60 mb-6">Try adjusting your search criteria or filters</p>;
                 <button;
@@ -485,7 +485,7 @@ visible: {
 }
 }
 };
-return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden" > <Head> <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title> <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." /> <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" /> <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." /> <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" /> <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" /> </Head> <EnhancedNavigation /> <motion.div initial= {
+return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden" > <Head> <title>Comprehensive 2025 Innovative Services Showcase  Zion Tech Group</title> <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." /> <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase  Zion Tech Group" /> <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." /> <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" /> <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" /> </Head> <EnhancedNavigation /> <motion.div initial= {
   {
   opacity: 0, y: 30 
 }
@@ -527,7 +527,7 @@ quantum technologies, and revolutionary IT services that are transforming indust
   viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-white/10 text-white/70 hover:bg-white/20' 
 }` 
 }> <List className="w-4 h-4" /> </button> </div> </div> </div> </motion.div> </div> </section> </h2> </p> </div> {
-  filteredServices.length === 0 ? (<div className="text-center py-20" > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-2" >No services found</h3> <p className="text-white/60 mb-6" >Try adjusting your search criteria or filters</p> <button onClick= {
+  filteredServices.length === 0 ? (<div className="text-center py-20" > <div className="text-6xl mb-4" ></div> <h3 className="text-2xl font-bold text-white mb-2" >No services found</h3> <p className="text-white/60 mb-6" >Try adjusting your search criteria or filters</p> <button onClick= {
   () => {
   setSearchTerm ('');
 setSelectedCategory ('all');

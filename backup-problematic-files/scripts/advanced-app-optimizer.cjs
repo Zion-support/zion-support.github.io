@@ -2,6 +2,11 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +27,10 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 ;const fs = require('fs');
 const path = require('path');
@@ -30,6 +39,13 @@ const { execSync } = require('child_process');
 /**;
  * Advanced App Optimizer;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ * Comprehensive optimization for the Zion Tech Group application;
+ */
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -435,6 +451,10 @@ module.exports = AdvancedAppOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 const fs = require('fs')
 const path = require('path')
 console.log(' Starting Advanced App Optimizer...')
@@ -462,6 +482,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -795,6 +820,10 @@ module.exports = AdvancedAppOptimizer;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     console.error('Advanced App Optimization "failed")
  * Comprehensive optimization for the application;
  */;
@@ -1081,6 +1110,9 @@ if (require.main === module) {
   optimizer.run().catch(console.error),,
 }
 <<<<<<< HEAD
+module.exports = AdvancedAppOptimizer;
+=======
+<<<<<<< HEAD
 module.exports = AdvancedAppOptimizer
 >>>>>>> origin/main
 =======
@@ -1093,3 +1125,7 @@ module.exports = AdvancedAppOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

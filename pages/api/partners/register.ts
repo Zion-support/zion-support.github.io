@@ -1,5 +1,3 @@
-
-
     }
     const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
@@ -8,19 +6,6 @@
       .eq("code", code)
       .maybeSingle();
 
-
-    if (existingErr) return res && res.status($1).json({ $2 });
-    if (existing) return res && res.status($1).json({ $2 });
-    const { error } = await supabase && supabase.from("partners").insert({
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getServerSupabase  } from '../../../utils / supabase / server';
-function sanitize_code (input: string): string {
-  return input;
-    .toLowerCase ();
-    .replace (/[^a - z0 - 9-]/g, "-");
-    .replace (/-+/g, "-");
-    .replace (/^-|-$/g, "");
 }
 export default async /**
  * handler - Function description
@@ -63,13 +48,11 @@ if ( {) {
   $2
 }
     const { error } = await supabase.from ("partners").insert ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       code,
       name,
 
   }
 }
-=======
       niche: niche || null, socials: socials || null,
       payout_method: payout_method || null, status: 'pending',
       commission_rate: 0.15});
@@ -79,19 +62,7 @@ if ( {) {
     return res.status(200).json({ ok: true, code, status: 'pending' })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
-
-  }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    if (return res.status (500).json ({ error: "Database error" })) {
-  $2
-=======
-
-
-  }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     return res.status (200).json ({ ok: true, code, status: "pending" });
   } catch (e: any) {
@@ -110,8 +81,5 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

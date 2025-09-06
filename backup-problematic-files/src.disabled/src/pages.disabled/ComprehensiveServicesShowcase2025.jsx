@@ -9,4 +9,3 @@ const ComprehensiveServicesShowcase2025 = ({ className }) => {
   );
 };
 
-export default ComprehensiveServicesShowcase2025;

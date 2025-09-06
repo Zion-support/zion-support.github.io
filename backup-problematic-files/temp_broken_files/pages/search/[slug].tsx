@@ -393,7 +393,7 @@ export default function SearchResultsPage({;
             <CategoryCard;
               title={result.title}
               description={result.description || ''}
-              icon={result.image || '📁'}
+              icon={result.image || ''}
             />;
           </div>;
         ),;
@@ -520,9 +520,9 @@ export default function SearchResultsPage({;
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm";
                 >;
                   <option value="">All Ratings</option>;
-                  <option value="4">4★ & up</option>;
-                  <option value="3">3★ & up</option>;
-                  <option value="2">2★ & up</option>;
+                  <option value="4">4 & up</option>;
+                  <option value="3">3 & up</option>;
+                  <option value="2">2 & up</option>;
                 </select>;
               </div>;
 ;
@@ -708,13 +708,13 @@ case 'category': return (<CategoryCard title= {
 }description= {
   result.description || '' 
 }icon= {
-  result.image || '📁' 
+  result.image || '' 
 }/> </div>);
 default: return (<div </p> </div>) 
 }
 };
 return (<> <SEO /> <div className="min-h-screen bg-gray-50 dark:bg-gray-900" > <div className="container mx-auto px-4 py-8" data-testid="search-results" > Search Results </h1> <p className="text-gray-600 dark:text-gray-200" data-testid="results-count" > /> </div> </div> <Button variant="outline" size="sm" className="flex items-center gap-2" data-testid="filter-button" > <Filter className="h-4 w-4" /> Filters </Button> <select > <option value="relevance" >Relevance</option> <option value="newest" >Newest</option> <option value="price asc" >Price: Low to High</option> <option value="price desc" >Price: High to Low</option> <option value="rating" >Highest Rated</option> </select> <select </option>) ) 
-}</select> <div className="flex items-center gap-1" > <input /> </div> <select > <option value="">All Ratings</option> <option value=" 4">4★ & up</option> <option value=" 3">3★ & up</option> <option value=" 2">2★ & up</option> </select> </div> <div className="flex items-center gap-2"> <Button > <Grid className="h-4 w-4"/> </Button> <Button > <List className="h-4 w-4"/> </Button> </div> </div> </div> {
+}</select> <div className="flex items-center gap-1" > <input /> </div> <select > <option value="">All Ratings</option> <option value=" 4">4 & up</option> <option value=" 3">3 & up</option> <option value=" 2">2 & up</option> </select> </div> <div className="flex items-center gap-2"> <Button > <Grid className="h-4 w-4"/> </Button> <Button > <List className="h-4 w-4"/> </Button> </div> </div> </div> {
   /* Loading State */ 
 }{
   loading && results.length === 0 && (<div className="flex justify-center py-12"> <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div> </div>) 

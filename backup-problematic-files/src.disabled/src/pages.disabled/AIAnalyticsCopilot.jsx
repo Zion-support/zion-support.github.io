@@ -9,4 +9,3 @@ const AIAnalyticsCopilot = ({ className }) => {
   );
 };
 
-export default AIAnalyticsCopilot;

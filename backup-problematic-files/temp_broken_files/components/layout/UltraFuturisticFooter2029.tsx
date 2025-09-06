@@ -22,21 +22,21 @@ const _serviceCategories = [
       {_name: 'AI-Powered IT Asset Management', _href: '/ai-powered-it-asset-management'}
     ]
   },
-  {_title: '🧠 AI & Technology', _services: [
+  {_title: ' AI & Technology', _services: [
       { name: 'AI Services', _href: '/ai-services'},
       {_name: 'Machine Learning', _href: '/machine-learning'},
       {_name: 'Natural Language Processing', _href: '/nlp-services'},
       {_name: 'Computer Vision', _href: '/computer-vision'}
     ]
   },
-  {_title: '⚛️ Quantum & Emerging Tech', _services: [
+  {_title: ' Quantum & Emerging Tech', _services: [
       { name: 'Quantum Computing', _href: '/quantum-computing'},
       {_name: 'Blockchain Solutions', _href: '/blockchain-solutions'},
       {_name: 'IoT Platforms', _href: '/iot-platforms'},
       {_name: 'Space Technology', _href: '/space-tech'}
     ]
   },
-  {_title: '🏙️ Enterprise Solutions', _services: [
+  {_title: ' Enterprise Solutions', _services: [
       { name: 'Enterprise IT', _href: '/enterprise-it'},
       {_name: 'Cloud Solutions', _href: '/cloud-solutions'},
       {_name: 'Cybersecurity', _href: '/cybersecurity'},
@@ -227,7 +227,7 @@ const UltraFuturisticFooter2029 = () => {
       <div className=&quot;border-t border-slate-700/50&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8&quot;>
           <div className=&quot;flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0&quot;>
-            <div className=&quot;text-sm text-gray-400&quot;>              © 2025 Zion Tech Group. All rights reserved.
+            <div className=&quot;text-sm text-gray-400&quot;>               2025 Zion Tech Group. All rights reserved.
             </div>
             
             <div className=&quot;flex items-center space-x-6 text-sm text-gray-400&quot;>

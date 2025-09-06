@@ -9,4 +9,3 @@ const LanguageContext.js = ({ className }) => {
   );
 };
 
-export default LanguageContext.js;

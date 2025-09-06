@@ -79,7 +79,7 @@ initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className=&quot;inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm&quot;        >
           <Sparkles className=&quot;w-5 h-5 text-purple-400&quot; />
-          <span className=&quot;text-purple-300 font-medium&quot;>🚀 2032 Revolutionary Technology</span>
+          <span className=&quot;text-purple-300 font-medium&quot;> 2032 Revolutionary Technology</span>
           <Sparkles className=&quot;w-5 h-5 text-cyan-400&quot; />
         </motion.div>
 

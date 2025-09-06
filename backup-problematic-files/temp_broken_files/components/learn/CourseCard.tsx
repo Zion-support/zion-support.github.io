@@ -19,7 +19,7 @@ export default function CourseCard({ course }: { course: Course }) {
           {course.isFree ? 'Free' : 'Paid'}
         </span>
       </div>
-      <div className=&quot;text-xs text-gray-500 mt-1&quot;>{course.category} • {course.level} • {Math.round(course.durationMinutes / 60)}h</div>
+      <div className=&quot;text-xs text-gray-500 mt-1&quot;>{course.category}  {course.level}  {Math.round(course.durationMinutes / 60)}h</div>
       <div className=&quot;text-sm mt-2 line-clamp-2&quot;>{course.description}</div>
       <div className=&quot;mt-3 flex items-center justify-between&quot;>
         <span className=&quot;text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded&quot;>Badge: {course.certificationBadge}</span>

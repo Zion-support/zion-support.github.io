@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const glob = require("glob");"const BASE_URL = "https: /ziontechgroup.com";"const SITEMAP_PATH = path.join(process.cwd(), "public", "sitemap.xml");/ Static pages that should be included in sitemap"const STATIC_PAGES = [""," "/about"," "/services"," "/solutions"," "/products"," "/pricing"," "/contact"," "/privacy"," "/terms"," "/cookies"," "/careers"," "/blog"," "/case-studies"," "/whitepapers"," "/webinars"," "/events"," "/news"," "/support"," "/docs"," "/api"," "/ai-services"," "/it-services"," "/micro-saas"," "/cybersecurity"," "/cloud-services"," "/digital-transformation"];/ Dynamic pages patterns"const DYNAMIC_PATTERNS = ["pages/services/*.tsx"," "pages/solutions/*.tsx"," "pages/products/*.tsx"];function generateSitemap() { const urls = []; const currentDate = new Date().toISOString(); / Add static pages STATIC_PAGES.forEach(page => { urls.push({" loc: `${BASE_URL}${page}`," lastmod: currentDate,"" changefreq: page === "" ? "daily" : "weekly","" priority: page === "" ? "1.0" : "0.8" })}); / Add dynamic pages DYNAMIC_PATTERNS.forEach(pattern => { const files = glob.sync(pattern); files.forEach(file => { / Skip index files and special pages" if (file.includes("index.") | file.includes("_app.") | file.includes("_document.")) { return} / Convert file path to URL" const relativePath = file.replace("pages/", "").replace(".tsx", "").replace(".js", "");` const url = `${BASE_URL}/${relativePath}`; urls.push({" loc: url," lastmod: currentDate,"" changefreq: "monthly","" priority: "0.6" })})}); / Generate XML"` const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"<urlset xmlns="http: /www.sitemaps.org/schemas/sitemap/0.9">`${urls.map(url => ` <url> <loc>${url.loc}</loc> <lastmod>${url.lastmod}</lastmod> <changefreq>${url.changefreq}</changefreq> <priority>${url.priority}</priority>"" </url>").join("\n")}"</urlset>"; / Write sitemap" fs.writeFileSync(SITEMAP_PATH, sitemap, "utf8");` console.log(` Sitemap generated with ${urls.length} URLs`);"` console.log(` Location: ${SITEMAP_PATH}`)}if (require.main === module) { generateSitemap()}module.exports = { generateSitemap };""`"`
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node
@@ -50,10 +60,18 @@ const glob = require('glob');
 >>>>>>> origin/main
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+/**
+ * Generate sitemap for the website
+ */
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,6 +171,10 @@ if (require.main === module) {}
 module.exports = { generateSitemap };
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 class SitemapGenerator {
   constructor() {
     this.baseUrl = 'https: //zion.app', this.pages = [],
@@ -176,6 +198,9 @@ class SitemapGenerator {
 
       // Ensure public directory exists
       const publicDir = path.dirname(this.outputFile);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
   /**
    * Add a page to the sitemap
@@ -272,11 +297,20 @@ class SitemapGenerator {
       // Ensure public directory exists
       const publicDir = path.dirname(this.sitemapPath);
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/main
+=======
+>>>>>>> pr-12166
       if (!fs.existsSync(publicDir)) {
         fs.mkdirSync(publicDir, { recursive: true });
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> pr-12166
       // Write sitemap
       fs.writeFileSync(this.outputFile, xml);
 
@@ -320,6 +354,11 @@ class SitemapGenerator {
       .join('\n');
 
     return `${header}\n${urlEntries}\n${footer}`;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 =======
       const xml = this.generateXML();
       fs.writeFileSync(this.sitemapPath, xml, 'utf8');
@@ -358,11 +397,29 @@ class SitemapGenerator {
     return success;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   }
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> pr-12166
 }
 
 // Run if called directly
 if (require.main === module) {
 <<<<<<< HEAD
+=======
+}
+// Run if called directly
+if (require.main === module) {
+<<<<<<< HEAD
+  const generator = new SitemapGenerator();
+  generator.run().catch(console.error);
+}
+module.exports = SitemapGenerator;
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -583,3 +640,7 @@ module.exports = SitemapGenerator;
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

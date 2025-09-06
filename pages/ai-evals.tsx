@@ -1,3 +1,8 @@
+import React from 'react',;
+import Head from 'next/head',;
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
+;
 
 
 import React from 'react',;
@@ -6,7 +11,6 @@ import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolograp
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 
-=======
 import React from 'react'
 import Head from 'next/head'
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
@@ -14,30 +18,12 @@ import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
-
-
-	},
-	const plans = [
-		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost trackingToxicity/PII checksCSV export'] },
-		{ name: 'Growth', price: '$499/month', items: ['50K eval callsCustom metrics (BLEU/ROUGE/F1)CI evals via APISlack alerts'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPCSLA & audit logsSOC2 supportSAML/SSO'] }],
-export default function AIEvalsPage() {_const _contactInfo = {
-		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
-	const _plans = [
-		{_name: 'Startup', _price: '$149/month', _items: ['5K eval calls', _'Latency/Cost tracking', _'Toxicity/PII checks', _'CSV export']},
-		{_name: 'Growth', _price: '$499/month', _items: ['50K eval calls', _'Custom metrics (BLEU/ROUGE/F1)', _'CI evals via API', _'Slack alerts']},
-		{_name: 'Enterprise', _price: 'Custom', _items: ['Private cloud/VPC', _'SLA & audit logs', _'SOC2 support', _'SAML/SSO']}];
-
-	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
@@ -50,11 +36,6 @@ export default function AIEvalsPage() {_const _contactInfo = {
 					<div className="mt-6 flex justify-center gap-3">
 
 
-						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Get a Demo</Link>
-						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -67,21 +48,6 @@ export default function AIEvalsPage() {_const _contactInfo = {
 									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
 
 
-								))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-							</ul>;
-						</div>;
-					))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -112,16 +78,19 @@ export default function AIEvalsPage() {_const _contactInfo = {
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</div>
 				</div>
 			</div>
 		</QuantumHolographicMatrixBackground>
-
-=======
+	)
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
-=======
+}
+
 import React from 'react',
 import Head from 'next / head',
 import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground',
@@ -197,10 +166,5 @@ return (
     </div>;
   </div>;
   </QuantumHolographicMatrixBackground>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

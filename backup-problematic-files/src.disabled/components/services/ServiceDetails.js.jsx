@@ -9,4 +9,3 @@ const ServiceDetails.js = ({ className }) => {
   );
 };
 
-export default ServiceDetails.js;

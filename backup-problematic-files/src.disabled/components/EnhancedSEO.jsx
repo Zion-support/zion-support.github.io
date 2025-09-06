@@ -9,4 +9,3 @@ const EnhancedSEO = ({ className }) => {
   );
 };
 
-export default EnhancedSEO;

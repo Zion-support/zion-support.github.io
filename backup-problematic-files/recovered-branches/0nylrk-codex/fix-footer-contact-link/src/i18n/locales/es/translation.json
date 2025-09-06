@@ -7,15 +7,15 @@
     "save": "Guardar",
     "cancel": "Cancelar",
     "submit": "Enviar",
-    "yes": "Sí",
+    "yes": "S",
     "no": "No",
-    "success": "Éxito",
+    "success": "xito",
     "error": "Error"
   },
   "nav": {
     "home": "Inicio",
     "marketplace": "Mercado",
-    "categories": "Categorías",
+    "categories": "Categoras",
     "talent": "Talento",
     "equipment": "Equipamiento",
     "dashboard": "Panel",
@@ -23,40 +23,40 @@
     "post_job": "Publicar Trabajo"
   },
   "auth": {
-    "login": "Iniciar Sesión",
+    "login": "Iniciar Sesin",
     "signup": "Registrarse",
-    "logout": "Cerrar Sesión",
+    "logout": "Cerrar Sesin",
     "email": "Correo",
-    "password": "Contraseña",
-    "forgot_password": "¿Olvidó su contraseña?",
+    "password": "Contrasea",
+    "forgot_password": "Olvid su contrasea?",
     "remember_me": "Recordarme",
-    "login_success": "Sesión iniciada correctamente",
-    "logout_success": "Sesión cerrada correctamente"
+    "login_success": "Sesin iniciada correctamente",
+    "logout_success": "Sesin cerrada correctamente"
   },
   "home": {
-    "hero_title": "El Futuro del Mercado de Tecnología e IA",
-    "hero_subtitle": "El primer mercado gratuito dedicado a la alta tecnología e inteligencia artificial",
+    "hero_title": "El Futuro del Mercado de Tecnologa e IA",
+    "hero_subtitle": "El primer mercado gratuito dedicado a la alta tecnologa e inteligencia artificial",
     "browse_marketplace": "Explorar Mercado",
     "create_profile": "Crear Perfil",
     "explore_tools": "Explorar Nuestras Herramientas",
-    "tools_description": "Todo lo que necesitas para conectarte con el ecosistema de IA y tecnología"
+    "tools_description": "Todo lo que necesitas para conectarte con el ecosistema de IA y tecnologa"
   },
   "jobs": {
     "post_job_title": "Publicar un Trabajo",
-    "post_job_description": "Complete el formulario a continuación para publicar su trabajo y encontrar el talento perfecto",
-    "job_title": "Título del Trabajo",
-    "job_description": "Descripción del Trabajo",
+    "post_job_description": "Complete el formulario a continuacin para publicar su trabajo y encontrar el talento perfecto",
+    "job_title": "Ttulo del Trabajo",
+    "job_description": "Descripcin del Trabajo",
     "skills_required": "Habilidades Requeridas",
     "budget": "Presupuesto",
-    "deadline": "Fecha Límite",
+    "deadline": "Fecha Lmite",
     "job_posted": "Trabajo publicado correctamente"
   },
   "language": {
     "en": "English",
-    "es": "Español",
-    "pt": "Português",
-    "ar": "العربية",
+    "es": "Espaol",
+    "pt": "Portugus",
+    "ar": "",
     "language_changed": "Idioma cambiado a {{language}}",
-    "switch_to_detected": "¿Cambiar a {{language}}?"
+    "switch_to_detected": "Cambiar a {{language}}?"
   }
 }

@@ -187,9 +187,9 @@ export default function VerifyStatus() {;
             <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">;
               <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>;
               <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">;
-                <p>• Check your email inbox for a verification link</p>;
-                <p>• Click the link in the email to verify your account</p>;
-                <p>• Return here or try logging in after verification</p>;
+                <p> Check your email inbox for a verification link</p>;
+                <p> Click the link in the email to verify your account</p>;
+                <p> Return here or try logging in after verification</p>;
               </div>;
               {lastSentTime && (;
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">;
@@ -308,7 +308,7 @@ setMessage ('');
   error 
 }</AlertDescription> </Alert>) 
 }We'll check the verification status for this email address </p>) 
-}</div> <p>• Check your email inbox for a verification link</p> <p>• Click the link in the email to verify your account</p> <p>• Return here or try logging in after verification</p> </div> {
+}</div> <p> Check your email inbox for a verification link</p> <p> Click the link in the email to verify your account</p> <p> Return here or try logging in after verification</p> </div> {
   lastSentTime && (<p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center" > <Clock className="h-3 w-3 mr-1" /> Last email sent: {
   lastSentTime.toLocaleTimeString () 
 }</p>) 

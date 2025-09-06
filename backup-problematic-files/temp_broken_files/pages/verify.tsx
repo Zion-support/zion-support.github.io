@@ -137,7 +137,7 @@ export default function VerifyPage() {;
             <div>;
               <div className="flex items-center justify-between mb-2">;
                 <span className="text-sm text-gray-600">Progress</span>;
-                <span className="text-sm font-medium">{progress}% {profile.status === 'submitted' && '→ Pending ID'} {profile.status === 'approved' && '→ Approved'}</span>;
+                <span className="text-sm font-medium">{progress}% {profile.status === 'submitted' && ' Pending ID'} {profile.status === 'approved' && ' Approved'}</span>;
               </div>;
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">;
                 <div className="bg-blue-600 h-3" style={{ width:`${progress}%` }} />;

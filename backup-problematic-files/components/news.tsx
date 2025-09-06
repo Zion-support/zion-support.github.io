@@ -184,7 +184,7 @@ export default function NewsPage() {
       category: "Company News",
       author: "Zion Tech Group",
       readTime: "3 min read",
-      image: "🚀",
+      image: "",
       featured: true
     },
     {
@@ -1546,7 +1546,7 @@ export default function News() {;
       category: "Partnerships",
       author: "Sarah Chen",
       readTime: "2 min read",
-      image: "🤝"
+      image: ""
     },
     {
       id: 3,
@@ -1556,7 +1556,7 @@ export default function News() {;
       category: "Innovation",
       author: "Dr. Emily Watson",
       readTime: "4 min read",
-      image: "⚖️"
+      image: ""
     },
     {
       id: 4,
@@ -1566,7 +1566,7 @@ export default function News() {;
       category: "Company News",
       author: "Marcus Rodriguez",
       readTime: "2 min read",
-      image: "🌏"
+      image: ""
     },
     {
       id: 5,
@@ -1576,7 +1576,7 @@ export default function News() {;
       category: "Technology",
       author: "Dr. James Wilson",
       readTime: "5 min read",
-      image: "🧠"
+      image: ""
     },
     {
       id: 6,
@@ -1586,7 +1586,7 @@ export default function News() {;
       category: "Sustainability",
       author: "Lisa Park",
       readTime: "6 min read",
-      image: "🌱"
+      image: ""
     },
     {
       id: 7,
@@ -1596,7 +1596,7 @@ export default function News() {;
       category: "Case Studies",
       author: "Alex Thompson",
       readTime: "4 min read",
-      image: "📊"
+      image: ""
     },
     {
       id: 8,
@@ -1606,7 +1606,7 @@ export default function News() {;
       category: "Research",
       author: "Prof. Maria Garcia",
       readTime: "7 min read",
-      image: "📚"
+      image: ""
     }
   ],
 
@@ -1671,7 +1671,7 @@ export default function News() {;
       category: "Partnerships",;
       author: "Sarah Chen",;
       readTime: "2 min read",;
-      image: "🤝";
+      image: "";
     },;
     {;
       id: 3,;
@@ -1681,7 +1681,7 @@ export default function News() {;
       category: "Innovation",;
       author: "Dr. Emily Watson",;
       readTime: "4 min read",;
-      image: "⚖️";
+      image: "";
     },;
     {;
       id: 4,;
@@ -1691,7 +1691,7 @@ export default function News() {;
       category: "Company News",;
       author: "Marcus Rodriguez",;
       readTime: "2 min read",;
-      image: "🌏";
+      image: "";
     },;
     {;
       id: 5,;
@@ -1701,7 +1701,7 @@ export default function News() {;
       category: "Technology",;
       author: "Dr. James Wilson",;
       readTime: "5 min read",;
-      image: "🧠";
+      image: "";
     },;
     {;
       id: 6,;
@@ -1711,7 +1711,7 @@ export default function News() {;
       category: "Sustainability",;
       author: "Lisa Park",;
       readTime: "6 min read",;
-      image: "🌱";
+      image: "";
     },;
     {;
       id: 7,;
@@ -1721,7 +1721,7 @@ export default function News() {;
       category: "Case Studies",;
       author: "Alex Thompson",;
       readTime: "4 min read",;
-      image: "📊";
+      image: "";
     },;
     {;
       id: 8,;
@@ -1731,7 +1731,7 @@ export default function News() {;
       category: "Research",;
       author: "Prof. Maria Garcia",;
       readTime: "7 min read",;
-      image: "📚";
+      image: "";
     }
   ];
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
@@ -1792,9 +1792,9 @@ export default function News() {;
                     </p>
                     <div className="flex items-center gap-4 text-sm text-white/60 mb-4">
                       <span>By {article.author}</span>
-                      <span>•</span>
+                      <span></span>
                       <span>{article.date}</span>
-                      <span>•</span>
+                      <span></span>
                       <span>{article.readTime}</span>
                     </div>
                     <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">

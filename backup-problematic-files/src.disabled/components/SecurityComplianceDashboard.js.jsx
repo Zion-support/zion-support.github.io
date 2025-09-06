@@ -9,4 +9,3 @@ const SecurityComplianceDashboard.js = ({ className }) => {
   );
 };
 
-export default SecurityComplianceDashboard.js;

@@ -9,4 +9,3 @@ const Ai-powered-it-asset-management = ({ className }) => {
   );
 };
 
-export default Ai-powered-it-asset-management;

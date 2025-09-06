@@ -30,7 +30,7 @@ export default function EditJobPage() {;
     router.push('/client/dashboard'),;
   }
 ;
-  if (!job) return <div>Loading…</div>,;
+  if (!job) return <div>Loading</div>,;
 ;
   return (;
     <div className="max-w-2xl mx-auto space-y-4">;
@@ -54,6 +54,6 @@ export default function EditJobPage() {;
   ),; const [title, setTitle] = useState ('');
 const [description, setDescription] = useState ('');
 const [category, setCategory] = useState ('');
-}if (!job) return <div>Loading…</div>;
+}if (!job) return <div>Loading</div>;
 </div> </div>) 
 }

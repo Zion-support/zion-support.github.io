@@ -9,4 +9,3 @@ const RetailSolutions = ({ className }) => {
   );
 };
 
-export default RetailSolutions;

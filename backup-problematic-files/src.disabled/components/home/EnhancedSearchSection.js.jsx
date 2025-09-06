@@ -9,4 +9,3 @@ const EnhancedSearchSection.js = ({ className }) => {
   );
 };
 
-export default EnhancedSearchSection.js;

@@ -195,19 +195,19 @@ import Button from '../components/ui/Button',;
 export default function AboutPage() {;
   const values = [;
     {;
-      icon: '🚀',;
+      icon: '',;
       title: 'Innovation',;
       description: 'Constantly pushing boundaries and exploring new frontiers in technology',;
       color: 'text-cyan-400',;
       gradient: 'from-cyan-400 to-blue-500'},;
     {;
-      icon: '🤖',;
+      icon: '',;
       title: 'Autonomy',;
       description: 'Building systems that can operate independently and make intelligent decisions',;
       color: 'text-fuchsia-400',;
       gradient: 'from-fuchsia-400 to-purple-500'},;
     {;
-      icon: '🌍',;
+      icon: '',;
       title: 'Impact',;
       description: 'Creating technology that makes a positive difference in the world',;
       color: 'text-green-400',;
@@ -216,13 +216,13 @@ export default function AboutPage() {;
     {;
       title: 'AI Development',;
       description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.',;
-      icon: '🧠',;
+      icon: '',;
       color: 'text-cyan-400',;
       gradient: 'from-cyan-400 to-blue-500'},;
     {;
       title: 'Automation Systems',;
       description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.',;
-      icon: '⚙️',;
+      icon: '',;
       color: 'text-fuchsia-400',;
       gradient: 'from-fuchsia-400 to-purple-500'}],;
   const achievements = [;
@@ -381,21 +381,21 @@ export default function AboutPage() {;
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Card className="text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30">
-                <div className="text-4xl mb-4">📞</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">Call Us</h3>
                 <p className="text-blue-400 font-semibold text-lg">{contactInfo.mobile}</p>
                 <p className="text-gray-400 text-sm mt-2">Available 24/7 for urgent inquiries</p>
               </Card>
               
               <Card className="text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30">
-                <div className="text-4xl mb-4">✉️</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
                 <p className="text-green-400 font-semibold text-lg">{contactInfo.email}</p>
                 <p className="text-gray-400 text-sm mt-2">Response within 2 hours guaranteed</p>
               </Card>
               
               <Card className="text-center p-8 bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30">
-                <div className="text-4xl mb-4">📍</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">Visit Us</h3>
                 <p className="text-purple-400 font-semibold text-sm">{contactInfo.address}</p>
                 <p className="text-gray-400 text-sm mt-2">Global headquarters and innovation center</p>
@@ -404,7 +404,7 @@ export default function AboutPage() {;
 
             <div className="text-center">
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-lg mb-6">
-                🌐 Visit our website: {contactInfo.website}
+                 Visit our website: {contactInfo.website}
               </div>
               <p className="text-gray-400 text-lg">
                 Start your 21-day free trial today and experience the future of technology
@@ -550,19 +550,19 @@ export default function AboutPage() {;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
               <Card className="text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30">;
-                <div className="text-4xl mb-4">📞</div>;
+                <div className="text-4xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">Call Us</h3>;
                 <p className="text-blue-400 font-semibold text-lg">{contactInfo.mobile}</p>;
                 <p className="text-gray-400 text-sm mt-2">Available 24/7 for urgent inquiries</p>;
               </Card>;
               <Card className="text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30">;
-                <div className="text-4xl mb-4">✉️</div>;
+                <div className="text-4xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>;
                 <p className="text-green-400 font-semibold text-lg">{contactInfo.email}</p>;
                 <p className="text-gray-400 text-sm mt-2">Response within 2 hours guaranteed</p>;
               </Card>;
               <Card className="text-center p-8 bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30">;
-                <div className="text-4xl mb-4">📍</div>;
+                <div className="text-4xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">Visit Us</h3>;
                 <p className="text-purple-400 font-semibold text-sm">{contactInfo.address}</p>;
                 <p className="text-gray-400 text-sm mt-2">Global headquarters and innovation center</p>;
@@ -570,7 +570,7 @@ export default function AboutPage() {;
             </div>;
             <div className="text-center">;
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-lg mb-6">;
-                🌐 Visit our website: {contactInfo.website}
+                 Visit our website: {contactInfo.website}
               </div>;
               <p className="text-gray-400 text-lg">;
                 Start your 21-day free trial today and experience the future of technology;

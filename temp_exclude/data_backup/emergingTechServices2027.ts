@@ -1,5 +1,3 @@
-
-
 export interface EmergingTechService2027 { id: string, title: string, description: string, category: string, subcategory: string, pricing: {
        monthly: number, yearly: number, custom: string, currency: string,
     pricingModel: string
@@ -9,8 +7,6 @@ export interface EmergingTechService2027 { id: string, title: string, descriptio
     compliance: string[]
     },
     roi: string, estimatedDelivery: string, contactInfo: { phone: string, email: string, website: string,
-
-
 export interface EmergingTechService2027 { id: string, title: string, description: string, category: string, subcategory: string, pricing: {
        monthly: number, yearly: number, custom: string, currency: string,
     pricingModel: string

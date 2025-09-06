@@ -603,7 +603,7 @@ export default function RevolutionaryServicesPage() {;
                 animate={{ opacity:1 }}
                 transition={{ duration:0.6 }}
               >;
-                <div className="text-6xl mb-4">🔍</div>;
+                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
                                          <Button ;
@@ -651,7 +651,7 @@ export default function RevolutionaryServicesPage() {;
                       onClick={() => setSelectedService(null)}
                       className="text-gray-400 hover:text-white text-2xl";
                     >;
-                      ×;
+                      ;
                     </button>;
                   </div>;
 ;

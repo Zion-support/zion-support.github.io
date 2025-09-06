@@ -9,4 +9,3 @@ const HowItWorks = ({ className }) => {
   );
 };
 
-export default HowItWorks;

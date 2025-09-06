@@ -17,12 +17,35 @@ class TypeChecker {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    
+>>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
       console.log('Running TypeScript type check...');
+<<<<<<< HEAD
+=======
       
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       const child = spawn('npm', ['run', 'type-check'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -38,7 +61,20 @@ class TypeChecker {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}
@@ -47,7 +83,17 @@ class TypeChecker {}
           console.log('Type check failed ✗');
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
+<<<<<<< HEAD
+=======
           
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
           // Log type errors for manual review;
           this.logTypeErrors(output + errorOutput)};
       })} catch (error) {}
@@ -58,7 +104,20 @@ class TypeChecker {}
     const typeErrors = lines.filter(line => )
       line.includes('error TS') || line.includes('Type error');
    ;);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    
+>>>>>>> origin/main
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -95,4 +154,17 @@ if ( {})
 });
   
   checker.start().catch(console.error)};
+<<<<<<< HEAD
 module.exports = TypeChecker;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+module.exports = TypeChecker;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+module.exports = TypeChecker;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

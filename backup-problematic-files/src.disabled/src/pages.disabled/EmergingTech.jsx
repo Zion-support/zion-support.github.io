@@ -9,4 +9,3 @@ const EmergingTech = ({ className }) => {
   );
 };
 
-export default EmergingTech;

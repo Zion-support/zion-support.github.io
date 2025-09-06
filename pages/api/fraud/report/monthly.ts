@@ -1,12 +1,10 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  try {
   if (req && req.method !== "GET") {
     res && res.status(405).json({ error: "Method not allowed" });
     return;
@@ -25,8 +23,7 @@ export default async function handler(
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -58,14 +55,6 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

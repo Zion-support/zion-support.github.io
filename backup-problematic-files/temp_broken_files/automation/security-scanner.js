@@ -21,7 +21,7 @@
         this.vulnerabilities.push(`${vulnCount} vulnerabilities found`),;
         this.log(`Found ${vulnCount} vulnerabilities`, "WARN"),;
       } else {,;
-        this.log("✓ No vulnerabilities found"),;
+        this.log(" No vulnerabilities found"),;
       };
     } catch (error) {,;
       this.log(`Security audit:failed:${error.message}`, "ERROR"),;
@@ -54,7 +54,7 @@
         this.vulnerabilities.push(`${secretCount} potential secrets found`),;
         this.log(`Found ${secretCount} potential secrets`, "WARN"),;
       } else {,;
-        this.log("✓ No exposed secrets found"),;
+        this.log(" No exposed secrets found"),;
       };
     } catch (error) {,;
       this.log(`Secret check:failed:${error.message}`, "ERROR"),;
@@ -105,7 +105,7 @@
   };
 ,;
   async run() {,;
-    this.log("🔒 Starting Security Scanner"),;
+    this.log(" Starting Security Scanner"),;
 ,;
     try {,;
       await this.runSecurityAudit(),;
@@ -113,11 +113,11 @@
       await this.generateReport(),;
 ,;
       this.log("=" * 50),;
-      this.log(`🎯 Security Scanner completed. Issues:found:${this.vulnerabilities.length}`),;
-      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`)),;
+      this.log(` Security Scanner completed. Issues:found:${this.vulnerabilities.length}`),;
+      this.vulnerabilities.forEach(vuln => this.log(`    ${vuln}`)),;
 ,;
     } catch (error) {,;
-      this.log(`❌ Security Scanner:failed:${error.message}`, "ERROR"),;
+      this.log(` Security Scanner:failed:${error.message}`, "ERROR"),;
     };
   };
 };
@@ -179,7 +179,7 @@ class SecurityScanner {
         this.vulnerabilities.push(`${vulnCount} vulnerabilities found`);
         this.log(`Found ${vulnCount} vulnerabilities`, "WARN");
       } else {;
-        this.log("✓ No vulnerabilities found");
+        this.log(" No vulnerabilities found");
       };
     } catch (error) {;
       this.log(`Security audit failed: ${error.message}`, "ERROR");
@@ -212,7 +212,7 @@ class SecurityScanner {
         this.vulnerabilities.push(`${secretCount} potential secrets found`);
         this.log(`Found ${secretCount} potential secrets`, "WARN");
       } else {;
-        this.log("✓ No exposed secrets found");
+        this.log(" No exposed secrets found");
       };
     } catch (error) {;
       this.log(`Secret check failed: ${error.message}`, "ERROR");
@@ -262,7 +262,7 @@ class SecurityScanner {
 };
 ;
   async run() {;
-    this.log("🔒 Starting Security Scanner");
+    this.log(" Starting Security Scanner");
 ;
     try {;
       await this.runSecurityAudit();
@@ -270,11 +270,11 @@ class SecurityScanner {
       await this.generateReport();
 ;
       this.log("=" * 50);
-      this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`);
-      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`));
+      this.log(` Security Scanner completed. Issues found: ${this.vulnerabilities.length}`);
+      this.vulnerabilities.forEach(vuln => this.log(`    ${vuln}`));
 ;
     } catch (error) {;
-      this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR");
+      this.log(` Security Scanner failed: ${error.message}`, "ERROR");
 };
 };
 };
@@ -291,7 +291,7 @@ export default SecurityScanner;      const auditResult = JSON.parse(output.toStr
         this.vulnerabilities.push(`${vulnCount} vulnerabilities found`),
         this.log(`Found ${vulnCount} vulnerabilities`, &quot;WARN&quot;)
       } else {,
-        this.log("✓ No vulnerabilities found")
+        this.log(" No vulnerabilities found")
       }
     } catch (error) {,
       this.log(`Security audit: failed: ${error.message}`, "ERROR")
@@ -323,7 +323,7 @@ export default SecurityScanner;      const auditResult = JSON.parse(output.toStr
         this.vulnerabilities.push(`${secretCount} potential secrets found`),
         this.log(`Found ${secretCount} potential secrets`, &quot;WARN&quot;)
       } else {,
-        this.log("✓ No exposed secrets found")
+        this.log(" No exposed secrets found")
       }
     } catch (error) {,
       this.log(`Secret check: failed: ${error.message}`, "ERROR")
@@ -372,7 +372,7 @@ export default SecurityScanner;      const auditResult = JSON.parse(output.toStr
   },
 ,
   async run() {,
-    this.log(&quot;🔒 Starting Security Scanner&quot;),
+    this.log(&quot; Starting Security Scanner&quot;),
 ,
     try {,
       await this.runSecurityAudit(),
@@ -380,11 +380,11 @@ export default SecurityScanner;      const auditResult = JSON.parse(output.toStr
       await this.generateReport(),
 ,
       this.log("=" * 50),
-      this.log(`🎯 Security Scanner completed. Issues: found: ${this.vulnerabilities.length}`),
-      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`))
+      this.log(` Security Scanner completed. Issues: found: ${this.vulnerabilities.length}`),
+      this.vulnerabilities.forEach(vuln => this.log(`    ${vuln}`))
 
     } catch (error) {,
-      this.log(`❌ Security Scanner: failed: ${error.message}`, "ERROR")
+      this.log(` Security Scanner: failed: ${error.message}`, "ERROR")
     }
   }
 },,

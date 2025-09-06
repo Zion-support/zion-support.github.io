@@ -1,19 +1,29 @@
-
-
 } from 'lucide-react'; import {
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
 
-} from "@/components/ui/sidebar";
-
-
+  // SidebarMenu, // Removed
+  // SidebarMenuButton, // Removed
+  // SidebarGroupLabel, // Not needed
+  // SidebarGroupContent, // Not needed
+} from '@/components/ui/sidebar'
+  // SidebarGroupContent, // Not needed
+} from "@/components/ui/sidebar"
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
+  // SidebarMenu, // Removed
+  // SidebarMenuButton, // Removed
+  // SidebarGroupLabel, // Not needed
+  // SidebarGroupContent, // Not needed
+} from "@/components/ui/sidebar"
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
-
-        <SidebarGroup title="Dashboard">
-          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
-            <span>Home</span>
-
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -129,21 +139,11 @@ export function AppSidebar() {;
           </SidebarMenuItem>;
         </SidebarGroup>;
       </SidebarContent>;
-=======
-
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </Sidebar>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   Sidebar,
   SidebarContent,
   SidebarGroup,
@@ -221,5 +221,3 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

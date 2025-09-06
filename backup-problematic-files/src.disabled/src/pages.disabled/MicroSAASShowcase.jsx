@@ -9,4 +9,3 @@ const MicroSAASShowcase = ({ className }) => {
   );
 };
 
-export default MicroSAASShowcase;

@@ -1,3 +1,6 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -391,6 +394,8 @@ async function main() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-code-quality-analyzer.cjs
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
@@ -430,6 +435,7 @@ async function main() {
     log('error', 'Fatal error in comprehensive code quality analysis', error.message);
     process.exit(1)}
 }
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
 <<<<<<< HEAD
 
 main();#!/usr/bin/env node;
@@ -449,6 +455,17 @@ main();
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+main();#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-code-quality-analyzer.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -541,6 +558,10 @@ console.log('')
     "message"
     "action"
       log('warn', 'Issues "found")
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
+<<<<<<< HEAD
+      log('info', 'Quality "Recommendations")
+=======
 <<<<<<< HEAD
       log('info', 'Quality "Recommendations")
 =======
@@ -554,3 +575,13 @@ console.log('')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      log('info', 'Quality "Recommendations")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-code-quality-analyzer.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

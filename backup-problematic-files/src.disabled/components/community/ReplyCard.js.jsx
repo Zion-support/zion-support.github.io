@@ -9,4 +9,3 @@ const ReplyCard.js = ({ className }) => {
   );
 };
 
-export default ReplyCard.js;

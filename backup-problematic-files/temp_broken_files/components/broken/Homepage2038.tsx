@@ -141,7 +141,7 @@ const Homepage2038: React.FC = () => {
               <motion.div 
                 className=&quot;p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300&quot;
                 whileHover={{ scale: 1.05 }}              >
-                <div className=&quot;text-5xl font-bold text-green-400 mb-3 group-hover:text-green-300 transition-colors&quot;>∞</div>
+                <div className=&quot;text-5xl font-bold text-green-400 mb-3 group-hover:text-green-300 transition-colors&quot;></div>
                 <div className=&quot;text-gray-300 text-lg&quot;>Future Possibilities</div>
                 <div className=&quot;text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity&quot;>Unlimited potential</div>
               </motion.div>

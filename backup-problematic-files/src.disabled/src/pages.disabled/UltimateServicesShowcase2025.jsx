@@ -9,4 +9,3 @@ const UltimateServicesShowcase2025 = ({ className }) => {
   );
 };
 
-export default UltimateServicesShowcase2025;

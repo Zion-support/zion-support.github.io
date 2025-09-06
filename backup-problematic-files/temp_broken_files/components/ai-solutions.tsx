@@ -8,7 +8,7 @@ export default function AISolutionsPage() {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
       features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
-      icon: '🧠',
+      icon: '',
       category: 'Core AI',
       complexity: 'Advanced'
     },
@@ -17,7 +17,7 @@ export default function AISolutionsPage() {
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',
       features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development'],
-      icon: '💬',
+      icon: '',
       category: 'Language AI',
       complexity: 'Advanced'
     },
@@ -26,7 +26,7 @@ export default function AISolutionsPage() {
       title: 'Computer Vision',
       description: 'Computer vision solutions for image recognition, object detection, and visual analytics.',
       features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control'],
-      icon: '👁️',
+      icon: '',
       category: 'Visual AI',
       complexity: 'Advanced'
     },
@@ -35,7 +35,7 @@ export default function AISolutionsPage() {
       title: 'Autonomous Systems',
       description: 'Self-operating systems that can make decisions and take actions independently.',
       features: ['Decision MakingSelf-LearningAdaptive BehaviorContinuous Improvement'],
-      icon: '🤖',
+      icon: '',
       category: 'Autonomy',
       complexity: 'Expert'
     },
@@ -44,7 +44,7 @@ export default function AISolutionsPage() {
       title: 'Predictive Analytics',
       description: 'Data-driven insights that help predict future trends and behaviors.',
       features: ['Trend AnalysisRisk AssessmentForecastingBehavioral Prediction'],
-      icon: '📊',
+      icon: '',
       category: 'Analytics',
       complexity: 'Intermediate'
     },
@@ -53,7 +53,7 @@ export default function AISolutionsPage() {
       title: 'AI-Powered Automation',
       description: 'Intelligent automation that learns and improves over time.',
       features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows'],
-      icon: '⚡',
+      icon: '',
       category: 'Automation',
       complexity: 'Intermediate'
     }
@@ -63,22 +63,22 @@ export default function AISolutionsPage() {
     {
       industry: 'Manufacturing',
       solutions: ['Quality ControlPredictive MaintenanceSupply Chain Optimization'],
-      icon: '🏭'
+      icon: ''
     },
     {
       industry: 'Healthcare',
       solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery'],
-      icon: '🏥'
+      icon: ''
     },
     {
       industry: 'Finance',
       solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading'],
-      icon: '💳'
+      icon: ''
     },
     {
       industry: 'Retail',
       solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing'],
-      icon: '🛍️'
+      icon: ''
     }
   ],
 
@@ -121,14 +121,14 @@ export default function AISolutionsPage() {
                     <ul className=&quot;space-y-1 mb-4&quot;>
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className=&quot;text-sm text-white/60 flex items-center&quot;>
-                          <span className=&quot;text-cyan-400 mr-2&quot;>•</span>
+                          <span className=&quot;text-cyan-400 mr-2&quot;></span>
                           {feature}                        </li>
                       ))}
                     </ul>;
                     <Link ;
                       href={`/services#${solution.id}`}
                       className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;                    >
-                      Learn More <span className=&quot;ml-1&quot;>→</span>
+                      Learn More <span className=&quot;ml-1&quot;></span>
                     </a>
                   </div>
                 ))}
@@ -182,7 +182,7 @@ export default function AISolutionsPage() {
                     href=&quot;/case-studies#ai-automation-manufacturing&quot;
                     className=&quot;text-fuchsia-400 hover:text-fuchsia-300 transition-colors&quot;
                   >
-                    Read Case Study →
+                    Read Case Study 
                   </a>
                 </div>
                 <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6&quot;>
@@ -194,7 +194,7 @@ export default function AISolutionsPage() {
                     href=&quot;/case-studies#content-generation-scale&quot;
                     className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;
                   >
-                    Read Case Study →
+                    Read Case Study 
                   </a>
                 </div>
               </div>

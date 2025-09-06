@@ -9,4 +9,3 @@ const TermsOfService = ({ className }) => {
   );
 };
 
-export default TermsOfService;

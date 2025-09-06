@@ -6,21 +6,17 @@
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
-
-
     }
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 
+    return res.status(500).json({ error: e?.message })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
   }
 }
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

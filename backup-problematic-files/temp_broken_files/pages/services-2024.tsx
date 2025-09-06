@@ -210,7 +210,7 @@ const Services2024Page:React.FC = () => {;
                   </select>;
                   <button;
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' :'asc')} className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">;
-                    {sortOrder === 'asc' ? '↑' :'↓'}
+                    {sortOrder === 'asc' ? '' :''}
                   </button>;
                 </div>;
               </div>;
@@ -223,7 +223,7 @@ const Services2024Page:React.FC = () => {;
           <div className="max-w-7xl mx-auto">;
             {filteredServices.length === 0 ? (;
               <div className="text-center py-20">;
-                <div className="text-6xl mb-4">🔍</div>;
+                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>;
                 <p className="text-gray-400">Try adjusting your search criteria or filters.</p>;
               </div>;

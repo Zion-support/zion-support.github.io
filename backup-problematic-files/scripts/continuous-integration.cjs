@@ -2,6 +2,11 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +195,10 @@ module.exports = ContinuousIntegration;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -220,13 +229,22 @@ const path = require('path')
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
 <<<<<<< HEAD
+      console.error('Fatal "error")
+<<<<<<< HEAD
+=======
+      console.error('Fatal "error")
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
-      console.error('Fatal "error")
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
       console.error('Fatal "error")
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -251,3 +269,7 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

@@ -46,7 +46,7 @@ const categories = [  {
     rating: 4.9,
     tags: ["AI", "Machine Learning", "Enterprise"],
     color: "from-blue-500 to-purple-500",
-    icon: "🤖",
+    icon: "",
   },
   {
     id: 'enterprise',
@@ -537,7 +537,7 @@ key={category.id}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400">
                   {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
-                  {searchTerm && ` • Search: "${searchTerm}"`}
+                  {searchTerm && `  Search: "${searchTerm}"`}
                 </p>
               </div>
               
@@ -559,7 +559,7 @@ key={category.id}
         <div className="space-y-6">
           {filteredServices.length === 0 ? (
             <div className="text-center py-12">
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
+              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4"></div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 No services found
               </h3>

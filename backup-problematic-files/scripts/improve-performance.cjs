@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -30,6 +35,10 @@ const fs = require("fs")"const path = require("path")function improvePerformance
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 const fs = require('fs');
 const path = require('path');
 function improvePerformance() {}
@@ -43,6 +52,48 @@ const nextConfig = {}
   "poweredByHeader": false,
   "generateEtags": false,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  
+  
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  
+  
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
   
@@ -70,12 +121,58 @@ const nextConfig = {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   // Image optimization;
   "images": {}
     formats: ['image/webp', 'image/avif'],
     "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  
+  
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  
+  
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
   
@@ -103,6 +200,10 @@ const nextConfig = {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   // Bundle optimization;
   "webpack": (config, { dev, isServer }) => {}
     if ( {})
@@ -124,6 +225,48 @@ const nextConfig = {}
             "chunks": 'all'}}}};
     return confi}g},
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  
+  
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  
+  
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
   
@@ -151,6 +294,10 @@ const nextConfig = {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   // Headers for performance;
   async headers() {}
     return [;]
@@ -170,9 +317,20 @@ const nextConfig = {}
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]}};
 <<<<<<< HEAD
+module.exports = nextConfig;";
+      fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
+      console.log('Performance improvements completed')} catch (error) {}
+      console.error('Performance improvement "failed": ', error.message)};
+  };
+};
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -284,3 +442,7 @@ improvePerformance();
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

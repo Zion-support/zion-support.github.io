@@ -212,7 +212,7 @@ export default function ResearchPage() {;
                   rel="noopener noreferrer";
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200";
                 >;
-                  View Publication <span aria-hidden="true">→</span>;
+                  View Publication <span aria-hidden="true"></span>;
                 </a>;
               </div>;
             ))}
@@ -303,7 +303,7 @@ export default function ResearchPage() {;
               Get in Touch;
             </a>;
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">;
-              Research Careers <span aria-hidden="true">→</span>;
+              Research Careers <span aria-hidden="true"></span>;
             </a>;
           </div>;
         </div>;

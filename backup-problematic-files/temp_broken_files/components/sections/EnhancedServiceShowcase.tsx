@@ -67,12 +67,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   const [sortBy, setSortBy] = useState<string>('popular'),
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'ai', name: 'AI & ML', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum', icon: '⚛️' },
-    { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
-    { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
-    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
+    { id: 'all', name: 'All Services', icon: '' },
+    { id: 'ai', name: 'AI & ML', icon: '' },
+    { id: 'quantum', name: 'Quantum', icon: '' },
+    { id: 'blockchain', name: 'Blockchain', icon: '' },
+    { id: 'enterprise', name: 'Enterprise', icon: '' },
+    { id: 'emerging', name: 'Emerging Tech', icon: '' }
   ],
 
   const priceRanges = [
@@ -256,7 +256,7 @@ key={service.id}
                 <div className=&quot;relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full&quot;>
                   {/* Popular Badge */}
                   {service.popular && (
-                    <div className=&quot;absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full&quot;>                      ⭐ Most Popular
+                    <div className=&quot;absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full&quot;>                       Most Popular
                     </div>
                   )}
 ;
@@ -286,7 +286,7 @@ key={service.id}
                     <ul className=&quot;space-y-2&quot;>
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className=&quot;text-sm text-gray-400 flex items-start&quot;>
-                          <span className=&quot;text-cyan-400 mr-2&quot;>•</span>
+                          <span className=&quot;text-cyan-400 mr-2&quot;></span>
                           {feature}                        </li>
                       ))}
                     </ul>;
@@ -310,7 +310,7 @@ key={service.id}
 
                   {/* ROI Highlight */}
                   <div className=&quot;mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20&quot;>
-                    <div className=&quot;text-sm text-green-400 font-semibold mb-1&quot;>🚀 ROI Promise</div>
+                    <div className=&quot;text-sm text-green-400 font-semibold mb-1&quot;> ROI Promise</div>
                     <div className=&quot;text-xs text-gray-300 leading-relaxed&quot;>
                       {service.roi}
                     </div>;
@@ -318,7 +318,7 @@ key={service.id}
 ;
                   {/* Market Position */}
                   <div className=&quot;mb-6 p-4 bg-gray-800/30 rounded-lg&quot;>
-                    <div className=&quot;text-sm text-cyan-400 font-semibold mb-2&quot;>📊 Market Position</div>
+                    <div className=&quot;text-sm text-cyan-400 font-semibold mb-2&quot;> Market Position</div>
                     <div className=&quot;text-xs text-gray-300 leading-relaxed&quot;>
                       {service.marketPosition}
                     </div>;
@@ -373,9 +373,9 @@ initial={{ opacity: 0, y: 30 }}
               </Button>
             </div>
             <div className=&quot;mt-6 text-sm text-gray-400&quot;>
-              <p>📞 Call us: <span className=&quot;text-cyan-400&quot;>+1 302 464 0950</span></p>
-              <p>📧 Email: <span className=&quot;text-cyan-400&quot;>kleber@ziontechgroup.com</span></p>
-              <p>🌐 Visit: <span className=&quot;text-cyan-400&quot;>https://ziontechgroup.com</span></p>
+              <p> Call us: <span className=&quot;text-cyan-400&quot;>+1 302 464 0950</span></p>
+              <p> Email: <span className=&quot;text-cyan-400&quot;>kleber@ziontechgroup.com</span></p>
+              <p> Visit: <span className=&quot;text-cyan-400&quot;>https://ziontechgroup.com</span></p>
             </div>
           </div>
         </motion.div>

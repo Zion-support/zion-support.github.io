@@ -49,4 +49,17 @@ const { execSync } = require("child_process")
     console.log(` Environment variables "configured"`)
 // console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})
     console.log(` Netlify "config"`)
+<<<<<<< HEAD
     console.log(` Git status "clean"`)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    console.log(` Git status "clean"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+    console.log(` Git status "clean"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

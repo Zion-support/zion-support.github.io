@@ -9,4 +9,3 @@ const ZionHireAI = ({ className }) => {
   );
 };
 
-export default ZionHireAI;

@@ -9,4 +9,3 @@ const ApplicationStatusTracker = ({ className }) => {
   );
 };
 
-export default ApplicationStatusTracker;

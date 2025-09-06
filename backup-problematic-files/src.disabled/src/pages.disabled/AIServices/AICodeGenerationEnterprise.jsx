@@ -9,4 +9,3 @@ const AICodeGenerationEnterprise = ({ className }) => {
   );
 };
 
-export default AICodeGenerationEnterprise;

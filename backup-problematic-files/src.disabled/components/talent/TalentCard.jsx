@@ -9,4 +9,3 @@ const TalentCard = ({ className }) => {
   );
 };
 
-export default TalentCard;

@@ -1,4 +1,6 @@
 
+export type ProjectStatus =
+export type ProjectStatus = 
 export type ProjectStatus = 
 
 
@@ -6,9 +8,6 @@ export type ProjectStatus =
   | 'offer_accepted'
   | 'changes_requested'
   | 'in_progress'
-  | 'completed'
-  | 'canceled';
-=======
 export type ProjectStatus =;
   | 'offer_sent';
   | 'offer_accepted';
@@ -22,6 +21,7 @@ export type ProjectStatus =;
 export interface Project {;
 
 
+export interface Project {
   id: string;
   client_id: string;
   talent_id: string;
@@ -35,36 +35,17 @@ export interface Project {;
   updated_at: string;
   job?: {
 
-    title: string,
-    description: string;
-  }
-  talent_profile?: {
-    full_name: string;
-    professional_title?: string,
-    profile_picture_url?: string;
-  }
-  client_profile?: {
-    display_name: string,
-    avatar_url?: string;
-
-  }
-}
-
 
 
 export interface ProjectNote {;
 
 
+export interface ProjectNote {
   id: string;
   project_id: string;
   user_id: string;
   content: string;
   created_at: string;
   created_by_profile?: {
-
-    display_name: string,
-    avatar_url?: string;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

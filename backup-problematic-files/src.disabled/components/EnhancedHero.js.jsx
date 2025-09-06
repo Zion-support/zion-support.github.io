@@ -9,4 +9,3 @@ const EnhancedHero.js = ({ className }) => {
   );
 };
 
-export default EnhancedHero.js;

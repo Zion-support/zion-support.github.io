@@ -82,10 +82,10 @@ const AIFinancialRisk: React.FC = () => {
               Comprehensive risk assessment using AI algorithms and machine learning models.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Credit risk analysis</li>
-              <li>• Market risk assessment</li>
-              <li>• Operational risk</li>
-              <li>• Liquidity risk</li>
+              <li> Credit risk analysis</li>
+              <li> Market risk assessment</li>
+              <li> Operational risk</li>
+              <li> Liquidity risk</li>
             </ul>
           </div>
 
@@ -95,10 +95,10 @@ const AIFinancialRisk: React.FC = () => {
               Monitor financial risks in real-time with AI-powered alert systems.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Live risk monitoring</li>
-              <li>• Alert systems</li>
-              <li>• Threshold management</li>
-              <li>• Automated responses</li>
+              <li> Live risk monitoring</li>
+              <li> Alert systems</li>
+              <li> Threshold management</li>
+              <li> Automated responses</li>
             </ul>
           </div>
 
@@ -108,10 +108,10 @@ const AIFinancialRisk: React.FC = () => {
               Predict potential risks and market movements with advanced AI models.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Risk forecasting</li>
-              <li>• Scenario analysis</li>
-              <li>• Stress testing</li>
-              <li>• Monte Carlo simulation</li>
+              <li> Risk forecasting</li>
+              <li> Scenario analysis</li>
+              <li> Stress testing</li>
+              <li> Monte Carlo simulation</li>
             </ul>
           </div>
         </div>

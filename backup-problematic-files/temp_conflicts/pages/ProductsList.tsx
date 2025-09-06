@@ -13,7 +13,6 @@ export default function ProductsListPage() {;
         <p className="text-lg mb-4">Discover our cutting-edge technology solutions designed to transform your business.</p>;
         <div className="mt-4">;
           <a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home;
           </a>;
         </div>;
       </div>;

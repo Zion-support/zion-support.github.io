@@ -9,4 +9,3 @@ const WishlistSlice.js = ({ className }) => {
   );
 };
 
-export default WishlistSlice.js;

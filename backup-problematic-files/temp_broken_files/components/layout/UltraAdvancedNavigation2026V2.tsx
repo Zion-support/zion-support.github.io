@@ -94,7 +94,7 @@ export default function UltraAdvancedNavigation2026V2() {
             </div>
             <div className=&quot;flex items-center space-x-4&quot;>
               <Link href=&quot;/enhanced-services-showcase-2026-v2&quot; className=&quot;text-purple-400 hover:text-purple-300 transition-colors&quot;>
-                🚀 New 2026 Services
+                 New 2026 Services
               </a>
             </div>
           </div>

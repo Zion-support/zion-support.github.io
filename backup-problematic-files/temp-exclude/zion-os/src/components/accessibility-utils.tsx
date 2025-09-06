@@ -192,7 +192,7 @@ export function CollapsibleSection({ ;
       >;
         {title}
         <span className="text-[var(--accent)]">;
-          {isExpanded ? "−" :""}
+          {isExpanded ? "" :""}
         </span>;
       </button>;
       ;
@@ -338,7 +338,7 @@ return (<div aria-live= {
 }> {
   title 
 }<span className="text-[var (--accent) ]"> {
-  isExpanded ? "−" : "+" 
+  isExpanded ? "" : "+" 
 }</span> </button> <div id= {
   `collapsible-$ {
   title.toLowerCase () .replace (/\s+/g, '-') 

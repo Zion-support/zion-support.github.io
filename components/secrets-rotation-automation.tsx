@@ -1,5 +1,4 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,22 +21,22 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
 
+export default function SecretsRotationAutomationPage() {
 
-import React from './react';
-import SEO from "../components / SEO";
-import { Check, ExternalLink  } from './lucide-react';
-export default /**
- * SecretsRotationAutomationPage - Function description
- */
-function SecretsRotationAutomationPage() {
-  const features = [;
+  const features = [
+    "Automated key and secret rotation"
+    "JIT credentials with expirations"
+    "Policy approvals and audit trails"
+    "CI/CD integration (GitHub Actions, CircleCI)"
+    "Cloud KMS and Vault support"
+  ];
+  return (
+
+export default function SecretsRotationAutomationPage() {
+  const features = [
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -98,32 +97,7 @@ function SecretsRotationAutomationPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
-
-            </a>;
-          </div>;
-        </section>;
-      </main>;
-
-    </>);
   return (
-    <>;
-      <SEO;
-        title="Secrets Rotation Automation";
-        description="Automate key and secret rotation across cloud and CI / CD with approvals and audit logs.";
-      />;
-      <main id="main" className="container mx - auto px - 4 py - 24">;
-        <section className="max - w-5xl mx - auto">;
-          <h1 className="text - 4xl font - extrabold tracking - tight">;
-            Secrets Rotation Automation;
-          </h1>;
-          <p className="mt - 4 text - lg text - gray - 300">;
-            Keep credentials short - lived and compliant. Automate rotations;
-            across providers with full auditability.;
-          </p>;
-          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
-            {features.map ((f) => (
-              <div;
-=======
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -177,19 +151,11 @@ function SecretsRotationAutomationPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </a>;
           </div>;
         </section>;
       </main>;
-
-}
-
-
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </a>;
+          </div>;
+        </section>;
+      </main>;

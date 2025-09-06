@@ -9,4 +9,3 @@ const Alert-dialog = ({ className }) => {
   );
 };
 
-export default Alert-dialog;

@@ -7,7 +7,7 @@ export default function ComprehensiveRedundancyRedirect() {;
         <meta httpEquiv="refresh" content="0, url=/COMPREHENSIVE_REDUNDANCY_IMPLEMENTATION_SUMMARY.md" />;
       </Head>;
       <main style={{ padding:24 }}>;
-        <p>Redirecting to Comprehensive Redundancy docs…</p>;
+        <p>Redirecting to Comprehensive Redundancy docs</p>;
       </main>;
     </>;
   ),;}
@@ -16,5 +16,5 @@ export default function ComprehensiveRedundancyRedirect() {;
   {
   padding: 24 
 }
-}> <p>Redirecting to Comprehensive Redundancy docs…</p> </main> </>) 
+}> <p>Redirecting to Comprehensive Redundancy docs</p> </main> </>) 
 }

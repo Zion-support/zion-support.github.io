@@ -206,7 +206,7 @@ export function TalentRegistrationForm() {;
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>;
             <p>You can review and edit these enhancements in your profile dashboard.</p>;
             <div style="margin-top:30px, padding-top:20px, border-top:1px solid #eee,">;
-              <p style="color:#666, font-size:12px,">© ${new Date().getFullYear()} Zion Marketplace</p>;
+              <p style="color:#666, font-size:12px,"> ${new Date().getFullYear()} Zion Marketplace</p>;
             </div>;
           </div>;
           `;
@@ -818,7 +818,7 @@ if (Array.isArray (categorySkills) ) {
   try {
   await supabase.functions.invoke ('send-email', {
   body: {
-  <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666, font-size: 12px, ">© $ {
+  <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666, font-size: 12px, "> $ {
   new Date () .getFullYear () 
 }Zion Marketplace</p> 
 }

@@ -9,4 +9,3 @@ const UseVirtualScroll = ({ className }) => {
   );
 };
 
-export default UseVirtualScroll;

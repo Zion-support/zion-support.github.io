@@ -9,4 +9,3 @@ const EnhancedQuickAccess.js = ({ className }) => {
   );
 };
 
-export default EnhancedQuickAccess.js;

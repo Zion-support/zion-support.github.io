@@ -9,4 +9,3 @@ const AIPoweredITAssetManagement = ({ className }) => {
   );
 };
 
-export default AIPoweredITAssetManagement;

@@ -9,4 +9,3 @@ const API = ({ className }) => {
   );
 };
 
-export default API;

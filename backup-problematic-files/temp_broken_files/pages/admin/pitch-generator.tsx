@@ -31,7 +31,7 @@ function SlidePreview({ slide, isActive, onClick } { slide:Slide, isActive:boole
   return (;
     <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' :'border-gray-200 dark:border-gray-800'}`}>;
       <div className="font-semibold text-sm line-clamp-2">{slide.title || 'Untitled'}</div>;
-      <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>;
+      <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || ''}</div>;
     </button>;
   ),;
 }
@@ -257,7 +257,7 @@ export default function PitchGenerator() {;
 ;
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">;
               <div className="font-medium mb-2">History</div>;
-              <div className="text-xs text-gray-500 dark:text-gray-400">Version:{versionTag || '—'}</div>;
+              <div className="text-xs text-gray-500 dark:text-gray-400">Version:{versionTag || ''}</div>;
               <ul className="mt-2 space-y-1 text-sm">;
                 {history.map((h) => (;
                   <li key={h.id} className="flex justify-between border rounded px-2 py-1">;
@@ -357,7 +357,7 @@ export default function PitchGenerator() {;
 
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || ''}</div>
               <ul className="mt-2 space-y-1 text-sm">
                 {history.map(_(h) => (
                   <li key={h.id} className="flex justify-between border rounded px-2 py-1">

@@ -9,4 +9,3 @@ const AIAutonomousThreatDetection = ({ className }) => {
   );
 };
 
-export default AIAutonomousThreatDetection;

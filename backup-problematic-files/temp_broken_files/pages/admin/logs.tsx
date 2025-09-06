@@ -577,7 +577,7 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                   <div className="flex items-center justify-between text-xs text-muted-foreground">;
                     <div>;
                       Session:{log.sessionId}
-                      {log.userId && ` • User:${log.userId}`}
+                      {log.userId && `  User:${log.userId}`}
                     </div>;
                     {log.performance && (;
                       <div>{formatPerformance(log.performance)}</div>;

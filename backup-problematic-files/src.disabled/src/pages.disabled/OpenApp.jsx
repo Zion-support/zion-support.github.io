@@ -9,4 +9,3 @@ const OpenApp = ({ className }) => {
   );
 };
 
-export default OpenApp;

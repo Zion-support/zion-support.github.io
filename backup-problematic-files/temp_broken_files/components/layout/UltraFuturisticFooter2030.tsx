@@ -15,42 +15,42 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 },
 const _serviceCategories = [
-  {_title: '🚀 AI & Consciousness', _services: [
+  {_title: ' AI & Consciousness', _services: [
       { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-platform'},
       {_name: 'AI Emotional Intelligence', _href: '/ai-emotion-intelligence-platform'},
       {_name: 'AI Creativity Orchestrator', _href: '/ai-creativity-orchestrator'},
       {_name: 'AI Autonomous Business Manager', _href: '/ai-autonomous-business-manager'}
     ]
   },
-  {_title: '⚛️ Quantum & Emerging Tech', _services: [
+  {_title: ' Quantum & Emerging Tech', _services: [
       { name: 'Quantum Internet Security', _href: '/quantum-internet-security-gateway'},
       {_name: 'Quantum Learning Accelerator', _href: '/quantum-learning-accelerator'},
       {_name: 'Quantum Financial Trading', _href: '/quantum-financial-trading-platform'},
       {_name: 'Quantum Cloud Infrastructure', _href: '/quantum-cloud-infrastructure'}
     ]
   },
-  {_title: '🧬 Biotech & DNA Computing', _services: [
+  {_title: ' Biotech & DNA Computing', _services: [
       { name: 'DNA Computing Platform', _href: '/biotech-dna-computing-platform'},
       {_name: 'Personalized Nutrition', _href: '/biotech-personalized-nutrition'},
       {_name: 'Predictive Health Analytics', _href: '/ai-predictive-health-analytics'},
       {_name: 'Research Automation', _href: '/advanced-research-automation'}
     ]
   },
-  {_title: '🏙️ Enterprise IT Solutions', _services: [
+  {_title: ' Enterprise IT Solutions', _services: [
       { name: 'Autonomous DevOps', _href: '/autonomous-devops-platform'},
       {_name: 'Autonomous IT Operations', _href: '/autonomous-it-operations-center'},
       {_name: 'AI Enterprise Security', _href: '/ai-powered-enterprise-security'},
       {_name: 'Intelligent Data Governance', _href: '/intelligent-data-governance'}
     ]
   },
-  {_title: '🌌 Space & Metaverse Tech', _services: [
+  {_title: ' Space & Metaverse Tech', _services: [
       { name: 'Space Mining Automation', _href: '/space-mining-automation-platform'},
       {_name: 'Metaverse Digital Reality', _href: '/metaverse-digital-reality-platform'},
       {_name: 'Quantum Research Platform', _href: '/quantum-research-platform'},
       {_name: 'AI Research Assistant', _href: '/ai-research-assistant'}
     ]
   },
-  {_title: '🎯 2030 Innovative Micro SAAS', _services: [
+  {_title: ' 2030 Innovative Micro SAAS', _services: [
       { name: 'AI Business Intelligence Suite 2030', _href: '/ai-business-intelligence-suite-2030'},
       {_name: 'AI Customer Experience Platform 2030', _href: '/ai-customer-experience-platform-2030'},
       {_name: 'AI Marketing Automation Suite 2030', _href: '/ai-marketing-automation-2030'},

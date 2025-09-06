@@ -697,9 +697,6 @@ class ComprehensiveWebsiteAnalyzer {;
   medium' }, ';
           { "action": 'Create: blog sectio,n, "priority": ';
   medium' }, ',
-
-    <<<<<<< HEAD
-
           { "action": 'Add: case studie,s, "priority": ';
   medium' }']      })}
     // "Check": for missing essential pages;

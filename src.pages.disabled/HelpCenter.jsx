@@ -24,9 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface HelpCenterProps {
   // Add props here as needed
-
-
-
 export default function HelpCenter({ }: HelpCenterProps) {
   return (
     <div>
@@ -34,11 +31,22 @@ export default function HelpCenter({ }: HelpCenterProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
+:src.pages.disabled/HelpCenter.jsx
+}
+}
+}
+}
+}
 }
 
-=======
 
 
+
+
+
+:src.pages.disabled/HelpCenter.jsx
+}
+}
+}
+}
+}

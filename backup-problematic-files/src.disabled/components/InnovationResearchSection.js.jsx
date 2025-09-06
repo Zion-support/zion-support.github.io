@@ -9,4 +9,3 @@ const InnovationResearchSection.js = ({ className }) => {
   );
 };
 
-export default InnovationResearchSection.js;

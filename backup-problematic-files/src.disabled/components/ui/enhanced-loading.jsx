@@ -9,4 +9,3 @@ const Enhanced-loading = ({ className }) => {
   );
 };
 
-export default Enhanced-loading;

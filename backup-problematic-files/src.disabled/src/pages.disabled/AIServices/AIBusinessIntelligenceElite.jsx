@@ -9,4 +9,3 @@ const AIBusinessIntelligenceElite = ({ className }) => {
   );
 };
 
-export default AIBusinessIntelligenceElite;

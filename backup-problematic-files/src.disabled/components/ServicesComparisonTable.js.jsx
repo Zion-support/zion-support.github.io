@@ -9,4 +9,3 @@ const ServicesComparisonTable.js = ({ className }) => {
   );
 };
 
-export default ServicesComparisonTable.js;

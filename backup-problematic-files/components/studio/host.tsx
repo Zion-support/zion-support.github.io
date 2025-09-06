@@ -113,7 +113,7 @@ export default function StudioHostPage() {;
           </div>
         </div>
         <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
-          {generating ? 'Generating…' : 'Generate Episode'}
+          {generating ? 'Generating' : 'Generate Episode'}
         </button>
       </section>
 
@@ -151,10 +151,10 @@ export default function StudioHostPage() {;
             </div>
             <div className="flex gap-3">
               <button className="px-4 py-2 bg-purple-600 text-white rounded" onClick={handleSynthesize} disabled={synthesizing}>
-                {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
+                {synthesizing ? 'Synthesizing' : 'Synthesize Audio'}
               </button>
               <button className="px-4 py-2 bg-gray-800 text-white rounded" onClick={handlePublishRss} disabled={publishing}>
-                {publishing ? 'Publishing…' : 'Update RSS'}
+                {publishing ? 'Publishing' : 'Update RSS'}
               </button>
             </div>
             {episode.audio && (

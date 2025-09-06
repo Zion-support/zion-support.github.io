@@ -9,4 +9,3 @@ const FeaturedListingsSection.js = ({ className }) => {
   );
 };
 
-export default FeaturedListingsSection.js;

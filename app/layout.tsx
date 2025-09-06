@@ -33,92 +33,74 @@ export const metadata = {
   },
 };
 
+/**
+ * Header - Function description
+ */
 function Header() {
   return (
-    <header className="bg-white shadow-sm border-b">
-      <div className="max-w-6xl mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-gray-900">
-            Zion Tech Group
-          </Link>
-          <nav className="hidden md:flex space-x-8">
-            <Link href="/services" className="text-gray-600 hover:text-gray-900">
-              Services
-            </Link>
-            <Link href="/about" className="text-gray-600 hover:text-gray-900">
-              About
-            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-900">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-          </div>
+    <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
+      <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
+        <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+          Zion Tech Group
+        </Link>
+        <div className="hidden md:flex gap-6">
+          <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
+          <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+          <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
         </div>
-      </div>
+        <button className="md:hidden p-2" aria-label="Toggle menu">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
     </header>
   );
 }
 
+/**
+ * Footer - Function description
+ */
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
-            <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
-              Enterprise-grade AI, micro SaaS, and IT solutions.
-            </p>
-            <div className="text-gray-300">
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown, DE 19709</p>
-              <p>Phone: +1 302 464 0950</p>
-              <p>Email: kleber@ziontechgroup.com</p>
+            <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
+            <div className="space-y-2">
+              <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
+              <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
+              <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
+              <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
             </div>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><Link href="/services/micro-saas">Micro SaaS</Link></li>
-              <li><Link href="/services/ai-services">AI Services</Link></li>
-              <li><Link href="/services/it-services">IT Services</Link></li>
-            </ul>
+            <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
+            <div className="space-y-2">
+              <Link href="/" className="block text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
+              <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</Link>
+              <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
+            </div>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="text-gray-300">
-              <p>Mobile: +1 302 464 0950</p>
-              <p>Email: kleber@ziontechgroup.com</p>
+            <h3 className="font-semibold text-gray-900 mb-3">Contact Info</h3>
+            <div className="text-sm text-gray-600 space-y-1">
+              <div>Mobile: +1 302 464 0950</div>
+              <div>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600 transition-colors">kleber@ziontechgroup.com</a></div>
+              <div>Address: 364 E Main St STE 1008<br />Middletown DE 19709</div>
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        <div className="border-t border-gray-200 mt-6 pt-4 text-xs text-gray-500 text-center">
+          © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
         </div>
       </div>
     </footer>
   );
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-gray-900">

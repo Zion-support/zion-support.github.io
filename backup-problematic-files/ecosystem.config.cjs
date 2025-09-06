@@ -2,6 +2,8 @@ module.exports = {
   apps: [
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       name: 'ci-cd-pipeline',
       script: 'npm',
       args: 'run build',
@@ -39,6 +41,10 @@ module.exports = {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -77,15 +83,19 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       name: 'bolt-zion-app',
-=======
       name: 'ci-cd-pipeline',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       script: 'npm',
       args: 'run build',
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -96,13 +106,16 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -115,10 +128,6 @@ module.exports = {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
         NODE_ENV: 'production',
       },
       cron_restart: '0 0 * * *', // Daily restart
@@ -136,13 +145,6 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-<<<<<<< HEAD
-        NODE_ENV: 'production',      },
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        NODE_ENV: 'production',
-=======
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
@@ -155,7 +157,6 @@ module.exports = {
     {
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor.js',
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -164,25 +165,14 @@ module.exports = {
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
-<<<<<<< HEAD
-    }
-  ]
-=======
-=======
         NODE_ENV: 'production',
       },
->>>>>>> origin/automation-improvements-final
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/automation-error.log',
       out_file: './logs/automation-out.log',
       log_file: './logs/automation-combined.log',
-<<<<<<< HEAD
-      time: true,    },
-=======
       time: true,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     },
->>>>>>> origin/automation-improvements-final
     {
       name: 'comprehensive-automation',
       script: 'node',
@@ -430,6 +420,11 @@ module.exports = {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
@@ -835,6 +830,10 @@ module.exports = {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
@@ -843,6 +842,13 @@ module.exports = {}
 <<<<<<< HEAD
   ]
 };
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+  ]
+};
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -856,3 +862,7 @@ module.exports = {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

@@ -33,42 +33,42 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 },
 const _serviceCategories = [
-  {_title: '🧠 Revolutionary AI Services', _icon: BrainIcon, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and creativity', _services: [
+  {_title: ' Revolutionary AI Services', _icon: BrainIcon, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and creativity', _services: [
       { name: 'AI Business Intelligence Pro', _href: '/ai-business-intelligence-pro', _description: 'Transform data into actionable insights', _price: '$299/month'},
       {_name: 'AI Video Generation Platform', _href: '/ai-video-generation-platform', _description: 'Create professional videos with AI', _price: '$499/month'},
       {_name: 'AI-Powered Cybersecurity', _href: '/ai-cybersecurity-platform', _description: 'Next-generation threat detection', _price: '$799/month'},
       {_name: 'AI Drug Discovery Platform', _href: '/ai-drug-discovery-platform', _description: 'Accelerate drug discovery with AI', _price: '$3, _999/month'}
     ]
   },
-  {_title: '⚛️ Quantum & Emerging Tech', _icon: AtomIcon, _color: 'from-indigo-600 via-blue-600 to-cyan-600', _description: 'Quantum computing and beyond', _services: [
+  {_title: ' Quantum & Emerging Tech', _icon: AtomIcon, _color: 'from-indigo-600 via-blue-600 to-cyan-600', _description: 'Quantum computing and beyond', _services: [
       { name: 'Quantum Machine Learning', _href: '/quantum-machine-learning-platform', _description: 'Harness quantum computing for ML', _price: '$1, _999/month'},
       {_name: 'Blockchain AI Platform', _href: '/blockchain-ai-platform', _description: 'Decentralized AI for the future', _price: '$899/month'},
       {_name: 'Edge AI Computing', _href: '/edge-ai-computing-platform', _description: 'AI at the edge for real-time processing', _price: '$599/month'},
       {_name: 'AI Climate Modeling', _href: '/ai-climate-modeling-platform', _description: 'Predict climate change with AI', _price: '$1, _299/month'}
     ]
   },
-  {_title: '🏙️ Enterprise IT Solutions', _icon: CpuIcon, _color: 'from-blue-600 via-cyan-600 to-teal-600', _description: 'Autonomous enterprise infrastructure', _services: [
+  {_title: ' Enterprise IT Solutions', _icon: CpuIcon, _color: 'from-blue-600 via-cyan-600 to-teal-600', _description: 'Autonomous enterprise infrastructure', _services: [
       { name: 'API Security & Monitoring', _href: '/api-security-monitoring-suite', _description: 'Protect and monitor your APIs', _price: '$399/month'},
       {_name: 'Customer Success Automation', _href: '/customer-success-automation', _description: 'Automate customer success workflows', _price: '$199/month'},
       {_name: 'HR Automation Suite', _href: '/hr-automation-suite', _description: 'Streamline HR processes with AI', _price: '$179/month'},
       {_name: 'Project Management AI', _href: '/project-management-ai-platform', _description: 'AI-powered project management', _price: '$199/month'}
     ]
   },
-  {_title: '🛒 Business Automation', _icon: ShoppingCart, _color: 'from-teal-600 via-emerald-600 to-green-600', _description: 'Streamline business operations', _services: [
+  {_title: ' Business Automation', _icon: ShoppingCart, _color: 'from-teal-600 via-emerald-600 to-green-600', _description: 'Streamline business operations', _services: [
       { name: 'E-commerce Automation', _href: '/ecommerce-automation-platform', _description: 'Automate your entire e-commerce operation', _price: '$249/month'},
       {_name: 'Marketing Automation Suite', _href: '/marketing-automation-suite', _description: 'Automate your entire marketing operation', _price: '$279/month'},
       {_name: 'Financial Analytics Platform', _href: '/financial-analytics-platform', _description: 'Real-time financial insights', _price: '$349/month'},
       {_name: 'Legal Document Automation', _href: '/legal-document-automation', _description: 'Automate legal document creation', _price: '$399/month'}
     ]
   },
-  {_title: '🤖 Robotics & Automation', _icon: RocketIcon, _color: 'from-green-600 via-yellow-600 to-orange-600', _description: 'Intelligent automation solutions', _services: [
+  {_title: ' Robotics & Automation', _icon: RocketIcon, _color: 'from-green-600 via-yellow-600 to-orange-600', _description: 'Intelligent automation solutions', _services: [
       { name: 'Autonomous Robotics Platform', _href: '/autonomous-robotics-platform', _description: 'Build and deploy intelligent robots', _price: '$2, _499/month'},
       {_name: 'AI Content Generator Elite', _href: '/ai-content-generator-elite', _description: 'Professional AI content creation', _price: '$49/month'},
       {_name: 'AI Guardrails Suite', _href: '/ai-guardrails-suite', _description: 'Policy and safety for LLM apps', _price: '$199/month'},
       {_name: 'AI Business Intelligence', _href: '/ai-business-intelligence-suite', _description: 'Intelligent business insights', _price: '$299/month'}
     ]
   },
-  {_title: '🔬 Research & Development', _icon: MicroscopeIcon, _color: 'from-orange-600 via-red-600 to-pink-600', _description: 'Breakthrough research solutions', _services: [
+  {_title: ' Research & Development', _icon: MicroscopeIcon, _color: 'from-orange-600 via-red-600 to-pink-600', _description: 'Breakthrough research solutions', _services: [
       { name: 'Quantum DNA Computing', _href: '/quantum-dna-computing-platform', _description: 'DNA-based quantum computation', _price: '$35, _999/month'},
       {_name: 'Space Mining Automation', _href: '/space-mining-automation-platform', _description: 'Automated asteroid mining', _price: '$45, _999/month'},
       {_name: 'Metaverse AI Development', _href: '/metaverse-ai-development-platform', _description: 'Build immersive virtual worlds', _price: '$2, _999/month'},

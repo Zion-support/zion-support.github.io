@@ -58,10 +58,10 @@ const AIAssistant: React.FC = () => {
               Understand and respond to natural language queries with high accuracy and context awareness.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Context-aware responses</li>
-              <li>• Multi-language support</li>
-              <li>• Sentiment analysis</li>
-              <li>• Intent recognition</li>
+              <li> Context-aware responses</li>
+              <li> Multi-language support</li>
+              <li> Sentiment analysis</li>
+              <li> Intent recognition</li>
             </ul>
           </div>
 
@@ -71,10 +71,10 @@ const AIAssistant: React.FC = () => {
               Automate repetitive tasks and streamline workflows with intelligent task management.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Workflow automation</li>
-              <li>• Task scheduling</li>
-              <li>• Process optimization</li>
-              <li>• Error handling</li>
+              <li> Workflow automation</li>
+              <li> Task scheduling</li>
+              <li> Process optimization</li>
+              <li> Error handling</li>
             </ul>
           </div>
 
@@ -84,10 +84,10 @@ const AIAssistant: React.FC = () => {
               Analyze data and provide insights to help make informed business decisions.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Pattern recognition</li>
-              <li>• Predictive analytics</li>
-              <li>• Data visualization</li>
-              <li>• Trend analysis</li>
+              <li> Pattern recognition</li>
+              <li> Predictive analytics</li>
+              <li> Data visualization</li>
+              <li> Trend analysis</li>
             </ul>
           </div>
         </div>

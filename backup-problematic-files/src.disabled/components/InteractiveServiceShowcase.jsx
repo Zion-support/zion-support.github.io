@@ -9,4 +9,3 @@ const InteractiveServiceShowcase = ({ className }) => {
   );
 };
 
-export default InteractiveServiceShowcase;

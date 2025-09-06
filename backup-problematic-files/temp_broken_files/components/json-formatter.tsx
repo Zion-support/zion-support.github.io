@@ -325,7 +325,7 @@ onClick={() => downloadJSON(formattedJson, 'formatted.json')}
                   </div>
                 ) : (
                   <div className=&quot;bg-gray-700 p-6 rounded-lg border border-gray-600 text-center&quot;>
-                    <div className=&quot;text-6xl mb-4&quot;>📄</div>
+                    <div className=&quot;text-6xl mb-4&quot;></div>
                     <p className=&quot;text-gray-400&quot;>
                       Formatted JSON will appear here. Enter JSON data and click format to get started.
                     </p>
@@ -333,9 +333,9 @@ onClick={() => downloadJSON(formattedJson, 'formatted.json')}
                 )}
 
                 {formattedJson && (
-                  <div className=&quot;text-sm text-gray-400&quot;>                    <p>• Characters: {formattedJson.length}</p>
-                    <p>• Lines: {formattedJson.split('\n').length}</p>
-                    <p>• Size: {_(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
+                  <div className=&quot;text-sm text-gray-400&quot;>                    <p> Characters: {formattedJson.length}</p>
+                    <p> Lines: {formattedJson.split('\n').length}</p>
+                    <p> Size: {_(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
                   </div>
                 )}
               </div>;
@@ -357,7 +357,7 @@ onClick={() => downloadJSON(formattedJson, 'formatted.json')}
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>✨</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Smart Formatting</h3>
               <p className=&quot;text-gray-400&quot;>
                 Intelligent JSON formatting with customizable indentation and spacing options.
@@ -365,7 +365,7 @@ onClick={() => downloadJSON(formattedJson, 'formatted.json')}
             </Card>
 
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>✅</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Real-time Validation</h3>
               <p className=&quot;text-gray-400&quot;>
                 Instant JSON validation with detailed error messages and syntax highlighting.
@@ -373,7 +373,7 @@ onClick={() => downloadJSON(formattedJson, 'formatted.json')}
             </Card>
 
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>📦</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Minification</h3>
               <p className=&quot;text-gray-400&quot;>
                 Compress JSON data by removing unnecessary whitespace and formatting.
@@ -381,7 +381,7 @@ onClick={() => downloadJSON(formattedJson, 'formatted.json')}
             </Card>
 
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🔢</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Line Numbers</h3>
               <p className=&quot;text-gray-400&quot;>
                 Optional line numbering for easier navigation and debugging of large JSON files.
@@ -389,7 +389,7 @@ onClick={() => downloadJSON(formattedJson, 'formatted.json')}
             </Card>
 
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>💾</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Export Options</h3>
               <p className=&quot;text-gray-400&quot;>
                 Download formatted JSON files or copy to clipboard with a single click.
@@ -397,7 +397,7 @@ onClick={() => downloadJSON(formattedJson, 'formatted.json')}
             </Card>
 
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>⚙️</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Customizable</h3>
               <p className=&quot;text-gray-400&quot;>
                 Adjust indentation size, toggle compact mode, and customize display options.
@@ -420,54 +420,54 @@ onClick={() => downloadJSON(formattedJson, 'formatted.json')}
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             <Card className=&quot;p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>👨‍💻</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Developers</h3>
               <p className=&quot;text-gray-400 mb-6&quot;>
                 Format API responses, debug JSON data, and prepare configuration files with professional formatting.
               </p>
               <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li>• API development and testing</li>
-                <li>• Configuration file management</li>
-                <li>• Debug and troubleshooting</li>
+                <li> API development and testing</li>
+                <li> Configuration file management</li>
+                <li> Debug and troubleshooting</li>
               </ul>
             </Card>
 
             <Card className=&quot;p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>📊</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Data Analysts</h3>
               <p className=&quot;text-gray-400 mb-6&quot;>
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.
               </p>
               <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li>• Data cleaning and preparation</li>
-                <li>• Report generation</li>
-                <li>• Data validation</li>
+                <li> Data cleaning and preparation</li>
+                <li> Report generation</li>
+                <li> Data validation</li>
               </ul>
             </Card>
 
             <Card className=&quot;p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🔧</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>DevOps Engineers</h3>
               <p className=&quot;text-gray-400 mb-6&quot;>
                 Manage configuration files, validate deployment manifests, and format infrastructure as code.
               </p>
               <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li>• Configuration management</li>
-                <li>• Infrastructure validation</li>
-                <li>• Deployment automation</li>
+                <li> Configuration management</li>
+                <li> Infrastructure validation</li>
+                <li> Deployment automation</li>
               </ul>
             </Card>
 
             <Card className=&quot;p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>📝</div>
+              <div className=&quot;text-4xl mb-4&quot;></div>
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Technical Writers</h3>
               <p className=&quot;text-gray-400 mb-6&quot;>
                 Format JSON examples for documentation, tutorials, and technical specifications.
               </p>
               <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li>• Documentation examples</li>
-                <li>• API documentation</li>
-                <li>• Technical specifications</li>
+                <li> Documentation examples</li>
+                <li> API documentation</li>
+                <li> Technical specifications</li>
               </ul>
             </Card>
           </div>

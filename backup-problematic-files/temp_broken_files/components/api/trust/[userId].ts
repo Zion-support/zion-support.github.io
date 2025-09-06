@@ -13,7 +13,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
   try {
     const { OpenAI } = await import('openai'),
     const client = new OpenAI({ apiKey }),
-    const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`,
+    const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this users behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`,
     const _resp = await client.chat.completions.create({_model: 'gpt-4o-mini', _messages: [
         { role: 'system', _content: 'You are an impartial risk and trust analyst for a talent marketplace.'},
         {_role: 'user', _content: prompt}],

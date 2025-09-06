@@ -28,12 +28,12 @@ export default function Revolutionary2027ServicesShowcase() {;
   const holographicCount = allServices.filter(service => service.category.includes('Holographic')).length,;
 ;
   const categories = [;
-    { id:'all', name:'All Services', icon:'🚀', count:allServices.length },;
-    { id:'ai', name:'AI Services', icon:'🧠', count:aiCount },;
-    { id:'quantum', name:'Quantum Services', icon:'⚛️', count:quantumCount },;
-    { id:'it', name:'IT Infrastructure', icon:'⚙️', count:itCount },;
-    { id:'micro-saas', name:'Micro SaaS', icon:'💻', count:microSaasCount },;
-    { id:'holographic', name:'Holographic', icon:'🎭', count:holographicCount }
+    { id:'all', name:'All Services', icon:'', count:allServices.length },;
+    { id:'ai', name:'AI Services', icon:'', count:aiCount },;
+    { id:'quantum', name:'Quantum Services', icon:'', count:quantumCount },;
+    { id:'it', name:'IT Infrastructure', icon:'', count:itCount },;
+    { id:'micro-saas', name:'Micro SaaS', icon:'', count:microSaasCount },;
+    { id:'holographic', name:'Holographic', icon:'', count:holographicCount }
   ],;
 ;
   const priceRanges = [;
@@ -354,7 +354,7 @@ export default function Revolutionary2027ServicesShowcase() {;
               <motion.div;
                 initial={{ opacity:0 }}
                 animate={{ opacity:1 }} className="text-center py-16">;
-                <div className="text-6xl mb-4">🔍</div>;
+                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>;
                 <button ;

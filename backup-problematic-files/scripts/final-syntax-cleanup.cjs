@@ -1,4 +1,10 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/final-syntax-cleanup.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -91,10 +97,13 @@ class FinalSyntaxCleanup {
 =======
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"console.log(" Starting ultimate syntax error fixing.");/ Fix specific issues in multiple filesconst fixes = [/ api-quick-start.tsx fixes {" file: "pages/docs/api-quick-start.tsx"," search: " }"\n}"}"," replace: " }\n}"}" }, {"" file: "pages/docs/api-quick-start.tsx","" search: "display: "alignItems", "center" gap: 12,","" replace: "display: "flex", alignItems: "center", gap: 12," }, {"" file: "pages/docs/api-quick-start.tsx","" search: "background: "borderRadius", 8","" replace: "background: "#1e293b", borderRadius: 8" }, / sdk.tsx fixes {"" file: "pages/docs/sdk.tsx","" search: "background: "borderRadius", 8,","" replace: "background: "#1e293b", borderRadius: 8," }, / enterprise.tsx fixes {"" file: "pages/enterprise.tsx"," search: " </div>{}\"<div className=\"bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16\">\"<h2 className=\"text-3xl font-bold text-white text-center mb-8\">Industries We Serve</h2>\"<div className=\"grid md: grid-cols-2 lg:grid-cols-3 gap-6\">{industries.map((industry, index) => (\"<div key={index} className=\"bg-white/10 rounded-lg p-6 border border-white/20\">\"<h3 className=\"text-lg font-semibold text-white mb-2\">{industry.name}</h3>\"<div className=\"text-blue-400 font-medium mb-2\">{industry.clients} Clients</div>\"<div className=\"text-gray-300 text-sm\">{industry.solutions}</div></div>;"," replace: " </div>\n \n {}\n <div className=\"bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16\">\n <h2 className=\"text-3xl font-bold text-white text-center mb-8\">Industries We Serve</h2>\n <div className=\"grid md: grid-cols-2 lg:grid-cols-3 gap-6\">\n {industries.map((industry, index) => (\n <div key={index} className=\"bg-white/10 rounded-lg p-6 border border-white/20\">\n <h3 className=\"text-lg font-semibold text-white mb-2\">{industry.name}</h3>\n <div className=\"text-blue-400 font-medium mb-2\">{industry.clients} Clients</div>\n <div className=\"text-gray-300 text-sm\">{industry.solutions}</div>\n </div>\n ))}\n </div>\n </div>" }, / marketplace.tsx fixes {"" file: "pages/marketplace.tsx"," search: " }>"," replace: " }>" }, / security.tsx fixes {"" file: "pages/security.tsx"," search: " title: \"Data Encryption\"\n description:"," replace: " title: \"Data Encryption\",\n description: " }];let fixedCount = 0;let errorCount = 0;/ Apply fixesfixes.forEach(({ file, search, replace }) => { try { const filePath = path.join(process.cwd(), file); if (!fs.existsSync(filePath)) {" console.log(" File not found: ${file}"); return} " let content = fs.readFileSync(filePath, "utf8"); if (content.includes(search)) { content = content.replace(search, replace);" fs.writeFileSync(filePath, content, "utf8");" console.log(" Fixed issue in ${file}"); fixedCount++} } catch (error) {" console.error(" Error fixing ${file}:", error.message); errorCount++}});"console.log("\n Ultimate syntax error fixing complete!");"console.log(" Files fixed: ${fixedCount}");"console.log(" Errors: ${errorCount}");""console.log("\n Run "npm run build" to test the fixes.`);'"`'"`
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/final-syntax-cleanup.cjs
 #!/usr/bin/env node
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:backup-problematic-files/scripts/final-syntax-cleanup.cjs
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -105,12 +114,19 @@ class FinalSyntaxCleanup {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/final-syntax-cleanup.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 const fs = require('fs');
 const { execSync } = require('child_process');
-
 console.log('🔧 Final Syntax Cleanup');
 console.log('=');
-
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -186,8 +202,17 @@ for (const file of filesToFix) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/final-syntax-cleanup.cjs
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/final-syntax-cleanup.cjs
+=======
+>>>>>>> pr-12166
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
+<<<<<<< HEAD
+console.log('🎉 Final syntax cleanup completed!');
+=======
 // Try to build
 console.log('\n🔨 Testing build...');
 try {
@@ -412,6 +437,7 @@ if (require.main === module) {
 }
 
 module.exports = FinalSyntaxCleanup;
+<<<<<<< HEAD:backup-problematic-files/scripts/final-syntax-cleanup.cjs
 <<<<<<< HEAD
 >>>>>>> origin/main
 =======
@@ -451,3 +477,12 @@ console.log('🎉 Final syntax cleanup completed!');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/final-syntax-cleanup.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

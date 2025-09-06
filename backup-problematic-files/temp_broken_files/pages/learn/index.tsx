@@ -27,7 +27,7 @@ export default function LearnMarketplace() {;
       <div className="flex items-end justify-between gap-4">;
         <div>;
           <h1 className="text-2xl font-semibold">Zion Academy</h1>;
-          <div className="text-gray-500 text-sm">Courses • Certifications • Career Boost</div>;
+          <div className="text-gray-500 text-sm">Courses  Certifications  Career Boost</div>;
         </div>;
       </div>;
 ;
@@ -45,7 +45,7 @@ export default function LearnMarketplace() {;
   ),; 
 }load () 
 }, [filters]);
-return (<div className="space-y-6" > <div className="flex items-end justify-between gap-4" > <div> <h1 className="text-2xl font-semibold" >Zion Academy</h1> <div className="text-gray-500 text-sm" >Courses • Certifications • Career Boost</div> </div> </div> <FilterBar {
+return (<div className="space-y-6" > <div className="flex items-end justify-between gap-4" > <div> <h1 className="text-2xl font-semibold" >Zion Academy</h1> <div className="text-gray-500 text-sm" >Courses  Certifications  Career Boost</div> </div> </div> <FilterBar {
   ...filters 
 }onChange= {
   setFilters 

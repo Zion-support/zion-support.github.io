@@ -9,7 +9,7 @@ export default function PartnersPage() {
 			</Head>
 			<div className=&quot;max-w-5xl mx-auto space-y-6&quot;>
 				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>Partners</h1>
-				<p className=&quot;text-slate-300&quot;>We work with best‑in‑class platforms across AI, cloud, data, security, and DevOps.</p>
+				<p className=&quot;text-slate-300&quot;>We work with bestinclass platforms across AI, cloud, data, security, and DevOps.</p>
 				<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
 					<li>Cloud & Edge: AWS, Azure, Cloudflare</li>
 					<li>AI & LLM: OpenAI, Anthropic, Groq</li>

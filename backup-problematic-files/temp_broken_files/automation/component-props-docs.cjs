@@ -1,59 +1,59 @@
 const fs = require('fs');
 const path = require('path');
-;
+
 function ensureDir(dirPath) { fs.mkdirSync(dirPath, { recursive:true }); }
-;
-function listFilesRecursive(dir, exts) {;
+
+function listFilesRecursive(dir, exts) {
   const files = [];
   const stack = [dir];
-  while (stack.length) {;
+  while (stack.length) {
     const cur = stack.pop();
     const stat = fs.statSync(cur);
-    if (stat.isDirectory()) {;
-      for (const ent of fs.readdirSync(cur)) {;
+    if (stat.isDirectory()) {
+      for (const ent of fs.readdirSync(cur)) {
         if (ent.startsWith('.')) continue;
         stack.push(path.join(cur, ent));
       }
-    } else if (exts.includes(path.extname(cur))) {;
+    } else if (exts.includes(path.extname(cur))) {
       files.push(cur);
     }
   }
   return files;
 }
-;
-function extractPropsAndComponents(content) {;
+
+function extractPropsAndComponents(content) {
   const interfaces = [];
   const types = [];
   const components = [];
-;
+
   const interfaceRegex = /interface\s+([A-Za-z0-9_]+Props?)\s*\{[\s\S]*?\}/g;
   const typeRegex = /type\s+([A-Za-z0-9_]+Props?)\s*=\s*[\s\S]*?;/g;
   const exportFunctionRegex = /export\s+(default\s+)?function\s+([A-Za-z0-9_]+)\s*\(/g;
   const constComponentRegex = /export\s+const\s+([A-Za-z0-9_]+)\s*=\s*\(/g;
-;
+
   let m;
   while ((m = interfaceRegex.exec(content))) interfaces.push(m[1]);
   while ((m = typeRegex.exec(content))) types.push(m[1]);
   while ((m = exportFunctionRegex.exec(content))) components.push(m[2]);
   while ((m = constComponentRegex.exec(content))) components.push(m[1]);
-;
+
   return { interfaces:Array.from(new Set(interfaces)), types:Array.from(new Set(types)), components:Array.from(new Set(components)) };
 }
-;
-function generateDocs(componentsDir, outDir) {;
+
+function generateDocs(componentsDir, outDir) {
   const files = listFilesRecursive(componentsDir, ['.tsx', '.ts', '.jsx', '.js']);
   const entries = [];
-  for (const file of files) {;
+  for (const file of files) {
     const rel = path.relative(componentsDir, file);
     const content = fs.readFileSync(file, 'utf8');
     const { interfaces, types, components } = extractPropsAndComponents(content);
     entries.push({ file:rel, interfaces, types, components });
   }
   const totalComponents = entries.reduce((acc, e) => acc + e.components.length, 0);
-;
+
   ensureDir(outDir);
   fs.writeFileSync(path.join(outDir, 'components-props.json'), JSON.stringify({ generatedAt:new Date().toISOString(), totalFiles:files.length, totalComponents, entries }, null, 2));
-;
+
   const html = `<!doctype html>;
 <html lang="en">;
 <head>;
@@ -84,17 +84,17 @@ function generateDocs(componentsDir, outDir) {;
 </body>;
 </html>`;
   fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
-;
+
   console.log(`[component-props-docs] Processed ${files.length} files, found ${totalComponents} components.`);
 }
-;
-function main() {;
+
+function main() {
   const projectRoot = path.resolve(__dirname, '..');
   const componentsDir = path.join(projectRoot, 'components');
   const outDir = path.join(projectRoot, 'public', 'reports', 'components');
   generateDocs(componentsDir, outDir);
 }
-;
-if (require.main === module) {;
+
+if (require.main === module) {
   try { main(); process.exit(0); } catch (e) { console.error(e); process.exit(1); }
 }

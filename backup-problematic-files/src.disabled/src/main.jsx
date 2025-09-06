@@ -9,4 +9,3 @@ const Main = ({ className }) => {
   );
 };
 
-export default Main;

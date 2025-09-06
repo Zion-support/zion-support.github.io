@@ -1,5 +1,11 @@
+import { GetStaticPaths, GetStaticProps  } from 'next';
+import { useState  } from 'react';
+import { readJson  } from '../../utils/fsDb';
+import {GetStaticPaths, GetStaticProps} from 'next';
+import {useState} from 'react';
+import {readJson} from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
 
-=======
 
 
 import {GetStaticPaths, GetStaticProps} from 'next';
@@ -8,11 +14,6 @@ import {useState} from 'react';
 
 
 import type { HelpArticle } from '../../utils/support';
-=======
-import {read_json} from '../../utils / fs_db';
-import type { HelpArticle } from '../../utils / support';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = read_json < HelpArticle[]>('help / articles.json', []);
   return {
@@ -20,31 +21,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
-    paths: articles.map((a) => ({ params: { slug: a.slug } })),
-    fallback: false}
-};
-
-
-export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find((a) => a.slug === slug) || null;
   return { props: { article } }
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
-
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return {;
     paths: articles && articles.map(a => ({ params: { slug: a && a.slug } })),;
     fallback: false,;
-=======
-
     paths: articles.map(a => ({ params: { slug: a.slug } })),
     fallback: false,
 
@@ -59,7 +50,6 @@ export const getStaticProps: GetStaticProps = async ctx => {;
 
 
             className='enhanced-button enhanced-button-secondary';
-=======
     paths: articles.map (array => ({ params: { slug: a.slug } })),
     fallback: false,
   }
@@ -117,15 +107,12 @@ function vote() {
       </div>;
 
 
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful)
   }
-=======
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
-
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
@@ -133,9 +120,6 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
-
-
-=======
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -168,16 +152,14 @@ export default function HelpArticlePage(req, res) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ articleId: article.id, helpful })});
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setVoted(helpful);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
 
   return (
     <article className="prose dark:prose-invert max-w-none">
@@ -188,16 +170,15 @@ export default function HelpArticlePage(req, res) {
         <div>Was this article helpful?</div>
         <div className="flex gap-2">
           <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
-          <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
-        </div>
-      </div>
-    </article>
+
+}
+  )
+}
 
 
 
 }
 
-=======
 
   )
 }
@@ -205,9 +186,5 @@ export default function HelpArticlePage(req, res) {
     </article>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

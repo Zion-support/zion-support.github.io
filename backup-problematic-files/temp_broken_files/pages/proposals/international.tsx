@@ -44,7 +44,7 @@ export default function InternationalProposalsPage() {;
             <div key={i.id} className="p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">;
               <div>;
                 <div className="font-medium">{i.title}</div>;
-                <div className="text-sm text-gray-600">{i.targetInstitution} • {i.type} • {i.regionalScope}</div>;
+                <div className="text-sm text-gray-600">{i.targetInstitution}  {i.type}  {i.regionalScope}</div>;
                 <div className="text-xs text-gray-500">Created {new Date(i.createdAt).toLocaleString()}</div>;
               </div>;
               <div className="flex items-center gap-4 text-sm">;

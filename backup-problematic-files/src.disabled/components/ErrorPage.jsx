@@ -9,4 +9,3 @@ const ErrorPage = ({ className }) => {
   );
 };
 
-export default ErrorPage;

@@ -9,4 +9,3 @@ const AvatarUpload = ({ className }) => {
   );
 };
 
-export default AvatarUpload;

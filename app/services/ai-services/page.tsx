@@ -1,200 +1,209 @@
+import React from 'react';
+import Link from 'next/link';
 
-export const metadata = { 
-  title: 'AI Services | Zion Tech Group',
-  description: 'Professional AI services including RAG systems, LLM applications, MLOps, and custom AI solutions. Expert AI development starting at $5k.'
-};
-
-export default function AIPage() {
-  return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <section className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Services</h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Ship AI features with confidence: RAG, agents, fine-tuning, evals and MLOps.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item 
-            title="Applied AI" 
-            details={[
-              "RAG over private data",
-              "Task-specific agents",
-              "Vision + speech processing",
-              "Personalization engines",
-              "Chatbot development",
-              "Document processing",
-              "Code generation tools"
-            ]} 
-          />
-          <Item 
-            title="Model Ops" 
-            details={[
-              "Offline evals & testing",
-              "Safety + guardrails",
-              "Batch + streaming inference",
-              "Cost controls & optimization",
-              "Model versioning",
-              "A/B testing frameworks",
-              "Performance monitoring"
-            ]} 
-          />
-          <Item 
-            title="Data & MLOps" 
-            details={[
-              "Data pipelines",
-              "Feature stores",
-              "Vector databases",
-              "Monitoring + drift detection",
-              "Model deployment",
-              "Automated retraining",
-              "Data quality assurance"
-            ]} 
-          />
-        </div>
-
-        <div className="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-lg p-6 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our AI Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Large Language Models</h3>
-              <p className="text-gray-600">GPT-4, Claude, Llama, and custom fine-tuned models for your specific use cases.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Vector Databases</h3>
-              <p className="text-gray-600">Pinecone, Weaviate, Chroma, and custom vector search solutions for RAG applications.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">MLOps & Deployment</h3>
-              <p className="text-gray-600">Kubernetes, Docker, MLflow, and cloud-native AI model deployment strategies.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Custom AI Solutions</h3>
-              <p className="text-gray-600">From computer vision to NLP, we build AI solutions tailored to your business needs.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Pricing />
-    </div>
-  );
+interface AIServiceProps {
+  title: string;
+  description: string;
+  price: string;
+  features: string[];
+  useCases: string[];
+  icon: string;
+  href: string;
 }
 
-function Item({ title, details }: { title: string; details: string[] }) {
+function AIService({ title, description, price, features, useCases, icon, href }: AIServiceProps) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-purple-500 mr-2 mt-1">•</span>
-            <span className="text-gray-600">{detail}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function Pricing() {
-  return (
-    <section>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Services Pricing</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan 
-          name="AI Discovery" 
-          price="$5k–$12k" 
-          duration="2–3 weeks"
-          features={[
-            "Use-case analysis & design",
-            "Technology stack selection",
-            "Data assessment",
-            "Implementation roadmap",
-            "Proof of concept",
-            "ROI projections",
-            "Risk assessment"
-          ]} 
-        />
-        <Plan 
-          name="AI Pilot" 
-          price="$15k–$45k" 
-          duration="4–8 weeks"
-          features={[
-            "RAG/agent MVP development",
-            "Evals + safety implementation",
-            "Real-time dashboards",
-            "Data pipeline setup",
-            "Model fine-tuning",
-            "API development",
-            "Integration testing"
-          ]} 
-        />
-        <Plan 
-          name="AI Production" 
-          price="$50k+" 
-          duration="Custom timeline"
-          features={[
-            "Hardened infrastructure",
-            "Advanced monitoring",
-            "SLA guarantees",
-            "Cost optimization",
-            "Scalability planning",
-            "Security hardening",
-            "24/7 support"
-          ]} 
-        />
+    <Link
+      href={href}
+      className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-300"
+    >
+      <div className="flex items-center mb-4">
+        <span className="text-3xl mr-4">{icon}</span>
+        <div>
+          <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+          <div className="text-lg font-bold text-blue-600">{price}</div>
+        </div>
       </div>
-      
-      <div className="mt-12 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Implement AI?</h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's discuss your AI requirements and create a custom solution that drives real business value.
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+        <ul className="space-y-1">
+          {features.map((feature, index) => (
+            <li key={index} className="text-sm text-gray-600 flex items-center">
+              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4 className="text-sm font-semibold text-gray-900 mb-2">Use Cases:</h4>
+        <div className="flex flex-wrap gap-1">
+          {useCases.map((useCase, index) => (
+            <span key={index} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+              {useCase}
+            </span>
+          ))}
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+export default function AIServicesPage() {
+  return (
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-blue-100 rounded-lg">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          AI Services & Solutions
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Harness the power of artificial intelligence to automate processes, gain insights, and transform your business with cutting-edge AI solutions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Services Consultation"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Free AI Consultation
+          </a>
+          <a
             href="tel:+13024640950"
-            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
           >
             Call +1 302 464 0950
           </a>
+        </div>
+      </section>
+
+      {/* AI Services Grid */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Services</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Comprehensive AI solutions tailored to your business needs, from chatbots to predictive analytics.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <AIService
+            title="AI Chatbot Platform"
+            description="Intelligent conversational AI that understands context and provides human-like responses"
+            price="Starting at $2,500"
+            features={[
+              "Natural language processing",
+              "Multi-channel support",
+              "Custom training data",
+              "Analytics dashboard",
+              "Integration APIs"
+            ]}
+            useCases={["Customer Support", "Lead Generation", "FAQ Automation", "Sales Assistant"]}
+            icon="🤖"
+            href="/services/ai-chatbot-platform"
+          />
+          <AIService
+            title="AI Content Generator"
+            description="Automated content creation using advanced language models for blogs, social media, and marketing"
+            price="Starting at $1,500"
+            features={[
+              "GPT-4 integration",
+              "SEO optimization",
+              "Brand voice training",
+              "Multi-format output",
+              "Plagiarism detection"
+            ]}
+            useCases={["Blog Writing", "Social Media", "Email Campaigns", "Product Descriptions"]}
+            icon="✍️"
+            href="/services/ai-content-generation"
+          />
+          <AIService
+            title="AI Data Analytics"
+            description="Predictive analytics and intelligent insights from your business data using machine learning"
+            price="Starting at $3,000"
+            features={[
+              "Predictive modeling",
+              "Anomaly detection",
+              "Trend analysis",
+              "Custom ML models",
+              "Real-time insights"
+            ]}
+            useCases={["Sales Forecasting", "Risk Assessment", "Customer Segmentation", "Performance Optimization"]}
+            icon="🧠"
+            href="/services/ai-data-analytics"
+          />
+          <AIService
+            title="AI Code Reviewer"
+            description="Automated code analysis and quality assurance with AI-powered suggestions and security scanning"
+            price="Starting at $1,000"
+            features={[
+              "Code quality analysis",
+              "Security vulnerability detection",
+              "Performance optimization",
+              "Best practice recommendations",
+              "CI/CD integration"
+            ]}
+            useCases={["Code Quality", "Security Audits", "Performance Reviews", "Team Training"]}
+            icon="🔍"
+            href="/services/ai-code-reviewer"
+          />
+          <AIService
+            title="AI Meeting Assistant"
+            description="Intelligent meeting transcription, summarization, and action item extraction"
+            price="Starting at $2,000"
+            features={[
+              "Real-time transcription",
+              "Meeting summaries",
+              "Action item extraction",
+              "Calendar integration",
+              "Meeting analytics"
+            ]}
+            useCases={["Meeting Notes", "Action Tracking", "Team Collaboration", "Client Meetings"]}
+            icon="🎤"
+            href="/services/ai-meeting-assistant"
+          />
+          <AIService
+            title="AI Customer Insights"
+            description="Customer behavior analysis and personalized recommendations using advanced AI algorithms"
+            price="Starting at $2,500"
+            features={[
+              "Customer segmentation",
+              "Behavior prediction",
+              "Personalized recommendations",
+              "Churn prediction",
+              "ROI analysis"
+            ]}
+            useCases={["Customer Retention", "Personalization", "Marketing Optimization", "Sales Enhancement"]}
+            icon="👥"
+            href="/services/ai-customer-insights"
+          />
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Let's discuss how AI can solve your specific business challenges and drive growth.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+            href="mailto:kleber@ziontechgroup.com?subject=AI Services Project Inquiry"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Email Us
+            Start Your AI Journey
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            Call +1 302 464 0950
           </a>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
-  duration: string;
-  features: string[]; 
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-purple-600 mb-1">{price}</div>
-      <div className="text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-3">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <a 
-        href="mailto:kleber@ziontechgroup.com?subject=AI Services Inquiry"
-        className="block w-full mt-6 bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-      >
-        Get Started
-      </a>
+        <div className="mt-8 text-sm">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>Email: kleber@ziontechgroup.com</p>
+        </div>
+      </section>
     </div>
   );
 }
-

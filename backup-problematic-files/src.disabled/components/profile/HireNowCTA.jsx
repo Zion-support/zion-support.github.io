@@ -9,4 +9,3 @@ const HireNowCTA = ({ className }) => {
   );
 };
 
-export default HireNowCTA;

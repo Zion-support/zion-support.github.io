@@ -9,4 +9,3 @@ const Use-mobile = ({ className }) => {
   );
 };
 
-export default Use-mobile;

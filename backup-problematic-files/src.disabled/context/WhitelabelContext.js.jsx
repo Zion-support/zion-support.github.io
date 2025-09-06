@@ -9,4 +9,3 @@ const WhitelabelContext.js = ({ className }) => {
   );
 };
 
-export default WhitelabelContext.js;

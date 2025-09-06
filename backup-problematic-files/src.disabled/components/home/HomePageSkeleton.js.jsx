@@ -9,4 +9,3 @@ const HomePageSkeleton.js = ({ className }) => {
   );
 };
 
-export default HomePageSkeleton.js;

@@ -1,7 +1,13 @@
-
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts"
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
 
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
@@ -9,25 +15,19 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
 
     const { scope, startDate, endDate, projectType } = await req && req.json();
-=======
 
 
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -43,16 +43,15 @@ serve(async (req) => {;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
-
-
-
+  }
+  try {
+    // Get the OpenAI API key from environment variables
+    const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
+    if (!apiKey) {
+      throw new Error('OPENAI_API_KEY is not set')
     }
-
     // Parse request body
-    const { scope, startDate, endDate, projectType } = await req.json(),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
@@ -70,30 +69,11 @@ serve(async (req) => {;
     Format the response as a valid JSON array of milestone objects with these fields:
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
-
-
-    `,
-
-
-
     // Call OpenAI API
-
-
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`},
-
-
-      body: JSON.stringify({
-=======
-    const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
-      body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         model: 'gpt-4o-mini';
         messages: [
           {
-
+            role: 'system'
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
 const cors_headers = {
@@ -148,29 +128,15 @@ if ( {) {
         messages: [;
           {
             role: 'system',
-
             content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
             role: 'user'
             content: prompt}];
-
-        temperature: 0 && 0.7})});
-
-    const data = await response && response.json();
-    
-    if (!response && response.ok) {
-      throw new Error(data && data.error?.message || 'Failed to generate milestones')
-
     }
     // Parse the AI-generated content to ensure it's valid JSON
     try {
       const content = data && data.choices[0].message && message.content.trim();
       // Try to parse the response as JSON
-
-      const milestones = JSON && JSON.parse(content);
-      
-      return new Response(JSON && JSON.stringify({ milestones }), {
-
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
     } catch (parseError) {
       // If parsing fails, try to extract JSON from the text
@@ -180,13 +146,6 @@ if ( {) {
   } catch (error) {
     console && console.error('Error generating milestones:', error);
     return new Response(
-
-      JSON && JSON.stringify({ error: error && error.message || 'Failed to generate milestones' });
-      { 
-        status: 500, 
-
-=======
-
             role: 'system',
             content: 'You are a project management expert that breaks work into appropriate milestones.'},
           {
@@ -199,48 +158,27 @@ if ( {) {
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate milestones')
     }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+    // Parse the AI-generated content to ensure it's valid JSON;
+    try {;
+      const content = data.choices[0].message.content.trim(),;
+      // Try to parse the response as JSON;
+      const milestones = JSON.parse(content),;
+      return new Response(JSON.stringify({ milestones }), {;
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+    } catch (parseError) {;
+      // If parsing fails, try to extract JSON from the text;
+      console.error('Failed to parse AI response as JSON:', parseError),;
+      throw new Error('Failed to parse AI response');
+    }
+  } catch (error) {;
+    console.error('Error generating milestones:', error),;
+    return new Response(;
+      JSON.stringify({ error: error.message || 'Failed to generate milestones' }),;
+      {;
+        status: 500,;
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
 
-
-;
-    const data = await response.json ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error (data.error?.message || 'Failed to generate milestones');
-    }
-    // Parse the AI - generated content to ensure it's valid JSON;
-    try {
-      const content = data.choices[0].message.content.trim ();
-      // Try to parse the response as JSON;
-      const milestones = JSON.parse (content);
-;
-      return new Response (JSON.stringify ({ milestones }), {
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }});
-    } catch (parse_error) {
-      // If parsing fails, try to extract JSON from the text;
-      console.error ('Failed to parse AI response as JSON:', parse_error);
-      throw new Error ('Failed to parse AI response');
-    }
-  } catch (error) {
-    console.error ('Error generating milestones:', error);
-    return new Response (
-      JSON.stringify ({ error: error.message || 'Failed to generate milestones' });
-      {
-        status: 500,
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
-    );
-  }
-});
-;
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

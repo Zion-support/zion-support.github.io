@@ -228,5 +228,3 @@ function main() {
   console && console.log('   3. Test the application');
   console && console.log('   4. Commit the changes')}
 main();
-
-

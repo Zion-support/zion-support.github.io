@@ -20,4 +20,17 @@ if (fs.existsSync('package.json')
   results.checks.push({ "name": 'eslint-config', "status"})
   results.checks.push({ "name": 'eslint-config', "status"})
   results.checks.push({ "name": 'prettier-config', "status"})
+<<<<<<< HEAD
   results.checks.push({ "name": 'prettier-config', "status"})
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  results.checks.push({ "name": 'prettier-config', "status"})
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+  results.checks.push({ "name": 'prettier-config', "status"})
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

@@ -9,4 +9,3 @@ const NewServices = ({ className }) => {
   );
 };
 
-export default NewServices;

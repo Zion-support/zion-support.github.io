@@ -9,4 +9,3 @@ const CloudCostOptimizer = ({ className }) => {
   );
 };
 
-export default CloudCostOptimizer;

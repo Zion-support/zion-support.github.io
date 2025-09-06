@@ -9,4 +9,3 @@ const ServiceCard.js = ({ className }) => {
   );
 };
 
-export default ServiceCard.js;

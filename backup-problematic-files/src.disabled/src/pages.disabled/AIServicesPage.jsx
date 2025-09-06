@@ -9,4 +9,3 @@ const AIServicesPage = ({ className }) => {
   );
 };
 
-export default AIServicesPage;

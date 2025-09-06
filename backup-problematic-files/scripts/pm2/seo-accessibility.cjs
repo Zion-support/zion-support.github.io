@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -548,12 +563,30 @@ monitor.run().catch(error => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 /**
  * PM2 SEO & Accessibility Service;
  * Checks SEO and accessibility compliance;
  */
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 =======
@@ -576,11 +609,14 @@ const path = require('path');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -602,6 +638,15 @@ const path = require('path');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 class SEOAccessibility {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'seo-accessibility';
@@ -621,6 +666,18 @@ class SEOAccessibility {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -651,6 +708,15 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -662,7 +728,15 @@ class SEOAccessibility {}
     };
     try {}
       this.log('Checking SEO compliance...');
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      const seoIssues = [];
+      const htmlFiles = this.findHTMLFiles();
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 =======
@@ -684,10 +758,13 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
       
       const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
       
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -708,6 +785,15 @@ class SEOAccessibility {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       for (const file of htmlFiles) {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
@@ -718,7 +804,48 @@ class SEOAccessibility {}
         };
       };
       this.log(`Found ${seoIssues.length} SEO issues`);
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -746,6 +873,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      
+      
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       return {}
         checked: true,
         issues: seoIssues,
@@ -759,7 +897,48 @@ class SEOAccessibility {}
   };
   findHTMLFiles() {}
     const htmlFiles = [];
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -787,13 +966,65 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    
+    
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+          
+          
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+          
+          
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
           
@@ -821,6 +1052,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+          
+          
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && (file.endsWith('.html') || file.endsWith('.htm'))) {}
@@ -831,7 +1073,48 @@ class SEOAccessibility {}
         // Skip directories that can't be read;
       };
     };
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -859,6 +1142,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     // Scan common directories;
     const scanDirs = ['public', 'dist', 'out', 'build', 'pages'];
     for (const dir of scanDirs) {}
@@ -870,7 +1164,48 @@ class SEOAccessibility {}
   };
   analyzeSEO(content, filePath) {}
     const issues = [];
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -898,6 +1233,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    
+    
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     // Check for title tag;
     if (!content.includes('<title>')) {}
       issues.push({})
@@ -970,7 +1316,15 @@ class SEOAccessibility {}
     };
     try {}
       this.log('Checking accessibility compliance...');
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      const a11yIssues = [];
+      const htmlFiles = this.findHTMLFiles();
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 =======
@@ -992,10 +1346,13 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
       
       const a11yIssues = [];
       const htmlFiles = this.findHTMLFiles();
       
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1016,6 +1373,15 @@ class SEOAccessibility {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       for (const file of htmlFiles) {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
@@ -1026,7 +1392,48 @@ class SEOAccessibility {}
         };
       };
       this.log(`Found ${a11yIssues.length} accessibility issues`);
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -1054,6 +1461,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      
+      
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       return {}
         checked: true,
         issues: a11yIssues,
@@ -1067,7 +1485,48 @@ class SEOAccessibility {}
   };
   analyzeAccessibility(content, filePath) {}
     const issues = [];
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -1095,6 +1554,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    
+    
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     // Check for proper heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     let lastLevel = 0;
@@ -1162,15 +1632,28 @@ class SEOAccessibility {}
     };
     try {}
       this.log('Checking performance...');
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
 <<<<<<< HEAD
+>>>>>>> origin/main
+=======
+      const performanceIssues = [];
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
       
       const performanceIssues = [];
       
       
       const performanceIssues = [];
       
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -1201,6 +1684,15 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       // Check bundle size;
       const distDir = 'dist';
       if (fs.existsSync(distDir)) {}
@@ -1232,7 +1724,48 @@ class SEOAccessibility {}
         };
       };
       this.log(`Found ${performanceIssues.length} performance issues`);
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -1260,6 +1793,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      
+      
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       return {}
         checked: true,
         issues: performanceIssues,
@@ -1272,7 +1816,48 @@ class SEOAccessibility {}
   };
   calculateBundleSize(dir) {}
     let totalSize = 0;
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -1300,13 +1885,65 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    
+    
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     const scanDir = (currentDir) => {}
       try {}
         const files = fs.readdirSync(currentDir);
         for (const file of files) {}
           const filePath = path.join(currentDir, file);
           const stat = fs.statSync(filePath);
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+          
+          
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+          
+          
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
           
@@ -1334,6 +1971,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+          
+          
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
           if (stat.isDirectory()) {}
             scanDir(filePath);
           } else if (stat.isFile() && (file.endsWith('.js') || file.endsWith('.css'))) {}
@@ -1344,7 +1992,48 @@ class SEOAccessibility {}
         // Skip directories that can't be read;
       };
     };
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -1372,13 +2061,65 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     scanDir(dir);
     return totalSize;
   };
   findImageFiles() {}
     const imageFiles = [];
     const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -1406,13 +2147,65 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    
+    
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+          
+          
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+          
+          
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
           
@@ -1440,6 +2233,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+          
+          
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && extensions.some(ext => file.toLowerCase().endsWith(ext))) {}
@@ -1450,7 +2254,48 @@ class SEOAccessibility {}
         // Skip directories that can't be read;
       };
     };
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -1478,6 +2323,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     const scanDirs = ['public', 'dist', 'out', 'build', 'assets', 'images'];
     for (const dir of scanDirs) {}
       if (fs.existsSync(dir)) {}
@@ -1493,7 +2349,48 @@ class SEOAccessibility {}
     };
     try {}
       this.log('Running Lighthouse audit...');
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -1521,6 +2418,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      
+      
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       // Check if Lighthouse is available;
       try {}
         execSync('npx lighthouse --version', { stdio: 'pipe' }
@@ -1532,7 +2440,48 @@ class SEOAccessibility {}
       };
       // Run Lighthouse audit (simplified - would need a running server);
       this.log('Lighthouse audit requires a running server - skipping for now');
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -1560,6 +2509,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      
+      
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       return {}
         audited: false,
         reason: 'No running server available for audit'
@@ -1585,7 +2545,15 @@ class SEOAccessibility {}
         lighthouseAudit: this.lighthouseAudit;
       };
     };
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 =======
@@ -1607,10 +2575,13 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
 
     const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1631,15 +2602,30 @@ class SEOAccessibility {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     this.log(`SEO & Accessibility report generated: ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1648,11 +2634,17 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     try {}
       const report = await this.generateReport();
       const totalIssues = (report.seo.totalIssues || 0) + 
                          (report.accessibility.totalIssues || 0) + 
                          (report.performance.totalIssues || 0);
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1661,6 +2653,8 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
     
     try {}
       const report = await this.generateReport();
@@ -1669,6 +2663,7 @@ class SEOAccessibility {}
                          (report.accessibility.totalIssues || 0) + 
                          (report.performance.totalIssues || 0);
       
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1692,6 +2687,15 @@ class SEOAccessibility {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       if (totalIssues === 0) {}
         this.log('SEO & Accessibility check completed - no issues found');
       } else {}
@@ -1706,7 +2710,11 @@ class SEOAccessibility {}
 if (require.main === module) {}
   const seoAccessibility = new SEOAccessibility();
   seoAccessibility.start().catch(console.error);
+<<<<<<< HEAD
 };
+=======
+};
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1742,3 +2750,14 @@ module.exports = SEOAccessibility;module.exports = SEOAccessibility;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+module.exports = SEOAccessibility;module.exports = SEOAccessibility;
+module.exports = SEOAccessibility;module.exports = SEOAccessibility;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/pm2/seo-accessibility.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

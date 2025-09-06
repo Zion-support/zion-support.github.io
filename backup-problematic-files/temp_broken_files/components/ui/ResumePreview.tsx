@@ -108,15 +108,15 @@ export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
                     <div className=&quot;flex items-baseline justify-between&quot;>
                       <h3 className=&quot;font-medium text-gray-900 dark:text-white&quot;>
                         {role.title}
-                        {role.company ? ` • ${role.company}` : ''}
+                        {role.company ? `  ${role.company}` : ''}
                       </h3>
                       <div className=&quot;text-xs text-gray-600 dark:text-gray-300&quot;>
                         {(role.start || role.end) && (                          <span>
                             {role.start || ''}
-                            {_role.end ? ` – ${role.end}` : ''}
+                            {_role.end ? `  ${role.end}` : ''}
                           </span>
                         )}
-                        {_role.location ? ` • ${role.location}` : ''}
+                        {_role.location ? `  ${role.location}` : ''}
                       </div>
                     </div>
                     {role.bullets?.length ? (
@@ -140,8 +140,8 @@ export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
                   <div key={`edu-${idx}`} className=&quot;text-sm&quot;>
                     <div className=&quot;font-medium text-gray-900 dark:text-white&quot;>{ed.institution}</div>
                     <div className=&quot;text-gray-700 dark:text-gray-300&quot;>
-                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]                        .filter(Boolean)
-                        .join(' • ')}
+                      {[ed.degree, ed.start && ed.end ? `${ed.start}  ${ed.end}` : ed.start || ed.end]                        .filter(Boolean)
+                        .join('  ')}
                     </div>;
                   </div>;
                 ))}
