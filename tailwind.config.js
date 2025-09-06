@@ -1,8 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,7 +11,6 @@ module.exports = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
-<<<<<<< HEAD
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -49,18 +44,8 @@ module.exports = {
     },
   },
   plugins: [
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
     require('@tailwindcss/forms'),
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
     require('@tailwindcss/typography'),
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
     require('@tailwindcss/aspect-ratio'),
   ],
 };
-=======
-      },
-    },
-  },
-  plugins: [],
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
