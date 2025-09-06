@@ -1,40 +1,40 @@
-import React from "react";
+import React from 'react';
 const ComprehensiveSitemap = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      {" "}
+      {' '}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {" "}
+        {' '}
         <div className="text-center mb-12">
-          {" "}
+          {' '}
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            {" "}
-            Comprehensive Sitemap{" "}
-          </h1>{" "}
+            {' '}
+            Comprehensive Sitemap{' '}
+          </h1>{' '}
           <p className="text-xl text-gray-600">
-            {" "}
-            Complete directory of all our pages and resources.{" "}
-          </p>{" "}
-        </div>{" "}
+            {' '}
+            Complete directory of all our pages and resources.{' '}
+          </p>{' '}
+        </div>{' '}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {" "}
+          {' '}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
+            {' '}
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
               Main Navigation
-            </h3>{" "}
+            </h3>{' '}
             <ul className="space-y-2">
-              {" "}
+              {' '}
               <li>
                 <a href="/" className="text-blue-600 hover:text-blue-800">
                   Home
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a href="/about" className="text-blue-600 hover:text-blue-800">
                   About Us
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/services"
@@ -42,7 +42,7 @@ const ComprehensiveSitemap = () => {
                 >
                   Services
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/solutions"
@@ -50,7 +50,7 @@ const ComprehensiveSitemap = () => {
                 >
                   Solutions
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/contact"
@@ -58,16 +58,16 @@ const ComprehensiveSitemap = () => {
                 >
                   Contact
                 </a>
-              </li>{" "}
-            </ul>{" "}
-          </div>{" "}
+              </li>{' '}
+            </ul>{' '}
+          </div>{' '}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
+            {' '}
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
               Services
-            </h3>{" "}
+            </h3>{' '}
             <ul className="space-y-2">
-              {" "}
+              {' '}
               <li>
                 <a
                   href="/services/ai-solutions"
@@ -75,7 +75,7 @@ const ComprehensiveSitemap = () => {
                 >
                   AI Solutions
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/services/cybersecurity"
@@ -83,7 +83,7 @@ const ComprehensiveSitemap = () => {
                 >
                   Cybersecurity
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/services/cloud-devops"
@@ -91,7 +91,7 @@ const ComprehensiveSitemap = () => {
                 >
                   Cloud & DevOps
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/services/digital-twin"
@@ -99,31 +99,31 @@ const ComprehensiveSitemap = () => {
                 >
                   Digital Twin
                 </a>
-              </li>{" "}
-            </ul>{" "}
-          </div>{" "}
+              </li>{' '}
+            </ul>{' '}
+          </div>{' '}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
+            {' '}
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
               Resources
-            </h3>{" "}
+            </h3>{' '}
             <ul className="space-y-2">
-              {" "}
+              {' '}
               <li>
                 <a href="/blog" className="text-blue-600 hover:text-blue-800">
                   Blog
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a href="/news" className="text-blue-600 hover:text-blue-800">
                   News
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a href="/help" className="text-blue-600 hover:text-blue-800">
                   Help Center
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/support"
@@ -131,11 +131,11 @@ const ComprehensiveSitemap = () => {
                 >
                   Support
                 </a>
-              </li>{" "}
-            </ul>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+              </li>{' '}
+            </ul>{' '}
+          </div>{' '}
+        </div>{' '}
+      </div>{' '}
     </div>
   );
 };

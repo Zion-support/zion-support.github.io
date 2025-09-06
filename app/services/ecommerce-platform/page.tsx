@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'E-commerce Platform Development | Zion Tech Group',
-  description: 'Build powerful e-commerce platforms with payment processing, inventory management, and customer features. Professional e-commerce solutions starting at $25k.'
+  description: 'Build powerful e-commerce platforms with payment processing, inventory management, and customer features. Professional e-commerce solutions starting at $25k.',
 };
 
 export default function EcommercePlatformPage() {
@@ -11,43 +11,43 @@ export default function EcommercePlatformPage() {
         <p className="text-xl text-gray-600 mb-8">
           Build powerful e-commerce platforms with payment processing, inventory management, customer accounts, and advanced selling features.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item 
-            title="Product Management" 
+          <Item
+            title="Product Management"
             details={[
-              "Product catalog",
-              "Inventory tracking",
-              "Variants & options",
-              "Bulk import/export",
-              "SEO optimization",
-              "Image management",
-              "Product reviews"
-            ]} 
+              'Product catalog',
+              'Inventory tracking',
+              'Variants & options',
+              'Bulk import/export',
+              'SEO optimization',
+              'Image management',
+              'Product reviews',
+            ]}
           />
-          <Item 
-            title="Payment & Checkout" 
+          <Item
+            title="Payment & Checkout"
             details={[
-              "Multiple payment gateways",
-              "Secure checkout process",
-              "Tax calculation",
-              "Shipping integration",
-              "Coupon system",
-              "Subscription billing",
-              "Mobile payments"
-            ]} 
+              'Multiple payment gateways',
+              'Secure checkout process',
+              'Tax calculation',
+              'Shipping integration',
+              'Coupon system',
+              'Subscription billing',
+              'Mobile payments',
+            ]}
           />
-          <Item 
-            title="Customer Features" 
+          <Item
+            title="Customer Features"
             details={[
-              "User accounts",
-              "Order history",
-              "Wishlist functionality",
-              "Customer support",
-              "Loyalty programs",
-              "Personalization",
-              "Mobile app"
-            ]} 
+              'User accounts',
+              'Order history',
+              'Wishlist functionality',
+              'Customer support',
+              'Loyalty programs',
+              'Personalization',
+              'Mobile app',
+            ]}
           />
         </div>
 
@@ -100,50 +100,50 @@ function Pricing() {
     <section>
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">E-commerce Platform Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan 
-          name="Starter Store" 
-          price="$25k–$50k" 
+        <Plan
+          name="Starter Store"
+          price="$25k–$50k"
           duration="8–12 weeks"
           features={[
-            "Basic product catalog",
-            "Payment processing",
-            "Order management",
-            "Customer accounts",
-            "Mobile responsive",
-            "Basic analytics",
-            "Standard support"
-          ]} 
+            'Basic product catalog',
+            'Payment processing',
+            'Order management',
+            'Customer accounts',
+            'Mobile responsive',
+            'Basic analytics',
+            'Standard support',
+          ]}
         />
-        <Plan 
-          name="Professional Store" 
-          price="$50k–$100k" 
+        <Plan
+          name="Professional Store"
+          price="$50k–$100k"
           duration="12–20 weeks"
           features={[
-            "Everything in Starter",
-            "Advanced inventory",
-            "Multi-channel selling",
-            "Advanced analytics",
-            "API integrations",
-            "White-label options",
-            "Priority support"
-          ]} 
+            'Everything in Starter',
+            'Advanced inventory',
+            'Multi-channel selling',
+            'Advanced analytics',
+            'API integrations',
+            'White-label options',
+            'Priority support',
+          ]}
         />
-        <Plan 
-          name="Enterprise Store" 
-          price="$100k+" 
+        <Plan
+          name="Enterprise Store"
+          price="$100k+"
           duration="16–28 weeks"
           features={[
-            "Everything in Professional",
-            "Custom development",
-            "Advanced security",
-            "Multi-tenant architecture",
-            "Dedicated support",
-            "SLA guarantees",
-            "On-premise deployment"
-          ]} 
+            'Everything in Professional',
+            'Custom development',
+            'Advanced security',
+            'Multi-tenant architecture',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
         />
       </div>
-      
+
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your E-commerce Platform?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -168,11 +168,11 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -187,7 +187,7 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="mailto:kleber@ziontechgroup.com?subject=E-commerce Platform Development Inquiry"
         className="block w-full mt-6 bg-red-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
       >

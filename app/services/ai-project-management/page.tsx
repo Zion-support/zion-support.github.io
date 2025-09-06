@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'AI Project Management Tool | Zion Tech Group',
-  description: 'Streamline your projects with AI-powered project management, automated task assignment, and intelligent resource optimization.'
+  description: 'Streamline your projects with AI-powered project management, automated task assignment, and intelligent resource optimization.',
 };
 
 export default function AIProjectManagementPage() {
@@ -8,37 +8,37 @@ export default function AIProjectManagementPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Project Management Tool</h1>
       <p className="text-xl text-gray-600 mb-12">Streamline your projects with AI-powered management, automated task assignment, and intelligent resource optimization.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="AI Task Management" 
+        <FeatureCard
+          title="AI Task Management"
           features={[
-            "Smart task assignment",
-            "Priority optimization",
-            "Deadline prediction",
-            "Resource allocation"
-          ]} 
+            'Smart task assignment',
+            'Priority optimization',
+            'Deadline prediction',
+            'Resource allocation',
+          ]}
         />
-        <FeatureCard 
-          title="Team Collaboration" 
+        <FeatureCard
+          title="Team Collaboration"
           features={[
-            "Real-time communication",
-            "File sharing & versioning",
-            "Progress tracking",
-            "Team performance analytics"
-          ]} 
+            'Real-time communication',
+            'File sharing & versioning',
+            'Progress tracking',
+            'Team performance analytics',
+          ]}
         />
-        <FeatureCard 
-          title="Project Analytics" 
+        <FeatureCard
+          title="Project Analytics"
           features={[
-            "Performance metrics",
-            "Risk assessment",
-            "Budget tracking",
-            "Timeline optimization"
-          ]} 
+            'Performance metrics',
+            'Risk assessment',
+            'Budget tracking',
+            'Timeline optimization',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose AI-Powered Project Management?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function AIProjectManagementPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Project Management?</h2>
         <p className="text-gray-600 mb-6">Start with a free trial and see how AI can revolutionize your team's productivity.</p>
@@ -117,38 +117,38 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Team" 
-          price="$99/mo" 
+        <Plan
+          name="Team"
+          price="$99/mo"
           features={[
-            "Up to 10 team members",
-            "Basic AI features",
-            "Project templates",
-            "Email support"
-          ]} 
+            'Up to 10 team members',
+            'Basic AI features',
+            'Project templates',
+            'Email support',
+          ]}
         />
-        <Plan 
-          name="Professional" 
-          price="$299/mo" 
+        <Plan
+          name="Professional"
+          price="$299/mo"
           features={[
-            "Up to 50 team members",
-            "Advanced AI optimization",
-            "Custom workflows",
-            "Priority support",
-            "API integrations"
-          ]} 
+            'Up to 50 team members',
+            'Advanced AI optimization',
+            'Custom workflows',
+            'Priority support',
+            'API integrations',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise" 
-          price="$799/mo" 
+        <Plan
+          name="Enterprise"
+          price="$799/mo"
           features={[
-            "Unlimited team members",
-            "Custom AI models",
-            "White-label solution",
-            "Dedicated support",
-            "On-premise deployment"
-          ]} 
+            'Unlimited team members',
+            'Custom AI models',
+            'White-label solution',
+            'Dedicated support',
+            'On-premise deployment',
+          ]}
         />
       </div>
     </div>
@@ -172,11 +172,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
+          popular
+            ? 'bg-indigo-600 text-white hover:bg-indigo-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

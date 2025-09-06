@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
 // PricingCard component
-const PricingCard = ({ 
-  name, 
-  price, 
-  period, 
-  description, 
-  features, 
-  isPopular 
-}: { 
-  name: string; 
-  price: string; 
-  period: string; 
-  description: string; 
-  features: string[]; 
-  isPopular: boolean; 
+const PricingCard = ({
+  name,
+  price,
+  period,
+  description,
+  features,
+  isPopular,
+}: {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  isPopular: boolean;
 }) => (
   <div className={`relative bg-white p-8 rounded-lg shadow-lg ${isPopular ? 'ring-2 ring-blue-500' : ''}`}>
     {isPopular && (
@@ -43,8 +43,8 @@ const PricingCard = ({
       ))}
     </ul>
     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-      isPopular 
-        ? 'bg-blue-600 text-white hover:bg-blue-700' 
+      isPopular
+        ? 'bg-blue-600 text-white hover:bg-blue-700'
         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
     }`}>
       Get Started
@@ -64,7 +64,7 @@ const Pricing: React.FC = () => {
             Choose the perfect plan for your business needs. All plans include our core services with flexible options.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <PricingCard
             name="Starter"
@@ -72,11 +72,11 @@ const Pricing: React.FC = () => {
             period="month"
             description="Perfect for small businesses getting started with AI and automation"
             features={[
-              "Basic AI services",
-              "Micro SaaS development",
-              "IT support",
-              "Email support",
-              "Monthly reports"
+              'Basic AI services',
+              'Micro SaaS development',
+              'IT support',
+              'Email support',
+              'Monthly reports',
             ]}
             isPopular={false}
           />
@@ -86,12 +86,12 @@ const Pricing: React.FC = () => {
             period="month"
             description="Ideal for growing businesses that need advanced AI and automation"
             features={[
-              "Advanced AI services",
-              "Custom micro SaaS",
-              "Full IT services",
-              "Priority support",
-              "Weekly reports",
-              "API access"
+              'Advanced AI services',
+              'Custom micro SaaS',
+              'Full IT services',
+              'Priority support',
+              'Weekly reports',
+              'API access',
             ]}
             isPopular={true}
           />
@@ -101,12 +101,12 @@ const Pricing: React.FC = () => {
             period="month"
             description="Complete solution for large enterprises with complex needs"
             features={[
-              "Full AI suite",
-              "White-label solutions",
-              "Dedicated team",
-              "24/7 support",
-              "Custom integrations",
-              "SLA guarantee"
+              'Full AI suite',
+              'White-label solutions',
+              'Dedicated team',
+              '24/7 support',
+              'Custom integrations',
+              'SLA guarantee',
             ]}
             isPopular={false}
           />

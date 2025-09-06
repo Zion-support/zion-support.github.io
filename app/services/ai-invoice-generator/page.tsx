@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const metadata = { 
+export const metadata = {
   title: 'AI Invoice Generator | Zion Tech Group',
   description: 'Intelligent invoice generation with AI-powered data extraction, automated billing, payment tracking, and smart expense categorization for streamlined financial management.',
-  keywords: 'AI invoice generator, automated billing, invoice automation, expense tracking, financial management, smart invoicing'
+  keywords: 'AI invoice generator, automated billing, invoice automation, expense tracking, financial management, smart invoicing',
 };
 
 interface FeatureProps {
@@ -154,14 +154,14 @@ export default function AIInvoiceGeneratorPage() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
-            { name: "QuickBooks", icon: "📚", description: "Accounting software" },
-            { name: "Xero", icon: "🔢", description: "Cloud accounting" },
-            { name: "Stripe", icon: "💳", description: "Payment processing" },
-            { name: "PayPal", icon: "💰", description: "Online payments" },
-            { name: "FreshBooks", icon: "📖", description: "Invoice software" },
-            { name: "Wave", icon: "🌊", description: "Free accounting" },
-            { name: "Sage", icon: "🧙", description: "Business software" },
-            { name: "Zoho Books", icon: "📘", description: "Online accounting" }
+            { name: 'QuickBooks', icon: '📚', description: 'Accounting software' },
+            { name: 'Xero', icon: '🔢', description: 'Cloud accounting' },
+            { name: 'Stripe', icon: '💳', description: 'Payment processing' },
+            { name: 'PayPal', icon: '💰', description: 'Online payments' },
+            { name: 'FreshBooks', icon: '📖', description: 'Invoice software' },
+            { name: 'Wave', icon: '🌊', description: 'Free accounting' },
+            { name: 'Sage', icon: '🧙', description: 'Business software' },
+            { name: 'Zoho Books', icon: '📘', description: 'Online accounting' },
           ].map((integration, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
               <div className="text-3xl mb-3">{integration.icon}</div>
@@ -227,12 +227,12 @@ export default function AIInvoiceGeneratorPage() {
             period="month"
             description="Perfect for freelancers and small businesses"
             features={[
-              "Up to 50 invoices/month",
-              "Basic AI data extraction",
-              "Payment processing",
-              "Basic analytics",
-              "Email support",
-              "1 user account"
+              'Up to 50 invoices/month',
+              'Basic AI data extraction',
+              'Payment processing',
+              'Basic analytics',
+              'Email support',
+              '1 user account',
             ]}
             cta="Start Free Trial"
           />
@@ -242,14 +242,14 @@ export default function AIInvoiceGeneratorPage() {
             period="month"
             description="Most popular for growing businesses"
             features={[
-              "Up to 500 invoices/month",
-              "Advanced AI features",
-              "Expense categorization",
-              "Advanced analytics",
-              "Priority support",
-              "5 user accounts",
-              "Custom templates",
-              "API access"
+              'Up to 500 invoices/month',
+              'Advanced AI features',
+              'Expense categorization',
+              'Advanced analytics',
+              'Priority support',
+              '5 user accounts',
+              'Custom templates',
+              'API access',
             ]}
             popular={true}
             cta="Start Free Trial"
@@ -260,14 +260,14 @@ export default function AIInvoiceGeneratorPage() {
             period="month"
             description="For large organizations"
             features={[
-              "Unlimited invoices",
-              "Full AI optimization suite",
-              "White-label options",
-              "Dedicated account manager",
-              "24/7 phone support",
-              "Unlimited users",
-              "Custom integrations",
-              "Advanced reporting"
+              'Unlimited invoices',
+              'Full AI optimization suite',
+              'White-label options',
+              'Dedicated account manager',
+              '24/7 phone support',
+              'Unlimited users',
+              'Custom integrations',
+              'Advanced reporting',
             ]}
             cta="Contact Sales"
           />

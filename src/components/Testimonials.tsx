@@ -16,64 +16,64 @@ const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      company: "TechCorp Solutions",
-      role: "CEO",
-      content: "Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 300% and their team's expertise is unmatched.",
+      name: 'Sarah Johnson',
+      company: 'TechCorp Solutions',
+      role: 'CEO',
+      content: 'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 300% and their team\'s expertise is unmatched.',
       rating: 5,
-      avatar: "SJ"
+      avatar: 'SJ',
     },
     {
       id: 2,
-      name: "Michael Chen",
-      company: "DataFlow Inc",
-      role: "CTO",
-      content: "The cybersecurity solutions provided by Zion Tech have been exceptional. We've had zero security incidents since implementation, and their 24/7 support is outstanding.",
+      name: 'Michael Chen',
+      company: 'DataFlow Inc',
+      role: 'CTO',
+      content: 'The cybersecurity solutions provided by Zion Tech have been exceptional. We\'ve had zero security incidents since implementation, and their 24/7 support is outstanding.',
       rating: 5,
-      avatar: "MC"
+      avatar: 'MC',
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      company: "CloudScale Systems",
-      role: "VP of Engineering",
-      content: "Their cloud migration service was flawless. We reduced our infrastructure costs by 40% while improving performance. Highly recommend their services.",
+      name: 'Emily Rodriguez',
+      company: 'CloudScale Systems',
+      role: 'VP of Engineering',
+      content: 'Their cloud migration service was flawless. We reduced our infrastructure costs by 40% while improving performance. Highly recommend their services.',
       rating: 5,
-      avatar: "ER"
+      avatar: 'ER',
     },
     {
       id: 4,
-      name: "David Thompson",
-      company: "InnovateLabs",
-      role: "Founder",
-      content: "The micro SaaS platform they built for us has been a game-changer. It's scalable, reliable, and has generated significant recurring revenue for our business.",
+      name: 'David Thompson',
+      company: 'InnovateLabs',
+      role: 'Founder',
+      content: 'The micro SaaS platform they built for us has been a game-changer. It\'s scalable, reliable, and has generated significant recurring revenue for our business.',
       rating: 5,
-      avatar: "DT"
+      avatar: 'DT',
     },
     {
       id: 5,
-      name: "Lisa Wang",
-      company: "AnalyticsPro",
-      role: "Data Director",
-      content: "Their data analytics solutions provided insights we never knew existed. The custom dashboards and reporting tools have revolutionized our decision-making process.",
+      name: 'Lisa Wang',
+      company: 'AnalyticsPro',
+      role: 'Data Director',
+      content: 'Their data analytics solutions provided insights we never knew existed. The custom dashboards and reporting tools have revolutionized our decision-making process.',
       rating: 5,
-      avatar: "LW"
+      avatar: 'LW',
     },
     {
       id: 6,
-      name: "James Wilson",
-      company: "SecureNet Corp",
-      role: "IT Director",
-      content: "Outstanding IT services and support. Their team is professional, knowledgeable, and always available when we need them. They've become an extension of our team.",
+      name: 'James Wilson',
+      company: 'SecureNet Corp',
+      role: 'IT Director',
+      content: 'Outstanding IT services and support. Their team is professional, knowledgeable, and always available when we need them. They\'ve become an extension of our team.',
       rating: 5,
-      avatar: "JW"
-    }
+      avatar: 'JW',
+    },
   ];
 
   return (
     <div className="py-20 bg-gray-900/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Stats */}
-        <motion.div 
+        <motion.div
           className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

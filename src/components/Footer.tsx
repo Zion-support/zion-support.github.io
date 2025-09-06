@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   return (
@@ -82,10 +83,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">AI Solutions</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Cybersecurity</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Cloud Infrastructure</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Digital Transformation</a></li>
+              <li><Link to="/services/ai" className="hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link to="/services/cybersecurity" className="hover:text-white transition-colors">Cybersecurity</Link></li>
+              <li><Link to="/services/cloud" className="hover:text-white transition-colors">Cloud Infrastructure</Link></li>
+              <li><Link to="/services/digital-transformation" className="hover:text-white transition-colors">Digital Transformation</Link></li>
             </ul>
           </div>
         </div>

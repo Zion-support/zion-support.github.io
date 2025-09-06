@@ -7,11 +7,11 @@ interface ToastProps {
   onClose: () => void;
 }
 
-const Toast: React.FC<ToastProps> = ({ 
-  message, 
-  type = 'info', 
-  duration = 3000, 
-  onClose 
+const Toast: React.FC<ToastProps> = ({
+  message,
+  type = 'info',
+  duration = 3000,
+  onClose,
 }) => {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -28,14 +28,14 @@ const Toast: React.FC<ToastProps> = ({
     success: 'bg-green-500 text-white',
     error: 'bg-red-500 text-white',
     warning: 'bg-yellow-500 text-black',
-    info: 'bg-blue-500 text-white'
+    info: 'bg-blue-500 text-white',
   };
 
   const icons = {
     success: '✓',
     error: '✕',
     warning: '⚠',
-    info: 'ℹ'
+    info: 'ℹ',
   };
 
   return (

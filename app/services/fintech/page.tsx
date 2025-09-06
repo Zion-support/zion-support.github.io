@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'FinTech Solutions | Zion Tech Group',
-  description: 'Complete financial technology solutions including digital banking, payment processing, trading platforms, and blockchain financial services. Bank-grade security and compliance.'
+  description: 'Complete financial technology solutions including digital banking, payment processing, trading platforms, and blockchain financial services. Bank-grade security and compliance.',
 };
 
 export default function FinTechPage() {
@@ -10,7 +10,7 @@ export default function FinTechPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">FinTech Solutions</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Complete financial technology solutions including digital banking, payment processing, 
+            Complete financial technology solutions including digital banking, payment processing,
             trading platforms, and blockchain financial services. Bank-grade security and compliance.
           </p>
         </div>
@@ -22,12 +22,12 @@ export default function FinTechPage() {
             icon="🏦"
             description="Complete digital banking platforms and core banking systems"
             services={[
-              "Core banking systems",
-              "Mobile banking apps",
-              "Online banking portals",
-              "Account management",
-              "Transaction processing",
-              "Customer onboarding"
+              'Core banking systems',
+              'Mobile banking apps',
+              'Online banking portals',
+              'Account management',
+              'Transaction processing',
+              'Customer onboarding',
             ]}
             pricing="$50,000 - $300,000"
             marketSize="$1.2T"
@@ -37,12 +37,12 @@ export default function FinTechPage() {
             icon="💳"
             description="Payment gateways, processing systems, and digital wallets"
             services={[
-              "Payment gateways",
-              "Mobile payments",
-              "Cryptocurrency payments",
-              "Cross-border payments",
-              "Subscription billing",
-              "Fraud detection"
+              'Payment gateways',
+              'Mobile payments',
+              'Cryptocurrency payments',
+              'Cross-border payments',
+              'Subscription billing',
+              'Fraud detection',
             ]}
             pricing="$25,000 - $150,000"
             marketSize="$2.1T"
@@ -52,12 +52,12 @@ export default function FinTechPage() {
             icon="📈"
             description="Trading platforms, market data, and investment management"
             services={[
-              "Stock trading platforms",
-              "Cryptocurrency exchanges",
-              "Forex trading systems",
-              "Market data feeds",
-              "Portfolio management",
-              "Risk management"
+              'Stock trading platforms',
+              'Cryptocurrency exchanges',
+              'Forex trading systems',
+              'Market data feeds',
+              'Portfolio management',
+              'Risk management',
             ]}
             pricing="$80,000 - $400,000"
             marketSize="$1.8T"
@@ -67,12 +67,12 @@ export default function FinTechPage() {
             icon="💰"
             description="Peer-to-peer lending, credit scoring, and loan management"
             services={[
-              "P2P lending platforms",
-              "Credit scoring systems",
-              "Loan origination",
-              "Risk assessment",
-              "Collection management",
-              "Credit monitoring"
+              'P2P lending platforms',
+              'Credit scoring systems',
+              'Loan origination',
+              'Risk assessment',
+              'Collection management',
+              'Credit monitoring',
             ]}
             pricing="$40,000 - $250,000"
             marketSize="$900B"
@@ -82,12 +82,12 @@ export default function FinTechPage() {
             icon="🛡️"
             description="InsurTech solutions and digital insurance platforms"
             services={[
-              "Policy management systems",
-              "Claims processing",
-              "Underwriting automation",
-              "Customer portals",
-              "Risk assessment",
-              "Digital distribution"
+              'Policy management systems',
+              'Claims processing',
+              'Underwriting automation',
+              'Customer portals',
+              'Risk assessment',
+              'Digital distribution',
             ]}
             pricing="$60,000 - $350,000"
             marketSize="$1.1T"
@@ -97,12 +97,12 @@ export default function FinTechPage() {
             icon="⚖️"
             description="Regulatory technology and compliance management"
             services={[
-              "KYC/AML systems",
-              "Regulatory reporting",
-              "Compliance monitoring",
-              "Audit trails",
-              "Risk management",
-              "Regulatory updates"
+              'KYC/AML systems',
+              'Regulatory reporting',
+              'Compliance monitoring',
+              'Audit trails',
+              'Risk management',
+              'Regulatory updates',
             ]}
             pricing="$30,000 - $180,000"
             marketSize="$400B"
@@ -115,12 +115,12 @@ export default function FinTechPage() {
             title="Wealth Management Platform"
             description="Comprehensive wealth management and financial planning solutions"
             features={[
-              "Portfolio management",
-              "Financial planning tools",
-              "Client relationship management",
-              "Performance analytics",
-              "Tax optimization",
-              "Estate planning"
+              'Portfolio management',
+              'Financial planning tools',
+              'Client relationship management',
+              'Performance analytics',
+              'Tax optimization',
+              'Estate planning',
             ]}
             pricing="$45,000 - $250,000"
             icon="💎"
@@ -129,12 +129,12 @@ export default function FinTechPage() {
             title="Digital Wallet & Mobile Payments"
             description="Secure digital wallet and mobile payment solutions"
             features={[
-              "Multi-currency support",
-              "QR code payments",
-              "NFC payments",
-              "P2P transfers",
-              "Bill payments",
-              "Loyalty programs"
+              'Multi-currency support',
+              'QR code payments',
+              'NFC payments',
+              'P2P transfers',
+              'Bill payments',
+              'Loyalty programs',
             ]}
             pricing="$35,000 - $200,000"
             icon="📱"
@@ -143,12 +143,12 @@ export default function FinTechPage() {
             title="Blockchain Financial Services"
             description="Blockchain-based financial services and DeFi solutions"
             features={[
-              "Smart contracts",
-              "DeFi protocols",
-              "Tokenization",
-              "Cross-chain bridges",
-              "Yield farming",
-              "Liquidity pools"
+              'Smart contracts',
+              'DeFi protocols',
+              'Tokenization',
+              'Cross-chain bridges',
+              'Yield farming',
+              'Liquidity pools',
             ]}
             pricing="$50,000 - $300,000"
             icon="⛓️"
@@ -157,12 +157,12 @@ export default function FinTechPage() {
             title="Financial Analytics & BI"
             description="Advanced financial analytics and business intelligence"
             features={[
-              "Real-time dashboards",
-              "Predictive analytics",
-              "Risk modeling",
-              "Performance metrics",
-              "Custom reports",
-              "Data visualization"
+              'Real-time dashboards',
+              'Predictive analytics',
+              'Risk modeling',
+              'Performance metrics',
+              'Custom reports',
+              'Data visualization',
             ]}
             pricing="$25,000 - $150,000"
             icon="📊"
@@ -171,12 +171,12 @@ export default function FinTechPage() {
             title="Financial Planning & Advisory"
             description="AI-powered financial planning and advisory platforms"
             features={[
-              "Goal-based planning",
-              "Retirement planning",
-              "Investment advice",
-              "Tax planning",
-              "Estate planning",
-              "Risk assessment"
+              'Goal-based planning',
+              'Retirement planning',
+              'Investment advice',
+              'Tax planning',
+              'Estate planning',
+              'Risk assessment',
             ]}
             pricing="$30,000 - $180,000"
             icon="🎯"
@@ -185,12 +185,12 @@ export default function FinTechPage() {
             title="Cross-Border Payments"
             description="International payment and remittance solutions"
             features={[
-              "Multi-currency support",
-              "Real-time transfers",
-              "Compliance management",
-              "Exchange rate optimization",
-              "Transaction tracking",
-              "Regulatory reporting"
+              'Multi-currency support',
+              'Real-time transfers',
+              'Compliance management',
+              'Exchange rate optimization',
+              'Transaction tracking',
+              'Regulatory reporting',
             ]}
             pricing="$60,000 - $350,000"
             icon="🌍"
@@ -203,7 +203,7 @@ export default function FinTechPage() {
             Ready to Build Your FinTech Solution?
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Our FinTech experts will help you build secure, scalable, and compliant financial solutions 
+            Our FinTech experts will help you build secure, scalable, and compliant financial solutions
             that meet the highest industry standards.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -232,7 +232,7 @@ function FinTechCategory({
   description,
   services,
   pricing,
-  marketSize
+  marketSize,
 }: {
   title: string;
   icon: string;
@@ -247,7 +247,7 @@ function FinTechCategory({
       <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="text-gray-600 space-y-2 mb-4">
-        {services.map((service) => (
+        {services.map(service => (
           <li key={service} className="flex items-center">
             <span className="text-blue-500 mr-2">•</span> {service}
           </li>
@@ -268,7 +268,7 @@ function FinTechService({
   description,
   features,
   pricing,
-  icon
+  icon,
 }: {
   title: string;
   description: string;
@@ -282,7 +282,7 @@ function FinTechService({
       <h4 className="text-xl font-bold text-gray-900 mb-2">{title}</h4>
       <p className="text-gray-600 mb-3">{description}</p>
       <ul className="text-gray-600 space-y-1 mb-3">
-        {features.map((feature) => (
+        {features.map(feature => (
           <li key={feature} className="flex items-center text-sm">
             <span className="text-blue-500 mr-2">•</span> {feature}
           </li>

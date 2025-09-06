@@ -1,40 +1,40 @@
-import React from "react";
+import React from 'react';
 const Sitemap = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      {" "}
+      {' '}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {" "}
+        {' '}
         <div className="text-center mb-12">
-          {" "}
+          {' '}
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            {" "}
-            Sitemap{" "}
-          </h1>{" "}
+            {' '}
+            Sitemap{' '}
+          </h1>{' '}
           <p className="text-xl text-gray-600">
-            {" "}
-            Find all our pages and resources in one place.{" "}
-          </p>{" "}
-        </div>{" "}
+            {' '}
+            Find all our pages and resources in one place.{' '}
+          </p>{' '}
+        </div>{' '}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {" "}
+          {' '}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
+            {' '}
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
               Main Pages
-            </h3>{" "}
+            </h3>{' '}
             <ul className="space-y-2">
-              {" "}
+              {' '}
               <li>
                 <a href="/" className="text-blue-600 hover:text-blue-800">
                   Home
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a href="/about" className="text-blue-600 hover:text-blue-800">
                   About
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/services"
@@ -42,7 +42,7 @@ const Sitemap = () => {
                 >
                   Services
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/solutions"
@@ -50,7 +50,7 @@ const Sitemap = () => {
                 >
                   Solutions
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/contact"
@@ -58,31 +58,31 @@ const Sitemap = () => {
                 >
                   Contact
                 </a>
-              </li>{" "}
-            </ul>{" "}
-          </div>{" "}
+              </li>{' '}
+            </ul>{' '}
+          </div>{' '}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
+            {' '}
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
               Resources
-            </h3>{" "}
+            </h3>{' '}
             <ul className="space-y-2">
-              {" "}
+              {' '}
               <li>
                 <a href="/blog" className="text-blue-600 hover:text-blue-800">
                   Blog
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a href="/news" className="text-blue-600 hover:text-blue-800">
                   News
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a href="/help" className="text-blue-600 hover:text-blue-800">
                   Help
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/support"
@@ -90,16 +90,16 @@ const Sitemap = () => {
                 >
                   Support
                 </a>
-              </li>{" "}
-            </ul>{" "}
-          </div>{" "}
+              </li>{' '}
+            </ul>{' '}
+          </div>{' '}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
+            {' '}
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
               Legal
-            </h3>{" "}
+            </h3>{' '}
             <ul className="space-y-2">
-              {" "}
+              {' '}
               <li>
                 <a
                   href="/privacy"
@@ -107,12 +107,12 @@ const Sitemap = () => {
                 >
                   Privacy Policy
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a href="/terms" className="text-blue-600 hover:text-blue-800">
                   Terms of Service
                 </a>
-              </li>{" "}
+              </li>{' '}
               <li>
                 <a
                   href="/cookies"
@@ -120,11 +120,11 @@ const Sitemap = () => {
                 >
                   Cookie Policy
                 </a>
-              </li>{" "}
-            </ul>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+              </li>{' '}
+            </ul>{' '}
+          </div>{' '}
+        </div>{' '}
+      </div>{' '}
     </div>
   );
 };

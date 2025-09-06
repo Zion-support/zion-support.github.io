@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { useNotifications } from '@/context/NotificationContext';
+import SEOHead from '@/components/SEOHead';
 
 const Contact: React.FC = () => {
   const { toast } = useToast();
@@ -9,61 +13,55 @@ const Contact: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-=======
   const validateForm = () => {
     const errors: string[] = [];
-    
+
     if (!formData.name.trim()) errors.push('Name is required');
     if (!formData.email.trim()) errors.push('Email is required');
     if (!formData.message.trim()) errors.push('Message is required');
-    
+
     if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       errors.push('Please enter a valid email address');
     }
-    
+
     if (formData.message && formData.message.length < 10) {
       errors.push('Message must be at least 10 characters long');
     }
-    
+
     return errors;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const errors = validateForm();
     if (errors.length > 0) {
       toast({
-        title: "Validation Error",
+        title: 'Validation Error',
         description: errors.join(', '),
-        variant: "destructive",
+        variant: 'destructive',
       });
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     try {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       // Show success notification
       addNotification({
         type: 'success',
@@ -72,38 +70,36 @@ const Contact: React.FC = () => {
         duration: 5000,
         action: {
           label: 'View Services',
-          onClick: () => window.location.href = '/services'
-        }
+          onClick: () => window.location.href = '/services',
+        },
       });
-      
+
       toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. We'll get back to you within 24 hours.",
+        title: 'Message sent successfully!',
+        description: 'Thank you for your message. We\'ll get back to you within 24 hours.',
       });
-      
+
       setFormData({
         name: '',
         email: '',
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: '',
       });
-    }, 3000);
-=======
     } catch (error) {
       // Show error notification
       addNotification({
         type: 'error',
         title: 'Error sending message',
         message: 'There was an error sending your message. Please try again.',
-        duration: 7000
+        duration: 7000,
       });
-      
+
       toast({
-        title: "Error",
-        description: "There was an error sending your message. Please try again.",
-        variant: "destructive",
+        title: 'Error',
+        description: 'There was an error sending your message. Please try again.',
+        variant: 'destructive',
       });
     } finally {
       setIsSubmitting(false);
@@ -115,26 +111,26 @@ const Contact: React.FC = () => {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
       details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
-      description: 'Send us an email anytime'
+      description: 'Send us an email anytime',
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
       details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
-      description: 'Call us during business hours'
+      description: 'Call us during business hours',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Address',
       details: ['123 Tech Street', 'Innovation City, IC 12345'],
-      description: 'Visit our headquarters'
+      description: 'Visit our headquarters',
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: 'Business Hours',
       details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 10:00 AM - 4:00 PM'],
-      description: 'We\'re here to help'
-    }
+      description: 'We\'re here to help',
+    },
   ];
 
   const services = [
@@ -145,12 +141,12 @@ const Contact: React.FC = () => {
     'Data Solutions',
     'Mobile Solutions',
     'Consulting',
-    'Other'
+    'Other',
   ];
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Contact Us - Get Your Free Consultation | Zion Tech Group"
         description="Ready to transform your business? Contact our expert team for a free consultation on AI services, cybersecurity, cloud solutions, and custom software development."
         keywords="contact, consultation, AI services, cybersecurity, cloud solutions, software development, technology consulting"
@@ -172,7 +168,7 @@ const Contact: React.FC = () => {
             {/* Contact Form */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-              
+
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
