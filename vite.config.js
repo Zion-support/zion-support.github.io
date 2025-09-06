@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-=======
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
->>>>>>> 4e673242df90fef9ac4b26022c65baf9cfa79382
 
 export default defineConfig({
   plugins: [react()],
@@ -37,10 +31,5 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
-<<<<<<< HEAD
   }
 });
-=======
-  },
-})
->>>>>>> 4e673242df90fef9ac4b26022c65baf9cfa79382

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -72,18 +71,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-=======
-import React from 'react'
-
-const Footer: React.FC = () => {
-  return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto px-4 text-center">
-        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-      </div>
-    </footer>
-  )
-}
-
-export default Footer
->>>>>>> 4e673242df90fef9ac4b26022c65baf9cfa79382
