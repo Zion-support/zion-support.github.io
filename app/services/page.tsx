@@ -2,11 +2,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
-<<<<<<< HEAD
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-=======
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 export default function ServicesOverviewPage() {
   return (
@@ -50,18 +46,18 @@ export default function ServicesOverviewPage() {
           icon="⚙️"
         />
         <ServiceCard
-          href="/services/blockchain"
-          title="Blockchain"
-          description="Smart contracts, DeFi protocols, and Web3 applications"
-          bullets={["Smart contracts", "DeFi protocols", "NFT platforms"]}
+          href="/services/blockchain-solutions"
+          title="Blockchain Solutions"
+          description="DeFi protocols, NFTs, smart contracts, and Web3 applications"
+          bullets={["Smart contracts", "DeFi protocols", "NFT marketplaces"]}
           icon="⛓️"
         />
         <ServiceCard
-          href="/services/data-analytics"
-          title="Data Analytics"
-          description="Business intelligence, predictive modeling, and real-time analytics"
-          bullets={["BI dashboards", "Predictive analytics", "Real-time insights"]}
-          icon="📊"
+          href="/services/mobile-development"
+          title="Mobile Development"
+          description="iOS, Android, and cross-platform mobile applications"
+          bullets={["Native development", "Cross-platform", "App store optimization"]}
+          icon="📱"
         />
       </div>
       <CTA />{" "}
