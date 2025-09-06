@@ -9,23 +9,23 @@ export interface PricingSuggestion {
 ;
 // Define types for the pricing recommendation;
 export interface PricingSuggestion {;
-  minRate: number,;
-  maxRate: number,;
-  confidence: "High" | "Medium" | "Low",;
+  minRate: number;
+  maxRate: number;
+  confidence: "High" | "Medium" | "Low";
   explanation: string;
 }
 ;
 export interface ClientBudgetParams {;
-  jobTitle: string,;
-  category: string,;
-  timeline?: string,;
-  scope?: string,;
+  jobTitle: string;
+  category: string;
+  timeline?: string;
+  scope?: string;
   experienceLevel?: string;
 }
 ;
 export interface TalentRateParams {;
-  skills: string[],;
-  yearsExperience: number,;
+  skills: string[];
+  yearsExperience: number;
   location?: string;
 }
 
@@ -68,13 +68,13 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     }
 ;
     // Adjust based on job title keywords;
-    const lowercaseTitle = jobTitle.toLowerCase(),;
+    const lowercaseTitle = jobTitle.toLowerCase();
     if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;
-      minRate += 20,;
+      minRate += 20;
       maxRate += 30;
     } else if (lowercaseTitle.includes("junior")) {;
-      minRate -= 10,;
-      maxRate -= 15,;
+      minRate -= 10;
+      maxRate -= 15;
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
     }
     
@@ -104,26 +104,26 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
 ;
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
   try {;
-    const { skills, yearsExperience, location } = params,;
+    const { skills, yearsExperience, location } = params;
     // Simulate API call delay;
-    await new Promise(resolve => setTimeout(resolve, 1000)),;
+    await new Promise(resolve => setTimeout(resolve, 1000));
     // Base rate calculation based on years of experience;
-    let baseRate = 25 + (yearsExperience * 5),;
+    let baseRate = 25 + (yearsExperience * 5);
     // Adjust for in-demand skills;
-    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'],;
+    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
     const hasInDemandSkills = skills.some(skill =>;
       inDemandSkills.some(demandSkill => skill.toLowerCase().includes(demandSkill));
-    ),;
+    );
     if (hasInDemandSkills) {;
       baseRate += 15;
     }
 ;
     // Location adjustment;
-    let locationFactor = 1.0,;
+    let locationFactor = 1.0;
     if (location) {;
-      const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'],;
-      const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'],;
-      const lowercaseLocation = location.toLowerCase(),;
+      const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'];
+      const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'];
+      const lowercaseLocation = location.toLowerCase();
       if (highCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
         locationFactor = 1.2;
       } else if (lowCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
@@ -141,10 +141,10 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     } else if (!location || yearsExperience < 1) {
       confidence = "Low"
 ;
-    const minRate = Math.round(baseRate * locationFactor * 0.9),;
-    const maxRate = Math.round(baseRate * locationFactor * 1.2),;
+    const minRate = Math.round(baseRate * locationFactor * 0.9);
+    const maxRate = Math.round(baseRate * locationFactor * 1.2);
     // Determine confidence;
-    let confidence: "High" | "Medium" | "Low" = "Medium",;
+    let confidence: "High" | "Medium" | "Low" = "Medium";
     if (yearsExperience > 3 && hasInDemandSkills && location) {;
       confidence = "High";
     } else if (!location || yearsExperience < 1) {;
@@ -152,7 +152,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     }
 ;
     // Generate explanation;
-    let explanation = `Based on ${yearsExperience} years of experience`,;
+    let explanation = `Based on ${yearsExperience} years of experience`;
     if (hasInDemandSkills) {;
       explanation += ` and your in-demand skills (${skills.join()})`;
     }
@@ -161,11 +161,11 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       explanation += `, considering market rates in ${location}`;
     }
 ;
-    explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`,;
+    explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
     return {;
-      minRate,;
-      maxRate,;
-      confidence,;
+      minRate;
+      maxRate;
+      confidence;
       explanation;
     }
   } catch (error) {
@@ -211,20 +211,20 @@ export async function trackPricingSuggestion(data: {
 ;
 // Function to save pricing analytics data;
 export async function trackPricingSuggestion(data: {;
-  userId: string,;
-  suggestionType: 'client' | 'talent',;
-  suggestedMin: number,;
-  suggestedMax: number,;
-  actualValue?: number,;
+  userId: string;
+  suggestionType: 'client' | 'talent';
+  suggestedMin: number;
+  suggestedMax: number;
+  actualValue?: number;
   accepted: boolean;
 }) {;
   try {;
     // In a real implementation, this would save to the database;
     // For now, we'll just log it;
-    // // // console.log("Tracking pricing suggestion:", data),;
+    // // // console.log("Tracking pricing suggestion:", data);
     // In a real implementation with Supabase: // await supabase;
     //  .from('pricing_suggestions');
-    //  .insert([data]),;
+    //  .insert([data]);
     return true;
   } catch (error) {;
     console.error("Error tracking pricing suggestion:", error);

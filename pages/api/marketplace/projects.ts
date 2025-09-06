@@ -65,7 +65,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 ;
       if (action === "mark_completed") {;
-        project.status = "COMPLETED",;
+        project.status = "COMPLETED";
         saveProject(project);
         return res.json({ ok: true, project });
       }

@@ -74,15 +74,15 @@ export const useEmailAuth = (
       }
 ;
       toast({;
-        title: "Signup successful",;
-        description: "Check your email for verification instructions."}),;
+        title: "Signup successful";
+        description: "Check your email for verification instructions."});
       return { data }
     } catch (error: any) {;
-      console.error("Signup error:", error),;
+      console.error("Signup error:", error);
       toast({;
-        title: "Signup failed",;
-        description: error.message || "An unexpected error occurred",;
-        variant: "destructive"}),;
+        title: "Signup failed";
+        description: error.message || "An unexpected error occurred";
+        variant: "destructive"});
       return { error }
           variant: "destructive"});
         return { error };
@@ -119,15 +119,15 @@ export const useEmailAuth = (
       }
 ;
       toast({;
-        title: "Password reset email sent",;
-        description: "Check your email for password reset instructions."}),;
+        title: "Password reset email sent";
+        description: "Check your email for password reset instructions."});
       return {}
     } catch (error: any) {;
-      console.error("Password reset error:", error),;
+      console.error("Password reset error:", error);
       toast({;
-        title: "Password reset failed",;
-        description: error.message || "An unexpected error occurred",;
-        variant: "destructive"}),;
+        title: "Password reset failed";
+        description: error.message || "An unexpected error occurred";
+        variant: "destructive"});
       return { error }
           variant: "destructive"});
         return { error };

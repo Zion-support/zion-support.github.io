@@ -1,4 +1,4 @@
-// Utility functions for api-helpers,;
-export const api-helpers = {,;
+// Utility functions for api-helpers;
+export const api-helpers = {;
   // TODO: Implement utility functions;
 };

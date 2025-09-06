@@ -1,25 +1,25 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import OpenAI from 'openai',;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
 export type GenerateServiceDescriptionRequest = {;
-  title: string,;
-  keyFeatures: string[],;
-  targetAudience: string,;
-  additionalNotes?: string,;
+  title: string;
+  keyFeatures: string[];
+  targetAudience: string;
+  additionalNotes?: string;
   tone?: 'professional' | 'friendly' | 'persuasive' | 'technical';
-},;
+};
 export type GenerateServiceDescriptionResponse = {;
   description: string;
-},;
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),;
+};
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(;
-  req: NextApiRequest,;
+  req: NextApiRequest;
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>;
 ) {;
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
   }
 ;
-  const { title, keyFeatures, targetAudience, additionalNotes, tone } = req.body as GenerateServiceDescriptionRequest,;
+  const { title, keyFeatures, targetAudience, additionalNotes, tone } = req.body as GenerateServiceDescriptionRequest;
   if (!process.env.OPENAI_API_KEY) {;
     return res.status(500).json({ error: 'OpenAI API key not configured' });
   }
@@ -29,7 +29,7 @@ export default async function handler(;
   }
 ;
   try {;
-    const toneInstruction = tone ? `Write in a ${tone} tone.` : 'Write in a professional, clear tone.',;
+    const toneInstruction = tone ? `Write in a ${tone} tone.` : 'Write in a professional, clear tone.';
     const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.;
 Service Title: ${title}
 Target Audience: ${targetAudience}
@@ -43,13 +43,13 @@ Requirements:;
 - 2-3 sentence hook opening that addresses audience needs;
 - 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline);
 - Use clear, benefit-focused language;
-- End with a short call to action`,;
+- End with a short call to action`;
     // Using Responses API for modern SDK;
     const response = await openai.responses.create({;
-      model: 'gpt-4o-mini',;
-      input: prompt,;
-      temperature: 0.7}),;
-    let description = '',;
+      model: 'gpt-4o-mini';
+      input: prompt;
+      temperature: 0.7});
+    let description = '';
     const output = response.output?.[0];
     if (output && output.type === 'message') {;
       // Aggregate all text parts from the first message;

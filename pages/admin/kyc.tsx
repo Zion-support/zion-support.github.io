@@ -20,9 +20,10 @@ export default function AdminKycPage() {
     const res = await fetch('/api/admin/kyc-queue', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, action, reason: reason || undefined })}),
-    const data = await res.json(),
-    if (data.ok) load(),
+      body: JSON.stringify({ userId, action, reason: reason || undefined })
+    });
+    const data = await res.json();
+    if (data.ok) load();
   }
 
   return (
@@ -74,5 +75,5 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
-  ),
+  );
 }

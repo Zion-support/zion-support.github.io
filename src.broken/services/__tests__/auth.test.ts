@@ -1,4 +1,4 @@
-// Service for auth.test,;
-export const auth.testService = {,;
+// Service for auth.test;
+export const auth.testService = {;
   // TODO: Implement service methods;
 };

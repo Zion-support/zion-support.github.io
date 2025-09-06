@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
-const p = path.join(process.cwd(), 'datareportsdepsweekly-dependencies.json'),;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const p = path.join(process.cwd(), 'datareportsdepsweekly-dependencies.json');
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
   try {;
     if (!fs.existsSync(p)) return res.status(200).json({});

@@ -1,4 +1,4 @@
-export type UnitSystem = 'metric' | 'imperial',;
+export type UnitSystem = 'metric' | 'imperial';
 export function cmToIn(cm: number): number {;
   return cm / 2.54;
 }
@@ -16,14 +16,14 @@ export function lbsToKg(lbs: number): number {;
 }
 ;
 export function formatDimensions(;
-  widthCm: number,;
-  heightCm: number,;
-  depthCm: number,;
+  widthCm: number;
+  heightCm: number;
+  depthCm: number;
   unit: UnitSystem;
 ): string {;
   if (unit === 'imperial') {;
-    const w = cmToIn(widthCm).toFixed(1),;
-    const h = cmToIn(heightCm).toFixed(1),;
+    const w = cmToIn(widthCm).toFixed(1);
+    const h = cmToIn(heightCm).toFixed(1);
     const d = cmToIn(depthCm).toFixed(1);
     return `${w} x ${h} x ${d} in`;
   }

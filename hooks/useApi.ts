@@ -45,4 +45,4 @@ export function useApi<T>(
     refetch: fetchData,
   };
 }
-},;
+};

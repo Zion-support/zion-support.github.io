@@ -1,8 +1,8 @@
 export const mapProfileToUser = (user: any, profile: any) => {;
   return {;
-    ...user,;
+    ...user;
     ...profile, ;
-    id: user.id,;
+    id: user.id;
     email: user.email;
   };
 };

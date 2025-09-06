@@ -69,5 +69,5 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 
   return metrics;
 }
-},;
+};
 export default usePerformanceMonitor;

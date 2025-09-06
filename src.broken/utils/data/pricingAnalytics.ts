@@ -1,6 +1,6 @@
-import { supabase } from '@/utils/supabase/client',;
+import { supabase } from '@/utils/supabase/client';
 export type PricingAnalyticsEvent = {;
-  kind: 'client_suggestion' | 'talent_suggestion' | 'applied_suggestion',;
+  kind: 'client_suggestion' | 'talent_suggestion' | 'applied_suggestion';
   payload: Record<string unknown>;
 };
 export async function logPricingAnalytics(event: PricingAnalyticsEvent): Promise<void> {;

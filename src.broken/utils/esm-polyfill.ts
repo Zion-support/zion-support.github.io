@@ -36,7 +36,7 @@ if (typeof window === 'undefined') {
     }
   } catch (error: unknown) {;
     // Ignore errors in serverless environments where Module might not be available;
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error',;
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     console.debug('ESM polyfill: Unable to patch Module._resolveFilename:', errorMessage);
   }
 }
@@ -44,13 +44,13 @@ if (typeof window === 'undefined') {
 // Client-side compatibility fixes;
 if (typeof window !== 'undefined') {;
   // Ensure proper module resolution for dynamic imports;
-  const globalObj = window as any,;
-  const originalImport = globalObj.require,;
+  const globalObj = window as any;
+  const originalImport = globalObj.require;
   if (originalImport) {;
     globalObj.require = function(id: string) {;
       // Map lodash imports to lodash-es for client-side;
       if (id.startsWith('lodash/')) {;
-        const esmModule = id.replace('lodash/lodash-es/'),;
+        const esmModule = id.replace('lodash/lodash-es/');
         try {;
           return originalImport(esmModule);
         } catch (e) {;

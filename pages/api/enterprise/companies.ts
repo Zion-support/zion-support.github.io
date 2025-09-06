@@ -1,13 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { store } from '../../../utils/data/enterpriseStore',;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '../../../utils/data/enterpriseStore';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method === 'GET') {;
-    const { slug } = req.query,;
+    const { slug } = req.query;
     if (!slug || typeof slug !== 'string') {;
       return res.status(400).json({ error: 'slug required' });
     }
-    const company = store.getCompanyBySlug(slug),;
-    if (!company) return res.status(404).json({ error: 'not_found' }),;
+    const company = store.getCompanyBySlug(slug);
+    if (!company) return res.status(404).json({ error: 'not_found' });
     return res.status(200).json(company);
   }
 ;

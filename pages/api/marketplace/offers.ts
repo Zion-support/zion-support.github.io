@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return res.json({ ok: true, offers })
       }
       if (user.role === "talent") {;
-        const offers = listOffers({ talentSlug: user.talentSlug }),;
+        const offers = listOffers({ talentSlug: user.talentSlug });
         return res.json({ ok: true, offers });
       }
       return bad(res, "Unknown role", 403)
@@ -92,8 +92,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 ;
       if (action === "decline") {;
-        if (user.role !== "talent") return bad(res, "Only talent can decline", 403),;
-        existing.status = "DECLINED",;
+        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
+        existing.status = "DECLINED";
         saveOffer(existing);
         return res.json({ ok: true, offer: existing });
       }

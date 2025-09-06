@@ -13,27 +13,27 @@ interface TalentProfileData {
   bio: string,
   skills: string[],
   location?: string
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
+import "https: //deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
+const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY');
 const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 interface TalentProfileData {;
-  name: string,;
-  title: string,;
-  bio: string,;
-  skills: string[],;
+  name: string;
+  title: string;
+  bio: string;
+  skills: string[];
   location?: string;
 }
 ;
 interface EnhancedProfile {;
-  summary: string,;
+  summary: string;
   categorizedSkills: {;
-    programming: string[],;
-    devops: string[],;
-    platforms: string[],;
-    softSkills: string[],;
+    programming: string[];
+    devops: string[];
+    platforms: string[];
+    softSkills: string[];
     other: string[];
   }
 }
@@ -56,19 +56,19 @@ serve(async (req) => {;
 ;
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
-      method: 'POST',;
+      method: 'POST';
       headers: {;
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,;
-        'Content-Type': 'application/json'},;
+        'Authorization': `Bearer ${OPENAI_API_KEY}`;
+        'Content-Type': 'application/json'};
       body: JSON.stringify({;
-        model: 'gpt-4o-mini',;
+        model: 'gpt-4o-mini';
         messages: [;
           {;
-            role: 'system',;
+            role: 'system';
             content: `You are an expert HR assistant. Based on the user's bio and experience, write a professional and engaging 100–150 word summary for their profile. Then extract up to 8 clear skill tags, categorized by type for better filtering.`;
-          },;
+          };
           {;
-            role: 'user',;
+            role: 'user';
             content: `Create a professional profile summary and categorize skills based on this information:;
             Name: ${talentData.name}
             Title: ${talentData.title}
@@ -111,28 +111,28 @@ serve(async (req) => {;
     } catch (e) {
       console.error("Error parsing OpenAI response:", e),
       throw new Error("Failed to parse the generated content")
-        ],;
-        temperature: 0.7,;
+        ];
+        temperature: 0.7;
         response_format: { type: "json_object" }
-      })}),;
-    const openAIData = await openAIResponse.json(),;
+      })});
+    const openAIData = await openAIResponse.json();
     if (!openAIData.choices || openAIData.choices.length === 0) {;
       throw new Error("Failed to generate profile content");
     }
 ;
     // Extract the generated content from the response;
-    const responseContent = openAIData.choices[0].message.content,;
+    const responseContent = openAIData.choices[0].message.content;
     // Parse the JSON response;
-    let enhancedProfile: EnhancedProfile,;
+    let enhancedProfile: EnhancedProfile;
     try {;
       enhancedProfile = JSON.parse(responseContent);
     } catch (e) {;
-      console.error("Error parsing OpenAI response:", e),;
+      console.error("Error parsing OpenAI response:", e);
       throw new Error("Failed to parse the generated content");
     }
 ;
     return new Response(;
-      JSON.stringify(enhancedProfile),;
+      JSON.stringify(enhancedProfile);
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
 
@@ -143,9 +143,9 @@ serve(async (req) => {;
       JSON.stringify({ error: error.message }),
     );
   } catch (error) {;
-    console.error("Error in talent-profile-enhancer function:", error),;
+    console.error("Error in talent-profile-enhancer function:", error);
     return new Response(;
-      JSON.stringify({ error: error.message }),;
+      JSON.stringify({ error: error.message });
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }

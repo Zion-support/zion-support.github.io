@@ -10,7 +10,7 @@ export const useAuthEventHandlers = (setUser: any, setOnboardingStep: any) => {;
   };
 ;
   return {;
-    handleSignedIn,;
+    handleSignedIn;
     handleSignedOut;
   };
 };

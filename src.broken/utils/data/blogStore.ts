@@ -1,8 +1,8 @@
-import fs from 'fs',;
-import path from 'path',;
-import { BlogPost } from '@/utils/types/blog',;
-const DATA_DIR = path.resolve(process.cwd(), 'datablog'),;
-const POSTS_PATH = path.resolve(DATA_DIR, 'posts.json'),;
+import fs from 'fs';
+import path from 'path';
+import { BlogPost } from '@/utils/types/blog';
+const DATA_DIR = path.resolve(process.cwd(), 'datablog');
+const POSTS_PATH = path.resolve(DATA_DIR, 'posts.json');
 function ensureStore(): void {;
   if (!fs.existsSync(DATA_DIR)) {;
     fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -13,9 +13,9 @@ function ensureStore(): void {;
 }
 ;
 export function readPosts(): BlogPost[] {;
-  ensureStore(),;
+  ensureStore();
   try {;
-    const raw = fs.readFileSync(POSTS_PATH, 'utf8'),;
+    const raw = fs.readFileSync(POSTS_PATH, 'utf8');
     return JSON.parse(raw) as BlogPost[];
   } catch (e) {;
     return [];
@@ -23,7 +23,7 @@ export function readPosts(): BlogPost[] {;
 }
 ;
 export function writePosts(posts: BlogPost[]): void {;
-  ensureStore(),;
+  ensureStore();
   fs.writeFileSync(POSTS_PATH, JSON.stringify(posts, null, 2), 'utf8');
 }
 ;
@@ -36,14 +36,14 @@ export function findPostById(id: string): BlogPost | undefined {;
 }
 ;
 export function upsertPost(post: BlogPost): BlogPost {;
-  const posts = readPosts(),;
-  const idx = posts.findIndex((p) => p.id === post.id),;
+  const posts = readPosts();
+  const idx = posts.findIndex((p) => p.id === post.id);
   if (idx >= 0) {;
     posts[idx] = post;
   } else {;
     posts.unshift(post);
   }
-  writePosts(posts),;
+  writePosts(posts);
   return post;
 }
 ;
@@ -66,9 +66,9 @@ export function listAllTags(): string[] {;
 }
 ;
 export function incrementMetric(id: string, metric: keyof BlogPost['metrics']): BlogPost | undefined {;
-  const posts = readPosts(),;
-  const idx = posts.findIndex((p) => p.id === id),;
-  if (idx < 0) return undefined,;
+  const posts = readPosts();
+  const idx = posts.findIndex((p) => p.id === id);
+  if (idx < 0) return undefined;
   posts[idx].metrics[metric] += 1;
   writePosts(posts);
   return posts[idx];

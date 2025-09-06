@@ -21,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const jobApplications = (apps.length || 9),
     const successRate = ((apps.filter(a => a.status === 'accepted').length || 3) / Math.max(jobApplications, 1)) * 100,
 
-    const tagCounts: Record<string number> = {},
+    const tagCounts: Record<string, number> = {},
     (tags.length ? tags : [
       { tag: 'react' },
       { tag: 'node' },

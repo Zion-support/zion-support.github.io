@@ -87,13 +87,13 @@ export default function AdminIntegrationsPage() {
           )}
         </div>
       </div>
-    ),
+    )
   }
 
   function RulesModal() {
-    if (!selected) return null,
-    const provider = providers.find(p => p.id === selected)!,
-    const isCrm = provider.category === 'crm',
+    if (!selected) return null;
+    const provider = providers.find(p => p.id === selected)!;
+    const isCrm = provider.category === 'crm';
     return (
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
         <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
@@ -119,11 +119,11 @@ export default function AdminIntegrationsPage() {
           </div>
           <div className="mt-4 flex justify-end gap-2">
             <button className="px-3 py-1.5 rounded border text-sm" onClick={() => setSelected(null)}>Close</button>
-            <button className="px-3 py-1.5 rounded bg-black text-white text-sm" onClick={async () => { await connect(provider.id), setSelected(null), }}>Save</button>
+            <button className="px-3 py-1.5 rounded bg-black text-white text-sm" onClick={async () => { await connect(provider.id); setSelected(null); }}>Save</button>
           </div>
         </div>
       </div>
-    ),
+    )
   }
 
   return (

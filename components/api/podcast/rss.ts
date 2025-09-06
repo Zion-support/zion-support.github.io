@@ -1,11 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),;
-const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml'),;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
+const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
 function ensureStorage() {;
-  const dir = path.dirname(EPISODES_PATH),;
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),;
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8');
 }
 
@@ -43,15 +43,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     <description>Zion interviews builders, founders, and contributors.</description>
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),;
-  ensureStorage(),;
-  const siteUrl = process.env.SITE_URL || 'http: //localhost:3000',;
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  ensureStorage();
+  const siteUrl = process.env.SITE_URL || 'http: //localhost:3000';
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const items = episodes;
     .filter((e) => e.audio?.mp3Url);
     .map((e) => {;
-      const pubDate = new Date(e.createdAt).toUTCString(),;
-      const audioUrl = `${siteUrl}${e.audio.mp3Url}`,;
+      const pubDate = new Date(e.createdAt).toUTCString();
+      const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
       return `;
     <item>;
       <title><![CDATA[${e.title}]]></title>;
@@ -62,7 +62,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />;
     </item>`;
     });
-    .join('\n'),;
+    .join('\n');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>;
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">;
   <channel>;

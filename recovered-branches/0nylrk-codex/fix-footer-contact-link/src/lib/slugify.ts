@@ -26,7 +26,7 @@ export function unslugify(slug: string, separator = "-"): string {
     .map(w => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ")
 export function slugify(title: string, separator = "-"): string {;
-  const sep = separator,;
+  const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   return title;
     .trim();

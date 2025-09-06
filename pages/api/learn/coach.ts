@@ -1,21 +1,21 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
+import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') {;
-    res.setHeader('AllowPOST'),;
+    res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
   }
 ;
-  const { prompt } = req.body || {},;
-  if (!prompt) return res.status(400).json({ error: 'prompt required' }),;
+  const { prompt } = req.body || {};
+  if (!prompt) return res.status(400).json({ error: 'prompt required' });
   try {;
-    const apiKey = process.env.OPENAI_API_KEY,;
+    const apiKey = process.env.OPENAI_API_KEY;
     if (apiKey) {;
-      const { OpenAI } = await import('openai'),;
-      const openai = new OpenAI({ apiKey }),;
+      const { OpenAI } = await import('openai');
+      const openai = new OpenAI({ apiKey });
       const resp = await openai.chat.completions.create({;
-        model: 'gpt-4o-mini',;
+        model: 'gpt-4o-mini';
         messages: [;
-          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },;
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' };
           { role: 'user', content: String(prompt) }
         ];
       });

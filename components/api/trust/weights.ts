@@ -1,13 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights',;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method === 'GET') {;
-    const current = await getTrustWeights(),;
+    const current = await getTrustWeights();
     return res.status(200).json({ current, defaults: getDefaultWeights() });
   }
 ;
   if (req.method === 'PUT') {;
-    const incoming = req.body || {},;
+    const incoming = req.body || {};
     const updated = await setTrustWeights(incoming);
     return res.status(200).json({ updated });
   }

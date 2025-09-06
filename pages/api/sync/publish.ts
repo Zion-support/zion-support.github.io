@@ -55,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const alreadyPropagated = payload.propagate === false,
 
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
-    const headers: Record<string string> = {},
+    const headers: Record<string, string> = {},
     const localBody = { ...event, propagate: false },
     const baseSignature = require("../../../utils/sync/signature"),
     const sig = baseSignature.signPayload(localBody),
@@ -72,27 +72,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             // ignore peer failure
 ;
   if (event.type === "proposal") {;
-    const votes = (event as any).payload?.votes,;
-    const providedRoot = event.merkleRoot,;
+    const votes = (event as any).payload?.votes;
+    const providedRoot = event.merkleRoot;
     if (!Array.isArray(votes) || !providedRoot) {;
       return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" });
     }
-    const computed = computeMerkleRootFromVotes(votes),;
+    const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {;
       return res.status(400).json({ error: "Merkle root mismatch" });
     }
   }
 ;
-  const entityId = getEntityId(event),;
-  const currentState = readState(),;
-  upsertEvent(currentState, event),;
-  writeState(currentState),;
-  const alreadyPropagated = payload.propagate === false,;
+  const entityId = getEntityId(event);
+  const currentState = readState();
+  upsertEvent(currentState, event);
+  writeState(currentState);
+  const alreadyPropagated = payload.propagate === false;
   if (!alreadyPropagated && currentState.config.peers.length > 0) {;
-    const headers: Record<string string> = {},;
-    const localBody = { ...event, propagate: false },;
-    const baseSignature = require("../../../utils/sync/signature"),;
-    const sig = baseSignature.signPayload(localBody),;
+    const headers: Record<string, string> = {};
+    const localBody = { ...event, propagate: false };
+    const baseSignature = require("../../../utils/sync/signature");
+    const sig = baseSignature.signPayload(localBody);
     if (sig) headers["x-zion-signature"] = sig;
     await Promise.all(;
       currentState.config.peers;

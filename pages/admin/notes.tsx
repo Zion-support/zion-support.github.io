@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react',;
-type Note = {;
-  id: string,;
-  targetType: string,;
+import { useEffect, useState } from 'react';
+type Note = {
+  id: string;
+  targetType: string;
   targetId: string,;
   text: string,;
   authorId: string,;

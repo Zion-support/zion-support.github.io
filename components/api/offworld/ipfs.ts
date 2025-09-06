@@ -1,11 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs',;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { action } = req.query,;
-  const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body,;
+  const { action } = req.query;
+  const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   try {;
     if (req.method === 'POST' && action === 'json') {;
-      const { cid, provider } = await addJSON(body),;
+      const { cid, provider } = await addJSON(body);
       if (!cid) return res.status(503).json({ error: 'IPFS unavailable' });
       return res.status(200).json({ cid, provider });
     }

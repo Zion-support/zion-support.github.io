@@ -1,18 +1,18 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { supabase } from '../../../utils/supabase/client',;
-import { NotificationItem, NotificationType } from '../../../utils/notifications',;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { supabase } from '../../../utils/supabase/client';
+import { NotificationItem, NotificationType } from '../../../utils/notifications';
 ;
 function getUserId(req:NextApiRequest):string {;
-  const cookie = req.headers.cookie || '',;
-  const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id=')),;
-  if (match) return decodeURIComponent(match.split('=')[1]),;
+  const cookie = req.headers.cookie || '';
+  const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match.split('=')[1]);
   return 'demo-user-1';
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const userId = getUserId(req),
-    const { filter = 'all', countOnly, limit = '50', offset = '0' } = req.query as Record<string string>,
+    const { filter = 'all', countOnly, limit = '50', offset = '0' } = req.query as Record<string, string>,
     // If countOnly, return unread count quickly
     if (countOnly === 'true') {_const { data, _error} = await supabase
         .from('notifications')

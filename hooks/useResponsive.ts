@@ -56,11 +56,11 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
   'resize', updateDimensions)}, []),
   return state},
 export default useResponsive,
-        "isDesktop": width >= 1024})},;
-    updateDimensions(),;
+        "isDesktop": width >= 1024})};
+    updateDimensions();
     window.addEventListener(;
-  'resize', updateDimensions),;
+  'resize', updateDimensions);
     return () => window.removeEventListener(;
-  'resize', updateDimensions)}, []),;
-  return state},;
+  'resize', updateDimensions)}, []);
+  return state};
 export default useResponsive;

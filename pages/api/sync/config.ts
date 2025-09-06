@@ -33,9 +33,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: "Method not allowed" })
-    if (typeof optIn === "boolean") state.config.optIn = optIn,;
-    if (typeof paused === "boolean") state.config.paused = paused,;
-    if (scope) state.config.scope = scope,;
+    if (typeof optIn === "boolean") state.config.optIn = optIn;
+    if (typeof paused === "boolean") state.config.paused = paused;
+    if (scope) state.config.scope = scope;
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId;
     writeState(state);
     return res.status(200).json({ config: state.config });

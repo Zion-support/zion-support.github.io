@@ -7,4 +7,4 @@ declare type BadgeVariant = ;
   | "outline";
   | "success";
   | "warning";
-  | "info",; // Additional type declaration for the badge variants declare type BadgeVariant = 
+  | "info"; // Additional type declaration for the badge variants declare type BadgeVariant = 

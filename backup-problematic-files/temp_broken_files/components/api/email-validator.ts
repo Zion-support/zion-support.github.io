@@ -80,16 +80,16 @@ export default async function handler(
     }
 ;
     const result:EmailValidationResult = {;
-      email,;
-      isValid:score >= 70,;
-      score:Math.max(0, score),;
-      suggestions,;
+      email;
+      isValid:score >= 70;
+      score:Math.max(0, score);
+      suggestions;
       details:{;
-        hasValidFormat,;
-        hasValidDomain,;
+        hasValidFormat;
+        hasValidDomain;
         hasValidMX:true, // Simplified for demo;
-        isDisposable,;
-        isRoleBased,;
+        isDisposable;
+        isRoleBased;
         isFreeProvider}
     },
 

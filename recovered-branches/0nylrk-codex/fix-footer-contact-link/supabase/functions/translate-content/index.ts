@@ -34,7 +34,7 @@ serve(async (req) => {
       systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
 ;
     // Prepare system prompt based on content type;
-    let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.",;
+    let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.";
     if (contentType === "job") {;
       systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology.";
     } else if (contentType === "profile") {;
@@ -42,10 +42,10 @@ serve(async (req) => {
     }
 ;
     // Create translations for each target language;
-    const translations = {},;
+    const translations = {};
     for (const targetLang of targetLanguages) {;
       if (targetLang === sourceLanguage) {;
-        translations[targetLang] = content,;
+        translations[targetLang] = content;
         continue;
       }
       
@@ -66,14 +66,14 @@ serve(async (req) => {
               
               ${content}
 ;
-              Only provide the translated text, no explanations or additional comments.`}],;
-          temperature: 0.3})}),;
+              Only provide the translated text, no explanations or additional comments.`}];
+          temperature: 0.3})});
       if (!response.ok) {;
-        const errorData = await response.json(),;
+        const errorData = await response.json();
         throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
       }
 ;
-      const data = await response.json(),;
+      const data = await response.json();
       translations[targetLang] = data.choices[0].message.content.trim();
     }
 
@@ -96,17 +96,17 @@ serve(async (req) => {
 ;
     return new Response(;
       JSON.stringify({;
-        translations}),;
+        translations});
       {;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
   } catch (error) {;
-    console.error("Error in translate-content function:", error),;
+    console.error("Error in translate-content function:", error);
     return new Response(;
       JSON.stringify({;
-        error: error.message}),;
+        error: error.message});
       {;
-        status: 500,;
+        status: 500;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
   }

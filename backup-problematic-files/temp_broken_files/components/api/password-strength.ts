@@ -1,19 +1,19 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
+import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 interface PasswordStrengthResult {;
-  password:string,;
-  strength:'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong',;
-  score:number,;
-  feedback:string[],;
+  password:string;
+  strength:'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
+  score:number;
+  feedback:string[];
   details:{;
-    length:number,;
-    hasUppercase:boolean,;
-    hasLowercase:boolean,;
-    hasNumbers:boolean,;
-    hasSymbols:boolean,;
-    hasCommonPatterns:boolean,;
+    length:number;
+    hasUppercase:boolean;
+    hasLowercase:boolean;
+    hasNumbers:boolean;
+    hasSymbols:boolean;
+    hasCommonPatterns:boolean;
     entropy:number;
-  },;
+  };
   suggestions:string[];
 }
 

@@ -220,31 +220,31 @@ export function useAuthOperations(
           title: "Oh no! Something went wrong.",
           description: error.message})
         return prevUser;
-      }),;
+      });
       toast({;
-        title: "Profile updated!",;
-        description: "Your profile has been successfully updated."}),;
+        title: "Profile updated!";
+        description: "Your profile has been successfully updated."});
       return { error: null }
     } catch (error) {;
-      console.error("Profile update failed:", error),;
+      console.error("Profile update failed:", error);
       toast({;
-        variant: "destructive",;
-        title: "Profile update failed",;
-        description: "There was an issue updating your profile. Please try again."}),;
+        variant: "destructive";
+        title: "Profile update failed";
+        description: "There was an issue updating your profile. Please try again."});
       return { error: "Failed to update profile." }
     } finally {;
       setIsLoading(false);
     }
-  },;
+  };
   const loginWithGoogle = async () => {;
-    setIsLoading(true),;
+    setIsLoading(true);
     try {;
       const { data, error } = await supabase.auth.signInWithOAuth({;
-        provider: "google"}),;
+        provider: "google"});
       if (error) {;
         toast({;
-          variant: "destructive",;
-          title: "Oh no! Something went wrong.",;
+          variant: "destructive";
+          title: "Oh no! Something went wrong.";
           description: error.message});
       }
     } finally {;
@@ -263,16 +263,16 @@ export function useAuthOperations(
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
-  },;
+  };
   const loginWithFacebook = async () => {;
-    setIsLoading(true),;
+    setIsLoading(true);
     try {;
       const { data, error } = await supabase.auth.signInWithOAuth({;
-        provider: "facebook"}),;
+        provider: "facebook"});
       if (error) {;
         toast({;
-          variant: "destructive",;
-          title: "Oh no! Something went wrong.",;
+          variant: "destructive";
+          title: "Oh no! Something went wrong.";
           description: error.message});
       }
     } finally {;
@@ -291,16 +291,16 @@ export function useAuthOperations(
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
-  },;
+  };
   const loginWithTwitter = async () => {;
-    setIsLoading(true),;
+    setIsLoading(true);
     try {;
       const { data, error } = await supabase.auth.signInWithOAuth({;
-        provider: "twitter"}),;
+        provider: "twitter"});
       if (error) {;
         toast({;
-          variant: "destructive",;
-          title: "Oh no! Something went wrong.",;
+          variant: "destructive";
+          title: "Oh no! Something went wrong.";
           description: error.message});
       }
     } finally {;
@@ -314,48 +314,48 @@ export function useAuthOperations(
       const ethereum = (window as any).ethereum,
       if (!ethereum) {
         throw new Error("Web3 wallet not found")
-  },;
+  };
   const loginWithWeb3 = async () => {;
-    setIsLoading(true),;
+    setIsLoading(true);
     try {;
-      const ethereum = (window as any).ethereum,;
+      const ethereum = (window as any).ethereum;
       if (!ethereum) {;
         throw new Error("Web3 wallet not found");
       }
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),;
-      const address = accounts[0],;
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const address = accounts[0];
       await ethereum.request({;
-        method: 'personal_sign',;
+        method: 'personal_sign';
         params: [address, address];
-      }),;
+      });
       // Fix: Create a proper UserProfile object;
       setUser({;
-        id: address,;
-        displayName: address,;
-        profileComplete: true,;
+        id: address;
+        displayName: address;
+        profileComplete: true;
         email: '', // Add required fields;
         userType: 'talent', // Default user type;
-        createdAt: new Date().toISOString(),;
+        createdAt: new Date().toISOString();
         updatedAt: new Date().toISOString();
-      } as UserProfile),;
+      } as UserProfile);
       toast({ title: 'Wallet connected', description: address });
     } catch (error: any) {;
       toast({;
-        variant: 'destructive',;
-        title: 'Web3 login failed',;
+        variant: 'destructive';
+        title: 'Web3 login failed';
         description: error?.message || 'Unable to connect wallet';
       });
     } finally {;
       setIsLoading(false);
     }
-  },;
+  };
   return {;
-    login,;
-    signup,;
-    logout,;
-    resetPassword,;
-    updateProfile,;
-    loginWithGoogle,;
+    login;
+    signup;
+    logout;
+    resetPassword;
+    updateProfile;
+    loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
     loginWithWeb3}
