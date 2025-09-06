@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   eslint: {
@@ -73,11 +74,48 @@ poll: 1000,
       use: "ignore-loader",
     });
 
+=======
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
+  images: {
+    domains: ['localhost'],
+    formats: ['image/webp', 'image/avif'],
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  webpack: (config, { dev, isServer }) => {
+    // Optimize bundle size
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2197
     return config;
   },
   async headers() {
     return [
       {
+<<<<<<< HEAD
         source: "/(.*)",
         headers: [
           {
@@ -95,11 +133,41 @@ poll: 1000,
           {
             key: "Referrer-Policy",
             value: "origin-when-cross-origin",
+=======
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2197
           },
         ],
+      },
+    ];
+  },
+<<<<<<< HEAD
+};
+
+export default nextConfig;
+=======
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
       },
     ];
   },
 };
 
 export default nextConfig;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2197

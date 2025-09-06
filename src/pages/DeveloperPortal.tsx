@@ -7,7 +7,7 @@ import {
   List,
   LucideIcon,
   Terminal,
-  Webhook,;
+  Webhook,
 } from 'lucide-react';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ApiKeysManager } from '@/components/developers/ApiKeysManager';
@@ -18,8 +18,9 @@ interface TabDefinition {
   id: string;
   label: string;
   icon: LucideIcon;
+}
 
-export function DeveloperPortal() {
+export default function DeveloperPortal() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>('documentation');
 
@@ -48,13 +49,15 @@ export function DeveloperPortal() {
         <div className='flex flex-wrap -mb-px'>
           {tabs.map(tab => {
             const Icon = tab.icon;
-            
-                onClick={() => setActiveTab(tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
                   activeTab === tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
-                onClick = {(,) => setActiveTab(tab.id),}
               >
                 <Icon size={16} className='mr-2' />
                 {tab.label}
@@ -73,35 +76,5 @@ export function DeveloperPortal() {
       </div>
     </div>
   );
-                onClick={() => setActiveTab(tab.id)}
-              >
-                <Icon size={16} className="mr-2" />
-                {tab.label}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-      
-      {/* Tab content */}
-      <div>
-        {activeTab === "documentation" && <ApiDocumentation />}
-        {activeTab === "api-keys" && <ApiKeysManager />}
-        {activeTab === "webhooks" && <WebhooksManager />}
-        {activeTab === "logs" && <ApiLogs />}
-      </div>
-    </div>
-  );
 }
 
-export default function ProtectedDeveloperPortal() {
-  return (
-    <ProtectedRoute>
-      <DeveloperPortal />
-    </ProtectedRoute>
-  );
-}
-}
-  );
-}
-;

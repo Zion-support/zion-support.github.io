@@ -1,27 +1,25 @@
 import { logInfo } from '@/utils/productionLogger';
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
     id: "getting-hired",
     name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.";
+    description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
     icon: "Briefcase"
-  };
+  },
   "project-help": {
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
     icon: "MessageSquare"
-  };
+  },
   "ai-tools": {
     id: "ai-tools",
     name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.";
+    description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,
     icon: "Code"
   };
