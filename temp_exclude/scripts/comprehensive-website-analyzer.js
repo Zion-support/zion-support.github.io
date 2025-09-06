@@ -698,10 +698,9 @@ class ComprehensiveWebsiteAnalyzer {;
           { "action": 'Create: blog sectio,n, "priority": ';
   medium' }, ',
 
-    <<<<<<< HEAD
-
-          { "action": 'Add: case studie,s, "priority": ';
-  medium' }']      })}
+          { "action": 'Add: case studies', "priority": 'medium' }
+        ])
+      }
     // "Check": for missing essential pages;
     const essentialPages = ['/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/sitemap', '';/contact', '';/about'    ]';
     const missingEssential = essentialPages.filter(

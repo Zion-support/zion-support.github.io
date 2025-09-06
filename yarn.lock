@@ -23,26 +23,12 @@
     "@csstools/css-tokenizer" "^3.0.3"
     lru-cache "^10.4.3"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
-=======
-<<<<<<< HEAD
-"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
-=======
 "@assemblyscript/loader@^0.9.4":
   version "0.9.4"
   resolved "https://registry.npmjs.org/@assemblyscript/loader/-/loader-0.9.4.tgz"
   integrity sha512-HazVq9zwTVwGmqdwYzu7WyQ6FQVZ7SwET0KKQuKm55jD0IfUpZgN0OPIiZG3zV1iSrVYcN0bdwLRXI/VNCYsUA==
 
-"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.27.1":
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 "@axe-core/cli@^4.10.2":
   version "4.10.2"
   resolved "https://registry.npmjs.org/@axe-core/cli/-/cli-4.10.2.tgz"
