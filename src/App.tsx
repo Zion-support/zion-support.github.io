@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Button from './components/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
@@ -7,6 +8,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorBoundary from './components/ErrorBoundary';
+import { ThemeProvider } from './components/ThemeProvider';
+import SEO from './components/SEO';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Lazy load pages for better performance
 const About = React.lazy(() => import('./pages/About'));
@@ -65,24 +69,34 @@ const EnhancedHome = () => (
 
 function App() {
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
+    <HelmetProvider>
+      <ThemeProvider>
+        <ErrorBoundary>
+          <PerformanceOptimizer />
+          <SEO 
+            title="Zion Tech Group - AI & Technology Solutions"
+            description="Leading AI & Technology Solutions for a Smarter Future. Transform your business with cutting-edge AI, cybersecurity, and cloud infrastructure solutions."
+            keywords={['AI', 'technology', 'cybersecurity', 'cloud', 'solutions', 'innovation', 'Zion Tech Group']}
+          />
+          <Router>
+            <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+              <Header />
+              <main className="flex-1">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/contact" element={<Contact />} />
+                  </Routes>
+                </Suspense>
+              </main>
+              <Footer />
+            </div>
+          </Router>
+        </ErrorBoundary>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 

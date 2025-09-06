@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
+import ThemeToggle from './ThemeToggle';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,6 +32,7 @@ const Header: React.FC = () => {
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
             </Link>
+            <ThemeToggle />
             <Button variant="primary" size="small">
               Get Started
             </Button>
