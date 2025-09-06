@@ -1,5 +1,51 @@
 {
-  "timestamp": "2025-09-04T21:58:04.013Z",
-  "metrics": {},
-  "recommendations": []
+  "timestamp": "2025-09-06T20:18:43.685Z",
+  "duration": "7s",
+  "metrics": [
+    {
+      "name": "Build Time",
+      "value": 6498,
+      "unit": "ms",
+      "timestamp": "2025-09-06T20:18:43.676Z"
+    },
+    {
+      "name": "Bundle Size",
+      "value": 1251185,
+      "unit": "bytes",
+      "displayValue": "1222KB (1.19MB)",
+      "timestamp": "2025-09-06T20:18:43.677Z"
+    },
+    {
+      "name": "Memory Usage",
+      "value": 4628160,
+      "unit": "bytes",
+      "displayValue": "4MB",
+      "timestamp": "2025-09-06T20:18:43.678Z"
+    },
+    {
+      "name": "Source Files",
+      "value": 563,
+      "unit": "files",
+      "timestamp": "2025-09-06T20:18:43.684Z"
+    },
+    {
+      "name": "Dependencies",
+      "value": 95,
+      "unit": "packages",
+      "timestamp": "2025-09-06T20:18:43.684Z"
+    },
+    {
+      "name": "Dev Dependencies",
+      "value": 49,
+      "unit": "packages",
+      "timestamp": "2025-09-06T20:18:43.684Z"
+    }
+  ],
+  "summary": {
+    "totalMetrics": 6,
+    "buildTime": 6498,
+    "bundleSize": "1222KB (1.19MB)",
+    "memoryUsage": "4MB",
+    "fileCount": 563
+  }
 }

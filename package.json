@@ -257,6 +257,10 @@
     "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
+    "automation:enhanced": "node scripts/enhanced-automation-suite.cjs",
+    "automation:performance": "node scripts/performance-monitor.cjs",
+    "automation:security": "node scripts/security-audit.cjs",
+    "automation:all": "npm run automation:enhanced && npm run automation:performance && npm run automation:security",
     "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
   },
   "pm2": {
