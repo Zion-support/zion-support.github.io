@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 import { Metadata } from 'next';
@@ -253,6 +254,13 @@ export default function HomePage() {
           Get Started Today
         </Link>
       </section>
+=======
+export default function Home() {
+  return (
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>AI, Micro SaaS, and IT Services</p>
+>>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8
     </div>
-  );
+  )
 }
