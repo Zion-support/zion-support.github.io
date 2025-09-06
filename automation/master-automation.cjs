@@ -240,7 +240,7 @@ if (require.main === module) {
           process.exit(1);
         });
       break;
-    default: console.log('Usage: node master-automation.cjs [start|status]'), process.exit(1),
+    default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
   }
 }
 

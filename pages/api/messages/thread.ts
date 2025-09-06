@@ -15,16 +15,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ conversation, messages })
   } else if (req.method === 'POST') {
     const { conversationId, recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body || {};
-    if (!recipientId || !body) return res.status($1).json({$2});
+    if (!recipientId || !body) return res.status(400).json({ error: 'Missing required fields' });
     const { conversation, message } = sendMessage({
-      conversationId;
+      conversationId,
       senderId: user.id,
       recipientId,
-    body,
+      body,
       linkUrl,
-    attachmentBase64,
-      attachmentName;
-      context});
+      attachmentBase64,
+      attachmentName,
+      context
+    });
     res.status(200).json({ conversation, message })
   } else {
     res.status(405).json({ error: 'Method not allowed' })

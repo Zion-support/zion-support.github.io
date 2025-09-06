@@ -21,19 +21,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     if (req.method === 'POST') {
       const { userId = 'demo-user', courseId, lessonId, percent } = req.body || {};
-      if (!courseId) return res.status($1).json({$2});
-      const user = users[userId] || { userId; name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },
-      const courseProgress = user.progress[courseId] || { completedLessons: [], percent: 0, completed: false },
+      if (!courseId) return res.status(400).json({ error: 'Course ID required' });
+      const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
+      const courseProgress = user.progress[courseId] || { completedLessons: [], percent: 0, completed: false };
       if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
-        courseProgress.completedLessons.push(lessonId)
+        courseProgress.completedLessons.push(lessonId);
       }
       if (typeof percent === 'number') {
-        courseProgress.percent = Math.max(courseProgress.percent, percent)
+        courseProgress.percent = Math.max(courseProgress.percent, percent);
       }
       user.progress[courseId] = courseProgress;
       users[userId] = user;
       writeUsers(users);
-      return res.status(200).json({ ok: true, progress: courseProgress })
+      return res.status(200).json({ ok: true, progress: courseProgress });
     }
 
     res.setHeader('AllowGET, POST');

@@ -21,19 +21,19 @@ function save(db: Record<string, KycProfile>) {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).json({$2});
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { userId } = req.body as { userId?: string };
-  if (!userId) return res.status($1).json({$2});
+  if (!userId) return res.status(400).json({ error: 'User ID required' });
   const db = load();
   const profile = db[userId];
-  if (!profile) return res.status($1).json({$2});
+  if (!profile) return res.status(404).json({ error: 'Profile not found' });
   const validation = validateKycSubmission(profile);
-  if (!validation.ok) return res.status($1).json({$2});
+  if (!validation.ok) return res.status(400).json({ error: 'Invalid profile data' });
   // Simple AML check
   const aml = getAmlProvider();
   const amlResult = profile.role === 'enterprise'
-    ? await aml.checkBusiness({ businessName: profile.businessName || ''; country: profile.country })
-    : await aml.checkPerson({ fullLegalName: profile.fullLegalName || '', country: profile.country, dob: profile.dateOfBirth }),
+    ? await aml.checkBusiness({ businessName: profile.businessName || '', country: profile.country })
+    : await aml.checkPerson({ fullLegalName: profile.fullLegalName || '', country: profile.country, dob: profile.dateOfBirth });
   profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
   // Flags and risk scoring
   const flags = new Set<string>(profile.flags || []);
@@ -50,7 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   // Compute simple risk score
-  let riskScore = 10, // base low risk
+  let riskScore = 10; // base low risk
   if (flags.has('aml_alert')) riskScore += 50;
   if (flags.has('fraud_risk')) riskScore += 20;
   if (flags.has('duplicate_ip')) riskScore += 15;
