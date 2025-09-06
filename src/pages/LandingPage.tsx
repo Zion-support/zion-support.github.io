@@ -25,7 +25,7 @@ import {
   MessageSquare,
   Sparkles,
   BarChart3,
-  Smartphone,;
+  Smartphone,
 } from 'lucide-react';
 
 export default function LandingPage() {
@@ -147,3 +147,4 @@ export default function LandingPage() {
       <FloatingCTA />
     </div>
   );
+}
