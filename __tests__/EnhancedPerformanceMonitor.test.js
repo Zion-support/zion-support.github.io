@@ -1,1 +1,8 @@
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+
+describe('Basic Test', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});

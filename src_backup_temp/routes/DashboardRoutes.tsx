@@ -2,14 +2,6 @@ import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-// Lazy load dashboard pages;
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ';
 // Lazy load dashboard pages';';
 const Dashboard = lazy(() => import('../pages/Dashboard'));';';
@@ -21,7 +13,6 @@ const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));';';
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));';';
 ;
 // Lazy load dashboard pages;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 // Lazy load dashboard pages
 const Dashboard = lazy(() => import('../pages/Dashboard'));
 const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
@@ -31,12 +22,6 @@ const Analytics = lazy(() => import('../pages/Analytics'));
 const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 const "DashboardRoutes": "React.FC = () => {;
   return (<Suspense fallback={<LoadingSpinner  />"}>;
@@ -83,10 +68,6 @@ const "DashboardRoutes": "React.FC = () => {;
         } />;
       </Routes>;
     </Suspense>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const DashboardRoutes: React.FC = () => {
   return (<Suspense fallback={<LoadingSpinner  />}>
       <Routes>
@@ -135,19 +116,10 @@ const DashboardRoutes: React.FC = () => {
   );
 };
 export default DashboardRoutes;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </Route>
 </Route>
 </Route>';
 </Route>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 </Route>;
 </Route>;
@@ -157,13 +129,6 @@ export default DashboardRoutes;
 </Route>;
 </Route>;
 </Route>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </Route>
 </Route>
 </Route>
@@ -171,12 +136,4 @@ export default DashboardRoutes;
 </Route>
 </Route>
 </Route>
-<<<<<<< HEAD
 </Route>
-=======
-<<<<<<< HEAD
-</Route>
-=======
-</Route>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

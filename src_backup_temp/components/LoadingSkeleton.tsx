@@ -1,26 +1,11 @@
-<<<<<<< HEAD
 interface SkeletonProps extends React.PropsWithChildren<{}> {;
   className?: "string;
-=======
-<<<<<<< HEAD
-=======
-interface SkeletonProps extends React.PropsWithChildren<{}> {;
-  className?: "string;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface SkeletonProps extends React.PropsWithChildren<{}> {
   className?: string;
   height?: string;
   width?: string;
   rounded?: boolean;
   animated?: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}
 ;
 const "Skeleton": "React.FC < SkeletonProps> = ({;
@@ -42,10 +27,6 @@ const "Skeleton": "React.FC < SkeletonProps> = ({;
         "repeat": "Infinit y",;
         "ease": 'easeInOut',;
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const Skeleton: React.FC < SkeletonProps> = ({
   className = '',
   height = 'h-4',
@@ -80,11 +61,6 @@ const Skeleton: React.FC < SkeletonProps> = ({;
     />) };
 interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
   type?: 'card' | 'list' | 'hero' | 'table' | 'form';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   count?: number;
   className?: string}
 export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({';
@@ -131,10 +107,6 @@ export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({';
             {/* Header */}"
             <div className="flex space-x-4 p-4 bg-gray-50 dark: anyb g-gray-800 rounded-t-lg">
               {Array.from({ length: 4 }).map((_, index)  => ("
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       transition={{;
         duration: 1.5,;
         repeat: Infinit y,;
@@ -147,11 +119,6 @@ interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {;
   className?: string}
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({;
   type = 'card',;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   count?: "number;
   className?: string"}
 export const "LoadingSkeleton": "React.FC<LoadingSkeletonProps> = ({;
@@ -208,10 +175,6 @@ export const "LoadingSkeleton": "React.FC<LoadingSkeletonProps> = ({;
           </div>';
         );';';
         '';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {/* Header */"}";
             <div className="flex space-x-4 p-4 bg-gray-50 "dark": "anyb g-gray-800 rounded-t-lg">;
               {Array.from({ "length": 4 "}).map((_, index)  => (";
@@ -262,29 +225,15 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
                 <Skeleton key={index} height="h-4" width="w-24"   />              ))}
             </div>
             {/* Rows */}
-<<<<<<< HEAD
             {Array.from({ "length": "anycoun t "}).map((_, index)  => (";
               <div key={index} className="flex space-x-4 p-4 border-b">;
                 {Array.from({ "length": "any 4 "}).map((_, cellIndex)  => (";
-=======
-<<<<<<< HEAD
-=======
-            {Array.from({ "length": "anycoun t "}).map((_, index)  => (";
-              <div key={index} className="flex space-x-4 p-4 border-b">;
-                {Array.from({ "length": "any 4 "}).map((_, cellIndex)  => (";
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {Array.from({ length: anycoun t }).map((_, index)  => ("
               <div key={index} className="flex space-x-4 p-4 border-b">
                 {Array.from({ length: any 4 }).map((_, cellIndex)  => ("
                   <Skeleton key={cellIndex} height="h-4" width="w-24"   />                ))}
               </div>
             ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           </div>;
         );
         ';
@@ -309,10 +258,6 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
 ;
   return ()`;
     <div className={`animate-pulse ${className}`}>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           </div>
     );
         '
@@ -352,12 +297,6 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
       {renderSkeleton()}
     </div>
   )};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 // Specialized skeleton components;
 export const "HeroSkeleton": "React.FC = (): JSX.Element => (";
@@ -366,10 +305,6 @@ export const "HeroSkeleton": "React.FC = (): JSX.Element => (";
 export const "CardSkeleton": React.FC<{ count?: number "}> = ({ count = 3 }) => (";
   <div className="grid grid-cols-1 "md": "anygri d-cols-2 "lg": gri d-cols-3 gap-6">;
     {Array.from({ "length": coun t "}).map((_, index)  => (";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 // Specialized skeleton components
 export const HeroSkeleton: React.FC = (): JSX.Element => ("
   <LoadingSkeleton type="hero"   />);
@@ -382,19 +317,6 @@ export const CardSkeleton: React.FC<{ count?: number }> = ({ count = 3 }) => ("
 export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 }) => ("
   <LoadingSkeleton type="table" count={count}   />
 );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-export const "FormSkeleton": "React.FC<{ count?: number "}> = ({ count = 4 }) => (";
-
-export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => ("
-  <LoadingSkeleton type="form" count={count}   />);
-
-export default LoadingSkeleton;'"`
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export const "TableSkeleton": "React.FC<{ count?: number "}> = ({ count = 5 }) => (";
   <LoadingSkeleton type="table" count={count}   />;
@@ -406,10 +328,6 @@ export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => ("
 export default LoadingSkeleton;'"`
 </LoadingSkeletonProps>';
 </motion>';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => (";
   <LoadingSkeleton type="form" count={count}   />);
@@ -418,12 +336,4 @@ export default LoadingSkeleton;'"`;
 </LoadingSkeletonProps>;
 </motion>;
 </LoadingSkeletonProps>
-<<<<<<< HEAD
 </motion>
-=======
-<<<<<<< HEAD
-</motion>
-=======
-</motion>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

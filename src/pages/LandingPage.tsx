@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { Header } from '@/components/Header';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { TestimonialCarousel } from '@/components/TestimonialCarousel';
-import { FloatingCTA } from '@/components/FloatingCTA';
-import { HeroSection } from '@/components/HeroSection';
-import { CategoriesSection } from '@/components/CategoriesSection';
-import { BenefitsSection } from '@/components/BenefitsSection';
-import { HowItWorksSection } from '@/components/HowItWorksSection';
-import { WaitlistSection } from '@/components/WaitlistSection';
-import { BlogSection } from '@/components/BlogSection';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { FeaturedListingsSection } from '@/components/FeaturedListingsSection';
-import { FeaturesGuideSection } from '@/components/FeaturesGuideSection';
-import { SocialShareSection } from '@/components/SocialShareSection';
-import { useTranslation } from 'react-i18next';
-import { useLanguage } from '@/context/LanguageContext';
-<<<<<<< HEAD
-=======
 import { Header } from '@/components / Header';
 import { TrustedBySection } from '@/components / TrustedBySection';
 import { TestimonialCarousel } from '@/components / TestimonialCarousel';
@@ -39,7 +16,6 @@ import { FeaturesGuideSection } from '@/components / FeaturesGuideSection';
 import { SocialShareSection } from '@/components / SocialShareSection';
 import { use_translation } from 'react - i18next';
 import { use_language } from '@/context / LanguageContext';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
   ArrowRight
   Users
@@ -50,7 +26,6 @@ import {
   Sparkles
   BarChart3
   Smartphone
-=======
 import {;
   ArrowRight,;
   Users,;
@@ -61,56 +36,7 @@ import {;
   Sparkles,;
   BarChart3,;
   Smartphone,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
-<<<<<<< HEAD
-
-export default function LandingPage() {;
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
-<<<<<<< HEAD
-  // Tools and features showcase
-
-  const toolsFeatures = [
-    {
-      title: t('home.tool_ai_matcher')
-      description: t('home.tool_ai_matcher_desc')
-      icon: <Sparkles className='h-6 w-6 text-zion-cyan' />
-      link: '/match'
-    }
-    {
-      title: t('home.tool_talent')
-      description: t('home.tool_talent_desc')
-      icon: <Users className='h-6 w-6 text-zion-purple' />
-      link: '/talent'
-    }
-    {
-      title: t('home.tool_services')
-      description: t('home.tool_services_desc')
-      icon: <Zap className='h-6 w-6 text-zion-cyan' />
-      link: '/services'
-    }
-    {
-      title: t('home.tool_equipment')
-      description: t('home.tool_equipment_desc')
-      icon: <Settings className='h-6 w-6 text-zion-purple' />
-      link: '/equipment'
-    }
-    {
-      title: t('home.tool_analytics')
-      description: t('home.tool_analytics_desc')
-      icon: <BarChart3 className='h-6 w-6 text-zion-cyan' />
-      link: '/analytics'
-    }
-    {
-      title: 'Mobile App'
-      description:
-        'Take Zion with you on the go with our mobile app for iOS and Android'
-      icon: <Smartphone className='h-6 w-6 text-zion-purple' />
-      link: '/mobile-launch'
-    }
-=======
-
   // Tools and features showcase;
   const toolsFeatures = [;
     {;
@@ -150,8 +76,6 @@ export default function LandingPage() {;
       icon: <Smartphone className='h-6 w-6 text-zion-purple' />,;
       link: '/mobile-launch',;
     },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default /**
  * LandingPage - Function description
  */
@@ -198,39 +122,15 @@ function LandingPage() {
       icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />,
       link: '/mobile - launch',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
-<<<<<<< HEAD
-    <div className='min-h-screen bg-zion-blue text-white'>;
-      <SEO
-<<<<<<< HEAD
-        title={t('home.seo_title')}
-        description={t('home.seo_description')}
-        keywords={t('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'      />
-      <Header />
-      <HeroSection />
-      {/* Quick Access Tools Section */}
-      <section className='py-16 bg-zion-blue-dark'>
-        <div className='container mx-auto px-4'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4'>
-              {t('home.explore_tools')}
-            </h2>
-            <p className='text-zion-slate-light text-xl max-w-3xl mx-auto'>
-              {t('home.tools_description')}
-            </p>
-          </div>
-=======
         title={t('home && home.seo_title')}
         description={t('home && home.seo_description')}
         keywords={t('home && home.seo_keywords')}
         canonical='https://app && app.ziontechgroup.com/'      />;
       <Header />;
       <HeroSection />;
-
       {/* Quick Access Tools Section */}
       <section className='py-16 bg-zion-blue-dark'>;
         <div className='container mx-auto px-4'>;
@@ -242,8 +142,6 @@ function LandingPage() {
               {t('home && home.tools_description')}
             </p>;
           </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <div
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;
             {toolsFeatures && toolsFeatures.map((feature, index) => (;
@@ -271,7 +169,6 @@ function LandingPage() {
                   <span>{t("general && general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
               </Link>;
-=======
 import { Header } from "@/components/Header";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -292,12 +189,8 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
 import { Zap } from 'lucide-react';
-
-
 export default function LandingPage() { const { t  } = useTranslation(),
   const { isRTL  } = useLanguage(),
-
-  
   // Tools and features showcase
   const toolsFeatures = [
     {
@@ -332,8 +225,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
       link: "/mobile-launch"
     }
   ];
-
-
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO 
@@ -344,7 +235,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
       />
       <Header />
       <HeroSection />
-      
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -356,7 +246,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
               {t("home.tools_description")}
             </p>
           </div>
-          
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
               <Link 
@@ -374,66 +263,31 @@ export default function LandingPage() { const { t  } = useTranslation(),
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
                 </div>
               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-      <CategoriesSection />
-      <BenefitsSection />
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <CategoriesSection />
       <BenefitsSection />
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
-<<<<<<< HEAD
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-      <CategoriesSection />
-      <BenefitsSection />
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
-<<<<<<< HEAD
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
-      <FloatingCTA />
-    </div>
-=======
           </div>;
         </div>;
       </section>;
-
       <CategoriesSection />;
       <BenefitsSection />;
       <CategoriesSection />;
       <BenefitsSection />;
-
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
-
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
       <CategoriesSection />;
       <BenefitsSection />;
-
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
-
-=======
     <div className='min - h-screen bg - zion - blue text - white'>;
       <SEO;
         title={t ('home.seo_title')}
@@ -497,36 +351,18 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <BenefitsSection />;
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <HowItWorksSection />;
       <FeaturedListingsSection />;
       <TestimonialCarousel />;
       <TrustedBySection />;
       <BlogSection />;
-<<<<<<< HEAD
-
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />      ;
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />;
-
-      <FloatingCTA />;
-    </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-}
-=======
-      
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
-      
       <WaitlistSection />
       <FloatingCTA />
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
       {/* Add social share section to encourage users to spread the word */}
@@ -534,4 +370,3 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <FloatingCTA />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

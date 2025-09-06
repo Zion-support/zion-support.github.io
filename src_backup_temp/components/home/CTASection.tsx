@@ -2,12 +2,6 @@ import React from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
 import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 const "CTASection": "React.FC = (): JSX.Element => {;
   const features = [;
@@ -25,10 +19,6 @@ const "CTASection": "React.FC = (): JSX.Element => {;
       "icon": "Calenda r",;
       "title": "Flexible Plans",;
       "description": "Scale up or down as your business grows";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const CTASection: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -305,13 +295,6 @@ const CTASection: React.FC = (): JSX.Element => {
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover: borde r-zion-cyan/40 transition-all duration-300 hover: shado w-lg hover: shado w-zion-cyan/20";
               initial = {;
   { opacity: 0,;
@@ -324,13 +307,6 @@ const CTASection: React.FC = (): JSX.Element => {
               transition = {;
   { duration: 0.6,;
   delay: 0.6 + index * 0.1;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
               viewport={{ once: tru e }}
               whileHover={{ y: -5 }}
@@ -343,20 +319,11 @@ const CTASection: React.FC = (): JSX.Element => {
           ))}
         </motion.div>
         {/* CTA Buttons */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <motion.div;
           className="flex flex-col "sm": "fle x-row gap-6 justify-center items-center";
           initial = {;
   { opacity: 0,;
   y: 3 0 ;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 }}
           whileInView = {;
@@ -403,16 +370,8 @@ const CTASection: React.FC = (): JSX.Element => {
           initial={{ "opacity": "0 "}}
           whileInView={{ "opacity": "1 "}}
           transition = {;
-<<<<<<< HEAD
   { duration: 1,;
   delay: 1 ;
-=======
-<<<<<<< HEAD
-=======
-  { duration: 1,;
-  delay: 1 ;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 }}
           viewport={{ once: tru e }}
@@ -476,18 +435,9 @@ const CTASection: React.FC = (): JSX.Element => {
   );
 };
 export default CTASection;}};
-<<<<<<< HEAD
 </motion>
 </motion>';
 </motion>;';;';
-=======
-<<<<<<< HEAD
-=======
-</motion>
-</motion>';
-</motion>;';;';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </motion>;
 </motion>;
 </motion>;
@@ -495,7 +445,6 @@ export default CTASection;}};
 </motion>;
 </motion>;
 </motion>;
-<<<<<<< HEAD
 </motion>
 </motion>
 </motion>
@@ -503,16 +452,3 @@ export default CTASection;}};
 </motion>
 </motion>
 </motion>
-=======
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-<<<<<<< HEAD
-</motion>
-=======
-</motion>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-
-export const real2027Q3Additions = [
-  {
-<<<<<<< HEAD
-    id: 'it-asset-discovery-agent'
-    name: 'IT Asset Discovery Agent'
-    tagline: 'Agentless network-wide discovery and enrichment'
-    price: '$149'
-    period: '/month'
-    description:
-      'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.'
-      'Agentless subnet scanning and SaaS discovery'
-      'OS, version, and CVE enrichment'
-      'CMDB, ServiceNow, and Jira export'
-      'Change detection and drift alerts'
-    ]
-    category: 'Enterprise IT'
-    link: '/it-asset-discovery-agent'
-    realService: true
-=======
-    id: 'it-asset-discovery-agent', name: 'IT Asset Discovery Agent',
+id: 'it-asset-discovery-agent', name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network-wide discovery and enrichment', price: '$149',
     period: '/month',
     description: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
@@ -28,7 +7,6 @@ export const real2027Q3Additions = [
     ];
     category: 'Enterprise IT', link: '/it-asset-discovery-agent',
     realService: true,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'
   }
   {
@@ -343,11 +321,6 @@ export const real2027Q3Additions = [
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
@@ -680,4 +653,3 @@ export const real2027Q3Additions = [;
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

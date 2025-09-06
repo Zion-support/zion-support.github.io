@@ -26,10 +26,6 @@ export default function ProductCard("props": "any) {;
           Product information unavailable.;
         </p>;
       </div>;
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   if (!product || 
       typeof product.id !== "string" || 
       typeof product.title !== "string" || 

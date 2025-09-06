@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-
-import useSWR from 'swr';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import Link from 'next/link';
-<<<<<<< HEAD
-const fetcher = (url: string) => fetch(url).then(r => r.json())
-=======
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function DisputesIndexPage() {
   const { data } = useSWR('/api/disputes', fetcher)
   const disputes = data?.disputes |[]
-
-=======
 import useSWR from 'swr',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 import Link from 'next / link',
@@ -23,7 +12,6 @@ export default /**
 function DisputesIndexPage() {
   const { data } = useSWR ('/api / disputes', fetcher),
   const disputes = data?.disputes || [],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <EnhancedLayout>;
       <div className="max - w-4xl mx - auto">;
@@ -50,23 +38,7 @@ function DisputesIndexPage() {
                   <td className="px - 3 py - 2">{d.status}</td>;
                 </tr>))}
               {disputes.length === 0 && (
-<<<<<<< HEAD
-                <tr>
-                  <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </EnhancedLayout>
-  )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 <tr>;
                   <td col_span={4} className="px - 3 py - 6 text - center text - sm text - gray - 500">No disputes yet</td>;
                 </tr>)}
@@ -76,4 +48,3 @@ function DisputesIndexPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

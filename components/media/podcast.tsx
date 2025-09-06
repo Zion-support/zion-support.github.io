@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-useEffect ( () => {
-  const load = async () => {
-  try {
-<<<<<<< HEAD
-=======
- useEffect ( () => {;
+useEffect ( () => {;
   const load = async () => {;
   try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (loading) return <div>Loading episodes…</div>;
   return (
     <div className='space-y-6'>;
@@ -43,7 +34,6 @@ useEffect ( () => {
                   </a>;
                 )}
                 {ep && ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;
-
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -96,7 +86,6 @@ useEffect ( () => {
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
           </li>;
-=======
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = {
@@ -111,11 +100,9 @@ type EpisodeListItem = {
     mp4Url?: string
   }
 };
-
 export default function PodcastIndexPage() {
   const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-
   useEffect(() => {
     const load = async () => {
       try {
@@ -130,9 +117,7 @@ export default function PodcastIndexPage() {
     };
     load()
   }, []);
-
   if (loading) return <div>Loading episodes…</div>;
-
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -171,17 +156,11 @@ export default function PodcastIndexPage() {
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
             </div>
           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ))}
       </ul>;
     </div>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if (return <div > Loading episodes…</div>) {
   $2
@@ -274,4 +253,3 @@ if (return <div > Loading episodes…</div>) {
       </ul>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {
-<<<<<<< HEAD
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-  BarChart
-  DollarSign
-  LineChart
-  TrendingUp
-  Users
-} from 'lucide-react'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-
-import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { Star } from 'lucide-react'
-export function PartnerDashboard() {
-  // Placeholder data - would come from API in real implementation
-
-  const stats = {
-    totalReferrals: 42
-    pendingReferrals: 8
-    completedReferrals: 34
-    conversionRate: 18.5
-    totalRevenue: 850.0
-    pendingRevenue: 200.0
-=======
 import {;
   Card,;
   CardContent,;
@@ -50,62 +14,11 @@ import {;
   TrendingUp,;
   Users,;
 } from 'lucide-react';
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
-import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
-export function PartnerDashboard() {;
-  // Placeholder data - would come from API in real implementation;
-  const stats = {;
-    totalReferrals: 42,;
-    pendingReferrals: 8,;
-    completedReferrals: 34,;
-    conversionRate: 18 && 18.5,;
-    totalRevenue: 850 && 850.0,;
-    pendingRevenue: 200 && 200.0,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-  return (
-    <div className='space-y-6'>;
-      {/* Stats Overview */}
-<<<<<<< HEAD
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-        <Card className='bg-zion-blue-dark border-zion-blue-light'>
-          <CardHeader className='flex flex-row items-center justify-between pb-2'>
-            <CardTitle className='text-sm font-medium'>
-              Total Referrals
-            </CardTitle>
-            <Users className='h-4 w-4 text-zion-cyan' />
-          </CardHeader>
-          <CardContent>
-            <div className='text-2xl font-bold'>{stats.totalReferrals}</div>
-            <p className='text-xs text-zion-slate-light'>
-              {stats.completedReferrals} completed, {stats.pendingReferrals}{' '}
-              pending
-            </p>
-          </CardContent>
-        </Card>
-        <Card className='bg-zion-blue-dark border-zion-blue-light'>
-          <CardHeader className='flex flex-row items-center justify-between pb-2'>
-            <CardTitle className='text-sm font-medium'>
-              Conversion Rate
-            </CardTitle>
-            <TrendingUp className='h-4 w-4 text-zion-purple' />
-          </CardHeader>
-          <CardContent>
-            <div className='text-2xl font-bold'>{stats.conversionRate}%</div>
-            <p className='text-xs text-zion-slate-light'>              Of clicks that convert to sign-ups
-            </p>
-          </CardContent>
-        </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
-=======
-
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -116,8 +29,6 @@ export function PartnerDashboard() {
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   };
-
-
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -129,7 +40,6 @@ export function PartnerDashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <p className="text-xs text-zion-slate-light">
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
             </p>
@@ -147,20 +57,6 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-        <Card className='bg-zion-blue-dark border-zion-blue-light'>
-          <CardHeader className='flex flex-row items-center justify-between pb-2'>
-            <CardTitle className='text-sm font-medium'>
-              Total Earnings
-            </CardTitle>
-            <DollarSign className='h-4 w-4 text-green-500' />
-          </CardHeader>
-          <CardContent>
-            <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
-            <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout
-=======
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
@@ -169,20 +65,12 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
-<<<<<<< HEAD
-=======
               ${stats.pendingRevenue} pending payout
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </p>
           </CardContent>
         </Card>
       </div>
-<<<<<<< HEAD
-      {/* Performance Chart */}      {/* Performance Chart */}
-=======
-      
       {/* Performance Chart */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -193,34 +81,6 @@ export function PartnerDashboard() {
             <LineChart className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
             <p className="text-zion-slate-light">Detailed analytics will be available soon</p>
           </div>
-<<<<<<< HEAD
-        </CardContent>
-      </Card>
-      {/* Recent Referrals */}
-      <Card className='bg-zion-blue-dark border-zion-blue-light'>
-        <CardHeader>
-          <CardTitle>Performance Overview</CardTitle>
-          <CardDescription>
-            Track your referral performance over time
-          </CardDescription>
-        </CardHeader>
-        <CardContent className='flex justify-center items-center p-6'>
-          <div className='text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full'>
-            <LineChart className='h-16 w-16 mx-auto text-zion-slate-light mb-4' />
-            <p className='text-zion-slate-light'>
-              Detailed analytics will be available soon
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-      {/* Recent Referrals */}
-      <Card className='bg-zion-blue-dark border-zion-blue-light'>
-        <CardHeader className='flex flex-row items-center justify-between'>          <div>
-            <CardTitle>Recent Referrals</CardTitle>
-            <CardDescription>Your latest partner referrals</CardDescription>
-          </div>          </div>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </CardContent>
       </Card>
       {/* Recent Referrals */}
@@ -230,20 +90,6 @@ export function PartnerDashboard() {
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
-<<<<<<< HEAD
-          <Button variant='outline' size='sm'>
-            View All
-          </Button>
-        </CardHeader>
-        <CardContent>
-          <div className='text-center p-12 border border-dashed border-zion-blue-light rounded-lg'>
-            <Users className='h-16 w-16 mx-auto text-zion-slate-light mb-4' />
-            <p className='text-zion-slate-light mb-4'>No referrals yet</p>
-            <p className='text-xs text-zion-slate-light'>              Start sharing your referral links to earn rewards          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
-            <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
-            <p className="text-zion-slate-light mb-4">No referrals yet</p>
-            <p className="text-xs text-zion-slate-light">
-=======
           <Button variant="outline" size="sm">View All</Button>
         </CardHeader>
         <CardContent>
@@ -252,16 +98,11 @@ export function PartnerDashboard() {
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
               Start sharing your referral links to earn rewards
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </p>
           </div>
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-  )
-}
-=======
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
         <Card className='bg-zion-blue-dark border-zion-blue-light'>;
           <CardHeader className='flex flex-row items-center justify-between pb-2'>;
@@ -278,7 +119,6 @@ export function PartnerDashboard() {
             </p>;
           </CardContent>;
         </Card>;
-
         <Card className='bg-zion-blue-dark border-zion-blue-light'>;
           <CardHeader className='flex flex-row items-center justify-between pb-2'>;
             <CardTitle className='text-sm font-medium'>;
@@ -297,7 +137,6 @@ export function PartnerDashboard() {
             </p>;
           </CardContent>;
         </Card>;
-
         <Card className="bg-zion-blue-dark border-zion-blue-light">;
           <CardHeader className="flex flex-row items-center justify-between pb-2">;
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>;
@@ -310,7 +149,6 @@ export function PartnerDashboard() {
             </p>;
           </CardContent>;
         </Card>;
-
         <Card className='bg-zion-blue-dark border-zion-blue-light'>;
           <CardHeader className='flex flex-row items-center justify-between pb-2'>;
             <CardTitle className='text-sm font-medium'>;
@@ -333,7 +171,6 @@ export function PartnerDashboard() {
           </CardContent>;
         </Card>;
       </div>;
-
       {/* Performance Chart */}      {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -347,7 +184,6 @@ export function PartnerDashboard() {
           </div>;
         </CardContent>;
       </Card>;
-
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>;
         <CardHeader>;
@@ -365,7 +201,6 @@ export function PartnerDashboard() {
           </div>;
         </CardContent>;
       </Card>;
-
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>;
         <CardHeader className='flex flex-row items-center justify-between'>          <div>;
@@ -374,14 +209,12 @@ export function PartnerDashboard() {
           </div>          </div>;
         </CardContent>;
       </Card>;
-
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader className="flex flex-row items-center justify-between">;
           <div>;
             <CardTitle>Recent Referrals</CardTitle>;
             <CardDescription>Your latest partner referrals</CardDescription>;
-=======
   Card,
   CardContent,
   CardDescription,
@@ -528,22 +361,12 @@ function PartnerDashboard() {
           <div>;
             <CardTitle > Recent Referrals</CardTitle>;
             <CardDescription > Your latest partner referrals</CardDescription>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
           <Button variant='outline' size='sm'>;
             View All;
           </Button>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-          <div className='text-center p-12 border border-dashed border-zion-blue-light rounded-lg'>;
-            <Users className='h-16 w-16 mx-auto text-zion-slate-light mb-4' />;
-            <p className='text-zion-slate-light mb-4'>No referrals yet</p>;
-            <p className='text-xs text-zion-slate-light'>              Start sharing your referral links to earn rewards          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;
-            <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
-            <p className="text-zion-slate-light mb-4">No referrals yet</p>;
-            <p className="text-xs text-zion-slate-light">;
-=======
           <div className='text - center p - 12 border border - dashed border - zion - blue - light rounded - lg'>;
             <Users className='h - 16 w - 16 mx - auto text - zion - slate - light mb - 4' />;
             <p className='text - zion - slate - light mb - 4'>No referrals yet</p>;
@@ -551,21 +374,11 @@ function PartnerDashboard() {
             <Users className="h - 16 w - 16 mx - auto text - zion - slate - light mb - 4" />;
             <p className="text - zion - slate - light mb - 4">No referrals yet</p>;
             <p className="text - xs text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </p>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-    </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

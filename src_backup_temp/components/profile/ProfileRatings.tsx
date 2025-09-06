@@ -5,12 +5,6 @@ import { ReviewsList } from '@/components/reviews/ReviewsList';
 import { useReviews } from '@/hooks/useReviews';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export function ProfileRatings("props": "any) {;
   const { reviews", isLoading, fetchUserReviews, reportReview } = useReviews();
@@ -29,10 +23,6 @@ export function ProfileRatings("props": "any) {;
         }
       });
       ;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export function ProfileRatings(props: any) {
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({}
@@ -49,13 +39,6 @@ export function ProfileRatings(props: any) {
         }
       }
     );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       setRatingDistribution(distribution);
     }
   }, [reviews]);
@@ -65,21 +48,12 @@ export function ProfileRatings(props: any) {
   // "TODO": "Add dependencies if needed;
 "}, []);
     fetchUserReviews(userId);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   }, [userId, fetchUserReviews]); // Added fetchUserReviews;
   ;
   return (<div className="space-y-6">;
       <div className="flex flex-col "md": "fle x-row gap-6">;
         <div className=""md":w-1/3">;
           <ReviewStats averageRating={averageRating"}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   }, [userId, fetchUserReviews]); // Added fetchUserReviews
   return (
         <div className="space-y-6">
@@ -119,11 +93,6 @@ export function ProfileRatings(props: any) {
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               />;
             </TabsContent>;
           </Tabs>;
@@ -131,10 +100,6 @@ export function ProfileRatings(props: any) {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               />
             </TabsContent>
           </Tabs>

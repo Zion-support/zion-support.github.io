@@ -1,56 +1,17 @@
 import type { GetServerSideProps } from 'next';
-<<<<<<< HEAD
-import { FormEvent, useEffect, useState } from 'react';
-import type { Vendor } from '../utils/vendor-types';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-=======
 type Props = { vendor: Vendor | null },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function AgencyDashboardPage({ vendor }: Props) {
-=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
 export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!activeVendor)
-=======
-=======
-
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   if (!activeVendor);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='text-gray-500'>No vendor found. Please apply first.</div>;
     );  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
-<<<<<<< HEAD
-  async function saveProfile(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const updated = {
-<<<<<<< HEAD
-      ...activeVendor
-      name: String(formData.get('name') |activeVendor.name)
-      about: String(formData.get('about') |activeVendor.about |'')
-      servicesOffered: String(
-        formData.get('servicesOffered') |
-          activeVendor.servicesOffered?.join(',') |
-          ''
-      )
-        .split(',')
-        .map(s => s.trim())
-        .filter(Boolean)
-=======
-
   async function saveProfile(): any (e: FormEvent<HTMLFormElement>) {;
     e && e.preventDefault();
     const formData = new FormData(e && e.currentTarget);
@@ -66,43 +27,19 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
         .split(',');
         .map(s => s && s.trim());
         .filter(Boolean),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
     setActiveVendor(updated);  }
-<<<<<<< HEAD
-  function addPackage() {
-    if (!pkgTitle |!pkgPrice |!activeVendor) return;      name: String(formData.get('name') |activeVendor.name)
-      about: String(formData.get('about') |activeVendor.about |'')
-      servicesOffered: String(formData.get('servicesOffered') |activeVendor.servicesOffered?.join() |'')
-        .split()
-        .map(s => s.trim())
-=======
-
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;      name: String(formData && formData.get('name') || activeVendor && activeVendor.name),;
       about: String(formData && formData.get('about') || activeVendor && activeVendor.about || ''),;
       servicesOffered: String(formData && formData.get('servicesOffered') || activeVendor && activeVendor.servicesOffered?.join() || '');
         .split();
         .map(s => s && s.trim());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
   }
-<<<<<<< HEAD
-  function addPackage() {
-    if (!pkgTitle |!pkgPrice |!activeVendor) return;
-    const packages = [
-      ...(activeVendor.packages |[])
-      {
-        id: `pkg_${Date.now()}`
-        title: pkgTitle
-        description: pkgDesc
-        priceUsd: Number(pkgPrice)
-      }
-=======
-
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [;
@@ -113,7 +50,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
         description: pkgDesc,;
         priceUsd: Number(pkgPrice),;
       },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
@@ -129,16 +65,9 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             Pending Verification;
           </span>;
         )}
-<<<<<<< HEAD
-      </div>
-      <section className='space-y-4'>
-        <h2 className='text-lg font-medium'>Profile</h2>
-=======
       </div>;
-
       <section className='space-y-4'>;
         <h2 className='text-lg font-medium'>Profile</h2>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <form
           onSubmit={saveProfile}
           className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -154,11 +83,7 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             <label className='block text-sm mb-1'>About</label>;
             <textarea
               name='about'
-<<<<<<< HEAD
-              defaultValue={activeVendor.about |''}
-=======
               defaultValue={activeVendor && activeVendor.about || ''}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               rows={4}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />;
@@ -167,20 +92,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             <label className='block text-sm mb-1'>Services Offered</label>;
             <input
               name='servicesOffered'
-<<<<<<< HEAD
-              defaultValue={activeVendor.servicesOffered?.join(', ') |''}
-              className='w-full border rounded px-3 py-2 bg-transparent'
-            />
-          </div>
-          <div className='md:col-span-2'>
-            <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>
-              Save
-            </button>          </div>
-        </form>
-      </section>
-      <section className='space-y-3'>
-        <h2 className='text-lg font-medium'>Publish Packages</h2>
-=======
               defaultValue={activeVendor && activeVendor.servicesOffered?.join(', ') || ''}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />;
@@ -191,12 +102,9 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             </button>          </div>;
         </form>;
       </section>;
-
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
-=======
       ...activeVendor;
       name: String(formData.get('name') || activeVendor.name),
       about: String(formData.get('about') || activeVendor.about || ''),
@@ -207,7 +115,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
     // For MVP, update via direct API not implemented, keep local preview only
     setActiveVendor(updated)
   }
-
   function addPackage() {
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [...(activeVendor.packages || []), {
@@ -216,49 +123,16 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
       description: pkgDesc,
       priceUsd: Number(pkgPrice)}],
     setActiveVendor({ ...activeVendor, packages });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
   return (
-<<<<<<< HEAD
-    <div className="space-y-8">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Agency Dashboard</h1>
-        {!activeVendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}
-      </div>
-      <section className="space-y-4">
-        <h2 className="text-lg font-medium">Profile</h2>
-        <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm mb-1" htmlFor="input-Agency Name">Agency Name</label>
-            <input name="name" defaultValue={activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />
-          </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm mb-1" htmlFor="input-About">About</label>
-            <textarea name="about" defaultValue={activeVendor.about |''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
-          </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>
-            <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join() |''} className="w-full border rounded px-3 py-2 bg-transparent" />
-          </div>
-          <div className="md:col-span-2">
-            <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button>
-          </div>
-        </form>
-      </section>
-<<<<<<< HEAD
-      <section className='space-y-3'>
-        <h2 className='text-lg font-medium'>Publish Packages</h2>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-=======
     <div className="space-y-8">;
       <div className="flex items-center justify-between">;
         <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;
         {!activeVendor && activeVendor.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}
       </div>;
-
       <section className="space-y-4">;
         <h2 className="text-lg font-medium">Profile</h2>;
         <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -279,11 +153,9 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
           </div>;
         </form>;
       </section>;
-
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <div
               key={p && p.id}
               className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -316,13 +188,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             />;
             <button
               onClick={addPackage}
-<<<<<<< HEAD
-              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
-            >
-              Add
-            </button>          </div>
-=======
-
       <section className="space-y-3">
         <h2 className="text-lg font-medium">Publish Packages</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -333,7 +198,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
               <div className="mt-2 text-sm">${p.priceUsd}</div>
             </div>
           ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
       </section>
       <section className='space-y-3'>
@@ -343,74 +207,36 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
           <div className="flex gap-2">
             <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className="border rounded px-3 py-2 bg-transparent w-full" />
             <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>
-<<<<<<< HEAD
-        </div>
-      </section>
-      <section className='space-y-3'>
-        <h2 className='text-lg font-medium'>Project Pipeline</h2>
-        <Pipeline vendorId={activeVendor.id} />
-      </section>
-      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
-    </div>
-  );        <Pipeline vendorId={activeVendor.id} />
-=======
           </div>
         </div>
       </section>
-
       <section className="space-y-3">
         <h2 className="text-lg font-medium">Project Pipeline</h2>
         <Pipeline vendorId={activeVendor.id} />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </section>
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
-<<<<<<< HEAD
-    const res = await fetch(
-      `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
-    );
-    const data = await res.json();
-    setItems(data.items |[]);  }    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
-    const data = await res.json();
-    setItems(data.items |[])
-=======
     const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
     const data = await res.json();
     setItems(data.items || [])
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
-<<<<<<< HEAD
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ itemId, status })
-    });
-    fetchItems();
-  useEffect(() => {
-=======
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
               Add;
             </button>          </div>;
         </div>;
       </section>;
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ itemId, status })});
     fetchItems()
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">;
           <input placeholder="Title" value={pkgTitle} onChange={e => setPkgTitle(e && e.target.value)} className="border rounded px-3 py-2 bg-transparent" />;
@@ -420,22 +246,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>;
         </div>;
       </section>;
-
-<<<<<<< HEAD
-      <section className='space-y-3'>;
-        <h2 className='text-lg font-medium'>Project Pipeline</h2>;
-        <Pipeline vendorId={activeVendor && activeVendor.id} />;
-      </section>;
-
-      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>;
-    </div>;
-  );        <Pipeline vendorId={activeVendor && activeVendor.id} />;
-      </section>;
-
-      <div className="text-center text-xs text-gray-500">Powered by Zion</div>;
-    </div>;
-  );
-=======
   return (
     <div className="space-y-2">
       {items.length === 0 && <div className="text-sm text-gray-500">No leads yet.</div>}
@@ -457,12 +267,9 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       ))}
     </div>
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
-
 function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
   const [items, setItems] = useState<any[]>([]);
-
   async function fetchItems() {;
     const res = await fetch(;
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`;
@@ -472,7 +279,6 @@ function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
     const data = await res && res.json();
     setItems(data && data.items || []);
   }
-
   async function changeStatus(): any (itemId: string, status: string) {;
     await fetch('/api/vendors/update-pipeline', {;
       method: 'POST',;
@@ -480,9 +286,7 @@ function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
       body: JSON && JSON.stringify({ itemId, status }),;
     });
     fetchItems();
-
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     fetchItems();
   }, []);
   return (
@@ -504,7 +308,6 @@ function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
-=======
 import {FormEvent, useEffect, useState} from 'react';
 import type { Vendor } from '../utils / vendor - types';
 ;
@@ -775,7 +578,6 @@ function change_status() {
             default_value={item.status}
             on_change={e => change_status (item.id, e.target.value)}
             className='border rounded px - 2 py - 1 bg - transparent text - sm';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             <option value='lead'>Lead</option>;
             <option value='qualified'>Qualified</option>;
@@ -783,56 +585,26 @@ function change_status() {
             <option value='in_progress'>In Progress</option>;
             <option value='complete'>Complete</option>;
             <option value='lost'>Lost</option>          </select>;
-<<<<<<< HEAD
-        </div>;
-      ))}
-    </div>          <select defaultValue={item && item.status} onChange={e => changeStatus(item && item.id, e && e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">;
-=======
         </div>))}
     </div>          <select default_value={item.status} on_change={e => change_status (item.id, e.target.value)} className="border rounded px - 2 py - 1 bg - transparent text - sm">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <option value="lead">Lead</option>;
             <option value="qualified">Qualified</option>;
             <option value="proposal">Proposal</option>;
             <option value="in_progress">In Progress</option>;
             <option value="complete">Complete</option>;
             <option value="lost">Lost</option>;
-<<<<<<< HEAD
-        </div>;
-      ))}
-    </div>;
-  );
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] |null; // tie to auth later
-  return { props: { vendor } }
-<<<<<<< HEAD
-};  )
-}
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] |null, // tie to auth later
-=======
-
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } };
 };  );
 }
-
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null, // tie to auth later;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return { props: { vendor } }
 }
-
-=======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         </div>))}
     </div>);
 ;
@@ -848,4 +620,3 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
   return { props: { vendor } }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

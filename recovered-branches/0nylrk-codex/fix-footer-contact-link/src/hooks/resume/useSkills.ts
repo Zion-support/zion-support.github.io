@@ -1,38 +1,7 @@
-<<<<<<< HEAD
-
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Skill  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useSkills() {
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [error, setError] = useState<string | null>(null);
-  const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to add skills')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-    try {
-      const { error } = await supabase
-        .from('resume_skills')
-        .insert({
-          resume_id: resumeId;
-<<<<<<< HEAD
-          name: skill.name;
-          proficiency: skill.proficiency;
-          category: skill.category
-          years_experience: skill.years_experience
-=======
-          name: skill && skill.name;
+name: skill && skill.name;
           proficiency: skill && skill.proficiency;
           category: skill && skill.category,
           years_experience: skill && skill.years_experience
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });
       if (error) throw error;
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
@@ -66,9 +35,7 @@ export function useSkills() {
     isLoading;
     error;
     addSkill;
-
     deleteSkill
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
@@ -150,6 +117,5 @@ if (throw error) {
     error;
     add_skill;
     delete_skill;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

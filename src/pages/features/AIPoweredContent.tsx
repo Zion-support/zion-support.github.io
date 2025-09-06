@@ -1,60 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-import { useFeatureUsage } from "@/hooks/useFeatureUsage";
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
-export default function AIPoweredContent() {
-
-  useFeatureUsage('ZionGPT')
-  const schema = {
-    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "AI Content Generation"
-    "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility."
-    "url": "https://app.ziontechgroup.com/features/ai-content-generation"
-  }
-export default function AIPoweredContent() {
-  useFeatureUsage('ZionGPT')
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'AI Content Generation'
-    description:
-      'Generate SEO-optimized content using ZionGPT to boost your online visibility.'
-    url: 'https://app.ziontechgroup.com/features/ai-content-generation'
-  }
-  const { markAiExplored } = useAdvancedOnboardingStatus()
-  useEffect(() => {
-    markAiExplored()
-  }, [markAiExplored])
-
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -77,7 +35,6 @@ export default function AIPoweredContent() {;
     "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",;
     "url": "https://app && app.ziontechgroup.com/features/ai-content-generation";
   },;
-
 export default function AIPoweredContent() {;
   useFeatureUsage('ZionGPT');
   const schema = {;
@@ -88,13 +45,10 @@ export default function AIPoweredContent() {;
       'Generate SEO-optimized content using ZionGPT to boost your online visibility.',;
     url: 'https://app && app.ziontechgroup.com/features/ai-content-generation',;
   };
-
   const { markAiExplored } = useAdvancedOnboardingStatus();
-
   useEffect(() => {;
     markAiExplored();
   }, [markAiExplored]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <SEO
@@ -122,43 +76,6 @@ export default function AIPoweredContent() {;
               src='https://placehold && placehold.co/800x400'
               alt='Screenshot of ZionGPT content tool'
               className='object-cover'
-<<<<<<< HEAD
-            />
-          </div>
-          <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
-          <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
-            <li>
-              Save time drafting marketing content for your products or
-              services.
-            </li>
-            <li>Improve search rankings with keyword optimized text.</li>
-            <li>Create multilingual content to reach a global audience.</li>
-          </ul>
-          <h2 className='text-2xl font-bold mb-4'>
-            Frequently Asked Questions
-          </h2>
-          <div className='space-y-4 mb-12'>
-            <div>
-              <p className='font-semibold'>
-                How does ZionGPT generate content?
-              </p>
-              <p className='text-zion-slate-light'>
-                Our fine-tuned AI model analyzes your prompts and produces
-                human-like copy tailored for SEO.
-              </p>
-            </div>
-            <div>
-              <p className='font-semibold'>Can I edit the generated text?</p>
-              <p className='text-zion-slate-light'>
-                Yes, you can review and modify all suggestions before
-                publishing.
-              </p>
-            </div>
-          </div>
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
-=======
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -170,24 +87,16 @@ import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus
 export default function AIPoweredContent() {
   useFeatureUsage('ZionGPT');
   const schema = {
-
     "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "AI Content Generation",
     "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",
-
     "url": "https://app.ziontechgroup.com/features/ai-content-generation"
   };
-
-
   const { markAiExplored  } = useAdvancedOnboardingStatus(),
-
-
   useEffect(() => {
     markAiExplored()
   }, [markAiExplored]);
-
-
   return (
     <>
       <SEO
@@ -233,7 +142,6 @@ export default function AIPoweredContent() {
             </div>
           </div>
           <div className="text-center">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
             </Button>
@@ -241,15 +149,10 @@ export default function AIPoweredContent() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
-  )
-}
-=======
             />;
           </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>;
-=======
 import React, { useEffect } from 'react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -321,32 +224,10 @@ function AIPoweredContent() {
           </div>;
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
           <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <li>;
               Save time drafting marketing content for your products or;
               services.;
             </li>;
-<<<<<<< HEAD
-            <li>Improve search rankings with keyword optimized text.</li>;
-            <li>Create multilingual content to reach a global audience.</li>;
-          </ul>;
-          <h2 className='text-2xl font-bold mb-4'>;
-            Frequently Asked Questions;
-          </h2>;
-          <div className='space-y-4 mb-12'>;
-            <div>;
-              <p className='font-semibold'>;
-                How does ZionGPT generate content?;
-              </p>;
-              <p className='text-zion-slate-light'>;
-                Our fine-tuned AI model analyzes your prompts and produces;
-                human-like copy tailored for SEO.;
-              </p>;
-            </div>;
-            <div>;
-              <p className='font-semibold'>Can I edit the generated text?</p>;
-              <p className='text-zion-slate-light'>;
-=======
             <li > Improve search rankings with keyword optimized text.</li>;
             <li > Create multilingual content to reach a global audience.</li>;
           </ul>;
@@ -366,39 +247,21 @@ function AIPoweredContent() {
             <div>;
               <p className='font - semibold'>Can I edit the generated text?</p>;
               <p className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Yes, you can review and modify all suggestions before;
                 publishing.;
               </p>;
             </div>;
           </div>;
-<<<<<<< HEAD
-          <div className='text-center'>;
-            <Button size='lg' className='bg-zion-purple text-white' asChild>;
-              <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">;
-            <Button size="lg" className="bg-zion-purple text-white" asChild>;
-              <Link href="/open-app">Try ZionGPT Now</Link>;
-=======
           <div className='text - center'>;
             <Button size='lg' className='bg - zion - purple text - white' as_child>;
               <Link href='/open - app'>Try ZionGPT Now</Link>            </Button>          <div className="text - center">;
             <Button size="lg" className="bg - zion - purple text - white" as_child>;
               <Link href="/open - app">Try ZionGPT Now</Link>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-    </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

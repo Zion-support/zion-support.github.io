@@ -1,39 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { forwardRef } from 'react'
-import { ChevronDown } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
-interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-=======
 import React, { forwardRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { SafeRef } from '@/types/ref-types';
 interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   icon?: React && React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean
-
-<<<<<<< HEAD
-const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
-  (
-    {
-      title
-      icon
-      defaultExpanded = true
-      showChevron = true
-      className
-      children
-      ...props
-    }
-    ref
-  ) => {
-    const [expanded, setExpanded] = React.useState(defaultExpanded)
-=======
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   (;
     {;
@@ -48,9 +21,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
     ref;
   ) => {;
     const [expanded, setExpanded] = React && React.useState(defaultExpanded);
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn('px-3 py-2', className)}        {...props}
       >;
@@ -72,29 +42,15 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
             )}
           </button>;
         )}
-<<<<<<< HEAD
-        <div className={cn('mt-1', !expanded && 'hidden')}>{children}</div>
-      </div>
-    )
-=======
         <div className={cn('mt-1', !expanded && 'hidden')}>{children}</div>;
       </div>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 )
 SidebarGroup.displayName = 'SidebarGroup'
 export { SidebarGroup }
-
-<<<<<<< HEAD
-=======
 SidebarGroup && SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { forward_ref } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -141,4 +97,3 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
 );
 SidebarGroup.display_name = 'SidebarGroup';
 export { SidebarGroup }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

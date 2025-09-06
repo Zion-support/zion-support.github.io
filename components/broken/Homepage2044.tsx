@@ -1,102 +1,14 @@
-<<<<<<< HEAD
-
-</div>);
-//Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
-...revolutionary2044ITServices;
-...revolutionary2044AIServices ], []);
-<<<<<<< HEAD
-const featuredServices = useMemo ( () => allRevolutionaryServices && allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices]);
-], []);
-<<<<<<< HEAD
-}window.location.href = '/revolutionary-2044-pricing-showcase'
-}, []);
-const handleWatchDemo = useCallback ( () => {
-  //Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {
-}window.location.href = '/services'
-}, []);
-const handleServiceClick = useCallback ( (service: unknown) => {
-  //Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {
-}window.location.href = service.slug
-}, []);
-}, []);
-}
-//Loading state if (isLoading) {
-  return (<Layout> <div className="min-h-screen flex items-center justify-center" > <motion.div > <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" ></div> <p className="text-cyan-400 text-lg" >Loading Zion Tech Group...</p> </motion.div> </div> </Layout>)
-}return (<Layout> <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" aria-labelledby="hero-heading" > left: `$ {
-  Math.random () * 100
-}%`;
-top: `$ {
-  Math.random () * 100
-}%`
-}/>) )
-}</div> </div> {
-  /* Floating geometric shapes - optimized animations */
-}<motion.div /> </div> </div> </Layout>)
-}return (<> <Head> <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." /> <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" /> <meta name="author" content="Zion Tech Group" /> <meta name="robots" content="index, follow" /> {
-  /* Structured Data */
-}<script
-})
-}/> > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0 0 30px rgba (6, 182, 212, 0.5) ]" > Zion Tech Group </span> </motion.h1> <motion.p > Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion.p> <motion.div > <span className="relative z-10 flex items-center" > Experience the Future <ArrowRight className="w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300" /> </span> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" ></div> </button> <button > <span className="flex items-center" > Explore Services <Play className="w-7 h-7 ml-4" /> </span> </button> </motion.div> {
-  /* Enhanced Stats Section */
-}<motion.div > {
-  stats.map ( (stat, index) => (<motion.div key= {
-  stat.label
-}> <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </div> </motion.div>) )
-}</motion.div> {
-  /* Featured Service Showcase */
-}<motion.div > <div className="text-center mb-12" > <h2 className="text-4xl font-bold text-white mb-4" > Featured Revolutionary Services </h2> <p className="text-xl text-gray-400" > Experience the future of technology with our cutting-edge solutions </p> </div> key= {
-  category.id
-}onClick= {
-  () => handleCategoryChange (category.id)
-}className= {
-  `px-6 py-3 rounded-full border transition-all duration-300 flex items-center gap-2 $ {
-  selectedCategory === category.id ? `bg-gradient-to-r $ {
-  category.color
-}text-white border-transparent shadow-lg`: 'bg-gray-900/50 text-gray-300 border-gray-600 hover:border-gray-500 hover:text-white'
-}`
-}> </button>) )
-}</div> key= {
-  service.id
-}className= {
-  `relative group cursor-pointer $ {
-  index === currentServiceIndex ? 'scale-105' : 'scale-100'
-}transition-transform duration-500`
-}onClick= {
-  () => handleServiceClick (service)
-}whileHover= {
-  {
-  scale: 1.05
-}whileTap= {
-  {
-  scale: 0.95
-}initial= {
-  {
-  opacity: 0, y: 20
-}animate= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.5, delay: index * 0.1
-}> <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0 0 50px rgba (0, 0, 0, 0.5) ] hover:shadow-[0 0 80px rgba (6, 182, 212, 0.3) ] transition-all duration-300 group-hover:border-cyan-500/50" > <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" ></div> <div className="relative z-10" > <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0 0 30px rgba (6, 182, 212, 0.3) ] mb-6" > <feature.icon className="w-8 h-8 text-white" /> </div> </p> </div> </div> </motion.div>) )
-}</div> </div> </section> > <h2 className="text-5xl font-bold text-white mb-6" > Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" >Features</span> </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300" /> </a> </div> </div> </motion.div>) )
-}</div> </div> </section> <motion.div initial= {
-=======
-
 }window && window.location.href = '/revolutionary-2044-pricing-showcase' ;
 }, []);
 const handleWatchDemo = useCallback ( () => {;
   //Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {;
-
 }window && window.location.href = '/services' ;
 }, []);
 const handleServiceClick = useCallback ( (service: unknown) => {;
   //Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {;
-
 }window && window.location.href = service && service.slug ;
 }, []);
 }, []);
-
 };
 //Loading state if (isLoading) {;
   return (<Layout> <div className="min-h-screen flex items-center justify-center" > <motion && motion.div > <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" ></div> <p className="text-cyan-400 text-lg" >Loading Zion Tech Group...</p> </motion && motion.div> </div> </Layout>) ;
@@ -106,7 +18,6 @@ const handleServiceClick = useCallback ( (service: unknown) => {;
 top: `$ {;
   Math && Math.random () * 100 ;
 }%` ;
-
 }/>) ) ;
 }</div> </div> {;
   /* Floating geometric shapes - optimized animations */ ;
@@ -115,7 +26,6 @@ top: `$ {;
   /* Structured Data */ ;
 }<script
 }) 
-
 }/> > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0 0 30px rgba (6, 182, 212, 0 && 0.5) ]" > Zion Tech Group </span> </motion && motion.h1> <motion && motion.p > Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion && motion.p> <motion && motion.div > <span className="relative z-10 flex items-center" > Experience the Future <ArrowRight className="w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300" /> </span> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" ></div> </button> <button > <span className="flex items-center" > Explore Services <Play className="w-7 h-7 ml-4" /> </span> </button> </motion && motion.div> {;
   /* Enhanced Stats Section */ ;
 }<motion && motion.div > {;
@@ -146,27 +56,21 @@ top: `$ {;
 }whileHover= {;
   {;
   scale: 1 && 1.05 ;
-
 }whileTap= {;
   {;
   scale: 0 && 0.95 ;
-
 }initial= {;
   {;
   opacity: 0, y: 20 ;
-
 }animate= {;
   {;
   opacity: 1, y: 0 ;
-
 }transition= {;
   {;
   duration: 0 && 0.5, delay: index * 0 && 0.1 ;
-
 }> <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0 0 50px rgba (0, 0, 0, 0 && 0.5) ] hover:shadow-[0 0 80px rgba (6, 182, 212, 0 && 0.3) ] transition-all duration-300 group-hover:border-cyan-500/50" > <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" ></div> <div className="relative z-10" > <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0 0 30px rgba (6, 182, 212, 0 && 0.3) ] mb-6" > <feature && feature.icon className="w-8 h-8 text-white" /> </div> </p> </div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> > <h2 className="text-5xl font-bold text-white mb-6" > Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" >Features</span> </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion && motion.div> > Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300" /> </a> </div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -174,26 +78,13 @@ top: `$ {;
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
-  duration: 0.8
-}viewport= {
-  {
-  once: true
-}> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>)
-}
-=======
   duration: 0 && 0.8 
-
 }viewport= {
   {
   once: true 
-
 }> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) ;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2044;export default Homepage2044;
-
-=======
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
@@ -218,10 +109,8 @@ import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-
 const ServiceCard = lazy(() => import('./ServiceCard'));
 const TestimonialsSection = lazy(() => import('./TestimonialsSection'));
 const LiveChatWidget = lazy(() => import('./LiveChatWidget'));
-
 // Lazy load heavy components
 const ServiceCard = lazy(() => import('./ServiceCard'));
-
 // Loading skeleton component
 const LoadingSkeleton = () => (
   <div className="animate-pulse">
@@ -230,7 +119,6 @@ const LoadingSkeleton = () => (
     <div className="h-4 bg-gray-700 rounded w-3/4"></div>
   </div>
 );
-
 interface Service {
   id: string,
   name: string,
@@ -238,13 +126,10 @@ interface Service {
   type: string,
   category: string,
   pricing: {
-      
     starter: string
-  
     },
     slug: string
 }
-
 const Homepage2044: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -252,18 +137,15 @@ const Homepage2044: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
   const [isLoading, setIsLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
-  
   // Memoize expensive computations
   const allRevolutionaryServices = useMemo(() => [
     ...revolutionary2044AdvancedMicroSaas;
     ...revolutionary2044ITServices;
     ...revolutionary2044AIServices
   ], []);
-
   const featuredServices = useMemo(() => 
     allRevolutionaryServices.slice(0, 6), [allRevolutionaryServices]
   );
-
   const getFilteredServices = useCallback(() => {
     if (selectedCategory === 'all') return allRevolutionaryServices;
     return allRevolutionaryServices.filter(service => 
@@ -271,7 +153,6 @@ const Homepage2044: React.FC = () => {
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
     )
   }, [selectedCategory, allRevolutionaryServices]);
-
   const categories = useMemo(() => [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500' },
     { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-500 to-blue-500' },
@@ -280,7 +161,6 @@ const Homepage2044: React.FC = () => {
     { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-500 to-purple-500' },
     { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-500 to-teal-500' }
   ], []);
-
   const features = useMemo(() => [
     { icon: Brain, title: "AI Consciousness Evolution 2044", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-2044", color: "from-purple-500 to-pink-500" },
     { icon: Atom, title: "Quantum Neural Networks 2044", description: "Quantum-powered AI with consciousness integration", href: "/quantum-neural-network-platform-2044", color: "from-blue-500 to-cyan-500" },
@@ -289,14 +169,12 @@ const Homepage2044: React.FC = () => {
     { icon: Cpu, title: "Autonomous Business Intelligence 2044", description: "Fully autonomous AI business intelligence", href: "/ai-autonomous-business-intelligence-2044", color: "from-emerald-500 to-teal-500" },
     { icon: Database, title: "Quantum Cloud Infrastructure 2044", description: "Quantum-powered cloud with consciousness", href: "/quantum-cloud-infrastructure-2044", color: "from-yellow-500 to-orange-500" }
   ];
-
   const stats = useMemo(() => [
     { number: "2000+", label: "Revolutionary Services", icon: Star, description: "Cutting-edge solutions" },
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, description: "Reliable performance" },
     { number: "24/7", label: "AI Support Available", icon: Brain, description: "Always there for you" },
     { number: "200+", label: "Countries Served", icon: Globe, description: "Global reach" }
   ], []);
-
   const handleGetStarted = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -304,7 +182,6 @@ const Homepage2044: React.FC = () => {
     }
     window.location.href = '/revolutionary-2044-pricing-showcase'
   }, []);
-
   const handleWatchDemo = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -312,7 +189,6 @@ const Homepage2044: React.FC = () => {
     }
     window.location.href = '/services'
   }, []);
-
   const handleServiceClick = useCallback((service: any) => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -320,7 +196,6 @@ const Homepage2044: React.FC = () => {
     }
     window.location.href = service.slug
   }, []);
-
   const handleCategoryChange = useCallback((categoryId: string) => {
     setSelectedCategory(categoryId);
     // Add analytics tracking
@@ -328,25 +203,21 @@ const Homepage2044: React.FC = () => {
       (window as any).gtag('eventcategory_filter', { category: categoryId })
     }
   }, []);
-
   useEffect(() => {
     // Performance optimization: Use requestIdleCallback for non-critical operations
     const initializePage = () => {
       setIsVisible(true);
       setIsLoading(false)
     };
-
     if ('requestIdleCallback' in window) {
       (window as any).requestIdleCallback(initializePage)
     } else {
       setTimeout(initializePage, 100)
     }
-    
     // Auto-rotate featured services with better performance
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)
     }, 6000);
-    
     // Track mouse movement for parallax effects with throttling
     let ticking = false;
     const handleMouseMove = (e: MouseEvent) => {
@@ -358,7 +229,6 @@ const Homepage2044: React.FC = () => {
         ticking = true
       }
     };
-    
     window.addEventListener('mousemove', handleMouseMove, { passive: true }),
     // Track scroll progress for performance monitoring
     const handleScroll = () => {
@@ -367,7 +237,6 @@ const Homepage2044: React.FC = () => {
       const scrollPercent = (scrollTop / docHeight) * 100;
       setScrollProgress(scrollPercent)
     };
-    
     window.addEventListener('scroll', handleScroll, { passive: true }),
     return () => {
       clearInterval(interval);
@@ -375,7 +244,6 @@ const Homepage2044: React.FC = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, []);
-
   // Loading state
   if (isLoading) {
     return (
@@ -393,7 +261,6 @@ const Homepage2044: React.FC = () => {
       </Layout>
     );
   }
-
   return (
     <Layout>
       {/* Scroll Progress Indicator */}
@@ -404,7 +271,6 @@ const Homepage2044: React.FC = () => {
           transition={{ duration: 0.1 }}
         />
       </div>
-
       {/* Main Content */}
       <main className="relative z-10">
         {/* Hero Section */}
@@ -418,7 +284,6 @@ const Homepage2044: React.FC = () => {
             <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse shadow-[0_0_100px_rgba(6,182,212,0.5)]"></div>
             <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000 shadow-[0_0_100px_rgba(168,85,247,0.5)]"></div>
             <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500 shadow-[0_0_100px_rgba(16,185,129,0.5)]"></div>
-            
             {/* Optimized animated particles - reduced count for better performance */}
             <div className="absolute inset-0">
               {[...Array(10)].map((_, i) => (
@@ -442,7 +307,6 @@ const Homepage2044: React.FC = () => {
                 />
               ))}
             </div>
-
             {/* Grid pattern with neon glow */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute inset-0" style={{
@@ -450,7 +314,6 @@ const Homepage2044: React.FC = () => {
                 backgroundSize: '60px 60px'
               }}></div>
             </div>
-
             {/* Floating geometric shapes - optimized animations */}
             <motion.div
               className="absolute top-32 right-32 w-24 h-24 border border-cyan-400/30 rotate-45"
@@ -480,7 +343,6 @@ const Homepage2044: React.FC = () => {
       </Layout>
     )
   }
-
   return(<>
       <Head>
         <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title>
@@ -488,21 +350,18 @@ const Homepage2044: React.FC = () => {
         <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/" />
         <meta property="og:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
         <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://ziontechgroup.com/" />
         <meta property="twitter:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
         <meta property="twitter:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
         <meta property="twitter: image" content="https://ziontechgroup.com/og-image.jpg" />
-        
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -524,13 +383,11 @@ const Homepage2044: React.FC = () => {
             })
           }}
         />
-        
         {/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
       </Head>
-
             <motion.h1
               id="hero-heading"
               className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-10 leading-none"
@@ -542,7 +399,6 @@ const Homepage2044: React.FC = () => {
                 Zion Tech Group
               </span>
             </motion.h1>
-            
             <motion.p
               className="text-3xl md:text-4xl text-gray-300 mb-16 max-w-6xl mx-auto leading-relaxed font-light"
               initial={{ opacity: 0, y: 30 }}
@@ -551,7 +407,6 @@ const Homepage2044: React.FC = () => {
             >
               Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.
             </motion.p>
-
             <motion.div
               className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
               initial={{ opacity: 0, y: 30 }}
@@ -580,7 +435,6 @@ const Homepage2044: React.FC = () => {
                 </span>
               </button>
             </motion.div>
-
             {/* Enhanced Stats Section */}
             <motion.div
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-20"
@@ -613,7 +467,6 @@ const Homepage2044: React.FC = () => {
                 </motion.div>
               ))}
             </motion.div>
-
             {/* Featured Service Showcase */}
             <motion.div
               className="max-w-6xl mx-auto"
@@ -629,7 +482,6 @@ const Homepage2044: React.FC = () => {
                   Experience the future of technology with our cutting-edge solutions
                 </p>
               </div>
-
               {/* Category Filter */}
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 {categories.map((category) => (
@@ -647,7 +499,6 @@ const Homepage2044: React.FC = () => {
                   </button>
                 ))}
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {getFilteredServices().slice(0, 6).map((service, index) => (
                   <motion.div
@@ -664,16 +515,13 @@ const Homepage2044: React.FC = () => {
                   >
                     <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      
                       <div className="relative z-10">
                         <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)] mb-6">
                           <feature.icon className="w-8 h-8 text-white" />
                         </div>
-                        
                         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                           {feature.title}
                         </h3>
-                        
                         <p className="text-gray-400 text-sm leading-relaxed">
                           {feature.description}
                         </p>
@@ -684,7 +532,6 @@ const Homepage2044: React.FC = () => {
               </div>
             </div>
           </section>
-
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-transparent to-gray-900/50">
           <div className="max-w-7xl mx-auto">
@@ -702,7 +549,6 @@ const Homepage2044: React.FC = () => {
                 Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -716,20 +562,16 @@ const Homepage2044: React.FC = () => {
                 >
                   <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
                     <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-5 rounded-3xl group-hover:opacity-10 transition-opacity duration-300`}></div>
-                    
                     <div className="relative z-10">
                       <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
-                      
                       <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                         {feature.title}
                       </h3>
-                      
                       <p className="text-gray-400 text-sm leading-relaxed mb-6">
                         {feature.description}
                       </p>
-                      
                       <a
                         href={feature.href}
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:gap-2"
@@ -744,7 +586,6 @@ const Homepage2044: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Call to Action Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
@@ -760,7 +601,6 @@ const Homepage2044: React.FC = () => {
               <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <button 
                   className="group px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold rounded-3xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(168,85,247,0.4)] focus: outline-none focus:ring-4 focus:ring-purple-500/50 text-xl"
@@ -771,7 +611,6 @@ const Homepage2044: React.FC = () => {
                     <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
-                
                 <button 
                   className="px-12 py-6 border-2 border-purple-400 text-purple-400 font-bold rounded-3xl hover:bg-purple-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-400/50 text-xl"
                   onClick={handleWatchDemo}
@@ -789,10 +628,7 @@ const Homepage2044: React.FC = () => {
     </>
   )
 };
-
 export default Homepage2044;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 const featured_services = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices]);
 ], []);
 ;
@@ -894,4 +730,3 @@ top: `$ {
 }
 export default Homepage2044;export default Homepage2044;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

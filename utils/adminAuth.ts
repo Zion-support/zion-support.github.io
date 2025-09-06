@@ -1,49 +1,15 @@
-<<<<<<< HEAD
-import type { NextApiRequest } from 'next';
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface Session {
   user_id: string;
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
-<<<<<<< HEAD
-export function getSessionFromReq(req: NextApiRequest): Session | null {
-  // Mock implementation - replace with actual session logic
-  const authHeader = req.headers.authorization;
-  if (!authHeader) {
-    return null;
-  }
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { userId: 'admin-1', email: 'admin@zion.os', role: 'admin' }
-  }
-  return { userId: 'user-1', email: 'user@zion.os', role: 'user' }
-}
-export function isInternalAgentRequest(req: NextApiRequest): boolean {
-  // Check for internal agent headers or IPs
-  const userAgent = req.headers['user-agent'] |'';
-  const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
-  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
-}
-<<<<<<< HEAD
-
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true;
-};
-=======
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
 }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
-
 export interface AdminUser {
   id: string;
   email: string;
@@ -51,13 +17,11 @@ export interface AdminUser {
   permissions: string[];
   lastLogin: Date;
 }
-
 export interface AdminSession {
   user: AdminUser;
   token: string;
   expiresAt: number;
 }
-
 // Mock admin users - in production, this would come from a database
 const adminUsers: AdminUser[] = [
   {
@@ -75,7 +39,6 @@ const adminUsers: AdminUser[] = [
     lastLogin: new Date()
   }
 ];
-
 export function createAdminSession(user: AdminUser, token: string): AdminSession {
   return {
     user,
@@ -83,65 +46,51 @@ export function createAdminSession(user: AdminUser, token: string): AdminSession
     expiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
   };
 }
-
 export function isAdminAuthenticated(session: AdminSession | null): boolean {
   if (!session) return false;
   return Date.now() < session.expiresAt;
 }
-
 export function hasAdminPermission(session: AdminSession | null, permission: string): boolean {
   if (!session || !isAdminAuthenticated(session)) return false;
   return session.user.permissions.includes('*') || session.user.permissions.includes(permission);
 }
-
 export function isSuperAdmin(session: AdminSession | null): boolean {
   if (!session || !isAdminAuthenticated(session)) return false;
   return session.user.role === 'super_admin';
 }
-
 export function isModerator(session: AdminSession | null): boolean {
   if (!session || !isAdminAuthenticated(session)) return false;
   return ['admin', 'super_admin', 'moderator'].includes(session.user.role);
 }
-
 export function requireAdminAuth(handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) {
   return (req: NextApiRequest, res: NextApiResponse) => {
     const session = req.session as AdminSession;
-    
     if (!isAdminAuthenticated(session)) {
       return res.status(401).json({ error: 'Admin authentication required' });
     }
-
     return handler(req, res, session);
   };
 }
-
 export function requireSuperAdmin(handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) {
   return (req: NextApiRequest, res: NextApiResponse) => {
     const session = req.session as AdminSession;
-    
     if (!isSuperAdmin(session)) {
       return res.status(403).json({ error: 'Super admin access required' });
     }
-
     return handler(req, res, session);
   };
 }
-
 export function requirePermission(permission: string) {
   return (handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) => {
     return (req: NextApiRequest, res: NextApiResponse) => {
       const session = req.session as AdminSession;
-      
       if (!hasAdminPermission(session, permission)) {
         return res.status(403).json({ error: `Permission '${permission}' required` });
       }
-
       return handler(req, res, session);
     };
   };
 }
-
 export async function authenticateAdmin(email: string, password: string): Promise<AdminUser | null> {
   // Mock authentication - in production, this would verify credentials against a database
   const user = adminUsers.find(u => u.email === email);
@@ -151,12 +100,9 @@ export async function authenticateAdmin(email: string, password: string): Promis
   }
   return null;
 }
-
 export function getAdminUser(id: string): AdminUser | null {
   return adminUsers.find(u => u.id === id) || null;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function getSessionFromReq (req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const auth_header = req.headers.authorization;
@@ -186,4 +132,3 @@ export const is_admin = () =>: any {
   return true;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

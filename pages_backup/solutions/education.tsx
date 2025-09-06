@@ -1,30 +1,18 @@
-<<<<<<< HEAD:pages_backup/solutions/education.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -46,14 +34,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe,, CheckCircle,, ArrowRight} from 'lucide-react';
-
 const features = [;
   {;
     icon: GraduationCap,;
     title: 'Learning Management System',;
     description: 'Comprehensive LMS with course management and student tracking',;
     benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -66,30 +52,6 @@ const features = [;
     icon: GraduationCap,;
     title: 'Learning Management Systems,',;
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
-<<<<<<< HEAD:pages_backup/solutions/education.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  GraduationCap, 
-  Users, 
-  BookOpen, 
-  Laptop, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight ;
-} from 'lucide-react';
-
-const features = [
-  {
-    icon: GraduationCap,
-    title: 'Learning Management System',
-    description: 'Comprehensive LMS with course management and student tracking',
-    benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -102,65 +64,24 @@ const features = [;
     icon: GraduationCap,
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   },
   {}
-<<<<<<< HEAD
-    icon: Users,
-    title: 'Student Information Systems,',
-    description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
-=======
     icon: Users,
     title: 'Student Information Systems,',
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
   },
-=======
   },;
   {}
     icon: Users,;
     title: 'Student Information Systems,',;
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',;
   },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
   {}
     icon: BookOpen,;
     title: 'Digital Content Management,',;
     description: 'Platforms for creating, managing, and delivering educational content and resources.',;
   },;
   {}
-<<<<<<< HEAD:pages_backup/solutions/education.tsx
-    icon: Laptop,
-    title: 'Virtual Classrooms,',
-    description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
-  },
-  {}
-    icon: Globe,
-    title: 'Accessibility Solutions,',
-    description: 'ADA-compliant educational technology that ensures equal access for all students.'';
-    title: 'Learning Management Systems',
-    description: 'Comprehensive LMS platforms for online and blended learning'
-  },
-  {
-    icon: Users,
-    title: 'Student Information Systems',
-    description: 'Complete student data management and academic tracking'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-  },
-  {}
-    icon: BookOpen,
-<<<<<<< HEAD
-    title: 'Digital Content Management,',
-    description: 'Platforms for creating, managing, and delivering educational content and resources.',
-  },
-  {}
-    icon: Laptop,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     title: 'Digital Content Management',
     description: 'Interactive digital content creation and distribution'
   },
@@ -256,17 +177,12 @@ const benefits = [
   'Accessible learning for all students'
 ];
 export default function EducationSolutions() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
   }
 ];
-
 export default function EducationSolutionsPage() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     title: 'Virtual Classrooms,',
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },
@@ -301,7 +217,6 @@ export default function EducationSolutionsPage() {
     icon: Users,
     title: 'Teacher Resources',
     description: 'Professional development and teaching support tools'
-=======
     icon: Laptop,;
     title: 'Virtual Classrooms,',;
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'',;
@@ -337,7 +252,6 @@ export default function EducationSolutionsPage() {
     icon: Users,;
     title: 'Teacher Resources',;
     description: 'Professional development and teaching support tools';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
   }
 ;];
 const solutions = [;
@@ -414,22 +328,13 @@ const benefits = [;
   'Reduced operational costs',;
   'Accessible learning for all students';
 ];
-<<<<<<< HEAD:pages_backup/solutions/education.tsx
-export default function EducationSolutions() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 export default function EducationSolutions() {;
     title: 'Virtual Classrooms',;
     description: 'Online learning platform with video conferencing and collaboration',;
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording'];
   }
 ];
-
 export default function EducationSolutionsPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -437,13 +342,9 @@ export default function EducationSolutionsPage() {;
       keywords="education solutions, learning management system, student information system, educational technology, digital learning">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-<<<<<<< HEAD:pages_backup/solutions/education.tsx
-=======
-  
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className="bg-gradient-to-r from-indigo-600 to-blue-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -476,37 +377,21 @@ export default function EducationSolutionsPage() {;
                 Comprehensive solutions designed to enhance learning experiences
                 and streamline educational operations.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
-=======
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-indigo-600" />
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -514,7 +399,6 @@ export default function EducationSolutionsPage() {;
                     {feature.description}
                   </p>
                 </div>
-=======
     title: 'Virtual Classrooms,',;
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },;
@@ -552,7 +436,6 @@ export default function EducationSolutionsPage() {;
   }
 ;];
 const solutions = [;
-
   'Learning Management Systems (LMS)',',;
   'Student Information Systems (SIS)',',;
   'Virtual Classroom Platforms',',;
@@ -563,7 +446,6 @@ const solutions = [;
   'Online Course Creation Tools',',;
   'Student Analytics & Reporting',',;
   'Educational Data Integration'',;
-
   ];
 export default function EducationSolutionsPage() {;
   return (
@@ -630,7 +512,6 @@ export default function EducationSolutions() {;
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording'];
   }
 ];
-
 export default function EducationSolutionsPage() {;
   return (
     <Layout
@@ -828,7 +709,6 @@ export default function EducationSolutionsPage() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
               ))}
             </div>,;
           </div>;
@@ -933,35 +813,6 @@ export default function EducationSolutionsPage() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-<<<<<<< HEAD:pages_backup/solutions/education.tsx
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Transform Education?</h3>
-                <p className="text-lg mb-6">
-                  Let our education technology experts help you implement solutions
-                  that enhance learning and streamline operations.
-                </p>
-                <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Demo
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {benefit}
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -1047,7 +898,6 @@ export default function EducationSolutionsPage() {;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Education Guide;
-=======
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">;
@@ -1059,51 +909,11 @@ export default function EducationSolutionsPage() {;
                 <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
                   Schedule Demo;
                   <ArrowRight className="w-5 h-5 ml-2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
                 </button>;
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD:pages_backup/solutions/education.tsx
-      </div>;
-    </Layout>;
-        {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Transforming Education
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our education solutions help institutions improve learning outcomes,
-                  streamline operations, and enhance the educational experience for all stakeholders.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Transform Education?</h3>
-                <p className="text-lg mb-6">
-                  Let our education technology experts help you implement solutions
-                  that enhance learning and streamline operations.
-                </p>
-                <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Demo
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -1128,23 +938,12 @@ export default function EducationSolutionsPage() {;
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </Layout>
-=======
-<<<<<<< HEAD
-=======
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </>
-=======
     </Layout>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -1176,4 +975,3 @@ export default function EducationSolutionsPage() {;
     </>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx

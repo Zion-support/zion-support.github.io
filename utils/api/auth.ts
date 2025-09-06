@@ -1,44 +1,29 @@
-<<<<<<< HEAD
-import { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-export function getUserFromRequest(req: any): User | null {
-  // Mock implementation - in production, this would extract user from JWT or session
-<<<<<<< HEAD
-  const authHeader = req.headers.authorization;
-  if (!authHeader |!authHeader.startsWith('Bearer ')) {
-=======
-  const authHeader = req && req.headers.authorization;
+const authHeader = req && req.headers.authorization;
   if (!authHeader || !authHeader && authHeader.startsWith('Bearer ')) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return null;
   }
   return user;
 }
-=======
 // API authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../supabaseClient';
-
 export interface AuthenticatedUser {
   id: string;
   email: string;
   role?: string;
   talentSlug?: string;
 }
-
 export interface AuthResult {
   user: AuthenticatedUser | null;
   error?: string;
   statusCode?: number;
 }
-
 export async function authenticateRequest(
   req: NextApiRequest,
   res: NextApiResponse
 ): Promise<AuthResult> {
   try {
     const authHeader = req.headers.authorization;
-    
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
       return {
         user: null,
@@ -46,9 +31,7 @@ export async function authenticateRequest(
         statusCode: 401
       };
     }
-
     const token = authHeader.substring(7);
-    
     // For demo purposes, we'll use a simple token validation
     // In production, you would validate the JWT token here
     if (token === 'demo-token') {
@@ -61,12 +44,10 @@ export async function authenticateRequest(
         }
       };
     }
-
     // Try to validate with Supabase if available
     try {
       const supabase = getServerSupabase();
       const { data: { user }, error } = await supabase.auth.getUser(token);
-      
       if (error || !user) {
         return {
           user: null,
@@ -74,7 +55,6 @@ export async function authenticateRequest(
           statusCode: 401
         };
       }
-
       return {
         user: {
           id: user.id,
@@ -95,7 +75,6 @@ export async function authenticateRequest(
           }
         };
       }
-
       return {
         user: null,
         error: 'Authentication failed',
@@ -110,89 +89,71 @@ export async function authenticateRequest(
     };
   }
 }
-
 export function requireAuth(handler: (req: NextApiRequest, res: NextApiResponse, user: AuthenticatedUser) => Promise<void>) {
   return async (req: NextApiRequest, res: NextApiResponse) => {
     const { user, error, statusCode } = await authenticateRequest(req, res);
-    
     if (!user) {
       return res.status(statusCode || 401).json({ error: error || 'Unauthorized' });
     }
-
     return handler(req, res, user);
   };
 }
-
 export function requireRole(role: string) {
   return (handler: (req: NextApiRequest, res: NextApiResponse, user: AuthenticatedUser) => Promise<void>) => {
     return requireAuth(async (req, res, user) => {
       if (user.role !== role) {
         return res.status(403).json({ error: 'Insufficient permissions' });
       }
-      
       return handler(req, res, user);
     });
   };
 }
-
 export function requireAdmin(handler: (req: NextApiRequest, res: NextApiResponse, user: AuthenticatedUser) => Promise<void>) {
   return requireRole('admin')(handler);
 }
-
 export function requireTalent(handler: (req: NextApiRequest, res: NextApiResponse, user: AuthenticatedUser) => Promise<void>) {
   return requireAuth(async (req, res, user) => {
     if (!user.talentSlug) {
       return res.status(403).json({ error: 'Talent profile required' });
     }
-    
     return handler(req, res, user);
   });
 }
-
 export function getUserId(req: NextApiRequest): string | null {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return null;
   }
-  
   const token = authHeader.substring(7);
   if (token === 'demo-token') {
     return 'demo-user-123';
   }
-  
   return null;
 }
-
 export function getTalentSlug(req: NextApiRequest): string | null {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return null;
   }
-  
   const token = authHeader.substring(7);
   if (token === 'demo-token') {
     return 'demo-talent';
   }
-  
   return null;
 }
-
 export function isAuthenticated(req: NextApiRequest): boolean {
   const authHeader = req.headers.authorization;
   return !!(authHeader && authHeader.startsWith('Bearer '));
 }
-
 export function getAuthHeaders(req: NextApiRequest): Record<string, string> {
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return {};
   }
-  
   return {
     'Authorization': authHeader
   };
 }
-
 export function createAuthResponse(user: AuthenticatedUser, token?: string) {
   return {
     user: {
@@ -205,31 +166,25 @@ export function createAuthResponse(user: AuthenticatedUser, token?: string) {
     expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString() // 24 hours
   };
 }
-
 export function validateApiKey(apiKey: string): boolean {
   // In production, validate against your API key store
   const validKeys = ['demo-api-key', 'test-key-123'];
   return validKeys.includes(apiKey);
 }
-
 export function requireApiKey(handler: (req: NextApiRequest, res: NextApiResponse) => Promise<void>) {
   return async (req: NextApiRequest, res: NextApiResponse) => {
     const apiKey = req.headers['x-api-key'] as string;
-    
     if (!apiKey || !validateApiKey(apiKey)) {
       return res.status(401).json({ error: 'Invalid API key' });
     }
-    
     return handler(req, res);
   };
 }
-
 export function getRateLimitKey(req: NextApiRequest): string {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown';
   const userAgent = req.headers['user-agent'] || 'unknown';
   return `${ip}-${userAgent}`;
 }
-
 export function createRateLimitResponse(limit: number, remaining: number, resetTime: number) {
   return {
     'X-RateLimit-Limit': limit.toString(),
@@ -237,7 +192,6 @@ export function createRateLimitResponse(limit: number, remaining: number, resetT
     'X-RateLimit-Reset': resetTime.toString()
   };
 }
-
 export function sanitizeUser(user: AuthenticatedUser): Partial<AuthenticatedUser> {
   return {
     id: user.id,
@@ -246,7 +200,6 @@ export function sanitizeUser(user: AuthenticatedUser): Partial<AuthenticatedUser
     talentSlug: user.talentSlug
   };
 }
-
 export function createAuthError(message: string, statusCode: number = 401) {
   return {
     error: message,
@@ -254,7 +207,6 @@ export function createAuthError(message: string, statusCode: number = 401) {
     timestamp: new Date().toISOString()
   };
 }
-
 export function logAuthEvent(event: string, userId: string, details?: Record<string, any>) {
   console.log(`[AUTH] ${event}`, {
     userId,
@@ -262,7 +214,6 @@ export function logAuthEvent(event: string, userId: string, details?: Record<str
     details
   });
 }
-
 export function createSessionToken(user: AuthenticatedUser): string {
   // In production, create a proper JWT token
   const payload = {
@@ -273,20 +224,16 @@ export function createSessionToken(user: AuthenticatedUser): string {
     iat: Math.floor(Date.now() / 1000),
     exp: Math.floor(Date.now() / 1000) + (24 * 60 * 60) // 24 hours
   };
-  
   // For demo purposes, return a simple token
   return Buffer.from(JSON.stringify(payload)).toString('base64');
 }
-
 export function verifySessionToken(token: string): AuthenticatedUser | null {
   try {
     const payload = JSON.parse(Buffer.from(token, 'base64').toString());
-    
     // Check if token is expired
     if (payload.exp && payload.exp < Math.floor(Date.now() / 1000)) {
       return null;
     }
-    
     return {
       id: payload.id,
       email: payload.email,
@@ -297,8 +244,6 @@ export function verifySessionToken(token: string): AuthenticatedUser | null {
     return null;
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function getUserFromRequest (req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
   const auth_header = req.headers.authorization;
@@ -309,4 +254,3 @@ export function getUserFromRequest (req: any): User | null {
   }
   return user;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

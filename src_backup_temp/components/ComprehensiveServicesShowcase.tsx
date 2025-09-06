@@ -1,9 +1,4 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page(props: any) {';
 const ComprehensiveServicesShowcase: Reac t.FC = () => {;';';
   const [selectedCategory, setSelectedCategory] = useState<string>('all');';';
@@ -13,10 +8,6 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;';';
     ...EMERGING_TECH_SERVICES_2025';
   ];';';
   // Get unique categories'
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function Page("props": "any) {;
 const "ComprehensiveServicesShowcase": React.FC = () => {;
@@ -25,10 +16,6 @@ const "ComprehensiveServicesShowcase": React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services;
   const "allServices": "Servic e[] = [...EXPANDED_INNOVATIVE_SERVICES_2025",;
     ...EMERGING_TECH_SERVICES_2025;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export default function Page(props: any) {
 const ComprehensiveServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -37,31 +24,14 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
   const allServices: Servic e[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ];
-<<<<<<< HEAD
   // Get unique categories';
   // Get unique categories'
-=======
-<<<<<<< HEAD
-  // Get unique categories'
-  
-=======
-  // Get unique categories';
-  // Get unique categories'
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     return cats}, [allServices]) ;
   // Get unique innovation levels
     return levels}, [allServices]);  // Filter services
     return allServices.filter(service => {;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);';
   ';';
       case 'AI & Customer Experience':;';';
@@ -104,10 +74,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
 ;
       case 'AI & Customer Experience': ";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       case 'AI & Customer Experience':;
       case 'AI & Supply Chain':;
       case 'AI & Legal Tech':;
@@ -142,18 +108,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
         return <Zap className="h-6 w-6"   />;
       case 'Autonomous Vehicles & Fleet Management':"
         return <Rocket className="h-6 w-6"   />;
-<<<<<<< HEAD
       "default":";
         return <Star className="h-6 w-6"   />"};
   };
-=======
-<<<<<<< HEAD
-=======
-      "default":";
-        return <Star className="h-6 w-6"   />"};
-  };
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
   return (";
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">;
@@ -230,36 +187,19 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             <div className="flex items-center gap-2">";
               <span className="text-gray-700 font-medium">"Category": "</span>;
               <select;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
               >
                 {categories.map(category  => (';
                   <option key={category} value={category}>';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 value={selectedCategory"}
                 onChange={(e) => setSelectedCategory(e.target.value)}";
                 className="px-4 py-2 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent";
               >;
                 {categories.map(category  => (;
-<<<<<<< HEAD
                   <option key={category} value={category}>;
                     {category === 'all' ? 'All Categories' : category}
-=======
-<<<<<<< HEAD
-=======
-                  <option key={category} value={category}>;
-                    {category === 'all' ? 'All Categories' : category}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   <option key={category"} value={category}>;
                     {category === 'all' ? 'All Categories' : "category"}
                   </option>) ) }
@@ -269,36 +209,19 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             <div className="flex items-center gap-2">";
               <span className="text-gray-700 font-medium">"Innovation": "</span>;
               <select;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}"
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
               >
                 {innovationLevels.map(level  => (';
                   <option key={level} value={level}>';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 value={selectedInnovationLevel"}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}";
                 className="px-4 py-2 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-zion-cyan "focus": borde r-transparent";
               >;
                 {innovationLevels.map(level  => (;
-<<<<<<< HEAD
                   <option key={level} value={level}>;
                     {level === 'all' ? 'All Levels' : level}
-=======
-<<<<<<< HEAD
-=======
-                  <option key={level} value={level}>;
-                    {level === 'all' ? 'All Levels' : level}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   <option key={level"} value={level}>;
                     {level === 'all' ? 'All Levels' : "level"}
                   </option>) ) }
@@ -554,11 +477,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                           className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full"
                           {tag}
                         </span>) ) }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     </div>;
                   </div>;
                   {/* CTA Buttons */}";
@@ -578,10 +496,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               </motion.div>) ) "};
           </div> {filteredServices.length === 0 && (;";
             <div className="text-center py-16">;";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     </div>
                   </div>
                   {/* CTA Buttons */}"
@@ -602,28 +516,14 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
           </div> {filteredServices.length === 0 && (;"
             <div className="text-center py-16">;"
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <button;';
                 onClick={() => {;';';
                   setSelectedCategory('all');';';
                   setSelectedInnovationLevel('all');';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <button;
                 onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedInnovationLevel('all');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   setSearchTerm('')}}"                className="text-zion-cyan "hover": "tex t-zion-cyan-light font-medium";
               >;
                 Clear all filters;
@@ -650,10 +550,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg "hover": b g-white "hover": tex t-zion-blue transition-colors";
 ";
               <Phone className="mr-2 h-5 w-5"   />              Call Now;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   setSearchTerm('')}}"                className="text-zion-cyan hover: tex t-zion-cyan-light font-medium"
               >
                 Clear all filters
@@ -680,11 +576,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-zion-blue transition-colors"
 "
               <Phone className="mr-2 h-5 w-5"   />              Call Now
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </a>;
           </div>;
         </div>;
@@ -694,10 +585,6 @@ export default ComprehensiveServicesShowcase}}}}'"`
 </motion>
 </string>';
 </string>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <button;
                 onClick={() => {;
                   setSelectedCategory('all');
@@ -732,32 +619,15 @@ export default ComprehensiveServicesShowcase}}}}'"`
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>;) "};
 export default ComprehensiveServicesShowcase}}}}'"`;
 </motion>;
 </string>;
 </string>;
 </string>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>;) };
 export default ComprehensiveServicesShowcase}}}}'"`
 </motion>
 </string>
 </string>
-<<<<<<< HEAD
 </string>
-=======
-<<<<<<< HEAD
-</string>
-=======
-</string>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

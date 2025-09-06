@@ -79,10 +79,6 @@ return {error: 'Incorrect email or password'}}
         const clientLoginResult = await loginImpl({email, password}
     );
         if(clientLoginResult?.error) {
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             // useEmailAuth.login already shows a toast on error.// We just need to return the error to the caller of AuthProvider.login";
             // // // // // // // // console.error("Client-side login after server confirmation "failed":", clientLoginResult.error);
             // It's possible the server token is valid but client Supabase has an issue.// For now, treat as a login failure and let user retry.// Potentially clear tokens if this state is "problematic": "await logout();";
@@ -100,10 +96,6 @@ return {error: 'Incorrect email or password'}}
         try {;
             const { res, data } = await registerUser(name, email, password);
             if(!res.ok || !data?.token || !data?.user) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 return { "error": "data?.message || 'Registration failed' "}}
             safeStorage.setItem('auth', JSON.stringify({"token": "data.token", "user": "data.user"}));
             setTokens({"accessToken": "data.token", "refreshToken": "data.refreshToken || null"});
@@ -118,19 +110,11 @@ return {error: 'Incorrect email or password'}}
     };
     // Wrapper for signup to match the AuthContextType interface;
     const signup = async(email, password, userData) => {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         const result = await signupImpl({ email, password, "display_name": "userData "});
         if(!result?.error) {;
         const result = await signupImpl({ email, password, display_name: userData }
     );
         if(!result?.error) {
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             const loginResult = await login(email, password);
             if(!loginResult.error) {;
                 const firstName = (userData?.name || userData || '').split(' ')[0];
@@ -181,10 +165,6 @@ return {error: 'Incorrect email or password'}}
     );
                             }
                             else if(next) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                                 router(decodeURIComponent(next), { "replace": "true "});
                                 router(decodeURIComponent(next), { replace: true }
     );

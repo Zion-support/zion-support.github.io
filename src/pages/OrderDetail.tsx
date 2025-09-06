@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-
-import { useAuth } from '@/hooks/useAuth';
-<<<<<<< HEAD
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
-import { OrderTimeline } from '@/components/orders/OrderTimeline';
-<<<<<<< HEAD
-
-export default function OrderDetailPage() {
-=======
-=======
 import React, { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
 import { ArrowLeft, Package, CreditCard, MapPin, Clock, CheckCircle } from 'lucide-react';
@@ -21,7 +7,6 @@ import { Badge } from '@/components / ui / badge';
 import Link from 'next / link';
 import { use_auth } from '@/hooks / use_auth';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface OrderItem {
   id: string;
   name: string;
@@ -44,15 +29,6 @@ interface Order {
     zip_code: string;
     country: string;
   }
-<<<<<<< HEAD
-  paymentMethod: {
-    type: string;
-    last4: string;
-  }
-  trackingNumber?: string;
-}
-const getStatusColor = (status: string) => {
-=======
   payment_method: {
     type: string;
     last4: string;
@@ -60,7 +36,6 @@ const getStatusColor = (status: string) => {
   tracking_number?: string;
 }
 const getStatusColor = (status: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   switch (status) {
     case 'pending':;
       return 'bg - yellow - 100 text - yellow - 800';
@@ -76,12 +51,8 @@ const getStatusColor = (status: string) =>: any {
       return 'bg - gray - 100 text - gray - 800';
   }
 }
-<<<<<<< HEAD
-const getStatusIcon = (status: string) => {
-=======
 ;
 const getStatusIcon = (status: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   switch (status) {
     case 'delivered':;
       return <CheckCircle className="h - 4 w - 4" />;
@@ -93,23 +64,6 @@ const getStatusIcon = (status: string) =>: any {
       return <Clock className="h - 4 w - 4" />;
   }
 }
-<<<<<<< HEAD
-export default function OrderDetail() {
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-  const router = useRouter();
-  const { user } = useAuth();
-  const [order, setOrder] = useState<Order | null>(null);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    // Mock data - replace with actual API call
-    const mockOrder: Order = {
-      id: router.query.id as string |'1'
-      orderId: 'ORD-2024-001'
-      date: '2024-01-15'
-      status: 'shipped'
-      total: 299.99
-      items: [
-=======
 ;
 export default /**
  * OrderDetail - Function description
@@ -129,35 +83,17 @@ function OrderDetail() {
       status: 'shipped',
       total: 299.99,
       items: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
           id: '1'
           name: 'Premium Web Development Service'
           quantity: 1
           price: 299.99
         }
-<<<<<<< HEAD
-      ]
-      shippingAddress: {
-        name: 'John Doe'
-        street: '123 Main St'
-        city: 'New York'
-        state: 'NY'
-        zipCode: '10001'
-        country: 'USA'
-      }
-      paymentMethod: {
-        type: 'credit_card'
-        last4: '4242'
-      }
-      trackingNumber: 'TRK123456789'
-=======
 export default function OrderDetailPage() {;
   const router = useRouter();
   const { orderId } = router && router.query as { orderId?: string };
   const { user } = useAuth();
   const { data: order, isLoading } = useGetOrderQuery(orderId);
-
   const handleDownload = async () => {;
     if (!order) return;
     const blob = await generateInvoicePdf(order);
@@ -170,7 +106,6 @@ export default function OrderDetailPage() {;
     document && document.body.removeChild(link);
     URL && URL.revokeObjectURL(url);
   };
-
   const handleResend = async () => {;
     if (!order || !user?.email) return;
     try {;
@@ -184,33 +119,11 @@ export default function OrderDetailPage() {;
       toast({ title: 'Receipt sent!' });
     } catch (err) {;
       toast({ title: 'Failed to send receipt', variant: 'destructive' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     setOrder(mockOrder);
     setLoading(false);
   }, [router.query.id]);
   if (loading) {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const handleCopySummary = async () => {
-    if (!order) return;
-    const summary = [
-      `Order #${order.orderId}`,
-      `Date: ${new Date(order.date).toLocaleDateString()}`,
-      '',
-      'Items:',
-      ...order.items.map(
-        i => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`
-      ),
-      '',
-      `Total: $${order.total.toFixed(2)}`,
-      '',
-      'Shipping Address:',
-      order.shippingAddress.name,
-      order.shippingAddress.street,
-      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`,
-=======
   const handleCopySummary = async () => {;
     if (!order) return;
     const summary = [;
@@ -227,18 +140,10 @@ export default function OrderDetailPage() {;
       order && order.shippingAddress.name,;
       order && order.shippingAddress.street,;
       `${order && order.shippingAddress.city}, ${order && order.shippingAddress.state} ${order && order.shippingAddress.zip}`,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ].join('\n');
-
     await navigator && navigator.clipboard.writeText(summary);
     toast && toast.success('Order summary copied to clipboard');
   };
-
-<<<<<<< HEAD
-  if (isLoading || !order) {
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
       ],
       shipping_address: {
         name: 'John Doe',
@@ -263,7 +168,6 @@ export default function OrderDetailPage() {;
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <div className="container mx - auto px - 4 py - 8">;
         <div className="animate - pulse">;
@@ -275,48 +179,14 @@ if ( {) {
         </div>;
       </div>);
   }
-<<<<<<< HEAD
-  if (!order) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Order not found</h1>
-          <Link href="/orders">
-            <Button>
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to orders
-            </Button>
-          </Link>
-        </div>
-      </div>
-=======
   if (isLoading || !order) {;
     return (
       <div className='container max-w-3xl py-10'>;
         <Skeleton className='h-6 w-full' />;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
   }
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className='container max-w-3xl py-10 space-y-6'>
-      <h1 className='text-3xl font-bold'>Order #{order.orderId}</h1>
-
-      <div>
-        <h2 className='font-semibold mb-2'>Items</h2>
-        <ul className='space-y-1'>
-          {order.items.map((item, idx) => (
-            <li key={idx} className='flex justify-between'>
-              <span>
-                {item.name} x {item.quantity}
-              </span>
-              <span>${item.price.toFixed(2)}</span>
-            </li>
-          ))}
-        </ul>
-=======
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6">
         <Link href="/orders">
@@ -326,7 +196,6 @@ if ( {) {
           </Button>
         </Link>
         <h1 className="text-3xl font-bold">Order Details</h1>
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Order Summary */}
@@ -400,7 +269,6 @@ if ( {) {
             </CardContent>
           </Card>
         </div>
-=======
   // Check condition
 if ( {) {
   $2
@@ -500,7 +368,6 @@ if ( {) {
             </CardContent>;
           </Card>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Order Status & Tracking */}
         <div className="space - y-6">;
           <Card>;
@@ -527,38 +394,8 @@ if ( {) {
                     <span className="text - sm">Shipped</span>;
                   </div>)}
                 {order.status === 'delivered' && (
-<<<<<<< HEAD
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm">Delivered</span>
-                  </div>
-                )}
-              </div>
-            </CardContent>
-          </Card>
-          {order.trackingNumber && (
-            <Card>
-              <CardHeader>
-                <CardTitle>Tracking Information</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <p className="text-sm text-gray-600">Tracking Number:</p>
-                  <p className="font-mono text-lg">{order.trackingNumber}</p>
-                  <Button className="w-full mt-4">
-                    Track Package
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          )}
-        </div>
-      </div>
-    </div>
-=======
     <div className='container max-w-3xl py-10 space-y-6'>;
       <h1 className='text-3xl font-bold'>Order #{order && order.orderId}</h1>;
-
       <div>;
         <h2 className='font-semibold mb-2'>Items</h2>;
         <ul className='space-y-1'>;
@@ -571,7 +408,6 @@ if ( {) {
           ))}
         </ul>;
       </div>;
-
       <div>;
         <h2 className='font-semibold mb-2'>Shipping Address</h2>;
         <p>{order && order.shippingAddress.name}</p>;
@@ -581,12 +417,10 @@ if ( {) {
           {order && order.shippingAddress.zip}
         </p>;
       </div>;
-
       <div>;
         <h2 className='font-semibold mb-2'>Tracking</h2>;
         <OrderTimeline events={order && order.trackingEvents} />;
       </div>;
-
       <div className='flex gap-3'>;
         <Button onClick={handleDownload}>Download PDF Invoice</Button>;
         <Button variant='outline' onClick={handleCopySummary}>;
@@ -596,21 +430,11 @@ if ( {) {
           Resend Receipt;
         </Button>;
       </div>;
-
       <Link href='/orders' className='text-zion-purple underline'>;
         Back to orders;
       </Link>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-<<<<<<< HEAD
-}
-=======
-
-<<<<<<< HEAD
-
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
 };
 `Order #$ {;
   order && order.orderId ;
@@ -643,11 +467,6 @@ toast && toast.success ('Order summary copied to clipboard') ;
 }'";
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
                     <span className="text - sm">Delivered</span>;
@@ -673,40 +492,5 @@ toast && toast.success ('Order summary copied to clipboard') ;
         </div>;
       </div>;
     </div>);
-<<<<<<< HEAD;
+;
 }
-`Order #$ {
-  order.order_id ;
-}`;
-`Date: $ {
-  new Date (order.date) .toLocaleDateString () ;
-}`;';
-'';';
-'Items:';
-...order.items.map ( (i) => `$ {
-  i.name ;
-}x$ {
-  i.quantity ;
-}- $$ {
-  i.price.to_fixed (2) ;
-}`);';
-'';
-`Total: $$ {
-  order.total.to_fixed (2) ;
-}`;';
-'';';
-'Shipping Address: ';
-order.shipping_address.name;
-order.shipping_address.street;
-await navigator.clipboard.write_text (summary);';
-toast.success ('Order summary copied to clipboard') ;
-}
-</li>) ) ;
-}</ul> </div> <div> </div> <Link href="/orders" className="text - zion - purple underline" > Back to orders </Link> </div>) ;
-}'";
-}
-}
-=======;
-}
->>>>>>> cursor / fix - lint - push - and - merge - to - main - 2c83;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

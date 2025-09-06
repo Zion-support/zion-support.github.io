@@ -55,10 +55,6 @@ function ErrorFallback({ error, resetError }) {}
             <RefreshCw className="w-4 h-4 mr-2" />"
 </RefreshCw>
           </button>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export function ErrorBoundaryFallback(props: any) {
 	return (
 		<div style="{{{padding: 24; textAlign: 'center'}}"}>
@@ -85,10 +81,6 @@ export class ErrorBoundary extends React.Component {;
 	}
 	handleRetry = () => {;
 		this.setState({ "hasError": "false", "error": "null "});
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 	handleRetry = () => {
 		this.setState({ hasError: false, error: null }
     );
@@ -128,8 +120,4 @@ export class ErrorBoundary extends React.Component {;
       </div>
     </div>
     return <ErrorFallback error={error} resetError={resetError} />;
-<<<<<<< HEAD
 </ErrorFallback>"
-=======
-</ErrorFallback>"
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

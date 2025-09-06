@@ -1,38 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-export default function DiversityInclusionPage() {
-<<<<<<< HEAD
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from "react";
 import Head from "next/head";
-
 export default function DiversityInclusionPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -92,7 +78,6 @@ export default function DiversityInclusionPage() {;
     </div>;
   );
 }
-=======
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -112,8 +97,6 @@ export default function DiversityInclusionPage() {;
 		</div>
 	);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -177,4 +160,3 @@ function DiversityInclusionPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

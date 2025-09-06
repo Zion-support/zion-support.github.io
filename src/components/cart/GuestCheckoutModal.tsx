@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
-import {
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogFooter
-  DialogHeader
-  DialogTitle
-} from '@/components/ui/dialog'
-
-import { User, Mail, MapPin, CreditCard } from 'lucide-react'
-import { isProdDomain } from '@/utils/getStripe';
-interface GuestCheckoutModalProps {
-
-  open: boolean
-  onOpenChange: (open: boolean) => void
-  onSubmit: (details: { email: string; address: string }) => void
-export default function GuestCheckoutModal({
-  open
-  onOpenChange
-  onSubmit
-}: GuestCheckoutModalProps) {
-  const [email, setEmail] = useState('')
-  const [address, setAddress] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email |!address) {
-      alert('Please fill in all required fields')
-      return
-    }
-    setIsSubmitting(true)
-=======
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -75,32 +34,24 @@ if ( {) {
       return;
     }
     setIsSubmitting (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       on_submit ({ email, address });
     } finally {
-<<<<<<< HEAD
-      setIsSubmitting(false)
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -120,7 +71,6 @@ import {;
 } from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react';
 import { isProdDomain } from '@/utils/getStripe';
-
 interface GuestCheckoutModalProps {;
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -133,49 +83,21 @@ export default function GuestCheckoutModal(): any ({;
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     if (!email || !address) {;
       alert('Please fill in all required fields');
       return;
     }
-
     setIsSubmitting(true);
     try {;
       onSubmit({ email, address });
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       setIsSubmitting (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
-
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className='bg-zion-blue border-zion-cyan/20 max-w-md'>
-        <DialogHeader>
-          <DialogTitle className='text-white flex items-center gap-2'>
-            <User className='h-5 w-5 text-zion-cyan' />
-            Guest Checkout
-          </DialogTitle>
-          <DialogDescription className='text-zion-slate-light'>
-            Enter your details to complete your purchase as a guest.
-          </DialogDescription>
-        </DialogHeader>
-        {!isProdDomain() && (
-          <div className='rounded-md bg-amber-500/20 p-2 text-center text-amber-400'>
-            Pay with test data – use card 4242 4242 4242 4242 and any future
-            date.
-          </div>
-        )}
-        <form onSubmit={handleSubmit} className='space-y-4'>
-          <div className='space-y-2'>
-=======
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className='bg-zion-blue border-zion-cyan/20 max-w-md'>;
         <DialogHeader>;
@@ -187,17 +109,14 @@ export default function GuestCheckoutModal(): any ({;
             Enter your details to complete your purchase as a guest.;
           </DialogDescription>;
         </DialogHeader>;
-
         {!isProdDomain() && (;
           <div className='rounded-md bg-amber-500/20 p-2 text-center text-amber-400'>;
             Pay with test data – use card 4242 4242 4242 4242 and any future;
             date.;
           </div>;
         )}
-
         <form onSubmit={handleSubmit} className='space-y-4'>;
           <div className='space-y-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Label
               htmlFor='guest-email'
               className='text-white flex items-center gap-2'>;
@@ -207,24 +126,13 @@ export default function GuestCheckoutModal(): any ({;
             <Input
               id='guest-email'
               type='email'
-<<<<<<< HEAD
-              value={email |''}
-              onChange={e => setEmail(e.target.value |'')}
-              placeholder='your.email@example.com'              required
-              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light'
-            />
-          </div>
-          <div className='space-y-2'>
-=======
               value={email || ''}
               onChange={e => setEmail(e && e.target.value || '')}
               placeholder='your && your.email@example && example.com'              required;
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light';
             />;
           </div>;
-
           <div className='space-y-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Label
               htmlFor='guest-address'
               className='text-white flex items-center gap-2'>;
@@ -233,31 +141,14 @@ export default function GuestCheckoutModal(): any ({;
             </Label>;
             <Textarea
               id='guest-address'
-<<<<<<< HEAD
-              value={address |''}
-              onChange={e => setAddress(e.target.value |'')}
-              placeholder='Enter your full shipping address...'              required
-              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]'
-            />
-          </div>
-          <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>
-            <p className='text-yellow-400 text-sm'>
-              💡 Creating an account allows you to track your order and checkout
-              faster next time.
-            </p>
-          </div>
-          <DialogFooter className='space-x-2'>
-=======
               value={address || ''}
               onChange={e => setAddress(e && e.target.value || '')}
               placeholder='Enter your full shipping address...'              required;
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]';
             />;
           </div>;
-
           <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
             <p className='text-yellow-400 text-sm'>;
-=======
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className='bg - zion - blue border - zion - cyan / 20 max - w-md'>;
         <DialogHeader>;
@@ -310,42 +201,10 @@ export default function GuestCheckoutModal(): any ({;
           </div>;
           <div className='bg - yellow - 500 / 10 border border - yellow - 500 / 30 rounded - lg p - 3'>;
             <p className='text - yellow - 400 text - sm'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               💡 Creating an account allows you to track your order and checkout;
               faster next time.;
             </p>;
           </div>;
-<<<<<<< HEAD
-
-          <DialogFooter className='space-x-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            <Button
-              type='button'
-              variant='outline'
-              onClick={() => onOpenChange(false)}
-              className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'            >;
-              Cancel;
-            </Button>;
-            <Button
-              type='submit'
-<<<<<<< HEAD
-              disabled={isSubmitting |!email |!address}
-              className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
-              {isSubmitting ? (
-                'Processing...'
-              ) : (
-                <>
-                  <CreditCard className='h-4 w-4 mr-2' />
-                  Continue to Payment
-                </>
-              )}
-            </Button>
-          </DialogFooter>
-        </form>
-      </DialogContent>
-    </Dialog>
-  )
-=======
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
               {isSubmitting ? (;
@@ -356,7 +215,6 @@ export default function GuestCheckoutModal(): any ({;
                   Continue to Payment;
                 </>;
               )}
-=======
           <DialogFooter className='space - x-2'>;
             <Button;
               type='button';
@@ -375,23 +233,10 @@ export default function GuestCheckoutModal(): any ({;
                   <CreditCard className='h - 4 w - 4 mr - 2' />;
                   Continue to Payment;
                 </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
-<<<<<<< HEAD
-    </Dialog>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-}
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Dialog>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

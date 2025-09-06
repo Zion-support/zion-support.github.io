@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function CaseStudyPage() {
-  const caseStudy = {
-<<<<<<< HEAD
-    id: 'content-generation-scale'
-    title: 'Scaling Content Generation 10x'
-    company: 'Digital Marketing Agency'
-    industry: 'Marketing'
-    challenge: 'Unable to meet client demand for high-quality content at scale'
-    solution: 'Deployed autonomous content generation systems with human oversight and quality control'
-=======
-    id: 'content-generation-scale',
-=======
+id: 'content-generation-scale',
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -24,27 +8,12 @@ export default /**
 function CaseStudyPage() {
   const case_study = {
     id: 'content - generation - scale',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     title: 'Scaling Content Generation 10x',
     company: 'Digital Marketing Agency',
     industry: 'Marketing',
     challenge: 'Unable to meet client demand for high - quality content at scale',
     solution: 'Deployed autonomous content generation systems with human oversight and quality control',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    results: [
-      '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate'
-    ]
-    technologies: ['Natural Language ProcessingContent OptimizationSEO AutomationAnalytics']
-    duration: '4 months'
-    teamSize: '5 engineers + 3 content specialists'
-    featured: false
-<<<<<<< HEAD
-  }
-=======
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   return (
     <>
       <Head>
@@ -145,12 +114,7 @@ function CaseStudyPage() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     results: [;
       '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate';
     ],
@@ -257,4 +221,3 @@ function CaseStudyPage() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

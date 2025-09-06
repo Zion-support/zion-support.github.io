@@ -1,34 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
-<<<<<<< HEAD
-  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' })
-  const [message, setMessage] = useState('')
-=======
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
   const [message, setMessage] = useState('');
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function saveCourse() {
     setMessage('')
     const resp = await fetch('/api/admin/learn/course', {
-<<<<<<< HEAD
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       body: JSON.stringify(form)
     })
     const data = await resp.json()
     if (data.ok) setMessage('Saved')
     else setMessage('Error: ' + (data.error |'unknown'))
-
   }
   return (
     <div className="space-y-4">
@@ -55,12 +38,7 @@ export default function AdminLearn() {
       {message && <div className="text-sm">{message}</div>}
     </div>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { useEffect, useState } from 'react',
 ;
 export default /**
@@ -110,4 +88,3 @@ function save_course() {
       {message && <div className="text - sm">{message}</div>}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

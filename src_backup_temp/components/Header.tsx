@@ -1,27 +1,10 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';';';
 import { Link, useLocation } from 'react-router-dom';';';
 import { MainNavigation } from './header/MainNavigation';';';
-=======
-<<<<<<< HEAD
-=======
-import React, { useState, useEffect } from 'react';';';
-import { Link, useLocation } from 'react-router-dom';';';
-import { MainNavigation } from './header/MainNavigation';';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-interface HeaderProps {
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface HeaderProps {
   className?: string;
 }
@@ -42,10 +25,6 @@ export function Header(props: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState<string>('');
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export function Header({ className = '' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 import React, { useState, useEffect } from 'react';
@@ -119,13 +98,6 @@ export function Header({ className = '' }: "HeaderProps) {;
               </h1>;
             </div>;
           </Link>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const navigationItems = [
     { name: 'Home', href: '/' },
     { 
@@ -351,24 +323,10 @@ const Header = () => {
       href: '/contact',
     },
   ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
@@ -406,16 +364,8 @@ const Header = () => {
             </div>
           </Link>
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <MainNavigation className="hidden md: fle x"  />
           <MainNavigation className="hidden md:flex" />
-=======
-<<<<<<< HEAD
-=======
-          <MainNavigation className="hidden md: fle x"  />
-          <MainNavigation className="hidden md:flex" />
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <nav className="hidden md:flex items-center space-x-8">
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -430,13 +380,6 @@ const Header = () => {
               </Link>
             ))}
           </nav>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {/* Contact Info - Hidden on small screens */}
           <div className="hidden xl:flex items-center space-x-4 text-sm text-gray-400">
             <div className="flex items-center space-x-2">
@@ -448,26 +391,12 @@ const Header = () => {
               <span>kleber@ziontechgroup.com</span>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {/* Right side actions */}
           <div className="flex items-center space-x-2 lg:space-x-4">
             {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-<<<<<<< HEAD
               className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
-=======
-<<<<<<< HEAD
-=======
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Search"
             >
@@ -476,18 +405,9 @@ const Header = () => {
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
-<<<<<<< HEAD
               className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"';
             >';';
               {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
-=======
-<<<<<<< HEAD
-=======
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"';
-            >';';
-              {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle theme"
             >
@@ -497,14 +417,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-<<<<<<< HEAD
                 className="flex items-center space-x-2 p-2 text-gray-400 hover: tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200"
-=======
-<<<<<<< HEAD
-=======
-                className="flex items-center space-x-2 p-2 text-gray-400 hover: tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200"
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
                 aria-label="User menu"
               >
@@ -514,21 +427,12 @@ const Header = () => {
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
                   <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
                     onClick={() => setIsUserMenuOpen(false)}
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     to="/dashboard"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
@@ -543,16 +447,8 @@ const Header = () => {
                     Sign In
                   </Link>
                   <Link
-<<<<<<< HEAD
                     to="/register"
                     className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
-=======
-<<<<<<< HEAD
-=======
-                    to="/register"
-                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     to="/contact"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
@@ -566,14 +462,7 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-<<<<<<< HEAD
               className="md: hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
-=======
-<<<<<<< HEAD
-=======
-              className="md: hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle mobile menu"
             >
@@ -581,12 +470,6 @@ const Header = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Search Bar */}
         {isSearchOpen && (
           <div className="pb-4">
@@ -621,10 +504,6 @@ const Header = () => {
               >
                 <Search className="w-5 h-5" />
               </button>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden">
@@ -651,15 +530,7 @@ const Header = () => {
                     }`} />
                   )}
                 </button>
-<<<<<<< HEAD
         {/* Search overlay */}
-=======
-<<<<<<< HEAD
-
-=======
-        {/* Search overlay */}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -687,12 +558,6 @@ const Header = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Search Bar */}
         {isSearchOpen && (
           <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50 p-4">
@@ -713,10 +578,6 @@ const Header = () => {
                   Search
                 </button>
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </form>
           </div>
         )
@@ -725,13 +586,6 @@ const Header = () => {
     );
 }
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        </div>
-      )}
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {/* Mobile Navigation Overlay */}
       {isMobileMenuOpen && (
         <div className="md: hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
@@ -751,7 +605,6 @@ const Header = () => {
       )}
         </div>
       )}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
     </header>
   );
 }
@@ -880,14 +733,6 @@ const router = useRouter()
         </AnimatePresence>
       </nav>
     </header>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  );
-};
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   )
 }
     );"
@@ -895,8 +740,4 @@ const router = useRouter()
 "
   );
 };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default Header;

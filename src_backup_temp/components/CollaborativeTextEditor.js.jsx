@@ -276,10 +276,6 @@ useEffect(() => {}";
 ;
 // Default export behavior';
             const blob = new Blob([exportContent], {"type": 'text/plain'});
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 // Default export behavior'
             const blob = new Blob([exportContent], {type: 'text/plain'}
     );
@@ -324,10 +320,6 @@ useEffect(() => {}
                         "version": "Math.max(prev.version", message.payload.version)}});
                 trackEvent('editor',collaboration_sync',text_synced', null, {"userId": "message.userId",;
                     "version": "message.payload.version"})}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 // Simple merge strategy - in production, this would use operational transformation
                     return {...prev,
                         content: message.payload.content,
@@ -425,10 +417,6 @@ useEffect(() => {}
             </span>";
             <span>";
               Version {editorState.version}"";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 generateAISuggestions()}"
 }, 3000)""
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])""""

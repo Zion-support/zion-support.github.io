@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Facebook } from 'lucide-react'
-
-<<<<<<< HEAD
-import { signIn } from 'next-auth/react'
-type Provider = 'google' | 'github' | 'facebook' | 'credentials'
-interface AuthButtonsProps {
-  providers?: Provider[]
-export function AuthButtons({
-  providers = ['google', 'github', 'facebook', 'credentials']
-}: AuthButtonsProps) {
-  const [loadingProvider, setLoadingProvider] = useState<string | null>(null)
-=======
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Facebook } from 'lucide-react';
@@ -26,30 +10,22 @@ export /**
  */
 function AuthButtons() {
   const [loading_provider, setLoadingProvider] = useState < string | null>(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const handleSignIn = async (provider: Provider) => {
     setLoadingProvider (provider);
     await sign_in (provider);
   }
-<<<<<<< HEAD
-  const gridCols = `grid-cols-${providers.length}`
-=======
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
 interface AuthButtonsProps {;
   providers?: Provider[];
-
 export function AuthButtons(): any ({;
   providers = ['google', 'github', 'facebook', 'credentials'],;
 }: AuthButtonsProps) {;
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null);
-
   const handleSignIn = async (provider: Provider) => {;
     setLoadingProvider(provider);
     await signIn(provider);
   };
   const gridCols = `grid-cols-${providers && providers.length}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>;
       {providers && providers.includes('google') && (;
@@ -138,19 +114,9 @@ export function AuthButtons(): any ({;
           )}
         </Button>;
       )}
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const grid_cols = `grid - cols-${providers.length}`;
   return (
     <div className={`mt - 6 grid ${grid_cols} gap - 3`}>;
@@ -231,4 +197,3 @@ export function AuthButtons(): any ({;
         </Button>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

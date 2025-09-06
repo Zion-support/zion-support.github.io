@@ -56,10 +56,6 @@ export {ThemeToggle};
 export {ThemeToggle};
 ;
 export {ThemeToggle};
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {ThemeToggle};';
 ;';;';
 ;
@@ -67,8 +63,4 @@ export {ThemeToggle};
 ;
 ;
 export {ThemeToggle};
-<<<<<<< HEAD
 ;
-=======
-;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

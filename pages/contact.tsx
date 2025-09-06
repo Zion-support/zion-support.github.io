@@ -1,68 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
 import Layout from "../components/Layout";
-=======
 import React from 'react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';
->>>>>>> origin/automation-improvements-final
-
-export default function Contact() {;
-  return (
-    <Layout
-      title="Contact Us - Zion Tech Group"
-<<<<<<< HEAD
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Contact Us
-            </h1>
-=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
->>>>>>> origin/automation-improvements-final
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
-=======
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 export default function Contact() {
   return (
     <>
@@ -85,7 +49,6 @@ export default function Contact() {
             {/* A placeholder for a contact form could go here */}
             <p className="text-gray-500 text-sm">
               (Contact form functionality would be implemented here)
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             </p>
           </div>
           <Link href="/services" className="btn-secondary">
@@ -95,13 +58,7 @@ export default function Contact() {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
 import Head from 'next/head';
-
 const ContactPage: React.FC = () => {
   return (
     <>
@@ -128,7 +85,6 @@ const ContactPage: React.FC = () => {
               <p className='text-xl text-slate-300 text-center mb-12'>
                 Ready to transform your business? Get in touch with our experts.
               </p>
-
               <div className='grid: md:grid-cols-2 gap-12'>
                 <div>
                   <h2 className='text-2xl font-bold mb-6'>Get In Touch</h2>
@@ -178,7 +134,6 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <div>
                   <h2 className='text-2xl font-bold mb-6'>Send us a Message</h2>
                   <ContactForm />
@@ -189,7 +144,6 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </>
-=======
       description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -207,14 +161,8 @@ const ContactPage: React.FC = () => {
         </div>;
       </div>;
     </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -244,4 +192,3 @@ function Contact() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

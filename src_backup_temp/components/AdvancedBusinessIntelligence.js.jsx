@@ -274,10 +274,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                     <h3 className="font-semibold text-zion-slate">;
                       {metric.name}
                     </h3>;
-<<<<<<< HEAD
-                    
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                     {getTrendIcon(metric.trend)}
                   </div>";
                   <div className="text-2xl font-bold text-zion-slate mb-2">;
@@ -313,10 +309,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 </div>;
               ))}
             </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             {/* Quick Actions */}";
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">";
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">";
@@ -333,10 +325,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               "
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[{
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                     "label": 'Generate Report'",;
                     "icon": "Download",;
                     "action": "() => {"}},;
@@ -396,10 +384,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                       </span>;
                     </div>";
                     <p className="text-zion-slate-light mb-3">;
-<<<<<<< HEAD
-                      
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high''
                             ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''
@@ -460,10 +444,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                           : 'bg-red-100 text-red-700 "dark":bg-red-900/30 "dark":text-red-300'`;
                     "}`}
                   >;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {activeTab === 'models' && ("
           <div className="space-y-4">
             {models.map(model => (
@@ -529,10 +509,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
     </div>;
   );}
 "export default ComponentName;";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"
@@ -546,9 +522,5 @@ export function AdvancedBusinessIntelligence("props": "any) {;
     </div>
     );}
 "export default ComponentName;"
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </RefreshCw>;
 </RefreshCw>

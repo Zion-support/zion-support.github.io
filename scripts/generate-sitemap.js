@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { createWriteStream } from 'fs',
-import { join } from 'path',
-=======
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ '','/about','/services','/services/ai-services','/services/micro-saas','/services/it-services','/contact',]; const generateSitemap = () => { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${pages.map(page => ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url>`).join('\n')} </urlset>`; const outDir = path.join(__dirname,'..','out'); if (!fs.existsSync(outDir)) { fs.mkdirSync(outDir,{ recursive: true })} fs.writeFileSync(path.join(outDir,'sitemap.xml'),sitemap); }; generateSitemap();
 import fs from 'fs';
 import path from 'path';
@@ -21,7 +13,6 @@ const pages = ['',
   '/services/it-services',
   '/contact',
 ];
->>>>>>> origin/automation-improvements-final
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -50,24 +41,17 @@ const generateSitemap = () => {
     <priority>0.6</priority>
   </url>
 </urlset>`,
-
   const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),
   const writeStream = createWriteStream(sitemapPath),
   writeStream.write(sitemap),
   writeStream.end(),
-
   console.log('Sitemap generated successfully at:', sitemapPath)
 },
-
 generateSitemap(),
-<<<<<<< HEAD
-=======
 const fs = require('fs');
 const path = require('path');
-
 // Base URL for the site
 const BASE_URL = 'https://zion.app';
-
 // Define the pages and their metadata
 const pages = [
   {
@@ -173,12 +157,10 @@ const pages = [
     lastmod: new Date().toISOString().split('T')[0]
   }
 ];
-
 // Generate sitemap XML content
 function generateSitemapXML() {
   let xml = '<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>\n';
   xml += '<urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;>\n';
-  
   pages.forEach(page => {
     xml += '  <url>\n';
     xml += `    <loc>${BASE_URL}${page.url}</loc>\n`;
@@ -187,16 +169,13 @@ function generateSitemapXML() {
     xml += `    <priority>${page.priority}</priority>\n`;
     xml += '  </url>\n';
   });
-  
   xml += '</urlset>';
   return xml;
 }
-
 // Generate sitemap.txt (simple text version)
 function generateSitemapTXT() {
   return pages.map(page => `${BASE_URL}${page.url}`).join('\n');
 }
-
 // Main execution
 function main() {
   try {
@@ -205,52 +184,40 @@ function main() {
     if (!fs.existsSync(publicDir)) {
       fs.mkdirSync(publicDir, { recursive: true });
     }
-
     // Generate and save sitemap.xml
     const sitemapXML = generateSitemapXML();
     const xmlPath = path.join(publicDir, 'sitemap.xml');
     fs.writeFileSync(xmlPath, sitemapXML, 'utf8');
     // console.log(`✅ Sitemap XML generated: ${xmlPath}`);
-
     // Generate and save sitemap.txt
     const sitemapTXT = generateSitemapTXT();
     const txtPath = path.join(publicDir, 'sitemap.txt');
     fs.writeFileSync(txtPath, sitemapTXT, 'utf8');
     // console.log(`✅ Sitemap TXT generated: ${txtPath}`);
-
     // Generate robots.txt
     const robotsTXT = `User-agent: *
 Allow: /
-
 # Sitemaps
 Sitemap: ${BASE_URL}/sitemap.xml
 Sitemap: ${BASE_URL}/sitemap.txt
-
 # Crawl-delay
 Crawl-delay: 1`;
-    
     const robotsPath = path.join(publicDir, 'robots.txt');
     fs.writeFileSync(robotsPath, robotsTXT, 'utf8');
     // console.log(`✅ Robots.txt generated: ${robotsPath}`);
-
     // console.log(`\n🎉 Sitemap generation complete!`);
     // console.log(`📊 Total pages: ${pages.length}`);
     // console.log(`🌐 Base URL: ${BASE_URL}`);
-    
   } catch (error) {
     console.error('❌ Error generating sitemap:', error);
     process.exit(1);
   }
 }
-
 // Run if called directly
 if (require.main === module) {
   main();
 }
-
 module.exports = { generateSitemapXML, generateSitemapTXT, pages };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { createWriteStream } from 'fs',;
 import { join } from 'path',;
 const generateSitemap = () => {;
@@ -288,32 +255,9 @@ const generateSitemap = () => {;
   console.log('Sitemap generated successfully at:', sitemapPath);
 },;
 generateSitemap();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node
-<<<<<<< HEAD
-console.log('🗺️  Generating sitemap...');
-console.log('✅ Sitemap generation completed');
->>>>>>> 4b819355ccb44a5b24eeefb1407608395a1110cb
-=======
-<<<<<<< HEAD
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ '','/about','/services','/services/ai-services','/services/micro-saas','/services/it-services','/contact',]; const generateSitemap = () => { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${pages.map(page => ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url>`).join('\n')} </urlset>`; const outDir = path.join(__dirname,'..','out'); if (!fs.existsSync(outDir)) { fs.mkdirSync(outDir,{ recursive: true })} fs.writeFileSync(path.join(outDir,'sitemap.xml'),sitemap); console.log('✅ Sitemap generated successfully')}; generateSitemap();
-=======
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ '','/about','/services','/services/ai-services','/services/micro-saas','/services/it-services','/contact',]; const generateSitemap = () => { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${pages.map(page => ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url>`).join('\n')} </urlset>`; const outDir = path.join(__dirname,'..','out'); if (!fs.existsSync(outDir)) { fs.mkdirSync(outDir,{ recursive: true })} fs.writeFileSync(path.join(outDir,'sitemap.xml'),sitemap); console.log('✅ Sitemap generated successfully')}; generateSitemap();
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 };
 ,
 generateSitemap(),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 console && console.log('🗺️  Generating sitemap...');
 console && console.log('✅ Sitemap generation completed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

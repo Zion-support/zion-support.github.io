@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
-function list(dir: string, baseDir: string) {
-<<<<<<< HEAD
-  const items = fs.readdirSync(dir)
-=======
-  const items = fs.readdirSync(dir);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+const items = fs.readdirSync(dir);
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
@@ -16,10 +6,6 @@ function list(dir: string, baseDir: string) {
     return { name, rel, isDir: stat.isDirectory() }
   })
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export async function getStaticProps() {
   const base = path.join(process.cwd(), 'docs/gitbook')
   const sections = fs.existsSync(base)
@@ -27,11 +13,9 @@ export async function getStaticProps() {
         title: entry.name
         items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
     : []
-
   return { props: { sections }, revalidate: 600 }
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
-=======
 import fs from 'fs',
 import path from 'path',
 import Link from 'next / link',
@@ -63,7 +47,6 @@ export default /**
  * DocsIndex - Function description
  */
 function DocsIndex() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="space - y-6">;
       <h1 className="text - 3xl font - bold">Zion Docs (GitBook)</h1>;
@@ -77,22 +60,7 @@ function DocsIndex() {
                 <li key={it.rel}>;
                   <a className="underline" href={`https://github.com / Zion - Holdings / zion.app / blob / main / docs / gitbook/${it.rel}`} target="_blank" rel="noreferrer">;
                     {it.rel}
-<<<<<<< HEAD
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </a>;
                 </li>))}
             </ul>;
@@ -100,4 +68,3 @@ function DocsIndex() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

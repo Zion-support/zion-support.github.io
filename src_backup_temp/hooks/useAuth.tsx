@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { useState, useEffect } from 'react';
 interface User {;
   "id": "string;
@@ -147,10 +142,6 @@ export function useAuth() {;
     register;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface User {
   id: string;
   email: string;
@@ -195,15 +186,9 @@ export function useAuth(props: any) {
             isAuthenticated: false,
             isLoading: false
           });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         }';
       } catch (error) {';';
         console.error('Error parsing stored user:', error);
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         }
       } catch (error) {
         console.error('Auth check failed:', error);
@@ -229,13 +214,6 @@ export function useAuth(props: any) {
           isLoading: fals e,
         })}
     };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     checkAuth()}, []);
     setAuthState({
       user: mockUse r,
@@ -285,18 +263,9 @@ export function useAuth(props: any) {
         ...prev,
         user: updatedUse r
       }));
-<<<<<<< HEAD
 ';
       // Update localStorage';';
       localStorage.setItem('zion_user', JSON.stringify(updatedUser));
-=======
-<<<<<<< HEAD
-=======
-';
-      // Update localStorage';';
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       if (response.ok) {
         const { user, token } = await response.json();
         localStorage.setItem('user', JSON.stringify(user));
@@ -315,13 +284,6 @@ export function useAuth(props: any) {
       return { success: false, error: 'Network error' };
     }
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       // Update localStorage
       localStorage.setItem('zion_user', JSON.stringify(updatedUser));
     }
@@ -336,24 +298,9 @@ export function useAuth(props: any) {
 '
     updateProfile,
   }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    logout
-  };
-}
-
-</AuthState>
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ';
 </AuthState>';';
     logout
   };
 }
-<<<<<<< HEAD
 </AuthState>
-=======
-</AuthState>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

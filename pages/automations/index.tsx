@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Link from 'next/link';
-<<<<<<< HEAD
-
-const AutomationsIndex: NextPage = () => {
-  const items = [
-    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
-=======
 const AutomationsIndex: NextPage = () => {
   const items = [
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' };
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -31,11 +20,6 @@ const AutomationsIndex: NextPage = () => {
   )
 }
 export default AutomationsIndex;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage } from 'next',
 import Link from 'next / link',
 const AutomationsIndex: NextPage = () => {
@@ -58,4 +42,3 @@ const AutomationsIndex: NextPage = () => {
     </main>);
 },
 export default AutomationsIndex,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,126 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import Header from '../components/Header';
-import { SEO } from '../components/SEO';
-import { GradientHeading } from '../components/GradientHeading';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Textarea } from '../components/ui/textarea';
-import { Card } from '../components/ui/card';
-import { useToast } from '../components/ui/use-toast';
-import { logInfo, logWarn, logErrorToProduction } from '../utils/productionLogger';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../components/ui/tooltip';
-import z from 'zod';
-import { ChatAssistant } from '../components/ChatAssistant';
-import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const contactSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Please enter a valid email address'),
-  subject: z.string().min(5, 'Subject must be at least 5 characters'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-});
-
-export default function Contact() {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errors, setErrors] = useState({});
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }));
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      // Validate form data
-      const validatedData = contactSchema.parse(formData);
-      
-      // Log form submission
-      logInfo('Contact form submission started', { email: validatedData.email });
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Show success message
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours.",
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      logInfo('Contact form submission completed successfully');
-      
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        const fieldErrors = {};
-        error.errors.forEach((err) => {
-          fieldErrors[err.path[0]] = err.message;
-        });
-        setErrors(fieldErrors);
-        logWarn('Contact form validation failed', { errors: fieldErrors });
-      } else {
-        logErrorToProduction('Contact form submission failed', error);
-        toast({
-          title: "Error",
-          description: "Something went wrong. Please try again.",
-          variant: "destructive",
-        });
-      }
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <SEO 
-        title="Contact Us - Zion Tech Group"
-        description="Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day."
-        keywords="contact, AI services, micro SaaS, IT services, Zion Tech Group"
-      />
-      <Header />
-      
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-6xl mx-auto">
-          <GradientHeading 
-            title="Contact Us"
-            subtitle="We'd love to hear from you. Send us a message and we'll respond as soon as possible."
-            className="text-center mb-12"
-          />
-          
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -132,7 +10,6 @@ export default function Contact() {
       </div>
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
@@ -172,7 +49,6 @@ export default function Contact() {
                   </div>
                 </div>
               </Card>
-              
               <Card className="p-6 bg-blue-50 border-blue-200">
                 <h4 className="font-semibold text-blue-900 mb-2">Quick Response</h4>
                 <p className="text-blue-800 text-sm">
@@ -180,7 +56,6 @@ export default function Contact() {
                 </p>
               </Card>
             </div>
-            
             {/* Contact Form */}
             <Card className="p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
@@ -216,11 +91,6 @@ export default function Contact() {
                       className={errors.email ? 'border-red-500' : ''}
                       required
                     />
-<<<<<<< HEAD
-                    {errors.email && (
-                      <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                    )}
-=======
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -258,7 +128,6 @@ export default function Contact() {
                       <option value="analytics">Data Analytics</option>
                       <option value="consulting">Consulting</option>
                     </select>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>
                 </div>
                 <div>
@@ -278,31 +147,7 @@ export default function Contact() {
                     <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
                   )}
                 </div>
-<<<<<<< HEAD
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className={errors.message ? 'border-red-500' : ''}
-                    placeholder="Tell us about your project or requirements..."
-                    required
-                  />
-                  {errors.message && (
-                    <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-                  )}
-                </div>
-                
-                <Button
-=======
                 <button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
@@ -310,9 +155,6 @@ export default function Contact() {
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
-<<<<<<< HEAD
-            </Card>
-=======
             </div>
             {/* Contact Information */}
             <div className="space-y-8">
@@ -395,39 +237,30 @@ export default function Contact() {
                 </div>
               </div>
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>
         </div>
       </div>
-      
       <ChatAssistant />
     </div>
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-
 const Contact: React.FC = () => {;
   return (
     <div className="min-h-screen bg-gray-50">;
@@ -438,9 +271,5 @@ const Contact: React.FC = () => {;
         </p>;
       </div>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

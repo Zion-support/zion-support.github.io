@@ -4,10 +4,6 @@ import React from 'react'; export interface AdvancedITService { id: string; titl
 ;';;';
 import React from 'react';
 import React from 'react'; export interface AdvancedITService { "id": "string; "title": string; "description": string; "category": string; "subcategory": string; "price": number; "currency": string; "pricingModel": string; "features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "tags": string[]; "estimatedDelivery": string; "supportLevel": string; "marketPrice": string; "roi": string; "innovationLevel": string; "contactInfo": { "phone": string; "email": string; "website": string; "address": string "}; "technicalSpecs": "{ "technology": string[]; "integrations": string[]; "apiEndpoints": number; "uptime": string; "security": string[] "}; "competitors": 'string[]; "marketSize": "string; "growthRate": string; "rating": number; "reviews": number; "customers": number'"} ; export const "ADVANCED_IT_SERVICES_2025": "AdvancedITServic e[] = ["
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export interface AdvancedITService { 
   &quot;id&quot;: string; 
   title: string; 
@@ -36,15 +32,8 @@ export interface AdvancedITService {
   reviews: number; 
   customers: number;
 }
-<<<<<<< HEAD
-
 export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [];
 export const &quot;ADVANCED_IT_SERVICES_2025&quot;: AdvancedITService[] = [];
-
-=======
-export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [];
-export const &quot;ADVANCED_IT_SERVICES_2025&quot;: AdvancedITService[] = [];
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 import React from 'react
 export interface AdvancedITService {
   "id": string;
@@ -416,8 +405,4 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
   reviews: number;
   customers: number;
 }
-<<<<<<< HEAD
 export const "ADVANCED_IT_SERVICES_2025": AdvancedITService[] = [];
-=======
-export const "ADVANCED_IT_SERVICES_2025": AdvancedITService[] = [];
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

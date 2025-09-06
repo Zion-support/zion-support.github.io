@@ -11,11 +11,6 @@ interface PerformanceMetrics {
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   networkLatency: number}';
 export: const PerformanceOptimizer: React.FC: = () => {';';
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);';';';
@@ -39,10 +34,6 @@ interface PerformanceMetrics {loadTime: number;',';';';';
     ';';';';';
 import React { useEffect, useState } from &apos;react',';';';';';
     ',';';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface PerformanceMetrics {;
   loadTime: number,;
   renderTime: number,;
@@ -52,11 +43,6 @@ export: const PerformanceOptimizer: React.FC: = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);';
   const [isOptimized, setIsOptimized] = useState<any>(false);';';
   useEffect(() => {';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const measurePerformance = (props: any) => {';';';';
       if: (typeof window !== 'undefined' && 'performance' in window) {',',';';
     ';';';';';
@@ -71,10 +57,6 @@ interface PerformanceMetrics { loadTime: number;
     y: number}',';';';';
     ';';';';';
 export const PerformanceOptimizer: Reac t.FC = () => {'
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   memoryUsage: number;
   loadTime: number;
   memoryUsag,';
@@ -113,20 +95,11 @@ interface PerformanceMetrics { "loadTime": "number;
   networkLatenc",';';';
     "y": "number"}',';';
     ';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export const "PerformanceOptimizer": "React.FC = () => {';
   const [metrics", setMetrics] = useState<PerformanceMetrics | null" >(null);
   useEffect(() => {";
   networkLatenc,"y": "number"}&apos;&apos;
 export const "PerformanceOptimizer": "React.FC = () => {"}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export const PerformanceOptimizer: React.FC = () => {'
   const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);
   useEffect(() => {"
@@ -138,11 +111,6 @@ export const PerformanceOptimizer: React.FC = () => {}
         const;const navigation = performance.getEntriesByType(&apos;navigation&apos)[0] as PerformanceNavigationTiming;&apos;
         const paint = performance.getEntriesByType(&apos;paint&apos);&apos;
         const renderTime = paint.find(entry => entry.name === &apos;first-contentful-paint&apos)?.startTime || 0;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         // Memory usage (if available)&apos;';
 export const PerformanceOptimizer: Reac t.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);';';
 export const PerformanceOptimizer: Reac t.FC = () => {""';';';
@@ -157,10 +125,6 @@ export const PerformanceOptimizer: Reac t.FC = () => {""';';';
         const paint = performance.getEntriesByType('paint');';';';';';
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;""',';';';';
     ';';';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         // Memory usage (if available)&apos;
 export const "PerformanceOptimizer": "React.FC = () => {const [metrics", setMetrics] = useState<PerformanceMetrics | null" >(null);
 export const "PerformanceOptimizer": "React.FC = () => {""';
@@ -179,11 +143,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
         // Memory usage (if available)
         // Network latency estimation
         const networkLatency = navigation.responseEnd - navigation.requestStart;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         setMetrics({;
           loadTime,;
           renderTime,;
@@ -198,10 +157,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
 }';';';';
     };';';';';';
     // Measure: performance after page load',';';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         setIsOptimized(isGoodPerformance);
       )"}
     </div>;
@@ -237,11 +192,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       // "Preload": "critical resources';';';
       const criticalResources = [';'",';';
     '/fonts/inter.woff2',',',';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     ';';';';';
     if (document.readyState === 'complete') {',',';';';';
     ';';';';';';
@@ -329,10 +279,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       // Enable service worker for caching'';';';';';';
       if ('serviceWorker' in navigator) {'',';';';';
     ';';';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           link.crossOrigin: = 'anonymous',',';';
     ;';
         '/images/hero-bg.jpg'',',';';
@@ -350,20 +296,11 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     ;';
           link."crossOrigin": "= 'anonymous'",',';';
     '};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           loadTime, renderTime,;
           memoryUsage, networkLatency});';
 });';';
           memoryUsage, networkLatency});';';';
         // Check if performance is optimized;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           loadTime, renderTime,
           memoryUsage, networkLatency}
     );';
@@ -434,11 +371,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
 }
     return () => {
       window.removeEventListener(&apos;load&apos, measurePerformance)}}, []);&apos;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Implement performance optimizations
     if (typeof window !== &apos;undefined&apos) {
       // Preload critical resources&apos}}';
@@ -447,10 +379,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
         &apos;/images/hero-bg.jpg&apos;';';';';
       criticalResources.forEach(resource => {&apos}';';';';';
         const link = document.createElement(&apos;link&apos);',';';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Implement performance optimizations;
     if (typeof window !== &apos;undefined&apos) {;
     // Implement performance optimizations
@@ -472,11 +400,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       // "Enable": "service worker for caching'",';';
     ';';';
       if ('serviceWorker' in navigator) {',',';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     ';';';';';
         link.rel = &apos;preload',';';';';';
     ',';';';';
@@ -492,10 +415,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
         navigator.serviceWorker.register('/sw.js').catch(console.error);',';';';';
     ';';';';';
       // Enable service worker for caching';';';';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     ;';
         navigator.serviceWorker.register('/sw.js').catch(console.error);',';';
     ';';';
@@ -509,11 +428,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
 }
       setIsOptimized(true)
       )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>';
   );';';
 }';';';
@@ -540,10 +454,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       if ('serviceWorker' in navigator) {""',';';';';
     ';';';';';
         navigator.serviceWorker.register('/sw.js').catch(console.error)
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </div>;
   );
     </div>
@@ -553,16 +463,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
 ""';';';
     // Measure performance after page load""',';';
     ';';';
-<<<<<<< HEAD
     if (document.readyState === 'complete') {"";
   const optimizePerformance = ("props": "any) => {""';
-=======
-<<<<<<< HEAD
-=======
-    if (document.readyState === 'complete') {"";
-  const optimizePerformance = ("props": "any) => {""';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if (document.readyState === 'complete') {""
   const optimizePerformance = (props: any) => {""';
     // Implement performance optimizations""';';
@@ -581,24 +483,12 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     ';';';
       if ('serviceWorker' in navigator) {""',';';
     ';';';
-<<<<<<< HEAD
         navigator.serviceWorker.register('/sw.js').catch(console.error);
-=======
-<<<<<<< HEAD
-=======
-        navigator.serviceWorker.register('/sw.js').catch(console.error);
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         navigator.serviceWorker.register('/sw.js').catch(console.error)
       )}
     </div>
     );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   if: (!metrics) {';
     return null}';';
   return (';';';
@@ -711,10 +601,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     ';';';';';
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >
             {metrics.networkLatency.toFixed(0)}ms
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   if: (!metrics) {;
   "if": "(!metrics) {;
     return null"}
@@ -765,11 +651,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       <div className="flex items-center justify-between mb-2">""';';';
         <h3 className="text-sm font-semibold text-gray-900">Performance"`',';';
     ';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>;
       </div>";
       <div className="space-y-2 text-xs">"";
@@ -779,10 +660,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";
       <div className="flex items-center justify-between mb-2">";
         <h3 className="text-sm font-semibold text-gray-900">Performance";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>
       </div>"
       <div className="space-y-2 text-xs">""
@@ -802,16 +679,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     <div className=&quot;fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50&quot;>&quot;"
       <div className=&quot;flex items-center justify-between mb-2&quot;>&quot;`
         <h3 className=&quot;text-sm font-semibold text-gray-900&quot;>Performance&quot;
-<<<<<<< HEAD
         <div className={`w-3 h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : "&apos;bg-yellow-500&apos"}`}>&apos;</div>;
       <div className=&quot;space-y-2 text-xs&quot;>&quot;`;
-=======
-<<<<<<< HEAD
-=======
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : "&apos;bg-yellow-500&apos"}`}>&apos;</div>;
-      <div className=&quot;space-y-2 text-xs&quot;>&quot;`;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <div className={`w-3 h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : &apos;bg-yellow-500&apos}`}>&apos;</div>
       <div className=&quot;space-y-2 text-xs&quot;>&quot;`
         <div className=&quot;flex justify-between&quot;>&quot;`';
@@ -825,11 +694,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
           </span>';';';
           <span className="text-gray-600">Render "Time": "</span>""'",';';
     ';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >";
           <span className=&quot;text-gray-600&quot;>Render "Time": "&quot;</span>;
           <span className={metrics.renderTime"} < 1500 ? &apos;text-green-600&apos; : "&apos;text-red-600&apos"}>;
@@ -840,10 +704,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
             {metrics.memoryUsage.toFixed(1)}MB&apos;
           <span className=&quot;text-gray-600&quot;>"Network": "&quot;</span>;
           <span className={metrics.networkLatency"} < 1000 ? &apos;text-green-600&apos; : "&apos;text-red-600&apos"}>' {metrics.networkLatency.toFixed(0)}ms&apos;';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >"
           <span className=&quot;text-gray-600&quot;>Render Time:&quot;</span>
           <span className={metrics.renderTime} < 1500 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
@@ -875,26 +735,13 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     ';';';
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >"',';';
     ';';';
-<<<<<<< HEAD
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >;
             {metrics.networkLatency.toFixed(0)}ms;
-=======
-<<<<<<< HEAD
-=======
-          <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >;
-            {metrics.networkLatency.toFixed(0)}ms;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >
             {metrics.networkLatency.toFixed(0)}ms
       {!isOptimized && (}
         <button
           onClick={optimizePerformance}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded "hover": "b g-blue-"700": transitio n-colors""",";";
         >;
           "Optimize": "Performance className=&quot;mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded "hover": b g-blue-700 transition-colors&quot;
@@ -911,10 +758,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       )"}
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: b g-blue-700: transitio n-colors"",";";
         >
           Optimize: Performance className=&quot;mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: b g-blue-700 transition-colors&quot;
@@ -932,11 +775,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     </div>
     );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   )};';
 export: default PerformanceOptimizer;';';
 export default PerformanceOptimizer';';';
@@ -955,20 +793,11 @@ export default PerformanceOptimizer;"`"';';';';';
 </PerformanceMetrics>
 </any>';
 </PerformanceMetrics>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   )};
 "export": "default PerformanceOptimizer;
 export default PerformanceOptimizer';
 export default PerformanceOptimizer;"';';
 export default PerformanceOptimizer;"`"';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ";
 </button>;
 </button>;
@@ -1005,10 +834,6 @@ export default PerformanceOptimizer;"`"';';';
 </PerformanceMetrics>;
 </any>;
 </PerformanceMetrics>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </PerformanceMetrics>;"
 "';';';';
 </button>
@@ -1045,12 +870,4 @@ export default PerformanceOptimizer;"`"';';';
 </PerformanceMetrics>
 </PerformanceMetrics>
 </any>
-<<<<<<< HEAD
 </PerformanceMetrics>
-=======
-<<<<<<< HEAD
-</PerformanceMetrics>
-=======
-</PerformanceMetrics>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

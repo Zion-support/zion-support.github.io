@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../utils/sync/storage";
-import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-<<<<<<< HEAD
-  const state = readState()
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
@@ -32,16 +19,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (scope) state.config.scope = scope
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId
     writeState(state)
-
     return res.status(200).json({ config: state.config })
   }
   return res.status(405).json({ error: "Method not allowed" })
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state  } from '../../../utils / sync / storage';,
 import { InstanceConfig, Peer, SyncScope  } from '../../../utils / sync / types';,
@@ -98,4 +79,3 @@ if (state.config.instance_id = instance_id, ) {
   return res.status (405).json ({ error: "Method not allowed" });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -2,40 +2,11 @@
 export const parseSearchQuery = (query: string) =>: any {
   // Add search query parsing functionality here;
   return {
-<<<<<<< HEAD
-    keywords: []
-    skills: []
-    location: null
-    type: null
-  }
-}
-<<<<<<< HEAD
-export const searchAll = (parsed: any, access: any) => {
-  // Add search functionality here
-  return {
-    all: []
-    talent: []
-    jobs: []
-    projects: []
-  }
-}
-export const suggestDidYouMean = (query: string) => {
-  // Add did you mean functionality here
-  return null;
-=======
-
 export async function parseQueryToFilters(query: string): Promise<SearchFilters> {
   const filters: SearchFilters = {};
-  
-<<<<<<< HEAD
-  if (!query || query && query.trim().length === 0) {
-    return filters;
-=======
   // rudimentary skill tokenization
   const tokens = lower.split(/[^a-z0-9+.#]/).filter(Boolean);
-  
   return Array.from(found);
-
 function extractKeywords(text: string): string[] {
   return text
     .toLowerCase()
@@ -63,7 +34,6 @@ function extractKeywords(text: string): string[] {
         ].includes(w)
     );
 }
-
 export async function parseQueryToFilters(
   query: string
 ): Promise<ParsedFilters> {
@@ -75,11 +45,9 @@ export async function parseQueryToFilters(
     ...extractBudget(query),
     keywords: extractKeywords(query),
   };
-
   const apiKey =
     process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
   if (!apiKey) return base;
-
   try {
     const system = `You are Operator GPT parsing user search intent into filters for a marketplace. Return ONLY a compact JSON object with keys: type (one of: all|talent|jobs|projects), skills (array of strings), location (string|optional), minBudgetUsd (number|optional), maxBudgetUsd (number|optional), availability (full-time|part-time|contract|optional).`;
     const user = `Query: ${query}`;
@@ -114,40 +82,30 @@ export async function parseQueryToFilters(
     };
   } catch {
     return base;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
-
   const words = query && query.toLowerCase().split(/\s+/);
   const keywords: string[] = [];
   const skills: string[] = [];
-  
   // Simple keyword extraction
   for (const word of words) {
     if (word && word.length > 2) {
       keywords && keywords.push(word);
     }
   }
-  
   if (keywords && keywords.length > 0) {
     filters && filters.keywords = keywords;
   }
-  
   // Extract skills (simple heuristic)
   const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescript', 'vue', 'angular', 'php', 'ruby', 'go', 'rust', 'swift', 'kotlin', 'c++', 'c#', 'html', 'css', 'sql', 'mongodb', 'postgresql', 'mysql', 'redis', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'git', 'github', 'gitlab', 'jenkins', 'ci/cd', 'devops', 'frontend', 'backend', 'fullstack', 'mobile', 'ios', 'android', 'web', 'api', 'rest', 'graphql', 'microservices', 'blockchain', 'ai', 'ml', 'data', 'analytics', 'design', 'ui', 'ux', 'figma', 'sketch', 'adobe', 'photoshop', 'illustrator'];
-  
   for (const word of words) {
     if (skillKeywords && skillKeywords.includes(word)) {
       skills && skills.push(word);
     }
   }
-  
   if (skills && skills.length > 0) {
     filters && filters.skills = skills;
   }
-  
   return filters;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     keywords: [],
     skills: [],
     location: null,
@@ -168,5 +126,4 @@ export const search_all = (parsed: any, access: any) =>: any {
 export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
   return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-
-export const real2036ITServices = [
-  {
-<<<<<<< HEAD
-    id: 'quantum-cloud-infrastructure-platform'
-    name: 'Quantum Cloud Infrastructure Platform'
-    tagline: 'Next-generation quantum cloud computing'
-    description:
-      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.'
-    price: '$6,999'
-    period: 'month'
-      'Quantum computing resources'
-      'Quantum-classical hybrid computing'
-      'Quantum resource management'
-      'Quantum networking'
-      'Quantum security protocols'
-      'Scalable quantum infrastructure'
-=======
-    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
+id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation quantum cloud computing',
     description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',
     price: '$6,999',
@@ -33,7 +14,6 @@ export const real2036ITServices = [
     ];
     useCases: [
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ]
     popular: true
     category: 'Quantum Cloud'
@@ -353,11 +333,6 @@ export const real2036ITServices = [
     ]
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export const real2036ITServices = [;
   {
     id: 'quantum - cloud - infrastructure - platform',
@@ -693,4 +668,3 @@ export const real2036ITServices = [;
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Image from "next/image";
-import { Twitter, Linkedin } from 'lucide-react'
-=======
 import Image from 'next / image';
 import { Twitter, Linkedin } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface Speaker {
   name: string;
   title: string;
@@ -16,17 +9,14 @@ interface Speaker {
   linkedin?: string;
 }
 interface Speaker {
-
   name: string
   title: string
   avatar: string
   twitter?: string
-
   linkedin?: string
 }
 const speakers: Speaker[] = [
   {
-
     name: 'Alex Zion'
     title: 'Founder & CEO'
     avatar: 'https://placehold.co/100x100'
@@ -34,7 +24,6 @@ const speakers: Speaker[] = [
     linkedin: '#'
   }
 ]
-=======
 import Image from 'next/image';
 import { Twitter, Linkedin } from 'lucide-react';
 interface Speaker {;
@@ -45,7 +34,6 @@ interface Speaker {;
   linkedin?: string;
   linkedin?: string;
 }
-
 interface Speaker {;
   name: string,;
   title: string,;
@@ -53,7 +41,6 @@ interface Speaker {;
   twitter?: string;
   linkedin?: string;
 }
-
 const speakers: Speaker[] = [;
   {;
     name: 'Alex Zion',;
@@ -63,8 +50,6 @@ const speakers: Speaker[] = [;
     linkedin: '#',;
   },;
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
 export function SpeakersSection() {;
   return (
     <section className='py-12 bg-zion-blue-dark text-white' id='speakers'>;
@@ -103,20 +88,14 @@ export function SpeakersSection() {;
                     <span className='sr-only'>Twitter</span>                  </a>                    <Twitter className="h-4 w-4" aria-hidden="true" />;
                     <span className="sr-only">Twitter</span>;
                   </a>;
-=======
 import Image from "next/image";
 import { Twitter, Linkedin } from 'lucide-react'
-
 interface Speaker {
   name: string,
   title: string,
   avatar: string,
   twitter?: string;
-<<<<<<< HEAD
-  linkedin?: string
-=======
   linkedin?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 const speakers: Speaker[] = [;
   {
@@ -124,18 +103,6 @@ const speakers: Speaker[] = [;
     title: 'Founder & CEO',
     avatar: 'https://placehold.co / 100x100',
     twitter: '#',
-<<<<<<< HEAD
-    linkedin: '#'}],
-export function SpeakersSection() {
-  return (
-    <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-          {speakers.map((sp) => (
-            <div key={sp.name} className="text-center space-y-2">
-              <Image
-=======
     linkedin: '#',
   },
 ];
@@ -155,56 +122,18 @@ function SpeakersSection() {
         <div className="grid gap - 8 sm:grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 justify - items - center">;
           {speakers.map ((sp, ) => (
             <div key={sp.name} className="text - center space - y-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
                 height={96}
-<<<<<<< HEAD
-                className="rounded-full mx-auto"
-                loading="lazy"
-              />
-              <p className="font-semibold">{sp.name}</p>
-              <p className="text-sm opacity-80">{sp.title}</p>
-              <div className="flex justify-center gap-3 text-zion-cyan">
-=======
                 className='rounded - full mx - auto';
                 loading='lazy';
               <p className='font - semibold'>{sp.name}</p>;
               <p className='text - sm opacity - 80'>{sp.title}</p>;
               <div className='flex justify - center gap - 3 text - zion - cyan'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {sp.twitter && (
                   <a;
                     href={sp.twitter}
-<<<<<<< HEAD
-                    aria-label="Twitter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center"
-                  >
-                    <Twitter className="h-4 w-4" aria-hidden="true" />
-                    <span className="sr-only">Twitter</span>
-                  </a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-                )}
-                {sp && sp.linkedin && (;
-                  <a
-<<<<<<< HEAD
-                    href={sp && sp.linkedin}
-                    aria-label='LinkedIn'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='flex items-center'>;
-                    <Linkedin className='h-4 w-4' aria-hidden='true' />;
-                    <span className='sr-only'>LinkedIn</span>                  </a>                    aria-label="LinkedIn";
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="flex items-center";
-                  >;
-                    <Linkedin className="h-4 w-4" aria-hidden="true" />;
-                    <span className="sr-only">LinkedIn</span>;
-=======
                     href={sp.linkedin}
                     aria-label="LinkedIn"
                     target="_blank"
@@ -214,30 +143,17 @@ function SpeakersSection() {
                     <Linkedin className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">LinkedIn</span>
                   </a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 )}
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </section>
-<<<<<<< HEAD
-  )
-}
-=======
         </div>;
       </div>;
     </section>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                     aria - label='Twitter';
                     target='_blank';
                     rel='noopener noreferrer';
@@ -274,4 +190,3 @@ function SpeakersSection() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

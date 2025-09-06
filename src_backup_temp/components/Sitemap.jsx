@@ -1,10 +1,6 @@
 import React from 'react';
 export default Sitemap;
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 import {Link} from 'react-router-dom';
 export default function Page("props": "any) {;
 ",;
@@ -202,10 +198,6 @@ export {Page, Sitemap};
 </li>;
 </div>;
 </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </li>
 </li>
 </li>
@@ -221,8 +213,4 @@ export default function Sitemap.js({ }: Sitemap.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

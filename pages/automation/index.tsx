@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-const Index: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index page" />
-      </Head>
-      <main>
-        <h1>Index</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  )
-}
-export default Index;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 const Index: NextPage = () => {
@@ -38,4 +14,3 @@ const Index: NextPage = () => {
     </div>);
 },
 export default Index,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

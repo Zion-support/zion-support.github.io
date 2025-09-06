@@ -1,64 +1,22 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu",
-import { Button } from "@/components/ui/button",
-import { Eye, ChevronDown, Loader2 } from "lucide-react";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-interface ApplicationActionsProps {
-
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
-}
-export function ApplicationActions({
-=======
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
 import {Eye, ChevronDown, Loader2} from "lucide-react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
-
 interface ApplicationActionsProps {;
   application: JobApplication,;
   processingId: string | null,;
   onViewApplication: (applicationId: string) => Promise<void>,;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
 }
-
 export function ApplicationActions(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   application;
   processingId;
   onViewApplication;
   onStatusChange;
 }: ApplicationActionsProps) {;
   return (
-<<<<<<< HEAD
-    <div className="flex items-center justify-end gap-2">
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={() => onViewApplication(application.id)}
-        disabled={!!application.viewed_at}
-      >
-        <Eye className="h-4 w-4" />
-      </Button>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button
-            variant="outline"
-=======
     <div className="flex items-center justify-end gap-2">;
       <Button
         variant="outline" 
@@ -68,12 +26,10 @@ export function ApplicationActions(): any ({;
       >;
         <Eye className="h-4 w-4" />;
       </Button>;
-
       <DropdownMenu>;
         <DropdownMenuTrigger asChild>;
           <Button
             variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             size="sm"
             disabled={processingId === application && application.id}>;
             {processingId === application && application.id ? (;
@@ -81,46 +37,6 @@ export function ApplicationActions(): any ({;
             ) : (;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
-<<<<<<< HEAD
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuItem
-            onClick={() => onStatusChange(application.id, "shortlisted")}
-          >
-            Shortlist
-          </DropdownMenuItem>
-          <DropdownMenuItem
-            onClick={() => onStatusChange(application.id, "interview")}
-          >
-            Schedule Interview
-          </DropdownMenuItem>
-          <DropdownMenuItem
-            onClick={() => onStatusChange(application.id, "hired")}
-          >
-            Hire
-          </DropdownMenuItem>
-          <DropdownMenuItem
-            onClick={() => onStatusChange(application.id, "rejected")}
-            className="text-red-600"
-          >
-            Reject
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-      <Button
-        variant="default"
-        size="sm"
-        asChild
-      >
-        <Link to={`/messages?talentId=${application.talent_id}`}>
-          Contact
-        </Link>
-      </Button>
-    </div>
-  )
-}
-=======
           </Button>;
         </DropdownMenuTrigger>;
         <DropdownMenuContent align="end">;
@@ -142,7 +58,6 @@ export function ApplicationActions(): any ({;
           <DropdownMenuItem
             onClick={() => onStatusChange(application && application.id, "rejected")}
             className="text-red-600";
-=======
 import { useState } from './react';
 import { Link } from './react-router-dom';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu';
@@ -200,27 +115,11 @@ function ApplicationActions() {
           <DropdownMenuItem;
             on_click={() => onStatusChange (application.id, "rejected")}
             className="text - red - 600";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-<<<<<<< HEAD
-
-      <Button
-        variant="default" 
-        size="sm"
-        asChild>;
-        <Link to={`/messages?talentId=${application && application.talent_id}`}>;
-          Contact;
-        </Link>;
-      </Button>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       <Button;
         variant="default";
         size="sm";
@@ -232,4 +131,3 @@ function ApplicationActions() {
       </Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

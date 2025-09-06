@@ -13,4 +13,4 @@ describe('AccessibilityEnhancer'
   it('handles keyboard events correctly'
     const element = screen.getByRole('button'
     fireEvent.keyDown(element, { "key"
-    fireEvent.keyDown(element, { "key"
+    fireEvent.keyDown(element, { "key"'"

@@ -23,12 +23,6 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
   const [isLoading, setIsLoading] = useState<typeof true>(true);
   const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
   const [tokens, setTokens] = useState<any>({;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     "accessToken": "nul l",;
     "refreshToken": "nul l;
   "});
@@ -39,10 +33,6 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
     // Check for existing auth state on mount;
 : "src/context/auth/useAuthState.tsx;
     ;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     accessToken: nul l,
     refreshToken: nul l
   }
@@ -52,13 +42,6 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
 }, []);
     // Check for existing auth state on mount
 :src/context/auth/useAuthState.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         if(typeof window !== 'null') {;
           ;
           if(auth) {;

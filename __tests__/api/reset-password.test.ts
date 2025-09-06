@@ -6,5 +6,4 @@ describe('/api/auth/reset token validation'
   it('returns 400 if token is missing'
       "method"
       "body"
-      "method"
-      "body": { token: 'invalid', "newPassword"
+      "method"'"body": { token: 'invalid', "newPassword"'"

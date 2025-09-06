@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
-
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function MarketPricingPage() {
@@ -127,13 +121,7 @@ export default function MarketPricingPage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
 }
-=======
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -260,4 +248,3 @@ function MarketPricingPage() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

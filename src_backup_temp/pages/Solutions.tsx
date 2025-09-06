@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/pages/Solutions.tsx
 import { Link } from 'react-router-dom';
 import { 
@@ -314,10 +309,6 @@ export function Solutions() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 const "Solutions": "React.FC = () => {;
   return (;
@@ -332,12 +323,4 @@ const "Solutions": "React.FC = () => {;
   );
 "};
 ;
-<<<<<<< HEAD
 export default Solutions;
-=======
-<<<<<<< HEAD
-export default Solutions;
-=======
-export default Solutions;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

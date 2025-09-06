@@ -26,10 +26,6 @@ const ServiceCategory = ("props": "any) => {"}
             'Supply Chain & Logistics': <Truck className="w-6 h-6" />,';';
             'Real Estate & Property': <Home className="w-6 h-6" />,';';
             'Legal & Compliance': <Lock className="w-6 h-6" />,
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
     const getCategoryIcon = (props: any) => {;
         const iconMap = {;
   'AI & Machine Learning': <Brain className="w-6 h-6" />,;
@@ -69,10 +65,6 @@ export default Component';
 ;';;';
 export default Component;
 export default Component;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 interface EnhancedServicesOverview.jsProps {
   // Add props here as needed
 }
@@ -83,8 +75,4 @@ export default function EnhancedServicesOverview.js({ }: EnhancedServicesOvervie
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

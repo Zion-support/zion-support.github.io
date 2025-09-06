@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-=======
 import { useState, useEffect  } from './react';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface User {
   id: string;
   email: string;
   name: string;
 }
-<<<<<<< HEAD
-export const useAuth = () => {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    // Simulate auth check
-    setLoading(false);
-  }, []);
-=======
 export const use_auth = () =>: any {
   const [user, set_user] = useState < User | null>(null);
   const [loading, set_loading] = useState (true);
@@ -27,21 +14,10 @@ export const use_auth = () =>: any {
     set_loading (false);
   }, []);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     user
     loading
     login: (email: string, password: string) => {
-<<<<<<< HEAD
-      // Simulate login
-      setUser({ id: "1", email, name: "User" });
-    }
-    logout: () => {
-      setUser(null);
-    }
-  }
-}
-=======
       // Simulate login;
       set_user ({ id: "1", email, name: "User" });
     },
@@ -51,4 +27,3 @@ export const use_auth = () =>: any {
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

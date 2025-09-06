@@ -1,135 +1,58 @@
-<<<<<<< HEAD
-
-// AI Matchmaking utility functions
-=======
 // AI Matchmaking utility functions;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface MatchResultItem {
   id: string;
   title: string;
   description: string;
   category: string;
   price?: number;
-<<<<<<< HEAD
-
-  skills?: string[]
-
-  image?: string
-=======
   skills?: string[],
   image?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface MatchResult {
   item: MatchResultItem;
   score: number;
-<<<<<<< HEAD
-
-  matchedSkills: string[]
-
-  reason: string
-}
-// Sample data for testing when API is not available
-const sampleData: MatchResultItem[] = [
-=======
   matched_skills: string[],
   reason: string;
 }
 // Sample data for testing when API is not available;
 const sample_data: MatchResultItem[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: "talent - 1";
     title: "Senior AI Engineer";
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
-<<<<<<< HEAD
-
-    price: 120
-
-    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"]
-=======
     price: 120,
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: "service - 1";
     title: "AI Model Training";
     description: "Custom AI model training service with data preparation and deployment";
     category: "Services - AI Development";
-<<<<<<< HEAD
-
-    price: 5000
-
-    skills: ["Machine Learning", "Model Training", "AI Deployment"]
-=======
     price: 5000,
     skills: ["Machine Learning", "Model Training", "AI Deployment"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: "equipment - 1";
     title: "NVIDIA A100 GPU Server";
     description: "High - performance GPU server for AI model training and inference";
     category: "Equipment - Hardware";
-<<<<<<< HEAD
-
-    price: 15000
-
-    skills: ["GPU Computing", "High Performance", "AI Hardware"]
-  }
-];
-// Function to find matches based on query and type
-export async function findMatches(
-  query: string;
-
-  type: string = ""
-  limit: number = 5
-): Promise<MatchResult[]> {
-  try {
-    // In production, we would call an API endpoint here
-    // For now, we'll simulate a response with sample data
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    // Filter by type if provided
-    let filteredItems = sampleData;
-    if (type && type !== "all") {
-<<<<<<< HEAD
-      filteredItems = sampleData.filter(item =>
-        item.category.toLowerCase().includes(type.toLowerCase())
-=======
       filteredItems = sampleData && sampleData.filter(item => 
         item && item.category.toLowerCase().includes(type && type.toLowerCase())
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       )
     }
     // Sort by simulated relevance (random for now)
-<<<<<<< HEAD
-    const matches: MatchResult[] = filteredItems.map(item => ({
-      item
-      score: Math.floor(Math.random() * 40) + 60, // Random score between 60 and 99
-      matchedSkills: item.skills?.slice(0, 2) |[];
-      reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
-=======
     const matches: MatchResult[] = filteredItems && filteredItems.map(item => ({
       item,
       score: Math && Math.floor(Math && Math.random() * 40) + 60, // Random score between 60 and 99
       matchedSkills: item && item.skills?.slice(0, 2) || [];
       reason: `This ${item && item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }));
     // Sort by score
     return matches && matches.sort((a, b) => b && b.score - a && a.score).slice(0, limit)
   } catch (error) {
-<<<<<<< HEAD
-    console.error("Error in matchmaking:", error);
-
-=======
     console && console.error("Error in matchmaking:", error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return []
-=======
     price: 15000,
     skills: ["GPU Computing", "High Performance", "AI Hardware"];
   }
@@ -168,6 +91,5 @@ if ( {) {
   } catch (error) {
     console.error ("Error in matchmaking:", error);
     return [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

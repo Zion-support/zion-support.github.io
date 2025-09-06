@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { useRouter } from 'next/router'
-import { Button } from '@/components/ui/button'
-import { ChatBotPanel } from './ChatBotPanel'
-import { MessageSquare, Info, X } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useTheme } from "@/hooks/useTheme";
-export function SupportWidget() {
-=======
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -21,8 +9,6 @@ export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
   const router = useRouter();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
@@ -46,7 +32,6 @@ export function SupportWidget() {;
             theme === 'dark'
               ? 'bg-zion-blue-dark border border-zion-blue-light'
               : 'bg-white border border-gray-200'
-
           )}
           style={{ height: '600px', maxHeight: '80vh' }}>;
           <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>;
@@ -74,36 +59,17 @@ export function SupportWidget() {;
                 size='icon'
                 className='h-8 w-8 rounded-full'
                 onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-                aria-label='Close support'              >
-                <X className='h-5 w-5' />
-              </Button>
-            </div>
-          </div>
-          <ChatBotPanel />
-        </div>
-      )}
-    </>
-  )
-}
-=======
                 aria-label='Close support'              >;
                 <X className='h-5 w-5' />;
               </Button>;
             </div>;
           </div>;
-
           <ChatBotPanel />;
         </div>;
       )}
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useState } from 'react';
 import { use_router } from 'next / router';
 import { Button } from '@/components / ui / button';
@@ -172,4 +138,3 @@ function SupportWidget() {
         </div>)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

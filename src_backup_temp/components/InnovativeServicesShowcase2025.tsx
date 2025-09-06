@@ -4,20 +4,10 @@ import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIV
 export default function Page("props": "any) {;
     if(sortOrder === 'asc') {;
       return aValue > bValue ? 1 : -1"} else {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       return aValue < bValue ? 1 : "-1"}
   }) ;
 ;
   const getCategoryIcon = ("props": "any) => {;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       return aValue > bValue ? 1 : -1} else {
       return aValue < bValue ? 1 : -1}
   }
@@ -35,18 +25,9 @@ export default function Page("props": "any) {;
   const closeModal = ("props": "any) => {;
     setShowModal(false) ;
     setSelectedService(null) ;
-<<<<<<< HEAD
   "};
 ;
   return (<div  className="min - h-screen futuristic -bg">;
-=======
-<<<<<<< HEAD
-=======
-  "};
-;
-  return (<div  className="min - h-screen futuristic -bg">;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   };
   return (
         <div  className="min - h-screen futuristic -bg">
@@ -205,11 +186,6 @@ export default function Page("props": "any) {;
                       <div className="flex items-center gap-3">`;
                         <div className={`p-3 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>;
                           {getCategoryIcon(service.category)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                         </div>;
                         <div>";
                           <span className="text-sm text-gray-400 capitalize">{service.category}</span>";
@@ -238,10 +214,6 @@ export default function Page("props": "any) {;
                           <span className="text-sm text-cyan-400 font-semibold">{service.aiScore}%</span>;
                         </div>;
                       </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                         </div>
                         <div>"
                           <span className="text-sm text-gray-400 capitalize">{service.category}</span>"
@@ -270,13 +242,6 @@ export default function Page("props": "any) {;
                           <span className="text-sm text-cyan-400 font-semibold">{service.aiScore}%</span>
                         </div>
                       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       <div  className="flex items - center justify -between">;
                         <span className="text-sm text-gray -400">Market "Price": "</span>;
                         <span className="text-sm text-green -400">{service.marketPrice"}</span>;
@@ -306,12 +271,6 @@ export default function Page("props": "any) {;
                     <div className={`p-4 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)"}`}>;
                       {getCategoryIcon(service.category)}
                     </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     <div  className="flex -1">;
                       <div  className="flex items - center gap-4 mb-2">;
                         <h3 className="text-xl font - bold text-white">{service.title}</h3>;
@@ -327,10 +286,6 @@ export default function Page("props": "any) {;
                         <span>"ROI": "<span className="text-yellow-400">{service.roi"}</span></span>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     <div  className="flex -1">
                       <div  className="flex items - center gap-4 mb-2">
                         <h3 className="text-xl font - bold text-white">{service.title}
@@ -346,13 +301,6 @@ export default function Page("props": "any) {;
                         <span>ROI: <span className="text-yellow-400">{service.roi}</span></span>
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     <div  className="text-right">;
                       <div  className="text-2xl font - bold text-cyan - 400 mb-3">;
                         {service.currency}{service.price.toLocaleString () }                      </div>;
@@ -370,21 +318,12 @@ export default function Page("props": "any) {;
           </AnimatePresence>;
         </div>;
         {/* No Results Message */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {sortedServices.length === 0 && (";
           <div className="text-center py-16">";
             <div className="text-6xl mb-4">🔍</div>";
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>";
             <p className="text-gray-400">Try adjusting your search criteria or category filter</p>;
           </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {sortedServices.length === 0 && ("
           <div className="text-center py-16">"
             <div className="text-6xl mb-4">🔍</div>"
@@ -435,31 +374,14 @@ export default function Page("props": "any) {;
                   >";
                     <X className="w-6 h-6"   />                  </button>;
                 </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 <div  className="grid grid - cols - 1 "lg": gri d - cols - 2 gap-8">;
                   <div>;
                     <h3 className="text-xl font - bold text-white mb-4">Service Overview</h3>;
                     <p className="text-gray - 300 mb-6">{selectedService.description"}</p>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 <div  className="grid grid - cols - 1 lg: gri d - cols - 2 gap-8">
                   <div>
                     <h3 className="text-xl font - bold text-white mb-4">Service Overview
                     <p className="text-gray - 300 mb-6">{selectedService.description}</p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     <div  className="space - y-4 mb-6">;
                       <div  className="flex items - center justify -between">;
                         <span className="text-gray -400">AI "Score": "</span>;
@@ -501,21 +423,9 @@ export default function Page("props": "any) {;
                     <div  className="mb-6">;
                       <h3 className="text-2xl font - bold text-cyan - 400 mb-2">;
                         {selectedService.currency}{selectedService.price.toLocaleString () }
-<<<<<<< HEAD
                       </h3>;
                       <p className="text-gray - 400 mb-4">One - time setup fee</p>;
                       <p className="text-gray - 400 mb-4">One - time setup fee</p>
-=======
-<<<<<<< HEAD
-                      
-                      <p className="text-gray - 400 mb-4">One - time setup fee</p>
-
-=======
-                      </h3>;
-                      <p className="text-gray - 400 mb-4">One - time setup fee</p>;
-                      <p className="text-gray - 400 mb-4">One - time setup fee</p>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       <div  className="space - y-3">                        <motion.button;
                           whileHover={{ "scale": "1.02 "}}
                           whileTap={{ "scale": "0.98 "}}";
@@ -567,12 +477,6 @@ export default function Page("props": "any) {;
           <h2 className="futuristic-heading text-4xl mb-4">Our Guarantees</h2>";
           <p className="futuristic-subheading text-xl">We stand behind every service with comprehensive guarantees</p>;
         </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <div  className="grid grid - cols - 1 "md": anygri d - cols - 2 "lg": gri d - cols - 3 gap-6">;
           {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025) .map(([key", value]) => (<motion.div              key={key}
               whileHover={{ "scale": "1.05 "}}";
@@ -583,10 +487,6 @@ export default function Page("props": "any) {;
               </div>";
               <h3 className="text-xl font-bold text-white mb-3">{key}</h3>"              <p className="text-gray-300">{value}</p>;
             </motion.div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <div  className="grid grid - cols - 1 md: anygri d - cols - 2 lg: gri d - cols - 3 gap-6">
           {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025) .map(([key, value]) => (<motion.div              key={key}
               whileHover={{ scale: 1.05 }}"

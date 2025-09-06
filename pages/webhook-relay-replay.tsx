@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, RefreshCcw, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function WebhookRelayReplayPage() {
-<<<<<<< HEAD
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/webhook-relay-replay'))
-  if (!service) return null
-=======
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/webhook-relay-replay'));
+const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/webhook-relay-replay'));
   if (!service) return null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   return (
     <Layout>
       <Head>
@@ -57,13 +43,7 @@ export default function WebhookRelayReplayPage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
 }
-=======
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import Head from 'next / head',
 import { Phone, Mail, MapPin, Check, ArrowRight, RefreshCcw, Star } from 'lucide-react',
@@ -121,4 +101,3 @@ if (return null, ) {
     </Layout>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

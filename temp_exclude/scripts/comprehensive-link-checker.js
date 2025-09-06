@@ -306,7 +306,6 @@ class ComprehensiveLinkChecker {;
       const $ = cheerio.load(sitemapContent, { "xmlMode": true });
       $('url loc').each((i, elem) => {
     const url = $(elem).text().trim(),
-    <<<<<<< HEAD
         this.sitemapUrls.push(url)});
       console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`)} catch (error) {
       console.error(

@@ -1,38 +1,6 @@
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-
-type Holder = { address: string, amount: string }
-type Metrics = {
-  updatedAt: number
-  tokenDistribution: { address: string, percent: number }[]
-  topHolders: Holder[]
-  activeProposals: any[]
-  governanceParticipationRate: number
-  cached?: boolean
-}
-export default function DaoMetrics() {
-  const [data, setData] = useState<Metrics | null>(null)
-  const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    async function load() {
-      setLoading(true)
-      const resp = await fetch('/api/dao/metrics')
-      const json = await resp.json()
-      setData(json)
-      setLoading(false)
-    }
-    load()
-<<<<<<< HEAD
-  }, [])
-  if (loading) return <div>Loading...</div>
-  if (!data) return <div>Error loading data</div>
-=======
-  }, []);
-
+}, []);
   if (loading) return <div>Loading...</div>;
   if (!data) return <div>Error loading data</div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -58,10 +26,6 @@ export default function DaoMetrics() {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
@@ -82,10 +46,6 @@ export default function DaoMetrics() {
           </table>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
@@ -110,12 +70,7 @@ export default function DaoMetrics() {
       </section>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { useEffect, useState } from 'react',
 ;
 type Holder = { address: string, amount: string },
@@ -218,4 +173,3 @@ if (return <div > Error loading data</div>, ) {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

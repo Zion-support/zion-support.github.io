@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -14,9 +9,7 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
   const [requests, setRequests] = useState(initialRequests)
   async function resolve(id: string) {
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
-
     setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)))
-=======
 import { GetServerSideProps } from 'next',
 import { useState } from 'react',
 import { read_json } from '../../utils / fs_db',
@@ -35,7 +28,6 @@ function SupportRequests() {
 function resolve() {
     await fetch ('/api / support / resolve', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ id }) }),
     set_requests ((prev: any[]) => prev.map ((r) => (r.id === id ? { ...r, status: 'resolved', resolved_at: Date.now () } : r)));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return (
     <div className="space - y-6">;
@@ -52,23 +44,9 @@ function resolve() {
               <div className="opacity - 80">Status: {r.status}</div>;
             </div>;
             {r.status !== 'resolved' && (
-<<<<<<< HEAD
-              <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               <button on_click={() => resolve (r.id)} className="enhanced - button enhanced - button - primary">Mark Resolved</button>)}
           </div>))}
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

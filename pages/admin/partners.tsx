@@ -1,75 +1,12 @@
-<<<<<<< HEAD
-
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import Head from 'next / head';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface Partner {
-=======
-
 interface Partner {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   code: string;
   name: string;
   status: 'active' | 'inactive' | 'pending';
   commission: number;
-<<<<<<< HEAD
-  contactEmail: string;
-  contactPhone: string;
-  joinedAt: string;
-  lastActivity: string;
-  totalReferrals: number;
-  totalEarnings: number;
-<<<<<<< HEAD
-const mockPartners: Partner[] = [
-  {
-    id: '1'
-    code: 'PART001'
-    name: 'Tech Solutions Inc.'
-    status: 'active'
-    commission: 15
-    contactEmail: 'contact@techsolutions.com'
-    contactPhone: '+1-555-0123'
-    joinedAt: '2024-01-15T00:00:00Z'
-    lastActivity: '2025-01-15T10:30:00Z'
-    totalReferrals: 25
-    totalEarnings: 12500
-  }
-  {
-    id: '2'
-    code: 'PART002'
-    name: 'Digital Marketing Pro'
-    status: 'active'
-    commission: 12
-    contactEmail: 'hello@digitalmarketingpro.com'
-    contactPhone: '+1-555-0456'
-    joinedAt: '2024-03-20T00:00:00Z'
-    lastActivity: '2025-01-14T16:45:00Z'
-    totalReferrals: 18
-    totalEarnings: 8750
-  }
-  {
-    id: '3'
-    code: 'PART003'
-    name: 'Cloud Services LLC'
-    status: 'pending'
-    commission: 10
-    contactEmail: 'info@cloudservices.com'
-    contactPhone: '+1-555-0789'
-    joinedAt: '2025-01-10T00:00:00Z'
-    lastActivity: '2025-01-10T00:00:00Z'
-    totalReferrals: 0
-    totalEarnings: 0
-  }
-];
-const AdminPartnersPage: React.FC = () => {
-=======
-
 const mockPartners: Partner[] = [;
   {;
     id: '1',;
@@ -111,45 +48,16 @@ const mockPartners: Partner[] = [;
     totalEarnings: 0;
   }
 ];
-
 const AdminPartnersPage: React.FC = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-<<<<<<< HEAD
-  useEffect(() => {
-    // Simulate loading partners
-    setTimeout(() => {
-      setPartners(mockPartners);
-      setLoading(false);
-    }, 1000);  }, []);
-  async function updatePartner(code: string, updates: any) {
-    await fetch('/api/admin/partners/update', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ code, ...updates })
-    });
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners |[]);  }
-  async function viewFlags(code: string) {
-    setSelected(code)
-    const res = await fetch(
-      `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
-    );
-    const json = await res.json();
-    setFlags(json.flags |[]);
-=======
-=======
 import { useEffect, useState } from 'react';
-
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
-
   useEffect(() => {
     (async () => {
       try {
@@ -159,7 +67,6 @@ export default function AdminPartners() {
       } catch {}
     })()
   }, []);
-
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
       method: 'POST',
@@ -169,22 +76,18 @@ export default function AdminPartners() {
     const json = await res.json();
     setPartners(json.partners || [])
   }
-
   async function viewFlags(code: string) {
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
     const json = await res.json();
     setFlags(json.flags || [])
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   useEffect(() => {;
     // Simulate loading partners;
     setTimeout(() => {;
       setPartners(mockPartners);
       setLoading(false);
     }, 1000);  }, []);
-
   async function updatePartner(): any (code: string, updates: any) {;
     await fetch('/api/admin/partners/update', {;
       method: 'POST',;
@@ -194,7 +97,6 @@ export default function AdminPartners() {
     const res = await fetch('/api/admin/partners/list');
     const json = await res && res.json();
     setPartners(json && json.partners || []);  }
-
   async function viewFlags(): any (code: string) {;
     setSelected(code),;
     const res = await fetch(;
@@ -203,8 +105,6 @@ export default function AdminPartners() {
     const json = await res && res.json();
     setFlags(json && json.flags || []);
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   }
   return (
     <div className='space-y-6'>;
@@ -228,9 +128,6 @@ export default function AdminPartners() {
                 <td className='py-2 pr-4'>{p && p.status}</td>;
                 <td className='py-2 pr-4'>;
                   <input
-<<<<<<< HEAD
-                    type='number'                    defaultValue={p && p.commission_rate}
-=======
   contact_email: string;
   contact_phone: string;
   joined_at: string;
@@ -338,23 +235,13 @@ function view_flags() {
                 <td className='py - 2 pr - 4'>;
                   <input;
                     type='number'                    default_value={p.commission_rate}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     min={0}
                     max={1}
-<<<<<<< HEAD
-                    step={0.01}
-<<<<<<< HEAD
-                    onBlur={e =>
-                      updatePartner(p.code, {
-                        commission_rate: Number(e.target.value)
-                      })
-=======
                     step={0 && 0.01}
                     onBlur={e =>;
                       updatePartner(p && p.code, {;
                         commission_rate: Number(e && e.target.value),;
                       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     }
                     className='w-24 border rounded px-2 py-1';
                   />;
@@ -364,7 +251,6 @@ function view_flags() {
                     className='px-2 py-1 rounded border'
                     onClick={() =>;
                       updatePartner(p && p.code, { status: 'approved' });
-=======
                     on_blur={e =>;
                       update_partner (p.code, {
                         commission_rate: Number (e.target.value),
@@ -378,35 +264,18 @@ function view_flags() {
                     className='px - 2 py - 1 rounded border';
                     on_click={() =>;
                       update_partner (p.code, { status: 'approved' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     }
                   >;
                     Approve;
                   </button>;
-<<<<<<< HEAD
-                  <button
-                    className='px-2 py-1 rounded border'
-                    onClick={() =>;
-                      updatePartner(p && p.code, { status: 'rejected' });
-=======
                   <button;
                     className='px - 2 py - 1 rounded border';
                     on_click={() =>;
                       update_partner (p.code, { status: 'rejected' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     }
                   >;
                     Reject;
                   </button>;
-<<<<<<< HEAD
-                  <button
-                    className='px-2 py-1 rounded border'
-                    onClick={() => viewFlags(p && p.code)}
-                  >;
-                    Fraud Flags;
-                  </button>                </td>;
-              </tr>;
-=======
                     type="number"
                     defaultValue={p.commission_rate}
                     min={0}
@@ -422,27 +291,10 @@ function view_flags() {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
-<<<<<<< HEAD
-          </tbody>
-        </table>
-      </div>
-      {selected && (
-<<<<<<< HEAD
-        <div className='p-4 rounded border'>
-          <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>
-          <ul className='list-disc pl-6'>
-            {flags.map((f, idx) => (
-              <li key={idx}>
-                <span className='font-medium'>{f.type}</span> — {f.severity}{' '}
-                {f.note && <span className='text-gray-500'>({f.note})</span>}
-              </li>
-=======
           </tbody>;
         </table>;
       </div>;
-
       {selected && (;
         <div className='p-4 rounded border'>;
           <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>;
@@ -452,37 +304,12 @@ function view_flags() {
                 <span className='font-medium'>{f && f.type}</span> — {f && f.severity}{' '}
                 {f && f.note && <span className='text-gray-500'>({f && f.note})</span>}
               </li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
             {flags && flags.length === 0 && (;
               <li className='text-gray-500 list-none'>No flags</li>;
             )}
-<<<<<<< HEAD
-          </ul>
-        </div>
-{/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>
-            <p className="text-2xl font-bold">{totalPartners}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>
-            <p className="text-2xl font-bold text-green-600">{activePartners}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>
-            <p className="text-2xl font-bold">{totalReferrals}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>
-            <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
-          </div>
-        </div>
-=======
           </ul>;
         </div>;
-
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
           <div className="bg-white rounded-lg shadow p-4">;
@@ -502,8 +329,6 @@ function view_flags() {
             <p className="text-2xl font-bold text-blue-600">${totalEarnings && totalEarnings.toLocaleString()}</p>;
           </div>;
         </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -521,24 +346,6 @@ function view_flags() {
               <label className="block text-sm font-medium mb-2">Filter by Status</label>;
               <select
                 value={statusFilter}
-<<<<<<< HEAD
-                onChange={(e) => setStatusFilter(e.target.value)}
-                className="w-full p-2 border rounded-md"
-              >
-                <option value="all">All Statuses</option>
-                <option value="active">Active</option>
-                <option value="inactive">Inactive</option>
-                <option value="pending">Pending</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        {/* Partners Table */}
-        <div className="bg-white rounded-lg shadow overflow-hidden">
-          <div className="px-6 py-4 border-b">
-            <h2 className="text-lg font-semibold">Partners ({filteredPartners.length})</h2>
-          </div>
-=======
                   <button;
                     className='px - 2 py - 1 rounded border';
                     on_click={() => view_flags (p.code)}
@@ -614,7 +421,6 @@ function view_flags() {
           <div className="px - 6 py - 4 border - b">;
             <h2 className="text - lg font - semibold">Partners ({filtered_partners.length})</h2>;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {loading ? (
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
             <div className="text - center py - 8 text - gray - 500">;
@@ -676,9 +482,6 @@ function view_flags() {
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;
                         <div className="flex space - x-2">;
                           {partner.status === 'pending' && (
-<<<<<<< HEAD
-                            <>
-=======
                 onChange={(e) => setStatusFilter(e && e.target.value)}
                 className="w-full p-2 border rounded-md";
               >;
@@ -690,13 +493,11 @@ function view_flags() {
             </div>;
           </div>;
         </div>;
-
         {/* Partners Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden">;
           <div className="px-6 py-4 border-b">;
             <h2 className="text-lg font-semibold">Partners ({filteredPartners && filteredPartners.length})</h2>;
           </div>;
-
           {loading ? (;
             <div className="text-center py-8">Loading partners...</div>;
           ) : filteredPartners && filteredPartners.length === 0 ? (;
@@ -761,7 +562,6 @@ function view_flags() {
                         <div className="flex space-x-2">;
                           {partner && partner.status === 'pending' && (;
                             <>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
                                 className="text-green-600 hover:text-green-900";
@@ -793,7 +593,6 @@ function view_flags() {
                             </button>;
                           )}
                           <button className="text-blue-600 hover:text-blue-900">;
-=======
                             <>;
                               <button;
                                 on_click={() => handleStatusChange (partner.id, 'active')}
@@ -823,30 +622,14 @@ function view_flags() {
                               Activate;
                             </button>)}
                           <button className="text - blue - 600 hover:text - blue - 900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             Edit;
                           </button>;
                         </div>;
                       </td>;
-<<<<<<< HEAD
-                    </tr>;
-                  ))}
-                </tbody>;
-              </table>;
-            </div>;
-          )}
-<<<<<<< HEAD
-        </div>
-      </main>
-    </>
-  );
-=======
         </div>;
       </main>;
     </>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         <div className="p-4 rounded border">
           <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
           <ul className="list-disc pl-6">
@@ -862,8 +645,6 @@ function view_flags() {
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                     </tr>))}
                 </tbody>;
               </table>;
@@ -872,4 +653,3 @@ function view_flags() {
       </main>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

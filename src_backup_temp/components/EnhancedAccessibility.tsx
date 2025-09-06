@@ -1,9 +1,4 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function Page("props": "any) {;
 interface EnhancedAccessibilityProps {;
@@ -21,18 +16,10 @@ export const EnhancedAccessibility: Reac t.FC<EnhancedAccessibilityProps> = ({
   const [settings, setSettings] = useState<any>({';
 ';';
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export const "EnhancedAccessibility": React.FC<EnhancedAccessibilityProps> = ({;
   enabled = true",;: "any;
   showControls = true",;: "any;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export default function Page(props: any) {
 interface EnhancedAccessibilityProps {
   // Add your props here: any;
@@ -45,11 +32,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   className = '': any;
 "}) => {;
   const [isOpen, setIsOpen] = useState<any>(false);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const [settings, setSettings] = useState<any>({;
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge'}
@@ -64,10 +46,6 @@ export const EnhancedAccessibility: React.FC = () => {;
     focusIndicator: tru e,';';
     colorBlindness: 'normal',';';
     fontSize: 'medium'
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const [settings, setSettings] = useState<AccessibilitySettings>({;
     highContrast: fals e,;
     largeText: fals e,;
@@ -127,23 +105,10 @@ export const EnhancedAccessibility: React.FC = () => {
     // Cleanup function
   };
 }, []);, []);    if(isOpen) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       setIsVisible(true);
       if(timeoutRef.current) clearTimeout(timeoutRef.current)} else {
       timeoutRef.current = setTimeout(() => setIsVisible(false), 300)}
   }, [isOpen]) ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Apply accessibility settings;
   useEffect(() => {;
@@ -151,10 +116,6 @@ export const EnhancedAccessibility: React.FC = () => {
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Apply accessibility settings
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -162,13 +123,6 @@ export const EnhancedAccessibility: React.FC = () => {
     // Cleanup function
   };
 }, []);, []);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // High contrast
     if(settings.highContrast) {
       root.classList.add('high-contrast')} else {
@@ -180,21 +134,12 @@ export const EnhancedAccessibility: React.FC = () => {
       root.style.setProperty('--reduced-motion',reduce')} else {
       root.style.removeProperty('--reduced-motion');
     // Focus indicator
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(settings.focusIndicator) {';
 ';';
       root.style.setProperty('--focus-visible',2px solid #22ddd2')} else {';
 ';';
       root.style.setProperty('--focus-visible',none')}';';
     // Color blindness simulation'';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     // High contrast;
     if(settings.highContrast) {;
@@ -219,49 +164,24 @@ export const EnhancedAccessibility: React.FC = () => {
     root.style.setProperty('--color-blindness', settings.colorBlindness);
     // Font size
     root.style.fontSize = fontSizeMap[settings.fontSize]}, [settings]) }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(settings.reducedMotion) {';
 ';';
       document.documentElement.classList.add('reduced-motion')} else {';
 ';';
-<<<<<<< HEAD
     if(settings.reducedMotion) {
       document.documentElement.classList.add('reduced-motion')} else {
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-    if(settings.reducedMotion) {
-      document.documentElement.classList.add('reduced-motion')} else {
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       document.documentElement.classList.remove('reduced-motion')}
     if(settings.largeText) {
       document.documentElement.classList.add('large-text')} else {
       document.documentElement.classList.remove('large-text')}
     // Save settings to localStorage'
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   useEffect(() => {
   // TODO: Add dependencies if needed
   return () => {
@@ -272,15 +192,6 @@ export const EnhancedAccessibility: React.FC = () => {
     const saved = localStorage.getItem('accessibility-settings');    if(saved) {
       setSettings(JSON.parse(saved))}
   }, []);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    if(settings.reducedMotion) {;
-      document.documentElement.classList.add('reduced-motion')} else {;
-      document.documentElement.classList.remove('reduced-motion')}
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       [key]: !prev[key]}) ) };';
 ';';
   // Screen reader announcements'';
@@ -293,18 +204,8 @@ export const EnhancedAccessibility: React.FC = () => {
       [key]: "!prev[key]"}) ) };
 ;
   // Screen reader announcements';
-<<<<<<< HEAD
       [key]: !prev[key]}) ) };
   // Screen reader announcements'
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-      [key]: !prev[key]}) ) };
-  // Screen reader announcements'
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     announcement.setAttribute('aria-live',polite');
     announcement.setAttribute('aria-atomic',true');
     announcement.className="sr-only";    announcement.textContent = message;
@@ -313,21 +214,12 @@ export const EnhancedAccessibility: React.FC = () => {
     setTimeout(() => {
       document.body.removeChild(announcement) }, 1000) ;
     setAnnouncements(prev => [...prev, message]) }, []) ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Enhanced keyboard navigation;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Enhanced keyboard navigation
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -335,11 +227,6 @@ export const EnhancedAccessibility: React.FC = () => {
     // Cleanup function
   };
 }, []);, []);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     if(!settings.keyboardNavigation) return;';
 ';';
       // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
@@ -358,25 +245,12 @@ export const EnhancedAccessibility: React.FC = () => {
           break;';';
         case 'Enter':'';';
         case ' ':'';';
-<<<<<<< HEAD
     if(!settings.keyboardNavigation) return;
       // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-    if(!settings.keyboardNavigation) return;
-      // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
       switch(e.key) {;
         case 'Tab': ";
           // Enhanced tab navigation with visual feedback;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       switch(e.key) {
         case 'Tab':
           // Enhanced tab navigation with visual feedback
@@ -388,30 +262,14 @@ export const EnhancedAccessibility: React.FC = () => {
             target.style.outlineOffset = '';
           "}, 2000) ;
           break;
-<<<<<<< HEAD
         case 'Enter':';
         case ' ':';
-=======
-<<<<<<< HEAD
-=======
-        case 'Enter':';
-        case ' ':';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         case 'Enter':'
         case ' ':'
           if(target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {;
             e.preventDefault();
             target.click();
             announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-
-          break;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           break;';
 ';';
         case 'Escape':';';
@@ -424,10 +282,6 @@ modals.forEach(modal:  > {;';';
         case 'Escape':;
           // Close modals, dropdowns, etc.';
 modals.forEach(modal:  > {;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         case 'Escape': ";
           // Close modals", dropdowns, etc.';
 modals.forEach("modal": "> {;
@@ -440,10 +294,6 @@ modals.forEach("modal": "> {;
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         case 'Escape':
           // Close modals, dropdowns, etc.'
 modals.forEach(modal:  > {;
@@ -458,24 +308,10 @@ modals.forEach(modal:  > {;
   };
 }, []);, []);
     if(!settings.keyboardNavigation) return;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         if(mainContent) {
           (mainContent as HTMLElement).focus()}      }
       // Skip to navigation'
       if(e.key === 'Tab' && e.shiftKey && e.altKey) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
         if(mainContent) {;
           (mainContent as HTMLElement).focus()}      }
@@ -486,11 +322,6 @@ modals.forEach(modal:  > {;
         if(navigation) {
           (navigation as HTMLElement).focus()}
       }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     };';
 ';';
     document.addEventListener('keydown', handleKeyDown);';';
@@ -508,10 +339,6 @@ modals.forEach(modal:  > {;
     return () => {';
 ';';
       document.removeEventListener('focusin', handleFocusIn);';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
@@ -525,12 +352,6 @@ modals.forEach(modal:  > {;
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator, settings.screenReader, announce]) ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Skip to main content link;
   useEffect(() => {;
@@ -538,10 +359,6 @@ modals.forEach(modal:  > {;
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Skip to main content link
   useEffect(() => {
 // TODO: Add dependencies if needed
@@ -549,24 +366,11 @@ modals.forEach(modal:  > {;
     // Cleanup function
   };
 }, []);, []);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-</any>
-</AccessibilitySettings>
-</any>
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </any>
 </AccessibilitySettings>
 </any>
 </any>';
 </EnhancedAccessibilityProps>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 </any>;
 </AccessibilitySettings>;
@@ -576,12 +380,4 @@ modals.forEach(modal:  > {;
 </EnhancedAccessibilityProps>;
 </any>
 </any>
-<<<<<<< HEAD
 </EnhancedAccessibilityProps>
-=======
-<<<<<<< HEAD
-</EnhancedAccessibilityProps>
-=======
-</EnhancedAccessibilityProps>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

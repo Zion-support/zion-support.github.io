@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Menu, X} from "lucide-react";
@@ -11,10 +6,8 @@ import {cn} from "@/lib/utils";
 interface SidebarTriggerProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
   className?: string;
 }
-
 export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerProps) {;
   const { open, toggleSidebar } = useSidebar();
-
   return (
     <Button
       variant="ghost"
@@ -27,6 +20,3 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
     </Button>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

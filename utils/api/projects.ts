@@ -1,29 +1,11 @@
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import { NextApiRequest, NextApiResponse } from 'next';
-import {
-<<<<<<< HEAD
-  Project,
-  Milestone,
-  MilestoneStatus,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  isMilestoneStatus,
-=======
-=======
-  Project
+Project
   Milestone
   MilestoneStatus
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   isMilestoneStatus
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 } from '../types/milestones';
 import { CurrentUser } from './auth';
-=======
 // Project management utilities
 import { v4 as uuidv4 } from 'uuid';
-
 export interface Project {
   id: string;
   title: string;
@@ -54,14 +36,10 @@ export interface Project {
   createdAt: string;
   updatedAt: string;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-=======
   isMilestoneStatus;
 } from '../types / milestones';
 import { CurrentUser } from './auth';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface Milestone {
   id: string;
   title: string;
@@ -73,146 +51,69 @@ export interface Milestone {
   created_at: string;
   updated_at: string;
 }
-<<<<<<< HEAD
-// Mock storage
-const projects: Project[] = [];
-export function getProjectById(id: string): Project | null {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return projects.find(p => p.id === id) || null;
-=======
   return projects.find(p => p.id === id) |null;
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
   return projects && projects.find(p => p && p.id === id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export function getAllProjects(): Project[] {
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
-<<<<<<< HEAD
-    ...project
-    id: `project_${Date.now()}`
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
-  }
-  projects.push(newProject);
-=======
     ...project,
     id: `project_${Date && Date.now()}`,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return newProject;
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
-<<<<<<< HEAD
-  const project = projects.find(p => p.id === id);
-  if (!project) return null;
-<<<<<<< HEAD
-  
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
-=======
   const project = projects && projects.find(p => p && p.id === id);
   if (!project) return null,
-  
   Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return project;
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
-<<<<<<< HEAD
-    ...milestone
-    id: `milestone_${Date.now()}`
-    status: 'pending'
-    createdAt: new Date().toISOString()
-=======
     ...milestone,
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     updatedAt: new Date().toISOString()
-<<<<<<< HEAD
-  };
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
-=======
-=======
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
-=======
   project && project.milestones[idx] = next;
   project && project.updatedAt = now;
   saveProject(project);
   return next;  
   project && project.milestones.push(newMilestone);
   project && project.updatedAt = new Date().toISOString();
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return newMilestone;
 }
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
-<<<<<<< HEAD
-  const milestone = project.milestones.find(m => m.id === milestoneId);
-  if (!milestone) return null;
-<<<<<<< HEAD
-  
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
-=======
   const milestone = project && project.milestones.find(m => m && m.id === milestoneId);
   if (!milestone) return null,
-  
   Object && Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project && project.updatedAt = new Date().toISOString();
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return milestone;
 }
 export function deleteMilestone(project: Project, milestoneId: string): boolean {
-<<<<<<< HEAD
-  const index = project.milestones.findIndex(m => m.id === milestoneId);
-  if (index === -1) return false;
-<<<<<<< HEAD
-  
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   project.milestones.splice(index, 1);
   project.updatedAt = new Date().toISOString();
-=======
   const index = project && project.milestones.findIndex(m => m && m.id === milestoneId);
   if (index === -1) return false,
-  
   project && project.milestones.splice(index, 1);
   project && project.updatedAt = new Date().toISOString();
-  
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  return true;
-}
-=======
   projectMembers.push(member);
   return member;
 }
-
 export function getProjectMembers(projectId: string): ProjectMember[] {
   return projectMembers.filter(m => m.projectId === projectId);
 }
-
 export function removeProjectMember(projectId: string, userId: string): boolean {
   const index = projectMembers.findIndex(m => m.projectId === projectId && m.userId === userId);
   if (index >= 0) {
@@ -221,7 +122,6 @@ export function removeProjectMember(projectId: string, userId: string): boolean 
   }
   return false;
 }
-
 export function updateProjectMemberRole(projectId: string, userId: string, role: ProjectMember['role']): boolean {
   const member = projectMembers.find(m => m.projectId === projectId && m.userId === userId);
   if (member) {
@@ -230,54 +130,42 @@ export function updateProjectMemberRole(projectId: string, userId: string, role:
   }
   return false;
 }
-
 // Utility functions
 export function isClient(project: Project, userId: string): boolean {
   return project.clientId === userId;
 }
-
 export function isTalent(project: Project, user: { talentSlug?: string }): boolean {
   return user.talentSlug === project.talentSlug;
 }
-
 export function isProjectMember(projectId: string, userId: string): boolean {
   return projectMembers.some(m => m.projectId === projectId && m.userId === userId);
 }
-
 export function getProjectRole(projectId: string, userId: string): ProjectMember['role'] | null {
   const member = projectMembers.find(m => m.projectId === projectId && m.userId === userId);
   return member ? member.role : null;
 }
-
 export function canEditProject(project: Project, user: { id: string; talentSlug?: string }): boolean {
   return isClient(project, user.id) || isTalent(project, user) || isProjectMember(project.id, user.id);
 }
-
 export function canViewProject(project: Project, user: { id: string; talentSlug?: string }): boolean {
   return canEditProject(project, user);
 }
-
 export function getProjectStatus(project: Project): string {
   if (project.status === 'COMPLETED') return 'Completed';
   if (project.status === 'CANCELLED') return 'Cancelled';
   if (project.status === 'PAUSED') return 'Paused';
-  
   const now = new Date();
   const overdueMilestones = project.timeline.filter(m => 
     m.dueDate && new Date(m.dueDate) < now && m.status !== 'COMPLETED'
   );
-  
   if (overdueMilestones.length > 0) return 'Overdue';
   return 'Active';
 }
-
 export function calculateProjectProgress(project: Project): number {
   if (project.timeline.length === 0) return 0;
-  
   const completedMilestones = project.timeline.filter(m => m.status === 'COMPLETED').length;
   return Math.round((completedMilestones / project.timeline.length) * 100);
 }
-
 export function getProjectStats(project: Project): {
   totalAmount: number;
   completedAmount: number;
@@ -294,7 +182,6 @@ export function getProjectStats(project: Project): {
   const overdueCount = project.timeline.filter(m => 
     m.dueDate && new Date(m.dueDate) < new Date() && m.status !== 'COMPLETED'
   ).length;
-  
   return {
     totalAmount,
     completedAmount,
@@ -303,12 +190,10 @@ export function getProjectStats(project: Project): {
     overdueCount
   };
 }
-
 export function searchProjects(query: string, userId?: string): Project[] {
   const allProjects = userId ? 
     [...getProjectsByClient(userId), ...getProjectsByTalent(userId)] : 
     getAllProjects();
-  
   const searchTerm = query.toLowerCase();
   return allProjects.filter(project => 
     project.title.toLowerCase().includes(searchTerm) ||
@@ -316,14 +201,12 @@ export function searchProjects(query: string, userId?: string): Project[] {
     project.talentSlug.toLowerCase().includes(searchTerm)
   );
 }
-
 export function getRecentProjects(userId: string, limit: number = 10): Project[] {
   const userProjects = [...getProjectsByClient(userId), ...getProjectsByTalent(userId)];
   return userProjects
     .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
     .slice(0, limit);
 }
-
 export function getProjectTimeline(projectId: string): Array<{
   type: 'milestone' | 'note' | 'document';
   id: string;
@@ -334,9 +217,7 @@ export function getProjectTimeline(projectId: string): Array<{
 }> {
   const project = getProject(projectId);
   if (!project) return [];
-  
   const timeline = [];
-  
   // Add milestones
   project.timeline.forEach(milestone => {
     timeline.push({
@@ -348,7 +229,6 @@ export function getProjectTimeline(projectId: string): Array<{
       author: 'System'
     });
   });
-  
   // Add notes
   project.notes.forEach(note => {
     timeline.push({
@@ -360,7 +240,6 @@ export function getProjectTimeline(projectId: string): Array<{
       author: note.authorId
     });
   });
-  
   // Add documents
   project.documents.forEach(doc => {
     timeline.push({
@@ -371,11 +250,8 @@ export function getProjectTimeline(projectId: string): Array<{
       author: 'System'
     });
   });
-  
   return timeline.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 // Mock storage;
 const projects: Project[] = [];
 ;
@@ -440,4 +316,3 @@ if (return false) {
 ;
   return true;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

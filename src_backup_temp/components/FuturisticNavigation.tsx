@@ -196,12 +196,6 @@ if(searchQuery.trim()) {;
                         exit = {;
   { "opacity": "0", "y": "-10",;
   "scale": "0.95;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
                         transition={{ "duration": "0.2 "}}";
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden";
@@ -214,10 +208,6 @@ if(searchQuery.trim()) {;
                           <div className="space-y-2">;
                             {category.services.map((service, subIndex) => (;
                               <motion.div;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
                         transition={{ duration: 0.2 }}"
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
@@ -305,11 +295,6 @@ if(searchQuery.trim()) {;
       </header>;
     </>;
   )};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 '"`;
 ;,"});})";
 ;
@@ -322,10 +307,6 @@ if(searchQuery.trim()) {;
 </motion>;
 </motion>;
 </motion>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 '"`
 ;,"}
     );,})";

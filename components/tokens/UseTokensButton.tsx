@@ -1,43 +1,23 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react";
-import UseTokensModal, { RedemptionType } from "./UseTokensModal";
-export default function UseTokensButton({
-  serviceId
-  defaultType
-}: {
-  serviceId?: string;
-  defaultType?: RedemptionType;
-}) {
-
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState } from "react";
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
-
 export default function UseTokensButton(): any ({;
   serviceId,;
   defaultType,;
@@ -45,7 +25,6 @@ export default function UseTokensButton(): any ({;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -63,9 +42,7 @@ export default function UseTokensButton(): any ({;
       />;
     </>;
   );
-=======
 export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -83,12 +60,7 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
       />;
     </>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useState } from './react';
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 ;
@@ -129,4 +101,3 @@ function UseTokensButton() {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

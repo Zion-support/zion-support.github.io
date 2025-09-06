@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 const "QuantumComputing": React.FC = () => {
   return (
@@ -18,9 +13,4 @@ const "QuantumComputing": React.FC = () => {
 };
 export { QuantumComputing };
 export default QuantumComputing;
-<<<<<<< HEAD
 import React from 'react'; const QuantumComputing: React.FC = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-center"> Quantum Computing </h1> <p className="text-xl text-gray-600 text-center">Coming soon...</p> </div> </div> )}; export { QuantumComputing }; export default QuantumComputing;
-=======
-import React from 'react'; const QuantumComputing: React.FC = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-center"> Quantum Computing </h1> <p className="text-xl text-gray-600 text-center">Coming soon...</p> </div> </div> )}; export { QuantumComputing }; export default QuantumComputing;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

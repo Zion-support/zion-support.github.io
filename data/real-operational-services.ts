@@ -1,51 +1,4 @@
 export interface RealOperationalService {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  real_implementation: boolean;
-  contact_info: {
-    mobile: string;
-    email: string;
-<<<<<<< HEAD
-
-    address: string;
-  }
-export const realOperationalServices: RealOperationalService[] = [
-  {
-    id: 'operational-intelligence'
-    name: 'Operational Intelligence Platform'
-    tagline: 'Real-time operational insights and optimization'
-    price: '$99/month'
-    description:
-      'Comprehensive operational intelligence platform for monitoring and optimizing business operations.'
-    features: [
-      'Real-time monitoring'
-      'Performance analytics'
-      'Operational insights'
-      'Optimization recommendations'
-      'Alert system'
-    ]
-    link: '/services/operational-intelligence'
-    category: 'Operational Services'
-    realImplementation: true
-    contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];      mobile: "+1 302 464 0950";
-
-      email: "kleber@ziontechgroup.com";
-=======
-=======
     address: string;
   }
 ;
@@ -68,21 +21,12 @@ export const realOperationalServices: RealOperationalService[] = [;
     category: 'Operational Services',
     real_implementation: true,
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
-<<<<<<< HEAD
-      email: "kleber@ziontechgroup && ziontechgroup.com";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -93,7 +37,6 @@ export const realOperationalServices: RealOperationalService[] = [;
     address: string
   }
 }
-
 export const realOperationalServices: RealOperationalService[] = [
   {
     id: "operational-intelligence", name: "Operational Intelligence Platform",
@@ -114,12 +57,9 @@ export const realOperationalServices: RealOperationalService[] = [
     }
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

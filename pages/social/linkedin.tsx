@@ -1,45 +1,27 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function LinkedInRedirect() {
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.location.replace(
-        'https://www.linkedin.com/company/zion-tech-group'
-=======
-
 export default function LinkedInRedirect() {;
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace(;
         'https://www && www.linkedin.com/company/zion-tech-group';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     }
   }, []);
@@ -66,15 +48,12 @@ export default function LinkedInRedirect() {;
       </div>;
     </>;
   );
-
-=======
 export default function LinkedInRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
 		}
 	}, []);
-
 	return (
 		<>
 			<Head>
@@ -91,8 +70,6 @@ export default function LinkedInRedirect() {
 		</>
 	)
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 ;
 export default /**
@@ -133,4 +110,3 @@ if ( {) {
       </div>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

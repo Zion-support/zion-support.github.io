@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const LanguageSync: NextPage = () => {
   return (
     <div>
@@ -27,11 +19,6 @@ const LanguageSync: NextPage = () => {
   )
 }
 export default LanguageSync;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -55,4 +42,3 @@ const LanguageSync: NextPage = () => {
     </div>);
 },
 export default LanguageSync,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

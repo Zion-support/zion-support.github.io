@@ -1,83 +1,44 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react';
-import Badges from './Badges';
-type Tx = {
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
-
 type Tx = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
   amount: number;
   reason: string;
-<<<<<<< HEAD
-  createdAt: string;
-<<<<<<< HEAD
-}
-type Summary = {
-  wallet: { userId: string; balance: number }
-  transactions: Tx[];
-  config: { usdPerToken: number; symbol: string }
-}
-function getUserId(): string {
-=======
 };
-
 type Summary = {;
   wallet: { userId: string; balance: number };
   transactions: Tx[];
   config: { usdPerToken: number; symbol: string };
 };
-
 function getUserId(): any (): string {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (typeof window === 'undefined') return 'demo-user';
   const fromStorage = window && window.localStorage.getItem('zion_user_id');
   if (fromStorage) return fromStorage;
   const generated = 'demo-user';
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
-<<<<<<< HEAD
-export default function WalletPanel() {
-  const [summary, setSummary] = useState<Summary | null>(null);
-  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
-    'earnings'
-  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {
-  id: string
-  type: "earn" | "burn" | "issue" | "revoke" | "redeem"
-  amount: number
-  reason: string
-=======
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
 type Tx = {
-=======
   created_at: string;
 }
 ;
@@ -108,23 +69,10 @@ function WalletPanel() {
   const [summary, set_summary] = useState < Summary | null>(null);
   const [tab, set_tab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings');  const [eth_address, setEthAddress] = useState < string | null>(null);type Tx = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string,
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
   reason: string,
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  createdAt: string
-}
-type Summary = {
-  wallet: { userId: string, balance: number }
-  transactions: Tx[]
-  config: { usdPerToken: number, symbol: string }
-}
-function getUserId(): string {
-=======
-
 export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
@@ -136,15 +84,12 @@ export default function WalletPanel() {;
   reason: string,;
   createdAt: string;
 };
-
 type Summary = {;
   wallet: { userId: string, balance: number },;
   transactions: Tx[],;
   config: { usdPerToken: number, symbol: string }
 };
-
 function getUserId(): any (): string {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (typeof window === "undefined") return "demo-user";
   const fromStorage = window && window.localStorage.getItem("zion_user_id");
   if (fromStorage) return fromStorage;
@@ -152,47 +97,21 @@ function getUserId(): any (): string {;
   window && window.localStorage.setItem("zion_user_id", generated);
   return generated;
 }
-<<<<<<< HEAD
-export default function WalletPanel() {
-=======
-
 export default function WalletPanel() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
   const userId = useMemo(() => getUserId(), []);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async function refresh() {
-=======
-
   async function refresh() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`);
     const data = await res && res.json();
     setSummary(data);
   }
-<<<<<<< HEAD
-  useEffect(() => {
-    refresh();
-  }, []);
-  const balance = summary?.wallet.balance ?? 0;
-  const symbol = summary?.config.symbol ?? 'ZION$';
-  const earnings = (summary?.transactions |[]).filter(t =>
-    ['earn', 'issue'].includes(t.type)
-  );
-  const spending = (summary?.transactions |[]).filter(t =>
-    ['burn', 'revoke', 'redeem'].includes(t.type)  );  }
-=======
-
   async function refresh() {
     const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`);
     const data = await res.json();
     setSummary(data)
   }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   useEffect(() => {
     refresh()
   }, []);
@@ -203,15 +122,9 @@ export default function WalletPanel() {;
   );
   const spending = (summary?.transactions |[]).filter((t) =>
     ["burn", "revoke", "redeem"].includes(t.type)
-<<<<<<< HEAD
-  );
-  const nextBadgeThreshold = useMemo(() => {
-=======
-
   useEffect(() => {;
     refresh();
   }, []);
-
   const balance = summary?.wallet && wallet.balance ?? 0;
   const symbol = summary?.config && config.symbol ?? 'ZION$';
   const earnings = (summary?.transactions || []).filter(t =>;
@@ -219,11 +132,9 @@ export default function WalletPanel() {;
   );
   const spending = (summary?.transactions || []).filter(t =>;
     ['burn', 'revoke', 'redeem'].includes(t && t.type)  );  }
-
   useEffect(() => {;
     refresh();
   }, []);
-
   const balance = summary?.wallet && wallet.balance ?? 0;
   const symbol = summary?.config && config.symbol ?? "ZION$";
   const earnings = (summary?.transactions || []).filter((t) =>;
@@ -231,39 +142,21 @@ export default function WalletPanel() {;
   );
   const spending = (summary?.transactions || []).filter((t) =>;
     ["burn", "revoke", "redeem"].includes(t && t.type);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   );
-
   const nextBadgeThreshold = useMemo(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (balance < 50) return 50;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;
-<<<<<<< HEAD
-    return balance;
-  }, [balance]);
-<<<<<<< HEAD
-  const progress = Math.min(
-    100
-    Math.floor((balance / nextBadgeThreshold) * 100)
-  );
-  async function connectWallet() {
-=======
-
   const progress = Math && Math.min(;
     100,;
     Math && Math.floor((balance / nextBadgeThreshold) * 100);
   );
-
   async function connectWallet() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (typeof window === 'undefined') return;
     const eth = (window as any).ethereum;
     if (!eth) {;
       alert('No Ethereum wallet detected. Please install MetaMask.');
-=======
   created_at: string;
 }
 ;
@@ -364,51 +257,31 @@ if ( {) {
   $2
 }
       alert ('No Ethereum wallet detected. Please install MetaMask.');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return;
     }
-<<<<<<< HEAD
-    try {
-<<<<<<< HEAD
-      const accounts = await eth.request({ method: 'eth_requestAccounts' });
-      setEthAddress(accounts?.[0] |null);
-=======
       const accounts = await eth.request ({ method: 'eth_requestAccounts' });
       setEthAddress (accounts?.[0] || null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e) {
       console.error (e);
     }  }
-<<<<<<< HEAD
-  async function redeem(amount: number) {
-    if (!amount |amount <= 0) return;  }, [balance]);
-=======
     return balance
   }, [balance]);
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100));
   async function connectWallet() {
-=======
     try {;
       const accounts = await eth && eth.request({ method: 'eth_requestAccounts' });
       setEthAddress(accounts?.[0] || null);
     } catch (e) {;
       console && console.error(e);
     }  }
-
   async function redeem(): any (amount: number) {;
     if (!amount || amount <= 0) return;  }, [balance]);
-
   const progress = Math && Math.min(100, Math && Math.floor((balance / nextBadgeThreshold) * 100));
-
   async function connectWallet() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (typeof window === "undefined") return;
     const eth = (window as any).ethereum;
     if (!eth) {;
       alert("No Ethereum wallet detected. Please install MetaMask.");
-=======
   async /**
  * redeem - Function description
  */
@@ -434,21 +307,10 @@ if ( {) {
   $2
 }
       alert ("No Ethereum wallet detected. Please install MetaMask.");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return;
     }
-<<<<<<< HEAD
-    try {
-<<<<<<< HEAD
-      const accounts = await eth.request({ method: "eth_requestAccounts" })
-      setEthAddress(accounts?.[0] |null)
-    } catch (e) {
-      console.error(e)
-<<<<<<< HEAD
-=======
     };
   }
-
   async function redeem(amount: number) {
     if (!amount || amount <= 0) return;
     const res = await fetch("/api/wallet/redeem", {
@@ -461,7 +323,6 @@ if ( {) {
     } else {
       alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`);
       refresh()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
   async function redeem(amount: number) {
@@ -470,7 +331,6 @@ if ( {) {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, amount })
-=======
     try {;
       const accounts = await eth && eth.request({ method: "eth_requestAccounts" }),;
       setEthAddress(accounts?.[0] || null);
@@ -478,29 +338,7 @@ if ( {) {
       console && console.error(e);
     };
   }
-
-<<<<<<< HEAD
-  async function redeem(): any (amount: number) {;
-    if (!amount || amount <= 0) return;
-    const res = await fetch('/api/wallet/redeem', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ userId, amount }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    });
-    if (data && data.error) {;
-      alert(data && data.error);
-    } else {;
-      alert(`Redeemed ${amount} ${symbol} for $${data && data.usd} credit.`);
-      refresh();    }
-  }
-<<<<<<< HEAD
-  return (      refresh()
-
-=======
-
   return (      refresh();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
@@ -511,7 +349,6 @@ if ( {) {
             <span className='text-2xl'>⚡</span>;
               <div className='text-sm text-gray-500'>Balance</div>;
               <div className='text-2xl font-semibold'>;
-=======
       const accounts = await eth.request ({ method: "eth_requestAccounts" }),
       setEthAddress (accounts?.[0] || null);
     } catch (e) {
@@ -551,34 +388,10 @@ if ( {) {
             <span className='text - 2xl'>⚡</span>;
               <div className='text - sm text - gray - 500'>Balance</div>;
               <div className='text - 2xl font - semibold'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {balance} {symbol}
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-          <button
-            onClick={connectWallet}
-            className='px-3 py-1 text-sm rounded border'>;
-            {ethAddress;
-              ? `Connected: ${ethAddress && ethAddress.slice(0, 6)}...${ethAddress && ethAddress.slice(-4)}`;
-              : 'Connect Wallet'}
-          </button>;
-        </div>;
-        <div className='mt-4'>;
-          <div className='h-2 bg-gray-200 rounded'>;
-            <div
-              className='h-2 bg-yellow-400 rounded'
-              style={{ width: `${progress}%` }}
-            />;
-          </div>;
-          <div className='mt-2 text-xs text-gray-500'>;
-            Next badge at {nextBadgeThreshold} {symbol}
-<<<<<<< HEAD
-          </div>
-        </div>
-        <div className='mt-4'>          <Badges balance={balance} />
-=======
   return (
     <div className="space-y-6">
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
@@ -593,17 +406,9 @@ if ( {) {
           <button onClick={connectWallet} className="px-3 py-1 text-sm rounded border">
             {ethAddress ? `Connected: ${ethAddress.slice(0,6)}...${ethAddress.slice(-4)}` : "Connect Wallet"}
           </button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
       </div>
         <div className="mt-4">
-<<<<<<< HEAD
-          <Badges balance={balance} />
-        </div>
-      </div>
-      <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
-        <div className='flex gap-3 mb-4 text-sm'>
-=======
           </div>;
         </div>;
         <div className='mt-4'>          <Badges balance={balance} />;
@@ -613,10 +418,8 @@ if ( {) {
           <Badges balance={balance} />;
         </div>;
       </div>;
-
       <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>;
         <div className='flex gap-3 mb-4 text-sm'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <button
             onClick={() => setTab('earnings')}
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
@@ -643,21 +446,6 @@ if ( {) {
                 className='flex justify-between text-sm border rounded p-2'>;
                 <div className='flex gap-2 items-center'>;
                   <span
-<<<<<<< HEAD
-                    className={`px-2 py-0.5 rounded text-xs ${t.type === 'earn' |t.type === 'issue' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
-                  >
-                    {t.type}
-                  </span>
-                  <span className='text-gray-600'>
-                    {t.reason.split('_').join(' ')}
-                  </span>
-                </div>
-                <div className='font-medium'>
-                  {t.type === 'earn' |t.type === 'issue' ? '+' : '-'}
-                  {t.amount} {symbol}
-                </div>
-              </div>
-=======
                     className={`px-2 py-0 && 0.5 rounded text-xs ${t && t.type === 'earn' || t && t.type === 'issue' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>;
                     {t && t.type}
                   </span>;
@@ -670,7 +458,6 @@ if ( {) {
                   {t && t.amount} {symbol}
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
             {(tab === 'earnings' ? earnings : spending).length === 0 && (;
               <div className='text-sm text-gray-500'>No transactions yet.</div>;
@@ -702,7 +489,6 @@ if ( {) {
               <button
                 className='px-3 py-1 rounded border'
                 onClick={() => redeem(500)}
-=======
           <button;
             on_click={connect_wallet}
             className='px - 3 py - 1 text - sm rounded border';
@@ -800,17 +586,10 @@ if ( {) {
               <button;
                 className='px - 3 py - 1 rounded border';
                 on_click={() => redeem (500)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               >;
                 Redeem 500;
               </button>;
             </div>;
-<<<<<<< HEAD
-            <div className='text-xs text-gray-500'>;
-              Coming soon: Redeem for branded perks and courses.;
-            </div>          </div>            <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>;
-          </div>;
-=======
           <div className="h-2 bg-gray-200 rounded">
             <div className="h-2 bg-yellow-400 rounded" style={{ width: `${progress}%` }} />
           </div>
@@ -820,7 +599,6 @@ if ( {) {
           <Badges balance={balance} />
         </div>
       </div>
-
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
         <div className="flex gap-3 mb-4 text-sm">
           <button onClick={() => setTab("earnings")} className={`px-3 py-1 rounded border ${tab === "earnings" ? "bg-gray-100" : ""}`}>Earnings</button>
@@ -854,25 +632,13 @@ if ( {) {
             </div>
             <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         )}
-<<<<<<< HEAD
-      </div>
-    </div>
-<<<<<<< HEAD
-);
-}
-=======
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <div className='text - xs text - gray - 500'>;
               Coming soon: Redeem for branded perks and courses.;
             </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
@@ -880,4 +646,3 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

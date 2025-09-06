@@ -1,17 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 interface FraudItem {
-<<<<<<< HEAD
-
-  id: string
-  userId: string | null
-  source: string
-  createdAt: string
-  heuristic: { reasons: string[], severity: string }
-  gpt?: { label: string, reason: string, confidence: number }
-
-  status: string
-}
-=======
   id: string,
   user_id: string | null,
   source: string,
@@ -20,45 +8,6 @@ interface FraudItem {
   gpt?: { label: string, reason: string, confidence: number },
   status: string;
 }
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-export default function FraudAdminPage() {
-  const [items, setItems] = useState<FraudItem[]>([])
-  const [adminToken, setAdminToken] = useState<string>('')
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<string | null>(null)
-  useEffect(() => {
-<<<<<<< HEAD
-=======
-    const saved = localStorage.getItem('admin-token') || '';
-    setAdminToken(saved)
-  }, []);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-    const saved = localStorage.getItem('admin-token') |''
-    setAdminToken(saved)
-  }, [])
-  const fetchItems = async () => {
-    setLoading(true)
-    setError(null)
-    try {
-<<<<<<< HEAD
-      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} })
-      const json = await res.json()
-      if (!res.ok) throw new Error(json.error |'Failed to load')
-      setItems(json.items |[])
-    } catch (e: any) {
-      setError(e.message |'Failed to load')
-=======
-      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} }),
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error || 'Failed to load');
-      setItems(json.items || [])
-    } catch (e: any) {
-      setError(e.message || 'Failed to load')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * FraudAdminPage - Function description
  */
@@ -83,22 +32,14 @@ function FraudAdminPage() {
       set_items (json.items || []);
     } catch (e: any) {
       set_error (e.message || 'Failed to load');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
-<<<<<<< HEAD
-  }
-  useEffect(() => {
-<<<<<<< HEAD
-=======
     fetchItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken]);
-
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken])
@@ -117,7 +58,6 @@ function FraudAdminPage() {
     if (res.ok) fetchItems()
     else alert(json.error |'Action failed')
   }
-
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -180,12 +120,7 @@ function FraudAdminPage() {
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   },
   useEffect (() => {
     fetch_items (),
@@ -268,4 +203,3 @@ function FraudAdminPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

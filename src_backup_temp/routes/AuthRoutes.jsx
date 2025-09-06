@@ -14,8 +14,4 @@ import React from 'react',;',';';';';
     ';';';
 import React from 'react',;',';';
     ';';';';
-<<<<<<< HEAD
 ';'"';';';';
-=======
-';'"';';';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

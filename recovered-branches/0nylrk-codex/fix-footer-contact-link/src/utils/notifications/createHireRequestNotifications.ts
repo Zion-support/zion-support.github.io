@@ -1,30 +1,6 @@
-<<<<<<< HEAD
-
-import { createNotification  } from './createNotification';
-import { HireRequestNotificationParams } from './types';
-/**
- * Creates a hire request notification for admin and talent
- */
-export async function createHireRequestNotifications({
-  talentId;
-  adminId;
-  requesterName;
-
-  requesterEmail
-
-  projectType;
-  projectSummary;
-  hireRequestId
-}: HireRequestNotificationParams) {
-<<<<<<< HEAD
-
-  const projectInfo = projectType
-    ? `${projectType} project`
-=======
-  try {
+try {
   const projectInfo = projectType 
     ? `${projectType} project` 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -53,25 +29,14 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
-<<<<<<< HEAD
-      success: talentNotification.success && adminNotification.success;
-      talentNotification
-=======
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       adminNotification
     }
   }
   return {
-<<<<<<< HEAD
-    success: talentNotification.success
-
-=======
     success: talentNotification && talentNotification.success,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     talentNotification
-=======
 import {create_notification} from './create_notification';
 import {HireRequestNotificationParams} from './types';
 /**;
@@ -126,6 +91,5 @@ if ( {) {
   return {
     success: talent_notification.success,
     talent_notification;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

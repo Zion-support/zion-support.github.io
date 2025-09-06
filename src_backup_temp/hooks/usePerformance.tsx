@@ -29,12 +29,6 @@ export function usePerformance("props": "any) {;
     sendToAnalytics = false} = options;
 ;
   const [metrics, setMetrics] = useState<PerformanceMetrics>({;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     "fcp": "nul l",;
     "lcp": "nul l",;
     "fid": "nul l",;
@@ -44,10 +38,6 @@ export function usePerformance("props": "any) {;
     "windowLoad": "nul l",;
     "navigationStart": "nul l"});
 ;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: nul l,
     lcp: nul l,
@@ -58,13 +48,6 @@ export function usePerformance("props": "any) {;
     windowLoad: nul l,
     navigationStart: nul l}
     );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const [isMonitoring, setIsMonitoring] = useState<any>(false);
 : "src/hooks/usePerformance.tsx;
   const observerRef = useRef<PerformanceObserver | null>(null);';
@@ -80,12 +63,6 @@ export function usePerformance("props": "any) {;
     ;
       ;
       if (lcpEntry) {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         setMetrics(prev => ({ ...prev, "lcp": "lcpEntr y.startTime "}))});
     // First Input Delay (FID);
     ;
@@ -119,10 +96,6 @@ export function usePerformance("props": "any) {;
       for (const entry of list.getEntries()) {;
         ;
         if (!layoutShiftEntry.hadRecentInput) {;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
     );
     // Largest Contentful Paint (LCP)
@@ -152,14 +125,6 @@ export function usePerformance("props": "any) {;
     // Cumulative Layout Shift (CLS)
       for (const entry of list.getEntries()) {
         if (!layoutShiftEntry.hadRecentInput) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-          clsValue += layoutShiftEntry.value;
-;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           clsValue += layoutShiftEntry.value;
 ;
       setMetrics(prev => ({ ...prev, "cls": "clsValu e "}))});
@@ -176,10 +141,6 @@ export function usePerformance("props": "any) {;
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
       fidObserver.observe({ "entryTypes": "['first-input'] "});
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})} catch (error) {;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       setMetrics(prev => ({ ...prev, cls: clsValu e }))}
     );
     // Start observing
@@ -223,35 +184,18 @@ export function usePerformance("props": "any) {;
         domLoad,;
         windowLoad;
       }));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
           // // // // // // // // })});
     try {;
 : "src/hooks/usePerformance.tsx;
 ';
       longTaskObserver.observe({ "entryTypes": ['longtask'] "})} catch (error) {;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           // // // // // // // // })}
     );
     try {
 :src/hooks/usePerformance.tsx
 '
       longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       // // // // // // // // }
     return : "unknown longTaskObserver.disconnect();
       if (logToConsole) {;
@@ -296,38 +240,17 @@ export function usePerformance("props": "any) {;
             ;
             setMetrics(prev => ({ ...prev", fcp }));
             if (logToConsole) // }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        })}
-    );
-      observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         })});
       observerRef.current.observe({ "entryTypes": "['paint'] "})} catch (e) {;
         })}
     );
       observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       // }
             ;
             setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole) }
-<<<<<<< HEAD
         })});
       observerRef.current.observe({ "entryTypes": "['paint'] "})} catch (e) {;
-=======
-<<<<<<< HEAD
-=======
-        })});
-      observerRef.current.observe({ "entryTypes": "['paint'] "})} catch (e) {;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         })}
     );
       observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
@@ -343,24 +266,11 @@ export function usePerformance("props": "any) {;
           ;
           setMetrics(prev => ({ ...prev", lcp }));
           if (logToConsole) // }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      }
-    );
-      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       });
       lcpObserverRef.current.observe({ "entryTypes": "['largest-contentful-paint'] "})} catch (e) {;
       }
     );
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       // }
         ;
         ;
@@ -368,16 +278,8 @@ export function usePerformance("props": "any) {;
           ;
           setMetrics(prev => ({ ...prev, lcp }));
           if (logToConsole) }
-<<<<<<< HEAD
       });
       lcpObserverRef.current.observe({ "entryTypes": "['largest-contentful-paint'] "})} catch (e) {;
-=======
-<<<<<<< HEAD
-=======
-      });
-      lcpObserverRef.current.observe({ "entryTypes": "['largest-contentful-paint'] "})} catch (e) {;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       }
     );
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
@@ -392,29 +294,13 @@ export function usePerformance("props": "any) {;
 : "src/hooks/usePerformance.tsx;
             clsValue += (entry as any).value"}
         }
-<<<<<<< HEAD
         setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
         if (logToConsole) // });
       clsObserverRef.current.observe({ "entryTypes": "['layout-shift'] "})} catch (e) {;
-=======
-<<<<<<< HEAD
-=======
-        setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
-        if (logToConsole) // });
-      clsObserverRef.current.observe({ "entryTypes": "['layout-shift'] "})} catch (e) {;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         setMetrics(prev => ({ ...prev, cls: clsValu e }));
         if (logToConsole) // }
     );
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       // }
   }, [enableWebVitals, logToConsole]);
 ;
@@ -426,18 +312,9 @@ export function usePerformance("props": "any) {;
     ;
             clsValue += (entry as any).value"}
         }
-<<<<<<< HEAD
         setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
         if (logToConsole) });
       clsObserverRef.current.observe({ "entryTypes": "['layout-shift'] "})} catch (e) {;
-=======
-<<<<<<< HEAD
-=======
-        setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
-        if (logToConsole) });
-      clsObserverRef.current.observe({ "entryTypes": "['layout-shift'] "})} catch (e) {;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         setMetrics(prev => ({ ...prev, cls: clsValu e }));
         if (logToConsole) }
     );
@@ -699,22 +576,11 @@ export function useAPIPerformance(..."args": "unknow n[]): unknown {;
 : "src/hooks/usePerformance.tsx;
       ;
       if (average > threshold) {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-      
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         slowAPIs.push({ endpoint", average })}
     });
     return slowAPIs.sort("a": "unknow n", "b": "unknown b.average - a.average)"}, [apiMetrics]);
       ;
       if (average > threshold) {;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       if (average > threshold) {
         slowAPIs.push({ endpoint, average })}
     }

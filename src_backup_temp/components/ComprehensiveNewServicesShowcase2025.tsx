@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-export default ComprehensiveNewServicesShowcase2025;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React, { useState } from 'react';';
 export default ComprehensiveNewServicesShowcase2025;';';
 import React, { useState } from 'react';
@@ -334,10 +327,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
 ;
 export default ComprehensiveNewServicesShowcase2025;
 export default ComprehensiveNewServicesShowcase2025;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
 export default function Page(props: any) {
 ;
@@ -454,13 +443,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"
               />
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {/* Category Filter */}"
             <div className="flex gap-2 overflow-x-auto pb-2">
               {categories.map((category) => (
@@ -530,13 +512,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Description */}"
               <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                 {service.description}
@@ -566,21 +541,12 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                       <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0"   />                      <span>{feature}</span>
                     </div>
                   ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
                       +{service.features.length-3} more features
                         </div>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
                       +{service.features.length-3} more features
@@ -759,38 +725,17 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
     </div>) }
 export default ComprehensiveNewServicesShowcase2025;'"`
 </motion>
-<<<<<<< HEAD
 </motion>';
 </motion>;';;';
-=======
-<<<<<<< HEAD
-=======
-</motion>';
-</motion>;';;';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         )}
       </div>
     </div>
   );
 }
 export default ComprehensiveNewServicesShowcase2025;
-<<<<<<< HEAD
 </motion>
 </motion>
 </motion>
 </motion>
 </motion>
 </motion>
-=======
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-<<<<<<< HEAD
-</motion>
-=======
-</motion>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

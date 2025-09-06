@@ -9,18 +9,9 @@ Plus,
   HelpCircle,
   Star,
   Share2,
-<<<<<<< HEAD
   Bookmark,';
   Download,';';
   Printer'';';
-=======
-<<<<<<< HEAD
-=======
-  Bookmark,';
-  Download,';';
-  Printer'';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 Plus,;
   MessageCircle,;
   Phone,;
@@ -38,11 +29,6 @@ Plus,;
   Download,
   Printer'
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 interface FloatingAction {;
   id: string;
@@ -56,10 +42,6 @@ interface FloatingActionButtonProps {
 ';
   actions?: FloatingAction[];';';
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   "id": "string;
   "icon": React.ComponentType<{ size?: number; className?: string;
 "}>;
@@ -70,10 +52,6 @@ interface FloatingActionButtonProps {
 ;
 interface FloatingActionButtonProps {;
   actions?: "FloatingAction[];
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 interface FloatingAction {
   id: string;
   icon: React.ComponentType<{ size?: number; className?: string 
@@ -89,19 +67,10 @@ interface FloatingActionButtonProps {
   showScrollToTop?: boolean;
   showContactActions?: boolean;
   showUtilityActions?: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
 ';
   actions = [],: any;';';
   position = 'bottom-right',: any;';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
   actions = [],: any;
@@ -110,15 +79,9 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
   showScrollToTop = true,: any;
   showContactActions = true,: any;
   showUtilityActions = true: any;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }) => {
   const [isExpanded, setIsExpanded] = useState<any>(false);';
   const [showScrollButton, setShowScrollButton] = useState<any>(false);';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 }) => {;
   const [isExpanded, setIsExpanded] = useState<any>(false);
   const [showScrollButton, setShowScrollButton] = useState<any>(false);
@@ -141,10 +104,6 @@ const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({;
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   actions = [],: any;
   position = 'bottom-right',: any;
@@ -162,11 +121,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   return () => {
     // Cleanup function
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }, []);, []);';
 ';';
     if(theme === 'auto') {';
@@ -175,10 +129,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       '';';
       mediaQuery.addEventListener('change', handleChange);';';
       return () => mediaQuery.removeEventListener('change', handleChange)} else {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }, []);, []);
 ;
     if(theme === 'auto') {;
@@ -192,15 +142,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       '
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange)} else {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-      setCurrentTheme(theme)}
-  }, [theme]) ;
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       setCurrentTheme(theme)}
   }, [theme]) ;
 ;
@@ -210,10 +151,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Show scroll to top button when scrolled down
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -221,22 +158,9 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     // Cleanup function
   };
 }, []);, []);
-<<<<<<< HEAD
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
-=======
-<<<<<<< HEAD
-    
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Default actions;
   const "defaultActions": "FloatingActio n[] = [// Contact actions;
@@ -342,10 +266,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     ] : "[])",;
     // Custom actions;
     ...actions,;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Default actions
   const defaultActions: FloatingActio n[] = [// Contact actions
     ...(showContactActions ? [
@@ -424,11 +344,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         color: 'bg-indigo-500 hover: b g-indigo-600',
         priority: 'low' as const
       },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {';
 ';';
         id: 'download',';
@@ -454,10 +369,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           window.print()},';';
         color: 'bg-gray-500 hover: b g-gray-600',';';
         priority: 'low' as const
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     };
 ;
@@ -605,27 +516,12 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     `;
     notification.textContent = message;
     document.body.appendChild(notification) ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // Animate in
     setTimeout(() => {
       notification.classList.remove('translate-x-full')}, 100);
     // Remove after 3 seconds
-<<<<<<< HEAD
     setTimeout(() => {';
 ';';
-=======
-<<<<<<< HEAD
-=======
-    setTimeout(() => {';
-';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     // Animate in;
     setTimeout(() => {;
@@ -636,11 +532,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       notification.classList.add('translate-x-full');
       setTimeout(() => {;
         document.body.removeChild(notification)}, 300)}, 3000)}, []);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Get position classes';
   ';';
       case 'top-right':'';';
@@ -648,10 +539,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       case 'top-left':'';';
         return 'top-6 left-6';';';
       default:'';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Get position classes;
       case 'top-right':';
@@ -664,11 +551,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         return 'top-6 right-6';
       case 'top-left':'
         return 'top-6 left-6';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       default:';
         return 'bottom-6 right-6'}
   };
@@ -696,23 +578,11 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                     animationDelay: `${index * 100}}"ms`,';';
                     animation: 'slideInUp 0.3s ease-out forwards'
       "default":';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       default:'
         return 'bottom-6 right-6'}
   };
   // Get theme classes
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                    "animationDelay": "`${index * 100"}}"ms`,;
-                    "animation": 'slideInUp 0.3s ease-out forwards';
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   return ();
     <>;
@@ -736,7 +606,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                     animation: 'slideInUp 0.3s ease-out forwards';
                     "animationDelay": "`${index * 100"}}"ms`,;
                     "animation": 'slideInUp 0.3s ease-out forwards';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   return ()
     <>
       {/* Main Floating Action Button */}`
@@ -764,11 +633,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                     {action.label}
                   </span>
                 </div>) ) }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 </div>
   );
 }
@@ -781,16 +645,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
               hover: scal e-110 focus: outlin e-none focus: rin g-4 focus: rin g-zion-cyan/30'';';
               ${isExpanded ? 'rotate-45' : ''}`';
             `}';';
-<<<<<<< HEAD
             </div>) }
           {/* Main Button */}
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-            </div>) }
-          {/* Main Button */}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <button;
             onClick={toggleExpansion}`;
             className={`;
@@ -798,10 +654,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
               ${getThemeClasses()} border-2;
               "hover": "scal e-110 "focus": outlin e-none "focus": rin g-4 "focus": rin g-zion-cyan/30';
               ${isExpanded ? 'rotate-45' : ''"}`;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <button
             onClick={toggleExpansion}`
             className={`
@@ -818,11 +670,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         </div>
       </div>
       {/* Scroll to Top Button */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {showScrollToTop && showScrollButton && (;
         <button;
           onClick={scrollToTop}`;
@@ -867,10 +714,6 @@ type FloatingActionButtonProps = {;
 "};
 ;
 const "FloatingActionButton": "React.FC<FloatingActionButtonProps> = ({ enabled = true "}) => {;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {showScrollToTop && showScrollButton && (
         <button
           onClick={scrollToTop}`
@@ -916,63 +759,29 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = t
   return (<button
       onClick={() => setOpen(!open)}
       aria-expanded={open}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
       className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 "hover": "b g-cyan-600 text-white";
     >;
       <Plus size={24"}   />;
     </button>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover: b g-cyan-600 text-white"
     >
       <Plus size={24}   />
     </button>
   )};
 export default FloatingActionButton;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </any>
 </FloatingActionButtonProps>
 </any>';
 </FloatingActionButtonProps>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 </any>;
 </FloatingActionButtonProps>;
 </any>;
 </any>;
 </FloatingActionButtonProps>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </any>
 </FloatingActionButtonProps>
 </any>
 </any>
-<<<<<<< HEAD
 </FloatingActionButtonProps>
-=======
-<<<<<<< HEAD
-</FloatingActionButtonProps>
-=======
-</FloatingActionButtonProps>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

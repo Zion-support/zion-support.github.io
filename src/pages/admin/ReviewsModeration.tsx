@@ -1,43 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO'
-import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { useState, useEffect } from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-=======
-
 import { SEO } from "@/components/SEO";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Star, AlertTriangle } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';
 function ReviewsModerationContent() {
-
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState('pending')
-  const [reviews, setReviews] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-=======
   const [ activeTab, setActiveTab ] = useState("pending"),
   const [ reviews, setReviews ] = useState([]),
   const [ isLoading, setIsLoading ] = useState(true),
-
-  
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const fetchReviews = async () => {
     setIsLoading(true)
     try {
@@ -72,7 +45,6 @@ function ReviewsModerationContent() {
   }, [activeTab])
   const handleRefresh = () => {
     fetchReviews()
-=======
 import { SEO } from '@/components / SEO';
 import { ReviewsModerationTable } from '@/components / admin / reviews / ReviewsModerationTable';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
@@ -129,9 +101,7 @@ function ReviewsModerationContent() {
   }, [active_tab]),
   const handle_refresh = () =>: any {
     fetch_reviews ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
 import { SEO } from '@/components/SEO';
 import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
@@ -151,7 +121,6 @@ function ReviewsModerationContent() {;
   const [activeTab, setActiveTab] = useState('pending');
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
   const fetchReviews = async () => {;
     setIsLoading(true);
     try {;
@@ -159,62 +128,6 @@ function ReviewsModerationContent() {;
       // For now, let's simulate a delay and return empty data;
       await new Promise(resolve => setTimeout(resolve, 1000));
       setReviews([]);
-<<<<<<< HEAD
-      setIsLoading(false);
-      logErrorToProduction(;
-        error instanceof Error ? error && error.message : String(error),;
-        error instanceof Error ? error : undefined,;
-        { message: 'Error fetching reviews' }
-      );
-      toast({;
-        title: 'Error',;
-        description: 'Failed to load reviews. Please try again later.',;
-        variant: 'destructive',;
-      });
-      setIsLoading(false);    }
-  };
-
-  useEffect(() => {;
-    fetchReviews();        title: "Error",;
-        description: "Failed to load reviews. Please try again later.",;
-        variant: "destructive"}),;
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {;
-    fetchReviews();
-  useEffect((,) => {;
-    fetchReviews();
-  }, [activeTab]),;
-
-  const handleRefresh = () => {;
-    fetchReviews();
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-  return (
-    <>;
-<<<<<<< HEAD
-      <SEO
-        title='Review Moderation | Zion AI Marketplace'
-        description='Moderate and manage reviews in the Zion AI Marketplace'
-<<<<<<< HEAD
-      />
-      <main className='container mx-auto px-4 py-8'>
-        <div className='flex justify-between items-center mb-8'>
-          <div>
-            <h1 className='text-3xl font-bold'>Review Moderation</h1>
-            <p className='text-muted-foreground mt-1'>
-              Manage, approve, or reject reviews
-            </p>
-          </div>
-        </div>
-        <Card>
-          <CardHeader>
-            <CardTitle className='flex items-center gap-2'>
-              <Star className='h-5 w-5' />              Review Management            <CardTitle className="flex items-center gap-2">
-=======
       setIsLoading(false)
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' });
@@ -225,16 +138,12 @@ function ReviewsModerationContent() {;
       setIsLoading(false)
     }
   };
-
   useEffect(() => {
     fetchReviews()
   }, [activeTab]);
-
   const handleRefresh = () => {
     fetchReviews()
   };
-
-
   return (
     <>
       <SEO
@@ -248,11 +157,9 @@ function ReviewsModerationContent() {;
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>
           </div>
         </div>
-        
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <Star className="h-5 w-5" />
               Review Management
             </CardTitle>
@@ -261,28 +168,12 @@ function ReviewsModerationContent() {;
             </CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-            <Tabs
-              defaultValue='pending'
-              value={activeTab}
-              onValueChange={setActiveTab}
-            >
-              <TabsList className='mb-6'>
-                <TabsTrigger value='pending'>Pending Reviews</TabsTrigger>
-                <TabsTrigger value='reported'>Reported Reviews</TabsTrigger>
-              </TabsList>
-              <TabsContent value='pending' className='mt-0'>
-                <ReviewsModerationTable                  reviews={reviews}            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
-=======
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <TabsList className="mb-6">
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
               <TabsContent value="pending" className="mt-0">
-<<<<<<< HEAD
-=======
       />;
       <main className='container mx-auto px-4 py-8'>;
         <div className='flex justify-between items-center mb-8'>;
@@ -293,7 +184,6 @@ function ReviewsModerationContent() {;
             </p>;
           </div>;
         </div>;
-
         <Card>;
           <CardHeader>;
             <CardTitle className='flex items-center gap-2'>;
@@ -314,50 +204,28 @@ function ReviewsModerationContent() {;
                 <TabsTrigger value='pending'>Pending Reviews</TabsTrigger>;
                 <TabsTrigger value='reported'>Reported Reviews</TabsTrigger>;
               </TabsList>;
-
               <TabsContent value='pending' className='mt-0'>;
                 <ReviewsModerationTable                  reviews={reviews}            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>;
               <TabsList className="mb-6">;
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>;
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>;
               </TabsList>;
-
               <TabsContent value="pending" className="mt-0">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <ReviewsModerationTable
-=======
                 <ReviewsModerationTable 
                   reviews={reviews}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
                   reviews = {reviews,}
                   isLoading = {isLoading,}
                   onRefresh = {handleRefresh,}
-<<<<<<< HEAD
-                />
-              </TabsContent>
-<<<<<<< HEAD
-              <TabsContent value='reported' className='mt-0'>
-                <div className='text-center py-12 border rounded-lg'>
-                  <AlertTriangle className='h-10 w-10 text-amber-500 mx-auto mb-2' />
-                  <h3 className='text-lg font-medium mb-2'>Reported Reviews</h3>
-                  <p className='text-muted-foreground'>
-                    This section will show reviews that have been reported by
-                    users.                  </p>
-=======
-              
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
                   <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>
                   <p className="text-muted-foreground">
                     This section will show reviews that have been reported by users.
-<<<<<<< HEAD
-=======
                   </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </TabsContent>
             </Tabs>
@@ -365,16 +233,9 @@ function ReviewsModerationContent() {;
         </Card>
       </main>
     </>
-<<<<<<< HEAD
-  )
-}
-=======
   );
 }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function ReviewsModeration() {
-=======
       <SEO;
         title='Review Moderation | Zion AI Marketplace';
         description='Moderate and manage reviews in the Zion AI Marketplace';
@@ -449,26 +310,13 @@ export default /**
  * ReviewsModeration - Function description
  */
 function ReviewsModeration() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <ProtectedRoute>;
       <ReviewsModerationContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx-auto px-4 py-8" > <div className="flex justify-between items-center mb-8" > <div> <h1 className="text-3xl font-bold" >Review Moderation</h1> <p className="text-muted-foreground mt-1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Star className="h-5 w-5" /> Review Management </CardTitle> <CardDescription> Review and moderate user-submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt-0" > <ReviewsModerationTable reviews= {
-  reviews
-}isLoading= {
-  isLoading
-}onRefresh= {
-  handleRefresh "
-}/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>)
-}export default function ReviewsModeration () {
-  return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
-=======
                 />;
               </TabsContent>;
-
               <TabsContent value='reported' className='mt-0'>;
                 <div className='text-center py-12 border rounded-lg'>;
                   <AlertTriangle className='h-10 w-10 text-amber-500 mx-auto mb-2' />;
@@ -491,30 +339,13 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
     </>;
   );
 }
-
 export default function ReviewsModeration() {;
   return (
     <ProtectedRoute>;
       <ReviewsModerationContent />;
     </ProtectedRoute>;
   );
-<<<<<<< HEAD
-
-};
-return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx-auto px-4 py-8" > <div className="flex justify-between items-center mb-8" > <div> <h1 className="text-3xl font-bold" >Review Moderation</h1> <p className="text-muted-foreground mt-1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Star className="h-5 w-5" /> Review Management </CardTitle> <CardDescription> Review and moderate user-submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt-0" > <ReviewsModerationTablereviews= {
-  reviews 
-}isLoading= {
-  isLoading 
-}onRefresh= {
-  handleRefresh "
-}/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>) ;
-}export default function ReviewsModeration() {;
-  return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx - auto px - 4 py - 8" > <div className="flex justify - between items - center mb - 8" > <div> <h1 className="text - 3xl font - bold" >Review Moderation</h1> <p className="text - muted - foreground mt - 1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <Star className="h - 5 w - 5" /> Review Management </CardTitle> <CardDescription> Review and moderate user - submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt - 0" > <ReviewsModerationTable reviews= {
   reviews;
 }is_loading= {
@@ -527,4 +358,3 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
  */
 function ReviewsModeration() {
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

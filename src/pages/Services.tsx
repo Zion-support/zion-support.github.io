@@ -1,41 +1,22 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export default function Services() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>
-        <p className="text-gray-300 text-lg">Comprehensive technology services for your business needs.</p>
-      </div>
-    </div>
-  );
-}
-=======
 import { Link } from 'react-router-dom';
 const Services: React.FC = () => {
   const services = [
@@ -194,7 +175,6 @@ const Services: React.FC = () => {
         </div>
       </div>
     </div>
-=======
 const Services: React.FC = () => {;
   return (
     <div className="min-h-screen bg-gray-50">;
@@ -216,14 +196,7 @@ const Services: React.FC = () => {;
         </div>;
       </div>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-<<<<<<< HEAD
-}
-export default Services;
->>>>>>> 2fc87795dcf7cb742c24a257dd9040071acce941
-=======
 };
 ;
 export default Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

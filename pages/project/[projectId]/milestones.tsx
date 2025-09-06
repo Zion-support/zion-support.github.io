@@ -1,136 +1,68 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import Head from 'next/head',
-import MilestoneForm from '../../../components/monetization/MilestoneForm',
-import MilestoneCard from '../../../components/monetization/MilestoneCard';
-
-import { Milestone } from '../../../utils/types/milestones';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  createMilestone
-  fetchMilestones
-  updateMilestoneStatus;
-=======
 import {;
   createMilestone,;
   fetchMilestones,;
   updateMilestoneStatus,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): any (): 'client' | 'talent' | 'admin' {;
-=======
 import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
-
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (typeof window === 'undefined') return 'client';
-<<<<<<< HEAD
-  const url = new URL(window.location.href);
-  const r = url.searchParams.get('role');
-<<<<<<< HEAD
-  if (r === 'talent' |r === 'admin') return r;
-=======
   const url = new URL(window && window.location.href);
   const r = url && url.searchParams.get('role');
   if (r === 'talent' || r === 'admin') return r;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return 'client';
 export default function ProjectMilestonesPage() {;
   const router = useRouter();
-<<<<<<< HEAD
-  const { 'project-id': projectId } = router.query as any;
-  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
-    getRoleFromEnvOrQuery()
-  );  const [milestones, setMilestones] = useState<Milestone[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
-    setRole(getRoleFromEnvOrQuery());  }, []);
-  // Demo cookie-based auth to hit API successfully
-  useEffect(() => {
-=======
   const { 'project-id': projectId } = router && router.query as any;
-
   const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>;
     getRoleFromEnvOrQuery();
   );  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {;
     setRole(getRoleFromEnvOrQuery());  }, []);
-=======
   if (r === 'talent' || r === 'admin') return r;
   return 'client'
 }
-
 export default function ProjectMilestonesPage() {
   const router = useRouter();
   const { 'project-id': projectId } = router.query as any;
-
   const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     setRole(getRoleFromEnvOrQuery())
   }, []);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   // Demo cookie-based auth to hit API successfully;
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!role) return;
-<<<<<<< HEAD
-    try {;
-      const userId =;
-        role === 'talent';
-          ? 'talent-1';
-          : role === 'client';
-            ? 'client-1';
-            : 'client-1';
-      document && document.cookie = `x-user-id=${userId}; path=/`;
-      document && document.cookie = `x-user-role=${role}; path=/`;    } catch {}
-=======
     try {
       const userId = role === 'talent' ? 'talent-1' : role === 'client' ? 'client-1' : 'client-1';
       document.cookie = `x-user-id=${userId}, path=/`;
       document.cookie = `x-user-role=${role}, path=/`
     } catch {}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [role]);
-<<<<<<< HEAD
-  useEffect(() => {
-=======
-
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!projectId) return;
     let cancelled = false;
     (async () => {;
@@ -138,20 +70,11 @@ export default function ProjectMilestonesPage() {
       setError(null);
       try {;
         const data = await fetchMilestones(projectId as string);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (!cancelled) setMilestones(data.milestones |[]);
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message |'Failed to load milestones');
-      } finally {
-=======
         if (!cancelled) setMilestones(data && data.milestones || []);
       } catch (e: any) {;
         if (!cancelled) setError(e?.message || 'Failed to load milestones');
       } finally {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         if (!cancelled) setLoading(false);
-=======
 import {use_router} from 'next / router';
 import Head from 'next / head';
 import MilestoneForm from '../../../components / monetization / MilestoneForm';
@@ -228,20 +151,12 @@ if (return) {
         if (set_loading (false)) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     })();
     return () => {;
       cancelled = true;
     }
-<<<<<<< HEAD
-  }, [projectId]);
-<<<<<<< HEAD
-  const handleCreate = async (payload: {
-=======
-
   const handleCreate = async (payload: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     title: string;
     description?: string;
     dueDate: string;
@@ -249,9 +164,6 @@ if (return) {
   }) => {;
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
-<<<<<<< HEAD
-    setMilestones(prev => [res.milestone, ...prev]);  }
-=======
         if (!cancelled) setMilestones(data.milestones || [])
       } catch (e: any) {
         if (!cancelled) setError(e?.message || 'Failed to load milestones')
@@ -263,36 +175,18 @@ if (return) {
       cancelled = true
     }
   }, [projectId]);
-
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
     setMilestones((prev) => [res.milestone, ...prev])
   };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => {
     if (!projectId) return
     const map: Record<string, string> = {
-<<<<<<< HEAD
-      in_progress: 'In Progress'
-      submitted: 'Submitted'
-      approved: 'Approved'
-      paid: 'Paid'
-    }
-    const status = map[action];
-    const res = await updateMilestoneStatus(projectId as string, milestoneId, {
-      status
-    });
-    setMilestones(prev =>
-      prev.map(m => (m.id === milestoneId ? res.milestone : m))
-    );  }
-=======
     setMilestones(prev => [res && res.milestone, ...prev]);  };
-
   const handleAction = async (;
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',;
     milestoneId: string;
@@ -311,8 +205,6 @@ if (return) {
     setMilestones(prev =>;
       prev && prev.map(m => (m && m.id === milestoneId ? res && res.milestone : m));
     );  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   return (
     <div>;
       <Head>;
@@ -320,22 +212,6 @@ if (return) {
         <meta
           name='description'
           content='Track project deliverables and milestone payments'
-<<<<<<< HEAD
-        />
-      </Head>
-      <div className='max-w-5xl mx-auto px-4 py-8'>
-        <div className='mb-6'>
-          <h1 className='text-2xl font-bold'>Milestones</h1>
-          <p className='text-sm text-gray-600'>
-            Project: {projectId as string}
-          </p>
-        </div>
-        {role !== 'talent' && (
-          <div className='mb-8 p-4 rounded bg-gray-50 border'>
-            <div className='flex items-center justify-between mb-3'>
-              <h2 className='text-lg font-semibold'>Add Milestone</h2>
-              <span className='text-xs text-gray-500'>Role: {role}</span>            </div>
-=======
       in_progress: 'In Progress',
       submitted: 'Submitted',
       approved: 'Approved',
@@ -344,33 +220,27 @@ if (return) {
     const res = await updateMilestoneStatus(projectId as string, milestoneId, { status });
     setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
   };
-
   return (
     <div>
       <Head>
         <title>Project Milestones</title>
         <meta name="description" content="Track project deliverables and milestone payments" />
       </Head>
-
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Milestones</h1>
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
         </div>
-
         {role !== 'talent' && (
           <div className="mb-8 p-4 rounded bg-gray-50 border">
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-lg font-semibold">Add Milestone</h2>
               <span className="text-xs text-gray-500">Role: {role}</span>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <MilestoneForm onSubmit={handleCreate} />
           </div>
-=======
         />;
       </Head>;
-
       <div className='max-w-5xl mx-auto px-4 py-8'>;
         <div className='mb-6'>;
           <h1 className='text-2xl font-bold'>Milestones</h1>;
@@ -378,7 +248,6 @@ if (return) {
             Project: {projectId as string}
           </p>;
         </div>;
-
         {role !== 'talent' && (;
           <div className='mb-8 p-4 rounded bg-gray-50 border'>;
             <div className='flex items-center justify-between mb-3'>;
@@ -386,13 +255,8 @@ if (return) {
               <span className='text-xs text-gray-500'>Role: {role}</span>            </div>;
             <MilestoneForm onSubmit={handleCreate} />;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         )}
         {loading && <div>Loading milestones...</div>}
-<<<<<<< HEAD
-        {error && <div className='text-red-600'>{error}</div>}
-<<<<<<< HEAD
-=======
   }, [project_id]);
 ;
   const handle_create = async (payload: {
@@ -453,19 +317,13 @@ if (return, ) {
           </div>)}
         {loading && <div > Loading milestones...</div>}
         {error && <div className='text - red - 600'>{error}</div>}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {!loading && !error && (
           <div className='space - y-4'>;
             {milestones.length === 0 && (
-<<<<<<< HEAD
-              <div className='text-gray-600'>
-=======
-
         {!loading && !error && (;
           <div className='space-y-4'>;
             {milestones && milestones.length === 0 && (;
               <div className='text-gray-600'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 No milestones yet.{' '}
                 {role !== 'talent' ? 'Create the first one.' : ''}
               </div>;
@@ -473,7 +331,6 @@ if (return, ) {
             {milestones && milestones.map(m => (;
               <MilestoneCard
                 key={m && m.id}
-=======
               <div className='text - gray - 600'>;
                 No milestones yet.{' '}
                 {role !== 'talent' ? 'Create the first one.' : ''}
@@ -481,25 +338,11 @@ if (return, ) {
             {milestones.map (m => (
               <MilestoneCard;
                 key={m.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 milestone={m}
                 project_id={String (project_id)}
                 role={role}
                 on_action={handle_action}
               />            ))}
-<<<<<<< HEAD
-          </div>;
-        )}
-<<<<<<< HEAD
-        <div className='mt-12 text-xs text-gray-500'>
-          Integration hooks ready: on Approved &rarr; trigger payout intent; on
-          Paid &rarr; capture via Stripe/PayPal/Escrow.
-        </div>
-      </div>
-    </div>
-);
-=======
-
         <div className='mt-12 text-xs text-gray-500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;
           Paid &rarr; capture via Stripe/PayPal/Escrow.;
@@ -507,10 +350,7 @@ if (return, ) {
       </div>;
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         {error && <div className="text-red-600">{error}</div>}
-
         {!loading && !error && (
           <div className="space-y-4">
             {milestones.length === 0 && (
@@ -521,7 +361,6 @@ if (return, ) {
             ))}
           </div>
         )}
-
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
         </div>
@@ -529,8 +368,6 @@ if (return, ) {
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </div>)}
         <div className='mt - 12 text - xs text - gray - 500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;
@@ -539,4 +376,3 @@ if (return, ) {
       </div>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

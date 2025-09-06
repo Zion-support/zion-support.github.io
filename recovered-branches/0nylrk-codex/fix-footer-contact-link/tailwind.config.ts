@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import { Config } from "tailwindcss",
-import { fontFamily } from "tailwindcss/defaultTheme",
-import plugin from "tailwindcss/plugin";
-import animatePlugin from "tailwindcss-animate";
-
-const config: Config = {
-  darkMode: ["class"]
-  content: [
-    "./pages/**/*.{ts,tsx}";
-    "./components/**/*.{ts,tsx}";
-    "./app/**/*.{ts,tsx}";
-    "./src/**/*.{ts,tsx}"];
-  safelist: ['border-border'];
-=======
 import { Config } from './tailwindcss';
 import { font_family } from './tailwindcss / default_theme';
 import plugin from './tailwindcss / plugin';
@@ -25,7 +10,6 @@ const config: Config = {
     "./app/**/*.{ts, tsx}";
     "./src/**/*.{ts, tsx}"];
   safelist: ['border - border'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
     container: {
       center: true;
@@ -40,54 +24,7 @@ const config: Config = {
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
         primary: {
-<<<<<<< HEAD
-          DEFAULT: "hsl(var(--primary))"
-          foreground: "hsl(var(--primary-foreground))"}
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))"
-          foreground: "hsl(var(--secondary-foreground))"}
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))"
-          foreground: "hsl(var(--destructive-foreground))"}
-        muted: {
-          DEFAULT: "hsl(var(--muted))"
-          foreground: "hsl(var(--muted-foreground))"}
-        accent: {
-          DEFAULT: "hsl(var(--accent))"
-          foreground: "hsl(var(--accent-foreground))"}
-        popover: {
-          DEFAULT: "hsl(var(--popover))"
-          foreground: "hsl(var(--popover-foreground))"}
-        card: {
-          DEFAULT: "hsl(var(--card))"
-          foreground: "hsl(var(--card-foreground))"}
-        // Custom Zion colors
-        "zion-blue": {
-          DEFAULT: "#0a0f1f";
-          light: "#1e263b"
-          dark: "#090c1a"}
-        "zion-purple": {
-          DEFAULT: "#a855f7";
-          light: "#d8b4fe"
-          dark: "#9333ea"}
-        "zion-cyan": {
-          DEFAULT: "#00e5ff";
-          light: "#7df9ff"
-          dark: "#00c4cc"}
-        "zion-slate": {
-          DEFAULT: "#94A3B8";
-          light: "#CBD5E1"
-          dark: "#64748B"}}
-      borderRadius: {
-        lg: "var(--radius)";
-        md: "calc(var(--radius) - 2px)"
-        sm: "calc(var(--radius) - 4px)"}
-      fontFamily: {
-<<<<<<< HEAD
-        sans: ["var(--font-sans)", ...fontFamily.sans]}
-=======
         sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       keyframes: {
         "accordion-down": {
           from: { height: "0" }
@@ -96,13 +33,8 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
       animation: {
-<<<<<<< HEAD
-        "accordion-down": "accordion-down 0.2s ease-out"
-        "accordion-up": "accordion-up 0.2s ease-out"}}}
-=======
         "accordion-down": "accordion-down 0 && 0.2s ease-out",
         "accordion-up": "accordion-up 0 && 0.2s ease-out"}}};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
@@ -116,8 +48,6 @@ const config: Config = {
       addUtilities(newUtilities)
     })]}
 export default config;
-
-=======
           DEFAULT: "hsl (var (--primary))",
           foreground: "hsl (var (--primary - foreground))"}
         secondary: {
@@ -186,4 +116,3 @@ export default config;
 ;
 export default config;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

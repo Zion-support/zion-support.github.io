@@ -1,41 +1,11 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import type { NextPage } from 'next';
-import type { Review } from '../../types/reviews';
-
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
-const AdminReviewsPage: NextPage = () => {
-  const [pending, setPending] = useState<Review[]>([])
-  const [all, setAll] = useState<Review[]>([])
-  const [adminKey, setAdminKey] = useState('')
-  async function refresh() {
-    const res = await fetch('/api/admin/debug/reviews')
-    const data = await res.json()
-    if (res.ok) {
-      setAll(data.reviews)
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
-    }
-  }
-<<<<<<< HEAD
-  useEffect(() => { refresh() }, [])
-=======
-
-  useEffect(() => { refresh() }, []);
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+useEffect(() => { refresh() }, []);
   async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST'
       headers: {
-<<<<<<< HEAD
-        'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
-      body: JSON.stringify({ action, reviewId })})
-=======
-      
         'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'
     },
     body: JSON.stringify({ action, reviewId })});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (res.ok) refresh()
   }
   return (
@@ -61,10 +31,6 @@ const AdminReviewsPage: NextPage = () => {
           {!pending.length && <div>No pending reviews.</div>}
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <section className="enhanced-card">
         <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
@@ -73,11 +39,6 @@ const AdminReviewsPage: NextPage = () => {
   )
 }
 export default AdminReviewsPage;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useEffect, useState } from 'react',
 import type { NextPage } from 'next',
 import type { Review } from '../../types / reviews',
@@ -143,4 +104,3 @@ function moderate() {
     </main>);
 },
 export default AdminReviewsPage,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

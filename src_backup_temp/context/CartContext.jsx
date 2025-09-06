@@ -60,10 +60,6 @@ const { user "} = useAuth();
     }
 ;
     dispatch({"type": 'SET_ITEMS', "payload": "items"});
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
     dispatch({type: 'SET_ITEMS', payload: items}
     );
   }, [cartKey]);
@@ -74,10 +70,6 @@ const { user "} = useAuth();
   }, [state.items, cartKey]);
 ;
   const addItem = item => {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
     dispatch({ "type": 'ADD_ITEM', "payload": "item "});
   const addItem = item => {
     dispatch({ type: 'ADD_ITEM', payload: item }
@@ -85,10 +77,6 @@ const { user "} = useAuth();
   };
 ;
   const removeItem = id => {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
     dispatch({ "type": 'REMOVE_ITEM', "payload": "id "});
   const removeItem = id => {
     dispatch({ type: 'REMOVE_ITEM', payload: id }
@@ -99,10 +87,6 @@ const { user "} = useAuth();
     if(quantity <= 0) {;
       removeItem(id);
     "} else {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       dispatch({ "type": 'UPDATE_QUANTITY', "payload": "{ id", quantity } });
       dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }
     );
@@ -110,10 +94,6 @@ const { user "} = useAuth();
   };
 ;
   const clearCart = ("props": "any) => {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
     dispatch({ "type": 'CLEAR_CART' "});
   const clearCart = (props: any) => {
     dispatch({ type: 'CLEAR_CART' }

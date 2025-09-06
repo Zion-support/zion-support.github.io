@@ -1,11 +1,5 @@
 import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function Page("props": "any) {;
 interface SEOMetrics {;
@@ -29,10 +23,6 @@ interface SEOOptimizerProps extends React.PropsWithChildren<{}> {;
 export const "SEOOptimizer": "React.FC<SEOOptimizerProps> = ({;
   url",;
 "autoAnalyze": "tru e",;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page(props: any) {
 interface SEOMetrics {
   pageSpeed: number;
@@ -60,11 +50,6 @@ autoAnalyze: tru e,;
   const [currentUrl, setCurrentUrl] = useState<any>(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState<any>(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Mock SEO analysis data(in real app, this would come from actual analysis)
   const mockAnalysis: SEOAnalysi s = useMemo(() => ({
     score: 8 7,
@@ -124,10 +109,6 @@ autoAnalyze: tru e,;
         priority: 'low',';';
         effort: 'low',
         estimatedImpact: 5
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Mock SEO analysis data(in real app, this would come from actual analysis);
   const "mockAnalysis": "SEOAnalysi s = useMemo(() => ({;
@@ -176,11 +157,6 @@ autoAnalyze: tru e,;
         "estimatedImpact": "8;
       "},;
       {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         id: '3',;
         title: 'Improve Internal Linking',;
         description: 'Add more internal links to improve page authority distribution.',;
@@ -199,10 +175,6 @@ autoAnalyze: tru e,;
         fid: 4 5,;
         cls: 0.08}},;
     lastUpdated: new Date () }) , []) ;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         "id": '3',;
         "title": 'Improve Internal Linking',;
         "description": 'Add more internal links to improve page authority distribution.',;
@@ -231,10 +203,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
     return analysis?.suggestions.sort((a, b) => {;
       const priorityOrder = {;
   "high": "3", "medium": "2",;  ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   // Mock SEO analysis data(in real app, this would come from actual analysis)
   const mockAnalysis: SEOAnalysi s = useMemo(() => ({
     score: 8 7,
@@ -314,12 +282,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
   ;
   "low": "1 "};
       return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   if(!analysis && !isAnalyzing) {;
     return ();
@@ -387,10 +349,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
             <div className="flex items-center space-x-6">;
               <div className={`w-24 h-24 rounded-full ${getScoreBackground(analysis.score)} flex items-center justify-center`}>`;
                 <span className={`text-3xl font-bold ${getScoreColor(analysis.score)}`}>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   if(!analysis && !isAnalyzing) {
     return ()
       <div className="text-center py-8">"
@@ -528,20 +486,11 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               <div className="flex space-x-1">
                 {['all',content',technical',performance',accessibility'].map((category) => (
                   <button
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     key={category}';
                     onClick={() => setSelectedCategory(category)}`';';
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category'';';
                         ? 'bg-zion-cyan text-white''';';
                         : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 </span>;
               </div>;
 ";
@@ -613,17 +562,11 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                 {['all',content',technical',performance',accessibility'].map((category) => (;
                   <button;
                     key={category}
-<<<<<<< HEAD
-=======
                     onClick={() => setSelectedCategory(category)}`;
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category';
                         ? 'bg-zion-cyan text-white'';
                         : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`;
                     }`}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                         : 'bg-zion-slate/10 text-zion-slate "hover": "b g-zion-slate/20'`;
                     "}`}
 ;
@@ -632,13 +575,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                         ? 'bg-zion-cyan text-white''
                         : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`
                     }`}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {category.charAt(0) .toUpperCase () + category.slice(1) }
                   </button>) ) }
               </div>
@@ -648,11 +584,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               <AnimatePresence>
                 {filteredIssues.map((issue) => (<motion.div
                     key={issue.id}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     initial = {;
   { "opacity": "0",;
   "y": "2 0;
@@ -677,10 +608,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                       ) : issue.type === 'warning' ? ("
                         <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"   />
                       ) : ("
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   { "opacity": "1",;
   "y": "0;
 "}}
@@ -699,14 +626,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                       ) : "issue.type === 'warning' ? (";
                         <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"   />;
                       ) : (";
-<<<<<<< HEAD
                         <Info className="w-5 h-5 text-blue-500 mt-0.5"   />                      )}
-=======
-<<<<<<< HEAD
-=======
-                        <Info className="w-5 h-5 text-blue-500 mt-0.5"   />                      )}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                         <Info className="w-5 h-5 text-blue-500 mt-0.5"   />                      )"}
 ";
                       <div className="flex-1">";
@@ -773,11 +693,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               {filteredSuggestions.slice(0, 3).map((suggestion) => (
                 <motion.div
                   key={suggestion.id}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   initial = {;
   { "opacity": "0",;
   "x": "2 0;
@@ -816,7 +731,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
 ';
   { opacity: 1,';';
   height: 'auto'
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 animate = {;
   { opacity: 1,;
   height: 'auto';
@@ -933,21 +847,9 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
     setIsOptimizing(true) ;    // Implement actual optimization logic here
     await new Promise(resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing(false) }, []) ;
-<<<<<<< HEAD
   return {
     analysis,
     isOptimizing,
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-  return {
-    analysis,
-    isOptimizing,
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     optimizePage';
   }};';';
 '"`
@@ -957,10 +859,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
 </any>
 </SEOAnalysis>';
 </SEOOptimizerProps>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   return {;
     analysis,;
@@ -968,11 +866,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
     optimizePage;
     optimizePage
   }};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 '"`;
 ;,"});})";
 ;
@@ -986,10 +879,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
 </any>;
 </SEOAnalysis>;
 </SEOOptimizerProps>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 '"`
 ;,"}
     );,})";
@@ -1002,12 +891,4 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
 </any>
 </any>
 </SEOAnalysis>
-<<<<<<< HEAD
 </SEOOptimizerProps>
-=======
-<<<<<<< HEAD
-</SEOOptimizerProps>
-=======
-</SEOOptimizerProps>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

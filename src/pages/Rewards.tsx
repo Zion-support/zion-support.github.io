@@ -1,33 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Gift } from 'lucide-react'
-
-const REWARDS = [
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 }
-  { id: 'premium-week', title: 'Premium Week', cost: 1000 }
-  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
-]
-const REWARDS = [
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 }
-  { id: 'premium-week', title: 'Premium Week', cost: 1000 }
-  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
-]
-=======
 import { Gift } from 'lucide-react';
 const REWARDS = [;
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },;
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },;
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 },;
 ];
-
 const REWARDS = [;
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },;
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },;
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 },;
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   return (
     <div className='container max-w-xl py-10'>;
       <h1 className='text-3xl font-bold mb-6'>Rewards</h1>;
@@ -41,15 +22,11 @@ const REWARDS = [;
             </div>;
             <Gift className='h-5 w-5' />          </li>            <Gift className="h-5 w-5" />;
           </li>;
-=======
 import { Gift } from 'lucide-react'
-
 const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
-
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }];
-
 export default function RewardsPage() {
   return (
     <div className="container max-w-xl py-10">
@@ -63,25 +40,13 @@ export default function RewardsPage() {
             </div>
             <Gift className="h-5 w-5" />
           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ))}
-<<<<<<< HEAD
-      </ul>
-    </div>
-<<<<<<< HEAD
-  )
-}
-=======
       </ul>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { Gift } from 'lucide-react';
 const REWARDS = [;
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
@@ -110,4 +75,3 @@ const REWARDS = [;
       </ul>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

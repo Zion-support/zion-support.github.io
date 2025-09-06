@@ -80,10 +80,6 @@ const {applications, isLoading, updateApplicationStatus} =;
     try {
       await updateApplicationStatus(draggableId, newStatus);
       toast({;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         "title": 'Status updated',;
         "description": "`Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title"}`});
     } catch(error) {;

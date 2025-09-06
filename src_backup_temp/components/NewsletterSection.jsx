@@ -165,10 +165,6 @@ export function NewsletterSection("props": "any) {;
               ))}
             </div>;
           </motion.div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
           {/* Right content - Newsletter Form */}";
           <motion.div variants={itemVariants} className="relative">";
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">";

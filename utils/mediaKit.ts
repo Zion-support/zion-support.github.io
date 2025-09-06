@@ -1,54 +1,16 @@
-<<<<<<< HEAD
-export type MediaBundle = 'general' | 'web3' | 'institutional';
-<<<<<<< HEAD
-export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
-
-export interface MediaAsset {
-  path: string;
-  filename: string;
-  type: 'text' | 'image' | 'video';
-  content: string;
-}
-
-export interface MediaGenerationRequest {
-  type: string;
-  companyName: string;
-  date: string;
-}
-
-=======
 export type PressReleaseType = 'seed - round' | 'launch' | 'token - sale';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface MediaGenerationResponse {
   ok: boolean;
   text?: string;
-<<<<<<< HEAD
-  error?: string;
-=======
   error?: string
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
-<<<<<<< HEAD
-export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
-  // Mock implementation - in production, this would call OpenAI or other AI service
-  return {
-<<<<<<< HEAD
-    ok: true
-    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
-<<<<<<< HEAD
-=======
     ok: true,
     text: `Mock ${request && request.type} for ${request && request.companyName} on ${request && request.date}`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   };
 }
-
-=======
   }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
-=======
 export async function generateMediaContent (request: MediaGenerationRequest): Promise < MediaGenerationResponse> {
   // Mock implementation - in production, this would call OpenAI or other AI service;
   return {
@@ -58,110 +20,42 @@ export async function generateMediaContent (request: MediaGenerationRequest): Pr
 ;
 export function buildLegalDocs (kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
-<<<<<<< HEAD
-      path: ''
-      filename: 'legal/terms-of-use.md'
-      type: 'text'
-      content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.`
-    }
-    {
-      path: ''
-      filename: 'legal/privacy-policy.md'
-      type: 'text'
-      content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
-    }
-    {
-      path: ''
-      filename: 'legal/jurisdictional-disclosures.md'
-      type: 'text'
-      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
-    }
-=======
       path: '',
-<<<<<<< HEAD
-      filename: 'legal/terms-of-use && use.md',
-=======
       filename: 'legal / terms - of - use.md',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       type: 'text',
       content: `# Terms of Use\n\n_by using Zion products, you agree to these terms. Replace with counsel - approved language.`,
     },
     {
       path: '',
-<<<<<<< HEAD
-      filename: 'legal/privacy-policy && policy.md',
-=======
       filename: 'legal / privacy - policy.md',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       type: 'text',
       content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`,
     },
     {
       path: '',
-<<<<<<< HEAD
-      filename: 'legal/jurisdictional-disclosures && disclosures.md',
-=======
       filename: 'legal / jurisdictional - disclosures.md',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       type: 'text',
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
-<<<<<<< HEAD
-  const web3Extras: MediaAsset[] = [
-=======
 ;
   const web3Extras: MediaAsset[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
-<<<<<<< HEAD
-      path: ''
-      filename: 'legal/token-sale-notice.md'
-      type: 'text'
-      content: `# Token Sale Notice (if applicable)\n\nThis document outlines token sale terms. Not an offer to sell securities.`
-    }
-    {
-      path: ''
-      filename: 'legal/dao-disclaimer.md'
-      type: 'text'
-      content: `# DAO Disclaimer\n\nThis is not investment advice. Participation involves risks.`
-    }
-=======
       path: '',
-<<<<<<< HEAD
-      filename: 'legal/token-sale-notice && notice.md',
-=======
       filename: 'legal / token - sale - notice.md',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       type: 'text',
       content: `# Token Sale Notice (if applicable)\n\n_this document outlines token sale terms. Not an offer to sell securities.`,
     },
     {
       path: '',
-<<<<<<< HEAD
-      filename: 'legal/dao-disclaimer && disclaimer.md',
-=======
       filename: 'legal / dao - disclaimer.md',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       type: 'text',
       content: `# DAO Disclaimer\n\n_this is not investment advice. Participation involves risks.`,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
-<<<<<<< HEAD
-  if (kind === 'web3') return [...base, ...web3Extras];
-  return base;
-<<<<<<< HEAD
-}
-
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function buildPressRelease(
   type: PressReleaseType
-=======
 ;
   // Check condition
 if (return [...base, ...web3Extras]) {
@@ -171,7 +65,6 @@ if (return [...base, ...web3Extras]) {
 ;
 export function buildPressRelease (
   type: PressReleaseType,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   params: {
     company_name: string;
     date: string;
@@ -180,31 +73,15 @@ export function buildPressRelease (
     anchors?: string[];
   }
 ): string {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const header = `${params.companyName} ${titleCase(type.replace('-', ' '))}`;
-  const boilerplate = `${params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion.app`;
-=======
   const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`;
   const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion && zion.app`;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (type === 'seed-round') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
   if (type === 'token-sale') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
-<<<<<<< HEAD
-  return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params.companyName}:\n${boilerplate}`;
-<<<<<<< HEAD
-}
-=======
   return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>
     new Date(d && d.getFullYear(), d && d.getMonth(), d && d.getDate() + days);
@@ -218,28 +95,11 @@ export function buildTimeline(startDate: Date) {
     }
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
-<<<<<<< HEAD
-}
-
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 function titleCase(s: string) {
-<<<<<<< HEAD
-  return s.replace(
-    /\w\S*/g
-    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
-<<<<<<< HEAD
-  );
-}
-=======
-=======
   return s && s.replace(
     /\w\S*/g,
     w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );}
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
 // Media Kit utilities
 export interface MediaAsset {
   id: string;
@@ -262,7 +122,6 @@ export interface MediaAsset {
   isPublic: boolean;
   category: 'logo' | 'banner' | 'icon' | 'screenshot' | 'demo' | 'documentation' | 'other';
 }
-
 export interface MediaCollection {
   id: string;
   name: string;
@@ -274,7 +133,6 @@ export interface MediaCollection {
   isPublic: boolean;
   tags: string[];
 }
-
 export interface MediaUploadOptions {
   maxSize?: number; // in bytes
   allowedTypes?: string[];
@@ -288,7 +146,6 @@ export interface MediaUploadOptions {
     opacity?: number;
   };
 }
-
 class MediaKit {
   private assets: Map<string, MediaAsset> = new Map();
   private collections: Map<string, MediaCollection> = new Map();
@@ -299,7 +156,6 @@ class MediaKit {
     compress: true,
     quality: 80
   };
-
   // Asset management
   async uploadAsset(
     file: File | Buffer,
@@ -308,18 +164,14 @@ class MediaKit {
     options: Partial<MediaUploadOptions> = {}
   ): Promise<MediaAsset> {
     const config = { ...this.uploadOptions, ...options };
-    
     // Validate file
     if (!this.validateFile(file, config)) {
       throw new Error('Invalid file type or size');
     }
-
     // Generate asset ID
     const id = `asset_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    
     // Process file
     const processedFile = await this.processFile(file, config);
-    
     // Create asset record
     const asset: MediaAsset = {
       id,
@@ -339,28 +191,22 @@ class MediaKit {
       isPublic: false,
       category: 'other'
     };
-
     this.assets.set(id, asset);
     return asset;
   }
-
   async getAsset(id: string): Promise<MediaAsset | null> {
     return this.assets.get(id) || null;
   }
-
   async updateAsset(id: string, updates: Partial<MediaAsset>): Promise<MediaAsset | null> {
     const asset = this.assets.get(id);
     if (!asset) return null;
-
     const updatedAsset = { ...asset, ...updates };
     this.assets.set(id, updatedAsset);
     return updatedAsset;
   }
-
   async deleteAsset(id: string): Promise<boolean> {
     return this.assets.delete(id);
   }
-
   async searchAssets(query: string, filters?: {
     type?: MediaAsset['type'];
     category?: MediaAsset['category'];
@@ -369,7 +215,6 @@ class MediaKit {
     isPublic?: boolean;
   }): Promise<MediaAsset[]> {
     let assets = Array.from(this.assets.values());
-
     // Apply filters
     if (filters) {
       if (filters.type) {
@@ -388,7 +233,6 @@ class MediaKit {
         assets = assets.filter(a => a.isPublic === filters.isPublic);
       }
     }
-
     // Apply search query
     if (query) {
       const lowercaseQuery = query.toLowerCase();
@@ -398,10 +242,8 @@ class MediaKit {
         a.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
       );
     }
-
     return assets.sort((a, b) => new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime());
   }
-
   // Collection management
   async createCollection(
     name: string,
@@ -419,86 +261,68 @@ class MediaKit {
       isPublic: false,
       tags: []
     };
-
     this.collections.set(collection.id, collection);
     return collection;
   }
-
   async getCollection(id: string): Promise<MediaCollection | null> {
     return this.collections.get(id) || null;
   }
-
   async updateCollection(id: string, updates: Partial<MediaCollection>): Promise<MediaCollection | null> {
     const collection = this.collections.get(id);
     if (!collection) return null;
-
     const updatedCollection = {
       ...collection,
       ...updates,
       updatedAt: new Date().toISOString()
     };
-
     this.collections.set(id, updatedCollection);
     return updatedCollection;
   }
-
   async deleteCollection(id: string): Promise<boolean> {
     return this.collections.delete(id);
   }
-
   async addAssetToCollection(collectionId: string, assetId: string): Promise<boolean> {
     const collection = this.collections.get(collectionId);
     if (!collection) return false;
-
     if (!collection.assets.includes(assetId)) {
       collection.assets.push(assetId);
       collection.updatedAt = new Date().toISOString();
       this.collections.set(collectionId, collection);
     }
-
     return true;
   }
-
   async removeAssetFromCollection(collectionId: string, assetId: string): Promise<boolean> {
     const collection = this.collections.get(collectionId);
     if (!collection) return false;
-
     const index = collection.assets.indexOf(assetId);
     if (index > -1) {
       collection.assets.splice(index, 1);
       collection.updatedAt = new Date().toISOString();
       this.collections.set(collectionId, collection);
     }
-
     return true;
   }
-
   async getCollectionAssets(collectionId: string): Promise<MediaAsset[]> {
     const collection = this.collections.get(collectionId);
     if (!collection) return [];
-
     return collection.assets
       .map(assetId => this.assets.get(assetId))
       .filter((asset): asset is MediaAsset => asset !== undefined);
   }
-
   // Utility methods
   private validateFile(file: File | Buffer, config: MediaUploadOptions): boolean {
     // Check file size
     if (file instanceof File && file.size > (config.maxSize || 0)) {
       return false;
     }
-
     // Check file type
     if (file instanceof File && config.allowedTypes) {
       if (!config.allowedTypes.includes(file.type)) {
         return false;
       }
     }
-
     return true;
   }
-
   private async processFile(
     file: File | Buffer,
     config: MediaUploadOptions
@@ -517,11 +341,9 @@ class MediaKit {
     // 2. Generate thumbnails for images/videos
     // 3. Extract metadata
     // 4. Compress if needed
-
     const filename = file instanceof File ? file.name : `file_${Date.now()}`;
     const mimeType = file instanceof File ? file.type : 'application/octet-stream';
     const size = file instanceof File ? file.size : (file as Buffer).length;
-
     return {
       filename,
       url: `https://media.ziontechgroup.com/assets/${filename}`,
@@ -537,7 +359,6 @@ class MediaKit {
       }
     };
   }
-
   private getFileType(mimeType: string): MediaAsset['type'] {
     if (mimeType.startsWith('image/')) return 'image';
     if (mimeType.startsWith('video/')) return 'video';
@@ -545,16 +366,13 @@ class MediaKit {
     if (mimeType.startsWith('application/')) return 'document';
     return 'document';
   }
-
   // Configuration
   async updateUploadOptions(options: Partial<MediaUploadOptions>): Promise<void> {
     this.uploadOptions = { ...this.uploadOptions, ...options };
   }
-
   async getUploadOptions(): Promise<MediaUploadOptions> {
     return { ...this.uploadOptions };
   }
-
   // Statistics
   async getStats(): Promise<{
     totalAssets: number;
@@ -564,7 +382,6 @@ class MediaKit {
     byCategory: Record<MediaAsset['category'], number>;
   }> {
     const assets = Array.from(this.assets.values());
-    
     const byType: Record<MediaAsset['type'], number> = {
       image: 0,
       video: 0,
@@ -572,7 +389,6 @@ class MediaKit {
       document: 0,
       archive: 0
     };
-
     const byCategory: Record<MediaAsset['category'], number> = {
       logo: 0,
       banner: 0,
@@ -582,15 +398,12 @@ class MediaKit {
       documentation: 0,
       other: 0
     };
-
     let totalSize = 0;
-
     for (const asset of assets) {
       byType[asset.type]++;
       byCategory[asset.category]++;
       totalSize += asset.size;
     }
-
     return {
       totalAssets: assets.length,
       totalCollections: this.collections.size,
@@ -599,17 +412,14 @@ class MediaKit {
       byCategory
     };
   }
-
   // Cleanup
   async clearAll(): Promise<void> {
     this.assets.clear();
     this.collections.clear();
   }
 }
-
 // Singleton instance
 export const mediaKit = new MediaKit();
-
 // Main functions for external use
 export async function uploadAsset(
   file: File | Buffer,
@@ -619,15 +429,12 @@ export async function uploadAsset(
 ): Promise<MediaAsset> {
   return mediaKit.uploadAsset(file, name, uploadedBy, options);
 }
-
 export async function getAsset(id: string): Promise<MediaAsset | null> {
   return mediaKit.getAsset(id);
 }
-
 export async function searchAssets(query: string, filters?: Parameters<typeof mediaKit.searchAssets>[1]): Promise<MediaAsset[]> {
   return mediaKit.searchAssets(query, filters);
 }
-
 export async function createCollection(
   name: string,
   createdBy: string,
@@ -635,11 +442,9 @@ export async function createCollection(
 ): Promise<MediaCollection> {
   return mediaKit.createCollection(name, createdBy, description);
 }
-
 export async function getCollection(id: string): Promise<MediaCollection | null> {
   return mediaKit.getCollection(id);
 }
-
 // Utility functions
 export function formatFileSize(bytes: number): string {
   const sizes = ['Bytes', 'KB', 'MB', 'GB'];
@@ -647,32 +452,24 @@ export function formatFileSize(bytes: number): string {
   const i = Math.floor(Math.log(bytes) / Math.log(1024));
   return Math.round(bytes / Math.pow(1024, i) * 100) / 100 + ' ' + sizes[i];
 }
-
 export function getFileExtension(filename: string): string {
   return filename.split('.').pop()?.toLowerCase() || '';
 }
-
 export function isImageFile(mimeType: string): boolean {
   return mimeType.startsWith('image/');
 }
-
 export function isVideoFile(mimeType: string): boolean {
   return mimeType.startsWith('video/');
 }
-
 export function isAudioFile(mimeType: string): boolean {
   return mimeType.startsWith('audio/');
 }
-
 export function generateAssetId(): string {
   return `asset_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
-
 export function generateCollectionId(): string {
   return `collection_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const header = `${params.company_name} ${title_case (type.replace ('-', ' '))}`;
   const boilerplate = `${params.company_name} builds AI agents for Web3 enterprises. Learn more at https://zion.app`;
 ;
@@ -714,4 +511,3 @@ function title_case() {
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

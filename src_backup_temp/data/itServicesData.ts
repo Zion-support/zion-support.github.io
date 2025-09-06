@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD:src/data/itServicesData.ts
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export interface ITService {;
   "id": "string;
   "title": string;
@@ -2696,8 +2689,4 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["Cisco", "HPE", "Dell Technologies", "Juniper", "Fortinet"],
     marketSize: "$25.6 billion by 2025"
   }
-<<<<<<< HEAD
 ];
-=======
-];
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

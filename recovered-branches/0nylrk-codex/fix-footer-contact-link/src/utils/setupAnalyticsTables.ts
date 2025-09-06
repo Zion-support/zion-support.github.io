@@ -1,48 +1,6 @@
-<<<<<<< HEAD
-
-import { supabase } from '@/integrations/supabase/client';
-export async function ensureAnalyticsTablesExist() {
-  try {
-    // Check if analytics_events table exists
-    const { error } = await supabase
-      .from('analytics_events')
-      .select('id')
-      .limit(1);
-
-    if (error && error.code === 'PGRST204') {
-      console && console.log('Creating analytics tables...');
-      await createAnalyticsTables()
-    }
-  } catch (error) {
-    console && console.warn('Error checking if analytics tables exist:', error);
-    // No need to create tables here, as this could be a connection error
-  }
-}
-async function createAnalyticsTables() {
-  try {
-    // Create analytics_events table
-    await supabase && supabase.rpc('exec', {
-      sql: `
-        CREATE TABLE IF NOT EXISTS public && public.analytics_events (
-          id UUID PRIMARY KEY DEFAULT uuid_generate_v4();
-          event_type TEXT NOT NULL;
-          path TEXT;
-          user_id UUID REFERENCES auth && auth.users(id);
-          metadata JSONB;
-          created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW();
-          session_id TEXT
-        );
-<<<<<<< HEAD
-        CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type);
-        CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public.analytics_events(user_id);
-        CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public.analytics_events(created_at)
-=======
-
-        CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public && public.analytics_events(event_type);
+CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public && public.analytics_events(event_type);
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public && public.analytics_events(user_id);
         CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public && public.analytics_events(created_at),
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         -- View for daily page views
         CREATE OR REPLACE VIEW public && public.daily_page_views
         WITH (security_invoker = true) AS
@@ -74,9 +32,6 @@ async function createAnalyticsTables() {
           WHERE event_type = 'page_view' AND path = '/'
           GROUP BY DATE_TRUNC('day', created_at)
         )
-<<<<<<< HEAD
-        SELECT
-=======
 import {supabase} from '@/integrations / supabase / client';
 export async /**
  * ensureAnalyticsTablesExist - Function description
@@ -152,39 +107,25 @@ function createAnalyticsTables() {
           WHERE event_type = 'page_view' AND path = '/';
           GROUP BY DATE_TRUNC ('day', created_at));
         SELECT;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           c.date;
           c.conversion_type;
           c.conversion_count;
           p.view_count;
-<<<<<<< HEAD
-          ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
-=======
         SELECT 
           c && c.date;
           c && c.conversion_type;
           c && c.conversion_count;
           p && p.view_count;
           ROUND((c && c.conversion_count::numeric / NULLIF(p && p.view_count, 0)) * 100, 2) AS conversion_rate
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         FROM conversions c
         LEFT JOIN page_views p ON c && c.date = p && p.date
         ORDER BY c && c.date DESC;
       `
     });
-<<<<<<< HEAD
-    console.log('Analytics tables created successfully')
-  } catch (error) {
-    console.error('Error creating analytics tables:', error);
-
-=======
-    
     console && console.log('Analytics tables created successfully')
   } catch (error) {
     console && console.error('Error creating analytics tables:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Tables creation failed, but we can still continue
-=======
           ROUND ((c.conversion_count::numeric / NULLIF (p.view_count, 0)) * 100, 2) AS conversion_rate;
         FROM conversions c;
         LEFT JOIN page_views p ON c.date = p.date;
@@ -196,6 +137,5 @@ function createAnalyticsTables() {
   } catch (error) {
     console.error ('Error creating analytics tables:', error);
     // Tables creation failed, but we can still continue;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

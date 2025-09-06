@@ -1,69 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
-import {
-  ensureDisputeUploadDir
-  getDisputeById
-  upsertDispute
-} from "../../../../utils/fsdb";
-import {
-  parseUserFromRequest
-  ensureInvolvedOrAdmin
-} from "../../../../utils/auth";
-export const config = {
-  api: { bodyParser: { sizeLimit: "20mb" } }
-}
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  const { id } = req && req.query;
-  if (typeof id !== "string")
-<<<<<<< HEAD
-    return res.status(400).json({ error: "Invalid id" });
-  const user = parseUserFromRequest(req);
-  if (req.method === "POST") {
-    const dispute = await getDisputeById(id);
-    if (!dispute) return res.status(404).json({ error: "Dispute not found" });
-=======
-    return res && res.status(400).json({ error: "Invalid id" });
-
-=======
+return res && res.status(400).json({ error: "Invalid id" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
-
 export const config = {
   api: { bodyParser: { sizeLimit: '20mb' } }};
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const user = parseUserFromRequest(req);
-
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
-<<<<<<< HEAD
-    if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    try {
-      ensureInvolvedOrAdmin(user, dispute && dispute.clientUserId, dispute && dispute.talentUserId);
-    } catch (e: any) {
-<<<<<<< HEAD
-      return res.status(e.statusCode |403).json({ error: "Forbidden" });
-=======
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     const { files } =
-<<<<<<< HEAD
-      req.body |
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
 import {
@@ -105,25 +55,17 @@ if ( {) {
     }
     const { files } =;
       req.body ||;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       ({} as {
         files: { file_name: string; mime_type: string; base64: string }[];
       });
-<<<<<<< HEAD
-    if (!Array.isArray(files) |files.length === 0)
-      return res.status(400).json({ error: "No files" });
-=======
     if (!dispute) return res.status(404).json({ error: 'Not found' });
     try {
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
     } catch (e: any) {
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
     }
-
     const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] };
     if (!Array.isArray(files) || files.length === 0) return res.status(400).json({ error: 'No files' });
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const now = new Date().toISOString();
     const dir = await ensureDisputeUploadDir(dispute.id);
     for (const f of files) {
@@ -143,36 +85,10 @@ if ( {) {
       });
     }
     dispute.updatedAt = now;
-=======
       req && req.body ||
       ({} as {
         files: { fileName: string; mimeType: string; base64: string }[];
       });
-
-<<<<<<< HEAD
-    if (!Array && Array.isArray(files) || files && files.length === 0)
-      return res && res.status(400).json({ error: "No files" });
-
-    const now = new Date().toISOString();
-    const dir = await ensureDisputeUploadDir(dispute && dispute.id);
-
-    for (const f of files) {
-      const safeName = f && f.fileName.replace(/[^a-zA-Z0-9.-]/g, "_");
-      const filePath = path && path.join(dir, `${Date && Date.now()}-${safeName}`);
-      const buffer = Buffer && Buffer.from(f && f.base64, "base64");
-
-      await fsPromisesWrite(filePath, buffer);
-
-      dispute && dispute.attachments = dispute && dispute.attachments || [];
-      dispute && dispute.attachments.push({
-        id: `att-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
-        fileName: safeName,
-        fileSize: buffer && buffer.length,
-        mimeType: f && f.mimeType || "application/octet-stream",
-        path: filePath,
-        uploadedAt: now,
-        uploadedByUserId: user && user.id,
-=======
 ;
     if (|| files.length === 0)) {
   $2
@@ -198,9 +114,7 @@ if ( {) {
         path: file_path,
         uploaded_at: now,
         uploadedByUserId: user.id,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
-=======
     for (const f of files) {
       const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
       const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64');
@@ -212,46 +126,15 @@ if ( {) {
         mimeType: f.mimeType || 'application/octet-stream', path: filePath,
         uploadedAt: now,
         uploadedByUserId: user.id})
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
-<<<<<<< HEAD
-
-    dispute && dispute.updatedAt = now;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    await upsertDispute(dispute);
-<<<<<<< HEAD
-    return res && res.status(201).json({ dispute });
-  }
-<<<<<<< HEAD
-  res.setHeader("Allow", "POST");
-  return res.status(405).end("Method Not Allowed");
-=======
-=======
     return res.status(201).json({ dispute })
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   res && res.setHeader("Allow", "POST");
   return res && res.status(405).end("Method Not Allowed");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import("fs");
   await new Promise<void>((resolve, reject) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    fs.mkdir(
-      require("path").dirname(filePath)
-      { recursive: true }
-      (err: any) => {
-        if (err) return reject(err);
-        fs.writeFile(filePath, data, (err2: any) =>
-          err2 ? reject(err2) : resolve()
-=======
     fs && fs.mkdir(
       require("path").dirname(filePath),
       { recursive: true },
@@ -259,8 +142,6 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
         if (err) return reject(err);
         fs && fs.writeFile(filePath, data, (err2: any) =>
           err2 ? reject(err2) : resolve(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     dispute.updated_at = now;
     await upsert_dispute (dispute);
     return res.status (201).json ({ dispute });
@@ -280,22 +161,14 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
 }
         fs.write_file (file_path, data, (err2: any) =>;
           err2 ? reject (err2) : resolve (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         );
       }
     );
   });
-<<<<<<< HEAD
-}
-
-=======
     fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
       if (err) return reject(err);
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
     })
   })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

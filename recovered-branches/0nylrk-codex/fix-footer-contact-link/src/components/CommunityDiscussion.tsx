@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { MessageCircle } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Avatar, AvatarFallback } from "@/components/ui/avatar",
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-interface DiscussionPost {;
-=======
 import React, { useState } from './react';
 import { MessageCircle  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -18,7 +7,6 @@ import { Avatar, AvatarFallback  } from '@/components / ui / avatar';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Separator  } from '@/components / ui / separator';
 interface DiscussionPost {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: number;
   author: string;
   avatar?: string;
@@ -26,18 +14,6 @@ interface DiscussionPost {
   title: string;
   body: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-const initialPosts: DiscussionPost[] = [
-  {
-
-    id: 1
-    author: "Anna Zhou"
-    time: "2h ago"
-    title: "What AI trends are you most excited for in 2025?"
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
-  }
-=======
 const initial_posts: DiscussionPost[] = [;
   {
     id: 1,
@@ -46,7 +22,6 @@ const initial_posts: DiscussionPost[] = [;
     title: "What AI trends are you most excited for in 2025?",
     body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 2
     author: "David Kim"
@@ -56,8 +31,6 @@ const initial_posts: DiscussionPost[] = [;
   }
 ];
 export const CommunityDiscussion: React.FC = () => {
-=======
-
 const initialPosts: DiscussionPost[] = [;
   {;
     id: 1,;
@@ -74,28 +47,6 @@ const initialPosts: DiscussionPost[] = [;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
   },;
 ];
-<<<<<<< HEAD
-
-export const CommunityDiscussion: React.FC = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  const [posts, setPosts] = useState(initialPosts);
-  const [showNew, setShowNew] = useState(false);
-  const [newTitle, setNewTitle] = useState("");
-  const [newBody, setNewBody] = useState("");
-<<<<<<< HEAD
-  const handleAddPost = () => {
-    if (!newTitle.trim() |!newBody.trim()) return;
-    setPosts([
-      {
-        id: Date.now()
-        author: "You"
-        time: "Now"
-        title: newTitle
-        body: newBody
-      }
-      ...posts
-=======
-
   const handleAddPost = () => {;
     if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
     setPosts([;
@@ -107,7 +58,6 @@ export const CommunityDiscussion: React.FC = () => {;
         body: newBody,;
       },;
       ...posts,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ]);
     setNewTitle("");
     setNewBody("");
@@ -152,7 +102,6 @@ export const CommunityDiscussion: React.FC = () => {;
               value={newBody}
               onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
                 setNewBody(e && e.target.value);
-=======
 ;
 export const CommunityDiscussion: React.FC = () => {
   const [posts, set_posts] = useState (initial_posts);
@@ -218,36 +167,11 @@ export const CommunityDiscussion: React.FC = () => {
               value={new_body}
               on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) =>;
                 setNewBody (e.target.value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }
               max_length={400}
               rows={3}
             />;
-<<<<<<< HEAD
-            <div className="flex gap-3 justify-end">;
-              <Button
-                variant="secondary"
-                size="sm"
-                className="bg-zion-blue text-white hover:bg-zion-blue-dark"
-                onClick={() => setShowNew(false)}
-              >;
-                Cancel;
-              </Button>;
-              <Button
-                size="sm"
-                className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
-                onClick={handleAddPost}
-<<<<<<< HEAD
-                disabled={!newTitle.trim() |!newBody.trim()}
-              >
-                Post
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-=======
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
-=======
             <div className="flex gap - 3 justify - end">;
               <Button;
                 variant="secondary";
@@ -263,60 +187,10 @@ export const CommunityDiscussion: React.FC = () => {
                 on_click={handleAddPost}
                 disabled={!new_title.trim () || !new_body.trim ()}
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Post;
               </Button>;
             </div>;
           </CardContent>;
-<<<<<<< HEAD
-        </Card>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      )}
-      <div className="flex flex-col gap-6">;
-        {posts && posts.map((post) => (;
-          <Card
-            key={post && post.id}
-            className="bg-zion-blue border-zion-slate-dark shadow-lg">;
-            <CardContent className="py-4 flex gap-4">;
-              <Avatar>;
-                <AvatarFallback>;
-                  {post && post.author;
-                    .split(" ");
-                    .map((s) => s[0]);
-                    .join("");
-                    .toUpperCase();
-                    .slice(0, 2)}
-                </AvatarFallback>;
-              </Avatar>;
-              <div>;
-                <div className="flex gap-2 items-center">;
-                  <span className="font-semibold text-white">;
-                    {post && post.author}
-                  </span>;
-                  <span className="text-xs text-zion-slate-light">;
-                    {post && post.time}
-                  </span>;
-                </div>;
-                <h3 className="text-lg font-bold text-zion-cyan mt-1">;
-                  {post && post.title}
-                </h3>;
-                <p className="text-zion-slate-light mt-1 whitespace-pre-line">;
-                  {post && post.body}
-                </p>;
-              </div>;
-            </CardContent>;
-          </Card>;
-        ))}
-      </div>;
-      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
-        🚀 Stay engaged! Top contributors are regularly featured on the;
-        homepage.;
-      </div>;
-    </div>;
-  );
-}
-
-=======
         </Card>)}
       <div className="flex flex - col gap - 6">;
         {posts.map ((post) => (
@@ -361,4 +235,3 @@ export const CommunityDiscussion: React.FC = () => {
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

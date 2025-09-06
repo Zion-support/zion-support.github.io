@@ -1,71 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import { Bot, Users, TrendingUp } from 'lucide-react'
-=======
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react'
 import { Star } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-<<<<<<< HEAD
-export default function AITalentMatchingPage() {
-
-  const benefits = [
-    {
-<<<<<<< HEAD
-      icon: Bot
-      title: "AI-Powered Matching"
-      description: "Advanced algorithms match the right talent with the right opportunities"
-    }
-    {
-      icon: Users
-      title: "Verified Professionals"
-      description: "All candidates are pre-screened and verified for quality"
-    }
-    {
-      icon: TrendingUp
-      title: "Success Tracking"
-      description: "Monitor performance and success rates of placements"
-    }
-  ]
-  const features = [
-    "Machine learning-based candidate matching"
-    "Comprehensive skill assessment tools"
-    "Real-time market analysis"
-    "Automated interview scheduling"
-    "Performance analytics dashboard"
-    "Custom matching criteria"
-  ]
-  const stats = [
-    { label: "Successful Placements", value: "95%" }
-    { label: "Client Satisfaction", value: "98%" }
-=======
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -84,7 +20,6 @@ export default function AITalentMatchingPage() {;
       description: "Monitor performance and success rates of placements";
     }
   ];
-=======
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className = "h-8 w-8" />},
@@ -106,8 +41,6 @@ export default function AITalentMatchingPage() {;
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   const features = [;
     "Machine learning-based candidate matching",;
     "Comprehensive skill assessment tools",;
@@ -116,15 +49,11 @@ export default function AITalentMatchingPage() {;
     "Performance analytics dashboard",;
     "Custom matching criteria";
   ];
-
   const stats = [;
     { label: "Successful Placements", value: "95%" },;
     { label: "Client Satisfaction", value: "98%" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     { label: "Time to Hire", value: "50% faster" }
   ]
-
-=======
 import React from './react';
 import { ServiceLandingTemplate  } from '../components / services / ServiceLandingTemplate';
 import { Bot, Users, TrendingUp, Star } from 'lucide-react';
@@ -162,7 +91,6 @@ function AITalentMatchingPage() {
     { label: "Client Satisfaction", value: "98%" },
     { label: "Time to Hire", value: "50% faster" }
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <ServiceLandingTemplate;
       title="AI Talent Matching";
@@ -171,24 +99,10 @@ function AITalentMatchingPage() {
       benefits={benefits}
       features={features}
       stats={stats}
-<<<<<<< HEAD
-      ctaText="Start Matching Talent"
-      ctaLink="/contact"
-<<<<<<< HEAD
-    />
-  )
-=======
     />;
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       cta_text="Start Matching Talent";
       cta_link="/contact";
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

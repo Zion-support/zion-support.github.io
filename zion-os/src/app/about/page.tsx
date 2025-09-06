@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-export default function AboutPage() {return (;
-    <div className="min-h-screen bg-white">;
-=======
 export default /**
  * AboutPage - Function description
  */
 function AboutPage() {
   return (
     <div className="min - h-screen bg - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - blue - 600 to - indigo - 700 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;

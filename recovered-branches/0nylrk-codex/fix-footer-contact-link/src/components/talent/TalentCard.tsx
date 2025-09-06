@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
-import { useNavigate } from "react-router-dom";
-import { TalentProfile } from "@/types/talent";
-export interface TalentCardProps {
-
-  talent: TalentProfile
-  onViewProfile: (id: string) => void
-  onRequestHire: (talent: TalentProfile) => void
-  isSaved: boolean
-  onToggleSave: (id: string, isSaved: boolean) => void
-
-  isAuthenticated: boolean
-}
-export function TalentCard({
-=======
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
@@ -32,58 +11,23 @@ export interface TalentCardProps {;
   onToggleSave: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean;
 }
-
 export function TalentCard(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
-<<<<<<< HEAD
-  isAuthenticated
-}: TalentCardProps) {
-
-  const navigate = useNavigate();
-  const handleViewProfile = () => {
-    // Navigate directly to the talent profile
-    navigate(`/talent/${talent.id}`);
-    // Also call the onViewProfile callback if provided
-    if (onViewProfile) {
-      onViewProfile(talent.id)
-    }
-  }
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(talent)
-    }
-  }
-  const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
-    if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved)
-    }
-  }
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[];
-=======
   isAuthenticated;
 }: TalentCardProps) {;
   const navigate = useNavigate();
-
   const handleViewProfile = () => {;
     // Navigate directly to the talent profile;
     navigate(`/talent/${talent && talent.id}`);
-
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;
       onViewProfile(talent && talent.id);
     }
   };
-
   const handleRequestHire = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
@@ -91,7 +35,6 @@ export function TalentCard(): any ({;
       onRequestHire(talent);
     }
   };
-
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
@@ -99,30 +42,13 @@ export function TalentCard(): any ({;
       onToggleSave(talent && talent.id, !isSaved);
     }
   };
-
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
       <div className="p-6">;
         <div className="flex items-start">;
           {/* Avatar */}
-<<<<<<< HEAD
-          <div className="relative mr-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
-              {talent.profile_picture_url ? (
-                <img
-                  src={talent.profile_picture_url}
-                  alt={talent.full_name}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
-                  {talent.full_name?.charAt(0) |"T"}
-                </div>
-=======
           <div className="relative mr-4">;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
               {talent && talent.profile_picture_url ? (;
@@ -135,7 +61,6 @@ export function TalentCard(): any ({;
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
                   {talent && talent.full_name?.charAt(0) || "T"}
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
             {talent && talent.is_verified && (;
@@ -143,12 +68,7 @@ export function TalentCard(): any ({;
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
               </div>;
             )}
-<<<<<<< HEAD
-          </div>
-=======
           </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
@@ -157,23 +77,12 @@ export function TalentCard(): any ({;
                 variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
-<<<<<<< HEAD
-                onClick={handleToggleSave}
-              >
-                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
-                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
-              </Button>
-            </div>
-            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
-=======
                 onClick={handleToggleSave}>;
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>;
               </Button>;
             </div>;
             <p className="text-zion-cyan font-medium">{talent && talent.professional_title}</p>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -188,51 +97,28 @@ export function TalentCard(): any ({;
                   <span>{talent && talent.availability_type}</span>;
                 </div>;
               )}
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-        {/* Skills */}
-        {skills.length > 0 && (
-          <div className="mt-4">
-            <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index) => (
-=======
             </div>;
           </div>;
         </div>;
-
         {/* Skills */}
         {skills && skills.length > 0 && (;
           <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
               {skills && skills.map((skill, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <span
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
                 </span>;
               ))}
-<<<<<<< HEAD
-              {(talent.skills?.length |0) > 5 && (
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
-                </span>
-=======
               {(talent && talent.skills?.length || 0) > 5 && (;
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
                   +{(talent && talent.skills?.length || 0) - 5} more;
                 </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">;
           <div>;
@@ -244,16 +130,9 @@ export function TalentCard(): any ({;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
-<<<<<<< HEAD
-          </div>
-          <div className="flex items-center gap-2">
-            {isAuthenticated && (
-=======
           </div>;
-
           <div className="flex items-center gap-2">;
             {isAuthenticated && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 size="sm"
                 variant="secondary"
@@ -265,23 +144,6 @@ export function TalentCard(): any ({;
             <Button
               size="sm"
               variant="ghost"
-<<<<<<< HEAD
-              onClick={(e) => {
-                e.stopPropagation();
-
-                handleViewProfile()
-              }}
-              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
-            >
-              View <ArrowRight className="ml-1 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </div>
-    </Card>
-  )
-}
-=======
               onClick={(e) => {;
                 e && e.stopPropagation();
                 handleViewProfile();
@@ -289,7 +151,6 @@ export function TalentCard(): any ({;
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
-=======
 import { Button } from '@/components / ui / button';
 import { Card } from '@/components / ui / card';
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from './lucide-react';
@@ -446,17 +307,9 @@ if ( {) {
               className="text - zion - cyan hover: text - white hover:bg - zion - blue - light";
             >;
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </Card>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -59,17 +59,9 @@ import {useInterviews} from '@/hooks/useInterviews';
     );
 export function InterviewRequestForm(props: any) {
 import React from 'react';
-<<<<<<< HEAD
-
 interface InterviewRequestForm.jsProps {
   // Add props here as needed
 }
-
-=======
-interface InterviewRequestForm.jsProps {
-  // Add props here as needed
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         resolver: zodResolver(formSchema),
         defaultValues: {
             title: `Interview with ${talent.full_name}`,"
@@ -79,13 +71,7 @@ interface InterviewRequestForm.jsProps {
             meetingLink: ""}}
     );
     async function onSubmit(props: any) {
-<<<<<<< HEAD
-
         if(!userDetails?.id) {;
-
-=======
-        if(!userDetails?.id) {;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             toast({;
 ";
                 "title": "Authentication required"",";
@@ -222,10 +208,6 @@ interface InterviewRequestForm.jsProps {
                   <PopoverContent className="w-auto p-0" align="start">"
                     <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled = {(date) => date < new Date() || date > addDays(new Date(),
   90)
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "} initialFocus className="p-3 pointer-events-auto"/>;
                   </PopoverContent>;
                 </Popover>;
@@ -315,10 +297,6 @@ interface InterviewRequestForm.jsProps {
       </form>;
     </Form>)}
 '"`;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </FormField>;
 </FormField>;
 </FormField>;
@@ -342,8 +320,4 @@ export default function InterviewRequestForm.js({ }: InterviewRequestForm.jsProp
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

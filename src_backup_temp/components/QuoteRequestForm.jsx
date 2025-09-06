@@ -80,10 +80,6 @@ export const QuoteRequestForm = ("props": "any) => {"}
   const timelineOptions = []";""
   const budgetRanges = []";""
   const urgencyLevels = []  const handleChange = (e) => {}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
     setFormData(prev => ({}
 ;
       ...prev,;

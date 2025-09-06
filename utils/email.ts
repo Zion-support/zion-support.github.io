@@ -1,48 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs-extra';
-import path from 'path';
-=======
 import fs from 'fs - extra';
 import path from 'path';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface WarningEmailPayload {
   toUserId: string;
   to_address?: string | null;
   subject: string;
   body: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface EmailOptions {
   to: string;
   subject: string;
   body: string;
 }
-<<<<<<< HEAD
-export async function sendWarningEmail(
-  payload: WarningEmailPayload
-): Promise<void> {
-<<<<<<< HEAD
-  const logDir = path.resolve(process.cwd(), 'data/fraud');
-  const logPath = path.join(logDir, 'emails.log');
-  await fs.ensureDir(logDir);
-<<<<<<< HEAD
-
-  const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
-  await fs.appendFile(logPath, line, 'utf8');
-}
-
-=======
   const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress |'unknown'} subject=${payload.subject} body=${payload.body}\n`;
   await fs.appendFile(logPath, line, 'utf8');
-=======
 // Email utilities
 export interface EmailConfig {
   provider: 'smtp' | 'sendgrid' | 'ses' | 'mailgun' | 'nodemailer';
@@ -59,27 +30,19 @@ export interface EmailConfig {
       pass: string;
     };
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
   console.log('Email would be sent:', options);
 }
-=======
   const logDir = path && path.resolve(process && process.cwd(), 'data/fraud');
   const logPath = path && path.join(logDir, 'emails && emails.log');
   await fs && fs.ensureDir(logDir);
-
   const line = `[${new Date().toISOString()}] toUserId=${payload && payload.toUserId} to=${payload && payload.toAddress || 'unknown'} subject=${payload && payload.subject} body=${payload && payload.body}\n`;
   await fs && fs.appendFile(logPath, line, 'utf8');export async function sendWarningEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
   console && console.log('Email would be sent:', options);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
 export interface EmailResult {
   success: boolean;
   messageId?: string;
@@ -87,11 +50,9 @@ export interface EmailResult {
   provider?: string;
   timestamp: string;
 }
-
 class EmailManager {
   private config: EmailConfig;
   private templates: Map<string, EmailTemplate> = new Map();
-
   constructor() {
     this.config = {
       provider: 'nodemailer',
@@ -110,7 +71,6 @@ class EmailManager {
       }
     };
   }
-
   // Send email
   async sendEmail(message: EmailMessage): Promise<EmailResult> {
     try {
@@ -122,7 +82,6 @@ class EmailManager {
           timestamp: new Date().toISOString()
         };
       }
-
       // Process template if specified
       if (message.templateId) {
         const processedMessage = await this.processTemplate(message);
@@ -135,10 +94,8 @@ class EmailManager {
         }
         message = processedMessage;
       }
-
       // Send based on provider
       const result = await this.sendViaProvider(message);
-      
       return {
         success: true,
         messageId: result.messageId,
@@ -154,7 +111,6 @@ class EmailManager {
       };
     }
   }
-
   private async sendViaProvider(message: EmailMessage): Promise<{ messageId: string }> {
     switch (this.config.provider) {
       case 'sendgrid':
@@ -169,17 +125,14 @@ class EmailManager {
         return this.sendViaSMTP(message);
     }
   }
-
   private async sendViaSMTP(message: EmailMessage): Promise<{ messageId: string }> {
     const nodemailer = await import('nodemailer');
-    
     const transporter = nodemailer.createTransporter({
       host: this.config.smtp!.host,
       port: this.config.smtp!.port,
       secure: this.config.smtp!.secure,
       auth: this.config.smtp!.auth
     });
-
     const mailOptions = {
       from: `${this.config.fromName} <${this.config.fromEmail}>`,
       to: Array.isArray(message.to) ? message.to.join(', ') : message.to,
@@ -191,15 +144,12 @@ class EmailManager {
       attachments: message.attachments,
       headers: message.headers
     };
-
     const info = await transporter.sendMail(mailOptions);
     return { messageId: info.messageId };
   }
-
   private async sendViaSendGrid(message: EmailMessage): Promise<{ messageId: string }> {
     const sgMail = await import('@sendgrid/mail');
     sgMail.setApiKey(this.config.apiKey!);
-
     const msg = {
       to: message.to,
       from: {
@@ -213,11 +163,9 @@ class EmailManager {
       attachments: message.attachments,
       headers: message.headers
     };
-
     const response = await sgMail.send(msg);
     return { messageId: response[0].headers['x-message-id'] as string };
   }
-
   private async sendViaSES(message: EmailMessage): Promise<{ messageId: string }> {
     const AWS = await import('aws-sdk');
     const ses = new AWS.SES({
@@ -225,7 +173,6 @@ class EmailManager {
       accessKeyId: process.env.AWS_ACCESS_KEY_ID,
       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
     });
-
     const params = {
       Destination: {
         ToAddresses: Array.isArray(message.to) ? message.to : [message.to],
@@ -242,11 +189,9 @@ class EmailManager {
       Source: `${this.config.fromName} <${this.config.fromEmail}>`,
       ReplyToAddresses: this.config.replyTo ? [this.config.replyTo] : undefined
     };
-
     const result = await ses.sendEmail(params).promise();
     return { messageId: result.MessageId };
   }
-
   private async sendViaMailgun(message: EmailMessage): Promise<{ messageId: string }> {
     const formData = new FormData();
     formData.append('from', `${this.config.fromName} <${this.config.fromEmail}>`);
@@ -260,7 +205,6 @@ class EmailManager {
     formData.append('subject', message.subject);
     if (message.text) formData.append('text', message.text);
     if (message.html) formData.append('html', message.html);
-
     const response = await fetch(`https://api.mailgun.net/v3/${process.env.MAILGUN_DOMAIN}/messages`, {
       method: 'POST',
       headers: {
@@ -268,37 +212,29 @@ class EmailManager {
       },
       body: formData
     });
-
     const result = await response.json();
     return { messageId: result.id };
   }
-
   // Template management
   async addTemplate(template: EmailTemplate): Promise<void> {
     this.templates.set(template.id, template);
   }
-
   async getTemplate(id: string): Promise<EmailTemplate | null> {
     return this.templates.get(id) || null;
   }
-
   async removeTemplate(id: string): Promise<boolean> {
     return this.templates.delete(id);
   }
-
   async listTemplates(): Promise<EmailTemplate[]> {
     return Array.from(this.templates.values());
   }
-
   private async processTemplate(message: EmailMessage): Promise<EmailMessage | null> {
     const template = this.templates.get(message.templateId!);
     if (!template) return null;
-
     const variables = message.variables || {};
     let subject = template.subject;
     let html = template.html;
     let text = template.text;
-
     // Replace variables in template
     for (const [key, value] of Object.entries(variables)) {
       const placeholder = `{{${key}}}`;
@@ -306,7 +242,6 @@ class EmailManager {
       html = html.replace(new RegExp(placeholder, 'g'), String(value));
       text = text.replace(new RegExp(placeholder, 'g'), String(value));
     }
-
     return {
       ...message,
       subject,
@@ -314,36 +249,29 @@ class EmailManager {
       text: message.text || text
     };
   }
-
   // Validation
   private validateEmailAddresses(emails: string | string[]): boolean {
     const emailList = Array.isArray(emails) ? emails : [emails];
     return emailList.every(email => this.isValidEmail(email));
   }
-
   private isValidEmail(email: string): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
-
   // Configuration
   async updateConfig(newConfig: Partial<EmailConfig>): Promise<void> {
     this.config = { ...this.config, ...newConfig };
   }
-
   async getConfig(): Promise<EmailConfig> {
     return { ...this.config };
   }
 }
-
 // Singleton instance
 export const emailManager = new EmailManager();
-
 // Main function for external use
 export async function sendEmail(message: EmailMessage): Promise<EmailResult> {
   return emailManager.sendEmail(message);
 }
-
 // Warning email function
 export async function sendWarningEmail(
   to: string,
@@ -365,7 +293,6 @@ export async function sendWarningEmail(
     priority
   });
 }
-
 // Utility functions
 export function createEmailTemplate(
   id: string,
@@ -386,16 +313,13 @@ export function createEmailTemplate(
     category
   };
 }
-
 export function isValidEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
-
 export function formatEmailList(emails: string | string[]): string {
   return Array.isArray(emails) ? emails.join(', ') : emails;
 }
-
 // Common email templates
 export const COMMON_TEMPLATES = {
   WELCOME: 'welcome',
@@ -405,8 +329,6 @@ export const COMMON_TEMPLATES = {
   PAYMENT_CONFIRMATION: 'payment_confirmation',
   SECURITY_NOTIFICATION: 'security_notification'
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export async function sendWarningEmail (
   payload: WarningEmailPayload): Promise < void> {
   const log_dir = path.resolve (process.cwd (), 'data / fraud');
@@ -420,4 +342,3 @@ export async function send_email (options: EmailOptions): Promise < void> {
   // Mock implementation - in production, this would send actual emails;
   console.log ('Email would be sent:', options);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

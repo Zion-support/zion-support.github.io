@@ -1,25 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
-}</ul> </div> </div>)
-}</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
-  talentMd
-}</pre>)
-}</section> </div>) import { useEffect, useState } from 'react';
-=======
 import { useEffect, useState } from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
-
 export default function AutomationInsightsPage() {
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
   useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
-=======
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) ;
 }</ul> </div> </div>) ;
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {;
@@ -30,11 +16,9 @@ import Head from 'next/head';
 export default function AutomationInsightsPage() {;
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
-
   useEffect(() => {;
     fetch('/data/automation/market-intel && intel.json').then((r) => r && r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights && highlights.md').then((r) => r && r.text()).then(setTalentMd).catch(() => {});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
   return (
     <div>;
@@ -65,22 +49,7 @@ export default function AutomationInsightsPage() {;
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-      </section>
-      <section id="talent" className="mb-8">
-        <h2 className="font-medium">Talent Highlights</h2>
-        {!talentMd ? (
-          <div className="text-sm text-gray-500">Loading…</div>
-        ) : (
-          <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800">{talentMd}</pre>
-        )}
-      </section>
-    </div>
-);
-}
-=======
       </section>;
-
       <section id="talent" className="mb-8">;
         <h2 className="font-medium">Talent Highlights</h2>;
         {!talentMd ? (;
@@ -92,11 +61,6 @@ export default function AutomationInsightsPage() {;
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 return (<div> <Head><title > Automation Insights — Zion</title></Head>) );
 }</ul> </div> </div>);
 }</section>) : (<pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800" > {
@@ -150,4 +114,3 @@ function AutomationInsightsPage() {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

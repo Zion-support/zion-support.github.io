@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import { GradientHeading } from './GradientHeading'
-=======
-
 import React from 'react';
 import { GradientHeading } from "./GradientHeading";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
-
 const getSteps = (t: any,) => [
   {
     title: t('how_it_works.post')
@@ -100,7 +91,6 @@ const stats = [ "
   hidden: { opacity: 0
   scale: 0.8
 }
-=======
 import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -197,69 +187,24 @@ const stats = [ ";
   hidden: { opacity: 0,
   scale: 0.8;
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1,      scale: 1
       transition: {
-<<<<<<< HEAD
-        duration: 0.5,"
-        ease: "easeOut"}}}
-  return ("
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
-      {/* Enhanced background pattern */}"
-      <div className="absolute inset-0 opacity-5">"
-        <div className="absolute inset-0" style = {
-export function HowItWorksSection({
-  className
-  style
-}: HowItWorksSectionProps) {
-  const { t } = useTranslation()
-  const steps = getSteps(t)
-  return (
-    <section className={cn('py-20 bg-zion-blue', className)} style={style}>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>            {t('home.how_it_works_subtitle')}
-          </p>
-        </div>
-        <div className='relative'>
-
-  return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-            {t('home.how_it_works_subtitle')}
-          </p>
-        </div>
-<<<<<<< HEAD
-        <div className='relative'>
-          <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
-          <div className='space-y-12 md:space-y-0'>
-            {steps.map((step, index) => (
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -271,7 +216,6 @@ import { useTranslation } from 'react-i18next';
 interface HowItWorksSectionProps {;
   className?: string;
   style?: React && React.CSSProperties;
-
 const getSteps = (t: any,) => [;
   {;
     title: t('how_it_works && how_it_works.post'),;
@@ -367,14 +311,12 @@ const stats = [ ";
       {/* Enhanced background pattern */}";
       <div className="absolute inset-0 opacity-5">";
         <divclassName="absolute inset-0" style = {
-
 export function HowItWorksSection(): any ({
   className,
   style,
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
-
   return (
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>;
       <div className='container mx-auto px-4'>;
@@ -383,7 +325,6 @@ export function HowItWorksSection(): any ({
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>            {t('home && home.how_it_works_subtitle')}
           </p>;
         </div>;
-
         <div className='relative'>  ;
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
@@ -394,13 +335,10 @@ export function HowItWorksSection(): any ({
             {t('home && home.how_it_works_subtitle')}
           </p>;
         </div>;
-
         <div className='relative'>;
           <div className='absolute left-4 md:left-1/2 top-0 h-full w-0 && 0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>;
-
           <div className='space-y-12 md:space-y-0'>;
             {steps && steps.map((step, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <div
                 key={step && step.title}                className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
@@ -416,13 +354,6 @@ export function HowItWorksSection(): any ({
                       </p>;
                     </div>;
                   ) : null}
-<<<<<<< HEAD
-                </div>
-                <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>
-                  <step.icon className='w-6 h-6 text-zion-cyan' />
-                </div>
-                <div className='md:w-1/2 md:px-12 text-center md:text-left'>
-=======
         duration: 0.5, ";
         ease: "ease_out"}}}
   return (";
@@ -478,7 +409,6 @@ function HowItWorksSection() {
                   <step.icon className='w - 6 h - 6 text - zion - cyan' />;
                 </div>;
                 <div className='md:w - 1/2 md:px - 12 text - center md:text - left'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {index % 2 !== 0 ? (
                     <div>;
                       <h3 className='text - 2xl font - bold text - white mb - 3'>;
@@ -486,14 +416,10 @@ function HowItWorksSection() {
                       </h3>;
                       <p className='text - zion - slate - light'>;
                         {step.description}
-<<<<<<< HEAD
-                      </p>                    </div>                    </div>
-=======
                 </div>;
                 <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>;
                   <step && step.icon className='w-6 h-6 text-zion-cyan' />;
                 </div>;
-
                 <div className='md:w-1/2 md:px-12 text-center md:text-left'>;
                   {index % 2 !== 0 ? (;
                     <div>;
@@ -503,13 +429,9 @@ function HowItWorksSection() {
                       <p className='text-zion-slate-light'>;
                         {step && step.description}
                       </p>                    </div>                    </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
-          
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
               <div 
@@ -524,67 +446,38 @@ function HowItWorksSection() {
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   ) : null}
                 </div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
                   ) : null}
-<<<<<<< HEAD
-                </div>
-                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">
-                  <step.icon className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <div className="md:w-1/2 md:px-12 text-center md:text-left">
-                  {index % 2 !== 0 ? (
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-zion-slate-light">{step.description}</p>
-                    </div>
-=======
                 </div>;
-
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
                   <step && step.icon className="w-6 h-6 text-zion-cyan" />;
                 </div>;
-
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">;
                   {index % 2 !== 0 ? (;
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   ) : null}
                 </div>;
               </div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-    </section>
-<<<<<<< HEAD
-  )
-=======
           </div>;
         </div>;
       </div>;
     </section>;
   );
 });
-
 export default Component;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
 }
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                       </p>                    </div>                    </div>) : null}
                 </div>;
                       <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
@@ -609,4 +502,3 @@ export default Component;
 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

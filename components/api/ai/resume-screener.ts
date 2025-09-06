@@ -1,30 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { authenticateRequest } from '@/utils/auth';
-import { generateText } from '@/utils/ai';
-<<<<<<< HEAD
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-<<<<<<< HEAD
-  const method = (req.method |'POST').toUpperCase();
-  if (method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const method = (req.method |'POST').toUpperCase();
-  if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { jobDescription, resumes } = req.body |{}
   if (!jobDescription |!Array.isArray(resumes))
-=======
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST')
@@ -32,55 +13,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-
-<<<<<<< HEAD
-  const auth = authenticateRequest(req, false);
-  if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
-
-  const { jobDescription, resumes } = req && req.body || {};
-  if (!jobDescription || !Array && Array.isArray(resumes))
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    return res
-      .status(400)
-      .json({ error: 'jobDescription and resumes[] required' });
-  const prompt =
-    `Score resumes 0-100 for fit vs job description. Return JSON array of {candidateIndex, score, summary, redFlags}.\n` +
-    `Job Description:\n${jobDescription}\n\n` +
-<<<<<<< HEAD
-    `Resumes:\n${resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
-=======
     `Resumes:\n${resumes && resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const text = await generateText(
     prompt
     'You are an expert technical recruiter. Output strictly valid JSON.'
   );
   return res && res.status(200).json({ results: text });
-=======
   const { jobDescription, resumes } = req.body || {};
   if (!jobDescription || !Array.isArray(resumes)) return res.status(400).json({ error: 'jobDescription and resumes[] required' });
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const prompt = `Score resumes 0-100 for fit vs job description. Return JSON array of {candidateIndex, score, summary, redFlags}.\n` +
     `Job Description:\n${jobDescription}\n\n` +
-<<<<<<< HEAD
-    `Resumes:\n${resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
-  const text = await generateText(prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
-
-  return res.status(200).json({ results: text })
-}
-<<<<<<< HEAD
-=======
     `Resumes:\n${resumes && resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
-
   const text = await generateText(prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
   return res && res.status(200).json({ results: text })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
 ;
@@ -128,4 +74,3 @@ function handler() {
   const text = await generate_text (prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
   return res.status (200).json ({ results: text });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

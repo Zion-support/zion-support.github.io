@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-]
-}];
-];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
-  section.badge
-}</span>)
-}</div>) : (<ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />)
-}</button> <AnimatePresence> > <CloseIcon className="w-5 h-5" /> </button> </div> </div> </a>) )
-}+ {
-  filteredServices.length - 5
-}more results </div>)
-}</div>) : (<div className="text-sm text-gray-500 text-center py-2" > No services found </div>)
-}</div>)
-}</div> </div> </div> </div> </motion.div>) )
-}</div> </div> </span> </a>) )
-}</div> </div> </span> </div> <ChevronRight className= {
-  `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
-  expandedCategory === item.name ? 'rotate-90' : ''
-}`
-}/> </button> <AnimatePresence> > {
-  item.children?.map ( (child) => (<Link key= {
-  child.name
-}{
-  child.badge
-}</span>)
-}</a>) )
-}</motion.div>)
-}</AnimatePresence> </div>) )
-}</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>)
-};export default EnhancedSidebar2025;
-=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -45,7 +11,6 @@ import {
   Target, BookOpen, Truck, BarChart3;
   Sparkles, Eye, Lightbulb, Palette, Code
 } from 'lucide-react';
-
 interface SidebarItem {
   name: string,
   href: string,
@@ -56,15 +21,12 @@ interface SidebarItem {
   isNew?: boolean;
   isHot?: boolean
 }
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const sidebarItems: SidebarItem[] = [
   {
     name: 'All Services'
@@ -249,26 +211,21 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Live Chat', href: '/live-chat', description: 'Real-time assistance' }
       { name: 'Training Programs', href: '/training', description: 'Skill development' }
       { name: 'Community Forum', href: '/community', description: 'User community' }
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -485,8 +442,6 @@ const sidebarItems: SidebarItem[] = [;
       { name: 'Live Chat', href: '/live-chat', description: 'Real-time assistance' },;
       { name: 'Training Programs', href: '/training', description: 'Skill development' },;
       { name: 'Community Forum', href: '/community', description: 'User community' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ];
 }];
 ];</div> <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - lg blur - lg opacity - 50" ></div> </div> <div> <h2 className="text - lg font - bold bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent" > Zion Tech Group </h2> <p className="text - xs text - gray - 400" >Navigation</p> </div> </div> </div> </div> </div> {
@@ -700,34 +655,10 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'Live Chat', href: '/live - chat', description: 'Real - time assistance' },
       { name: 'Training Programs', href: '/training', description: 'Skill development' },
       { name: 'Community Forum', href: '/community', description: 'User community' },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ];
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-const resources = [
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> }
-  { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> }
-  { name: 'Case Studies', href: '/case-studies', icon: <BookOpen className="w-4 h-4" /> }
-  { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> }
-  { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> }
-  { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
-];
-const supportLinks = [
-  { name: 'Contact Support', href: '/support', description: 'Get help from our team' }
-  { name: 'Documentation', href: '/docs', description: 'Technical guides' }
-  { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' }
-  { name: 'Status Page', href: '/status', description: 'Service status' }
-  { name: 'Training', href: '/training', description: 'Learn our platforms' }
-  { name: 'Community', href: '/community', description: 'Connect with users' }
-];
-  const toggleSection = (title: string) => {
-    const newExpanded = new Set(expandedSections)
-    if (newExpanded.has(title)) {
-      newExpanded.delete(title)
-=======
 ;
 const resources = [;
   { name: 'Documentation', href: '/docs', icon: <FileText className="w - 4 h - 4" /> },
@@ -753,20 +684,9 @@ const support_links = [;
   $2
 }
       new_expanded.delete (title);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       new_expanded.add (title);
     }
-<<<<<<< HEAD
-    setExpandedSections(newExpanded)
-  }
-  const filteredServices = sidebarItems.flatMap(item =>
-    item.children?.filter(child =>
-      child.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-      child.description?.toLowerCase().includes(searchQuery.toLowerCase())
-    ) |[]
-=======
-
 const resources = [;
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },;
   { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> },;
@@ -775,7 +695,6 @@ const resources = [;
   { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },;
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
 ];
-
 const supportLinks = [;
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },;
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },;
@@ -784,7 +703,6 @@ const supportLinks = [;
   { name: 'Training', href: '/training', description: 'Learn our platforms' },;
   { name: 'Community', href: '/community', description: 'Connect with users' }
 ];
-
   const toggleSection = (title: string) => {;
     const newExpanded = new Set(expandedSections),;
     if (newExpanded && newExpanded.has(title)) {;
@@ -794,13 +712,11 @@ const supportLinks = [;
     }
     setExpandedSections(newExpanded);
   };
-
   const filteredServices = sidebarItems && sidebarItems.flatMap(item =>;
     item && item.children?.filter(child =>;
       child && child.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       child && child.description?.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     ) || [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   return (
     <motion&& motion.aside
@@ -809,39 +725,6 @@ const supportLinks = [;
       transition={{ duration: 0 && 0.5, ease: "easeOut" }}
       className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/50 scrollbar-track-transparent">;
       {/* Header */}
-<<<<<<< HEAD
-      <div className="sticky top-0 bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 p-4">
-        <div className="flex items-center space-x-3 mb-4">
-          <div className="relative">
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50"></div>
-          </div>
-          <div>
-            <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h2>
-            <p className="text-xs text-gray-400">Navigation</p>
-          </div>
-        </div>
-        {/* Contact Info */}
-        <div className="space-y-2 text-xs text-gray-300">
-          <div className="flex items-center space-x-2">
-            <Phone className="w-3 h-3 text-cyan-400" />
-            <span>{contactInfo.mobile}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Mail className="w-3 h-3 text-cyan-400" />
-            <span>{contactInfo.email}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Globe className="w-3 h-3 text-cyan-400" />
-            <span>{contactInfo.website}</span>
-          </div>
-        </div>
-      </div>
-=======
       <div className="sticky top-0 bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 p-4">;
         <div className="flex items-center space-x-3 mb-4">;
           <div className="relative">;
@@ -857,7 +740,6 @@ const supportLinks = [;
             <p className="text-xs text-gray-400">Navigation</p>;
           </div>;
         </div>;
-
         {/* Contact Info */}
         <div className="space-y-2 text-xs text-gray-300">;
           <div className="flex items-center space-x-2">;
@@ -874,8 +756,6 @@ const supportLinks = [;
           </div>;
         </div>;
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Navigation Sections */}
       <div className="p-4 space-y-2">;
         {sidebarSections && sidebarSections.map((section) => (;
@@ -900,12 +780,6 @@ const supportLinks = [;
               ) : (;
                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />;
               )}
-<<<<<<< HEAD
-            </button>
-            <AnimatePresence>
-              {expandedSections.has(section.title) && (
-                <motion.div
-=======
     setExpandedSections (new_expanded);
   }
 ;
@@ -978,20 +852,11 @@ const supportLinks = [;
             <AnimatePresence>;
               {expanded_sections.has (section.title) && (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-                  className="ml-8 space-y-1"
-                >
-                  <CloseIcon className="w-5 h-5" />
-                </button>
-              </div>
-=======
             </button>;
-
             <AnimatePresence>;
               {expandedSections && expandedSections.has(section && section.title) && (;
                 <motion&& motion.div
@@ -1003,8 +868,6 @@ const supportLinks = [;
                   <CloseIcon className="w-5 h-5" />;
                 </button>;
               </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Search Bar */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
@@ -1012,18 +875,10 @@ const supportLinks = [;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-<<<<<<< HEAD
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
-                />
-              </div>
-=======
                   onChange={(e) => setSearchQuery(e && e.target.value)}
                   className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";
                 />;
               </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Search Results */}
               {searchQuery && (;
                 <div className="mt-4 space-y-2">;
@@ -1057,36 +912,7 @@ const supportLinks = [;
                   )}
                 </div>;
               )}
-<<<<<<< HEAD
-            </div>
-            {/* Contact Information */}
-            <div className="p-6 border-b border-cyan-500/30">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-                <Mail className="w-5 h-5 text-cyan-400" />
-                <span>Contact Information</span>
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">
-                    {contactInfo.mobile}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className="flex items-start space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
-                  <span className="text-sm">{contactInfo.address}</span>
-                </div>
-              </div>
-            </div>
-=======
             </div>;
-
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">;
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;
@@ -1112,8 +938,6 @@ const supportLinks = [;
                 </div>;
               </div>;
             </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Quick Stats */}
             <div className="p-6 border-b border-cyan-500/30">;
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;
@@ -1132,14 +956,8 @@ const supportLinks = [;
                     <div className="text-xs text-gray-400">{stat && stat.label}</div>;
                   </motion && motion.div>;
                 ))}
-<<<<<<< HEAD
-              </div>
-            </div>
-=======
               </div>;
             </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">;
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;
@@ -1161,14 +979,8 @@ const supportLinks = [;
                     </span>;
                   </Link>;
                 ))}
-<<<<<<< HEAD
-              </div>
-            </div>
-=======
               </div>;
             </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Service Categories */}
             <div className="p-6 border-b border-cyan-500/30">;
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;
@@ -1179,13 +991,6 @@ const supportLinks = [;
                 {sidebarItems && sidebarItems.map((item) => (;
                   <div key={item && item.name}>;
                     <button
-<<<<<<< HEAD
-                      onClick={() => toggleCategory(item.name)}
-                      className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <div className={`w-8 h-8 bg-gradient-to-r ${item.isHot ? 'from-indigo-500 to-purple-600' : 'from-cyan-500 to-blue-600'} rounded-lg flex items-center justify-center`}>
-=======
                   className="ml - 8 space - y-1";
                 >;
                   <CloseIcon className="w - 5 h - 5" />;
@@ -1315,24 +1120,10 @@ const supportLinks = [;
                     >;
                       <div className="flex items - center space - x-3">;
                         <div className={`w - 8 h - 8 bg - gradient - to - r ${item.is_hot ? 'from - indigo - 500 to - purple - 600' : 'from - cyan - 500 to - blue - 600'} rounded - lg flex items - center justify - center`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {item.icon}
                         </div>;
                         <span className="text - gray - 300 group - hover:text - white transition - colors duration - 200">;
                           {item.name}
-<<<<<<< HEAD
-                        </span>
-                      </div>
-                      <ChevronRight
-                        className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                          expandedCategory === item.name ? 'rotate-90' : ''
-                        }`}
-                      />
-                    </button>
-                    <AnimatePresence>
-                      {expandedCategory === item.name && (
-                        <motion.div
-=======
                       onClick={() => toggleCategory(item && item.name)}
                       className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group";
                     >;
@@ -1350,11 +1141,9 @@ const supportLinks = [;
                         }`} 
                       />;
                     </button>;
-
                     <AnimatePresence>;
                       {expandedCategory === item && item.name && (;
                         <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
@@ -1381,14 +1170,8 @@ const supportLinks = [;
                     </AnimatePresence>;
                   </div>;
                 ))}
-<<<<<<< HEAD
-              </div>
-            </div>
-=======
               </div>;
             </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">;
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;
@@ -1417,31 +1200,6 @@ const supportLinks = [;
                 <Link
                   href="/about"
                   onClick={onClose}
-<<<<<<< HEAD
-                  className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                >
-                  <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
-                    About Us
-                  </div>
-                  <div className="text-xs text-gray-500">Learn about Zion Tech Group</div>
-                </Link>
-              </div>
-            </div>
-            <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-              <div className="text-lg font-bold text-blue-400">1000+</div>
-              <div className="text-xs text-gray-400">Clients</div>
-            </div>
-            <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-              <div className="text-lg font-bold text-purple-400">24/7</div>
-              <div className="text-xs text-gray-400">Support</div>
-            </div>
-            <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-              <div className="text-lg font-bold text-green-400">99.9%</div>
-              <div className="text-xs text-gray-400">Uptime</div>
-            </div>
-          </div>
-        </div>
-=======
                   className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group">;
                   <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">;
                     About Us;
@@ -1464,28 +1222,10 @@ const supportLinks = [;
             </div>;
           </div>;
         </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* CTA Section */}
         <div className="pt-4 border-t border-gray-800 px-3">;
           <Link
             href="/contact"
-<<<<<<< HEAD
-            className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-          >
-            <span>Get Started Today</span>
-            <ArrowRight className="w-4 h-4 ml-2 inline" />
-          </Link>
-        </div>
-      </div>
-      {/* Floating Elements */}
-      <div className="absolute top-1/4 left-4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
-      <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
-    </motion.aside>
-  )
-}
-=======
                         </span>;
                       </div>;
                       <ChevronRight;
@@ -1594,19 +1334,15 @@ const supportLinks = [;
     </motion.aside>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React, { useState, useEffect              } from 'react.ts;
 import Link from 'next / link.ts;
 import { motion, AnimatePresence               } from 'framer-motion.ts;
-<<<<<<< HEAD
-=======
             className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">;
             <span>Get Started Today</span>;
             <ArrowRight className="w-4 h-4 ml-2 inline" />;
           </Link>;
         </div>;
       </div>;
-
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>;
       <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>;
@@ -1614,27 +1350,10 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
     </motion && motion.aside>;
   );
 };
-
-<<<<<<< HEAD
-import React, { useState, useEffect              } from 'react ;
-import Link from 'next/link ;
-import { motion, AnimatePresence               } from 'framer-motion ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown,'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
-} from 'lucide-react && react.ts;
-=======
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
 } from 'lucide-react.ts;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface SidebarItem {name: string;
-
   href: string;
-<<<<<<< HEAD
-  icon?: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-<<<<<<< HEAD
-=======
   icon: React && React.ReactNode;
   description?: string;
   children?: SidebarItem[];
@@ -1644,8 +1363,6 @@ interface SidebarItem {name: string;
   isHot?: boolean,;
   isPremium?: boolean,;
 category?: string}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   badge?: string
   color?: string
   isNew?: boolean
@@ -1653,7 +1370,6 @@ category?: string}
   isPremium?: boolean
 category?: string}
 const sidebarSections = []"      } {";
-=======
   badge?: string,
   color?: string,
   is_new?: boolean,
@@ -1661,7 +1377,6 @@ const sidebarSections = []"      } {";
   is_premium?: boolean,
 category?: string}
 const sidebar_sections = []"      } {";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ";
         name: "Quantum Computing", "        href: "/quantum - services", icon: Atom, "        description: "Next - generation quantum computing solutions", sub_items["          { name: "Quantum Cloud Infrastructure", href: "/quantum - cloud - infrastructure" } { name: "Quantum Bio - Computing", href: "/quantum - bio - computing" } { name: "Quantum Energy Platform", href: "/quantum - energy - platform" } { name: "Quantum Materials Discovery", href: "/quantum - materials - discovery" } { name: "Quantum Robotics", href: "/quantum - robotics" } { name: "Quantum Internet Security", href: "/quantum - internet - security" } { name: "Quantum Logistics", href: "/quantum - logistics - optimization" } { name: "Quantum Cybersecurity", href: "/quantum - cybersecurity - platform" }"        ]"      } {";
 ";
@@ -1673,24 +1388,15 @@ const sidebar_sections = []"      } {";
 ";
         name: "Emerging Tech", "        href: "/emerging - tech", icon: Sparkles, "        description: "Future technologies and innovations", sub_items["          { name: "Brain - Computer Interface", href: "/brain - computer - interface" } { name: "Autonomous Vehicle AI", href: "/autonomous - vehicle - ai" } { name: "Advanced Robotics", href: "/advanced - robotics" } { name: "Biotechnology Platform", href: "/biotechnology - platform" }"        ];
     ];
-<<<<<<< HEAD
-} {";
-    title: "Industry Solutions", "    icon: Target, color: "from-purple-500 to-pink-600", "    items["      {";
-=======
 } {
 ";
     title: "Industry Solutions", "    icon: Target, color: "from - purple - 500 to - pink - 600", "    items["      {";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ";
         name: "Healthcare", href: "/healthcare - solutions", "        icon: Heart, description: "AI - powered healthcare diagnostics and solutions", "        sub_items["          { name: "AI Healthcare Diagnostics", href: "/ai - healthcare - diagnostics" }, "          { name: "Medical Imaging AI", href: "/medical - imaging - ai" }, "          { name: "Drug Discovery Platform", href: "/drug - discovery - platform" }"        ]"      } {";
 ";
         name: "Financial Services", "        href: "/financial - solutions", icon: BarChart3, "        description: "Advanced financial intelligence and analytics", sub_items["          { name: "AI Financial Intelligence", href: "/ai - financial - intelligence" } { name: "Quantum Trading Platform", href: "/quantum - financial - trading" } { name: "Risk Assessment AI", href: "/risk - assessment - ai" }"        ]"      } {";
 ";
-<<<<<<< HEAD
-        name: "Manufacturing", "        href: "/manufacturing-solutions", icon: Settings, "        description: "Industry 4 && 4.0 and smart manufacturing", subItems["          { name: "Smart Factory Platform", href: "/smart-factory-platform" } { name: "Predictive Maintenance AI", href: "/predictive-maintenance-ai" } { name: "Quality Control AI", href: "/quality-control-ai" }"        ]"      } {";
-=======
         name: "Manufacturing", "        href: "/manufacturing - solutions", icon: Settings, "        description: "Industry 4.0 and smart manufacturing", sub_items["          { name: "Smart Factory Platform", href: "/smart - factory - platform" } { name: "Predictive Maintenance AI", href: "/predictive - maintenance - ai" } { name: "Quality Control AI", href: "/quality - control - ai" }"        ]"      } {";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ";
         name: "Retail & E - commerce", "        href: "/retail - solutions", icon: Eye, "        description: "E - commerce optimization and retail intelligence", sub_items["          { name: "E - commerce Optimization", href: "/ecommerce - optimization - platform" } { name: "Customer Behavior AI", href: "/customer - behavior - ai" } { name: "Inventory Management AI", href: "/inventory - management - ai" }"        ]"      } {";
 ";
@@ -1698,36 +1404,20 @@ const sidebar_sections = []"      } {";
 ";
         name: "Education", "        href: "/education - solutions", icon: Award, "        description: "AI - powered education and learning platforms", sub_items["          { name: "AI Education Platform", href: "/ai - education - platform" } { name: "Personalized Learning AI", href: "/personalized - learning - ai" } { name: "Student Performance AI", href: "/student - performance - ai" }"        ];
 ";
-<<<<<<< HEAD
-    title: "Comp & Resources", "    icon: Users, color: "from-green-500 to-emerald-600", "    items["      {";
-ursor/automate-test-fix-improve-and-merge-code-99d1,";
-<<<<<<< HEAD
-name: "About Us, href: "/about"
-=======
 name: "About Us, href: "/about",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ","        icon: Users, description:,";
   Learn about Zion Tech Group",";
   "        subItems["          { name: "Our Mission, href:,";
   /mission" },";
-<<<<<<< HEAD
-  "          { name: "Leadership Team, href:
-  /leadership";
-  " },"          { name: "Comp History, href:,";
-  /history" },";
-  "          { name: "Careers, href:
-=======
   "          { name: "Leadership Team, href:,;
   /leadership";
   " },"          { name: "Comp History, href:,";
   /history" },";
   "          { name: "Careers, href:,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   /careers";
   " }"        ]";
   "      } {";
         name: "Resources", "        href: "/resources", icon: BookOpen, "        description: "Educational content and documentation", subItems["          { name: "Documentation", href: "/docs" } { name: "API Reference", href: "/api-docs" } { name: "Blog & News", href: "/blog" } { name: "Case Studies", href: "/case-studies" } { name: "Whitepapers", href: "/whitepapers" } { name: "Webinars", href: "/webinars" }"        ]"      } {";
-=======
     title: "Comp & Resources", "    icon: Users, color: "from - green - 500 to - emerald - 600", "    items["      {";
 ursor / automate - test - fix - improve - and - merge - code - 99d1, ";
 name: "About Us, href: "/about",
@@ -1745,26 +1435,16 @@ name: "About Us, href: "/about",
   "      } {
 ";
         name: "Resources", "        href: "/resources", icon: BookOpen, "        description: "Educational content and documentation", sub_items["          { name: "Documentation", href: "/docs" } { name: "API Reference", href: "/api - docs" } { name: "Blog & News", href: "/blog" } { name: "Case Studies", href: "/case - studies" } { name: "Whitepapers", href: "/whitepapers" } { name: "Webinars", href: "/webinars" }"        ]"      } {";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ";
         name: "Support", "        href: "/support", icon: HelpCircle, "        description: "Get help and support", sub_items["          { name: "Contact Support", href: "/contact - support" } { name: anyanyanyanyanyanyanyanyanyanyanyanyany & apos, Training Programs", href: "/training", "}, "          { name: "Community Forum", href: "/community" }, "          { name: "Knowledge Base", href: "/knowledge - base" }"        ]"      }];
     title: anyanyanyanyanyanyanyanyanyanyanyanyany"Revolutionary: Services, ", ";
     icon: Za, p, ";
     color: "from - cyan - 500: to - blue - 600, ", ";
 category?: string;
-<<<<<<< HEAD
-const sidebarSections = [];
-<<<<<<< HEAD
-}
-      {name: "Quantum Computing",";
-        href: "/quantum-services"
-=======
 },;
       {;
-
 name: "Quantum Computing",";
         href: "/quantum-services",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         icon: Atom,";
         description: "Next-generation quantum computing solutions",";
           { name: "Quantum Cloud Infrastructure", href: "/quantum-cloud-infrastructure" } { name: "Quantum Bio-Computing", href: "/quantum-bio-computing" } { name: "Quantum Energy Platform", href: "/quantum-energy-platform" } { name: "Quantum Materials Discovery", href: "/quantum-materials-discovery" } { name: "Quantum Robotics", href: "/quantum-robotics" } { name: "Quantum Internet Security", href: "/quantum-internet-security" } { name: "Quantum Logistics", href: "/quantum-logistics-optimization" } { name: "Quantum Cybersecurity", href: "/quantum-cybersecurity-platform" }
@@ -1778,17 +1458,10 @@ name: "Quantum Computing",";
           { name: "Quantum Logistics", href: "/quantum-logistics-optimization" },";
           { name: "Quantum Cybersecurity", href: "/quantum-cybersecurity-platform" }
         ];
-<<<<<<< HEAD
-}
-      {name: "Enterprise IT",";
-        href: "/enterprise-it"
-=======
 },;
       {;
-
 name: "Enterprise IT",";
         href: "/enterprise-it",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         icon: Shield,";
         description: "Enterprise-grade IT infrastructure and security",";
           { name: "Edge Computing Orchestrator", href: "/edge-computing-orchestration" } { name: "Zero Trust Security Platform", href: "/zero-trust-network-architecture" } { name: "Blockchain Enterprise Platform", href: "/blockchain-infrastructure-platform" } { name: "AI-Powered DevOps", href: "/ai-powered-devops" } { name: "Quantum Networking", href: "/quantum-networking" } { name: "Autonomous IT Operations", href: "/autonomous-it-operations" } { name: "Quantum Data Center", href: "/quantum-data-center" } { name: "Quantum Cloud Migration", href: "/quantum-cloud-migration" }
@@ -1802,17 +1475,10 @@ name: "Enterprise IT",";
           { name: "Quantum Data Center", href: "/quantum-data-center" },";
           { name: "Quantum Cloud Migration", href: "/quantum-cloud-migration" }
         ];
-<<<<<<< HEAD
-}
-      {name: "Micro SAAS",";
-        href: "/micro-saas"
-=======
 },;
       {;
-
 name: "Micro SAAS",";
         href: "/micro-saas",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         icon: Rocket,";
         description: "AI-powered micro SAAS solutions",";
           { name: "AI Content Factory Platform", href: "/ai-content-factory" } { name: "CRM Intelligence & Automation", href: "/crm-intelligence-automation" } { name: "AI Decision Engine Platform", href: "/ai-decision-engine" } { name: "E-commerce Optimization", href: "/ecommerce-optimization-platform" } { name: "AI HR & Talent Platform", href: "/ai-hr-talent-platform" } { name: "Financial Analytics Platform", href: "/financial-analytics-platform" } { name: "Supply Chain Intelligence", href: "/supply-chain-intelligence" } { name: "Marketing Automation Platform", href: "/marketing-automation-platform" } { name: "Project Management AI", href: "/project-management-ai" }
@@ -1827,17 +1493,10 @@ name: "Micro SAAS",";
           { name: "Marketing Automation Platform", href: "/marketing-automation-platform" },";
           { name: "Project Management AI", href: "/project-management-ai" }
         ];
-<<<<<<< HEAD
-}
-      {name: "Space Technology",";
-        href: "/space-tech"
-=======
 },;
       {;
-
 name: "Space Technology",";
         href: "/space-tech",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         icon: Globe,";
         description: "Cutting-edge space exploration and mining",";
           { name: "Space Mining Platform", href: "/space-mining-platform" } { name: "Satellite Technology", href: "/satellite-technology" } { name: "Space Resource Management", href: "/space-resource-management" } { name: "Interplanetary Communication", href: "/interplanetary-communication" }
@@ -1847,21 +1506,13 @@ name: "Space Technology",";
           { name: "Space Resource Management", href: "/space-resource-management" },";
           { name: "Interplanetary Communication", href: "/interplanetary-communication" }
         ];
-<<<<<<< HEAD
-}
-      {name: "Emerging Tech",";
-        href: "/emerging-tech"
-=======
 },;
       {;
-
 name: "Emerging Tech",";
         href: "/emerging-tech",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         icon: Sparkles,";
         description: "Future technologies and innovations",";
           { name: "Brain-Computer Interface", href: "/brain-computer-interface" } { name: "Autonomous Vehicle AI", href: "/autonomous-vehicle-ai" } { name: "Advanced Robotics", href: "/advanced-robotics" } { name: "Biotechnology Platform", href: "/biotechnology-platform" }
-=======
 const sidebar_sections = [];
 },
       {
@@ -1940,7 +1591,6 @@ name: "Emerging Tech", ";
         icon: Sparkles, ";
         description: "Future technologies and innovations", ";
           { name: "Brain - Computer Interface", href: "/brain - computer - interface" } { name: "Autonomous Vehicle AI", href: "/autonomous - vehicle - ai" } { name: "Advanced Robotics", href: "/advanced - robotics" } { name: "Biotechnology Platform", href: "/biotechnology - platform" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 items[ ";
         name: "AI: & Consciousness, ", ";
         href: "/ai - services, ", ";
@@ -1973,22 +1623,8 @@ items[ ";
         description: "Cutting - edge: space exploration and mining, ", ";
           { name: "Space: Mining Platform, ", href: "/space - mining - platform"}, " { name: "Satellite: Technology, ", href: "/satellite - technology"}, " { name: "Space: Resource Management, ", href: "/space - resource - management"}, " { name: "Interplanetary: Communication, ", href: "/interplanetary - communication"}";
 ";
-<<<<<<< HEAD
-        name: "Emerging: Tech,",";
-        href: "/emerging-tech,",";
-        icon: Sparkle,s,";
-        description: "Future: technologies and innovations,",";
-          { name: "Brain-Computer: Interface,", href: "/brain-computer-interface"}," { name: "Autonomous: Vehicle AI,", href: "/autonomous-vehicle-ai"}," { name: "Advanced: Robotics,", href: "/advanced-robotics"}," { name: "Biotechnology: Platform,", href: "/biotechnology-platform"}";
-const contactInfo = {";
-  mobile: "+1-302-464-0950",";
-<<<<<<< HEAD
-  email: "kleber@ziontechgroup.com",";
-  address: "364 E Main St STE 1008, Middletown, DE 19709";
-=======
   email: "kleber@ziontechgroup && ziontechgroup.com",";
   address: "364 E Main St STE 1008, Middletown, DE 19709";,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         name: "Emerging: Tech, ", ";
         href: "/emerging - tech, ", ";
         icon: Sparkle, s, ";
@@ -1998,25 +1634,10 @@ const contact_info = {";
   mobile: "+1 - 302 - 464 - 0950", ";
   email: "kleber@ziontechgroup.com", ";
   address: "364 E Main St STE 1008, Middletown, DE 19709";,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 ";
   {";
 ";
-<<<<<<< HEAD
-    title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos,Revolutionary Services", icon: Zap,";
-    color: "from-cyan-500 to-blue-600", items[";
-<<<<<<< HEAD
-    title: "Revolutionary Services"
-    icon: Zap,";
-    color: "from-cyan-500 to-blue-600"
-    items: [
-name: "AI & Consciousness",";
-        href: "/ai-services"
-        icon: Brain,";
-        description: "Advanced AI consciousness and evolution platforms"
-        subItems: ["
-=======
     title: "Revolutionary Services",;
     icon: Zap,";
     color: "from-cyan-500 to-blue-600",;
@@ -2026,7 +1647,6 @@ name: "AI & Consciousness",";
         icon: Brain,";
         description: "Advanced AI consciousness and evolution platforms",;
         subItems: [",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           { name: "AI Consciousness Evolution", href: "/ai-consciousness-evolution" } { name: "AI Autonomous Ecosystem", href: "/ai-autonomous-ecosystem" } { name: "AI Ethics & Governance", href: "/ai-ethics-governance" } { name: "AI Creativity Studio", href: "/ai-creativity-studio" } { name: "AI Education Platform", href: "/ai-education-platform" } { name: "AI Healthcare Diagnostics", href: "/ai-healthcare-diagnostics" } { name: "AI Financial Intelligence", href: "/ai-financial-intelligence" } { name: "AI Sustainability Platform", href: "/ai-sustainability-platform" } { name: "AI Emotional Intelligence", href: "/ai-emotional-intelligence-platform" } { name: "AI Legal Contract Analyzer", href: "/ai-legal-contract-analyzer" }
         nam,";
     e: "AI & Consciousness" {,";
@@ -2043,106 +1663,12 @@ href: "/ai-services", icon: Brain,";
           { name: "AI Sustainability Platform", href: "/ai-sustainability-platform" },";
           { name: "AI Emotional Intelligence", href: "/ai-emotional-intelligence-platform" },";
           { name: "AI Legal Contract Analyzer", href: "/ai-legal-contract-analyzer" }
-<<<<<<< HEAD
-        ];
-}
-      {const sidebarSections = [;
-=======
         ];,;
 },;
       {;
 const sidebarSections = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {;
     title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap,'    color: 'from-cyan-500 to-blue-600', items['      {;
-<<<<<<< HEAD
-        name: 'AI & Consciousness'
-    name: '        href: '/ai-services'
-    icon: Brain,'        description: 'Advanced AI consciousness and evolution platforms', subItems['          { name: 'AI Consciousness Evolution'
-    href: '/ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem'
-    href: '/ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance'
-    href: '/ai-ethics-governance' }, { name: 'AI Creativity Studio'
-    href: '/ai-creativity-studio' }, { name: 'AI Education Platform'
-    href: '/ai-education-platform' }, { name: 'AI Healthcare Diagnostics'
-    href: '/ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence'
-    href: '/ai-financial-intelligence' }, { name: 'AI Sustainability Platform'
-    href: '/ai-sustainability-platform' }, { name: 'AI Emotional Intelligence'
-    href: '/ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer'
-    href: '/ai-legal-contract-analyzer' }'        ]'      }, {name: 'Quantum Computing'
-    name: '        href: '/quantum-services'
-    icon: Atom,'        description: 'Next-generation quantum computing solutions', subItems['          { name: 'Quantum Cloud Infrastructure'
-    href: '/quantum-cloud-infrastructure' }, { name: 'Quantum Bio-Computing'
-    href: '/quantum-bio-computing' }, { name: 'Quantum Energy Platform'
-    href: '/quantum-energy-platform' }, { name: 'Quantum Materials Discovery'
-    href: '/quantum-materials-discovery' }, { name: 'Quantum Robotics'
-    href: '/quantum-robotics' }, { name: 'Quantum Internet Security'
-    href: '/quantum-internet-security' }, { name: 'Quantum Logistics'
-    href: '/quantum-logistics-optimization' }, { name: 'Quantum Cybersecurity'
-    href: '/quantum-cybersecurity-platform' }'        ]'      }, {name: 'Enterprise IT'
-    name: '        href: '/enterprise-it'
-    icon: Shield,'        description: 'Enterprise-grade IT infrastructure and security', subItems['          { name: 'Edge Computing Orchestrator'
-    href: '/edge-computing-orchestration' }, { name: 'Zero Trust Security Platform'
-    href: '/zero-trust-network-architecture' }, { name: 'Blockchain Enterprise Platform'
-    href: '/blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps'
-    href: '/ai-powered-devops' }, { name: 'Quantum Networking'
-    href: '/quantum-networking' }, { name: 'Autonomous IT Operations'
-    href: '/autonomous-it-operations' }, { name: 'Quantum Data Center'
-    href: '/quantum-data-center' }, { name: 'Quantum Cloud Migration'
-    href: '/quantum-cloud-migration' }'        ]'      }, {name: 'Micro SAAS'
-    name: '        href: '/micro-saas'
-    icon: Rocket,'        description: 'AI-powered micro SAAS solutions', subItems['          { name: 'AI Content Factory Platform'
-    href: '/ai-content-factory' }, { name: 'CRM Intelligence & Automation'
-    href: '/crm-intelligence-automation' }, { name: 'AI Decision Engine Platform'
-    href: '/ai-decision-engine' }, { name: 'E-commerce Optimization'
-    href: '/ecommerce-optimization-platform' }, { name: 'AI HR & Talent Platform'
-    href: '/ai-hr-talent-platform' }, { name: 'Financial Analytics Platform'
-    href: '/financial-analytics-platform' }, { name: 'Supply Chain Intelligence'
-    href: '/supply-chain-intelligence' }, { name: 'Marketing Automation Platform'
-    href: '/marketing-automation-platform' }, { name: 'Project Management AI'
-    href: '/project-management-ai' }'        ]'      }, {name: 'Space Technology'
-    name: '        href: '/space-tech'
-    icon: Globe,'        description: 'Cutting-edge space exploration and mining', subItems['          { name: 'Space Mining Platform'
-    href: '/space-mining-platform' }, { name: 'Satellite Technology'
-    href: '/satellite-technology' }, { name: 'Space Resource Management'
-    href: '/space-resource-management' }, { name: 'Interplanetary Communication'
-    href: '/interplanetary-communication' }'        ]'      }, {name: 'Emerging Tech'
-    name: '        href: '/emerging-tech'
-    icon: Sparkles,'        description: 'Future technologies and innovations', subItems['          { name: 'Brain-Computer Interface'
-    href: '/brain-computer-interface' }, { name: 'Autonomous Vehicle AI'
-    href: '/autonomous-vehicle-ai' }, { name: 'Advanced Robotics'
-    href: '/advanced-robotics' }, { name: 'Biotechnology Platform'
-    href: '/biotechnology-platform' }'        ]';
-    ];
-}
-  {";
-    title: "Comp & Resources"
-    icon: Users,";
-    color: "from-green-500 to-emerald-600"
-    items[;
-      {;
-    title: 'Comp & Resources'
-    title: '    icon: Users, color: 'from-green-500 to-emerald-600','    items['      {;
-        name: 'About Us'
-    href: '/about'
-    href: '        icon: Users, description: 'Learn about Zion Tech Group','        subItems['          { name: 'Our Mission'
-    href: '/mission' },'          { name: 'Leadership Team'
-    href: '/leadership' },'          { name: 'Comp History'
-    href: '/history' },'          { name: 'Careers'
-    href: '/careers' }'        ]'      }, {name: 'Resources'
-    name: '        href: '/resources'
-    icon: BookOpen,'        description: 'Educational content and documentation', subItems['          { name: 'Documentation'
-    href: '/docs' }, { name: 'API Reference'
-    href: '/api-docs' }, { name: 'Blog & News'
-    href: '/blog' }, { name: 'Case Studies'
-    href: '/case-studies' }, { name: 'Whitepapers'
-    href: '/whitepapers' }, { name: 'Webinars'
-    href: '/webinars' }'        ]'      }, {name: 'Support'
-    name: '        href: '/support'
-    icon: HelpCircle,'        description: 'Get help and support', subItems['          { name: 'Contact Support'
-    href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training;
-},'          { name: 'Community Forum'
-    href: '/community' },'          { name: 'Knowledge Base'
-=======
         name: 'AI & Consciousness',;
     name: '        href: '/ai-services',;
     icon: Brain,'        description: 'Advanced AI consciousness and evolution platforms', subItems['          { name: 'AI Consciousness Evolution',;
@@ -2213,7 +1739,6 @@ const sidebarSections = [;
     color: "from-green-500 to-emerald-600",;
     items[;
       {;
-
     title: 'Comp & Resources',;
     title: '    icon: Users, color: 'from-green-500 to-emerald-600','    items['      {;
         name: 'About Us',;
@@ -2238,33 +1763,14 @@ const sidebarSections = [;
     href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training;
 },'          { name: 'Community Forum',;
     href: '/community' },'          { name: 'Knowledge Base',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     href: '/knowledge-base' };'        ];'      };];
 }
 ];
-<<<<<<< HEAD
-interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {isOpen: boolean
-  onClose: ()               => voi,d}
-export: default function EnhancedSidebar2025(...args[]: any):  {const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-}
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-}
-      newExpanded.delete(sectionTitle)} else: {newExpanded.add(sectionTitle)}
-    setExpandedSections(newExpanded)}
-  const filteredServices = sidebarSections.flatMap(section =>;
-    section.items.flatMap(item: =>
-      item.subItems?.filter(child: =>
-  isOpen: boolean
-onClose: ()               => void}
-export default function EnhancedSidebar2025(...args[]: any):  {export default function EnhancedSidebar2025(...args[]: any):  {;
-=======
 interface EnhancedSidebar2025Props extends React && React.PropsWithChildren<{}> {;
   isOpen: boolean,;
   onClose: ()               => voi,d}
-
 export: default function EnhancedSidebar2025(): any (...args[]: any):  {;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-=======
     title: anyanyanyanyanyanyanyanyanyanyanyanyany & apos, Revolutionary Services", icon: Zap, ";
     color: "from - cyan - 500 to - blue - 600", items[";
     title: "Revolutionary Services",
@@ -2402,37 +1908,9 @@ interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
   on_close: ()               => voi, d}
 export: default function EnhancedSidebar2025 (...args[]: any):  {
   const [expanded_sections, setExpandedSections] = useState < Set < string>>(new Set ());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
   const [expanded_items, setExpandedItems] = useState < Set < string>>(new Set ());
 }
-<<<<<<< HEAD
-      newExpanded && newExpanded.delete(sectionTitle)} else: {;      newExpanded && newExpanded.add(sectionTitle)}
-
-    setExpandedSections(newExpanded)}
-
-  const filteredServices = sidebarSections && sidebarSections.flatMap(section =>;
-    section && section.items.flatMap(item: =>,;
-      item && item.subItems?.filter(child: =>,;
-  isOpen: boolean,;
-onClose: ()               => void}
-
-export default function EnhancedSidebar2025(): any (...args[]: any):  {;
-export default function EnhancedSidebar2025(): any (...args[]: any):  {;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-}
-interface EnhancedSidebar2025Props {;
-  onClose: () => void}
-export default function EnhancedSidebar2025() {export default function EnhancedSidebar2025() {;
-  const router = useRouter();
-}
-  const filteredServices = sidebarSections && sidebarSections.flatMap(section =>;
-    section && section.items.flatMap(item =>;
-      item && item.subItems?.filter(child =>;
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-=======
       new_expanded.delete (section_title)} else: {      new_expanded.add (section_title)}
     setExpandedSections (new_expanded)}
   const filtered_services = sidebar_sections.flat_map (section =>;
@@ -2462,74 +1940,27 @@ function EnhancedSidebar2025() {
     section.items.flat_map (item =>;
       item.sub_items?.filter (child =>;
   const [expanded_sections, setExpandedSections] = useState < Set < string>>(new Set ());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
   const [expanded_items, setExpandedItems] = useState < Set < string>>(new Set ());
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      newExpanded.delete(sectionTitle)} else {newExpanded.add(sectionTitle)}
-    setExpandedSections(newExpanded)}
-  const filteredServices = sidebarSections.flatMap(section =>;
-    section.items.flatMap(item =>;
-      item.subItems?.filter(child =>;
-child.name.toLowerCase().includes(searchQuery.toLowerCase()) |;
-        child.description?.toLowerCase().includes(searchQuery.toLowerCase());
-=======
       newExpanded && newExpanded.delete(sectionTitle)} else {;
       newExpanded && newExpanded.add(sectionTitle)}
-
     setExpandedSections(newExpanded)}
-
   const filteredServices = sidebarSections && sidebarSections.flatMap(section =>;
     section && section.items.flatMap(item =>;
       item && item.subItems?.filter(child =>;
 child && child.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
         child && child.description?.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
       ) |[];
     );
 }
-<<<<<<< HEAD
-      newExpanded.delete(itemName)} else: {
-      newExpanded.delete(itemName)} else {const toggleSection = (sectionTitle: string) => {
-    const newExpanded = new Set(expandedSections)
-    if (newExpanded.has(sectionTitle)) {;
-      newExpanded.delete(sectionTitle)} else {const toggleItem = (itemName: string) => {
-    const newExpanded = new Set(expandedItems)
-    if (newExpanded.has(itemName)) {;
-  )
-      newExpanded.delete(itemName)} else {child.name.toLowerCase().includes(searchQuery.toLowerCase()) |;
-        child.description?.toLowerCase().includes(searchQuery.toLowerCase());
-      ) |[];
-    );
-      newExpanded.delete(itemName)} else: {
-      newExpanded.delete(itemName)} else {const toggleSection = (sectionTitle: string) => {
-    const newExpanded = new Set(expandedSections)
-    if (newExpanded.has(sectionTitle)) {;
-      newExpanded.delete(sectionTitle)} else {const toggleItem = (itemName: string) => {
-    const newExpanded = new Set(expandedItems)
-    if (newExpanded.has(itemName)) {;
-  )
-      newExpanded.delete(itemName)} else {newExpanded.add(itemName)}
-    setExpandedItems(newExpanded)}
-  useEffect(() => {
-    if: (isOpen) {"
-      document.body.style.overflow = "hidden"} else {";
-";
-      document.body.style.overflow: = "unset"}";
-document.body.style.overflow = 'hidden'} else {document.body.style.overflow = 'unset'}
-    return () => {document.body.style.overflow = 'unset'}}, [isOpen]);
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (;
-=======
       newExpanded && newExpanded.delete(itemName)} else: {,;
       newExpanded && newExpanded.delete(itemName)} else {;
   const toggleSection = (sectionTitle: string) => {,;
     const newExpanded = new Set(expandedSections),;
     if (newExpanded && newExpanded.has(sectionTitle)) {;
       newExpanded && newExpanded.delete(sectionTitle)} else {;
-
   const toggleItem = (itemName: string) => {,;
     const newExpanded = new Set(expandedItems),;
     if (newExpanded && newExpanded.has(itemName)) {;
@@ -2550,23 +1981,18 @@ document.body.style.overflow = 'hidden'} else {document.body.style.overflow = 'u
   ),;
       newExpanded && newExpanded.delete(itemName)} else {;
 newExpanded && newExpanded.add(itemName)}
-
     setExpandedItems(newExpanded)}
-
   useEffect(() => {;
-
     if: (isOpen) {;
 ",;
       document && document.body.style && style.overflow = "hidden"} else {";
 ";
       document && document.body.style && style.overflow: = "unset"}";
-
 document && document.body.style && style.overflow = 'hidden'} else {;
       document && document.body.style && style.overflow = 'unset'};
     return () => {;
       document && document.body.style && style.overflow = 'unset'}}, [isOpen]);
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router && router.pathname === href;return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <>;
       {/* comment */}
       <AnimatePresence>;
@@ -2589,7 +2015,6 @@ initial = {{ opacity: 0}}
             transition="{{" duration: 0 && 0.3}}";
             className="fixed: inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden,";
             onClick="{onClos,e}"";
-=======
       new_expanded.delete (section_title)} else {
       new_expanded.add (section_title)}
     setExpandedSections (new_expanded)}
@@ -2669,37 +2094,22 @@ initial = {{ opacity: 0}}
             transition="{{" duration: 0.3}}";
             className="fixed: inset - 0 bg - black / 50 backdrop - blur - sm z - 40 lg: hidden, ";
             on_click="{on_clos, e}"";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             initial="{{" opacity: 0 }}
             initial = {{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0 && 0.3 }}
-className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden            onClick={onClose}"          />)}
-=======
             transition={{ duration: 0.3 }}
 className="fixed inset - 0 bg - black / 50 backdrop - blur - sm z - 40 lg:hidden            on_click={on_close}"          />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       </AnimatePresence>;
       {/* comment */}
 initial="{{" coordinate_x: "-100%" }}"        animate="{{" coordinate_x: is_open ? 0 : "-100%" }}"        transition = {";
   { type "spring", damping: 25, "  stiffness: 200 "}}";
 className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - r border - gray - 800 / 50 z - 50 overflow - y-auto"}";
         {/* comment */}";
-<<<<<<< HEAD
-        <div className="sticky" top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6>"          <div className="flex items-center justify-between mb-6>            <div className="flex items-center gap-3">              <div className=relative">"                <div className="w-12" h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center>"                  <Zap className="w-6 h-6 text-white       />                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>              </div>"              <div>;
-                <h2 className="text-xl" font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent>"                  Zion Tech Group"                </h2>";
-                <p className="text-gray-400" text-sm>Revolutionary Technology</p>"              </div>"            </div>";
-<<<<<<< HEAD
-            <button className="lg: " hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200""              <X className="w-5" h-5 text-gray-400       />"            </button>"          </div>
-=======
             <button className="lg: " hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200""              <X className="w-5" h-5 text-gray-400       />"            </button>"          </div>,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   onClos,    e: () => void}
           {/* Contact Bar */}";
           <div className="space-y-3">"            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>              <Phone className="w-4 h-4 text-cyan-400" />              <span className="text-sm" text-gray-300">{contactInfo && contactInfo.mobile}</span>"            </div>            <div className="flex" items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">"              <Mail className="w-4" h-4 text-cyan-400 />"              <span className="text-sm text-gray-300>{contactInfo && contactInfo.email}</span>            </div>"          </div>";
-=======
         <div className="sticky" top - 0 bg - black / 80 backdrop - blur - xl border - b border - gray - 800 / 50 p - 6>"          <div className="flex items - center justify - between mb - 6>            <div className="flex items - center gap - 3">              <div class_name = relative">"                <div className="w - 12" h - 12 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center>"                  <Zap className="w - 6 h - 6 text - white       />                </div>"                <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl blur opacity - 20></div>              </div>"              <div>;
                 <h2 className="text - xl" font - bold bg - gradient - to - r from - white to - cyan - 300 bg - clip - text text - transparent>"                  Zion Tech Group"                </h2>";
                 <p className="text - gray - 400" text - sm > Revolutionary Technology</p>"              </div>"            </div>";
@@ -2707,19 +2117,11 @@ className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - 
   on_clos,    e: () => void}
           {/* Contact Bar */}";
           <div className="space - y-3">"            <div className="flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30>              <Phone className="w - 4 h - 4 text - cyan - 400" />              <span className="text - sm" text - gray - 300">{contact_info.mobile}</span>"            </div>            <div className="flex" items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"              <Mail className="w - 4" h - 4 text - cyan - 400 />"              <span className="text - sm text - gray - 300>{contact_info.email}</span>            </div>"          </div>";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         </div>;
       {/* Sidebar */}
-<<<<<<< HEAD
-      <motion.div;
-<<<<<<< HEAD
-initial={{ x: '-100%' }}'        animate={{ x: isOpen ? 0 : '-100%' }}'        transition = {';
-  { type: 'spring'
-=======
       <motion&& motion.div
 initial={{ x: '-100%' }}'        animate={{ x: isOpen ? 0 : '-100%' }}'        transition = {'
   { type: 'spring',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     damping: 25,'  stiffness: 200 '}}
 className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto}
         {/* Header */}
@@ -2733,11 +2135,7 @@ className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r
           <div className="space-y-3>            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">"              <Phone className="w-4 h-4 text-cyan-400 />              <span className="text-sm text-gray-300">{contactInfo && contactInfo.mobile}</span>"            </div>"            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>              <Mail className="w-4 h-4 text-cyan-400" />"              <span className="text-sm text-gray-300>{contactInfo && contactInfo.email}</span>            </div>"          </div>;
         </div>;
         {/* comment */}";
-<<<<<<< HEAD
-        <div className="p-6" space-y-6>"          {/* comment */}"          <Link href=/"            onClick={onClose}"            className="flex" items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group""            <Home className="w-5" h-5 text-cyan-400       />"            <span className="text-white font-semibold>Home</span>          </Link>"
-=======
         <div className="p-6" space-y-6>"          {/* comment */}"          <Link href=/"            onClick={onClose}"            className="flex" items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group""            <Home className="w-5" h-5 text-cyan-400       />"            <span className="text-white font-semibold>Home</span>          </Link>",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* comment */}
         {/* Navigation Content */}
         <div className="p-6 space-y-6>          {/* Home Link */}"          <Link
@@ -2748,16 +2146,10 @@ className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"                <div className="flex items-center gap-3>                  <div className={`w-8 h-8 bg-gradient-to-r ${section && section.color} rounded-lg flex items-center justify-center`}>"                    <section && section.icon className="w-4 h-4 text-white />                  </div>"                  <span className="text-white font-semibold>{section && section.title}</span>                </div>"                <ChevronDownclassName={w-4 h-4 text-gray-400 transition-transform duration-300 ${`
                     expandedSections && expandedSections.has(section && section.title) ? 'rotate-180' : 
 '                  }`}'                />              </button><AnimatePresence>;
-<<<<<<< HEAD
-                {expandedSections.has(section.title) && (;
-                    initial = {const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClose }) => {
-=======
                 {expandedSections && expandedSections.has(section && section.title) && (;
                     initial = {;
 const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClose }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-=======
 initial={{ coordinate_x: '-100%' }}'        animate={{ coordinate_x: is_open ? 0 : '-100%' }}'        transition = {';
   { type: 'spring',
     damping: 25, '  stiffness: 200 '}}
@@ -2789,32 +2181,9 @@ className={`fixed left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - bl
                     initial = {
 const EnhancedSidebar2025: React.FC < EnhancedSidebar2025Props> = ({ is_open, on_close }) => {
   const [expanded_sections, setExpandedSections] = useState < string[]>([]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
   const [expanded_items, setExpandedItems] = useState < string[]>([]);
 }
-<<<<<<< HEAD
-    setExpandedSections(prev = >;
-      prev && prev.includes(sectionTitle);
-}
-        ? prev && prev.filter(title => title !== sectionTitle);
-}
-        : [...prev, sectionTitle];
-    )}
-    setExpandedItems(prev = >;
-      prev && prev.includes(itemName);
-}
-        ? prev && prev.filter(name => name !== itemName);
-}
-        : [...prev, itemName];
-      {/* comment */}";
-<<<<<<< HEAD
-          className = "fixed" inset-0 bg-black bg-opacity-50 z-40 lg: hidden
-      {/* comment */}
-        initial="{{" x: "-100%"}}";
-        animate="{{" x: isOpen: ? 0 : "-100%"}}";
-        transition: = {"
-=======
           className = "fixed" inset-0 bg-black bg-opacity-50 z-40 lg: hidden,;
 ,;
       {/* comment */}
@@ -2822,7 +2191,6 @@ const EnhancedSidebar2025: React.FC < EnhancedSidebar2025Props> = ({ is_open, on
         animate="{{" x: isOpen: ? 0 : "-100%"}}";
         transition: = {;
 ",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { type "spring,", damping: 2,5,";
   stiffness: 200: }}";
         className = "{"fixed" left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto"}
@@ -2837,28 +2205,14 @@ const EnhancedSidebar2025: React.FC < EnhancedSidebar2025Props> = ({ is_open, on
           <div: className="flex" items-center justify-between mb-6>";";
             <div: className="flex items-center gap-3>,";
               <div: className="relative">,";
-<<<<<<< HEAD
-                <div: className="w-12" h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">","
-                  <Zap: className = "w-6" h-6 text-white />",";
-                <div: className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>
-      <motion.div
-initial="{{" x: "-100%" }}
-        animate="{{" x: isOpen ? 0 : "-100%" }}
-        transition = {";
-  { type: "spring", damping: 25
-  stiffness: 200
->;
-=======
                 <div: className="w-12" h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">",",;
                   <Zap: className = "w-6" h-6 text-white />",";
                 <div: className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>,;
       <motion&& motion.div,
 initial="{{" x: "-100%" }}
         animate="{{" x: isOpen ? 0 : "-100%" }}
-
         transition = {
 "
-=======
     setExpandedSections (prev = >;
       prev.includes (section_title);
 }
@@ -2902,16 +2256,10 @@ initial="{{" coordinate_x: "-100%" }}
         animate="{{" coordinate_x: is_open ? 0 : "-100%" }}
         transition = {
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { type: "spring", damping: 25,
   stiffness: 200,>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }}";
-<<<<<<< HEAD
-        className="{"fixed" left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto"}
-=======
         className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - r border - gray - 800 / 50 z - 50 overflow - y-auto"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* comment */}";
         <div className="sticky top - 0 bg - black / 80 backdrop - blur - xl border - b border - gray - 800 / 50 p - 6">";
           <div className="flex" items - center justify - between mb - 6>";
@@ -2923,31 +2271,16 @@ initial="{{" coordinate_x: "-100%" }}
                 <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl blur opacity - 20"></div>;
               </div>;
               <div>";
-<<<<<<< HEAD
-                <h2 className="text-xl" font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent>;
-<<<<<<< HEAD
-                  Zion Tech Group
-=======
                   Zion Tech Group,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 </h2>";
                 <p className="text-gray-400 text-sm">Revolutionary Technology</p>;";
                 <p className = "text-gray-400" text-sm">Revolutionary Technology</p>;
         exit="{{" x: "-100%" }}";
-<<<<<<< HEAD
-        className="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 lg: translate-x-0 l
-    g: static l
-    g: shadow-none
-      >";
-        <div className="flex flex-col h-full">
-=======
         className="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 lg: translate-x-0 l,;
     g: static l,;
     g: shadow-none,;
       >";
         <div className="flex flex-col h-full">,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                 <h2 className="text - xl" font - bold bg - gradient - to - r from - white to - cyan - 300 bg - clip - text text - transparent>;
                   Zion Tech Group,
                 </h2>";
@@ -2959,7 +2292,6 @@ initial="{{" coordinate_x: "-100%" }}
     g: shadow - none,
       >";
         <div className="flex flex - col h - full">,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* comment */}";
           <div className="flex" items - center justify - between p - 6 border - b border - gray - 200">;
             <div className="flex" items - center>;
@@ -2972,24 +2304,11 @@ initial="{{" coordinate_x: "-100%" }}
         initial="{{" coordinate_x: -320 }}";
         animate="{{" coordinate_x: is_open ? 0 : -320 }}";
         transition="{{" type spring", stiffness: 300, damping: 30 }}";
-<<<<<<< HEAD
-        className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 lg: translate-x-0 lg:static lg:shadow-none";
-          <div className="flex" items-center justify-between p-6 border-b border-gray-200">";
-            <div className="flex items-center>";
-              <div className="w-8" h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">";
-                <Zap className="w-5 h-5 text-white       />";
-              <span className="ml-3" text-xl font-bold text-gray-900">;
-<<<<<<< HEAD
-                Zion Tech Group
-              </span>"
-=======
                 Zion Tech Group,;
               </span>",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <button: onClick="{onClose}
               className="lg: hidden: p-2 hover:bg-gray-800/50: rounded-lg transition-colors duration-200,"
                 <p className="text-gray-400 text-sm">Revolutionary Technology</p>;
-=======
         className="fixed top - 0 left - 0 h - full w - 80 bg - white shadow - xl z - 50 lg: translate - x-0 lg:static lg:shadow - none";
           <div className="flex" items - center justify - between p - 6 border - b border - gray - 200">";
             <div className="flex items - center>";
@@ -3001,7 +2320,6 @@ initial="{{" coordinate_x: "-100%" }}
             <button: on_click="{on_close}
               className="lg: hidden: p - 2 hover:bg - gray - 800 / 50: rounded - lg transition - colors duration - 200, ";
                 <p className="text - gray - 400 text - sm">Revolutionary Technology</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>";
             <button on_click="{on_close}
@@ -3019,25 +2337,12 @@ initial="{{" coordinate_x: "-100%" }}
               className="lg:hidden" p - 2 rounded - lg hover:bg - gray - 100";
               <X className="w - 6 h - 6"  />;
           {/* comment */}";
-<<<<<<< HEAD
-          <div className="flex-1" overflow-y-auto p-4">;
-            <div className="space-y-6">";
-                <div key="{sectionIndex}">";
-<<<<<<< HEAD
-                    onClick="{()" => toggleSection(section.title)}
-                    className="w-full flex items-center justify-between p-3 rounded-lg hover: bg-gray-50 transition-colors"
-                      <div className="{"w-8" h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mr-3"}>;
-                        <section.icon className="w-4" h-4 text-white" />";
-                      <span className="font-semibold text-gray-900>{section.title}</span>;
-                    {expandedSections.includes(section.title) ? (";
-=======
                     onClick="{()" => toggleSection(section && section.title)}
                     className="w-full flex items-center justify-between p-3 rounded-lg hover: bg-gray-50 transition-colors",;
                       <div className="{"w-8" h-8 bg-gradient-to-r ${section && section.color} rounded-lg flex items-center justify-center mr-3"}>;
                         <section && section.icon className="w-4" h-4 text-white" />";
                       <span className="font-semibold text-gray-900>{section && section.title}</span>;
                     {expandedSections && expandedSections.includes(section && section.title) ? (";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <ChevronDown className="w-5 h-5 text-gray-500"  />;
                     ) : (";
                       <ChevronRight className="w-5" h-5 text-gray-500"  />;
@@ -3048,19 +2353,12 @@ initial="{{" coordinate_x: "-100%" }}
                 <div key="{section && section.title}" className="mb-6>";
                     onClick="{()" => toggleSection(section && section.title)}";
                     className="w-full" flex items-center justify-between px-4 py-3 text-left rounded-lg transition-colors hover: bg-gray-100;
-<<<<<<< HEAD
-                      <section.icon className="w-5 h-5 mr-3 text-gray-600 />"
-                      <span className="font-medium" text-gray-900">{section.title}</span>;
-                    {expandedSections.includes(section.title) ? (";
-=======
                       <section && section.icon className="w-5 h-5 mr-3 text-gray-600 />",;
                       <span className="font-medium" text-gray-900">{section && section.title}</span>;
                     {expandedSections && expandedSections.includes(section && section.title) ? (";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <ChevronDown className="w-4 h-4       />;
                     ) : (";
                       <ChevronRight className="w-4" h-4"  />;
-=======
           <div className="flex - 1" overflow - y-auto p - 4">;
             <div className="space - y-6">";
                 <div key="{section_index}">";
@@ -3084,21 +2382,10 @@ initial="{{" coordinate_x: "-100%" }}
                     {expanded_sections.includes (section.title) ? (";
                       <ChevronDown className="w - 4 h - 4       />) : (";
                       <ChevronRight className="w - 4" h - 4"  />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ";
         <div className="p - 6 space - y-6>;
           {/* comment */}";
-<<<<<<< HEAD
-          <Linkhref=/"""
-            className="flex: " items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30: hover:to-purple-600/30: rounded-lg border border-cyan-500/30 transition-all duration-300 group">;
-">;
-            <Home: className = "w-5 h-5 text-cyan-400 />,";
-            <span: className="text-white font-semibold">Home</span>,";
-<<<<<<< HEAD
-            className="flex" items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"
-=======
             className="flex" items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* comment */}";
           <div className="space-y-3>";
             <div className="flex" items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">";
@@ -3108,7 +2395,6 @@ initial="{{" coordinate_x: "-100%" }}
             <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>";
               <Mail className="w-4" h-4 text-cyan-400"  />";
               <span className="text-sm text-gray-300>{contactInfo && contactInfo.email}</span>;
-=======
           <Link href=/"";";
             className="flex: " items - center gap - 3 p - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 hover: from - cyan - 500 / 30: hover:to - purple - 600 / 30: rounded - lg border border - cyan - 500 / 30 transition - all duration - 300 group">;
 ">;
@@ -3124,37 +2410,19 @@ initial="{{" coordinate_x: "-100%" }}
             <div className="flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30>";
               <Mail className="w - 4" h - 4 text - cyan - 400"  />";
               <span className="text - sm text - gray - 300>{contact_info.email}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
         {/* comment */}";
         <div className="p - 6" space - y-6">;
           {/* comment */}";
-<<<<<<< HEAD
-          <Linkhref="/"
-            onClick="{onClose}
-            className="flex" items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"
-            <Home className="w-5 h-5 text-cyan-400       />";
-            <span className="text-white" font-semibold">Home</span>;
-=======
           <Link href="/";
             on_click="{on_close}
             className="flex" items - center gap - 3 p - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 hover: from - cyan - 500 / 30 hover:to - purple - 600 / 30 rounded - lg border border - cyan - 500 / 30 transition - all duration - 300 group";
             <Home className="w - 5 h - 5 text - cyan - 400       />";
             <span className="text - white" font - semibold">Home</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </Link>;
           {/* comment */}
             {/* Search */}
             <div className="relative">;
-<<<<<<< HEAD
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e && e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/20 transition-all duration-200";
-=======
               <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400" />;
               <input;
                 type="text";
@@ -3162,26 +2430,10 @@ initial="{{" coordinate_x: "-100%" }}
                 value={search_query}
                 on_change={(e) => setSearchQuery (e.target.value)}
                 className="w - full pl - 10 pr - 4 py - 2 bg - white / 10 border border - cyan - 500 / 30 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 400 focus:bg - white / 20 transition - all duration - 200";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               />;
             </div>;
           </div>;
                 </div>;
-<<<<<<< HEAD
-                <ChevronDown className="{"w-4" h-4 text-gray-400 transition-transform duration-300 ${">;
-                    expandedSections && expandedSections.has(section && section.title) ? "rotate-180" : "">;
-}"}
-";
-                    expandedSections && expandedSections.has(section && section.title) ? "rotate-180" : ;
-}"}
-<<<<<<< HEAD
-                  <motion.div: initial = {{ opacity:  ,0
-  height: 0: }}
-                    animate = {{ opacity: 1
-  height: 'auto' ;
-}}
-                    exit = {{ opacity: 0, height: 0}}
-=======
                 <ChevronDown className="{"w - 4" h - 4 text - gray - 400 transition - transform duration - 300 ${">;
                     expanded_sections.has (section.title) ? "rotate - 180" : "">;
 }"}
@@ -3199,7 +2451,6 @@ initial="{{" coordinate_x: "-100%" }}
                     exit = {
 ;
 { opacity: 0, height: 0}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     transition={{ duration: 0.3 }}
 className="space - y-2 ml - 6"                    {section.items.map ((item, item_index) => (
                       <div key={item_index} className="space - y-2>                        <button"                          on_click={() => toggle_item (item.name)}
@@ -3207,22 +2458,14 @@ className="space - y-2 ml - 6"                    {section.items.map ((item, ite
                               <p className="text - gray - 500 text - xs>{item.description}</p>                            </div>"                          </div>;
                           {item.sub_items && item.sub_items.length > 0 && (
                             <ChevronRight;
-<<<<<<< HEAD
-                              className={w-4 h-4 text-gray-500 transition-transform duration-300 ${`;
-                                expandedItems.has(item.name) ? 'rotate-90' : ;
-=======
-
                   <motion&& motion.div: initial = {
   { opacity:  ,0,
   height: 0: }}
-
                     animate = {
-
 { opacity: 1,
   height: 'auto' 
 }}
                     exit = {
-
 { opacity: 0, height: 0}}
                     transition={{ duration: 0 && 0.3 }}
 className="space-y-2 ml-6"                    {section && section.items.map((item, itemIndex) => (;
@@ -3233,31 +2476,13 @@ className="space-y-2 ml-6"                    {section && section.items.map((ite
                             <ChevronRight
                               className={w-4 h-4 text-gray-500 transition-transform duration-300 ${`
                                 expandedItems && expandedItems.has(item && item.name) ? 'rotate-90' : 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 '                              }`}'                            />`                          )}</button>;
                         {/* comment */}
                         {/* comment */}
-<<<<<<< HEAD
-                            {expandedItems.has(item.name) && (;
-=======
-
                             {expandedItems && expandedItems.has(item && item.name) && (;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ";
                                 className = "space-y-1: ml-6 {item && item.subItems.map((subItem, subIndex) => (";
                                   <Link: key="{subIndex}
-<<<<<<< HEAD
-                                    href="{subItem.href}
-className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group"                                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>                                    <span className="text-gray-400" group-hover:text-cyan-300 transition-colors duration-200 text-xs">"                                      {subItem.name}                                    </span></Link>";
-                                    className="flex items-center gap-2 p-2 hover: bg-gray-800/20: rounded-lg transition-all duration-300 group"
-";
-                                    <div: className="w-1.5" h-1.5 bg-cyan-400 rounded-full group-hover:scale-150: transition-transform duration-200"></div>",";
-                                    <span: className="text-gray-400" group-hover:text-cyan-300: transition-colors duration-200 text-xs>" {subItem.nam,e}";
-                                className="space-y-1 ml-6
-                                {item.subItems.map((subItem, subIndex) => (;
-                                {expandedItems.includes(item.name) && (";
-=======
                                     href="{subItem && subItem.href}
 className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group"                                    <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>                                    <span className="text-gray-400" group-hover:text-cyan-300 transition-colors duration-200 text-xs">"                                      {subItem && subItem.name}                                    </span></Link>";
                                     className="flex items-center gap-2 p-2 hover: bg-gray-800/20: rounded-lg transition-all duration-300 group",;
@@ -3267,33 +2492,17 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
                                 className="space-y-1 ml-6,;
                                 {item && item.subItems.map((subItem, subIndex) => (;
                                 {expandedItems && expandedItems.includes(item && item.name) && (";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                     className="ml-8" mt-1 space-y-1";
                                     {item && item.children.map((child, childIndex) => (";
                                         key="{childIndex}
-<<<<<<< HEAD
-                                        href="{child.href}
-                                        className="{"block" p-2 rounded-lg text-sm transition-colors ${isActive(child.href);
-=======
                                         href="{child && child.href}
                                         className="{"block" p-2 rounded-lg text-sm transition-colors ${;
                                           isActive(child && child.href);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                             ? "bg-blue-50 text-blue-700";
                                             : "text-gray-600 hover: bg-gray-50",                    {section && section.items.map((item, itemIndex) => (";
                       <div key="{itemIndex}" className="space-y-2>";
                           onClick="{()" => toggleItem(item && item.name)}";
                           className="w-full" flex items-center justify-between p-2 hover: bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"";
-<<<<<<< HEAD
-                            <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200 />"
-                              <span: className="text-gray-300" group-hover:text-white: transition-colors duration-200 text-sm font-medium">" {item.nam,e}";
-                              <p: className="text-gray-500" text-xs>{item.description}</p>";
-                          {item.subItems: && item.subItems.length > 0 && (";
-                            <ChevronRight className = "{`w-4" h-4 text-gray-500 transition-transform duration-300 ${">;
-                                expandedItems.has(item.name) ? "rotate-90" : "",";
-                                expandedItems.has(item.name) ? "rotate-90" : "";
-                    {expandedSections.includes(section.title) && (";
-=======
                               className={w - 4 h - 4 text - gray - 500 transition - transform duration - 300 ${`;
                                 expanded_items.has (item.name) ? 'rotate - 90' : ;
 '                              }`}'                            />`                          )}</button>;
@@ -3334,22 +2543,12 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
                                 expanded_items.has (item.name) ? "rotate - 90" : "", ";
                                 expanded_items.has (item.name) ? "rotate - 90" : "";
                     {expanded_sections.includes (section.title) && (";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         initial="{{" opacity: 0, height: 0 }}"";
                         animate="{{" opacity: 1, height: auto }}";
                         className="ml - 4 mt - 2 space - y-1";
                         {section.items.map ((item) => (";
                           <div key="{item.name}">";
                               href="{item.href}"";
-<<<<<<< HEAD
-                              className="{`flex" items-center p-3 rounded-lg transition-colors ${isActive(item.href)`";
-                                  ? "bg-blue-50 text-blue-700 border-l-4 border-blue-600""";
-                                  : "text-gray-700 hover: bg-gray-50"";
-                            >`";
-                              <item.icon className="w-5" h-5 mr-3 />"";
-                              <div className="flex-1>"
-                                <div className="font-medium">{item.name}</div>;
-=======
                               className="{`flex" items - center p - 3 rounded - lg transition - colors ${
                                 is_active (item.href)`";
                                   ? "bg - blue - 50 text - blue - 700 border - l-4 border - blue - 600""";
@@ -3358,29 +2557,9 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
                               <item.icon className="w - 5" h - 5 mr - 3 />"";
                               <div className="flex - 1>",
                                 <div className="font - medium">{item.name}</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {item.description && (";
                                   <div className="text - sm" text - gray - 500">{item.description}</div>;
                               {item.children && (";
-<<<<<<< HEAD
-                                  onClick="{(e)" => {e.preventDefault();";
-                                    toggleItem(item.name)}}"";
-                                  className = "p-1" hover: bg-gray-200 rounded";
-                                  {expandedItems.includes(item.name) ? ("";
-                              className="{`flex" items-center px-4 py-3 rounded-lg transition-colors ${isActive(item.href)";
-                                  ? "bg-blue-100 text-blue-700 font-medium"";
-                                  : "text-gray-700 hover:bg-gray-100"";
-                              <item.icon className="w-5 h-5 mr-3 />"
-                              <span className=flex-1">{item.name}</span>;
-                              {item.badge && (";
-                                <span className="{`px-2" py-1 text-xs rounded-full ${";
-                                  item.isNew ? "bg-green-100 text-green-800" :";
-                                  item.isHot ? "bg-red-100 text-red-800" :";
-                                  item.isPremium ? "bg-purple-100 text-purple-800" :";
-                                  "bg-gray-100 text-gray-800">;
-}`}>;
-                                  {item.badge}
-=======
                             <item && item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200 />",;
                               <span: className="text-gray-300" group-hover:text-white: transition-colors duration-200 text-sm font-medium">" {item && item.nam,e}";
                               <p: className="text-gray-500" text-xs>{item && item.description}</p>";
@@ -3426,25 +2605,10 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
                                   "bg-gray-100 text-gray-800">;,;
 }`}>;
                                   {item && item.badge}
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         {/* Sub-items: */}
                         {/* Sub-items */}
                             {expandedItems && expandedItems.has(item && item.name) && (;
 ";
-<<<<<<< HEAD
-                                className = "space-y-1: ml-6 {item.subItems.map((subItem, subIndex) => (";
-                                  <Link: key="{subIndex}"";
-                                    href="{subItem.href}"";
-className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group"                                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>                                    <span className="text-gray-400" group-hover:text-cyan-300 transition-colors duration-200 text-xs">"                                      {subItem.name}                                    </span></Link>";
-                                    className="flex items-center gap-2 p-2 hover: bg-gray-800/20: rounded-lg transition-all duration-300 group"
-";
-                                    <div: className="w-1.5" h-1.5 bg-cyan-400 rounded-full group-hover:scale-150: transition-transform duration-200"></div>",";
-                                    <span: className="text-gray-400" group-hover:text-cyan-300: transition-colors duration-200 text-xs>" {subItem.nam,e}";
-                                className="space-y-1 ml-6
-                                {item.subItems.map((subItem, subIndex) => (;
-                                {expandedItems.includes(item.name) && (";
-=======
                                 className = "space-y-1: ml-6 {item && item.subItems.map((subItem, subIndex) => (";
                                   <Link: key="{subIndex}""
                                     href="{subItem && subItem.href}""
@@ -3456,16 +2620,9 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
                                 className="space-y-1 ml-6,;
                                 {item && item.subItems.map((subItem, subIndex) => (;
                                 {expandedItems && expandedItems.includes(item && item.name) && (";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                     className="ml-8" mt-1 space-y-1";
                                     {item && item.children.map((child, childIndex) => (";
                                         key="{childIndex}"";
-<<<<<<< HEAD
-                                        href="{child.href}"";
-                                        className="{`block" p-2 rounded-lg text-sm transition-colors ${isActive(child.href)`";
-                                            ? "bg-blue-50 text-blue-700""";
-                                            : "text-gray-600 hover: bg-gray-50"
-=======
                                   on_click="{(e)" => {
                                     e.prevent_default ();";
                                     toggle_item (item.name)}}"";
@@ -3508,32 +2665,19 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
                                           is_active (child.href)`";
                                             ? "bg - blue - 50 text - blue - 700""";
                                             : "text - gray - 600 hover: bg - gray - 50",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                         {child.name}
                                     ))}
                                   </motion.div>";
                               <div className="ml - 4 mt - 1 space - y-1>;
                                 {item.children.map ((child) => (";
                                     key="{child.name}
-<<<<<<< HEAD
-                                    className="{"block" px-4 py-2 text-sm rounded-lg transition-colors ${isActive(child.href)";
-                                        ? "bg-blue-50 text-blue-600 font-medium;
-                                        : "text-gray-600 hover: bg-gray-50;
-                                    className="flex" items-center gap-2 p-2 hover:bg-gray-800/20 rounded-lg transition-all duration-300 group;
-                                    className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group
-";
-                                    <div className="w-1.5" h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>";
-                                    <span className="text-gray-400 group-hover:text-cyan-300 transition-colors duration-200 text-xs>,                                      {subItem.name}
-=======
                                         href="{child && child.href}"";
                                         className="{`block" p-2 rounded-lg text-sm transition-colors ${;
                                           isActive(child && child.href)`";
                                             ? "bg-blue-50 text-blue-700""";
                                             : "text-gray-600 hover: bg-gray-50",;
                                         {child && child.name}
-
                                     ))}
-
                                   </motion && motion.div>";
                               <div className="ml-4 mt-1 space-y-1>;
                                 {item && item.children.map((child) => (";
@@ -3547,9 +2691,6 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
 ";
                                     <div className="w-1 && 1.5" h-1 && 1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>";
                                     <span className="text-gray-400 group-hover:text-cyan-300 transition-colors duration-200 text-xs>,                                      {subItem && subItem.name}
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                                     className="{"block" px - 4 py - 2 text - sm rounded - lg transition - colors ${
                                       is_active (child.href)";
                                         ? "bg - blue - 50 text - blue - 600 font - medium;
@@ -3559,26 +2700,12 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
 ";
                                     <div className="w - 1.5" h - 1.5 bg - cyan - 400 rounded - full group - hover:scale - 150 transition - transform duration - 200"></div>";
                                     <span className="text - gray - 400 group - hover:text - cyan - 300 transition - colors duration - 200 text - xs>,                                      {sub_item.name}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Quick Stats */}";
 <div className="pt - 6" border - t border - gray - 800 / 50">"            <h4 className="text - sm" font - semibold text - gray - 400 mb - 3 uppercase tracking - wider > Quick Stats</h4>"            <div className="grid grid - cols - 2 gap - 3>              <div className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">                <div className="text - lg" font - bold text - cyan - 400">500+</div>"                <div className="text - xs" text - gray - 400 > Services</div>"              </div>"              <div className="text - center" p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30>"                <div className="text - lg font - bold text - purple - 400 > 1000+</div>                <div className="text - xs text - gray - 400">Clients</div>              </div>            </div>";
           {/* Quick: Stats */}";
-<<<<<<< HEAD
-          <div className="pt-6 border-t border-gray-800/50>;";
-            <h4: className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>;";
-            <div: className="grid" grid-cols-2 gap-3">";";
-              <div: className="text-center" p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>",";
-                <div: className="text-lg font-bold text-cyan-400>500+</div>,";
-<<<<<<< HEAD
-                <div: className="text-xs text-gray-400">Services</div>,"
-                <div: className = "text-lg" font-bold text-purple-400">1000+</div>",";
-                <div: className="text-xs" text-gray-400>Clients</div>"
-=======
                 <div: className="text-xs text-gray-400">Services</div>,",;
                 <div: className = "text-lg" font-bold text-purple-400">1000+</div>",";
                 <div: className="text-xs" text-gray-400>Clients</div>",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           <div className="pt - 6 border - t border - gray - 800 / 50>;";
             <h4: className="text - sm font - semibold text - gray - 400 mb - 3 uppercase tracking - wider">Quick Stats</h4>;";
             <div: className="grid" grid - cols - 2 gap - 3">";";
@@ -3587,25 +2714,9 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
                 <div: className="text - xs text - gray - 400">Services</div>, ",
                 <div: class_name = "text - lg" font - bold text - purple - 400">1000+</div>", ";
                 <div: className="text - xs" text - gray - 400 > Clients</div>",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* comment */}";
 <div className="pt - 6" border - t border - gray - 800 / 50">"            <h4 className="text - sm" font - semibold text - gray - 400 mb - 3 uppercase tracking - wider > Quick Stats</h4>"            <div className="grid grid - cols - 2 gap - 3>              <div className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">                <div className="text - lg" font - bold text - cyan - 400">500+</div>"                <div className="text - xs" text - gray - 400 > Services</div>"              </div>"              <div className="text - center" p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30>"                <div className="text - lg font - bold text - purple - 400 > 1000+</div>                <div className="text - xs text - gray - 400">Clients</div>              </div>            </div>";
           {/* comment */}";
-<<<<<<< HEAD
-          <div className="pt-6 border-t border-gray-800/50>;";
-            <h4: className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>;";
-            <div: className="grid" grid-cols-2 gap-3">";";
-              <div: className="text-center" p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>",";
-                <div: className="text-lg font-bold text-cyan-400>500+</div>,";
-<<<<<<< HEAD
-                <div: className="text-xs text-gray-400">Services</div>,"
-                <div: className = "text-lg" font-bold text-purple-400">1000+</div>",";
-                <div: className="text-xs" text-gray-400>Clients</div>"
-          {/* comment */}";
-            <div: className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30>,"
-              <h4: className = "text-sm font-semibold text-white mb-2">Ready to Transform?</h4>,";
-              <p: className="text-gray-300" text-xs mb-3">"
-=======
                 <div: className="text-xs text-gray-400">Services</div>,",;
                 <div: className = "text-lg" font-bold text-purple-400">1000+</div>",";
                 <div: className="text-xs" text-gray-400>Clients</div>",;
@@ -3613,7 +2724,6 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
             <div: className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30>,",;
               <h4: className = "text-sm font-semibold text-white mb-2">Ready to Transform?</h4>,";
               <p: className="text-gray-300" text-xs mb-3">",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 Get: in touch to discuss your revolutionary technology needs.;
             </nav>;
           {/* comment */}
@@ -3630,17 +2740,10 @@ target=_blank
                 rel="noopener noreferrer,"
 className="p-2" text-gray-400 hover: text-blue-600 transition-colors
                 <Globe className="w-5 h-5       />;
-<<<<<<< HEAD
-              </a>"
-                href="mailt
-    o: info@ziontechgroup.com""
-                className="p-2" text-gray-400 hove
-=======
               </a>",;
                 href="mailt,;
     o: info@ziontechgroup && ziontechgroup.com"",;
                 className="p-2" text-gray-400 hove,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     r: text-gray-600 transition-colors";
                 <Mail className="w-5 h-5"  />";
             <p className="mt-2" text-xs text-gray-500>;
@@ -3648,7 +2751,6 @@ className="p-2" text-gray-400 hover: text-blue-600 transition-colors
                 href="mailto:kleber@ziontechgroup && ziontechgroup.com;
                 className="p-2" text-gray-400 hover:text-gray-600 transition-colors";
             <p className="text-center text-xs text-gray-500 mt-2">;
-=======
           <div className="pt - 6 border - t border - gray - 800 / 50>;";
             <h4: className="text - sm font - semibold text - gray - 400 mb - 3 uppercase tracking - wider">Quick Stats</h4>;";
             <div: className="grid" grid - cols - 2 gap - 3">";";
@@ -3688,68 +2790,29 @@ className="p - 2" text - gray - 400 hover: text - blue - 600 transition - colors
                 href="mailto:kleber@ziontechgroup.com;
                 className="p - 2" text - gray - 400 hover:text - gray - 600 transition - colors";
             <p className="text - center text - xs text - gray - 500 mt - 2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               © 2024 Zion Tech Group. All rights reserved.;
-<<<<<<< HEAD
-            </p>
-=======
             </p>,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* comment */}";
           <div className="pt - 6" border - t border - gray - 800 / 50>"            <div className="p - 4 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 rounded - lg border border - cyan - 500 / 30>              <h4 className="text - sm font - semibold text - white mb - 2">Ready to Transform?</h4>              <p className="text - gray - 300" text - xs mb - 3">"                Get in touch to discuss your revolutionary technology needs.              </p>;
 ";
-<<<<<<< HEAD
-                          <div className="flex items-center gap-3">";
-                            <item && item.icon className="w-4" h-4 text-gray-400 group-hover: text-cyan-400 transition-colors duration-200 />;
-                            <div>";
-<<<<<<< HEAD
-                              <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">
-                                {item.name}
-=======
                               <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">,;
                                 {item && item.name}
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               </span>";
                               <p className="text-gray-500" text-xs>{item && item.description}</p>;
                             </div>;
-<<<<<<< HEAD
-                          {item.subItems && item.subItems.length > 0 && (";
-                            <ChevronRight className="{"w-4" h-4 text-gray-500 transition-transform duration-300 ${";
-                                expandedItems.has(item.name) ? "rotate-90" : ;
-=======
                           {item && item.subItems && item && item.subItems.length > 0 && (";
                             <ChevronRightclassName="{"w-4" h-4 text-gray-500 transition-transform duration-300 ${
 "
                                 expandedItems && expandedItems.has(item && item.name) ? "rotate-90" : 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }"}
                                   />;
                           )}
                         </button>;
                         {/* comment */}
-<<<<<<< HEAD
-                        {item.subItems && item.subItems.length > 0 && (;
-                          <AnimatePresence>;
-                            {expandedItems.has(item.name) && (;
-                              <motion.div
-initial = {{ opacity: 0
-  height: 0
-,,
-}}
-                                animate = {{ opacity: 1
-  height: 'auto' ;
-}}
-                                exit = {{ opacity: 0, height: 0}}
-                                transition={{ duration: 0.3 }}
-className="space-y-1 ml-6"                                {item.subItems.map((subItem, subIndex) => (<Link;
-=======
-
                         {item && item.subItems && item && item.subItems.length > 0 && (;
                           <AnimatePresence>;
                             {expandedItems && expandedItems.has(item && item.name) && (;
                               <motion&& motion.div,
-=======
                           <div className="flex items - center gap - 3">";
                             <item.icon className="w - 4" h - 4 text - gray - 400 group - hover: text - cyan - 400 transition - colors duration - 200 />;
                             <div>";
@@ -3770,57 +2833,28 @@ className="space-y-1 ml-6"                                {item.subItems.map((su
                           <AnimatePresence>;
                             {expanded_items.has (item.name) && (
                               <motion.div,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 initial = {
   { opacity: 0,
   height: 0,
 , ,,
 }}
-<<<<<<< HEAD
-
-                                animate = {
-
-=======
                                 animate = {
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 { opacity: 1,
   height: 'auto' 
 }}
                                 exit = {
-<<<<<<< HEAD
-
-{ opacity: 0, height: 0}}
-                                transition={{ duration: 0 && 0.3 }}
-className="space-y-1 ml-6"                                {item && item.subItems.map((subItem, subIndex) => (<Link
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                                    key={subIndex}
-                                    href={subItem && subItem.href}
-                                    onClick={onClose}
-className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group"                                    <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200></div>                                    <span className="text-gray-400 group-hover:text-cyan-300 transition-colors duration-200 text-xs">"                                      {subItem && subItem.name}"                                    </span></Link>;
-                                ))}
-<<<<<<< HEAD
-                              </motion.div>;
-=======
-
                               </motion && motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             )}
                           </AnimatePresence>;
                         )}
                       </div>;
                     ))}
-<<<<<<< HEAD
-                  </motion.div>;
-=======
-
                   </motion && motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
               </AnimatePresence>;
             </div>;
           ))}
-=======
 ;
 { opacity: 0, height: 0}}
                                 transition={{ duration: 0.3 }}
@@ -3835,21 +2869,9 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
                   </motion.div>)}
               </AnimatePresence>;
             </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Quick Stats */}
 <div className="pt - 6 border - t border - gray - 800 / 50>            <h4 className="text - sm font - semibold text - gray - 400 mb - 3 uppercase tracking - wider">Quick Stats</h4>"            <div className="grid grid - cols - 2 gap - 3>              <div className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"                <div className="text - lg font - bold text - cyan - 400 > 500+</div>                <div className="text - xs text - gray - 400">Services</div>"              </div>"              <div className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30>                <div className="text - lg font - bold text - purple - 400">1000+</div>"                <div className="text - xs text - gray - 400 > Clients</div>              </div>"            </div>;
           </div>;
-<<<<<<< HEAD
-          {/* Contact CTA */}
-          <div className="pt-6 border-t border-gray-800/50>            <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30">"              <h4 className="text-sm font-semibold text-white mb-2>Ready to Transform?</h4>              <p className="text-gray-300 text-xs mb-3">"                Get in touch to discuss your revolutionary technology needs."              </p>;
-              <Link
-                href="/contact""                onClick={onClose}"                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"                Contact Us
-                <ChevronRight className="w-4 h-4 />              </Link>"            </div>;
-          </div>;
-        </div>;
-      </motion && motion.div>;
-</>;);
-=======
 ;
           {/* Contact CTA */}
           <div className="pt - 6 border - t border - gray - 800 / 50>            <div className="p - 4 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 rounded - lg border border - cyan - 500 / 30">"              <h4 className="text - sm font - semibold text - white mb - 2>Ready to Transform?</h4>              <p className="text - gray - 300 text - xs mb - 3">"                Get in touch to discuss your revolutionary technology needs."              </p>;
@@ -3860,7 +2882,6 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
         </div>;
       </motion.div>;
 </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
               </p>";
               <Link href=/contact"">;
@@ -3879,22 +2900,14 @@ export default EnhancedSidebar2025, "),          <div className="pt - 6" border 
               <p className="text - gray - 300 text - xs mb - 3">;
                 Get in touch to discuss your revolutionary technology needs.";
                 href=/contact";";
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className = "inline-flex: items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600: hover:to-purple-700: text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105
-                Contact: Us"
-=======
                 className = "inline-flex: items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600: hover:to-purple-700: text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105,;
                 Contact: Us",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <ChevronRight className="w-4 h-4" />,";
                 className="inline-flex" items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105";
-=======
                 class_name = "inline - flex: items - center gap - 2 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover: from - cyan - 600: hover:to - purple - 700: text - white text - sm font - semibold rounded - lg transition - all duration - 300 transform hover:scale - 105,
                 Contact: Us",
                 <ChevronRight className="w - 4 h - 4" />, ";
                 className="inline - flex" items - center gap - 2 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover: from - cyan - 600 hover:to - purple - 700 text - white text - sm font - semibold rounded - lg transition - all duration - 300 transform hover:scale - 105";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Contact Us";
                 <ChevronRight className="w - 4 h - 4 / />;
 </>);
@@ -3909,23 +2922,10 @@ Contact Us";
       </motion && motion.div>;
     </>;
 ";
-<<<<<<< HEAD
-export default EnhancedSidebar2025,";
-<<<<<<< HEAD
-  ),,
-}
-}}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))))
-
-=======
   ),,,;
 }
 }}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default EnhancedSidebar2025;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default EnhancedSidebar2025, "), ,,
 }
 }}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -5,11 +5,6 @@ interface EmptyStateProps {;
   icon?: React.ReactNode;
   action?: React.ReactNode;
   className?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 }
 ';
@@ -29,10 +24,6 @@ const EmptyState: Reac t.FC<EmptyStateProps> = ({';';
   );
 }
       <h3 className="text-lg font-medium text-gray-900 mb-2">
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}
 ;
 const "EmptyState": "React.FC<EmptyStateProps> = ({;
@@ -52,14 +43,7 @@ const "EmptyState": "React.FC<EmptyStateProps> = ({;
 ;
       <h3 className="text-lg font-medium text-gray-900 mb-2">;
 }
-<<<<<<< HEAD
 const EmptyState: React.FC<EmptyStateProps> = ({
-=======
-<<<<<<< HEAD
-=======
-const EmptyState: React.FC<EmptyStateProps> = ({
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const "EmptyState": Reac t.FC<EmptyStateProps> = ({
   title = 'No data available',
   description = 'There are no items to display at the moment.',
@@ -77,20 +61,11 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
 }
       <h3 className="text-lg font-medium text-gray-900 mb-2">
         {title}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {description && (
         <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">
 ;
       {description && (;
         <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {description}
         </p>;
       )}
@@ -102,34 +77,18 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
   );
 }
     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
 };
 ';
 // Default empty state icon component';';
 export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         </div>;
       )}
     </div>;
   );
     );
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    className={`h-full w-full ${className}`}
-// Default empty state icon component
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 // Default empty state icon component;
 export const "EmptyStateIcon": "React.FC<{ className?: string "}> = ({ className = '' }) => (;
@@ -138,10 +97,6 @@ export const "EmptyStateIcon": "React.FC<{ className?: string "}> = ({ className
 // Default empty state icon component
 export const EmptyStateIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
 export const "EmptyStateIcon": Reac t.FC<{ className?: string }> = ({ className = " }) => (
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   <svg
     className={`h-full w-full ${className}`};
     fill="none";
@@ -157,24 +112,10 @@ export const "EmptyStateIcon": Reac t.FC<{ className?: string }> = ({ className 
   </svg>;
 );
 export default EmptyState;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </path>';
 </EmptyStateProps>;';;';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </path>;
 </EmptyStateProps>;
 </path>
 </EmptyStateProps>;';';
-<<<<<<< HEAD
 import React from 'react'; ; interface EmptyStateProps {; title?: string; description?: string; icon?: React.ReactNode; action?: React.ReactNode; className?: string} const EmptyState: Reac t.FC<EmptyStateProps> = ({ title = 'No data available',description = 'There are no items to display at the moment.',icon,action,className = " }) => { return ( <div className="min-h-screen bg-white"> {icon && ( <div className="mx-auto h-12 w-12 text-gray-400 mb-4"> {icon}; </div> )} <h3 className="text-lg font-medium text-gray-900 mb-2"> {title} ; {description && (; <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">; {description} </p>; )} ; {action && (; <div className="flex justify-center">; {action} </div> )} </div> )}; export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = " }) => ( <svg className={`h-full w-full ${className}`}; fill="none"; viewBox="0 0 24 24"; stroke="currentColor"; aria-hidden="true"; >; <path strokeLinecap="round"; strokeLinejoin="round"; strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"; />; </svg>; ); ; export default EmptyState; </path> </EmptyStateProps>;';';
-=======
-<<<<<<< HEAD
-import React from 'react'; ; interface EmptyStateProps {; title?: string; description?: string; icon?: React.ReactNode; action?: React.ReactNode; className?: string} const EmptyState: Reac t.FC<EmptyStateProps> = ({ title = 'No data available',description = 'There are no items to display at the moment.',icon,action,className = " }) => { return ( <div className="min-h-screen bg-white"> {icon && ( <div className="mx-auto h-12 w-12 text-gray-400 mb-4"> {icon}; </div> )} <h3 className="text-lg font-medium text-gray-900 mb-2"> {title} ; {description && (; <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">; {description} </p>; )} ; {action && (; <div className="flex justify-center">; {action} </div> )} </div> )}; export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = " }) => ( <svg className={`h-full w-full ${className}`}; fill="none"; viewBox="0 0 24 24"; stroke="currentColor"; aria-hidden="true"; >; <path strokeLinecap="round"; strokeLinejoin="round"; strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"; />; </svg>; ); ; export default EmptyState; </path> </EmptyStateProps>;';';
-=======
-import React from 'react'; ; interface EmptyStateProps {; title?: string; description?: string; icon?: React.ReactNode; action?: React.ReactNode; className?: string} const EmptyState: Reac t.FC<EmptyStateProps> = ({ title = 'No data available',description = 'There are no items to display at the moment.',icon,action,className = " }) => { return ( <div className="min-h-screen bg-white"> {icon && ( <div className="mx-auto h-12 w-12 text-gray-400 mb-4"> {icon}; </div> )} <h3 className="text-lg font-medium text-gray-900 mb-2"> {title} ; {description && (; <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">; {description} </p>; )} ; {action && (; <div className="flex justify-center">; {action} </div> )} </div> )}; export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = " }) => ( <svg className={`h-full w-full ${className}`}; fill="none"; viewBox="0 0 24 24"; stroke="currentColor"; aria-hidden="true"; >; <path strokeLinecap="round"; strokeLinejoin="round"; strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"; />; </svg>; ); ; export default EmptyState; </path> </EmptyStateProps>;';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

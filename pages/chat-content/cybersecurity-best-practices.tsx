@@ -1,10 +1,4 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 const CybersecurityBestPractices: NextPage = () => {
   return (
     <div>
@@ -12,8 +6,6 @@ const CybersecurityBestPractices: NextPage = () => {
         <title>CybersecurityBestPractices - Zion Tech Solutions</title>
         <meta name="description" content="CybersecurityBestPractices page" />
       </Head>
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <main>
         <h1>CybersecurityBestPractices</h1>
         <p>This page is under construction.</p>
@@ -21,7 +13,6 @@ const CybersecurityBestPractices: NextPage = () => {
     </div>
   )
 }
-=======
       <main>;
         <h1>CybersecurityBestPractices</h1>;
         <p>This page is under construction.</p>;
@@ -29,14 +20,7 @@ const CybersecurityBestPractices: NextPage = () => {
     </div>;
   ),;
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default CybersecurityBestPractices;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
       <main>;
         <h1 > CybersecurityBestPractices</h1>;
@@ -47,4 +31,3 @@ import Head from 'next / head';
 ;
 export default CybersecurityBestPractices;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

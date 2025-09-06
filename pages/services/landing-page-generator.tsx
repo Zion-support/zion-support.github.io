@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import UseTokensButton from '../../components/tokens/UseTokensButton';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const LandingPageGenerator: NextPage = () => {
   return (
     <div>
@@ -24,11 +15,6 @@ const LandingPageGenerator: NextPage = () => {
   )
 }
 export default LandingPageGenerator;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -49,4 +35,3 @@ const LandingPageGenerator: NextPage = () => {
     </div>);
 },
 export default LandingPageGenerator,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

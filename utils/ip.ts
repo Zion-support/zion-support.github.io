@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest } from 'next';
-<<<<<<< HEAD
-export function extractClientIp(req: NextApiRequest): string | null {
-<<<<<<< HEAD
-  const xff = (req.headers['x-forwarded-for'] as string) |'';
-  const ip =
-    xff.split(',')[0]?.trim() |
-    (req.headers['x-real-ip'] as string) |
-    (req.socket?.remoteAddress ?? null);
-  if (!ip) return null;
-  if (ip.startsWith('::ffff:')) return ip.substring(7);
-  return ip;
-}
-<<<<<<< HEAD
-
-export function getClientIp(req: any): string {
-  const forwarded = req.headers['x-forwarded-for'];
-  const remoteAddress = req.socket?.remoteAddress;
-=======
-  const xff = (req && req.headers['x-forwarded-for'] as string) || '';
+const xff = (req && req.headers['x-forwarded-for'] as string) || '';
   const ip =
     xff && xff.split(',')[0]?.trim() ||
     (req && req.headers['x-real-ip'] as string) ||
@@ -28,11 +8,8 @@ export function getClientIp(req: any): string {
   return ip;export function getClientIp(req: any): string {
   const forwarded = req && req.headers['x-forwarded-for'];
   const remoteAddress = req && req.socket?.remoteAddress,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  
   if (forwarded) {
     return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim();
-=======
 // IP address utilities
 export interface IpInfo {
   ip: string;
@@ -48,7 +25,6 @@ export interface IpInfo {
   status?: string;
   message?: string;
 }
-
 export interface IpReputation {
   ip: string;
   reputation: 'good' | 'neutral' | 'poor' | 'malicious';
@@ -65,7 +41,6 @@ export interface IpReputation {
     isBlacklisted?: boolean;
   };
 }
-
 export interface GeolocationResult {
   ip: string;
   latitude?: number;
@@ -82,11 +57,9 @@ export interface GeolocationResult {
   as: string;
   query: string;
 }
-
 class IpManager {
   private cache: Map<string, { data: any; timestamp: number }> = new Map();
   private cacheTimeout = 24 * 60 * 60 * 1000; // 24 hours
-
   // Extract client IP from request
   extractClientIp(req: any): string {
     // Check various headers for the real IP
@@ -94,65 +67,48 @@ class IpManager {
     const realIp = req.headers['x-real-ip'];
     const cfConnectingIp = req.headers['cf-connecting-ip'];
     const xClientIp = req.headers['x-client-ip'];
-    
     if (forwardedFor) {
       // X-Forwarded-For can contain multiple IPs, take the first one
       const ips = forwardedFor.split(',').map((ip: string) => ip.trim());
       return ips[0];
     }
-    
     if (realIp) return realIp;
     if (cfConnectingIp) return cfConnectingIp;
     if (xClientIp) return xClientIp;
-    
     // Fallback to connection remote address
     return req.connection?.remoteAddress || 
            req.socket?.remoteAddress || 
            req.ip || 
            'unknown';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
-  
   return remoteAddress || 'unknown';
-=======
 export function getClientIp(req: any): string {
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
   }
-<<<<<<< HEAD
-  return remoteAddress |'unknown';
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-}
-=======
-
   // Check IP reputation
   async getIpReputation(ip: string): Promise<IpReputation | null> {
     if (!this.isValidIp(ip)) {
       return null;
     }
-
     // Check cache first
     const cached = this.cache.get(`reputation_${ip}`);
     if (cached && Date.now() - cached.timestamp < this.cacheTimeout) {
       return cached.data;
     }
-
     try {
       // Mock reputation check - in production, integrate with real reputation services
       const reputation = await this.checkMockReputation(ip);
-      
       // Cache the result
       this.cache.set(`reputation_${ip}`, { data: reputation, timestamp: Date.now() });
-      
       return reputation;
     } catch (error) {
       console.error('Error checking IP reputation:', error);
       return null;
     }
   }
-
   private async checkMockReputation(ip: string): Promise<IpReputation> {
     // Mock reputation data - in production, integrate with real services
     const mockData = {
@@ -185,7 +141,6 @@ export function getClientIp(req: any): string {
         }
       }
     };
-
     const data = mockData[ip as keyof typeof mockData] || {
       reputation: 'neutral' as const,
       score: 50,
@@ -200,7 +155,6 @@ export function getClientIp(req: any): string {
         isBlacklisted: Math.random() > 0.9
       }
     };
-
     return {
       ip,
       reputation: data.reputation,
@@ -210,26 +164,20 @@ export function getClientIp(req: any): string {
       details: data.details
     };
   }
-
   // Validate IP address
   isValidIp(ip: string): boolean {
     if (!ip || ip === 'unknown') return false;
-    
     // IPv4 validation
     const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
     if (ipv4Regex.test(ip)) return true;
-    
     // IPv6 validation (simplified)
     const ipv6Regex = /^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/;
     if (ipv6Regex.test(ip)) return true;
-    
     return false;
   }
-
   // Check if IP is private
   isPrivateIp(ip: string): boolean {
     if (!this.isValidIp(ip)) return false;
-    
     // Private IP ranges
     const privateRanges = [
       /^10\./,                    // 10.0.0.0/8
@@ -241,30 +189,24 @@ export function getClientIp(req: any): string {
       /^fc00:/,                   // IPv6 unique local
       /^fe80:/                    // IPv6 link-local
     ];
-    
     return privateRanges.some(range => range.test(ip));
   }
-
   // Check if IP is likely a proxy/VPN
   async isProxyOrVpn(ip: string): Promise<boolean> {
     const reputation = await this.getIpReputation(ip);
     return reputation?.details.isProxy || reputation?.details.isVpn || false;
   }
-
   // Get IP geolocation
   async getGeolocation(ip: string): Promise<GeolocationResult | null> {
     if (!this.isValidIp(ip)) {
       return null;
     }
-
     try {
       const response = await fetch(`http://ip-api.com/json/${ip}`);
       const data = await response.json();
-      
       if (data.status === 'fail') {
         return null;
       }
-
       return {
         ip: data.query,
         latitude: data.lat,
@@ -286,12 +228,10 @@ export function getClientIp(req: any): string {
       return null;
     }
   }
-
   // Clear cache
   clearCache(): void {
     this.cache.clear();
   }
-
   // Get cache stats
   getCacheStats(): { size: number; entries: string[] } {
     return {
@@ -300,40 +240,31 @@ export function getClientIp(req: any): string {
     };
   }
 }
-
 // Singleton instance
 export const ipManager = new IpManager();
-
 // Main function for external use
 export function extractClientIp(req: any): string {
   return ipManager.extractClientIp(req);
 }
-
 // Utility functions
 export function isValidIp(ip: string): boolean {
   return ipManager.isValidIp(ip);
 }
-
 export function isPrivateIp(ip: string): boolean {
   return ipManager.isPrivateIp(ip);
 }
-
 export async function getIpInfo(ip: string): Promise<IpInfo | null> {
   return ipManager.getIpInfo(ip);
 }
-
 export async function getIpReputation(ip: string): Promise<IpReputation | null> {
   return ipManager.getIpReputation(ip);
 }
-
 export async function isProxyOrVpn(ip: string): Promise<boolean> {
   return ipManager.isProxyOrVpn(ip);
 }
-
 export async function getGeolocation(ip: string): Promise<GeolocationResult | null> {
   return ipManager.getGeolocation(ip);
 }
-
 // Common IP patterns
 export const COMMON_PROXY_HEADERS = [
   'x-forwarded-for',
@@ -345,7 +276,6 @@ export const COMMON_PROXY_HEADERS = [
   'forwarded-for',
   'forwarded'
 ];
-
 export const PRIVATE_IP_RANGES = [
   '10.0.0.0/8',
   '172.16.0.0/12',
@@ -353,8 +283,6 @@ export const PRIVATE_IP_RANGES = [
   '127.0.0.0/8',
   '169.254.0.0/16'
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export function extractClientIp (req: NextApiRequest): string | null {
   const xff = (req.headers['x - forwarded - for'] as string) || '';
@@ -383,4 +311,3 @@ if ( {) {
   }
   return remote_address || 'unknown';
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

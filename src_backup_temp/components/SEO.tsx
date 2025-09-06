@@ -1,16 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 interface SEOProps {;
   title?: "string;
-=======
-<<<<<<< HEAD
-
-=======
-interface SEOProps {;
-  title?: "string;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface SEOProps {
   title?: string;
   description?: string;
@@ -44,14 +35,6 @@ interface SEOProps {
   section?: string;
   tags?: string[];
   noindex?: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-export default SEO
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}
 ;
 export const "SEO": "React.FC<SEOProps> = ({;
@@ -140,7 +123,6 @@ export const SEO: Reac t.FC<SEOProps> = ({';';
   type = 'website',';';
 ;
 export default SEO
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 }
 export const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions',
@@ -237,13 +219,6 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og: descriptio n" content={description}   />
       <meta property="og: imag e" content={image}   />
       <meta property="og: site_nam e" content="Zion Tech Group"   />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions',
   description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
@@ -284,13 +259,6 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {/* Twitter */}
       <meta property="twitter: car d" content="summary_large_image"   />
       <meta property="twitter: ur l" content={url}   />
@@ -661,13 +629,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       />
     </Head>
   )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "
 export default SEO;"
 ""
@@ -687,21 +648,8 @@ export default SEO;"
 </script>
 </Helmet>
 </SEOProps>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default SEO;
-</script>
-</SEOProps>
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </script>';
 </SEOProps>;';;';
 export default SEO;
 </script>
-<<<<<<< HEAD
 </SEOProps>
-=======
-</SEOProps>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

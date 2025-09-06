@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
-export default function ServicesPage() {
-=======
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
-
 export default function ServicesPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold'>Services</h1>;
@@ -53,9 +44,7 @@ export default function ServicesPage() {;
     </EnhancedLayout>;
   );
 }
-=======
 import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
-
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -80,8 +69,6 @@ export default function ServicesPage() {
     </EnhancedLayout>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 export default /**
@@ -133,4 +120,3 @@ function ServicesPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

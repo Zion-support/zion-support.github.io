@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Mock file system database utility
-export function readJson<T>(filePath: string, defaultValue: T): T {
-  try {
-<<<<<<< HEAD
-    const fs = require('fs')
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(content);
-=======
-    const fs = require('fs'),
+const fs = require('fs'),
     if (fs && fs.existsSync(filePath)) {
       const content = fs && fs.readFileSync(filePath, 'utf8');
       return JSON && JSON.parse(content);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   } catch (error) {
     console && console.error('Error reading file:', error);
-=======
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {
   try {
@@ -30,24 +17,12 @@ export function read_json < T>(file_path: string, default_value: T): T {
     }
   } catch (error) {
     console.error ('Error reading file:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return default_value;
 }
-<<<<<<< HEAD
-export function writeJson<T>(filePath: string, data: T): void {
-  try {
-    const fs = require('fs');
-    const path = require('path');
-<<<<<<< HEAD
-    const dir = path.dirname(filePath)
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-=======
     const dir = path && path.dirname(filePath),
     if (!fs && fs.existsSync(dir)) {
       fs && fs.mkdirSync(dir, { recursive: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
   } catch (error) {
@@ -60,23 +35,15 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {
   await writeAllDisputes(all);
 }
 export function getDisputeUploadDir(caseId: string): string {
-<<<<<<< HEAD
-  return path.join(UPLOADS_ROOT, caseId);
-}
-=======
   return path && path.join(UPLOADS_ROOT, caseId);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
 }
-=======
 // File system database utilities
 import * as fs from 'fs';
 import * as path from 'path';
-
 export interface FSDocument {
   id: string;
   data: any;
@@ -84,43 +51,35 @@ export interface FSDocument {
   updatedAt: Date;
   version: number;
 }
-
 export interface FSCollection {
   name: string;
   path: string;
   documents: Map<string, FSDocument>;
 }
-
 export class FSDatabase {
   private basePath: string;
   private collections: Map<string, FSCollection> = new Map();
-
   constructor(basePath: string = './data/fsdb') {
     this.basePath = basePath;
     this.ensureBasePath();
   }
-
   private ensureBasePath(): void {
     if (!fs.existsSync(this.basePath)) {
       fs.mkdirSync(this.basePath, { recursive: true });
     }
   }
-
   private getCollectionPath(collectionName: string): string {
     return path.join(this.basePath, collectionName);
   }
-
   private ensureCollectionPath(collectionName: string): void {
     const collectionPath = this.getCollectionPath(collectionName);
     if (!fs.existsSync(collectionPath)) {
       fs.mkdirSync(collectionPath, { recursive: true });
     }
   }
-
   private loadCollection(collectionName: string): FSCollection {
     const collectionPath = this.getCollectionPath(collectionName);
     const documents = new Map<string, FSDocument>();
-
     if (fs.existsSync(collectionPath)) {
       const files = fs.readdirSync(collectionPath);
       for (const file of files) {
@@ -140,31 +99,24 @@ export class FSDatabase {
         }
       }
     }
-
     const collection: FSCollection = {
       name: collectionName,
       path: collectionPath,
       documents
     };
-
     this.collections.set(collectionName, collection);
     return collection;
   }
-
   private saveDocument(collectionName: string, document: FSDocument): void {
     const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     this.ensureCollectionPath(collectionName);
-    
     const filePath = path.join(collection.path, `${document.id}.json`);
     fs.writeFileSync(filePath, JSON.stringify(document, null, 2));
-    
     collection.documents.set(document.id, document);
   }
-
   async create(collectionName: string, data: any, id?: string): Promise<FSDocument> {
     const documentId = id || `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     const now = new Date();
-    
     const document: FSDocument = {
       id: documentId,
       data,
@@ -172,63 +124,48 @@ export class FSDatabase {
       updatedAt: now,
       version: 1
     };
-
     this.saveDocument(collectionName, document);
     return document;
   }
-
   async read(collectionName: string, id: string): Promise<FSDocument | null> {
     const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     return collection.documents.get(id) || null;
   }
-
   async update(collectionName: string, id: string, data: any): Promise<FSDocument | null> {
     const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     const existingDoc = collection.documents.get(id);
-    
     if (!existingDoc) return null;
-
     const updatedDoc: FSDocument = {
       ...existingDoc,
       data: { ...existingDoc.data, ...data },
       updatedAt: new Date(),
       version: existingDoc.version + 1
     };
-
     this.saveDocument(collectionName, updatedDoc);
     return updatedDoc;
   }
-
   async delete(collectionName: string, id: string): Promise<boolean> {
     const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     const document = collection.documents.get(id);
-    
     if (!document) return false;
-
     const filePath = path.join(collection.path, `${id}.json`);
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);
     }
-
     collection.documents.delete(id);
     return true;
   }
-
   async list(collectionName: string, filter?: (doc: FSDocument) => boolean): Promise<FSDocument[]> {
     const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     const documents = Array.from(collection.documents.values());
-    
     if (filter) {
       return documents.filter(filter);
     }
-    
     return documents;
   }
-
   async find(collectionName: string, query: any): Promise<FSDocument[]> {
     const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     const documents = Array.from(collection.documents.values());
-    
     return documents.filter(doc => {
       for (const [key, value] of Object.entries(query)) {
         if (doc.data[key] !== value) {
@@ -238,15 +175,12 @@ export class FSDatabase {
       return true;
     });
   }
-
   async count(collectionName: string): Promise<number> {
     const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     return collection.documents.size;
   }
-
   async clear(collectionName: string): Promise<void> {
     const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
-    
     // Delete all files
     for (const [id] of collection.documents) {
       const filePath = path.join(collection.path, `${id}.json`);
@@ -254,28 +188,21 @@ export class FSDatabase {
         fs.unlinkSync(filePath);
       }
     }
-    
     collection.documents.clear();
   }
-
   getCollectionNames(): string[] {
     return Array.from(this.collections.keys());
   }
 }
-
 // Singleton instance
 export const fsdb = new FSDatabase();
-
 // Utility functions
 export function createFSDatabase(basePath?: string): FSDatabase {
   return new FSDatabase(basePath);
 }
-
 export function generateId(): string {
   return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function write_json < T>(file_path: string, data: T): void {
   try {
     const fs = require ('fs');
@@ -304,4 +231,3 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
   await mkdir (dir, { recursive: true });
   return dir;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

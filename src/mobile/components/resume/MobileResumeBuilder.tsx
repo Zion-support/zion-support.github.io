@@ -1,51 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import {
-<<<<<<< HEAD
-
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue} from "@/components/ui/select"
-import { Label } from "@/components/ui/label"
-import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { ChevronRight, Zap, Star } from 'lucide-react'
-type ResumeStep = "basics" | "experience" | "education" | "skills"
-import React, { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue} from "@/components/ui/select"
-type ResumeStep = "basics" | "experience" | "education" | "skills"
-export function MobileResumeBuilder() {
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics")
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case "basics": return <BasicsStep />
-      case "experience":
-        return <ExperienceStep />
-      case "education":
-        return <EducationStep />
-      case "skills":
-        return <SkillsStep />
-      default:
-        return <BasicsStep />
-    }
-  }
-=======
 import {;
   Select;
   SelectContent;
@@ -57,9 +9,7 @@ import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { ChevronRight, Zap, Star } from 'lucide-react';
-
 type ResumeStep = "basics" | "experience" | "education" | "skills";
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -74,10 +24,8 @@ import {;
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
 type ResumeStep = "basics" | "experience" | "education" | "skills",;
-
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
-
   const renderStepContent = () => {;
     switch (currentStep) {;
       case "basics": return <BasicsStep />,;
@@ -91,8 +39,6 @@ export function MobileResumeBuilder() {;
         return <BasicsStep />;
     }
   },;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
@@ -121,69 +67,20 @@ export function MobileResumeBuilder() {;
           variant = {currentStep === "skills" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("skills"),}
-<<<<<<< HEAD
-        >
-          Skills
-        </Button>
-      </div>
-      {renderStepContent()}
-      <Button className="w-full flex gap-2" size="lg">
-        <Zap className="h-5 w-5" /> Enhance with AI
-      </Button>
-      <Button variant="default" className="w-full" size="lg">
-        Save & Preview
-      </Button>
-    </div>
-  )
-}
-function BasicsStep() {
-  return (
-    <Card>
-      <CardContent className="p-4 space-y-4">
-        <div className="space-y-2">
-          <Label htmlFor="title">Resume Title</Label>
-          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="fullName">Full Name</Label>
-          <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="phone">Phone Number</Label>
-          <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="location">Location</Label>
-          <Input id="location" name="location" placeholder="City, Country" autoComplete="address-level2" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="summary">Professional Summary</Label>
-          <Textarea
-            id="summary"
-            placeholder="Write a brief summary about yourself"
-=======
         >;
           Skills;
         </Button>;
       </div>;
-
       {renderStepContent()}
-
       <Button className="w-full flex gap-2" size="lg">;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
-
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
     </div>;
   );
 }
-
 function BasicsStep() {;
   return (
     <Card>;
@@ -213,7 +110,6 @@ function BasicsStep() {;
           <Textarea
             id="summary" 
             placeholder="Write a brief summary about yourself" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             rows = {4,}
           />;
         </div>;
@@ -221,16 +117,6 @@ function BasicsStep() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
-function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }])
-  const addExperience = () => {
-    const newId = (experiences.length + 1).toString()
-    setExperiences([...experiences, { id: newId }])
-  }
-  const removeExperience = (id: string,) => {
-    setExperiences(experiences.filter(exp => exp.id !== id))
-=======
   Select;
   SelectContent;
   SelectItem;
@@ -361,7 +247,6 @@ function ExperienceStep() {
   },
   const remove_experience = (id: string, ) =>: any {
     set_experiences (experiences.filter (exp => exp.id !== id));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const remove_education = (id: string, ) =>: any {
     set_educations (educations.filter (edu => edu.id !== id));
@@ -369,40 +254,21 @@ function ExperienceStep() {
   const remove_skill = (id: string, ) =>: any {
     set_skills (skills.filter (skill => skill.id !== id));
   }
-=======
-
 function ExperienceStep() {;
   const [experiences, setExperiences] = useState([{ id: '1' }]),;
-
   const addExperience = () => {;
     const newId = (experiences && experiences.length + 1).toString(),;
     setExperiences([...experiences, { id: newId }]);
   },;
-
   const removeExperience = (id: string,) => {;
     setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
   };
-
-
   const removeEducation = (id: string,) => {;
     setEducations(educations && educations.filter(edu => edu && edu.id !== id));
   };
-
-
-
   const removeSkill = (id: string,) => {;
     setSkills(skills && skills.filter(skill => skill && skill.id !== id));
   };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

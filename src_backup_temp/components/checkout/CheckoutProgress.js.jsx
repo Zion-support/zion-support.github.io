@@ -16,26 +16,13 @@ export {CheckoutProgress};
 export {CheckoutProgress};
 ;
 export {CheckoutProgress};
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {CheckoutProgress};';
 ;';;';
 ;
 export {CheckoutProgress};
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {CheckoutProgress};
 export {CheckoutProgress};
 export {CheckoutProgress};
 export {CheckoutProgress};
-<<<<<<< HEAD
-
 export {CheckoutProgress};
-=======
-export {CheckoutProgress};
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

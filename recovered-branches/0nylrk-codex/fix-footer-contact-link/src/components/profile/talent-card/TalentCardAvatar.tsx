@@ -1,43 +1,8 @@
-<<<<<<< HEAD
-
-import React from "react";
-<<<<<<< HEAD
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-interface TalentCardAvatarProps {
-=======
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-
 interface TalentCardAvatarProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   profilePicture?: string;
   fullName: string;
 }
-<<<<<<< HEAD
-export function TalentCardAvatar({
-  profilePicture
-  fullName
-}: TalentCardAvatarProps) {
-  // Get initials for avatar fallback
-
-  const getInitials = (name: string) => {
-    return name
-      .split(" ")
-      .map((part) => part[0])
-      .join("")
-      .toUpperCase();
-  }
-
-  return (
-    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
-      <AvatarImage src={profilePicture |undefined} alt={fullName} />
-      <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
-        {getInitials(fullName)}
-      </AvatarFallback>
-    </Avatar>
-  );
-}
-=======
-
 export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCardAvatarProps) {;
   // Get initials for avatar fallback;
   const getInitials = (name: string) => {;
@@ -47,7 +12,6 @@ export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCar
       .join('');
       .toUpperCase();
   };
-
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">;
       <AvatarImage
@@ -60,8 +24,6 @@ export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCar
     </Avatar>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 interface TalentCardAvatarProps {
@@ -89,4 +51,3 @@ function TalentCardAvatar() {
       </AvatarFallback>;
     </Avatar>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

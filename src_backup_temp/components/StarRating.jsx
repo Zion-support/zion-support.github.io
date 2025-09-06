@@ -26,8 +26,4 @@ export default function StarRating(props: any) {}"}
     );,})';';
 export {StarRating};,}
     );,"})';';';
-<<<<<<< HEAD
     );,"})"';';';';
-=======
-    );,"})"';';';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

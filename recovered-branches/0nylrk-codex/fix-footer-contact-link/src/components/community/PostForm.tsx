@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { 
-  Card;
-  CardContent;
-  CardFooter;
-  CardHeader;
-  CardTitle
-} from "@/components/ui/card",
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea";
-import { ForumCategory } from "@/types/community";
-interface PostFormValues {
-
-  title: string
-  content: string
-  categoryId: ForumCategory
-
-  tags: string
-}
-interface PostFormProps {
-
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void
-  isEditing?: boolean
-}
-export const PostForm = ({
-  initialValues;
-  onSubmit;
-  isEditing = false
-}: PostFormProps) => {
-  const form = useForm<PostFormValues>({
-    defaultValues: {
-      title: initialValues?.title |""
-      content: initialValues?.content |""
-      categoryId: initialValues?.categoryId |"project-help"
-      tags: initialValues?.tags |""
-=======
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -62,13 +12,11 @@ interface PostFormValues {;
   categoryId: ForumCategory,;
   tags: string;
 }
-
 interface PostFormProps {;
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,;
   isEditing?: boolean;
 }
-
 export const PostForm = ({;
   initialValues;
   onSubmit;
@@ -80,14 +28,9 @@ export const PostForm = ({;
       content: initialValues?.content || "",;
       categoryId: initialValues?.categoryId || "project-help",;
       tags: initialValues?.tags || "";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  const handleSubmit = async (values: PostFormValues) => {
-    setIsSubmitting(true)
-=======
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -125,21 +68,15 @@ export const PostForm = ({
 ;
   const handle_submit = async (values: PostFormValues) => {
     setIsSubmitting (true),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       await on_submit (values);
     } finally {
-<<<<<<< HEAD
-      setIsSubmitting(false)
-=======
-
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
@@ -156,7 +93,6 @@ export const PostForm = ({
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Title</FormLabel>;
-=======
       setIsSubmitting (false);
     }
   }
@@ -175,39 +111,14 @@ export const PostForm = ({
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
-                </FormItem>;
-              )}
-<<<<<<< HEAD
-            />
-=======
             />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="content"
-<<<<<<< HEAD
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Content</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Write your post content here..."
-                      className="min-h-[200px]"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-=======
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Content</FormLabel>;
@@ -222,8 +133,6 @@ export const PostForm = ({
                 </FormItem>;
               )}
             />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="categoryId"
@@ -243,39 +152,10 @@ export const PostForm = ({
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-            />
-=======
             />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="tags"
-<<<<<<< HEAD
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Tags (comma-separated)</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="e.g. resume, hiring, flutter"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-            </Button>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-  )
-}
-=======
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Tags (comma-separated)</FormLabel>;
@@ -289,10 +169,8 @@ export const PostForm = ({
                 </FormItem>;
               )}
             />;
-
             <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -348,23 +226,12 @@ export const PostForm = ({
             />;
             <Button type="submit" disabled={is_submitting}>;
               {is_submitting ? "Submitting..." : is_editing ? "Update Post" : "Create Post"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>;
-  );
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export default PostForm;
-
-=======
     </Card>);
 }
 ;
 export default PostForm;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

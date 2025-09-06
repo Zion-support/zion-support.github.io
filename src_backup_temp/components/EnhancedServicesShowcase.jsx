@@ -228,10 +228,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   >{service.icon}"";";
                   <h3 className="text - xl font-semibold text-white mb-2"> {service.name}"",;
                   </h3>"";";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
           </motion.div>
       </section>
 ""{/* comment */}"";"
@@ -339,10 +335,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   <h4 className="&apos;text-sm" font-semibold text-blue-400 mb-2&apos;>";
                     Key Features&apos;&apos,&apos;&apos;";
                   <ul className="&apos;space-y-1&apos;">;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ""{/* comment */}"";"
                 <div className="bg-white/5 rounded-lg p-4 mb-4">"";"
                   <h4 className = "text - sm font-semibold text-green-400 mb-2">,
@@ -721,10 +713,6 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
 "}} transition = {;
   { "duration": "0.6",;
   "delay": "0.6;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}}>";
             <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>";
             <div className="grid grid-cols-1 "md": "grid-cols-2 gap-4 text-sm text-gray-300">";
@@ -804,10 +792,6 @@ export {EnhancedServicesShowcase}
 ;
 '";
 `"";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </p>;
 </motion>;
 </motion>;

@@ -59,10 +59,6 @@ export function ApiDocumentation("props": "any) {;
 ;
 }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -127,10 +123,6 @@ const response = await fetch(\`"https"://ziontechgroup.com/api/v1/jobs/\${jobId;
 ;
 }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -195,10 +187,6 @@ print(data)`;
       "max": "10000",;
   "currency": "USD";
     ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 },;
     "deadline": "2025-06-"30T23":"59": "59Z";
   "}'`,;
@@ -267,10 +255,6 @@ print(data)`;
   })
 }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -348,10 +332,6 @@ print(data)`;
 ;
 }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -410,10 +390,6 @@ const response = await fetch(\`"https"://ziontechgroup.com/api/v1/talent/\${tale
 ;
 }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -489,10 +465,6 @@ print(data)`;
     "requester_name": "John Doe",;
   "requester_email": "john@example.com";
   ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 }'`,;
             "javascript": "`const response = await fetch('"https"://ziontechgroup.com/api/v1/quotes'", {;
   "method": 'POST',;
@@ -529,10 +501,6 @@ print(data)`;
     requester_email: 'john@example.com'})
 }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -603,10 +571,6 @@ print(data)`;
 ;
 }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -634,10 +598,6 @@ print(data)`;
       "viewed_at": "null",;
   "replied_at": "null;
     ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "},;
     // More quotes...;
   ],;
@@ -894,11 +854,6 @@ function EndpointSection("props": "any) {;
                 : method === 'PUT';
                     ? "border-yellow-500 text-yellow-400 font-mono";
                     : "border-red-500 text-red-400 font-mono""}>;
-<<<<<<< HEAD
-  
-  
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received')}
     );`} language="javascript" showLineNumbers={true}/>

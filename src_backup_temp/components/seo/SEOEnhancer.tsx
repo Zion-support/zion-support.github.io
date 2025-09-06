@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React, { useEffect } from 'react';""',';';';';
     ';';';';';
 import React, {useEffect } from 'react';"',';';';';
@@ -20,29 +15,16 @@ import React, { useEffect } from 'react';""',';';';';
     ';';';';';
 import React, { useEffect } from 'react',;',';';';';
     ';';';';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React, { useEffect } from 'react';""',';';
     ';';';
 import React, {useEffect } from 'react';"',';';
     ';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Head from 'next/head;
 interface SEOEnhancerProps {;
 title?: "string;'",';';
   ';';';: "any;
   import React", { "useEffect": "any;
 "} from &apos;react',';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Head from 'next/head';';';';
 interface SEOEnhancerProps {
 title?: string;',';';
@@ -55,30 +37,14 @@ import Head from &apos;next/head;';
 import React, { useEffect } from 'react';""',';';
     ';';';
 import React, { useEffect } from 'react',;',';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    ;
-import Head from 'next/head';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     ';';';';
     ;
 import Head from 'next/head';
 interface SEOEnhancerProps {;
   title?: "string;
-<<<<<<< HEAD
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   keywords?: string;';
   canonical?: string;';';
   ogImage?: string;';';';
@@ -207,25 +173,13 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({
     "address": {"
       "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008","
       "addressLocality": "Middletown", "addressRegion": "DE","
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   keywords?: string;
   canonical?: string;
   ogImage?: string;';
   ogType?: string;';';
   twitterCard?: string;';';';
-<<<<<<< HEAD
   structuredData?: any;
 "}&apos;&apos;',';';
-=======
-<<<<<<< HEAD
-=======
-  structuredData?: any;
-"}&apos;&apos;',';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   structuredData?: any
 }&apos;&apos;',';';
     ';';';
@@ -288,11 +242,6 @@ export const "SEOEnhancer": "React.FC<SEOEnhancerProps> = ({""'",';';
     );}
     );""',';';
     ';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       observer.observe({ "entryTypes": "['navigation'] "});}
   }, [title]);
   const defaultStructuredData = {"";
@@ -314,10 +263,6 @@ export const "SEOEnhancer": React.FC<SEOEnhancerProps> = ({;
   keywords = &apos;AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting&apos,;
   canonical,;
   ogImage = &apos;"https": "//ziontechgroup.com/og-image.jpg&apos",';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       observer.observe({ entryTypes: ['navigation'] }
     );}
   }, [title]);
@@ -371,11 +316,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       }
     );',';';
     ';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       observer.observe({ "entryTypes": "['navigation']   "});',';';
     ';';';
       observer.observe({"entryTypes": "['navigation'] "});';';
@@ -389,10 +329,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "address": "{";
       "@type": "PostalAddress"", "streetAddress": "364 E Main St STE 1008",";
       "addressLocality": "Middletown", "addressRegion": "DE",";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       "postalCode": "19709", "addressCountry": "US";
 },";
     "contactPoint": "{";
@@ -518,11 +454,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta property=""og": "descriptio n" content={description"}   />"';';';
       <meta property=""og": "typ e" content={ogType"}   />"',';';
     ';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property=""og": "ur l" content={canonical || 'http",;
     "s": "//ziontechgroup.com'"}   />;
       <meta property=""og": "imag e" content={ogImage"}   />";
@@ -554,10 +485,6 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta httpEquiv="X-Frame-Options" content="DENY" /" >"";
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /" >;
     </Head>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property="og: ur l" content={canonical || 'http,';';';';
     s://ziontechgroup.com'}   />
       <meta property="og: imag e" content={ogImage}   />"
@@ -625,11 +552,6 @@ export default SEOEnhancer;"
       <meta property=""og": "descriptio n" content={description"} /" >"';';';
       <meta property=""og": "typ e" content={ogType"} /" >"',';';
     ';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property=""og": "ur l" content={canonical || '"https"://ziontechgroup.com'"} /" >";
       <meta property=""og": "imag e" content={ogImage"} /" >";
       <meta property=""og": "site_nam e" content="Zion Tech Group" /" >";
@@ -658,10 +580,6 @@ export default SEOEnhancer;"
       <meta httpEquiv="X-Frame-Options" content="DENY" /"" >"";
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /"" >;
     </Head>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'} /" >"
       <meta property="og: imag e" content={ogImage} /" >"
       <meta property="og: site_nam e" content="Zion Tech Group" /" >"
@@ -720,11 +638,6 @@ export default SEOEnhancer;""
       <meta name=&quot;keywords&quot; content={keywords}   />&quot;
       <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;   />
       {/* Open Graph */}&quot;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property=&quot;"og": "titl e&quot; content={title"}   />&quot;
       <meta property=&quot;"og": "descriptio n&quot; content={description"}   />&quot;
       <meta property=&quot;"og": "typ e&quot; content={ogType"}   />&quot;
@@ -745,19 +658,10 @@ export default SEOEnhancer;""
       <meta name=""twitter": "descriptio n" content={description"} /" >";
       <meta name=""twitter": "imag e" content={ogImage"} /" >;
       {/* Canonical URL */}";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property=&quot;og: titl e&quot; content={title}   />&quot;
       <meta property=&quot;og: descriptio n&quot; content={description}   />&quot;
       <meta property=&quot;og: typ e&quot; content={ogType}   />&quot;
       <meta property=&quot;og: ur l&quot; content={canonical || &apos;http,s: //ziontechgroup.com&apos}   />&apos;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property=&quot;og: imag e&quot; content={ogImage}   />&quot;';
       <meta property=&quot;og: site_nam e&quot; content=&quot;Zion Tech Group&quot;   />';';
       {/* Open Graph */}';';';
@@ -765,10 +669,6 @@ export default SEOEnhancer;""
       <meta property="og: descriptio n" content={description}   />';';';';';
       <meta property="og: typ e" content={ogType}   />',';';';';
     ';';';';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property=&quot;og: imag e&quot; content={ogImage}   />&quot;
       <meta property=&quot;og: site_nam e&quot; content=&quot;Zion Tech Group&quot;   />
       {/* Open Graph */}';
@@ -783,11 +683,6 @@ export default SEOEnhancer;""
       <meta name="twitter: car d" content={twitterCard} /" >"
       <meta name="twitter: titl e" content={title} /" >"
       <meta name="twitter: descriptio n" content={description} /" >"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta name="twitter: imag e" content={ogImage} /" >';
       {/* Canonical URL */}"';';
       {canonical && <link rel="canonical" href={canonical} /" >}, {/* Structured Data */}';';';
@@ -798,10 +693,6 @@ export default SEOEnhancer;""
       <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'}   />
       <meta property="og: imag e" content={ogImage}   />
       <meta property="og: site_nam e" content="Zion Tech Group"   />
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property=&quot;og: imag e&quot; content={ogImage}   />&quot;
       <meta property=&quot;og: site_nam e&quot; content=&quot;Zion Tech Group&quot;   />;
       {/* Open Graph */}';
@@ -825,11 +716,6 @@ export default SEOEnhancer;""
       <meta property=""og": "descriptio n" content={description"}   />';';';
       <meta property=""og": "typ e" content={ogType"}   />',';';
     ';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'}   />;
       <meta property="og: imag e" content={ogImage}   />;
       <meta property="og: site_nam e" content="Zion Tech Group"   />;
@@ -864,10 +750,6 @@ export default SEOEnhancer;""
       <link rel="preconnect" href=""https"://fonts.gstatic.com" crossOrigin="anonymous"   />;
       <link rel="dns-prefetch" href=""https"://ziontechgroup.com"   />;
       {/* Security headers */"}&quot;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <meta property="og: ur l" content={canonical || 'https://ziontechgroup.com'}   />
       <meta property="og: imag e" content={ogImage}   />
       <meta property="og: site_nam e" content="Zion Tech Group"   />
@@ -897,11 +779,6 @@ export default SEOEnhancer;""
       <meta httpEquiv=&quot;X-Content-Type-Options&quot; content=&quot;nosniff&quot;   />&quot;
       <meta httpEquiv=&quot;X-Frame-Options&quot; content=&quot;DENY&quot;   />&quot;
       <meta httpEquiv=&quot;X-XSS-Protection&quot; content=&quot;1; mode=block&quot;   />&quot;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </Head>';
   );';';
 };';';';
@@ -912,22 +789,12 @@ export default SEOEnhancer;';';';';';
 </SEOEnhancerProps>
 </SEOEnhancerProps>';
 </SEOEnhancerProps>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </Head>;
     </Head>
   );
 };';
 export default SEOEnhancer';';
 export default SEOEnhancer;';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-"';';';';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ";
 </script>;
 </script>;
@@ -946,10 +813,6 @@ export default SEOEnhancer;';';';
 </SEOEnhancerProps>;
 </SEOEnhancerProps>;
 </SEOEnhancerProps>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </script>
 </script>
 </script>
@@ -957,12 +820,4 @@ export default SEOEnhancer;';';';
 </SEOEnhancerProps>
 </SEOEnhancerProps>
 </SEOEnhancerProps>
-<<<<<<< HEAD
 </SEOEnhancerProps>
-=======
-<<<<<<< HEAD
-</SEOEnhancerProps>
-=======
-</SEOEnhancerProps>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

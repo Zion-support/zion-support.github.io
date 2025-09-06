@@ -28,10 +28,6 @@ export default function Page("props": "any) {;
             "transition": "{;
                 "duration": 0.3",";
   "ease": "easeOut";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 interface ServiceCard.jsProps {
   // Add props here as needed
 }
@@ -40,15 +36,8 @@ interface ServiceCard.jsProps {
     const badgeVariants = {;
   "hidden": "{ "scale": 0",;
   "opacity": "0;
-<<<<<<< HEAD
-
   hidden: { scale: 0,
   opacity: 0
-
-=======
-  hidden: { scale: 0,
-  opacity: 0
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "},;
         "visible": "{;
             "scale": 1",;
@@ -107,10 +96,6 @@ interface ServiceCard.jsProps {
               {category}
             </motion.span>;
           </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
           {/* Enhanced Title */}";
           <h3 className="text-xl font-bold text-white mb-4 text-center group-"hover": "text-zion-cyan transition-all duration-300 group-"hover":scale-105">;
             {title"}
@@ -118,11 +103,6 @@ interface ServiceCard.jsProps {
           {/* Enhanced Title */}"
           <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-zion-cyan transition-all duration-300 group-hover:scale-105">
             {title}
-<<<<<<< HEAD
-          
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
           {/* Enhanced Description */}";
           <p className="text-zion-slate-light text-sm leading-relaxed mb-6 text-center group-"hover": "text-white transition-colors duration-300">;
             {description"}
@@ -195,10 +175,6 @@ export {ServiceCard};
 </motion>;
 </motion>;
 </motion>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>
 </motion>
 </motion>
@@ -214,8 +190,4 @@ export default function ServiceCard.js({ }: ServiceCard.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

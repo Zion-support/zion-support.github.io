@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
-
-const REGION_OPTIONS = [
-  { id: "North America", label: "North America" }
-  { id: "Europe", label: "Europe" }
-  { id: "Asia", label: "Asia" }
-  { id: "South America", label: "South America" }
-  { id: "Australia", label: "Australia" }
-=======
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
 import {RegionFilterProps} from "@/types/filters";
@@ -21,7 +7,6 @@ const REGION_OPTIONS = [;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { id: "Africa", label: "Africa" }
 ];
 export function RegionFilter({
@@ -31,11 +16,7 @@ export function RegionFilter({
   toggleSection
   isMobileFilterOpen
 }: RegionFilterProps) {
-
-<<<<<<< HEAD
-=======
 export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
@@ -47,20 +28,11 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-<<<<<<< HEAD
-      </button>
-      {expanded && (
-        <div className="mt-4 space-y-2">
-          {REGION_OPTIONS.map((region) => (
-            <div key={region.id} className="flex items-center">
-=======
       </button>;
-
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {REGION_OPTIONS && REGION_OPTIONS.map(region => (;
             <div key={region && region.id} className="flex items-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Checkbox
                 id={`region-${region && region.id}`}
                 checked={selectedRegions && selectedRegions.includes(region && region.id)}
@@ -76,16 +48,9 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-  );
-}
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { RegionFilterProps  } from '@/types / filters';
@@ -133,4 +98,3 @@ function RegionFilter() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

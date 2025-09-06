@@ -1,21 +1,6 @@
-<<<<<<< HEAD
 import { toast   } from 'react-hot-toast';
 import { toast } from 'react-hot-toast'
 import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "number"} position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): "{ const showToast = ("message": 'string'",options?: "ToastOptions) => { return toast(message",options) return { showToast }};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/ui/use-toast.ts
-import { toast   } from 'react-hot-toast';
-import { toast } from 'react-hot-toast'
-
-import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "number"} position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): "{ const showToast = ("message": 'string'",options?: "ToastOptions) => { return toast(message",options) return { showToast }};
-
-=======
-import { toast   } from 'react-hot-toast';
-import { toast } from 'react-hot-toast'
-import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "number"} position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): "{ const showToast = ("message": 'string'",options?: "ToastOptions) => { return toast(message",options) return { showToast }};
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { toast } from 'react-hot-toast'
 interface ToastOptions {
   duration?: number;
@@ -26,12 +11,4 @@ export function useToast() {
     return toast(message, options);
   };
   return { showToast };
-<<<<<<< HEAD
 };
-=======
-<<<<<<< HEAD
-};
-=======
-};
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,52 +1,33 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {
-<<<<<<< HEAD
-  LineChart
-  BarChart
-  DonutChart;
-} from '../components/salary/InsightCharts';
-=======
   LineChart,
   BarChart,
   DonutChart,
 } from '../components / salary / InsightCharts';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 type InsightResponse = {
-=======
 import {;
   LineChart,;
   BarChart,;
   DonutChart,;
 } from '../components/salary/InsightCharts';
-
 type InsightResponse = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
   medianHourlyUsd: number;
@@ -56,26 +37,10 @@ type InsightResponse = {;
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-  gptRecommendation?: string;};  recommendedHourlyUsd: number
-  recommendedMonthlyUsd: number
-  medianHourlyUsd: number
-  minHourlyUsd: number
-  maxHourlyUsd: number
-  confidence: number
-  trendMonthly: { label: string, value: number }[]
-  regionalComparison: { region: string, medianHourlyUsd: number }[]
-  tags: string[]
-  gptRecommendation?: string
-=======
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
-
 type InsightResponse = {
   recommendedHourlyUsd: number,
-=======
   gpt_recommendation?: string;}  recommendedHourlyUsd: number,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   recommendedMonthlyUsd: number,
   medianHourlyUsd: number,
   minHourlyUsd: number,
@@ -84,13 +49,6 @@ type InsightResponse = {
   trend_monthly: { label: string, value: number }[],
   regional_comparison: { region: string, medianHourlyUsd: number }[],
   tags: string[],
-<<<<<<< HEAD
-  gptRecommendation?: string
-};
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-export default function SalaryInsightsPage() {
-=======
   gptRecommendation?: string;};  recommendedHourlyUsd: number,;
   recommendedMonthlyUsd: number,;
   medianHourlyUsd: number,;
@@ -101,36 +59,18 @@ export default function SalaryInsightsPage() {
   regionalComparison: { region: string, medianHourlyUsd: number }[],;
   tags: string[],;
   gptRecommendation?: string;
-
 export default function SalaryInsightsPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
-<<<<<<< HEAD
-  const [experienceLevel, setExperienceLevel] = useState<;
-    'Junior' | 'Mid' | 'Senior' | 'Lead';
-  >('Senior');
-  const [remote, setRemote] = useState(true);
-  const [employmentType, setEmploymentType] = useState<;
-    'contract' | 'freelance' | 'full-time';
-  >('contract');  const [loading, setLoading] = useState(false);  const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
-=======
   const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-<<<<<<< HEAD
-  useEffect(() => {
-<<<<<<< HEAD
-    // Lightweight login check via Supabase client if available; otherwise public mode    (async () => {
-=======
     // Lightweight login check via Supabase client if available, otherwise public mode
-=======
   gpt_recommendation?: string;
 export default /**
  * SalaryInsightsPage - Function description
@@ -159,64 +99,19 @@ function SalaryInsightsPage() {
         const { supabase } = await import ('../utils / supabase / client');
         const user = await supabase.auth.get_user ();
         setIsLoggedIn (!!user.data.user);    // Lightweight login check via Supabase client if available, otherwise public mode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     (async () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       try {
-<<<<<<< HEAD
-=======
-
   useEffect(() => {;
     // Lightweight login check via Supabase client if available; otherwise public mode    (async () => {;
       try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         const { supabase } = await import('../utils/supabase/client');
-<<<<<<< HEAD
-        const user = await supabase && supabase.auth.getUser();
-        setIsLoggedIn(!!user && user.data.user);    // Lightweight login check via Supabase client if available, otherwise public mode;
-    (async () => {;
-      try {;
-        const { supabase } = await import('../utils/supabase/client');
-        const user = await supabase && supabase.auth.getUser();
-        setIsLoggedIn(!!user && user.data.user);
-      } catch {;
-        setIsLoggedIn(false);
-      }
-    })();  }, []);      } catch {;
-        setIsLoggedIn(false);
-      }
-    })();
-=======
         const user = await supabase.auth.getUser();
         setIsLoggedIn(!!user.data.user)
       } catch {
         setIsLoggedIn(false)
       }
     })()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, []);
-<<<<<<< HEAD
-  async function fetchInsights() {
-    setLoading(true);
-    setError(null);
-    try {
-      const res = await fetch('/api/salary-insights', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-<<<<<<< HEAD
-          roleTitle
-          skills: skills
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-          region
-          experienceLevel
-          remote
-          employmentType
-        })
-=======
-
   async function fetchInsights() {;
     setLoading(true);
     setError(null);
@@ -235,17 +130,10 @@ function SalaryInsightsPage() {
           remote,;
           employmentType,;
         }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       if (!res && res.ok) throw new Error('Failed to fetch insights');
       const json = (await res && res.json()) as InsightResponse;
       setData(json);
-<<<<<<< HEAD
-    } catch (e: any) {
-      setError(e.message |'Unexpected error');
-    } finally {
-      setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
-=======
           roleTitle;
           skills: skills.split().map((s) => s.trim()).filter(Boolean),
           region;
@@ -253,18 +141,12 @@ function SalaryInsightsPage() {
           remote;
           employmentType})});
       if (!res.ok) throw new Error('Failed to fetch insights');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       const json = (await res.json()) as InsightResponse;
       setData(json)
     } catch (e: any) {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
-<<<<<<< HEAD
-    }
-  }
-  useEffect(() => {
-=======
     } catch (e: any) {;
       setError(e && e.message || 'Unexpected error');
     } finally {;
@@ -275,36 +157,14 @@ function SalaryInsightsPage() {
       setError(e && e.message || 'Unexpected error');
     } finally {;
       setLoading(false);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
-
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  function saveInsight() {
-    const payload = {
-      createdAt: new Date().toISOString()
-      input: {
-        roleTitle
-        skills
-        region
-        experienceLevel
-        remote
-        employmentType
-      }
-      output: data
-    };    (async () => {    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data }
-=======
-
   function saveInsight() {
     const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
@@ -312,11 +172,6 @@ function SalaryInsightsPage() {
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
           await supabase.from('salary_insights').insert({
-<<<<<<< HEAD
-            user_id: user.data.user.id
-            payload
-=======
-
   function saveInsight() {;
     const payload = {;
       createdAt: new Date().toISOString(),;
@@ -339,8 +194,6 @@ function SalaryInsightsPage() {
           await supabase && supabase.from('salary_insights').insert({;
             user_id: user && user.data.user && user.id,;
             payload,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         const { supabase } = await import ('../utils / supabase / client');
         const user = await supabase.auth.get_user ();
         setIsLoggedIn (!!user.data.user);
@@ -427,81 +280,46 @@ if ( {) {
           await supabase.from ('salary_insights').insert ({
             user_id: user.data.user.id,
             payload,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           });
           alert ('Insight saved to your profile');
           return;
         }
-<<<<<<< HEAD
-      } catch {;
-        // fall back      }          alert('Insight saved to your profile');
-          return;
-=======
             user_id: user.data.user.id,
             payload});
           alert('Insight saved to your profile');
           return
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       } catch {
         // fall back      }          alert ('Insight saved to your profile');
           return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       } catch {;
         // fall back;
       }
-<<<<<<< HEAD
-      try {
-<<<<<<< HEAD
-        const key = 'zion.salary-insights.history';
-        const history = JSON.parse(localStorage.getItem(key) |'[]');
-        history.unshift(payload);
-        localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
-<<<<<<< HEAD
-=======
       try {;
         const key = 'zion && zion.salary-insights && insights.history';
         const history = JSON && JSON.parse(localStorage && localStorage.getItem(key) || '[]');
         history && history.unshift(payload);
         localStorage && localStorage.setItem(key, JSON && JSON.stringify(history && history.slice(0, 50)));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         alert('Insight saved locally');
       } catch {}
     })();
   }
-<<<<<<< HEAD
-  const donutData = useMemo(() => {
-    if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
-=======
         alert('Insight saved locally')
       } catch {}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     })()
   }
   const donutData = useMemo(() => {
-<<<<<<< HEAD
-    if (!data) return [] as { label: string, value: number }[]
-=======
     if (!data) return [] as { label: string, value: number }[],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
     const lower = Math.max(0, median - min);
     const upper = Math.max(0, max - median);
     return [
-<<<<<<< HEAD
-      { label: 'Below Median', value: lower |1 }
-      { label: 'Median', value: median |1 }
-      { label: 'Above Median', value: upper |1 }
-=======
-
   const donutData = useMemo(() => {;
     if (!data) return [] as { label: string; value: number }[];    const min = data && data.minHourlyUsd;      } catch {}
     })();
   }
-
   const donutData = useMemo(() => {;
     if (!data) return [] as { label: string, value: number }[],;
     const min = data && data.minHourlyUsd;
@@ -513,17 +331,11 @@ if ( {) {
       { label: 'Below Median', value: lower || 1 },;
       { label: 'Median', value: median || 1 },;
       { label: 'Above Median', value: upper || 1 },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ];  }, [data]);
   return (
-<<<<<<< HEAD
-    <div>      { label: 'Above Median', value: upper |1 }]
-=======
       { label: 'Below Median', value: lower || 1 },
       { label: 'Median', value: median || 1 },
       { label: 'Above Median', value: upper || 1 }]
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         const key = 'zion.salary - insights.history';
         const history = JSON.parse (local_storage.get_item (key) || '[]');
         history.unshift (payload);
@@ -557,62 +369,14 @@ if (return [] as { label: string, value: number }[], ) {
 ;
   return (
     <div>      { label: 'Above Median', value: upper || 1 }];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }, [data]);
 ;
   return (
-<<<<<<< HEAD
-    <div>
-<<<<<<< HEAD
-      <div className='relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow'>
-        <div className='relative z-10'>
-          <h1 className='text-2xl font-semibold'>Salary Insights</h1>
-          <p className='opacity-90'>
-            Benchmark rates and set competitive offers in real-time.
-          </p>
-        </div>
-        <div className='absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl' />
-      </div>
-      <div className='mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6'>
-        <div className='lg:col-span-1 space-y-4'>
-          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-            <h2 className='font-medium mb-3'>Filters</h2>
-            <label className='block text-sm mb-2'>Role title</label>
-            <input
-              value={roleTitle}
-              onChange={e => setRoleTitle(e.target.value)}
-              className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
-              placeholder='e.g., Senior AI Engineer'
-            />
-            <label className='block text-sm mt-3 mb-2'>Skills</label>
-            <input
-              value={skills}
-              onChange={e => setSkills(e.target.value)}
-              className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
-              placeholder='Comma-separated'
-            />
-            <label className='block text-sm mt-3 mb-2'>Region</label>
-            <input
-              value={region}
-              onChange={e => setRegion(e.target.value)}
-              className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
-              placeholder='City, Country'
-            />
-            <div className='grid grid-cols-2 gap-3 mt-3'>
-              <div>
-                <label className='block text-sm mb-2'>Experience</label>
-                <select
-                  value={experienceLevel}
-                  onChange={e => setExperienceLevel(e.target.value as any)}
-                  className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
-                >                  <option>Junior</option>        </div>
-=======
       <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow">
         <div className="relative z-10">
           <h1 className="text-2xl font-semibold">Salary Insights</h1>
           <p className="opacity-90">Benchmark rates and set competitive offers in real-time.</p>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
       </div>
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -636,33 +400,13 @@ if (return [] as { label: string, value: number }[], ) {
                 </select>
               </div>
               <div>
-<<<<<<< HEAD
-                <label className='block text-sm mb-2'>Employment</label>
-                <select
-                  value={employmentType}
-                  onChange={e => setEmploymentType(e.target.value as any)}
-                  className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
-                >
-                  <option value='contract'>Contract</option>
-                  <option value='freelance'>Freelance</option>
-                  <option value='full-time'>Full-time</option>                </select>
-              </div>
-            </div>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
                   <option value="contract">Contract</option>
                   <option value="freelance">Freelance</option>
                   <option value="full-time">Full-time</option>
-<<<<<<< HEAD
-              </div>
-            </div>
-            <div className='flex items-center gap-2 mt-3'>
-=======
     <div>      { label: 'Above Median', value: upper || 1 }];
   }, [data]);
-
   return (
     <div>;
       <div className='relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow'>;
@@ -674,7 +418,6 @@ if (return [] as { label: string, value: number }[], ) {
         </div>;
         <div className='absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl' />;
       </div>;
-
       <div className='mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6'>;
         <div className='lg:col-span-1 space-y-4'>;
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
@@ -686,7 +429,6 @@ if (return [] as { label: string, value: number }[], ) {
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm';
               placeholder='e && e.g., Senior AI Engineer';
             />;
-
             <label className='block text-sm mt-3 mb-2'>Skills</label>;
             <input
               value={skills}
@@ -694,7 +436,6 @@ if (return [] as { label: string, value: number }[], ) {
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm';
               placeholder='Comma-separated';
             />;
-
             <label className='block text-sm mt-3 mb-2'>Region</label>;
             <input
               value={region}
@@ -702,7 +443,6 @@ if (return [] as { label: string, value: number }[], ) {
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm';
               placeholder='City, Country';
             />;
-
             <div className='grid grid-cols-2 gap-3 mt-3'>;
               <div>;
                 <label className='block text-sm mb-2'>Experience</label>;
@@ -713,20 +453,16 @@ if (return [] as { label: string, value: number }[], ) {
                 >                  <option>Junior</option>        </div>;
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />;
       </div>;
-
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">;
         <div className="lg:col-span-1 space-y-4">;
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
             <h2 className="font-medium mb-3">Filters</h2>;
             <label className="block text-sm mb-2" htmlFor="input-Role title">Role title</label>;
             <input value={roleTitle} onChange={(e) => setRoleTitle(e && e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e && e.g., Senior AI Engineer" />;
-
             <label className="block text-sm mt-3 mb-2" htmlFor="input-Skills">Skills</label>;
             <input value={skills} onChange={(e) => setSkills(e && e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="Comma-separated" />;
-
             <label className="block text-sm mt-3 mb-2" htmlFor="input-Region">Region</label>;
             <input value={region} onChange={(e) => setRegion(e && e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City, Country" />;
-
             <div className="grid grid-cols-2 gap-3 mt-3">;
               <div>;
                 <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>;
@@ -756,30 +492,14 @@ if (return [] as { label: string, value: number }[], ) {
                   <option value="full-time">Full-time</option>;
               </div>;
             </div>;
-
             <div className='flex items-center gap-2 mt-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <input
                 id='remote'
                 type='checkbox'
                 checked={remote}
-<<<<<<< HEAD
-                onChange={e => setRemote(e.target.checked)}
-              />
-              <label htmlFor='remote' className='text-sm'>
-                Remote role
-              </label>
-            </div>
-            {!isLoggedIn && (
-              <div className='mt-3 text-xs text-gray-500'>                Advanced filters are available when you sign in.
-              </div>
-            )}
-=======
                 </select>
               </div>
             </div>
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="flex items-center gap-2 mt-3">
               <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e.target.checked)} />
               <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>
@@ -788,56 +508,19 @@ if (return [] as { label: string, value: number }[], ) {
               <div className="mt-3 text-xs text-gray-500">
                 Advanced filters are available when you sign in.
               </div>
-=======
                 onChange={e => setRemote(e && e.target.checked)}
               />;
               <label htmlFor='remote' className='text-sm'>;
                 Remote role;
               </label>;
             </div>;
-
-<<<<<<< HEAD
-            {!isLoggedIn && (;
-              <div className='mt-3 text-xs text-gray-500'>                Advanced filters are available when you sign in.;
-              </div>;
-            )}
-            <div className="flex items-center gap-2 mt-3">;
-              <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e && e.target.checked)} />;
-              <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>;
-            </div>;
-
-            {!isLoggedIn && (;
-              <div className="mt-3 text-xs text-gray-500">;
-                Advanced filters are available when you sign in.;
-              </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            )}
-            <button
-              onClick={fetchInsights}
-              disabled={loading}
-              className='mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50'>              {loading ? 'Calculating…' : 'Update Insights'}
-            </button>;
-          </div>;
-            <button onClick={fetchInsights} disabled={loading} className="mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50">;
-=======
             <button onClick={fetchInsights} disabled={loading} className="mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               {loading ? 'Calculating…' : 'Update Insights'}
-<<<<<<< HEAD
-            </button>
-          </div>
-<<<<<<< HEAD
-          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-            <h3 className='font-medium mb-2'>Actions</h3>
-            <div className='flex flex-col gap-2'>
-=======
             </button>;
           </div>;
-
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
             <h3 className='font-medium mb-2'>Actions</h3>;
             <div className='flex flex-col gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <button
                 onClick={saveInsight}
                 className='rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900'>;
@@ -853,31 +536,13 @@ if (return [] as { label: string, value: number }[], ) {
                 onClick={() =>;
                   alert('This would suggest a resume rate optimization.');
                 }
-<<<<<<< HEAD
-                className='rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700'
-              >
-                Optimize Resume Rate
-              </button>            </div>
-          </div>
-        </div>
-        <div className='lg:col-span-2 space-y-6'>          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-=======
-
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <h3 className="font-medium mb-2">Actions</h3>
             <div className="flex flex-col gap-2">
               <button onClick={saveInsight} className="rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900">Save insight</button>
               <button onClick={() => alert('This would prefill a job posting flow.')} className="rounded bg-emerald-600 text-white py-2 text-sm hover:bg-emerald-700">Use in Job Post</button>
               <button onClick={() => alert('This would suggest a resume rate optimization.')} className="rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700">Optimize Resume Rate</button>
-<<<<<<< HEAD
-          </div>
-        </div>
-        <div className='lg:col-span-2 space-y-6'>
-            <div className='rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm'>
-=======
                 className='rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700';
-=======
     <div>;
       <div className='relative overflow - hidden rounded - xl bg - gradient - to - r from - indigo - 600 via - violet - 600 to - fuchsia - 600 p - 6 text - white shadow'>;
         <div className='relative z - 10'>;
@@ -1015,35 +680,11 @@ if (return [] as { label: string, value: number }[], ) {
                   alert ('This would suggest a resume rate optimization.');
                 }
                 className='rounded bg - blue - 600 text - white py - 2 text - sm hover:bg - blue - 700';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               >;
                 Optimize Resume Rate;
               </button>            </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
-
-        <div className='lg:col-span-2 space-y-6'>          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
-            <h3 className="font-medium mb-2">Actions</h3>;
-            <div className="flex flex-col gap-2">;
-              <button onClick={saveInsight} className="rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900">Save insight</button>;
-              <button onClick={() => alert('This would prefill a job posting flow.')} className="rounded bg-emerald-600 text-white py-2 text-sm hover:bg-emerald-700">Use in Job Post</button>;
-              <button onClick={() => alert('This would suggest a resume rate optimization.')} className="rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700">Optimize Resume Rate</button>;
-          </div>;
-        </div>;
-
-        <div className='lg:col-span-2 space-y-6'>;
-            <div className='rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-              {error}
-            </div>;
-          )}
-<<<<<<< HEAD
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <div className='text-xs text-gray-500'>Recommended Hourly</div>
-              <div className='text-xl font-semibold'>
-=======
         <div className='lg:col - span - 2 space - y-6'>          <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
             <h3 className="font - medium mb - 2">Actions</h3>;
             <div className="flex flex - col gap - 2">;
@@ -1060,7 +701,6 @@ if (return [] as { label: string, value: number }[], ) {
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <div className='text - xs text - gray - 500'>Recommended Hourly</div>;
               <div className='text - xl font - semibold'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {data ? `$${data.recommendedHourlyUsd}` : '—'}
               </div>;
             </div>;
@@ -1074,44 +714,13 @@ if (return [] as { label: string, value: number }[], ) {
               <div className='text - xs text - gray - 500'>Median</div>;
               <div className='text - xl font - semibold'>;
                 {data ? `$${data.medianHourlyUsd}` : '—'}
-<<<<<<< HEAD
-              </div>
-            </div>
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <div className='text-xs text-gray-500'>Confidence</div>
-              <div className='text-xl font-semibold'>
-                {data ? `${Math.round(data.confidence * 100)}%` : '—'}
-              </div>
-            </div>
-          </div>
-          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-            <h3 className='font-medium mb-3'>Trend: Last 12 months</h3>
-            {data ? (
-              <LineChart points={data.trendMonthly} />
-            ) : (
-              <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />
-            )}
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <h3 className='font-medium mb-3'>Regional comparison</h3>
-              {data ? (
-                <BarChart
-                  data={data.regionalComparison.map(r => ({
-                    label: r.region
-                    value: r.medianHourlyUsd
-=======
-=======
             </div>
           </div>
         </div>
-
         <div className="lg:col-span-2 space-y-6">
           {error && (
             <div className="rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm">{error}</div>
           )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
           <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <div className='text-xs text-gray-500'>Recommended Hourly</div>;
@@ -1138,7 +747,6 @@ if (return [] as { label: string, value: number }[], ) {
               </div>;
             </div>;
           </div>;
-
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
             <h3 className='font-medium mb-3'>Trend: Last 12 months</h3>;
             {data ? (;
@@ -1147,7 +755,6 @@ if (return [] as { label: string, value: number }[], ) {
               <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
             )}
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <h3 className='font-medium mb-3'>Regional comparison</h3>;
@@ -1156,32 +763,11 @@ if (return [] as { label: string, value: number }[], ) {
                   data={data && data.regionalComparison.map(r => ({;
                     label: r && r.region,;
                     value: r && r.medianHourlyUsd,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }))}
                 />;
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
-<<<<<<< HEAD
-              {data && (;
-                <table className='w-full mt-3 text-sm'>;
-                  <thead>;
-                    <tr className='text-left text-xs text-gray-500'>;
-                      <th className='py-1'>Region</th>;
-                      <th className='py-1'>Median (USD/hr)</th>;
-                    </tr>;
-                  </thead>;
-                  <tbody>;
-                    {data && data.regionalComparison.map(r => (;
-                      <tr
-                        key={r && r.region}
-                        className='border-t border-gray-100 dark:border-gray-900'>;
-                        <td className='py-1'>{r && r.region}</td>;
-                        <td className='py-1'>${r && r.medianHourlyUsd}</td>                      </tr>                    {data && data.regionalComparison.map((r) => (;
-                      <tr key={r && r.region} className="border-t border-gray-100 dark:border-gray-900">;
-                        <td className="py-1">{r && r.region}</td>;
-                        <td className="py-1">${r && r.medianHourlyUsd}</td>;
-=======
               {data && (
                 <table className="w-full mt-3 text-sm">
                   <thead>
@@ -1196,17 +782,10 @@ if (return [] as { label: string, value: number }[], ) {
                         <td className="py-1">{r.region}</td>
                         <td className="py-1">${r.medianHourlyUsd}</td>
                       </tr>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     ))}
                   </tbody>;
                 </table>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <h3 className='font-medium mb-3'>Distribution</h3>
-=======
               </div>;
             </div>;
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
@@ -1257,19 +836,11 @@ if (return [] as { label: string, value: number }[], ) {
             </div>;
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <h3 className='font - medium mb - 3'>Distribution</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {data ? (
                 <div className='flex flex - col items - center gap - 3'>;
                   <DonutChart;
                     slices={
-<<<<<<< HEAD
-                      donutData.map((d, i) => ({
-                        label: d.label
-                        value: d.value
-                      })) as any
-=======
             </div>;
-
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <h3 className='font-medium mb-3'>Distribution</h3>;
               {data ? (;
@@ -1280,7 +851,6 @@ if (return [] as { label: string, value: number }[], ) {
                         label: d && d.label,;
                         value: d && d.value,;
                       })) as any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     }
                   />;
                   <div className='flex gap-2 flex-wrap justify-center text-xs'>;
@@ -1302,9 +872,7 @@ if (return [] as { label: string, value: number }[], ) {
                 </div>;
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
-=======
             </div>
-
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Distribution</h3>
               {data ? (
@@ -1318,40 +886,15 @@ if (return [] as { label: string, value: number }[], ) {
                 </div>
               ) : (
                 <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               )}
-<<<<<<< HEAD
-            </div>
-          </div>
-          {data?.gptRecommendation && (
-<<<<<<< HEAD
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <h3 className='font-medium mb-2'>GPT Recommendation</h3>
-              <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
-                {data.gptRecommendation}
-              </p>            </div>
-          )}
-          {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-=======
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
           )}
           {data && (
-<<<<<<< HEAD
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <h3 className='font-medium mb-3'>Signals</h3>
-              <div className='flex gap-2 flex-wrap'>
-                <span className='rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs'>
-                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr
-                </span>
-                {data.tags.map(t => (
-=======
             </div>;
           </div>;
-
           {data?.gptRecommendation && (;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <h3 className='font-medium mb-2'>GPT Recommendation</h3>;
@@ -1359,13 +902,11 @@ if (return [] as { label: string, value: number }[], ) {
                 {data && data.gptRecommendation}
               </p>            </div>;
           )}
-
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
               <h3 className="font-medium mb-2">GPT Recommendation</h3>;
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data && data.gptRecommendation}</p>;
             </div>;
           )}
-
           {data && (;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <h3 className='font-medium mb-3'>Signals</h3>;
@@ -1374,7 +915,6 @@ if (return [] as { label: string, value: number }[], ) {
                   Range: ${data && data.minHourlyUsd} - ${data && data.maxHourlyUsd} / hr;
                 </span>;
                 {data && data.tags.map(t => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <span
                     key={t}
                     className='rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs'>;
@@ -1387,7 +927,6 @@ if (return [] as { label: string, value: number }[], ) {
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>;
               </div>;
             </div>;
-=======
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Signals</h3>
               <div className="flex gap-2 flex-wrap">
@@ -1397,27 +936,14 @@ if (return [] as { label: string, value: number }[], ) {
                 ))}
               </div>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </div>
-<<<<<<< HEAD
-);
-}
-=======
         </div>;
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                       donut_data.map ((d, i) => ({
                         label: d.label,
                         value: d.value,
@@ -1479,4 +1005,3 @@ if (return [] as { label: string, value: number }[], ) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Badge } from '@/components/ui/badge';
-=======
-      return <Badge className="bg-blue-500">Message</Badge>;
+return <Badge className="bg-blue-500">Message</Badge>;
       return <Badge className="bg-orange-500">Order</Badge>;    default:;
       return <Badge variant="outline">Notification</Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
 interface NotificationProps {
   type: 'message' | 'order' | 'default';
 }
-
 export function NotificationBadge({ type }: NotificationProps) {
   switch (type) {
     case 'message':
@@ -24,7 +14,6 @@ export function NotificationBadge({ type }: NotificationProps) {
       return <Badge variant="outline">Notification</Badge>;
   }
 }
-
 export default function NotificationsPage() {
   return (
     <div className="container py-10">
@@ -33,7 +22,6 @@ export default function NotificationsPage() {
     </div>
   );
 }
-=======
 import React, { useState, useEffect } from 'react';
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -41,15 +29,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
-
-
-
-=======
-<<<<<<< HEAD;
-return <Badge className="bg - blue - 500">Message</Badge>;
-      return <Badge className="bg - orange - 500">Order</Badge>;    default:;
-      return <Badge variant="outline">Notification</Badge>;
-=======;
+;
 import React, { useState, useEffect } from 'react';
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components / ui / badge';
@@ -57,8 +37,6 @@ import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
 import { toast } from '@/hooks / use - toast';
->>>>>>> cursor / fix - lint - push - and - merge - to - main - 2c83;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface Notification {
   id: string;
   type: 'message' | 'order' | 'system' | 'promotion';
@@ -68,17 +46,7 @@ interface Notification {
   read: boolean;
   action_url?: string;
 }
-<<<<<<< HEAD
-
-
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD;
-}
-=======;
+;
 const getNotificationIcon = (type: string) =>: any {
   switch (type) {
     case 'message':;
@@ -256,5 +224,3 @@ if ( {) {
         </div>)}
     </div>);
 }
->>>>>>> cursor / fix - lint - push - and - merge - to - main - 2c83;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

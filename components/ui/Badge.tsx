@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-import React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "../../lib/utils";
-<<<<<<< HEAD
-// Define HTML element types
-interface HTMLElement {
-=======
-
 // Define HTML element types;
 interface HTMLElement {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className: string;
   id: string;
   innerHTML: string;
   textContent: string | null;
   style: { [key: string]: string }
 }
-<<<<<<< HEAD
-=======
 import React from './react';
 import { cva, type VariantProps  } from './class - variance - authority';
 import { cn  } from '../../lib / utils';
@@ -30,42 +18,12 @@ interface HTMLElement {
   text_content: string | null;
   style: { [key: string]: string }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface HTMLDivElement extends HTMLElement {
   tag_name: 'DIV';
 }
-<<<<<<< HEAD
-
-const badgeVariants = cva(
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-  {
-    variants: {
-      variant: {
-        default:
-          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80"
-        secondary:
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80"
-        destructive:
-          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80"
-        outline: "text-foreground border-border"
-      }
-    }
-    defaultVariants: {
-      variant: "default"
-    }
-
-  }
-);
-export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>
-    VariantProps<typeof badgeVariants> {}
-function Badge({ className, variant, ...props }: BadgeProps) {
-=======
-
 interface HTMLDivElement extends HTMLElement {;
   tagName: 'DIV';
 }
-
 const badgeVariants = cva(;
   "inline-flex items-center rounded-full border px-2 && 2.5 py-0 && 0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",;
   {;
@@ -85,19 +43,15 @@ const badgeVariants = cva(;
     },;
   }
 );
-
 export interface BadgeProps;
   extends React && React.HTMLAttributes<HTMLDivElement>,;
     VariantProps<typeof badgeVariants> {}
-
 function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );
 }
 export { Badge, badgeVariants }
-=======
 const badge_variants = cva (
   "inline - flex items - center rounded - full border px - 2.5 py - 0.5 text - xs font - semibold transition - colors focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2",
   {
@@ -129,4 +83,3 @@ function Badge() {
     <div className={cn (badge_variants ({ variant }), class_name)} {...props} />);
 }
 export { Badge, badge_variants }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -9,10 +9,6 @@ export const ThemeProvider = ("props": "any) => {;
   const [theme", setTheme] = React.useState("dark");
   ;
   React.useEffect(() => {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const ThemeContext = React.createContext({theme: "dark",
   setTheme: () => null,}
     );

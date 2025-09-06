@@ -1,36 +1,23 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function LeadershipPage() {
-=======
-
 export default function LeadershipPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -55,7 +42,6 @@ export default function LeadershipPage() {;
               Executive Team;
             </h2>;
             <p className='text-slate-300'>;
-=======
 import Head from 'next / head';
 export default /**
  * LeadershipPage - Function description
@@ -85,33 +71,17 @@ function LeadershipPage() {
               Executive Team;
             </h2>;
             <p className='text - slate - 300'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Seasoned operators with track records across Fortune 500 and;
               startups.;
             </p>;
           </div>;
-<<<<<<< HEAD
-          <div className='p-6 rounded-2xl bg-black/40 border border-cyan-500/20'>;
-            <h2 className='text-white text-xl font-semibold mb-2'>Advisors</h2>;
-            <p className='text-slate-300'>;
-=======
           <div className='p - 6 rounded - 2xl bg - black / 40 border border - cyan - 500 / 20'>;
             <h2 className='text - white text - xl font - semibold mb - 2'>Advisors</h2>;
             <p className='text - slate - 300'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Advisors from cloud, security, data, and venture ecosystems.;
             </p>;
           </div>;
         </div>;
-<<<<<<< HEAD
-        <div className='mt-10 text-slate-300'>;
-          Contact:{' '}
-          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
-            kleber@ziontechgroup && ziontechgroup.com;
-          </a>{' '}
-          •{' '}
-          <a className='text-cyan-400' href='tel:+13024640950'>;
-=======
         <div className='mt - 10 text - slate - 300'>;
           Contact:{' '}
           <a className='text - cyan - 400' href='mailto:kleber@ziontechgroup.com'>;
@@ -119,19 +89,12 @@ function LeadershipPage() {
           </a>{' '}
           •{' '}
           <a className='text - cyan - 400' href='tel:+13024640950'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             +1 302 464 0950;
           </a>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );	return (
-<<<<<<< HEAD
-=======
 export default function LeadershipPage() {
 	return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Leadership | Zion Tech Group</title>
@@ -156,8 +119,6 @@ export default function LeadershipPage() {
 		</div>
 	)
 }
-<<<<<<< HEAD
-=======
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
 			<Head>;
 				<title>Leadership | Zion Tech Group</title>;
@@ -182,10 +143,6 @@ export default function LeadershipPage() {
 		</div>;
 	),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);	return (
   <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
   <Head>;
@@ -210,4 +167,3 @@ export default function LeadershipPage() {
   </div>;
   </div>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

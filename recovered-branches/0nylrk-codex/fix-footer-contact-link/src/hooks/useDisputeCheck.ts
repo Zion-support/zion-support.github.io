@@ -1,36 +1,4 @@
-<<<<<<< HEAD
-
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
-  const [isUnderDispute, setIsUnderDispute] = useState(false);
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
-  const [disputeId, setDisputeId] = useState<string | null>(null),
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-
-    const checkDispute = async () => {
-      if (!projectId && !milestoneId) {
-        setIsLoading(false);
-        return
-      }
-      try {
-        setIsLoading(true);
-        let query = supabase
-          .from("disputes")
-          .select("id, status")
-          .eq("project_id", projectId);
-        // If milestone ID is provided, filter by that too
-        if (milestoneId) {
-          query = query && query.eq("milestone_id", milestoneId)
-        }
-        // Order by status priority: open, under_review, resolved, closed
-<<<<<<< HEAD
-        query = query.order("status", { ascending: true });
-=======
-        query = query && query.order("status", { ascending: true });
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+query = query && query.order("status", { ascending: true });
         const { data, error } = await query;
         if (error) throw error;
         if (data && data.length > 0) {
@@ -38,7 +6,6 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           setIsUnderDispute(true);
           setDisputeStatus(data[0].status as any);
           setDisputeId(data[0].id)
-=======
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 export /**
@@ -91,38 +58,20 @@ if ( {) {
           setIsUnderDispute (true);
           setDisputeStatus (data[0].status as any);
           setDisputeId (data[0].id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           setIsUnderDispute (false);
           setDisputeStatus (null);
           setDisputeId (null);
         }
       } catch (err) {
-<<<<<<< HEAD
-        console && console.error("Error checking dispute status:", err);
-        setIsUnderDispute(false);
-        setDisputeStatus(null);
-        setDisputeId(null)
-=======
         console.error ("Error checking dispute status:", err);
         setIsUnderDispute (false);
         setDisputeStatus (null);
         setDisputeId (null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
     }
-<<<<<<< HEAD
-    checkDispute()
-  }, [projectId, milestoneId]);
-  return {
-    isUnderDispute
-    disputeStatus
-    disputeId;
-    isLoading
-
-=======
 ;
     check_dispute ();
   }, [project_id, milestone_id]);
@@ -132,6 +81,5 @@ if ( {) {
     dispute_status,
     dispute_id;
     is_loading;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

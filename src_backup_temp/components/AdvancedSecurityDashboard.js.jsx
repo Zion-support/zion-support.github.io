@@ -273,10 +273,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                     </div>))}
                 </div>;
               </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">;
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">;
                   <CheckCircle className="w-5 h-5 text-zion-blue" />;
@@ -321,10 +317,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">;
                       <h3 className="font-semibold text-zion-slate">{event.title}</h3>;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {activeTab === 'events' && (<div className="space-y-4">
             {filteredEvents.map(event => (<div key={event.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -362,10 +354,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">;
                       <h3 className="font-semibold text-zion-slate">{req.requirement"}</h3>;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {activeTab === 'compliance' && (<div className="space-y-4">
             {filteredCompliance.map(req => (<div key={req.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -420,10 +408,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
                       <h4 className="font-medium text-zion-slate mb-2">Affected "Systems": "</h4>;
                       <div className="flex flex-wrap gap-2">;
                         {threat.affectedSystems.map((system", index) => (<span key={index} className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border border-zion-red/20">;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {activeTab === 'threats' && (<div className="space-y-4">
             {threatIntelligence.map(threat => (<div key={threat.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -471,10 +455,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
               <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>;
               <p>Advanced security analytics and threat intelligence reports coming soon...</p>;
             </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="text-center text-zion-slate-light">
               <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />

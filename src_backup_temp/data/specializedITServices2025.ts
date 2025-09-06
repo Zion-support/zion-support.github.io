@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD:src/data/specializedITServices2025.ts
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export interface SpecializedITService { "id": "string; "title": string; "description": string; "category": string; "subcategory": string; "price": number; "currency": string; "pricingModel": string; "features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "tags": string[]; "estimatedDelivery": string; "supportLevel": string; "marketPrice": string; "roi": string; "innovationLevel": string; "contactInfo": { "phone": string; "email": string; "website": string "}; technicalSpecs?: "{ "technology": 'string[]; "integrations": string[]; "apiEndpoints": number; "uptime": string; "security": string[]' "}; competitors?: "string[]; marketSize?: string"} ; export const "SPECIALIZED_IT_SERVICES_2025": "SpecializedITServic e[] = ["
 export interface SpecializedITService { &quot;id&quot;: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string }; technicalSpecs?: { &quot;technology&quot;: &apos;string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]&apos; }; competitors?: string[]; marketSize?: string} ; export const &quot;SPECIALIZED_IT_SERVICES_2025&quot;: SpecializedITServic e[] = [
 module.exports = interface SpecializedITService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string }; technicalSpecs?: { technology: "string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]" }; competitors?: string[]; marketSize?: string} ; export const SPECIALIZED_IT_SERVICES_2025: SpecializedITServic e[] = ['"'"
@@ -19,12 +12,4 @@ export default function SpecializedITServices2025({ }: SpecializedITServices2025
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

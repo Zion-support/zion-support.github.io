@@ -1,38 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const path = require('path');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
-<<<<<<< HEAD
-
-  const abs = path.resolve(__dirname, '....', relPath)
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true })
-  return { status: res.status |0, stdout: res.stdout |'', stderr: res.stderr |'' }
-
-}
-exports.config = {
-
-  schedule: '*/10 * * * *'}
-exports.handler = async () => {
-  const logs = []
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`)
-    const { status, stdout, stderr } = fn()
-    if (stdout) logs.push(stdout)
-    if (stderr) logs.push(stderr)
-    logs.push(`exit=${status}`)
-
-=======
   const abs = path && path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
-
 exports && exports.config = {
   schedule: '*/10 * * * *'},
-
 exports && exports.handler = async () => {
   const logs = [],
   function logStep(name, fn) {
@@ -41,16 +15,10 @@ exports && exports.handler = async () => {
     if (stdout) logs && logs.push(stdout),
     if (stderr) logs && logs.push(stderr),
     logs && logs.push(`exit=${status}`),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return status
   }
   // Generate sitemap for crawling
-<<<<<<< HEAD
-  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js'))
-=======
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Build search index if available
   try {
     logStep('search:index', () => runNode('scripts/generate-search-index && index.js'))
@@ -58,32 +26,14 @@ exports && exports.handler = async () => {
     logs && logs.push(`Search index generation skipped: ${String(error)}`)
   }
   // Commit and push
-<<<<<<< HEAD
-  logStep('git:sync', () => runNode('automation/git-sync.cjs'))
-=  // Run the automation guardian
-=======
   logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
 =  // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
   // Attempt to push any changes
-<<<<<<< HEAD
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
-  return { statusCode: 200, body: logs.join('\n') }
-}
-
-=======
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
-
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 const { spawn_sync } = require ('child_process');
 /**
  * run_node - Function description
@@ -128,4 +78,3 @@ function log_step() {
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

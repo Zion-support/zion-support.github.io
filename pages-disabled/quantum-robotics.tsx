@@ -1,36 +1,18 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from "react";
-import Head from "next/head";
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Car
-  Star
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -44,23 +26,15 @@ import {;
   ArrowRight,;
   Car,;
   Star,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-<<<<<<< HEAD
-export default function AutonomousVehicleAIPage() {
-  const service = enhancedRealMicroSaasServices.find((s) =>
-    s.link.endsWith("/autonomous-vehicle-ai-platform")
-=======
 export default function AutonomousVehicleAIPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
     s && s.link.endsWith("/autonomous-vehicle-ai-platform"),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -146,7 +120,6 @@ export default function AutonomousVehicleAIPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-=======
 import React from './react';
 import Head from './next / head';
 import {
@@ -257,5 +230,4 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

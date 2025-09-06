@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const Component = ("props": "any) => {;
 import React from "react";
 """;","});,"})";
@@ -330,10 +325,6 @@ export { EnhancedServicesNavigation };,"});,"})";
 export { EnhancedServicesNavigation };,"});,"})";
 ;,"});,"})";
 export { EnhancedServicesNavigation };,"});,"});
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const Component = (props: any) => {
 import React from "react"
 """;,"}

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-<<<<<<< HEAD
-=======
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000, // 5 minutes
@@ -15,13 +8,8 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
-<<<<<<< HEAD
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
-=======
   bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS);
   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -33,25 +21,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
-<<<<<<< HEAD
-const authHeader = req.headers.authorization |''
-  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
-  if (!token |token !== process.env.OPERATOR_API_TOKEN) {
-=======
   const authHeader = req.headers.authorization || '';
   const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined;
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
 const ip = (req.headers['x-forwarded-for'] as string)?.split()[0]?.trim() |req.socket.remoteAddress |'unknown'
   if (isRateLimited(ip)) {
     return res.status(429).json({ error: 'Too Many Requests' })
-
   }
   try {
-
 const { prompt, system, temperature } = (typeof req.body === 'string') ? JSON.parse(req.body) : req.body
     if (!prompt |typeof prompt !== 'string') {
       return res.status(400).json({ error: 'Missing prompt' })
@@ -70,14 +50,8 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
   } catch (err: any) {
     console.error('Operator error', err)
     return res.status(500).json({ error: 'Internal Server Error' })
-
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -151,4 +125,3 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,197 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react',
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import Head from 'next/head';
-
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-<<<<<<< HEAD
-import {
-  Search
-  Filter
-  ArrowRight
-  Clock
-  Star
-  FileText
-  Code
-  Database
-  Cloud
-  Shield
-  Brain
-  Users
-  Settings
-  Globe
-  CheckCircle
-  X
-  ChevronDown
-  ChevronUp
-} from 'lucide-react';
-const searchResults = [
-  {
-    id: 1
-    title: 'AI Development Services'
-    description: 'Comprehensive AI development solutions including machine learning, computer vision, and natural language processing.'
-    url: '/ai-services'
-    category: 'Services'
-    type: 'Page'
-    icon: Brain
-    rating: 4.9
-    lastUpdated: '2024-01-15'
-  }
-  {
-    id: 2
-    title: 'Cloud Infrastructure Setup'
-    description: 'Complete guide to setting up scalable cloud infrastructure for your applications.'
-    url: '/guides'
-    category: 'Guides'
-    type: 'Article'
-    icon: Cloud
-    rating: 4.8
-    lastUpdated: '2024-01-10'
-  }
-  {
-    id: 3
-    title: 'Cybersecurity Best Practices'
-    description: 'Essential cybersecurity practices to protect your applications and data.'
-    url: '/guides'
-    category: 'Guides'
-    type: 'Article'
-    icon: Shield
-    rating: 4.7
-    lastUpdated: '2024-01-08'
-  }
-  {
-    id: 4
-    title: 'Database Optimization'
-    description: 'Learn database design principles and optimization techniques.'
-    url: '/guides'
-    category: 'Guides'
-    type: 'Article'
-    icon: Database
-    rating: 4.8
-    lastUpdated: '2024-01-05'
-  }
-  {
-    id: 5
-    title: 'Our Team'
-    description: 'Meet our talented team of experts who are passionate about technology and innovation.'
-    url: '/team'
-    category: 'Company'
-    type: 'Page'
-    icon: Users
-    rating: 4.9
-    lastUpdated: '2024-01-12'
-  }
-  {
-    id: 6
-    title: 'Contact Us'
-    description: 'Get in touch with our team for project inquiries and support.'
-    url: '/contact'
-    category: 'Company'
-    type: 'Page'
-    icon: Settings
-    rating: 4.9
-    lastUpdated: '2024-01-14'
-  }
-];
-const categories = [
-  { name: 'All', count: searchResults.length }
-  { name: 'Services', count: 1 }
-  { name: 'Guides', count: 3 }
-  { name: 'Company', count: 2 }
-];
-const filters = [
-  { name: 'Pages', count: 3 }
-  { name: 'Articles', count: 3 }
-  { name: 'Recent', count: 4 }
-  { name: 'Popular', count: 2 }
-];
-<<<<<<< HEAD
-export default function SearchPage() {
-=======
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Search,
-  Filter,
-  Grid,
-  List,
-  ArrowRight,
-  ExternalLink,
-  Brain,
-  Shield,
-  Rocket,
-  Cpu,
-  Database,
-  Atom,
-  Target,
-  Star,
-  Sparkles,
-  Zap,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  Globe,
-  Code,
-  Server,
-  TrendingUp,
-  BarChart3,
-  Cloud,
-  Network,
-  Lightbulb,
-  Flame,
-  Zap as ZapIcon,
-  X,
-  Sliders,
-  SortAsc,
-  SortDesc,;
-} from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { 
   Search, Filter, Grid, List, ArrowRight, ExternalLink, 
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
@@ -202,9 +35,6 @@ import {
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function SearchPage() {
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
 import {;
   Search,;
   Filter,;
@@ -225,7 +55,6 @@ import {;
   ChevronDown,;
   ChevronUp;
 } from 'lucide-react';
-
 const searchResults = [;
   {;
     id: 1,;
@@ -294,61 +123,37 @@ const searchResults = [;
     lastUpdated: '2024-01-14';
   }
 ];
-
 const categories = [;
   { name: 'All', count: searchResults && searchResults.length },;
   { name: 'Services', count: 1 },;
   { name: 'Guides', count: 3 },;
   { name: 'Company', count: 2 }
 ];
-
 const filters = [;
   { name: 'Pages', count: 3 },;
   { name: 'Articles', count: 3 },;
   { name: 'Recent', count: 4 },;
   { name: 'Popular', count: 2 }
 ];
-
 export default function SearchPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
-<<<<<<< HEAD
-  const filteredResults = searchResults.filter(result => {
-    const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-                        result.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' |result.category === selectedCategory;
-    const matchesFilter = selectedFilter === 'All' |result.type === selectedFilter;
-=======
-
   const filteredResults = searchResults && searchResults.filter(result => {;
     const matchesQuery = result && result.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
                         result && result.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || result && result.category === selectedCategory;
     const matchesFilter = selectedFilter === 'All' || result && result.type === selectedFilter;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return matchesQuery && matchesCategory && matchesFilter;
   });
   return (
-<<<<<<< HEAD
-    <Layout>
-      <Head>
-        <title>Search - Zion Tech Group</title>
-        <meta name="description" content="Search our website for information, guides, services, and more." />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-=======
     <Layout>;
       <Head>;
         <title>Search - Zion Tech Group</title>;
         <meta name="description" content="Search our website for information, guides, services, and more." />;
       </Head>;
-
       <div className="min-h-screen bg-gray-50">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -356,16 +161,6 @@ export default function SearchPage() {;
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl font-bold mb-6">
-                Search Our Website
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                Find the information you need quickly and easily.
-              </p>
-=======
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl font-bold mb-6">;
                 Search Our Website;
@@ -373,8 +168,6 @@ export default function SearchPage() {;
               <p className="text-xl mb-8 text-blue-100">;
                 Find the information you need quickly and easily.;
               </p>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Search Bar */}
               <div className="max-w-2xl mx-auto">;
                 <div className="relative">;
@@ -383,16 +176,6 @@ export default function SearchPage() {;
                     type="text"
                     placeholder="Search for services, guides, articles..."
                     value={searchQuery}
-<<<<<<< HEAD
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
-                  />
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-=======
                     onChange={(e) => setSearchQuery(e && e.target.value)}
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300";
                   />;
@@ -401,8 +184,6 @@ export default function SearchPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Filters Section */}
         <section className="py-8 bg-white border-b">;
           <div className="container mx-auto px-4">;
@@ -415,11 +196,6 @@ export default function SearchPage() {;
                   <Filter className="w-4 h-4 mr-2" />;
                   Filters;
                   {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
-<<<<<<< HEAD
-                </button>
-                {categories.map((category) => (
-                  <button
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -598,7 +374,6 @@ function SearchPage() {
                 </button>;
                 {categories.map ((category) => (
                   <button;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     key={category.name}
                     on_click={() => setSelectedCategory (category.name)}
                     className={`px - 4 py - 2 rounded - lg transition - colors ${
@@ -606,23 +381,7 @@ function SearchPage() {
                         ? 'bg - blue - 600 text - white';
                         : 'bg - gray - 100 text - gray - 700 hover:bg - gray - 200';
                     }`}
-<<<<<<< HEAD
-
-                  >
-                    {term}
-                  </button>
-                ))}
-              </div>
-
-              <div className="text-sm text-gray-600">
-                {filteredResults.length} results found
-              </div>
-            </div>
-            {showFilters && (
-              <motion.div
-=======
                 </button>;
-
                 {categories && categories.map((category) => (;
                   <button
                     key={category && category.name}
@@ -637,15 +396,12 @@ function SearchPage() {
                   </button>;
                 ))}
               </div>;
-
               <div className="text-sm text-gray-600">;
                 {filteredResults && filteredResults.length} results found;
               </div>;
             </div>;
-
             {showFilters && (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
@@ -660,31 +416,15 @@ function SearchPage() {
                           ? 'bg-blue-600 text-white';
                           : 'bg-white text-gray-700 hover:bg-gray-100';
                       }`}
-<<<<<<< HEAD
-                    >
-                      {filter.name} ({filter.count})
-                    </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  ))}
-                </div>
-=======
                   ))}                </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
                   ))}
                 </div>
->>>>>>> origin/automation-improvements-final
-=======
 ))}
                 </div>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
               </motion.div>
             )}
           </div>
         </section>
-=======
                     >;
                       {filter && filter.name} ({filter && filter.count});
                     </button>;
@@ -694,8 +434,6 @@ function SearchPage() {
             )}
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Search Results */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -707,20 +445,6 @@ function SearchPage() {
                     className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center mb-2">
-                          <result.icon className="w-5 h-5 text-blue-600 mr-2" />
-                          <span className="text-sm text-gray-500">{result.category}</span>
-                          <span className="mx-2 text-gray-300">•</span>
-                          <span className="text-sm text-gray-500">{result.type}</span>
-                        </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">
-                          <Link
-=======
                   >;
                     {category.name} ({category.count});
                   </button>))}
@@ -776,38 +500,11 @@ function SearchPage() {
                         </div>;
                         <h3 className="text - xl font - bold text - gray - 900 mb - 2">;
                           <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             href={result.url}
                             className="hover:text - blue - 600 transition - colors";
                           >;
                             {result.title}
-<<<<<<< HEAD
-                          </Link>
-                        </h3>
-                        <p className="text-gray-600 mb-4">
-                          {result.description}
-                        </p>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Clock className="w-4 h-4 mr-1" />
-                          <span className="mr-4">Updated {result.lastUpdated}</span>
-                          <div className="flex items-center">
-                            <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
-                            <span>{result.rating}</span>
-                          </div>
-                        </div>
-                      </div>
-                      <Link
-                        href={result.url}
-                        className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
-                      >
-                        <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       </Link>
-=======
-                      </Link>
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -820,7 +517,6 @@ function SearchPage() {
   });
   const [sortBy, setSortBy] = useState('relevance');
   const [showFilters, setShowFilters] = useState(false);
-
   // Mock data for search
   const allServices = [
     {
@@ -964,7 +660,6 @@ function SearchPage() {
       relevance: 68
     }
   ];
-
   const categories = [
     { id: 'all', name: 'All Categories', icon: '📂' },
     { id: 'AI & Machine Learning', name: 'AI & Machine Learning', icon: '🧠' },
@@ -976,14 +671,12 @@ function SearchPage() {
     { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },
     { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
   ];
-
   const statuses = [
     { id: 'all', name: 'All Statuses', icon: '📊' },
     { id: 'active', name: 'Active', icon: '✅' },
     { id: 'beta', name: 'Beta', icon: '🧪' },
     { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
   ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', icon: '💰' },
     { id: 'under-500', name: 'Under $500/month', icon: '💵' },
@@ -991,7 +684,6 @@ function SearchPage() {
     { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },
     { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
   ];
-
   const technologies = [
     { id: 'all', name: 'All Technologies', icon: '🔧' },
     { id: 'AI/ML', name: 'AI/ML', icon: '🧠' },
@@ -1001,16 +693,13 @@ function SearchPage() {
     { id: 'Biotech', name: 'Biotech', icon: '🧬' },
     { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
   ];
-
   // Search function
   const performSearch = () => {
     if (!searchTerm.trim()) {
       setSearchResults([]);
       return
     }
-
     setIsSearching(true);
-    
     // Simulate search delay
     setTimeout(() => {
       const results = allServices.filter(service => {
@@ -1018,11 +707,9 @@ function SearchPage() {
                             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             service.technology.toLowerCase().includes(searchTerm.toLowerCase());
-        
         const matchesCategory = filters.category === 'all' || service.category === filters.category;
         const matchesStatus = filters.status === 'all' || service.status === filters.status;
         const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology;
-        
         let matchesPrice = true;
         if (filters.priceRange !== 'all') {
           const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -1041,10 +728,8 @@ function SearchPage() {
               break
           }
         }
-        
         return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
       });
-
       // Sort results
       const sortedResults = results.sort((a, b) => {
         switch (sortBy) {
@@ -1061,26 +746,22 @@ function SearchPage() {
           default: return 0
         }
       });
-
       setSearchResults(sortedResults);
       setIsSearching(false)
     }, 500)
   };
-
   // Handle search on Enter key
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       performSearch()
     }
   };
-
   // Update search when filters change
   useEffect(() => {
     if (searchTerm.trim()) {
       performSearch()
     }
   }, [filters, sortBy]);
-
   // Clear all filters
   const clearFilters = () => {
     setFilters({
@@ -1091,7 +772,6 @@ function SearchPage() {
     });
     setSortBy('relevance')
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -1101,9 +781,7 @@ function SearchPage() {
         <meta property="og:description" content="Advanced search across all services and solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/search" />
       </Head>
-
       <SmartHeader />
-
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -1122,7 +800,6 @@ function SearchPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Search Interface */}
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
@@ -1148,7 +825,6 @@ function SearchPage() {
                   </button>
                 </div>
               </div>
-
               {/* View Mode Toggle */}
               <div className="flex items-center gap-2">
                 <button
@@ -1169,7 +845,6 @@ function SearchPage() {
                 </button>
               </div>
             </div>
-
             {/* Filters and Sort */}
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex items-center gap-4">
@@ -1183,7 +858,6 @@ function SearchPage() {
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   )}
                 </button>
-                
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
@@ -1196,7 +870,6 @@ function SearchPage() {
                   <option value="status">Sort by Status</option>
                 </select>
               </div>
-
               {Object.values(filters).some(f => f !== 'all') && (
                 <button
                   onClick={clearFilters}
@@ -1207,7 +880,6 @@ function SearchPage() {
                 </button>
               )}
             </div>
-
             {/* Expanded Filters */}
             {showFilters && (
               <motion.div
@@ -1232,7 +904,6 @@ function SearchPage() {
                       ))}
                     </select>
                   </div>
-
                   {/* Status Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Status</label>
@@ -1248,7 +919,6 @@ function SearchPage() {
                       ))}
                     </select>
                   </div>
-
                   {/* Price Range Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Price Range</label>
@@ -1264,7 +934,6 @@ function SearchPage() {
                       ))}
                     </select>
                   </div>
-
                   {/* Technology Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Technology</label>
@@ -1286,7 +955,6 @@ function SearchPage() {
           </div>
         </div>
       </section>
-
       {/* Search Results */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -1300,7 +968,6 @@ function SearchPage() {
               {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
             </p>
           </div>
-
           {/* Loading State */}
           {isSearching && (
             <div className="text-center py-20">
@@ -1310,7 +977,6 @@ function SearchPage() {
               <p className="text-white/60">Searching our services...</p>
             </div>
           )}
-
           {/* No Results */}
           {!isSearching && searchTerm && searchResults.length === 0 && (
             <div className="text-center py-20">
@@ -1329,7 +995,6 @@ function SearchPage() {
               </button>
             </div>
           )}
-
           {/* Search Results */}
           {!isSearching && searchResults.length > 0 && (
             <AnimatePresence mode="wait">
@@ -1363,15 +1028,12 @@ function SearchPage() {
                           <span className="text-xs text-white/40">{service.technology}</span>
                         </div>
                       </div>
-                      
                       <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
                       <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
-                      
                       {/* Price */}
                       <div className="mb-4">
                         <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                       </div>
-                      
                       {/* Features */}
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
@@ -1384,7 +1046,6 @@ function SearchPage() {
                           ))}
                         </div>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <a
                           href={service.link}
@@ -1400,22 +1061,11 @@ function SearchPage() {
                           Get Quote
                         </a>
                       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 </Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                     </div>
                   </motion.div>
                 ))}
               </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-            ) : (
-              <motion.div
-=======
                     transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
                     <div className="flex items-start justify-between">;
                       <div className="flex-1">;
@@ -1425,7 +1075,6 @@ function SearchPage() {
                           <span className="mx-2 text-gray-300">•</span>;
                           <span className="text-sm text-gray-500">{result && result.type}</span>;
                         </div>;
-
                         <h3 className="text-xl font-bold text-gray-900 mb-2">;
                           <Link
                             href={result && result.url}
@@ -1433,11 +1082,9 @@ function SearchPage() {
                             {result && result.title}
                           </Link>;
                         </h3>;
-
                         <p className="text-gray-600 mb-4">;
                           {result && result.description}
                         </p>;
-
                         <div className="flex items-center text-sm text-gray-500">;
                           <Clock className="w-4 h-4 mr-1" />;
                           <span className="mr-4">Updated {result && result.lastUpdated}</span>;
@@ -1447,7 +1094,6 @@ function SearchPage() {
                           </div>;
                         </div>;
                       </div>;
-
                       <Link
                         href={result && result.url}
                         className="ml-4 text-blue-600 hover:text-blue-700 transition-colors">;
@@ -1459,7 +1105,6 @@ function SearchPage() {
               </div>;
             ) : (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="text-center py-16"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1483,14 +1128,8 @@ function SearchPage() {
                 </button>;
               </motion && motion.div>;
             )}
-<<<<<<< HEAD
-          </div>
-        </section>
-=======
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Popular Searches */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -1506,21 +1145,6 @@ function SearchPage() {
                 Common searches to help you find what you're looking for.;
               </p>;
             </motion && motion.div>;
-
-<<<<<<< HEAD
-            <div className="flex flex-wrap gap-3 justify-center">
-              {[
-                'AI Development'
-                'Cloud Services'
-                'Cybersecurity'
-                'Database Design'
-                'Mobile Apps'
-                'Web Development'
-                'IT Support'
-                'Consulting'
-              ].map((term, index) => (
-                <motion.button
-=======
             <div className="flex flex-wrap gap-3 justify-center">;
               {[;
                 'AI Development',;
@@ -1533,7 +1157,6 @@ function SearchPage() {
                 'Consulting';
               ].map((term, index) => (;
                 <motion&& motion.button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   key={term}
                   onClick={() => setSearchQuery(term)}
                   className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-blue-100 hover:text-blue-700 transition-colors";
@@ -1544,7 +1167,6 @@ function SearchPage() {
                   {term}
                 </motion && motion.button>;
               ))}
-=======
                           </Link>;
                         </h3>;
                         <p className="text - gray - 600 mb - 4">;
@@ -1631,32 +1253,14 @@ function SearchPage() {
                 >;
                   {term}
                 </motion.button>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-    </Layout>;
   );
-}  )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
-=======
             </AnimatePresence>
           )}
-
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
             <div className="text-center py-20">
@@ -1686,25 +1290,14 @@ function SearchPage() {
           )}
         </div>
       </section>
-
       <SmartFooter />
     </div>
   )
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 )
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Layout>);
 }  );
 }
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

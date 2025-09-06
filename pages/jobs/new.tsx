@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useToast } from '../../components/ui/NotificationSystem';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function NewJobPage() {
   const { notify } = useToast();
   const [loading, setLoading] = useState(false);
-  const onSubmit = null;
-=======
-export default function NewJobPage() {
-  const { notify } = useToast();
-  const [loading, setLoading] = useState(false);
-
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -23,8 +9,6 @@ export default function NewJobPage() {
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
   };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -41,20 +25,13 @@ export default function NewJobPage() {
         )}
       </EnhancedCard>
     </div>
-<<<<<<< HEAD
-);
-=======
           </form>;
         )}
       </EnhancedCard>;
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import {useState} from 'react';
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
@@ -64,4 +41,3 @@ import { use_toast } from '../../components / ui / NotificationSystem';
       </EnhancedCard>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

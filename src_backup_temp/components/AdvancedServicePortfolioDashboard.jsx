@@ -321,10 +321,6 @@ export default function Page("props": "any) {;
           </CardContent>
         </Card>
       </motion.div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Filters and Controls */}
       <motion.div initial = {;
   { "opacity": "0",;
@@ -573,10 +569,6 @@ export default function Page("props": "any) {;
 "}} animate = {;
   { "opacity": "1",;
   "y": "0;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 ";
 "}} transition={{ "delay": "0.5 "}} className="text-center">";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">";

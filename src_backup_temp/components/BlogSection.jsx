@@ -29,17 +29,9 @@ import { Link  "} from 'react-router-dom';
                 <span>{post.date}</span>;
                 <span>{post.readTime}</span>;
               </div>;
-<<<<<<< HEAD
-
 interface BlogSection.jsProps {
   // Add props here as needed
 }
-
-=======
-interface BlogSection.jsProps {
-  // Add props here as needed
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             id: '2',
             title: 'Building Scalable Web Applications',
             excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
@@ -79,8 +71,4 @@ export default function BlogSection.js({ }: BlogSection.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

@@ -1,71 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
 import Layout from "../components/Layout";
-=======
 import React from 'react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Brain,
-  Shield,
-  Users,
-  Zap,
-  Target,
-  Award,
-  ChevronRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Code,
-  Database,
-  Cloud,
-  Smartphone,
-  BarChart3,
-  Heart,
-  Lightbulb,
-  Rocket,
-  Lock,
-  TrendingUp;
-} from 'lucide-react';
-
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -117,7 +73,6 @@ export default function AboutPage() {
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500' }
   ];
-
   const values = [
     {
       icon: Brain,
@@ -144,7 +99,6 @@ export default function AboutPage() {
       color: 'from-emerald-500 to-teal-500'
     }
   ];
-
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
@@ -153,75 +107,13 @@ export default function AboutPage() {
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500' }
   ];
-
   const team = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      name: "John Smith",
-      role: "CEO & Founder",
-      image: "/team/john.jpg",
-      bio: "Visionary leader with 15+ years in tech"
-    },
-    {
-      name: "Sarah Johnson",
-      role: "CTO",
-      image: "/team/sarah.jpg", 
-      bio: "Technical expert specializing in cloud architecture"
-    },
-    {
-      name: "Mike Chen",
-      role: "Lead Developer",
-      image: "/team/mike.jpg",
-      bio: "Full-stack developer passionate about innovation"
-    }
-  ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-
-=======
-
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function About() {
-=======
 export default function About() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-    <Layout
-      title="About Us - Zion Tech Group"
-<<<<<<< HEAD
-      description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leading technology solutions provider specializing in AI
-              cybersecurity, and digital transformation.
-=======
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">About Zion Tech Group</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.
->>>>>>> origin/automation-improvements-final
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">About page is under construction.</p>
-          </div>
-        </div>
-      </div>
-    </Layout>
-=======
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -240,20 +132,14 @@ export default function About() {;
         </div>;
       </div>;
     </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts delivering cutting-edge technology solutions." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative pt-20 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
@@ -277,7 +163,6 @@ export default function About() {;
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -293,7 +178,6 @@ export default function About() {;
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -325,7 +209,6 @@ export default function About() {;
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-blue-900">
           <div className="container mx-auto px-4">
@@ -354,7 +237,6 @@ export default function About() {;
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -391,7 +273,6 @@ export default function About() {;
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600">
           <div className="container mx-auto px-4">
@@ -416,9 +297,6 @@ export default function About() {;
       </div>
     </>
   );
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
@@ -447,7 +325,6 @@ export default function About() {;
       color: 'from-red-500 to-orange-500'
     }
   ];
-
   const milestones = [
     {
       year: '2020',
@@ -480,7 +357,6 @@ export default function About() {;
       description: 'Continuing to push boundaries with autonomous AI systems and consciousness technology.'
     }
   ];
-
 import React from 'react';
 import Head from 'next/head';
 import Button from '../components/ui/Button';
@@ -492,14 +368,12 @@ export default function AboutPage() {
         <meta name="description" content="About Zion Tech Group: AI, micro SaaS, and enterprise IT innovators." />
         <link rel="canonical" href="https://ziontechgroup.com/about" />
       </Head>
-
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto space-y-10">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">About Zion Tech Group</h1>
             <p className="text-gray-300 text-lg">We build real, outcome-oriented AI, micro SaaS, and enterprise IT solutions.</p>
           </header>
-
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <div className="text-sm text-gray-400 mb-2">What we do</div>
@@ -514,7 +388,6 @@ export default function AboutPage() {
               <div className="text-gray-200">Startups to enterprises across healthcare, fintech, manufacturing, media, and public sector.</div>
             </div>
           </section>
-
           <section className="grid grid-cols-1 md: grid-cols-2 gap-6">
             <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <h2 className="text-2xl font-semibold mb-3">Contact</h2>
@@ -539,14 +412,7 @@ export default function AboutPage() {
     </>
   )
 };
-
 export default AboutPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -577,4 +443,3 @@ function About() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -67,25 +67,11 @@ function TeamExpertiseSection("props": "any) {];
               <div className="text-4xl font - bold text-blue - 400 mb-3 group - "hover": "tex t-blue - 300 transition - colors duration -200">;
                 {expertise.count"}
               </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              <h3 className="text-xl font - bold text-white mb-3 group - hover: tex t-blue - 400 transition - colors duration -200">
-                {expertise.title}
-              
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <h3 className="text-xl font - bold text-white mb-3 group - "hover": "tex t-blue - 400 transition - colors duration -200">;
                 {expertise.title"}
               </h3>;
               <h3 className="text-xl font - bold text-white mb-3 group - hover: tex t-blue - 400 transition - colors duration -200">
                 {expertise.title}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <p className="text-gray - 400 text-sm leading -relaxed">                {expertise.description}
               </p>;
             </motion.div>) ) }
@@ -103,12 +89,6 @@ function TeamExpertiseSection("props": "any) {];
           transition = {;
   { "duration": "0.6",;
   "delay": "0.3;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
@@ -129,10 +109,6 @@ function TeamExpertiseSection("props": "any) {];
             </div>;
           </div>;
         </motion.div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"

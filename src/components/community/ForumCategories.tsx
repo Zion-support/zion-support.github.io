@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from "next/link",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
-import { ForumCategoryInfo } from "@/types/community";
-const categories: ForumCategoryInfo[] = [
-  {
-
-    id: "getting-hired"
-    name: "Getting Hired"
-    description: "Tips, strategies, and questions about getting hired on the platform."
-    adminOnly: false
-    icon: "Briefcase"
-  }
-  {
-    id: "project-help"
-    name: "Project Help"
-    description: "Get help with your ongoing projects and collaboration."
-    adminOnly: false
-    icon: "MessageSquare"
-  }
-  {
-    id: "ai-tools"
-    name: "AI Tools Discussion"
-    description: "Discuss AI tools, frameworks, and best practices."
-    adminOnly: false
-    icon: "Code"
-  }
-  {
-    id: "feedback"
-    name: "Feedback & Feature Requests"
-    description: "Share your feedback and suggest new features."
-    adminOnly: false
-    icon: "FileText"
-  }
-  {
-    id: "announcements"
-    name: "Announcements"
-    description: "Official announcements from the Zion team."
-    adminOnly: true
-    icon: "Megaphone"
-=======
 const categories: ForumCategoryInfo[] = [;
   {
     id: "getting - hired",
@@ -78,7 +33,6 @@ const categories: ForumCategoryInfo[] = [;
     description: "Official announcements from the Zion team.",
     admin_only: true,
     icon: "Megaphone";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
 const icon_map = {
@@ -88,20 +42,11 @@ const icon_map = {
   FileText;
   Megaphone;
 }
-<<<<<<< HEAD
-export const ForumCategories = () => {
-  const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const visibleCategories = categories.filter(
-    category => !category.adminOnly |isAdmin
-  )
-=======
 export const ForumCategories = () =>: any {
   const { user } = use_auth ();
   const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
   const visible_categories = categories.filter (
     category => !category.admin_only || is_admin);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="grid gap - 4 md: grid - cols - 2 lg:grid - cols - 3">;
       {visible_categories.map ((category) => {
@@ -122,13 +67,6 @@ export const ForumCategories = () =>: any {
       })}
     </div>);
 }
-<<<<<<< HEAD
-export default ForumCategories
-"
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-export default ForumCategories
-
-=======
 const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
@@ -166,7 +104,6 @@ const categories: ForumCategoryInfo[] = [;
     icon: "Megaphone";
   }
 ];
-
 const iconMap = {;
   Briefcase;
   MessageSquare;
@@ -174,15 +111,12 @@ const iconMap = {;
   FileText;
   Megaphone;
 };
-
 export const ForumCategories = () => {;
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-
   const visibleCategories = categories && categories.filter(;
     category => !category && category.adminOnly || isAdmin;
   );
-
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
       {visibleCategories && visibleCategories.map((category) => {;
@@ -205,19 +139,11 @@ export const ForumCategories = () => {;
     </div>;
   );
 };
-
 export default ForumCategories;
 ";
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-
 export default ForumCategories;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default ForumCategories;
 ";
   const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
 export default ForumCategories;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

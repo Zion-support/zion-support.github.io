@@ -1,41 +1,15 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from 'react',
-import Link from 'next/link';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-<<<<<<< HEAD
-interface LogoProps {
-  customLogo?: string
-export function Logo({ customLogo }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
-=======
 import React from 'react';
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 interface LogoProps {
   customLogo?: string
-  
 }
-
-
 export function Logo({ customLogo }: LogoProps) { const { isWhitelabel, logoUrl, brandName  } = useWhitelabel(),
-
-  
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   // Use the white-label logo if available and no specific customLogo is provided
-
   const logoToUse = customLogo |(isWhitelabel ? logoUrl : null)
   // Use the white-label color if available and no specific _customColor is provided
-<<<<<<< HEAD
-  // const colorToUse = _customColor |(isWhitelabel ? primaryColor : undefined)
-=======
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   if (logoToUse) {
-=======
 import Link from 'next / link';
 import { use_whitelabel } from '@/context / WhitelabelContext';
 interface LogoProps {
@@ -53,27 +27,16 @@ function Logo() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <Link href="/" className="flex items - center">;
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
       </Link>);
   }
   return (
-<<<<<<< HEAD
-    <Link href="/" className="flex items-center">
-      <img src="/logos/zion-logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />
-    </Link>
-  )
-  if (logoToUse) {
-=======
-
 interface LogoProps {;
   customLogo?: string;
-
 export function Logo(): any ({ customLogo }: LogoProps) {;
   const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
-
   // Use the white-label logo if available and no specific customLogo is provided;
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
   // Use the white-label color if available and no specific _customColor is provided;
@@ -85,18 +48,15 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
       </Link>;
     );
   }
-
   return (
     <Link href="/" className="flex items-center">;
       <img src="/logos/zion-logo && logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
     </Link>;
   );
   if (logoToUse) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Link href='/' className='flex items-center'>;
         <img
-=======
     <Link href="/" className="flex items - center">;
       <img src="/logos / zion - logo.png" alt="Zion Logo" className="h - 8" width={32} height={32} />;
     </Link>);
@@ -107,22 +67,14 @@ if ( {) {
     return (
       <Link href='/' className='flex items - center'>;
         <img;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={logoToUse}
           alt={`${brand_name} Logo`}
           className='h - 8';
           width={32}
           height={32}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        />
-      </Link>
-    )
-=======
         />;
       </Link>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <Link href='/' className='flex items-center'>;
@@ -132,21 +84,10 @@ if ( {) {
         className='h-8'
         width={32}
         height={32}
-<<<<<<< HEAD
-      />
-    </Link>
-  )
-}
-=======
       />;
     </Link>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         />;
       </Link>);
   }
@@ -161,4 +102,3 @@ if ( {) {
       />;
     </Link>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

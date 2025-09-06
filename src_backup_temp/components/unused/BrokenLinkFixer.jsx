@@ -71,10 +71,6 @@ export default function Page("props": "any) {;
         setLinks(allLinks);
         // Update stats;
         setStats({;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             "total": "allLinks.length",;
             "healthy": "0",;
             "broken": "0",;
@@ -162,10 +158,6 @@ export default function Page("props": "any) {;
             return;
         // Remove previous highlights';
         document.querySelectorAll('.broken-link-highlight').forEach(el => {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             el.classList.remove('broken-link-highlight')});
         // Add highlight to selected element';
         link.element.classList.add('broken-link-highlight');

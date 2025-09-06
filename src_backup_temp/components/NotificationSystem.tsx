@@ -1,18 +1,9 @@
 import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page(props: any) {
 > {
 ';
   maxNotifications?: number;';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function Page(props: any) {;
 > {;
@@ -20,28 +11,13 @@ export default function Page(props: any) {;
 ;
 export default function Page("props": "any) {;
 > {;
-<<<<<<< HEAD
-
 export default function Page(props: any) {
 > {
-<<<<<<< HEAD
-=======
-
-=======
-export default function Page(props: any) {
-> {
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   maxNotifications?: number;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   enableSound?: boolean;
   enableVibration?: boolean;
   autoDismiss?: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   defaultDuration?: number"}
 ;
 interface NotificationSettings {;
@@ -56,10 +32,6 @@ export const "NotificationSystem": "React.FC<NotificationSystemProps> = ({;
   maxNotifications = 5",;
   position = 'top-right',;
 "enableSound": "tru e",;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   defaultDuration?: number}
 interface NotificationSettings {
   sound: boolean;
@@ -68,13 +40,6 @@ interface NotificationSettings {
   position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   maxNotifications: number;
   defaultDuration: number}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5,
   position = 'top-right',
@@ -87,11 +52,6 @@ enableSound: tru e,;
   autoDismiss = true,;
   defaultDuration = 5000}) => {;
   const [notifications, setNotifications] = useState<Notification[]>([]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const [settings, setSettings] = useState<NotificationSettings>({;
     "sound": "enableSoun d",;
     "vibration": "enableVibratio n",;
@@ -107,10 +67,6 @@ enableSound: tru e,;
 // Initialize audio for notification sounds';';
 default:'';';
 // Initialize audio for notification sounds      default:'';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 // Initialize audio for notification sounds;
 default:';
@@ -138,21 +94,12 @@ return 'top-4 right-4'}
   };
   // Update settings
     setSettings(prev => ({ ...prev, ...newSettings }) ) }, []) ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Expose addNotification method globally for external use;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Expose addNotification method globally for external use
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -166,11 +113,6 @@ return 'top-4 right-4'}
     <>
       {/* Notification Bell */}`
       <div className = {`fixed ${getPositionClasses()} z-50`}>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <button;
           onClick={() => setIsOpen(!isOpen)}";
           className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 "hover": "borde r-zion-cyan/40 transition-all duration-300 transform "hover": scal e-105";
@@ -183,7 +125,6 @@ return 'top-4 right-4'}
               animate={{ scale: 1 }}"
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"';
 ';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               animate={{ scale: 1 }}";
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center";
               initial={{ "scale": "0 "}}
@@ -201,22 +142,10 @@ return 'top-4 right-4'}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}"
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {unreadCount > 99 ? '99+' : unreadCount}
             </motion.div>) }
         </button>
         {/* Settings button */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <button;
           onClick={() => setShowSettings(!showSettings)}";
           className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/10 "hover": "b g-zion-slate/20 rounded-lg transition-colors";
@@ -269,10 +198,6 @@ return 'top-4 right-4'}
                 <button';
                   onClick={() => updateSettings({ autoDismiss: !settings.autoDismiss })}`';';
                   className={`p-2 rounded-lg transition-colors ${settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ";
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings;
 ";
@@ -355,11 +280,6 @@ return 'top-4 right-4'}
             <div className="space-y-2 max-h-80 overflow-y-auto">;
               <AnimatePresence>;
                 {notifications.length === 0 ? (<motion.div;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}"
                     className="text-center py-8 text-zion-slate/60"
@@ -370,10 +290,6 @@ return 'top-4 right-4'}
                 ) : (
                   notifications.map((notification) => (
                     <motion.div
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     animate={{ opacity: 1 }}";
                     initial={{ "opacity": "0 "}}
                     animate={{ "opacity": "1 "}}";
@@ -385,14 +301,7 @@ return 'top-4 right-4'}
                 ) : "(;
                   notifications.map((notification) => (;
                     <motion.div;
-<<<<<<< HEAD
                       key={notification.id}
-=======
-<<<<<<< HEAD
-=======
-                      key={notification.id}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       key={notification.id"}
                       initial = {;
   { "opacity": "0",;
@@ -540,15 +449,9 @@ return 'top-4 right-4'}
                       className = {
 `
   `p-4 rounded-xl ${getNotificationStyles(notification.type,;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   notification.priority)';
 ';';
 } ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   notification.priority);
 } ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`;
   notification.priority)
@@ -565,11 +468,6 @@ return 'top-4 right-4'}
                             <h4 className={`text-sm font-medium ${notification.read ? 'text-zion-slate/70' : 'text-zion-slate-dark'`
                             }`}>
                               {notification.title}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                             </h4>;
                             <button;
                               onClick={() => dismissNotification(notification.id)}";
@@ -580,10 +478,6 @@ return 'top-4 right-4'}
 `;
                           <p className={`text-sm mt-1 ${notification.read ? 'text-zion-slate/60' : 'text-zion-slate'`;
                           "}`}>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                             </h4>
                             <button
                               onClick={() => dismissNotification(notification.id)}"
@@ -624,11 +518,6 @@ return 'top-4 right-4'}
                                 <button
                                   onClick={() => {
                                     notification.action!.onClick();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                                     markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 "hover": "b g-zion-cyan/20 text-zion-cyan rounded transition-colors";
                                 >;
                                   {notification.action.label"}
@@ -644,10 +533,6 @@ return 'top-4 right-4'}
                           </div>;
                         </div>;
                       </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                                     markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover: b g-zion-cyan/20 text-zion-cyan rounded transition-colors"
                                 >
                                   {notification.action.label}
@@ -675,11 +560,6 @@ export
       (window as any).addNotification(notification)}
   }, []) ;
   return { addNotification }};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 // Utility functions for common notification types';
 export ';';
         priority: 'medium',';';
@@ -740,10 +620,6 @@ export ';';
 </NotificationSettings>
 </Notification>';
 </NotificationSystemProps>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 // Utility functions for common notification types;
 export;
@@ -812,13 +688,6 @@ export;
 </NotificationSettings>;
 </Notification>;
 </NotificationSystemProps>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 // Utility functions for common notification types
 export 
         priority: 'medium',;
@@ -885,12 +754,4 @@ export
 </any>
 </NotificationSettings>
 </Notification>
-<<<<<<< HEAD
 </NotificationSystemProps>
-=======
-<<<<<<< HEAD
-</NotificationSystemProps>
-=======
-</NotificationSystemProps>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

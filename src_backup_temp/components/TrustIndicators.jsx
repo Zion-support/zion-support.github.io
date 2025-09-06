@@ -20,25 +20,13 @@ import { Shield", Lock, Award, Users, Globe, CheckCircle, Star, Zap export funct
             "title": "Verified Community",";
             "description": "10,000+ verified professionals and companies",";
             "color": "text-zion-purple";
-<<<<<<< HEAD
-
 interface TrustIndicators.jsProps {
   // Add props here as needed
 }
-
-=======
-interface TrustIndicators.jsProps {
-  // Add props here as needed
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             icon: Users,"
             title: "Verified Community","
             description: "10,000+ verified professionals and companies","
             color: "text-zion-purple"
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
     ];
     const certifications = [";
         { "name": "SOC 2 Type II", "status": "Certified", "year": "2024" },";
@@ -109,10 +97,6 @@ interface TrustIndicators.jsProps {
                   <h4 className="font-semibold text-white mb-1">{cert.name}</h4>";
                   <div className="text-zion-cyan text-sm font-medium mb-1">{cert.status}</div>";
                   <div className="text-zion-slate-light text-xs">{cert.year}</div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {/* Certifications Section */}"
         {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">"
             <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -194,8 +178,4 @@ export default function TrustIndicators.js({ }: TrustIndicators.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

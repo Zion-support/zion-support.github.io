@@ -1,38 +1,4 @@
-<<<<<<< HEAD
-
-/**
- * Format a date string or timestamp into a readable format
- * @param date Date to format
- * @param format Optional format specification
- * @returns Formatted date string
- */
-
-export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
-  const dateObj = new Date(date);
-  switch (format) {
-    case 'short':
-<<<<<<< HEAD
-      return dateObj.toLocaleDateString()
-    case 'medium':
-      return dateObj.toLocaleDateString(undefined, {
-        year: 'numeric'
-        month: 'short'
-        day: 'numeric'
-      });
-    case 'long':
-      return dateObj.toLocaleDateString(undefined, {
-        year: 'numeric'
-        month: 'long'
-        day: 'numeric'
-      });
-    case 'full':
-      return dateObj.toLocaleDateString(undefined, {
-        weekday: 'long'
-        year: 'numeric'
-        month: 'long'
-        day: 'numeric'
-=======
-      return dateObj && dateObj.toLocaleDateString(),
+return dateObj && dateObj.toLocaleDateString(),
     case 'medium':
       return dateObj && dateObj.toLocaleDateString(undefined, { 
         year: 'numeric', 
@@ -51,19 +17,13 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         year: 'numeric', 
         month: 'long', 
         day: 'numeric' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     case 'relative':
       // Simple relative time (today, yesterday, or date)
       const now = new Date();
       const today = new Date(now && now.getFullYear(), now && now.getMonth(), now && now.getDate());
       const yesterday = new Date(today);
-<<<<<<< HEAD
-      yesterday.setDate(yesterday.getDate() - 1);
-=======
       yesterday && yesterday.setDate(yesterday && yesterday.getDate() - 1);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (dateObj >= today) {
         return 'Today'
       } else if (dateObj >= yesterday) {
@@ -82,64 +42,29 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 export const timeAgo = (date: Date | string | number): string => {
   const dateObj = new Date(date);
   const now = new Date();
-<<<<<<< HEAD
-  const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000);
-  let interval = Math.floor(seconds / 31536000)
-  if (interval >= 1) {
-    return interval === 1 ? '1 year ago' : `${interval} years ago`
-  }
-  interval = Math.floor(seconds / 2592000);
-  if (interval >= 1) {
-    return interval === 1 ? '1 month ago' : `${interval} months ago`
-  }
-  interval = Math.floor(seconds / 86400);
-  if (interval >= 1) {
-    return interval === 1 ? '1 day ago' : `${interval} days ago`
-  }
-  interval = Math.floor(seconds / 3600);
-  if (interval >= 1) {
-    return interval === 1 ? '1 hour ago' : `${interval} hours ago`
-  }
-  interval = Math.floor(seconds / 60);
-  if (interval >= 1) {
-    return interval === 1 ? '1 minute ago' : `${interval} minutes ago`
-  }
-  return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`
-}
-
-=======
-  
   const seconds = Math && Math.floor((now && now.getTime() - dateObj && dateObj.getTime()) / 1000);
-  
   let interval = Math && Math.floor(seconds / 31536000),
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }
-  
   interval = Math && Math.floor(seconds / 2592000);
   if (interval >= 1) {
     return interval === 1 ? '1 month ago' : `${interval} months ago`
   }
-  
   interval = Math && Math.floor(seconds / 86400);
   if (interval >= 1) {
     return interval === 1 ? '1 day ago' : `${interval} days ago`
   }
-  
   interval = Math && Math.floor(seconds / 3600);
   if (interval >= 1) {
     return interval === 1 ? '1 hour ago' : `${interval} hours ago`
   }
-  
   interval = Math && Math.floor(seconds / 60);
   if (interval >= 1) {
     return interval === 1 ? '1 minute ago' : `${interval} minutes ago`
   }
-  
   return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 /**;
 * Format a date string or timestamp into a readable format;
 * @param date Date to format;
@@ -244,4 +169,3 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

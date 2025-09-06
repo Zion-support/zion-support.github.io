@@ -1,57 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
 import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
-
 const categories = [
   {
-<<<<<<< HEAD
-    title: 'Services'
-    description: 'On-demand IT support, consulting, development, and more'
-    icon: <Briefcase className='w-10 h-10' />
-    link: '/services', // Link for the card itself
-  }
-  {
-    title: 'Talents'
-    description: 'Connect with AI experts, developers, and tech specialists'
-    icon: <Users className='w-10 h-10' />
-    link: '/talent', // Link for the card itself
-    color: undefined, // Let CategoryCard use default color
-  }
-  {
-    title: 'Equipment'
-    description: 'Rent or buy specialized hardware, servers, and devices'
-    icon: <HardDrive className='w-10 h-10' />
-    link: '/equipment', // Link for the card itself
-    color: undefined, // Let CategoryCard use default color
-  }
-  {
-    title: 'Innovation'
-    description: 'Discover cutting-edge solutions and tech breakthroughs'
-    icon: <Lightbulb className='w-10 h-10' />
-    link: '/innovation'
-    color: undefined, // Let CategoryCard use default color
-  }
-]
-
-export default function AllCategoriesPage() {
-=======
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
 import ErrorBoundary from '@/components/GlobalErrorBoundary';
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-
 // Reusing the categories array from CategoriesSection && CategoriesSection.tsx;
 // Ideally, this would come from a shared data source or API;
 const categories = [;
@@ -83,25 +41,13 @@ const categories = [;
     color: undefined, // Let CategoryCard use default color;
   },;
 ];
-
 export default function AllCategoriesPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen bg-zion-blue'>;
       <div className='container mx-auto px-4 py-12'>;
         <div className='text-center mb-12'>;
           <GradientHeading
             level='h1'
-<<<<<<< HEAD
-            className='text-4xl md:text-5xl font-bold mb-4'
-          >
-            All Categories
-          </GradientHeading>
-          <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
-            Explore our extensive range of AI services and products. Find
-            exactly what you're looking for to enhance your business or personal
-            projects.          </p>
-=======
     title: "Services",
     description: "On-demand IT support, consulting, development, and more";
     icon: <Briefcase className = "w-10 h-10" />,
@@ -129,8 +75,6 @@ export default function AllCategoriesPage() {;
     link: "/innovation",
     color: undefined, // Let CategoryCard use default color
   }];
-
-
 export default function AllCategoriesPage() {
   return (
     <div className="min-h-screen bg-zion-blue">
@@ -143,18 +87,12 @@ export default function AllCategoriesPage() {
             Explore our extensive range of AI services and products.
             Find exactly what you're looking for to enhance your business or personal projects.
           </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
         <ErrorBoundary>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {categories.map(category => (
-=======
             className='text-4xl md:text-5xl font-bold mb-4'>;
             All Categories;
           </GradientHeading>;
           <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>;
-=======
 import { CategoryCard } from '@/components / CategoryCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import ErrorBoundary from '@/components / GlobalErrorBoundary';
@@ -205,21 +143,12 @@ function AllCategoriesPage() {
             All Categories;
           </GradientHeading>;
           <p className='text - zion - slate - light text - lg max - w-3xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Explore our extensive range of AI services and products. Find;
             exactly what you're looking for to enhance your business or personal;
             projects.          </p>;
         </div>;
-<<<<<<< HEAD
-
-        <ErrorBoundary>;
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>;
-            {categories && categories.map(category => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <CategoryCard
                 key={category && category.id}
                 title={category && category.title}
@@ -228,20 +157,11 @@ function AllCategoriesPage() {
                 href={category && category.href}
               />;
             ))}
-<<<<<<< HEAD
-          </div>
-        <ErrorBoundary>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((category) => (
-=======
           </div>;
-
         <ErrorBoundary>;
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>;
             {categories && categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
             {categories && categories.map((category) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <CategoryCard
                 key={category && category.title}
                 title={category && category.title}
@@ -258,27 +178,14 @@ function AllCategoriesPage() {
                 // The 'link' in the categories array above is used by CategoryCard's internal Link
               />;
             ))}
-<<<<<<< HEAD
-          </div>
-        </ErrorBoundary>
-      </div>
-    </div>
-<<<<<<< HEAD
-  )
-}
-=======
           </div>;
         </ErrorBoundary>;
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <ErrorBoundary>;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
             {categories.map (category => (
@@ -314,4 +221,3 @@ function AllCategoriesPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

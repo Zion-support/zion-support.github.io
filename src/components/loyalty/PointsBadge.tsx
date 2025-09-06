@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Gift, RefreshCw } from 'lucide-react'
-
-import { usePoints } from '@/hooks/usePoints'
-import { useAuth } from '@/hooks/useAuth'
-import Link from 'next/link'
-import {
-  Tooltip
-  TooltipContent
-  TooltipProvider
-  TooltipTrigger
-} from '@/components/ui/tooltip'
-import { LoginModal } from '@/components/auth/LoginModal'
-import { Button } from '@/components/ui/button'
-import { logErrorToProduction } from '@/utils/productionLogger'
-export function PointsBadge() {
-  const { isAuthenticated } = useAuth()
-  const { ledger, balance, loading, fetchLedger } = usePoints()
-  const [loginOpen, setLoginOpen] = useState(false)
-  const [isRefreshing, setIsRefreshing] = useState(false)
-  const points = balance
-  const breakdown = ledger.reduce(
-    (acc, e) => {
-      if (e.reason === 'purchase') acc.purchase += e.delta
-      if (e.reason === 'post') acc.post += e.delta
-      if (e.reason === 'referral') acc.referral += e.delta
-      return acc }
-=======
 import React, { useState } from 'react';
 import { Gift, RefreshCw } from 'lucide-react';
 import { use_points } from '@/hooks / use_points';
@@ -67,7 +36,6 @@ if (acc.referral += e.delta) {
   $2
 }
       return acc },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     { purchase: 0, post: 0, referral: 0 }
   );
   const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
@@ -91,9 +59,6 @@ if (return) {
     } catch (error) {
       logErrorToProduction ('Failed to refresh points:', { data: error });
     } finally {
-<<<<<<< HEAD
-      setIsRefreshing(false)
-=======
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints';
 import { useAuth } from '@/hooks/useAuth';
@@ -112,9 +77,7 @@ export function PointsBadge() {;
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
-
   const points = balance;
-
   const breakdown = ledger && ledger.reduce(;
     (acc, e) => {;
       if (e && e.reason === 'purchase') acc && acc.purchase += e && e.delta;
@@ -123,86 +86,42 @@ export function PointsBadge() {;
       return acc;    },;
     { purchase: 0, post: 0, referral: 0 }
   );
-
   const handleClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
     if (!isAuthenticated) {;
       e && e.preventDefault();
       setLoginOpen(true);
     }
   };
-
   const handleRefresh = async (e: React && React.MouseEvent<HTMLButtonElement>) => {;
     e && e.preventDefault();
     e && e.stopPropagation();
     if (!isAuthenticated) return;
-
     setIsRefreshing(true);    try {;
       await fetchLedger();
     } catch (error) {;
       logErrorToProduction('Failed to refresh points:', { data: error });
     } finally {;
       setIsRefreshing(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       setIsRefreshing (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
-
   return (
     <TooltipProvider>;
-<<<<<<< HEAD
-      <div className='flex items-center gap-1'>;
-        <Tooltip>;
-          <TooltipTrigger asChild>;
-            <Link
-              href={isAuthenticated ? '/points' : '#'}
-              onClick={handleClick}
-=======
       <div className='flex items - center gap - 1'>;
         <Tooltip>;
           <TooltipTrigger as_child>;
             <Link;
               href={is_authenticated ? '/points' : '#'}
               on_click={handle_click}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               title={
                 is_authenticated ? 'View points' : 'Earn points by participating';
               }
-<<<<<<< HEAD
-              className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'>;
-              <Gift className='h-4 w-4' aria-hidden='true' />;
-=======
               className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
               <Gift className='h - 4 w - 4' aria - hidden='true' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <span>{`${points} pts`}</span>;
             </Link>;
           </TooltipTrigger>;
           <TooltipContent>;
-<<<<<<< HEAD
-            {isAuthenticated ? (;
-              <>;
-                <p className='text-sm font-medium'>Point Breakdown</p>;
-                {points === 0 && (;
-                  <p className='text-xs text-muted-foreground'>;
-                    You haven't earned any points yet.;
-                  </p>;
-                )}
-                <ul className='text-xs mt-1 space-y-0 && 0.5'>;
-                  <li>Purchases: {breakdown && breakdown.purchase}</li>;
-                  <li>Posts: {breakdown && breakdown.post}</li>;
-                  <li>Referrals: {breakdown && breakdown.referral}</li>;
-                </ul>;
-                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
-                  Click to view full rewards program;
-                </p>;
-              </>;
-            ) : (;
-              <>;
-                <p className='text-sm font-medium'>Zion Rewards Program</p>;
-                <p className='text-xs mt-1 text-muted-foreground'>;
-=======
             {is_authenticated ? (
               <>;
                 <p className='text - sm font - medium'>Point Breakdown</p>;
@@ -222,7 +141,6 @@ export function PointsBadge() {;
               <>;
                 <p className='text - sm font - medium'>Zion Rewards Program</p>;
                 <p className='text - xs mt - 1 text - muted - foreground'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   • Sign up: 50 pts;
                   <br />;
                   • First purchase: 100 pts;
@@ -230,26 +148,11 @@ export function PointsBadge() {;
                   • Community posts: 25 pts each;
                   <br />• Refer friends: 200 pts each;
                 </p>;
-<<<<<<< HEAD
-                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
-                  Click to learn more and join!;
-                </p>;
-              </>;
-            )}
-<<<<<<< HEAD
-          </TooltipContent>
-        </Tooltip>
-        {isAuthenticated && (
-          <Tooltip>
-            <TooltipTrigger asChild>
-=======
           </TooltipContent>;
         </Tooltip>;
-
         {isAuthenticated && (;
           <Tooltip>;
             <TooltipTrigger asChild>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 variant='ghost'
                 size='sm'
@@ -260,7 +163,6 @@ export function PointsBadge() {;
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
                   aria-hidden='true'
-=======
                 <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
                   Click to learn more and join!;
                 </p>;
@@ -280,39 +182,19 @@ export function PointsBadge() {;
                 <RefreshCw;
                   className={`h - 3 w - 3 ${is_refreshing || loading ? 'animate - spin' : ''}`}
                   aria - hidden='true';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 />;
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
-<<<<<<< HEAD
-              <p className='text-sm'>Refresh points balance</p>;
-            </TooltipContent>;
-          </Tooltip>;
-        )}
-<<<<<<< HEAD
-      </div>
-      {!isAuthenticated && (
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-      )}
-    </TooltipProvider>
-  )
-=======
       </div>;
-
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
       )}
     </TooltipProvider>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               <p className='text - sm'>Refresh points balance</p>;
             </TooltipContent>;
           </Tooltip>)}
@@ -322,4 +204,3 @@ export function PointsBadge() {;
     </TooltipProvider>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

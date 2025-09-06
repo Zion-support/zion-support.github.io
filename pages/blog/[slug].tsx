@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -11,7 +6,6 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
-
 import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
@@ -20,7 +14,6 @@ function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
   }
-
   const raw = fs.readFileSync(filePath, 'utf8')
   const match = raw.match(/---\n([\s\S]+?)\n---\n([\s\S]*)/)
   if (!match |!match[1] |!match[2]) return null
@@ -29,11 +22,6 @@ function parseMarkdown(filePath: string): BlogPost | null {
   const slug = path.basename(filePath).replace(/\.md$/, '')
   return { ...meta, id: slug, slug, content } as BlogPost
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import ReactMarkdown from 'react - markdown',
 import { use_router } from 'next / router',
@@ -63,18 +51,12 @@ if (return null, ) {
   const slug = path.basename (file_path).replace (/\.md$/, ''),
   return { ...meta, id: slug, slug, content } as BlogPost;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface BlogPostPageProps {
   /**;
   * Preloaded blog post for static generation. Can be null if not found.;
   */;
   initial_post: BlogPost | null;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const router = useRouter()
   const { slug } = router.query
@@ -82,11 +64,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const [error, setError] = React.useState<string | null>(null)
   React.useEffect(() => {
     if (initialPost && initialPost.slug === slug) {
-<<<<<<< HEAD
-      setPost(initialPost)
-=======
       setPost(initialPost);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setError(null), // Clear any previous error
     } else if (slug) {
       // This case handles if the slug changes and initialPost is not for the current slug
@@ -94,15 +72,9 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       // For now, we will rely on getStaticProps to provide the correct post or a 404.
       // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.
-<<<<<<< HEAD
-      const directFallback = BLOG_POSTS.find((p) => p.slug === slug) |null
-      if (directFallback) {
-        setPost(directFallback)
-=======
       const directFallback = BLOG_POSTS.find((p) => p.slug === slug) || null;
       if (directFallback) {
         setPost(directFallback);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         setError(null)
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
@@ -114,7 +86,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   }, [slug, initialPost])
   if (error) {
     return <div>{error}</div>
-=======
 const BlogPostPage: React.FC < BlogPostPageProps> = ({ initial_post }) => {
   const router = use_router (),
   const { slug } = router.query,
@@ -156,7 +127,6 @@ if ( {) {
   $2
 }
     return <div>{error}</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   // Check condition
 if ( {) {
@@ -164,22 +134,11 @@ if ( {) {
 }
     return <div > Article not found</div>;
   }
-<<<<<<< HEAD
-  const articleLd = {
-<<<<<<< HEAD
-    author: post.author.name
-    publishedTime: post.publishedDate
-    tags: post.tags |[]}
-  const body = (post as any).body |post.content
-=======
-=======
   const article_ld = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     author: post.author.name,
     published_time: post.published_date,
     tags: post.tags || []},
   const body = (post as any).body || post.content;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>;
       <AdvancedSEO;
@@ -196,17 +155,10 @@ if ( {) {
           <img;
             src={post.author.avatar_url}
             alt={post.author.name}
-<<<<<<< HEAD
-            className="w-10 h-10 rounded-full"
-            onError={(e) => {
-              const target = e.currentTarget as HTMLImageElement
-              target.src = '/images/blog-placeholder.svg'
-=======
             className="w - 10 h - 10 rounded - full";
             on_error={(e) => {
               const target = e.current_target as HTMLImageElement,
               target.src = '/images / blog - placeholder.svg';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }}
           />;
           <div>;
@@ -222,54 +174,7 @@ if ( {) {
             <img;
               src={post.featured_image}
               alt={post.title}
-<<<<<<< HEAD
-              className="object-cover w-full h-full"
-              onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement
-                target.src = '/images/blog-placeholder.svg'
-              }}
-            />
-          </div>
-        )}
-        <ReactMarkdown>{body}</ReactMarkdown>
-        <AuthorBio author={post.author} />
-        <SocialShareButtons title={post.title} />
-        <CommentsSection slug={post.slug} />
-      </main>
-    </>
-  )
-}
-export default BlogPostPage
-export const getStaticPaths: GetStaticPaths = async () => {
-  const dir = path.join(process.cwd(), 'contentblog')
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'))
-  const paths = files.map((f) => ({
-    params: { slug: f.replace(/\.md$/, '') }}))
-  // Use `blocking` so new posts added after build can be generated on demand
-  return { paths, fallback: 'blocking' }
-}
-export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
-  params}: {
-  params?: { slug?: string }
-}) => {
-  const slug = params?.slug as string
-  // Validate slug to prevent malformed paths
-  if (!/^[a-z0-9-]+$/.test(slug)) {
-    return { notFound: true }
-  }
-  const filePath = path.join(process.cwd(), 'contentblog', `${slug}.md`)
-  const post = parseMarkdown(filePath)
-  if (!post) {
-    return { notFound: true }
-  }
-  return { props: { initialPost: post }, revalidate: 60 }
-<<<<<<< HEAD
-}
-
-=======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               className="object - cover w - full h - full";
               on_error={(e) => {
                 const target = e.current_target as HTMLImageElement,
@@ -315,4 +220,3 @@ if ( {) {
   return { props: { initial_post: post }, revalidate: 60 }
 },
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

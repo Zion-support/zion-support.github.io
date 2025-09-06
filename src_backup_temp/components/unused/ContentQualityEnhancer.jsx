@@ -4,10 +4,6 @@ import {motion, AnimatePresence} from 'framer-motion';
 export default function Page("props": "any) {;
             // Check for very short content;
             if(words.length > 0 && words.length < 10) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 issues.push({;
 `;
                     "id": `short-content-${index"}`,;
@@ -40,10 +36,6 @@ export default function Page(props: any) {
                 seoScore -= 3}
             // Check for very long paragraphs(hard to read);
             if(words.length > 100) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 issues.push({;
 `;
                     "id": "`long-paragraph-${index"}`,;
@@ -78,10 +70,6 @@ export default function Page(props: any) {
                 if(previousHeadings.length > 0) {;
                     const lastLevel = parseInt(previousHeadings[previousHeadings.length-1].tagName.charAt(1));
                     if(level - lastLevel > 1) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                         issues.push({;
 `;
                             "id": "`heading-skip-${index"}`,;
@@ -118,17 +106,9 @@ export default function Page(props: any) {
             commonWords.forEach(word => {wordFrequency[word] = (wordFrequency[word] || 0) + 1}
     );
             Object.entries(wordFrequency).forEach(([word, count]) => {
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 if(count > 5 && word.length > 3) {;
                     const density = (count / commonWords.length) * 100;
                     if(density > 3) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                         issues.push({;
 `;
                             "id": "`keyword-stuffing-${index"}-${word}`,;
@@ -165,15 +145,8 @@ export default function Page(props: any) {
     );
             // Check for proper meta descriptions'
             if(element.tagName === 'META' && element.getAttribute('name') === 'description') {
-<<<<<<< HEAD
-
                 const content = element.getAttribute('content') || '';
                 if(content.length < 50) {;
-
-=======
-                const content = element.getAttribute('content') || '';
-                if(content.length < 50) {;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                     issues.push({;
 `;
                         "id": "`short-meta-${index"}`,;
@@ -201,10 +174,6 @@ export default function Page(props: any) {
     );
                     seoScore -= 5}
                 else if(content.length > 160) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                     issues.push({;
 `;
                         "id": "`long-meta-${index"}`,;
@@ -236,10 +205,6 @@ export default function Page(props: any) {
             if(element.tagName === 'A') {;
                 const href = element.getAttribute('href');
                 if(href && (href.startsWith('#') || href.startsWith('"javascript":'))) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                     issues.push({;
 `;
                         "id": "`broken-link-${index"}`,;
@@ -271,10 +236,6 @@ export default function Page(props: any) {
             if(element.tagName === 'IMG') {;
                 const alt = element.getAttribute('alt');
                 if(!alt || alt.trim() === '') {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                     issues.push({;
 `;
                         "id": "`missing-alt-${index"}`,;
@@ -313,10 +274,6 @@ export default function Page(props: any) {
     );
         // Generate suggestions based on analysis
         if(wordCount < 300) {
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             suggestions.push({;
                 "id": 'increase-content',;
                 "type": 'improvement',;
@@ -408,10 +365,6 @@ export default function Page(props: any) {
     const highlightElement = useCallback((element) => {;
         // Remove previous highlights';
         document.querySelectorAll('.content-highlight').forEach(el => {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             el.classList.remove('content-highlight')});
         // Add highlight to selected element';
         element.classList.add('content-highlight');

@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Button  } from '@/components/ui/button';
-import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
-import { toast } from '@/hooks/use-toast';
-<<<<<<< HEAD
-interface SocialShareButtonsProps {
-  title: string
-export function SocialShareButtons({ title }: SocialShareButtonsProps) {
-
-  const shareUrl =
-    typeof window !== 'undefined'
-      ? encodeURIComponent(window.location.href)
-      : ''
-  const shareText = encodeURIComponent(title)
-  const shareToTwitter = () => {
-    window.open(
-      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
-      '_blank'
-    )
-  }
-  const shareToFacebook = () => {
-    window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`
-      '_blank'
-    )
-  }
-  const shareToLinkedIn = () => {
-    window.open(
-      `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`
-      '_blank'
-    )
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
@@ -61,7 +27,6 @@ function SocialShareButtons() {
     window.open (
       `https://www.linkedin.com / sharing / share - offsite/?url=${share_url}`,
       '_blank');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const copy_link = () =>: any {
     // Check condition
@@ -75,59 +40,32 @@ if (return) {
   }
   const buttons = [;
     {
-<<<<<<< HEAD
-      icon: <Twitter className='h-4 w-4' />
-      label: 'Twitter'
-      onClick: shareToTwitter
-    }
-    {
-      icon: <Facebook className='h-4 w-4' />
-      label: 'Facebook'
-      onClick: shareToFacebook
-    }
-    {
-      icon: <Linkedin className='h-4 w-4' />
-      label: 'LinkedIn'
-      onClick: shareToLinkedIn
-    }
-    {
-      icon: <LinkIcon className='h-4 w-4' />
-      label: 'Copy Link'
-      onClick: copyLink
-    }
-  ]
-=======
 interface SocialShareButtonsProps {;
   title: string;
-
 export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {;
   const shareUrl =;
     typeof window !== 'undefined';
       ? encodeURIComponent(window && window.location.href);
       : '';
   const shareText = encodeURIComponent(title);
-
   const shareToTwitter = () => {;
     window && window.open(;
       `https://twitter && twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,;
       '_blank';
     );
   };
-
   const shareToFacebook = () => {;
     window && window.open(;
       `https://www && www.facebook.com/sharer/sharer && sharer.php?u=${shareUrl}`,;
       '_blank';
     );
   };
-
   const shareToLinkedIn = () => {;
     window && window.open(;
       `https://www && www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,;
       '_blank';
     );
   };
-
   const copyLink = () => {;
     if (typeof window === 'undefined') return;
     navigator && navigator.clipboard;
@@ -157,8 +95,6 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
       onClick: copyLink,;
     },;
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   return (
     <div className='mt-12 flex flex-wrap gap-2'>;
       {buttons && buttons.map(btn => (;
@@ -171,21 +107,11 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
           <span>{btn && btn.label}</span>;
         </Button>;
       ))}
-<<<<<<< HEAD
-    </div>
-  )
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       icon: <Twitter className='h - 4 w - 4' />,
       label: 'Twitter',
       on_click: shareToTwitter,
@@ -221,4 +147,3 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     </div>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

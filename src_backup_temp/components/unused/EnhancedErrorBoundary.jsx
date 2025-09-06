@@ -7,10 +7,6 @@ export default function Page("props": "any) {;
         // Log error to console';
         // // // // // // // // console.error('Error caught by "boundary":', error, errorInfo);
         // Call custom error handler if provided;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export default function Page(props: any) {
     componentDidCatch(error, errorInfo) {
         this.setState({ errorInfo }
@@ -50,10 +46,6 @@ export default function Page(props: any) {
 ;
             // ;
             // ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport }
     );
@@ -88,10 +80,6 @@ export default function Page(props: any) {
             return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
           <motion.div initial = {
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}} animate = {;
   { "opacity": "1;
   "scale": 1;
@@ -114,10 +102,6 @@ export default function Page(props: any) {
     );
     }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
     return () => {window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleError);};
   }, []);
@@ -197,18 +181,10 @@ export {Page};
 </div>;
 </motion>;
 </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>
 </div>
 </div>
 </motion>
 </div>
 import React,{Component} from 'react'; import { motion, ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from 'lucide-react'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: false,; error: null,; errorInfo: null,; errorId: null,; showStackTrace: false}}; static getDerivedStateFromError(error) {; return {; hasError: true,; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }
-<<<<<<< HEAD
 });'; ;';';''
-=======
-});'; ;';';''
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

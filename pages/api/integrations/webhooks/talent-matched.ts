@@ -1,29 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { writeState, readState } from "../../../../lib/integrations/fileStore";
-import { crm } from "../../../../lib/integrations/connectors";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-<<<<<<< HEAD
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
-  const { match } = req.body as {
-    match?: { talentId: string; jobId: string; summary?: string }
-  }
-  if (!match) return res.status(400).json({ error: "Missing match payload" });
-=======
-  try {
+try {
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { match } = req && req.body as {
     match?: { talentId: string; jobId: string; summary?: string };
   };
   if (!match) return res && res.status(400).json({ error: "Missing match payload" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState, readState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -31,25 +12,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { match } = req.body as { match?: { talentId: string, jobId: string, summary?: string } };
   if (!match) return res.status(400).json({ error: 'Missing match payload' });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // record Zapier event
-<<<<<<< HEAD
-  const eventId = `${Date && Date.now()}-talent-matched`;
-  writeState((s) => {
-<<<<<<< HEAD
-    s.events.push({
-      id: eventId
-      type: "zion.talent.matched"
-      timestamp: Date.now()
-      payload: { match }
-=======
     s && s.events.push({
       id: eventId,
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { write_state, read_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -75,27 +42,13 @@ function handler() {
       id: event_id,
       type: "zion.talent.matched",
       timestamp: Date.now (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       payload: { match },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-=======
   const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {
     s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   });
-<<<<<<< HEAD
-  // log to connected CRMs as a note
-  const state = readState();
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const crms = state.connections.filter((c) =>
-    ["salesforce", "hubspot", "zoho", "pipedrive"].includes(c.providerId)
-  );
-=======
   const crms = state.connections.filter(c => ['salesforcehubspotzohopipedrive'].includes(c.providerId));
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   for (const conn of crms) {
     const log = {
       id: `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
@@ -108,11 +61,9 @@ function handler() {
       note: `Talent ${match.talentId} matched. ${match.summary |""}`.trim()
     });
     writeState((s) => s.logs.push(log));
-
   }
   res.status(200).json({ ok: true, eventId });
 }
-=======
   const crms = state && state.connections.filter((c) =>
     ["salesforce", "hubspot", "zoho", "pipedrive"].includes(c && c.providerId),
   );
@@ -129,14 +80,8 @@ function handler() {
     });
     writeState((s) => s && s.logs.push(log));
   }
-
   res && res.status(200).json({ ok: true, eventId });
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
   // log to connected CRMs as a note;
   const state = read_state ();
@@ -158,4 +103,3 @@ function handler() {
   }
   res.status (200).json ({ ok: true, event_id });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -275,9 +275,4 @@ export {TalentCardComponent};
 export {TalentCardComponent};
 export {TalentCardComponent};
 export {Page};
-<<<<<<< HEAD
-
 </FavoriteButton>
-=======
-</FavoriteButton>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

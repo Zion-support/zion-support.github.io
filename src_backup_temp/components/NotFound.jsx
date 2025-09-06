@@ -350,10 +350,6 @@ export {NotFound};
 export {NotFound};
 ;
 export {NotFound};
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>
 </motion>
 </motion>';
@@ -379,8 +375,4 @@ export default function NotFound.js({ }: NotFound.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

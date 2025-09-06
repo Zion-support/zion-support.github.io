@@ -94,10 +94,6 @@ export default function Page(props: any) {
 '";
 '"
 import React from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 interface CommunityDiscussion.jsProps {
   // Add props here as needed
 }

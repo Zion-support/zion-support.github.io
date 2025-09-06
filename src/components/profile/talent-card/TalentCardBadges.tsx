@@ -1,30 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from "react";
-import { Badge } from "@/components/ui/badge";
-import { Award } from 'lucide-react'
-interface TalentCardBadgesProps {
-  featured: boolean | undefined
-export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
-=======
 interface TalentCardBadgesProps {;
   featured: boolean | undefined;
-
 export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!featured) return null;
   return (
-<<<<<<< HEAD
-    <div className='absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10'>
-      <Badge className='bg-transparent border-0 flex items-center gap-1 text-white px-0'>
-        <Award className='h-3 w-3' />
-        <span>Featured</span>
-      </Badge>
-    </div>
-  );  )
-=======
     <div className='absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10'>;
       <Badge className='bg-transparent border-0 flex items-center gap-1 text-white px-0'>;
         <Award className='h-3 w-3' />;
@@ -33,19 +11,10 @@ export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
     </div>;
   );  );
 };
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
   )
-<<<<<<< HEAD
-}
-=======
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { Badge } from '@/components / ui / badge';
 import { Award } from 'lucide-react';
@@ -69,4 +38,3 @@ if (return null) {
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

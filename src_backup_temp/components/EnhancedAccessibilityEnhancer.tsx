@@ -124,53 +124,26 @@ export default function Page("props": "any) {;
       applySettings({ [key]: "newValue "});
 ;
       if(key === 'highContrast') {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         announceToScreenReader();
           newValue';
             ? 'High contrast mode enabled'';
             : 'High contrast mode disabled';
         )} else if(key === 'largeText') {;
-<<<<<<< HEAD
   // Toggle settings
       applySettings({ [key]: newValue }
     );
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-  // Toggle settings
-      applySettings({ [key]: newValue }
-    );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         announceToScreenReader(';
           newValue ? 'Large text mode enabled' : 'Large text mode disabled';
         )}
     },;
     [settings, applySettings, announceToScreenReader];
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Zoom controls;
   ;
       applySettings({ "zoomLevel": "newZoo m "});`;
       announceToScreenReader(`Zoom level ${newZoom}%`)},;
     [settings.zoomLevel, applySettings, announceToScreenReader];
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Zoom controls
       applySettings({ zoomLevel: newZoo m }
     );`
@@ -192,12 +165,6 @@ export default function Page("props": "any) {;
         title="Accessibility Options";
       >";
         <Accessibility className="w-5 h-5"   />      </motion.button>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {/* Accessibility Panel */"}
       <AnimatePresence>;
         {isVisible && (<motion.div;
@@ -218,10 +185,6 @@ export default function Page("props": "any) {;
               >";
                 <EyeOff className="w-4 h-4"   />              </button>;
             </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div
@@ -241,13 +204,6 @@ export default function Page("props": "any) {;
               >"
                 <EyeOff className="w-4 h-4"   />              </button>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {/* Content */"}";
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">;
               {/* Visual Enhancements */}";

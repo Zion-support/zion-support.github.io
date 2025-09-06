@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const colorSchemes = {
-  quantum: {
-  resizeCanvas ();
-window.addEventListener ('resize', resizeCanvas);
-// Wrap around edges if (this.x < 0) this.x = canvas.width;
-if (this.x > canvas.width) this.x = 0;
-if (this.y < 0) this.y = canvas.height;
-if (this.y > canvas.height) this.y = 0;
-// Fade out near end of life if (this.life < 20) {
-=======
 const color_schemes = {
   quantum: {
   resize_canvas ();
@@ -36,46 +22,27 @@ if (this.coordinate_y = 0) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
 // Initialize particles ctx.fill_style = colors.primary;
 ctx.font = `$ {
-<<<<<<< HEAD
-  fontSize
-}px monospace`;
-const EnhancedFuturisticBackground: React.FC<
-  EnhancedFuturisticBackgroundProps
-> = ({
-  children
-  className = ''
-  intensity = 'medium'
-  colorScheme = 'quantum'
-  particleCount = 100
-  animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps {
@@ -85,7 +52,6 @@ interface EnhancedFuturisticBackgroundProps {
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
   particleCount?: number;
   animationSpeed?: number
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 import React from 'react';
  const colorSchemes = {;
@@ -97,14 +63,12 @@ if (this && this.x > canvas && canvas.width) this && this.x = 0;
 if (this && this.y < 0) this && this.y = canvas && canvas.height;
 if (this && this.y > canvas && canvas.height) this && this.y = 0;
 // Fade out near end of life if (this && this.life < 20) {;
-
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
 // Initialize particles ctx && ctx.fillStyle = colors && colors.primary;
 ctx && ctx.font = `$ {;
   fontSize ;
 }px monospace`;
-
 const EnhancedFuturisticBackground: React.FC<;
   EnhancedFuturisticBackgroundProps;
 > = ({;
@@ -114,8 +78,6 @@ const EnhancedFuturisticBackground: React.FC<;
   colorScheme = 'quantum',;
   particleCount = 100,;
   animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   font_size;
 }px monospace`;
 ;
@@ -128,62 +90,20 @@ const EnhancedFuturisticBackground: React.FC<;
   color_scheme = 'quantum',
   particle_count = 100,
   animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   children;
   class_name = '';
   intensity = 'medium';
-<<<<<<< HEAD
-  colorScheme = 'quantum';
-<<<<<<< HEAD
-  particleCount = 100
-  animationSpeed = 1
-<<<<<<< HEAD
-=======
 }) => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const colorSchemes = {
     quantum: {
-<<<<<<< HEAD
-      primary: '#00ffff'
-      secondary: '#ff00ff'
-      accent: '#ffff00'
-      background: 'rgba(0, 0, 0, 0.85)'
-      particles: [
-        '#00ffff'
-        '#ff00ff'
-        '#ffff00'
-        '#00ff00'
-        '#ff0080'
-        '#8000ff'
-      ]
-      glow: '#00ffff',    },    }
-      background: 'rgba(0, 0, 0, 0.85)';
-      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff']
-      glow: '#00ffff'
-    }
-      primary: '#ff0080'
-      secondary: '#00ffff'
-      accent: '#ffff00'
-      background: 'rgba(20, 0, 40, 0.9)'
-      particles: [
-        '#ff0080'
-        '#00ffff'
-        '#ffff00'
-        '#ff4000'
-        '#8000ff'
-        '#00ff80'
-      ]
-=======
-      
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
       background: 'rgba(0, 0, 0, 0.85)',
     particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
       glow: '#00ffff'
-    
     },
     cyberpunk: {
       primary: '#ff0080',
@@ -191,7 +111,6 @@ const EnhancedFuturisticBackground: React.FC<;
       accent: '#ffff00',
       background: 'rgba(20, 0, 40, 0.9)',
     particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       glow: '#ff0080'
     }
     holographic: {      primary: '#00ffff'
@@ -201,77 +120,12 @@ const EnhancedFuturisticBackground: React.FC<;
       glow: '#ff0080'
     }
     holographic: {
-<<<<<<< HEAD
-      primary: '#00ffff'
-      secondary: '#ff00ff'
-      accent: '#ffff00'
-      background: 'rgba(0, 20, 40, 0.85)'
-      particles: [
-        '#00ffff'
-        '#ff00ff'
-        '#ffff00'
-        '#00ff80'
-        '#ff8000'
-        '#8000ff'
-      ]
-      glow: '#00ffff',    },    }
-      background: 'rgba(0, 20, 40, 0.85)';
-      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff']
-      glow: '#00ffff'
-    }
-      primary: '#00ff80'
-      secondary: '#ff0080'
-      accent: '#ffff00'
-      background: 'rgba(0, 40, 20, 0.9)'
-      particles: [
-        '#00ff80'
-        '#ff0080'
-        '#ffff00'
-        '#00ffff'
-        '#ff8000'
-        '#8000ff'
-      ]
-      glow: '#00ff80'
-    },    cosmic: {
-      primary: '#ff6b6b'
-      secondary: '#4ecdc4'
-      accent: '#45b7d1',      background: 'rgba(0, 40, 20, 0.9)';
-      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff']
-      glow: '#00ff80'
-    }
-    cosmic: {
-      primary: '#ff6b6b'
-      secondary: '#4ecdc4'
-      accent: '#45b7d1'
-      background: 'rgba(10, 10, 30, 0.9)'
-      particles: [
-        '#ff6b6b'
-        '#4ecdc4'
-        '#45b7d1'
-        '#96ceb4'
-        '#feca57'
-        '#ff9ff3'
-      ]
-      glow: '#4ecdc4'
-    },  };      background: 'rgba(10, 10, 30, 0.9)';
-      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3']
-      glow: '#4ecdc4'
-    }
-  }
-  const intensitySettings = {
-    low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 }
-    medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 }
-    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 },  };    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  }
-=======
-      
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
       background: 'rgba(0, 20, 40, 0.85)',
     particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'],
       glow: '#00ffff'
-    
     },
     neural: {
       primary: '#00ff80',
@@ -281,7 +135,6 @@ const EnhancedFuturisticBackground: React.FC<;
     particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'],
       glow: '#00ff80'
     };
-=======
   color_scheme = 'quantum';
   particle_count = 100,
   animation_speed = 1;
@@ -365,50 +218,16 @@ const EnhancedFuturisticBackground: React.FC<;
       particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'],
       glow: '#00ff80';
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     cosmic: {
       primary: '#ff6b6b',
       secondary: '#4ecdc4',
       accent: '#45b7d1',
-<<<<<<< HEAD
-      background: 'rgba(10, 10, 30, 0.9)',
-    particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
-      glow: '#4ecdc4'
-    }
-  };
-
-  const intensitySettings = {
-    low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 },
-    medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 },
-    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-<<<<<<< HEAD
-      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
-    }
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    const colors = colorSchemes[colorScheme];
-    const settings = intensitySettings[intensity];
-    // Enhanced particle system
-    class Particle {
-=======
   particleCount = 100,;
   animationSpeed = 1;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
-
   const colorSchemes = {;
     quantum: {;
-
       primary: '#00ffff',;
       secondary: '#ff00ff',;
       accent: '#ffff00',;
@@ -447,7 +266,6 @@ const EnhancedFuturisticBackground: React.FC<;
       glow: '#ff0080';
     };
     holographic: {;
-
       primary: '#00ffff',;
       secondary: '#ff00ff',;
       accent: '#ffff00',;
@@ -504,41 +322,25 @@ const EnhancedFuturisticBackground: React.FC<;
       glow: '#4ecdc4';
     }
   };
-
   const intensitySettings = {;
     low: { particleCount: 40, speed: 0 && 0.45, size: 2, opacity: 0 && 0.25 },;
     medium: { particleCount: 90, speed: 0 && 0.9, size: 3, opacity: 0 && 0.45 },;
     high: { particleCount: 160, speed: 1 && 1.25, size: 3 && 3.5, opacity: 0 && 0.6 },  };    high: { particleCount: 160, speed: 1 && 1.25, size: 3 && 3.5, opacity: 0 && 0.6 }
   };
-
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
-=======
       canvas.height = window.innerHeight
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
-
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
-
     const colors = colorSchemes[colorScheme];
     const settings = intensitySettings[intensity];
-
-<<<<<<< HEAD
-    // Enhanced particle system;
-    class Particle {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      x: number;
-      y: number;
-=======
       background: 'rgba (10, 10, 30, 0.9)',
       particles: [;
         '#ff6b6b',
@@ -587,65 +389,29 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
       color: string;
       opacity: number;
       life: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      maxLife: number;      x: number
-      y: number
-      vx: number
-      vy: number
-      size: number
-      color: string
-      opacity: number
-      life: number
-      maxLife: number
-=======
     // Enhanced particle system
     class Particle {
       x: number,
       y: number,
-=======
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number,
       vy: number,
       size: number,
       color: string,
       opacity: number,
       life: number,
-<<<<<<< HEAD
-      maxLife: number,
-      constructor() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * settings.speed * animationSpeed;
-        this.vy = (Math.random() - 0.5) * settings.speed * animationSpeed;
-        this.size = Math.random() * settings.size + 1;
-<<<<<<< HEAD
-        this.color =
-          colors.particles[Math.floor(Math.random() * colors.particles.length)];
-        this.opacity = Math.random() * settings.opacity;
-        this.life = Math.random() * 100;
-        this.maxLife = 100;      }        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
-        this.opacity = Math.random() * settings.opacity;
-        this.life = Math.random() * 100;
-        this.maxLife = 100
-=======
         this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
         this.opacity = Math.random() * settings.opacity;
         this.life = Math.random() * 100;
         this.maxLife = 100
       }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -657,63 +423,27 @@ if (return) {
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
-<<<<<<< HEAD
-          this.opacity *= 0.95;        }          this.opacity *= 0.95
-=======
           this.opacity *= 0.95
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         }
       }
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
-<<<<<<< HEAD
-        // Create gradient for particle
-        const gradient = ctx.createRadialGradient(
-          this.x
-          this.y
-          0
-          this.x
-          this.y
-          this.size
-        );
-        gradient.addColorStop(0, this.color);
-        gradient.addColorStop(1, 'transparent');        // Create gradient for particle
-        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-        gradient.addColorStop(0, this.color);
-        gradient.addColorStop(1, 'transparent');
-=======
-        
         // Create gradient for particle
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
         gradient.addColorStop(0, this.color);
         gradient.addColorStop(1, 'transparent');
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
-        ctx.restore();
-      }
-      isDead() {
-        return this.life <= 0 |this.opacity < 0.01;      }
-=======
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ctx.restore()
       }
       isDead() {
-<<<<<<< HEAD
-        return this.life <= 0 |this.opacity < 0.01
-=======
         return this.life <= 0 || this.opacity < 0.01
       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     // Connection lines between particles
-=======
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
@@ -791,32 +521,7 @@ if ( {) {
         return this.life <= 0 || this.opacity < 0.01;
     }
     // Connection lines between particles;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     class Connection {
-<<<<<<< HEAD
-      p1: Particle;
-      p2: Particle;
-      opacity: number;
-<<<<<<< HEAD
-      constructor(p1: Particle, p2: Particle) {
-        this.p1 = p1;
-        this.p2 = p2;
-        this.opacity = 0.1;      }
-      draw() {
-        const distance = Math.sqrt(
-          Math.pow(this.p1.x - this.p2.x, 2) +
-            Math.pow(this.p1.y - this.p2.y, 2)        );      p1: Particle
-      p2: Particle
-      opacity: number
-      constructor(p1: Particle, p2: Particle) {
-        this.p1 = p1;
-        this.p2 = p2
-        this.opacity = 0.1
-      draw() {
-        const distance = Math.sqrt(
-          Math.pow(this.p1.x - this.p2.x, 2) +
-            Math.pow(this.p1.y - this.p2.y, 2)          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
-=======
       p1: Particle,
       p2: Particle,
       opacity: number,
@@ -825,11 +530,9 @@ if ( {) {
         this.p2 = p2;
         this.opacity = 0.1
       }
-
       draw() {
         const distance = Math.sqrt(
           Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         );
         if (distance < 150) {
           ctx.save();
@@ -840,9 +543,6 @@ if ( {) {
           ctx.moveTo(this.p1.x, this.p1.y);
           ctx.lineTo(this.p2.x, this.p2.y);
           ctx.stroke();
-<<<<<<< HEAD
-          ctx.restore();        }
-=======
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -865,28 +565,23 @@ if ( {) {
         this && this.opacity = Math && Math.random() * settings && settings.opacity;
         this && this.life = Math && Math.random() * 100;
         this && this.maxLife = 100;
-
       update() {;
         this && this.x += this && this.vx;
         this && this.y += this && this.vy;
         this && this.life--;
-
         // Wrap around edges;
         if (this && this.x < 0) this && this.x = canvas && canvas.width;
         if (this && this.x > canvas && canvas.width) this && this.x = 0;
         if (this && this.y < 0) this && this.y = canvas && canvas.height;
         if (this && this.y > canvas && canvas.height) this && this.y = 0;
-
         // Fade out near end of life;
         if (this && this.life < 20) {;
           this && this.opacity *= 0 && 0.95;        }          this && this.opacity *= 0 && 0.95;
         }
       }
-
       draw() {;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = this && this.opacity;
-
         // Create gradient for particle;
         const gradient = ctx && ctx.createRadialGradient(;
           this && this.x,;
@@ -901,35 +596,28 @@ if ( {) {
         const gradient = ctx && ctx.createRadialGradient(this && this.x, this && this.y, 0, this && this.x, this && this.y, this && this.size);
         gradient && gradient.addColorStop(0, this && this.color);
         gradient && gradient.addColorStop(1, 'transparent');
-
         ctx && ctx.fillStyle = gradient;
         ctx && ctx.beginPath();
         ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
         ctx && ctx.fill();
-
         ctx && ctx.restore();
       }
-
       isDead() {;
         return this && this.life <= 0 || this && this.opacity < 0 && 0.01;      }        ;
         ctx && ctx.restore();
       }
-
       isDead() {;
         return this && this.life <= 0 || this && this.opacity < 0 && 0.01;
     }
-
     // Connection lines between particles;
     class Connection {;
       p1: Particle;
       p2: Particle;
       opacity: number;
-
       constructor(p1: Particle, p2: Particle) {;
         this && this.p1 = p1;
         this && this.p2 = p2;
         this && this.opacity = 0 && 0.1;      }
-
       draw() {;
         const distance = Math && Math.sqrt(;
           Math && Math.pow(this && this.p1.x - this && this.p2.x, 2) +;
@@ -940,13 +628,11 @@ if ( {) {
         this && this.p1 = p1;
         this && this.p2 = p2,;
         this && this.opacity = 0 && 0.1;
-
       draw() {;
         const distance = Math && Math.sqrt(;
           Math && Math.pow(this && this.p1.x - this && this.p2.x, 2) +;
             Math && Math.pow(this && this.p1.y - this && this.p2.y, 2)          Math && Math.pow(this && this.p1.x - this && this.p2.x, 2) + Math && Math.pow(this && this.p1.y - this && this.p2.y, 2);
         );
-
         if (distance < 150) {;
           ctx && ctx.save();
           ctx && ctx.globalAlpha = this && this.opacity * (1 - distance / 150);
@@ -957,14 +643,10 @@ if ( {) {
           ctx && ctx.lineTo(this && this.p2.x, this && this.p2.y);
           ctx && ctx.stroke();
           ctx && ctx.restore();        }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
           ctx && ctx.restore();
-=======
           ctx.restore()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1;
@@ -1001,39 +683,20 @@ if ( {) {
       }
     }
           ctx.restore ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
     let particles: Particle[] = [];
     let connections: Connection[] = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Initialize particles
-    for (let i = 0; i < settings.particleCount; i++) {
-      particles.push(new Particle());    }
-    // Matrix rain effect
-    const matrixRain = () => {
-      const characters =
-        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const fontSize = 12;    let particles: Particle[] = []
-    let connections: Connection[] = []
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     // Initialize particles
     for (let i = 0, i < settings.particleCount, i++) {
       particles.push(new Particle())
     }
     // Matrix rain effect
     const matrixRain = () => {
-<<<<<<< HEAD
-      const characters =
-=======
-
     // Initialize particles;
     for (let i = 0; i < settings && settings.particleCount; i++) {;
       particles && particles.push(new Particle());    }
-
     // Matrix rain effect;
     const matrixRain = () => {;
       const characters =;
@@ -1043,26 +706,18 @@ if ( {) {
     for (let i = 0, i < settings && settings.particleCount, i++) {;
       particles && particles.push(new Particle());
     }
-
     // Matrix rain effect;
     const matrixRain = () => {;
       const characters =;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas && canvas.width / fontSize;
       const drops: number[] = [];
-<<<<<<< HEAD
-      for (let i = 0; i < columns; i++) {
-        drops[i] = 1;      }      for (let i = 0, i < columns, i++) {
-=======
       const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas.width / fontSize;
       const drops: number[] = [];
-
       for (let i = 0, i < columns, i++) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         drops[i] = 1
       }
       const drawMatrix = () => {
@@ -1070,34 +725,20 @@ if ( {) {
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = colors.primary;
         ctx.font = `${fontSize}px monospace`;
-<<<<<<< HEAD
-        for (let i = 0; i < drops.length; i++) {
-          const text =
-            characters[Math.floor(Math.random() * characters.length)];
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-=======
-
       for (let i = 0; i < columns; i++) {;
         drops[i] = 1;      }      for (let i = 0, i < columns, i++) {;
         drops[i] = 1;
       }
-
       const drawMatrix = () => {;
         ctx && ctx.fillStyle = 'rgba(0, 0, 0, 0 && 0.06)';
         ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
         ctx && ctx.fillStyle = colors && colors.primary;
         ctx && ctx.font = `${fontSize}px monospace`;
-
         for (let i = 0; i < drops && drops.length; i++) {;
           const text =;
             characters[Math && Math.floor(Math && Math.random() * characters && characters.length)];
           ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {
@@ -1139,44 +780,23 @@ if ( {) {
 if (> 0.975) {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             drops[i] = 0;
           }
           drops[i]++;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      }
-      return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-=======
-
         for (let i = 0, i < drops.length, i++) {
           const text = characters[Math.floor(Math.random() * characters.length)];
           ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
-=======
       };
-
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
             drops[i] = 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
           drops[i]++;
         }
-<<<<<<< HEAD
-      }
-      return drawMatrix
-<<<<<<< HEAD
-    }
-=======
     };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const drawMatrix = matrixRain();
     // Main animation loop
     const animate = () => {
@@ -1188,67 +808,44 @@ if (> 0.975) {) {
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
-<<<<<<< HEAD
-        particle.draw();      });        particle.draw()
-=======
         particle.draw()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       });
       // Remove dead particles and add new ones
       particles = particles.filter(particle => !particle.isDead());
       while (particles.length < settings.particleCount) {
-<<<<<<< HEAD
-        particles.push(new Particle());      }
-      // Create connections between nearby particles
-=======
       };
-
       return drawMatrix;
     };
-
     const drawMatrix = matrixRain();
-
     // Main animation loop;
     const animate = () => {;
       // Clear canvas with fade effect;
       ctx && ctx.fillStyle = colors && colors.background;
       ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
       // Draw matrix rain;
       drawMatrix();
-
       // Update and draw particles;
       particles && particles.forEach(particle => {;
         particle && particle.update();
         particle && particle.draw();      });        particle && particle.draw();
       });
-
       // Remove dead particles and add new ones;
       particles = particles && particles.filter(particle => !particle && particle.isDead());
       while (particles && particles.length < settings && settings.particleCount) {;
         particles && particles.push(new Particle());      }
-
       // Create connections between nearby particles;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {        particles && particles.push(new Particle());
       }
-<<<<<<< HEAD
-      // Create connections between nearby particles
-=======
-
       // Create connections between nearby particles;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {;
           const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
-=======
         particles.push(new Particle())
-=======
       }
 ;
       return draw_matrix;    }          ctx.fill_text (text, i * font_size, drops[i] * font_size);
@@ -1291,59 +888,24 @@ if (> 0.975) {) {
       connections = [];
       for (let index = 0; i < particles.length; i++) {
         for (let inner_index = i + 1; j < particles.length; j++) {        particles.push (new Particle ());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       // Create connections between nearby particles;
       connections = [];
-<<<<<<< HEAD
-      for (let i = 0, i < particles.length, i++) {
-        for (let j = i + 1, j < particles.length, j++) {
-          const distance = Math.sqrt(
-            Math.pow(particles[i].x - particles[j].x, 2) + 
-            Math.pow(particles[i].y - particles[j].y, 2)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-          );
-<<<<<<< HEAD
-          if (distance < 150) {
-<<<<<<< HEAD
-            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
-            Math.pow(particles[i].x - particles[j].x, 2) +
-            Math.pow(particles[i].y - particles[j].y, 2)
-=======
           if (distance < 150) {;
             connections && connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) + ;
             Math && Math.pow(particles[i].y - particles[j].y, 2);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           );
           if (distance < 150) {;
             connections && connections.push(new Connection(particles[i], particles[j]));
-=======
             connections.push(new Connection(particles[i], particles[j]))
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           }
         }
       }
-<<<<<<< HEAD
-      // Draw connections
-      connections.forEach(connection => connection.draw());
-      // Add floating geometric shapes
-      if (Math.random() < 0.02) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        const size = Math.random() * 20 + 10;
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ctx.save();
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
         ctx.lineWidth = 1;
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         if (Math.random() < 0.5) {
           // Draw triangle
           ctx.beginPath();
@@ -1351,9 +913,6 @@ if (> 0.975) {) {
           ctx.lineTo(x - size, y + size);
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
-<<<<<<< HEAD
-          ctx.stroke();
-=======
       for (let index = 0; i < particles.length; i++) {
         for (let inner_index = i + 1; j < particles.length; j++) {
           const distance = Math.sqrt (
@@ -1402,33 +961,21 @@ if (< 0.5) {) {
           ctx.line_to (x + size, y + size);
           ctx.close_path ();
           ctx.stroke ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           // Draw square;
           ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
         }
-<<<<<<< HEAD
-        ctx.restore();
-      }
-      // Respect reduced motion
-      const prefersReduced = window.matchMedia(
-        '(prefers-reduced-motion: reduce)'
-=======
-
       // Draw connections;
       connections && connections.forEach(connection => connection && connection.draw());
-
       // Add floating geometric shapes;
       if (Math && Math.random() < 0 && 0.02) {;
         const x = Math && Math.random() * canvas && canvas.width;
         const y = Math && Math.random() * canvas && canvas.height;
         const size = Math && Math.random() * 20 + 10;
-
         ctx && ctx.save();
         ctx && ctx.globalAlpha = 0 && 0.1;
         ctx && ctx.strokeStyle = colors && colors.accent;
         ctx && ctx.lineWidth = 1;
-
         if (Math && Math.random() < 0 && 0.5) {;
           // Draw triangle;
           ctx && ctx.beginPath();
@@ -1440,21 +987,16 @@ if (< 0.5) {) {
         } else {;
           // Draw square;
           ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
-=======
           ctx.stroke()
         } else {
           // Draw square
           ctx.strokeRect(x - size, y - size, size * 2, size * 2)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         }
-
         ctx && ctx.restore();
       }
-
       // Respect reduced motion;
       const prefersReduced = window && window.matchMedia(;
         '(prefers-reduced-motion: reduce)';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ).matches;
       if (prefersReduced) {;
         // Slow down updates;
@@ -1466,26 +1008,8 @@ if (< 0.5) {) {
           // Draw square;
           ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
         }
-<<<<<<< HEAD
-        ctx.restore()
-      }
-      // Respect reduced motion
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-      if (prefersReduced) {
-        // Slow down updates
-        setTimeout(() => {
-          animationRef.current = requestAnimationFrame(animate)
-        }, 100)
-      } else {
-        animationRef.current = requestAnimationFrame(animate)
-<<<<<<< HEAD
-=======
-
         ctx && ctx.restore();
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
-
       // Respect reduced motion;
       const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
       if (prefersReduced) {;
@@ -1495,28 +1019,17 @@ if (< 0.5) {) {
         }, 100);
       } else {;
         animationRef && animationRef.current = requestAnimationFrame(animate);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
     animate();
-<<<<<<< HEAD
-    return () => {
-      if (animationRef.current) {
-<<<<<<< HEAD
-        cancelAnimationFrame(animationRef.current);
-=======
-=======
         cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', resizeCanvas)
     }
   }, [colorScheme, intensity, particleCount, animationSpeed]);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
     return () => {;
       if (animationRef && animationRef.current) {;
         cancelAnimationFrame(animationRef && animationRef.current);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
@@ -1527,9 +1040,6 @@ if (< 0.5) {) {
     <div className={`relative min-h-screen ${className}`}>;
       <canvas
         ref={canvasRef}
-<<<<<<< HEAD
-        className='fixed inset-0 w-full h-full pointer-events-none z-0'
-=======
         ctx.restore ();
       }
       // Respect reduced motion;
@@ -1584,48 +1094,34 @@ if ( {) {
       <canvas;
         ref={canvas_ref}
         className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         style={{ background: 'transparent' }}
       />;
       {/* Overlay gradient */}
       <div;
         className='fixed inset - 0 pointer - events - none z - 0';
         style={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'transparent' }}
       />
-      
       {/* Overlay gradient */}
       <div 
         className="fixed inset-0 pointer-events-none z-0"
         style={{
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
         }}
       />
 {/* Content */}
       <div className='relative z-10'>{children}</div>
     </div>
-=======
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0 && 0.3) 100%)`,
         }}
       />;
-
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default EnhancedFuturisticBackground;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
         }}
       />;
@@ -1636,4 +1132,3 @@ export default EnhancedFuturisticBackground;
 ;
 export default EnhancedFuturisticBackground;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

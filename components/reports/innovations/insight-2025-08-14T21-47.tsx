@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Page() {
-=======
-
 export default function Page() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -33,11 +25,7 @@ export default function Page() {;
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
-<<<<<<< HEAD
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>'
-=======
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -46,9 +34,7 @@ export default function Page() {;
       </main>;
     </div>;
   );export default function Page() {;
-=======
 export default function Page() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
@@ -65,12 +51,7 @@ export default function Page() {
       </main>;
     </div>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -129,4 +110,3 @@ function Page() {
       </main>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

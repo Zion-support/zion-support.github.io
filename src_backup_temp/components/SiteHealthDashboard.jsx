@@ -291,10 +291,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
           <TrendingUp className="w-6 h-6 text-blue-600" />;
           <span>Priority Action Items</span>;
         </h2>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         <div className="grid grid-cols-1 "md": "grid-cols-2 gap-6">;
           <div className="space-y-4">;
             <h3 className="text-lg font-semibold text-red-600 flex items-center space-x-2">;
@@ -393,10 +389,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
         </div>
       </div>
     </div>)}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Performance Trends */"}
       <div className="bg-white rounded-xl shadow-lg p-8">;
         <h2 className="text-2xl font-bold mb-6">Recent Improvements</h2>;

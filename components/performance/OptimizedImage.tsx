@@ -1,44 +1,28 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import Image from 'next/image';
-<<<<<<< HEAD
-interface OptimizedImageProps {
-  src: string, alt: string
-=======
-
 interface OptimizedImageProps {;
-
   src: string, alt: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
   src: string, alt: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   width?: number;
   height?: number;
   class_name?: string;
@@ -48,24 +32,6 @@ interface OptimizedImageProps {
   fill?: boolean;
   style?: React && React.CSSProperties;
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src
-  alt
-  width
-  height
-  className = ''
-  priority = false
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-  quality = 85
-  fill = false
-  style
-
-}) => {
-  if (fill) {
-=======
 const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   src,;
   alt,;
@@ -79,8 +45,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   style;
 }) => {;
   if (fill) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
   src,
   alt,
@@ -97,7 +61,6 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <Image;
         src={src}
@@ -108,22 +71,12 @@ if ( {) {
         sizes={sizes}
         quality={quality}
         style={style}
-<<<<<<< HEAD
-      />;
-    );
-  }
-<<<<<<< HEAD
-    <Image
-=======
-
     <Image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       src={src}
       alt={alt}
       width={width |800}
       height={height |600}
       className={className}
-=======
       />);
   }
     <Image;
@@ -132,17 +85,12 @@ if ( {) {
       width={width || 800}
       height={height || 600}
       className={class_name}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       priority={priority}
       sizes={sizes}
 quality={quality}
       style={style}
   );
 }
-<<<<<<< HEAD
-export default OptimizedImage;
-=======
 ;
 export default OptimizedImage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

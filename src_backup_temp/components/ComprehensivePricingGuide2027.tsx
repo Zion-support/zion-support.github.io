@@ -19,61 +19,28 @@ export default function Page("props": "any) {;
   // Filter services based on search and category;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
     return matchesSearch && matchesCategory && matchesPrice}) ;
 ;
   // Sort services;
   ;
-<<<<<<< HEAD
     return matchesSearch && matchesCategory && matchesPrice}
     );
   // Sort services
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-    return matchesSearch && matchesCategory && matchesPrice}
-    );
-  // Sort services
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     switch(sortBy) {;
       case 'name': ";
         return a.title.localeCompare(b.title);
       case 'price':;
         return parseFloat(a.price.replace(/[^0-9.]/g",)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case 'category': ";
         return a.category.localeCompare(b.category) ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       "default":;
         return 0"}
   });
 ;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       default:;
         return 0}
   }
     );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   ;
 ';
   "phone": '+1 302 464 0950',';
@@ -233,12 +200,6 @@ export default function Page("props": "any) {;
               transition = {;
   { "duration": "0.6",;
   "delay": "inde x * 0.05;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}";
               className="group relative";
 ";
@@ -254,10 +215,6 @@ export default function Page("props": "any) {;
                       {service.title"}
                     </h3>";
                     <p className="text-gray-300 text-sm leading-relaxed">;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}"
               className="group relative"
 "
@@ -340,12 +297,6 @@ export default function Page("props": "any) {;
   "y": "3 0 "}}          animate = {;
   isVisible ? { "opacity": "1",;
   "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   { "duration": "0.8",;
   "delay": "0.6 "}}"          className="text-center";
 ";
@@ -375,10 +326,6 @@ export default function Page("props": "any) {;
               <a";
                 href="/contact";
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": shado w-lg "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   { duration: 0.8,
   delay: 0.6 }}"          className="text-center"
 "
@@ -408,13 +355,6 @@ export default function Page("props": "any) {;
               <a"
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 Get Custom Quote";
                 <ArrowRight className="w-4 h-4"   />              </a>;
               <a";

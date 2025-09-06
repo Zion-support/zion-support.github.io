@@ -18,10 +18,6 @@ import React from 'react';
 interface AIChatAssistant.jsProps {
   // Add props here as needed
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
     ]);
     const [inputValue", setInputValue] = useState('');
     const [isListening, setIsListening] = useState(false);
@@ -171,10 +167,6 @@ interface AIChatAssistant.jsProps {
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Messages */"}";
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
         {messages.map((message) => (<div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>'";
@@ -212,10 +204,6 @@ interface AIChatAssistant.jsProps {
 ;
         <div ref={messagesEndRef}  />;
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Input Area */}";
       <div className="p-4 border-t border-zion-slate-light">";
         <div className="flex items-center gap-2">";
@@ -281,8 +269,4 @@ export default function AIChatAssistant.js({ }: AIChatAssistant.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

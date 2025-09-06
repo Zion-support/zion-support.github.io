@@ -195,12 +195,6 @@ export function UserExperienceOptimizer("props": "any) {;
                     <X className="w-5 h-5"   />                  </button>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Content */"}";
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">;
                 {isAnalyzing ? (";
@@ -263,10 +257,6 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Content */}"
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
                 {isAnalyzing ? ("
@@ -329,13 +319,6 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {/* Navigation Tabs */}";
                     <div className="flex space-x-1 bg-gray-100 "dark": "b g-gray-800 rounded-lg p-1">;
                       {[{;
@@ -369,11 +352,6 @@ export function UserExperienceOptimizer("props": "any) {;
                         </button>) ) }
                     </div>;
                     {/* UX Metrics View */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'metrics' && (";
                       <div className="space-y-4">";
                         <div className="flex items-center justify-between">";
@@ -410,10 +388,6 @@ export function UserExperienceOptimizer("props": "any) {;
                                 <h4 className="font-medium text-gray-900 "dark": "tex t-white">;
                                   {metric.name"}
                                 </h4>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'metrics' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
@@ -481,11 +455,6 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>;
                       </div>) }
                     {/* User Behaviors View */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'behaviors' && (";
                       <div className="space-y-4">";
                         <div className="flex items-center justify-between">";
@@ -526,10 +495,6 @@ export function UserExperienceOptimizer("props": "any) {;
                                         <AlertTriangle className="w-4 h-4 text-red-600"   />;
                                       )"}
                                     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'behaviors' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
@@ -569,13 +534,6 @@ export function UserExperienceOptimizer("props": "any) {;
                                         <AlertTriangle className="w-4 h-4 text-red-600"   />
                                       )}
                                     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                                     <div>";
                                       <h4 className="font-medium text-gray-900 "dark": "tex t-white">;
                                         {behavior.action"}
@@ -606,11 +564,6 @@ export function UserExperienceOptimizer("props": "any) {;
                         </div>;
                       </div>) }
                     {/* Optimization Suggestions View */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'suggestions' && (";
                       <div className="space-y-4">";
                         <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
@@ -633,10 +586,6 @@ export function UserExperienceOptimizer("props": "any) {;
                                   <div className="flex-1">";
                                     <div className="flex items-center space-x-3 mb-2">;
                                       <div`;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'suggestions' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
@@ -714,12 +663,6 @@ export function UserExperienceOptimizer("props": "any) {;
                             ))"}
                         </div>;
                       </div>) }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {/* Action Buttons */}";
                     <div className="flex items-center justify-center space-x-4 pt-6">";
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg "hover": "b g-green-700 transition-colors">";
@@ -754,10 +697,6 @@ export function UserExperienceOptimizer("props": "any) {;
                   </div>) "}
               </div>;
             </motion.div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {/* Action Buttons */}"
                     <div className="flex items-center justify-center space-x-4 pt-6">"
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors">"

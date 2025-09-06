@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-import { defineConfig, devices } from '@playwright/test';
-<<<<<<< HEAD
-
-import { defineConfig, devices } from '@playwright/test';
-export default defineConfig({testDir:'tests/e2e';
-  use:{;
-    baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
-    trace:'on-first-retry'}
-=======
 import { defineConfig, devices } from '@playwright/test',;
-
 export default defineConfig({;
   testDir:'tests/e2e',;
   use:{;
     baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
     trace:'on-first-retry'},;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -43,19 +31,10 @@ export default defineConfig({;
   ];
   reporter:[;
     ['list'];
-<<<<<<< HEAD
-    ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
-});import { defineConfig, devices } from "@playwright/test";
-import { defineConfig, devices } from '@playwright/test';
-<<<<<<< HEAD
-    baseURL: process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000'
-=======
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     trace: 'on-first-retry'
   }
   projects: [
-=======
 import { define_config, devices } from '@playwright / test';
 import { define_config, devices } from '@playwright / test',
 ;
@@ -103,76 +82,43 @@ import { define_config, devices } from '@playwright / test';
     trace: 'on - first - retry';
   },
   projects: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       name: "Desktop Chrome"
       use: {
-<<<<<<< HEAD
-        browserName: 'chromium'
-        channel: 'chrome'
-=======
         browser_name: 'chromium',
         channel: 'chrome';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
     }
     {
       name: "Desktop Firefox"
-
       use: {
         browser_name: 'firefox';
 }
     }
     {
-
       name: "Desktop Safari"
-
       use: {
         browser_name: 'webkit';
 }
     }
     {
-
       name: "Mobile Chrome"
       use: {
-<<<<<<< HEAD
-        browserName: 'chromium'
-        ...devices['Pixel 5']
-=======
         browser_name: 'chromium',
         ...devices['Pixel 5'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
     }
     {
       name: "Mobile Safari"
       use: {
-<<<<<<< HEAD
-        browserName: 'webkit'
-        ...devices['iPhone 12']
-=======
         browser_name: 'webkit',
         ...devices['i_phone 12'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
-
     }
-<<<<<<< HEAD
-  ]
-  reporter: [
-
-    ['list']
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
-]
-
-=======
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   ],
   reporter: [;
     ['list'],
     ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

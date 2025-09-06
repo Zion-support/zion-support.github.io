@@ -1,75 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Sparkles } from 'lucide-react'
-interface AIListingFormProps {
-  onSubmit: (formData: {
-    title: string;
-    category: string;
-    keyFeatures: string;
-    targetAudience: string
-
-  }) => void
-  isLoading: boolean;  initialValues?: {
-    title?: string
-    category?: string
-    keyFeatures?: string
-    targetAudience?: string
-  };    title: string
-    category: string
-    keyFeatures: string
-    targetAudience: string
-  },) => void
-  isLoading: boolean
-    title?: string
-    category?: string
-    keyFeatures?: string
-    targetAudience?: string
-  }
-export function AIListingForm({
-  onSubmit
-  isLoading
-  initialValues = {}
-}: AIListingFormProps) {
-  const { toast } = useToast()
-  const [title, setTitle] = useState(initialValues.title |'')
-  const [category, setCategory] = useState(initialValues.category |'')
-  const [keyFeatures, setKeyFeatures] = useState(
-    initialValues.keyFeatures |''
-  )
-  const [targetAudience, setTargetAudience] = useState(
-    initialValues.targetAudience |''
-  )
-  const handleSubmit = () => {
-    if (!title |!category) {
-      toast({
-        title: 'Missing required fields'
-        description: 'Please provide at least a title and category.'
-        variant: 'destructive',  const [title, setTitle] = useState(initialValues.title |"")
-  const [category, setCategory] = useState(initialValues.category |"")
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"")
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"")
-  const handleSubmit = () => {
-    if (!title |!category) {
-      toast({
-        title: 'Missing required fields'
-        description: 'Please provide at least a title and category.'
-        variant: 'destructive'
-      return
-    }
-    onSubmit({
-      title
-      category
-      keyFeatures
-      targetAudience
-    })
-=======
 import React, { useState } from 'react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -139,9 +67,7 @@ if ( {) {
       key_features,
       target_audience,
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
 interface AIListingFormProps {;
   onSubmit: (formData: {;
     title: string;
@@ -188,7 +114,6 @@ export function AIListingForm(): any ({;
   const [category, setCategory] = useState(initialValues && initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
   const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");
-
   const handleSubmit = () => {;
     if (!title || !category) {;
       toast({;
@@ -197,7 +122,6 @@ export function AIListingForm(): any ({;
         variant: 'destructive',;
       return;
     }
-
     onSubmit({;
       title,;
       category,;
@@ -205,79 +129,10 @@ export function AIListingForm(): any ({;
       targetAudience,;
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   return (
-<<<<<<< HEAD
-    <div className='space-y-4'>;
-      <div className='space-y-2'>;
-        <label
-          htmlFor='title'
-          className='text-sm font-medium text-zion-slate-light'>;
-          Title;
-        </label>;
-        <Input
-          id='title'
-          value={title}
-          onChange={e => setTitle(e && e.target.value)}
-          placeholder='Enter your product or service title';
-          className='bg-zion-blue border border-zion-blue-light text-white';
-          disabled={isLoading}        />;
-      </div>;
-      <div className='space-y-2'>;
-        <label
-          htmlFor='category'
-          className='text-sm font-medium text-zion-slate-light'>;
-          Category;
-        </label>;
-        <Input
-          id='category'
-          value={category}
-          onChange={e => setCategory(e && e.target.value)}
-          placeholder='e && e.g. AI Tool, Digital Product, Service';
-          className='bg-zion-blue border border-zion-blue-light text-white';
-          disabled={isLoading}        />;
-      </div>;
-      <div className='space-y-2'>;
-        <label
-          htmlFor='keyFeatures'
-          className='text-sm font-medium text-zion-slate-light'>;
-          Key Features (Optional);
-        </label>;
-        <Textarea
-          id='keyFeatures'
-          value={keyFeatures}
-          onChange={e => setKeyFeatures(e && e.target.value)}
-          placeholder='Briefly describe the main features or benefits';
-          className='bg-zion-blue border border-zion-blue-light text-white min-h-20';
-          disabled={isLoading}        />;
-      </div>;
-      <div className='space-y-2'>;
-        <label
-          htmlFor='targetAudience'
-          className='text-sm font-medium text-zion-slate-light'>;
-          Target Audience (Optional);
-        </label>;
-        <Input
-          id='targetAudience'
-          value={targetAudience}
-          onChange={e => setTargetAudience(e && e.target.value)}
-          placeholder='e && e.g. Developers, Marketers, Startups';
-          className='bg-zion-blue border border-zion-blue-light text-white';
-          disabled={isLoading}
-        />;
-      </div>;
-      <Button
-        onClick={handleSubmit}
-<<<<<<< HEAD
-        disabled={isLoading |!title |!category}
-        className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'      >        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
-          id="title"
-=======
         disabled={isLoading || !title || !category}
         className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'>        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
           id="title";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           value={title}
           onChange={(e) => setTitle(e && e.target.value)}
           placeholder="Enter your product or service title";
@@ -316,13 +171,6 @@ export function AIListingForm(): any ({;
           placeholder="e && e.g. Developers, Marketers, Startups";
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-<<<<<<< HEAD
-        />
-      </div>
-      <Button
-        onClick={handleSubmit}
-        disabled={isLoading |!title |!category}
-=======
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -330,7 +178,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from 'lucide-react'
 import { Star } from 'lucide-react';
-
 interface AIListingFormProps {
   onSubmit: (formData: {
     title: string,
@@ -346,15 +193,11 @@ interface AIListingFormProps {
     targetAudience?: string
   }
 }
-
-
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),
   const [ title, setTitle ] = useState(initialValues.title || ""),
   const [ category, setCategory ] = useState(initialValues.category || ""),
   const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
   const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
-
-
   const handleSubmit = () => {
     if (!title || !category) {
       toast({
@@ -364,7 +207,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       });
       return
     }
-
     onSubmit({
       title;
       category;
@@ -372,15 +214,12 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       targetAudience
     })
   };
-
-
   return (
     <div className="space-y-4">
       <div className="space-y-2">
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Title">Title</label>
         <Input
           id="title"
-=======
     <div className='space - y-4'>;
       <div className='space - y-2'>;
         <label;
@@ -448,7 +287,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         disabled={is_loading || !title || !category}
         className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2'      >        className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2";
           id="title";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           value={title}
           on_change={(e) => set_title (e.target.value)}
           placeholder="Enter your product or service title";
@@ -461,50 +299,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         <Input;
           id="category";
           value={category}
-<<<<<<< HEAD
-          onChange={(e) => setCategory(e.target.value)}
-          placeholder="e.g. AI Tool, Digital Product, Service"
-          className="bg-zion-blue border border-zion-blue-light text-white"
-          disabled={isLoading}
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>
-        <Textarea
-          id="keyFeatures"
-          value={keyFeatures}
-          onChange={(e) => setKeyFeatures(e.target.value)}
-          placeholder="Briefly describe the main features or benefits"
-          className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
-          disabled={isLoading}
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Target Audience (Optional)">Target Audience (Optional)</label>
-        <Input
-          id="targetAudience"
-          value={targetAudience}
-          onChange={(e) => setTargetAudience(e.target.value)}
-          placeholder="e.g. Developers, Marketers, Startups"
-          className="bg-zion-blue border border-zion-blue-light text-white"
-          disabled={isLoading}
-        />
-      </div>
-      <Button 
-        onClick={handleSubmit}
-        disabled={isLoading || !title || !category}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
-      >
-        {isLoading ? (
-          <>Generating Optimized Content...</>
-        ) : (
-          <>
-<<<<<<< HEAD
-            <Sparkles className='h-4 w-4 mr-2' />            Generate Optimized Content            <Sparkles className="h-4 w-4 mr-2" />
-=======
             <Sparkles className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             Generate Optimized Content
           </>
         )}
@@ -520,7 +315,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }</Button> </div>)
 }'"
 }
-=======
         />;
       </div>;
       <Button
@@ -538,22 +332,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       </Button>;
     </div>;
   );
-<<<<<<< HEAD
-
-}: AIListingFormProps) {;
-  if (!title || !category) {;
-  toast ({;
-  return;
-}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
-  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ;
-}</Button> </div>) ;
-}'";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           on_change={(e) => set_category (e.target.value)}
           placeholder="e.g. AI Tool, Digital Product, Service";
           className="bg - zion - blue border border - zion - blue - light text - white";
@@ -607,4 +386,3 @@ if ( {) {
 }</Button> </div>);
 }'";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-export default function ToolResourcePage() {
-  const router = useRouter()
-  const { id } = router.query
-  // Tools data - this should match the data in resources.tsx
-  const tools = [
-    {
-<<<<<<< HEAD
-      id: 'automation-assessment'
-      title: 'Automation Readiness Assessment'
-      description: 'Evaluate your organization\'s readiness for AI automation implementation.'
-      type: 'Interactive Tool'
-      estimatedTime: '15 minutes'
-=======
-      id: 'automation-assessment',
-=======
+id: 'automation-assessment',
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -33,78 +13,27 @@ function ToolResourcePage() {
   const tools = [;
     {
       id: 'automation - assessment',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       title: 'Automation Readiness Assessment',
       description: 'Evaluate your organization's readiness for AI automation implementation.',
       type: 'Interactive Tool',
-<<<<<<< HEAD
-      estimatedTime: '15 minutes',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-      fullContent: `
-        <h2>About This Tool</h2>
-        <p>The Automation Readiness Assessment is designed to help organizations evaluate their current
-        capabilities and identify opportunities for AI automation implementation. This comprehensive assessment
-        covers technology infrastructure, organizational culture, and business processes.</p>
-        <h2>What You'll Learn</h2>
-        <p>This assessment will help you understand:</p>
-        <ul>
-          <li>Your current automation maturity level</li>
-          <li>Areas where automation can provide the most value</li>
-          <li>Potential challenges and how to address them</li>
-          <li>Recommended next steps for your automation journey</li>
-        </ul>
-        <h2>Assessment Categories</h2>
-        <p>The assessment covers several key areas:</p>
-        <ul>
-          <li><strong>Technology Infrastructure:</strong> Current systems, data quality, and technical capabilities</li>
-          <li><strong>Organizational Culture:</strong> Change readiness, innovation mindset, and learning culture</li>
-          <li><strong>Business Processes:</strong> Process maturity, standardization, and optimization opportunities</li>
-          <li><strong>Data & Analytics:</strong> Data availability, quality, and analytical capabilities</li>
-          <li><strong>Leadership & Strategy:</strong> Executive support, strategic alignment, and resource allocation</li>
-        </ul>
-        <h2>How to Use This Tool</h2>
-        <p>To get the most accurate results:</p>
-        <ol>
-          <li>Set aside 15-20 minutes for the assessment</li>
-          <li>Answer questions honestly based on your current situation</li>
-          <li>Consider involving key stakeholders for broader perspective</li>
-          <li>Review results with your team to develop action plans</li>
-        </ol>
-        <h2>Next Steps After Assessment</h2>
-<<<<<<< HEAD
-        <p>Once you complete the assessment, you'll receive:</p>
-=======
         <p>Once you complete the assessment, you'll receive: </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
-<<<<<<< HEAD
-      `
-=======
       `;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       features: [
         'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
     }
     {
-<<<<<<< HEAD
-      id: 'ai-maturity-model'
-      title: 'AI Maturity Model'
-      description: 'Assess your current AI capabilities and plan your transformation journey.'
-      type: 'Framework'
-      estimatedTime: '30 minutes'
-=======
       id: 'ai-maturity-model',
       title: 'AI Maturity Model',
       description: 'Assess your current AI capabilities and plan your transformation journey.',
       type: 'Framework',
       estimatedTime: '30 minutes',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your
@@ -129,11 +58,7 @@ function ToolResourcePage() {
           <li><strong>Processes & Governance:</strong> AI governance, risk management, and operational processes</li>
         </ul>
         <h2>Using the Framework</h2>
-<<<<<<< HEAD
-        <p>To effectively use this framework:</p>
-=======
         <p>To effectively use this framework: </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -150,29 +75,17 @@ function ToolResourcePage() {
           <li>Progress tracking and measurement</li>
           <li>Stakeholder alignment and communication</li>
         </ul>
-<<<<<<< HEAD
-      `
-=======
       `;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       features: [
         '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
     }
     {
-<<<<<<< HEAD
-      id: 'performance-benchmark'
-      title: 'Performance Benchmarking Tool'
-      description: 'Compare your automation performance against industry standards.'
-      type: 'Analytics Tool'
-      estimatedTime: '20 minutes'
-=======
       id: 'performance-benchmark',
       title: 'Performance Benchmarking Tool',
       description: 'Compare your automation performance against industry standards.',
       type: 'Analytics Tool',
       estimatedTime: '20 minutes',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against
@@ -214,11 +127,7 @@ function ToolResourcePage() {
           <li>Use results to drive continuous improvement initiatives</li>
         </ul>
         <h2>Action Planning</h2>
-<<<<<<< HEAD
-        <p>Based on benchmark results, develop action plans that include:</p>
-=======
         <p>Based on benchmark results, develop action plans that include: </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -226,24 +135,13 @@ function ToolResourcePage() {
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-<<<<<<< HEAD
-      `
-=======
       `;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
-<<<<<<< HEAD
-  ]
-  const tool = tools.find(t => t.id === id)
-=======
   ];
-
   const tool = tools.find(t => t.id === id);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   if (!tool) {
     return (
       <>
@@ -306,10 +204,6 @@ function ToolResourcePage() {
                   />
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-              
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
@@ -322,10 +216,6 @@ function ToolResourcePage() {
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
-=======
-                
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
@@ -341,10 +231,6 @@ function ToolResourcePage() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-            
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="text-center">
               <Link
                 href="/contact"
@@ -358,12 +244,7 @@ function ToolResourcePage() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       estimated_time: '15 minutes',
       full_content: `;
         <h2 > About This Tool</h2>;
@@ -625,4 +506,3 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

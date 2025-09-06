@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { useState } from "react",
-import { Dialog, DialogContent } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-import { TemplateManager } from "./templates/TemplateManager";
-import { SmartContractBuilder } from "./SmartContractBuilder";
-interface ContractBuilderProps {
-
-  isOpen: boolean
-  onClose: () => void
-  talent: TalentProfile
-  clientName: string
-
-  onContractGenerated?: (contractContent: string) => void
-}
-export function ContractBuilder({
-=======
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -39,9 +15,7 @@ interface ContractBuilderProps {;
   clientName: string,;
   onContractGenerated?: (contractContent: string) => void;
 }
-
 export function ContractBuilder(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   isOpen;
   onClose;
   talent;
@@ -50,35 +24,14 @@ export function ContractBuilder(): any ({;
 }: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
-<<<<<<< HEAD
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
-    undefined
-  ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData)
-  }
-  const handleContractGenerated = (contract: string) => {
-    setGeneratedContract(contract);
-    setActiveTab("preview")
-    if (onContractGenerated) {
-      onContractGenerated(contract)
-    }
-  }
-  if (showSmartContractBuilder) {
-=======
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   );
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-
   const handleLoadTemplate = (templateData: ContractFormValues) => {;
     setFormValues(templateData);
   };
-
   const handleContractGenerated = (contract: string) => {;
     setGeneratedContract(contract);
     setActiveTab("preview"),;
@@ -86,21 +39,13 @@ export function ContractBuilder(): any ({;
       onContractGenerated(contract);
     }
   };
-
   if (showSmartContractBuilder) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <SmartContractBuilder
         isOpen={isOpen}
         onClose={() => {;
           setShowSmartContractBuilder(false);
-<<<<<<< HEAD
-
-          onClose()
-=======
           onClose();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState } from './react';
 import { Dialog, DialogContent } from '@/components / ui / dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
@@ -154,36 +99,10 @@ if ( {) {
         on_close={() => {
           setShowSmartContractBuilder (false);
           on_close ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }}
         talent={talent}
         client_name={client_name}
         onContractGenerated={onContractGenerated}
-<<<<<<< HEAD
-      />;
-    );
-  }
-  return (
-<<<<<<< HEAD
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
-          <div className="flex justify-between items-center">
-            <TabsList className="grid grid-cols-2">
-              <TabsTrigger value="form">Contract Details</TabsTrigger>
-              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
-            </TabsList>
-            <div className="flex gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setTemplateManagerOpen(true)}
-                className="flex gap-1"
-              >
-                <Save className="h-4 w-4" />
-                Templates
-              </Button>
-=======
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
@@ -192,7 +111,6 @@ if ( {) {
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
-
             <div className="flex gap-2">;
               <Button
                 variant="outline" 
@@ -203,21 +121,10 @@ if ( {) {
                 <Save className="h-4 w-4" />;
                 Templates;
               </Button>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 variant="secondary"
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
-<<<<<<< HEAD
-              >
-                Smart Contract Builder
-              </Button>
-            </div>
-          </div>
-          <TabsContent value="form" className="pt-4">
-=======
-=======
       />);
   }
   return (
@@ -243,39 +150,22 @@ if ( {) {
                 variant="secondary";
                 size="sm";
                 on_click={() => setShowSmartContractBuilder (true)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               >;
                 Smart Contract Builder;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
-
-          <TabsContent value="form" className="pt-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            <ContractForm
-=======
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            />
-          </TabsContent>
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-=======
             />;
           </TabsContent>;
-
           <TabsContent value="preview" className="pt-4">;
             {generatedContract && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <ContractPreview
                 contractContent={generatedContract}
                 talent={talent}
@@ -283,33 +173,18 @@ if ( {) {
                 status="ready"
               />;
             )}
-<<<<<<< HEAD
-          </TabsContent>
-        </Tabs>
-=======
           </TabsContent>;
         </Tabs>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-<<<<<<< HEAD
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}
-=======
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -331,4 +206,3 @@ if ( {) {
       </DialogContent>;
     </Dialog>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

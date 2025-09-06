@@ -1,44 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../lib/integrations/fileStore";
-import { getProviderById } from "../../../lib/integrations/registry";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-<<<<<<< HEAD
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
-  const { providerId } = req.body as { providerId?: string }
-  if (!providerId |!getProviderById(providerId)) {
-    return res.status(400).json({ error: "Invalid providerId" });
-=======
-  try {
+try {
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { providerId } = req && req.body as { providerId?: string };
   if (!providerId || !getProviderById(providerId)) {
     return res && res.status(400).json({ error: "Invalid providerId" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   const state = readState();
   const conn = state && state.connections.find((c) => c && c.providerId === providerId);
   if (!conn) return res && res.status(404).json({ error: "Connection not found" });
   const now = Date && Date.now();
   writeState((s) => {
-<<<<<<< HEAD
-    s.logs.push({
-      id: `${now}-${providerId}-resync`
-      timestamp: now
-      providerId: providerId as any
-      level: "info"
-      action: "resync"
-=======
     s && s.logs.push({
       id: `${now}-${providerId}-resync`,
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../lib / integrations / file_store';
 import { getProviderById  } from '../../../lib / integrations / registry';
@@ -66,21 +39,11 @@ function handler() {
   write_state ((s) => {
     s.logs.push ({
       id: `${now}-${provider_id}-resync`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       timestamp: now,
       provider_id: provider_id as any,
       level: "info",
       action: "resync",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-<<<<<<< HEAD
-    const target = s && s.connections.find((c) => c && c.providerId === providerId);
-    if (target) target && target.lastSyncAt = now;
-  });
-  res && res.status(200).json({ ok: true });
-}
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
@@ -93,7 +56,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const state = readState();
   const conn = state.connections.find(c => c.providerId === providerId);
   if (!conn) return res.status(400).json({ error: 'Provider not connected' });
-
   const now = Date.now();
   writeState(s => {
     s.logs.push({ id: `${now}-${providerId}-resync`, timestamp: now, providerId: providerId as any, level: 'info', action: 'resync' });
@@ -102,8 +64,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   });
   res.status(200).json({ ok: true })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     const target = s.connections.find ((c) => c.provider_id === provider_id);
     // Check condition
 if (target.lastSyncAt = now) {
@@ -112,4 +72,3 @@ if (target.lastSyncAt = now) {
   });
   res.status (200).json ({ ok: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

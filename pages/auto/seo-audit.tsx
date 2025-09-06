@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const SEOAudit: NextPage = () => {
   return (
     <div>
@@ -24,11 +16,6 @@ const SEOAudit: NextPage = () => {
   )
 }
 export default SEOAudit;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -49,4 +36,3 @@ const SEOAudit: NextPage = () => {
     </div>);
 },
 export default SEOAudit,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

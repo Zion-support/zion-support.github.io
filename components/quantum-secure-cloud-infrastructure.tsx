@@ -1,45 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
-import SEO from '../components/SEO';
-export default function QuantumSecureCloudInfrastructure() {
-	return (
-		<ServiceLanding
-			title;
-				"NIST PQC roadmap alignment]}
-			]}
-			industries={["Financial Services", "Healthcare", "Government"]}
-			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
-		/>
-	)
-}
-<<<<<<< HEAD
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -68,10 +42,6 @@ export default function QuantumSecureCloudInfrastructure() {;
 		/>;
 	);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components / SEO';
@@ -98,4 +68,3 @@ return (<ServiceLanding;
     url="https: //ziontechgroup.com / quantum - secure - cloud - infrastructure";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

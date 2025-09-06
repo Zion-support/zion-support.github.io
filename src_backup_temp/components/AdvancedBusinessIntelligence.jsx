@@ -188,10 +188,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Controls */"}";
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">";
         <div className="flex items-center justify-between">";
@@ -239,10 +235,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               {tab.label}
             </button>) }) }
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Content */}";
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'";
         {activeTab === 'overview' && (<div className="space-y-6">;
@@ -280,10 +272,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                     </div>) }
                 </div>) ) }
             </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             {/* Quick Actions */}";
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">";
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">";
@@ -310,10 +298,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 { label: 'Set Alerts', icon: AlertTriangle, action: () => { /* empty */ } },
                 { label: 'Export Data', icon: Download, action: () => { /* empty */ } }
             ].map((item, index) => {
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 const Icon = item.icon;";
                 return (<button key={index} onClick={item.action} className="p-3 bg-white "dark": "bg-zion-slate rounded-lg border border-zion-slate-light "hover":border-zion-cyan transition-colors text-sm font-medium text-zion-slate "hover":text-zion-cyan">";
                       <Icon className="w-4 h-4 mx-auto mb-2" />;

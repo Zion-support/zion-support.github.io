@@ -1379,10 +1379,6 @@ designed to transform your business and drive exponential growth.";
         </motion.div>"",;
         {/* comment */}""""";
         <motion .div """";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0, y: 30}}
           animate = {}"
   {opacity: 1, y: 0}}"""
@@ -1519,10 +1515,6 @@ designed to transform your business and drive exponential growth."
                     {service.features.length > 3 && ("""";
                       <span className="bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">;
                         +{service.features.length-3} more,;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               <span>{category.name}</span>
             </button>) ) }"
         </motion.div>""
@@ -1671,10 +1663,6 @@ designed to transform your business and drive exponential growth."
             onClick="{" () =" > setSelectedService (null)}";
           >""""";
             <motion .div"""";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 1, y: 0}}
           transition = {}">
   {duration: 0.6, delay: 0.4",";"}}""" >""""""
@@ -1795,10 +1783,6 @@ designed to transform your business and drive exponential growth."
                   </a>;
                 </div>;
             </motion.div>,;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {scale: 1, opacity: 1}}
               exit = {}"
   {scale: 0.9, opacity: 0}}"""

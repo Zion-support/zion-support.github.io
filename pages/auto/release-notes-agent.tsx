@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const ReleaseNotesAgent: NextPage = () => {
   return (
     <div>
@@ -22,11 +14,6 @@ const ReleaseNotesAgent: NextPage = () => {
   )
 }
 export default ReleaseNotesAgent;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -45,4 +32,3 @@ const ReleaseNotesAgent: NextPage = () => {
     </div>);
 },
 export default ReleaseNotesAgent,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

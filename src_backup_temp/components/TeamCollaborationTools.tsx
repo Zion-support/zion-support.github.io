@@ -1,10 +1,4 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default function Page("props": "any) {;
 interface Comment {;
@@ -50,10 +44,6 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {;
 export const "TeamCollaborationTools": "React.FC<TeamCollaborationToolsProps> = ({;
   showTeamMembers = true",;
 "showProjects": "tru e",;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page(props: any) {
 interface Comment {
   id: string;
@@ -72,29 +62,13 @@ interface Message {
   attachments?: string[];
   reactions: { type: string; count: number}[];
   isRead: boolean}
-<<<<<<< HEAD
 interface FileItem {
   id: string;';
   name: string;';';
-=======
-<<<<<<< HEAD
-=======
-interface FileItem {
-  id: string;';
-  name: string;';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 interface FileItem {;
   id: string;
   name: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface FileItem {
   id: string;
   name: string;
@@ -131,11 +105,6 @@ showProjects: tru e,;
   const [searchQuery, setSearchQuery] = useState<any>('');
   const [selectedDepartment, setSelectedDepartment] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   // Sample data;
   useEffect(() => {;
@@ -185,10 +154,6 @@ showProjects: tru e,;
         sharedWith['Lisa Thompson'],;';';
         permissions: 'view',';';
         version: '1.0'
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const sampleFiles: FileIte m[] = [{;
         id: '1',;
         name: 'AI_Platform_Architecture.pdf',;
@@ -233,21 +198,10 @@ showProjects: tru e,;
         "lastModified": '2024-01-13',;
         tags['Security',Audit',Report'],;
         sharedWith['Lisa Thompson'],;
-<<<<<<< HEAD
-        permissions: 'view',;
-        version: '1.0';
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-        "permissions": 'view',;
-        "version": '1.0';
-
-=======
         permissions: 'view',;
         version: '1.0';
         "permissions": 'view',;
         "version": '1.0';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   // Sample data
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -293,26 +247,10 @@ showProjects: tru e,;
         sharedWith['Lisa Thompson'],;
         permissions: 'view',
         version: '1.0'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     ];
     setTeamMembers(sampleTeamMembers) ;
     setProjects(sampleProjects) ;
     setMessages(sampleMessages) ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    setFiles(sampleFiles) }, []) ;
-      "default": "retur n 'text-zinc-400 bg-zinc-400/20'"}
-  };
-;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     setFiles(sampleFiles) }, []) ;';
 ';';
   // Get status color and icon'';';
@@ -335,10 +273,6 @@ showProjects: tru e,;
       "default": "retur n 'text-zinc-400 bg-zinc-400/20'"}
   };
 ;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Get file type icon";
       "default": "retur n <File className="w-5 h-5"   />"}};
   // Format file size;
@@ -346,11 +280,6 @@ showProjects: tru e,;
           msg.reactions.push({ "type": "reactionTyp e", "count": "1 "})}
       }
       return msg}) ) };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return ("
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}"
@@ -372,10 +301,6 @@ showProjects: tru e,;
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.id'';';
                   ? 'bg-zion-cyan text-white''';';
                   : 'text-zinc-400 hover: tex t-white hover: b g-zinc-800/50'`
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   return (";
     <div className="w-full max-w-7xl mx-auto p-6">;
@@ -397,23 +322,11 @@ showProjects: tru e,;
               onClick={() => setActiveTab(tab.id as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.id';
                   ? 'bg-zion-cyan text-white'';
-<<<<<<< HEAD
-                  : 'text-zinc-400 hover: tex t-white hover: b g-zinc-800/50'`;
-              }`}
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-                  : 'text-zinc-400 "hover": "tex t-white "hover": b g-zinc-800/50'`;
-              "}`}
-;
-
-=======
                   : 'text-zinc-400 hover: tex t-white hover: b g-zinc-800/50'`;
               }`}
                   : 'text-zinc-400 "hover": "tex t-white "hover": b g-zinc-800/50'`;
               "}`}
 ;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   // Get status color and icon'
       default: retur n { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}};
   // Get project status color'
@@ -451,24 +364,12 @@ showProjects: tru e,;
                   ? 'bg-zion-cyan text-white''
                   : 'text-zinc-400 hover: tex t-white hover: b g-zinc-800/50'`
               }`}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {tab.icon}
               {tab.label}
             </button>) ) }
         </div>
       </div>
       {/* Team Members Tab */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {activeTab === 'team' && showTeamMembers && (;
         <motion.div;
           initial = {;
@@ -509,22 +410,11 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-green-400 mb-2">;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {activeTab === 'team' && showTeamMembers && (
         <motion.div
           initial = {
   { opacity: 0,
   y: 2 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         </div>;
       </div>;
       {/* Team Members Tab */}
@@ -589,19 +479,10 @@ showProjects: tru e,;
   { opacity: 1,;
   y: 0;
 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "';
               <div className="text-3xl font-bold text-blue-400 mb-2">';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               transition={{ delay: 0.1 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -610,8 +491,6 @@ showProjects: tru e,;
               </div>";
               <div className="text-zinc-400">Online Now</div>;
             </motion.div>;
-<<<<<<< HEAD
-=======
 ;
             <motion.div;
               initial = {;
@@ -626,10 +505,6 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-blue-400 mb-2">;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 {teamMembers.filter(m => m.availability === 'available').length}
               </div>";
               <div className="text-zinc-400">Available</div>;
@@ -670,10 +545,6 @@ showProjects: tru e,;
                 <div className="flex items-center gap-4 mb-4">";
                   <div className="relative">";
                     <div className="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold text-lg">;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             <motion.div
               initial = {
   { opacity: 0,
@@ -792,11 +663,6 @@ showProjects: tru e,;
                       <div key={project} className="text-xs text-zinc-400">
                         • {project}
                       </div>) ) }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </div>;
                 </div>;
                 {/* Actions */}";
@@ -817,10 +683,6 @@ showProjects: tru e,;
                 </div>;
               </motion.div>) ) "}
           </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                 </div>
                 {/* Actions */}"
@@ -842,13 +704,6 @@ showProjects: tru e,;
               </motion.div>) ) }
           </div>
         </motion.div>) }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-      {/* Projects Tab */}
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ';
       {/* Projects Tab */}';';
       {/* Projects Tab */}
@@ -892,22 +747,11 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-green-400 mb-2">;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {activeTab === 'projects' && showProjects && (
         <motion.div
           initial = {
   { opacity: 0,
   y: 2 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
       {/* Projects Tab */}
       {activeTab === 'projects' && showProjects && (;
@@ -971,19 +815,10 @@ showProjects: tru e,;
   { opacity: 1,;
   y: 0;
 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "';
               <div className="text-3xl font-bold text-blue-400 mb-2">';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               transition={{ delay: 0.1 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -992,8 +827,6 @@ showProjects: tru e,;
               </div>";
               <div className="text-zinc-400">Active</div>;
             </motion.div>;
-<<<<<<< HEAD
-=======
 ;
             <motion.div;
               initial = {;
@@ -1008,10 +841,6 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-blue-400 mb-2">;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 {projects.filter(p => p.status === 'completed').length}
               </div>";
               <div className="text-zinc-400">Completed</div>;
@@ -1035,10 +864,6 @@ showProjects: tru e,;
             </motion.div>;
           </div>;
           {/* Projects List */}";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             <motion.div
               initial = {
   { opacity: 0,
@@ -1078,11 +903,6 @@ showProjects: tru e,;
           <div className="space-y-6"> {projects.map((project, index) => (;
               <motion.div
                 key={project.id}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 initial = {;
   { "opacity": "0",;
   "y": "2 0;
@@ -1103,10 +923,6 @@ showProjects: tru e,;
 ";
                     <div className="flex flex-wrap items-center gap-3">`;
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getProjectStatusColor(project.status)}`}>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 initial = {
   { opacity: 0,
   y: 2 0
@@ -1133,11 +949,6 @@ showProjects: tru e,;
                       </span>"
                       <span className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full">
                         {project.client}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       </span>;
                     </div>;
                   </div>;
@@ -1189,10 +1000,6 @@ showProjects: tru e,;
                     <div className="text-white font-medium">{project.teamMembers.length} members</div>;
                   </div>;
                 </div> {/* Tags */}";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       </span>
                     </div>
                   </div>
@@ -1255,11 +1062,6 @@ showProjects: tru e,;
           </div>
           {/* Add Project Button */}"
           <div className="text-center">;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             <button;
               onClick={() => setShowProjectForm(true)}";
               className="px-8 py-3 bg-zion-cyan text-white rounded-lg "hover": "b g-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto";
@@ -1275,28 +1077,15 @@ showProjects: tru e,;
           initial = {
   { opacity: 0,
   y: 2 0
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         </motion.div>) "}
 ;
       {/* Communication Tab */}
       {activeTab === 'communication' && showCommunication && (;
         <motion.div;
           initial = {;
-<<<<<<< HEAD
   { opacity: 0,;
   y: 2 0;
 }}
-=======
-<<<<<<< HEAD
-=======
-  { opacity: 0,;
-  y: 2 0;
-}}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   { "opacity": "0",;
   "y": "2 0;
 "}}
@@ -1387,12 +1176,6 @@ showProjects: tru e,;
               </div>"
               <div className="text-zinc-400">Read</div>
             </motion.div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
             <motion.div;
               initial = {;
@@ -1407,10 +1190,6 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-blue-400 mb-2">;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             <motion.div
               initial = {
   { opacity: 0,
@@ -1433,11 +1212,6 @@ showProjects: tru e,;
           <div className="space-y-4"> {messages.map((message, index) => (;
               <motion.div
                 key={message.id}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 initial = {;
   { "opacity": "0",;
   "y": "2 0;
@@ -1452,10 +1226,6 @@ showProjects: tru e,;
 ";
                 <div className="flex items-start gap-4">";
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 initial = {
   { opacity: 0,
   y: 2 0
@@ -1468,16 +1238,8 @@ showProjects: tru e,;
                 className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: b g-zinc-900/50 transition-all duration-300 ${!message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''`
                 }`}
 "
-<<<<<<< HEAD
                 <div className="flex items-start gap-4">"';
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">';';
-=======
-<<<<<<< HEAD
-=======
-                <div className="flex items-start gap-4">"';
-                  <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 animate = {;
   { opacity: 1,;
   y: 0;
@@ -1509,11 +1271,6 @@ showProjects: tru e,;
                       {message.reactions.map((reaction, idx) => (
                         <button
                           key={idx}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                           onClick={
   () => handleMessageReaction(message.id,
   reaction.type)
@@ -1522,10 +1279,6 @@ showProjects: tru e,;
 '"';';
                           {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1"   />}'"';';
                           {reaction.type === 'check' && <CheckCircle className="w-3 h-3 inline mr-1"   />}'"';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                           onClick={;
   () => handleMessageReaction(message.id,;
   reaction.type);
@@ -1662,30 +1415,14 @@ showProjects: tru e,;
             </div>
           </div>
         </motion.div>) }
-<<<<<<< HEAD
 ';
       {/* File Sharing Tab */}';';
-=======
-<<<<<<< HEAD
-
-=======
-';
-      {/* File Sharing Tab */}';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {/* File Sharing Tab */}
       {activeTab === 'files' && showFileSharing && (
         <motion.div
           initial = {
   { opacity: 0,
   y: 2 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
       {/* File Sharing Tab */}
       {activeTab === 'files' && showFileSharing && (;
@@ -1749,19 +1486,10 @@ showProjects: tru e,;
   { opacity: 1,;
   y: 0;
 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "';
               <div className="text-3xl font-bold text-blue-400 mb-2">';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               transition={{ delay: 0.1 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -1770,8 +1498,6 @@ showProjects: tru e,;
               </div>";
               <div className="text-zinc-400">Documents</div>;
             </motion.div>;
-<<<<<<< HEAD
-=======
 ;
             <motion.div;
               initial = {;
@@ -1786,10 +1512,6 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-blue-400 mb-2">;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 {files.filter(f => f.type === 'image').length}
               </div>";
               <div className="text-zinc-400">Images</div>;
@@ -1807,10 +1529,6 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-zion-cyan mb-2">;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             <motion.div
               initial = {
   { opacity: 0,
@@ -1850,11 +1568,6 @@ showProjects: tru e,;
           <div className="space-y-4"> {files.map((file, index) => (;
               <motion.div
                 key={file.id}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 initial = {;
   { "opacity": "0",;
   "y": "2 0;
@@ -1911,10 +1624,6 @@ showProjects: tru e,;
               <p className="text-zinc-400 mb-4">Drag and drop files here or click to browse</p>"              <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg "hover": "b g-zion-cyan/80 transition-colors">;
                 Choose Files;
               </button>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 initial = {
   { opacity: 0,
   y: 2 0
@@ -1973,16 +1682,8 @@ showProjects: tru e,;
               </button>
             </div>;
           </div>;
-<<<<<<< HEAD
         </motion.div>;) };';
     </div>;) };';';
-=======
-<<<<<<< HEAD
-=======
-        </motion.div>;) };';
-    </div>;) };';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         </motion.div>;) "};
     </div>;) };
 '"`
@@ -2019,16 +1720,8 @@ showProjects: tru e,;
 </FileItem>
 </Message>
 </Project>
-<<<<<<< HEAD
 </TeamMember>';
 </TeamCollaborationToolsProps>;';;';
-=======
-<<<<<<< HEAD
-=======
-</TeamMember>';
-</TeamCollaborationToolsProps>;';;';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         </motion.div>;) };
     </div>;) };
 '"`;
@@ -2068,12 +1761,4 @@ showProjects: tru e,;
 </TeamMember>;
 </TeamCollaborationToolsProps>;
 </TeamMember>
-<<<<<<< HEAD
 </TeamCollaborationToolsProps>
-=======
-<<<<<<< HEAD
-</TeamCollaborationToolsProps>
-=======
-</TeamCollaborationToolsProps>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import * as React from 'react'
-import * as ToastPrimitives from '@radix-ui/react-toast'
-import { cva, type VariantProps } from 'class-variance-authority'
-import { X } from 'lucide-react'
-
-import { cn } from '@/lib/utils'
-import { logInfo } from '@/utils/productionLogger'
-const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils/productionLogger'
-const ToastProvider = ToastPrimitives.Provider
-const ToastViewport = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Viewport>
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
->(({ className, ...props }, ref,) => (
-  <ToastPrimitives.Viewport
-=======
 import React from 'react';
 import * as React from 'react';
 import * as ToastPrimitives from '@radix-ui/react-toast';
@@ -23,17 +5,13 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { logInfo } from '@/utils/productionLogger';
-
 const ToastProvider = ToastPrimitives && ToastPrimitives.Provider;import { logInfo } from '@/utils/productionLogger';
 const ToastProvider = ToastPrimitives && ToastPrimitives.Provider;
-
 const ToastViewport = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Viewport>,;
   React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Viewport>;
 >(({ className, ...props }, ref,) => (;
   <ToastPrimitives&& ToastPrimitives.Viewport
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import * as React from 'react';
 import * as ToastPrimitives from '@radix - ui / react - toast';
 import { cva, type VariantProps } from 'class - variance - authority';
@@ -47,55 +25,13 @@ const ToastViewport = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof ToastPrimitives.Viewport>;
 >(({ class_name, ...props }, ref, ) => (
   <ToastPrimitives.Viewport;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (
       'fixed top - 0 z-[100] flex max - h-screen w - full flex - col - reverse p - 4 sm:bottom - 0 sm:right - 0 sm:top - auto sm:flex - col md:max - w-[420px]',      class_name), }
     {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  />
-))
-ToastViewport.displayName = ToastPrimitives.Viewport.displayName
-const toastVariants = cva(
-  'group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full'
-  {
-    variants: {
-      variant: {
-        default: 'border bg-background text-foreground'
-        destructive:
-          'destructive border-destructive bg-destructive text-destructive-foreground'
-        success:
-          'border-green-500 bg-green-50 text-green-900 dark:bg-green-900/20 dark:text-green-100'
-        warning:
-          'border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100'
-        info: 'border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100'
-      }
-    }
-    defaultVariants: {
-      variant: 'default'
-    }
-  }
-)
-const Toast = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Root>
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
-    VariantProps<typeof toastVariants>
->(({ className, variant, ...props }, ref) => {
-      />
-  )
-})
-Toast.displayName = ToastPrimitives.Root.displayName
-const ToastAction = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Action>
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Action>
->(({ className, ...props }, ref,) => (
-  <ToastPrimitives.Action
-=======
   />;
 ));
 ToastViewport && ToastViewport.displayName = ToastPrimitives && ToastPrimitives.Viewport.displayName;
-
 const toastVariants = cva(;
   'group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full',;
   {;
@@ -116,7 +52,6 @@ const toastVariants = cva(;
     },;
   }
 );
-
 const Toast = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Root>,;
   React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Root> &;
@@ -126,14 +61,11 @@ const Toast = React && React.forwardRef<;
   );
 });
 Toast && Toast.displayName = ToastPrimitives && ToastPrimitives.Root.displayName;
-
 const ToastAction = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Action>,;
   React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Action>;
 >(({ className, ...props }, ref,) => (;
   <ToastPrimitives&& ToastPrimitives.Action
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   />));
 ToastViewport.display_name = ToastPrimitives.Viewport.display_name;
 const toast_variants = cva (
@@ -169,60 +101,23 @@ const ToastAction = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof ToastPrimitives.Action>;
 >(({ class_name, ...props }, ref, ) => (
   <ToastPrimitives.Action;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (
       'inline - flex h - 8 shrink - 0 items - center justify - center rounded - md border bg - transparent px - 3 text - sm font - medium ring - offset - background transition - colors hover:bg - secondary focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50 group-[.destructive]:border - muted / 40 group-[.destructive]:hover:border - destructive / 30 group-[.destructive]:hover:bg - destructive group-[.destructive]:hover:text - destructive - foreground group-[.destructive]:focus:ring - destructive',      class_name), }
     {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  />
-))
-ToastAction.displayName = ToastPrimitives.Action.displayName
-const ToastClose = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Close>
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Close>
->(({ className, ...props }, ref,) => (
-  <ToastPrimitives.Close
-=======
   />;
 ));
 ToastAction && ToastAction.displayName = ToastPrimitives && ToastPrimitives.Action.displayName;
-
 const ToastClose = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Close>,;
   React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Close>;
 >(({ className, ...props }, ref,) => (;
   <ToastPrimitives&& ToastPrimitives.Close
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
       'absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600'
       className
     )}
-<<<<<<< HEAD
-    toast-close=''    {...props}
-  >
-    <X className='h-4 w-4' />
-  </ToastPrimitives.Close>
-))
-ToastClose.displayName = ToastPrimitives.Close.displayName
-const ToastTitle = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Title>
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Title>
->(({ className, ...props }, ref,) => (
-  <ToastPrimitives.Title
-    ref={ref}
-    className={cn('text-sm font-semibold', className)}    {...props}
-  />
-))
-ToastTitle.displayName = ToastPrimitives.Title.displayName
-const ToastDescription = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Description>
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description>
->(({ className, ...props }, ref,) => (
-  <ToastPrimitives.Description
-=======
   />));
 ToastAction.display_name = ToastPrimitives.Action.display_name;
 const ToastClose = React.forward_ref<;
@@ -253,7 +148,6 @@ const ToastDescription = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof ToastPrimitives.Description>;
 >(({ class_name, ...props }, ref, ) => (
   <ToastPrimitives.Description;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ('text - sm opacity - 90', class_name)}    {...props}
   />));
@@ -277,20 +171,11 @@ export {
  */
 function use_toast() {
 //   return {
-<<<<<<< HEAD
-//     // Accept a loosely typed props object to allow custom fields like `description`
-//     toast: (props: any,) => {
-//       // Implementation of toast functionality
-//       logInfo('Toast:', { data: props })
-//     }
-
-=======
     toast-close=''    {...props}>;
     <X className='h-4 w-4' />;
   </ToastPrimitives && ToastPrimitives.Close>;
 ));
 ToastClose && ToastClose.displayName = ToastPrimitives && ToastPrimitives.Close.displayName;
-
 const ToastTitle = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Title>,;
   React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Title>;
@@ -301,7 +186,6 @@ const ToastTitle = React && React.forwardRef<;
   />;
 ));
 ToastTitle && ToastTitle.displayName = ToastPrimitives && ToastPrimitives.Title.displayName;
-
 const ToastDescription = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Description>,;
   React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Description>;
@@ -312,11 +196,8 @@ const ToastDescription = React && React.forwardRef<;
   />;
 ));
 ToastDescription && ToastDescription.displayName = ToastPrimitives && ToastPrimitives.Description.displayName;
-
 type ToastProps = React && React.ComponentPropsWithoutRef<typeof Toast>;
-
 type ToastActionElement = React && React.ReactElement<typeof ToastAction>;
-
 export {;
   type ToastProps,;
   type ToastActionElement,;
@@ -328,7 +209,6 @@ export {;
   ToastClose,;
   ToastAction,;
 };
-
 // Add useToast hook export;
 // export function useToast() {;
 //   return {;
@@ -337,13 +217,8 @@ export {;
 //       // Implementation of toast functionality;
 //       logInfo('Toast:', { data: props });
 //     },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 //   }
 // }
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 //     // Accept a loosely typed props object to allow custom fields like `description`;
 //     toast: (props: any, ) => {
 //       // Implementation of toast functionality;
@@ -351,4 +226,3 @@ export {;
 //     },
 //   }
 // }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-<<<<<<< HEAD
-import { Card, CardContent } from "@/components/ui/card",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { Skeleton } from "@/components/ui/skeleton";
-import { formatDistanceToNow } from "date-fns";
-export function AnalyticsSummary() {
-  const { data: stats, isLoading } = useQuery({
-
-    queryKey: ['analytics-summary']
-
-    queryFn: async () => {
-      // Get total page views
-      const { data: pageViewsData, error: pageViewsError } = await supabase
-        .from('analytics_events')
-        .select('count')
-        .eq('event_typepage_view')
-=======
 import {Card, CardContent} from "@/components/ui/card";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -33,52 +12,8 @@ export function AnalyticsSummary() {;
         .from('analytics_events');
         .select('count');
         .eq('event_typepage_view');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .single();
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
-<<<<<<< HEAD
-      // Get unique visitors (by counting distinct user IDs)
-      const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
-        .from('analytics_events')
-        .select('user_id')
-        .eq('event_typepage_view')
-        .is('user_idnot.null');
-      if (uniqueVisitorsError) throw uniqueVisitorsError;
-
-      const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) |[]);
-      // Get conversion count
-      const { data: conversionsData, error: conversionsError } = await supabase
-        .from('analytics_events')
-        .select('count')
-        .eq('event_typeconversion')
-        .single();
-      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
-      // Get most recent event to calculate "last updated"
-      const { data: lastEventData, error: lastEventError } = await supabase
-        .from('analytics_events')
-        .select('created_at')
-        .order('created_at', { ascending: false })
-        .limit(1)
-        .single();
-      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
-      return {
-        totalPageViews: pageViewsData?.count |0
-        uniqueVisitors: uniqueUserIds.size |0
-        conversions: conversionsData?.count |0
-        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
-    }
-    refetchInterval: 300000, // Refetch every 5 minutes
-  });
-  // Calculate conversion rate
-  const conversionRate = stats && stats.totalPageViews > 0
-    ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
-    : '0.00';
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-      <StatCard
-        title="Total Page Views"
-        value={isLoading ? <Skeleton className="h-8 w-20 bg-zion-blue-light" /> : stats?.totalPageViews |0}
-=======
 import { Card, CardContent } from '@/components / ui / card';
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
@@ -157,50 +92,31 @@ if (throw lastEventError) {
       <StatCard;
         title="Total Page Views";
         value={is_loading ? <Skeleton className="h - 8 w - 20 bg - zion - blue - light" /> : stats?.totalPageViews || 0}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         icon={
           <svg xmlns="http://www.w3.org / 2000 / svg" width="24" height="24" view_box="0 0 24 24" fill="none" stroke="current_color" stroke_width="2" stroke_linecap="round" stroke_linejoin="round"><path d="m2 12 5 - 3-5 - 3v6Z"/><path d="M7 9v10c0 .6.4 1 1 1h2a1 1 0 0 0 1 - 1v - 6"/><path d="M11 13h4"/><path d="M15 13v7a1 1 0 0 0 1 1h2c.6 0 1-.4 1 - 1V8.5"/><path d="M19 8.5a3.5 3.5 0 0 0 - 7 0"/><path d="M22 2 2 22"/></svg>;
         }
-<<<<<<< HEAD
-      />
-      <StatCard
-        title="Unique Visitors"
-        value={isLoading ? <Skeleton className="h-8 w-20 bg-zion-blue-light" /> : stats?.uniqueVisitors |0}
-=======
       />;
       <StatCard;
         title="Unique Visitors";
         value={is_loading ? <Skeleton className="h - 8 w - 20 bg - zion - blue - light" /> : stats?.unique_visitors || 0}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         icon={
           <svg xmlns="http://www.w3.org / 2000 / svg" width="24" height="24" view_box="0 0 24 24" fill="none" stroke="current_color" stroke_width="2" stroke_linecap="round" stroke_linejoin="round"><circle cx="18" cy="15" r="3"/><circle cx="9" cy="7" r="4"/><path d="M10 15H6a4 4 0 0 0 - 4 4v2"/><path d="m21.7 16.4-.9-.3"/><path d="m15.2 13.9-.9-.3"/><path d="m16.6 18.7.3-.9"/><path d="m19.1 12.2.3-.9"/><path d="m19.6 18.7-.4 - 1"/><path d="m16.8 12.3-.4 - 1"/><path d="m14.3 16.6 1-.4"/><path d="m20.7 13.8 1-.4"/></svg>;
         }
-<<<<<<< HEAD
-      />
-      <StatCard
-        title="Conversion Rate"
-=======
-
       // Get unique visitors (by counting distinct user IDs);
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase;
         .from('analytics_events');
         .select('user_id');
         .eq('event_typepage_view');
         .is('user_idnot && user_idnot.null');
-
       if (uniqueVisitorsError) throw uniqueVisitorsError;
-
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item && item.user_id) || []);
-
       // Get conversion count;
       const { data: conversionsData, error: conversionsError } = await supabase;
         .from('analytics_events');
         .select('count');
         .eq('event_typeconversion');
         .single();
-
       if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
-
       // Get most recent event to calculate "last updated";
       const { data: lastEventData, error: lastEventError } = await supabase;
         .from('analytics_events');
@@ -208,9 +124,7 @@ if (throw lastEventError) {
         .order('created_at', { ascending: false });
         .limit(1);
         .single();
-
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
-
       return {;
         totalPageViews: pageViewsData?.count || 0,;
         uniqueVisitors: uniqueUserIds && uniqueUserIds.size || 0,;
@@ -219,12 +133,10 @@ if (throw lastEventError) {
     };
     refetchInterval: 300000, // Refetch every 5 minutes;
   });
-
   // Calculate conversion rate;
   const conversionRate = stats && stats.totalPageViews > 0 ;
     ? ((stats && stats.conversions / stats.totalPageViews) * 100).toFixed(2);
     : '0 && 0.00';
-
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">;
       <StatCard
@@ -243,20 +155,13 @@ if (throw lastEventError) {
       />;
       <StatCard
         title="Conversion Rate" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         value={isLoading ? <Skeleton className="h-8 w-20 bg-zion-blue-light" /> : `${conversionRate}%`}
         icon={;
           <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 20 2-2"/><path d="M4 14a6 6 0 0 1 6-6"/><path d="M5 18a8 8 0 0 1 8-8"/><path d="M6 16a6 6 0 0 1 6-6"/><path d="m10 16 2-2v6"/><path d="m3 14 2-2"/><rect x="14" y="2" width="8" height="8" rx="2"/></svg>;
         }
-<<<<<<< HEAD
-      />
-      <StatCard
-        title="Last Updated"
-=======
       />;
       <StatCard
         title="Last Updated" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         value={
           isLoading ? (
             <Skeleton className="h-8 w-28 bg-zion-blue-light" />;
@@ -271,24 +176,12 @@ if (throw lastEventError) {
     </div>;
   );
 }
-<<<<<<< HEAD
-interface StatCardProps {
-  title: string
-  value: React.ReactNode
-
-  icon: React.ReactNode
-}
-function StatCard({ title, value, icon }: StatCardProps) {
-=======
-
 interface StatCardProps {;
   title: string,;
   value: React && React.ReactNode,;
   icon: React && React.ReactNode;
 }
-
 function StatCard(): any ({ title, value, icon }: StatCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;
@@ -302,16 +195,6 @@ function StatCard(): any ({ title, value, icon }: StatCardProps) {;
             </p>;
             <h4 className="text-2xl font-bold text-white">;
               {value}
-<<<<<<< HEAD
-            </h4>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-=======
-=======
       />;
       <StatCard;
         title="Conversion Rate";
@@ -355,17 +238,9 @@ function StatCard() {
             </p>;
             <h4 className="text - 2xl font - bold text - white">;
               {value}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </h4>;
           </div>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

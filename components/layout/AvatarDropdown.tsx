@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { useUser } from '../../providers/UserProvider'
-export default function AvatarDropdown() {
-  const { user, logout } = useUser()
-  const [open, setOpen] = useState(false)
-  if (!user) return null
-=======
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { use_user } from '../../providers / UserProvider';
@@ -20,7 +11,6 @@ function AvatarDropdown() {
 if (return null) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className=&quot;relative & quot;>;
       <button on_click={() => set_open (object => !o)} className=&quot;h - 8 w - 8 rounded - full bg - gradient - to - br from - indigo - 500 to - cyan - 500 text - white text - xs font - semibold grid place - items - center ring - 1 ring - white / 40 & quot;>;

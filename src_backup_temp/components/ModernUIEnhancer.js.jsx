@@ -163,10 +163,6 @@ export default function Page("props": "any) {;
     );
         return () => {
             animatedElements.forEach((element) => {
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                 observer.unobserve(element)})}}, [enableScrollEffects]);
     return (<>;
       {/* Theme Toggle Button */}
@@ -273,10 +269,6 @@ export default function Page("props": "any) {;
 "}} exit = {;
   { "opacity": "0", "y": "100",;
   "scale": "0.8 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}} transition = {;
 ";
   { "type": "spring", "damping": "25",;
@@ -313,10 +305,6 @@ export default function Page("props": "any) {;
                 </button>
               </div>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             {/* Content */"}";
             <div className="p-4 space-y-4">;
               {/* Animation Controls */}";

@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import React from 'react';
-export default function ManifestoPage(): JSX.Element {
-  return (
-    <>
-      <Head>
-        <title>Zion Manifesto</title>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-        <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
+<meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
         <div className="mx-auto w-full max-w-5xl px-6 py-12">
@@ -42,7 +30,6 @@ export default function ManifestoPage(): JSX.Element {
             <h2 id="ai-for-empowerment">AI for Empowerment, Not Exploitation</h2>
             <p>
               AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching
-
               scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize
               transparency, auditability, and consent. Your data powers your outcomes, not someone else’s moat.
             </p>
@@ -58,12 +45,7 @@ export default function ManifestoPage(): JSX.Element {
       </main>
     </>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head',
 import React from 'react',
 export default function ManifestoPage (): JSX.Element {
@@ -118,4 +100,3 @@ export default function ManifestoPage (): JSX.Element {
       </main>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

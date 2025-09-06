@@ -207,10 +207,6 @@ export default function FuturisticServicesShowcase()() {
 "}} transition = {;
   { "duration": "0.8;
   "delay": 0.4 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 "}} className="text-center mt-16">;
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm">;
             <h3 className="text-2xl "md": "text-3xl font-bold text-white mb-4">;

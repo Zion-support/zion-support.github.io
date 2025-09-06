@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';';';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';';';';
 interface ButtonProps {';';
   ';';';: any;';';
@@ -58,10 +52,6 @@ interface ButtonProps {;
   ';';';: "any;
   variant?: 'default' | 'outline' | 'ghost' | 'link'",',';';
   ;: "any;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface ButtonProps {
   ';';';: any;
   children: React.ReactNode;',';';
@@ -74,19 +64,10 @@ interface ButtonProps {
   onClick?: () => void;'",';';
   ';';';: "any;
   type?: 'button' | 'submit' | 'reset';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   disabled?: boolean;
 "}';';
 export const "Button": "React.FC<ButtonProps> = ({';';';
   children",',';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   disabled?: boolean
 }';';
 export const Button: React.FC<ButtonProps> = ({';';';
@@ -121,14 +102,7 @@ export const Button: React.FC<ButtonProps> = ({';';';
     ';';';
     "lg": 'px-6 py-3 text-base',',';';
     ';';';
-<<<<<<< HEAD
     icon: 'w-10 h-10 p-0'};
-=======
-<<<<<<< HEAD
-=======
-    icon: 'w-10 h-10 p-0'};
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     "icon": 'w-10 h-10 p-0'};
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
@@ -140,11 +114,6 @@ export const Button: React.FC<ButtonProps> = ({';';';
       className={classes}
       onClick={onClick}
       disabled={disabled}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     >';
       {children}';';
     </button>';';';
@@ -152,29 +121,13 @@ export const Button: React.FC<ButtonProps> = ({';';';
 };';';';';';
 export default Button;"';';';';';
 </ButtonProps>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     >;
     >
       {children}
     </button>';
   );';';
 };';';';
-<<<<<<< HEAD
 export default Button;";
 </ButtonProps>;
 export default Button;"';';';';
 </ButtonProps>
-=======
-<<<<<<< HEAD
-export default Button;"';';';';
-</ButtonProps>
-=======
-export default Button;";
-</ButtonProps>;
-export default Button;"';';';';
-</ButtonProps>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

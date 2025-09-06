@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import Document, {
-<<<<<<< HEAD
-  Html
-  Head
-  Main
-  NextScript
-  DocumentContext;
-} from 'next/document';
-
-export default function Document() {
-=======
 import Document, {;
   Html,;
   Head,;
@@ -20,7 +6,6 @@ import Document, {;
   DocumentContext,;
 } from 'next/document';
 export default function Document() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Html lang='en'>;
       <Head>;
@@ -45,7 +30,6 @@ export default function Document() {;
         <link rel="preconnect" href="https: //fonts && fonts.googleapis.com" />;
         <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="" />;
         <link href="https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />;
-=======
   Html,
   Head,
   Main,
@@ -80,18 +64,11 @@ function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />;
         <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="" />;
         <link href="https://fonts.googleapis.com / css2?family = Inter:wght@400, 500, 600, 700, 800, 900 & family = JetBrains + Mono:wght@400, 600 & display = swap" rel="stylesheet" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <body>;
         <Main />;
         <NextScript />;
       </body>;
-<<<<<<< HEAD
-    </Html>;
-  );
-}
-=======
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-
 export default function Document() {
   return (
     <Html lang="en">
@@ -110,8 +87,5 @@ export default function Document() {
     </Html>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Html>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

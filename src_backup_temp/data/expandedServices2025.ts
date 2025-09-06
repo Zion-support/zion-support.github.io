@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD:src/data/expandedServices2025.ts
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export type ServiceItem = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Digital Marketing' | 'Business Intelligence' | 'Supply Chain' | 'Healthcare Tech' | 'Education Tech' | 'Legal Tech' | 'Real Estate Tech'; price: string;
 ';
 ';';
@@ -12,12 +5,4 @@ export type ServiceItem = { id: string; title: string; description: string; cate
 export type ServiceItem = { "id": "string; "title": string; "description": string; "category": 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Digital Marketing' | 'Business Intelligence' | 'Supply Chain' | 'Healthcare Tech' | 'Education Tech' | 'Legal Tech' | 'Real Estate Tech'; "price": string;"
 export type ServiceItem = { id: string; title: string; description: string; category: &apos;Micro SaaS&apos; | &apos;IT Services&apos; | &apos;AI Solutions&apos; | &apos;Cybersecurity&apos; | &apos;Data & Analytics&apos; | &apos;Cloud & DevOps&apos; | &apos;Quantum Computing&apos; | &apos;Blockchain & Web3&apos; | &apos;IoT & Edge&apos; | &apos;Green Tech&apos; | &apos;Space Tech&apos; | &apos;BioTech & Health&apos; | &apos;FinTech & DeFi&apos; | &apos;Metaverse & AR/VR&apos; | &apos;Autonomous Systems&apos; | &apos;Digital Marketing&apos; | &apos;Business Intelligence&apos; | &apos;Supply Chain&apos; | &apos;Healthcare Tech&apos; | &apos;Education Tech&apos; | &apos;Legal Tech&apos; | &apos;Real Estate Tech&apos;; price: string;
 export type ServiceItem = { "id": string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Digital Marketing' | 'Business Intelligence' | 'Supply Chain' | 'Healthcare Tech' | 'Education Tech' | 'Legal Tech' | 'Real Estate Tech'; price: string;
-<<<<<<< HEAD
 export type ServiceItem = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Digital Marketing' | 'Business Intelligence' | 'Supply Chain' | 'Healthcare Tech' | 'Education Tech' | 'Legal Tech' | 'Real Estate Tech'; price: string;
-=======
-<<<<<<< HEAD
-export type ServiceItem = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Digital Marketing' | 'Business Intelligence' | 'Supply Chain' | 'Healthcare Tech' | 'Education Tech' | 'Legal Tech' | 'Real Estate Tech'; price: string;
-=======
-export type ServiceItem = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Digital Marketing' | 'Business Intelligence' | 'Supply Chain' | 'Healthcare Tech' | 'Education Tech' | 'Legal Tech' | 'Real Estate Tech'; price: string;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

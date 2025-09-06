@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { Link } from 'react-router-dom';
 const MicroSaaS: React.FC = () => {
   const microSaaSServices = [
@@ -448,10 +443,6 @@ const MicroSaaS: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 const "MicroSaaS": "React.FC = () => {;
   return (;

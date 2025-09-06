@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-
-
-import {useState, useEffect} from "react";
-import {useParams} from "react-router-dom";
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/components/ui/use-toast";
-import {SEO} from "@/components/SEO";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {HireNowCTA} from "@/components/profile/HireNowCTA";
-import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
-<<<<<<< HEAD
-export default function ProfilePage() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const { profileId } = useParams() as { profileId?: string }
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-  useEffect(() => {
-    const fetchProfile = async () => {
-=======
-
 export default function ProfilePage() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
@@ -32,10 +5,8 @@ export default function ProfilePage() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-
   useEffect(() => {;
     const fetchProfile = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsLoading(true);
       setIsError(false);
       try {;
@@ -44,19 +15,6 @@ export default function ProfilePage() {;
           .select("*");
           .eq("id", profileId);
           .single();
-<<<<<<< HEAD
-        if (error) {
-          throw error
-        }
-        setProfileData(data)
-      } catch (error) {
-        console.error("Error fetching profile:", error);
-        setIsError(true);
-        toast({
-          title: "Error"
-          description: "Failed to load profile. Please try again later."
-          variant: "destructive"})
-=======
 import { useState, useEffect } from './react';
 import { use_params } from './react-router-dom';
 import { supabase } from '@/integrations / supabase / client';
@@ -106,23 +64,12 @@ if ( {) {
           title: "Error",
           description: "Failed to load profile. Please try again later.",
           variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
-<<<<<<< HEAD
-    }
-    if (profileId) {
-      fetchProfile()
-    }
-  }, [profileId]);
-  if (isLoading) {
-=======
-
         if (error) {;
           throw error;
         }
-
         setProfileData(data);
       } catch (error) {;
         console && console.error("Error fetching profile:", error);
@@ -135,26 +82,18 @@ if ( {) {
         setIsLoading(false);
       }
     };
-
     if (profileId) {;
       fetchProfile();
     }
   }, [profileId]);
-
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <span className="loading loading-ring loading-lg"></span>;
       </div>;
     );
   }
-<<<<<<< HEAD
-  if (isError |!profileData) {
-=======
-
   if (isError || !profileData) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p className="text-red-500">Failed to load profile.</p>;
@@ -164,21 +103,12 @@ if ( {) {
   return (
     <>;
       <SEO
-<<<<<<< HEAD
-        title={`${profileData.full_name} | Talent Profile`}
-        description={profileData.bio |"View the profile of this talented individual."}
-      />
-      <AppHeader />
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-12 gap-6">
-=======
         title={`${profileData && profileData.full_name} | Talent Profile`}
         description={profileData && profileData.bio || "View the profile of this talented individual."}
       />;
       <AppHeader />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">;
             {/* Profile Header */}
@@ -198,12 +128,7 @@ if ( {) {
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
                     </div>;
                   )}
-<<<<<<< HEAD
-                </div>
-=======
                 </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Main Info */}
                 <div className="flex-1">;
                   <div className="flex justify-between items-start">;
@@ -212,12 +137,7 @@ if ( {) {
                       <p className="text-zion-cyan font-medium">{profileData && profileData.professional_title}</p>;
                     </div>;
                     {/* Add Save/Unsave Button Here */}
-<<<<<<< HEAD
-                  </div>
-=======
                   </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">;
                     {profileData && profileData.location && (;
@@ -232,16 +152,9 @@ if ( {) {
                         <span>{profileData && profileData.availability}</span>;
                       </div>;
                     )}
-<<<<<<< HEAD
-                  </div>
-                </div>
-              </div>
-=======
                   </div>;
                 </div>;
               </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -253,23 +166,12 @@ if ( {) {
                   </div>;
                 </div>;
               )}
-<<<<<<< HEAD
-            </div>
-            {/* Bio Section */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
-              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
-              <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
-            </div>
-=======
             </div>;
-
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
               <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
             </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
@@ -289,25 +191,13 @@ if ( {) {
                 ) : (;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;
                 )}
-<<<<<<< HEAD
-              </div>
-            </div>
-            {/* Experience Section */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
-              <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
-              <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
-            </div>
-=======
               </div>;
             </div>;
-
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>;
               <p className="text-zion-slate-light">{profileData && profileData.experience || "No experience provided."}</p>;
             </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
@@ -339,16 +229,9 @@ if ( {) {
                     <Linkedin className="h-6 w-6" />;
                   </a>;
                 )}
-<<<<<<< HEAD
-              </div>
-            </div>
-          </div>
-=======
               </div>;
             </div>;
           </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
@@ -357,20 +240,9 @@ if ( {) {
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
-
               }}
             />;
             {/* Placeholder for other sidebar elements */}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
-=======
     }
 ;
     // Check condition
@@ -533,17 +405,9 @@ if ( {) {
               }}
             />;
             {/* Placeholder for other sidebar elements */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

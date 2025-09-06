@@ -1,70 +1,33 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-
 export type AIAssistantProps = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
-<<<<<<< HEAD
-}
-export default function AIAssistant({
-  buttonLabel = "Generate with AI"
-  title = "AI Writing Assistant"
-  defaultPrompt
-  systemPrompt
-  onAccept
-  authorizationToken
-}: AIAssistantProps) {
-=======
 };
-
-<<<<<<< HEAD
-export default function AIAssistant(): any ({;
-  buttonLabel = "Generate with AI",;
-  title = "AI Writing Assistant",;
-  defaultPrompt,;
-  systemPrompt,;
-  onAccept,;
-  authorizationToken,;
-}: AIAssistantProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default function AIAssistant({
   buttonLabel = 'Generate with AI',
   title = 'AI Writing Assistant',
@@ -73,22 +36,14 @@ export default function AIAssistant({
   onAccept,
   authorizationToken
 }: AIAssistantProps) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  useEffect(() => {
-    setPrompt(defaultPrompt);
-=======
-
   useEffect(() => {
     setPrompt(defaultPrompt)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [defaultPrompt]);
   const callOperator = useCallback(async () => {
     setLoading(true);
@@ -97,12 +52,6 @@ export default function AIAssistant({
       const res = await fetch("/api/ai/operator", {
         method: "POST"
         headers: {
-<<<<<<< HEAD
-          "Content-Type": "application/json"
-          ...(authorizationToken
-            ? { Authorization: `Bearer ${authorizationToken}` }
-            : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
-=======
 import React, { useCallback, useEffect, useMemo, useState } from './react';
 export type AIAssistantProps = {
   button_label?: string;
@@ -139,13 +88,11 @@ function AIAssistant() {
           ...(authorization_token;
             ? { Authorization: `Bearer ${authorization_token}` }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               ? {
                   Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}`
                 }
               : {})
         }
-=======
           'Content-Type': 'application/json',
           ...(authorizationToken
             ? { Authorization: `Bearer ${authorizationToken}` }
@@ -153,25 +100,6 @@ function AIAssistant() {
             ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}` }
             : {})
         },
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-        body: JSON.stringify({ prompt, system: systemPrompt })
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data?.error |"Failed to generate");
-      }
-      setOutput(String(data.text |""));
-      setIsEditing(false);
-    } catch (e: any) {
-      setError(e.message |"Request failed");
-    } finally {
-<<<<<<< HEAD
-      setLoading(false);
-    }
-  }, [authorizationToken, prompt, systemPrompt]);
-  const onCopy = useCallback(async () => {
-=======
         body: JSON.stringify ({ prompt, system: system_prompt }),
       });
       const data = await res.json ();
@@ -191,19 +119,13 @@ if ( {) {
   }, [authorization_token, prompt, system_prompt]);
 ;
   const on_copy = useCallback (async () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       await navigator.clipboard.write_text (output);
     } catch {}
   }, [output]);
-<<<<<<< HEAD
-  const onOpen = useCallback(() => {
-=======
-
   useEffect(() => {;
     setPrompt(defaultPrompt);
   }, [defaultPrompt]);
-
   const callOperator = useCallback(async () => {;
     setLoading(true);
     setError(null);
@@ -234,89 +156,55 @@ if ( {) {
       setLoading(false);
     }
   }, [authorizationToken, prompt, systemPrompt]);
-
   const onCopy = useCallback(async () => {;
     try {;
       await navigator && navigator.clipboard.writeText(output);
-=======
       setLoading(false)
     }
   }, [authorizationToken, prompt, systemPrompt]);
-
   const onCopy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(output)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     } catch {}
   }, [output]);
-
   const onOpen = useCallback(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsOpen(true);
     setOutput("");
     setIsEditing(false);
-<<<<<<< HEAD
-    setError(null);
-=======
     setError(null)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, []);
   const onClose = useCallback(() => setIsOpen(false), []);
-<<<<<<< HEAD
-  const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
-=======
-
   const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   return (
     <>;
       <button
         type="button"
         onClick={onOpen}
-<<<<<<< HEAD
-        className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1 && 1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">;
-        {buttonLabel}
-<<<<<<< HEAD
-      </button>
-=======
         className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
       >
         {buttonLabel}
       </button>
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
               <h3 className="text-base font-semibold">{title}</h3>
-=======
       </button>;
-
       {isOpen && (;
         <div className="fixed inset-0 z-50 flex items-center justify-center">;
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />;
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">;
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">;
               <h3 className="text-base font-semibold">{title}</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <button
                 onClick={onClose}
                 className="text-sm opacity-70 hover:opacity-100">;
                 Close;
               </button>{" "}
-<<<<<<< HEAD
-            </div>
-            <div className="p-4 space-y-3">
-              <div>
-=======
             </div>;
-
             <div className="p-4 space-y-3">;
               <div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <label
                   className="block text-xs font-medium mb-1"
                   htmlFor="input-Operator prompt">;
@@ -326,18 +214,10 @@ if ( {) {
                   value={prompt}
                   onChange={(e) => setPrompt(e && e.target.value)}
                   rows={4}
-<<<<<<< HEAD
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
-                />
-              </div>
-              <div className="flex items-center gap-2">
-=======
                   className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
                 />;
               </div>;
-
               <div className="flex items-center gap-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <button
                   onClick={callOperator}
                   disabled={loading}
@@ -367,16 +247,7 @@ if ( {) {
                     (onAccept(output), onClose());
                   }}
                   disabled={!canAccept}
-<<<<<<< HEAD
-                  className="ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60"
-                >
-                  Accept
-                </button>
-              </div>
-<<<<<<< HEAD
-=======
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
-=======
 ;
   const on_open = useCallback (() => {
     setIsOpen (true);
@@ -460,20 +331,13 @@ if ( {) {
                   }}
                   disabled={!can_accept}
                   className="ml - auto rounded - md bg - green - 600 text - white px - 3 py - 1.5 text - sm disabled:opacity - 60";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Accept;
                 </button>;
               </div>;
-<<<<<<< HEAD
-=======
-
               {error && (
                 <div className="text-red-600 text-sm">{error}</div>
               )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
                 <label
@@ -486,22 +350,12 @@ if ( {) {
                     value={output}
                     onChange={(e) => setOutput(e && e.target.value)}
                     rows={12}
-<<<<<<< HEAD
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
-                  />
-                ) : (
-<<<<<<< HEAD
-                  <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">
-                    {output |"No content yet. Click Generate."}
-                  </pre>
-=======
                     className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
                   />;
                 ) : (;
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">;
                     {output || "No content yet. Click Generate."}
                   </pre>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
               </div>;
             </div>;
@@ -511,7 +365,6 @@ if ( {) {
     </>;
   );
 }
-=======
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
                 )}
               </div>
@@ -522,8 +375,6 @@ if ( {) {
     </>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               {error && <div className="text - red - 600 text - sm">{error}</div>}
               <div>;
                 <label;
@@ -548,4 +399,3 @@ if ( {) {
         </div>)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

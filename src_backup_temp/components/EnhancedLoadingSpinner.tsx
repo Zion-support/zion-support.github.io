@@ -12,12 +12,6 @@ setTimeout(() => {;
   }, [autoComplete, enabled, autoCompleteDelay, onComplete]) ;
 ;
   if(!enabled || !isVisible) return null;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   const renderSpinner = ("props": "any) => {;
     switch(variant) {;
@@ -29,10 +23,6 @@ setTimeout(() => {;
               animate={{ "rotate": "36 0 "}}
               transition={{ "duration": "2", "repeat": "Infinit y", "ease": "linear" }}
             />;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const renderSpinner = (props: any) => {
     switch(variant) {
       case 'futuristic':
@@ -44,13 +34,6 @@ setTimeout(() => {;
               animate={{ rotate: 36 0 }}
               transition={{ duration: 2, repeat: Infinit y, ease: "linear" }}
             />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             {/* Inner ring */}
             <motion.div;
               className="absolute inset - 2 border-4 border-zion - purple / 40 rounded-full";
@@ -81,11 +64,6 @@ setTimeout(() => {;
                   "ease": "easeInOut";
                 }}
               />) ) }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           </div>) ;
       case 'minimal': ";
 '      case 'minimal':;
@@ -95,10 +73,6 @@ setTimeout(() => {;
             animate={{ "rotate": 36 0 "}}";
             transition={{ "duration": "1", "repeat": "Infinit y", "ease": "linear" }}
           />;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           </div>
     );
       case 'minimal':
@@ -121,11 +95,6 @@ setTimeout(() => {;
             >;
               <motion.div;
                 key={currentStep}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 initial={{ "opacity": "0", "y": "1 0 "}}
                 animate={{ "opacity": "1", "y": "0 "}}
                 exit={{ "opacity": "0", "y": "-10 "}}
@@ -142,10 +111,6 @@ setTimeout(() => {;
             className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full";
             animate={{ "rotate": 36 0 "}}";
             transition={{ "duration": "1", "repeat": "Infinit y", "ease": "linear" }}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 initial={{ opacity: 0, y: 1 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
@@ -183,19 +148,9 @@ export default function EnhancedLoadingSpinner("props": "any) {;
     "md": 'text-base',;
     "lg": 'text-lg';
   }
-<<<<<<< HEAD
 ;
   return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>;
 <motion.div;
-=======
-<<<<<<< HEAD
-
-=======
-;
-  return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>;
-<motion.div;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
         <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
 <motion.div
@@ -293,11 +248,6 @@ className="{"${sizeClasses[size]}" relative"}";
       </div>;
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           className="absolute inset-0 flex items-center justify-center""          animate="{{" "scale": "[1", 1.2, 1] }}"          transition="{{" "duration": "1.5", "repeat": "Infinit y", "ease": "easeInOut" }}"        >"          <div className="w-2 h-2 bg-blue-600 rounded-full"   />"        </motion.div>"      </motion.div>;
       ;
 ";
@@ -369,10 +319,6 @@ export default function EnhancedLoadingSpinner({,"});,"})";
   text = "Loading...",,;
   className = ""}: "EnhancedLoadingSpinnerProps) {";
   const sizeClasses = {"}";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           className="absolute inset-0 flex items-center justify-center""          animate="{{" scale: [1, 1.2, 1] }}"          transition="{{" duration: 1.5, repeat: Infinit y, ease: "easeInOut" }}"        >"          <div className="w-2 h-2 bg-blue-600 rounded-full"   />"        </motion.div>"      </motion.div>
 "
 ,"}
@@ -547,11 +493,6 @@ export default function EnhancedLoadingSpinner({,"}
 interface EnhancedLoadingSpinnerProps {;
   "": "any;
   ): any;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "};framer-motion";;framer-motion;
   size?: "&apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; text?: string className?: string"}&apos;&apos;
 export default function EnhancedLoadingSpinner("props": "any) {&apos"}&apos;
@@ -559,10 +500,6 @@ export default function EnhancedLoadingSpinner("props": "any) {&apos"}&apos;
   const textSizes = {}";
   return (&apos;<div className = "{"flex" flex-col items-center justify-center space-y-4 ${className}"}>;
       <motion.div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 };framer-motion";framer-motion
   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; text?: string className?: string}&apos;&apos
 export default function EnhancedLoadingSpinner(props: any) {&apos}&apos
@@ -622,13 +559,6 @@ className="&apos;absolute" inset-0 flex items-center justify-center";"
 repeat: Infinit y,
 delay: i * 0.2,"
 ease: "easeInOut"}}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function EnhancedLoadingSpinner("props": "any) {"";
   const sizeClasses = {"}";
 """;

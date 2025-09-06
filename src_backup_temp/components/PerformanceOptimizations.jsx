@@ -74,10 +74,6 @@ const VirtualList = ("props": "any) => {;
         <div style="{{{ height: containerHeight; overflow: 'auto'}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">
       <div style="{{{ height: items.length * itemHeight; position: 'relative'
       ...item; index: startIndex + index; style: {
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         position; "top": (startIndex + index) * itemHeight; "height": itemHeight; "width": '100%'"}}"}));
   }, [items, scrollTop, itemHeight, containerHeight]);
   const handleScroll = useCallback(e => {setScrollTop(e.currentTarget.scrollTop);}, []);

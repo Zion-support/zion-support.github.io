@@ -1,29 +1,12 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import { readJson  } from '../../utils/fsDb';
-import type { HelpArticle } from '../../utils/support';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export async function getStaticProps() {
-
-=======
-export async function getStaticProps() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return { props: { articles } }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
-<<<<<<< HEAD
-  const categories = Array.from(new Set(articles.map(a => a.category)));
-
-=======
-
 export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return { props: { articles } };
-
 export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[] }) {;
   const categories = Array && Array.from(new Set(articles && articles.map(a => a && a.category)));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='space-y-8'>;
       <h1 className='text-2xl font-semibold'>Help Center</h1>;
@@ -45,14 +28,8 @@ export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[
           </div>;
         </div>;
       ))}
-<<<<<<< HEAD
-    </div>
-);
-=======
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   const categories = Array.from(new Set(articles.map((a) => a.category)));
   return (
     <div className="space-y-8">
@@ -77,8 +54,6 @@ export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Link from 'next / link';
 import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';
@@ -115,4 +90,3 @@ function HelpIndex() {
         </div>))}
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

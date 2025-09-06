@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
-export async function getStaticProps() {
-	return (getSlugStaticProps as any)({ params: { slug: 'automated-financial-analytics-platform' } })
 }
-export default function AutomatedFinancialAnalyticsPlatform(props: any) {
-	return <ServicePage {...props} />
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 export async /**
@@ -25,4 +13,3 @@ export default /**
 function AutomatedFinancialAnalyticsPlatform() {
 return <ServicePage {...props} />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

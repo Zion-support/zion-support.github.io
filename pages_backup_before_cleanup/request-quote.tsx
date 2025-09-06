@@ -1,43 +1,24 @@
-<<<<<<< HEAD:pages_backup_before_cleanup/request-quote.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; import ContactForm from \'../src/components/ContactForm\'; const RequestQuotePage = () => {; return (; <> <SEOHead title=\"Request a Quote - Zion Tech Group\" description=\"Request a custom quote for your project.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Request a Quote></div> <p className=\"text-gray-600 mb-8\">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
 const React from "react"; import SEOHead from "./src/components/SEOHead"; import ContactForm from "./src/components/ContactForm"; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;'"'"
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
-=======
-<<<<<<< HEAD
-=======
 import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; import ContactForm from \'../src/components/ContactForm\'; const RequestQuotePage = () => {; return (; <> <SEOHead title=\"Request a Quote - Zion Tech Group\" description=\"Request a custom quote for your project.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Request a Quote></div> <p className=\"text-gray-600 mb-8\">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
 const React from "react"; import SEOHead from "./src/components/SEOHead"; import ContactForm from "./src/components/ContactForm"; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;'"'"
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; import ContactForm from \'../src/components/ContactForm\'; const RequestQuotePage = () => {; return (; <> <SEOHead title=\"Request a Quote - Zion Tech Group\" description=\"Request a custom quote for your project.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Request a Quote></div> <p className=\"text-gray-600 mb-8\">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
-const React from "react"; import SEOHead from "./src/components/SEOHead"; import ContactForm from "./src/components/ContactForm"; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;'"'"
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -46,4 +27,3 @@ const React from "react"; import SEOHead from "./src/components/SEOHead"; import
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return ( <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return ( <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return ( <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.bak/request-quote.tsx

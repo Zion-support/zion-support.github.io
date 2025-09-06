@@ -1,17 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { Link } from 'react-router-dom';
 :src/components/Footer.tsx
 ';
 ';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import {;
   Mail;
   Phone;
@@ -293,21 +284,12 @@ import {
   Twitter, 
   Linkedin, 
   Instagram, 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   Github, 
   Mail, 
   Phone, 
   MapPin, 
   ArrowUp,
   Globe,
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { 
   Mail, 
   Phone, 
@@ -316,14 +298,7 @@ import {
   Twitter, 
   Github, 
   ArrowUp,
-<<<<<<< HEAD
 :src/components/Footer.tsx
-=======
-<<<<<<< HEAD
-=======
-:src/components/Footer.tsx
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   Shield,
   Zap,
   Brain,
@@ -331,11 +306,6 @@ import {
   Building,
   Users,
   FileText,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/components/Footer.tsx
   Video,
   TestTube,
@@ -347,7 +317,6 @@ import {
   Rocket,
   Heart,
   DollarSign,
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 import React, { useState } from 'react';
 import Link from 'next/link';
   TrendingUp,
@@ -355,16 +324,8 @@ import Link from 'next/link';
   Newspaper,
   Target,
   Heart,
-<<<<<<< HEAD
 :src/components/Footer.tsx
   DollarSign
-=======
-<<<<<<< HEAD
-=======
-:src/components/Footer.tsx
-  DollarSign
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { Zap, Phone, Mail, MapPin } from 'lucide-react';
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -458,18 +419,9 @@ import {
   Zap,
   Brain,
   Shield,
-<<<<<<< HEAD
   Code,
   Building2,
   FileText,
-=======
-<<<<<<< HEAD
-=======
-  Code,
-  Building2,
-  FileText,
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   Users,
   HardDrive,
   TrendingUp,
@@ -480,11 +432,6 @@ import {
   Cpu,
   GraduationCap,
   BarChart3,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   ArrowUp,
   ExternalLink,
   Clock,
@@ -497,10 +444,6 @@ import {
   Eye,
   Atom,
   Network,
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   ArrowUp,
   Heart,
   Star,
@@ -529,13 +472,6 @@ import {
   Coins,
   Satellite,
   MessageCircle,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Palette,
-  ChevronDown
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   Search,
   BarChart,
   Users2,
@@ -547,18 +483,9 @@ import {
 :src/components/Footer.tsx
 } from 'lucide-react';
 export function Footer() {
-<<<<<<< HEAD
 } from 'lucide-react';
 export function Footer(props: any) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-} from 'lucide-react';
-export function Footer(props: any) {
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   Server,
   ShoppingCart,
   Smartphone,
@@ -699,10 +626,6 @@ const socialLinks = [
 export function Footer(props: any) {
   const [expandedSections, setExpandedSections] = React.useState<Set<string>>(new Set());
   const [showScrollTop, setShowScrollTop] = React.useState<any>(false);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   Search,
   BarChart,
   Users2,
@@ -712,23 +635,11 @@ export function Footer(props: any) {
 } from 'lucide-react';
 export default function Footer(props: any) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     const handleScroll = (props: any) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       const scrollToTopButton = document.getElementById('scroll-to-top');
       if (scrollToTopButton) {
         if (window.pageYOffset > 300) {
@@ -827,16 +738,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}
   Instagram,
   Twitter,
   Facebook,
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   Facebook, 
   Instagram,
   Youtube,
   ArrowRight,
   Shield,
-<<<<<<< HEAD
-  Award,
-  Users,
-=======
   Cloud,
   Zap,
   Users,
@@ -1001,7 +907,6 @@ export function Footer(props: any) {
   Newspaper';';
 } from 'lucide-react';';
 ';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
   Palette,
   ChevronDown
@@ -1010,14 +915,6 @@ import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitt
 } from 'lucide-react';
   Clock
 } from 'lucide-react';
-<<<<<<< HEAD
-
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  };
-
-=======
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const scrollToTop = () => {
@@ -1151,10 +1048,6 @@ const Footer = () => {
         { name: 'Research', href: '/research-development' }
       ]
     }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
@@ -1206,12 +1099,6 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {/* Service Sections */}
           {footerSections.slice(1, 4).map((section) => (
             <div key={section.title} className="space-y-4">
@@ -1260,18 +1147,9 @@ const Footer = () => {
                   <social.icon className="w-5 h-5" />
                 </Link>
               ))}
-<<<<<<< HEAD
             </div>
           </div>
           {/* Services */}
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-            </div>
-          </div>
-          {/* Services */}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Services
             <ul className="space-y-2">
@@ -1312,18 +1190,9 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-<<<<<<< HEAD
             </ul>
           </div>
           {/* Company */}
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-            </ul>
-          </div>
-          {/* Company */}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Company
             <ul className="space-y-2">
@@ -1358,10 +1227,6 @@ const Footer = () => {
               <div>
                 <p className="text-white font-medium">Location</p>
                 <p className="text-gray-400 text-sm">San Francisco, CA</p>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Contact & Social Section */}
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1452,12 +1317,6 @@ const Footer = () => {
     }
     );
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   // Handle link click
   const handleLinkClick = (props: any) => {
     if (link.external) {
@@ -1548,10 +1407,6 @@ const Footer = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">';
         <div className="absolute inset-0" style="{{{';';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style="{{{
           backgroundImage: `url("data; %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}"} />
@@ -1575,15 +1430,7 @@ const Footer = () => {
                   </div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                     Zion Tech Group
-<<<<<<< HEAD
                   </h3>
-=======
-<<<<<<< HEAD
-                  
-=======
-                  </h3>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                 </div>
                 <p className="text-slate-300 text-lg leading-relaxed mb-6">
                   Leading the future of technology with cutting-edge AI solutions, 
@@ -1697,24 +1544,12 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               className="flex flex-col space-y-4"
             >
-<<<<<<< HEAD
               <h3 className="text-lg font-semibold text-white">Follow Us</h3>
-=======
-<<<<<<< HEAD
-=======
-              <h3 className="text-lg font-semibold text-white">Follow Us</h3>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <h3 className="text-lg font-semibold text-white">Follow Us
               <div className="flex space-x-4">
                 {socialLinks.map((link) => (
                   <motion.a
                     key={link.name}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1722,10 +1557,6 @@ const Footer = () => {
                     whileTap={{ scale: 0.95 }}
                     className={`w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-lg flex items-center justify-center text-slate-300 ${link.color} transition-all duration-200`}
                   >
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           <div>
             <h4 className="text-lg font-semibold mb-6">Company</h4>
             <ul className="space-y-3">
@@ -1752,11 +1583,6 @@ const Footer = () => {
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                   >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     <link .icon className="w-5 h-5"  />
                   </motion.a>
                 ))}
@@ -1765,10 +1591,6 @@ const Footer = () => {
           </div>
         </div>
         {/* Newsletter Signup */}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1779,15 +1601,7 @@ const Footer = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated with Zion Tech Group
-<<<<<<< HEAD
             </h3>
-=======
-<<<<<<< HEAD
-            
-=======
-            </h3>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
               Get the latest insights on AI, quantum computing, and technology trends delivered to your inbox.
             </p>
@@ -1934,13 +1748,6 @@ export function Footer(props: any) {
     window.scrollTo({ top: 0, behavior: 'smooth' }
     );
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const footerSections = [
     {
       title: "Services",
@@ -2003,13 +1810,6 @@ export function Footer(props: any) {
     { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
     { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }
   ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-  return (
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -2039,10 +1839,6 @@ export function Footer(props: any) {
               </a>
             </div>
 :src/components/Footer.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {socialLinks.map((social, index) => (
                 <a 
                   key={index}
@@ -2060,11 +1856,6 @@ export function Footer(props: any) {
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/components/Footer.tsx
           {/* Services */}
           <div className="space-y-4">
@@ -2175,7 +1966,6 @@ export function Footer(props: any) {
               <h3 className="text-white font-semibold text-sm uppercase tracking-wider">
                 {section.title}
               </h3>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
             <div key={section.title}>
@@ -2184,19 +1974,10 @@ export function Footer(props: any) {
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       href={link.href}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {link.name}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       to={link.href}
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
                     >
@@ -2209,13 +1990,6 @@ export function Footer(props: any) {
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {/* Services */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Services</h4>
@@ -2319,13 +2093,6 @@ export function Footer(props: any) {
             </ul>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Contact Information */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -2368,14 +2135,7 @@ export function Footer(props: any) {
               <Link to="/cookies" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
                 Cookie Policy
               </Link>
-<<<<<<< HEAD
 :src/components/Footer.tsx
-=======
-<<<<<<< HEAD
-=======
-:src/components/Footer.tsx
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             <div className="flex items-center space-x-6 text-sm">
               <Link href="/sitemap" className="text-gray-400 hover:text-blue-400 transition-colors">Sitemap</Link>
               <Link href="/accessibility" className="text-gray-400 hover:text-blue-400 transition-colors">Accessibility</Link>
@@ -2384,19 +2144,10 @@ export function Footer(props: any) {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-export default Footer;
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 </footer>
   );
 };
 export default Footer;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Scroll to Top Button */}
       <button
         id="scroll-to-top"
@@ -2408,14 +2159,7 @@ export default Footer;
       </button>
     </footer>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Social Links */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -2649,10 +2393,6 @@ export default Footer;
                   </a>
                 </div>
               </div>
-<<<<<<< HEAD
-              
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
             <div key={section.title}>
@@ -2661,19 +2401,10 @@ export default Footer;
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       href={link.href}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {link.name}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                       to={link.href}
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
                     >
@@ -2686,13 +2417,6 @@ export default Footer;
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Stats Section */}
         <div className="border-t border-gray-800 mt-12 pt-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -2714,11 +2438,6 @@ export default Footer;
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Newsletter Signup */}
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="max-w-md">
@@ -2733,10 +2452,6 @@ export default Footer;
                 />
               <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-300">
 Subscribe
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -2747,12 +2462,6 @@ Subscribe
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           {/* Copyright */}
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -2772,10 +2481,6 @@ Subscribe
 {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md: fle x-row justify-between items-center space-y-4 md: spac e-y-0">
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -2783,11 +2488,6 @@ Subscribe
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <Link to="/privacy" className="text-gray-400 hover: tex t-white transition-colors">
                 Privacy Policy
               </Link>
@@ -2796,10 +2496,6 @@ Subscribe
               </Link>
               <Link to="/cookies" className="text-gray-400 hover: tex t-white transition-colors">
 Cookie Policy
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
               </Link>
@@ -2847,18 +2543,6 @@ Cookie Policy
       </div>
     </footer>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-}
-;';;';
-}
-};
-
-export default Footer;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 :src/components/Footer.tsx
 }
 }
@@ -2883,9 +2567,4 @@ export default Footer;
 ;';;';
 }
 };
-<<<<<<< HEAD
 export default Footer;
-=======
-export default Footer;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

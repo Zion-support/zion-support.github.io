@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD:src/data/microSaasServicesData.ts
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export interface MicroSaasService {;
   "id": "string;
   "title": string;
@@ -2956,8 +2949,4 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],
     marketSize: "$5.9 billion by 2025"
   }
-<<<<<<< HEAD
 ];
-=======
-];
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

@@ -16,10 +16,6 @@ const Badge = ({ className, variant = 'default', children, ...props }) => {;
     </div>;
   );
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {Badge};
 export {Badge};
 export {Badge};
@@ -30,10 +26,6 @@ export {Badge};';
 export { Badge };
 ;
 export { Badge };
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 return()
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
@@ -45,9 +37,4 @@ export {Badge};
 export {Badge};
 export {Badge};
 export {Badge};
-<<<<<<< HEAD
-
 export {Badge};
-=======
-export {Badge};
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

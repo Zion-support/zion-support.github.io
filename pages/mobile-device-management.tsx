@@ -1,35 +1,12 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react';
-export default function MDMPage() {
-  const features = [
-<<<<<<< HEAD
-    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions']
-  const pricing = [
-    { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' }
-    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' }
-    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }]
-  const references = [
-    { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' }
-    { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' }
-    { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }]
-
-=======
-    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'];
-
+'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'];
   const pricing = [
     { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
     { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' };
     { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }];
-
   const references = [
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <Layout>
       <Head>
@@ -85,10 +62,6 @@ export default function MDMPage() {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <section className="text-center">
             <div className="inline-flex items-center justify-center gap-3 text-gray-300">
               <Shield className="w-5 h-5 text-purple-400" />
@@ -99,12 +72,7 @@ export default function MDMPage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -186,4 +154,3 @@ function MDMPage() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

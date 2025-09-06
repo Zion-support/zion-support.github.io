@@ -980,10 +980,6 @@ issues,;
         // Auto-analyze SEO when component mounts;
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = ("props": "any) => {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </button>;
 </div>;
 </div>;
@@ -1028,8 +1024,4 @@ issues,;
 </button>
 </div>
 </div>
-<<<<<<< HEAD
 </div>
-=======
-</div>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

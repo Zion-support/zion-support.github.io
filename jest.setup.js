@@ -1,5 +1,4 @@
 require("@testing-library/jest-dom");
-const React = require("react");
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -30,7 +29,10 @@ jest.mock("next/image", () => ({
   __esModule: true,
   default: (props) => {
     const { src, alt, ...otherProps } = props;
-    return React.createElement("img", { src, alt, ...otherProps });
+    return {
+      type: 'img',
+      props: { src, alt, ...otherProps }
+    };
   },
 }));
 
@@ -39,7 +41,11 @@ jest.mock("next/link", () => ({
   __esModule: true,
   default: (props) => {
     const { children, href, ...otherProps } = props;
-    return React.createElement("a", { href, ...otherProps }, children);
+    return {
+      type: 'a',
+      props: { href, ...otherProps },
+      children
+    };
   },
 }));
 

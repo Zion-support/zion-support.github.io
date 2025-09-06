@@ -414,10 +414,6 @@ const handleClearHistory = useCallback(() => {}""
 </>) : (<>"""";
                       <Sparkles className="w-5 h-5"/" >";
                       Generate Code",;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -586,10 +582,6 @@ const handleClearHistory = useCallback(() => {}""
 </>) : (<>"""";
                     <Eye className="w-5 h-5"/" >";
                     Analyze Code",;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {generatedCode && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -697,10 +689,6 @@ const handleClearHistory = useCallback(() => {}""
                               </div>"""";
                               {issue.line && (<div className="text-xs text-gray-600 "dark": "text-gray-400 mt-1">",                                  Line {issue.line}
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {codeAnalysis && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -793,10 +781,6 @@ const handleClearHistory = useCallback(() => {}""
                                 {issue.message}""""";
                               </div>"""";
                               {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                                     </div>
   );
 }
@@ -822,10 +806,6 @@ const handleClearHistory = useCallback(() => {}""
                                 {issue.message}"""""
                               </div>""""
                               {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                                 </div>) }
                             </div>
                           </div>) ) }
@@ -907,10 +887,6 @@ const handleClearHistory = useCallback(() => {}""
                 <FileText className="w-5 h-5"/" >";
                 Generate Documentation",;
               </button>,;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1034,10 +1010,6 @@ const handleClearHistory = useCallback(() => {}""
                       Copy Code",;
                     </button>;
                   </div>,;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {suggestions.length > 0 && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -1133,10 +1105,6 @@ const handleClearHistory = useCallback(() => {}""
                       Export",;
                     </button>;
                   </div>,;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {history.length > 0 && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -1264,8 +1232,4 @@ export default Component;
 </Code>;
 </div>;
 </Code>
-<<<<<<< HEAD
 </div>
-=======
-</div>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

@@ -111,10 +111,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             description: 'No headings found','''
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO','''
             status: 'open'
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = (props: any) => {}
@@ -933,20 +929,12 @@ export {ContentQualityAnalyzer};
 export {ContentQualityAnalyzer};
 ;
 export {ContentQualityAnalyzer};
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </motion>';
 </motion>;';;';
 ;
 </motion>;
 </motion>;
 </motion>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {ContentQualityAnalyzer};
 export {ContentQualityAnalyzer};
 export {ContentQualityAnalyzer};
@@ -954,8 +942,4 @@ export {ContentQualityAnalyzer};
 export {ContentQualityAnalyzer};
 </motion>
 </motion>
-<<<<<<< HEAD
 </motion>
-=======
-</motion>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

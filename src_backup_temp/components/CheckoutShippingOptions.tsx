@@ -43,19 +43,9 @@ export function CheckoutShippingOptions("props": "any) {;
     if(rate && onSelect) onSelect(rate)};
 ;
   if(!toAddress) return null;
-<<<<<<< HEAD
 ;
   return (<div className="my-4">;
       <h2 className="font-semibold mb-2">Shipping Options</h2>;
-=======
-<<<<<<< HEAD
-
-=======
-;
-  return (<div className="my-4">;
-      <h2 className="font-semibold mb-2">Shipping Options</h2>;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
         <div className="my-4">
       <h2 className="font-semibold mb-2">Shipping Options</h2>

@@ -160,10 +160,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                 Performance optimization insights;
               </p>;
             </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             {/* Tab Navigation */"}
             <div className="flex border-b border-gray-200 "dark": "border-gray-700">;
               {[;
@@ -174,14 +170,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                     ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50 "dark": "bg-purple-900/20';
                     : 'text-gray-600 "dark":text-gray-400 "hover":text-gray-800 "dark":"hover":text-gray-200'"}`} aria-selected={activeTab === id} role="tab">;
                   <Icon className="w-4 h-4" />;
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 

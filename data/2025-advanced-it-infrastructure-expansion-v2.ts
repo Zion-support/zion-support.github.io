@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-
-export const advancedITInfrastructureExpansion2025V2 = [
-  {
-<<<<<<< HEAD
-    name: 'Autonomous DevOps Platform'
-    description: 'Self-managing DevOps automation platform'
-    category: 'Cloud & FinOps'
-    pricing: '$399/month'
-      'Automated deployment'
-      'Self-healing infrastructure'
-      'Performance optimization'
-      'Cost management'
-=======
-    name: 'Autonomous DevOps Platform', description: 'Self-managing DevOps automation platform',
+name: 'Autonomous DevOps Platform', description: 'Self-managing DevOps automation platform',
     category: 'Cloud & FinOps', pricing: '$399/month',
     features: [
       'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ]
   }
   {
@@ -635,11 +620,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ]
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export const advancedITInfrastructureExpansion2025V2 = [;
   {
     name: 'Autonomous DevOps Platform',
@@ -1269,4 +1249,3 @@ export const advancedITInfrastructureExpansion2025V2 = [;
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

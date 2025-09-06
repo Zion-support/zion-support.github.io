@@ -266,12 +266,6 @@ interface SecurityMonitoringSystemProps {;
                     <X className="w-5 h-5"   />                  </button>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Content */"}";
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">;
                 {isScanning ? (";
@@ -334,10 +328,6 @@ interface SecurityMonitoringSystemProps {;
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {/* Content */}"
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
                 {isScanning ? ("
@@ -400,13 +390,6 @@ interface SecurityMonitoringSystemProps {;
                         </div>
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {/* Navigation Tabs */}";
                     <div className="flex space-x-1 bg-gray-100 "dark": "b g-gray-800 rounded-lg p-1">;
                       {[{;
@@ -440,11 +423,6 @@ interface SecurityMonitoringSystemProps {;
                         </button>) ) }
                     </div>;
                     {/* Threats View */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'threats' && (";
                       <div className="space-y-4">";
                         <div className="flex items-center justify-between">";
@@ -473,10 +451,6 @@ interface SecurityMonitoringSystemProps {;
                                 <div className="flex-1">";
                                   <div className="flex items-center space-x-3 mb-2">;
                                     <div`;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'threats' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
@@ -562,11 +536,6 @@ interface SecurityMonitoringSystemProps {;
                       </div>) }
 ;
                     {/* Vulnerabilities View */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'vulnerabilities' && (";
                       <div className="space-y-4">";
                         <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
@@ -587,10 +556,6 @@ interface SecurityMonitoringSystemProps {;
                                 <div className="flex-1">";
                                   <div className="flex items-center space-x-3 mb-2">;
                                     <div`;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'vulnerabilities' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
@@ -646,11 +611,6 @@ interface SecurityMonitoringSystemProps {;
                       </div>) }
 ;
                     {/* Compliance View */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'compliance' && (";
                       <div className="space-y-4">";
                         <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
@@ -672,10 +632,6 @@ interface SecurityMonitoringSystemProps {;
                                   {compliance.framework"}
                                 </h4>;
                                 <div`;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {selectedView === 'compliance' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
@@ -744,12 +700,6 @@ interface SecurityMonitoringSystemProps {;
                             </motion.div>) ) }
                         </div>;
                       </div>) }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
                     {/* Action Buttons */}";
                     <div className="flex items-center justify-center space-x-4 pt-6">";
@@ -785,10 +735,6 @@ interface SecurityMonitoringSystemProps {;
                   </div>) "}
               </div>;
             </motion.div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     {/* Action Buttons */}"
                     <div className="flex items-center justify-center space-x-4 pt-6">"
                       <button className="flex items-center space-x-2 px-6 py-3 bg-red-600 text-white rounded-lg hover: b g-red-700 transition-colors">"

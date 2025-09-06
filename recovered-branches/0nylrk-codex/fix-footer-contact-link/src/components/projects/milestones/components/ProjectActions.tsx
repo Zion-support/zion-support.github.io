@@ -1,21 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { Link  } from 'react-router-dom';
-import { ShieldAlert } from "lucide-react";
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
-interface ProjectActionsProps {
-
-  projectId: string
-  isUnderDispute: boolean
-  disputeId?: string;
-  isTalent: boolean
-
-  onAddMilestone: () => void
-}
-export function ProjectActions({
-=======
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
@@ -27,9 +10,7 @@ interface ProjectActionsProps {;
   isTalent: boolean,;
   onAddMilestone: () => void;
 }
-
 export function ProjectActions(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   projectId;
   isUnderDispute;
   disputeId;
@@ -37,17 +18,6 @@ export function ProjectActions(): any ({;
   onAddMilestone;
 }: ProjectActionsProps) {;
   return (
-<<<<<<< HEAD
-    <div className="flex gap-2">
-      {isUnderDispute && disputeId ? (
-        <Button variant="outline" asChild>
-          <Link to={`/dashboard/disputes/${disputeId}`}>
-            <ShieldAlert className="h-4 w-4 mr-2" />
-            View Active Dispute
-          </Link>
-        </Button>
-      ) : (
-=======
     <div className="flex gap-2">;
       {isUnderDispute && disputeId ? (;
         <Button variant="outline" asChild>;
@@ -57,7 +27,6 @@ export function ProjectActions(): any ({;
           </Link>;
         </Button>;
       ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <RaiseDisputeButton
           projectId={projectId}
           variant="outline"
@@ -68,16 +37,9 @@ export function ProjectActions(): any ({;
           Add Milestone;
         </Button>;
       )}
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {Button} from '@/components / ui / button';
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
@@ -112,4 +74,3 @@ function ProjectActions() {
         </Button>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,30 +1,18 @@
-<<<<<<< HEAD:pages_backup/solutions/government.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -64,8 +52,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {Shield,, Users,, FileText,, Globe,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx
 import Layout from '../../components/Layout';
 import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -98,24 +84,6 @@ const features = [;
     description: 'Government data analytics and business intelligence for informed decision making.'';
 import Layout from '../../components/Layout';
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD:pages_backup/solutions/government.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Users, 
-  FileText, 
-  Globe, 
-  Database, 
-  CheckCircle, 
-  ArrowRight ;
-} from 'lucide-react';
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -148,10 +116,6 @@ const features = [;
     description: 'Government data analytics and business intelligence for informed decision making.'';
 import Layout from '../../components/Layout';
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const features = [
   {
     icon: Building2,
@@ -174,11 +138,6 @@ const features = [
     description: 'Secure document storage and management systems'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
@@ -187,7 +146,6 @@ const features = [
     icon: ArrowRight,
     title: 'Data Analytics',
     description: 'Government data analysis and reporting tools'
-=======
 const features = [;
   {;
     icon: Building2,;
@@ -221,7 +179,6 @@ const features = [;
   }
 ;];
 const solutions = [;
-
   'Citizen Portal Development',',;
   'Government Data Analytics',',;
   'Cybersecurity Solutions',',;
@@ -232,7 +189,6 @@ const solutions = [;
   'Government Mobile Applications',',;
   'Compliance Management',',;
   'Public Sector Cloud Solutions'',;
-
   ];
 export default function GovernmentSolutionsPage() {;
   return (
@@ -300,7 +256,6 @@ export default function GovernmentSolutions() {;
     benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration'];
   }
 ];
-
 export default function GovernmentSolutionsPage() {;
   return (
     <Layout
@@ -317,7 +272,6 @@ export default function GovernmentSolutionsPage() {;
     icon: ArrowRight,;
     title: 'Data Analytics',;
     description: 'Government data analysis and reporting tools';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx
   }
 ;];
 const solutions = [;
@@ -394,20 +348,6 @@ const benefits = [;
   'Reduced operational costs',;
   'Increased government efficiency';
 ];
-<<<<<<< HEAD:pages_backup/solutions/government.tsx
-export default function GovernmentSolutions() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    icon: Database,
-    title: 'Data Management',
-    description: 'Secure data management and analytics for government data',
-    benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration']
-  }
-];
-
-export default function GovernmentSolutionsPage() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
@@ -494,13 +434,7 @@ const benefits = [
   'Increased government efficiency'
 ];
 export default function GovernmentSolutions() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 export default function GovernmentSolutions() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -508,13 +442,9 @@ export default function GovernmentSolutions() {;
       keywords="government solutions, digital government, public sector, citizen services, government technology, e-government">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-<<<<<<< HEAD:pages_backup/solutions/government.tsx
-=======
-  
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -547,37 +477,21 @@ export default function GovernmentSolutions() {;
                 Comprehensive solutions designed to modernize government operations
                 and improve citizen services.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
-=======
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-gray-600" />
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -585,7 +499,6 @@ export default function GovernmentSolutions() {;
                     {feature.description}
                   </p>
                 </div>
-=======
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -775,7 +688,6 @@ export default function GovernmentSolutions() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx
               ))}
             </div>,;
           </div>;
@@ -880,35 +792,6 @@ export default function GovernmentSolutions() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-<<<<<<< HEAD:pages_backup/solutions/government.tsx
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Government?</h3>
-                <p className="text-lg mb-6">
-                  Let our government technology experts help you implement solutions
-                  that improve citizen services and government efficiency.
-                </p>
-                <button className="bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {benefit}
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -994,7 +877,6 @@ export default function GovernmentSolutions() {;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Government Guide;
-=======
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">;
@@ -1006,51 +888,11 @@ export default function GovernmentSolutions() {;
                 <button className="bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
                   Schedule Consultation;
                   <ArrowRight className="w-5 h-5 ml-2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx
                 </button>;
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD:pages_backup/solutions/government.tsx
-      </div>;
-    </Layout>;
-        {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Modernizing Government
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our government solutions help public sector organizations improve
-                  citizen services, enhance transparency, and streamline operations.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Government?</h3>
-                <p className="text-lg mb-6">
-                  Let our government technology experts help you implement solutions
-                  that improve citizen services and government efficiency.
-                </p>
-                <button className="bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -1075,23 +917,12 @@ export default function GovernmentSolutions() {;
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </Layout>
-=======
-<<<<<<< HEAD
-=======
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </>
-=======
     </Layout>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -1123,4 +954,3 @@ export default function GovernmentSolutions() {;
     </>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx

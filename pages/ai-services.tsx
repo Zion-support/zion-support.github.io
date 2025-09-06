@@ -1,67 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
 import Layout from "../components/Layout";
 export default function AIServices() {
   return (
 <Layout
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Layout from '../components/Layout';
-
-export default function AIServices() {;
-  return (
-    <Layout
->>>>>>> origin/automation-improvements-final
-      title="AI Services - Zion Tech Group"
-<<<<<<< HEAD
-      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions and
-              services.
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">
-              AI Services page is under construction.
-            </p>
-=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
@@ -69,8 +28,6 @@ export default function AIServices() {;
           </div>
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
->>>>>>> origin/automation-improvements-final
-=======
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
@@ -87,12 +44,10 @@ export default function AIServices() {
                 <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
               </Link>
             ))}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           </div>
         </div>
       </div>
     </Layout>
-=======
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -107,7 +62,6 @@ export default function AIServices() {
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
-=======
 import React from './react';
 import Layout from "../components / Layout";
 export default /**
@@ -132,20 +86,11 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -154,19 +99,16 @@ import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
   }, []);
-
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   };
-
   const categories = [
     { id: 'all', name: 'All AI Services', count: 100 },
     { id: 'autonomous', name: 'Autonomous Agents', count: 25 },
@@ -176,7 +118,6 @@ export default function AIServices() {
     { id: 'automation', name: 'AI Automation', count: 15 },
     { id: 'specialized', name: 'Specialized AI', count: 10 }
   ];
-
   const services = [
     {
       id: 1,
@@ -299,7 +240,6 @@ export default function AIServices() {
       useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
     }
   ];
-
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
@@ -313,7 +253,6 @@ export default function AIServices() {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/ai-services`} />
       </Head>
-      
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */}
@@ -334,7 +273,6 @@ export default function AIServices() {
               </p>
             </div>
           </section>
-
           {/* Category Filter */}
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
@@ -355,7 +293,6 @@ export default function AIServices() {
               </div>
             </div>
           </section>
-
           {/* Services Grid */}
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
@@ -371,10 +308,8 @@ export default function AIServices() {
                         Popular
                       </div>
                     )}
-                    
                     <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
-                    
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h4>
                       <ul className="text-slate-400 text-sm space-y-1">
@@ -386,7 +321,6 @@ export default function AIServices() {
                         ))}
                       </ul>
                     </div>
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-green-400 mb-2">Use Cases:</h4>
                       <div className="flex flex-wrap gap-1">
@@ -397,12 +331,10 @@ export default function AIServices() {
                         ))}
                       </div>
                     </div>
-                    
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
                       <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>
                     </div>
-                    
                     <button className="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                       Learn More
                     </button>
@@ -411,14 +343,12 @@ export default function AIServices() {
               </div>
             </div>
           </section>
-
           {/* AI Capabilities Section */}
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                 Our AI Capabilities
               </h2>
-              
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -429,7 +359,6 @@ export default function AIServices() {
                   <h3 className="text-xl font-bold mb-2">Machine Learning</h3>
                   <p className="text-slate-400">Advanced ML algorithms for pattern recognition and predictive modeling</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -440,7 +369,6 @@ export default function AIServices() {
                   <h3 className="text-xl font-bold mb-2">Computer Vision</h3>
                   <p className="text-slate-400">Image and video analysis with object detection and recognition</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -450,7 +378,6 @@ export default function AIServices() {
                   <h3 className="text-xl font-bold mb-2">Natural Language</h3>
                   <p className="text-slate-400">Advanced NLP for text analysis, translation, and understanding</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -463,7 +390,6 @@ export default function AIServices() {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -474,7 +400,6 @@ export default function AIServices() {
                 Contact our AI experts to discuss how our advanced artificial intelligence services 
                 can transform your business operations and drive innovation.
               </p>
-              
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link 
                   href="/contact" 
@@ -532,13 +457,7 @@ export default function AIServicesPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
 }
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -2,11 +2,6 @@ import React from 'react';""',';';
     ';';';
 import React from 'react;;
 import { Shield, Award, Users, Clock, CheckCircle, Star } from 'lucide-react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const "TrustIndicators": "React.FC = () => {;
   const indicators = [;
     {;
@@ -85,10 +80,6 @@ const "TrustIndicators": "React.FC = () => {;
                 <indicator .icon className={`w-8 h-8 ${indicator.color"}`} /` >`}
               </div>"";
               <h3 className="text-sm font-semibold text-white mb-1">;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const TrustIndicators: React.FC = () => {
   const indicators = [
     {
@@ -198,11 +189,6 @@ const TrustIndicators: React.FC = () => {
               <CheckCircle className="w-5 h-5 text-green-500" /" >"
               <span className="text-sm">HIPAA Compliant</span>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
           </div>';
         </div>';';
       </div>';';';
@@ -212,10 +198,6 @@ export default TrustIndicators;"`""';';';';
 </CheckCircle>
 </CheckCircle>';
 </indicator>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         </div>;
         {/* Additional Trust Elements */}"";
         <div className="mt-16 text-center">"";
@@ -243,32 +225,15 @@ export default TrustIndicators;"`""';';';';
       </div>';
     </section>';';
   );};';';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default TrustIndicators;"`"";
 </CheckCircle>;
 </CheckCircle>;
 </CheckCircle>;
 </CheckCircle>;
 </indicator>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default TrustIndicators;"`""';';';';
 </CheckCircle>
 </CheckCircle>
 </CheckCircle>
 </CheckCircle>
-<<<<<<< HEAD
 </indicator>
-=======
-<<<<<<< HEAD
-</indicator>
-=======
-</indicator>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,38 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
-
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
   content: string
   timestamp?: number
 }
 function generateSessionId(): string {
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -45,9 +33,7 @@ type ChatMessage = {;
   content: string,;
   timestamp?: number;
 };
-
 function generateSessionId(): any (): string {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (typeof window === 'undefined') return '';
   const existing = window && window.localStorage.getItem('zion_support_session_id');
   if (existing) return existing;
@@ -55,12 +41,7 @@ function generateSessionId(): any (): string {;
   window && window.localStorage.setItem('zion_support_session_id', id);
   return id;
 }
-<<<<<<< HEAD
-export default function ChatWidget() {;
-=======
-
 export default function ChatWidget() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -69,140 +50,46 @@ export default function ChatWidget() {
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  useEffect(() => {
-    sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef.current = generateSessionId()
-=======
-
   useEffect(() => {
     sessionIdRef.current = generateSessionId()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, []);
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
-<<<<<<< HEAD
-        {
-          role: 'assistant'
-          content: 'Hi! How can I help you?'
-          timestamp: Date.now()
-        }
-      ]);    }
-  }, [isOpen, messages.length]);
-  useEffect(() => {        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
-=======
         { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }, [isOpen, messages.length]);
   useEffect(() => {
-<<<<<<< HEAD
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-  const quickReplies = useMemo(
-    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-=======
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [messages]);
   const quickReplies = useMemo(
     () => ['How do I hire?How do I get matched?Billing help'];
-<<<<<<< HEAD
-=======
     []
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   );
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
-<<<<<<< HEAD
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          sessionId: sessionIdRef.current
-          eventType
-          payload
-        })
-      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     } catch {}
   }
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
-<<<<<<< HEAD
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          sessionId: sessionIdRef.current
-          reason
-          tag: 'escalate'
-        })
-      });
-      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setShowEscalation(true)
     } catch {}
   }
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
-<<<<<<< HEAD
-    const newUserMessage: ChatMessage = {
-      role: 'user'
-      content: text
-      timestamp: Date.now()
-    }
-    setMessages(prev => [...prev, newUserMessage]);
-    setInput('');
-    setIsLoading(true);
-    await logEvent('message/user', { content: text });    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() }
-    setMessages((prev) => [...prev, newUserMessage]);
-    setInput('');
-    setIsLoading(true);
-    await logEvent('message/user', { content: text })
-      const res = await fetch('/api/support/chat', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          sessionId: sessionIdRef.current
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({
-            role
-            content
-          }))
-        })
-      });      const data = await res.json();          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
-      const data = await res.json();
-      if (data?.assistantMessage) {
-        const assistantMessage: ChatMessage = {
-          role: 'assistant'
-          content: data.assistantMessage
-          timestamp: Date.now()
-        }
-        setMessages(prev => [...prev, assistantMessage]);
-        await logEvent('message/assistant', {
-          content: assistantMessage.content
-          meta: data.meta
-        });
-      }
-      if (data?.meta?.intentMatched === false) {
-        setFailedIntents(n => {
-=======
-
   useEffect(() => {;
     sessionIdRef && sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef && sessionIdRef.current = generateSessionId();
   }, []);
-
   useEffect(() => {;
     if (!isOpen && messages && messages.length === 0) {;
       // Seed greeting;
@@ -214,23 +101,18 @@ export default function ChatWidget() {
         },;
       ]);    }
   }, [isOpen, messages && messages.length]);
-
   useEffect(() => {        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date && Date.now() }]);
     }
   }, [isOpen, messages && messages.length]);
-
   useEffect(() => {;
     messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-
   const quickReplies = useMemo(;
     () => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-
   const quickReplies = useMemo(;
     () => ['How do I hire?How do I get matched?Billing help'];
   );
-
   async function logEvent(): any (eventType: string, payload: any) {;
     try {;
       await fetch('/api/support/session', {;
@@ -244,7 +126,6 @@ export default function ChatWidget() {
       });    } catch {}        body: JSON && JSON.stringify({ sessionId: sessionIdRef && sessionIdRef.current, eventType, payload })});
     } catch {}
   }
-
   async function escalateSupport(): any (reason: string) {;
     try {;
       await fetch('/api/support/escalate', {;
@@ -260,11 +141,9 @@ export default function ChatWidget() {
       setShowEscalation(true);
     } catch {}
   }
-
   async function onSend(): any (messageText?: string) {;
     const text = (messageText ?? input).trim();
     if (!text) return;
-
     const newUserMessage: ChatMessage = {;
       role: 'user',;
       content: text,;
@@ -290,7 +169,6 @@ export default function ChatWidget() {
         }),;
       });      const data = await res && res.json();          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
       const data = await res && res.json();
-
       if (data?.assistantMessage) {;
         const assistantMessage: ChatMessage = {;
           role: 'assistant',;
@@ -303,10 +181,8 @@ export default function ChatWidget() {
           meta: data && data.meta,;
         });
       }
-
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents(n => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -316,17 +192,6 @@ export default function ChatWidget() {
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
-<<<<<<< HEAD
-    } catch (e) {
-      setMessages(prev => [
-        ...prev
-        {
-          role: 'assistant'
-          content:
-            'Sorry, something went wrong. Please try again or contact support.'
-          timestamp: Date.now()
-        }
-=======
     } catch (e) {;
       setMessages(prev => [;
         ...prev,;
@@ -336,16 +201,12 @@ export default function ChatWidget() {
             'Sorry, something went wrong. Please try again or contact support.',;
           timestamp: Date && Date.now(),;
         },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ]);
     } finally {;
       setIsLoading(false);    }
   }
   return (
     <div className='fixed bottom-4 right-4 z-50'>      }
-<<<<<<< HEAD
-=======
-
     const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() },
     setMessages((prev) => [...prev, newUserMessage]);
     setInput('');
@@ -359,7 +220,6 @@ export default function ChatWidget() {
           sessionId: sessionIdRef.current,
           messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
       const data = await res.json();
-
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
           role: 'assistant',
@@ -368,15 +228,10 @@ export default function ChatWidget() {
         setMessages((prev) => [...prev, assistantMessage]);
         await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta })
       }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
-=======
-
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -389,55 +244,12 @@ export default function ChatWidget() {
     } catch (e) {;
       setMessages((prev) => [;
         ...prev;
-<<<<<<< HEAD
-        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date && Date.now() }]);
-    } finally {;
-      setIsLoading(false);
-=======
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
   return (
-<<<<<<< HEAD
-    <div className='fixed bottom-4 right-4 z-50'>;
-      {!isOpen && (;
-        <button
-          aria-label='Open support chat'
-          onClick={() => setIsOpen(true)}
-          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (;
-        <button
-          aria-label="Open support chat"
-          onClick={() => setIsOpen(true)}
-          className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black";
-        >;
-          ?;
-        </button>;
-      )}
-<<<<<<< HEAD
-      {isOpen && (
-        <div className='w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col'>
-          <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800'>
-            <div className='font-semibold'>Zion Support</div>
-            <button
-              onClick={() => setIsOpen(false)}
-              aria-label='Close'
-              className='p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700'
-            >              <X size={18} />
-            </button>
-          </div>
-          <div className='flex-1 overflow-y-auto p-3 space-y-3'>        <div className="w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col">
-          <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800">
-            <div className="font-semibold">Zion Support</div>
-            <button onClick={() => setIsOpen(false)} aria-label="Close" className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
-            </button>
-          </div>
-          <div className='flex-1 overflow-y-auto p-3 space-y-3'>
-            {messages.map((m, idx) => (
-=======
-
       {isOpen && (;
         <div className='w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col'>;
           <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800'>;
@@ -449,17 +261,14 @@ export default function ChatWidget() {
             >              <X size={18} />;
             </button>;
           </div>;
-
           <div className='flex-1 overflow-y-auto p-3 space-y-3'>        <div className="w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col">;
           <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800">;
             <div className="font-semibold">Zion Support</div>;
             <button onClick={() => setIsOpen(false)} aria-label="Close" className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">;
             </button>;
           </div>;
-
           <div className='flex-1 overflow-y-auto p-3 space-y-3'>;
             {messages && messages.map((m, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <div
                 key={idx}
                 className={
@@ -470,7 +279,6 @@ export default function ChatWidget() {
                     m && m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
               <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
-=======
     <div className="fixed bottom-4 right-4 z-50">
       {!isOpen && (
         <button
@@ -481,7 +289,6 @@ export default function ChatWidget() {
           ?
         </button>
       )}
-
       {isOpen && (
         <div className="w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col">
           <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800">
@@ -490,11 +297,9 @@ export default function ChatWidget() {
               <X size={18} />
             </button>
           </div>
-
           <div className="flex-1 overflow-y-auto p-3 space-y-3">
             {messages.map((m, idx) => (
               <div key={idx} className={m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <div
                   className={
                     m && m.role === 'assistant'
@@ -505,38 +310,17 @@ export default function ChatWidget() {
                 </div>;
               </div>;
             ))}
-<<<<<<< HEAD
-            {isLoading && (;
-              <div className='text-sm'>;
-                <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>;
-                  Thinking…;
-                </div>              </div>              <div className="text-sm">;
-                <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking…</div>;
-              </div>;
-=======
             {isLoading && (
               <div className="text-sm">
                 <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking…</div>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             )}
-<<<<<<< HEAD
-            <div ref={messagesEndRef} />
-          </div>
-          {!showEscalation && (
-<<<<<<< HEAD
-            <div className='px-3 pb-2'>
-              <div className='flex flex-wrap gap-2 mb-2'>
-                {quickReplies.map(q => (
-=======
             <div ref={messagesEndRef} />;
           </div>;
-
           {!showEscalation && (;
             <div className='px-3 pb-2'>;
               <div className='flex flex-wrap gap-2 mb-2'>;
                 {quickReplies && quickReplies.map(q => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <button
                     key={q}
                     onClick={() => onSend(q)}
@@ -547,7 +331,6 @@ export default function ChatWidget() {
                     key={q}
                     onClick={() => onSend(q)}
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
-=======
             <div className="px-3 pb-2">
               <div className="flex flex-wrap gap-2 mb-2">
                 {quickReplies.map((q) => (
@@ -556,24 +339,15 @@ export default function ChatWidget() {
                     onClick={() => onSend(q)}
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
                   >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     {q}
                   </button>;
                 ))}
               </div>;
             </div>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
-            {!showEscalation ? (
-              <div className='flex gap-2'>
-=======
-
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (;
               <div className='flex gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <input
                   value={input}
                   onChange={e => setInput(e && e.target.value)}
@@ -590,64 +364,18 @@ export default function ChatWidget() {
                   disabled={isLoading}
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (;
               <div className="flex gap-2">;
-=======
-
           <div className="border-t border-gray-200 dark:border-gray-800 p-2">
             {!showEscalation ? (
               <div className="flex gap-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <input
                   value={input}
-<<<<<<< HEAD
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' && !e.shiftKey) {
-                      e.preventDefault();
-
-                      onSend()
-=======
                   onChange={(e) => setInput(e && e.target.value)}
                   onKeyDown={(e) => {;
                     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
                       e && e.preventDefault();
                       onSend();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     }
                   }}
-<<<<<<< HEAD
-                  placeholder="Ask a question…";
-                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500";
-                />;
-                <button
-                  onClick={() => onSend()}
-                  disabled={isLoading}
-                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                  className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50";
-                >;
-                  Send;
-                </button>;
-              </div>;
-            ) : (;
-              <div className='flex flex-col gap-2 text-sm'>;
-                <div className='text-gray-700 dark:text-gray-300'>;
-                  We can escalate this to our team:;
-                </div>;
-                <div className='flex gap-2'>;
-                  <a
-                    href='mailto:support@zion && zion.ai'
-                    className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'>;
-                    Email Support;
-                  </a>;
-                  <a
-                    href='/contact'
-                    className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'>;
-                    Chat with Live Agent;
-                  </a>                </div>              <div className="flex flex-col gap-2 text-sm">;
-                <div className="text-gray-700 dark:text-gray-300">We can escalate this to our team:</div>;
-                <div className="flex gap-2">;
-                  <a href="mailto:support@zion && zion.ai" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Email Support</a>;
-                  <a href="/contact" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Chat with Live Agent</a>;
-              </div>;
-=======
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -667,27 +395,16 @@ export default function ChatWidget() {
                   <a href="/contact" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Chat with Live Agent</a>
                 </div>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             )}
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-);
-}
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 useEffect ( () => {
   // Check condition
 if ( {) {
@@ -1061,4 +778,3 @@ if ( {) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

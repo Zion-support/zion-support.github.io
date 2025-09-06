@@ -1,60 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",
-import { TalentProfile } from "@/types/talent",
-import { UserProfile } from "@/types/auth",
-import { cn } from "@/lib/utils",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { format, addDays } from "date-fns",
-import { CalendarIcon, Check, Clock } from "lucide-react",
-import { toast } from "@/components/ui/use-toast";
-import { useInterviews } from "@/hooks/useInterviews";
-interface InterviewRequestFormProps {
-
-  talent: TalentProfile
-  onClose: () => void
-  userDetails?: UserProfile
-}
-const formSchema = z.object({
-  date: z.date({
-    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
-    message: "Interview date must be in the future"
-  });
-  time: z.string().min(1, "Please select a time for the interview.");
-  duration: z.string().min(1, "Please select the interview duration.");
-  platform: z.string().min(1, "Please select a meeting platform.");
-  meetingLink: z.string().optional()
-  title: z.string().min(3, "Please provide a brief title for the interview.");
-  notes: z.string().optional()})
-export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
-  const { requestInterview } = useInterviews();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      title: `Interview with ${talent.full_name}`
-      duration: "30"
-      platform: "zoom"
-      notes: ""
-      meetingLink: ""}})
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    if (!userDetails?.id) {
-      toast({
-        title: "Authentication required"
-        description: "Please log in to schedule an interview"
-        variant: "destructive"})
-      return
-=======
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -78,7 +21,6 @@ interface InterviewRequestFormProps {;
   onClose: () => void,;
   userDetails?: UserProfile;
 }
-
 const formSchema = z && z.object({;
   date: z && z.date({;
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;
@@ -90,11 +32,9 @@ const formSchema = z && z.object({;
   meetingLink: z && z.string().optional(),;
   title: z && z.string().min(3, "Please provide a brief title for the interview.");
   notes: z && z.string().optional()}),;
-
 export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<z && z.infer<typeof formSchema>>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
@@ -103,7 +43,6 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
       platform: "zoom",;
       notes: "",;
       meetingLink: ""}}),;
-
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
@@ -111,38 +50,8 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
         description: "Please log in to schedule an interview",;
         variant: "destructive"}),;
       return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     setIsSubmitting(true);
-<<<<<<< HEAD
-    try {
-      // Combine date and time
-      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
-      const scheduledDate = new Date(dateTimeString);
-      // Calculate end time based on duration
-      const durationMinutes = parseInt(values.duration);
-      await requestInterview({
-        talent_id: talent.id
-        client_id: userDetails.id
-        scheduled_date: scheduledDate.toISOString()
-        duration_minutes: durationMinutes
-        notes: values.notes
-        meeting_platform: values.platform as any
-        meeting_link: values.meetingLink
-        interview_type: "video"
-        title: values.title
-      });
-      toast({
-        title: "Interview requested"
-        description: `Your interview request with ${talent.full_name} has been sent.`})
-      onClose()
-    } catch (error) {
-      console.error("Failed to schedule interview:", error);
-      toast({
-        title: "Failed to schedule interview"
-        description: "An error occurred while scheduling the interview. Please try again."
-        variant: "destructive"})
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components / ui / form';
@@ -238,44 +147,16 @@ if ( {) {
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsSubmitting (false);
     }
   }
-<<<<<<< HEAD
-  const timeSlots = [
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
-    "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30"
-    "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30"
-    "18:00", "18:30", "19:00", "19:30", "20: 00"
-  ]
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-        <div className="flex items-center mb-6">
-          <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
-            <img
-              src={talent.profile_picture_url |"/placeholder.svg"}
-              alt={talent.full_name}
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <div>
-            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
-            <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
-          </div>
-        </div>
-=======
-
     try {;
       // Combine date and time;
       const dateTimeString = `${format(values && values.date, 'yyyy-MM-dd')}T${values && values.time}:00`;
       const scheduledDate = new Date(dateTimeString);
-
       // Calculate end time based on duration;
       const durationMinutes = parseInt(values && values.duration);
-
       await requestInterview({;
         talent_id: talent && talent.id,;
         client_id: userDetails && userDetails.id,;
@@ -287,7 +168,6 @@ if ( {) {
         interview_type: "video",;
         title: values && values.title;
       });
-
       toast({;
         title: "Interview requested",;
         description: `Your interview request with ${talent && talent.full_name} has been sent.`}),;
@@ -302,14 +182,12 @@ if ( {) {
       setIsSubmitting(false);
     }
   }
-
   const timeSlots = [;
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",;
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",;
     "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30",;
     "18:00", "18:30", "19:00", "19:30", "20: 00";
   ],;
-
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-5">;
@@ -326,15 +204,12 @@ if ( {) {
             <p className="text-sm text-zion-slate-light">{talent && talent.professional_title}</p>;
           </div>;
         </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name="title"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
-=======
   const time_slots = [;
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",
@@ -363,22 +238,12 @@ if ( {) {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Interview Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <FormControl>;
                 <Input placeholder="Brief title for the interview" {...field} />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
-            </FormItem>;
-          )}
-<<<<<<< HEAD
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
         />;
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
             control={form && form.control}
             name="date"
@@ -391,11 +256,6 @@ if ( {) {
                       <Button
                         variant="outline"
                         className={cn(
-<<<<<<< HEAD
-                          "w-full pl-3 text-left font-normal";
-
-                          !field.value && "text-muted-foreground"
-=======
                           "w-full pl-3 text-left font-normal"
                           !field && field.value && "text-muted-foreground"
                         )}>;
@@ -403,7 +263,6 @@ if ( {) {
                           format(field && field.value, "PPP");
                         ) : (;
                           <span>Pick a date</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         )}
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                       </Button>;
@@ -412,26 +271,11 @@ if ( {) {
                   <PopoverContent className="w-auto p-0" align="start">;
                     <Calendar
                       mode="single"
-<<<<<<< HEAD
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={(date) => date < new Date() |date > addDays(new Date(), 90)}
-                      initialFocus
-                      className="p-3 pointer-events-auto"
-                    />
-                  </PopoverContent>
-                </Popover>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-=======
                       selected={field && field.value}
                       onSelect={field && field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";
-=======
             </FormItem>)}
         />;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -465,25 +309,10 @@ if ( {) {
                       disabled={(date) => date < new Date () || date > add_days (new Date (), 90)}
                       initial_focus;
                       className="p - 3 pointer - events - auto";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
-<<<<<<< HEAD
-              </FormItem>;
-            )}
-          />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          <FormField
-            control={form && form.control}
-            name="time"
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel>Time</FormLabel>;
-                <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
               </FormItem>)}
           />;
           <FormField;
@@ -493,34 +322,14 @@ if ( {) {
               <FormItem>;
                 <FormLabel > Time</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select time" />;
                     </SelectTrigger>;
                   </FormControl>;
-<<<<<<< HEAD
-                  <SelectContent className="max-h-[300px]">;
-                    {timeSlots && timeSlots.map((time) => (;
-                      <SelectItem key={time} value={time}>;
-                        {time}
-                      </SelectItem>;
-                    ))}
-                  </SelectContent>;
-                </Select>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-<<<<<<< HEAD
-          />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
           />;
         </div>;
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
             control={form && form.control}
             name="duration"
@@ -528,7 +337,6 @@ if ( {) {
               <FormItem>;
                 <FormLabel>Duration</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
                   <SelectContent className="max - h-[300px]">;
                     {time_slots.map ((time) => (
                       <SelectItem key={time} value={time}>;
@@ -548,7 +356,6 @@ if ( {) {
               <FormItem>;
                 <FormLabel > Duration</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select duration" />;
@@ -562,15 +369,7 @@ if ( {) {
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
-<<<<<<< HEAD
-              </FormItem>;
-            )}
-<<<<<<< HEAD
-          />
-=======
           />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
             control={form && form.control}
             name="platform"
@@ -578,7 +377,6 @@ if ( {) {
               <FormItem>;
                 <FormLabel>Platform</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
               </FormItem>)}
           />;
           <FormField;
@@ -588,7 +386,6 @@ if ( {) {
               <FormItem>;
                 <FormLabel > Platform</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select platform" />;
@@ -596,29 +393,15 @@ if ( {) {
                   </FormControl>;
                   <SelectContent>;
                     <SelectItem value="zoom">Zoom</SelectItem>;
-<<<<<<< HEAD
-                    <SelectItem value="google-meet">Google Meet</SelectItem>;
-=======
                     <SelectItem value="google - meet">Google Meet</SelectItem>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <SelectItem value="teams">Microsoft Teams</SelectItem>;
                     <SelectItem value="other">Other</SelectItem>;
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
-<<<<<<< HEAD
-              </FormItem>;
-            )}
-<<<<<<< HEAD
-          />
-        </div>
-        {form.watch('platform') !== 'in-app' && (
-=======
           />;
         </div>;
-
         {form && form.watch('platform') !== 'in-app' && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
             control={form && form.control}
             name="meetingLink"
@@ -628,7 +411,6 @@ if ( {) {
                 <FormControl>;
                   <Input
                     placeholder={`Add your ${form && form.watch('platform')} link here`}
-=======
               </FormItem>)}
           />;
         </div>;
@@ -642,34 +424,17 @@ if ( {) {
                 <FormControl>;
                   <Input;
                     placeholder={`Add your ${form.watch ('platform')} link here`}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
-              </FormItem>;
-            )}
-          />;
-        )}
-        <FormField
-          control={form && form.control}
-          name="notes"
-<<<<<<< HEAD
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Notes (Optional)</FormLabel>
-              <FormControl>
-=======
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Notes (Optional)</FormLabel>;
               <FormControl>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Textarea
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
-=======
               </FormItem>)}
           />)}
         <FormField;
@@ -682,31 +447,11 @@ if ( {) {
                 <Textarea;
                   placeholder="Share what you'd like to discuss in this interview";
                   className="h - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
-            </FormItem>;
-          )}
-<<<<<<< HEAD
-        />
-        <div className="flex justify-end gap-4 pt-4">
-          <Button variant="outline" onClick={onClose} type="button">
-            Cancel
-          </Button>
-          <Button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Scheduling..." : "Schedule Interview"}
-          </Button>
-        </div>
-      </form>
-    </Form>
-  )
-}
-=======
         />;
-
         <div className="flex justify-end gap-4 pt-4">;
           <Button variant="outline" onClick={onClose} type="button">;
             Cancel;
@@ -719,8 +464,6 @@ if ( {) {
     </Form>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             </FormItem>)}
         />;
         <div className="flex justify - end gap - 4 pt - 4">;
@@ -734,4 +477,3 @@ if ( {) {
       </form>;
     </Form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

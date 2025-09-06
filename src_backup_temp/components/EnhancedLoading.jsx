@@ -11,10 +11,6 @@ import React from 'react';
 interface EnhancedLoading.jsProps {
   // Add props here as needed
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {EnhancedLoading};
 ;
 export {EnhancedLoading};
@@ -55,8 +51,4 @@ export default function EnhancedLoading.js({ }: EnhancedLoading.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

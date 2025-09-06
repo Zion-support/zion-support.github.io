@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function CaseStudyPage() {
-  const caseStudy = {
-<<<<<<< HEAD
-    id: 'ai-automation-manufacturing'
-    title: 'AI-Powered Manufacturing Automation'
-    company: 'Global Manufacturing Corp'
-    industry: 'Manufacturing'
-    challenge: 'Inefficient production processes, high downtime, and quality control issues'
-    solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization'
-=======
-    id: 'ai-automation-manufacturing',
+id: 'ai-automation-manufacturing',
     title: 'AI-Powered Manufacturing Automation',
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -26,26 +10,11 @@ function CaseStudyPage() {
   const case_study = {
     id: 'ai - automation - manufacturing',
     title: 'AI - Powered Manufacturing Automation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
     challenge: 'Inefficient production processes, high downtime, and quality control issues',
     solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    results: [
-      '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs'
-    ]
-    technologies: ['Machine LearningComputer VisionIoT SensorsPredictive Analytics']
-    duration: '6 months'
-    teamSize: '8 engineers'
-    featured: true
-<<<<<<< HEAD
-  }
-=======
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   return (
     <>
       <Head>
@@ -146,12 +115,7 @@ function CaseStudyPage() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     results: [;
       '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs';
     ],
@@ -258,4 +222,3 @@ function CaseStudyPage() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

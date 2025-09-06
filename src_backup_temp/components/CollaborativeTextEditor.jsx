@@ -483,10 +483,6 @@ ${editorState.content}"}
 ;
 // Default export behavior';
             const blob = new Blob([exportContent], {"type": 'text/plain'});
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 // Default export behavior'
             const blob = new Blob([exportContent], {type: 'text/plain'}
     );
@@ -631,10 +627,6 @@ generateAISuggestions()}
           "";";
           <div className = "flex items-center gap-2">""{/* comment */}""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""",";
                 <Users className="w-4 h-4"   />,;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         }, 3000)"
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])"
     return ("
@@ -761,10 +753,6 @@ generateAISuggestions()}
           """";
           <div className="flex items-center gap-2">"""{/* comment */}""""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""""";
                 <Users className="w-4 h-4"   />",;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
           &apos;&apos,
           &apos;&apos,&apos;&apos,"
           <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos;{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="&apos;px-3" py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos,",

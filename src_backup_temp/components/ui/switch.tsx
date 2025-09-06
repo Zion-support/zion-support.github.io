@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import { cn } from "../../utils/cn";
 ;
@@ -10,10 +5,6 @@ interface SwitchProps {;
 import { cn } from "@/lib/utils"
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   checked?: "boolean;
   onCheckedChange?: ("checked": boolean) => void;
   disabled?: boolean;
@@ -69,16 +60,8 @@ import { cn } from "@/lib/utils"
 ;
 export default switch;
 </span>
-<<<<<<< HEAD
 export default switch;';
 </span>;';;';
-=======
-<<<<<<< HEAD
-=======
-export default switch;';
-</span>;';;';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
@@ -99,14 +82,5 @@ const Switch = React.forwardRef<
   </SwitchPrimitives.Root>
 ))
 Switch.displayName = SwitchPrimitives.Root.displayName
-<<<<<<< HEAD
 export { Switch }
 export { Switch };
-=======
-<<<<<<< HEAD
-export { Switch };
-=======
-export { Switch }
-export { Switch };
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

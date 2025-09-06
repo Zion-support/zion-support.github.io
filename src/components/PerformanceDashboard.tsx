@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-export function PerformanceDashboard() {
-  return (
-    <div className="bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-lg p-4 w-80">
-      <h3 className="text-white font-semibold mb-2">Performance Dashboard</h3>
-      <p className="text-slate-400 text-sm">Performance metrics will be displayed here</p>
-    </div>
-  );
-}
-=======
-
 import React, { useState } from 'react'
 import {
   Card
@@ -31,34 +15,27 @@ import { Button } from '@/components/ui/button'
   Shield
   Search
 } from 'lucide-react'
-
 interface PerformanceMetrics {
   buildSize: string;
   pageCount: number;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -85,82 +62,13 @@ interface PerformanceMetrics {;
   pageCount: number;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error';
-
 interface Improvement {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   title: string;
   description: string;
   status: 'completed' | 'in-progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
-
-<<<<<<< HEAD
-const PerformanceDashboard: React.FC = () => {
-  const [metrics] = useState<PerformanceMetrics>({
-    buildSize: '959 MB'
-    pageCount: 166
-    loadTime: 1.2
-    healthStatus: 'healthy'
-  })
-  const improvements: Improvement[] = [
-    {
-      id: '1'
-      title: 'Fixed Search Bar Issues'
-      description:
-        'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems'
-      status: 'completed'
-      impact: 'high'
-      category: 'ux'
-    }
-    {
-      id: '2'
-      title: 'Environment Validation System'
-      description:
-        'Added comprehensive pre-build checks to prevent deployment with missing environment variables'
-      status: 'completed'
-      impact: 'high'
-      category: 'build'
-    }
-    {
-      id: '3'
-      title: 'NextAuth Configuration Fix'
-      description:
-        'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors'
-      status: 'completed'
-      impact: 'medium'
-      category: 'security'
-    }
-    {
-      id: '4'
-      title: 'API Client Error Handling'
-      description:
-        'Improved global error handling with better retry logic and user feedback'
-      status: 'completed'
-      impact: 'medium'
-      category: 'ux'
-    }
-    {
-      id: '5'
-      title: 'Bundle Analyzer Integration'
-      description:
-        'Added bundle analysis tools to identify and optimize large dependencies'
-      status: 'completed'
-      impact: 'medium'
-      category: 'performance'
-    }
-    {
-      id: '6'
-      title: 'Health Check Endpoint'
-      description:
-        'Created production monitoring endpoint for environment and service health'
-      status: 'completed'
-      impact: 'medium'
-      category: 'security'
-    }
-  ]
-  const getStatusIcon = (status: string,) => {
-=======
 import React, { useState } from 'react';
 import {
   Card,
@@ -254,7 +162,6 @@ const PerformanceDashboard: React.FC = () => {
     },
   ];
   const getStatusIcon = (status: string, ) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (status) {
       case 'completed':;
         return <CheckCircle className='h - 4 w - 4 text - green - 500' />;
@@ -295,68 +202,6 @@ const PerformanceDashboard: React.FC = () => {
   const completed_improvements = improvements.filter (
     imp => imp.status === 'completed');
   return (
-<<<<<<< HEAD
-    <div className='space-y-6 p-6'>
-      <div className='flex items-center justify-between'>
-        <h1 className='text-3xl font-bold text-gray-900'>
-          Performance Dashboard
-        </h1>
-        <Badge className='bg-green-100 text-green-800'>
-          {completedImprovements.length} Improvements Completed
-        </Badge>
-      </div>
-      {/* Metrics Overview */}
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
-        <Card>
-          <CardHeader className='pb-2'>
-            <CardTitle className='text-sm font-medium text-gray-600'>
-              Build Size
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className='text-2xl font-bold'>{metrics.buildSize}</div>
-            <p className='text-xs text-gray-500'>Total build output</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className='pb-2'>
-            <CardTitle className='text-sm font-medium text-gray-600'>
-              Page Count
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className='text-2xl font-bold'>{metrics.pageCount}</div>
-            <p className='text-xs text-gray-500'>Generated pages</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className='pb-2'>
-            <CardTitle className='text-sm font-medium text-gray-600'>
-              Load Time
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className='text-2xl font-bold'>{metrics.loadTime}s</div>
-            <p className='text-xs text-gray-500'>Average page load</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className='pb-2'>
-            <CardTitle className='text-sm font-medium text-gray-600'>
-              Health Status
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className='flex items-center space-x-2'>
-              <CheckCircle className='h-5 w-5 text-green-500' />
-              <span className='text-sm font-semibold text-green-600'>
-                Healthy
-              </span>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-=======
 const PerformanceDashboard: React.FC = () => {;
   const [metrics] = useState<PerformanceMetrics>({;
     buildSize: '959 MB',;
@@ -364,7 +209,6 @@ const PerformanceDashboard: React.FC = () => {;
     loadTime: 1 && 1.2,;
     healthStatus: 'healthy',;
   });
-
   const improvements: Improvement[] = [;
     {;
       id: '1',;
@@ -421,7 +265,6 @@ const PerformanceDashboard: React.FC = () => {;
       category: 'security',;
     },;
   ];
-
   const getStatusIcon = (status: string,) => {;
     switch (status) {;
       case 'completed':;
@@ -434,7 +277,6 @@ const PerformanceDashboard: React.FC = () => {;
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
     }
   };
-
   const getImpactColor = (impact: string,) => {;
     switch (impact) {;
       case 'high':;
@@ -447,7 +289,6 @@ const PerformanceDashboard: React.FC = () => {;
         return 'bg-gray-100 text-gray-800';
     }
   };
-
   const getCategoryIcon = (category: string,) => {;
     switch (category) {;
       case 'performance':;
@@ -462,11 +303,9 @@ const PerformanceDashboard: React.FC = () => {;
         return <CheckCircle className='h-4 w-4' />;
     }
   };
-
   const completedImprovements = improvements && improvements.filter(;
     imp => imp && imp.status === 'completed';
   );
-
   return (
     <div className='space-y-6 p-6'>;
       <div className='flex items-center justify-between'>;
@@ -477,13 +316,11 @@ const PerformanceDashboard: React.FC = () => {;
           {completedImprovements && completedImprovements.length} Improvements Completed;
         </Badge>;
       </div>;
-
       {/* Metrics Overview */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>;
         <Card>;
           <CardHeader className='pb-2'>;
             <CardTitle className='text-sm font-medium text-gray-600'>;
-=======
     <div className='space - y-6 p - 6'>;
       <div className='flex items - center justify - between'>;
         <h1 className='text - 3xl font - bold text - gray - 900'>;
@@ -498,21 +335,10 @@ const PerformanceDashboard: React.FC = () => {;
         <Card>;
           <CardHeader className='pb - 2'>;
             <CardTitle className='text - sm font - medium text - gray - 600'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Build Size;
             </CardTitle>;
           </CardHeader>;
           <CardContent>;
-<<<<<<< HEAD
-            <div className='text-2xl font-bold'>{metrics && metrics.buildSize}</div>;
-            <p className='text-xs text-gray-500'>Total build output</p>;
-          </CardContent>;
-        </Card>;
-
-        <Card>;
-          <CardHeader className='pb-2'>;
-            <CardTitle className='text-sm font-medium text-gray-600'>;
-=======
             <div className='text - 2xl font - bold'>{metrics.build_size}</div>;
             <p className='text - xs text - gray - 500'>Total build output</p>;
           </CardContent>;
@@ -520,21 +346,10 @@ const PerformanceDashboard: React.FC = () => {;
         <Card>;
           <CardHeader className='pb - 2'>;
             <CardTitle className='text - sm font - medium text - gray - 600'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Page Count;
             </CardTitle>;
           </CardHeader>;
           <CardContent>;
-<<<<<<< HEAD
-            <div className='text-2xl font-bold'>{metrics && metrics.pageCount}</div>;
-            <p className='text-xs text-gray-500'>Generated pages</p>;
-          </CardContent>;
-        </Card>;
-
-        <Card>;
-          <CardHeader className='pb-2'>;
-            <CardTitle className='text-sm font-medium text-gray-600'>;
-=======
             <div className='text - 2xl font - bold'>{metrics.page_count}</div>;
             <p className='text - xs text - gray - 500'>Generated pages</p>;
           </CardContent>;
@@ -542,21 +357,10 @@ const PerformanceDashboard: React.FC = () => {;
         <Card>;
           <CardHeader className='pb - 2'>;
             <CardTitle className='text - sm font - medium text - gray - 600'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Load Time;
             </CardTitle>;
           </CardHeader>;
           <CardContent>;
-<<<<<<< HEAD
-            <div className='text-2xl font-bold'>{metrics && metrics.loadTime}s</div>;
-            <p className='text-xs text-gray-500'>Average page load</p>;
-          </CardContent>;
-        </Card>;
-
-        <Card>;
-          <CardHeader className='pb-2'>;
-            <CardTitle className='text-sm font-medium text-gray-600'>;
-=======
             <div className='text - 2xl font - bold'>{metrics.load_time}s</div>;
             <p className='text - xs text - gray - 500'>Average page load</p>;
           </CardContent>;
@@ -564,43 +368,25 @@ const PerformanceDashboard: React.FC = () => {;
         <Card>;
           <CardHeader className='pb - 2'>;
             <CardTitle className='text - sm font - medium text - gray - 600'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Health Status;
             </CardTitle>;
           </CardHeader>;
           <CardContent>;
-<<<<<<< HEAD
-            <div className='flex items-center space-x-2'>;
-              <CheckCircle className='h-5 w-5 text-green-500' />;
-              <span className='text-sm font-semibold text-green-600'>;
-=======
             <div className='flex items - center space - x-2'>;
               <CheckCircle className='h - 5 w - 5 text - green - 500' />;
               <span className='text - sm font - semibold text - green - 600'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Healthy;
               </span>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      {/* Completed Improvements */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items-center space-x-2'>;
-            <CheckCircle className='h-5 w-5 text-green-500' />;
-            <span>Completed Improvements</span>;
-=======
       {/* Completed Improvements */}
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items - center space - x-2'>;
             <CheckCircle className='h - 5 w - 5 text - green - 500' />;
             <span > Completed Improvements</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </CardTitle>;
           <CardDescription>;
             Recent performance and functionality improvements that have been;
@@ -608,42 +394,9 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-          <div className='space-y-4'>;
-            {completedImprovements && completedImprovements.map(improvement => (;
-              <div
-                key={improvement && improvement.id}
-                className='flex items-start space-x-3 p-3 border rounded-lg'>;
-                <div className='flex-shrink-0 mt-1'>                  {getCategoryIcon(improvement && improvement.category)}
-                </div>;
-                <div className='flex-1 min-w-0'>;
-                  <div className='flex items-center justify-between'>;
-                    <h3 className='text-sm font-medium text-gray-900'>;
-                      {improvement && improvement.title}
-                    </h3>;
-                    <div className='flex items-center space-x-2'>;
-                      <Badge className={getImpactColor(improvement && improvement.impact)}>;
-                        {improvement && improvement.impact} impact;
-                      </Badge>;
-                      {getStatusIcon(improvement && improvement.status)}
-                    </div>;
-                  </div>;
-                  <p className='text-sm text-gray-600 mt-1'>;
-                    {improvement && improvement.description}
-                  </p>;
-                </div>;
-              </div>;
-            ))}
-<<<<<<< HEAD
-          </div>
-        </CardContent>
-      </Card>
-=======
           </div>;
         </CardContent>;
       </Card>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Action Buttons */}
       <div className='flex space-x-4'>;
         <Button
@@ -657,22 +410,6 @@ const PerformanceDashboard: React.FC = () => {;
           onClick={() =>;
             alert('Bundle analysis available with: npm run build:analyze');
           }
-<<<<<<< HEAD
-          variant='outline'
-        >
-          <TrendingUp className='h-4 w-4 mr-2' />
-          Bundle Analysis
-        </Button>
-      </div>
-    </div>
-  )
-}
-export default PerformanceDashboard
-export default PerformanceDashboard
-export default PerformanceDashboard
-
->>>>>>> 2fc87795dcf7cb742c24a257dd9040071acce941
-=======
           variant='outline';
         >;
           <TrendingUp className='h-4 w-4 mr-2' />;
@@ -682,15 +419,9 @@ export default PerformanceDashboard
     </div>;
   );
 };
-
 export default PerformanceDashboard;
 export default PerformanceDashboard, ;
 export default PerformanceDashboard, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <div className='space - y-4'>;
             {completed_improvements.map (improvement => (
               <div;
@@ -743,4 +474,3 @@ export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 export default PerformanceDashboard,
 export default PerformanceDashboard,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

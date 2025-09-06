@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
   return (
     <div>
@@ -22,11 +14,6 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
   )
 }
 export default Chat5gTechnologyAndItsImpactOnIotChat;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -45,4 +32,3 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
     </div>);
 },
 export default Chat5gTechnologyAndItsImpactOnIotChat,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

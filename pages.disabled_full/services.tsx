@@ -1,33 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -67,11 +55,9 @@ import {
   Smartphone;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-
 export default function Services() {;
 	const title = 'Services — Zion Tech Group';
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
-
 	return (
 		<Layout>;
 			<PageTransition>;
@@ -1370,7 +1356,6 @@ export default function Services() {;
 							Our pricing reflects the true value of cutting-edge technology solutions, with transparent costs and exceptional ROI.;
 						</p>;
 					</div>;
-
 					{/* Pricing Tiers */}
 					<div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16'>;
 						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>;
@@ -1402,7 +1387,6 @@ export default function Services() {;
 								<div className='text-sm font-medium text-green-600'>Save up to 60%</div>;
 							</div>;
 						</div>;
-
 						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300 ring-2 ring-blue-500'>;
 							<div className='text-center mb-6'>;
 								<div className='inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-2'>;
@@ -1435,7 +1419,6 @@ export default function Services() {;
 								<div className='text-sm font-medium text-green-600'>Save up to 40%</div>;
 							</div>;
 						</div>;
-
 						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>;
 							<div className='text-center mb-6'>;
 								<h3 className='text-xl font-semibold text-gray-900 mb-2'>IT Services</h3>;
@@ -1466,7 +1449,6 @@ export default function Services() {;
 							</div>;
 						</div>;
 					</div>;
-
 					{/* Market Positioning */}
 					<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm'>;
 						<div className='text-center mb-8'>;
@@ -1475,7 +1457,6 @@ export default function Services() {;
 								We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.;
 							</p>;
 						</div>;
-
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
 							<div className='text-center'>;
 								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4'>;
@@ -1509,20 +1490,7 @@ export default function Services() {;
 					</div>;
 				</div>;
 			</section>;
-
 			{/* CTA Section */}
-<<<<<<< HEAD:pages.disabled_full/services.tsx
-			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32'>
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
-					<div className='mx-auto max-w-2xl text-center'>
-						<h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-							Ready to get started?
-						</h2>
-						<p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>
-							Let&aposs discuss your project requirements and how we can help you achieve your goals.
-						</p>
-						<div className='mt-10 flex items-center justify-center gap-x-6'>
-=======
 			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32'>;
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
 					<div className='mx-auto max-w-2xl text-center'>;
@@ -1533,7 +1501,6 @@ export default function Services() {;
 							Let&aposs discuss your project requirements and how we can help you achieve your goals.;
 						</p>;
 						<div className='mt-10 flex items-center justify-center gap-x-6'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled_full/services.tsx
 							<Link
 								href='/contact'
 								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105'
@@ -1544,20 +1511,6 @@ export default function Services() {;
 							<Link
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
-<<<<<<< HEAD:pages.disabled_full/services.tsx
-								aria-label='Back to homepage'
-							>
-								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
-							</Link>
-						</div>
-					</div>
-				</div>
-			</section>
-		</PageTransition>
-		</Layout>
-	);
-<<<<<<< HEAD
-=======
 								aria-label='Back to homepage'>;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
 							</Link>;
@@ -1568,8 +1521,4 @@ export default function Services() {;
 		</PageTransition>;
 		</Layout>;
 	),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled_full/services.tsx
 }
->>>>>>> origin/chore/merge-open-prs
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

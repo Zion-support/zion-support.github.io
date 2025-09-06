@@ -1,34 +1,14 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-export function ReferralGuide() {
-
-  const steps = [
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 export /**
  * ReferralGuide - Function description
  */
 function ReferralGuide() {
   const steps = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
     {
-<<<<<<< HEAD
-      title: "They sign up"
-      description: "When someone clicks your link and creates an account, they're tagged as your referral"}
-    {
-      title: "They complete onboarding"
-      description: "Once they complete their profile setup, your referral is confirmed"}
-    {
-      title: "You earn rewards"
-      description: "Rewards are issued based on the type of user who completes onboarding"}]
-=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-
 export function ReferralGuide() {;
   const steps = [;
     {;
@@ -43,8 +23,6 @@ export function ReferralGuide() {;
     {;
       title: "You earn rewards",;
       description: "Rewards are issued based on the type of user who completes onboarding"}],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   return (
     <Card>;
       <CardHeader>;
@@ -64,20 +42,11 @@ export function ReferralGuide() {;
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-=======
         </div>;
       </CardContent>;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
@@ -108,4 +77,3 @@ export function ReferralGuide() {;
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function IncubatorPage() {
-=======
-
 export default function IncubatorPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <EnhancedLayout>;
       <div className='max-w-3xl'>;
@@ -39,7 +30,6 @@ export default function IncubatorPage() {;
     </EnhancedLayout>;
   );
 }
-=======
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
@@ -54,8 +44,6 @@ export default function IncubatorPage() {
     </EnhancedLayout>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Link from 'next / link';
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 export default /**
@@ -91,4 +79,3 @@ function IncubatorPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

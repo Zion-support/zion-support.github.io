@@ -1,47 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-
-<<<<<<< HEAD
-export const Header: React.FC = () => {
-=======
 const Header = () => {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -49,11 +12,6 @@ const Header = () => {
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
       <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -64,46 +22,6 @@ const Header = () => {
               Zion Tech Group
             </h1>
           </Link>
-<<<<<<< HEAD
-        </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex ml-8 space-x-8">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Right side actions */}
-        <div className="ml-auto flex items-center space-x-4">
-          <button className="px-4 py-2 text-cyan-400 border border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-colors">
-            Login
-          </button>
-          <button className="px-4 py-2 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition-colors">
-            Get Started
-          </button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200"
-        >
-          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
-          <div className="px-4 py-4 space-y-2">
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -127,7 +45,6 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 border-t border-gray-200 pt-4">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -142,11 +59,8 @@ const Header = () => {
         </div>
       )}
     </header>
-<<<<<<< HEAD
-=======
 const Header: React.FC = () => {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const navigation = [;
     { name: 'Home', href: '/' },;
     { name: 'About', href: '/about' },;
@@ -154,7 +68,6 @@ const Header: React.FC = () => {;
     { name: 'Contact', href: '/contact' },;
     { name: 'Pricing', href: '/pricing' },;
   ];
-
   return (
     <header className="bg-white shadow-sm border-b">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -164,7 +77,6 @@ const Header: React.FC = () => {;
               Zion Tech;
             </Link>;
           </div>;
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">;
             {navigation && navigation.map((item) => (;
@@ -176,7 +88,6 @@ const Header: React.FC = () => {;
               </Link>;
             ))}
           </nav>;
-
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button
@@ -187,7 +98,6 @@ const Header: React.FC = () => {;
             </button>;
           </div>;
         </div>;
-
         {/* Mobile Navigation */}
         {isMenuOpen && (;
           <div className="md:hidden">;
@@ -207,10 +117,8 @@ const Header: React.FC = () => {;
         )}
       </div>;
     </header>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 };
-=======
 ;
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {, setActiveDropdown(activeDropdown === name ? null : name),
@@ -586,9 +494,6 @@ const Header = () => {,
 };
 ,
 export default Header,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   );
 };
 export default Header;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

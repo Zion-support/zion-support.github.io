@@ -14,10 +14,6 @@ export const Sidebar = React.forwardRef((props, ref) => {;
         <div className = {
   cn("flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
   props.className)
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 } ref={ref} {...props}>        {props.children}
       </div>;
     );
@@ -135,10 +131,6 @@ SidebarInset.displayName = 'SidebarInset';'""";
     );'
 SidebarInset.displayName = 'SidebarInset';'"""
 '"'"""
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </main>;
 </button>;
 </div>

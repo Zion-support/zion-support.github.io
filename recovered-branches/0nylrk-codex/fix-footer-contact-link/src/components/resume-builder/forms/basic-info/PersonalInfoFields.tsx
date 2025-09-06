@@ -1,19 +1,4 @@
-
-<<<<<<< HEAD
-import {
-<<<<<<< HEAD
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-=======
-  FormField,
+FormField,
   FormItem,
   FormLabel,
   FormControl,
@@ -22,13 +7,9 @@ import { BasicInfoFormData } from "./schema";
 import { Input  } from '@/components / ui / input';
 import { Control  } from './react - hook - form';
 import { BasicInfoFormData  } from './schema';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface PersonalInfoFieldsProps {
   control: Control < BasicInfoFormData>;
 }
-<<<<<<< HEAD
-export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
-=======
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
@@ -36,9 +17,7 @@ import {BasicInfoFormData} from "./schema";
 interface PersonalInfoFieldsProps {;
   control: Control<BasicInfoFormData>;
 }
-
 export function PersonalInfoFields(): any ({ control }: PersonalInfoFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField
@@ -47,7 +26,6 @@ export function PersonalInfoFields(): any ({ control }: PersonalInfoFieldsProps)
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Full Name</FormLabel>;
-=======
 export /**
  * PersonalInfoFields - Function description
  */
@@ -60,27 +38,17 @@ function PersonalInfoFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Full Name</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormControl>;
               <Input placeholder="John Doe" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
-        )}
-<<<<<<< HEAD
-      />
-=======
       />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="title"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Professional Title</FormLabel>;
-=======
           </FormItem>)}
       />;
       <FormField;
@@ -89,20 +57,11 @@ function PersonalInfoFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Professional Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormControl>;
               <Input placeholder="Senior Software Engineer" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
-        )}
-<<<<<<< HEAD
-      />
-=======
       />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="email"
@@ -115,19 +74,13 @@ function PersonalInfoFields() {
             <FormMessage />;
           </FormItem>;
         )}
-<<<<<<< HEAD
-      />
-=======
       />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="phone"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Phone</FormLabel>;
-=======
           </FormItem>)}
       />;
       <FormField;
@@ -148,28 +101,15 @@ function PersonalInfoFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Phone</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormControl>;
               <Input placeholder="+1 234 567 8900" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
-        )}
-<<<<<<< HEAD
-      />
-    </div>
-  );
-}
-=======
       />;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           </FormItem>)}
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-const useToast = () => { const successToast = (message: string) => { toast && toast.success(message)}; const errorToast = (message: string) => { toast && toast.error(message)}; return { successToast, errorToast }}),
-}export default ComponentName;
-const useToast = () => { const successToast = (message: string) => { toast && toast.success(message)}; const errorToast = (message: string) => { toast && toast.error(message)}; return { successToast,errorToast }});,}export default ComponentName;
- const useToast = () => { const successToast = ("message": string) => { toast && toast.success(message)}; const errorToast = ("message": string) => { toast && toast.error(message)}; return { successToast, errorToast }})}export default ComponentName;
-const useToast = () => { const successToast = (message: string) => { toast && toast.success(message)}; const errorToast = (message: string) => { toast && toast.error(message)}; return { successToast,errorToast }}),}export default ComponentName;
- const useToast = () => { const successToast = (message: string) => { toast && toast.success(message)}; const errorToast = (message: string) => { toast && toast.error(message)}; return { successToast, errorToast }}),
-}export default ComponentName;
-const useToast = () => { const successToast = (message: string) => { toast && toast.success(message)}; const errorToast = (message: string) => { toast && toast.error(message)}; return { successToast,errorToast }});,}export default ComponentName;
- const useToast = () => { const successToast = ("message": string) => { toast && toast.success(message)}; const errorToast = ("message": string) => { toast && toast.error(message)}; return { successToast, errorToast }})}export default ComponentName;
-const useToast = () => { const successToast = (message: string) => { toast && toast.success(message)}; const errorToast = (message: string) => { toast && toast.error(message)}; return { successToast,errorToast }}),}export default ComponentName;
-=======
 const useToast = () => { const successToast = (message: string) => { toast.success(message)}; const errorToast = (message: string) => { toast.error(message)}; return { successToast,errorToast }});,}export default ComponentName;
  const useToast = () => { const successToast = ("message": string) => { toast.success(message)}; const errorToast = ("message": string) => { toast.error(message)}; return { successToast, errorToast }})}export default ComponentName;
 const useToast = () => { const successToast = (message: string) => { toast.success(message)}; const errorToast = (message: string) => { toast.error(message)}; return { successToast,errorToast }}),}export default ComponentName;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

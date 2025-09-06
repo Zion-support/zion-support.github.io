@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-export function EnterpriseCTA() {
-=======
-
 export function EnterpriseCTA() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className="py-20 px-4 md: px-6">;
       <div className="container mx-auto max-w-6xl">;
@@ -70,7 +60,6 @@ export function EnterpriseCTA() {;
                       </span>;
                     </div>;
                     <p>Free consultation on implementation</p>;
-=======
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Calendar, ArrowRight  } from './lucide-react';
@@ -139,7 +128,6 @@ function EnterpriseCTA() {
                       </span>;
                     </div>;
                     <p > Free consultation on implementation</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </li>;
                 </ul>;
               </div>;
@@ -147,10 +135,5 @@ function EnterpriseCTA() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </section>;
-  );
-=======
     </section>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

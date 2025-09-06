@@ -78,10 +78,6 @@ export class ContentOptimizer {;
                 syllableCount += vowelGroups ? vowelGroups.length : 1;}
         }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         return syllableCount;
     }
 ;
@@ -147,10 +143,6 @@ export class ContentOptimizer {;
                 "severity": 'low',;
                 "message": "`Add more internal and external links for better SEO.`;
             "});
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
             issues.push({
                 type: 'word_count',
@@ -210,10 +202,6 @@ export class ContentOptimizer {;
             }
         }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         return suggestions;
     }
 ;

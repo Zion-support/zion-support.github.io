@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useState, useEffect } from 'react'
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
-import { cn } from '@/lib/utils'
-
-import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-interface ValidationRule {
-=======
 import React, { useState, useEffect } from 'react';
 import {;
   FormField,;
@@ -44,69 +18,11 @@ import {;
 import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 interface ValidationRule {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-<<<<<<< HEAD
-  custom?: (value: any) => string | null
-interface ValidatedFormFieldProps {
-  name: string;
-  label: string;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
-  placeholder?: string;
-  description?: string;
-  validation?: ValidationRule;
-  options?: { value: string, label: string }[],
-  form: any, // React Hook Form control
-  className?: string;
-  disabled?: boolean;
-  showValidIcon?: boolean;
-  debounceMs?: number
-export function ValidatedFormField({
-
-  name
-  label
-  type = 'text'
-  placeholder
-  description
-  validation = {}
-  options = []
-  form
-  className
-  disabled = false
-  showValidIcon = true
-  debounceMs = 300
-}: ValidatedFormFieldProps) {
-  const [showPassword, setShowPassword] = useState(false)
-  const [validationState, setValidationState] = useState<
-    'idle' | 'validating' | 'valid' | 'invalid'
-  >('idle')
-  const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(
-    null
-  )
-  const fieldValue = form.watch(name)
-  const fieldError = form.formState.errors[name]
-  const isTouched = form.formState.touchedFields[name]
-  // Debounced validation
-  useEffect((,) => {
-    if (!fieldValue |!isTouched) {
-      setValidationState('idle')
-      return
-    }
-    if (debounceTimer) {
-      clearTimeout(debounceTimer)
-    }
-    setValidationState('validating')
-    const timer = setTimeout(() => {
-      const error = validateField(fieldValue)
-      setValidationState(error ? 'invalid' : 'valid')
-    }, debounceMs)
-    setDebounceTimer(timer)
-=======
 import React, { useState, useEffect } from 'react';
 import {
   FormField,
@@ -188,50 +104,19 @@ if ( {) {
       setValidationState (error ? 'invalid' : 'valid');
     }, debounce_ms);
     setDebounceTimer (timer);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return () => {
       if (clear_timeout (timer)) {
   $2
 }
     }
-<<<<<<< HEAD
-  }, [fieldValue, isTouched, debounceMs])
-  const validateField = (value: any): string | null => {
-    if (
-      validation.required &&
-      (!value |(typeof value === 'string' && value.trim() === ''))
-=======
   }, [field_value, is_touched, debounce_ms]);
   const validate_field = (value: any): string | null => {
     if (=== ''))) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ) {
       return `${label} is required`;
     }
-<<<<<<< HEAD
-    if (typeof value === 'string') {
-      if (validation.minLength && value.length < validation.minLength) {
-        return `${label} must be at least ${validation.minLength} characters`
-      }
-      if (validation.maxLength && value.length > validation.maxLength) {
-        return `${label} must not exceed ${validation.maxLength} characters`
-      }
-      if (validation.pattern && !validation.pattern.test(value)) {
-        return `${label} format is invalid`
-      }
-    }
-    if (validation.custom) {
-      return validation.custom(value)
-    }
-    return null
-  }
-  const getValidationIcon = () => {
-    if (!showValidIcon |!isTouched |validationState === 'idle') return null
-    switch (validationState) {
-      case 'validating':
-=======
     // Check condition
 if ( {) {
   $2
@@ -269,7 +154,6 @@ if (return null) {
 }
     switch (validation_state) {
       case 'validating':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return (
           <div className='animate - spin h - 4 w - 4 border - 2 border - primary border - t-transparent rounded - full' />);
       case 'valid':;
@@ -297,9 +181,6 @@ if (return '') {
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
-<<<<<<< HEAD
-      case 'textarea':
-=======
   custom?: (value: any) => string | null;
 interface ValidatedFormFieldProps {;
   name: string;
@@ -323,7 +204,6 @@ interface ValidatedFormFieldProps {;
   disabled?: boolean;
   showValidIcon?: boolean;
   debounceMs?: number;
-
 export function ValidatedFormField(): any ({;
   name,;
   label,;
@@ -345,35 +225,28 @@ export function ValidatedFormField(): any ({;
   const [debounceTimer, setDebounceTimer] = useState<NodeJS && NodeJS.Timeout | null>(;
     null;
   );
-
   const fieldValue = form && form.watch(name);
   const fieldError = form && form.formState.errors[name];
   const isTouched = form && form.formState.touchedFields[name];
-
   // Debounced validation;
   useEffect((,) => {;
     if (!fieldValue || !isTouched) {;
       setValidationState('idle');
       return;
     }
-
     if (debounceTimer) {;
       clearTimeout(debounceTimer);
     }
-
     setValidationState('validating');
-
     const timer = setTimeout(() => {;
       const error = validateField(fieldValue);
       setValidationState(error ? 'invalid' : 'valid');
     }, debounceMs);
     setDebounceTimer(timer);
-
     return () => {;
       if (timer) clearTimeout(timer);
     };
   }, [fieldValue, isTouched, debounceMs]);
-
   const validateField = (value: any): string | null => {;
     if (;
       validation && validation.required &&;
@@ -381,31 +254,24 @@ export function ValidatedFormField(): any ({;
     ) {;
       return `${label} is required`;
     }
-
     if (typeof value === 'string') {;
       if (validation && validation.minLength && value && value.length < validation && validation.minLength) {;
         return `${label} must be at least ${validation && validation.minLength} characters`;
       }
-
       if (validation && validation.maxLength && value && value.length > validation && validation.maxLength) {;
         return `${label} must not exceed ${validation && validation.maxLength} characters`;
       }
-
       if (validation && validation.pattern && !validation && validation.pattern.test(value)) {;
         return `${label} format is invalid`;
       }
     }
-
     if (validation && validation.custom) {;
       return validation && validation.custom(value);
     }
-
     return null;
   };
-
   const getValidationIcon = () => {;
     if (!showValidIcon || !isTouched || validationState === 'idle') return null;
-
     switch (validationState) {;
       case 'validating':;
         return (
@@ -419,10 +285,8 @@ export function ValidatedFormField(): any ({;
         return null;
     }
   };
-
   const getFieldClasses = () => {;
     if (!isTouched) return '';
-
     switch (validationState) {;
       case 'valid':;
         return 'border-green-500 focus:border-green-500 focus:ring-green-500/20';
@@ -432,35 +296,22 @@ export function ValidatedFormField(): any ({;
         return '';
     }
   };
-
   const renderField = () => {;
     const baseClasses = cn(getFieldClasses(), className);
-
     switch (type) {;
       case 'textarea':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className='relative'>;
             <Textarea
               disabled = {disabled,}
               className = {baseClasses,}
               rows = {4,}
-<<<<<<< HEAD
-              {...form.register(name)}
-            />
-            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
-          </div>
-        )
-      case 'select':
-=======
               {...form && form.register(name)}
             />;
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
           </div>;
         );
-
       case 'select':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className='relative'>;
             <Select
@@ -474,22 +325,12 @@ export function ValidatedFormField(): any ({;
                     {option && option.label}
                   </SelectItem>;
                 ))}
-<<<<<<< HEAD
-              </SelectContent>
-            </Select>
-            <div className='absolute top-2 right-8'>{getValidationIcon()}</div>
-          </div>
-        )
-      case 'checkbox':
-=======
               </SelectContent>;
             </Select>;
             <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
           </div>;
         );
-
       case 'checkbox':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className='flex items-center space-x-2'>;
             <Checkbox
@@ -504,16 +345,9 @@ export function ValidatedFormField(): any ({;
               {label}
             </label>;
             {getValidationIcon()}
-<<<<<<< HEAD
-          </div>
-        )
-      case 'password':
-=======
           </div>;
         );
-
       case 'password':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className='relative'>;
             <Input
@@ -536,20 +370,11 @@ export function ValidatedFormField(): any ({;
                 ) : (;
                   <Eye className='h-4 w-4' />;
                 )}
-<<<<<<< HEAD
-              </Button>
-            </div>
-          </div>
-        )
-      default:
-=======
               </Button>;
             </div>;
           </div>;
         );
-
       default:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className='relative'>;
             <Input
@@ -560,30 +385,12 @@ export function ValidatedFormField(): any ({;
             />;
             <div className='absolute inset-y-0 right-0 flex items-center pr-3'>;
               {getValidationIcon()}
-<<<<<<< HEAD
-            </div>
-          </div>
-        )
-    }
-  }
-  if (type === 'checkbox') {
-        render={() => (
-          <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
-            <FormControl>{renderField()}</FormControl>            {(fieldError |description) && (
-              <div className='space-y-1'>
-                {fieldError && (
-                  <FormMessage className='text-sm text-red-500'>
-                    {fieldError.message}
-                  </FormMessage>
-=======
             </div>;
           </div>;
         );
     }
   };
-
   if (type === 'checkbox') {;
-
         render={() => (;
           <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
             <FormControl>{renderField()}</FormControl>            {(fieldError || description) && (;
@@ -592,7 +399,6 @@ export function ValidatedFormField(): any ({;
                   <FormMessage className='text-sm text-red-500'>;
                     {fieldError && fieldError.message}
                   </FormMessage>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
                 {description && !fieldError && (;
                   <p className='text-sm text-muted-foreground'>{description}</p>;
@@ -601,10 +407,6 @@ export function ValidatedFormField(): any ({;
             )}
           </FormItem>;
         )}
-<<<<<<< HEAD
-      />
-    )
-=======
       case 'textarea':;
         return (
           <div className='relative'>;
@@ -705,30 +507,15 @@ if ( {) {
               </div>)}
           </FormItem>)}
       />);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
       render={() => (
         <FormItem>;
           <FormLabel className='text - sm font - medium'>;
             {label}
             {validation.required && (
-<<<<<<< HEAD
-              <span className='text-red-500 ml-1'>*</span>
-            )}          </FormLabel>
-          <FormControl>{renderField()}</FormControl>
-          {(fieldError |description) && (
-            <div className='space-y-1'>
-              {fieldError && (
-                <FormMessage className='text-sm text-red-500 flex items-center gap-1'>
-                  <AlertCircle className='h-3 w-3' />
-                  {fieldError.message}
-                </FormMessage>
-=======
       />;
     );
   }
-
-
       render={() => (;
         <FormItem>;
           <FormLabel className='text-sm font-medium'>;
@@ -744,7 +531,6 @@ if ( {) {
                   <AlertCircle className='h-3 w-3' />;
                   {fieldError && fieldError.message}
                 </FormMessage>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
               {description && !fieldError && (;
                 <p className='text-sm text-muted-foreground'>{description}</p>;
@@ -753,50 +539,6 @@ if ( {) {
           )}
         </FormItem>;
       )}
-<<<<<<< HEAD
-    />
-  )
-// Validation helpers for common patterns
-export const validationPatterns = {
-  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/
-  phone: /^[\+]?[1-9][\d]{0,15}$/
-  url: /^https?:\/\/.+/
-  strongPassword:
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/
-}
-// Pre-configured validation rules
-export const commonValidations = {
-  required: { required: true }
-  email: {
-    required: true
-    pattern: validationPatterns.email
-    custom: (value: string,) => {
-      if (value && !validationPatterns.email.test(value)) {
-        return 'Please enter a valid email address'
-      }
-      return null
-    }
-  }
-  password: {
-    required: true
-    minLength: 8
-    custom: (value: string,) => {
-      if (value && !validationPatterns.strongPassword.test(value)) {
-        return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character'
-      }
-      return null
-    }
-  }
-  phone: {
-    pattern: validationPatterns.phone
-    custom: (value: string,) => {
-      if (value && !validationPatterns.phone.test(value)) {
-        return 'Please enter a valid phone number'
-      }
-      return null
-    }
-  }
-=======
               <span className='text - red - 500 ml - 1'>*</span>)}          </FormLabel>;
           <FormControl>{render_field ()}</FormControl>;
           {(field_error || description) && (
@@ -857,18 +599,12 @@ export const common_validations = {
       return null;
     },
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
     }
   }}
     }
-<<<<<<< HEAD
-  }}
-
-=======
     />;
   );
-
 // Validation helpers for common patterns;
 export const validationPatterns = {;
   email: /^[a-zA-Z0-9 && 9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,;
@@ -877,7 +613,6 @@ export const validationPatterns = {;
   strongPassword:;
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,;
 };
-
 // Pre-configured validation rules;
 export const commonValidations = {;
   required: { required: true },;
@@ -915,10 +650,4 @@ export const commonValidations = {;
   }},;
     };
   }},;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   }},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

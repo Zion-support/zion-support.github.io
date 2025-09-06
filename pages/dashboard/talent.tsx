@@ -1,46 +1,16 @@
-<<<<<<< HEAD
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton';
-
-<<<<<<< HEAD
-import {useEffect, useState} from 'react';
-<<<<<<< HEAD
-const STEPS = [
-  { key: 'profile', label: 'Profile completed' }
-  { key: 'skills', label: 'Skills added' }
-  { key: 'availability', label: 'Availability set' }
-  { key: 'match', label: 'First match received' }
-=======
-
 const STEPS = [;
   { key: 'profile', label: 'Profile completed' },;
   { key: 'skills', label: 'Skills added' },;
   { key: 'availability', label: 'Availability set' },;
   { key: 'match', label: 'First match received' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
-<<<<<<< HEAD
-export default function TalentDashboard() {
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
-    profile: false
-    skills: false
-    availability: false
-    match: false
-  });
-  useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem('onboarding.talent');
-      if (raw) setCompleted(JSON.parse(raw));    } catch {}
-=======
 const STEPS = [
   { key: 'profile', label: 'Profile completed' },
   { key: 'skills', label: 'Skills added' },
   { key: 'availability', label: 'Availability set' },
   { key: 'match', label: 'First match received' }] as const,
-
 type StepKey = typeof STEPS[number]['key'];
-
 export default function TalentDashboard() {
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
   useEffect(() => {
@@ -48,23 +18,8 @@ export default function TalentDashboard() {
       const raw = window.localStorage.getItem('onboarding.talent');
       if (raw) setCompleted(JSON.parse(raw))
     } catch {}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, []);
   useEffect(() => {
-<<<<<<< HEAD
-    try {
-      window.localStorage.setItem(
-        'onboarding.talent'
-        JSON.stringify(completed)
-      );
-    } catch {}
-  }, [completed]);
-  const progress = Math.round(
-    (Object.values(completed).filter(Boolean).length / STEPS.length) * 100
-  );
-  const toggle = (key: StepKey) =>
-=======
-
 export default function TalentDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     profile: false,;
@@ -72,13 +27,11 @@ export default function TalentDashboard() {;
     availability: false,;
     match: false,;
   });
-
   useEffect(() => {;
     try {;
       const raw = window && window.localStorage.getItem('onboarding && onboarding.talent');
       if (raw) setCompleted(JSON && JSON.parse(raw));    } catch {}
   }, []);
-
   useEffect(() => {;
     try {;
       window && window.localStorage.setItem(;
@@ -87,15 +40,11 @@ export default function TalentDashboard() {;
       );
     } catch {}
   }, [completed]);
-
   const progress = Math && Math.round(;
     (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
   );
-
   const toggle = (key: StepKey) =>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setCompleted(c => ({ ...c, [key]: !c[key] }));
-
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -112,26 +61,14 @@ export default function TalentDashboard() {;
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
-<<<<<<< HEAD
-          />        </div>
-      </EnhancedCard>
-      <EnhancedCard>
-        <h2 className='font-semibold mb-2'>Checklist</h2>
-        <ul className='space-y-2'>
-          {STEPS.map(s => (
-            <li key={s.key} className='flex items-center justify-between'>
-              <div className='flex items-center gap-2'>
-=======
           />        </div>;
       </EnhancedCard>;
-
       <EnhancedCard>;
         <h2 className='font-semibold mb-2'>Checklist</h2>;
         <ul className='space-y-2'>;
           {STEPS && STEPS.map(s => (;
             <li key={s && s.key} className='flex items-center justify-between'>;
               <div className='flex items-center gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
@@ -154,14 +91,10 @@ export default function TalentDashboard() {;
                   {s && s.key === 'skills' ? 'Add skills' : 'Mark done'}
                 </EnhancedButton>              )}
             </li>;
-=======
     try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]);
-
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
-
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
-
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -176,7 +109,6 @@ export default function TalentDashboard() {;
           <div className="h-2 rounded bg-blue-600" style={{ width: `${progress}%` }} />
         </div>
       </EnhancedCard>
-
       <EnhancedCard>
         <h2 className="font-semibold mb-2">Checklist</h2>
         <ul className="space-y-2">
@@ -192,25 +124,13 @@ export default function TalentDashboard() {;
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )}
             </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
-<<<<<<< HEAD
-        </ul>
-      </EnhancedCard>
-    </div>
-<<<<<<< HEAD
-);
-=======
         </ul>;
       </EnhancedCard>;
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
 import {useEffect, useState} from 'react';
@@ -306,4 +226,3 @@ function TalentDashboard() {
       </EnhancedCard>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

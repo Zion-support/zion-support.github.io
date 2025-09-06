@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
-
 import Link from 'next/link';
 import React from 'react';
 export default function CloudNativeAutomation() {
@@ -15,7 +9,6 @@ export default function CloudNativeAutomation() {
           Building Cloud-Native Automation Infrastructure | Zion Tech Group
         </title>
         <meta
-
           name='description'
           content='A deep dive into our cloud-native approach to building scalable, reliable automation systems.'
         />
@@ -105,7 +98,6 @@ export default function CloudNativeAutomation() {
                 </ul>
                 <p className='text-white/90 mb-4'>
                   Our Kubernetes clusters automatically handle load balancing
-
                   service discovery, and failover, ensuring high availability
                   and performance.
                 </p>
@@ -224,12 +216,7 @@ export default function CloudNativeAutomation() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head',
 import Link from 'next / link',
 import React from 'react',
@@ -451,4 +438,3 @@ function CloudNativeAutomation() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

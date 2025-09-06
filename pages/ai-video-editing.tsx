@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Film } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function AIVideoEditingPage() {
-<<<<<<< HEAD
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'))
-  if (!service) return null
-=======
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'));
+const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'));
   if (!service) return null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   return (
     <Layout>
       <Head>
@@ -57,12 +43,7 @@ export default function AIVideoEditingPage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import Head from 'next / head',
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Film } from 'lucide-react',
@@ -119,4 +100,3 @@ if (return null, ) {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

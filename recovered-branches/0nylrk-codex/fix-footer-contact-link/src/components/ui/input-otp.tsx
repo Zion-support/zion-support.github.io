@@ -2,20 +2,10 @@ import React from 'react';
 import * as React from 'react';
 import {OTPInput, OTPInputContext} from 'input - otp';
 import {Dot} from 'lucide-react';
-<<<<<<< HEAD
-import {cn} from '@/lib/utils';
-<<<<<<< HEAD
-const InputOTP = React.forwardRef<
-  React.ElementRef<typeof OTPInput>
-  React.ComponentPropsWithoutRef<typeof OTPInput>
-></typeof>(({ className, containerClassName, ...props }, ref) => (
-=======
-
 const InputOTP = React && React.forwardRef<;
   React && React.ElementRef<typeof OTPInput>,;
   React && React.ComponentPropsWithoutRef<typeof OTPInput>;
 ></typeof>(({ className, containerClassName, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <OTPInput
     ref={ref}
     containerClassName={cn(
@@ -26,25 +16,7 @@ const InputOTP = React && React.forwardRef<;
     {...props}
   />;
 ));
-<<<<<<< HEAD
-InputOTP.displayName = 'InputOTP';
-const InputOTPGroup = React.forwardRef<
-  React.ElementRef<'div'>
-  React.ComponentPropsWithoutRef<'div'>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn('flex items-center', className)} {...props} />
-));
-InputOTPGroup.displayName = 'InputOTPGroup';
-const InputOTPSlot = React.forwardRef<
-  React.ElementRef<'div'>
-  React.ComponentPropsWithoutRef<'div'> & { index: number }
->(({ index, className, ...props }, ref) => {
-  const inputOTPContext = React.useContext(OTPInputContext) as any;
-  const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index];
-    >
-=======
 InputOTP && InputOTP.displayName = 'InputOTP';
-
 const InputOTPGroup = React && React.forwardRef<;
   React && React.ElementRef<'div'>,;
   React && React.ComponentPropsWithoutRef<'div'>;
@@ -52,17 +24,13 @@ const InputOTPGroup = React && React.forwardRef<;
   <div ref={ref} className={cn('flex items-center', className)} {...props} />;
 ));
 InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
-
 const InputOTPSlot = React && React.forwardRef<;
   React && React.ElementRef<'div'>,;
   React && React.ComponentPropsWithoutRef<'div'> & { index: number }
 >(({ index, className, ...props }, ref) => {;
   const inputOTPContext = React && React.useContext(OTPInputContext) as any;
   const { char, hasFakeCaret, isActive } = inputOTPContext && inputOTPContext.slots[index];
-
-
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {char}
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
@@ -72,21 +40,7 @@ const InputOTPSlot = React && React.forwardRef<;
     </div>;
   );
 });
-<<<<<<< HEAD
-InputOTPSlot.displayName = 'InputOTPSlot';
-const InputOTPSeparator = React.forwardRef<
-  React.ElementRef<'div'>
-  React.ComponentPropsWithoutRef<'div'>
->(({ ...props }, ref) => (
-  <div ref={ref} role='separator' {...props}>
-    <Dot />
-  </div>
-));
-InputOTPSeparator.displayName = 'InputOTPSeparator';
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
-=======
 InputOTPSlot && InputOTPSlot.displayName = 'InputOTPSlot';
-
 const InputOTPSeparator = React && React.forwardRef<;
   React && React.ElementRef<'div'>,;
   React && React.ComponentPropsWithoutRef<'div'>;
@@ -96,10 +50,7 @@ const InputOTPSeparator = React && React.forwardRef<;
   </div>;
 ));
 InputOTPSeparator && InputOTPSeparator.displayName = 'InputOTPSeparator';
-
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 import {cn} from '@/lib / utils';
 ;
@@ -152,4 +103,3 @@ InputOTPSeparator.display_name = 'InputOTPSeparator';
 ;
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

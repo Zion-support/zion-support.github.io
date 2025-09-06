@@ -360,10 +360,6 @@ export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, C
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 ;
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};';
 ;';;';
 ;
@@ -377,9 +373,4 @@ export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, C
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-<<<<<<< HEAD
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-=======
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

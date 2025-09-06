@@ -55,12 +55,6 @@ const contactInfo = [{;
 "}}
               viewport={{ "once": "tru e "}}";
               className="text-center";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <a href={contact.link}";
                 className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4";
 ";
@@ -69,10 +63,6 @@ const contactInfo = [{;
               <h3 className="text-xl font-semibold text-white mb-2">{contact.title}</h3>";
               <p className="text-zion-slate-light">{contact.value}</p>;
             </motion.div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               <a href={contact.link}"
                 className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4"
 "

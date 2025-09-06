@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-
-
-import {useState} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
-=======
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface ApiKey {
   id: string;
   name: string;
@@ -21,13 +11,8 @@ export interface ApiKey {
   scopes: ApiKeyScope[];
   created_at: string;
   last_used_at: string | null;
-<<<<<<< HEAD
-  expires_at: string | null
-  is_active: boolean
-=======
   expires_at: string | null,
   is_active: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface ApiLog {
   id: string;
@@ -35,30 +20,8 @@ export interface ApiLog {
   method: string;
   status_code: number;
   created_at: string;
-<<<<<<< HEAD
-  ip_address?: string
-  response_time_ms?: number
-}
-export function useApiKeys() {
-  const { user } = useAuth();
-  const [keys, setKeys] = useState<ApiKey[]>([]);
-  const [logs, setLogs] = useState<ApiLog[]>([]);
-  const [totalLogs, setTotalLogs] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [newApiKey, setNewApiKey] = useState<string | null>(null);
-  // Helper to get the base URL for API functions
-  const getApiUrl = () => {
-    // Using optional chaining ensures this function works both in the browser
-    // (where import && import.meta.env is injected by Vite) and in Node environments
-    // such as tests or server side rendering.
-<<<<<<< HEAD
-    const env = (import.meta as any)?.env ?? process.env;
-    const url = env.VITE_SUPABASE_URL |env.SUPABASE_URL;
-=======
     const env = (import && import.meta as any)?.env ?? process ;
     const url = env && env.VITE_SUPABASE_URL || env && env.SUPABASE_URL;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return `${url}/functions/v1/api-key-manager`
   }
   // Fetch user's API keys
@@ -79,35 +42,18 @@ export function useApiKeys() {
           'Content-Type': 'application/json'
         }
       });
-<<<<<<< HEAD
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.error |'Failed to fetch API keys')
-      }
-      setKeys(result.keys |[])
-=======
-
       const result = await response && response.json();
-      
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to fetch API keys')
       }
-
       setKeys(result && result.keys || [])
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (err) {
       console && console.error('Error fetching API keys:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-<<<<<<< HEAD
-        title: "Error fetching API keys"
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-=======
         title: "Error fetching API keys",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   ip_address?: string,
   response_time_ms?: number;
 }
@@ -175,41 +121,10 @@ if ( {) {
         variant: "destructive";
         title: "Error fetching API keys",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
   }
-<<<<<<< HEAD
-  // Create new API key
-  const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
-    if (!user) return;
-    setLoading(true);
-    setError(null);
-    setNewApiKey(null);
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
-      if (!session) {
-        setError("Authentication required");
-        return
-      }
-      const response = await fetch(`${getApiUrl()}/create`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${session && session.access_token}`;
-          'Content-Type': 'application/json'
-<<<<<<< HEAD
-        }
-        body: JSON.stringify({
-          name;
-          scopes
-          expiresAt: expiresAt ? expiresAt.toISOString() : null
-        })
-      });
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.error |'Failed to create API key')
-=======
         };
         body: JSON && JSON.stringify({
           name;
@@ -217,22 +132,14 @@ if ( {) {
           expiresAt: expiresAt ? expiresAt && expiresAt.toISOString() : null
         })
       });
-
       const result = await response && response.json();
-      
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to create API key')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]);
       // Store the actual key value temporarily so it can be displayed once
-<<<<<<< HEAD
-      setNewApiKey(result.key);
-=======
       setNewApiKey(result && result.key);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
@@ -242,14 +149,8 @@ if ( {) {
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-<<<<<<< HEAD
-        title: "Error creating API key"
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-=======
         title: "Error creating API key",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
   // Create new API key;
   const createApiKey = async (name: string, scopes: ApiKeyScope[], expires_at?: Date | null) => {
@@ -309,63 +210,23 @@ if ( {) {
         variant: "destructive";
         title: "Error creating API key",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
   }
-<<<<<<< HEAD
-  // Regenerate API key
-  const regenerateApiKey = async (keyId: string) => {
-    if (!user) return;
-    setLoading(true);
-    setError(null);
-    setNewApiKey(null)
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
-      if (!session) {
-        setError("Authentication required");
-        return
-      }
-      const response = await fetch(`${getApiUrl()}/regenerate`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${session && session.access_token}`;
-          'Content-Type': 'application/json'
-<<<<<<< HEAD
-        }
-        body: JSON.stringify({ keyId })
-      });
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.error |'Failed to regenerate API key')
-=======
         };
         body: JSON && JSON.stringify({ keyId })
       });
-
       const result = await response && response.json();
-      
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to regenerate API key')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       // Update the key in the list
-<<<<<<< HEAD
-      setKeys(prev => prev.map(key =>
-        key.id === keyId ? { ...result, key: undefined } : key
-=======
       setKeys(prev => prev && prev.map(key => 
         key && key.id === keyId ? { ...result, key: undefined } : key
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ));
       // Store the new key value
-<<<<<<< HEAD
-      setNewApiKey(result.key);
-=======
       setNewApiKey(result && result.key);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       toast({
         title: "API Key Regenerated"
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
@@ -375,14 +236,8 @@ if ( {) {
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-<<<<<<< HEAD
-        title: "Error regenerating API key"
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-=======
         title: "Error regenerating API key",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
   // Regenerate API key;
   const regenerateApiKey = async (key_id: string) => {
@@ -438,54 +293,20 @@ if ( {) {
         variant: "destructive";
         title: "Error regenerating API key",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
   }
-<<<<<<< HEAD
-  // Revoke API key
-  const revokeApiKey = async (keyId: string) => {
-    if (!user) return;
-    setLoading(true);
-    setError(null)
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
-      if (!session) {
-        setError("Authentication required");
-        return
-      }
-      const response = await fetch(`${getApiUrl()}/revoke`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${session && session.access_token}`;
-          'Content-Type': 'application/json'
-<<<<<<< HEAD
-        }
-        body: JSON.stringify({ keyId })
-      });
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.error |'Failed to revoke API key')
-=======
         };
         body: JSON && JSON.stringify({ keyId })
       });
-
       const result = await response && response.json();
-      
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to revoke API key')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       // Update the key's active status in the list
-<<<<<<< HEAD
-      setKeys(prev => prev.map(key =>
-        key.id === keyId ? { ...key, is_active: false } : key
-=======
       setKeys(prev => prev && prev.map(key => 
         key && key.id === keyId ? { ...key, is_active: false } : key
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ));
       toast({
         title: "API Key Revoked"
@@ -496,14 +317,8 @@ if ( {) {
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-<<<<<<< HEAD
-        title: "Error revoking API key"
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-=======
         title: "Error revoking API key",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
   // Revoke API key;
   const revokeApiKey = async (key_id: string) => {
@@ -555,26 +370,10 @@ if ( {) {
         variant: "destructive";
         title: "Error revoking API key",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
   }
-<<<<<<< HEAD
-  // Fetch API usage logs
-  const fetchApiLogs = async (limit = 50, offset = 0) => {
-    if (!user) return;
-    setLoading(true);
-    setError(null);
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
-      if (!session) {
-        setError("Authentication required");
-        return
-      }
-      const response = await fetch(
-        `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`
-=======
 ;
   // Fetch API usage logs;
   const fetchApiLogs = async (limit = 50, offset = 0) => {
@@ -596,49 +395,23 @@ if ( {) {
       }
       const response = await fetch (
         `${getApiUrl ()}/logs?limit=${limit}&offset=${offset}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
           method: 'GET'
           headers: {
-<<<<<<< HEAD
-            'Authorization': `Bearer ${session && session.access_token}`;
-            'Content-Type': 'application/json'
-          }
-        }
-      );
-<<<<<<< HEAD
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.error |'Failed to fetch API logs')
-      }
-      setLogs(result.logs |[]);
-      setTotalLogs(result.count |0);
-=======
-
       const result = await response && response.json();
-      
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to fetch API logs')
       }
-
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return result
     } catch (err) {
       console && console.error('Error fetching API logs:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-<<<<<<< HEAD
-        title: "Error fetching API logs"
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-=======
         title: "Error fetching API logs",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             'Authorization': `Bearer ${session.access_token}`;
             'Content - Type': 'application / json';
           }
@@ -664,15 +437,11 @@ if ( {) {
         variant: "destructive";
         title: "Error fetching API logs",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
   }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     keys;
     logs;
@@ -685,11 +454,6 @@ if ( {) {
     regenerateApiKey;
     revokeApiKey;
     fetchApiLogs;
-<<<<<<< HEAD
-
-    clearNewApiKey: () => setNewApiKey(null)
-=======
     clearNewApiKey: () => setNewApiKey (null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

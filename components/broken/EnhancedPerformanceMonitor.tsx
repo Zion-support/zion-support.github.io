@@ -1,70 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-//FCP recommendations if (metrics.fcp > 2000) {
-  recs.push ({
-}return recs;
-}, []);
-//Wait for page to be fully loaded if (document.readyState !== 'complete') {
-  await new Promise (resolve => {
-}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) );
-if (metrics.fcp > 2000) score -= 20;
-if (metrics.lcp > 2500) score -= 25;
-if (metrics.cls > 0.1) score -= 15;
-if (metrics.ttfb > 600) score -= 20;
-if (!performanceData) {
-}> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>)
-=======
- //FCP recommendations if (metrics && metrics.fcp > 2000) {;
+//FCP recommendations if (metrics && metrics.fcp > 2000) {;
   recs && recs.push ({;
-
 }return recs;
 }, []);
 //Wait for page to be fully loaded if (document && document.readyState !== 'complete') {;
   await new Promise (resolve => {;
-
 }//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) );
 if (metrics && metrics.fcp > 2000) score -= 20;
 if (metrics && metrics.lcp > 2500) score -= 25;
 if (metrics && metrics.cls > 0 && 0.1) score -= 15;
 if (metrics && metrics.ttfb > 600) score -= 20;
 if (!performanceData) {;
-
 }> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>) ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {
   `w-4 h-4 $ {
-<<<<<<< HEAD
-  isLoading ? 'animate-spin' : ''
-}`
-}/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement'
-}</p> </div> <span className= {
-  `font-mono $ {
-  metrics.fcp > 2000 ? 'text-red-400': 'text-green-400'
-}`
-}> {
-  metrics.fcp.toFixed (0)
-}ms </span> </div> </span> </div> </div> </div>)
-}</span> </div> <div className="w-full bg-gray-700 rounded-full h-2" > <div width: `$ {
-  (metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100
-}%`
-}/> </div> </div> </div>)
-}</span> </div> </div> </div>)
-}rec.priority === 'high'? 'bg-red-500/20 text-red-400': rec.priority === 'medium'? 'bg-yellow-500/20 text-yellow-400': 'bg-green-500/20 text-green-400'
-}`
-}> {
-  rec.priority
-}</span> </div> </div>) )
-}</div> </div>)
-}) : (<BarChart3 className="w-4 h-4" />)
-}<span> {
-  isMonitoring ? 'Measuring...': 'Measure Performance'
-}</span> </button> </div> </div> </motion.div>)
-}</AnimatePresence> </>)
-}
-=======
   isLoading ? 'animate-spin' : '' 
 }` 
 }/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData && performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement' ;
@@ -91,7 +40,6 @@ if (!performanceData) {;
   isMonitoring ? 'Measuring...': 'Measure Performance' ;
 }</span> </button> </div> </div> </motion && motion.div>) ;
 }</AnimatePresence> </>) ;
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -103,7 +51,6 @@ import {
   BarChart3;
   Gauge
 } from 'lucide-react';
-
 interface PerformanceMetrics {
   fcp: number,
   lcp: number,
@@ -123,7 +70,6 @@ interface PerformanceMetrics {
     rtt: number
   }
 }
-
 interface PerformanceRecommendation {
   id: string,
   title: string,
@@ -133,14 +79,12 @@ interface PerformanceRecommendation {
   solution: string,
   category: 'performance' | 'accessibility' | 'seo' | 'user-experience'
 }
-
 const EnhancedPerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [recommendations, setRecommendations] = useState<PerformanceRecommendation[]>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
-
   const generateRecommendations = useCallback((metrics: PerformanceMetrics): PerformanceRecommendation[] => {
     const recs: PerformanceRecommendation[] = [];
     // FCP recommendations
@@ -155,7 +99,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     category: 'performance'
       })
     }
-
     // LCP recommendations
     if (metrics.lcp > 2500) {
       recs.push({
@@ -168,7 +111,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     category: 'performance'
       })
     }
-
     // CLS recommendations
     if (metrics.cls > 0.1) {
       recs.push({
@@ -181,7 +123,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     category: 'user-experience'
       })
     }
-
     // Memory usage recommendations
     if (metrics.memoryUsage && metrics.memoryUsage.usedJSHeapSize > 50 * 1024 * 1024) {
       recs.push({
@@ -194,7 +135,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     category: 'performance'
       })
     }
-
     // Network recommendations
     if (metrics.networkInfo && metrics.networkInfo.effectiveType === 'slow-2g') {
       recs.push({
@@ -207,27 +147,21 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     category: 'performance'
       })
     }
-
     return recs
   }, []);
-
   const measurePerformance = useCallback(async () => {
     try {
       setIsMonitoring(true);
-      
       // Wait for page to be fully loaded
       if (document.readyState !== 'complete') {
         await new Promise(resolve => {
           window.addEventListener('load', resolve, { once: true })
         })
       }
-
       // Wait a bit more for any async operations
       await new Promise(resolve => setTimeout(resolve, 1000));
-
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
-      
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
       const lcp = await new Promise<number>((resolve) => {
         if ('PerformanceObserver' in window) {
@@ -243,7 +177,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           resolve(0)
         }
       });
-
       const metrics: PerformanceMetrics = {
         fcp;
         lcp;
@@ -255,7 +188,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         memoryUsage: 'memory' in performance ? (performance as any).memory : undefined,
         networkInfo: 'connection' in navigator ? (navigator as any).connection : undefined
       };
-
       setMetrics(metrics);
       setRecommendations(generateRecommendations(metrics));
       setLastUpdate(new Date())
@@ -265,30 +197,24 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       setIsMonitoring(false)
     }
   }, [generateRecommendations]);
-
   const getPerformanceScore = (metrics: PerformanceMetrics): number => {
     let score = 100;
-    
     if (metrics.fcp > 2000) score -= 20;
     if (metrics.lcp > 2500) score -= 25;
     if (metrics.cls > 0.1) score -= 15;
     if (metrics.ttfb > 600) score -= 20;
-    
     return Math.max(0, score)
   };
-
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     return 'text-red-400'
   };
-
   const getOverallScoreBg = (score: number) => {
     if (score >= 90) return 'bg-green-500/20';
     if (score >= 70) return 'bg-yellow-500/20';
     return 'bg-red-500/20'
   };
-
   if (!performanceData) {
     return (
       <div className={`p-4 bg-gray-900 rounded-lg border border-gray-700 ${className}`}>
@@ -303,7 +229,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </div>
     )
   }
-
   return (
     <motion.div
       className={`bg-gray-900 rounded-lg border border-gray-700 overflow-hidden ${className}`}
@@ -350,7 +275,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Overall Score */}
       <div className="p-4">
         <div className="text-center mb-6">
@@ -365,7 +289,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
              performanceData.overallScore >= 70 ? 'Good' : 'Needs Improvement'}
           </p>
         </div>
-
               {/* Metrics */}
               {metrics && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -398,7 +321,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               )}
-
               {/* Memory Usage */}
               {metrics?.memoryUsage && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -427,7 +349,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               )}
-
               {/* Network Info */}
               {metrics?.networkInfo && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -454,7 +375,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               )}
-
               {/* Recommendations */}
               {recommendations.length > 0 && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -479,7 +399,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               )}
-
               {/* Action Buttons */}
               <div className="flex space-x-3">
                 <button
@@ -501,10 +420,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </AnimatePresence>
     </>
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 //FCP recommendations // Check condition
 if ( {) {
   $2
@@ -569,14 +485,5 @@ if ( {) {
 }</span> </button> </div> </div> </motion.div>);
 }</AnimatePresence> </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default EnhancedPerformanceMonitor;
-<<<<<<< HEAD
-export default EnhancedPerformanceMonitor;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

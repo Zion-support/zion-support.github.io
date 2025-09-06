@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}
-) )
-}</ul> </section> <section>) )
-}</ul> </section> </div>)
-=======
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface Node { id: string, tokens: string[] }
 interface Edge { source: string, target: string, weight: number, terms: string[] }
 interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
-
 type Props = { report: Report | null },
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
@@ -25,18 +15,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { report: null }, revalidate: 86400 }
   }
 };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function KnowledgeGraph({ report }: Props) {
-=======
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
 }</ul> </section> </div>) ;
 export default function KnowledgeGraph(): any ({ report }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!report) return <div>No knowledge graph yet.</div>;
-
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -64,23 +49,11 @@ export default function KnowledgeGraph(): any ({ report }: Props) {;
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
-<<<<<<< HEAD
-        </ul>
-      </section>
-    </div>
-);
-}
-=======
         </ul>;
       </section>;
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
 ) );
 }</ul> </section> <section>) );
@@ -122,4 +95,3 @@ if (return <div > No knowledge graph yet.</div>) {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

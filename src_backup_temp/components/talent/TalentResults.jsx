@@ -48,9 +48,4 @@ export function TalentResults({
     </div>
   );
 }
-<<<<<<< HEAD
-
 export default TalentResults;
-=======
-export default TalentResults;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

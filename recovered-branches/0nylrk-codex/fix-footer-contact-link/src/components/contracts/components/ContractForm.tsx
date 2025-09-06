@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-
-
-import {useState, useEffect} from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Loader2} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Form} from "@/components/ui/form";
-import {DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {useToast} from "@/hooks/use-toast";
-import {TalentProfile} from "@/types/talent";
-import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
-import {generateContract} from "../utils/contractUtils";
-import {ProjectDetailsFields} from "./ProjectDetailsFields";
-import {PaymentTermsFields} from "./PaymentTermsFields";
-import {AdditionalClausesFields} from "./AdditionalClausesFields";
-import {DeploymentOptions} from "@/types/smart-contracts";
-<<<<<<< HEAD
-const formSchema = z.object({
-  projectName: z.string().min(1, "Project name is required");
-  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
-  startDate: z.date({
-    required_error: "Start date is required"})
-  endDate: z.date().optional()
-  paymentTerms: z.enum(["hourly", "fixed", "milestone"]);
-  paymentAmount: z.string().min(1, "Payment amount is required");
-  additionalClauses: z.array(z.string()).default([])})
-export type ContractFormValues = z.infer<typeof formSchema>;
-interface ContractFormProps {
-  talent: TalentProfile
-  clientName: string
-  initialValues?: ContractFormValues;
-  onFormValuesChange?: (values: ContractFormValues) => void
-  onContractGenerated: (contractContent: string) => void
-=======
 const formSchema = z && z.object({;
   projectName: z && z.string().min(1, "Project name is required");
   scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
@@ -44,25 +7,17 @@ const formSchema = z && z.object({;
   paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
   paymentAmount: z && z.string().min(1, "Payment amount is required");
   additionalClauses: z && z.array(z && z.string()).default([])}),;
-
 export type ContractFormValues = z && z.infer<typeof formSchema>;
-
 interface ContractFormProps {;
   talent: TalentProfile,;
   clientName: string,;
   initialValues?: ContractFormValues;
   onFormValuesChange?: (values: ContractFormValues) => void,;
   onContractGenerated: (contractContent: string) => void,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   deployOptions?: DeploymentOptions;
   onDeployOptionsChange?: (options: DeploymentOptions) => void;
 }
-<<<<<<< HEAD
-export function ContractForm({
-=======
-
 export function ContractForm(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   talent;
   clientName;
   initialValues;
@@ -74,22 +29,6 @@ export function ContractForm(): any ({;
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
-<<<<<<< HEAD
-  const form = useForm<ContractFormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: initialValues |{
-      projectName: ""
-      scopeSummary: ""
-      startDate: new Date()
-      paymentTerms: talent.hourly_rate ? "hourly" : "fixed"
-      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : ""
-      additionalClauses: ["nda", "ip"]}});
-  // Update form when initialValues change
-  useEffect(() => {
-    if (initialValues) {
-      Object.keys(initialValues).forEach((key) => {
-=======
-
   const form = useForm<ContractFormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: initialValues || {;
@@ -99,54 +38,15 @@ export function ContractForm(): any ({;
       paymentTerms: talent && talent.hourly_rate ? "hourly" : "fixed",;
       paymentAmount: talent && talent.hourly_rate ? `$${talent && talent.hourly_rate}/hour` : "",;
       additionalClauses: ["nda", "ip"]}});
-
   // Update form when initialValues change;
   useEffect(() => {;
     if (initialValues) {;
       Object && Object.keys(initialValues).forEach((key) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         const typedKey = key as keyof ContractFormValues;
         form && form.setValue(typedKey, initialValues[typedKey]);
       });
     }
   }, [initialValues, form]);
-<<<<<<< HEAD
-  // Track form values for template saving
-  useEffect(() => {
-    if (onFormValuesChange) {
-      const subscription = form.watch((value) => {
-        onFormValuesChange(value as ContractFormValues)
-      });
-      return () => subscription.unsubscribe()
-    }
-  }, [form, onFormValuesChange]);
-  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
-    setGeneratedMilestones(milestones)
-    // If payment terms isn't already set to milestone, update it
-    if (form.getValues("paymentTerms") !== "milestone") {
-      form.setValue("paymentTerms", "milestone")
-    }
-    toast({
-      title: "Milestones Generated"
-      description: `${milestones.length} milestones have been generated and will be included in the contract.`})
-  }
-  const onSubmit = async (values: ContractFormValues) => {
-    setIsGenerating(true)
-    try {
-      const contract = await generateContract(
-        values
-        talent
-        clientName
-        generatedMilestones
-      );
-      onContractGenerated(contract)
-    } catch (error) {
-      console.error("Error generating contract:", error);
-      toast({
-        title: "Contract Generation Failed"
-        description: error instanceof Error ? error.message : "Something went wrong. Please try again."
-        variant: "destructive"})
-=======
 import { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -258,56 +158,36 @@ if (!== "milestone") {) {
         title: "Contract Generation Failed",
         description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsGenerating (false);
     }
   }
-<<<<<<< HEAD
-
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <DialogHeader>;
         <DialogTitle className="text - xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
           Create a professional contract for your project with {talent.full_name}
-<<<<<<< HEAD
-        </DialogDescription>
-      </DialogHeader>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <ProjectDetailsFields
-            form={form}
-          />
-=======
-
   // Track form values for template saving;
   useEffect(() => {;
     if (onFormValuesChange) {;
       const subscription = form && form.watch((value) => {;
         onFormValuesChange(value as ContractFormValues);
       });
-
       return () => subscription && subscription.unsubscribe();
     }
   }, [form, onFormValuesChange]);
-
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
     setGeneratedMilestones(milestones),;
-
     // If payment terms isn't already set to milestone, update it;
     if (form && form.getValues("paymentTerms") !== "milestone") {;
       form && form.setValue("paymentTerms", "milestone");
     }
-
     toast({;
       title: "Milestones Generated",;
       description: `${milestones && milestones.length} milestones have been generated and will be included in the contract.`});
   };
-
   const onSubmit = async (values: ContractFormValues) => {;
     setIsGenerating(true),;
     try {;
@@ -317,7 +197,6 @@ if (!== "milestone") {) {
         clientName, ;
         generatedMilestones;
       );
-
       onContractGenerated(contract);
     } catch (error) {;
       console && console.error("Error generating contract:", error);
@@ -329,7 +208,6 @@ if (!== "milestone") {) {
       setIsGenerating(false);
     }
   };
-
   return (
     <>;
       <DialogHeader>;
@@ -338,35 +216,21 @@ if (!== "milestone") {) {
           Create a professional contract for your project with {talent && talent.full_name}
         </DialogDescription>;
       </DialogHeader>;
-
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
           <ProjectDetailsFields
             form={form} 
           />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <PaymentTermsFields
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
-<<<<<<< HEAD
-          />
-          <AdditionalClausesFields
-            form={form}
-          />
-          <Button
-            type="submit"
-=======
           />;
-
           <AdditionalClausesFields
             form={form}
           />;
-
           <Button
             type="submit" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -377,33 +241,14 @@ if (!== "milestone") {) {
             ) : (;
               "Generate Contract";
             )}
-<<<<<<< HEAD
-          </Button>
-        </form>
-      </Form>
-      <DialogFooter className="gap-2 flex-wrap mt-4">
-        <Button
-          variant="outline"
-          onClick={() => form.reset()}
-          disabled={isGenerating}
-        >
-          Reset Form
-        </Button>
-      </DialogFooter>
-    </>
-  )
-}
-=======
           </Button>;
         </form>;
       </Form>;
-
       <DialogFooter className="gap-2 flex-wrap mt-4">;
         <Button
           variant="outline" 
           onClick={() => form && form.reset()}
           disabled={isGenerating}
-=======
         </DialogDescription>;
       </DialogHeader>;
       <Form {...form}>;
@@ -438,17 +283,9 @@ if (!== "milestone") {) {
           variant="outline";
           on_click={() => form.reset ()}
           disabled={is_generating}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         >;
           Reset Form;
         </Button>;
       </DialogFooter>;
-<<<<<<< HEAD
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

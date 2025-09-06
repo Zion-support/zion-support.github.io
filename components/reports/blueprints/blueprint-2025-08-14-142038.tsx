@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export default function Page() {
-
-=======
 export default function Page() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -54,7 +45,6 @@ export default function Page() {;
     </div>;
   );
 }
-=======
 export default function Page(){
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -73,8 +63,6 @@ export default function Page(){
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 ;
 export default /**
@@ -126,4 +114,3 @@ function Page() {
       </main>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

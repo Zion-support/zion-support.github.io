@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-
-export const real2036AIServices = [
-  {
-<<<<<<< HEAD
-    id: 'ai-emotion-intelligence-platform'
-    name: 'AI Emotion Intelligence Platform'
-    tagline: 'Advanced emotional AI understanding'
-    description:
-      'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.'
-    price: '$3,999'
-    period: 'month'
-      'Emotion recognition'
-      'Sentiment analysis'
-      'Emotional response generation'
-      'Emotional intelligence training'
-      'Multi-modal emotion detection'
-      'Emotional pattern analysis'
-=======
-    id: 'ai-emotion-intelligence-platform', name: 'AI Emotion Intelligence Platform',
+id: 'ai-emotion-intelligence-platform', name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
     description: 'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
     price: '$3,999',
@@ -33,7 +14,6 @@ export const real2036AIServices = [
     ];
     useCases: [
       'Customer serviceMental health supportEducation technologyHuman resources'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ]
     popular: true
     category: 'Emotional AI'
@@ -353,11 +333,6 @@ export const real2036AIServices = [
     ]
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export const real2036AIServices = [;
   {
     id: 'ai - emotion - intelligence - platform',
@@ -693,4 +668,3 @@ export const real2036AIServices = [;
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

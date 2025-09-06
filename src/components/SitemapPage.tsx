@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
-import Link from 'next/link';
-<<<<<<< HEAD
-import { ChevronRight } from 'lucide-react'
-import { SEO  } from './SEO';
-// Map sitemap paths to their actual routes in the application
-// Note: This pathMap might need to be updated based on Next.js page structure
-const pathMap: Record<string, string> = {
-
-  '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
-const resolvePath = (path: string): string => pathMap[path] ?? path
-=======
 const resolve_path = (path: string): string => path_map[path] ?? path, import React from 'react';
 import { complete_sitemap, dynamic_paths } from '@/config / sitemap';
 import Link from 'next / link';
@@ -25,9 +9,7 @@ import { SEO } from './SEO';
 const path_map: Record < string, string> = {
   '/about': '/content / about / blog': '/blog / careers': '/careers / green - it': '/content / green - it / sitemap - page': '/content / sitemap - page / talent - onboarding': '/talent - onboarding / forgot - password': '/forgot - password / signup / talent': '/auth / signup / talent / signup / client': '/auth / signup / client / talent - dashboard': '/talent - dashboard / client - dashboard': '/client - dashboard / hiring - tracker': '/dashboard / hiring - tracker / messages': '/dashboard / messages / notifications': '/dashboard / notifications / project/:project_id / room': '/dashboard / project/:project_id / room / post - job': '/marketplace / post - job'}
 const resolve_path = (path: string): string => path_map[path] ?? path,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const SitemapPage: React.FC = () => {
-=======
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
@@ -38,31 +20,15 @@ import { SEO } from './SEO';
 // Note: This pathMap might need to be updated based on Next && Next.js page structure;
 const pathMap: Record<string, string> = {;
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'};
-
 const resolvePath = (path: string): string => pathMap[path] ?? path,;
 export const SitemapPage: React.FC = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
-<<<<<<< HEAD
-      <SEO
-        title="Sitemap | Zion AI Marketplace"
-        description="Complete sitemap of the Zion AI Marketplace"
-        keywords="sitemap, zion, ai marketplace, navigation"
-<<<<<<< HEAD
-        canonical="https://app.ziontechgroup.com/content/sitemap-page"
-      />
-      <div className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
         canonical="https://app && app.ziontechgroup.com/content/sitemap-page"
       />;
       <div className="container mx-auto px-4 py-12">;
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>;
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>;
@@ -72,12 +38,6 @@ export const SitemapPage: React.FC = () => {;
                 .map(route => (;
                   <li key={route && route.path}>;
                     <Link
-<<<<<<< HEAD
-                      href = {resolvePath(route.path),}
-                      className="flex items-center hover:text-zion-purple"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-=======
       <SEO;
         title="Sitemap | Zion AI Marketplace";
         description="Complete sitemap of the Zion AI Marketplace";
@@ -100,32 +60,10 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {route.label}
                     </Link>;
                   </li>));
               }
-<<<<<<< HEAD
-            </ul>
-          </div>
-          {/* Talent Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>
-            <ul className="space-y-2">
-              {completeSitemap
-                .filter(route =>
-                  route.requiredRoles?.includes('jobSeeker') |
-                  route.requiredRoles?.includes('creator')
-                )
-                .map(route => (
-                  <li key={route.path}>
-                    <Link
-                      href = {resolvePath(route.path),}
-                      className="flex items-center hover:text-zion-purple"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-=======
             </ul>;
           </div>;
           {/* Talent Routes */}
@@ -144,32 +82,10 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {route.label}
                     </Link>;
                   </li>));
               }
-<<<<<<< HEAD
-            </ul>
-          </div>
-          {/* Client Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>
-            <ul className="space-y-2">
-              {completeSitemap
-                .filter(route =>
-                  route.requiredRoles?.includes('employer') |
-                  route.requiredRoles?.includes('buyer')
-                )
-                .map(route => (
-                  <li key={route.path}>
-                    <Link
-                      href = {resolvePath(route.path),}
-                      className="flex items-center hover:text-zion-purple"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-=======
             </ul>;
           </div>;
           {/* Client Routes */}
@@ -188,32 +104,10 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {route.label}
                     </Link>;
                   </li>));
               }
-<<<<<<< HEAD
-            </ul>
-          </div>
-          {/* Shared Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires any account type</p>
-            <ul className="space-y-2">
-              {completeSitemap
-                .filter(route =>
-                  route.requiredAuth &&
-                  (!route.requiredRoles |route.requiredRoles.length === 0)
-                )
-                .map(route => (
-                  <li key={route.path}>
-                    <Link
-                      href = {resolvePath(route.path),}
-                      className="flex items-center hover:text-zion-purple"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-=======
             </ul>;
           </div>;
           {/* Shared Routes */}
@@ -232,31 +126,10 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {route.label}
                     </Link>;
                   </li>));
               }
-<<<<<<< HEAD
-            </ul>
-          </div>
-          {/* Admin Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
-            <ul className="space-y-2">
-              {completeSitemap
-                .filter(route =>
-                  route.requiredRoles?.includes('admin')
-                )
-                .map(route => (
-                  <li key={route.path}>
-                    <Link
-                      href = {resolvePath(route.path),}
-                      className="flex items-center hover:text-zion-purple"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-=======
             </ul>;
           </div>;
           {/* Admin Routes */}
@@ -274,15 +147,10 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {route.label}
                     </Link>;
                   </li>));
               }
-<<<<<<< HEAD
-            </ul>
-          </div>
-=======
                       href = {resolvePath(route && route.path),}
                       className="flex items-center hover:text-zion-purple">;
                       <ChevronRight className="h-4 w-4 mr-2" />;
@@ -293,7 +161,6 @@ export const SitemapPage: React.FC = () => {;
               }
             </ul>;
           </div>;
-
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>;
@@ -317,7 +184,6 @@ export const SitemapPage: React.FC = () => {;
               }
             </ul>;
           </div>;
-
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>;
@@ -341,7 +207,6 @@ export const SitemapPage: React.FC = () => {;
               }
             </ul>;
           </div>;
-
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>;
@@ -365,7 +230,6 @@ export const SitemapPage: React.FC = () => {;
               }
             </ul>;
           </div>;
-
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>;
@@ -388,8 +252,6 @@ export const SitemapPage: React.FC = () => {;
               }
             </ul>;
           </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>;
@@ -403,44 +265,6 @@ export const SitemapPage: React.FC = () => {;
                   </div>;
                 </li>;
               ))}
-<<<<<<< HEAD
-            </ul>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-'"}
-  const sitemapData = [{
-      title: 'Main Pages'
-      links: [
-        { name: 'Home', url: '/' }
-        { name: 'About', url: '/about' }
-        { name: 'Services', url: '/services' }
-        { name: 'Contact', url: '/contact' }
-        { name: 'Blog', url: '/blog' }
-        { name: 'Careers', url: '/careers' }
-      ]
-}
-    {
-      title: 'Services'
-      links: [{ name: 'AI Services', url: '/services / ai' }
-        { name: 'IT Services', url: '/services / it' }
-        { name: 'Cloud Solutions', url: '/services / cloud' }
-        { name: 'Cybersecurity', url: '/services / cybersecurity' }
-        { name: 'Digital Transformation', url: '/services / digital - transformation' }
-      ]
-}
-    {
-      title: 'Solutions'
-      links: [{ name: 'Enterprise', url: '/solutions / enterprise' }
-        { name: 'Healthcare', url: '/solutions / healthcare' }
-        { name: 'Financial Services', url: '/solutions / financial' }
-        { name: 'Manufacturing', url: '/solutions / manufacturing' }
-      ]
-}
-=======
             </ul>;
           </div>;
           {/* Dynamic Routes */}
@@ -490,7 +314,6 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Manufacturing', url: '/solutions / manufacturing' },
       ];
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       title: 'Resources'
       links: [{ name: 'Case Studies', url: '/case - studies' }
@@ -498,17 +321,10 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Documentation', url: '/docs' }
         { name: 'API Reference', url: '/api' }
       ]}
-<<<<<<< HEAD
-        { name: 'Case Studies', url: '/case-studies' },'
-        { name: 'White Papers', url: '/white-papers' },'
-        { name: 'Webinars', url: '/webinars' },'
-        { name: 'Documentation', url: '/docs' },'        { name: 'API Reference', url: '/api' }
-=======
         { name: 'Case Studies', url: '/case - studies' }, ';
         { name: 'White Papers', url: '/white - papers' }, ';
         { name: 'Webinars', url: '/webinars' }, ';
         { name: 'Documentation', url: '/docs' }, '        { name: 'API Reference', url: '/api' },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       ]}
   ];
   return (<div className="min - h - screen bg - slate - 900 text - white py - 16">;
@@ -536,9 +352,6 @@ export const SitemapPage: React.FC = () => {;
                       href={link.url}
                       className="text - zinc - 300 hover:text - cyan - 400 transition - colors duration - 200 block py - 1">;
                       {link.name}
-<<<<<<< HEAD
-                    </a>
-=======
             </ul>;
           </div>;
         </div>;
@@ -547,7 +360,6 @@ export const SitemapPage: React.FC = () => {;
   );
 };
 '"},;
-
   const sitemapData = [{;
       title: 'Main Pages',;
       links: [;
@@ -594,7 +406,6 @@ export const SitemapPage: React.FC = () => {;
         title="Sitemap - Zion Tech Group"
         description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."
       />;
-
       <div className="container mx - auto px-4 max - w-6xl">;
         <div className="text-center mb-16">;
           <h1 className="text-5xl font - bold mb-6 bg-gradient - to - r from - cyan - 400 to - blue - 500 bg-clip - text text-transparent">            Sitemap;
@@ -616,10 +427,7 @@ export const SitemapPage: React.FC = () => {;
                       className="text-zinc - 300 hover:text-cyan - 400 transition - colors duration - 200 block py-1">;
                       {link && link.name}
                     </a>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                     </a>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </li>) ) }
               </ul>;
             </div>) ) }
@@ -631,20 +439,6 @@ export const SitemapPage: React.FC = () => {;
             <a href="/contact" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
               Contact us;
             </a>{' '}
-<<<<<<< HEAD
-            for assistance.
-          </p>
-        </div>
-      </div>
-    </div>;) }
-'"
-}
-
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             for assistance.;
           </p>;
         </div>;
@@ -652,4 +446,3 @@ export const SitemapPage: React.FC = () => {;
     </div>) }
 '";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -5,8 +5,4 @@ import React from 'react'; const LazyWrapper = (props: any) => { const [isLoaded
     ); useEffect(() => { if(inView && !isInView) { setIsInView(true);',';';
     ';';';
 import React from 'react'; const LazyWrapper = (props: any) => { const [isLoaded, setIsLoaded] = useState(false); const [isInView, setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref, { amount: threshold }
-<<<<<<< HEAD
     ); useEffect(() => { if(inView && !isInView) { setIsInView(true);
-=======
-    ); useEffect(() => { if(inView && !isInView) { setIsInView(true);
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

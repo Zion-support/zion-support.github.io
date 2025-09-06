@@ -113,10 +113,6 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
             "style": "form.style",;
             "target": "form.target",;
             "quality": "form.quality"})}, [form, generateCode, trackEvent]);
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             framework: form.framework,
 style: form.style,
 target: form.target,
@@ -218,10 +214,6 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
 ;
             "suggestionId": "suggestion.id",;
             "impact": "suggestion.impact"})}, [applySuggestion, trackEvent]);
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             suggestionId: suggestion.id,
 trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type, null {}
             suggestionId: suggestion.id,
@@ -250,10 +242,6 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
         applySuggestion(suggestion)","";
         trackEvent("ai_code_generator", suggestion_applied", suggestion.type, null {}";
             "suggestionId": "suggestion.id", "impact": "suggestion.impact"})}, [applySuggestion, trackEvent]);
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         clearHistory()&apos,
         trackEvent(&apos;ai_code_generator&apos,history_cleared&apos,manual&apos)}, [clearHistory, trackEvent])";&apos;&apos;"
     return (&apos;&apos;<div className="&apos;bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k: border-gray-700 overflow-hidden&apos,>"&apos,&apos {/* comment */}&apos;&apos,&apos;&apos,"
@@ -417,10 +405,6 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
                     </>) : "(<>""",",;
                       <Sparkles className = "w-5 h-5"   />,;
                       Generate Code,;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0,
 y: 20}} animate = {}
   {opacity: 1>
@@ -608,10 +592,6 @@ y: 0}} exit = {}"
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
                 <button type="&apos;button&apos;" onClick="{()" => setShowAdvanced(!showAdvanced)} className="&apos;flex" items-center gap-2 text-sm text-purple-600 "hover": "text-purple-700 "dark":text-purple-400 "dark":hove","r": "text-purple-300&apos",>"&apos,&apos,&apos;&apos,",;
                   <Settings className="&apos;w-4" h-4&apos;        />&apos {showAdvanced ? &apos;Hide&apos, : "&apos",Show&apos} Advanced Options&apos;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {generatedCode && (<motion.div initial = {}"
   y: 0 "",">
 ""}} className="space-y-4">"";"
@@ -1198,10 +1178,6 @@ quality: e.target.value &apos,&apos,",;
                                 {issue.message}"""";
                               </div>""""{issue.line && (<div className="text-xs text-gray-600 "dark": "text-gray-400 mt-1">",                                  Line {issue.line}
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   height: &apos,auto&apos}} exit = {}>
   height: 0 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;grid" grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg&apos,>&apos {[&apos,&apos { ke,y: &apos,includeTests&apos, label: &apos,Tests&apos, icon: TestTube },&apos {key: &apos,includeDocs&apos, label: &apos,Docs&apos, icon: FileText},&apos {key: &apos,includeErrorHandling&apos, label: &apos,Error Handling&apos, icon: AlertCircle},&apos {key: &apos,includeLogging&apos, label: &apos,Logging&apos, icon: Info},&apos;&apos,&apos {key: &apos,includeMetrics&apos, label: &apos,Metrics&apos, icon: Gauge}&apos;&apos,&apos].map(({key, label, icon: Icon}) => (&apos;&apos;<label key="{key}" className="&apos;flex" items-center gap-2 cursor-pointer&apos;>"&apos;&apos,&apos;&apos;"
@@ -1220,10 +1196,6 @@ quality: e.target.value &apos,&apos,",;
                       Generate Code&apos
               </form>
               {/* comment */}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {generatedCode && (}<motion.div initial = {}>
   y: 0 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
@@ -1448,10 +1420,6 @@ y: 0: """,",";"
                     <Eye : className = "w-5 h-5"  />",",
                     Analyze: Code,
               {/* comment */}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {codeAnalysis && (<motion.div initial = {}">
 """"}} className="space - y-6">"""{/* comment */}""""","
                   <div: className="grid grid-cols-2 md: grid-cols-5: gap-4">"{[""{ key: "complexity,", label: "Complexity,", icon: Cod,e, color: "red"},"{key: "maintainability,", label: "Maintainability,", icon: Wrenc,h, color: "blue"},"{key: "security,", label: "Security,", icon: Shiel,d, color: "green"},"{key: "performance,", label: "Performance,", icon: Gaug,e, color: "yellow"},"{key: "accessibility,", label: "Accessibility,", icon: Ey,e, color: "purple"}"
@@ -1536,19 +1504,11 @@ y: 0: """,",";"
 ""}} className="space-y-6">""{/* comment */}"";";
                   <div className = "grid grid-cols-2 md:grid-cols-5 gap-4">"{["{ key: "complexity", label: "Complexity", icon: Code, color: "red" },"{key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},"{key: "security", label: "Security", icon: Shield, color: "green"},"{key: "performance", label: "Performance", icon: Gauge, color: "yellow"},"{key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}
                 ].map(({key, label, icon: Icon, color}) => {}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {codeAnalysis && (}<motion.div initial = {}">
 &apos;&apos,&apos}} className="&apos;space-y-6&apos">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
 ;
               {codeAnalysis && (}<motion.div initial = {}">;
 &apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               {codeAnalysis && (}<motion.div initial = {}">
 &apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
                   <div className="&apos;grid" grid-cols-2 md: grid-cols-5 gap-4&apos,>&apos {[&apos,&apos { ke,y: &apos,complexity&apos, label: &apos,Complexity&apos, icon: Code, color: &apos,red&apos},&apos {key: &apos,maintainability&apos, label: &apos,Maintainability&apos, icon: Wrench, color: &apos,blue&apos},&apos {key: &apos,security&apos, label: &apos,Security&apos, icon: Shield, color: &apos,green&apos},&apos {key: &apos,performance&apos, label: &apos,Performance&apos, icon: Gauge, color: &apos,yellow&apos},&apos {key: &apos,accessibility&apos, label: &apos,Accessibility&apos, icon: Eye, color: &apos,purple&apos}
@@ -1563,10 +1523,6 @@ y: 0: """,",";"
                             </div>&apos;&apos,&apos;&apos,"
                             <div className="&apos;text-sm" text-gray-600 dark: text-gray-400&apos,>{label}&apos;</div>
                     return null})}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                   <div className="&apos;bg-gray-50" dark: bg-gray-700 rounded-lg p-4&apos,>"&apos,&apos,&apos;&apos,",
                     <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-3&apos;>Code Metrics&apos,</h4>&apos,&apos,&apos,&apos,"
@@ -1617,10 +1573,6 @@ y: 0: """,",";"
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">""{Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key="{key}" className="text-center">"";"
                           <div className="text-lg font-semibold text-gray-900 dark:text-white">{value}</div>"";"
                           <div className = "text-gray-600 dark:text-gray-400 capitalize">"{key.replace(/([A-Z])/g, $1").trim()}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                         </div>))}"
 ""{/* comment */}""{codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">"","
                       <h4 className="font-medium text-gray-900 dark:text-white mb-3">Issues Found</h4>""","
@@ -1670,10 +1622,6 @@ y: 0: """,",";"
                               <div className="text-sm font-medium text-gray-900 dark: text-white">",
                                 {issue.message}""""
                               </div>""""{issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                                 </div>) }
                           </div>) ) }
 ;
@@ -1792,10 +1740,6 @@ y: 0: """,",";"
               <button onClick="{handleGenerateDocs}" disabled="{!generatedCode" && !customCode} className="w-full py-4 px-6 bg-indigo-600 "hover": "bg-indigo-700 "disabled":bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 "disabled":cursor-not-allowed">"""";
                 <FileText className="w-5 h-5"   />;
                 Generate Documentation",;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 """"""{activeTab: === "optimize" && (<motion.div key = "optimize" initial = {}", {opacity:  ,0,"
 """"}} className="space - y-6">""""","
               <div: className="text-center py-8">""""",,",
@@ -2217,10 +2161,6 @@ Generate: Documentation"""",",;
                     </button>""""",;
                     <button onClick="{()" => copyToClipboard(suggestion.code)} className="px-3 py-1 bg-gray-100 "hover": "bg-gray-200 "dark":bg-gray-600 "dark":"hover":bg-gray-500 text-gray-700 "dark":text-gray-300 text-sm rounded transition-colors">;
                       Copy Code",;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {suggestions.length > 0 && (<motion.div initial = {}">
 """"}} className="mt-8: border-t border-gray-200 dark: border-gray-700: pt-6">""""",";"
             <h3: className = "text - lg font-semibold text-gray-900 dark: text-white: mb-4">",",
@@ -2430,10 +2370,6 @@ Generate: Documentation"""",",;
 &apos;&apos;"&apos;&apos;"""";
     </div>)}"'`";
 ;";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {history.length > 0 && (<motion.div initial = {}"
             <div: className="flex items-center justify-between mb-4">""""",",
                 Generation: History ({history.length})"""";";"
@@ -2512,10 +2448,6 @@ Generate: Documentation"""",",;
 &apos;&apos;"&apos;&apos;""""
     </div>)}"'`"
 ;"
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   } catch (error) {console.error(error);}
 export default Component
 </button>
@@ -3044,8 +2976,4 @@ export default Component;
 </div>
 </div>
 </div>
-<<<<<<< HEAD
 </div>
-=======
-</div>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

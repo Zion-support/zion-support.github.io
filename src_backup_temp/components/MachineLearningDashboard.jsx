@@ -148,10 +148,6 @@ export const MachineLearningDashboard = ("props": "any) => {""";
 "enableUserBehaviorTracking": "true"})";
 export const MachineLearningDashboard = ("props": "any) => {const [activeTab", setActiveTab] = useState("overview")}
     const {models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction} exportModel, importModel } = useMachineLearning();
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         const file = event.target.files?.[0];"""""""""
 export const MachineLearningDashboard = (props: any) => {"
     const { trackEvent } = useAnalytics();""""""""
@@ -429,10 +425,6 @@ type newModelForm.type,";
                         </span>""""";";";
                         <"span": "className = "text-sm text-gray-500 "dark": text-gray-400">""," {(model."accuracy": "* 100).toFixed(1)"}%;
                     setShowImportModel(false);
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 """{/* comment */}""""";";"
       <div: className = "p-4">"""""",",
         <AnimatePresence: mode="wait">""""""{activeTab == = "overview" && (<motion.div key="overview" initial = {}", {opacity:  ,0,
@@ -863,10 +855,6 @@ type newModelForm.type,";
                   <button onClick="{()" => setShowCreateModel(!showCreateModel)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg "hover": "bg-purple-700">"""";
                     <Plus className="w-4 h-4 inline mr-2"   />;
                     New Model",;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0,
   y: 20}} animate = {}
   {opacity: 1>
@@ -1290,10 +1278,6 @@ y: 0}} exit = {}"
                               "Started": "{job.startTime.toLocaleString()"}"";
 "&apos;&apos,&apos;&apos {activeTab === &apos;training&apos; && (&apos}&apos;<motion.div key="&apos;training&apos;" initial = {}";
               <h3 className="text-lg font-semibold text-gray-900 "dark": "text-white">Training Jobs</h3>""",";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
               <AnimatePresence> {showImportModel && (<motion.div initial = {}">
                     <h4: className="font-medium text-gray-900 dark: text-white: mb-3">Import Model</h4>""""",";"
                     <input : type="file" accept=".json" onChange="{handleImportModel}" className="block w-full text-sm text-gray-500 file: mr-4: file:py-2: file:px-4: file:rounded-lg: file:border-0: file:text-sm: file:font-medium: file:bg-purple-50: file:text-purple-700: hover:file:bg-purple-100"   />""""",";"

@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-import { format } from 'date-fns';
-interface DateDividerProps {
-  date: Date;
-}
-export function DateDivider({ date }: DateDividerProps) {
-=======
 import React from "react";
 import { format } from "date-fns";
 interface DateDividerProps {;
   date: Date;
 }
-
 export function DateDivider(): any ({ date }: DateDividerProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="flex items-center my-4">;
       <div className="flex-1 border-t border-zion-purple/20"></div>;
@@ -25,7 +13,6 @@ export function DateDivider(): any ({ date }: DateDividerProps) {;
       <div className="flex-1 border-t border-zion-purple/20"></div>;
     </div>;
   );
-=======
 import React from './react';
 import { format  } from './date - fns';
 interface DateDividerProps {
@@ -43,5 +30,4 @@ function DateDivider() {
       </div>;
       <div className="flex - 1 border - t border - zion - purple / 20"></div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

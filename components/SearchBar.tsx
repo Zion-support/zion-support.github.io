@@ -1,77 +1,33 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState, useRef, useEffect } from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-<<<<<<< HEAD
-=======
 import Link from 'next / link';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
 }
 const SearchBar: React.FC = () => {
-=======
-
 interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
 }
-<<<<<<< HEAD
-
-const SearchBar: React.FC = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-<<<<<<< HEAD
-  // Mock search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = [
-    {
-      title: 'Micro SaaS Products'
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more'
-      url: '/micro-saas'
-      type: 'category'
-    }
-    {
-      title: 'AI Services'
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more'
-      url: '/ai-services'
-      type: 'category'
-    }
-    {
-      title: 'IT Services'
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more'
-      url: '/it-services'
-      type: 'category'
-    }
-=======
 const SearchBar: React.FC = () => {
   const [query, set_query] = useState ('');
   const [results, set_results] = useState < SearchResult[]>([]);
@@ -100,7 +56,6 @@ const SearchBar: React.FC = () => {
       url: '/it - services',
       type: 'category',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       title: 'Cloud Cost Guard'
       description: 'FinOps Assistant for anomaly detection and cost optimization'
@@ -120,14 +75,6 @@ const SearchBar: React.FC = () => {
       type: 'page'
     }
   ];
-<<<<<<< HEAD
-  const handleSearch = async (searchQuery: string) => {
-    if (!searchQuery.trim()) {
-      setResults([]);
-      setIsOpen(false);
-      return
-=======
-
   // Mock search data - in a real app, this would come from an API;
   const searchData: SearchResult[] = [;
     {;
@@ -167,94 +114,48 @@ const SearchBar: React.FC = () => {
       type: 'page',;
     },;
   ];
-
   const handleSearch = async (searchQuery: string) => {;
     if (!searchQuery && searchQuery.trim()) {;
       setResults([]);
       setIsOpen(false);
       return,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     setIsLoading(true);
-<<<<<<< HEAD
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 300));
-    const filteredResults = searchData.filter(item =>
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
-=======
-
     // Simulate API delay;
     await new Promise(resolve => setTimeout(resolve, 300));
-
     const filteredResults = searchData && searchData.filter(item =>;
       item && item.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       item && item.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-<<<<<<< HEAD
-  }
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setQuery(value);
-    handleSearch(value)
-  }
-  const handleResultClick = () => {
-    setIsOpen(false)
-    setQuery('')
-  }
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-    setIsOpen(false)
-    inputRef.current?.blur()
-  }
-  }
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false)
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-=======
   };
-
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const value = e && e.target.value;
     setQuery(value);
     handleSearch(value),;
   };
-
   const handleResultClick = () => {;
     setIsOpen(false),;
     setQuery('');
   };
-
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === 'Escape') {;
     setIsOpen(false),;
     inputRef && inputRef.current?.blur();
   }
   };
-
   useEffect(() => {;
     const handleClickOutside = (event: MouseEvent) => {;
       if (searchRef && searchRef.current && !searchRef && searchRef.current.contains(event && event.target as Node)) {;
         setIsOpen(false),;
       }
     };
-
     document && document.addEventListener('mousedown', handleClickOutside);
     return () => {;
       document && document.removeEventListener('mousedown', handleClickOutside);
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
   return (
     <div ref={searchRef} className="relative w-full max-w-md">;
@@ -287,12 +188,7 @@ const SearchBar: React.FC = () => {
             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>;
           </div>;
         )}
-<<<<<<< HEAD
-      </div>
-=======
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Search Results Dropdown */}
       {isOpen && (;
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">;
@@ -333,7 +229,6 @@ const SearchBar: React.FC = () => {
     </div>;
   );
 }
-=======
 ;
   const handle_search = async (search_query: string) => {
     if () {) {
@@ -462,5 +357,4 @@ if ( {) {
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default SearchBar;

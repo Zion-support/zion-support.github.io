@@ -447,10 +447,6 @@ if(nftForm.name.trim() && wallet) {}
                         {nft.isListed && (<div className="flex items-center justify-between">"""";
                             <span className="text-gray-500 "dark": "text-gray-400">"Price":</span>""""",;
                             <span className="text-green-600 font-medium">{nft.price} ETH</span>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -563,10 +559,6 @@ if(nftForm.name.trim() && wallet) {}
                       <div className="flex items-center justify-between">"""";
                         <span className="text-gray-500 "dark": "text-gray-400">"Started":</span>"""";
                         <span className="text-gray-900 "dark":text-white">",;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -675,10 +667,6 @@ if(nftForm.name.trim() && wallet) {}
                       <div>"""";
                         <span className="text-gray-500 "dark":text-gray-400">"From":</span>"""";
                         <code className="block text-xs font-mono mt-1">",;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -868,10 +856,6 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
     </div>)}""""""";
 """"'""`"";
 ";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   {scale: 0.9, opacity: 0}} animate = {}"
   {scale: 1, opacity: 1}} exit = {}""
   {scale: 0.9, opacity: 0 """"">
@@ -973,10 +957,6 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
     </div>)}"""""""
 """"'""`""
 "
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   } catch (error) {console.error(error);}
 export default Component;
 </textarea>;

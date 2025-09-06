@@ -1,42 +1,16 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check, ExternalLink } from "lucide-react";
-interface IntegrationCardProps {
-
-  title: string
-  description: string
-  icon: React.ReactNode
-
-=======
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {ArrowRight, Check, ExternalLink} from "lucide-react";
-
 interface IntegrationCardProps {;
   title: string,;
   description: string,;
   icon: React && React.ReactNode,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void;
 }
-<<<<<<< HEAD
-export function IntegrationCard({
-  title;
-  description;
-  icon;
-  status;
-  onConnect}: IntegrationCardProps) {
-=======
-
 export function IntegrationCard(): any ({;
   title;
   description;
@@ -44,7 +18,6 @@ export function IntegrationCard(): any ({;
   status = "disconnected";
   href;
   onConnect}: IntegrationCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -90,25 +63,13 @@ export function IntegrationCard(): any ({;
     </Card>;
   );
 }
-<<<<<<< HEAD
-export function IntegrationCards() {
-=======
-
 export function IntegrationCards() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="grid md:grid-cols-3 gap-6">;
       {/* Integration cards would go here */}
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
@@ -174,4 +135,3 @@ function IntegrationCards() {
       {/* Integration cards would go here */}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

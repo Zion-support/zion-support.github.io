@@ -1,51 +1,31 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import ProductCard from '@/components/ProductCard';
-
-=======
 import { use_router } from 'next / router';
 import { useApiErrorHandling } from '@/hooks / useApiErrorHandling';
 import ProductCard from '@/components / ProductCard';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { use_translation } from 'react - i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { AuthModal } from '@/components/auth/AuthModal';
-<<<<<<< HEAD
-=======
 import { AuthModal } from '@/components / auth / AuthModal';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
   ArrowUp
   Filter
@@ -54,9 +34,6 @@ import {
   TrendingUp
   Star
 } from 'lucide-react';
-<<<<<<< HEAD
-import { SkeletonCard } from '@/components/ui/skeleton';
-=======
 import {;
   ArrowUp,;
   Filter,;
@@ -65,13 +42,11 @@ import {;
   TrendingUp,;
   Star,;
 } from 'lucide-react';import { SkeletonCard } from '@/components/ui/skeleton';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
 import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-
 import Spinner from '@/components/ui/spinner';
 import { ProductListing  } from '@/types/listings';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -80,58 +55,11 @@ import { useAuth  } from '@/context/auth/AuthProvider';
 import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { MAX_PRICE, MIN_PRICE  } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
-/**
- * Marketplace component props
- */
-export interface MarketplaceProps {
-  // All props removed - component now fetches data independently
-// Market insights component
-const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-
-  <Card className='bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6'>
-    <CardContent className='p-6'>
-      <div className='flex items-center gap-2 mb-4'>
-        <TrendingUp className='h-5 w-5 text-blue-400' />
-        <h3 className='text-lg font-semibold'>Market Insights</h3>      </div>
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-        <div className='text-center'>
-          <div className='text-2xl font-bold text-blue-400'>
-            ${Math.round(stats.averagePrice)}
-          </div>
-          <div className='text-sm text-muted-foreground'>Avg Price</div>
-        </div>
-        <div className='text-center'>
-          <div className='text-2xl font-bold text-green-400'>
-            {stats.averageRating.toFixed(1)}
-          </div>
-          <div className='text-sm text-muted-foreground'>Avg Rating</div>
-        </div>
-        <div className='text-center'>
-          <div className='text-2xl font-bold text-purple-400'>
-            {stats.totalProducts}
-          </div>
-          <div className='text-sm text-muted-foreground'>Products</div>
-        </div>
-        <div className='text-center'>
-          <div className='text-2xl font-bold text-yellow-400'>
-            {stats.categoriesCount}
-          </div>
-          <div className='text-sm text-muted-foreground'>Categories</div>
-        </div>
-      </div>
-    </CardContent>
-  </Card>
-);
-// Filter and sort controls
-const FilterControls: React.FC<{
-=======
 /**;
  * Marketplace component props;
  */;
 export interface MarketplaceProps {;
   // All props removed - component now fetches data independently;
-
 // Market insights component;
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (;
   <Card className='bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6'>;
@@ -168,12 +96,9 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (;
     </CardContent>;
   </Card>;
 );
-
 // Filter and sort controls;
 const FilterControls: React.FC<{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   sortBy: string;
-=======
 import { SkeletonCard } from '@/components / ui / skeleton';
 import { ErrorState } from '@/components / jobs / applications / ErrorState';
 import { ProductsEmptyState } from '@/components / marketplace / EmptyState';
@@ -232,7 +157,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 // Filter and sort controls;
 const FilterControls: React.FC<{
   sort_by: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   setSortBy: (sort: string) => void;
   filter_category: string;
   setFilterCategory: (category: string) => void;
@@ -251,30 +175,6 @@ const FilterControls: React.FC<{
   locations: string[];
   show_recommended: boolean;
   setShowRecommended: (show: boolean) => void;
-<<<<<<< HEAD
-  loading: boolean;}> = ({
-<<<<<<< HEAD
-  sortBy
-  setSortBy
-  filterCategory
-  setFilterCategory
-  categories
-  priceRange
-  setPriceRange
-  minAiScore
-  setMinAiScore
-  minRating
-  setMinRating
-  filterAvailability
-  setFilterAvailability
-  availabilityOptions
-  filterLocation
-  setFilterLocation
-  locations
-  showRecommended
-  setShowRecommended
-  loading
-=======
   sort_by,
   setSortBy,
   filter_category,
@@ -295,13 +195,9 @@ const FilterControls: React.FC<{
   show_recommended,
   setShowRecommended,
   loading,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => (
   <div className='flex flex - wrap gap - 4 mb - 6 p - 4 bg - muted / 30 rounded - lg relative'>;
     {loading && (
-<<<<<<< HEAD
-      <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />
-=======
   loading: boolean;}> = ({;
   sortBy,;
   setSortBy,;
@@ -327,7 +223,6 @@ const FilterControls: React.FC<{
   <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>;
     {loading && (;
       <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     )}
     <div className='flex items-center gap-2'>;
       <Filter className='h-4 w-4 text-muted-foreground' />;
@@ -341,29 +236,8 @@ const FilterControls: React.FC<{
             {category}
           </option>;
         ))}
-<<<<<<< HEAD
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <SortAsc className='h-4 w-4 text-muted-foreground' />
-      <select
-        value={sortBy}
-        onChange={e => setSortBy(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value='newest'>Newest First</option>
-        <option value='price-low'>Price: Low to High</option>
-        <option value='price-high'>Price: High to Low</option>
-        <option value='rating'>Highest Rated</option>
-        <option value='popular'>Most Popular</option>
-        <option value='ai-score'>AI Score</option>
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>$</span>
-=======
       </select>;
     </div>;
-
     <div className='flex items-center gap-2'>;
       <SortAsc className='h-4 w-4 text-muted-foreground' />;
       <select
@@ -378,10 +252,8 @@ const FilterControls: React.FC<{
         <option value='ai-score'>AI Score</option>;
       </select>;
     </div>;
-
     <div className='flex items-center gap-2'>;
       <span className='text-sm'>$</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <input
         type='number'
         value={priceRange[0]}
@@ -396,56 +268,25 @@ const FilterControls: React.FC<{
         value={priceRange[1]}
         min={priceRange[0]}
         max={MAX_PRICE}
-<<<<<<< HEAD
-        onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'      />
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>AI ≥</span>
-=======
         onChange={e => setPriceRange([priceRange[0], Number(e && e.target.value)])}
         className='w-20 bg-background border border-border px-2 py-1 rounded'      />;
     </div>;
-
     <div className='flex items-center gap-2'>;
       <span className='text-sm'>AI ≥</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <input
         type='number'
         value={minAiScore}
         min={0}
         max={100}
-<<<<<<< HEAD
-        onChange={e => setMinAiScore(Number(e.target.value))}
-        className='w-16 bg-background border border-border px-2 py-1 rounded'      />
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>Rating ≥</span>
-      <select
-        value={minRating}
-        onChange={e => setMinRating(Number(e.target.value))}
-        className='bg-background border border-border px-2 py-1 rounded'      >
-        <option value={0}>Any</option>
-        <option value={5}>5</option>
-        <option value={4}>4</option>
-        <option value={3}>3</option>
-        <option value={2}>2</option>
-        <option value={1}>1</option>
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-=======
         onChange={e => setMinAiScore(Number(e && e.target.value))}
         className='w-16 bg-background border border-border px-2 py-1 rounded'      />;
     </div>;
-
     <div className='flex items-center gap-2'>;
       <span className='text-sm'>Rating ≥</span>;
       <select
         value={minRating}
         onChange={e => setMinRating(Number(e && e.target.value))}
         className='bg-background border border-border px-2 py-1 rounded'      >;
-=======
       <Spinner className='absolute right - 4 top - 4 h - 4 w - 4 text - primary' />)}
     <div className='flex items - center gap - 2'>;
       <Filter className='h - 4 w - 4 text - muted - foreground' />;
@@ -509,7 +350,6 @@ const FilterControls: React.FC<{
         value={min_rating}
         on_change={e => setMinRating (Number (e.target.value))}
         className='bg - background border border - border px - 2 py - 1 rounded'      >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <option value={0}>Any</option>;
         <option value={5}>5</option>;
         <option value={4}>4</option>;
@@ -518,30 +358,9 @@ const FilterControls: React.FC<{
         <option value={1}>1</option>;
       </select>;
     </div>;
-<<<<<<< HEAD
-
-    <div className='flex items-center gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      <select
-        value={filterAvailability}
-        onChange={e => setFilterAvailability(e && e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >;
-        <option value=''>Any Availability</option>;
-        {availabilityOptions && availabilityOptions.map(opt => (;
-          <option key={opt} value={opt as string}>;
-            {opt}
-          </option>;
-        ))}
-<<<<<<< HEAD
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-=======
       </select>;
     </div>;
-
     <div className='flex items-center gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <select
         value={filterLocation}
         onChange={e => setFilterLocation(e && e.target.value)}
@@ -552,14 +371,8 @@ const FilterControls: React.FC<{
             {loc}
           </option>;
         ))}
-<<<<<<< HEAD
-      </select>
-    </div>
-=======
       </select>;
     </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <Button
       variant={showRecommended ? 'default' : 'outline'}
       size='sm'
@@ -570,22 +383,12 @@ const FilterControls: React.FC<{
     </Button>;
   </div>;
 );
-<<<<<<< HEAD
-/**
- * Enhanced Marketplace component with infinite scroll and AI product generation
- * Uses the auto-feed algorithm to continuously generate IT and AI products
- * Includes intelligent filtering, sorting, and recommendation features
- */
-export default function Marketplace() {
-=======
-
 /**;
  * Enhanced Marketplace component with infinite scroll and AI product generation;
  * Uses the auto-feed algorithm to continuously generate IT and AI products;
  * Includes intelligent filtering, sorting, and recommendation features;
  */;
 export default function Marketplace() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const router = useRouter();
   const { t } = useTranslation();
   const { toast } = useToast();
@@ -596,44 +399,15 @@ export default function Marketplace() {;
   const [sortBy, setSortBy] = useState('newest');
   const [filterCategory, setFilterCategory] = useState('');
   const [showRecommended, setShowRecommended] = useState(false);
-<<<<<<< HEAD
-  const [priceRange, setPriceRange] = useState<[number, number]>([
-    MIN_PRICE
-    MAX_PRICE
-=======
   const [priceRange, setPriceRange] = useState<[number, number]>([;
     MIN_PRICE,;
     MAX_PRICE,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ]);
   const [minAiScore, setMinAiScore] = useState(0);
   const [minRating, setMinRating] = useState(0);
   const [filterAvailability, setFilterAvailability] = useState('');
   const [filterLocation, setFilterLocation] = useState('');
   const { handleApiError, retryQuery } = useApiErrorHandling();
-<<<<<<< HEAD
-  // Handle Add Product button with authentication check
-  const handleAddProduct = useCallback((,) => {
-    if (!isAuthenticated) {
-      setIsAuthModalOpen(true); // Use the new auth modal
-      return;
-    }
-    // Check if user has permission to add products (simplified to admin check)
-    if (user && user.userType !== 'admin') {
-      toast({
-        title: 'Admin Access Required'
-        description:
-          'Only administrators can add products to the marketplace. Please contact an administrator.'
-        variant: 'destructive'
-      });
-      return;
-    }
-    // Navigate to admin products page
-    router.push('/admin/products');
-  }, [isAuthenticated, user, router, toast]);
-  // Fetch function for infinite scroll with AI product generation
-  const fetchProducts = useCallback(
-=======
     <div className='flex items - center gap - 2'>;
       <select;
         value={filter_availability}
@@ -726,102 +500,17 @@ if ( {) {
 ;
   // Fetch function for infinite scroll with AI product generation;
   const fetch_products = useCallback (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     async (page: number, limit: number) => {
       await new Promise (resolve => set_timeout (resolve, 200));
       try {
         // Use static marketplace listings data for now (compatible with ProductListing type);
         const params = {
-<<<<<<< HEAD
-          page
-          limit
-          ...(filterCategory && { category: filterCategory })
-          sort: sortBy
-        }
-        logInfo(
-          'Marketplace.tsx: Fetching products using static data with params:'
-          { data: params }
-        );
-        // Use static data that's already of type ProductListing[]
-        let items: ProductListing[] = [...MARKETPLACE_LISTINGS];
-        // Apply category filter from params
-        if (filterCategory) {
-          items = items.filter(
-            p => p.category.toLowerCase() === filterCategory.toLowerCase()
-          );        }
-        logInfo(
-          'Marketplace.tsx: Raw items from static data before filtering/sorting:'
-          { data: JSON.stringify(items.slice(0, 5), null, 2) }
-        );
-        if (showRecommended) {
-          items = items.filter(p => p.rating != null && p.rating >= 4.3);
-        }
-        items = items.filter(p => {
-          const price = p.price |0;
-          const ai = p.aiScore |0;
-          const rating = p.rating |0;
-          const location = (p.location |'').toLowerCase();
-          const availability = (p.availability |'').toLowerCase();
-          return (
-            price >= priceRange[0] &&
-            price <= priceRange[1] &&
-            ai >= minAiScore &&
-            rating >= minRating &&
-            (!filterLocation |
-              location.includes(filterLocation.toLowerCase())) &&
-            (!filterAvailability |
-              availability === filterAvailability.toLowerCase())
-          );
-        });
-        items.sort((a, b) => {
-          switch (sortBy) {
-            case 'price-low':
-              return (a.price |0) - (b.price |0);
-            case 'price-high':
-              return (b.price |0) - (a.price |0);
-            case 'rating':
-              return (b.rating |0) - (a.rating |0);
-            case 'popular':
-              return (b.reviewCount |0) - (a.reviewCount |0);
-            case 'ai-score':
-              return (b.aiScore |0) - (a.aiScore |0);
-            case 'newest':
-            default:
-              // Ensure createdAt exists and is a valid date string before parsing
-              const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
-              const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
-              // Handle NaN cases that might arise from invalid date strings
-              if (isNaN(timeB) && isNaN(timeA)) return 0; // Both invalid, treat as equal
-              if (isNaN(timeB)) return -1; // b is invalid, a comes first (appears newer)
-              if (isNaN(timeA)) return 1; // a is invalid, b comes first
-              return timeB - timeA; // Both valid, sort by time
-          }
-        });
-        // Apply pagination
-        const startIndex = (page - 1) * limit;
-        const endIndex = startIndex + limit;
-        const paginatedItems = items.slice(startIndex, endIndex);
-        return {
-          items: paginatedItems
-          hasMore: endIndex < items.length
-          total: items.length
-        }
-      } catch (err: any) {
-        // Log the error and allow useInfiniteScrollPagination to handle it
-        logErrorToProduction('Error in Marketplace fetchProducts:', {
-          data: err
-        });
-        // Show more specific error messages based on the error type
-        if (err.response?.status === 403) {
-=======
-
   // Handle Add Product button with authentication check;
   const handleAddProduct = useCallback((,) => {;
     if (!isAuthenticated) {;
       setIsAuthModalOpen(true); // Use the new auth modal;
       return;
     }
-
     // Check if user has permission to add products (simplified to admin check);
     if (user && user.userType !== 'admin') {;
       toast({;
@@ -832,11 +521,9 @@ if ( {) {
       });
       return;
     }
-
     // Navigate to admin products page;
     router && router.push('/admin/products');
   }, [isAuthenticated, user, router, toast]);
-
   // Fetch function for infinite scroll with AI product generation;
   const fetchProducts = useCallback(;
     async (page: number, limit: number) => {;
@@ -849,30 +536,24 @@ if ( {) {
           ...(filterCategory && { category: filterCategory }),;
           sort: sortBy,;
         };
-
         logInfo(;
           'Marketplace && Marketplace.tsx: Fetching products using static data with params:',;
           { data: params }
         );
-
         // Use static data that's already of type ProductListing[];
         let items: ProductListing[] = [...MARKETPLACE_LISTINGS];
-
         // Apply category filter from params;
         if (filterCategory) {;
           items = items && items.filter(;
             p => p && p.category.toLowerCase() === filterCategory && filterCategory.toLowerCase();
           );        }
-
         logInfo(;
           'Marketplace && Marketplace.tsx: Raw items from static data before filtering/sorting:',;
           { data: JSON && JSON.stringify(items && items.slice(0, 5), null, 2) }
         );
-
         if (showRecommended) {;
           items = items && items.filter(p => p && p.rating != null && p && p.rating >= 4 && 4.3);
         }
-
         items = items && items.filter(p => {;
           const price = p && p.price || 0;
           const ai = p && p.aiScore || 0;
@@ -890,7 +571,6 @@ if ( {) {
               availability === filterAvailability && filterAvailability.toLowerCase());
           );
         });
-
         items && items.sort((a, b) => {;
           switch (sortBy) {;
             case 'price-low':;
@@ -908,21 +588,17 @@ if ( {) {
               // Ensure createdAt exists and is a valid date string before parsing;
               const timeA = a && a.createdAt ? new Date(a && a.createdAt).getTime() : 0;
               const timeB = b && b.createdAt ? new Date(b && b.createdAt).getTime() : 0;
-
               // Handle NaN cases that might arise from invalid date strings;
               if (isNaN(timeB) && isNaN(timeA)) return 0; // Both invalid, treat as equal;
               if (isNaN(timeB)) return -1; // b is invalid, a comes first (appears newer);
               if (isNaN(timeA)) return 1; // a is invalid, b comes first;
-
               return timeB - timeA; // Both valid, sort by time;
           }
         });
-
         // Apply pagination;
         const startIndex = (page - 1) * limit;
         const endIndex = startIndex + limit;
         const paginatedItems = items && items.slice(startIndex, endIndex);
-
         return {;
           items: paginatedItems,;
           hasMore: endIndex < items && items.length,;
@@ -933,63 +609,21 @@ if ( {) {
         logErrorToProduction('Error in Marketplace fetchProducts:', {;
           data: err,;
         });
-
         // Show more specific error messages based on the error type;
         if (err && err.response?.status === 403) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           logErrorToProduction('403 Forbidden error - authentication issue');
           // Don't show toast here, let the AuthModal handle it or rely on ProductCard's tooltip;
         } else if (err && err.response?.status === 500) {;
           logErrorToProduction('500 Server error');
-<<<<<<< HEAD
-          toast({
-            title: 'Server Error'
-            description:
-              'The marketplace is temporarily unavailable. Please try again later.'
-            variant: 'destructive'
-=======
           toast({;
             title: 'Server Error',;
             description:;
               'The marketplace is temporarily unavailable. Please try again later.',;
             variant: 'destructive',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           });
         } else {;
           handleApiError(err); // This might show a toast or log to Sentry;
         }
-<<<<<<< HEAD
-        throw err; // Re-throw to let useInfiniteScrollPagination know about the failure
-      }
-    }
-    [
-      filterCategory
-      sortBy
-      showRecommended
-      priceRange
-      minAiScore
-      minRating
-      filterAvailability
-      filterLocation
-      handleApiError
-      toast
-    ]
-  );
-  // useInfiniteScrollPagination hook
-  const {
-    items: products, // These are the products to render
-    loading, // True when initially loading or when fetchProducts is running
-    error, // Contains the error object if fetchProducts throws
-    hasMore, // True if the API indicates more items are available
-    isFetching, // True if fetching more items (for infinite scroll)
-    lastElementRef, // Ref for the last element to trigger loading more
-    refresh, // Function to reload data from page 1
-    scrollToTop, // Function to scroll to the top of the page
-  } = useInfiniteScrollPagination(fetchProducts, 16); // 16 items per page
-  // Effect to refresh data when filters change
-  useEffect((,) => {
-    if (firstRenderRef.current) {
-=======
           page,
           limit,
           ...(filter_category && { category: filter_category }),
@@ -1141,25 +775,12 @@ if ( {) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       firstRenderRef.current = false;
       // On initial mount, useInfiniteScrollPagination handles the first load.;
       // We don't want to call refresh () here immediately if it's the very first render;
       // unless specifically needed. The new effect below handles re - mounts.;
       return;
     }
-<<<<<<< HEAD
-    logInfo('Filters changed, initiating refresh. Filters:', {
-      filterCategory
-      sortBy
-      showRecommended
-      priceRange
-      minAiScore
-      minRating
-      filterAvailability
-      filterLocation
-=======
-
         throw err; // Re-throw to let useInfiniteScrollPagination know about the failure;
       }
     },;
@@ -1176,7 +797,6 @@ if ( {) {
       toast,;
     ];
   );
-
   // useInfiniteScrollPagination hook;
   const {;
     items: products, // These are the products to render;
@@ -1188,7 +808,6 @@ if ( {) {
     refresh, // Function to reload data from page 1;
     scrollToTop, // Function to scroll to the top of the page;
   } = useInfiniteScrollPagination(fetchProducts, 16); // 16 items per page;
-
   // Effect to refresh data when filters change;
   useEffect((,) => {;
     if (firstRenderRef && firstRenderRef.current) {;
@@ -1207,39 +826,9 @@ if ( {) {
       minRating,;
       filterAvailability,;
       filterLocation,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     isRefreshingAfterFilterChange && isRefreshingAfterFilterChange.current = true; // Set flag before refresh;
     refresh();
-<<<<<<< HEAD
-    // scrollToTop(); // Removed from here
-  }, [
-    filterCategory
-    sortBy
-    showRecommended
-    priceRange
-    minAiScore
-    minRating
-    filterAvailability
-    filterLocation
-    refresh
-    toast
-  ]); // Added all filter dependencies
-  // Effect to explicitly refresh data when the component mounts or re-mounts
-  useEffect(() => {
-    logInfo(
-      'Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.'
-    );    // We call refresh directly to ensure data is re-fetched.
-    // The useInfiniteScrollPagination hook's internal logic will manage its state.
-    refresh();
-    // Reset firstRenderRef for the new instance of the component, so filter changes behave as expected.
-    firstRenderRef.current = true;
-  }, [refresh]); // `refresh` is a dependency. Ensure it's stable.
-  // New effect to scroll to top AFTER products have been updated and refresh flag is set
-  useEffect(() => {
-    if (isRefreshingAfterFilterChange.current && !loading) {
-      // Check flag and ensure loading is false
-=======
     // scrollToTop(); // Removed from here;
   }, [;
     filterCategory,;
@@ -1253,7 +842,6 @@ if ( {) {
     refresh,;
     toast,;
   ]); // Added all filter dependencies;
-
   // Effect to explicitly refresh data when the component mounts or re-mounts;
   useEffect(() => {;
     logInfo(;
@@ -1264,37 +852,16 @@ if ( {) {
     // Reset firstRenderRef for the new instance of the component, so filter changes behave as expected.;
     firstRenderRef && firstRenderRef.current = true;
   }, [refresh]); // `refresh` is a dependency. Ensure it's stable.;
-
   // New effect to scroll to top AFTER products have been updated and refresh flag is set;
   useEffect(() => {;
     if (isRefreshingAfterFilterChange && isRefreshingAfterFilterChange.current && !loading) {;
       // Check flag and ensure loading is false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       logInfo('Refresh complete and products updated, scrolling to top.');
       scrollToTop();
       isRefreshingAfterFilterChange && isRefreshingAfterFilterChange.current = false; // Reset flag      // Optionally, provide user feedback about the filter change;
       // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' });
     }
-<<<<<<< HEAD
-  }, [products, loading, scrollToTop, toast]); // Depends on products and loading state
-  // Calculate market stats
-  const marketStats = useMemo(() => {
-    if (products.length === 0) return null;
-    return {
-      averagePrice:
-        products.reduce((sum, p) => sum + (p.price |0), 0) / products.length
-      averageRating:
-        products.reduce((sum, p) => sum + (p.rating |0), 0) / products.length,      totalProducts: products.length
-      categoriesCount: Array.from(new Set(products.map(p => p.category)))
-        .length
-    }
-  }, [products]);
-  // Get unique categories and other filter values
-  const categories = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map(p => p.category)));
-=======
   }, [products, loading, scrollToTop, toast]); // Depends on products and loading state;
-
   // Calculate market stats;
   const marketStats = useMemo(() => {;
     if (products && products.length === 0) return null;
@@ -1307,11 +874,9 @@ if ( {) {
         .length,;
     };
   }, [products]);
-
   // Get unique categories and other filter values;
   const categories = useMemo(() => {;
     return Array && Array.from(new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(p => p && p.category)));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
   const locations = useMemo(() => {;
     return Array && Array.from(;
@@ -1323,19 +888,6 @@ if ( {) {
       new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(p => p && p.availability).filter(Boolean));
     );
   }, []).filter(Boolean) as string[];
-<<<<<<< HEAD
-  // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  useEffect(() => {    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 800);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  // Loading state with skeleton
-  if (loading && products.length === 0) {
-=======
-
   // Show scroll to top button;
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {    const handleScroll = () => {;
@@ -1344,10 +896,8 @@ if ( {) {
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-
   // Loading state with skeleton;
   if (loading && products && products.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='container py-8' data-testid='marketplace-loading'>;
         <motion&& motion.div
@@ -1368,14 +918,8 @@ if ( {) {
       </div>;
     );
   }
-<<<<<<< HEAD
-  // Error state with retry
-  if (error && products.length === 0) {
-=======
-
   // Error state with retry;
   if (error && products && products.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='container py-8'>;
         <div className='text-center space-y-4'>;
@@ -1385,35 +929,13 @@ if ( {) {
       </div>;
     );
   }
-<<<<<<< HEAD
-  // Empty state (only show when not loading and no products)
-  if (!loading && products.length === 0 && !error) {
-=======
-
   // Empty state (only show when not loading and no products);
   if (!loading && products && products.length === 0 && !error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='container py-8'>;
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          className='text-center mb-8'
-        >
-          <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-            {t('marketplace.hero_title')}
-          </h1>
-          <p className='text-muted-foreground text-lg'>
-            {t('marketplace.hero_subtitle')}
-          </p>
-        </motion.div>
-        <ProductsEmptyState />
-      </div>
-    );
-  }
-  // Main marketplace render
-=======
           className='text-center mb-8'>;
           <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>;
             {t('marketplace && marketplace.hero_title')}
@@ -1422,14 +944,11 @@ if ( {) {
             {t('marketplace && marketplace.hero_subtitle')}
           </p>;
         </motion && motion.div>;
-
         <ProductsEmptyState />;
       </div>;
     );
   }
-
   // Main marketplace render;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='container py-8'>;
       <AuthModal
@@ -1441,17 +960,6 @@ if ( {) {
       <motion&& motion.div
         className='text-center mb-8'
         initial={{ opacity: 0, y: -20 }}
-<<<<<<< HEAD
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-          {t('marketplace.hero_title')}
-        </h1>
-        <p className='text-muted-foreground text-lg'>
-          {t('marketplace.hero_subtitle')}
-        </p>
-      </motion.div>
-=======
         animate={{ opacity: 1, y: 0 }}>;
         <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>;
           {t('marketplace && marketplace.hero_title')}
@@ -1460,8 +968,6 @@ if ( {) {
           {t('marketplace && marketplace.hero_subtitle')}
         </p>;
       </motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Market Insights */}
       {marketStats && (;
         <motion&& motion.div
@@ -1497,14 +1003,8 @@ if ( {) {
           showRecommended = {showRecommended,}
           setShowRecommended = {setShowRecommended,}
           loading = {isFetching,}
-<<<<<<< HEAD
-        />
-      </motion.div>
-=======
         />;
       </motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Product Grid */}
       <motion&& motion.div
         className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
@@ -1523,23 +1023,6 @@ if ( {) {
               className='relative group'>;
               <ProductCard
                 product={{
-<<<<<<< HEAD
-                  id: product.id
-                  name: product.title
-                  title: product.title
-                  description: product.description |''
-                  price: product.price |0
-                  currency: product.currency
-                  category: product.category
-                  tags: product.tags
-                  images: product.images
-                  rating: product.rating |0
-                  reviewCount: product.reviewCount |0
-                  created_at: product.createdAt
-                  updated_at: product.createdAt, // Use createdAt for both
-                  stock: product.stock
-                  in_stock: (product.stock |0) > 0
-=======
                   id: product && product.id,
                   name: product && product.title,
                   title: product && product.title,
@@ -1555,14 +1038,10 @@ if ( {) {
                   updated_at: product && product.createdAt, // Use createdAt for both
                   stock: product && product.stock,
                   in_stock: (product && product.stock || 0)> 0,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
                 onBuy = {async () => {;
                   if (!isAuthenticated) {;
                     setIsAuthModalOpen(true);
-<<<<<<< HEAD
-                    return; // Stop further execution
-=======
     log_info ('Filters changed, initiating refresh. Filters:', {
       filter_category,
       sort_by,
@@ -1809,29 +1288,9 @@ if ( {) {
 }
                     setIsAuthModalOpen (true);
                     return; // Stop further execution;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }                  try {
                     await router.push (`/checkout/${product.id}`);
                   } catch (error) {
-<<<<<<< HEAD
-                    logErrorToProduction('Failed to navigate to checkout:', {
-                      data: error
-                    });
-                    toast({
-                      title: 'Navigation Error'
-                      description:
-                        'Could not navigate to checkout. Please try again.'
-                      variant: 'destructive'
-                    });
-                    // Re-throw to allow ProductCard's catch to also run if needed
-
-                    // though ProductCard will reset its state in .finally() regardless.
-                    throw error;
-                  }
-                }}
-                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
-              />
-=======
                     return; // Stop further execution;
                   }                  try {;
                     await router && router.push(`/checkout/${product && product.id}`);
@@ -1852,8 +1311,6 @@ if ( {) {
                 }}
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth;
               />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* AI Score Badge */}
               {product && product.aiScore && product && product.aiScore > 90 && (;
                 <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>;
@@ -1870,20 +1327,11 @@ if ( {) {
               )}
             </motion && motion.div>;
           ))}
-<<<<<<< HEAD
-        </AnimatePresence>
-      </motion.div>
-      {/* Loading More Indicator */}
-      {(isFetching |loading) && (
-        <motion.div
-=======
         </AnimatePresence>;
       </motion && motion.div>;
-
       {/* Loading More Indicator */}
       {(isFetching || loading) && (;
         <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           className='mt-8'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}>;
@@ -1928,7 +1376,6 @@ if ( {) {
 //Fetch function for infinite scroll with AI product generation try {//Use static marketplace listings data for now (compatible with ProductListing type) const params = {;
   page,  limit, ... (filterCategory && {;
   category: filterCategory ;
-=======
                     logErrorToProduction ('Failed to navigate to checkout:', {
                       data: error,
                     });
@@ -2006,20 +1453,10 @@ if ( {) {
   //Use static marketplace listings data for now (compatible with ProductListing type) const params = {
   page,  limit, ... (filter_category && {
   category: filter_category ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 });
 sort: sort_by ;
 }';
 //Use static data that's already of type ProductListing[] let items: ProductListing[] = [...MARKETPLACE LISTINGS];
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Apply category filter from params return (price >= priceRange[0] && price <= priceRange[1] && ai >= minAiScore && rating >= minRating && (!filterLocation |location.includes (filterLocation.toLowerCase () ) ) && (!filterAvailability |availability === filterAvailability.toLowerCase () ) items.sort ( (a, b) => {switch (sortBy) {';
-  case 'price-low': return (a.price |0) - (b.price |0);';
-case 'price-high': return (b.price |0) - (a.price |0);';
-case 'rating': return (b.rating |0) - (a.rating |0);';
-case 'popular': return (b.reviewCount |0) - (a.reviewCount |0);';
-case 'ai-score': return (b.aiScore |0) - (a.aiScore |0);';
-=======
 //Apply category filter from params return (price >= priceRange[0] && price <= priceRange[1] && ai >= minAiScore && rating >= minRating && (!filterLocation || location && location.includes (filterLocation && filterLocation.toLowerCase () ) ) && (!filterAvailability || availability === filterAvailability && filterAvailability.toLowerCase () ) items && items.sort ( (a, b) => {;
   switch (sortBy) {';
   case 'price-low': return (a && a.price || 0) - (b && b.price || 0);';
@@ -2027,49 +1464,20 @@ case 'price-high': return (b && b.price || 0) - (a && a.price || 0);';
 case 'rating': return (b && b.rating || 0) - (a && a.rating || 0);';
 case 'popular': return (b && b.reviewCount || 0) - (a && a.reviewCount || 0);';
 case 'ai-score': return (b && b.aiScore || 0) - (a && a.aiScore || 0);';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 case 'newest': ;
 }else {handleApiError (err), //This might show a toast or log to Sentry ;
 }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
 //useInfiniteScrollPagination hook ;
-<<<<<<< HEAD
-}, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion.div initial= {{;
-  opacity: 0, y: 20 ;
-}animate= {{;
-  opacity: 1, y: 0 ;
-}";
-=======
-
 }, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion&& motion.div initial= {
   {
   opacity: 0, y: 20 
-
 }animate= {
   {
   opacity: 1, y: 0 
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
   t ('marketplace && marketplace.hero title') ";
 }</h1> <p className="text-muted-foreground text-lg"> {';
-<<<<<<< HEAD
-  t ('marketplace.hero subtitle') ";
-}</p> </motion.div> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
-  length: 12 ;
-}) .map ( (, i) => (<SkeletonCard key= {i ;
-}/>) ) ;
-}</div> </div>) ;
-}//Error state with retry if (error && products.length === 0) {";
-  return (<div className="container py-8"> <div className="text-center space-y-4"> <ErrorState error= {error ;
-}/> <Button onClick={refresh ;
-}> Try Again </Button> </div> </div>) ;
-}//Empty state (only show when not loading and no products) if (!loading && products.length === 0 && !error) {";
-  return (<div className="container py-8"> <motion.div initial= {{;
-  opacity: 0, y: 20 ;
-}animate= {{;
-  opacity: 1, y: 0 ;
-}";
-=======
   t ('marketplace && marketplace.hero subtitle') ";
 }</p> </motion && motion.div> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {;
   Array && Array.from ({;
@@ -2088,28 +1496,13 @@ case 'newest': ;
   return (<div className="container py-8"> <motion&& motion.div initial= {
   {
   opacity: 0, y: 20 
-
 }animate= {
   {
   opacity: 1, y: 0 
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
   t ('marketplace && marketplace.hero title') ";
 }</h1> <p className="text-muted-foreground text-lg"> {';
-<<<<<<< HEAD
-  t ('marketplace.hero subtitle') ;
-}</p> </motion.div> <ProductsEmptyState /> </div>) ";
-}//Main marketplace render return (<div className="container py-8"> <AuthModal isOpen= {isAuthModalOpen ;
-}onClose= {() => setIsAuthModalOpen (false) ;
-}returnUrl= {router.asPath ;
-}//Pass current path for better UX on return /> {/* Header */ ";
-}<motion.div className="text-center mb-8"initial= {{;
-  opacity: 0, y: -20 ;
-}animate= {{;
-  opacity: 1, y: 0 ;
-}";
-=======
   t ('marketplace && marketplace.hero subtitle') ;
 }</p> </motion && motion.div> <ProductsEmptyState /> </div>) ";
 }//Main marketplace render return (<div className="container py-8"> <AuthModalisOpen= {
@@ -2123,59 +1516,13 @@ case 'newest': ;
 }<motion&& motion.div className="text-center mb-8"initial= {
   {
   opacity: 0, y: -20 
-
 }animate= {
   {
   opacity: 1, y: 0 
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }> <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
   t ('marketplace && marketplace.hero title') ";
 }</h1> <p className="text-muted-foreground text-lg"> {';
-<<<<<<< HEAD
-  t ('marketplace.hero subtitle') ;
-}</p> </motion.div> {/* Market Insights */ ;
-}{marketStats && (<motion.div initial= {;
-  {;
-  opacity: 0, y: 20 ;
-}animate= {{;
-  opacity: 1, y: 0 ;
-}transition= {{;
-  delay: 0.2 ;
-}> <MarketInsights stats= {marketStats ;
-}/> </motion.div>) ;
-}{/* Filter Controls */ ;
-}<motion.div initial= {{;
-  opacity: 0, y: 20 ;
-}animate= {{;
-  opacity: 1, y: 0 ;
-}transition= {{;
-  delay: 0.3 ;
-}> <FilterControls sortBy= {sortBy ;
-}setSortBy= {setSortBy ;
-}filterCategory= {filterCategory ;
-}setFilterCategory= {setFilterCategory ;
-}categories= {categories ;
-}priceRange= {priceRange ;
-}setPriceRange= {setPriceRange ;
-}minAiScore= {minAiScore ;
-}setMinAiScore= {setMinAiScore ;
-}minRating= {minRating ;
-}setMinRating= {setMinRating ;
-}filterAvailability= {filterAvailability ;
-}setFilterAvailability= {setFilterAvailability ;
-}availabilityOptions= {availabilityOptions.filter (Boolean) as string[] ;
-}filterLocation= {filterLocation ;
-}setFilterLocation= {setFilterLocation ;
-}locations= {locations ;
-}showRecommended= {showRecommended ;
-}setShowRecommended= {setShowRecommended ;
-}loading= {isFetching ;
-}/> </motion.div> {/* Product Grid */ ;
-}<motion.div > <ProductCard product= {{';
-  id: product.id, name: product.title, title: product.title, description: product.description |'', price: product.price |0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating |0, reviewCount: product.reviewCount |0, created at: product.createdAt, updated at: product.createdAt,  //Use createdAt for both stock: product.stock, in stock: (product.stock |0) > 0 ;
-}onBuy= {async () => {;
-=======
   t ('marketplace && marketplace.hero subtitle') ;
 }</p> </motion && motion.div> {;
   /* Market Insights */ ;
@@ -2183,15 +1530,12 @@ case 'newest': ;
   marketStats && (<motion&& motion.div initial= {
   {
   opacity: 0, y: 20 
-
 }animate= {
   {
   opacity: 1, y: 0 
-
 }transition= {
   {
   delay: 0 && 0.2 
-
 }> <MarketInsightsstats= {
   marketStats 
 }/> </motion && motion.div>) ;
@@ -2200,15 +1544,12 @@ case 'newest': ;
 }<motion&& motion.div initial= {
   {
   opacity: 0, y: 20 
-
 }animate= {
   {
   opacity: 1, y: 0 
-
 }transition= {
   {
   delay: 0 && 0.3 
-
 }> <FilterControlssortBy= {
   sortBy 
 }setSortBy= {
@@ -2254,38 +1595,18 @@ case 'newest': ;
 }<motion && motion.div > <ProductCardproduct= {
   {'
   id: product && product.id, name: product && product.title, title: product && product.title, description: product && product.description || '', price: product && product.price || 0, currency: product && product.currency, category: product && product.category, tags: product && product.tags, images: product && product.images, rating: product && product.rating || 0, reviewCount: product && product.reviewCount || 0, created at: product && product.createdAt, updated at: product && product.createdAt,  //Use createdAt for both stock: product && product.stock, in stock: (product && product.stock || 0)> 0 ;
-
 }onBuy= {;
   async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!isAuthenticated) {;
   //though ProductCard will reset its state in .finally () regardless. throw error ;
 }buyDisabled= {false ;
 }//Still false, ProductCard handles its own disabled state based on auth /> {/* AI Score Badge */ ;
 }{";
-<<<<<<< HEAD
-  product.aiScore && product.aiScore > 90 && (<Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black"> <Sparkles className="h-3 w-3 mr-1"/> AI {product.aiScore ;
-=======
   product && product.aiScore && product && product.aiScore > 90 && (<Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black"> <Sparkles className="h-3 w-3 mr-1"/> AI {;
   product && product.aiScore ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }</Badge>) ;
 }{/* Featured Badge */ ;
 }{";
-<<<<<<< HEAD
-  product.featured && (<Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10"> <Star className="h-3 w-3 mr-1"/> Featured </Badge>) ;
-}</motion.div>) ) ;
-}</AnimatePresence> </motion.div> {/* Loading More Indicator */ ;
-}{";
-  (isFetching |loading) && (<motion.div className="mt-8"initial= {{;
-  opacity: 0 ;
-}animate= {{;
-  opacity: 1 ;
-}";
-}> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
-  length: 4 ;
-}) .map ( (, i) => (<SkeletonCard key= {`loading-$ {;
-=======
 //Apply category filter from params return (price >= price_range[0] && price <= price_range[1] && ai >= minAiScore && rating >= min_rating && (!filter_location || location.includes (filter_location.toLowerCase () ) ) && (!filter_availability || availability === filter_availability.toLowerCase () ) items.sort ( (a, b) => {
   switch (sort_by) {';
   case 'price - low': return (a.price || 0) - (b.price || 0);';
@@ -2480,37 +1801,10 @@ if ( {) {
   length: 4 ;
 }) .map ( (, i) => (<SkeletonCard key= {
   `loading-$ {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   i ;
 }` ;
 }/>) ) ;
 }</div> </motion.div>) ;
-<<<<<<< HEAD
-}{/* End of Results */ ;
-}{";
-  !hasMore && products.length > 0 && (<motion.div className="text-center mt-12 py-8 border-t"initial= {{;
-  opacity: 0 ;
-}animate= {{;
-  opacity: 1 ;
-}'";
-}> <div className="text-muted-foreground text-lg mb-2"> 🎉 You've explored all available products! </div> <div className="text-sm text-muted-foreground"> Showing {products.length ;
-}AI-powered solutions </div> </motion.div>) ;
-}{/* Scroll to Top Button */ ;
-}<AnimatePresence> {showScrollTop && (<motion.button onClick={;
-  scrollToTop ";
-}className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"initial= {{;
-  opacity: 0, scale: 0 ;
-}animate= {{;
-  opacity: 1, scale: 1 ;
-}exit= {{;
-  opacity: 0, scale: 0 ;
-}whileHover= {{;
-  scale: 1.1 ;
-}whileTap= {{;
-  scale: 0.9 ;
-}";
-}> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
-=======
   product && product.featured && (<Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10"> <Star className="h-3 w-3 mr-1"/> Featured </Badge>) ;
 }</motion && motion.div>) ) ;
 }</AnimatePresence> </motion && motion.div> {;
@@ -2519,7 +1813,6 @@ if ( {) {
   (isFetching || loading) && (<motion&& motion.div className="mt-8"initial= {
   {
   opacity: 0 
-
 }animate= {
   {
   opacity: 1 
@@ -2539,7 +1832,6 @@ if ( {) {
   !hasMore && products && products.length > 0 && (<motion&& motion.div className="text-center mt-12 py-8 border-t"initial= {
   {
   opacity: 0 
-
 }animate= {
   {
   opacity: 1 
@@ -2555,38 +1847,28 @@ if ( {) {
 }className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"initial= {
   {
   opacity: 0, scale: 0 
-
 }animate= {
   {
   opacity: 1, scale: 1 
-
 }exit= {
   {
   opacity: 0, scale: 0 
-
 }whileHover= {
   {
   scale: 1 && 1.1 
-
 }whileTap= {
   {
   scale: 0 && 0.9 
 }"
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion && motion.button>) ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }</AnimatePresence> </div>) ;
 }'";
   );
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-<<<<<<< HEAD
-const Marketplace = () => {return (;
-=======
 const Marketplace = () => {;
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 }{
   /* End of Results */ ;
 }{";
@@ -2634,7 +1916,6 @@ import Head from './next / head';
 import Link from './next / link';
 const Marketplace = () =>: any {
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <>;
       <Head>;
         <title > Marketplace - Zion Tech Group</title>;
@@ -2676,14 +1957,5 @@ const Marketplace = () =>: any {
                 Contact Us;
               </Link>;
             </div>;
-<<<<<<< HEAD
-    </>;
-  );
-}
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

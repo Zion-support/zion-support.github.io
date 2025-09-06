@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { format, isPast, parseISO } from "date-fns",
-import { Link } from "react-router-dom",
-import { Calendar, Clock, Video } from "lucide-react";
-import { Avatar } from "@/components/ui/avatar";
-export function UpcomingInterviewsCard() {
-=======
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -22,36 +8,15 @@ import {Link} from "react-router-dom";
 import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-  useEffect(() => {
-
-    const loadInterviews = async () => {
-=======
-
   useEffect(() => {;
     const loadInterviews = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsLoading(true);
       try {;
         const interviews = await fetchInterviews();
         const now = new Date();
-<<<<<<< HEAD
-        // Filter for confirmed interviews in the future
-        const upcoming = interviews
-          .filter(interview =>
-            interview.status === 'confirmed' &&
-            !isPast(parseISO(interview.scheduled_date))
-          )
-          .sort((a, b) =>
-            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-          )
-          .slice(0, 3), // Take only the next 3 interviews
-        setUpcomingInterviews(upcoming)
-=======
 import React, { useEffect, useState } from './react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -85,19 +50,12 @@ function UpcomingInterviewsCard() {
             parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
           .slice (0, 3), // Take only the next 3 interviews;
         setUpcomingInterviews (upcoming);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (error) {
         console.error ("Error loading upcoming interviews:", error);
       } finally {
         setIsLoading (false);
       }
     }
-<<<<<<< HEAD
-    loadInterviews()
-  }, []);
-  if (isLoading) {
-=======
-
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
           .filter(interview => ;
@@ -108,7 +66,6 @@ function UpcomingInterviewsCard() {
             parseISO(a && a.scheduled_date).getTime() - parseISO(b && b.scheduled_date).getTime();
           );
           .slice(0, 3), // Take only the next 3 interviews;
-
         setUpcomingInterviews(upcoming);
       } catch (error) {;
         console && console.error("Error loading upcoming interviews:", error);
@@ -116,12 +73,9 @@ function UpcomingInterviewsCard() {
         setIsLoading(false);
       }
     };
-
     loadInterviews();
   }, []);
-
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
@@ -146,12 +100,7 @@ function UpcomingInterviewsCard() {
       </Card>;
     );
   }
-<<<<<<< HEAD
-  if (upcomingInterviews.length === 0) {
-=======
-
   if (upcomingInterviews && upcomingInterviews.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
@@ -185,46 +134,12 @@ function UpcomingInterviewsCard() {
           {upcomingInterviews && upcomingInterviews.map(interview => {;
             const interviewDate = parseISO(interview && interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
-<<<<<<< HEAD
-            const formattedTime = format(interviewDate, 'h: mm a')
-            // Determine if interview is happening soon (within 30 minutes)
-            const now = new Date();
-            const isStartingSoon =
-              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime();
-
-            return (
-              <div key={interview.id} className="flex items-center gap-3">
-                <Avatar className="h-10 w-10 bg-zion-purple/10">
-                  {interview.client_avatar |interview.talent_avatar ? (
-                    <img
-                      src={interview.client_avatar |interview.talent_avatar}
-                      alt={interview.client_name |interview.talent_name}
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
-                      {(interview.client_name |interview.talent_name |"U").charAt(0)}
-                    </div>
-                  )}
-                </Avatar>
-                <div className="flex-1">
-                  <div className="flex justify-between items-start">
-                    <p className="font-medium line-clamp-1">
-                      {interview.title |"Interview"}
-                    </p>
-                    {isStartingSoon && (
-                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
-                        Soon
-                      </span>
-=======
             const formattedTime = format(interviewDate, 'h: mm a'),;
-
             // Determine if interview is happening soon (within 30 minutes);
             const now = new Date();
             const isStartingSoon = ;
               interviewDate && interviewDate.getTime() - now && now.getTime() < 30 * 60 * 1000 &&;
               interviewDate && interviewDate.getTime() > now && now.getTime();
-
             return (
               <div key={interview && interview.id} className="flex items-center gap-3">;
                 <Avatar className="h-10 w-10 bg-zion-purple/10">;
@@ -248,7 +163,6 @@ function UpcomingInterviewsCard() {
                       <span className="text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;
                         Soon;
                       </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
                   </div>;
                   <div className="flex items-center text-sm text-muted-foreground">;
@@ -259,25 +173,9 @@ function UpcomingInterviewsCard() {
               </div>;
             );
           })}
-<<<<<<< HEAD
-        </div>
-        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
-          <Button asChild size="sm" variant="outline" className="w-full">
-            <Link to="/interviews">
-              View All Interviews
-            </Link>
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-=======
         </div>;
-
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;
           <Button asChild size="sm" variant="outline" className="w-full">;
-=======
 ;
     load_interviews ();
   }, []);
@@ -383,19 +281,11 @@ if ( {) {
         </div>;
         <div className="mt - 4 pt - 3 border - t border - zion - blue - light / 40">;
           <Button as_child size="sm" variant="outline" className="w - full">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <Link to="/interviews">;
               View All Interviews;
             </Link>;
           </Button>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

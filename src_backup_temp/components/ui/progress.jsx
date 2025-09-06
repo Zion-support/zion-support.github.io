@@ -24,10 +24,6 @@ const Progress = React.forwardRef(({className, value, max = 100, ...props}, ref)
     );
 }
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 Progress.displayName = 'Progress';
 ;
 export {Progress};

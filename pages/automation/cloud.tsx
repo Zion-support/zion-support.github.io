@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { useEffect, useState } from 'react';
-
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
@@ -12,9 +6,7 @@ export default function CloudAutomationHub() {
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
-
   }, [])
-
   return (
     <div className="space-y-6">
       <div>
@@ -53,12 +45,7 @@ export default function CloudAutomationHub() {
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { useEffect, useState } from 'react',
 ;
 export default /**
@@ -109,4 +96,3 @@ function CloudAutomationHub() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

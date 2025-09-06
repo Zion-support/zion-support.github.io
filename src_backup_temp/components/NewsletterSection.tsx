@@ -74,12 +74,6 @@ import React from 'react';
                   transition = {;
   { "duration": "0.5",;
   "delay": "inde x * 0.1;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}";
                   className="flex items-start";
 ";
@@ -90,10 +84,6 @@ import React from 'react';
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>";
                     <p className="text-gray-400">{benefit.description}</p>;
                   </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}"
                   className="flex items-start"
 "
@@ -124,12 +114,6 @@ import React from 'react';
             transition = {;
   { "duration": "0.6",;
   "delay": "0.2;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "}}
           >";
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">";
@@ -148,10 +132,6 @@ import React from 'react';
                   <input";
                     type="email";
                     id="email";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 }}
           >"
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">"

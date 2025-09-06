@@ -1,50 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { TUTORIALS } from '@/data/tutorials'
-import { SEO } from '@/components/SEO'
-import { Button } from '@/components/ui/button'
-import { ArrowLeft } from 'lucide-react'
-import ReactMarkdown from "react-markdown";
-import type { Tutorial as TutorialType } from "@/types/tutorial";
-interface TutorialPageProps {
-  tutorial?: TutorialType
-export default function Tutorial({
-  tutorial: initialTutorial
-}: TutorialPageProps) {
-  const router = useRouter()
-  const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
-  tutorial?: TutorialType
-}
-export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
-
-  const router = useRouter()
-  const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -56,10 +24,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import type { Tutorial as TutorialType } from '@/types/tutorial';
-
 interface TutorialPageProps {;
   tutorial?: TutorialType;
-
 export default function Tutorial(): any ({;
   tutorial: initialTutorial,;
 }: TutorialPageProps) {;
@@ -72,21 +38,12 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
   const router = useRouter(),;
   const slug = router && router.query.slug as string | undefined,;
   const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find((t,) => t && t.slug === slug),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   if (!tutorial) {;
     return (
-<<<<<<< HEAD
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>
-        Tutorial not found.
-      </div>
-    )
-=======
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>;
         Tutorial not found.;
       </div>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <>;
@@ -116,24 +73,11 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
                 : tutorial && tutorial.author.name}
             </p>;
           )}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </>
-  )
-}
-=======
         </div>;
       </div>;
     </>;
   );
-
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { TUTORIALS } from '@/data / tutorials';
@@ -201,4 +145,3 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

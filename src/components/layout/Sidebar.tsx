@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
   Home,
   Users,
@@ -15,7 +8,6 @@ import {
   Phone,
   Menu
 } from 'lucide-react';
-
 const Sidebar = () => {
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
@@ -23,12 +15,7 @@ const Sidebar = () => {
     { name: 'Services', href: '/services', icon: Settings },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Contact', href: '/contact', icon: Phone }
-<<<<<<< HEAD
-  ]
-=======
   ];
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
       <div className="p-6">
@@ -52,37 +39,26 @@ const Sidebar = () => {
         </nav>
       </div>
     </aside>
-<<<<<<< HEAD
-  )
-}
-export default Sidebar
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const Sidebar: React.FC = () => {;
   return (
     <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 lg:block hidden">;
@@ -119,10 +95,7 @@ const Sidebar: React.FC = () => {;
     </div>;
   );
 };
-
 export default Sidebar;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   };
 ,
   const navigationSections = [,
@@ -327,9 +300,6 @@ export default Sidebar;
     </motion.aside>,
   ),
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   );
 };
 export default Sidebar;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,53 +1,23 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-import AIAssistant from '../../components/ui/AIAssistant';
-<<<<<<< HEAD
-
-const ResumeBuilder: NextPage = () => {
-  const [role, setRole] = useState('Data Scientist')
-  const [experienceYears, setExperienceYears] = useState(5)
-  const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems')
-  const [tone, setTone] = useState('clear and concise')
-  const [summary, setSummary] = useState('')
-  const [experience, setExperience] = useState('')
-  const [skillsText, setSkillsText] = useState('')
-  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN
-=======
 const ResumeBuilder: NextPage = () => {
   const [role, setRole] = useState('Data Scientist');
   const [experienceYears, setExperienceYears] = useState(5);
   const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems');
   const [tone, setTone] = useState('clear and concise');
-
   const [summary, setSummary] = useState('');
   const [experience, setExperience] = useState('');
   const [skillsText, setSkillsText] = useState('');
-
   const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const generateSummaryPrompt = useMemo(() => (
     `Create a professional resume summary for a ${role.toLowerCase()} with ${experienceYears} years of experience in ${skills}. Tone: ${tone}.\n\nReturn markdown only.`
   ), [role, experienceYears, skills, tone])
   const improveSectionPrompt = (sectionName: string, content: string) => (
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
-<<<<<<< HEAD
-  )
-=======
   );
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div>
       <Head>
         <title>Resume Builder - Zion AI Marketplace</title>
       </Head>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
       <section className="mb-8">
         <h2 className="text-lg font-semibold mb-2">Profile</h2>
@@ -66,10 +36,6 @@ const ResumeBuilder: NextPage = () => {
           </label>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Summary</h2>
@@ -84,11 +50,7 @@ const ResumeBuilder: NextPage = () => {
             <AIAssistant
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
-<<<<<<< HEAD
-              defaultPrompt={improveSectionPrompt('summary', summary |'No content provided. Generate a summary based on role, years, and skills.')}
-=======
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               onAccept={setSummary}
               authorizationToken={operatorToken}
             />
@@ -102,11 +64,7 @@ const ResumeBuilder: NextPage = () => {
           <AIAssistant
             buttonLabel="Improve with AI"
             title="Improve Experience"
-<<<<<<< HEAD
-            defaultPrompt={improveSectionPrompt('experience section', experience |'Add experience details to improve.')}
-=======
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             onAccept={setExperience}
             authorizationToken={operatorToken}
           />
@@ -119,11 +77,7 @@ const ResumeBuilder: NextPage = () => {
           <AIAssistant
             buttonLabel="Improve with AI"
             title="Improve Skills"
-<<<<<<< HEAD
-            defaultPrompt={improveSectionPrompt('skills list', skillsText |`Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
-=======
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
           />
@@ -134,11 +88,6 @@ const ResumeBuilder: NextPage = () => {
   )
 }
 export default ResumeBuilder;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import React, { useMemo, useState } from 'react',
@@ -230,4 +179,3 @@ const ResumeBuilder: NextPage = () => {
     </div>);
 },
 export default ResumeBuilder,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

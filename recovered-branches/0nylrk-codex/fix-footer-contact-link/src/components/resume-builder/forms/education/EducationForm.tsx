@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -11,33 +6,6 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function EducationForm({
-  resumeId;
-  educationEntries
-  onComplete
-  onBack
-}: EducationFormProps) {
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null);
-  // Helper function to format dates to string
-  const formatDateValue = (dateValue: string | Date | undefined): string => {
-    if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue
-    return format(dateValue, 'yyyy-MM-dd')
-  }
-  const handleAddOrUpdate = async (data: any) => {
-    const educationData: Education = {
-      institution: data.institution
-      degree: data.degree
-      field_of_study: data.field_of_study
-      start_date: data.start_date
-      end_date: data.is_current ? undefined : (data.end_date |undefined)
-      is_current: data.is_current
-      description: data.description
-      location: data.location}
-=======
 export function EducationForm(): any ({ ;
   resumeId;
   educationEntries, ;
@@ -46,14 +14,12 @@ export function EducationForm(): any ({ ;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
-
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue,;
     return format(dateValue, 'yyyy-MM-dd');
   };
-
   const handleAddOrUpdate = async (data: any) => {;
     const educationData: Education = {;
       institution: data && data.institution,;
@@ -64,79 +30,33 @@ export function EducationForm(): any ({ ;
       is_current: data && data.is_current,;
       description: data && data.description,;
       location: data && data.location},;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let success;
     if (editingId) {;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
     }
-<<<<<<< HEAD
-    if (success) {
-      setEditingId(null)
-    }
-  }
-  const handleEdit = (edu: Education) => {
-    setEditingId(edu.id!)
-    // Form reset happens in the child component
-  }
-  const handleDelete = async (id: string) => {
-    if (confirm('Are you sure you want to delete this education entry?')) {
-      await deleteEducation(id)
-    }
-  }
-  const handleCancel = () => {
-    if (editingId) {
-      setEditingId(null)
-    } else {
-      onBack()
-=======
-
     if (success) {;
       setEditingId(null);
     }
   };
-
   const handleEdit = (edu: Education) => {;
     setEditingId(edu && edu.id!),;
     // Form reset happens in the child component;
   };
-
   const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this education entry?')) {;
       await deleteEducation(id);
     }
   };
-
   const handleCancel = () => {;
     if (editingId) {;
       setEditingId(null);
     } else {;
       onBack();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
-
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Education</h2>
-        <p className="text-muted-foreground">
-          Add your educational background and academic achievements.
-        </p>
-      </div>
-      <EducationList
-        educationEntries={educationEntries}
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
-          {editingId ? 'Update Education' : 'Add Education'}
-        </h3>
-=======
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Education</h2>;
@@ -144,40 +64,21 @@ export function EducationForm(): any ({ ;
           Add your educational background and academic achievements.;
         </p>;
       </div>;
-
       <EducationList
         educationEntries={educationEntries} 
         onEdit={handleEdit}
         onDelete={handleDelete}
       />;
-
       <div className="bg-muted/40 p-6 rounded-lg">;
         <h3 className="text-md font-medium mb-4">;
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
-<<<<<<< HEAD
-        />
-      </div>
-      {!editingId && educationEntries.length > 0 && (
-        <div className="flex justify-end">
-          <Button type="button" onClick={onComplete}>
-            Next
-          </Button>
-        </div>
-      )}
-    </div>
-  )
-}
-=======
         />;
       </div>;
-
       {!editingId && educationEntries && educationEntries.length > 0 && (;
         <div className="flex justify-end">;
           <Button type="button" onClick={onComplete}>;
@@ -188,8 +89,6 @@ export function EducationForm(): any ({ ;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * EducationForm - Function description
  */
@@ -292,4 +191,3 @@ if ( {) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

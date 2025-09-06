@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
 import React from "react";
 import { Star } from 'lucide-react'
-
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
 const testimonials = [
   {
@@ -16,9 +9,6 @@ const testimonials = [
     rating: 5
     avatar: '/placeholder.svg'
   }
-<<<<<<< HEAD
-const testimonials = [
-=======
 import React from 'react';
 import { Star } from 'lucide-react';
 import { Card, CardContent, CardFooter } from '@/components / ui / card';
@@ -31,7 +21,6 @@ const testimonials = [;
     avatar: '/placeholder.svg',
   },
 const testimonials = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     name: 'Sarah Williams'
     role: 'Tech Recruiter'
@@ -40,42 +29,18 @@ const testimonials = [;
     avatar: '/placeholder.svg'
   }
   {
-<<<<<<< HEAD
-    name: 'Michael Chen'
-    role: 'Full Stack Developer'
-    text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.'
-    rating: 4
-    avatar: '/placeholder.svg'
-  },]
-=======
     name: 'Michael Chen',
     role: 'Full Stack Developer',
     text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.',
     rating: 4,
     avatar: '/placeholder.svg',
   }, ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const AppTestimonials: React.FC = () => {
   return (    avatar: "/placeholder.svg";
   }
 ];
 export const AppTestimonials: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <section className='py-16 bg-zion-blue'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-12'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4'>
-            What Our Users Say
-          </h2>
-          <p className='text-lg text-gray-300 max-w-2xl mx-auto'>
-            Join thousands of satisfied users who have transformed their tech
-            careers with the Zion mobile app.
-          </p>
-        </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {testimonials.map((testimonial, index) => (
-=======
 import React from 'react';
 import { Star } from 'lucide-react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
@@ -87,7 +52,6 @@ const testimonials = [;
     rating: 5,;
     avatar: '/placeholder && placeholder.svg',;
   },;
-
 const testimonials = [;
   {;
     name: 'Sarah Williams',;
@@ -103,12 +67,10 @@ const testimonials = [;
     rating: 4,;
     avatar: '/placeholder && placeholder.svg',;
   },];
-
 export const AppTestimonials: React.FC = () => {;
   return (    avatar: "/placeholder && placeholder.svg";
   }
 ];
-
 export const AppTestimonials: React.FC = () => {;
   return (
     <section className='py-16 bg-zion-blue'>;
@@ -118,7 +80,6 @@ export const AppTestimonials: React.FC = () => {;
             What Our Users Say;
           </h2>;
           <p className='text-lg text-gray-300 max-w-2xl mx-auto'>;
-=======
     <section className='py - 16 bg - zion - blue'>;
       <div className='container mx - auto px - 4'>;
         <div className='text - center mb - 12'>;
@@ -126,50 +87,11 @@ export const AppTestimonials: React.FC = () => {;
             What Our Users Say;
           </h2>;
           <p className='text - lg text - gray - 300 max - w-2xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Join thousands of satisfied users who have transformed their tech;
             careers with the Zion mobile app.;
           </p>;
         </div>;
-<<<<<<< HEAD
-
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-          {testimonials && testimonials.map((testimonial, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            <Card
-              key={index}
-              className='bg-zion-blue-dark border-zion-purple/30'>;
-              <CardContent className='pt-6'>;
-                <div className='flex mb-4'>;
-                  {Array && Array.from({ length: 5 }).map((_, i) => (;
-                    <Star
-                      key={i}
-                      className={`h-5 w-5 ${i < testimonial && testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`}                    />;
-                  ))}
-                </div>;
-                <p className='text-gray-200 mb-6'>"{testimonial && testimonial.text}"</p>;
-              </CardContent>;
-              <CardFooter className='border-t border-zion-purple/20 pt-4'>;
-                <div className='flex items-center'>;
-                  <div className='h-10 w-10 rounded-full overflow-hidden mr-4'>;
-                    <img
-                      src={testimonial && testimonial.avatar}
-                      alt={testimonial && testimonial.name}
-                      className='h-full w-full object-cover'
-                      loading='lazy'
-<<<<<<< HEAD
-                    />
-                  </div>
-                  <div>
-                    <p className='font-semibold text-white'>
-                      {testimonial.name}
-                    </p>
-                    <p className='text-sm text-gray-400'>{testimonial.role}</p>                  </div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
-=======
 ];
-
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -178,7 +100,6 @@ export const AppTestimonials: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -187,7 +108,6 @@ export const AppTestimonials: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
-=======
                     />;
                   </div>;
                   <div>;
@@ -199,36 +119,17 @@ export const AppTestimonials: React.FC = () => {
                     <p className="text-sm text-gray-400">{testimonial && testimonial.role}</p>;
           </p>;
         </div>;
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
           {testimonials && testimonials.map((testimonial, index) => (;
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">;
               <CardContent className="pt-6">;
                 <div className="flex mb-4">;
                   {Array && Array.from({ length: 5 }).map((_, i) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial && testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />;
                   ))}
-<<<<<<< HEAD
-                </div>;
-                <p className="text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
-              </CardContent>;
-              <CardFooter className="border-t border-zion-purple/20 pt-4">;
-                <div className="flex items-center">;
-                  <div className="h-10 w-10 rounded-full overflow-hidden mr-4">;
-                    <img src={testimonial && testimonial.avatar} alt={testimonial && testimonial.name} className="h-full w-full object-cover" loading="lazy" />;
-                  </div>;
-                  <div>;
-                    <p className="font-semibold text-white">{testimonial && testimonial.name}</p>;
-                    <p className="text-sm text-gray-400">{testimonial && testimonial.role}</p>;
-                  </div>;
-                </div>;
-              </CardFooter>;
-            </Card>;
-=======
                 </div>
                 <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
               </CardContent>
@@ -244,38 +145,7 @@ export const AppTestimonials: React.FC = () => {
                 </div>
               </CardFooter>
             </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </section>
-  )
-<<<<<<< HEAD
-}
-{"
-  name: "Sarah Williams";"
-role: "Tech Recruiter";"
-text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive."
-rating: 5;"
-avatar: "/placeholder.svg"
-}
-{"
-  name: "Michael Chen";"
-role: "Full Stack Developer";"
-text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful."
-rating: 4;"
-avatar: "/placeholder.svg"
-}]
-export const AppTestimonials: React.FC = () => {"
-  return (<section className="py-16 bg-zion-blue" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <h2 className="text-3xl md:text-4xl font-bold mb-4" >What Our Users Say</h2> <p className="text-lg text-gray-300 max-w-2xl mx-auto" >
-}</div> </div> </section>)
-}
-'"}
-  )
-}
-
-=======
         </div>;
       </div>;
     </section>;
@@ -300,17 +170,8 @@ export const AppTestimonials: React.FC = () => {";
 }</div> </div> </section>) ;
 };
 '"},;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   );
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {testimonials.map ((testimonial, index) => (
             <Card;
@@ -395,4 +256,3 @@ export const AppTestimonials: React.FC = () => {";
 '"},
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

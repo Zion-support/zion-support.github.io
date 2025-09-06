@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -25,12 +20,6 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:pages_backup/services/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -195,7 +184,6 @@ const ServicesIndex: NextPage = () => {
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],
       pricing: "Starting at $249/month",
       link: "/services/intelligent-inventory-manager"
-=======
 const ServicesIndex: NextPage = () => {;
   const services = [;
     {;
@@ -360,7 +348,6 @@ const ServicesIndex: NextPage = () => {;
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],;
       pricing: "Starting at $249/month",;
       link: "/services/intelligent-inventory-manager";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
     }
   ];
   const itServices = [;
@@ -437,10 +424,8 @@ const ServicesIndex: NextPage = () => {;
       link: "/services/ai-automation";
     }
   ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
-
 const services = [;
   {;
     id: 'ai-development',;
@@ -483,11 +468,6 @@ const services = [;
     link: '/services/data-analytics';
   }
 ];
-
-<<<<<<< HEAD:pages_backup/services/index.tsx
-export default function ServicesIndex() {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -652,7 +632,6 @@ const ServicesIndex: NextPage = () => {
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],
       pricing: "Starting at $249/month",
       link: "/services/intelligent-inventory-manager"
-=======
 export default function ServicesIndex() {;
 const ServicesIndex: NextPage = () => {;
   const services = [;
@@ -818,7 +797,6 @@ const ServicesIndex: NextPage = () => {;
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],;
       pricing: "Starting at $249/month",;
       link: "/services/intelligent-inventory-manager";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
     }
   ];
   const itServices = [;
@@ -895,11 +873,6 @@ const ServicesIndex: NextPage = () => {;
       link: "/services/ai-automation";
     }
   ];
-<<<<<<< HEAD:pages_backup/services/index.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <>
       <Head>
@@ -907,15 +880,8 @@ const ServicesIndex: NextPage = () => {;
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
-
 const services = [;
   {;
     id: 'ai-development',;
@@ -958,7 +924,6 @@ const services = [;
     link: '/services/data-analytics';
   }
 ];
-
 export default function ServicesIndex() {;
   return (
     <>;
@@ -967,7 +932,6 @@ export default function ServicesIndex() {;
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />;
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />;
       </Head>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
         <div className="container mx-auto px-4">;
@@ -1167,19 +1131,10 @@ export default function ServicesIndex() {;
                   {service && service.features.map((feature, idx) => (;
                     <li key={idx} className="mb-1">• {feature}</li>;
                   ))}
-<<<<<<< HEAD:pages_backup/services/index.tsx
-                </ul>
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
-                  <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
                 </ul>;
                 <div className="flex justify-between items-center">;
                   <span className="text-lg font-semibold text-green-600">{service && service.pricing}</span>;
                   <Link href={service && service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
-
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
@@ -1197,7 +1152,6 @@ export default function ServicesIndex() {;
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -1224,13 +1178,6 @@ export default function ServicesIndex() {;
                     ))}
                   </div>;
                   <Link
-<<<<<<< HEAD:pages_backup/services/index.tsx
-                    href={service.link}
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -1434,10 +1381,6 @@ export default function ServicesIndex() {;
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     Learn More
                   </Link>
                 </div>
@@ -1458,42 +1401,24 @@ export default function ServicesIndex() {;
             </Link>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </div>
-    </>
-  );
-}
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       </main>
     </div>
   );
 };
-<<<<<<< HEAD
 export default ServicesIndex;
-=======
-export default ServicesIndex;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
                     Learn More
                   </Link>
                 </div>
               </div>
-=======
                     href={service && service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                     Learn More;
                   </Link>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
             ))}
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">;
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>;
@@ -1512,8 +1437,6 @@ export default ServicesIndex;
   );
 };
 export default ServicesIndex;
-<<<<<<< HEAD:pages_backup/services/index.tsx
-=======
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
         <div className="container mx-auto px-4">;
@@ -1717,7 +1640,6 @@ export default ServicesIndex;
                 <div className="flex justify-between items-center">;
                   <span className="text-lg font-semibold text-green-600">{service && service.pricing}</span>;
                   <Link href={service && service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">;
-
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
@@ -1735,7 +1657,6 @@ export default ServicesIndex;
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -1797,19 +1718,11 @@ export default ServicesIndex;
   ),;
 };
 export default ServicesIndex;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
 export default ServicesIndex;
       </div>;
     </>;
   );
-<<<<<<< HEAD:pages_backup/services/index.tsx
-
-      </div>
-    </>
-=======
 }
       </div>;
     </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

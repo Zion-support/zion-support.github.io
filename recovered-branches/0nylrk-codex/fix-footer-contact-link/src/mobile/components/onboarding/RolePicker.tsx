@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent} from "@/components/ui/card";
-import {Briefcase, Users, Check} from "lucide-react";
-type UserRole = "talent" | "client" | null;
-<<<<<<< HEAD
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -15,44 +5,23 @@ import { Briefcase, Users, Check } from './lucide-react';
 ;
 type UserRole = "talent" | "client" | null;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface RolePickerProps {
   on_select: (role: UserRole) => void;
 }
-<<<<<<< HEAD
-export function RolePicker({ onSelect }: RolePickerProps) {
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
-  const handleSelect = (role: UserRole) => {
-    setSelectedRole(role)
-    onSelect(role)
-  }
-
-  return (
-    <div className="space-y-4 px-4">
-      <h2 className="text-xl font-medium">What brings you to Zion?</h2>
-      <p className="text-muted-foreground">Choose how you want to use our platform</p>
-      <div className="space-y-3 mt-6">
-=======
-
 interface RolePickerProps {;
   onSelect: (role: UserRole) => void;
 }
-
 export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
-
   const handleSelect = (role: UserRole) => {;
     setSelectedRole(role),;
     onSelect(role);
   };
-
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium">What brings you to Zion?</h2>;
       <p className="text-muted-foreground">Choose how you want to use our platform</p>;
-
       <div className="space-y-3 mt-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent'
@@ -73,16 +42,9 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
               {selectedRole === 'talent' && (;
                 <Check className="h-5 w-5 text-primary" />;
               )}
-<<<<<<< HEAD
-            </div>
-          </CardContent>
-        </Card>
-=======
             </div>;
           </CardContent>;
         </Card>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
@@ -103,16 +65,6 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
               {selectedRole === 'client' && (;
                 <Check className="h-5 w-5 text-primary" />;
               )}
-<<<<<<< HEAD
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  )
-}
-=======
-=======
 export /**
  * RolePicker - Function description
  */
@@ -170,17 +122,9 @@ function RolePicker() {
               </div>;
               {selected_role === 'client' && (
                 <Check className="h - 5 w - 5 text - primary" />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

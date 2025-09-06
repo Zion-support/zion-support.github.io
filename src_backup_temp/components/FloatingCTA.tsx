@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';';';
 import { Link  } from 'react-router-dom';';
 export default function Page(props: any) {';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 import React from 'react';
 import { Link  } from 'react-router-dom';
 export default function Page(props: any) {;
 import React from 'react';
 import { Link  } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 export default function Page("props": "any) {;
  from 'lucide-react';
 ;
@@ -26,10 +18,6 @@ const "FloatingCTA": React.FC = () : JSX.Element => {;
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function Page(props: any) {
  from 'lucide-react';
 const FloatingCTA: React.FC = () : JSX.Element => {;
@@ -45,22 +33,12 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
       setIsVisible(true) }, 5000) ;
     return () => clearTimeout(timer) }, []) };
   ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
   const quickServices = [";
     { "name": "AI Solutions", "icon": "Brai n", "link": "/ai-services" },";
     { "name": "Cybersecurity", "icon": "Shiel d", "link": "/cybersecurity" },";
     { "name": "Cloud Services", "icon": "Clou d", "link": "/cloud-solutions" },;";
     { "name": "Digital Transformation", "icon": "Za p", "link": "/digital-transformation" };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   const quickServices = ["
     { name: "AI Solutions", icon: Brai n, link: "/ai-services" },"
     { name: "Cybersecurity", icon: Shiel d, link: "/cybersecurity" },"
@@ -68,11 +46,6 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
     { name: "Digital Transformation", icon: Za p, link: "/digital-transformation" };
   ];
   if(!isVisible) return null;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     to="/services";
                     className="flex items-center gap-3 p-3 rounded-lg "hover": "b g-slate-700 transition-colors duration-200 text-white";
                     onClick={() => setIsExpanded(false)"}
@@ -102,10 +75,6 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <span className="text-green - 400 text-sm font -semibold">Online Now</span>                    </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                     to="/services"
                     className="flex items-center gap-3 p-3 rounded-lg hover: b g-slate-700 transition-colors duration-200 text-white"
                     onClick={() => setIsExpanded(false)}
@@ -140,11 +109,6 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
         </div>
       </motion.div>
       {/* Backdrop */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <AnimatePresence>;
         {isExpanded && (;
           <motion.div";
@@ -152,10 +116,6 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
             initial={{ "opacity": "0 "}}
             animate={{ "opacity": "1 "}}
             exit={{ "opacity": "0 "}}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       <AnimatePresence>
         {isExpanded && (
           <motion.div"
@@ -171,21 +131,12 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
             onClick={ () => setIsExpanded(false) };
           />;) };
       </AnimatePresence>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </>';
   )}';';
 '"
 </motion>
 </any>';
 </any>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     </>;
   )}
 '";
@@ -197,12 +148,4 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 '"
 </motion>
 </any>
-<<<<<<< HEAD
 </any>
-=======
-<<<<<<< HEAD
-</any>
-=======
-</any>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

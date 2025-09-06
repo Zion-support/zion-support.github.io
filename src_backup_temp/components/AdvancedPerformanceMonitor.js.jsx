@@ -293,10 +293,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                       </h3>;
                     </div>;
                     <span`;
-<<<<<<< HEAD
-                      
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                     </div>
                     <span`
                       className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
@@ -336,10 +332,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                 </div>;
               ))}
             </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
             {/* Quick Status */}";
             <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-6">";
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">";
@@ -466,10 +458,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                         {metric.name}
                       </h3>;
                       <span`;
-<<<<<<< HEAD
-                      
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
                       >;
@@ -538,10 +526,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                         {alert.title"}
                       </h3>;
                       <span`;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {activeTab === 'alerts' && ("
           <div className="space-y-4">
             {performanceAlerts.map(alert => (
@@ -634,10 +618,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                         {metric.name"}
                       </h3>;
                       <span`;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {activeTab === 'scalability' && ("
           <div className="space-y-4">
             {scalabilityMetrics.map(metric => (
@@ -725,10 +705,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     </div>;
   );}
 "export default ComponentName;";
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"
@@ -746,9 +722,5 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     </div>
     );}
 "export default ComponentName;"
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </RefreshCw>;
 </RefreshCw>

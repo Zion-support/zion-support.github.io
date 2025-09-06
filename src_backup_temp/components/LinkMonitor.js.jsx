@@ -97,10 +97,6 @@ export const LinkMonitor = ("props": "any) => {;
   // Export broken links report;
   const exportReport = ("props": "any) => {;
     const report = {;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       "scanTime": lastScanTime?.toISOString()",;
       "totalBrokenLinks": "brokenLinks.length",;
       "brokenLinks": "brokenLinks",;
@@ -316,10 +312,6 @@ export const LinkMonitor = ("props": "any) => {;
           Export Report;
         </button>;
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
       {/* Recommendations */"}
       {brokenLinks.length > 0 && (";
         <div className="mt-6 p-4 bg-yellow-50 "dark": "bg-yellow-900/20 rounded-lg">";
@@ -1230,10 +1222,6 @@ export default LinkMonitor;"";,"}
 ""}"
 "
 };""
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 </div>;
 </div>;
 </div>;

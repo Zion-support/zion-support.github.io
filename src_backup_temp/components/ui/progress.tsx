@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 interface ProgressProps {;
   "value": "number;
@@ -22,10 +17,6 @@ export function Progress("props": "any) {;
        />;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 interface ProgressProps {
   "value": number;
   max?: number;
@@ -42,12 +33,4 @@ export function Progress($1) {
     );
 }
 </div>;';';
-<<<<<<< HEAD
 import React from 'react'; interface ProgressProps { value: number; max?: number; className?: string} export function Progress($1) { const percentage = Math.min(Math.max((value / max) * 100,0),100); return ( <div className="min-h-screen bg-white"> <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300" style="{{{ width: `${percentage}}"%` }} /> </div> )} </div>;';';
-=======
-<<<<<<< HEAD
-import React from 'react'; interface ProgressProps { value: number; max?: number; className?: string} export function Progress($1) { const percentage = Math.min(Math.max((value / max) * 100,0),100); return ( <div className="min-h-screen bg-white"> <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300" style="{{{ width: `${percentage}}"%` }} /> </div> )} </div>;';';
-=======
-import React from 'react'; interface ProgressProps { value: number; max?: number; className?: string} export function Progress($1) { const percentage = Math.min(Math.max((value / max) * 100,0),100); return ( <div className="min-h-screen bg-white"> <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300" style="{{{ width: `${percentage}}"%` }} /> </div> )} </div>;';';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

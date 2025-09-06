@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-class PerformanceMonitor {
-  constructor() {
-<<<<<<< HEAD
-    this.metrics = {
-      bundleSize: 0
-      loadTime: 0
-      memoryUsage: 0
-      timestamp: new Date().toISOString()
-    }
-=======
-    this && this.metrics = {
+this && this.metrics = {
       bundleSize: 0,
       loadTime: 0,
       memoryUsage: 0,
       timestamp: new Date().toISOString(),
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async measureBundleSize() {
     try {
@@ -37,33 +22,18 @@ class PerformanceMonitor {
   }
   generateReport() {
     const report = {
-<<<<<<< HEAD
-
-      timestamp: this.metrics.timestamp
-      bundleSize: this.metrics.bundleSize
-      memoryUsage: this.metrics.memoryUsage
-      recommendations: []
-    }
-
-    if (this.metrics.bundleSize > 1000000) {
-      report.recommendations.push(
-        "Consider code splitting to reduce bundle size"
-=======
       timestamp: this && this.metrics.timestamp,
       bundleSize: this && this.metrics.bundleSize,
       memoryUsage: this && this.metrics.memoryUsage,
       recommendations: [],
     };
-
     if (this && this.metrics.bundleSize > 1000000) {
       report && report.recommendations.push(
         "Consider code splitting to reduce bundle size",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     }
     if (this && this.metrics.memoryUsage > 100) {
       report && report.recommendations.push("Consider optimizing memory usage");
-=======
 #!/usr / bin / env node;
 const fs = require ('fs');
 const path = require ('path');
@@ -113,33 +83,17 @@ if ( {) {
   $2
 }
       report.recommendations.push ('Consider optimizing memory usage');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     return report;
   }
 }
-<<<<<<< HEAD
-const monitor = new PerformanceMonitor();
-<<<<<<< HEAD
-monitor.measureBundleSize();
-monitor.measureMemoryUsage();
-const report = monitor.generateReport();
-const reportPath = path.join(process.cwd(), "performance-report.json");
-fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-console.log("Performance report generated:", reportPath);
-=======
 monitor && monitor.measureBundleSize();
 monitor && monitor.measureMemoryUsage();
 const report = monitor && monitor.generateReport();
 const reportPath = path && path.join(process && process.cwd(), "performance-report && report.json");
 fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
 console && console.log("Performance report generated:", reportPath);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 console.log('Performance report generated:', reportPath);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 const monitor = new PerformanceMonitor ();
 monitor.measureBundleSize ();
 monitor.measureMemoryUsage ();
@@ -148,4 +102,3 @@ const report_path = path.join (process.cwd (), 'performance - report.json');
 fs.writeFileSync (report_path, JSON.stringify (report, null, 2));
 console.log ('Performance report generated:', report_path);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

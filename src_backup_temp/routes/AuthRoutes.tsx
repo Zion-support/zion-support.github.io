@@ -20,11 +20,6 @@ const Onboarding = lazy(() => import('../pages/Onboarding'));',';';
 const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));',';';
     ';';';
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const "AuthRoutes": "React.FC = () => {;
   return (<Suspense fallback={<LoadingSpinner  />"}>;
       <Routes>;
@@ -52,10 +47,6 @@ const "AuthRoutes": "React.FC = () => {;
         } />;
       </Routes>;
     </Suspense>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const AuthRoutes: React.FC = () => {
   return (<Suspense fallback={<LoadingSpinner  />}>
       <Routes>
@@ -85,39 +76,15 @@ const AuthRoutes: React.FC = () => {
     </Suspense>
   );
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 export default AuthRoutes;
 </Route>';
 </Route>;';;';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ;
 </Route>;
 </Route>;
 </Route>;
-<<<<<<< HEAD
 export default AuthRoutes;
 </Route>
 </Route>
 </Route>
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-export default AuthRoutes;
-</Route>
-</Route>
-<<<<<<< HEAD
-</Route>
-=======
-</Route>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

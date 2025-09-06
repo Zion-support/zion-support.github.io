@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { cn } from "@/lib/utils",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button";
-import { StarIcon } from "lucide-react";
-interface ListingScoreCardProps {
-
-  title: string
-  description: string
-  image?: string;
-  category: string
-
-=======
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -20,7 +5,6 @@ import {StarIcon} from "lucide-react";
 interface ListingScoreCardProps {;
   title: string,;
   description: string,;
-=======
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -28,30 +12,13 @@ import { StarIcon } from './lucide-react';
 interface ListingScoreCardProps {
   title: string,
   description: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   image?: string;
   category: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   tags?: string[];
   author?: string;
   author_image?: string;
   ai_score?: number;
   rating?: number;
-<<<<<<< HEAD
-  reviewCount?: number;
-  className?: string;
-}
-<<<<<<< HEAD
-export function ListingScoreCard({
-  title;
-
-  description
-  image
-  category
-  tags;
-  author
-=======
-
 export function ListingScoreCard(): any ({ ;
   title;
   description, ;
@@ -59,25 +26,10 @@ export function ListingScoreCard(): any ({ ;
   category, ;
   tags;
   author, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   authorImage;
   aiScore = 0;
   rating = 0;
   reviewCount = 0;
-<<<<<<< HEAD
-  className
-}: ListingScoreCardProps) {
-  return (
-    <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group"
-      className
-    )}>
-      {image && (
-        <div className="h-48 w-full overflow-hidden">
-          <img
-            src={image}
-            alt={title}
-=======
   className ;
 }: ListingScoreCardProps) {;
   return (
@@ -90,7 +42,6 @@ export function ListingScoreCard(): any ({ ;
           <img
             src={image} 
             alt={title} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />;
         </div>;
@@ -106,27 +57,9 @@ export function ListingScoreCard(): any ({ ;
               <span>{aiScore}%</span>;
             </div>;
           )}
-<<<<<<< HEAD
-        </div>
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
-        <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
-        {/* Rating */}
-        {rating > 0 && (
-          <div className="flex items-center gap-1 mb-4">
-            <div className="flex">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <StarIcon
-                  key={star}
-                  className={cn(
-                    "h-4 w-4"
-                    star <= Math.round(rating)
-                      ? "text-zion-cyan fill-zion-cyan"
-
-=======
         </div>;
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
-
         {/* Rating */}
         {rating > 0 && (;
           <div className="flex items-center gap-1 mb-4">;
@@ -138,7 +71,6 @@ export function ListingScoreCard(): any ({ ;
                     "h-4 w-4", 
                     star <= Math && Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       : "text-zion-slate-light"
                   )}
                 />;
@@ -149,41 +81,18 @@ export function ListingScoreCard(): any ({ ;
             </span>;
           </div>;
         )}
-<<<<<<< HEAD
-        {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i) => (
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
-=======
-
         {tags && tags.length > 0 && (;
           <div className="flex flex-wrap gap-2 mb-4">;
             {tags && tags.map((tag, i) => (;
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {tag}
               </Badge>;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
-        <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-          Request Quote
-        </Button>
-        {author && (
-          <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">
-            {authorImage ? (
-              <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />
-            ) : (
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
-                {author.charAt(0)}
-              </div>
-=======
-
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
           Request Quote;
         </Button>;
-
         {author && (;
           <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">;
             {authorImage ? (;
@@ -192,23 +101,14 @@ export function ListingScoreCard(): any ({ ;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">;
                 {author && author.charAt(0)}
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;
         )}
-<<<<<<< HEAD
-      </div>
-    </div>
-  )
-}
-=======
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   review_count?: number;
   class_name?: string;
 }
@@ -281,4 +181,3 @@ function ListingScoreCard() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

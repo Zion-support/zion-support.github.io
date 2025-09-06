@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link  } from 'react-router-dom';
-import { SERVICE_CATEGORIES } from '@/data/servicesData';
-export function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
-    timeline: ''
-=======
 import React from 'react';
 import { render, screen } from '@testing - library / react';
 import { MemoryRouter } from 'react-router-dom';
@@ -24,7 +9,6 @@ describe ('EquipmentPage', () => {
         <EquipmentPage />;
       </MemoryRouter>);
     expect (screen.getByText ('Equipment')).toBeInTheDocument ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
   const [selectedService, setSelectedService] = useState('');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -60,7 +44,6 @@ describe ('EquipmentPage', () => {
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-white border-b shadow-sm">
         <div className="container mx-auto px-4 py-4">
@@ -86,7 +69,6 @@ describe ('EquipmentPage', () => {
           </div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -96,7 +78,6 @@ describe ('EquipmentPage', () => {
             <p className="text-gray-600 mb-8">
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
             </p>
-            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -114,7 +95,6 @@ describe ('EquipmentPage', () => {
                     placeholder="Your full name"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -131,7 +111,6 @@ describe ('EquipmentPage', () => {
                   />
                 </div>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -147,7 +126,6 @@ describe ('EquipmentPage', () => {
                     placeholder="Your company name"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number
@@ -163,7 +141,6 @@ describe ('EquipmentPage', () => {
                   />
                 </div>
               </div>
-              
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service of Interest *
@@ -218,7 +195,6 @@ describe ('EquipmentPage', () => {
                   ))}
                 </select>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
@@ -239,7 +215,6 @@ describe ('EquipmentPage', () => {
                     <option value="over-500k">Over $500,000</option>
                   </select>
                 </div>
-                
                 <div>
                   <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Timeline
@@ -260,7 +235,6 @@ describe ('EquipmentPage', () => {
                   </select>
                 </div>
               </div>
-              
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Project Details *
@@ -276,7 +250,6 @@ describe ('EquipmentPage', () => {
                   placeholder="Tell us about your project, goals, and requirements..."
                 />
               </div>
-              
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
@@ -285,7 +258,6 @@ describe ('EquipmentPage', () => {
               </button>
             </form>
           </div>
-
           {/* Contact Information */}
           <div className="space-y-8">
             {/* Direct Contact */}
@@ -303,7 +275,6 @@ describe ('EquipmentPage', () => {
                     </a>
                   </div>
                 </div>
-                
                 <div className="flex items-center gap-4">
                   <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-green-600 text-xl">✉️</span>
@@ -315,7 +286,6 @@ describe ('EquipmentPage', () => {
                     </a>
                   </div>
                 </div>
-                
                 <div className="flex items-center gap-4">
                   <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-purple-600 text-xl">📍</span>
@@ -328,7 +298,6 @@ describe ('EquipmentPage', () => {
                     </p>
                   </div>
                 </div>
-                
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-orange-600 text-xl">🌐</span>
@@ -342,7 +311,6 @@ describe ('EquipmentPage', () => {
                 </div>
               </div>
             </div>
-
             {/* Business Hours */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
@@ -366,7 +334,6 @@ describe ('EquipmentPage', () => {
                 </div>
               </div>
             </div>
-
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -400,7 +367,6 @@ describe ('EquipmentPage', () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">

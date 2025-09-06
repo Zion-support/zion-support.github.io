@@ -1,51 +1,5 @@
 export interface RealMicroSaasService {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  contact_info: {
-    mobile: string;
-    email: string;
-    address: string;
-
-    website: string;
-  }
-<<<<<<< HEAD
-export const realMicroSaasServices: RealMicroSaasService[] = [
-  // AI-Powered Business Solutions
-  {    website: string
-
-  }
-}
-export const realMicroSaasServices: RealMicroSaasService[] = [
-  // AI-Powered Business Solutions
-  {
-<<<<<<< HEAD
-=======
     id: 'ai-legal-document-generator',
-=======
 export const realMicroSaasServices: RealMicroSaasService[] = [;
   // AI - Powered Business Solutions;
   {    website: string;
@@ -55,7 +9,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
   // AI - Powered Business Solutions;
   {
     id: 'ai - legal - document - generator',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
     price: '$89',
@@ -76,21 +29,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     popular: true,
     icon: '⚖️',
-<<<<<<< HEAD
-    color: 'from-blue-500 to-indigo-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-legal-documents',
-    marketPosition:
-      'Leading AI legal document platform with 99 && 99.7% accuracy rate',
-    targetAudience:
-=======
     color: 'from - blue - 500 to - indigo - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - legal - documents',
     market_position:;
       'Leading AI legal document platform with 99.7% accuracy rate',
     target_audience:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Law firms, legal professionals, small businesses, entrepreneurs, real estate agents',
     trial_days: 14,
     setup_time: '15 minutes',
@@ -119,17 +63,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'Legal research',
     ],
     roi: '300% time savings on document creation',
-<<<<<<< HEAD
-    competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template && Template.net'],
-    marketSize: '$2 && 2.1B legal tech market',
-    growthRate: '35% annual growth',
-    contactInfo: {
-=======
     competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net'],
     market_size: '$2.1B legal tech market',
     growth_rate: '35% annual growth',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -158,17 +95,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     popular: true,
     icon: '🤖',
-<<<<<<< HEAD
-    color: 'from-green-500 to-emerald-600',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service',
-    marketPosition:
-      'Industry-leading AI customer service with 95% customer satisfaction',
-    targetAudience:
-      'E-commerce businesses, SaaS companies, customer support teams, retail chains',
-    trialDays: 21,
-    setupTime: '2 hours',
-=======
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - customer - service',
@@ -178,7 +104,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'E - commerce businesses, SaaS companies, customer support teams, retail chains',
     trial_days: 21,
     setup_time: '2 hours',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Customer Service & Support',
     real_service: true,
     technology: [;
@@ -204,17 +129,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'Appointment booking',
     ],
     roi: '60% reduction in support costs',
-<<<<<<< HEAD
-    competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk && Tawk.to'],
-    marketSize: '$15 && 15.8B customer service software market',
-    growthRate: '28% annual growth',
-    contactInfo: {
-=======
     competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to'],
     market_size: '$15.8B customer service software market',
     growth_rate: '28% annual growth',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -243,17 +161,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     popular: true,
     icon: '📈',
-<<<<<<< HEAD
-    color: 'from-purple-500 to-pink-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-seo-optimizer',
-    marketPosition:
-=======
     color: 'from - purple - 500 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - seo - optimizer',
     market_position:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Leading AI SEO platform with 40% better ranking improvements',
     target_audience:;
       'Digital marketing agencies, e - commerce businesses, content creators, small businesses',
@@ -285,15 +196,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     roi: '200% increase in organic traffic in 6 months',
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath'],
-<<<<<<< HEAD
-    marketSize: '$8 && 8.2B SEO tools market',
-    growthRate: '32% annual growth',
-    contactInfo: {
-=======
     market_size: '$8.2B SEO tools market',
     growth_rate: '32% annual growth',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -322,19 +227,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     popular: true,
     icon: '🎬',
-<<<<<<< HEAD
-    color: 'from-red-500 to-pink-600',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-video-editing',
-    marketPosition: 'Cutting-edge AI video editing with 10x faster workflow',
-    targetAudience:
-=======
     color: 'from - red - 500 to - pink - 600',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / ai - video - editing',
     market_position: 'Cutting - edge AI video editing with 10x faster workflow',
     target_audience:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Content creators, video marketers, social media managers, film students, small businesses',
     trial_days: 21,
     setup_time: '30 minutes',
@@ -370,15 +267,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'Camtasia',
       'Filmora',
     ],
-<<<<<<< HEAD
-    marketSize: '$3 && 3.2B video editing software market',
-    growthRate: '45% annual growth',
-    contactInfo: {
-=======
     market_size: '$3.2B video editing software market',
     growth_rate: '45% annual growth',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -407,17 +298,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     popular: true,
     icon: '📊',
-<<<<<<< HEAD
-    color: 'from-cyan-500 to-blue-600',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-data-analytics',
-    marketPosition:
-=======
     color: 'from - cyan - 500 to - blue - 600',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / ai - data - analytics',
     market_position:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Leading AI analytics platform with 90% accuracy in predictions',
     target_audience:;
       'Data analysts, business intelligence teams, marketing agencies, e - commerce businesses',
@@ -450,15 +334,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     roi: '150% improvement in decision - making speed',
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo'],
-<<<<<<< HEAD
-    marketSize: '$23 && 23.4B business intelligence market',
-    growthRate: '38% annual growth',
-    contactInfo: {
-=======
     market_size: '$23.4B business intelligence market',
     growth_rate: '38% annual growth',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -487,17 +365,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     popular: true,
     icon: '👥',
-<<<<<<< HEAD
-    color: 'from-indigo-500 to-purple-600',
-    textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-hr-recruitment',
-    marketPosition:
-=======
     color: 'from - indigo - 500 to - purple - 600',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - hr - recruitment',
     market_position:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Leading AI recruitment platform with 70% faster hiring process',
     target_audience:;
       'HR professionals, recruitment agencies, small businesses, enterprise companies',
@@ -536,15 +407,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'Lever',
       'SmartRecruiters',
     ],
-<<<<<<< HEAD
-    marketSize: '$2 && 2.8B recruitment software market',
-    growthRate: '42% annual growth',
-    contactInfo: {
-=======
     market_size: '$2.8B recruitment software market',
     growth_rate: '42% annual growth',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -573,21 +438,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     popular: true,
     icon: '💰',
-<<<<<<< HEAD
-    color: 'from-yellow-500 to-orange-600',
-    textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-automation',
-    marketPosition:
-      'Industry-leading sales automation with 35% increase in conversion rates',
-    targetAudience:
-=======
     color: 'from - yellow - 500 to - orange - 600',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / ai - sales - automation',
     market_position:;
       'Industry - leading sales automation with 35% increase in conversion rates',
     target_audience:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Sales teams, B2B companies, real estate agents, insurance agents, consultants',
     trial_days: 21,
     setup_time: '3 hours',
@@ -624,15 +480,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'Zoho CRM',
       'Freshsales',
     ],
-<<<<<<< HEAD
-    marketSize: '$18 && 18.6B CRM market',
-    growthRate: '33% annual growth',
-    contactInfo: {
-=======
     market_size: '$18.6B CRM market',
     growth_rate: '33% annual growth',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -661,17 +511,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     popular: true,
     icon: '🔍',
-<<<<<<< HEAD
-    color: 'from-teal-500 to-green-600',
-    textColor: 'text-teal-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-market-research',
-    marketPosition:
-=======
     color: 'from - teal - 500 to - green - 600',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / ai - market - research',
     market_position:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Leading AI market research with 95% accuracy in trend predictions',
     target_audience:;
       'Market researchers, business strategists, startups, investment firms, consultants',
@@ -708,15 +551,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'Euromonitor',
       'Forrester',
     ],
-<<<<<<< HEAD
-    marketSize: '$1 && 1.9B market research market',
-    growthRate: '28% annual growth',
-    contactInfo: {
-=======
     market_size: '$1.9B market research market',
     growth_rate: '28% annual growth',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -745,21 +582,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     popular: true,
     icon: '🔗',
-<<<<<<< HEAD
-    color: 'from-gray-500 to-slate-600',
-    textColor: 'text-gray-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-blockchain-analytics',
-    marketPosition:
-      'Leading blockchain analytics with 99 && 99.9% transaction accuracy',
-    targetAudience:
-=======
     color: 'from - gray - 500 to - slate - 600',
     text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / ai - blockchain - analytics',
     market_position:;
       'Leading blockchain analytics with 99.9% transaction accuracy',
     target_audience:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Cryptocurrency traders, blockchain companies, financial institutions, regulators',
     trial_days: 21,
     setup_time: '4 hours',
@@ -794,15 +622,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'Blockchain && Blockchain.com',
       'Etherscan',
     ],
-<<<<<<< HEAD
-    marketSize: '$1 && 1.2B blockchain analytics market',
-    growthRate: '65% annual growth',
-    contactInfo: {
-=======
     market_size: '$1.2B blockchain analytics market',
     growth_rate: '65% annual growth',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -831,17 +653,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     ],
     popular: true,
     icon: '☁️',
-<<<<<<< HEAD
-    color: 'from-blue-500 to-cyan-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-cloud-cost-optimizer',
-    marketPosition:
-=======
     color: 'from - blue - 500 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - cloud - cost - optimizer',
     market_position:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Leading cloud cost optimization with 40% average cost reduction',
     target_audience:;
       'DevOps teams, cloud architects, IT managers, startups, enterprise companies',
@@ -879,15 +694,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'Cloudability',
       'AWS Cost Explorer',
     ],
-<<<<<<< HEAD
-    marketSize: '$4 && 4.8B cloud cost management market',
-    growthRate: '52% annual growth',
-    contactInfo: {
-=======
     market_size: '$4.8B cloud cost management market',
     growth_rate: '52% annual growth',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -918,11 +727,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     support:;
       'Dedicated health coach, community support, and 24 / 7 platform assistance.',
     compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-health-coach',
-=======
     link: 'https://ziontechgroup.com / ai - health - coach',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '🏃‍♂️',
     color: 'from - red - 500 to - pink - 600',
     popular: false,
@@ -962,21 +767,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     market_position:;
       'Alternatives include Superhuman AI and Front AI. Differentiator: policy guardrails and CRM context sync.',
     competitors: ['Superhuman', 'Front', 'Zendesk AI'],
-<<<<<<< HEAD
-    techStack: ['Next && Next.js', 'TypeScript', 'PostgreSQL', 'OpenAI', 'Gmail API'],
-    realImplementation: true,
-    implementationDetails:
-      'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.',
-    roi: 'Reduce support headcount needs by 0 && 0.2–0 && 0.5 FTE per 1k tickets/mo.',
-    useCases: [
-=======
     tech_stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'OpenAI', 'Gmail API'],
     real_implementation: true,
     implementation_details:;
       'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.',
     roi: 'Reduce support headcount needs by 0.2–0.5 FTE per 1k tickets / mo.',
     use_cases: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Support autoreplies',
       'Sales follow - ups',
       'Vendor coordination',
@@ -984,11 +780,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'],
     support: 'Email and chat support with onboarding concierge for teams',
     compliance: ['GDPR', 'CCPA', 'SOC 2 Type II'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-email-responder',
-=======
     link: 'https://ziontechgroup.com / ai - email - responder',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '📧',
     color: 'from - cyan - 600 to - blue - 700',
     popular: true,
@@ -1026,26 +818,16 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     market_position:;
       'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
     competitors: ['Typeform', 'SurveySparrow', 'Tally'],
-<<<<<<< HEAD
-    techStack: ['Next && Next.js', 'Supabase', 'Vercel Edge', 'OpenAI'],
-    realImplementation: true,
-    implementationDetails:
-=======
     tech_stack: ['Next.js', 'Supabase', 'Vercel Edge', 'OpenAI'],
     real_implementation: true,
     implementation_details:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Template gallery, response store, analytics, export jobs.',
     roi: 'Improves feedback volume 20–50%.',
     use_cases: ['NPS', 'Beta feedback', 'Lead qual'],
     integrations: ['HubSpot', 'Segment', 'Zapier'],
     support: 'Email support, templates library',
     compliance: ['GDPR', 'CCPA'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/mobile-surveys',
-=======
     link: 'https://ziontechgroup.com / mobile - surveys',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '📱',
     color: 'from - emerald - 600 to - teal - 700',
     popular: false,
@@ -1079,27 +861,16 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     market_position:;
       'Alternative to Notion templates + Asana. Faster to start with curated flows.',
     competitors: ['Asana', 'ClickUp', 'Notion'],
-<<<<<<< HEAD
-    techStack: ['Next && Next.js', 'Prisma', 'PostgreSQL'],
-    realImplementation: true,
-    implementationDetails:
-      'Template JSON schemas, rules engine, import/export.',
-=======
     tech_stack: ['Next.js', 'Prisma', 'PostgreSQL'],
     real_implementation: true,
     implementation_details:;
       'Template JSON schemas, rules engine, import / export.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     roi: 'Deliverables throughput +15–25%.',
     use_cases: ['Client delivery', 'Editorial calendar', 'Sprints'],
     integrations: ['Google Calendar', 'Slack', 'Linear'],
     support: 'Email support',
     compliance: ['GDPR'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/productivity-planner',
-=======
     link: 'https://ziontechgroup.com / productivity - planner',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '🗓️',
     color: 'from - purple - 600 to - pink - 600',
     popular: false,
@@ -1133,25 +904,15 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     market_position:;
       'Lean alternative to Hopin and Eventbrite with richer analytics.',
     competitors: ['Hopin', 'Eventbrite'],
-<<<<<<< HEAD
-    techStack: ['Next && Next.js', 'Stripe', 'Supabase'],
-    realImplementation: true,
-    implementationDetails: 'Stripe checkout, QR codes, analytics dashboards.',
-=======
     tech_stack: ['Next.js', 'Stripe', 'Supabase'],
     real_implementation: true,
     implementation_details: 'Stripe checkout, QR codes, analytics dashboards.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     roi: 'Increase sponsorship revenue 10–20%.',
     use_cases: ['Webinars', 'Summits', 'Workshops'],
     integrations: ['Stripe', 'Mailchimp', 'Zapier'],
     support: 'Priority email support',
     compliance: ['GDPR', 'PCI'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/event-management',
-=======
     link: 'https://ziontechgroup.com / event - management',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '🎫',
     color: 'from - indigo - 600 to - blue - 700',
     popular: false,
@@ -1185,25 +946,15 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     market_position:;
       'Simpler than Impact and PartnerStack with transparent pricing.',
     competitors: ['PartnerStack', 'Impact'],
-<<<<<<< HEAD
-    techStack: ['Next && Next.js', 'PostgreSQL', 'Stripe'],
-    realImplementation: true,
-    implementationDetails: 'Link generation, tracking pixels, payout ledger.',
-=======
     tech_stack: ['Next.js', 'PostgreSQL', 'Stripe'],
     real_implementation: true,
     implementation_details: 'Link generation, tracking pixels, payout ledger.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     roi: 'Affiliate channel +10–30% revenue.',
     use_cases: ['Influencer programs', 'Partner marketplaces'],
     integrations: ['Shopify', 'WooCommerce', 'Stripe'],
     support: 'Email support',
     compliance: ['GDPR'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/affiliate-tracking',
-=======
     link: 'https://ziontechgroup.com / affiliate - tracking',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '🔗',
     color: 'from - rose - 600 to - red - 700',
     popular: false,
@@ -1237,25 +988,15 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     market_position:;
       'Alternative to Plausible and Fathom with built - in insights.',
     competitors: ['Plausible', 'Fathom'],
-<<<<<<< HEAD
-    techStack: ['Next && Next.js', 'Edge Analytics', 'PostgreSQL'],
-    realImplementation: true,
-    implementationDetails: 'Script tag, event API, insights jobs.',
-=======
     tech_stack: ['Next.js', 'Edge Analytics', 'PostgreSQL'],
     real_implementation: true,
     implementation_details: 'Script tag, event API, insights jobs.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     roi: 'Improve conversion 5–15% via insights.',
     use_cases: ['Landing pages', 'Campaign tracking'],
     integrations: ['Shopify', 'Webflow', 'Zapier'],
     support: 'Email support',
     compliance: ['GDPR'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/website-analytics',
-=======
     link: 'https://ziontechgroup.com / website - analytics',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '📊',
     color: 'from - sky - 600 to - cyan - 700',
     popular: true,
@@ -1288,25 +1029,15 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     target_audience: ['MSPs', 'IT teams'],
     market_position: 'Lightweight alternative to Zendesk and Freshservice.',
     competitors: ['Zendesk', 'Freshservice'],
-<<<<<<< HEAD
-    techStack: ['Next && Next.js', 'PostgreSQL', 'Node && Node.js'],
-    realImplementation: true,
-    implementationDetails: 'Inbound parser, workflow builder, KB CMS.',
-=======
     tech_stack: ['Next.js', 'PostgreSQL', 'Node.js'],
     real_implementation: true,
     implementation_details: 'Inbound parser, workflow builder, KB CMS.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     roi: 'Reduce ticket volume 15–25% via KB.',
     use_cases: ['IT requests', 'Access provisioning'],
     integrations: ['Okta', 'Google Workspace', 'Slack'],
     support: 'Email support',
     compliance: ['GDPR', 'SOC 2'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/it-helpdesk',
-=======
     link: 'https://ziontechgroup.com / it - helpdesk',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '🛠️',
     color: 'from - slate - 600 to - gray - 700',
     popular: false,
@@ -1339,26 +1070,16 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     target_audience: ['D2C brands', 'Marketplaces'],
     market_position: 'Competitive with Loop and Returnly at simpler pricing.',
     competitors: ['Loop', 'Returnly'],
-<<<<<<< HEAD
-    techStack: ['Next && Next.js', 'Stripe', 'Shopify API'],
-    realImplementation: true,
-    implementationDetails:
-=======
     tech_stack: ['Next.js', 'Stripe', 'Shopify API'],
     real_implementation: true,
     implementation_details:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Webhook integrations, label providers, RMA workflows.',
     roi: 'Reduce refund losses via exchanges.',
     use_cases: ['Returns', 'Exchanges', 'Warranties'],
     integrations: ['Shopify', 'Shippo', 'EasyPost'],
     support: 'Email support',
     compliance: ['GDPR'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/return-manager',
-=======
     link: 'https://ziontechgroup.com / return - manager',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '📦',
     color: 'from - amber - 600 to - orange - 700',
     popular: false,
@@ -1392,26 +1113,15 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     market_position:;
       'Alternative to Lemlist and Mailshake with stricter safety.',
     competitors: ['Lemlist', 'Mailshake'],
-<<<<<<< HEAD
-    techStack: ['Next && Next.js', 'PostgreSQL', 'OpenAI'],
-    realImplementation: true,
-    implementationDetails: 'Warmup safe-guards, DNS checks, reply classifier.',
-=======
     tech_stack: ['Next.js', 'PostgreSQL', 'OpenAI'],
     real_implementation: true,
     implementation_details: 'Warmup safe - guards, DNS checks, reply classifier.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     roi: '+10–20% conversion uplift.',
     use_cases: ['Prospecting', 'Renewals'],
     integrations: ['HubSpot', 'Pipedrive', 'Gmail'],
     support: 'Email support',
-<<<<<<< HEAD
-    compliance: ['GDPR', 'CAN-SPAM'],
-    link: 'https://ziontechgroup && ziontechgroup.com/email-followups',
-=======
     compliance: ['GDPR', 'CAN - SPAM'],
     link: 'https://ziontechgroup.com / email - followups',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '📨',
     color: 'from - blue - 600 to - indigo - 700',
     popular: false,
@@ -1444,17 +1154,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     target_audience: ['Podcasters', 'Agencies'],
     market_position: 'Alternative to Descript transcripts with simpler pricing.',
     competitors: ['Descript', 'Rev'],
-<<<<<<< HEAD
-    techStack: ['Whisper', 'Next && Next.js', 'S3'],
-    realImplementation: true,
-    implementationDetails: 'Batch jobs, cloud storage, editor UI.',
-    roi: 'Cut post-production hours by 60–80%.',
-    useCases: ['Transcripts', 'Repurposing'],
-    integrations: ['RSS', 'YouTube', 'Anchor'],
-    support: 'Email support',
-    compliance: ['GDPR'],
-    link: 'https://ziontechgroup && ziontechgroup.com/podcast-transcription',
-=======
     tech_stack: ['Whisper', 'Next.js', 'S3'],
     real_implementation: true,
     implementation_details: 'Batch jobs, cloud storage, editor UI.',
@@ -1464,7 +1163,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     support: 'Email support',
     compliance: ['GDPR'],
     link: 'https://ziontechgroup.com / podcast - transcription',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '🎙️',
     color: 'from - fuchsia - 600 to - violet - 700',
     popular: true,
@@ -1506,11 +1204,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     integrations: ['S3', 'GCS', 'Databricks'],
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-knowledge-graph-studio',
-=======
     link: 'https://ziontechgroup.com / services / ai - knowledge - graph - studio',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '🕸️',
     color: 'from - teal - 600 to - emerald - 700',
     popular: true,
@@ -1544,25 +1238,15 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     market_position:;
       'Comparable to OpenRouter / EdenAI; adds governance and audit.',
     competitors: ['OpenRouter', 'EdenAI', 'Helicone'],
-<<<<<<< HEAD
-    techStack: ['Node && Node.js', 'PostgreSQL', 'OpenAI', 'Anthropic'],
-    realImplementation: true,
-    implementationDetails: 'Multi-tenant projects, RBAC, per-key metering.',
-=======
     tech_stack: ['Node.js', 'PostgreSQL', 'OpenAI', 'Anthropic'],
     real_implementation: true,
     implementation_details: 'Multi - tenant projects, RBAC, per - key metering.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     roi: 'Cut model costs by 20–40%.',
     use_cases: ['Central model access', 'Safety'],
     integrations: ['OpenAI', 'Anthropic', 'Azure'],
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/services/llm-guarded-api-gateway',
-=======
     link: 'https://ziontechgroup.com / services / llm - guarded - api - gateway',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '🛡️',
     color: 'from - cyan - 700 to - blue - 800',
     popular: true,
@@ -1603,11 +1287,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     integrations: ['S3', 'BigQuery', 'Snowflake'],
     support: 'Email support',
     compliance: ['GDPR'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/services/serverless-lakehouse-starter',
-=======
     link: 'https://ziontechgroup.com / services / serverless - lakehouse - starter',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '🏗️',
     color: 'from - stone - 600 to - zinc - 700',
     popular: false,
@@ -1648,11 +1328,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     integrations: ['dbt', 'GitHub', 'BigQuery'],
     support: 'Email support',
     compliance: ['GDPR'],
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/services/data-contracts-hub',
-=======
     link: 'https://ziontechgroup.com / services / data - contracts - hub',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '📜',
     color: 'from - lime - 600 to - green - 700',
     popular: false,
@@ -1660,10 +1336,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     customers: 19,
     rating: 4 && 4.6,
     reviews: 6,
-<<<<<<< HEAD
-  },];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1683,7 +1355,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     website: string
   }
 }
-
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions
   {
@@ -2256,8 +1927,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     reviews: 6
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
     tagline: 'Generate legally compliant documents in seconds with AI'
@@ -3000,7 +2669,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       trialDays: 14
       setupTime: '15 minutes'
     }
-
     features: [
       'Inbox labeling and prioritization'
       'On-brand response templates'
@@ -3010,7 +2678,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Metrics: FRT/ART, deflection rate'
     ]
     benefits: [
-
       'Cut response time by 60%'
       'Deflect 30–50% routine tickets'
       'Improve CSAT and NPS'
@@ -3591,25 +3258,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   },];
 // Helper functions
 export const getServicesByCategory = (category: string) => {
-<<<<<<< HEAD
-  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);    id: 'data-contracts-hub';
-    name: 'Data Contracts Hub';
-    tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
-    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
-    category: 'Data & Platform'
-    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 14, setupTime: '2 hours' }
-
-    features: ['Schema registryDiff viewerCI gatesBackfill helpers'];
-    benefits: ['Fewer incidentsFaster changes'];
-    targetAudience: ['Data platformAnalytics engineers'];
-    marketPosition: 'Complements dbt and warehouse-native governance.';
-    competitors: ['OpenMetadataGreat Expectations'];
-    techStack: ['TypeScriptPostgreSQLdbt'];
-
-    realImplementation: true
-    implementationDetails: 'Contracts as code, PR checks, lineage view.';
-
-=======
   }, ];
 ;
 // Helper functions;
@@ -3628,29 +3276,18 @@ export const getServicesByCategory = (category: string) =>: any {
     tech_stack: ['TypeScriptPostgreSQLdbt'];
     real_implementation: true,
     implementation_details: 'Contracts as code, PR checks, lineage view.';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     roi: 'Reduce data breakage incidents by 50–70%.';
     use_cases: ['Warehouse governance_analytics contracts'];
     integrations: ['dbtGitHubBigQuery'];
     support: 'Email support';
     compliance: ['GDPR'];
-<<<<<<< HEAD
-    link: 'https://ziontechgroup && ziontechgroup.com/services/data-contracts-hub';
-=======
     link: 'https://ziontechgroup.com / services / data - contracts - hub';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     icon: '📜';
     color: 'from - lime - 600 to - green - 700';
     popular: false;
     launch_date: '2025 - 02 - 08';
     customers: 19;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    rating: 4.6
-=======
     rating: 4 && 4.6,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 6
   }
 ];
@@ -3662,7 +3299,6 @@ competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
 realImplementation: true;
 implementationDetails: 'Template gallery, response store, analytics, export jobs.';
-=======
     rating: 4.6,
     reviews: 6;
   }
@@ -3676,38 +3312,25 @@ competitors: ['TypeformSurveySparrowTally'];
 tech_stack: ['Next.jsSupabaseVercel EdgeOpenAI'];
 real_implementation: true;
 implementation_details: 'Template gallery, response store, analytics, export jobs.';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 roi: 'Improves feedback volume 20–50%.';
 use_cases: ['NPSBeta feedback_lead qual'];
 integrations: ['HubSpotSegmentZapier'];
 support: 'Email support, templates library';
 compliance: ['GDPRCCPA'];
-<<<<<<< HEAD
-link: 'https://ziontechgroup && ziontechgroup.com/mobile-surveys';
-=======
 link: 'https://ziontechgroup.com / mobile - surveys';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 icon: '📱';
 color: 'from - emerald - 600 to - teal - 700';
 popular: false;
 launch_date: '2024 - 12 - 10';
 customers: 95;
-<<<<<<< HEAD
-rating: 4.6;
-<<<<<<< HEAD
-reviews: 22
-}
-=======
 rating: 4 && 4.6;
 reviews: 22 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
 competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.';
-=======
 reviews: 22;
 }
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
@@ -3715,33 +3338,20 @@ competitors: ['AsanaClickUpNotion'];
 tech_stack: ['Next.jsPrismaPostgreSQL'];
 real_implementation: true;
 implementation_details: 'Template JSON schemas, rules engine, import / export.';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 roi: 'Deliverables throughput +15–25%.';
 use_cases: ['Client delivery_editorial calendar_sprints'];
 integrations: ['Google CalendarSlackLinear'];
 support: 'Email support';
 compliance: ['GDPR'];
-<<<<<<< HEAD
-link: 'https://ziontechgroup && ziontechgroup.com/productivity-planner';
-=======
 link: 'https://ziontechgroup.com / productivity - planner';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 icon: '🗓️';
 color: 'from - purple - 600 to - pink - 600';
 popular: false;
 launch_date: '2025 - 01 - 20';
 customers: 60;
-<<<<<<< HEAD
-rating: 4.5;
-<<<<<<< HEAD
-reviews: 14
-}
-=======
 rating: 4 && 4.5;
 reviews: 14 
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const serviceCategories = [
   'Legal Technology'
   'Customer Service & Support'
@@ -3769,26 +3379,20 @@ export const serviceCategories = [
   'Education Technology'
   'Enterprise IT'
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
-=======
   return realMicroSaasServices.filter(service => service.category === category)
 };
-
 export const getServicesByPriceRange = (min: number, max: number) => {
   return realMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', '').replace(, ''));
     return price >= min && (max === Infinity || price <= max)
   })
 };
-
 export const getPopularServices = () => {
   return realMicroSaasServices.filter(service => service.popular)
 };
-
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
-=======
 reviews: 14;
 }
 ;
@@ -3820,15 +3424,7 @@ export const service_categories = [;
   'Enterprise IT',
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT';
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

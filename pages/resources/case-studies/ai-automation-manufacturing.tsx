@@ -1,28 +1,10 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function ResourceCaseStudyPage() {
-  const caseStudy = {
-<<<<<<< HEAD
-    id: 'ai-automation-manufacturing'
-    title: 'AI-Powered Manufacturing Automation'
-    company: 'Global Manufacturing Corp'
-    industry: 'Manufacturing'
-    results: '40% increase in production efficiency, 60% reduction in downtime'
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-  }
-=======
-    id: 'ai-automation-manufacturing',
+id: 'ai-automation-manufacturing',
     title: 'AI-Powered Manufacturing Automation',
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
     results: '40% increase in production efficiency, 60% reduction in downtime',
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
   };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
       <Head>
@@ -35,11 +17,7 @@ export default function ResourceCaseStudyPage() {
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
             <nav className="mb-8">
-<<<<<<< HEAD
-              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-=======
               <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 ← Back to Resources
               </Link>
             </nav>
@@ -70,7 +48,6 @@ export default function ResourceCaseStudyPage() {
                   <p className="text-white/90">
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance
                     quality control, and production optimization. Each system was designed to work independently while
-
                     sharing data for comprehensive insights.
                   </p>
                 </div>
@@ -141,12 +118,7 @@ export default function ResourceCaseStudyPage() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -275,4 +247,3 @@ function ResourceCaseStudyPage() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
