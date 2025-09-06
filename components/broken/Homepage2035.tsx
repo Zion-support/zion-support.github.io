@@ -66,12 +66,12 @@ const LoadingFallback = () => (
       <p className="text-sm text-gray-500">Preparing your digital transformation journey</p>
     </motion.div>
   </div>
-);
+),
 
 const Homepage2035: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [isLoading, setIsLoading] = useState(true),
+  const [isVisible, setIsVisible] = useState(false),
+  const [activeCategory, setActiveCategory] = useState('all'),
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -508,22 +508,22 @@ const Homepage2035: React.FC = () => {
                   icon: <Shield className="w-12 h-12" />,
                   title: 'Enterprise Security',
                   description: 'Military-grade security protocols and compliance standards to protect your business'
-                };
+                },
                 {
                   icon: <Rocket className="w-12 h-12" />,
                   title: 'Space Technology',
                   description: 'Pioneering space tech solutions for the next generation of innovation'
-                };
+                },
                 {
                   icon: <Atom className="w-12 h-12" />,
                   title: 'Quantum Computing',
                   description: 'Access to quantum computing power for complex problem-solving'
-                };
+                },
                 {
                   icon: <Cloud className="w-12 h-12" />,
                   title: 'Cloud-Native',
                   description: 'Built for the cloud with scalability, reliability, and performance in mind'
-                };
+                },
                 {
                   icon: <Target className="w-12 h-12" />,
                   title: 'Results-Driven',

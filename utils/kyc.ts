@@ -10,20 +10,20 @@ export interface KycDocumentMeta {
 }
 
 export interface KycProfile {
-  userId: string;
-  role: KycRole;
+  userId: string,
+  role: KycRole,
   fullLegalName?: string;
   businessName?: string;
   businessRegistrationNumber?: string;
   country?: string;
   dateOfBirth?: string;
-  documents: KycDocumentMeta[];
-  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
-  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
+  documents: KycDocumentMeta[],
+  status: 'in_progress' | 'submitted' | 'approved' | 'rejected',
+  amlStatus: 'unknown' | 'clear' | 'match' | 'review',
   flags?: string[];
   riskScore?: number;
-  createdAt: string;
-  lastUpdatedAt: string;
+  createdAt: string,
+  lastUpdatedAt: string,
   auditTrail: Array<{
     at: string;
     by: string;
@@ -52,11 +52,11 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   const missing: string[] = [];
   
   if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name');
+    missing.push('name'),
   }
   
   if (!profile.country) {
-    missing.push('country');
+    missing.push('country'),
   }
   
   if (profile.role === 'client' && !profile.dateOfBirth) {
@@ -64,11 +64,11 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   }
   
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
-    missing.push('businessRegistrationNumber');
+    missing.push('businessRegistrationNumber'),
   }
   
   return {
     ok: missing.length === 0,
     missing
-  };
+  },
 }

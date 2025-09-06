@@ -32,7 +32,7 @@ export default function Badges({ balance }: { balance: number }) {
   return current
 }
 export default function Badges({ balance }: { balance: number }) {
-  const active = currentBadge(balance);
+  const active = currentBadge(balance),
   return (
     <div className='flex gap-2 items-center flex-wrap'>
       {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">

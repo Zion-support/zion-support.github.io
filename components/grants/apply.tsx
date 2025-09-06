@@ -10,21 +10,21 @@ const categories: GrantCategory[] = [
   'Research Grants',
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {
-  const router = useRouter();
-  const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
-  const [projectName, setProjectName] = useState('');
-  const [teamInfo, setTeamInfo] = useState('');
-  const [proposalSummary, setProposalSummary] = useState('');
-  const [timeline, setTimeline] = useState('');
+  const router = useRouter(),
+  const [program, setProgram] = useState<'grant' | 'incubator'>('grant'),
+  const [projectName, setProjectName] = useState(''),
+  const [teamInfo, setTeamInfo] = useState(''),
+  const [proposalSummary, setProposalSummary] = useState(''),
+  const [timeline, setTimeline] = useState(''),
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
   const [supportingLinks, setSupportingLinks] = useState<string>('');
-  const [pitchDeckUrl, setPitchDeckUrl] = useState('');
-  const [region, setRegion] = useState('');
+  const [pitchDeckUrl, setPitchDeckUrl] = useState(''),
+  const [region, setRegion] = useState(''),
   const [sector, setSector] = useState<string>('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null);
 
   const save = async (submit: boolean) => {
@@ -76,7 +76,7 @@ export default function ApplyGrantPage() {
     } finally {
       setLoading(false)
     }
-  };
+  },
 
   return (
     <EnhancedLayout>

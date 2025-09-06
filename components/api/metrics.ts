@@ -146,7 +146,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       token: token.map((m) => m.trend || generateSeries(14, m.value));
       multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}};
   if (req.query.compare === 'quarter') {
-    const factor = 0.8 + Math.random() * 0.4;
+    const factor = 0.8 + Math.random() * 0.4,
     response.compare = {
       prevQuarter: {
         marketplace: marketplace.map(m => ({

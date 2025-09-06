@@ -156,7 +156,7 @@ const Homepage2047: React.FC = () => {
   ];
 
   // Get featured services for rotation
-  const featuredServices = allInnovativeServices.slice(0, 6);
+  const featuredServices = allInnovativeServices.slice(0, 6),
 
   // Filter services by category
   const getFilteredServices = () => {

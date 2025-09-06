@@ -79,7 +79,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
   <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">
     {children}
   </h2>
-);
+),
 
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
@@ -339,10 +339,11 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
           ) : null}
         </div>
       </div>
-    );
+    ),
   }
-);
+),
 
-ResumePreview.displayName = 'ResumePreview';
+ResumePreview.displayName = 'ResumePreview',
+
 
 export default ResumePreview;

@@ -1,16 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2046: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<any[]>([]);
-  const animationRef = useRef<number>();
+  const canvasRef = useRef<HTMLCanvasElement>(null),
+  const particlesRef = useRef<any[]>([]),
+  const animationRef = useRef<number>(),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
     // Set canvas size
     const resizeCanvas = () => {
@@ -18,8 +18,8 @@ const UltraFuturisticBackground2046: React.FC = () => {
       canvas.height = window.innerHeight;      canvas.height = window.innerHeight
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
 
     // Particle class
     class Particle {
@@ -54,14 +54,14 @@ const UltraFuturisticBackground2046: React.FC = () => {
         this.type = types[Math.floor(Math.random() * types.length)] as any;
         
           case 'quantum':
-            this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
-            break;
+            this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`,
+            break,
           case 'neural':
-            this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
-            break;
+            this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`,
+            break,
           case 'data':
-            this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`;
-            break;
+            this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`,
+            break,
           case 'energy':
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
             break;        }            break
@@ -69,8 +69,8 @@ const UltraFuturisticBackground2046: React.FC = () => {
       }
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
+        this.x += this.vx,
+        this.y += this.vy,
         this.life--;
 
         // Bounce off edges
@@ -231,15 +231,15 @@ const UltraFuturisticBackground2046: React.FC = () => {
         particlesRef.current.push(new Particle());      }      for (let i = 0, i < 150, i++) {
         particlesRef.current.push(new Particle())
       }
-    };
+    },
 
     // Animation loop
     const animate = () => {
       if (!ctx || !canvas) return;
       
       // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
@@ -258,7 +258,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
       drawQuantumField(ctx, canvas.width, canvas.height);
 
       // Draw neural network grid
-      drawNeuralGrid(ctx, canvas.width, canvas.height);
+      drawNeuralGrid(ctx, canvas.width, canvas.height),
 
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -335,7 +335,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
           const offset =
             Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;      for (let x = 0, x < width, x += gridSize) {
         for (let y = 0, y < height, y += gridSize) {
-          const offset = Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
+          const offset = Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10,
           
           ctx.moveTo(x + offset, y);
           ctx.lineTo(x + gridSize + offset, y);
@@ -347,12 +347,12 @@ const UltraFuturisticBackground2046: React.FC = () => {
     };
 
     // Start animation
-    initParticles();
-    animate();
+    initParticles(),
+    animate(),
 
     // Cleanup
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
     };

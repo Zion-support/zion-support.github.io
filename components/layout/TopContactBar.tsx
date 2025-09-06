@@ -44,7 +44,7 @@ const quickActions = [
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
 
 export default function TopContactBar() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false),
 
   return (
     <div className='relative z-40'>

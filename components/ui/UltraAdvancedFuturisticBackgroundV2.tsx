@@ -11,14 +11,15 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
 }) => {
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
+
 
     let animationFrameId: number;
     let particles: Array<{
@@ -73,11 +74,11 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
         });      }          maxLife: 100
         })
       }
-    };
+    },
 
     // Update and draw particles
     const updateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Create gradient background
       const gradient = ctx.createRadialGradient(
@@ -92,13 +93,13 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
       gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.6)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = gradient,
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
         particle.life--;
 
         // Bounce off edges
@@ -114,12 +115,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
         }
 
         // Draw particle
-        const alpha = particle.life / particle.maxLife;
-        ctx.globalAlpha = alpha;
-        ctx.fillStyle = particle.color;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
+        const alpha = particle.life / particle.maxLife,
+        ctx.globalAlpha = alpha,
+        ctx.fillStyle = particle.color,
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fill(),
 
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {
@@ -197,12 +198,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
       initParticles();    };      initParticles()
     };
 
-    window.addEventListener('resize', handleResize);
-    initParticles();
-    updateParticles();
+    window.addEventListener('resize', handleResize),
+    initParticles(),
+    updateParticles(),
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize),
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }

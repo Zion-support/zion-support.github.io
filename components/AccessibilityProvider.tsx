@@ -14,13 +14,13 @@ const AccessibilityContext = createContext<
 >(undefined);
 
 export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
+  const context = useContext(AccessibilityContext),
   if (context === undefined) {
     throw new Error(
       "useAccessibility must be used within an AccessibilityProvider",
     );
   }
-  return context;
+  return context,
 };
 
 interface AccessibilityProviderProps {
@@ -34,9 +34,9 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
 
-  const toggleHighContrast = () => setHighContrast(!highContrast);
-  const toggleLargeText = () => setLargeText(!largeText);
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+  const toggleHighContrast = () => setHighContrast(!highContrast),
+  const toggleLargeText = () => setLargeText(!largeText),
+  const toggleReducedMotion = () => setReducedMotion(!reducedMotion),
 
   const value = {
     highContrast,
@@ -45,7 +45,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     toggleHighContrast,
     toggleLargeText,
     toggleReducedMotion,
-  };
+  },
 
   return (
     <AccessibilityContext.Provider value={value}>
@@ -55,7 +55,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
         {children}
       </div>
     </AccessibilityContext.Provider>
-  );
+  ),
 };
 
 export default AccessibilityProvider;

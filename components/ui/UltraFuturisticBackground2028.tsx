@@ -24,14 +24,14 @@ interface UltraFuturisticBackground2028Props {
 export default function UltraFuturisticBackground2028({ children }: UltraFuturisticBackground2028Props) {
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
 
     // Particle system
     const particles: Array<{
@@ -72,7 +72,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particles.forEach(particle => {        particle.x += particle.vx;      particles.forEach((particle) => {
@@ -80,17 +80,17 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         particle.y += particle.vy;
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
 
         // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fillStyle = particle.color,
+        ctx.globalAlpha = particle.opacity,
+        ctx.fill(),
 
         // Draw connections
         particles.forEach(otherParticle => {          const dx = particle.x - otherParticle.x;        particles.forEach((otherParticle) => {
@@ -119,7 +119,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     // Handle resize
     const handleResize = () => {
@@ -127,7 +127,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize),
 
     return () => {
       window.removeEventListener('resize', handleResize);

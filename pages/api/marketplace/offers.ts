@@ -19,7 +19,7 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method === "GET") {
-      const user = getDemoUser(req);
+      const user = getDemoUser(req),
       if (user.role === "client") {
         const offers = listOffers({ clientId: user.id });
         return res.json({ ok: true, offers });

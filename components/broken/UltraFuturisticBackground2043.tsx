@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2043: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
     // Set canvas size
     const resizeCanvas = () => {
@@ -16,8 +16,8 @@ const UltraFuturisticBackground2043: React.FC = () => {
       canvas.height = window.innerHeight;      canvas.height = window.innerHeight
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
 
     // Particle system
     const particles: Array<{
@@ -76,14 +76,14 @@ const UltraFuturisticBackground2043: React.FC = () => {
     // Animation loop
     const animate = () => {
       // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)',
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
 
         // Bounce off edges
         if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
@@ -141,7 +141,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
       requestAnimationFrame(animate);      requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -248,7 +248,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             scale: [1.3, 1, 1.3],
             opacity: [0.3, 0.6, 0.3],
           animate={{
-            scale: [1.3, 1, 1.3];
+            scale: [1.3, 1, 1.3],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 9,
@@ -280,7 +280,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
 
         <motion.div
           animate={{
-            scale: [1, 1.4, 1];
+            scale: [1, 1.4, 1],
             opacity: [0.4, 0.7, 0.4]}}
           transition={{
             duration: 11,
@@ -347,7 +347,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             rotate: [0, 360],
             scale: [1, 1.2, 1],
           animate={{
-            rotate: [0, 360];
+            rotate: [0, 360],
             scale: [1, 1.2, 1]}}
           transition={{
             duration: 15,

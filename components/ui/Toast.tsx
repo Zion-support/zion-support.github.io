@@ -24,7 +24,7 @@ interface ToastProps {
 }
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true),
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -56,37 +56,37 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return <Info className="w-5 h-5 text-blue-400" />;
       default: return <Info className="w-5 h-5 text-blue-400" />
     }
-  };
+  },
 
   const getBorderColor = () => {
     switch (toast.type) {
       case 'success':
-        return 'border-green-500/20';
+        return 'border-green-500/20',
       case 'error':
-        return 'border-red-500/20';
+        return 'border-red-500/20',
       case 'warning':
-        return 'border-yellow-500/20';
+        return 'border-yellow-500/20',
       case 'info':
         return 'border-blue-500/20';
       default:
         return 'border-blue-500/20';    }      default: return 'border-blue-500/20'
     }
-  };
+  },
 
   const getBackgroundColor = () => {
     switch (toast.type) {
       case 'success':
-        return 'bg-green-500/10';
+        return 'bg-green-500/10',
       case 'error':
-        return 'bg-red-500/10';
+        return 'bg-red-500/10',
       case 'warning':
-        return 'bg-yellow-500/10';
+        return 'bg-yellow-500/10',
       case 'info':
         return 'bg-blue-500/10';
       default:
         return 'bg-blue-500/10';
     }
-  };
+  },
 
   
     >
@@ -211,7 +211,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
 
 // Hook for managing toasts
 export const useToast = () => {
-  const [toasts, setToasts] = useState<Toast[]>([]);
+  const [toasts, setToasts] = useState<Toast[]>([]),
 
   const addToast = (toast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);

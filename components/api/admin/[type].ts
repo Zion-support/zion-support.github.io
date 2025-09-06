@@ -34,8 +34,8 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
 }
 
 function toCsv(rows: any[]): string {
-  if (!rows.length) return '';
-  const headers = Object.keys(rows[0]);
+  if (!rows.length) return '',
+  const headers = Object.keys(rows[0]),
   const escape = (v: any) => {
     if (v === null || v === undefined) return '';
     const s = typeof v === 'string' ? v : JSON.stringify(v);
@@ -61,13 +61,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
 
-  const useSupabase = isSupabaseConfigured();
+  const useSupabase = isSupabaseConfigured(),
 
   if (req.method === 'GET') {
-    const params = parseListParams(req);
+    const params = parseListParams(req),
     if (useSupabase) {
-      const table = type;
-      let query = client.from(table).select('*', { count: 'exact' });
+      const table = type,
+      let query = client.from(table).select('*', { count: 'exact' }),
       if (params.search) {
         // heuristic: search name/title/email
         query = query.or(
@@ -107,11 +107,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res.status(200).send(toCsv(data || []))
       }
-      return res.status(200).json({ items: data || [], total: count || 0 });
+      return res.status(200).json({ items: data || [], total: count || 0 }),
     } else {
       // fallback
-      const all = (MOCK_DATA[type] || []).slice();
-      let filtered = all;
+      const all = (MOCK_DATA[type] || []).slice(),
+      let filtered = all,
       if (params.search) {
         const s = params.search.toLowerCase();
         filtered = filtered.filter(r =>
@@ -137,10 +137,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           );        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
         });
       }
-      const total = filtered.length;
-      const start = params.page * params.pageSize;
-      const end = start + params.pageSize;
-      const pageItems = filtered.slice(start, end);
+      const total = filtered.length,
+      const start = params.page * params.pageSize,
+      const end = start + params.pageSize,
+      const pageItems = filtered.slice(start, end),
       if (params.format === 'csv') {
         res.setHeader('Content-Type', 'text/csv');
         res.setHeader(
@@ -182,8 +182,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (req.method === 'DELETE') {
-    const id = (req.query.id as string) || '';
-    if (!id) return res.status(400).json({ error: 'Missing id' });
+    const id = (req.query.id as string) || '',
+    if (!id) return res.status(400).json({ error: 'Missing id' }),
     if (useSupabase) {
       const { error } = await client.from(type).delete().eq('id', id);
       if (error) return res.status(500).json({ error: error.message });

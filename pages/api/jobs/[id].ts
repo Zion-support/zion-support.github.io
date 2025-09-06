@@ -7,10 +7,10 @@ import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 const FILE = "jobs.json";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return;
-  const { id } = req.query;
-  const jobs = readJsonFile<Job[]>(FILE, []);
-  const idx = jobs.findIndex((j) => j.id === id);
+  if (!rateLimit(req, res)) return,
+  const { id } = req.query,
+  const jobs = readJsonFile<Job[]>(FILE, []),
+  const idx = jobs.findIndex((j) => j.id === id),
 
   if (idx === -1) {
     res.status(404).json({ error: "Job not found" });
@@ -54,11 +54,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === "string") job.status = status as Job["status"];
 
-    job.updatedAtIso = new Date().toISOString();
-    jobs[idx] = job;
+    job.updatedAtIso = new Date().toISOString(),
+    jobs[idx] = job,
     writeJsonFile<Job[]>(FILE, jobs);
 
-    res.status(200).json({ job });
+    res.status(200).json({ job }),
     return;
   }
 

@@ -26,8 +26,8 @@ const LOG_DIR = path.join(process.cwd(), 'data');
 const LOG_FILE = path.join(LOG_DIR, 'analyticsevents.log.jsonl');
 
 function ensureLogFile() {
-  if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
-  if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '');
+  if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true }),
+  if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, ''),
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -51,7 +51,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
 =======
     ip: (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '') as string
-  };
+  },
   try {
     ensureLogFile();
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n');

@@ -176,7 +176,7 @@ export default async function handler(
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' }),
   }
 
   const body: RequestBody = req.body;
@@ -186,7 +186,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   // Score and filter candidate profiles  const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
 
-  const country = extractCountry(region || 'Global');
+  const country = extractCountry(region || 'Global'),
 
   // Score and filter candidate profiles
   const scored = TALENT_PROFILES.map(p => ({
@@ -273,7 +273,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
-    .slice(0, 8);
+    .slice(0, 8),
 
   // Tags
   const scarceSkills = [

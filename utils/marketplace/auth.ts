@@ -1,22 +1,22 @@
 import { NextApiRequest } from 'next';
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
-  const authHeader = req.headers.authorization;
+  const authHeader = req.headers.authorization,
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return null;
   }
   
-  const token = authHeader.substring(7);
+  const token = authHeader.substring(7),
   if (token && token.length > 0) {
     return {
       id: 'user-1',
       email: 'user@example.com',
       role: 'client',
       name: 'Test User'
-    };
+    },
   }
   
-  return null;
+  return null,
 }
 
 export function assertTalentOrClientForOffer(
@@ -39,5 +39,5 @@ export function assertTalentOrClientForOffer(
   if (!user) {
     throw new Error('Authentication required'),
   }
-  return user;
+  return user,
 }

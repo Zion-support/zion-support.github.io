@@ -17,12 +17,12 @@ export default async function handler(
 - 2-3 subsections with H2/H3
 - Short paragraphs, bullet lists
 - Strong call-to-action for Zion Marketplace
-Do not include <html>, <body>, or scripts.`;
+Do not include <html>, <body>, or scripts.`,
     const user = `Topic: ${prompt}
 Region: ${region || "global"}
 Service focus: ${service || "general"}
 Audience: buyers looking to hire talent or rent equipment
-Tone: professional, modern, trustworthy`;
+Tone: professional, modern, trustworthy`,
     const response = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [

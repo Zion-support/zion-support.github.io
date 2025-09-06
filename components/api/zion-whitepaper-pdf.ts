@@ -35,11 +35,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
 
-  const doc = new (PDFDocument as any)({ autoFirstPage: false });
-  doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
-  doc.info.Author = 'Zion Protocol';
+  const doc = new (PDFDocument as any)({ autoFirstPage: false }),
+  doc.info.Title = `Zion Protocol Whitepaper (${edition})`,
+  doc.info.Author = 'Zion Protocol',
 
-  doc.pipe(res);
+  doc.pipe(res),
 
   // Cover page
   doc.addPage();

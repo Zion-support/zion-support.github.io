@@ -8,7 +8,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function IncidentAutomationSuitePage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite')),
   if (!service) return null;
 
   return (
@@ -52,7 +52,7 @@ export default function IncidentAutomationSuitePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  ),
 }
 
 ;

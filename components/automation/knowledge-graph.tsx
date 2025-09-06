@@ -3,7 +3,7 @@
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>)
 export default function KnowledgeGraph({ report }: Props) {
-  if (!report) return <div>No knowledge graph yet.</div>;
+  if (!report) return <div>No knowledge graph yet.</div>,
   return (
     <div className="space-y-6">
       <header className="space-y-1">

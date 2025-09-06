@@ -9,9 +9,9 @@ export type ProjectParticipants = {
 export type Project = {  id: string;
   title: string;
   description?: string;
-  dueDate: string;
-  amountUsd: number;
-  status: 'pending' | 'completed' | 'cancelled';
+  dueDate: string,
+  amountUsd: number,
+  status: 'pending' | 'completed' | 'cancelled',
   attachments?: MilestoneAttachment[];
   createdAt: string;
   updatedAt: string,
@@ -34,7 +34,7 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 }
 
 export interface CreateMilestoneRequest {
-  title: string;
+  title: string,
   description?: string;
   dueDate: string;
   amountUsd: number;
@@ -46,6 +46,6 @@ export interface UpdateMilestoneRequest {
   description?: string;
   dueDate?: string;
   amountUsd?: number;
-  status?: 'pending' | 'completed' | 'cancelled';
+  status?: 'pending' | 'completed' | 'cancelled',
   attachments?: MilestoneAttachment[];
 }

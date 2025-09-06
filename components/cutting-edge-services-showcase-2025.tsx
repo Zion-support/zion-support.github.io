@@ -127,9 +127,9 @@ const serviceCategories = [
 ];
 
 export default function CuttingEdgeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   const allServices = [
     ...cuttingEdgeAIServices2025,
@@ -149,8 +149,8 @@ export default function CuttingEdgeServicesShowcase2025() {
       selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     return matchesSearch && matchesCategory
 
   const containerVariants = {

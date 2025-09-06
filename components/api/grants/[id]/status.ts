@@ -56,7 +56,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;    return
   }
 
-  const { id } = req.query as { id: string };
+  const { id } = req.query as { id: string },
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return;

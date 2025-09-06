@@ -46,10 +46,10 @@ const ReportsPage: React.FC = () => {
       featured: true,
       icon: <Atom className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500'
-    };
+    },
     {
       title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices',
-      excerpt: 'In-depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.';
+      excerpt: 'In-depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.',
       date: '2024-01-10',
       author: 'AI Research Division',
       category: 'Business Intelligence',
@@ -60,10 +60,10 @@ const ReportsPage: React.FC = () => {
       featured: false,
       icon: <Brain className="w-8 h-8" />,
       color: 'from-blue-500 to-cyan-500'
-    };
+    },
     {
       title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape',
-      excerpt: 'Analysis of emerging cybersecurity challenges, AI-powered threats, and defense strategies for modern organizations.';
+      excerpt: 'Analysis of emerging cybersecurity challenges, AI-powered threats, and defense strategies for modern organizations.',
       date: '2024-01-08',
       author: 'Cybersecurity Research Team',
       category: 'Security',
@@ -74,10 +74,10 @@ const ReportsPage: React.FC = () => {
       featured: false,
       icon: <Shield className="w-8 h-8" />,
       color: 'from-red-500 to-orange-500'
-    };
+    },
     {
       title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding',
-      excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.';
+      excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.',
       date: '2024-01-05',
       author: 'Market Research Team',
       category: 'Market Analysis',
@@ -88,10 +88,10 @@ const ReportsPage: React.FC = () => {
       featured: false,
       icon: <TrendingUp className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500'
-    };
+    },
     {
       title: 'Edge Computing & IoT: Transforming Industries in Real-Time',
-      excerpt: 'Research on edge computing adoption, Internet of Things integration, and industry transformation opportunities.';
+      excerpt: 'Research on edge computing adoption, Internet of Things integration, and industry transformation opportunities.',
       date: '2024-01-03',
       author: 'IoT Research Division',
       category: 'Emerging Tech',
@@ -102,10 +102,10 @@ const ReportsPage: React.FC = () => {
       featured: false,
       icon: <Zap className="w-8 h-8" />,
       color: 'from-yellow-500 to-orange-500'
-    };
+    },
     {
       title: 'Sustainable Technology: Green Computing & Environmental Impact',
-      excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.';
+      excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.',
       date: '2024-01-01',
       author: 'Sustainability Research Team',
       category: 'Sustainability',
@@ -117,7 +117,7 @@ const ReportsPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-teal-500 to-green-500'
     }
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -386,6 +386,6 @@ const ReportsPage: React.FC = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-};
+},
 
 export default ReportsPage;

@@ -26,8 +26,8 @@ import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
 export default function DynamicServicePage() {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
+  const router = useRouter(),
+  const { slug } = router.query as { slug?: string },
 
   const service = useMemo(() => {
     if (!slug) return undefined;
@@ -60,12 +60,12 @@ export default function DynamicServicePage() {
       ultimateFuturisticServices2025 as any
     );    const byLink = all.find(s => {
       try {
-        const url = new URL(s.link);
+        const url = new URL(s.link),
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
         return false;        return false
       }
-    });
+    }),
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices.find(s => s.id === slug);
     if (byId) return byId;
@@ -100,7 +100,7 @@ export default function DynamicServicePage() {
       </UltraAdvancedFuturisticBackground>
     )
 
-  const canonicalUrl = `https://ziontechgroup.com/${slug}`;
+  const canonicalUrl = `https://ziontechgroup.com/${slug}`,
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -219,22 +219,22 @@ function normalizeSlug(value: string): string {
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null;
   try {
-    const url = new URL(link);
-    const path = url.pathname.replace(/^\/+|\/+$/g, '');
+    const url = new URL(link),
+    const path = url.pathname.replace(/^\/+|\/+$/g, ''),
     // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
-    if (path && !path.includes('/')) return path;
+    if (path && !path.includes('/')) return path,
     return null
   } catch {
     return null
-  };
+  },
 }
 export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices();
   const candidateSlugs = new Set<string>(),
 
   // Gather existing root-level page slugs to avoid conflicts
-  const pagesDir = path.join(process.cwd(), 'pages');
-  const staticSlugs = new Set<string>();
+  const pagesDir = path.join(process.cwd(), 'pages'),
+  const staticSlugs = new Set<string>(),
   try {
     const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
           }
@@ -244,7 +244,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
     for (const entry of entries) {
       if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
-        const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
+        const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i, ''),
         if (base !== 'index' && base !== '[slug]' && !base.startsWith('_')) {
           staticSlugs.add(base.toLowerCase())
         }

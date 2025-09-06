@@ -16,8 +16,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
 
-  const { entries } = readLogs();
-  const stuckOnly = req.query.stuck === '1' || req.query.stuck === 'true';
+  const { entries } = readLogs(),
+  const stuckOnly = req.query.stuck === '1' || req.query.stuck === 'true',
 
   if (stuckOnly) {
     return res.status(200).json({

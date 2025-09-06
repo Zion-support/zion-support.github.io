@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2034: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
     // Set canvas size
     const resizeCanvas = () => {
@@ -49,8 +49,8 @@ const UltraFuturisticBackground2034: React.FC = () => {
       }
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
+        this.x += this.vx,
+        this.y += this.vy,
         this.life--;
 
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
@@ -91,11 +91,11 @@ const UltraFuturisticBackground2034: React.FC = () => {
       if (!ctx) return;
       
       // Clear canvas with gradient
-      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.1)');
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height),
+      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.1)'),
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.05)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = gradient,
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particles.forEach(particle => {
@@ -133,7 +133,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
       requestAnimationFrame(animate);      requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);

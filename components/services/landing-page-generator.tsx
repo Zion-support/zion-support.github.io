@@ -13,5 +13,5 @@ export default function Placeholder() {
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  );
+  ),
 }

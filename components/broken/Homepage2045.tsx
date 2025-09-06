@@ -74,12 +74,12 @@ const LoadingFallback = () => (
       <p className="text-sm text-gray-500">Preparing your futuristic digital transformation journey</p>
     </motion.div>
   </div>
-);
+),
 
 const Homepage2045: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [isLoading, setIsLoading] = useState(true),
+  const [isVisible, setIsVisible] = useState(false),
+  const [activeSection, setActiveSection] = useState('hero'),
 
   useEffect(() => {
     // Simulate content loading with better timing
@@ -115,7 +115,7 @@ const Homepage2045: React.FC = () => {
           })
         };
         { threshold: 0.3, rootMargin: '-100px' }
-      );
+      ),
 
       const sections = document.querySelectorAll('section[id]');
       sections.forEach(section => observer.observe(section));
@@ -183,7 +183,7 @@ const Homepage2045: React.FC = () => {
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
           <p className="text-cyan-400 text-xl">Loading Zion Tech Group...</p>
       </div>
-    );
+    ),
   }
 
   return (

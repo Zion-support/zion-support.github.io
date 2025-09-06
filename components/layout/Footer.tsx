@@ -15,7 +15,7 @@ import {
   Database,
   Shield,
   Zap
-} from 'lucide-react';
+} from 'lucide-react',
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear(),
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
     { name: 'Contact', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' }
-  ];
+  ],
 
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-blue-400" />
-                <a href="tel:+13024640950" className="text-gray-400 hover:text-white transition-colors">
+                <a href="tel: +13024640950" className="text-gray-400 hover:text-white transition-colors">
                   +1 302 464 0950
                 </a>
               </div>

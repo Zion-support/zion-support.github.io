@@ -123,10 +123,10 @@ const stats = [
   { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
 
 export default function UltimateFuturisticServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
-  const [viewMode, setViewMode] = useState('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('popular'),
+  const [viewMode, setViewMode] = useState('grid'),
 
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
     const matchesSearch =
@@ -137,8 +137,8 @@ export default function UltimateFuturisticServicesShowcase2025() {
       selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     return matchesSearch && matchesCategory
 
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -161,13 +161,13 @@ export default function UltimateFuturisticServicesShowcase2025() {
       case 'price-high':
         return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'customers':
         return b.customers - a.customers;
       default:
         return b.popular ? 1 : -1;      default: return b.popular ? 1 : -1
     }
-  });
+  }),
 
   const containerVariants = {
     hidden: { opacity: 0 },

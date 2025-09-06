@@ -28,8 +28,8 @@ export default function AIAssistant({
   }, [defaultPrompt]);
 
   const callOperator = useCallback(async () => {
-    setLoading(true);
-    setError(null);
+    setLoading(true),
+    setError(null),
     try {
       const res = await fetch("/api/ai/operator", {
         method: "POST",
@@ -56,13 +56,13 @@ export default function AIAssistant({
     } finally {
       setLoading(false);
     }
-  }, [authorizationToken, prompt, systemPrompt]);
+  }, [authorizationToken, prompt, systemPrompt]),
 
   const onCopy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(output);
     } catch {}
-  }, [output]);
+  }, [output]),
 
   const onOpen = useCallback(() => {
     setIsOpen(true);
@@ -71,7 +71,6 @@ export default function AIAssistant({
     setError(null);
   }, []);
 
-  const onClose = useCallback(() => setIsOpen(false), []);
 
   const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
 

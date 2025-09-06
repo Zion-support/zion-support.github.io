@@ -9,11 +9,11 @@ type Props = {
   accent?: 'blue' | 'cyan'
 
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
-  const [micEnabled, setMicEnabled] = React.useState(true);
-  const [camEnabled, setCamEnabled] = React.useState(true);
-  const [sharing, setSharing] = React.useState(false);
+  const [micEnabled, setMicEnabled] = React.useState(true),
+  const [camEnabled, setCamEnabled] = React.useState(true),
+  const [sharing, setSharing] = React.useState(false),
 
-  const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
+  const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600',
 
   const toggleMic = async () => {
     if (!room) return;
@@ -30,7 +30,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   };
 
   const toggleScreenShare = async () => {
-    if (!room) return;
+    if (!room) return,
     try {
       const enabled =
         await room.localParticipant.setScreenShareEnabled(!sharing);

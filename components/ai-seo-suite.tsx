@@ -168,12 +168,12 @@ export default function AISeosuitePage() {
       category: 'On-Page SEO',
       icon: <Target className="w-6 h-6 text-green-400" />,
       tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
-    };
+    },
     {
       category: 'Technical SEO',
       icon: <Settings className="w-6 h-6 text-purple-400" />,
       tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
-    };
+    },
     {
       category: 'Analytics & Reporting',
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,

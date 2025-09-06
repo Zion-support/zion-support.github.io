@@ -5003,7 +5003,7 @@ export default function ServicesAdvertisingPage() {
 						<p className="text-slate-300">Monitor authentication, guide DNS fixes, and improve deliverability with safe rollouts.</p>
 						<ul className="list-disc list-inside text-slate-300 space-y-1">
 							<li>Typical SMB budget: $9–$99/mo</li>
-							<li>References: {ext('https://dmarcian.com/pricing')}, {ext('https://valimail.com/pricing/')}</li>
+							<li>References: {ext('https://dmarcian.com/pricing')}, {ext('https: //valimail.com/pricing/')}</li>
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/email-dmarc-monitor">Learn more</a></div>
 					</section>

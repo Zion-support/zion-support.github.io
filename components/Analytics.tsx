@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-
 interface AnalyticsProps {
   trackingId?: string;
 }
@@ -10,22 +9,22 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
     // Google Analytics 4
     if (typeof window !== 'undefined' && trackingId) {
       // Load gtag script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
+      const script = document.createElement('script'),
+      script.async = true,
+      script.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingId}`,
+      document.head.appendChild(script),
 
       // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [],
       function gtag(...args: unknown[]) {
         window.dataLayer.push(args),
       }
-      window.gtag = gtag;
+      window.gtag = gtag,
       gtag('js', new Date());
       gtag('config', trackingId, {
         page_title: document.title,
         page_location: window.location.href,
-      });
+      }),
 
       // Track page views
       const trackPageView = () => {
@@ -33,49 +32,49 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           page_title: document.title,
           page_location: window.location.href,
           page_path: window.location.pathname,
-        });
-      };
+        }),
+      },
 
       // Track page view on load
-      trackPageView();
+      trackPageView(),
 
       // Track page view on route change (for SPA behavior)
       const handleRouteChange = () => {
-        trackPageView();
-      };
+        trackPageView(),
+      },
 
       // Listen for popstate events (back/forward navigation)
-      window.addEventListener('popstate', handleRouteChange);
+      window.addEventListener('popstate', handleRouteChange),
 
       // Cleanup
       return () => {
-        window.removeEventListener('popstate', handleRouteChange);
-      };
+        window.removeEventListener('popstate', handleRouteChange),
+      },
     }
-  }, [trackingId]);
+  }, [trackingId]),
 
   // Track custom events
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
+      window.gtag('event', eventName, parameters),
     }
-  };
+  },
 
   // Track button clicks
   const trackButtonClick = (buttonName: string, location?: string) => {
     trackEvent('button_click', {
       button_name: buttonName,
       location: location || window.location.pathname,
-    });
-  };
+    }),
+  },
 
   // Track form submissions
   const trackFormSubmission = (formName: string) => {
     trackEvent('form_submit', {
       form_name: formName,
       page_location: window.location.href,
-    });
-  };
+    }),
+  },
 
   // Track external link clicks
   const trackExternalLink = (url: string, linkText: string) => {
@@ -83,15 +82,15 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       link_url: url,
       link_text: linkText,
       page_location: window.location.href,
-    });
-  };
+    }),
+  },
 
   // Expose tracking functions globally for use in other components
   if (typeof window !== 'undefined') {
-    (window as any).trackEvent = trackEvent;
-    (window as any).trackButtonClick = trackButtonClick;
-    (window as any).trackFormSubmission = trackFormSubmission;
-    (window as any).trackExternalLink = trackExternalLink;
+    (window as any).trackEvent = trackEvent,
+    (window as any).trackButtonClick = trackButtonClick,
+    (window as any).trackFormSubmission = trackFormSubmission,
+    (window as any).trackExternalLink = trackExternalLink,
   }
 
   return (
@@ -103,9 +102,9 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
             if ('performance' in window) {
               window.addEventListener('load', function() {
                 setTimeout(function() {
-                  const perfData = performance.getEntriesByType('navigation')[0];
+                  const perfData = performance.getEntriesByType('navigation')[0],
                   if (perfData) {
-                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart,
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
                         name: 'load',

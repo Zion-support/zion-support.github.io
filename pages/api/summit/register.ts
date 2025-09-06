@@ -9,7 +9,7 @@ export default async function handler(
   }
 
   try {
-    const { name, email, role, country, source } = req.body || {};
+    const { name, email, role, country, source } = req.body || {},
     if (!name || !email || !role || !country) {
       return res.status(400).json({ error: "Missing required fields" });
     }

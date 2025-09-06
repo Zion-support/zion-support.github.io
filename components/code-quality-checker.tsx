@@ -15,9 +15,9 @@ import {
   TrendingUp,;
 } from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
 export default function CodeQualityCheckerPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const [codeInput, setCodeInput] = useState('');
+  const [isAnalyzing, setIsAnalyzing] = useState(false),
+  const [analysisResults, setAnalysisResults] = useState(null),
+  const [codeInput, setCodeInput] = useState(''),
 
   const features = [
     {

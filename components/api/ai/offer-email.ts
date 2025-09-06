@@ -35,7 +35,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `Start Date: ${startDate || 'TBD'}\n` +
     `Company: ${companyName || 'Your Company'}\n` +
     `Notes: ${notes || ''}\n` +
-    `Include signature and next steps.`;
+    `Include signature and next steps.`,
+
 
   const text = await generateText(
     prompt,

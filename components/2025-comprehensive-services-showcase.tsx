@@ -565,6 +565,6 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
       </section>
     </div>
   )
-};
+},
 
 export default ComprehensiveServicesShowcase;

@@ -163,7 +163,7 @@ const servicePricing = [
   {
     category: '⚛️ Quantum & Advanced Tech',
     services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
-  };
+  },
   {
     category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)

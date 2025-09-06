@@ -18,8 +18,8 @@ interface ReportingData {
   }>
 }
 
-const FILE = 'reporting.json';
-const FALLBACK: ReportingData = { byTenant: {} };
+const FILE = 'reporting.json',
+const FALLBACK: ReportingData = { byTenant: {} },
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase(),
@@ -72,9 +72,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         funnel: funnel || next[tenantId]?.funnel || [];
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays || 0);
         costPerHireUsd: typeof costPerHireUsd === 'number' ? costPerHireUsd : next[tenantId]?.costPerHireUsd,
-        updatedAt: new Date().toISOString()};
+        updatedAt: new Date().toISOString()},
       return { byTenant: next }
-    }, FALLBACK);
+    }, FALLBACK),
     return res.status(200).json(updated.byTenant[tenantId])
   }
 

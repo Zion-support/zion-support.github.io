@@ -19,7 +19,7 @@ interface UrlShortenerResponse {
 }
 
 // In-memory storage (in production, use a database)
-const urlStorage = new Map<string, ShortUrl>();
+const urlStorage = new Map<string, ShortUrl>(),
 
 // Generate a random short code
 function generateShortCode(length: number = 6): string {
@@ -55,7 +55,7 @@ export default async function handler(
   if (req.method === 'POST') {
     // Create short URL
     try {
-      const { originalUrl, customCode }: UrlShortenerRequest = req.body;
+      const { originalUrl, customCode }: UrlShortenerRequest = req.body,
 
       if (!originalUrl) {
         return res.status(400).json({
@@ -81,7 +81,7 @@ export default async function handler(
       // Check if URL already exists
       const existingUrl = Array.from(urlStorage.values()).find(
         url => url.originalUrl === originalUrl
-      );
+      ),
 
       if (existingUrl) {
         return res.status(200).json({
@@ -106,7 +106,7 @@ export default async function handler(
       const shortUrl: ShortUrl = {
         id: Date.now().toString(),
         originalUrl,
-        shortCode,
+        shortCode;
         shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`,
         createdAt: new Date().toISOString(),
         clicks: 0,
@@ -119,7 +119,7 @@ export default async function handler(
         isActive: true
       };
 
-      urlStorage.set(shortCode, shortUrl);
+      urlStorage.set(shortCode, shortUrl),
 
       res.status(201).json({
         success: true,
@@ -133,7 +133,7 @@ export default async function handler(
         data: shortUrl
       })
     } catch (error) {
-      console.error('URL shortening error:', error);
+      console.error('URL shortening error:', error),
       res.status(500).json({
         success: false,
         error: 'Internal server error'
@@ -141,7 +141,7 @@ export default async function handler(
     }
   } else if (req.method === 'GET') {
     // Get all URLs (for demo purposes)
-    const urls = Array.from(urlStorage.values());
+    const urls = Array.from(urlStorage.values()),
     res.status(200).json({
       success: true,
       data: urls as any,
@@ -168,8 +168,8 @@ export async function getServerSideProps({
   }
 
   // Increment click count
-  shortUrl.clicks++;
-  urlStorage.set(shortCode, shortUrl);
+  shortUrl.clicks++,
+  urlStorage.set(shortCode, shortUrl),
 
   // Redirect to original URL
   return {

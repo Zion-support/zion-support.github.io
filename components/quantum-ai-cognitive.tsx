@@ -6,13 +6,13 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function QuantumAICognitivePage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'));
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive')),
 
   if (!service) {
     return null
   }
 
-  const contactInfo = service.contactInfo;
+  const contactInfo = service.contactInfo,
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -83,7 +83,7 @@ export default function QuantumAICognitivePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  ),
 }
 
 ;

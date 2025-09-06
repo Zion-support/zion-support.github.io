@@ -8,7 +8,7 @@ const localeLabelKey: Record<string, string> = {
   ar: "lang.arabic",
 };
 export default function LanguageSwitchPrompt() {
-  const { t } = useTranslation();
+  const { t } = useTranslation(),
   const [suggested, setSuggested] = useState<string | null>(null);
 
   useEffect(() => {

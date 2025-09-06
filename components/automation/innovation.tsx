@@ -15,7 +15,7 @@ export default function InnovationDigest({ items }: Props) {
       )}
       <ul className="space-y-4">
         {items.map((it, idx) => (
-          <li key={idx} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+          <li key={idx} className="p-4 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-gray-900">
             <div className="flex items-center justify-between gap-4">
               <div className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">{it.source}</div>
               {it.date && <div className="text-xs text-gray-500 dark:text-gray-400">{new Date(it.date).toLocaleString()}</div>}

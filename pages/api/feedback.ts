@@ -19,7 +19,7 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY)
     return false;
   try {
-    const admin = require("firebase-admin");
+    const admin = require("firebase-admin"),
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({

@@ -75,7 +75,7 @@ and micro SAAS services designed to transform your business and drive innovation
   /* Enhanced CTA Section */ 
 }<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)   // Combine all services
   const allServices = [
-    ...enhancedRealMicroSaasServices;
+    ...enhancedRealMicroSaasServices,
     ...innovativeAIServices2029;
     ...quantumSpaceInnovations2029;
     ...enterpriseITInnovations2029;
@@ -101,29 +101,29 @@ and micro SAAS services designed to transform your business and drive innovation
   // Get unique services by ID
   const uniqueServices = allServices.filter((service, index, self) => 
     index === self.findIndex(s => s.id === service.id)
-  );
+  ),
 
   // Get all categories
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
     Array.isArray(s.category) ? s.category[0] : s.category
-  )))];
+  )))],
 
   // Filter and sort services
   const filteredServices = uniqueServices
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
       const matchesCategory = selectedCategory === 'All' || 
                              (Array.isArray(service.category) ? 
                                service.category.includes(selectedCategory) : 
-                               service.category === selectedCategory);
+                               service.category === selectedCategory),
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name);
+          return a.name.localeCompare(b.name),
         case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'popularity':
@@ -132,14 +132,14 @@ and micro SAAS services designed to transform your business and drive innovation
           return (b.rating || 0) - (a.rating || 0);
         default: return 0
       }
-    });
+    }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <UltraFuturisticBackground2029>
@@ -362,7 +362,7 @@ and micro SAAS services designed to transform your business and drive innovation
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {categories.map((category, index) => {
-                  const stats = getCategoryStats(category.id);
+                  const stats = getCategoryStats(category.id),
                   return (
                     <motion.div
                       key={category.id}
@@ -459,7 +459,7 @@ and micro SAAS services designed to transform your business and drive innovation
                 <p className="text-gray-400">Try adjusting your search criteria or browse all services</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
+                    setSearchTerm(''),
                     setSelectedCategory('All')
                   }}
                   className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
@@ -624,7 +624,7 @@ and micro SAAS services designed to transform your business and drive innovation
                     Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies.
                   </p>
                   
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                  <div className="flex flex-col sm: flex-row gap-6 justify-center">
                     <motion.a
                       href="/contact"
                       whileHover={{ scale: 1.05 }}

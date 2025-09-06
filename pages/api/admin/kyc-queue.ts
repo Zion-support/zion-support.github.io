@@ -23,7 +23,7 @@ function load(): Record<string, KycProfile> {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
     return JSON.parse(raw)
   } catch {
-    return {}
+    return {};
   }
 }
 

@@ -17,10 +17,10 @@ import {
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() {
-  const [isTesting, setIsTesting] = useState(false);
-  const [testResults, setTestResults] = useState(null);
-  const [apiEndpoint, setApiEndpoint] = useState('');
-  const [apiKey, setApiKey] = useState('');
+  const [isTesting, setIsTesting] = useState(false),
+  const [testResults, setTestResults] = useState(null),
+  const [apiEndpoint, setApiEndpoint] = useState(''),
+  const [apiKey, setApiKey] = useState(''),
 
   const features = [
     {

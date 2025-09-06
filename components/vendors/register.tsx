@@ -1,6 +1,6 @@
 import {FormEvent, useState} from 'react';
 export default function VendorRegisterPage() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false),
   const [message, setMessage] = useState<string | null>(null);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {

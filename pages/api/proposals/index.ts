@@ -3,7 +3,7 @@ import fs from "fs-extra";
 import path from "path";
 const FILE_PATH = path.join(process.cwd(), "dataproposalsindex.json");
 async function ensureStore() {
-  await fs.ensureFile(FILE_PATH);
+  await fs.ensureFile(FILE_PATH),
   try {
     const raw = await fs.readFile(FILE_PATH, "utf8");
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });

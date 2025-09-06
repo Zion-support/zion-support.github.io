@@ -67,7 +67,7 @@ interface EnhancedServiceShowcaseProps {
 
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   title,
-  subtitle,
+  subtitle;
   showFilters = false,
   services = [],
   maxServices = 12,}) => {  title;

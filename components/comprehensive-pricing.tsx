@@ -86,10 +86,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
 export default function ComprehensivePricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('price');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [priceRange, setPriceRange] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState('price'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const allServices = [
@@ -118,7 +118,7 @@ export default function ComprehensivePricingPage() {
   ];
 
   // Filter and sort services
-  let filteredServices = allServices;
+  let filteredServices = allServices,
 
   // Category filter
   if (selectedCategory !== 'All') {
@@ -172,15 +172,15 @@ export default function ComprehensivePricingPage() {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare(b.category),
       case 'roi':
-        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0'),
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0'),
         return bRoi - aRoi;
       default:
         return a.name.localeCompare(b.name);    }      default: return a.name.localeCompare(b.name)
     }
-  });
+  }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -999,8 +999,8 @@ export default function ComprehensivePricingPage() {
                                  <Button 
                    variant="primary"
                    onClick={() => {
-                     setSearchQuery('');
-                     setSelectedCategory('All');
+                     setSearchQuery(''),
+                     setSelectedCategory('All'),
                      setPriceRange('All')
                    }}
                  >

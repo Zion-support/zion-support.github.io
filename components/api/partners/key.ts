@@ -40,7 +40,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const existing = keys.find(k => k.id === apiKey.id);  const existing = keys.find((k) => k.id === apiKey.id);
   if (existing) existing.active = false;
   // Create new key
-  const now = new Date().toISOString();
+  const now = new Date().toISOString(),
   const newKey = {
     id: uuidv4(),
     partnerId: auth.partner.id,

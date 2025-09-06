@@ -61,7 +61,7 @@ const pricingTiers = [
     cta: 'Start Free Trial',
     ctaLink: '/contact',
     popular: false
-  };
+  },
   {
     name: 'Professional',
     price: 299,
@@ -75,14 +75,14 @@ const pricingTiers = [
     cta: 'Start Free Trial',
     ctaLink: '/contact',
     popular: true
-  };
+  },
   {
     name: 'Enterprise',
     price: 999,
     period: 'month',
     description: 'For large organizations with complex needs',
     features: [
-      'Unlimited team membersFull AI suite access24/7 dedicated supportCustom integrationsAdvanced analytics & reportingDedicated account managerCustom developmentSLA guarantees';
+      'Unlimited team membersFull AI suite access24/7 dedicated supportCustom integrationsAdvanced analytics & reportingDedicated account managerCustom developmentSLA guarantees',
       'On-premise optionsCompliance certifications'
     ],
     icon: <Shield className="w-6 h-6" />,
@@ -154,7 +154,7 @@ const stats = [
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
 
 export default function CuttingEdgePricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const allServices = [
     ...cuttingEdgeAIServices2025,

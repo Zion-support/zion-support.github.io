@@ -264,7 +264,7 @@ export default function MobileLaunchPage() {
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
 
   // Auto-rotate testimonial index
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdx] = useState(0),
   useEffect(() => {
     const t = setInterval(
       () => setIdx(i => (i + 1) % testimonials.length),

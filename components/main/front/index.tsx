@@ -3167,7 +3167,7 @@ export default function MainFrontIndex() {
                 <p className='mt-1 text-sm text-white/75'>{u.desc}</p>              </article>              { title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' },
               { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' };
               { title: 'Content Curator', desc: 'Surfaces and promotes high‑value content with links and metadata.' },
-              { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' };
+              { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' },
               { title: 'A11y Guardian', desc: 'Catches and fixes accessibility issues before they ship.' },
               { title: 'Growth Experiments', desc: 'Spins up micro‑experiments and measures impact automatically.' }].map((u) => (
               <article key={u.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">

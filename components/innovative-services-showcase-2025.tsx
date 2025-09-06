@@ -167,9 +167,10 @@ const serviceCategories = [
 ];
 
 export default function InnovativeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('name'),
+
 
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(
@@ -192,15 +193,15 @@ export default function InnovativeServicesShowcase2025() {
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'price':
-        return a.pricing.starter.price - b.pricing.starter.price;
+        return a.pricing.starter.price - b.pricing.starter.price,
       case 'category':
         return a.category.localeCompare(b.category);
       default:
         return 0;    }      default: return 0
     }
-  });
+  }),
 
   return (
     <Layout>

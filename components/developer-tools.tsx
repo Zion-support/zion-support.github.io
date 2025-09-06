@@ -307,7 +307,7 @@ export default function DeveloperToolsPage() {
       phase: 'Security',
       tools: ['SnykGitHub Advanced Security'],
       description: 'Scan for vulnerabilities and security issues'
-    };
+    },
     {
       phase: 'Deployment',
       tools: ['VercelGitHub ActionsDocker'],

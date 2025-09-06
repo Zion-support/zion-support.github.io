@@ -148,7 +148,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         default: return 0
       }
     })
-    .slice(0, maxServices);
+    .slice(0, maxServices),
 
   const containerVariants = {
     hidden: { opacity: 0 },

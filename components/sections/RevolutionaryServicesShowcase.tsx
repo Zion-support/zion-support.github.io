@@ -5,8 +5,8 @@ import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-202
 import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
 const RevolutionaryServicesShowcase: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [visibleServices, setVisibleServices] = useState(12);
+  const [activeCategory, setActiveCategory] = useState('all'),
+  const [visibleServices, setVisibleServices] = useState(12),
 
   const categories = [
     {
@@ -51,18 +51,20 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       count: revolutionary2025MicroSaasServices.length,
     },  ];
 
-  const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services];
+  ],
+
+  const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services],
 
   const filteredServices = activeCategory === 'all' 
     ? allServices 
     : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI');
-        if (activeCategory === 'quantum') return service.category.includes('Quantum');
-        if (activeCategory === 'emerging') return emergingTech2025Services.includes(service);
-        if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service);
-        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service);
+        if (activeCategory === 'ai') return service.category.includes('AI'),
+        if (activeCategory === 'quantum') return service.category.includes('Quantum'),
+        if (activeCategory === 'emerging') return emergingTech2025Services.includes(service),
+        if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service),
+        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service),
         return true
-      });
+      }),
 
   const loadMore = () => {
     setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))

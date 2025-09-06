@@ -58,26 +58,26 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
 
     // Mouse move handler for interactive effects
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });    };      setMousePosition({ x: e.clientX, y: e.clientY })
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove),
 
     // Initialize particles with different types
     const initParticles = () => {
@@ -96,7 +96,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         data: ['#0080ff#8000ff#ff0080#80ff00'],
         quantum: ['#ff8000#8000ff#00ffff#ff0080'],
         neon: ['#ff0066#00ffff#ffff00#ff00ff']
-      };
+      },
       
       for (let i = 0, i < 150, i++) {
         const type = ['energydataquantumneon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
@@ -155,12 +155,12 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
       
       energyFieldsRef.current = fields
 
-    initParticles();
-    initEnergyFields();
+    initParticles(),
+    initEnergyFields(),
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw energy fields
       energyFieldsRef.current.forEach(field => {
@@ -233,14 +233,14 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           particle.vx += (dx / distance) * force * 0.01;
           particle.vy += (dy / distance) * force * 0.01
 
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
 
         // Draw particle with type-specific effects
         ctx.save();
@@ -248,19 +248,19 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         switch (particle.type) {
           case 'energy':
             // Energy particles with glow effect
-            ctx.shadowColor = particle.color;
-            ctx.shadowBlur = 15;
-            ctx.globalCompositeOperation = 'screen';
-            break;
+            ctx.shadowColor = particle.color,
+            ctx.shadowBlur = 15,
+            ctx.globalCompositeOperation = 'screen',
+            break,
           case 'data':
             // Data particles with digital effect
-            ctx.globalCompositeOperation = 'multiply';
-            break;
+            ctx.globalCompositeOperation = 'multiply',
+            break,
           case 'quantum':
             // Quantum particles with uncertainty effect
-            ctx.globalCompositeOperation = 'overlay';
-            ctx.shadowColor = particle.color;
-            ctx.shadowBlur = 10;
+            ctx.globalCompositeOperation = 'overlay',
+            ctx.shadowColor = particle.color,
+            ctx.shadowBlur = 10,
             break;
           case 'neon':
             // Neon particles with bright glow
@@ -354,7 +354,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         ctx.beginPath();
         
         for (let x = 0, x < canvas.width, x += 2) {
-          const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7);
+          const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7),
           if (x === 0) {
             ctx.moveTo(x, y)
           } else {
@@ -408,11 +408,11 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
       animationRef.current = requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', resizeCanvas),
+      window.removeEventListener('mousemove', handleMouseMove),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

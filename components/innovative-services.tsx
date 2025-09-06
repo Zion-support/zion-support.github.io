@@ -103,12 +103,12 @@ import {
   getInnovativeServiceCategories,;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 export default function InnovativeServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('innovation');
-  const [showFilters, setShowFilters] = useState(false);
+  const [priceRange, setPriceRange] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState('innovation'),
+  const [showFilters, setShowFilters] = useState(false),
 
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
@@ -131,7 +131,7 @@ export default function InnovativeServicesPage() {
   ];
 
   // Filter and sort services
-  let filteredServices = innovativeMicroSaasServices;
+  let filteredServices = innovativeMicroSaasServices,
 
   // Category filter
   if (selectedCategory !== 'All') {
@@ -176,11 +176,11 @@ export default function InnovativeServicesPage() {
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return a.price.monthly - b.price.monthly;
+        return a.price.monthly - b.price.monthly,
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare(b.category),
       case 'roi': {
         const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
@@ -197,9 +197,9 @@ export default function InnovativeServicesPage() {
         );
       }    }              default: {
           // Innovation level sorting
-          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 };
-          const aLevel = a.innovationLevel.split(' - ')[0];
-          const bLevel = b.innovationLevel.split(' - ')[0];
+          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 },
+          const aLevel = a.innovationLevel.split(' - ')[0],
+          const bLevel = b.innovationLevel.split(' - ')[0],
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)
         }
   });
@@ -211,8 +211,8 @@ export default function InnovativeServicesPage() {
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   };
 
-  const popularServices = getPopularInnovativeServices();
-  const categories = getInnovativeServiceCategories();
+  const popularServices = getPopularInnovativeServices(),
+  const categories = getInnovativeServiceCategories(),
 
   return (
     <>

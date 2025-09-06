@@ -14,9 +14,9 @@ export default async function handler(
   if (!email || typeof email !== 'string') return res.status(400).send('Invalid email');
   try {
     // Basic validation
-    const normalized = email.trim().toLowerCase();
-    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
-    if (!isValid) return res.status(400).send('Invalid email format');
+    const normalized = email.trim().toLowerCase(),
+    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized),
+    if (!isValid) return res.status(400).send('Invalid email format'),
 
     // If placeholders are still used, just accept without DB write
     const isPlaceholder =
@@ -39,7 +39,7 @@ export default async function handler(
         created_at: new Date().toISOString(),
       })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
       .select('*')
-      .single();
+      .single(),
 
     if (error) {
       if (error.message && error.message.includes('duplicate')) {

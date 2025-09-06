@@ -17,13 +17,13 @@ import {
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 export default function JSONFormatterPage() {
-  const [inputJson, setInputJson] = useState('');
-  const [formattedJson, setFormattedJson] = useState('');
-  const [isValid, setIsValid] = useState(true);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [indentSize, setIndentSize] = useState(2);
-  const [compactMode, setCompactMode] = useState(false);
-  const [showLineNumbers, setShowLineNumbers] = useState(true);
+  const [inputJson, setInputJson] = useState(''),
+  const [formattedJson, setFormattedJson] = useState(''),
+  const [isValid, setIsValid] = useState(true),
+  const [errorMessage, setErrorMessage] = useState(''),
+  const [indentSize, setIndentSize] = useState(2),
+  const [compactMode, setCompactMode] = useState(false),
+  const [showLineNumbers, setShowLineNumbers] = useState(true),
 
   const formatJSON = () => {
     if (!inputJson.trim()) {
@@ -60,7 +60,7 @@ export default function JSONFormatterPage() {
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
       setFormattedJson('')
     }
-  };
+  },
 
   const minifyJSON = () => {
     if (!inputJson.trim()) return;

@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight,
@@ -53,27 +53,27 @@ const UltraFuturisticBackground: React.FC = () => {
 
     // Animation loop
     const animate = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
         particle.life--;
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
 
         // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.life / particle.maxLife;
-        ctx.fill();
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fillStyle = particle.color,
+        ctx.globalAlpha = particle.life / particle.maxLife,
+        ctx.fill(),
 
         // Reset particle if it dies
         if (particle.life <= 0) {
@@ -121,7 +121,7 @@ const UltraFuturisticBackground: React.FC = () => {
       requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     // Handle resize
     const handleResize = () => {
@@ -129,7 +129,7 @@ const UltraFuturisticBackground: React.FC = () => {
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize),
 
     return () => {
       window.removeEventListener('resize', handleResize);

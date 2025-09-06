@@ -55,20 +55,20 @@
 }</AnimatePresence> </>) 
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
-    };
-    window.addEventListener('scroll', handleScroll);
+    },
+    window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []);
+  }, []),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen),
+  const closeMenu = () => setIsOpen(false),
 
   return (
     <>
@@ -384,6 +384,6 @@ export default function EnhancedNavigation2025() {
       <div className="h-20" />
     </>
   )
-};
+},
 
 

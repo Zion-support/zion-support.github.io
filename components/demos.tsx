@@ -85,7 +85,39 @@ export default function DemosPage() {
     }
   ];
 
-  const activeDemoData = demos.find(demo => demo.id === activeDemo);
+      color: 'from-blue-500 to-cyan-600',
+      component: <EmailValidatorDemo />
+    },
+    {
+      id: 'password-strength',
+      title: 'Password Strength Analyzer',
+      description: 'Comprehensive password security analysis with entropy calculation',
+      icon: <Lock className="w-6 h-6" />,
+      color: 'from-green-500 to-emerald-600',
+      component: <PasswordStrengthDemo />
+    },
+    {
+      id: 'url-shortener',
+      title: 'Smart URL Shortener',
+      description: 'Professional URL shortening with analytics and custom codes',
+      icon: <Link className="w-6 h-6" />,
+      color: 'from-purple-500 to-pink-600',
+      component: <UrlShortenerDemo />
+    },
+    {
+      id: 'text-analyzer',
+      title: 'Text Analysis Suite',
+      description: 'Advanced text analysis with readability and sentiment analysis',
+      icon: <FileText className="w-6 h-6" />,
+      color: 'from-orange-500 to-red-600',
+
+=======
+      component: <TextAnalyzerDemo />
+    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  ],
+
+  const activeDemoData = demos.find(demo => demo.id === activeDemo),
 
   return (
     <>

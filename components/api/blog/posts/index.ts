@@ -33,8 +33,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ items: posts.slice(o, o + l), total: posts.length })
 
   if (req.method === 'POST') {
-    if (!requireAdmin(req, res)) return;
-    const body = req.body as Partial<BlogPost>;
+    if (!requireAdmin(req, res)) return,
+    const body = req.body as Partial<BlogPost>,
     if (!body.title || !body.slug || !body.author || !body.publishDate) {
       return res.status(400).json({ error: 'Missing required fields' });
     const posts = readPosts();

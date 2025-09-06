@@ -6,25 +6,25 @@ type ChatMessage = {
   role: 'user' | 'assistant' | 'system',
   content: string,
   timestamp?: number
-};
+},
 
 function generateSessionId(): string {
-  if (typeof window === 'undefined') return '';
-  const existing = window.localStorage.getItem('zion_support_session_id');
-  if (existing) return existing;
-  const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`;
-  window.localStorage.setItem('zion_support_session_id', id);
+  if (typeof window === 'undefined') return '',
+  const existing = window.localStorage.getItem('zion_support_session_id'),
+  if (existing) return existing,
+  const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`,
+  window.localStorage.setItem('zion_support_session_id', id),
   return id
 }
 export default function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedIntents, setFailedIntents] = useState(0);
-  const [showEscalation, setShowEscalation] = useState(false);
-  const sessionIdRef = useRef<string>('');
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [messages, setMessages] = useState<ChatMessage[]>([]),
+  const [input, setInput] = useState(''),
+  const [isLoading, setIsLoading] = useState(false),
+  const [failedIntents, setFailedIntents] = useState(0),
+  const [showEscalation, setShowEscalation] = useState(false),
+  const sessionIdRef = useRef<string>(''),
+  const messagesEndRef = useRef<HTMLDivElement | null>(null),
 
   useEffect(() => {
     sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef.current = generateSessionId()
@@ -44,7 +44,7 @@ export default function ChatWidget() {
 
   useEffect(() => {        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
     }
-  }, [isOpen, messages.length]);
+  }, [isOpen, messages.length]),
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -89,8 +89,8 @@ export default function ChatWidget() {
   }
 
   async function onSend(messageText?: string) {
-    const text = (messageText ?? input).trim();
-    if (!text) return;
+    const text = (messageText ?? input).trim(),
+    if (!text) return,
 
     const newUserMessage: ChatMessage = {
       role: 'user',

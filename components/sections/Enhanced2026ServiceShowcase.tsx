@@ -35,14 +35,14 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     visible: {      opacity: 1,        delayChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { 
       opacity: 0,
       y: 50,
       scale: 0.9
-    };
+    },
     visible: { 
       opacity: 1,
       y: 0,

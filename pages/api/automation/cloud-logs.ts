@@ -29,10 +29,10 @@ import fs from 'fs';
 import path from 'path';
 async function fetchFromGitHub(): Promise<any[]> {
   try {
-    const repoUrl = require('../../../package.json').repository?.url || '';
-    const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
-    const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
-    const repo = process.env.GITHUB_REPO || (match ? match[2] : '');
+    const repoUrl = require('../../../package.json').repository?.url || '',
+    const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i),
+    const owner = process.env.GITHUB_OWNER || (match ? match[1] : ''),
+    const repo = process.env.GITHUB_REPO || (match ? match[2] : ''),
     if (!owner || !repo) return [];
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/automation_logs`;
     const headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };
@@ -84,7 +84,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const dir = path.join(process.cwd(), 'automation_logs');
   try {
     if (fs.existsSync(dir)) {
-      const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse();
+      const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse(),
       if (files.length > 0) {
         const logs = files.slice(0, 50).map((f) => {
           try {

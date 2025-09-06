@@ -31,14 +31,14 @@ function writeGrant(record: GrantApplication) {
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string };
-  if (!id) return res.status(400).json({ error: 'Missing id' });
+  const { id } = req.query as { id: string },
+  if (!id) return res.status(400).json({ error: 'Missing id' }),
 
-  const existing = readGrant(id);
-  if (!existing) return res.status(404).json({ error: 'Not found' });
+  const existing = readGrant(id),
+  if (!existing) return res.status(404).json({ error: 'Not found' }),
 
   if (req.method === 'GET') {
-    return res.status(200).json({ updates: existing.updates || [] });
+    return res.status(200).json({ updates: existing.updates || [] }),
   }
 
   if (req.method === 'POST') {

@@ -18,7 +18,7 @@ type Web3LoginModalProps = {
 };
 
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -29,8 +29,8 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   }, [isOpen]);
 
   const handleEvmConnect = useCallback(async () => {
-    setError(null);
-    setLoading(true);
+    setError(null),
+    setLoading(true),
     try {
       const Web3ModalCtor = (await import('web3modal')).default;
       const WalletConnectProvider = (
@@ -49,15 +49,20 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
         },
       });              rpc: { 1: 'https://cloudflare-eth.com' }}}}}),
 
-      const provider = await web3Modal.connect();
-      const ethers = await import('ethers');
-      const web3Provider = new ethers.providers.Web3Provider(provider as any);
-      const signer = web3Provider.getSigner();
-      const address = (await signer.getAddress()).toLowerCase();
-      const network = await web3Provider.getNetwork();
+      const provider = await web3Modal.connect(),
+      const ethers = await import('ethers'),
+      const web3Provider = new ethers.providers.Web3Provider(provider as any),
+      const signer = web3Provider.getSigner(),
+      const address = (await signer.getAddress()).toLowerCase(),
+      const network = await web3Provider.getNetwork(),
 
-      const nonceRes = await fetch('/api/auth/nonce');
-      const { nonce } = await nonceRes.json();
+      const nonceRes = await fetch('/api/auth/nonce'),
+      const { nonce } = await nonceRes.json(),
+
+      const domain = window.location.host,
+      const origin = window.location.origin,
+      const statement = 'Sign in to Zion with your wallet. No gas required.',
+      const issuedAt = new Date().toISOString(),
 
       const domain = window.location.host;
       const origin = window.location.origin;
@@ -65,7 +70,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const issuedAt = new Date().toISOString();
       const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`,
 
-      const signature = await signer.signMessage(siweMessage);
+      const signature = await signer.signMessage(siweMessage),
 
       const verifyRes = await fetch('/api/auth/verify-evm', {
         method: 'POST',
@@ -95,13 +100,13 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     } finally {
       setLoading(false)
     }
-  }, [onClose, onLoggedIn]);
+  }, [onClose, onLoggedIn]),
 
   const handlePhantomConnect = useCallback(async () => {
-    setError(null);
-    setLoading(true);
+    setError(null),
+    setLoading(true),
     try {
-      const provider = (window as any)?.solana;
+      const provider = (window as any)?.solana,
       if (!provider || !provider.isPhantom) {
         throw new Error('Phantom not found. Install the Phantom extension');
       }
@@ -154,7 +159,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     } finally {
       setLoading(false)
     }
-  }, [onClose, onLoggedIn]);
+  }, [onClose, onLoggedIn]),
 
   if (!isOpen) return null;
 

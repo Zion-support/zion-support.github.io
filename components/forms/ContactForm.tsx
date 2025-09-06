@@ -1,4 +1,4 @@
-'use client';
+'use client',
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -51,8 +51,8 @@ const ContactForm: React.FC = () => {
     
     // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      await new Promise(resolve => setTimeout(resolve, 2000)),
+      setSubmitStatus('success'),
       setFormData({
         name: '',
         email: '',

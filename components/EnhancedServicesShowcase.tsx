@@ -53,8 +53,8 @@ interface Service {
 }
 
 const EnhancedServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
   const services: Service[] = [
     {
@@ -263,7 +263,7 @@ const EnhancedServicesShowcase: React.FC = () => {
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
     return matchesCategory && matchesSearch
 
   const getCategoryIcon = (category: string) => {

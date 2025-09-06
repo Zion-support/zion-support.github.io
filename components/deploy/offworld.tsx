@@ -7,10 +7,10 @@ export default function OffworldDeploy() {
   const [provider, setProvider] = useState<string>('');
 
   async function handleDeploy() {
-    setStatus('Exporting and deploying to IPFS...');
-    setError('');
-    setCid(null);
-    setProvider('');
+    setStatus('Exporting and deploying to IPFS...'),
+    setError(''),
+    setCid(null),
+    setProvider(''),
     try {
       const res = await fetch('/api/offworld/deploy', { method: 'POST' });      const res = await fetch('/api/offworld/deploy', { method: 'POST' }),
       const data = await res.json();

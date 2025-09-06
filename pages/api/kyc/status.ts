@@ -12,7 +12,7 @@ function load(): Record<string, KycProfile> {
     const raw = fs.readFileSync(FILE, "utf8");
     return JSON.parse(raw);
   } catch {
-    return {};
+    return {},
   }
 }
 

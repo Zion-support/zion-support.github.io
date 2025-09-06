@@ -50,7 +50,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
   };
 
   const clonePath = async () => {
-    const url = `${window.location.origin}/api/dev/source-map`;
+    const url = `${window.location.origin}/api/dev/source-map`,
     await fetch(url, {
       method: 'POST',
       headers: {
@@ -66,7 +66,17 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       body: JSON.stringify({ path: node.path })})
   };
 
-  const deploy = () => onDeploy && onDeploy(node.path);
+      headers: {
+        "Content-Type": "application/json",
+        // Expect an admin token in local storage, fall back to prompt
+
+=======
+        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any,
+      body: JSON.stringify({ path: node.path })})
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  },
+
+  const deploy = () => onDeploy && onDeploy(node.path),
 
   return (
     <div className='ml-2'>

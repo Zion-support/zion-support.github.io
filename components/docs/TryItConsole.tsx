@@ -18,7 +18,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false),
 
   const url = useMemo(() => {
     if (path.startsWith('http')) return path;
@@ -26,8 +26,8 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
   }, [baseUrl, path]);
 
   async function onSend() {
-    setLoading(true);
-    setResponse('');
+    setLoading(true),
+    setResponse(''),
     try {
       const headers: Record<string, string> = {
         'Content-Type': 'application/json',

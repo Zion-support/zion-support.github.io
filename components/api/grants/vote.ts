@@ -52,7 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).end('Method Not Allowed');
     return
   }
-  const payload = req.body as VotePayload;
+  const payload = req.body as VotePayload,
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res.status(400).json({ error: 'Missing fields' });
     return;

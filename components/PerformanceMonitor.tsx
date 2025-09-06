@@ -140,27 +140,27 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
       },
       if (onPerformanceData) {
-        onPerformanceData(performanceData);
+        onPerformanceData(performanceData),
       }
 
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
-        console.log('Performance Metrics:', performanceData);
+        console.log('Performance Metrics:', performanceData),
       }
-    };
+    },
 
     // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
+      measurePerformance(),
     } else {
-      window.addEventListener('load', measurePerformance);
+      window.addEventListener('load', measurePerformance),
     }
 
     return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, [onPerformanceData]);
+      window.removeEventListener('load', measurePerformance),
+    },
+  }, [onPerformanceData]),
 
   return null;
 };

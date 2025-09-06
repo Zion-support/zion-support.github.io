@@ -8,7 +8,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function ApiObservabilityPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability')),
   if (!service) return null;
 
   return (
@@ -52,7 +52,7 @@ export default function ApiObservabilityPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  ),
 }
 
 ;

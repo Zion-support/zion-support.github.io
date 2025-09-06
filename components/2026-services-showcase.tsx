@@ -25,9 +25,9 @@ import { revolutionary2026Services } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
 export default function ServicesShowcase2026() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('name'),
 
   // Combine all 2026 services
   const allServices = [
@@ -62,8 +62,8 @@ export default function ServicesShowcase2026() {
         default:
           return a.name.localeCompare(b.name);      }      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
       return matchesSearch && matchesCategory
     .sort((a, b) => {
       switch (sortBy) {
@@ -73,13 +73,13 @@ export default function ServicesShowcase2026() {
             parseFloat(b.price.replace(/[^0-9.]/g, ''))
           );          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'customers':
           return b.customers - a.customers;
         default:
           return a.name.localeCompare(b.name);        default: return a.name.localeCompare(b.name)
       }
-    });
+    }),
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },

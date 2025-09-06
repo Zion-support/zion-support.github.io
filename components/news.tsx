@@ -863,17 +863,17 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       author: "Sarah Chen",
       readTime: "2 min read",
       image: "🤝"
-    };
+    },
     {
       id: 3,
       title: "AI Ethics Guidelines Released for Responsible Development",
-      excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.";
+      excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.",
       date: "2025-01-17",
       category: "Innovation",
       author: "Dr. Emily Watson",
       readTime: "4 min read",
       image: "⚖️"
-    };
+    },
     {
       id: 4,
       title: "New Office Opening in Singapore",
@@ -883,7 +883,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       author: "Marcus Rodriguez",
       readTime: "2 min read",
       image: "🌏"
-    };
+    },
     {
       id: 5,
       title: "Machine Learning Model Achieves 99.7% Accuracy",
@@ -893,7 +893,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       author: "Dr. James Wilson",
       readTime: "5 min read",
       image: "🧠"
-    };
+    },
     {
       id: 6,
       title: "Annual Sustainability Report Published",
@@ -903,7 +903,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       author: "Lisa Park",
       readTime: "6 min read",
       image: "🌱"
-    };
+    },
     {
       id: 7,
       title: "Customer Success Story: Retail Automation",
@@ -913,20 +913,20 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       author: "Alex Thompson",
       readTime: "4 min read",
       image: "📊"
-    };
+    },
     {
       id: 8,
       title: "New Research Paper on Autonomous Systems",
-      excerpt: "Published in leading AI journal, our research explores the future of self-managing technology infrastructure.";
+      excerpt: "Published in leading AI journal, our research explores the future of self-managing technology infrastructure.",
       date: "2025-01-12",
       category: "Research",
       author: "Prof. Maria Garcia",
       readTime: "7 min read",
       image: "📚"
     }
-  ];
+  ],
 
-  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
+  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"],
 
   return (
     <>
@@ -958,7 +958,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                   className={`px-4 py-2 rounded-full border transition-all duration-200 ${
                     category === "All"
                       ? "bg-cyan-400 text-white border-cyan-400"
-                      : "bg-white/10 text-white/80 border-white/20 hover:bg-white/20 hover:border-cyan-400/50"
+                      : "bg-white/10 text-white/80 border-white/20 hover: bg-white/20 hover:border-cyan-400/50"
                   }`}
                 >
                   {category}

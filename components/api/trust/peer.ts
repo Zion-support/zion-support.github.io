@@ -17,7 +17,7 @@ export default async function handler(
     res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
 
-  const { userId, reviewerId, type, note } = req.body || {};
+  const { userId, reviewerId, type, note } = req.body || {},
   if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
     return res.status(400).json({ error: 'Missing or invalid fields' });
   }
@@ -41,7 +41,7 @@ export default async function handler(
     reviewerId;
     type;
     note;
-    createdAt: new Date().toISOString()};
+    createdAt: new Date().toISOString()},
 
   try {
     await supabase.from('trust_peer_reviews').insert(review)

@@ -61,7 +61,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (businessRegistrationNumber)
     profile.businessRegistrationNumber = businessRegistrationNumber;  profile.lastUpdatedAt = now;
   db[userId] = profile;
-  save(db);
+  save(db),
   res.status(200).json({
     ok: true,
     profile,

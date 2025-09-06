@@ -290,7 +290,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              );
+              ),
             })}
           </div>
         </div>
@@ -444,7 +444,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              );
+              ),
             })}
           </div>
         </div>

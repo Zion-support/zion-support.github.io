@@ -49,8 +49,8 @@ function writeEpisodes(episodes: any[]) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { persona, invitee, topic, operatorPrompt } = req.body || {};
-  const id = uuidv4();
+  const { persona, invitee, topic, operatorPrompt } = req.body || {},
+  const id = uuidv4(),
 
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice || 'Visionary'} tone, speak in ${persona?.language || 'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -58,9 +58,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
-Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
+Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`,
 
-  const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
+  const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`,
+
 
   let generated: any = null;
   try {
@@ -120,7 +121,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
 
-    const episodes = readEpisodes();
+    const episodes = readEpisodes(),
     const episode = {
       id,
       createdAt: new Date().toISOString(),

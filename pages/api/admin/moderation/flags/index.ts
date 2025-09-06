@@ -38,7 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const flag = await createFlag(init),
       return res.status(201).json({ flag })
     } catch (e: any) {
-      return res.status(400).json({ error: e.message || 'Invalid payload' })
+      return res.status(400).json({ error: e.message || 'Invalid payload' });
     }
   }
 

@@ -6,8 +6,8 @@ const particles: Array< {
 for (let i = 0, i < count, i++) {
   particles.push ({
 
-export default function UltraAdvancedFuturisticBackground({
-  children,
+export default function UltraAdvancedFuturisticBackground({ 
+  children;
   intensity = 'medium',
   theme = 'quantum',
   particleCount = 200,
@@ -25,14 +25,14 @@ export default function UltraAdvancedFuturisticBackground({
   const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
 
     const particles: Array<{
       x: number;
@@ -102,7 +102,9 @@ export default function UltraAdvancedFuturisticBackground({
       cyberpunk: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],
       'quantum-fusion': ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff#ff1493', '#00bfff']
 
-    const selectedColors = colors[theme] || colors.quantum;
+    },
+
+    const selectedColors = colors[theme] || colors.quantum,
 
     // Initialize particles with enhanced properties
     const initParticles = () => {
@@ -118,7 +120,7 @@ export default function UltraAdvancedFuturisticBackground({
       for (let i = 0; i < count; i++) {        particles.push({      const count = intensity === 'extreme' ? particleCount * 2 : 
                    intensity === 'high' ? particleCount : 
                    intensity === 'medium' ? Math.floor(particleCount * 0.7) : 
-                   Math.floor(particleCount * 0.5);
+                   Math.floor(particleCount * 0.5),
       
       for (let i = 0, i < count, i++) {
           x: Math.random() * canvas.width,
@@ -147,7 +149,7 @@ export default function UltraAdvancedFuturisticBackground({
 
     // Enhanced animation loop with quantum effects
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Create gradient background
       const gradient = ctx.createRadialGradient(
@@ -181,7 +183,7 @@ export default function UltraAdvancedFuturisticBackground({
       // Update and draw particles with enhanced effects
       particles.forEach((particle, index) => {
         // Update particle life
-        particle.life -= 0.5;
+        particle.life -= 0.5,
         if (particle.life <= 0) {
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
@@ -189,9 +191,9 @@ export default function UltraAdvancedFuturisticBackground({
         }
 
         // Update position with quantum effects
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.rotation += particle.rotationSpeed;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+        particle.rotation += particle.rotationSpeed,
 
         // Quantum entanglement effect
         if (enableQuantumEffects && Math.random() < 0.01) {
@@ -230,10 +232,10 @@ export default function UltraAdvancedFuturisticBackground({
         }
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
 
         // Draw particle with enhanced effects
         ctx.save();
@@ -430,12 +432,12 @@ export default function UltraAdvancedFuturisticBackground({
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
-    window.addEventListener('resize', handleResize);
-    initParticles();
-    animate();
+    window.addEventListener('resize', handleResize),
+    initParticles(),
+    animate(),
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
@@ -482,7 +484,7 @@ export default function UltraAdvancedFuturisticBackground({
     </div>
   );      }
     }
-  }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]);
+  }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
 
   return (
     <div className="relative min-h-screen">

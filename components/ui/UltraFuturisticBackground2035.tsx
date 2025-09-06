@@ -19,9 +19,7 @@ interface UltraFuturisticBackground2035Props {
   enableNeonEffects?: boolean;
   enableSpaceTime?: boolean;
 
-const UltraFuturisticBackground2035: React.FC<
-  UltraFuturisticBackground2035Props
-> = ({
+const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({
   intensity = 'medium',
   colorScheme = 'quantum-fusion',
   particleCount = 200,
@@ -91,24 +89,24 @@ const UltraFuturisticBackground2035: React.FC<
           glow: 'rgba(0, 255, 255, 0.3)'
         }
     }
-  };
+  },
 
-  const colors = getColorScheme();
+  const colors = getColorScheme(),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
 
     // Initialize particles
     const initParticles = () => {
@@ -127,20 +125,20 @@ const UltraFuturisticBackground2035: React.FC<
         });      }          color: Math.random() > 0.5 ? colors.primary : colors.secondary
         })
       }
-    };
+    },
 
-    initParticles();
+    initParticles(),
 
     // Animation loop
     const animate = () => {
-      ctx.fillStyle = colors.background;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = colors.background,
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
         // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
 
         // Bounce off edges
         if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
@@ -158,15 +156,15 @@ const UltraFuturisticBackground2035: React.FC<
         }
 
         // Draw particle
-        const alpha = particle.life / particle.maxLife;
-        ctx.globalAlpha = alpha;
+        const alpha = particle.life / particle.maxLife,
+        ctx.globalAlpha = alpha,
 
         if (particle.type === 'quantum' && enableQuantumEffects) {
           // Quantum particle effect
-          ctx.beginPath();
-          ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
-          ctx.fillStyle = colors.accent;
-          ctx.fill();
+          ctx.beginPath(),
+          ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2),
+          ctx.fillStyle = colors.accent,
+          ctx.fill(),
 
           // Quantum glow
           ctx.shadowColor = colors.accent;
@@ -216,10 +214,10 @@ const UltraFuturisticBackground2035: React.FC<
 
       animationRef.current = requestAnimationFrame(animate)
 
-    animate();
+    animate(),
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
@@ -298,12 +296,12 @@ const UltraFuturisticBackground2035: React.FC<
       const size = 30 + Math.sin(time + i) * 10;
 
       // Glow effect
-      ctx.shadowColor = colors.primary;
-      ctx.shadowBlur = 30;
-      ctx.beginPath();
-      ctx.arc(x, y, size, 0, Math.PI * 2);
-      ctx.fillStyle = colors.glow;
-      ctx.fill();
+      ctx.shadowColor = colors.primary,
+      ctx.shadowBlur = 30,
+      ctx.beginPath(),
+      ctx.arc(x, y, size, 0, Math.PI * 2),
+      ctx.fillStyle = colors.glow,
+      ctx.fill(),
 
       // Core
       ctx.shadowBlur = 0;

@@ -12,13 +12,13 @@ export const StarRating: React.FC<Props> = ({
 type Props = {
   value: number,
   onChange: (val: number) => void,
-  size?: number;
+  size?: number,
   readOnly?: boolean
 };
 
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
 
-  const stars = [1, 2, 3, 4, 5];
+  const stars = [1, 2, 3, 4, 5],
 
   return (
     <div className='flex items-center gap-1'>

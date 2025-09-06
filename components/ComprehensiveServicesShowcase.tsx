@@ -32,7 +32,7 @@ import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(''),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<
     'popularity' | 'price' | 'rating' | 'newest'
@@ -173,7 +173,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
       return matchesCategory && matchesSearch;    })      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
       return matchesCategory && matchesSearch
     .sort((a, b) => {
       switch (sortBy) {
@@ -193,7 +193,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
         default:
           return 0;      }          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0

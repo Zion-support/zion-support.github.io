@@ -21,8 +21,8 @@ export default function UseTokensModal({
     defaultType ?? "boost_profile",
   );
   const [tokens, setTokens] = useState<number>(100);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const usdValue = (tokens * 0.01).toFixed(2);
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const usdValue = (tokens * 0.01).toFixed(2),
 
   useEffect(() => {
     (async () => {
@@ -37,7 +37,7 @@ export default function UseTokensModal({
   }
 
   async function redeem() {
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     try {
       const res = await fetch("/api/tokens/redeem", {
         method: "POST",
@@ -49,11 +49,11 @@ export default function UseTokensModal({
         onClose();
       }
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   }
 
-  if (!isOpen) return null;
+  if (!isOpen) return null,
 
   return (
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">

@@ -7,7 +7,7 @@ interface ButtonProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset',
   disabled?: boolean;
 export default function Button({
   children,

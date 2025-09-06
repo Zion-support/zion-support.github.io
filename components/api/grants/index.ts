@@ -73,9 +73,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         res.status(400).json({ error: 'Missing required fields' });
         return
       }
-      ensureDir();
-      const id = uuidv4();
-      const now = new Date().toISOString();
+      ensureDir(),
+      const id = uuidv4(),
+      const now = new Date().toISOString(),
       const record: GrantApplication = {
         id,
         program: payload.program || 'grant',

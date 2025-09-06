@@ -8,7 +8,7 @@ export type IntegrationProviderId =
   | 'greenhouse'
   | 'lever'
   | 'workable'
-  | 'bamboohr';
+  | 'bamboohr',
 
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId, name: string,
@@ -19,8 +19,8 @@ export interface IntegrationProviderMeta {
 
 export interface SyncRules {
   // CRM rules
-  autoCreateContacts?: boolean;
-  pushNotesMode?: 'auto' | 'manual';
+  autoCreateContacts?: boolean,
+  pushNotesMode?: 'auto' | 'manual',
   // ATS rules
   autoSyncApplicants?: boolean;
   autoUploadResumes?: boolean;

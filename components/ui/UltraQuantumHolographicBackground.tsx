@@ -86,7 +86,7 @@ export default function UltraQuantumHolographicBackground({
       background: 'rgba(0, 0, 0, 0.94)',
       overlay: 'rgba(0, 0, 0, 0.35)',    },    cyberpunk: {
     overlay: 'rgba(0, 0, 0, 0.25)'
-    };
+    },
     cyberpunk: {
       
       primary: '#ff0040',
@@ -115,7 +115,7 @@ export default function UltraQuantumHolographicBackground({
     }
   };
 
-  const colors = colorSchemes[colorScheme];
+  const colors = colorSchemes[colorScheme],
   const intensityMultiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5 }[intensity],
     const updateDimensions = () => {
       setDimensions({
@@ -125,9 +125,6 @@ export default function UltraQuantumHolographicBackground({
       })
     };
 
-    updateDimensions();
-    window.addEventListener('resize', updateDimensions);
-    setIsVisible(true);
 
     return () => window.removeEventListener('resize', updateDimensions);  }, []);    return () => window.removeEventListener('resize', updateDimensions)
   }, []);
@@ -135,12 +132,12 @@ export default function UltraQuantumHolographicBackground({
   useEffect(() => {
     if (!canvasRef.current || !dimensions.width || !dimensions.height) return;
 
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const canvas = canvasRef.current,
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = dimensions.width;
-    canvas.height = dimensions.height;
+    canvas.width = dimensions.width,
+    canvas.height = dimensions.height,
 
     // Particle system
     class Particle {
@@ -182,8 +179,8 @@ export default function UltraQuantumHolographicBackground({
         this.type = ['quantumholographicenergymatrix'][Math.floor(Math.random() * 4)] as any
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
+        this.x += this.vx,
+        this.y += this.vy,
         this.life--;
 
         // Bounce off edges
@@ -216,7 +213,7 @@ export default function UltraQuantumHolographicBackground({
 
         // Matrix rain effect
         if (this.type === 'matrix') {
-          this.vy += 0.1;
+          this.vy += 0.1,
           if (this.y > dimensions.height) {
             this.y = -10;
             this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
@@ -225,11 +222,11 @@ export default function UltraQuantumHolographicBackground({
       }
 
       draw() {
-        if (this.life <= 0) return;
+        if (this.life <= 0) return,
 
-        const alpha = this.life / this.maxLife;
-        ctx.save();
-        ctx.globalAlpha = alpha;
+        const alpha = this.life / this.maxLife,
+        ctx.save(),
+        ctx.globalAlpha = alpha,
 
         switch (this.type) {
           case 'quantum':
@@ -328,7 +325,7 @@ export default function UltraQuantumHolographicBackground({
     // Animation loop
     let animationId: number,
     const animate = () => {
-      ctx.clearRect(0, 0, dimensions.width, dimensions.height);
+      ctx.clearRect(0, 0, dimensions.width, dimensions.height),
 
       // Draw quantum field background
       const gradient = ctx.createRadialGradient(
@@ -342,15 +339,15 @@ export default function UltraQuantumHolographicBackground({
         dimensions.width / 2;
         dimensions.height / 2;
       );
-      gradient.addColorStop(0, colors.background);
-      gradient.addColorStop(1, colors.overlay);
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, dimensions.width, dimensions.height);
+      gradient.addColorStop(0, colors.background),
+      gradient.addColorStop(1, colors.overlay),
+      ctx.fillStyle = gradient,
+      ctx.fillRect(0, 0, dimensions.width, dimensions.height),
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.update();
-        particle.draw();
+        particle.update(),
+        particle.draw(),
 
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
@@ -418,7 +415,7 @@ export default function UltraQuantumHolographicBackground({
       animationId = requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     return () => {
       if (animationId) {
@@ -512,7 +509,7 @@ export default function UltraQuantumHolographicBackground({
                 color: colors.primary
               }}
               animate={{
-                opacity: [0, 1, 0];
+                opacity: [0, 1, 0],
                 scaleX: [0, 1, 0]
               }}
               transition={{

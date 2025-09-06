@@ -15,9 +15,9 @@ const localeLabelKey: Record<string, string> = {
   ar: 'lang.arabic',
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {
-  const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
-  const current = i18n.resolvedLanguage || i18n.language || 'en';
+  const { t } = useTranslation(),
+  const [open, setOpen] = useState(false),
+  const current = i18n.resolvedLanguage || i18n.language || 'en',
 
   const changeLanguage = async (lng: string) => {
     await i18n.changeLanguage(lng),

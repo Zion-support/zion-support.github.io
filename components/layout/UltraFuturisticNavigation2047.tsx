@@ -484,11 +484,11 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
 
 const UltraFuturisticNavigation2047 = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen),
+  const closeMenu = () => setIsOpen(false),
 
   const handleDropdownToggle = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
@@ -504,7 +504,9 @@ const UltraFuturisticNavigation2047 = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);        setActiveDropdown(null)
       }
-    };
+    },
+
+    window.addEventListener('resize', handleResize),
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);

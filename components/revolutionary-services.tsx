@@ -87,12 +87,12 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevo
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, Star, Calendar } from 'lucide-react';
 export default function RevolutionaryServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('name');
-  const [showFilters, setShowFilters] = useState(false);
+  const [priceRange, setPriceRange] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState('name'),
+  const [showFilters, setShowFilters] = useState(false),
   const [selectedService, setSelectedService] = useState<any>(null);
 
   const priceRanges = [
@@ -114,7 +114,7 @@ export default function RevolutionaryServicesPage() {
   ];
 
   // Filter and sort services
-  let filteredServices = revolutionaryMicroSaasServices;
+  let filteredServices = revolutionaryMicroSaasServices,
 
   // Category filter
   if (selectedCategory !== 'All') {
@@ -166,15 +166,15 @@ export default function RevolutionaryServicesPage() {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare(b.category),
       case 'roi':
-        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0'),
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0'),
         return bRoi - aRoi;
       default:
         return a.name.localeCompare(b.name);    }      default: return a.name.localeCompare(b.name)
     }
-  });
+  }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -183,7 +183,7 @@ export default function RevolutionaryServicesPage() {
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   };
 
-  const popularServices = getPopularRevolutionaryServices();
+  const popularServices = getPopularRevolutionaryServices(),
 
   // Enhanced service categories with better descriptions
   const enhancedCategories = [
@@ -1007,8 +1007,8 @@ export default function RevolutionaryServicesPage() {
                                          <Button 
                            variant="primary"
                            onClick={() => {
-                             setSearchQuery('');
-                             setSelectedCategory('All');
+                             setSearchQuery(''),
+                             setSelectedCategory('All'),
                              setPriceRange('All')
                            }}
                          >

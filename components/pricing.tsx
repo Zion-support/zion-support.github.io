@@ -37,8 +37,8 @@ import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovati
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 export default function PricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState('All'),
 
   // Combine all services
   const allServices = [
@@ -108,7 +108,7 @@ export default function PricingPage() {
                         (selectedPriceRange === 'Under $1K' && price < 1000) ||
                         (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) ||
                         (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) ||
-                        (selectedPriceRange === '$20K+' && price >= 20000);
+                        (selectedPriceRange === '$20K+' && price >= 20000),
     
     return matchesCategory && matchesPrice
 
@@ -143,7 +143,7 @@ export default function PricingPage() {
     if (!acc[category]) {
       acc[category] = []
     }
-    acc[category].push(service);
+    acc[category].push(service),
     return acc
   }, {} as Record<string, typeof filteredServices>);
   const faqs = [

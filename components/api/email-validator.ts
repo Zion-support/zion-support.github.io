@@ -23,19 +23,19 @@ export default async function handler(
   }
 
   try {
-    const { email } = req.body;
+    const { email } = req.body,
 
     if (!email || typeof email !== 'string') {
-      return res.status(400).json({ error: 'Email is required' });
+      return res.status(400).json({ error: 'Email is required' }),
     }
 
     // Basic email format validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const hasValidFormat = emailRegex.test(email);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    const hasValidFormat = emailRegex.test(email),
 
     // Extract domain
-    const domain = email.split('@')[1];
-    const hasValidDomain = domain && domain.length > 0;
+    const domain = email.split('@')[1],
+    const hasValidDomain = domain && domain.length > 0,
 
     // Check for common disposable email providers
     const disposableDomains = [
@@ -87,7 +87,7 @@ export default async function handler(
     const isFreeProvider = freeProviders.some(provider => domain === provider);
 
     // Calculate score (0-100)
-    let score = 100;
+    let score = 100,
     if (!hasValidFormat) score -= 50;
     if (!hasValidDomain) score -= 20;
     if (isDisposable) score -= 30;

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 export default function OnboardingWizard() {
-  const { role, setRole } = useRole();
-  const [open, setOpen] = useState(false);
+  const { role, setRole } = useRole(),
+  const [open, setOpen] = useState(false),
 
   useEffect(() => {
     try {
@@ -17,7 +17,7 @@ export default function OnboardingWizard() {
         setOpen(true)
       }
     } catch {}
-  }, []);
+  }, []),
 
   function completeOnboarding() {
     try {

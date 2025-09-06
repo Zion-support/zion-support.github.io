@@ -28,7 +28,7 @@ export default async function handler(
         .json({ ok: true, code, status: "pending", mock: true });
     }
 
-    const supabase = getServerSupabase();
+    const supabase = getServerSupabase(),
     const { data: existing, error: existingErr } = await supabase
       .from("partners")
       .select("code")

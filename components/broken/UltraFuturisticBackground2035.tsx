@@ -14,18 +14,18 @@ interface UltraFuturisticBackground2035Props {
 export default function UltraFuturisticBackground2035({ children }: UltraFuturisticBackground2035Props) {
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
-    canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+    canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
+    canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
     if (ctx) {
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
 
@@ -116,15 +116,15 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
           return ['#dc2626#7c3aed#059669'][Math.floor(Math.random() * 3)];
         default: return '#8b5cf6'
       }
-    };
+    },
 
     // Update and draw particles with enhanced effects
     const updateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       particles.forEach((particle, index) => {
         // Update particle life
-        particle.life--;
+        particle.life--,
         if (particle.life <= 0) {
           particle.life = particle.maxLife;
           particle.x =
@@ -135,8 +135,8 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
         }
 
         // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
 
         // Wrap around edges
         if (particle.x < 0)
@@ -151,11 +151,11 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
         if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
         if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0;
         // Calculate opacity based on life
-        const lifeRatio = particle.life / particle.maxLife;
-        const currentOpacity = particle.opacity * lifeRatio;
+        const lifeRatio = particle.life / particle.maxLife,
+        const currentOpacity = particle.opacity * lifeRatio,
 
         // Draw particle based on type
-        drawParticle(ctx, particle, currentOpacity);
+        drawParticle(ctx, particle, currentOpacity),
 
         // Draw connections with enhanced effects
         const maxDistance = prefersReducedMotion
@@ -180,7 +180,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       if (!prefersReducedMotion) {
         animationFrameId = requestAnimationFrame(updateParticles);        animationFrameId = requestAnimationFrame(updateParticles)
       }
-    };
+    },
 
     // Enhanced particle drawing with different types
     const drawParticle = (
@@ -193,13 +193,13 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
 
       switch (particle.type) {
         case 'quantum':
-          drawQuantumParticle(ctx, particle);
+          drawQuantumParticle(ctx, particle),
           break;
         case 'hologram':
-          drawHologramParticle(ctx, particle);
+          drawHologramParticle(ctx, particle),
           break;
         case 'neon':
-          drawNeonParticle(ctx, particle);
+          drawNeonParticle(ctx, particle),
           break;
         case 'energy':
           drawEnergyParticle(ctx, particle);
@@ -352,9 +352,9 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
     // Enhanced connection drawing with different effects
     const drawConnections = (ctx: CanvasRenderingContext2D, particles: any[], currentIndex: number, maxDistance: number, opacity: number) => {
         if (currentIndex !== otherIndex) {
-          const dx = particles[currentIndex].x - otherParticle.x;
-          const dy = particles[currentIndex].y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          const dx = particles[currentIndex].x - otherParticle.x,
+          const dy = particles[currentIndex].y - otherParticle.y,
+          const distance = Math.sqrt(dx * dx + dy * dy),
 
           if (distance < maxDistance) {
             const connectionOpacity =
@@ -390,8 +390,8 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
 
     // Handle window resize
     const handleResize = () => {
-      canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
-      canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+      canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
+      canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
       if (ctx) {
         ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
       }
@@ -400,12 +400,12 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       initParticles()
     };
 
-    window.addEventListener('resize', handleResize);
-    initParticles();
-    updateParticles();
+    window.addEventListener('resize', handleResize),
+    initParticles(),
+    updateParticles(),
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize),
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }

@@ -117,15 +117,15 @@ export default function Revolutionary2030ServicesPage() {
                 "telephone": "+1-302-464-0950";
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
-              };
+              },
               "address": {
-                "@type": "PostalAddress";
-                "streetAddress": "364 E Main St STE 1008";
-                "addressLocality": "Middletown";
-                "addressRegion": "DE";
-                "postalCode": "19709";
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
                 "addressCountry": "US"
-              };
+              },
               "sameAs": [
                 "https://github.com/Zion-Holdings"
               ]

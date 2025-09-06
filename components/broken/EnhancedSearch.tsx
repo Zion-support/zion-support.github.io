@@ -182,7 +182,7 @@ function debounce<T extends (...args: any[]) => any>(
   return (...args: Parameters<T>) => {
     clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait)
-  };
+  },
 }
 
 export default EnhancedSearch;

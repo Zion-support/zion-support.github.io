@@ -37,11 +37,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
+
 
     let animationFrameId: number;
     let particles: Array<{
@@ -68,10 +69,10 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         canvas.width = rect.width;
         canvas.height = rect.height;      }        canvas.height = rect.height
       }
-    };
+    },
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
 
     // Color schemes
     const colorSchemes = {
@@ -115,7 +116,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       }
     };
 
-    const colors = colorSchemes[colorScheme];
+    const colors = colorSchemes[colorScheme],
 
     // Initialize particles
     const initParticles = () => {
@@ -131,7 +132,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
                 : 'fusion';      for (let i = 0, i < particleCount, i++) {
         const type = Math.random() > 0.7 ? 'quantum' : 
                     Math.random() > 0.5 ? 'holographic' : 
-                    Math.random() > 0.3 ? 'neon' : 'fusion';
+                    Math.random() > 0.3 ? 'neon' : 'fusion',
         
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -211,7 +212,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         ctx.lineTo(canvas.width, y);
         ctx.stroke();      }        ctx.stroke()
       }
-    };
+    },
 
     // Neural network effect
     const createNeuralNetwork = () => {
@@ -298,12 +299,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         
         // Create glow effect
         const glowGradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0;
+          particle.x, particle.y, 0,
           particle.x, particle.y, particle.size * 3
-        );
+        ),
         glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`);
         glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 0.5 * 255).toString(16).padStart(2, '0')}`);
-        glowGradient.addColorStop(1, 'transparent');
+        glowGradient.addColorStop(1, 'transparent'),
         
         ctx.fillStyle = glowGradient;
         ctx.fill();
@@ -382,8 +383,8 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       animationFrameId = requestAnimationFrame(animate)
     };
 
-    initParticles();
-    animate();
+    initParticles(),
+    animate(),
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);

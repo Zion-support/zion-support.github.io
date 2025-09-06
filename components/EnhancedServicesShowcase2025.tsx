@@ -307,7 +307,7 @@ const services: Service[] = [
     description: 'Modern cloud-native development and deployment platform',
     icon: <FaCloud className='w-6 h-6' />,      'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
     ]
-  };
+  },
   {
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
@@ -346,9 +346,9 @@ const services: Service[] = [
 ];
 
 const EnhancedServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(''),
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
 
   const filteredServices = useMemo(() => {
@@ -386,7 +386,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.pricing.starter - b.pricing.starter;
+          return a.pricing.starter - b.pricing.starter,
         case 'category':
           return a.category.localeCompare(b.category);
         default:

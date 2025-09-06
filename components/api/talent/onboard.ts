@@ -38,9 +38,9 @@ async function summarizeAndTag(input: {;
   }
 
   try {
-    const { OpenAI } = await import('openai');
-    const client = new OpenAI({ apiKey: openaiApiKey });
-    const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`;
+    const { OpenAI } = await import('openai'),
+    const client = new OpenAI({ apiKey: openaiApiKey }),
+    const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT: \n${combinedText}`,
 
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -56,7 +56,7 @@ async function summarizeAndTag(input: {;
         { role: 'user', content: prompt }];
       temperature: 0.4});
 
-    const content = response.choices?.[0]?.message?.content || '';
+    const content = response.choices?.[0]?.message?.content || '',
     try {
       const parsed = JSON.parse(content);
       if (
@@ -96,7 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const id = randomUUID();
+    const id = randomUUID(),
     const {
       fullName,
       professionalTitle,
@@ -191,8 +191,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         summary;
         tags}};
 
-    const perRecordPath = path.join(dataDir, `${id}.json`);
-    await fse.writeJSON(perRecordPath, record, { spaces: 2 });
+    const perRecordPath = path.join(dataDir, `${id}.json`),
+    await fse.writeJSON(perRecordPath, record, { spaces: 2 }),
+
 
     const aggregatePath = path.join(
       process.cwd(),
@@ -212,8 +213,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // ignore
       }
     }
-    aggregate.push(record);
-    await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
+    aggregate.push(record),
+    await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 }),
 
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data

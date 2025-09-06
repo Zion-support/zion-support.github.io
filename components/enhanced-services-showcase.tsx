@@ -186,14 +186,14 @@ visible: {
 // Button component (if not imported)
 const Button = ({ 
   href,
-  variant = 'primary';
-  size = 'md';
-  className = '';
+  variant = 'primary',
+  size = 'md',
+  className = '',
   children, onClick 
 }: {
-  href?: string;
-  variant?: 'primary' | 'secondary';
-  size?: 'sm' | 'md' | 'lg';
+  href?: string,
+  variant?: 'primary' | 'secondary',
+  size?: 'sm' | 'md' | 'lg',
   className?: string;
   children: React.ReactNode,
   onClick?: () => void
@@ -202,15 +202,15 @@ const Button = ({
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',
     secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'
-  };
+  },
   
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg'
-  };
+  },
 
-  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`;
+  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`,
 
   if (href) {
     return (

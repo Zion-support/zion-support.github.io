@@ -36,9 +36,9 @@ export default function RequestToHirePage() {
       return;    }      return
     }
 
-    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
+    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, ''),
 
-    setSubmitting(true);
+    setSubmitting(true),
     try {
       const res = await fetch('/api/requests/create', {
         method: 'POST',
@@ -65,7 +65,7 @@ export default function RequestToHirePage() {
     } finally {
       setSubmitting(false)
     }
-  };
+  },
 
   if (result) {
     return (

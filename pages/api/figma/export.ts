@@ -18,8 +18,8 @@ export default async function handler(
     ) as UIKitKind;
     const zip = new JSZip();
 
-    const map = getZionDesignMap();
-    const tokens = await buildTokenSet();
+    const map = getZionDesignMap(),
+    const tokens = await buildTokenSet(),
 
     // Core files
     zip.file("map.json", JSON.stringify(map, null, 2));

@@ -8,16 +8,7 @@ if (this.y < 0) this.y = canvas.height;
 if (this.y > canvas.height) this.y = 0;
 // Fade out near end of life if (this.life < 20) {
 
-}let particles: Particle[] = [];
-let connections: Connection[] = [];
-// Initialize particles ctx.fillStyle = colors.primary;
-ctx.font = `$ {
-  fontSize 
-}px monospace`;
-
-const EnhancedFuturisticBackground: React.FC<
-  EnhancedFuturisticBackgroundProps
-> = ({
+const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
   children,
   className = '',
   intensity = 'medium',
@@ -72,7 +63,7 @@ const EnhancedFuturisticBackground: React.FC<
       accent: '#ffff00',    holographic: {
     particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],
       glow: '#ff0080'
-    };
+    },
     holographic: {
       
       primary: '#00ffff',
@@ -139,22 +130,22 @@ const EnhancedFuturisticBackground: React.FC<
   };
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
 
-    const colors = colorSchemes[colorScheme];
-    const settings = intensitySettings[intensity];
+    const colors = colorSchemes[colorScheme],
+    const settings = intensitySettings[intensity],
 
     // Enhanced particle system
     class Particle {
@@ -190,15 +181,15 @@ const EnhancedFuturisticBackground: React.FC<
         this.maxLife = 100
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
+        this.x += this.vx,
+        this.y += this.vy,
         this.life--;
 
         // Wrap around edges
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
+        if (this.x < 0) this.x = canvas.width,
+        if (this.x > canvas.width) this.x = 0,
+        if (this.y < 0) this.y = canvas.height,
+        if (this.y > canvas.height) this.y = 0,
 
         // Fade out near end of life
         if (this.life < 20) {
@@ -318,11 +309,11 @@ const EnhancedFuturisticBackground: React.FC<
       }
 
       const drawMatrix = () => {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.06)',
+        ctx.fillRect(0, 0, canvas.width, canvas.height),
 
-        ctx.fillStyle = colors.primary;
-        ctx.font = `${fontSize}px monospace`;
+        ctx.fillStyle = colors.primary,
+        ctx.font = `${fontSize}px monospace`,
 
         for (let i = 0; i < drops.length; i++) {
           const text =
@@ -334,7 +325,7 @@ const EnhancedFuturisticBackground: React.FC<
           }
           drops[i]++;
         }
-      };
+      },
 
       return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
@@ -348,16 +339,16 @@ const EnhancedFuturisticBackground: React.FC<
       return drawMatrix
     };
 
-    const drawMatrix = matrixRain();
+    const drawMatrix = matrixRain(),
 
     // Main animation loop
     const animate = () => {
       // Clear canvas with fade effect
-      ctx.fillStyle = colors.background;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = colors.background,
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Draw matrix rain
-      drawMatrix();
+      drawMatrix(),
 
       // Update and draw particles
       particles.forEach(particle => {
@@ -366,7 +357,7 @@ const EnhancedFuturisticBackground: React.FC<
       });
 
       // Remove dead particles and add new ones
-      particles = particles.filter(particle => !particle.isDead());
+      particles = particles.filter(particle => !particle.isDead()),
       while (particles.length < settings.particleCount) {
         particles.push(new Particle());      }
 
@@ -396,7 +387,7 @@ const EnhancedFuturisticBackground: React.FC<
       }
 
       // Draw connections
-      connections.forEach(connection => connection.draw());
+      connections.forEach(connection => connection.draw()),
 
       // Add floating geometric shapes
       if (Math.random() < 0.02) {
@@ -453,9 +444,9 @@ const EnhancedFuturisticBackground: React.FC<
       } else {
         animationRef.current = requestAnimationFrame(animate)
       }
-    };
+    },
 
-    animate();
+    animate(),
 
     return () => {
       if (animationRef.current) {

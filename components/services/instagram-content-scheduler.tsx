@@ -14,6 +14,6 @@ const ServicePage: NextPage<Props> = () => {
       </main>
     </div>
   )
-};
+},
 
 export default ServicePage;

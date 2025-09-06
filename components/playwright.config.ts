@@ -28,7 +28,7 @@ reporter: [ ['list'], ['json', {
   webServer: {
     command: npm run dev',    url: http://localhost:3000',    reuseExistingServer: !process.env.CI, // Reuse server locally, start fresh in CI
     timeout: 120 * 1000, // 2 minutes timeout for server to start
-    stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  };
+    stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  },
   // Optional: Define projects for different browsers
   // projects: [
   //   {

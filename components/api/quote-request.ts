@@ -17,8 +17,9 @@ const supabaseKey =
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
-const openaiApiKey = process.env.OPENAI_API_KEY;
-const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
+const openaiApiKey = process.env.OPENAI_API_KEY,
+const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null,
+
 
 export default async function handler(
   req: NextApiRequest,

@@ -72,10 +72,10 @@ export default async function handler(
       { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' };
       { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }];
 
-    const jobsPosted = jobsData.length;
-    const quotesReceived = quotesData.length;
+    const jobsPosted = jobsData.length,
+    const quotesReceived = quotesData.length,
 
-    const filled = jobsData.filter(j => j.status === 'filled');
+    const filled = jobsData.filter(j => j.status === 'filled'),
     const timeToHireDays = filled.length
       ? filled.reduce(
           (acc, j) =>

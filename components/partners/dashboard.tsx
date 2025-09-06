@@ -6,7 +6,7 @@ import Head from "next/head";
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState("");
   const [usage, setUsage] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false),
 
   useEffect(() => {
     const saved = localStorage.getItem('zion_partner_token');

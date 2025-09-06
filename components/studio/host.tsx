@@ -24,13 +24,13 @@ export default function StudioHostPage() {
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
 
-  const [generating, setGenerating] = useState(false);
-  const [episode, setEpisode] = useState<any>(null);
-  const [synthesizing, setSynthesizing] = useState(false);
-  const [publishing, setPublishing] = useState(false);
+  const [generating, setGenerating] = useState(false),
+  const [episode, setEpisode] = useState<any>(null),
+  const [synthesizing, setSynthesizing] = useState(false),
+  const [publishing, setPublishing] = useState(false),
 
   const handleGenerate = async () => {
-    setGenerating(true);
+    setGenerating(true),
     try {
       const res = await fetch('/api/podcast/generate', {
         method: 'POST',
@@ -56,11 +56,11 @@ export default function StudioHostPage() {
     } finally {
       setGenerating(false)
     }
-  };
+  },
 
   const handleSynthesize = async () => {
-    if (!episode?.id) return;
-    setSynthesizing(true);
+    if (!episode?.id) return,
+    setSynthesizing(true),
     try {
       const res = await fetch('/api/podcast/synthesize', {
         method: 'POST',
@@ -81,11 +81,11 @@ export default function StudioHostPage() {
     } finally {
       setSynthesizing(false)
     }
-  };
+  },
 
   const handlePublishRss = async () => {
-    if (!episode?.id) return;
-    setPublishing(true);
+    if (!episode?.id) return,
+    setPublishing(true),
     try {
       const res = await fetch('/api/podcast/rss', { method: 'POST' });
       await res.json();

@@ -13,14 +13,14 @@ const UltraFuturisticBackground2026: React.FC<
   const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
 
     let particles: Array<{
       x: number;
@@ -53,27 +53,27 @@ const UltraFuturisticBackground2026: React.FC<
     ];
 
     const createParticle = () => {
-      const side = Math.floor(Math.random() * 4);
+      const side = Math.floor(Math.random() * 4),
       let x, y, vx, vy;
 
       switch (side) {
         case 0: // Top
-          x = Math.random() * canvas.width;
-          y = -10;
-          vx = (Math.random() - 0.5) * 2;
-          vy = Math.random() * 2 + 1;
+          x = Math.random() * canvas.width,
+          y = -10,
+          vx = (Math.random() - 0.5) * 2,
+          vy = Math.random() * 2 + 1,
           break;
         case 1: // Right
-          x = canvas.width + 10;
-          y = Math.random() * canvas.height;
-          vx = -(Math.random() * 2 + 1);
-          vy = (Math.random() - 0.5) * 2;
+          x = canvas.width + 10,
+          y = Math.random() * canvas.height,
+          vx = -(Math.random() * 2 + 1),
+          vy = (Math.random() - 0.5) * 2,
           break;
         case 2: // Bottom
-          x = Math.random() * canvas.width;
-          y = canvas.height + 10;
-          vx = (Math.random() - 0.5) * 2;
-          vy = -(Math.random() * 2 + 1);
+          x = Math.random() * canvas.width,
+          y = canvas.height + 10,
+          vx = (Math.random() - 0.5) * 2,
+          vy = -(Math.random() * 2 + 1),
           break;
         case 3: // Left
           x = -10;
@@ -115,15 +115,15 @@ const UltraFuturisticBackground2026: React.FC<
         particles.push(createParticle());      for (let i = 0, i < 100, i++) {
         particles.push(createParticle())
       }
-    };
+    },
 
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
         particle.life++;
 
         if (
@@ -139,12 +139,12 @@ const UltraFuturisticBackground2026: React.FC<
           particles[index] = createParticle()
 
         // Draw particle
-        ctx.save();
-        ctx.globalAlpha = particle.alpha;
-        ctx.fillStyle = particle.color;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.save(),
+        ctx.globalAlpha = particle.alpha,
+        ctx.fillStyle = particle.color,
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fill(),
 
         // Draw glow effect
         const gradient = ctx.createRadialGradient(
@@ -166,8 +166,8 @@ const UltraFuturisticBackground2026: React.FC<
       });
 
       // Draw connecting lines between nearby particles
-      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
-      ctx.lineWidth = 1;
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)',
+      ctx.lineWidth = 1,
       particles.forEach((particle1, i) => {
         particles.slice(i + 1).forEach(particle2 => {
           const distance = Math.sqrt(
@@ -227,12 +227,12 @@ const UltraFuturisticBackground2026: React.FC<
       canvas.height = window.innerHeight;      canvas.height = window.innerHeight
     };
 
-    window.addEventListener('resize', handleResize);
-    initParticles();
-    animate();
+    window.addEventListener('resize', handleResize),
+    initParticles(),
+    animate(),
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

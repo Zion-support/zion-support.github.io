@@ -5,13 +5,13 @@ import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-ser
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
   innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services';
+} from '../data/2025-innovative-real-micro-saas-services',
 import { 
   innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced';
+} from '../data/2025-innovative-ai-services-enhanced',
 import { 
   innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced';
+} from '../data/2025-innovative-it-services-enhanced',
 import { 
   emergingTechServicesEnhanced2025 
 } from '../data/2025-emerging-tech-services-enhanced';
@@ -55,7 +55,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {
       setCurrentServiceIndex(
         prev => (prev + 1) % innovativeRealMicroSaasServices2025.length
@@ -78,7 +78,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false)
     }
-  };
+  },
 
   const allServices = [
     ...innovativeRealMicroSaasServices2025,

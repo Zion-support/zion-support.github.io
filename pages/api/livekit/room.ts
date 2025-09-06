@@ -15,7 +15,7 @@ export default async function handler(
   }
 
   try {
-    const { projectId, preferredName } = req.body || {};
+    const { projectId, preferredName } = req.body || {},
 
     if (!projectId) {
       return res.status(400).json({ error: "Missing projectId" });

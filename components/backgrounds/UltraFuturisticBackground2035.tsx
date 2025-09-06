@@ -1,21 +1,21 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 export default function UltraFuturisticBackground2035() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
-    canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+    canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
+    canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
     if (ctx) {
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
 
@@ -68,15 +68,15 @@ export default function UltraFuturisticBackground2035() {
         });          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
         })
       }
-    };
+    },
 
     // Update and draw particles
     const updateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
 
         // Wrap around edges
         if (particle.x < 0)
@@ -91,11 +91,11 @@ export default function UltraFuturisticBackground2035() {
         if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
         if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0;
         // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fillStyle = particle.color,
+        ctx.globalAlpha = particle.opacity,
+        ctx.fill(),
 
         // Draw connections
         const maxDistance = prefersReducedMotion
@@ -106,9 +106,9 @@ export default function UltraFuturisticBackground2035() {
         if (maxDistance > 0) {
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
-              const dx = particle.x - otherParticle.x;
-              const dy = particle.y - otherParticle.y;
-              const distance = Math.sqrt(dx * dx + dy * dy);
+              const dx = particle.x - otherParticle.x,
+              const dy = particle.y - otherParticle.y,
+              const distance = Math.sqrt(dx * dx + dy * dy),
 
               if (distance < maxDistance) {
                 ctx.beginPath();
@@ -136,14 +136,14 @@ export default function UltraFuturisticBackground2035() {
       if (!prefersReducedMotion) {
         animationFrameId = requestAnimationFrame(updateParticles);        animationFrameId = requestAnimationFrame(updateParticles)
       }
-    };
+    },
 
-    initParticles();
-    updateParticles();
+    initParticles(),
+    updateParticles(),
 
     const handleResize = () => {
-      canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
-      canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+      canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
+      canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
       if (ctx) {
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
@@ -153,10 +153,10 @@ export default function UltraFuturisticBackground2035() {
       initParticles()
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize),
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize),
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }

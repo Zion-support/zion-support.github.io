@@ -36,7 +36,7 @@ export default async function handler(
       return res.status(400).json({ error: "Review text is required" });
     }
 
-    const project = await findProjectById(projectId);
+    const project = await findProjectById(projectId),
     if (!project) {
       return res.status(404).json({ error: "Project not found" });
     }
@@ -56,14 +56,14 @@ export default async function handler(
         .json({ error: "Invalid reviewer for this project" });
     }
 
-    const existing = await hasExistingReview(projectId, fromRole, fromId);
+    const existing = await hasExistingReview(projectId, fromRole, fromId),
     if (existing) {
       return res.status(409).json({
         error: "You have already submitted a review for this project",
       });
     }
 
-    const now = new Date().toISOString();
+    const now = new Date().toISOString(),
     const review: Review = {
       id: uuidv4(),
       projectId,

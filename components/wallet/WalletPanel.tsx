@@ -54,7 +54,7 @@ export default function WalletPanel() {
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
 
-  const userId = useMemo(() => getUserId(), []);
+  const userId = useMemo(() => getUserId(), []),
 
   async function refresh() {
     const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`);
@@ -88,7 +88,7 @@ export default function WalletPanel() {
   );
 
   const nextBadgeThreshold = useMemo(() => {
-    if (balance < 50) return 50;
+    if (balance < 50) return 50,
     if (balance < 200) return 200;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;

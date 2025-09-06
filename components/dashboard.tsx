@@ -32,7 +32,17 @@ export default function Dashboard() {
     fetchBranding()
   }, [tenantId]);
 
-  const accent = branding?.primaryColor || '#111827';
+      } catch {
+        setBranding({ name: 'Zion Hire AI' })
+      }
+    }
+
+=======
+    fetchBranding()
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  }, [tenantId]),
+
+  const accent = branding?.primaryColor || '#111827',
 
   return (
     <div className='min-h-screen bg-gray-50'>

@@ -1,18 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-
 interface SearchResult {
   title: string, description: string,
   url: string, type: 'service' | 'page' | 'category',
 }
 
 const SearchBar: React.FC = () => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [query, setQuery] = useState(''),
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [isOpen, setIsOpen] = useState(false),
+  const [isLoading, setIsLoading] = useState(false),
+  const searchRef = useRef<HTMLDivElement>(null),
+  const inputRef = useRef<HTMLInputElement>(null),
 
   // Mock search data - in a real app, this would come from an API
   const searchData: SearchResult[] = [
@@ -61,19 +60,19 @@ const SearchBar: React.FC = () => {
       return,
     }
 
-    setIsLoading(true);
+    setIsLoading(true),
 
     // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 300));
+    await new Promise(resolve => setTimeout(resolve, 300)),
 
     const filteredResults = searchData.filter(item =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.description.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    ),
 
-    setResults(filteredResults);
-    setIsOpen(true);
-    setIsLoading(false);
+    setResults(filteredResults),
+    setIsOpen(true),
+    setIsLoading(false),
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -85,26 +84,26 @@ const SearchBar: React.FC = () => {
   const handleResultClick = () => {
     setIsOpen(false),
     setQuery('')
-  };
+  },
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
     setIsOpen(false),
     inputRef.current?.blur()
   }
-  };
+  },
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false),
       }
-    };
+    },
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside),
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+      document.removeEventListener('mousedown', handleClickOutside),
+    },
   }, []);
 
   return (

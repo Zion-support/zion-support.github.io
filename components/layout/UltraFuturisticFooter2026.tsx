@@ -217,7 +217,7 @@ const serviceCategories = [
       { name: 'AI Autonomous Vulnerability Scanner', href: '/ai-autonomous-vulnerability-scanner' },
       { name: 'Quantum Secure Communication', href: '/quantum-secure-communication' }
     ]
-  };
+  },
   {
     title: 'Fintech & Blockchain',
     services: [
@@ -227,7 +227,7 @@ const serviceCategories = [
       { name: 'AI Autonomous Insurance Platform', href: '/ai-autonomous-insurance-platform' },
       { name: 'Quantum Payment Processing', href: '/quantum-payment-processing' }
     ]
-  };
+  },
   {
     title: 'Healthcare & Biotech',
     services: [

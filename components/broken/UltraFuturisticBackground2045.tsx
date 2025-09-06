@@ -32,14 +32,14 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
   const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
 
     // Particle system
     const particles: Array<{
@@ -81,33 +81,33 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
         particle.life--;
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
 
         // Draw particle
-        ctx.save();
-        ctx.globalAlpha = particle.alpha;
-        ctx.fillStyle = particle.color;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.save(),
+        ctx.globalAlpha = particle.alpha,
+        ctx.fillStyle = particle.color,
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fill(),
 
         // Add glow effect
-        ctx.shadowColor = particle.color;
-        ctx.shadowBlur = 20;
-        ctx.fill();
-        ctx.restore();
+        ctx.shadowColor = particle.color,
+        ctx.shadowBlur = 20,
+        ctx.fill(),
+        ctx.restore(),
 
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
@@ -154,7 +154,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
       animationRef.current = requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     // Handle resize
     const handleResize = () => {
@@ -162,7 +162,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize),
 
     return () => {
       if (animationRef.current) {
@@ -300,7 +300,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
 
         <motion.div
           animate={{
-            rotate: [45, 405];
+            rotate: [45, 405],
             scale: [1, 1.15, 1];
             opacity: [0.3, 0.5, 0.3]}}
           transition={{
@@ -325,7 +325,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2],
           animate={{
-            y: [0, -20, 0];
+            y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
             duration: 4,
@@ -411,7 +411,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
 
         <motion.div
           animate={{
-            scale: [1, 1.8, 1];
+            scale: [1, 1.8, 1],
             opacity: [0.4, 0.9, 0.4];
             x: [0, 15, 0]}}
           transition={{

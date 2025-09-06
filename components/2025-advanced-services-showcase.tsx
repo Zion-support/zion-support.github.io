@@ -192,10 +192,10 @@ const getServiceFeatures = (service: any) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filteredServices, setFilteredServices] = useState(allServices);
+  const [filteredServices, setFilteredServices] = useState(allServices),
 
   useEffect(() => {
-    let filtered = allServices;
+    let filtered = allServices,
 
     // Filter by category
     if (selectedCategory !== 'all') {

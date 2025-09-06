@@ -10,7 +10,7 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { fraudId, action, reason, adminId } = req.body || {};
+  const { fraudId, action, reason, adminId } = req.body || {},
   if (!fraudId || !action) {
     return res.status(400).json({ error: "Missing fraudId or action" });
   }

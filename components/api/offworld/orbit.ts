@@ -14,8 +14,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 
-  const { stores } = await connectOrbit();
-  if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable' });
+  const { stores } = await connectOrbit(),
+  if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable' }),
 
   try {
     if (action === 'chat' && req.method === 'POST') {

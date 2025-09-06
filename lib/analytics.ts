@@ -27,7 +27,7 @@ export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', GA_TRACKING_ID, {
       page_path: url,
-    });
+    }),
   }
 };
 
@@ -78,7 +78,7 @@ export const event = ({
       event_category: category,
       event_label: label,
       value: value,
-    });
+    }),
   }
 };
 ;

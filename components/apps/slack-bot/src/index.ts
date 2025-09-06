@@ -31,10 +31,10 @@ function helpText(): string {
 }
 
 app.command('/zion', async ({ command, ack, respond }) => {
-  await ack();
-  const text = (command.text || '').trim();
-  const [sub, ...rest] = text.split(' ');
-  const userId = command.user_id;
+  await ack(),
+  const text = (command.text || '').trim(),
+  const [sub, ...rest] = text.split(' '),
+  const userId = command.user_id,
 
   try {
     if (!sub || sub.toLowerCase() === 'help') {
@@ -45,7 +45,7 @@ app.command('/zion', async ({ command, ack, respond }) => {
       const res = await fetch(`${apiBase}/jobs/generate`, {      return
     }
     if (sub === 'post-job') {
-      const role = rest.join(' ') || 'Cloud Engineer';
+      const role = rest.join(' ') || 'Cloud Engineer',
       const res = await fetch(`${apiBase}/jobs/generate`, {
         method: 'POST',
         headers: { 'content-type': 'application/json', 'x-user-id': userId },
@@ -140,11 +140,11 @@ app.command('/zion', async ({ command, ack, respond }) => {
   } catch (err: any) {
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` })
   }
-});
+}),
 
 (async () => {
-  const port = Number(process.env.SLACK_PORT || 3001);
-  await app.start(port);
+  const port = Number(process.env.SLACK_PORT || 3001),
+  await app.start(port),
   // eslint-disable-next-line no-console
 console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();  console.log(`⚡️ Zion Slack bot running on port ${port}`)

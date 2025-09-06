@@ -17,7 +17,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
     <Suspense fallback={fallback}>
       <Component {...props} />
     </Suspense>
-  );
+  ),
 };
 
 export default LazyComponent;

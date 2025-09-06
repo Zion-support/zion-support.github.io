@@ -217,7 +217,7 @@ export default function PricingComparisonPage() {
       insight: 'Professional features at startup-friendly prices',
       icon: <Zap className="w-6 h-6" />,
       color: 'text-purple-400'
-    };
+    },
     {
       insight: 'Enterprise-grade reliability without enterprise pricing',
       icon: <Star className="w-6 h-6" />,

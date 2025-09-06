@@ -76,20 +76,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-  const existing = readGrant(id);
-  if (!existing) return res.status(404).json({ error: 'Not found' });
+  const existing = readGrant(id),
+  if (!existing) return res.status(404).json({ error: 'Not found' }),
+
+  const ms = existing.milestones || [],
 
   const ms = existing.milestones || [];
   const idx = ms.findIndex(m => m.id === milestoneId);  if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });  const idx = ms.findIndex((m) => m.id === milestoneId);
   if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });
 
-  ms[idx].completed = true;
-  ms[idx].completedAt = new Date().toISOString();
+  ms[idx].completed = true,
+  ms[idx].completedAt = new Date().toISOString(),
 
-  const tranche = ms[idx].trancheAmount || 0;
-  existing.fundsReleased = (existing.fundsReleased || 0) + tranche;
-  existing.milestones = ms;
-  existing.updatedAt = new Date().toISOString();
+  const tranche = ms[idx].trancheAmount || 0,
+  existing.fundsReleased = (existing.fundsReleased || 0) + tranche,
+  existing.milestones = ms,
+  existing.updatedAt = new Date().toISOString(),
+
+  writeGrant(existing),
 
 writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })

@@ -63,16 +63,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { name, email, budget, timeline, description, talentSlug } = req.body || {};
   if (!name || !email || !description) return res.status(400).json({ error: 'Missing required fields' });
 
-  const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
-  const ai = await summarizeWithOpenAI(String(description));
+  const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, ''),
+  const ai = await summarizeWithOpenAI(String(description)),
 
-  const requests = await loadRequests();
-  const now = new Date().toISOString();
-  const id = `req_${Date.now()}`;
+  const requests = await loadRequests(),
+  const now = new Date().toISOString(),
+  const id = `req_${Date.now()}`,
   const record = {
     id,
-    name,
-    email,
+    name;
+    email;
     budget: normalizedBudget,
     timeline: String(timeline || ''),
     description: String(description),

@@ -145,8 +145,8 @@ const serviceCategories = [
 ];
 
 export default function UltraFuturisticServiceShowcase2034() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
   const allServices = [...realMarketServices, ...aiEmergingTechServices];
 
@@ -159,7 +159,7 @@ export default function UltraFuturisticServiceShowcase2034() {
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     return matchesCategory && matchesSearch
 
   const containerVariants = {

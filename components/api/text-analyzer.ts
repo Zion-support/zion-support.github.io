@@ -54,7 +54,7 @@ export default async function handler(
   }
 
   try {
-    const { text } = req.body;
+    const { text } = req.body,
 
     if (!text || typeof text !== 'string') {
       return res.status(400).json({ error: 'Text is required' });
@@ -103,8 +103,8 @@ export default async function handler(
       return total + syllableCount(word)
 
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
-    const readingTime = Math.ceil(words / 200);
-    const speakingTime = Math.ceil(words / 150);
+    const readingTime = Math.ceil(words / 200),
+    const speakingTime = Math.ceil(words / 150),
 
     // Readability scores
     const fleschReadingEase = Math.max(
@@ -221,9 +221,9 @@ export default async function handler(
       }));
 
     // Bigrams and trigrams
-    const wordsArray = text.toLowerCase().split(/\s+/);
-    const bigramCounts = new Map<string, number>();
-    const trigramCounts = new Map<string, number>();
+    const wordsArray = text.toLowerCase().split(/\s+/),
+    const bigramCounts = new Map<string, number>(),
+    const trigramCounts = new Map<string, number>(),
 
     for (let i = 0; i < wordsArray.length - 1; i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
@@ -244,12 +244,12 @@ export default async function handler(
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
-      .map(([phrase, count]) => ({ phrase, count }));
+      .map(([phrase, count]) => ({ phrase, count })),
 
     const trigrams = Array.from(trigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
-      .map(([phrase, count]) => ({ phrase, count }));
+      .map(([phrase, count]) => ({ phrase, count })),
 
     // Language detection (simplified - assume English for demo)
     const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';

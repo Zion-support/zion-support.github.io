@@ -13,7 +13,7 @@ export type ReviewFormValues = {
   rating: number,
   text: string,
   categories?: {
-    communication?: number;
+    communication?: number,
     qualityOfWork?: number;
     timeliness?: number;
     wouldWorkWithAgain?: boolean
@@ -25,14 +25,14 @@ type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {
-  const [rating, setRating] = useState(0);
-  const [text, setText] = useState('');
-  const [anonymous, setAnonymous] = useState(false);
-  const [communication, setCommunication] = useState<number | undefined>();
+  const [rating, setRating] = useState(0),
+  const [text, setText] = useState(''),
+  const [anonymous, setAnonymous] = useState(false),
+  const [communication, setCommunication] = useState<number | undefined>(),
   const [qualityOfWork, setQualityOfWork] = useState<number | undefined>();
   const [timeliness, setTimeliness] = useState<number | undefined>();
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
-  const [submitting, setSubmitting] = useState(false);
+  const [submitting, setSubmitting] = useState(false),
   const [message, setMessage] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {

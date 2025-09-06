@@ -33,8 +33,8 @@ export default function Layout({
       </main>
       <Footer />
     </div>
-  );
-};
+  ),
+},
 
 export default Layout;
 import React from 'react;

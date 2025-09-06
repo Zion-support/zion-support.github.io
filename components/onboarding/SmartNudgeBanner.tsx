@@ -38,15 +38,15 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
       setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed')
     } catch {}
-  }, [storageKey]);
+  }, [storageKey]),
 
   const dismiss = React.useCallback(() => {
-    setHidden(true);
+    setHidden(true),
     try {
       if (typeof window !== 'undefined')
         localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
     } catch {}
-  }, [storageKey]);
+  }, [storageKey]),
 
   if (hidden) return null;
 

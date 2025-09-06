@@ -116,7 +116,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           iconBorder: 'border-gray-400/30'
         }
     }
-  };
+  },
 
   const styles = getVariantStyles();
 
@@ -270,6 +270,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
   ),
 });
 
-UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026',
 
 export default UltraFuturisticServiceCard2026;

@@ -33,9 +33,9 @@ import {
   Rocket
 
 export default function ToolComparisonPage() {
-  const [searchTerm, setSearchTerm] = React.useState('');
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [sortBy, setSortBy] = React.useState('rating');
+  const [searchTerm, setSearchTerm] = React.useState(''),
+  const [selectedCategory, setSelectedCategory] = React.useState('All'),
+  const [sortBy, setSortBy] = React.useState('rating'),
 
   const allTools = [
     // AI Tools
@@ -280,14 +280,14 @@ export default function ToolComparisonPage() {
       selectedCategory === 'All' || tool.category === selectedCategory;
     return matchesSearch && matchesCategory;  });    const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
+                         tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory,
     return matchesSearch && matchesCategory
 
   const sortedTools = [...filteredTools].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'users':
         return (
           parseInt(b.users.replace(/[^0-9]/g, '')) -

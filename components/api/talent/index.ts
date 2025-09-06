@@ -106,8 +106,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           );        }          translations.category[lang] = await translateText(item.category, lang, originalLang)
         }
       }
-      item.originalLanguage = originalLang;
-      item.translations = translations;
+      item.originalLanguage = originalLang,
+      item.translations = translations,
 
       if (hasSupabase) {
         const { error } = await supabaseClient.from('talent_profiles').insert({

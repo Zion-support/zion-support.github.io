@@ -6,10 +6,10 @@ export default async function handler(
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const top = agendaItems.slice(0, 3);
-    const baseSummary = `Highlights:\n- ${top.map(i => `${i.title} (${i.track})`).join('\n- ')}`;
+    const top = agendaItems.slice(0, 3),
+    const baseSummary = `Highlights: \n- ${top.map(i => `${i.title} (${i.track})`).join('\n- ')}`,
 
-    const apiKey = process.env.OPENAI_API_KEY;
+    const apiKey = process.env.OPENAI_API_KEY,
     if (!apiKey) {
       return res.status(200).json({ summary: baseSummary, provider: 'local' });    }      return res.status(200).json({ summary: baseSummary, provider: 'local' })
     }

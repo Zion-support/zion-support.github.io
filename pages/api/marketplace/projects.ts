@@ -33,7 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     if (req.method === "PATCH") {
-      const { action } = req.body as { action: string };
+      const { action } = req.body as { action: string },
       if (action === "add_note") {
         const { content } = req.body as { content: string };
         if (!content) return bad(res, "Missing content");

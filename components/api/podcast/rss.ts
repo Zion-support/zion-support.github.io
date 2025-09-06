@@ -43,9 +43,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <guid isPermaLink="false">${e.id}</guid>
       <pubDate>${pubDate}</pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
-    </item>`;
+    </item>`,
     })
-    .join('\n');
+    .join('\n'),
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
@@ -57,7 +57,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     <description>Zion interviews builders, founders, and contributors.</description>
     ${items}
   </channel>
-</rss>`;
+</rss>`,
 
 fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' });

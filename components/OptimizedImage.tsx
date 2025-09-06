@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -12,7 +11,7 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src;
+  src,
   alt;
   width = 800;
   height = 600;

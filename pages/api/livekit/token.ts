@@ -15,7 +15,7 @@ export default async function handler(
   }
 
   try {
-    const { roomName, identity, name, audioOnly } = req.body || {};
+    const { roomName, identity, name, audioOnly } = req.body || {},
 
     if (!roomName || !identity) {
       return res.status(400).json({ error: "Missing roomName or identity" });
@@ -38,7 +38,8 @@ export default async function handler(
       canSubscribe: true,
     });
 
-    const token = await at.toJwt();
+
+    const token = await at.toJwt(),
 
     return res.status(200).json({
       token,

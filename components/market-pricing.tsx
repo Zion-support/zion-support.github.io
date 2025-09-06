@@ -33,7 +33,7 @@ export default function MarketPricing() {
           strengths: ['Advanced language modelsStrong brand recognitionLarge user base'],
           weaknesses: ['Limited consciousness featuresHigh API costsPrivacy concerns'],
           rating: 4.2
-        };
+        },
         {
           name: 'Anthropic',
           marketShare: '18%',
@@ -41,7 +41,7 @@ export default function MarketPricing() {
           strengths: ['Safety-focused approachConstitutional AIResearch-driven'],
           weaknesses: ['Smaller model varietyLimited enterprise featuresHigher pricing'],
           rating: 4.0
-        };
+        },
         {
           name: 'Zion Tech Group',
           marketShare: '12%',
@@ -50,14 +50,14 @@ export default function MarketPricing() {
           weaknesses: ['Smaller market presenceLimited brand recognitionNewer player'],
           rating: 4.8
         }
-      ];
+      ],
       pricingAnalysis: {
         lowEnd: '$0.005 per 1K tokens',
         midRange: '$0.015 per 1K tokens',
         highEnd: '$0.025 per 1K tokens',
         ourPosition: 'Mid-range with premium features'
       }
-    };
+    },
     'quantum-computing': {
       marketSize: '$8.7B',
       growthRate: '+45.2%',
@@ -71,7 +71,7 @@ export default function MarketPricing() {
           strengths: ['Established infrastructureQiskit ecosystemResearch partnerships'],
           weaknesses: ['Limited qubit countHigh costsComplex access'],
           rating: 4.1
-        };
+        },
         {
           name: 'Google',
           marketShare: '22%',
@@ -79,7 +79,7 @@ export default function MarketPricing() {
           strengths: ['Quantum supremacyAdvanced algorithmsResearch focus'],
           weaknesses: ['Limited commercial accessHigh pricingComplex setup'],
           rating: 4.3
-        };
+        },
         {
           name: 'Zion Tech Group',
           marketShare: '8%',
@@ -88,7 +88,7 @@ export default function MarketPricing() {
           weaknesses: ['Smaller infrastructureLimited qubit varietyNewer platform'],
           rating: 4.5
         }
-      ];
+      ],
       pricingAnalysis: {
         lowEnd: '$0.80 per quantum hour',
         midRange: '$1.50 per quantum hour',

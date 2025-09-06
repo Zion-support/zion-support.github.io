@@ -15,10 +15,10 @@ import {
   Trash2,;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 export default function URLShortenerPage() {
-  const [longUrl, setLongUrl] = useState('');
-  const [customAlias, setCustomAlias] = useState('');
+  const [longUrl, setLongUrl] = useState(''),
+  const [customAlias, setCustomAlias] = useState(''),
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]);
-  const [isShortening, setIsShortening] = useState(false);
+  const [isShortening, setIsShortening] = useState(false),
   const [showQR, setShowQR] = useState<string | null>(null);
 
   const generateShortUrl = async () => {

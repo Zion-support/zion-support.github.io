@@ -46,7 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const courses = JSON.parse(raw);
     const existingIndex = courses.findIndex((c: any) => c.id === body.id);
     if (existingIndex >= 0) {
-      courses[existingIndex] = { ...courses[existingIndex], ...body }
+      courses[existingIndex] = { ...courses[existingIndex], ...body };
     } else {
       courses.push(body);
     }

@@ -5,14 +5,14 @@ import path from 'path';
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const raw = fs.readFileSync(dataPath, 'utf-8');
-    const courses = JSON.parse(raw);
+    const raw = fs.readFileSync(dataPath, 'utf-8'),
+    const courses = JSON.parse(raw),
 
-    const { category, level, isFree } = req.query;
+    const { category, level, isFree } = req.query,
 
     const filtered = courses.filter((c: any) => {
-      if (category && c.category !== category) return false;
-      if (level && c.level !== level) return false;
+      if (category && c.category !== category) return false,
+      if (level && c.level !== level) return false,
       if (typeof isFree !== 'undefined') {
         const freeVal = isFree === 'true' || isFree === true;
         if (c.isFree !== freeVal) return false;

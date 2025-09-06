@@ -28,14 +28,14 @@ export default function FeedbackModal({
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
-  const [comment, setComment] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [comment, setComment] = useState(''),
+  const [loading, setLoading] = useState(false),
 
   if (!isOpen) return null;
 
   async function submit() {
-    if (rating < 1) return onClose(false);
-    setLoading(true);
+    if (rating < 1) return onClose(false),
+    setLoading(true),
     try {
       await fetch('/api/feedback', {
         method: 'POST',

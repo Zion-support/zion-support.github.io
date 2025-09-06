@@ -45,14 +45,14 @@ const UltraAdvancedQuantumBackground: React.FC<
 }) => {
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
 
     let animationFrameId: number;
     let particles: Particle[] = [];
@@ -86,8 +86,8 @@ const UltraAdvancedQuantumBackground: React.FC<
       }
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
+        this.x += this.vx,
+        this.y += this.vy,
         this.life--;
 
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
@@ -239,8 +239,8 @@ const UltraAdvancedQuantumBackground: React.FC<
         ctx.save();
         
         // Draw connections
-        ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)';
-        ctx.lineWidth = 1;
+        ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)',
+        ctx.lineWidth = 1,
         this.connections.forEach(connection => {
           const from = this.nodes[connection.from];
           const to = this.nodes[connection.to];
@@ -251,7 +251,7 @@ const UltraAdvancedQuantumBackground: React.FC<
         });
 
         // Draw nodes
-        ctx.fillStyle = 'rgba(100, 200, 255, 0.8)';
+        ctx.fillStyle = 'rgba(100, 200, 255, 0.8)',
         this.nodes.forEach(node => {
           ctx.beginPath();
           ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
@@ -281,11 +281,11 @@ const UltraAdvancedQuantumBackground: React.FC<
     for (let i = 0, i < 8, i++) {
       quantumFields.push(new QuantumField())
 
-    neuralNetworks.push(new NeuralNetwork());
+    neuralNetworks.push(new NeuralNetwork()),
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw quantum fields
       quantumFields.forEach(field => {
@@ -311,9 +311,9 @@ const UltraAdvancedQuantumBackground: React.FC<
       ctx.lineWidth = 1;
       for (let i = 0; i < particles.length; i += 2) {        if (i + 1 < particles.length) {      for (let i = 0, i < particles.length, i += 2) {
         if (i + 1 < particles.length) {
-          const p1 = particles[i];
-          const p2 = particles[i + 1];
-          const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
+          const p1 = particles[i],
+          const p2 = particles[i + 1],
+          const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2),
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
@@ -322,19 +322,20 @@ const UltraAdvancedQuantumBackground: React.FC<
           }
         }
       }
-      ctx.restore();
+      ctx.restore(),
+
 
       animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize),
 
     return () => {
       window.removeEventListener('resize', handleResize);

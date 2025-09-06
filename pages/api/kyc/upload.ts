@@ -8,15 +8,15 @@ const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(
 
 function load(): Record<string, KycProfile> {
   try {
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
+    const raw = fs.readFileSync(FILE, 'utf8'),
+    return JSON.parse(raw),
   } catch {
-    return {};
+    return {},
   }
 
 function save(db: Record<string, KycProfile>) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
+  fs.mkdirSync(DATA_DIR, { recursive: true }),
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2)),
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

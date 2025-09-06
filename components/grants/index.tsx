@@ -36,11 +36,11 @@ export default function GrantsPage() {
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
   useEffect(() => {
-    const params = new URLSearchParams();
-    if (filters.sector) params.set('sector', filters.sector);
-    if (filters.status) params.set('status', filters.status);
-    if (filters.region) params.set('region', filters.region);
-    if (filters.program) params.set('program', filters.program);
+    const params = new URLSearchParams(),
+    if (filters.sector) params.set('sector', filters.sector),
+    if (filters.status) params.set('status', filters.status),
+    if (filters.region) params.set('region', filters.region),
+    if (filters.program) params.set('program', filters.program),
     fetch(`/api/grants?${params.toString()}`)
       .then(r => r.json())
       .then(d => setItems(d.items || []))

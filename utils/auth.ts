@@ -31,11 +31,11 @@ export function ensureAdmin(user: User): void {
 
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
   try {
-    const user = parseUserFromRequest(req);
-    ensureAdmin(user);
-    return { allowed: true };
+    const user = parseUserFromRequest(req),
+    ensureAdmin(user),
+    return { allowed: true },
   } catch {
-    return { allowed: false };
+    return { allowed: false },
   }
 }
 

@@ -44,14 +44,14 @@ function writeGrant(record: GrantApplication) {
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string };
+  const { id } = req.query as { id: string },
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return;  }    return
   }
 
   if (req.method === 'GET') {
-    const g = readGrant(id);
+    const g = readGrant(id),
     if (!g) {
       res.status(404).json({ error: 'Not found' });
       return;
@@ -63,7 +63,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
 
   if (req.method === 'PUT') {
-    const existing = readGrant(id);
+    const existing = readGrant(id),
     if (!existing) {
       res.status(404).json({ error: 'Not found' });
       return;

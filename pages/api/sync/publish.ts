@@ -19,14 +19,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
-  const signature = req.headers["x-zion-signature"];
-  const payload = req.body;
-  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined);
+  const signature = req.headers["x-zion-signature"],
+  const payload = req.body,
+  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined),
   if (!signatureValid) {
     return res.status(401).json({ error: "Invalid signature" })
   }
 
-  const event = payload as SyncEvent & { propagate?: boolean };
+  const event = payload as SyncEvent & { propagate?: boolean },
   if (!event || !event.type || !event.eventId) {
     return res.status(400).json({ error: "Invalid event" })
   }
@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!Array.isArray(votes) || !providedRoot) {
       return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
     }
-    const computed = computeMerkleRootFromVotes(votes);
+    const computed = computeMerkleRootFromVotes(votes),
     if (computed !== providedRoot) {
       return res.status(400).json({ error: "Merkle root mismatch" })
     }
@@ -65,7 +65,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       currentState.config.peers
         .filter((p) => !p.paused)
         .map(async (peer) => {
-          const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+          const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
           try {
             await axios.post(url, localBody, { headers, timeout: 5000 })
           } catch {

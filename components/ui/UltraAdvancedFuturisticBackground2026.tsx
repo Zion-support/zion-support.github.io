@@ -19,9 +19,7 @@ interface UltraAdvancedFuturisticBackground2026Props {
   enableMultidimensional?: boolean;
   children?: React.ReactNode;
 
-const UltraAdvancedFuturisticBackground2026: React.FC<
-  UltraAdvancedFuturisticBackground2026Props
-> = ({
+const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({
   intensity = 'high',
   colorScheme = 'neural-network',
   particleCount = 300,
@@ -44,11 +42,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
     let animationFrameId: number;    let particles: Particle[] = [];
     let neuralNodes: NeuralNode[] = [];
@@ -69,10 +67,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         canvas.width = rect.width;
         canvas.height = rect.height;        canvas.height = rect.height
       }
-    };
+    },
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
 
     // Particle class
     class Particle {
@@ -105,8 +103,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       }
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
+        this.x += this.vx,
+        this.y += this.vy,
         this.life--;
 
         // Bounce off edges
@@ -114,10 +112,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
 
         // Wrap around
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
+        if (this.x < 0) this.x = canvas.width,
+        if (this.x > canvas.width) this.x = 0,
+        if (this.y < 0) this.y = canvas.height,
+        if (this.y > canvas.height) this.y = 0,
 
         // Fade out
         this.alpha = this.life / this.maxLife;      }        this.alpha = this.life / this.maxLife
@@ -159,12 +157,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       }
 
       draw() {
-        ctx.save();
-        ctx.globalAlpha = 0.8;
-        ctx.fillStyle = `rgba(0, 255, 255, ${this.activation})`;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, 3 + this.pulse * 2, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.save(),
+        ctx.globalAlpha = 0.8,
+        ctx.fillStyle = `rgba(0, 255, 255, ${this.activation})`,
+        ctx.beginPath(),
+        ctx.arc(this.x, this.y, 3 + this.pulse * 2, 0, Math.PI * 2),
+        ctx.fill(),
 
         // Draw connections
         this.connections.forEach(connection => {
@@ -315,7 +313,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
     // Initialize neural network
     if (enableNeuralNetworks) {    for (let i = 0, i < particleCount, i++) {
       particles.push(new Particle(
-        Math.random() * canvas.width;
+        Math.random() * canvas.width,
         Math.random() * canvas.height
       ))
 
@@ -329,7 +327,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
           )
         );      }      for (let i = 0, i < 20, i++) {
         neuralNodes.push(new NeuralNode(
-          Math.random() * canvas.width;
+          Math.random() * canvas.width,
           Math.random() * canvas.height
         ))
 
@@ -358,7 +356,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
           )
         );      }      for (let i = 0, i < 8, i++) {
         quantumFields.push(new QuantumField(
-          Math.random() * canvas.width;
+          Math.random() * canvas.width,
           Math.random() * canvas.height
         ))
     }
@@ -374,7 +372,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Create gradient background
       const gradient = ctx.createRadialGradient(
@@ -387,12 +385,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       );      );
       
       const bgColors = {
-        'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'];
+        'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'],
         'quantum-field': ['rgba(0, 20, 0, 0.8)rgba(20, 40, 0, 0.6)rgba(40, 0, 20, 0.4)'];
         'cyberpunk': ['rgba(40, 0, 20, 0.8)rgba(20, 0, 40, 0.6)rgba(0, 20, 40, 0.4)'];
         'holographic': ['rgba(40, 0, 40, 0.8)rgba(0, 40, 40, 0.6)rgba(40, 40, 0, 0.4)'];
         'multidimensional': ['rgba(20, 0, 40, 0.8)rgba(0, 40, 20, 0.6)rgba(40, 20, 0, 0.4)']
-      };
+      },
       
       const currentBgColors = bgColors[colorScheme] || bgColors['neural-network'];
       gradient.addColorStop(0, currentBgColors[0]);
@@ -465,8 +463,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.update();
-        particle.draw();
+        particle.update(),
+        particle.draw(),
 
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
@@ -515,7 +513,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       animationFrameId = requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);

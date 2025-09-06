@@ -34,7 +34,7 @@ export default async function handler(
       return;
     }
 
-    const nowIso = new Date().toISOString();
+    const nowIso = new Date().toISOString(),
     const job: Job = {
       id: uuidv4(),
       title: String(title),
@@ -77,10 +77,10 @@ export default async function handler(
       else job.category = "General";
     }
 
-    const jobs = readJsonFile<Job[]>(FILE, []);
-    jobs.unshift(job);
+    const jobs = readJsonFile<Job[]>(FILE, []),
+    jobs.unshift(job),
     writeJsonFile<Job[]>(FILE, jobs);
-    res.status(201).json({ job });
+    res.status(201).json({ job }),
     return;
   }
 

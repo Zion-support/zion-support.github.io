@@ -57,9 +57,9 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
 
   const connect = useCallback(async () => {
-    const r = new Room();
+    const r = new Room(),
 
-    r.on(RoomEvent.ParticipantConnected, () => rebuild());
+    r.on(RoomEvent.ParticipantConnected, () => rebuild()),
     r.on(RoomEvent.ParticipantDisconnected, () => rebuild());
     r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r.on(RoomEvent.LocalTrackPublished, () => rebuild());
@@ -103,7 +103,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   }, [serverUrl, token, startMode]);
 
   const rebuild = (current?: Room | null) => {
-    const r = current || room;
+    const r = current || room,
     if (!r) return;
     const list: Array<RemoteParticipant | LocalParticipant> = [
       r.localParticipant,
@@ -114,7 +114,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   };
 
   useEffect(() => {
-    connect();
+    connect(),
     return () => {
       if (room) {
         room.disconnect();

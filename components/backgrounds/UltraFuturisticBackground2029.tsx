@@ -27,24 +27,24 @@ interface Particle {
   type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'
 }
 export default function UltraFuturisticBackground2029() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<Particle[]>([]);
-  const animationRef = useRef<number | undefined>(undefined);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
+  const particlesRef = useRef<Particle[]>([]),
+  const animationRef = useRef<number | undefined>(undefined),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
 
     // Initialize particles
     const initParticles = () => {
@@ -82,11 +82,11 @@ export default function UltraFuturisticBackground2029() {
 
       particlesRef.current = particles
 
-    initParticles();
+    initParticles(),
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Create gradient background
       const gradient = ctx.createRadialGradient(
@@ -111,14 +111,14 @@ export default function UltraFuturisticBackground2029() {
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
         // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
 
         // Draw particle
         ctx.save();
@@ -165,14 +165,14 @@ export default function UltraFuturisticBackground2029() {
 
           case 'holographic':
             // Holographic particles with rainbow effect
-            const time = Date.now() * 0.001;
-            const hue = (time * 50 + index * 10) % 360;
-            ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
-            ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
-            ctx.shadowBlur = 15;
-            ctx.beginPath();
-            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            ctx.fill();
+            const time = Date.now() * 0.001,
+            const hue = (time * 50 + index * 10) % 360,
+            ctx.fillStyle = `hsl(${hue}, 70%, 60%)`,
+            ctx.shadowColor = `hsl(${hue}, 70%, 60%)`,
+            ctx.shadowBlur = 15,
+            ctx.beginPath(),
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+            ctx.fill(),
             break;
 
           case 'neural':
@@ -239,18 +239,19 @@ export default function UltraFuturisticBackground2029() {
         ctx.restore()
 
       // Draw floating geometric shapes
-      drawGeometricShapes(ctx, canvas.width, canvas.height);
+      drawGeometricShapes(ctx, canvas.width, canvas.height),
 
       // Draw energy waves
-      drawEnergyWaves(ctx, canvas.width, canvas.height);
+      drawEnergyWaves(ctx, canvas.width, canvas.height),
+
 
       animationRef.current = requestAnimationFrame(animate);    };      animationRef.current = requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
@@ -326,7 +327,7 @@ export default function UltraFuturisticBackground2029() {
       ctx.stroke();
       ctx.restore();
     }
-  };
+  },
 
   const drawEnergyWaves = (
     ctx: CanvasRenderingContext2D,
@@ -393,7 +394,7 @@ export default function UltraFuturisticBackground2029() {
       ctx.stroke();
       ctx.restore()
     }
-  };
+  },
 
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>

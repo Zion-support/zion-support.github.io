@@ -4,10 +4,11 @@ import type { Vendor } from '../utils/vendor-types';
 
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function AgencyDashboardPage({ vendor }: Props) {
-  const [activeVendor, setActiveVendor] = useState(vendor);
-  const [pkgTitle, setPkgTitle] = useState('');
-  const [pkgDesc, setPkgDesc] = useState('');
-  const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+  const [activeVendor, setActiveVendor] = useState(vendor),
+  const [pkgTitle, setPkgTitle] = useState(''),
+  const [pkgDesc, setPkgDesc] = useState(''),
+  const [pkgPrice, setPkgPrice] = useState<number | ''>(''),
+
 
   if (!activeVendor)
     return (
@@ -15,8 +16,8 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     );  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
 
   async function saveProfile(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    e.preventDefault(),
+    const formData = new FormData(e.currentTarget),
     const updated = {
       ...activeVendor,
       name: String(formData.get('name') || activeVendor.name),
@@ -215,7 +216,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 }
 
 function Pipeline({ vendorId }: { vendorId: string }) {
-  const [items, setItems] = useState<any[]>([]);
+  const [items, setItems] = useState<any[]>([]),
 
   async function fetchItems() {
     const res = await fetch(
@@ -288,7 +289,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../utils/vendor-store');
+  const { listVendors } = await import('../utils/vendor-store'),
   const vendor = listVendors()[0] || null, // tie to auth later
   return { props: { vendor } }
 };

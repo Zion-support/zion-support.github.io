@@ -36,7 +36,7 @@ export default async function handler(
   }
 
   try {
-    const body = req.body || {};
+    const body = req.body || {},
     const {
       instanceName,
       defaultLanguage = "en",

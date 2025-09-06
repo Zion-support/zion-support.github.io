@@ -4,13 +4,13 @@ import fs from 'fs';
 export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   try {
     if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(content);
+      const content = fs.readFileSync(filePath, 'utf8'),
+      return JSON.parse(content),
     }
   } catch (error) {
-    console.error('Error reading file:', error);
+    console.error('Error reading file:', error),
   }
-  return defaultValue;
+  return defaultValue,
 }
 
 export function writeJsonFile<T>(fileName: string, data: T): void {

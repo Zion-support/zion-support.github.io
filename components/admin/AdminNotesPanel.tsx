@@ -72,7 +72,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
   async function addNote() {
     if (!text.trim()) return;
-    setAdding(true);
+    setAdding(true),
     try {
       const res = await fetch('/api/admin/notes', {
         method: 'POST',

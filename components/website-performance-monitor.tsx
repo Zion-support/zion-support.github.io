@@ -15,8 +15,8 @@ import {
   Clock,;
 } from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
+  const [isAnalyzing, setIsAnalyzing] = useState(false),
+  const [analysisResults, setAnalysisResults] = useState(null),
 
   const features = [
     {
@@ -98,13 +98,13 @@ export default function WebsitePerformanceMonitorPage() {
     {
       icon: <Gauge className="w-8 h-8 text-white" />,
       title: 'Performance Metrics',
-      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.';
+      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
       icon: <AlertTriangle className="w-8 h-8 text-white" />,
       title: 'Issue Detection',
-      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.';
+      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'},
     {
@@ -116,7 +116,7 @@ export default function WebsitePerformanceMonitorPage() {
   const metrics = [
     {
       name: 'Core Web Vitals',
-      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.';
+      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
       icon: '⚡',
       color: 'text-blue-400'
     };
@@ -215,7 +215,7 @@ export default function WebsitePerformanceMonitorPage() {
     }
 
   const handleAnalyzeWebsite = async () => {
-    setIsAnalyzing(true);
+    setIsAnalyzing(true),
     // Simulate website analysis
     setTimeout(() => {
       setAnalysisResults({

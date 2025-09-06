@@ -24,10 +24,10 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   try {
-    const cfg = readJson(configPath);
-    const cache = readJson(cachePath);
-    const now = Date.now();
-    const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+    const cfg = readJson(configPath),
+    const cache = readJson(cachePath),
+    const now = Date.now(),
+    const oneWeekMs = 7 * 24 * 60 * 60 * 1000,
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
       return res.status(200).json({ ...cache, cached: true });
     }

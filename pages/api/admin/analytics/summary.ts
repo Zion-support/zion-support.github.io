@@ -41,7 +41,7 @@ import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 type EventRow = {
   name: string,
-  page?: string;
+  page?: string,
   userType?: string;
   properties?: Record<string, any>;
   at: string

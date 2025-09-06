@@ -27,5 +27,5 @@ export async function sendWarningEmail(
 
 export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
-  console.log('Email would be sent:', options);
+  console.log('Email would be sent:', options),
 }

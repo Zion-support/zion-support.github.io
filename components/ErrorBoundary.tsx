@@ -3,7 +3,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   level?: string;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;import { AlertTriangle, RefreshCw } from 'lucide-react';
@@ -13,15 +13,15 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props),
+    this.state = { hasError: false },
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -33,7 +33,7 @@ class ErrorBoundary extends Component<Props, State> {
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
       error,
       errorInfo
-    });
+    }),
 
     // Log error to external service (e.g., Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
@@ -52,8 +52,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleReload = () => {
-    window.location.reload();
-  };
+    window.location.reload(),
+  },
 
   handleGoHome = () => {
     window.location.href = '/';  };
@@ -173,10 +173,10 @@ class ErrorBoundary extends Component<Props, State> {
             </details>
           )}
         </div>
-      );
+      ),
     }
 
-    return this.props.children;
+    return this.props.children,
   }
 }
 

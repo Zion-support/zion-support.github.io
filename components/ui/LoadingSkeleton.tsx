@@ -22,7 +22,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
         ease: "easeInOut"}}
     />
   )
-};
+},
 
 interface ServiceCardSkeletonProps {
   className?: string
@@ -43,7 +43,7 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-4/6" />
     </div>
   )
-};
+},
 
 interface HeroSkeletonProps {
   className?: string
@@ -63,7 +63,7 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
       </div>
     </div>
   )
-};
+},
 
 interface StatsSkeletonProps {
   className?: string

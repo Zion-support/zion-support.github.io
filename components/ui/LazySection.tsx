@@ -24,7 +24,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       default:
         return { opacity: 0, y: 50 };    }        return { opacity: 0, y: 50 }
     }
-  };
+  },
 
   const getAnimatePosition = () => {
     switch (direction) {
@@ -39,7 +39,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       default:
         return { opacity: 1, y: 0 };
     }
-  };
+  },
 
   
     >

@@ -34,9 +34,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // Enforce status transition rules
     if (body.status) {
-      const isClientUser = isClient(project, user);
-      const isTalentUser = isTalent(project, user);
-      const status: string = body.status;
+      const isClientUser = isClient(project, user),
+      const isTalentUser = isTalent(project, user),
+      const status: string = body.status,
       const allowed =
         (status === "In Progress" && isClientUser) ||
         (status === "Submitted" && isTalentUser) ||
@@ -59,7 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
     }
 
-    const updated = updateMilestone(project, milestoneId, body);
+    const updated = updateMilestone(project, milestoneId, body),
     if (!updated) {
       res.status(404).json({ error: "Milestone not found" });
       return;

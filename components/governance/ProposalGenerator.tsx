@@ -60,8 +60,8 @@ export default function ProposalGenerator() {
   }
 
   async function handleGenerate() {
-    setIsGenerating(true);
-    setStatusMessage('Generating draft...');
+    setIsGenerating(true),
+    setStatusMessage('Generating draft...'),
     try {
       const res = await fetch('/api/proposals/generate', {
         method: 'POST',
@@ -89,7 +89,7 @@ export default function ProposalGenerator() {
   }
 
   async function handleExport() {
-    setStatusMessage('Exporting to PDF/Markdown/JSON...');
+    setStatusMessage('Exporting to PDF/Markdown/JSON...'),
     try {
       const res = await fetch('/api/proposals/export', {
         method: 'POST',
@@ -119,7 +119,7 @@ export default function ProposalGenerator() {
   }
 
   async function handleSubmitBridge() {
-    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
+    setStatusMessage('Submitting via bridge (email/IPFS/signature)...'),
     try {
       const res = await fetch('/api/proposals/submit', {
         method: 'POST',

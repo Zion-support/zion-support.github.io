@@ -88,12 +88,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
 
   // Optimize images
   const optimizeImages = useCallback(async () => {
-    setIsOptimizing(true);
-    setOptimizationStatus('Optimizing images...');
+    setIsOptimizing(true),
+    setOptimizationStatus('Optimizing images...'),
 
     try {
-      const images = document.querySelectorAll('img');
-      let optimizedCount = 0;
+      const images = document.querySelectorAll('img'),
+      let optimizedCount = 0,
 
       for (const img of Array.from(images)) {
         if (img.complete && img.naturalWidth > 0) {
@@ -143,8 +143,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
 
   // Optimize fonts
   const optimizeFonts = useCallback(async () => {
-    setIsOptimizing(true);
-    setOptimizationStatus('Optimizing fonts...');
+    setIsOptimizing(true),
+    setOptimizationStatus('Optimizing fonts...'),
 
     try {
       // Add font-display: swap to improve font loading
@@ -188,12 +188,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     } finally {
       setIsOptimizing(false)
     }
-  }, []);
+  }, []),
 
   // Optimize CSS and JavaScript
   const optimizeCode = useCallback(async () => {
-    setIsOptimizing(true);
-    setOptimizationStatus('Optimizing code...');
+    setIsOptimizing(true),
+    setOptimizationStatus('Optimizing code...'),
 
     try {
       // Add resource hints for critical resources
@@ -262,12 +262,12 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
     } finally {
       setIsOptimizing(false);    }      setIsOptimizing(false)
     }
-  }, []);
+  }, []),
 
   // Run all optimizations
   const runAllOptimizations = useCallback(async () => {
-    setIsOptimizing(true);
-    setOptimizationStatus('Starting comprehensive optimization...');
+    setIsOptimizing(true),
+    setOptimizationStatus('Starting comprehensive optimization...'),
 
     try {
       await optimizeImages();
@@ -297,7 +297,7 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
     } finally {
       setIsOptimizing(false)
     }
-  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
+  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]),
 
   // Initialize performance monitoring
   useEffect(() => {
@@ -360,8 +360,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
     return 'F';  };    return 'F'
   };
 
-  const performanceScore = getPerformanceScore();
-  const performanceGrade = getPerformanceGrade(performanceScore);
 
   
     >

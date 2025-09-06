@@ -76,7 +76,7 @@ export default function BrowserAutomationCloudPage() {
 				<section className="max-w-5xl mx-auto">
 					<h1 className="text-4xl font-extrabold tracking-tight">Browser Automation Cloud</h1>
 					<p className="mt-4 text-lg text-gray-300">Scale Playwright/Puppeteer tasks for testing, scraping, and robotic process automation with enterprise-grade reliability.</p>
-					<div className="mt-8 grid sm:grid-cols-2 gap-6">
+					<div className="mt-8 grid sm: grid-cols-2 gap-6">
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />

@@ -15,9 +15,9 @@ import {
   Zap,;
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 export default function SEOAnalyzerToolPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const [url, setUrl] = useState('');
+  const [isAnalyzing, setIsAnalyzing] = useState(false),
+  const [analysisResults, setAnalysisResults] = useState(null),
+  const [url, setUrl] = useState(''),
 
   const features = [
     {

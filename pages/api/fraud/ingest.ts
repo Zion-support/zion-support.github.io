@@ -30,8 +30,8 @@ export default async function handler(
   }
 
   try {
-    const body = req.body || {};
-    const source = body.source as MonitoredSource;
+    const body = req.body || {},
+    const source = body.source as MonitoredSource,
     if (!allowedSources.includes(source)) {
       res.status(400).json({ error: "Invalid source" });
       return;
@@ -55,9 +55,9 @@ export default async function handler(
       countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m),
     });
     // Privacy opt-out check for content analysis
-    let gpt: GptClassification | undefined = undefined;
+    let gpt: GptClassification | undefined = undefined,
     if (content && userId) {
-      const privacy = await store.getPrivacySettings(userId);
+      const privacy = await store.getPrivacySettings(userId),
       if (!privacy.monitoringContentAnalysisOptOut) {
         gpt = await classifyWithGPT(content, source);
       }

@@ -9,12 +9,12 @@ type Props = {
 };
 
 export default function MilestoneForm({ onSubmit }: Props) {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [dueDate, setDueDate] = useState('');
-  const [amountUsd, setAmountUsd] = useState<string>('');
+  const [title, setTitle] = useState(''),
+  const [description, setDescription] = useState(''),
+  const [dueDate, setDueDate] = useState(''),
+  const [amountUsd, setAmountUsd] = useState<string>(''),
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false),
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setError('Please provide Title, Due Date and a valid Amount.');
       return;
     }
-    setLoading(true);
+    setLoading(true),
     try {
       await onSubmit({
         title,
@@ -57,7 +57,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
     } finally {
       setLoading(false)
     }
-  };
+  },
 
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>

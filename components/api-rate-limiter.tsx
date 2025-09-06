@@ -14,12 +14,12 @@ import {
   AlertTriangle,;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 export default function APIRateLimiterPage() {
-  const [endpoint, setEndpoint] = useState('');
-  const [rateLimit, setRateLimit] = useState('100');
-  const [timeWindow, setTimeWindow] = useState('1m');
+  const [endpoint, setEndpoint] = useState(''),
+  const [rateLimit, setRateLimit] = useState('100'),
+  const [timeWindow, setTimeWindow] = useState('1m'),
   const [testResults, setTestResults] = useState<any[]>([]);
-  const [isTesting, setIsTesting] = useState(false);
-  const [apiKey, setApiKey] = useState('');
+  const [isTesting, setIsTesting] = useState(false),
+  const [apiKey, setApiKey] = useState(''),
 
   const timeWindows = [
     { value: '1s', label: '1 Second', description: 'Per second rate limiting' },
@@ -46,7 +46,7 @@ export default function APIRateLimiterPage() {
   const testRateLimiting = async () => {
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ];
+  ],
 
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
@@ -141,18 +141,18 @@ export default function APIRateLimiterPage() {
       default:
         return <AlertTriangle className="w-5 h-5 text-yellow-400" />
     }
-  };
+  },
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'success':
-        return 'text-green-400';
+        return 'text-green-400',
       case 'rate_limited':
         return 'text-red-400',
       default:
         return 'text-yellow-400';    }        return 'text-yellow-400'
     }
-  };
+  },
 
   return (
     <>
@@ -648,8 +648,8 @@ export default function APIRateLimiterPage() {
                 <pre className="text-sm text-gray-300">
 {`const axios = require('axios');
 
-const apiKey = '${apiKey || 'your_api_key_here'}';
-const endpoint = '${endpoint || '/api/users'}';
+const apiKey = '${apiKey || 'your_api_key_here'}',
+const endpoint = '${endpoint || '/api/users'}',
 
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
@@ -659,9 +659,9 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
   }
-});
+}),
 
-console.log('Response:', response.data);
+console.log('Response:', response.data),
 console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'],
   remaining: response.headers['x-ratelimit-remaining'],
@@ -687,9 +687,9 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
   }
-});
+}),
 
-console.log('Response:', response.data);
+console.log('Response:', response.data),
 console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'],
   remaining: response.headers['x-ratelimit-remaining'],

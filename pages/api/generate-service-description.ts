@@ -56,7 +56,7 @@ Requirements:
 - 2-3 sentence hook opening that addresses audience needs
 - 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline)
 - Use clear, benefit-focused language
-- End with a short call to action`;
+- End with a short call to action`,
     // Using Responses API for modern SDK
     const response = await openai.responses.create({
       model: "gpt-4o-mini",

@@ -1,14 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2029: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current,
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
+
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight,
@@ -23,7 +26,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
       color: string,
       opacity: number,
       life: number
-    }> = [];
+    }> = [],
 
     // Initialize particles
     for (let i = 0; i < 50; i++) {    for (let i = 0, i < 50, i++) {
@@ -44,12 +47,12 @@ const UltraFuturisticBackground2029: React.FC = () => {
       })
 
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
         particle.life--;
 
         if (particle.life <= 0) {
@@ -74,13 +77,13 @@ const UltraFuturisticBackground2029: React.FC = () => {
         ctx.globalCompositeOperation = 'screen';
         
         // Outer glow
-        ctx.shadowColor = particle.color;
-        ctx.shadowBlur = 20;
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity * 0.3;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.shadowColor = particle.color,
+        ctx.shadowBlur = 20,
+        ctx.fillStyle = particle.color,
+        ctx.globalAlpha = particle.opacity * 0.3,
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2),
+        ctx.fill(),
 
         // Inner particle
         ctx.globalAlpha = particle.opacity;
@@ -92,9 +95,10 @@ const UltraFuturisticBackground2029: React.FC = () => {
       });
 
       // Draw connecting lines between nearby particles
-      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
-      ctx.lineWidth = 0.5;
-      ctx.globalCompositeOperation = 'screen';
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)',
+      ctx.lineWidth = 0.5,
+      ctx.globalCompositeOperation = 'screen',
+
 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {          const dx = particles[i].x - particles[j].x;      for (let i = 0, i < particles.length, i++) {
@@ -123,14 +127,14 @@ const UltraFuturisticBackground2029: React.FC = () => {
       animationFrameId = requestAnimationFrame(animate);      animationFrameId = requestAnimationFrame(animate)
     };
 
-    animate();
+    animate(),
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize),
 
     return () => {
       window.removeEventListener('resize', handleResize);

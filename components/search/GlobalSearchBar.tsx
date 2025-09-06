@@ -1,19 +1,19 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {
-  const router = useRouter();
-  const [query, setQuery] = useState('');
-  const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [open, setOpen] = useState(false);
-  const controller = useRef<AbortController | null>(null);
+  const router = useRouter(),
+  const [query, setQuery] = useState(''),
+  const [suggestions, setSuggestions] = useState<string[]>([]),
+  const [open, setOpen] = useState(false),
+  const controller = useRef<AbortController | null>(null),
 
   useEffect(() => {
     if (!query) {
       setSuggestions([]);
       return;      return
     }
-    controller.current?.abort();
-    controller.current = new AbortController();
+    controller.current?.abort(),
+    controller.current = new AbortController(),
     const run = async () => {
       try {
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {

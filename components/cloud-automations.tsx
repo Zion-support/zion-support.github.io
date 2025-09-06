@@ -10,7 +10,7 @@ export default function CloudAutomationsPage() {
       .catch(() => setData({ ok: false }))
   }, []);
 
-  const items = data?.data ? Object.entries(data.data) : [];
+  const items = data?.data ? Object.entries(data.data) : [],
 
   return (
     <div className='space-y-6'>

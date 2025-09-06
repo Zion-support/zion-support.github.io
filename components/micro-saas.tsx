@@ -36,7 +36,7 @@ import {Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, T
 import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
 import {Zap, Star, Calendar} from 'lucide-react';
 export default function MicroSaasPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
   
   const microSaasServices = [
     {
@@ -92,7 +92,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Developers, DevOps teams, and product managers',
     trialDays: 14,      setupTime: '10 minutes',
       category: 'Development & DevOps'
-    };
+    },
     {
       name: 'AI Knowledge Base',
       tagline: 'Organize company knowledge',
@@ -110,7 +110,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Businesses of all sizes, knowledge workers, and documentation teams',
     trialDays: 14,      setupTime: '20 minutes',
       category: 'Productivity & Collaboration'
-    };
+    },
     {
       name: 'AI Email Marketing Pro',
       tagline: 'Advanced email automation',
@@ -128,7 +128,7 @@ export default function MicroSaasPage() {
     targetAudience: 'E-commerce businesses, marketers, and growth teams',
     trialDays: 14,      setupTime: '15 minutes',
       category: 'Marketing & Automation'
-    };
+    },
     {
       name: 'AI SEO Suite',
       tagline: 'Comprehensive SEO optimization',
@@ -146,7 +146,7 @@ export default function MicroSaasPage() {
     targetAudience: 'SEO professionals, digital marketers, and website owners',
     trialDays: 14,      setupTime: '20 minutes',
       category: 'Marketing & SEO'
-    };
+    },
     {
       name: 'AI Social Media Manager',
       tagline: 'Intelligent social media automation',
@@ -164,7 +164,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Social media managers, small businesses, and influencers',
     trialDays: 14,      setupTime: '10 minutes',
       category: 'Marketing & Social Media'
-    };
+    },
     {
       name: 'AI E-commerce Analytics',
       tagline: 'Data-driven e-commerce insights',
@@ -183,7 +183,7 @@ export default function MicroSaasPage() {
     targetAudience: 'E-commerce businesses, online retailers, and digital marketers',
     trialDays: 14,      setupTime: '25 minutes',
       category: 'Analytics & E-commerce'
-    };
+    },
     {
       name: 'AI Customer Support Bot',
       tagline: '24/7 intelligent support',
@@ -201,7 +201,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Customer support teams, SaaS companies, and e-commerce businesses',
     trialDays: 14,      setupTime: '20 minutes',
       category: 'Customer Experience'
-    };
+    },
     {
       name: 'AI Project Management',
       tagline: 'Intelligent project coordination',
@@ -219,7 +219,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Project managers, development teams, and creative agencies',
     trialDays: 14,      setupTime: '25 minutes',
       category: 'Productivity & Collaboration'
-    };
+    },
     {
       name: 'AI Financial Planning',
       tagline: 'Smart financial management',
@@ -237,7 +237,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Small businesses, financial advisors, and individuals',
     trialDays: 14,      setupTime: '30 minutes',
       category: 'Finance & Planning'
-    };
+    },
     {
       name: 'AI Content Calendar',
       tagline: 'Strategic content planning',
@@ -255,7 +255,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Content marketers, social media managers, and marketing teams',
     trialDays: 14,      setupTime: '15 minutes',
       category: 'Content & Marketing'
-    };
+    },
     {
       name: 'AI Performance Monitoring',
       tagline: 'Real-time system monitoring',
@@ -273,7 +273,7 @@ export default function MicroSaasPage() {
     targetAudience: 'DevOps teams, system administrators, and developers',
     trialDays: 14,      setupTime: '20 minutes',
       category: 'Development & DevOps'
-    };
+    },
     {
       name: 'AI Data Visualization',
       tagline: 'Beautiful data insights',
@@ -292,7 +292,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Data analysts, business intelligence teams, and executives',
     trialDays: 14,      setupTime: '25 minutes',
       category: 'Analytics & Data'
-    };
+    },
     {
       name: 'AI Customer Onboarding',
       tagline: 'Streamlined customer success',
@@ -311,7 +311,7 @@ export default function MicroSaasPage() {
     targetAudience: 'SaaS companies, product managers, and customer success teams',
     trialDays: 14,      setupTime: '20 minutes',
       category: 'Customer Experience'
-    };
+    },
     {
       name: 'AI A/B Testing Platform',
       tagline: 'Data-driven optimization',
@@ -330,7 +330,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Product managers, marketers, and UX researchers',
     trialDays: 14,      setupTime: '15 minutes',
       category: 'Analytics & Optimization'
-    };
+    },
     {
       name: 'AI Customer Feedback Hub',
       tagline: 'Centralized feedback management',
@@ -348,7 +348,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Product managers, customer success teams, and UX researchers',
     trialDays: 14,      setupTime: '20 minutes',
       category: 'Customer Experience'
-    };
+    },
     {
       name: 'AI Inventory Forecasting',
       tagline: 'Predictive inventory management',
@@ -367,7 +367,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Retail businesses, e-commerce stores, and warehouse managers',
     trialDays: 14,      setupTime: '30 minutes',
       category: 'Operations & Logistics'
-    };
+    },
     {
       name: 'AI Lead Generation',
       tagline: 'Automated lead discovery',
@@ -386,7 +386,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Sales teams, B2B companies, and marketing agencies',
     trialDays: 14,      setupTime: '25 minutes',
       category: 'Sales & Marketing'
-    };
+    },
     {
       name: 'AI Customer Churn Prediction',
       tagline: 'Prevent customer churn',
@@ -709,7 +709,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Sales teams, marketing teams, and professional services',
     trialDays: 14,      setupTime: '5 minutes',
       category: 'Marketing & Sales'
-    };
+    },
     {
       name: 'AI Meeting Assistant',
       tagline: 'Smart meeting productivity',
@@ -727,7 +727,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Remote teams, consultants, and meeting-heavy professionals',
     trialDays: 14,      setupTime: '10 minutes',
       category: 'Productivity & Collaboration'
-    };
+    },
     {
       name: 'AI Password Manager',
       tagline: 'Secure password management',
@@ -746,7 +746,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Businesses, IT teams, and security-conscious organizations',
     trialDays: 14,      setupTime: '10 minutes',
       category: 'Security & Compliance'
-    };
+    },
     {
       name: 'AI Time Tracking',
       tagline: 'Intelligent time management',
@@ -765,7 +765,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Freelancers, consultants, and project-based teams',
     trialDays: 14,      setupTime: '10 minutes',
       category: 'Productivity & Collaboration'
-    };
+    },
     {
       name: 'AI Form Builder',
       tagline: 'Smart form creation',
@@ -783,7 +783,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Businesses, marketers, and data collection teams',
     trialDays: 14,      setupTime: '15 minutes',
       category: 'Marketing & Sales'
-    };
+    },
     {
       name: 'AI Calendar Optimization',
       tagline: 'Smart scheduling assistant',
@@ -801,7 +801,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Professionals, consultants, and busy executives',
     trialDays: 14,      setupTime: '10 minutes',
       category: 'Productivity & Collaboration'
-    };
+    },
     {
       name: 'AI Social Media Analytics',
       tagline: 'Comprehensive social insights',
@@ -820,7 +820,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Social media managers, marketers, and brands',
     trialDays: 14,      setupTime: '20 minutes',
       category: 'Marketing & Sales'
-    };
+    },
     {
       name: 'AI Website Builder',
       tagline: 'Intelligent website creation',
@@ -839,7 +839,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Small businesses, entrepreneurs, and creative professionals',
     trialDays: 14,      setupTime: '30 minutes',
       category: 'Web Development'
-    };
+    },
     {
       name: 'AI Customer Support Chatbot',
       tagline: '24/7 intelligent support',
@@ -858,7 +858,7 @@ export default function MicroSaasPage() {
     targetAudience: 'E-commerce businesses, SaaS companies, and customer support teams',
     trialDays: 14,      setupTime: '25 minutes',
       category: 'Customer Experience'
-    };
+    },
     {
       name: 'AI Invoice Processing',
       tagline: 'Automated invoice management',
@@ -876,7 +876,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Accounting teams, finance departments, and small businesses',
     trialDays: 14,      setupTime: '20 minutes',
       category: 'Finance & Operations'
-    };
+    },
     {
       name: 'AI Project Risk Management',
       tagline: 'Predict and prevent project risks',
@@ -895,7 +895,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Project managers, risk managers, and enterprise teams',
     trialDays: 14,      setupTime: '30 minutes',
       category: 'Project Management'
-    };
+    },
     {
       name: 'AI Employee Onboarding',
       tagline: 'Streamlined onboarding experience',
@@ -914,7 +914,7 @@ export default function MicroSaasPage() {
     targetAudience: 'HR teams, growing companies, and remote-first organizations',
     trialDays: 14,      setupTime: '20 minutes',
       category: 'HR & Operations'
-    };
+    },
     {
       name: 'AI Customer Segmentation',
       tagline: 'Intelligent customer targeting',
@@ -933,7 +933,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Marketing teams, e-commerce businesses, and customer success teams',
     trialDays: 14,      setupTime: '25 minutes',
       category: 'Marketing & Sales'
-    };
+    },
     {
       name: 'AI Supply Chain Optimization',
       tagline: 'Intelligent supply chain management',
@@ -951,7 +951,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Manufacturers, retailers, and logistics companies',
     trialDays: 14,      setupTime: '45 minutes',
       category: 'Operations & Logistics'
-    };
+    },
     {
       name: 'AI Compliance Monitoring',
       tagline: 'Automated compliance management',
@@ -970,7 +970,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Compliance officers, legal teams, and regulated industries',
     trialDays: 14,      setupTime: '30 minutes',
       category: 'Legal & Compliance'
-    };
+    },
     {
       name: 'AI Performance Management',
       tagline: 'Data-driven performance insights',
@@ -989,7 +989,7 @@ export default function MicroSaasPage() {
     targetAudience: 'HR teams, managers, and performance-focused organizations',
     trialDays: 14,      setupTime: '20 minutes',
       category: 'HR & Operations'
-    };
+    },
     {
       name: 'AI Customer Lifetime Value',
       tagline: 'Maximize customer value',
@@ -1008,7 +1008,7 @@ export default function MicroSaasPage() {
     targetAudience: 'Marketing teams, e-commerce businesses, and subscription companies',
     trialDays: 14,      setupTime: '25 minutes',
       category: 'Analytics & Data'
-    };
+    },
     {
       name: 'AI Workflow Automation',
       tagline: 'Intelligent process automation',
@@ -1223,58 +1223,58 @@ export default function MicroSaasPage() {
       trend: 'AI Integration',
       description: 'Every service includes AI-powered features for enhanced automation and intelligence.',
       impact: 'High'
-    };
+    },
     {
       trend: 'API-First Design',
       description: 'All services provide robust APIs for seamless integration with existing workflows.',
       impact: 'High'
-    };
+    },
     {
       trend: 'Mobile Optimization',
       description: 'Responsive design and mobile apps for all services ensure accessibility anywhere.',
       impact: 'Medium'
-    };
+    },
     {
       trend: 'Security Focus',
       description: 'Enterprise-grade security and compliance built into every service.',
       impact: 'High'
     }
-  ];
+  ],
 
-  const categories = [...new Set(microSaasServices.map(service => service.category))];
+  const categories = [...new Set(microSaasServices.map(service => service.category))],
 
   const competitiveAdvantages = [
     {
       title: "Specialized Focus",
-      description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.";
+      description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.",
       icon: "🎯"
-    };
+    },
     {
       icon: '💰',
       title: 'Transparent Pricing',
       description: 'No hidden fees, no enterprise sales calls. Simple monthly pricing that scales with your business needs and growth.'
-    };
+    },
     {
       icon: '🔒',
       title: 'Enterprise Security',
       description: 'Bank-level security, SOC 2 compliance, and 99.9% uptime guarantee for all services. Built for production use.'
-    };
+    },
     {
       icon: '🎯',
       title: 'Focused Solutions',
       description: 'Each service solves a specific business problem without the complexity of enterprise platforms. Do one thing exceptionally well.'
-    };
+    },
     {
       icon: '📱',
       title: 'Mobile First',
       description: 'All services are optimized for mobile devices, ensuring your team can work efficiently from anywhere, anytime.'
-    };
+    },
     {
       icon: '🔄',
       title: 'Seamless Integration',
       description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
     }
-  ];
+  ],
 
   return (
     <>
@@ -1321,7 +1321,7 @@ export default function MicroSaasPage() {
               market research, financial planning, CRM systems, learning management, IoT management, analytics dashboards, 
               meeting transcription, invoice automation, churn prediction, lead scoring, real-time analytics, content optimization, 
               predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization, 
-              email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics;
+              email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics,
               product recommendations, fraud detection, inventory forecasting, customer onboarding, social media automation, fraud detection, 
               inventory forecasting, and more. Focused, affordable solutions that deliver specific value 
               without the complexity of enterprise platforms. Start with a free trial and scale as you grow.

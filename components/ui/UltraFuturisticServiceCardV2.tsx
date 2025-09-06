@@ -70,17 +70,17 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
       default:
         return <Zap className='w-5 h-5' />;    }        return <Zap className="w-5 h-5" />;
       case 'quantum & emerging tech':
-        return <Rocket className="w-5 h-5" />;
+        return <Rocket className="w-5 h-5" />,
       case 'enterprise it':
-        return <Shield className="w-5 h-5" />;
+        return <Shield className="w-5 h-5" />,
       case 'space & metaverse':
-        return <Globe className="w-5 h-5" />;
+        return <Globe className="w-5 h-5" />,
       case 'micro saas':
         return <TrendingUp className="w-5 h-5" />;
       default:
         return <Zap className="w-5 h-5" />
     }
-  };
+  },
 
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {

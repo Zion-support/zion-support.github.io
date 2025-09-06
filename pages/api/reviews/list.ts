@@ -22,7 +22,7 @@ export default async function handler(
       return res.status(400).json({ error: "Invalid targetType" });
     }
 
-    const all = await readReviews();
+    const all = await readReviews(),
     // Include reviews where both sides have submitted and both are approved and not removed
     const filtered = all.filter((r) => {
       if (r.removed || !r.approved) return false;

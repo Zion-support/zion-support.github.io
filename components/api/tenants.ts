@@ -10,11 +10,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase(),
 
   if (method === 'GET') {
-    return res.status(200).json({ tenants: getTenants() });
+    return res.status(200).json({ tenants: getTenants() }),
   }
 
-  const auth = authenticateRequest(req, false);
-  if (!auth.ok) return res.status(401).json({ error: auth.error });
+  const auth = authenticateRequest(req, false),
+  if (!auth.ok) return res.status(401).json({ error: auth.error }),
 
   if (method === 'POST') {
     const { branding } = req.body || {};

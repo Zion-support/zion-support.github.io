@@ -8,7 +8,7 @@ import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';impo
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
-  const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
+  const sections = useMemo(() => getWhitepaperSections(edition), [edition]),
 
   const downloadHref = useMemo(() => {
     if (edition === 'full') return '/docs/zion-protocol.pdf';

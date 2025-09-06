@@ -20,7 +20,7 @@ function ensureDataDir(): void {
 }
 
 export function readState(): IntegrationsState {
-  ensureDataDir();
+  ensureDataDir(),
   try {
     const raw = fs.readFileSync(STATE_FILE, "utf8");
     return JSON.parse(raw) as IntegrationsState;

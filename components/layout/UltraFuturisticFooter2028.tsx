@@ -145,7 +145,7 @@ const serviceCategories = [
       { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway' },
       { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol' }
     ]
-  };
+  },
   {
     title: '🤖 AI & Machine Learning',
     services: [

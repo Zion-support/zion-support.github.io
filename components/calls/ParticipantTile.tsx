@@ -44,7 +44,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current)
       }
-    };
+    },
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
         track.detach(videoRef.current);
@@ -61,8 +61,8 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       if (track) handleTrackSubscribed(pub, track);    });      if (track) handleTrackSubscribed(pub, track)
     });
 
-    participant.on('trackSubscribed', handleTrackSubscribed);
-    participant.on('trackUnsubscribed', handleTrackUnsubscribed);
+    participant.on('trackSubscribed', handleTrackSubscribed),
+    participant.on('trackUnsubscribed', handleTrackUnsubscribed),
 
     return () => {
       participant.off('trackSubscribed', handleTrackSubscribed);

@@ -44,7 +44,7 @@ export default async function handler(
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const id = generateCaseId();
+    const id = generateCaseId(),
     const dispute: DisputeCase = {
       id,
       projectId: String(projectId),

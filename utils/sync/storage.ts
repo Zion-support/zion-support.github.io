@@ -10,16 +10,16 @@ const defaultState: SyncState = {
     paused: false
   },
   lastSyncedAt: new Date().toISOString()
-};
+},
 
-let state: SyncState = { ...defaultState };
+let state: SyncState = { ...defaultState },
 
 export function readState(): SyncState {
-  return { ...state };
+  return { ...state },
 }
 
 export function updateState(updates: Partial<SyncState>): void {
-  state = { ...state, ...updates };
+  state = { ...state, ...updates },
 }
 
 export function upsertEvent(

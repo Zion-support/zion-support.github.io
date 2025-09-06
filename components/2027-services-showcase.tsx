@@ -40,7 +40,7 @@ import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
@@ -83,9 +83,9 @@ export default function ServicesShowcase2027() {
 
     return matchesSearch && matchesCategory && matchesPrice;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
     
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
@@ -98,7 +98,7 @@ export default function ServicesShowcase2027() {
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'price':
         return (
           parseInt(a.price.replace(/[^0-9]/g, '')) -

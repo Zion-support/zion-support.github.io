@@ -308,9 +308,9 @@ const technologyLinks = [
 ];
 
 export default function UltraFuturisticNavigation2027() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isClient, setIsClient] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isClient, setIsClient] = useState(false),
 
   useEffect(() => {
     setIsClient(true);  }, []);    setIsClient(true)
@@ -366,23 +366,23 @@ export default function UltraFuturisticNavigation2027() {
           name: 'AI Consciousness Platform',
           href: '/services/ai-consciousness-platform',
           description: 'Advanced AI consciousness simulation',
-          price: '$5,999/month';
+          price: '$5,999/month',
           icon: '🧠'
-        };
+        },
         { 
           name: 'Quantum Machine Learning',
           href: '/services/quantum-machine-learning',
           description: 'Quantum-powered ML platform',
-          price: '$12,999/month';
+          price: '$12,999/month',
           icon: '⚛️'
-        };
+        },
         { 
           name: 'Autonomous AI Agents',
           href: '/services/autonomous-ai-agents',
           description: 'Self-operating AI systems',
-          price: '$4,999/month';
+          price: '$4,999/month',
           icon: '🤖'
-        };
+        },
         { 
           name: 'AI Content Factory',
           href: '/services/ai-content-factory',

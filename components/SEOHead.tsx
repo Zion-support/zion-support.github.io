@@ -138,7 +138,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://images.unsplash.com" />
     </Head>
-  );
+  ),
 };
 
 export default SEOHead;

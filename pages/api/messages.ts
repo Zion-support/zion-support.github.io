@@ -17,14 +17,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
 
-    const conversations = readJsonFile<Conversation[]>(FILE, []);
-    const idx = conversations.findIndex((c) => c.id === String(conversationId));
+    const conversations = readJsonFile<Conversation[]>(FILE, []),
+    const idx = conversations.findIndex((c) => c.id === String(conversationId)),
     if (idx === -1) {
       res.status(404).json({ error: "Conversation not found" });
       return;
     }
 
-    const now = new Date().toISOString();
+    const now = new Date().toISOString(),
     const msg: Message = {
       id: uuidv4(),
       conversationId: String(conversationId),

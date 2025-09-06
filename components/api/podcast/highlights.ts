@@ -35,8 +35,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const idx = episodes.findIndex((e) => e.id === episodeId);
   if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
 
-  const episode = episodes[idx];
-  const segments = episode?.timeMarkers?.segments || [];
+  const episode = episodes[idx],
+  const segments = episode?.timeMarkers?.segments || [],
   const highlights = segments.map((t: string, i: number) => ({
     label: `Highlight ${i + 1}`,
     start: t,
@@ -48,7 +48,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     start: t;
     end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'}));
 
-  episode.highlights = highlights;
+  episode.highlights = highlights,
   episodes[idx] = episode;
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 

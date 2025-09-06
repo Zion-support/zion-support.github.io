@@ -50,20 +50,20 @@ const Homepage2043: React.FC = () => {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     
     // Auto-rotate featured services
     const serviceInterval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)
-    }, 4000);
+    }, 4000),
     
     // Auto-rotate testimonials
     const testimonialInterval = setInterval(() => {
       setCurrentTestimonialIndex((prev) => (prev + 1) % 3)
-    }, 6000);
+    }, 6000),
     
     return () => {
-      clearInterval(serviceInterval);
+      clearInterval(serviceInterval),
       clearInterval(testimonialInterval)
     }
   }, []);
@@ -75,7 +75,7 @@ const Homepage2043: React.FC = () => {
   ];  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
 
   // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6);
+  const featuredServices = allRevolutionaryServices.slice(0, 6),
 
   const features = [
     {
@@ -317,7 +317,7 @@ const Homepage2043: React.FC = () => {
           {/* Hero Content */}
           <div className='text-center max-w-6xl mx-auto relative z-10'>            <motion.div            <div className="absolute inset-0 opacity-20">
               <div className="absolute inset-0" style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`;
+                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
                 backgroundSize: '50px 50px'
               }}></div>
           </div>

@@ -16,9 +16,9 @@ export default function FeedbackWidget({
 
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
-  const [comment, setComment] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [comment, setComment] = useState(''),
+  const [submitting, setSubmitting] = useState(false),
+  const [submitted, setSubmitted] = useState(false),
   const [error, setError] = useState<string | null>(null);
 
   const effectiveResponseId = useMemo(
@@ -35,8 +35,8 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setError('Please choose 👍 or 👎');
       return;      return
     }
-    setError(null);
-    setSubmitting(true);
+    setError(null),
+    setSubmitting(true),
     try {
       const res = await fetch('/api/feedback/submit', {
         method: 'POST',
@@ -72,7 +72,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     } finally {
       setSubmitting(false)
     }
-  };
+  },
 
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>

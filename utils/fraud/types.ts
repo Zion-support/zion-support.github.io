@@ -6,7 +6,7 @@ export type AdminActionType =
   | 'remove_content'
   | 'investigate'
   | 'dismiss'
-  | 'escalate';
+  | 'escalate',
 
 export interface AdminAction {
   id: string;
@@ -29,7 +29,7 @@ export interface FraudDetectionResult {
 }
 
 export interface FraudDetectionConfig {
-  enabled: boolean;
+  enabled: boolean,
   rules: {
     suspiciousActivity: {
       enabled: boolean;

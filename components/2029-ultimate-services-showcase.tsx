@@ -56,9 +56,9 @@ import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-
 import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services';
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
 export default function UltimateServicesShowcase2029() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
 
   const allServices = [
     ...cuttingEdge2028MicroSaas,
@@ -193,17 +193,17 @@ export default function UltimateServicesShowcase2029() {
       (selectedCategory === 'quantum-space' && quantumSpaceInnovations2028.includes(service)) ||
       (selectedCategory === 'ai' && service.category.some(c => c.includes('AI') || c.includes('Machine Learning'))) ||
       (selectedCategory === 'quantum' && service.category.some(c => c.includes('Quantum'))) ||
-      (selectedCategory === 'enterprise' && service.category.some(c => c.includes('Enterprise')));
+      (selectedCategory === 'enterprise' && service.category.some(c => c.includes('Enterprise'))),
     
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.some(c => c.toLowerCase().includes(searchTerm.toLowerCase()));
+                         service.category.some(c => c.toLowerCase().includes(searchTerm.toLowerCase())),
     
     const matchesPrice = selectedPriceRange === 'all' ||
       (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
       (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 15000) ||
       (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service.price.replace(/[$]/g, '')) < 30000) ||
-      (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 30000);
+      (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 30000),
     
     return matchesCategory && matchesSearch && matchesPrice
 

@@ -13,7 +13,7 @@ export type EnhancedLayoutProps = {
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {
-    const lng = i18n.resolvedLanguage || i18n.language;
+    const lng = i18n.resolvedLanguage || i18n.language,
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
   }, []);

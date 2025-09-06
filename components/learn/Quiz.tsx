@@ -19,8 +19,9 @@ type Props = {
   onComplete: (score: number) => void
 
 export default function Quiz({ questions, onComplete }: Props) {
-  const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const [answers, setAnswers] = useState<Record<string, number>>({}),
+  const [submitted, setSubmitted] = useState(false),
+
 
   const score = questions.reduce(
     (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),

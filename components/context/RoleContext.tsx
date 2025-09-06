@@ -20,7 +20,7 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     try {import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-export type UserRole = 'client' | 'talent';
+export type UserRole = 'client' | 'talent',
 
 type RoleContextValue = {
   role: UserRole;
@@ -28,7 +28,6 @@ type RoleContextValue = {
   setRole: (role: UserRole) => void
 };
 
-const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -47,7 +46,7 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
         setRole(saved)
       }
     } catch {}
-  }, []);
+  }, []),
 
   useEffect(() => {
     try {
@@ -57,7 +56,8 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
     } catch {}
   }, [role]);
 
-  const value = useMemo(() => ({ role, setRole }), [role]);
+  const value = useMemo(() => ({ role, setRole }), [role]),
+
 
   return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;};  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>
 };

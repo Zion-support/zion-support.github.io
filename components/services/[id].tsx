@@ -29,10 +29,10 @@ export default function ServiceDetailPage() {
           </Button>
         </div>
       </div>
-    );
+    ),
   }
 
-  const service = getServiceById(id);
+  const service = getServiceById(id),
 
   if (!service) {
     return (

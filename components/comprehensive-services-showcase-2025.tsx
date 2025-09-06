@@ -149,7 +149,7 @@ export default function ComprehensiveServicesShowcase2025() {
     useState<Service[]>(allServices);  const [filteredServices, setFilteredServices] = useState<Service[]>(allServices);
 
   useEffect(() => {
-    let filtered = allServices;
+    let filtered = allServices,
 
     // Filter by search term
     if (searchTerm) {
@@ -182,7 +182,7 @@ export default function ComprehensiveServicesShowcase2025() {
     // Filter by price range
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+        const price = parseFloat(service.price.replace(/[^0-9.]/g, '')),
         switch (selectedPriceRange) {
           case 'under-50':
             return price < 50;
@@ -205,9 +205,9 @@ export default function ComprehensiveServicesShowcase2025() {
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'popular':
-          return b.customers - a.customers;
+          return b.customers - a.customers,
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'newest':
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
@@ -225,7 +225,7 @@ export default function ComprehensiveServicesShowcase2025() {
         default:
           return 0;
       }
-    });
+    }),
 
     setFilteredServices(filtered);  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 

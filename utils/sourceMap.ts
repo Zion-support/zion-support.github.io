@@ -3,14 +3,14 @@ export function getSourceMapWithExistence() {
   return {
     nodes: [],
     edges: []
-  };
+  },
 }
 
 export function getGitStatus() {
   return {
     connected: false,
     branch: 'main'
-  };
+  },
 }
 
 export function getSourceMapWithExistence(): SourceNode[] {

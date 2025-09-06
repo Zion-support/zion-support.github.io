@@ -41,7 +41,7 @@ export default function SalaryInsightsPage() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false),
 
   useEffect(() => {
     // Lightweight login check via Supabase client if available; otherwise public mode    (async () => {
@@ -64,8 +64,8 @@ export default function SalaryInsightsPage() {
   }, []);
 
   async function fetchInsights() {
-    setLoading(true);
-    setError(null);
+    setLoading(true),
+    setError(null),
     try {
       const res = await fetch('/api/salary-insights', {
         method: 'POST',
@@ -99,7 +99,7 @@ export default function SalaryInsightsPage() {
   }
 
   useEffect(() => {
-    fetchInsights();
+    fetchInsights(),
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -118,8 +118,8 @@ export default function SalaryInsightsPage() {
     };    (async () => {    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data },
     (async () => {
       try {
-        const { supabase } = await import('../utils/supabase/client');
-        const user = await supabase.auth.getUser();
+        const { supabase } = await import('../utils/supabase/client'),
+        const user = await supabase.auth.getUser(),
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
           await supabase.from('salary_insights').insert({
@@ -137,9 +137,9 @@ export default function SalaryInsightsPage() {
         // fall back;
       }
       try {
-        const key = 'zion.salary-insights.history';
-        const history = JSON.parse(localStorage.getItem(key) || '[]');
-        history.unshift(payload);
+        const key = 'zion.salary-insights.history',
+        const history = JSON.parse(localStorage.getItem(key) || '[]'),
+        history.unshift(payload),
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
         alert('Insight saved locally');
       } catch {}

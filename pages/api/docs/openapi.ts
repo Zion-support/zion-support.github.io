@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 import { EndpointSpec } from "../../../data/api-docs/types";
 function toOpenApi() {
-  const paths: Record<string, any> = {};
+  const paths: Record<string, any> = {},
   v1.sections.forEach((section) => {
     section.endpoints.forEach((ep: EndpointSpec) => {
       ((paths[ep.path] = paths[ep.path] || {}),

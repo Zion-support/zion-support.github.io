@@ -30,15 +30,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (req.method === 'POST') {
-    const started = Date.now();
+    const started = Date.now(),
     try {
-      const metrics = req.body || {};
-      const triggers = evaluateReflexes(metrics);
-      const state = readState<any>();
-      state.metrics = metrics;
-      state.lastTriggers = triggers;
-      writeState(state);
-      const latencyMs = Date.now() - started;
+      const metrics = req.body || {},
+      const triggers = evaluateReflexes(metrics),
+      const state = readState<any>(),
+      state.metrics = metrics,
+      state.lastTriggers = triggers,
+      writeState(state),
+      const latencyMs = Date.now() - started,
+
 
       appendLog({
         module: 'reflex',

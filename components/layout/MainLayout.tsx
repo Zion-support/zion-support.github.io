@@ -59,7 +59,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </div>
 </>
 
-  );
+},
 
 
 export default MainLayout;

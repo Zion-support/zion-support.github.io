@@ -37,13 +37,13 @@ export default async function handler(
     return;
   }
 
-  const { project } = req.body as { project: any };
+  const { project } = req.body as { project: any },
   if (!project?.meta || !Array.isArray(project?.chapters)) {
     res.status(400).json({ error: "Invalid payload" });
     return;
   }
 
-  const tmpPath = `/tmp/${randomUUID()}.epub`;
+  const tmpPath = `/tmp/${randomUUID()}.epub`,
   const options = {
     title: project.meta.title,
     author: project.meta.author,

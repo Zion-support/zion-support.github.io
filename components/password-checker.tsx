@@ -15,11 +15,11 @@ import {
   ArrowRight,;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 export default function PasswordCheckerPage() {
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [strength, setStrength] = useState(0);
-  const [strengthText, setStrengthText] = useState('');
-  const [strengthColor, setStrengthColor] = useState('');
+  const [password, setPassword] = useState(''),
+  const [showPassword, setShowPassword] = useState(false),
+  const [strength, setStrength] = useState(0),
+  const [strengthText, setStrengthText] = useState(''),
+  const [strengthColor, setStrengthColor] = useState(''),
   const [checks, setChecks] = useState({
     length: false,
     uppercase: false,
@@ -30,7 +30,7 @@ export default function PasswordCheckerPage() {
     noSequential: false,  });    noSequential: false
   });
   const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [generatedPassword, setGeneratedPassword] = useState('');
+  const [generatedPassword, setGeneratedPassword] = useState(''),
 
   useEffect(() => {
     if (password) {
@@ -55,10 +55,10 @@ export default function PasswordCheckerPage() {
       noSequential: !hasSequentialChars(pass)
     };
 
-    setChecks(newChecks);
+    setChecks(newChecks),
 
     // Calculate strength score
-    let score = 0;
+    let score = 0,
     score += newChecks.length ? 15 : 0;
     score += newChecks.uppercase ? 15 : 0;
     score += newChecks.lowercase ? 15 : 0;
@@ -71,7 +71,7 @@ export default function PasswordCheckerPage() {
     if (pass.length >= 12) score += 10;
     if (pass.length >= 16) score += 5;
 
-    setStrength(score);
+    setStrength(score),
 
     // Set strength text and color
     if (score >= 90) {
@@ -170,9 +170,9 @@ export default function PasswordCheckerPage() {
     setSuggestions(suggestions)
 
   const resetAnalysis = () => {
-    setStrength(0);
-    setStrengthText('');
-    setStrengthColor('');
+    setStrength(0),
+    setStrengthText(''),
+    setStrengthColor(''),
     setChecks({
       length: false,
       uppercase: false,

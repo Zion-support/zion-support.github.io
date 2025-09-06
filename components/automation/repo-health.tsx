@@ -4,9 +4,9 @@
 type Props = { report: Report | null },
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
+    const file = path.join(process.cwd(), 'publicautomationrepo-health.json'),
+    const raw = fs.readFileSync(file, 'utf8'),
+    const data = JSON.parse(raw),
     return { props: { report: data }, revalidate: 3600 }
   } catch {
     return { props: { report: null }, revalidate: 3600 }
@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 export default function RepoHealth({ report }: Props) {
-  if (!report) return <div>No report yet. Check back soon.</div>;
+  if (!report) return <div>No report yet. Check back soon.</div>,
   return (
     <div className="space-y-6">
       <header className="space-y-1">

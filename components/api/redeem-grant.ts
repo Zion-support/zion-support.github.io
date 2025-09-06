@@ -51,7 +51,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
     return res.status(405).json({ error: "Method Not Allowed" })
   }
-  const { studentEmail, grantCode, courseId } = req.body || {};
+  const { studentEmail, grantCode, courseId } = req.body || {},
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'Missing required fields' });

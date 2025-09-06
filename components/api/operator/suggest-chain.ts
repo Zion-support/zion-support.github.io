@@ -19,7 +19,8 @@ export default async function handler(
   let candidates = ['polygon', 'bnb', 'avalanche'];
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
 
-  const regionLc = (region || '').toString().toLowerCase();
+
+  const regionLc = (region || '').toString().toLowerCase(),
   if (regionLc.includes('apac') || regionLc.includes('asia')) {
     candidates =
       stake > 5000

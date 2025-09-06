@@ -25,15 +25,16 @@ export default async function handler(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
-    const userId = getUserId(req);
+    const userId = getUserId(req),
 
     const { error } = await supabase
       .from('notifications')
       .update({ read_status: true })
       .eq('user_id', userId)
-      .eq('read_status', false);
+      .eq('read_status', false),
 
-    if (error) return res.status(200).json({ ok: true });
+    if (error) return res.status(200).json({ ok: true }),
+
 
     return res.status(200).json({ ok: true });
   } catch (e) {

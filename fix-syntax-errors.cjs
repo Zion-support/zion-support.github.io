@@ -123,6 +123,7 @@ const fixes = [
   }
 ];
 
+// Function to fix a single file
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -143,7 +144,8 @@ function fixFile(filePath) {
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`  ❌ Error fixing ${filePath}:`, error.message);
+    return false;
   }
 function fixSyntaxErrors(filePath) {;
   console.log(`Fixing syntax errors in: ${filePath}`);
@@ -212,8 +214,8 @@ function fixAllFiles(dir) {
   const files = fs.readdirSync(dir);
   
   files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const fullPath = path.join(process.cwd(), file);
+    console.log(`\n🔍 Processing: ${file}`);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
       fixedCount += fixAllFiles(filePath);

@@ -8,111 +8,61 @@ const glob = require('glob');
 const fixes = [
   // Fix missing commas in function parameters
   {
-    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2,$3'
+    pattern: /(\w+):\s*([^,;]+);(\s*$|\s*\n)/gm,
+    replacement: '$1: $2,$3',
+    description: 'Fix semicolons in object properties'
   },
-  // Fix missing commas in object destructuring
+  // Fix semicolons in function calls
   {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
+    pattern: /(\w+\([^)]*\));(\s*$|\s*\n)/gm,
+    replacement: '$1,$2',
+    description: 'Fix semicolons in function calls'
   },
-  // Fix missing commas in array destructuring
+  // Fix semicolons in array elements
   {
-    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2,$3'
+    pattern: /(\{[^}]*\});(\s*$|\s*\n)/gm,
+    replacement: '$1,$2',
+    description: 'Fix semicolons in array elements'
   },
-  // Fix missing commas in function calls
+  // Fix semicolons in template literals
   {
-    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2,$3'
+    pattern: /(`[^`]*`);(\s*$|\s*\n)/gm,
+    replacement: '$1,$2',
+    description: 'Fix semicolons in template literals'
   },
-  // Fix missing commas in object properties
+  // Fix semicolons in string literals
   {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
+    pattern: /('[^']*');(\s*$|\s*\n)/gm,
+    replacement: '$1,$2',
+    description: 'Fix semicolons in string literals'
   },
-  // Fix missing commas in interface properties
+  // Fix semicolons in double-quoted strings
   {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
+    pattern: /("[^"]*");(\s*$|\s*\n)/gm,
+    replacement: '$1,$2',
+    description: 'Fix semicolons in double-quoted strings'
   },
-  // Fix missing commas in type definitions
+  // Fix semicolons in variable assignments
   {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
+    pattern: /(\w+\s*=\s*[^;]+);(\s*$|\s*\n)/gm,
+    replacement: '$1,$2',
+    description: 'Fix semicolons in variable assignments'
   },
-  // Fix missing commas in function parameters
+  // Fix semicolons in property access
   {
-    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2,$3'
+    pattern: /(\w+\.\w+);(\s*$|\s*\n)/gm,
+    replacement: '$1,$2',
+    description: 'Fix semicolons in property access'
   },
-  // Fix missing commas in object destructuring
+  // Fix semicolons in method calls
   {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
-  },
-  // Fix missing commas in array destructuring
-  {
-    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2,$3'
-  },
-  // Fix missing commas in function calls
-  {
-    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2,$3'
-  },
-  // Fix missing commas in object properties
-  {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
-  },
-  // Fix missing commas in interface properties
-  {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
-  },
-  // Fix missing commas in type definitions
-  {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
-  },
-  // Fix missing commas in function parameters
-  {
-    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2,$3'
-  },
-  // Fix missing commas in object destructuring
-  {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
-  },
-  // Fix missing commas in array destructuring
-  {
-    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2,$3'
-  },
-  // Fix missing commas in function calls
-  {
-    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2,$3'
-  },
-  // Fix missing commas in object properties
-  {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
-  },
-  // Fix missing commas in interface properties
-  {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
-  },
-  // Fix missing commas in type definitions
-  {
-    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2,$3'
+    pattern: /(\w+\.\w+\([^)]*\));(\s*$|\s*\n)/gm,
+    replacement: '$1,$2',
+    description: 'Fix semicolons in method calls'
   }
 ];
 
+// Function to fix a single file
 function fixFile(filePath) {
 
     let content = fs.readFileSync(filePath, 'utf8');

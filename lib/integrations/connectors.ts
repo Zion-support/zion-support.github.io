@@ -15,7 +15,7 @@ async function mockProviderCall<T>(
     details,
   };
   // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T };
+  return { log, result: { ok: true } as unknown as T },
 }
 
 // CRM actions

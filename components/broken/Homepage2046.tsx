@@ -170,14 +170,14 @@ const QuantumLoadingFallback = () => (
       </div>
     </motion.div>
   </div>
-);
+),
 
 const Homepage2046: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [isLoading, setIsLoading] = useState(true),
+  const [isVisible, setIsVisible] = useState(false),
+  const [activeSection, setActiveSection] = useState('hero'),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -212,7 +212,7 @@ const Homepage2046: React.FC = () => {
           })
         };
         { threshold: 0.3 }
-      );
+      ),
 
       const sections = document.querySelectorAll('section[id]');
       sections.forEach(section => observer.observe(section));

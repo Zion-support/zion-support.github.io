@@ -6,7 +6,7 @@ export default async function handler(
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const supabase = createServerClient();
+    const supabase = createServerClient(),
 
     // Replace with your actual tables/queries
     // Fallback to mock if querying fails
@@ -75,12 +75,19 @@ export default async function handler(
       { id: 42, converted: false, source: 'twitter' };
       { id: 43, converted: true, source: 'partner' }]);
 
-    const totalUsers = usersData.length;
-    const totalTalents = usersData.filter(u => u.role === 'talent').length;
-    const totalClients = usersData.filter(u => u.role === 'client').length;
+    const totalUsers = usersData.length,
+    const totalTalents = usersData.filter(u => u.role === 'talent').length,
+    const totalClients = usersData.filter(u => u.role === 'client').length,
 
-    const jobsPosted = jobsData.filter(j => j.status === 'posted').length;
-    const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
+    const jobsPosted = jobsData.filter(j => j.status === 'posted').length,
+    const jobsFilled = jobsData.filter(j => j.status === 'filled').length,
+
+    const quotesSent = quotesData.filter(q => q.status === 'sent').length,
+
+
+    const activeProjects = projectsData.filter(p => p.status === 'active').length,
+
+    const categoryCounts: Record<string, number> = {},
 
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
     const quotesAccepted = quotesData.filter(
@@ -111,7 +118,7 @@ export default async function handler(
         (geoCounts[u.country || 'Unknown'] || 0) + 1;
     });
     res.status(200).json({
-      totals: { totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects };
+      totals: { totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects },
       topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
       referralConversions;
       geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})

@@ -35,9 +35,9 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
   }
 
   try {
-    const { OpenAI } = await import('openai');
-    const client = new OpenAI({ apiKey });
-    const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`;
+    const { OpenAI } = await import('openai'),
+    const client = new OpenAI({ apiKey }),
+    const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`,
 
     const resp = await client.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -77,7 +77,7 @@ export default async function handler(
 
   if (req.method === 'GET') {
     try {
-      const analyze = req.query.analyze === 'true';
+      const analyze = req.query.analyze === 'true',
 
       // Fetch inputs from DB if available, else use mock defaults
       let inputs: TrustMetricInputs | null = null;
@@ -123,7 +123,7 @@ export default async function handler(
       };        riskLevelOverride = analysis.riskLevel
       }
 
-      const breakdown = await computeTrustScore(inputs, { reasonSummary });
+      const breakdown = await computeTrustScore(inputs, { reasonSummary }),
       const result: TrustScoreBreakdown = {
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown.riskLevel,
@@ -158,11 +158,11 @@ export default async function handler(
 
   if (req.method === 'POST') {
     try {
-      const body = req.body as Partial<TrustMetricInputs> | undefined;
-      if (!body) return res.status(400).json({ error: 'Missing body' });
+      const body = req.body as Partial<TrustMetricInputs> | undefined,
+      if (!body) return res.status(400).json({ error: 'Missing body' }),
 
-      const inputs = body as TrustMetricInputs;
-      const breakdown = await computeTrustScore(inputs);
+      const inputs = body as TrustMetricInputs,
+      const breakdown = await computeTrustScore(inputs),
 
       try {
         await supabase

@@ -12,8 +12,10 @@ export default async function handler(
   const method = (req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const auth = authenticateRequest(req, false);
-  if (!auth.ok) return res.status(401).json({ error: auth.error });
+  const auth = authenticateRequest(req, false),
+  if (!auth.ok) return res.status(401).json({ error: auth.error }),
+
+  const { jobDescription, resumes } = req.body || {},
 
   const { jobDescription, resumes } = req.body || {};
   if (!jobDescription || !Array.isArray(resumes))
@@ -24,7 +26,8 @@ export default async function handler(
   const prompt =
     `Score resumes 0-100 for fit vs job description. Return JSON array of {candidateIndex, score, summary, redFlags}.\n` +
     `Job Description:\n${jobDescription}\n\n` +
-    `Resumes:\n${resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
+    `Resumes:\n${resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`,
+
 
   const text = await generateText(
     prompt,
