@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, Star } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const Pricing = () => {
   const plans = [
@@ -54,7 +55,13 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
+    <>
+      <SEOHead 
+        title="Pricing Plans - Affordable Technology Solutions | Zion Tech Group"
+        description="Choose the perfect plan for your business needs. Flexible pricing for AI services, cybersecurity, cloud infrastructure, and custom software development."
+        keywords="pricing, technology solutions, AI services pricing, cybersecurity pricing, cloud services pricing, software development cost"
+      />
+      <div className="min-h-screen bg-gray-50 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">Pricing Plans</h1>
@@ -122,6 +129,7 @@ const Pricing = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
