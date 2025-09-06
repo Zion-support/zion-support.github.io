@@ -20,6 +20,11 @@ describe('AnalyticsManager', () => {'}
   test('applies correct styling', () => {'}
     render(<AnalyticsManager />);,
   });
+<<<<<<< HEAD
+=======
+});
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import _React from 'react'
 ''
 import '@testing-library/jest-dom';'
@@ -43,6 +48,7 @@ describe('AnalyticsManager', () => {
 });
 });
 });
+<<<<<<< HEAD
 import _React from 'react'
 '
 import '@testing-library/jest-dom';
@@ -53,3 +59,5 @@ describe('AnalyticsManager', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

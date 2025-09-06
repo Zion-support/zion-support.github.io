@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-deployment-automation.cjs
 =======
 <<<<<<< HEAD
@@ -223,6 +224,10 @@ const path = require('path')
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/enhanced-deployment-automation.cjs
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { execSync } = require('child_process')
 console.log(' Starting Enhanced Deployment Automation...')
           setTimeout(() => reject(new Error('Step timeout')
@@ -244,6 +249,7 @@ console.log(' Starting Enhanced Deployment Automation...')
     execSync('node scripts/performance-monitor.cjs', { "stdio"})
     const status = execSync('git status --porcelain', { "encoding"})
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-deployment-automation.cjs
   console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
   console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
@@ -268,3 +274,6 @@ console.log(' Starting Enhanced Deployment Automation...')
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/enhanced-deployment-automation.cjs
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

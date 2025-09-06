@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
@@ -28,6 +34,26 @@ function resolveMergeConflicts(filePath) {
     
     // Clean up multiple newlines
     content = content.replace(/\n{3,}/g, '\n\n');
+=======
+
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let conflictStart = -1;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+
+        inConflict = false;
+        conflictStart = -1;
+        continue;
+      }
+
+      if (!inConflict) {
+        resolvedLines.push(line);
+      }
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
@@ -37,11 +63,17 @@ function resolveMergeConflicts(filePath) {
     
     return false;
   } catch (error) {
+<<<<<<< HEAD
     console.error(`❌ Error processing ${filePath}:`, error.message);
+=======
+    console.error(`Error processing ${filePath}:`, error.message);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return false;
   }
 }
 
+<<<<<<< HEAD
 // Function to find all files with merge conflicts
 function findConflictedFiles() {
   try {
@@ -77,10 +109,30 @@ function findFilesWithConflictMarkers() {
           }
         } catch (error) {
           // Skip files that can't be read
+=======
+// Find all files with merge conflicts
+function findFilesWithConflicts(dir) {
+  const files = [];
+  
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        walkDir(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        const content = fs.readFileSync(fullPath, 'utf8');
+        if (content.includes('
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         }
       }
     }
   }
+<<<<<<< HEAD
   
   searchDirectory('.');
   return conflictedFiles;
@@ -128,3 +180,24 @@ function main() {
 
 // Run the script
 main();
+=======
+
+  walkDir(dir);
+  return files;
+}
+
+// Process all files
+const filesWithConflicts = findFilesWithConflicts('.');
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+
+let resolvedCount = 0;
+for (const file of filesWithConflicts) {
+  if (resolveMergeConflicts(file)) {
+
+    resolvedCount++;
+  }
+}
+
+console.log(`Resolved conflicts in ${resolvedCount} files`);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

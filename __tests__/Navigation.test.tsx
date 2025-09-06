@@ -62,6 +62,17 @@ describe('Navigation', () => {
 });
 
 origin/main
+<<<<<<< HEAD
+=======
+
+
+
+
+
+  test('displays correct content', () => {
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'

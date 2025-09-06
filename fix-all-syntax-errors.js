@@ -3,6 +3,10 @@
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+=======
+    if (!content && content.includes('export default')) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
 

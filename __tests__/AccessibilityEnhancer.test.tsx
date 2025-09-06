@@ -84,3 +84,7 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 });
+<<<<<<< HEAD
+=======
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

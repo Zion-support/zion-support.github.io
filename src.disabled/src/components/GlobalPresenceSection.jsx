@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,6 +30,10 @@ const React,{ useState } from "react"; import { motion,AnimatePresence } from "f
 
 import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4 && 4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};
 
+<<<<<<< HEAD
+=======
+import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React,{ useState } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; export default function Page() {; ,\"; { \"icon\": <Star className=\"w-6 h-6\"/>,\"value\": \"4.8/5\",\"label\": \"Global Rating\" },\"; { \"icon\": <TrendingUp className=\"w-6 h-6\"/>,\"value\": \"98%\",\"label\": \"Client Satisfaction\" } ]; const partnerships = [{}; export {};
 const React,{ useState } from "react"; import { motion,AnimatePresence } from "framer-motion"; export default function Page() {; ,"; { icon: <Star className="w-6 h-6"/>,value: "4.8/5",label: "Global Rating" },"; { icon: <TrendingUp className="w-6 h-6"/>,value: "98%",label: "Client Satisfaction" } ]; const partnerships = [{}; export {};'"'"
 import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};

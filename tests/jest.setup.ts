@@ -395,6 +395,12 @@ import axios from 'axios',;
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
 ;
+<<<<<<< HEAD
+=======
+import axios from 'axios',
+// @ts - ignore;
+axios.create = jest.fn (() => axios),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 // -----------------------------;
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;

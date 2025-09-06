@@ -34,7 +34,6 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
-    
 
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
@@ -264,11 +263,4 @@ if (require.main === module) {}
   console.error("CI automation "failed": ', error);
     process.exit(1)})};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = CIAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = CIAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

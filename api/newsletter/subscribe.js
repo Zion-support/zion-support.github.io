@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} ';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require(
   ./withErrorLogging.cjs')';
@@ -14,8 +19,12 @@ const { withErrorLogging } = require(
   try {;
     const { email } = req.body || {}
     if (!email) {;
+<<<<<<< HEAD
 <=
 >const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+=======
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -78,13 +87,20 @@ async function handler(req, res) {
   }
 
 module.exports = withErrorLogging(handler);
+<<<<<<< HEAD
 =
 >    res.json({ error: err.message ||';Subscription failed }})'}
+=======
+    res.json({ error: err.message ||';Subscription failed }})'}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
     res.json({ "error": err.message ||';Subscription failed }})'}
 module."exports": = withErrorLogging(handler);
+<<<<<<< HEAD
 =
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
     res.json({ "error": err.message ||';Subscription failed }})'}
@@ -95,6 +111,13 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
 }
 
 module.exports = withErrorLogging(handler);
+<<<<<<< HEAD
+=======
+    res.json({ error: err.message || 'Subscription failed' });
+  }
+
+module.exports = withErrorLogging(handler);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     res.json({ error: err.message ||';Subscription failed }})'}
 module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);

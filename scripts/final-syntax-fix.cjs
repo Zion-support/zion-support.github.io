@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Final Syntax Fix');
-console.log('==================');
-
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+console.log('
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -74,14 +65,7 @@ const filesToFix = [
 ];
 
 let totalFixed = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -105,11 +89,4 @@ for (const file of filesToFix) {
 }
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log('🎉 Final syntax fix completed!');
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-console.log('🎉 Final syntax fix completed!');
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

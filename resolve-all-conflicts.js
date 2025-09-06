@@ -12,15 +12,25 @@ function resolveMergeConflicts(filePath) {
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Check if file has merge conflicts
+<<<<<<< HEAD
         if (!content.includes('            return false; // No conflicts to resolve
+=======
+            return false; // No conflicts to resolve
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         }
         
         // Strategy: Keep HEAD version (current branch) for most conflicts
         // Remove merge conflict markers and keep the HEAD version
+<<<<<<< HEAD
         content = content.replace(/        
         // Remove any remaining conflict markers
         content = content.replace(/        content = content.replace(/\n/g, '');
         content = content.replace(/        
+=======
+        
+        // Remove any remaining conflict markers
+        
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');
         
@@ -43,7 +53,11 @@ function getConflictFiles() {
         // If git command fails, use grep to find files with conflict markers
         const { execSync } = require('child_process');
         try {
+<<<<<<< HEAD
             const result = execSync('grep -l "            return result.trim().split('\n').filter(file => file.length > 0);
+=======
+            return result.trim().split('\n').filter(file => file.length > 0);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         } catch (e) {
             return [];
         }

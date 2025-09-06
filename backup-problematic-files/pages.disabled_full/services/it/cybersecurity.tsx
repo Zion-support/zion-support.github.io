@@ -3,6 +3,7 @@ module.exports = default function ManagedCybersecurity() { return; }; return nul
 import React from 'react';
 
 interface CybersecurityProps {
+<<<<<<< HEAD:backup-problematic-files/pages.disabled_full/services/it/cybersecurity.tsx
   className?: string;
 }
 
@@ -14,3 +15,6 @@ const Cybersecurity: React.FC<CybersecurityProps> = ({ className }) => {
     </div>
   );
 }
+=======
+  // Add props here as needed
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages.disabled_full/services/it/cybersecurity.tsx

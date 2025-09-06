@@ -129,13 +129,7 @@ class DependencyManager {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved "to": ${reportFile}`);
     // Print summary
-    
-    
-    
-    
-    
-    
-    
+
     return report}
   async run() {
     try {this.log('🚀 Starting Dependency Manager'),const report = this.generateReport(),this.log('✅ Dependency management completed');
@@ -146,11 +140,4 @@ class DependencyManager {
 }
 // Run the dependency manager
 if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = DependencyManager;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = DependencyManager;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

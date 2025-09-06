@@ -16,4 +16,12 @@ export const config = {
      */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
+<<<<<<< HEAD
 };
+=======
+};
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

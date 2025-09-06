@@ -79,5 +79,18 @@ for (const file of filesWithConflicts) {
     fixedCount++;
   }
 }
+<<<<<<< HEAD
 
 console.log(`Fixed conflicts in ${fixedCount} files`);
+=======
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
+// Run TypeScript check to see remaining errors
+console.log('\nRunning TypeScript check...');
+try {
+  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' });
+  console.log('TypeScript check passed!');
+} catch (error) {
+  console.log('TypeScript check found some issues, but continuing...');
+}
+console.log('\nMerge conflict fixing complete!');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

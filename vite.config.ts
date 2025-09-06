@@ -11,6 +11,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true
+<<<<<<< HEAD
   },
   resolve: {
     alias: {
@@ -21,5 +22,7 @@ export default defineConfig({
     postcss: {
       plugins: []
     }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 })
