@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> main
 import fs from 'fs',;
 import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
@@ -60,10 +56,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // fall through to GitHub;
   }
 
-<<<<<<< HEAD
-  const remote = await fetchFromGitHub(),
-=======
   const remote = await fetchFromGitHub()
->>>>>>> main
   return res.status(200).json({ logs: remote })
 };

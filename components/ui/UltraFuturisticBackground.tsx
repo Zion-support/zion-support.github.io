@@ -1,78 +1,16 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
 import React from 'react';
 
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;
-<<<<<<< HEAD
-  variant?: 'quantum' | 'matrix' | 'neon';
-  intensity?: 'low' | 'medium' | 'high';
-  className?: string;
-}
-
-export default function UltraFuturisticBackground({ 
-  children, 
-  variant = 'quantum', 
-  intensity = 'medium',
-  className = ''
-}: UltraFuturisticBackgroundProps) {
-  const getBackgroundClasses = () => {
-    const baseClasses = 'min-h-screen relative overflow-hidden';
-    
-    switch (variant) {
-      case 'quantum':
-        return `${baseClasses} bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900`;
-      case 'matrix':
-        return `${baseClasses} bg-gradient-to-br from-green-900 via-gray-900 to-black`;
-      case 'neon':
-        return `${baseClasses} bg-gradient-to-br from-pink-900 via-purple-900 to-cyan-900`;
-      default:
-        return `${baseClasses} bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900`;
-    }
-  };
-  
-  return (
-    <div className={`${getBackgroundClasses()} ${className}`}>
-      {children}
-    </div>
-  );
-}
-=======
-<<<<<<< HEAD
-  intensity?: 'low' | 'medium' | 'high';
-  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
-  particleCount?: number;
-  animationSpeed?: number;
-  enableHolographic?: boolean;
-  enableQuantumEffects?: boolean;
-  enableNeonEffects?: boolean;
-  enableSpaceTime?: boolean;
-  variant?: 'quantum' | 'neon' | 'cyber';
-=======
   variant?: 'quantum' | 'neon' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   className?: string;
 }
 
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children,
-<<<<<<< HEAD
-  intensity = 'medium',
-  colorScheme = 'quantum-fusion',
-  particleCount = 200,
-  animationSpeed = 1.0,
-  enableHolographic = true,
-  enableQuantumEffects = true,
-  enableNeonEffects = true,
-  enableSpaceTime = true,
-  variant = 'quantum',
-=======
   variant = 'quantum',
   intensity = 'medium',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   className = ''
 }) => {
   const getBackgroundClasses = () => {
@@ -84,21 +22,12 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       case 'neon':
         return `${baseClasses} bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900`;
       case 'cyber':
-<<<<<<< HEAD
-        return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;
-=======
         return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-900`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       default:
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
     }
   };
 
-<<<<<<< HEAD
-  return (
-    <div className={`${getBackgroundClasses()} ${className}`}>
-      <div className="absolute inset-0 bg-black/20" />
-=======
   const getIntensityClasses = () => {
     switch (intensity) {
       case 'low':
@@ -124,7 +53,6 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       </div>
       
       {/* Content */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="relative z-10">
         {children}
       </div>
@@ -133,6 +61,3 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
 };
 
 export default UltraFuturisticBackground;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332

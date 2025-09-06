@@ -1,48 +1,6 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Menu, X, Search } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
-import SearchModal from './SearchModal';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  // Keyboard shortcut for search (Ctrl+K)
-  React.useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        setIsSearchOpen(true);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
-    { name: "Pricing", href: "/pricing" },
-  ];
-
-=======
->>>>>>> main
 import Button from './Button';
 
 const Header: React.FC = () => {
@@ -101,16 +59,4 @@ const Header: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Header;
-=======
-<<<<<<< HEAD
-export default Header;
-=======
-<<<<<<< HEAD
-export default Header;
-=======
-export default Header;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

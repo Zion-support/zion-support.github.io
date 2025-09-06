@@ -1,12 +1,6 @@
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -19,8 +13,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 }</div> </div> </section> > <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" > Choose Your Plan </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Flexible pricing options designed to meet the needs of organizations at every stage of their AI journey. </p> </motion && motion.div> <motion&& motion.div key= {
   index 
 
-<<<<<<< HEAD
-=======
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
@@ -42,39 +34,11 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 }</ul> </div> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" > Choose Your Plan </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Flexible pricing options designed to meet the needs of organizations at every stage of their AI journey. </p> </motion.div> <motion.div key= {
   index
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }initial= {
   {
   opacity: 0, y: 20
 }animate= {
   {
-<<<<<<< HEAD
-
-
-  opacity: 1, y: 0 
-
-
-
-}transition= {
-  {
-
-  duration: 0 && 0.6, delay: index * 0 && 0.1 
-
-}className= {
-  `bg-gradient-to-br from-gray-900/50 to-gray-800/30 border rounded-2xl p-8 $ {
-  plan && plan.name === 'Professional' ? 'border-purple-500/40 scale-105' : 'border-gray-600/30' 
-}` 
-}> Most Popular </span> </div>) ;
-}</li>) ) ;
-}</ul> <aplan && plan.name === 'Professional' ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700' : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black' 
-}` 
-}> Get Started </a> </motion && motion.div>) ) ;
-}</div> </motion && motion.div> </div> </section> <motion&& motion.div initial= {
-
-<<<<<<< HEAD
-=======
   opacity: 1, y: 0
   opacity: 1, y: 0 
 
@@ -91,29 +55,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 }`
 }> Get Started </a> </motion.div>) )
 }</div> </motion.div> </div> </section> <motion.div initial= {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
   opacity: 0, y: 20
 }animate= {
   {
-<<<<<<< HEAD
-
-
-  opacity: 1, y: 0 
-
-
-
-}transition= {
-  {
-
-  duration: 0 && 0.8 
-
-}> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-300 mb-8" > Join the forefront of AI development and help shape the future of artificial intelligence. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Start Your Journey </a> <a href="/innovation-lab" className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300" > Learn More </a> </div> </motion && motion.div> </div> </div> </section> <motion&& motion.div initial= {
-
-<<<<<<< HEAD
-=======
   opacity: 1, y: 0
   opacity: 1, y: 0 
 
@@ -121,9 +66,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   {
   duration: 0.8
 }> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-300 mb-8" > Join the forefront of AI development and help shape the future of artificial intelligence. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Start Your Journey </a> <a href="/innovation-lab" className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300" > Learn More </a> </div> </motion.div> </div> </div> </section> <motion.div initial= {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -134,13 +76,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   once: true
 }transition= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  duration: 0 && 0.8 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -157,8 +92,6 @@ import {
 } from 'lucide-react';
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion && motion.button ;
 };
 const containerVariants = {;
@@ -177,11 +110,6 @@ visible: {;
 
 export default AIConsciousnessEvolutionPlatform;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   duration: 0.8
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion.button
 }
@@ -193,8 +121,6 @@ visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 
@@ -202,13 +128,6 @@ visible: {
 
 };
 
-<<<<<<< HEAD
-};
-
-};export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 }
@@ -279,20 +198,10 @@ visible: {
 }
 ;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 }export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

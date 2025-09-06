@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-
-interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-}
-
-export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
 
 
 class ErrorBoundary extends React.Component {
@@ -192,8 +174,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 export default Layout;
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -238,23 +218,11 @@ export default function Layout({
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        {children}
-      </div>
-    </>
-  );
-}
-=======
         <meta name="keywords" content={keywords} />
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
@@ -283,8 +251,6 @@ export default function Layout({
     </>
   );
 }
-<<<<<<< HEAD
-=======
 import React, { ReactNode } from 'react';
 
 interface LayoutProps {
@@ -300,11 +266,3 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

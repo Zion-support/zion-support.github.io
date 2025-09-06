@@ -1,115 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
-
-export interface Notification {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-=======
 
 
   id: string;
   type: "success" | "error" | "warning" | "info";
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   title?: string;
   message: string;
   duration?: number;
 }
 
-<<<<<<< HEAD
-interface NotificationSystemProps {
-  notifications: Notification[];
-  onDismiss?: (id: string) => void;
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-}
-
-const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications,
-  onDismiss,
-  position = 'top-right',
-}) => {
-  const [visibleNotifications, setVisibleNotifications] = useState<Notification[]>([]);
-
-  const handleDismiss = useCallback((id: string) => {
-    setVisibleNotifications(prev => prev.filter(n => n.id !== id));
-    onDismiss?.(id);
-  }, [onDismiss]);
-
-  useEffect(() => {
-    setVisibleNotifications(notifications);
-  }, [notifications]);
-
-  useEffect(() => {
-    const timers: ReturnType<typeof setTimeout>[] = [];
-    
-    notifications.forEach(notification => {
-      if (notification.duration && notification.duration > 0) {
-        const timer = setTimeout(() => {
-          handleDismiss(notification.id);
-        }, notification.duration);
-        timers.push(timer);
-      }
-    });
-
-    return () => {
-      timers.forEach(timer => clearTimeout(timer));
-    };
-  }, [notifications, handleDismiss]);
-
-  const getNotificationStyles = (type: Notification['type']) => {
-    const baseStyles = 'border-l-4';
-    
-    switch (type) {
-      case 'success':
-        return `${baseStyles} border-green-500 bg-green-50 text-green-800`;
-      case 'error':
-        return `${baseStyles} border-red-500 bg-red-50 text-red-800`;
-      case 'warning':
-        return `${baseStyles} border-yellow-500 bg-yellow-50 text-yellow-800`;
-      case 'info':
-        return `${baseStyles} border-blue-500 bg-blue-50 text-blue-800`;
-      default:
-        return `${baseStyles} border-gray-500 bg-gray-50 text-gray-800`;
-    }
-  };
-
-  const getIcon = (type: Notification['type']) => {
-    switch (type) {
-      case 'success':
-        return <CheckCircle className="h-5 w-5 text-green-500" />;
-      case 'error':
-        return <AlertCircle className="h-5 w-5 text-red-500" />;
-      case 'warning':
-        return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
-      case 'info':
-        return <Info className="h-5 w-5 text-blue-500" />;
-      default:
-        return <Info className="h-5 w-5 text-gray-500" />;
-    }
-  };
-
-  const getPositionStyles = () => {
-    switch (position) {
-      case 'top-left':
-        return 'top-4 left-4';
-      case 'top-right':
-        return 'top-4 right-4';
-      case 'bottom-left':
-        return 'bottom-4 left-4';
-      case 'bottom-right':
-        return 'bottom-4 right-4';
-      default:
-        return 'top-4 right-4';
-    }
-  };
-
-  if (visibleNotifications.length === 0) return null;
-
-  return (
-    <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
-      {visibleNotifications.map(notification => (
-=======
 
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -166,10 +63,8 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 
 
 import React from 'react';
-=======
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
->>>>>>> main
 
 interface Notification {
   id: string;
@@ -225,50 +120,22 @@ const NotificationContainer: React.FC = () => {
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {notifications.map((notification) => (
-<<<<<<< HEAD
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
         <div
           key={notification.id}
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
         >
           <div className="flex items-start justify-between">
             <div className="flex-1">
-<<<<<<< HEAD
-              <div className="flex items-start space-x-2">
-                {getIcon(notification.type)}
-                <div className="flex-1">
-                  {notification.title && (
-                    <h4 className="font-medium mb-1">{notification.title}</h4>
-                  )}
-                  <p className="text-sm">{notification.message}</p>
-                </div>
-              </div>
-            </div>
-            {onDismiss && (
-              <button
-                onClick={() => handleDismiss(notification.id)}
-                className="ml-2 text-gray-400 hover:text-gray-600 transition-colors"
-              >
-                <X className="h-4 w-4" />
-              </button>
-            )}
-          </div>
-        </div>
-=======
         <NotificationItem
           key={notification.id}
           notification={notification}
           onRemove={removeNotification}
         />
->>>>>>> main
       ))}
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default NotificationSystem;
-=======
               {notification.title && (
               <p className="text-sm">{notification.message}</p>
             </div>
@@ -285,7 +152,6 @@ export default NotificationSystem;
               )}
 }
 }
-=======
 const NotificationItem: React.FC<{
   notification: Notification;
   onRemove: (id: string) => void;
@@ -305,7 +171,6 @@ const NotificationItem: React.FC<{
   };
 
   const Icon = icons[notification.type];
->>>>>>> main
 
   return (
     <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>
@@ -326,9 +191,6 @@ const NotificationItem: React.FC<{
   );
 };
 
-<<<<<<< HEAD
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
 export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (context === undefined) {
@@ -336,4 +198,3 @@ export const useNotifications = () => {
   }
   return context;
 };
->>>>>>> main

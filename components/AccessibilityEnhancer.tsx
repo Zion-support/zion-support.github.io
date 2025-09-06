@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -86,8 +83,6 @@ export default AccessibilityEnhancer;
 }
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -252,8 +247,6 @@ export default function AccessibilityEnhancer() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -339,7 +332,3 @@ export default AccessibilityEnhancer;
 }
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

@@ -9,8 +9,6 @@ type Note = {
   createdAt: number
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
   if (req.method === 'GET') {
@@ -22,10 +20,6 @@ type Note = {
       .sort((a, b) => b.createdAt - a.createdAt)
     return res.status(200).json({ notes })
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
   if (req.method === 'POST') {
     const authorId = String(req.headers['x-admin-user'] || 'admin')

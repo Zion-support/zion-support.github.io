@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-
-interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined' || typeof performance === 'undefined') {
-      return;
-    }
-
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const performanceData = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        
-        // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
-        // Resource timing
-        resourceCount: performance.getEntriesByType('resource').length,
-        
-        // Memory usage (if available)
-        memory: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
-          limit: (performance as any).memory.jsHeapSizeLimit
-        } : null
-      };
-=======
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -62,33 +23,12 @@ const PerformanceMonitor: React.FC = () => {
           });
         }
       });
->>>>>>> main
 
       observer.observe({ entryTypes: ['navigation'] });
 
-<<<<<<< HEAD
-      // Log performance data in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', performanceData);
-      }
-    };
-
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, [onPerformanceData]);
-=======
       return () => observer.disconnect();
     }
   }, []);
->>>>>>> main
 
   if (!metrics) return null;
 

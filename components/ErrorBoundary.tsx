@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -90,8 +82,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </pre>
               </details>
             )}
-<<<<<<< HEAD
-=======
           </div>;
     // Log the error to an error reporting service;
     console && console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -127,29 +117,11 @@ class ErrorBoundary extends Component<Props, State> {
             >
               Reload Page
             </button>
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
           </div>
         </div>
       );
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return this.props.children;
-  }
-}
-
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
     return this && this.props.children;
   }
@@ -314,18 +286,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
     return this.props.children;
   }
 }
 
-<<<<<<< HEAD
-export default ErrorBoundary;
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

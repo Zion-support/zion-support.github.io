@@ -1,38 +1,21 @@
-<<<<<<< HEAD
-import type { AppProps } from 'next/app';
-<<<<<<< HEAD
-import '../styles/globals.css';
-=======
 import '../src/index.css';
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 import type { AppProps } from 'next/app';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-<<<<<<< HEAD
-=======
-
-=======
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
 return <Component {...pageProps} />;
@@ -41,24 +24,16 @@ export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
-=======
 }
-=======
 
-=======
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-=======
 
 
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
 return <Component {...pageProps} />;
@@ -66,29 +41,6 @@ import '../styles/globals.css';
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import EnhancedFooter from '../components/layout/EnhancedFooter';
 
-<<<<<<< HEAD
-import '../src/styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {
-origin/main
-import '../src/styles/globals.css';
-export default function App({ Component, pageProps }: AppProps) {
-import '../src/styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {;
-return <Component {...pageProps} />;
-import '../styles/globals.css';
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
-import '../styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {;
-  return <Component {...pageProps} />;
-}
-ursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from '../components/layout/Layout';
 import '../styles/globals.css';
     <header style={{
@@ -254,25 +206,12 @@ export default function App({ Component, pageProps }: AppProps) {
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import '../styles/globals.css';
 
 }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { AppProps } from 'next / app';
 import '../src / styles / globals.css';
 ;
@@ -289,10 +228,6 @@ export default /**
 function App() {
   return <Component {...page_props} />;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 ursor/fix-lint-push-and-merge-to-main-e10e
 import '../src/styles/globals.css';
@@ -317,17 +252,7 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 }
->>>>>>> main
-=======
 import React from 'react';
 import type { AppProps } from 'next/app';
 import Layout from '../components/layout/Layout';
@@ -340,7 +265,3 @@ export default function App({ Component, pageProps }: AppProps) {
     </Layout>
   );
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
->>>>>>> main
