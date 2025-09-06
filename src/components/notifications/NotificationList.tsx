@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -198,6 +200,7 @@ import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context / notifications';
 import { EmptyState } from '@/components / ui / empty - state';
 import { Bell } from 'lucide-react';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -332,6 +335,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   );
 };
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -421,5 +425,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

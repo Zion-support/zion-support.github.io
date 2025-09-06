@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
 files && files.forEach((file) => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
@@ -37,6 +40,8 @@ files.for_each ((file) => {
       (match) => {
         return match.replace (",", ";");
 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
     content = content.replace(;
@@ -60,6 +65,7 @@ if (.ends_with (") {
           return match.trim () + ";";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
@@ -79,12 +85,17 @@ if (.ends_with (") {
           return match.trim() + ";";
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
         return match;
       }
     );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -92,6 +103,7 @@ if (.ends_with (") {
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       (match, varName) => {
         if (
           !match.includes("function") &&
@@ -117,6 +129,8 @@ if (.ends_with (") {
     );
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
@@ -139,3 +153,4 @@ if ( {) {
 console.log (`\n_total files fixed: ${total_fixed}`);
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

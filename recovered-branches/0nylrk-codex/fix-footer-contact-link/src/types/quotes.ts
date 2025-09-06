@@ -3,11 +3,14 @@ export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
 export type BudgetType = "fixed" | "hourly" | "range";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ListingItem {
   id: string;
   title: string;
@@ -57,7 +60,28 @@ export interface ContactInfo {;
   phone: string,
   company: string;
 }
+<<<<<<< HEAD
+}
+export interface QuoteFormData {
+  service_type: ServiceType;
+  service_category: ServiceCategory;
+  specific_item: ListingItem | null;
+  project_name: string;
+  project_description: string;
+  start_date?: Date;
+  end_date?: Date;
+  name: string;
+  email: string;
+  phone: string
+  company: string
+}
 export interface Budget {
+
+
+export interface Budget {;
+=======
+export interface Budget {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   amount: number;
   maxAmount?: number;
   type: BudgetType;
@@ -83,10 +107,13 @@ export interface QuoteFormData {;
   startDate?: Date;
   endDate?: Date;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   timeline: TimelineType;
   budget: Budget;
   contactInfo: ContactInfo;
@@ -109,6 +136,10 @@ export interface QuoteRequest {
 export interface QuoteRequest {;
 
 <<<<<<< HEAD
+  timeline: TimelineType;
+export interface QuoteRequest {
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -122,6 +153,7 @@ export interface QuoteRequest {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -140,6 +172,9 @@ export interface QuoteRequest {;
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
+<<<<<<< HEAD
+=======
   created_at: string;
   updated_at: string;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

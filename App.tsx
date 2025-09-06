@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +9,7 @@ import React, { JSX } from 'react';
 import React from 'react';
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -18,6 +21,15 @@ import React from 'react';
 >>>>>>> main
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
+<<<<<<< HEAD
+import LandingPage from './src/pages/LandingPage';
+import AboutPage from './src/pages/About';
+import ContactPage from './src/pages/Contact';
+import ServicesPage from './src/pages/ServicesPage';
+import PricingPage from './src/pages/PricingPage';
+
+export default function App() {
+=======
 import ServiceCard from './src/components/ServiceCard';
 import TestimonialCarousel from './src/components/TestimonialCarousel';
 import ContactSection from './src/components/ContactSection';
@@ -87,6 +99,7 @@ export default function App(): React.JSX.Element {
 export default function App(): JSX.Element {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> 114abeb283f270aa60bfbe93d6f31e5f8341ce65
   return (
     <main>
       <h1>Hello App</h1>

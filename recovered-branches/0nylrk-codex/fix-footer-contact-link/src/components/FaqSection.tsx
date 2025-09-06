@@ -25,6 +25,8 @@ const faqs = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -67,6 +69,7 @@ import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {FileText} from "lucide-react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -74,6 +77,16 @@ import {
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
 import { FileText } from "lucide-react",
+<<<<<<< HEAD
+const faqs = [
+  {
+    question: "How do I publish my AI product or service on Zion?"
+    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."}
+  {
+    question: "What types of AI jobs can I find or post on Zion?"
+    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."}
+  {
+=======
 
 <<<<<<< HEAD
 
@@ -104,6 +117,7 @@ const faqs = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function FaqSection() {;
   return (
@@ -162,6 +176,8 @@ function FaqSection() {
 <<<<<<< HEAD
 
                   {faq.question}
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -214,12 +230,16 @@ export function FaqSection() {
 export function FaqSection() {;
   return (
                   {faq.question}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 };
 
 };
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -247,6 +267,8 @@ const faqs = [;
     question: "Are there any fees for listing my products or services?",;
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 export function FaqSection() {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   return (;
 <<<<<<< HEAD
@@ -352,6 +374,7 @@ export function FaqSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </AccordionContent>;
               </AccordionItem>))}
           </Accordion>;
@@ -359,6 +382,8 @@ export function FaqSection() {;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -410,3 +435,4 @@ answer: "Zion's Green IT initiative focuses on sustainable IT practices througho
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

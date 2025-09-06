@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -57,6 +60,8 @@
     reviews: 45,
   },
   {
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -67,6 +72,7 @@
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
@@ -84,6 +90,8 @@
     support:
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
     compliance: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -163,6 +171,7 @@
 
     icon: '🧬',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -175,12 +184,15 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
     ],
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
@@ -198,6 +210,8 @@
     support:
       '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
     compliance: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -277,6 +291,7 @@
 
     icon: '🧠',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -289,12 +304,15 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
     ],
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
@@ -312,6 +330,8 @@
     support:
       '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
     compliance: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -391,6 +411,7 @@
 
     icon: '⚡',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -403,12 +424,15 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
     ],
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
@@ -428,8 +452,11 @@
     compliance: [
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -493,6 +520,8 @@
     },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     features: [;
       'Advanced computer vision',
       'Real - time decision making',
@@ -551,6 +580,7 @@
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     icon: '🚗',
     color: 'from - red - 500 to - pink - 600',
     popular: true,
@@ -562,6 +592,9 @@
     growth_rate: '75% annually',
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ];
     ];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
@@ -572,6 +605,8 @@
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform';
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -608,6 +643,7 @@
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     icon: '🚗';
     color: 'from - red - 500 to - pink - 600';
     popular: true;
@@ -615,6 +651,9 @@
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
+<<<<<<< HEAD
+  }
+=======
 <<<<<<< HEAD
   }
 =======
@@ -630,6 +669,7 @@
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string,;
   name: string,;
   tagline: string,;
@@ -669,6 +709,9 @@
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface EmergingTechService {;
   id: string,;
@@ -712,6 +755,8 @@ export interface EmergingTechService {;
   }
 ];
 ;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -723,3 +768,4 @@ export interface EmergingTechService {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

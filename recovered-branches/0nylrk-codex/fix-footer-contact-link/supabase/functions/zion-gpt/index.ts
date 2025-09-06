@@ -25,6 +25,8 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
+=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -45,12 +47,15 @@ const corsHeaders = {
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
   // Handle CORS preflight requests
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   if (req && req.method === "OPTIONS") {
@@ -88,11 +93,14 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (!prompt) {
       throw new Error("Prompt is required")
     }
     // Define the appropriate model to use
     // Default to base model if no specific model provided
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -197,6 +205,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
@@ -264,6 +273,8 @@ if ( {) {
 <<<<<<< HEAD
 
       });
+<<<<<<< HEAD
+=======
 =======
 =======
       });
@@ -296,6 +307,7 @@ if ( {) {
 =======
       });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
@@ -338,6 +350,8 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     console.error ("Error in zion - gpt function:", error);
@@ -357,6 +371,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -368,10 +383,14 @@ serve(async (req) => {;
     return new Response(null, { headers: corsHeaders });
   }
 <<<<<<< HEAD
+});
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     console.error ("Error in zion - gpt function:", error);
 ;
@@ -381,6 +400,10 @@ serve(async (req) => {;
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
+<<<<<<< HEAD
+  }
+});
+=======
 <<<<<<< HEAD
 
 =======
@@ -558,3 +581,4 @@ return new Response (JSON.stringify ({
   }
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

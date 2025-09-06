@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -38,6 +40,7 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -63,6 +66,8 @@ class FileWatcher {
     this.pendingChanges = new Set();
     // Ensure directories exist
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -102,12 +107,15 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     fs.mkdirSync(path.dirname(this.logFile), { "recursive": true })}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(logMessage.trim());
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -147,6 +155,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     fs.appendFileSync(this.logFile, logMessage)}
   async validateFile(filePath) {
     try {
@@ -154,6 +163,8 @@ class FileWatcher {
       const issues = [];
       // Basic syntax checks
       if (content.includes('return()') && !content.includes('return ()')) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -168,11 +179,14 @@ class FileWatcher {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         issues.push('Invalid return statement syntax');
       }
         issues.push('Merge conflict markers found');
       }
 
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
@@ -213,6 +227,7 @@ class FileWatcher {
       }
 
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Check for unmatched braces (simple check)
       const openBraces = (content.match(/{/g) || []).length;
       const closeBraces = (content.match(/}/g) || []).length;
@@ -220,6 +235,8 @@ class FileWatcher {
         issues.push('Unmatched braces detected');
       }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -236,12 +253,15 @@ class FileWatcher {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Check for unmatched parentheses
       const openParens = (content.match(/\(/g) || []).length;
       const closeParens = (content.match(/\)/g) || []).length;
       if (openParens !== closeParens) {
         issues.push('Unmatched parentheses detected');
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -257,10 +277,13 @@ class FileWatcher {
 
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {
         issues.push('React used without import');
       }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -271,6 +294,7 @@ class FileWatcher {
 =======
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -280,6 +304,8 @@ class FileWatcher {
         issues.push('React used without import');
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -294,6 +320,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return issues;
     } catch (error) {
       return [`File read error: ${error.message}`];
@@ -301,6 +328,8 @@ class FileWatcher {
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -316,12 +345,15 @@ class FileWatcher {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async quickTypeCheck(filePath) {
     if (!filePath.endsWith('.ts') && !filePath.endsWith('.tsx')) {
       return [];
     }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -337,6 +369,7 @@ class FileWatcher {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, { 
         stdio: 'pipe',
@@ -350,6 +383,8 @@ class FileWatcher {
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -365,12 +400,15 @@ class FileWatcher {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async autoFixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -386,12 +424,15 @@ class FileWatcher {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Auto-fix common issues
       const fixes = [
         {
           pattern: /return\(\)/g,
           replacement: 'return (',
           description: 'Fixed return statement syntax'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -433,6 +474,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         issues.push('Invalid return statement syntax')}
           "replacement": '',
           "description": 'Removed merge conflict markers'
@@ -443,6 +485,8 @@ class FileWatcher {
         }
       ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -450,10 +494,13 @@ class FileWatcher {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       for (const fix of fixes) {
         if (fix.pattern.test(content)) {
           content = content.replace(fix.pattern, fix.replacement);
           modified = true;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -492,12 +539,15 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           this.log(`Applied "fix": ${fix.description} in ${filePath}`)}
       }
       // Add React import if needed
       if (content.includes('React.') && !content.includes('import React')) {
         content = `import React from 'react';\n${content}`;
         modified = true;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -538,6 +588,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         this.log(`Added React import to ${filePath}`)}
       if (modified) {
         // Create backup
@@ -545,6 +596,8 @@ class FileWatcher {
         fs.copyFileSync(filePath, backupPath);
         // Write fixed content
         fs.writeFileSync(filePath, content);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -572,11 +625,14 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         this.log(`Auto-fixed file: ${filePath}`);
         return true;
       }
       return false;
     } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -611,6 +667,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         this.log(`Auto-fixed "file": ${filePath}`);
         return true}
       return false} catch (error) {
@@ -643,6 +700,8 @@ class FileWatcher {
       }
       results.files.push({
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -669,12 +728,15 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         path: filePath,
         issues: issues,
         typeErrors: typeErrors,
         timestamp: new Date().toISOString()
       });
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -709,6 +771,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "path": filePath,
         "issues": issues,
         "typeErrors": typeErrors,
@@ -718,6 +781,8 @@ class FileWatcher {
     const reportPath = path.join(__dirname, 'reports', 'real-time-validation.json');
     fs.mkdirSync(path.dirname(reportPath), { "recursive": true });
     fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -759,6 +824,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.log(`Validation "complete": ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);
     this.pendingChanges.clear()}
   setupWatcher() {
@@ -781,6 +847,8 @@ class FileWatcher {
       // Debounce processing
       if (this.debounceTimer) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -807,6 +875,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         clearTimeout(this.debounceTimer);
       }
       this.debounceTimer = setTimeout(() => {
@@ -828,6 +897,8 @@ class FileWatcher {
     return watcher;
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -861,6 +932,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         clearTimeout(this.debounceTimer)}
       this.debounceTimer = setTimeout(() => {
         this.processChanges().catch(error => {
@@ -882,6 +954,8 @@ class FileWatcher {
         this.log('Received SIGTERM, closing watcher...');
         watcher.close();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -908,6 +982,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         process.exit(0);
       });
       process.on('SIGINT', () => {
@@ -918,6 +993,8 @@ class FileWatcher {
     } catch (error) {
       this.log(`Error in file watcher: ${error.message}`, 'ERROR');
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -952,6 +1029,7 @@ class FileWatcher {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         process.exit(0)});
       process.on('SIGINT', () => {
         this.log('Received SIGINT, closing watcher...');
@@ -963,6 +1041,8 @@ class FileWatcher {
 // Install chokidar if not present
 try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -989,11 +1069,14 @@ try {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // // require('chokidar');
 } catch (error) {
   console.log('Installing chokidar...');
   execSync('yarn add chokidar', { stdio: 'inherit' });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -1012,10 +1095,13 @@ try {
 }
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Main execution
 if (require.main === module) {
   const watcher = new FileWatcher();
   watcher.run().catch(console.error);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1055,6 +1141,7 @@ module.exports = FileWatcher;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   require('chokidar')} catch (error) {
   console.log('Installing chokidar...');
   execSync('yarn add chokidar', { "stdio": 'inherit' })}
@@ -1063,6 +1150,8 @@ if (require.main === module) {
   const watcher = new FileWatcher();
   watcher.run().catch(console.error)}
 module.exports = FileWatcher;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1106,3 +1195,4 @@ module.exports = FileWatcher;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

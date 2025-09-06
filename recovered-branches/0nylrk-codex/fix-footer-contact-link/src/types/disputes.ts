@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -6,11 +8,15 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
 ;
 
 export interface Dispute {
+<<<<<<< HEAD
+export interface Dispute {
+=======
 <<<<<<< HEAD
 
 export interface Dispute {;
@@ -22,6 +28,7 @@ export interface Dispute {;
 =======
 export interface Dispute {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   project_id: string;
   milestone_id?: string;
@@ -35,6 +42,8 @@ export interface Dispute {
   status: DisputeStatus;
   resolution_type: ResolutionType;
   project?: {
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,6 +60,7 @@ export interface Dispute {
 
   }
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -61,6 +71,9 @@ export interface Dispute {
 export interface DisputeMessage {;
 
 
+<<<<<<< HEAD
+export interface DisputeMessage {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -83,6 +96,7 @@ export interface DisputeMessage {;
 =======
 export interface DisputeMessage {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   dispute_id: string;
   user_id: string;
@@ -90,6 +104,8 @@ export interface DisputeMessage {
   created_at: string;
   is_admin_note: boolean;
   user_profile?: {
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,6 +114,7 @@ export interface DisputeMessage {
 
   }
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -108,6 +125,9 @@ export interface DisputeMessage {
 export interface DisputeAttachment {;
 
 
+<<<<<<< HEAD
+export interface DisputeAttachment {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -122,6 +142,7 @@ export interface DisputeAttachment {;
 =======
 export interface DisputeAttachment {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   dispute_id: string;
   uploaded_by: string;
@@ -129,6 +150,8 @@ export interface DisputeAttachment {
   file_path: string;
   file_type: string;
   file_size: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -143,6 +166,7 @@ export type DisputeReason =;
   | 'payment';
   | 'contract_terms';
   | 'other';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export const disputeReasonLabels: Record < DisputeReason, string> = {
 
@@ -161,6 +185,8 @@ export const disputeReasonLabels: Record < DisputeReason, string> = {
 
 export const disputeReasonLabels: Record<DisputeReason, string> = {;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -182,6 +208,7 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
@@ -210,7 +237,10 @@ other: 'Other Issue'};
   contract_terms: 'Contract Terms Disagreement',
 
 other: 'Other Issue'};
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null,;
 export interface Dispute {;
@@ -282,6 +312,8 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
   contract_terms: 'Contract Terms Disagreement',;
   other: 'Other Issue'};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -291,3 +323,4 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

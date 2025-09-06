@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -12,6 +14,7 @@ import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-reac
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
@@ -19,9 +22,12 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ApiDocsHub() {
 
   const sections = [
@@ -44,6 +50,8 @@ export function ApiDocsHub() {
       path: "/developers/docs/webhooks"
       color: "from-green-500 to-emerald-500"}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from './react';
@@ -57,6 +65,7 @@ function ApiDocsHub() {
   const sections = [;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Sample Code"
       description: "Examples in JavaScript, Python, and Node.js";
@@ -92,6 +101,11 @@ function ApiDocsHub() {
 =======
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
+<<<<<<< HEAD
+      icon: Zap,
+      path: "/developers/docs/samples",
+      color: "from-yellow-500 to-orange-500"},
+=======
 
       icon: Zap,
       path: "/developers/docs/samples",
@@ -124,6 +138,7 @@ function ApiDocsHub() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Error Codes & Rate Limits"
       description: "Understanding API errors and rate limiting"
@@ -161,6 +176,8 @@ function ApiDocsHub() {
           <p className="text-zinc-400 mb-6">
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
           </p>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -219,6 +236,7 @@ export default ApiDocsHub;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;
@@ -254,6 +272,8 @@ export function ApiDocsHub() {;
     {;
       title: "Sample Code",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Examples in JavaScript, Python, and Node && Node.js";
 =======
@@ -261,6 +281,7 @@ export function ApiDocsHub() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       icon: Zap,;
       path: "/developers/docs/samples",;
       color: "from-yellow-500 to-orange-500"},;
@@ -269,6 +290,8 @@ export function ApiDocsHub() {;
       description: "Understanding API errors and rate limiting",;
       icon: AlertCircle,;
       path: "/developers/docs/errors",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       color: "from-red-500 to-rose-500"}],;
@@ -330,6 +353,7 @@ export function ApiDocsHub() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       icon: Zap,
       path: "/developers / docs / samples",
       color: "from - yellow - 500 to - orange - 500"},
@@ -441,6 +465,8 @@ export default ApiDocsHub;
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </ApiDocsLayout>;
           {sections.map((section) => (;
             <Link;
@@ -506,3 +532,4 @@ return (<ApiDocsLayout> <div className="max-w-4xl" > <h1 className="text-4xl fon
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

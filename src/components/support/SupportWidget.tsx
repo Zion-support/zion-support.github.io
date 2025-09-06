@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+const [isOpen, setIsOpen] = useState(false)
+  const { theme } = useTheme()
+  const router = useRouter()
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -14,6 +19,7 @@ export function SupportWidget() {
   const { theme } = useTheme();
   const router = useRouter();
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       {/* Fixed button in the bottom right */}
@@ -145,6 +151,9 @@ export function SupportWidget() {;
             </div>
             <div className="flex items-center gap-2">
 <<<<<<< HEAD
+              <Button
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -183,3 +192,4 @@ export function SupportWidget() {;
               <Button
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { NEW_PRODUCTS } from "@/data/newProductsData"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function NewProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };'"'"
@@ -31,3 +33,4 @@ const { useState } from "react"; import { DynamicListingPage } from "@/component
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
 import React from 'react';
 
@@ -136,3 +138,4 @@ export default UltraFuturisticBackground;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -7,6 +9,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -51,8 +54,11 @@ import {useAuth} from "@/hooks/useAuth";
 import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";
 import {supabase} from "@/integrations/supabase/client";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -75,7 +81,10 @@ import {
   Trash2, Plus, CheckCircle2
 } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Define the form schema with validation;
 const talentSchema = z && z.object({;
   // Step 1: Basic Info;
@@ -173,6 +182,8 @@ const talentSchema = z.object({
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
   const totalSteps = 4;
+<<<<<<< HEAD
+=======
     ).min(1, "Add at least one key project"),
     yearsOfExperience: z.string().min(1, "Years of experience is required")}),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -209,11 +220,24 @@ export function TalentOnboardingForm() {
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
   const totalSteps = 4;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ).min(1, "Add at least one key project"),
     yearsOfExperience: z.string().min(1, "Years of experience is required")}),
   
   // Step 3: Skills & Tech Stack
   skills: z.object({
+<<<<<<< HEAD
+    skillsList: z.string().min(2, "Add at least one skill");
+    toolsUsed: z.string().optional()})
+  // Step 4: Availability & Preferences
+  availability: z.object({
+    availabilityType: z.string().min(1, "Select your availability");
+    timezone: z.string().min(1, "Timezone is required");
+    hourlyRate: z.string().optional()
+    portfolioLinks: z.array(
+      z.object({
+        url: z.string().url("Must be a valid URL").min(5, "URL is required")})
+=======
     skillsList: z.string().min(2, "Add at least one skill"),
     toolsUsed: z.string().optional()}),
   
@@ -258,6 +282,7 @@ export function TalentOnboardingForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
@@ -290,6 +315,8 @@ export function TalentOnboardingForm() {
   // Handle profile picture upload
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -310,10 +337,13 @@ export function TalentOnboardingForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -350,6 +380,7 @@ export function TalentOnboardingForm() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (cvError) {
       console.error("Error uploading CV:", cvError);
       throw new Error("Failed to upload CV")
@@ -359,6 +390,8 @@ export function TalentOnboardingForm() {
 
   const totalSteps = 4;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 };
@@ -392,6 +425,7 @@ export function TalentOnboardingForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -458,6 +492,8 @@ export function TalentOnboardingForm() {;
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),;
   const totalSteps = 4,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -466,6 +502,7 @@ export function TalentOnboardingForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentSchema),;
     defaultValues: {;
@@ -827,6 +864,8 @@ if ( {) {
   return null;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1013,3 +1052,4 @@ return publicUrl;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

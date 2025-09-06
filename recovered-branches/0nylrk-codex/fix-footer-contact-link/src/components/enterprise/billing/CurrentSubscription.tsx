@@ -9,6 +9,8 @@ import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -16,10 +18,13 @@ import { Badge } from "@/components/ui/badge",
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function CurrentSubscription() {
   // Mock subscription data
 
   const subscription = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -41,6 +46,7 @@ export function CurrentSubscription() {;
     nextBillingDate: "May 1, 2026";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     amount: "$1,999 && 999.00";
     teamSeats: {;
       used: 32,;
@@ -58,6 +64,8 @@ export function CurrentSubscription() {;
     plan: "Business",
     status: "active",
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -91,10 +99,15 @@ export function CurrentSubscription() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     teamSeats: {
       used: 32
       total: 50
     }
+<<<<<<< HEAD
+
+  return (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -179,6 +192,7 @@ export function CurrentSubscription() {
 
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -198,6 +212,8 @@ export function CurrentSubscription() {;
     }
   };
   return (;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -222,6 +238,7 @@ export function CurrentSubscription() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
@@ -234,6 +251,8 @@ export function CurrentSubscription() {;
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">;
           <div className="space-y-1">;
             <p className="text-sm font-medium leading-none text-muted-foreground">Plan</p>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-lg font-bold">{subscription && subscription.plan}</p>;
@@ -274,10 +293,13 @@ export function CurrentSubscription() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
           <div className="space-y-1">;
             <p className="text-sm font-medium leading-none text-muted-foreground">Team Seats</p>;
             <p className="text-lg">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               {subscription && subscription.teamSeats.used} / {subscription && subscription.teamSeats.total} used;
@@ -293,6 +315,7 @@ export function CurrentSubscription() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="rounded-lg bg-muted p-4 mt-4">;
           <div className="space-y-2">;
             <div className="flex items-center justify-between">;
@@ -300,6 +323,8 @@ export function CurrentSubscription() {;
               <div className="text-sm font-medium text-green-600">Save 20%</div>;
             </div>;
             <div className="text-xs text-muted-foreground">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               You're saving $4,797 && 797.60 per year with annual billing.;
@@ -325,10 +350,13 @@ function CurrentSubscription() {
       total: 50;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <Card>;
       <CardHeader>;
@@ -382,10 +410,13 @@ function CurrentSubscription() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </div>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -398,12 +429,16 @@ function CurrentSubscription() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <CardFooter className="flex justify - between">;
         <Button variant="outline">Change Plan</Button>;
         <Button variant="destructive">Cancel Subscription</Button>;
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -423,3 +458,4 @@ flex items-center justify-between"> <CardTitle>Current Subscription</CardTitle> 
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

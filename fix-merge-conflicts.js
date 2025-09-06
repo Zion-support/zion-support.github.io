@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+}; traverse(dir); return files};
+// Find and fix files with merge conflicts;
+const conflictedFiles = findFilesWithConflicts('.');
+console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
+for (const file of conflictedFiles) {; fixMergeConflicts(file)};
+console.log('Merge conflict resolution complete!');
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?}}}}}}}};
+};
+  traverse(dir);
+  return files};
+// Find and fix files with merge conflicts;
+const conflictedFiles = findFilesWithConflicts('.');
+console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
+for (const file of conflictedFiles) {;
+  fixMergeConflicts(file)};
+console.log('Merge conflict resolution complete!');
+// Find and fix files with merge conflicts,
+const conflictedFiles = findFilesWithConflicts('.'),
+// console.log(`Found ${conflictedFiles.length} files with merge conflicts`),
+for (const file of conflictedFiles) {,
+  fixMergeConflicts(file)};
+// console.log('Merge conflict resolution complete!'),
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?};
+};
+        };
+      };
+};
+};
+  }
+  
+  return fixedCount;
+}
+
+  traverse(dir);
+  return files}
+// Find and fix files with merge conflicts
+const conflictedFiles = findFilesWithConflicts('.');
+console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
+for (const file of conflictedFiles) {
+  fixMergeConflicts(file)}
+console.log('Merge conflict resolution complete!');
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?}
+=======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); const cleanedLines = []; const seenImports = new Set(); for (let i = 0; i < lines.length; i++) { const line = lines[i].trim(); if (line === '' || line.startsWith('import') && seenImports.has(line)) { continue} if (line.startsWith('import')) { seenImports.add(line)} const cleanedLine = line .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .trim(); if (cleanedLine) { cleanedLines.push(cleanedLine)} } const finalContent = cleanedLines.join('\n'); fs.writeFileSync(filePath,finalContent,'utf8'); } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } function findFilesWithConflicts(dir) { const files = []; function traverse(currentDir) { const items = fs.readdirSync(currentDir); for (const item of items) { const fullPath = path.join(currentDir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { traverse(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) { const content = fs.readFileSync(fullPath,'utf8');
 #!/usr/bin/env node
 import fs from 'fs';
@@ -71,14 +115,23 @@ function fixMergeConflicts(filePath) {
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Main execution
-console.log('Finding files with merge conflict markers...');
-const filesWithConflicts = findFilesWithMergeConflicts('.');
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-let fixedCount = 0;
-for (const file of filesWithConflicts) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
+console.log('Starting merge conflict fix...');
+const srcPath = path.join(__dirname, 'src');
+const fixedCount = fixFilesInDirectory(srcPath);
+console.log(`Fixed ${fixedCount} files with merge conflicts.`);
+
+// Also fix specific problematic files
+const problematicFiles = [
+  'src/pages/About.tsx',
+  'src/pages/Home.tsx',
+  'src/pages/Index.tsx'
+];
+
+for (const file of problematicFiles) {
+  if (fs.existsSync(file)) {
+    fixMergeConflicts(file);
   }
 }
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
@@ -90,9 +143,23 @@ try {
 } catch (error) {
   console.log('TypeScript check found some issues, but continuing...');
 }
+<<<<<<< HEAD
+};
+};
+console.log('\nMerge conflict fixing complete!');
+console.log('\nMerge conflict fixing complete!');
+console.log('\nMerge conflict fixing complete!');
+}),;
+console.log('\nMerge conflict fixing complete!'),;
+console.log('\nMerge conflict fixing complete!'),;
+,;
+console.log(`Fixed merge conflicts in ${fixedCount} files`),;
+,),;
+=======
 console.log('\nMerge conflict fixing complete!');
 <<<<<<< HEAD
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

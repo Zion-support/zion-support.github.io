@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -142,6 +144,7 @@ if (require.main === module) {
 module.exports = { fixFinalSyntax };
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 
 const fs = require('fs');

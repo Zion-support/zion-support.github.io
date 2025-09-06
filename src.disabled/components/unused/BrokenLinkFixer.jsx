@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'''
@@ -11,6 +13,7 @@ import React,{ useState,useEffect,useCallback } from';react' import { motion,Ani
 =======
 <<<<<<<< HEAD:src.disabled/components/unused/BrokenLinkFixer.jsx
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 :src.disabled/components/unused/BrokenLinkFixer.jsx
@@ -21,6 +24,8 @@ import React,{ useState,useEffect,useCallback } from';react' import { motion,Ani
 import React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview', ') const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'''
 import React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'''
 import React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'''
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -37,3 +42,4 @@ import React,{ useState,useEffect,useCallback } from';react' import { motion,Ani
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/plans/enterprise'
+=======
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -269,10 +275,13 @@ export default function EnterprisePage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       permanent: false}}
 }
 export default function EnterpriseRedirect() { return null }
 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -301,6 +310,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 export default function EnterpriseRedirect() { return null }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 },
 ;
 export default function EnterpriseRedirect() { return null };
@@ -325,5 +335,8 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

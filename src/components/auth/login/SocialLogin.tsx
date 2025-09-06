@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 import { Facebook, Twitter, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,11 +17,14 @@ export function SocialLogin() {
     window.location.href = "/auth/google";
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="mt-6">
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-zion-blue-light" />
+<<<<<<< HEAD
+=======
         </div>
         <div className="relative flex justify-center text-sm">
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
@@ -31,6 +36,7 @@ return (
       <div className='relative'>
         <div className='absolute inset-0 flex items-center'>
           <div className='w-full border-t border-zion-blue-light' />
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
         <div className='relative flex justify-center text-sm'>
           <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>
@@ -94,6 +100,8 @@ function SocialLogin() {
         </div>;
       </div>;
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -141,6 +149,7 @@ function SocialLogin() {
 =======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -153,6 +162,8 @@ function SocialLogin() {
 >>>>>>> main
             </svg>
           )}
+<<<<<<< HEAD
+=======
         </Button>;
         <Button
 <<<<<<< HEAD
@@ -168,6 +179,7 @@ function SocialLogin() {
 =======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
         <Web3Login />
       </div>
@@ -175,6 +187,8 @@ function SocialLogin() {
   );
 };
 
+<<<<<<< HEAD
+=======
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -185,6 +199,7 @@ function SocialLogin() {
         >
           <span className="sr-only">Sign in with Facebook</span>
           <Facebook className="h-5 w-5" />
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
         <Button
           type="button"
@@ -197,6 +212,8 @@ function SocialLogin() {
           onClick={() => openAuthPopup("twitter")}
 =======
           onClick={() => openAuthPopup('twitter')}
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
           disabled={isLoading}
@@ -212,6 +229,7 @@ function SocialLogin() {
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
         <Web3Login />
       </div>
@@ -283,12 +301,17 @@ export function SocialLogin() {;
         >;
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h-5 w-5" />;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>;
         <Web3Login />;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -357,3 +380,4 @@ export function SocialLogin() {;
     </div>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

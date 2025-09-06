@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,6 +55,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> main
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 module.exports = interface NextGenAi2026Service { id: string name: string tagline: string price: string description: string features: string[]; link: string category: string realImplementation: boolean contactInfo: { mobile: string email: string address strin,g}export const nextGenAI2026Services NextGenAi2026Service[] = [{ id: "2026-next-gen-ai,","; name: "2026 Next-Gen AI Platform","; tagline: "Next-generation AI fo,r 202,6,","; price: "$299/month","; description: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.,","; features[ "Next-gen: AI capabilities","; "Advanced: algorithms","; "Future-ready: features","; "Innovation: platform","; "Expert: support","],link: "/services/2026-next-gen-ai,","; category: "Next-Gen A,I 202,6,","; realImplementation: "true",contactInfo: { mobil,e: "+1 302 464 0950","; email: "kleber@ziontechgroup.com","; address: "364 E Main St STE 1008 Middletown D,E 19709""]}}} """"
 import React from 'react';
 interface Nextgenai2026servicesProps {
@@ -61,6 +64,8 @@ interface Nextgenai2026servicesProps {
 }
 =======
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +96,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function Nextgenai2026services({ }: Nextgenai2026servicesProps) {
   return (
     <div>
@@ -98,6 +104,8 @@ export default function Nextgenai2026services({ }: Nextgenai2026servicesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,3 +188,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

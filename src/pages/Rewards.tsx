@@ -1,9 +1,12 @@
+<<<<<<< HEAD
+=======
 return (
     <div className='container max-w-xl py-10'>;
       <h1 className='text-3xl font-bold mb-6'>Rewards</h1>;
       <ul className='space-y-4'>;
         {REWARDS && REWARDS.map(r => (;
           <li
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             key={r && r.id}
             className='flex justify-between items-center border rounded-md p-4'>            <div>;
               <p className='font-medium'>{r && r.title}</p>;
@@ -13,7 +16,10 @@ return (
           </li>;
 
 import { Gift } from 'lucide-react'
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
@@ -32,6 +38,8 @@ export default function RewardsPage() {
             </div>
             <Gift className="h-5 w-5" />
           </li>
+<<<<<<< HEAD
+=======
 
         ))}
 
@@ -39,6 +47,7 @@ export default function RewardsPage() {
     </div>;
   );
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   );
 }
@@ -70,4 +79,7 @@ const REWARDS = [;
       </ul>;
     </div>);
 }
+<<<<<<< HEAD
+=======
 import { Gift } from 'lucide-react'
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

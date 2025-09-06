@@ -41,6 +41,9 @@ import React from\';react\'';\"export\": { function }\';\"export\": default func
 const React from";react"";export: { function }";export: default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'"
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
 <<<<<<< HEAD
+import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,3 +65,4 @@ import _React from';react'';"export": { function }';"export": default function C
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

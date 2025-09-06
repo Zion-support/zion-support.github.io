@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useRecordActivity = () => {;
   const { user } = useAuth();
@@ -12,6 +14,7 @@ export const useRecordActivity = () => {;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
 import {MilestoneActivity} from './types';
@@ -27,11 +30,16 @@ import {supabase} from '@/integrations/supabase/client';
 import {MilestoneActivity} from './types';
 export const useRecordActivity = () => {;
   const { user } = useAuth();
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
 export const useRecordActivity = () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const { user } = useAuth(),
 <<<<<<< HEAD
@@ -53,6 +61,7 @@ export const useRecordActivity = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     comment?: string
   ) => {
     if (!user) return null
@@ -60,6 +69,8 @@ export const useRecordActivity = () => {
       const { data, error } = await supabase
         .from('milestone_activities')
         .insert({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -89,11 +100,14 @@ export const useRecordActivity = () => {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           comment})
         .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         .single();
       if (error) throw error;
@@ -171,11 +185,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   };
   
   return {
     recordMilestoneActivity
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -184,6 +201,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
@@ -223,6 +241,8 @@ export const useRecordActivity = () => {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
+<<<<<<< HEAD
+=======
 
   };
   return {;
@@ -242,6 +262,7 @@ export const useRecordActivity = () => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
   return {;
     recordMilestoneActivity;
@@ -259,6 +280,9 @@ export const useRecordActivity = () => {;
 
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

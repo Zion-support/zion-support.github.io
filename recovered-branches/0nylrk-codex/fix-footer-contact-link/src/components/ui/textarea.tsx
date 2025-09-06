@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -27,11 +29,14 @@ export type TextareaProps = React.ComponentProps<"textarea">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
       <textarea
         className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -41,6 +46,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
           "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           className
         )}
 <<<<<<< HEAD
@@ -101,6 +107,8 @@ export { Textarea }
 
 export { Textarea };
 
+<<<<<<< HEAD
+=======
 Textarea.displayName = "Textarea"
 
 export { Textarea }
@@ -144,11 +152,16 @@ export { Textarea }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 Textarea.displayName = "Textarea"
 
 export { Textarea }
 ;
+<<<<<<< HEAD
+export { Textarea }
+=======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -12,6 +14,7 @@ import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileProjectView} from "../components/projects/MobileProjectView";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -19,9 +22,12 @@ import { MobileProjectView } from "../components/projects/MobileProjectView";
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileProjectView } from "../components/projects/MobileProjectView",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Mock data
 
 const projectData = {
@@ -31,12 +37,19 @@ const projectData = {
     name: "TechCorp Inc."
     avatar: ""
 <<<<<<< HEAD
+import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { MobileProjectView } from "../components/projects/MobileProjectView",;
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileProjectView} from "../components/projects/MobileProjectView";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Mock data;
 const projectData = {;
   id: "project-123",;
@@ -44,6 +57,8 @@ const projectData = {;
   client: {;
     name: "TechCorp Inc.",;
     avatar: "";
+<<<<<<< HEAD
+=======
   };
   startDate: "Oct 15, 2023";
   endDate: "Jan 15, 2024";
@@ -53,10 +68,13 @@ const projectData = {;
   description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";
 };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const milestonesData = [;
   {;
     id: "milestone-1",;
     title: "Initial Design Concepts",;
+<<<<<<< HEAD
+=======
     dueDate: "Oct 30, 2023";
     status: "completed" as const,;
     paymentStatus: "paid" as const,;
@@ -237,6 +255,7 @@ export function MobileProjects() {;
           project={projectData} 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
           milestones={milestonesData}
@@ -342,6 +361,8 @@ function MobileProjects() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -434,3 +455,4 @@ export function MobileProjects() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

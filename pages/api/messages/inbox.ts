@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+
+
+  res.status(200).json({ items })
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { requireUser } from '../../../utils/auth',;
 import { listConversations } from '../../../utils/messaging/storage',;
@@ -9,6 +15,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const items = listConversations(user.id),
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { requireUser } from '../../../utils/auth';
+import { listConversations } from '../../../utils/messaging/storage';
+export default function handler(req, res) {
+  try {
+
+
+  const user = requireUser(req, res);
+  if (!user) return,;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+=======
 import { requireUser } from '../../../utils/auth',;
 import { listConversations } from '../../../utils/messaging/storage',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -19,3 +48,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> main
   res.status(200).json({ items })
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

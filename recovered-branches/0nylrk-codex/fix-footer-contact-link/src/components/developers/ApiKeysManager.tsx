@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 export function ApiKeysManager() {;
   const { ;
     keys;
@@ -63,6 +65,7 @@ import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
@@ -77,6 +80,8 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   const { ;
     keys;
@@ -89,6 +94,7 @@ export function ApiKeysManager() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const {
     keys;
 
@@ -107,10 +113,14 @@ export function ApiKeysManager() {
   const { ;
     keys;
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { 
     keys,
     loading, 
@@ -149,6 +159,8 @@ export function ApiKeysManager() {
     setShowCreateDialog(false);
     setKeyName("");
     setSelectedScopes([])
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -202,6 +214,7 @@ export function ApiKeysManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Scope options
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' }
@@ -216,6 +229,8 @@ export function ApiKeysManager() {
         ? prev.filter(s => s !== scope)
         : [...prev, scope]
     )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -234,6 +249,7 @@ export function ApiKeysManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const getExampleCode = (key: string) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
@@ -244,6 +260,8 @@ export function ApiKeysManager() {
     setSelectedScopes([]);
     setShowCreateDialog(false)
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   },
@@ -265,6 +283,7 @@ export function ApiKeysManager() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -308,6 +327,8 @@ export function ApiKeysManager() {
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const handleCreateKey = async () => {;
@@ -320,6 +341,7 @@ export function ApiKeysManager() {
                           id={scope.value} 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
 import { format } from "date-fns",;
@@ -360,36 +382,47 @@ export function ApiKeysManager() {;
   const handleCreateKey = async () => {;
     if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
     setKeyName("");
     setSelectedScopes([]);
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleRegenerateKey = async (keyId: string) => {;
     await regenerateApiKey(keyId),;
     setShowRegenerateConfirm(null);
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleRevokeKey = async (keyId: string) => {;
     await revokeApiKey(keyId),;
     setShowDeleteConfirm(null);
   };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -412,6 +445,7 @@ export function ApiKeysManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Scope options;
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [;
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },;
@@ -419,6 +453,8 @@ export function ApiKeysManager() {;
     { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },;
     { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },;
     { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }],;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -563,6 +599,7 @@ export function ApiKeysManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
@@ -572,6 +609,8 @@ export function ApiKeysManager() {;
           Create and manage API keys for accessing the Zion APIs.;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -597,6 +636,7 @@ export function ApiKeysManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>;
             <DialogTrigger asChild>;
               <Button variant="default">Create New API Key</Button>;
@@ -608,6 +648,8 @@ export function ApiKeysManager() {;
                   Generate a new API key for accessing the Zion APIs.;
                 </DialogDescription>;
               </DialogHeader>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -630,6 +672,7 @@ export function ApiKeysManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     {scopeOptions && scopeOptions.map((scope) => (;
                       <div key={scope && scope.value} className="flex items-center space-x-2">;
                         <Checkbox
@@ -1126,6 +1169,8 @@ function ApiKeysManager() {
                       {scope}
                     </Badge>;
                   ))}
+<<<<<<< HEAD
+=======
                 <div className="mt - 3 flex flex - wrap gap - 2">;
                   {key.scopes.map ((scope) => (
                     <Badge;
@@ -1330,10 +1375,35 @@ function ApiKeysManager() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <div className="mt - 3 flex flex - wrap gap - 2">;
                   {key.scopes.map ((scope) => (
                     <Badge;
                       key={scope}
+<<<<<<< HEAD
+                      variant="secondary"
+                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
+                    >
+                      {scope}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
+                  <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
+                  <Popover>
+                    <PopoverTrigger className="flex items-center hover:text-zinc-300">
+                      <Clock size={12} className="mr-1" />
+                      Last used: {key.last_used_at
+                        ? format(new Date(key.last_used_at), 'MMM d, yyyy')
+                        : 'Never'}
+                    </PopoverTrigger>
+                    <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
+                      <p className="text-sm mb-1">Last Used</p>
+                      <p className="text-xs text-zinc-400">
+                        {key.last_used_at
+                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
+                          : 'This API key has never been used'}
+=======
                       variant="secondary";
                       className="bg - zinc - 800 text - zinc - 300 hover:bg - zinc - 800";
                     >;
@@ -1370,6 +1440,7 @@ function ApiKeysManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog
         open={showRegenerateConfirm !== null}
@@ -1425,6 +1496,8 @@ function ApiKeysManager() {
     </Card>
   )
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -1479,6 +1552,7 @@ function ApiKeysManager() {
               Any applications using this key will need to be updated.;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
@@ -1606,6 +1680,8 @@ function ApiKeysManager() {
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1767,3 +1843,4 @@ setShowCreateDialog (false)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

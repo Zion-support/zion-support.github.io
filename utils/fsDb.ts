@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 import { promises as fs } from "fs";
 import path from "path";
@@ -20,15 +22,30 @@ export const fsDb = {
   // Add file system database functionality here
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   read: (path: string) => null
   write: (path: string, data: any) => null
   exists: (path: string) => false
   delete: (path: string) => null
 <<<<<<< HEAD
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null;
+};
+
+
+
+
+
+
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
@@ -77,6 +94,12 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 >>>>>>> main
 
 <<<<<<< HEAD
+  try {
+    const fullPath = path && path.join(DATA_DIR, filePath);
+    const data = fs && fs.readFileSync(fullPath, 'utf8');
+    return JSON && JSON.parse(data);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -94,11 +117,14 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
     const fullPath = path.join(DATA_DIR, filePath);
     const data = fs.readFileSync(fullPath, "utf8");
     return JSON.parse(data);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     return defaultValue;
   }
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -114,6 +140,7 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fullPath = path.join(DATA_DIR, filePath);
@@ -160,12 +187,15 @@ export function writeJson<T>(relativePath: string, value: T): void {
   ensureDir(path.dirname(full));
   fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8');
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // File system database utilities;
 export const fs_db = {
   // Add file system database functionality here;
@@ -174,6 +204,8 @@ export const fs_db = {
   exists: (path: string) => false,
   delete: (path: string) => null;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -200,3 +232,4 @@ export const fs_db = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

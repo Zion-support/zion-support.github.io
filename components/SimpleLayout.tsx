@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+}
+export default /**
+ * SimpleLayout - Function description
+ */
+function SimpleLayout() {,
+  return (,
+    <>,
+      <Head>,
+        <title>{title}</title>,
+        {description && <meta name="description" content={description} />}
+      </Head>,
+=======
 import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
@@ -19,3 +32,4 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 };
 
 export default SimpleLayout;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

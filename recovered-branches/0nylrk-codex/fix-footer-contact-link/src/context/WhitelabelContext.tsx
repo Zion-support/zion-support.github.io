@@ -1,4 +1,34 @@
 <<<<<<< HEAD
+    headline: string
+    subtitle: string
+
+    cta: string
+  }
+    headline: string,
+    subtitle: string,
+    cta: string;
+  };
+  tenant: WhitelabelTenant | null
+}
+
+const defaultContext: WhitelabelContextType = {
+  isWhitelabel: false
+  primaryColor: '#9b87f5', // Default Zion purple
+  logoUrl: null
+  brandName: 'Zion AI Marketplace'
+  themePreset: 'light'
+  landingPageCopy: {
+    headline: 'AI Talent Marketplace'
+    subtitle: 'Find the best AI talent for your projects'
+    cta: 'Get Started'}
+  tenant: null}
+// The context may be undefined if the provider is not mounted.  By declaring
+// the generic as `WhitelabelContextType | null` we get proper type checking
+// without falling back to an empty object which triggers TS2740 errors.
+const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';
@@ -49,9 +79,16 @@ interface WhitelabelProviderProps {
   children: ReactNode;
 }
 
+<<<<<<< HEAD
+
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
+=======
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
   const [contextValue, setContextValue] =
     useState<WhitelabelContextType>(defaultContext);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {
     if (!isLoading && tenant) {
@@ -65,6 +102,12 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
         tenant: tenant,
       });
     } else if (!isLoading) {
+<<<<<<< HEAD
+      setContextValue(defaultContext)
+  // Cast is used here because the context default is `null` until provided by;
+  // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
+  return context as WhitelabelContextType;
+=======
       setContextValue(defaultContext);
     }
   }, [tenant, isLoading]);
@@ -74,6 +117,7 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
       {children}
     </WhitelabelContext.Provider>
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -235,6 +279,11 @@ if ( {) {
     <WhitelabelContext.Provider value={context_value}>;
       {children}
 <<<<<<< HEAD
+    </WhitelabelContext.Provider>);
+}
+;
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     </WhitelabelContext.Provider>;
@@ -329,3 +378,4 @@ export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

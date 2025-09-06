@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import type { AppProps } from 'next/app';
 <<<<<<< HEAD
 import '../styles/globals.css';
@@ -33,10 +35,13 @@ export default function App({ Component, pageProps }: AppProps) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
 return <Component {...pageProps} />;
 import '../styles/globals.css';
+<<<<<<< HEAD
+=======
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 
@@ -63,6 +68,7 @@ import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
 return <Component {...pageProps} />;
 import '../styles/globals.css';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import EnhancedFooter from '../components/layout/EnhancedFooter';
 
@@ -265,6 +271,8 @@ import '../styles/globals.css';
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -273,6 +281,7 @@ import '../styles/globals.css';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { AppProps } from 'next / app';
 import '../src / styles / globals.css';
 ;
@@ -289,6 +298,8 @@ export default /**
 function App() {
   return <Component {...page_props} />;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -344,3 +355,4 @@ export default function App({ Component, pageProps }: AppProps) {
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

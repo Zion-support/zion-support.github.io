@@ -17,12 +17,22 @@ export default function AITalentMatchingPage() {;
     }
   ];
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
 export default function AITalentMatchingPage() {
+<<<<<<< HEAD
+
+  const benefits = [
+    {
+      title: "Precise Candidate Matching",
+      description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
+=======
   const benefits = [
     {
 
@@ -31,6 +41,7 @@ export default function AITalentMatchingPage() {
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
 <<<<<<< HEAD
       icon: <Bot className="h-8 w-8" />},
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
@@ -40,6 +51,8 @@ export default function AITalentMatchingPage() {
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className="h-8 w-8" />}],
 
+<<<<<<< HEAD
+=======
 =======
       icon: <Bot className = "h-8 w-8" />},
     {
@@ -51,6 +64,7 @@ export default function AITalentMatchingPage() {
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className = "h-8 w-8" />}],
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const testimonials = [
     {
       name: "Emily Stone",
@@ -58,13 +72,21 @@ export default function AITalentMatchingPage() {
 <<<<<<< HEAD
       text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
 =======
+<<<<<<< HEAD
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
+=======
       text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       avatar: "/placeholder.svg"},
     {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
+<<<<<<< HEAD
+      avatar: "/placeholder.svg"}],
+
+=======
 
   const features = [;
     "Machine learning-based candidate matching",;
@@ -138,6 +160,7 @@ function AITalentMatchingPage() {
 <<<<<<< HEAD
     { label: "Time to Hire", value: "50% faster" }
   ];
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -184,6 +207,8 @@ export default function AITalentMatchingPage() {;
       subtitle="Find the perfect experts for your projects with intelligent matching.";
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
+<<<<<<< HEAD
+=======
 =======
     { label: "Time to Hire", value: "50% faster" },
   ];
@@ -193,12 +218,15 @@ export default function AITalentMatchingPage() {;
       subtitle="Find the perfect talent with our AI - powered matching system";
       description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients.";
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       benefits={benefits}
       features={features}
       stats={stats}
 
     />;
   );
+<<<<<<< HEAD
+=======
 
       cta_text="Start Matching Talent";
       cta_link="/contact";
@@ -207,3 +235,4 @@ export default function AITalentMatchingPage() {;
 
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

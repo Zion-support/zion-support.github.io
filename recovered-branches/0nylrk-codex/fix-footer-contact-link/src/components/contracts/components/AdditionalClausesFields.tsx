@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -31,14 +33,18 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   FormField,
   FormItem,
   FormLabel,
   FormControl,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/form";
 
 =======
@@ -53,6 +59,8 @@ import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -83,6 +91,7 @@ interface AdditionalClausesFieldsProps {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function AdditionalClausesFields({
   form
 }: AdditionalClausesFieldsProps) {
@@ -91,13 +100,19 @@ export function AdditionalClausesFields({
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { UseFormReturn } from "react-hook-form",
 import { 
   FormField,
@@ -128,8 +143,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
   return (;
     <FormField;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       control={form.control}
       name="additionalClauses"
       render={() => (
@@ -266,6 +284,8 @@ function AdditionalClausesFields() {
                           : field.on_change (
                               current_values.filter ((value) => value !== "nda"),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -282,12 +302,15 @@ function AdditionalClausesFields() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -296,6 +319,7 @@ function AdditionalClausesFields() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [],;
@@ -303,6 +327,8 @@ function AdditionalClausesFields() {
                           ? field.onChange([...currentValues, 'nda']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'nda');
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -312,6 +338,7 @@ function AdditionalClausesFields() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             );
                       }}
                     />
@@ -335,7 +362,10 @@ function AdditionalClausesFields() {
             />;
             <FormField;
               control={form.control}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             );
                       }}
                     />;
@@ -448,6 +478,8 @@ function AdditionalClausesFields() {
                           : field.on_change (
                               current_values.filter ((value) => value !== "ip"),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -489,6 +521,7 @@ function AdditionalClausesFields() {
                               currentValues.filter((value) => value !== 'ip');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             );
                       }}
                     />
@@ -512,11 +545,16 @@ function AdditionalClausesFields() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
               control={form.control}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             );
                       }}
                     />;
                   </FormControl>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -554,10 +592,15 @@ function AdditionalClausesFields() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <FormDescription>;
                       Transfer ownership of work products;
                     </FormDescription>;
                   </div>;
+<<<<<<< HEAD
+            <FormField
+              control={form && form.control}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -578,11 +621,14 @@ function AdditionalClausesFields() {
             <FormField
               control={form && form.control}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -614,6 +660,7 @@ function AdditionalClausesFields() {
                       checked={field.value?.includes ("termination")}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       onCheckedChange={(checked) => {
                                 (value) => value !== "termination"
                               )
@@ -627,6 +674,8 @@ function AdditionalClausesFields() {
                                 (value) => value !== "termination",
                               ),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -634,10 +683,13 @@ function AdditionalClausesFields() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                                 (value) => value !== "termination",
                               ),
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -666,6 +718,7 @@ function AdditionalClausesFields() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -673,6 +726,8 @@ function AdditionalClausesFields() {
                           ? field.onChange([...currentValues, 'termination']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'termination');
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -682,6 +737,7 @@ function AdditionalClausesFields() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             );
                       }}
                     />
@@ -705,11 +761,16 @@ function AdditionalClausesFields() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
               control={form.control}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             );
                       }}
                     />;
                   </FormControl>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -747,10 +808,15 @@ function AdditionalClausesFields() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <FormDescription>;
                       Define conditions for ending the contract;
                     </FormDescription>;
                   </div>;
+<<<<<<< HEAD
+            <FormField
+              control={form && form.control}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -771,6 +837,7 @@ function AdditionalClausesFields() {
             <FormField
               control={form && form.control}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
@@ -803,12 +870,15 @@ function AdditionalClausesFields() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </FormItem>)}
             />;
             <FormField;
@@ -816,6 +886,8 @@ function AdditionalClausesFields() {
               name="additional_clauses";
                                 (value) => value !== "revisions",
                               ),
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -843,6 +915,7 @@ function AdditionalClausesFields() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -850,6 +923,8 @@ function AdditionalClausesFields() {
                           ? field.onChange([...currentValues, 'revisions']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'revisions');
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -859,6 +934,7 @@ function AdditionalClausesFields() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             );
                       }}
                     />
@@ -946,6 +1022,8 @@ function AdditionalClausesFields() {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
                 </FormItem>;              )}
             />;
           </div>;
@@ -980,3 +1058,4 @@ FormDescription interface AdditionalClausesFieldsProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

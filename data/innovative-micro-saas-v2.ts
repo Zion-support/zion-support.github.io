@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -35,6 +38,8 @@
     address: string;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     website: string;
   }
 
@@ -53,6 +58,7 @@
 
       'No-code smart contract creation',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'smart - contract - automation - platform',
     name: 'Smart Contract Automation Platform',
     tagline: 'Automated smart contract creation and management for businesses',
@@ -64,8 +70,11 @@
       'No - code smart contract creation',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Template library (100+ templates)',
       'Automated contract execution',
       'Multi - blockchain support',
@@ -77,6 +86,8 @@
       '24 / 7 contract management',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📋',
@@ -96,6 +107,7 @@
     technology: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Blockchain',
       'Smart Contracts',
       'React',
@@ -105,6 +117,8 @@
       'Ethereum',
       'Polygon',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -140,6 +154,7 @@
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -156,6 +171,8 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'AI-powered churn prediction',
     id: 'ai - powered - customer - success - platform',
@@ -170,6 +187,7 @@
       'AI - powered churn prediction',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Automated customer engagement',
       'Upsell and cross - sell automation',
       'Customer health scoring',
@@ -181,6 +199,8 @@
       '24 / 7 customer success monitoring',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🎯',
@@ -201,6 +221,7 @@
       'AI / ML',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -209,6 +230,8 @@
       'Python',
       'TensorFlow',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -245,6 +268,7 @@
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -261,6 +285,8 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'AI-powered process analysis',
     id: 'intelligent - workflow - automation',
@@ -274,6 +300,7 @@
       'AI - powered process analysis',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Automated workflow creation',
       'Intelligent task routing',
       'Process optimization suggestions',
@@ -285,6 +312,8 @@
       '24 / 7 workflow management',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '⚙️',
@@ -305,6 +334,7 @@
       'AI / ML',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -313,6 +343,8 @@
       'Python',
       'TensorFlow',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -339,6 +371,7 @@
     competitors: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Zapier',
       'Make',
       'IFTTT',
@@ -365,6 +398,8 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'AI-powered investment recommendations',
     id: 'ai - powered - financial - advisor',
@@ -378,6 +413,7 @@
       'AI - powered investment recommendations',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Personalized financial planning',
       'Portfolio optimization algorithms',
       'Risk assessment and management',
@@ -389,6 +425,8 @@
       '24 / 7 financial monitoring',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '💰',
@@ -409,6 +447,7 @@
       'AI / ML',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -418,6 +457,8 @@
       'TensorFlow',
       'Financial APIs',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -431,6 +472,7 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -488,8 +530,11 @@ export interface InnovativeMicroSaasV2 {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: [;
       'Plaid',
       'Yodlee',
@@ -567,6 +612,9 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 <<<<<<< HEAD
 ;
 =======
+<<<<<<< HEAD
+;
+=======
     id: 'ai-powered-inventory-optimizer', name: 'AI-Powered Inventory Optimizer',
     tagline: 'Intelligent inventory management with predictive analytics', price: '$299',
     period: '/month',
@@ -616,3 +664,4 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

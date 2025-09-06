@@ -1,13 +1,18 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   message: Message,
   isUserMessage: boolean
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -26,6 +31,7 @@ interface MessageBubbleProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { format } from 'date-fns',;
 import { PaperclipIcon } from 'lucide-react',;
@@ -34,6 +40,9 @@ import { Message } from '@/types/messaging',;
 interface MessageBubbleProps {;
   message: Message,;
   isUserMessage: boolean;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -52,6 +61,7 @@ interface MessageBubbleProps {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   message: Message
 
@@ -60,6 +70,11 @@ interface MessageBubbleProps {;
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
 <<<<<<< HEAD
+    <div className={cn(
+      "flex",
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -68,6 +83,8 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
+<<<<<<< HEAD
+=======
 
     <div className={cn(;
       "flex";
@@ -84,6 +101,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "max-w-[75%] rounded-lg px-4 py-2";
         isUserMessage
           ? "bg-zion-purple text-white"
@@ -114,6 +132,8 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
           >
             <PaperclipIcon className="h-3 w-3 mr-1" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -133,6 +153,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>
@@ -183,6 +204,8 @@ function MessageBubble() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -243,3 +266,4 @@ export function MessageBubble({ message, isUserMessage } MessageBubbleProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

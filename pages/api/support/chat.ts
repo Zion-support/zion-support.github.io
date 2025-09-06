@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
@@ -38,6 +41,13 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
   };
 
+<<<<<<< HEAD
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [sysMessage, ...messages],
+      temperature: 0.2,
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
@@ -81,6 +91,7 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       temperature: 0.2
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
 
     const assistantMessage =
@@ -93,6 +104,15 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
       payload: { intent }
     });
       meta: {
+<<<<<<< HEAD
+        intentMatched: intent.intentMatched,
+        matchedArticleIds: intent.matchedArticleIds,
+        links: matchedArticles.map((a) => ({
+          title: a.title,
+          href: `/help/${a.slug}`,
+        })),
+      },
+=======
         intent_matched: intent.intent_matched
         matchedArticleIds: intent.matchedArticleIds
 
@@ -121,6 +141,7 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
   } catch (e: any) {
     return res.status(200).json({
@@ -129,5 +150,8 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
     });
   }
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

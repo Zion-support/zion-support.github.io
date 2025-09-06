@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**;
 * Helper script to update icon imports across the codebase;
@@ -28,6 +30,7 @@ const glob = require ('glob'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
  * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
  */
 
@@ -37,6 +40,8 @@ const glob = require('glob')
 // Helper to replace imports in a file
 function updateIconImportsInFile(filePath) {
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -57,10 +62,13 @@ function updateIconImportsInFile(filePath) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'import {$1} from "@/components/icons"'
     )
     // Only write if changes were made
     if (content !== updatedContent) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -80,6 +88,7 @@ function updateIconImportsInFile(filePath) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**;
  * Helper script to update icon imports across the codebase;
  *;
@@ -104,6 +113,8 @@ function updateIconImportsInFile(filePath) {;
       // // // console.log(`✅ Updated imports in ${filePath}`),;
       return true;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
       fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
@@ -117,6 +128,7 @@ function updateIconImportsInFile(filePath) {;
       return true
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return false
   } catch (err) {
@@ -136,6 +148,8 @@ function updateIconImportsInFile(filePath) {;
     return false
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -161,6 +175,7 @@ files && files.forEach(file => {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Find all TypeScript/JavaScript/JSX/TSX files
 
 const files = glob.sync('src/**/*.{js,jsx,ts,tsx}')
@@ -168,9 +183,12 @@ let updatedFiles = 0
 files.forEach(file => {
   const updated = updateIconImportsInFile(file)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (updated) updatedFiles++
 })
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`)
@@ -304,6 +322,8 @@ files.forEach(file => {;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -336,3 +356,4 @@ if (updated) updatedFiles++
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

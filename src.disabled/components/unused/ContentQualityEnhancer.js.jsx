@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { DocumentTextIcon,CheckCircleIcon,ExclamationTriangleIcon,InformationCircleIcon,WrenchScrewdriverIcon,XMarkIcon,ArrowPathIcon } from';';@heroicons/react/24/outline' "export": const ContentQualityEnhancer = ({ className = '';';,"showAnalysis": '= true',autoAnalyze = true,targetElements = ['p'';,'h1';';,'h2';';,'h3';';,'h4';';,'h5';';,'h6';';,'div[class*='content']';';,'article';';,'section';';] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [selectedElement,setSelectedElement] = useState(null)''';] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';) const [selectedElement,setSelectedElement] = useState(null)'
@@ -11,6 +13,7 @@ import _React,{ useState,useEffect,useCallback } from';react' import { motion,An
 =======
 <<<<<<<< HEAD:src.disabled/components/unused/ContentQualityEnhancer.js.jsx
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 :src.disabled/components/unused/ContentQualityEnhancer.js.jsx
@@ -21,6 +24,8 @@ import _React,{ useState,useEffect,useCallback } from';react' import { motion,An
 import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { DocumentTextIcon,CheckCircleIcon,ExclamationTriangleIcon,InformationCircleIcon,WrenchScrewdriverIcon,XMarkIcon,ArrowPathIcon } from';';@heroicons/react/24/outline' "export": const ContentQualityEnhancer = ({ className = '';';,"showAnalysis": '= true',autoAnalyze = true,targetElements = ['p'';,'h1';';,'h2';';,'h3';';,'h4';';,'h5';';,'h6';';,'div[class*='content']';';,'article';';,'section';';] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview', ') const [selectedElement,setSelectedElement] = useState(null)''';] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';) const [selectedElement,setSelectedElement] = useState(null)'
 import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { DocumentTextIcon,CheckCircleIcon,ExclamationTriangleIcon,InformationCircleIcon,WrenchScrewdriverIcon,XMarkIcon,ArrowPathIcon } from';';@heroicons/react/24/outline' "export": const ContentQualityEnhancer = ({ className = '';';,"showAnalysis": '= true',autoAnalyze = true,targetElements = ['p'';,'h1';';,'h2';';,'h3';';,'h4';';,'h5';';,'h6';';,'div[class*='content']';';,'article';';,'section';';] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [selectedElement,setSelectedElement] = useState(null)''';] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';) const [selectedElement,setSelectedElement] = useState(null)'
 import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { DocumentTextIcon,CheckCircleIcon,ExclamationTriangleIcon,InformationCircleIcon,WrenchScrewdriverIcon,XMarkIcon,ArrowPathIcon } from';';@heroicons/react/24/outline' "export": const ContentQualityEnhancer = ({ className = '';';,"showAnalysis": '= true',autoAnalyze = true,targetElements = ['p'';,'h1';';,'h2';';,'h3';';,'h4';';,'h5';';,'h6';';,'div[class*='content']';';,'article';';,'section';';] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [selectedElement,setSelectedElement] = useState(null)''';] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';) const [selectedElement,setSelectedElement] = useState(null)'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -37,3 +42,4 @@ import _React,{ useState,useEffect,useCallback } from';react' import { motion,An
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

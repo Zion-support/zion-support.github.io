@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -35,6 +37,7 @@ import type { UserDetails as AuthUserDetails } from "@/types/auth";
 export interface UserDetails {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id?: string;
   name?: string;
   email?: string;
@@ -124,7 +127,10 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 export interface AuthContextType {;
@@ -145,12 +151,15 @@ export interface AuthContextType {;
   loginWithTwitter: () => Promise<void>,;
   loginWithWeb3: () => Promise<void>;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -174,6 +183,8 @@ export interface AuthContextType {;
 }
 // Create a provider component
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -193,10 +204,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     console.log("Sign in attempted with:", email);
@@ -305,6 +319,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       companyId: "company-123"
     }),
     return { error: null }
@@ -322,9 +337,12 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
     // This would be replaced with actual Supabase auth
     // // // console.log("Sign up attempted with:", email, userData),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Mock successful sign-up
     setUser({
       id: "mock-user-id"
@@ -333,6 +351,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: userData?.name |"New User"
       userType: userData?.userType
       profileComplete: false
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     });
@@ -347,6 +367,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const resetPassword = async (email: string) => {
     // Mock implementation
     console.log("Password reset requested for:", email);
@@ -375,13 +396,20 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
     // Mock implementation
     // // // console.log("Profile update requested with:", data),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (user) {
       setUser({ ...user, ...data })
     }
     return { error: null }
+<<<<<<< HEAD
+  const loginWithGoogle = async () => {
+    // // // console.log("Google login requested"),
+=======
 <<<<<<< HEAD
 
 
@@ -403,6 +431,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithGoogle = async () => {
     // // // console.log("Google login requested"),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Mock implementation
     setUser({
       id: "google-user-id"
@@ -411,6 +440,10 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Google User"
       profileComplete: true
     })
+<<<<<<< HEAD
+  const loginWithFacebook = async () => {
+    // // // console.log("Facebook login requested"),
+=======
 <<<<<<< HEAD
 
 
@@ -432,6 +465,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithFacebook = async () => {
     // // // console.log("Facebook login requested"),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Mock implementation
     setUser({
       id: "facebook-user-id"
@@ -440,6 +474,10 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Facebook User"
       profileComplete: true
     })
+<<<<<<< HEAD
+  const loginWithTwitter = async () => {
+    // // // console.log("Twitter login requested"),
+=======
 <<<<<<< HEAD
 
 
@@ -461,6 +499,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithTwitter = async () => {
     // // // console.log("Twitter login requested"),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Mock implementation
     setUser({
       id: "twitter-user-id"
@@ -469,6 +508,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Twitter User"
       profileComplete: true
     })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   };
@@ -555,6 +596,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
@@ -565,9 +607,12 @@ export function useAuth(): AuthContextType {
   return context
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {;
@@ -575,12 +620,15 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 // Custom hook to use the auth context
@@ -589,7 +637,10 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       console.warn("No wallet detected"),
       return
 ;
@@ -628,22 +679,28 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
       id: "mock-user-id",;
       email,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       displayName: userData?.name || "New User",;
       name: userData?.name || "New User",;
       userType: userData?.userType,;
       profileComplete: false;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
     return { error: null }
   };
@@ -658,9 +715,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     if (user) {;
       setUser({ ...user, ...data });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   permissions?: string[];
   company_id?: string;
   bio?: string;
@@ -813,6 +873,8 @@ if ( {) {
       id: "google-user-id", ;
       email: "google@example && example.com", ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -845,10 +907,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       displayName: "Google User",;
       name: "Google User",;
       profileComplete: true;
     });
+<<<<<<< HEAD
+  };
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -859,6 +925,7 @@ if ( {) {
 =======
   };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const loginWithFacebook = async () => {;
     console && console.log("Facebook login requested");
     // Mock implementation;
@@ -884,6 +951,8 @@ if ( {) {
     setUser({;
       id: "twitter-user-id",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       email: "twitter@example.com",;
 <<<<<<< HEAD
 
@@ -891,16 +960,20 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       displayName: "Twitter User",;
       name: "Twitter User",;
       profileComplete: true;
     });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
   const loginWithWeb3 = async () => {;
     console && console.log("Web3 login requested");
@@ -909,6 +982,8 @@ if ( {) {
       console && console.warn("No wallet detected");
       return;
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
@@ -928,10 +1003,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (err) {
       console.error ('Web3 login failed', err);
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1001,10 +1079,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     isLoading;
     signIn;
     signOut;
     signUp;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1020,6 +1101,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     resetPassword;
     updateProfile;
     loginWithGoogle;
@@ -1090,6 +1172,9 @@ export function useAuth(): any (): AuthContextType {;
   }
   return context;
 }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -1321,3 +1406,4 @@ export function useAuth(): AuthContextType {;
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

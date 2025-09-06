@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { LoginCard } from "./LoginCard";
 
 import { LoginCard } from "./LoginCard";
@@ -69,6 +72,8 @@ export function LoginContent() {;
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     </div>);
 
@@ -85,6 +90,7 @@ import { LoginCard } from "./LoginCard",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function LoginContent() {
   return (
     <div className="flex min-h-screen bg-zion-blue">
@@ -104,6 +110,8 @@ export function LoginContent() {
         </div>
       </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -115,6 +123,7 @@ export function LoginContent() {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>;
   );
 }
@@ -143,6 +152,8 @@ export function LoginContent() {;
 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>;
   ),;
 } export function LoginContent () {
@@ -150,3 +161,4 @@ export function LoginContent() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

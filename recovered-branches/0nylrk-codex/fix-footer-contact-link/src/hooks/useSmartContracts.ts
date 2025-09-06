@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -15,9 +18,12 @@ export function useSmartContracts() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
@@ -30,6 +36,8 @@ export function useSmartContracts() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -37,6 +45,7 @@ export function useSmartContracts() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
@@ -51,16 +60,21 @@ export function useSmartContracts() {
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const generateSolidityContract = async (
     values: ContractFormValues
     talent: TalentProfile
     clientName: string
   ): Promise<string> => {
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -127,6 +141,7 @@ setIsLoading(true),
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (data && data.solidityCode) {
         return data.solidityCode
 import {useState} from 'react';
@@ -177,6 +192,8 @@ if ( {) {
       }
     } catch (err: any) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       console.error ("Error generating Solidity contract:", err);
       toast.error ("Failed to generate smart contract");
@@ -217,6 +234,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const deploySmartContract = async (
     contractCode: string;
     options: DeploymentOptions
@@ -254,7 +272,10 @@ if ( {) {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setDeploymentStatus('success');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       toast.success("Smart contract deployed successfully!");
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return mockSmartContractInfo
     } catch (err: any) {
       console.error("Error deploying smart contract:", err);
@@ -270,6 +291,8 @@ if ( {) {
     isLoading;
 
     deploymentStatus
+<<<<<<< HEAD
+=======
   }
 }
       setDeploymentStatus('deploying'),
@@ -527,12 +550,18 @@ if ( {) {
 
     deploymentStatus
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   return {
     generateSolidityContract;
     deploySmartContract;
     is_loading;
     deployment_status;
+<<<<<<< HEAD
+  }
+}
+;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -730,3 +759,4 @@ deploymentStatus
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -15,6 +15,8 @@ import {ShieldAlert, ArrowDown, Check, X, MessageSquare, Download} from "lucide-
 import {useAuth} from "@/hooks/useAuth";
 import {toast} from "sonner";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function DisputeDetail() {;
   // useParams may be untyped in this environment, so avoid passing a;
@@ -24,11 +26,14 @@ export function DisputeDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { disputeId } = useParams() as { disputeId?: string };
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -36,6 +41,7 @@ export function DisputeDetail() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { useDisputes } from "@/hooks/useDisputes",
@@ -71,6 +77,8 @@ export function DisputeDetail() {
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const [resolution, setResolution] = useState({;
@@ -88,6 +96,7 @@ export function DisputeDetail() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setIsLoading(true);
       try {;
         const disputeData = await getDisputeById(disputeId);
@@ -123,6 +132,8 @@ export function DisputeDetail() {
     if (success && dispute) {;
       setDispute({ ...dispute, status });
     }
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -246,6 +257,7 @@ export function DisputeDetail() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   const handleResolveDispute = async () => {
     if (!disputeId) return;
@@ -256,7 +268,10 @@ export function DisputeDetail() {
 
   };
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -326,6 +341,8 @@ export function DisputeDetail() {;
     if (!disputeId) return,
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -345,10 +362,13 @@ export function DisputeDetail() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary"),
       return
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const success = await resolveDispute(disputeId, resolution);
     
@@ -356,6 +376,7 @@ export function DisputeDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -365,6 +386,8 @@ export function DisputeDetail() {;
         resolved_at: new Date().toISOString()
       })
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   };
@@ -391,6 +414,7 @@ export function DisputeDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
@@ -450,6 +474,8 @@ export function DisputeDetail() {;
     }
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const handleSendMessage = async () => {;
@@ -457,6 +483,7 @@ export function DisputeDetail() {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleSendMessage = async () => {;
     if (!disputeId || !message && message.trim()) return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -478,6 +505,8 @@ export function DisputeDetail() {;
     } finally {;
       setIsSending(false);
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -563,6 +592,7 @@ export function DisputeDetail() {;
   if (!dispute) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -570,7 +600,10 @@ export function DisputeDetail() {;
   }
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <div className="p-8 text-center">
         <p>Dispute not found</p>
@@ -582,6 +615,8 @@ export function DisputeDetail() {;
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -602,6 +637,7 @@ export function DisputeDetail() {;
     return (
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 
   if (!dispute) {;
@@ -640,6 +676,8 @@ export function DisputeDetail() {;
     );
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -657,6 +695,7 @@ export function DisputeDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from './react';
 import { use_params, use_navigate } from './react-router-dom';
 import { use_disputes } from '@/hooks / use_disputes';
@@ -970,6 +1009,8 @@ export function DisputeDetail() {;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -978,6 +1019,7 @@ export function DisputeDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -996,6 +1038,8 @@ export function DisputeDetail() {;
           )}
         </div>
       </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1039,12 +1083,15 @@ export function DisputeDetail() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;
           <Check className="h - 4 w - 4" />;
           <AlertTitle > This dispute has been resolved</AlertTitle>;
           <AlertDescription>;
             {dispute.resolution_summary}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1058,6 +1105,7 @@ export function DisputeDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -1107,12 +1155,15 @@ export function DisputeDetail() {;
                         </li>
                       )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </AlertDescription>;
         </Alert>)}
       <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
@@ -1598,6 +1649,8 @@ export function DisputeDetail() {;
                       className="min-h-[100px]";
                       disabled={isSending}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1759,6 +1812,7 @@ export function DisputeDetail() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     {dispute.status !== "resolved" && (
                       <div>;
                         <h3 className="font - medium mb - 2">Resolve Dispute</h3>;
@@ -1766,6 +1820,8 @@ export function DisputeDetail() {;
                           <Textarea;
                             placeholder="Enter resolution summary...";
                             value={resolution.summary}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1992,6 +2048,7 @@ export function DisputeDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
@@ -2017,12 +2074,15 @@ export function DisputeDetail() {;
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     />;
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;
@@ -2159,6 +2219,8 @@ export function DisputeDetail() {;
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">;
                         {messages;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                           .filter(msg => msg && msg.is_admin_note);
                           .map((msg) => (;
@@ -2183,6 +2245,7 @@ export function DisputeDetail() {;
                           </div>;
                         ))}
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                                 getDisputeMessages(disputeId!).then(setMessages);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -2446,6 +2509,8 @@ export function DisputeDetail() {;
                   </CardContent>;
                 </Card>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </Tabs>;
@@ -2550,11 +2615,14 @@ export function DisputeDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </p>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2608,11 +2676,14 @@ export function DisputeDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2770,3 +2841,4 @@ formatDistanceToNow (new Date (dispute.created at), {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

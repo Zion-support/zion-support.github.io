@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -14,11 +16,14 @@ declare module 'react' {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   export default React,
   // Basic overloads for useRef to handle common cases;
   export function useRef<T>(initialValue: T): { current: T };
   export function useRef<T>(initialValue: T | null): { current: T | null };
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -27,10 +32,14 @@ declare module 'react' {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
   export function useState<S>(
+<<<<<<< HEAD
+    initialState: S | (() => S);
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     initialState: S | (() => S)
@@ -40,6 +49,7 @@ declare module 'react' {
 =======
     initialState: S | (() => S);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ): [S, Dispatch<SetStateAction<S>>];
   export function createContext<T>(defaultValue: T): any;
   export function useContext<T>(context: any): T;
@@ -49,16 +59,22 @@ declare module 'react' {
   // Generic definition to allow usage like forwardRef<HTMLDivElement, Props>()
   export function forwardRef<T, P = {}>(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     render: (props: P, ref: Ref<T>) => ReactElement | null
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
 
 
     render: (props: P, ref: Ref<T>) => ReactElement | null;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ): any;
   export default React,
   // Basic overloads for useRef to handle common cases;
@@ -152,6 +168,8 @@ declare module 'react' {
   export type ElementRef<T = any> = any
   export type CSSProperties = Record<string, string | number | undefined>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   export type ReactElement = any,
   export type ComponentType < P = {}> = (props: P) => any,
@@ -179,10 +197,13 @@ declare module 'react' {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 declare module 'react-dom' {
   export * from 'react-dom / index';
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -197,6 +218,7 @@ declare module 'react / jsx - runtime' {
 <<<<<<< HEAD
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -214,6 +236,8 @@ declare module 'react/jsx-runtime' {;
   export const Fragment: any;
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -221,6 +245,7 @@ declare module 'react/jsx-runtime' {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 declare module 'react' {;
   const React: any,;
   export default React,;
@@ -307,12 +332,15 @@ declare module 'react' {;
   export type ElementRef<T = any> = any,;
   export type CSSProperties = Record<string string | number | undefined>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 declare module 'react-dom' {
   export * from 'react-dom/index'
@@ -332,6 +360,8 @@ declare module 'react-dom' {;
   export * from 'react-dom/index';
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
  
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
@@ -339,6 +369,7 @@ declare module 'react-dom' {;
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 ;
 declare module 'react/jsx-runtime' {;
@@ -347,6 +378,8 @@ declare module 'react/jsx-runtime' {;
   export const Fragment: any;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -354,3 +387,4 @@ declare module 'react/jsx-runtime' {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -70,7 +70,11 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
+<<<<<<< HEAD
+]
+=======
 ],
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (

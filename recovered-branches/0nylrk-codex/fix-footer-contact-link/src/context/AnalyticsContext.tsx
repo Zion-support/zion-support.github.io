@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { create_context, useState, useContext, useEffect, ReactNode } from 'react';
@@ -8,6 +10,7 @@ import {supabase} from '@/integrations / supabase / client';
 =======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   type: AnalyticsEventType,;
 
 =======
@@ -72,6 +75,8 @@ export interface AnalyticsContextType {;
   clearEvents: () => void
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -97,6 +102,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useLocation } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -124,6 +130,8 @@ export type AnalyticsEventType =;
   | 'payment_completed';
   | 'signup';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   | 'login';
 ;
@@ -131,6 +139,7 @@ export type AnalyticsEventType =;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface AnalyticsEvent {
   type: AnalyticsEventType
   path?: string;
@@ -179,6 +188,8 @@ export interface AnalyticsEvent {;
   userId?: string | null;
   metadata?: Record<string, any>;
 }
+<<<<<<< HEAD
+=======
 
 
 export interface AnalyticsContextType {;
@@ -212,6 +223,7 @@ export interface AnalyticsContextType {;
   metadata?: Record<string, any>;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   pageViews: number,;
   lastEvent: AnalyticsEvent | null,;
   events: AnalyticsEvent[],;
@@ -261,15 +273,20 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
   // Function to track general analytics events
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const event: AnalyticsEvent = {
       type
       path: location.pathname
       timestamp: Date.now()
       userId: user?.id
       metadata
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -291,6 +308,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       // Store event in Supabase for persistent analytics
       await supabase.from('analytics_events').insert([{
@@ -298,6 +316,8 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         path: location.pathname
         user_id: user?.id
         metadata: metadata
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -308,6 +328,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
       console.error('Error logging analytics event:', error)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   // Function to track conversion events
@@ -408,6 +429,8 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {;
       await supabase.from('analytics_events').insert([{;
         event_type: type,;
         path: location.pathname,;
+<<<<<<< HEAD
+=======
         user_id: user?.id,;
         metadata: metadata;
       }]);
@@ -451,10 +474,13 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {;
       await supabase && supabase.from('analytics_events').insert([{;
         event_type: type,;
         path: location && location.pathname,;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         user_id: user?.id,;
         metadata: metadata;
       }]);
 
+<<<<<<< HEAD
+=======
       console && console.log(`Analytics event tracked: ${type}`, metadata);
     } catch (error) {;
       console && console.error('Error logging analytics event:', error);
@@ -500,6 +526,7 @@ export interface AnalyticsContextType {;
   clearEvents:() => void;
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }}
     >
       {children}
@@ -521,7 +548,10 @@ export const useAnalytics = (): AnalyticsContextType => {
     } catch (error) {
       console.error ('Error logging analytics event:', error);
     }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <AnalyticsContext&& AnalyticsContext.Provider
       value={{
@@ -554,6 +584,8 @@ export const useAnalytics = (): AnalyticsContextType => {;
 ;
 export const useAnalytics = (): AnalyticsContextType => {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -565,10 +597,15 @@ export const useAnalytics = (): AnalyticsContextType => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const context = useContext(AnalyticsContext);
   if (!context) {;
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
+<<<<<<< HEAD
+
+};
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -702,3 +739,4 @@ setLastEvent (null)
 
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

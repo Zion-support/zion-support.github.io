@@ -41,6 +41,9 @@ export: function ModeToggle () { return () <button className="p - 2 rounded - lg
 export: function ModeToggle () { return () <button className="p - 2 rounded - lg bg - zion - slate / 10 hover: bg: - zion - slate / 20 transition - colors"> <svg" className="w - 5 h - 5 text - zion - slate - light" fill="none" stroke="currentColor" viewBox="0 0 24 24" > <path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}" d="M20 && M20.354 15 && 15.354A9 9 0 018 && 018.646 3 && 3.646 9 && 9.003 9 && 9.003 0 0012 21a9 && 21a9.003 9 && 9.003 0 008 && 008.354 - 5 && 5.646z" /> </svg> </button>) } """;""";"""
 "export": function ModeToggle () { return () <button className='p - 2 rounded - lg bg - zion - slate / 10 hover: bg: - zion - slate / 20 transition - colors'> <svg' className='w - 5 h - 5 text - zion - slate - light' fill='none' stroke='currentColor' viewBox='0 0 24 24' > <path' strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}' d='M20 && M20.354 15 && 15.354A9 9 0 018 && 018.646 3 && 3.646 9 && 9.003 9 && 9.003 0 0012 21a9 && 21a9.003 9 && 9.003 0 008 && 008.354 - 5 && 5.646z' /> </svg> </button>) } ''';'"";""
 <<<<<<< HEAD
+"export": function ModeToggle () { return () <button className='p - 2 rounded - lg bg - zion - slate / 10 hover: bg: - zion - slate / 20 transition - colors'> <svg' className='w - 5 h - 5 text - zion - slate - light' fill='none' stroke='currentColor' viewBox='0 0 24 24' > <path' strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}' d='M20 && M20.354 15 && 15.354A9 9 0 018 && 018.646 3 && 3.646 9 && 9.003 9 && 9.003 0 0012 21a9 && 21a9.003 9 && 9.003 0 008 && 008.354 - 5 && 5.646z' /> </svg> </button>) } ''';'"";""
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,3 +65,4 @@ export: function ModeToggle () { return () <button className="p - 2 rounded - lg
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

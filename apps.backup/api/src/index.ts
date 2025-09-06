@@ -3,6 +3,8 @@ import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { get_pool, with_user } from './pg.js';
 dotenv.config ();
 ;
@@ -65,6 +67,7 @@ app && app.post('/jobs/generate', async (req, reply) => {
 
     )
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { get_pool, with_user } from './pg.js';
     const allowed = (process.env.CORS_ORIGINS || '';
     cb (new Error ('Not allowed';
@@ -220,6 +223,10 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
 <<<<<<< HEAD
 });
 =======
+<<<<<<< HEAD
+});
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

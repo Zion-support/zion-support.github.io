@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -8,6 +10,7 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface QuantumSpaceService {
   "id": string;
   name: string;
@@ -45,6 +48,9 @@ address: string};export const "quantumSpaceServices": QuantumSpaceService[] = [{
 export interface QuantumSpaceService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const quantumSpaceServices: QuantumSpaceService[] = [ { id: "quantum-computing-platform",name: "Quantum Computing Platform",tagline: "Next-generation quantum computing solutions",price: "$199/month",description: "Advanced quantum computing platform for complex calculations and simulations.",features[ "Quantum algorithms","Simulation tools","API access","Documentation","Support services" ],link: "/services/quantum-computing-platform",category: "Quantum Computing",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface QuantumSpaceService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const quantumSpaceServices: QuantumSpaceService[] = [ { id: "quantum-computing-platform",name: "Quantum Computing Platform",tagline: "Next-generation quantum computing solutions",price: "$199/month",description: "Advanced quantum computing platform for complex calculations and simulations.",features[ "Quantum algorithms","Simulation tools","API access","Documentation","Support services" ],link: "/services/quantum-computing-platform",category: "Quantum Computing",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface QuantumSpaceService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const quantumSpaceServices: QuantumSpaceService[] = [ { id: "quantum-computing-platform",name: "Quantum Computing Platform",tagline: "Next-generation quantum computing solutions",price: "$199/month",description: "Advanced quantum computing platform for complex calculations and simulations.",features[ "Quantum algorithms","Simulation tools","API access","Documentation","Support services" ],link: "/services/quantum-computing-platform",category: "Quantum Computing",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+<<<<<<< HEAD
+export interface QuantumSpaceService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const quantumSpaceServices: QuantumSpaceService[] = [ { id: "quantum-computing-platform",name: "Quantum Computing Platform",tagline: "Next-generation quantum computing solutions",price: "$199/month",description: "Advanced quantum computing platform for complex calculations and simulations.",features[ "Quantum algorithms","Simulation tools","API access","Documentation","Support services" ],link: "/services/quantum-computing-platform",category: "Quantum Computing",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+=======
 <<<<<<< HEAD
 =======
 
@@ -72,6 +78,7 @@ export interface QuantumSpaceService { id: string; name: string; tagline: string
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface QuantumSpaceService {
   "id": string;
   name: string;
@@ -106,6 +113,8 @@ address: string};export const "quantumSpaceServices": QuantumSpaceService[] = [{
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -181,3 +190,4 @@ address: string};export const "quantumSpaceServices": QuantumSpaceService[] = [{
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -22,11 +24,15 @@ import { cn } from "@/lib/utils"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const HoverCard = HoverCardPrimitive.Root
 const HoverCardTrigger = HoverCardPrimitive.Trigger
 const HoverCardContent = React.forwardRef<
   React.ElementRef<typeof HoverCardPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
+<<<<<<< HEAD
+>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >(({ className, align = &quot;center&quot;, sideOffset = 4, ...props }, ref) => (
@@ -36,11 +42,14 @@ const HoverCardContent = React.forwardRef<
 =======
 >(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   <HoverCardPrimitive.Content
     ref={ref}
     align={align}
     sideOffset={sideOffset}
     className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -57,6 +66,7 @@ const HoverCardContent = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
@@ -64,11 +74,14 @@ const HoverCardContent = React.forwardRef<
 ));
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 ;
@@ -86,6 +99,8 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }
 ;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -93,6 +108,7 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export { HoverCard, HoverCardTrigger, HoverCardContent };
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 <<<<<<< HEAD
@@ -118,9 +134,12 @@ const HoverCardContent = React.forward_ref<;
     {...props}
   />));
 HoverCardContent.display_name = HoverCardPrimitive.Content.display_name;
+<<<<<<< HEAD
+=======
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 import * as React from "react";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
@@ -160,4 +179,7 @@ React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export { HoverCard, HoverCardTrigger, HoverCardContent }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

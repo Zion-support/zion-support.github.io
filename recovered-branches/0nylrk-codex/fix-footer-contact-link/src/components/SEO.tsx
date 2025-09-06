@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { Helmet } from './react - helmet - async';
@@ -21,11 +23,14 @@ import { Helmet } from "react-helmet-async";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface SEOProps {
 
   title: string
   description: string
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -59,10 +64,13 @@ export function SEO(): any ({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   keywords?: string;
   ogImage?: string;
   ogUrl?: string;
   canonical?: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Helmet } from "react-helmet-async",
@@ -75,6 +83,7 @@ import { Helmet } from "react-helmet-async",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface SEOProps {
   title: string,
   description: string,
@@ -86,10 +95,13 @@ interface SEOProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function SEO({;
   title;
   description;
@@ -118,9 +130,12 @@ export function SEO({
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
   ogUrl,
   canonical,
@@ -129,9 +144,12 @@ export function SEO({
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 =======
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";
@@ -188,6 +206,8 @@ export function SEO({;
       <meta property="og:image" content={ogImage} />;
       {ogUrl && <meta property="og:url" content={ogUrl} />}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export /**
@@ -236,6 +256,7 @@ function SEO() {
       <meta name="twitter:image" content={ogImage} />
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
       {/* No index directive for search engines if needed */}
@@ -245,12 +266,15 @@ function SEO() {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </Helmet>
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
   title: string,;
@@ -287,6 +311,8 @@ export function SEO({;
       {ogUrl && <meta property="og:url" content={ogUrl} />}
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -307,12 +333,15 @@ export function SEO({;
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />;
       <meta name="twitter:site" content="@lovable_dev" />;
       <meta name="twitter:title" content={fullTitle} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={ogImage} />;
+<<<<<<< HEAD
+=======
 
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
@@ -323,6 +352,7 @@ export function SEO({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>;
@@ -330,6 +360,9 @@ export function SEO({;
 
 
 
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -401,12 +434,16 @@ noindex
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
     </Helmet>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

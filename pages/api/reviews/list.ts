@@ -1,9 +1,20 @@
+<<<<<<< HEAD
+
+    if (!targetType || !targetId) {
+      return res.status(400).json({ error: "Missing targetType or targetId" });
+    }
+    if (targetType !== "talent" && targetType !== "client") {
+      return res.status(400).json({ error: "Invalid targetType" });
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
 
 
+<<<<<<< HEAD
+=======
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -102,6 +113,7 @@ if (return false) {
     // Include reviews where both sides have submitted and both are approved and not removed
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 try {
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
     if (!targetType || !targetId) {
@@ -129,6 +141,8 @@ const { targetType, targetId } = req.query as {
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
+<<<<<<< HEAD
+=======
 
     const totalReviews = publicReviews.length;
     const averageRating = totalReviews
@@ -157,6 +171,7 @@ const { targetType, targetId } = req.query as {
   } catch (error: any) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === "talent") {
@@ -164,6 +179,12 @@ const { targetType, targetId } = req.query as {
           authorName = t ? t && t.name : r && r.fromId;
         }
         if (r && r.anonymous) authorName = "Anonymous";
+<<<<<<< HEAD
+    const summary: ReviewsSummary = {
+      average_rating,
+      total_reviews,
+      totalCompletedProjects,
+=======
 ;
     // Map to public reviews (mask anonymous author);
     const public_reviews: PublicReview[] = filtered;
@@ -234,6 +255,7 @@ if (author_name = "Anonymous") {
       average_rating
       total_reviews
       totalCompletedProjects
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   } catch (error: any) {
@@ -242,6 +264,8 @@ if (author_name = "Anonymous") {
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
   }
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -251,6 +275,7 @@ if (author_name = "Anonymous") {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
   }
@@ -276,5 +301,8 @@ if (author_name = "Anonymous") {
       .json({ error: "Internal server error", details: error?.message });
   }
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

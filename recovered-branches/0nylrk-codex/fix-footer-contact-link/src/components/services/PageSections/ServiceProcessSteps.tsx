@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 export function ServiceProcessSteps() {
   return (
     <div className="my-20">
@@ -5,6 +7,7 @@ export function ServiceProcessSteps() {
         How Our IT Onsite Service Works
       </h2>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
@@ -53,6 +56,35 @@ export function ServiceProcessSteps() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+      <div className="grid grid-cols-1 md: grid-cols-4 gap-8">;
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">1</div>;
+          <h3 className="text-lg font-bold text-white mb-3">Select Country</h3>;
+          <p className="text-zion-slate-light">Choose the country where you need onsite IT support services.</p>;
+        </div>;
+
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">2</div>;
+          <h3 className="text-lg font-bold text-white mb-3">Purchase Service</h3>;
+          <p className="text-zion-slate-light">Complete the secure payment for your selected location.</p>;
+        </div>;
+
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">3</div>;
+          <h3 className="text-lg font-bold text-white mb-3">Provide Details</h3>;
+          <p className="text-zion-slate-light">Share your site information and technical requirements with our team.</p>;
+        </div>;
+
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">4</div>;
+          <h3 className="text-lg font-bold text-white mb-3">Service Delivery</h3>;
+          <p className="text-zion-slate-light">Our local technicians arrive at your site within the guaranteed response time.</p>;
+        </div>;
+      </div>;
+    </div>;
+  );
+=======
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +95,7 @@ export function ServiceProcessSteps() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
 
@@ -103,6 +136,8 @@ function ServiceProcessSteps() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -120,3 +155,4 @@ function ServiceProcessSteps() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

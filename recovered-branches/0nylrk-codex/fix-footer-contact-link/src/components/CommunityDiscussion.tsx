@@ -51,6 +51,8 @@ interface DiscussionPost {
   time: string;
   title: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -61,12 +63,17 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface DiscussionPost {
   id: number,
   author: string,
   avatar?: string,
   time: string,
   title: string,
+<<<<<<< HEAD
+  body: string
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -115,6 +122,7 @@ id: 1
   body: string
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: 2
     author: "David Kim"
@@ -124,12 +132,15 @@ id: 1
   }
 ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const CommunityDiscussion: React.FC = () => {
 =======
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const initialPosts: DiscussionPost[] = [;
   {;
     id: 1,;
@@ -145,6 +156,8 @@ const initialPosts: DiscussionPost[] = [;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
   },;
 ];
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -186,6 +199,7 @@ export const CommunityDiscussion: React.FC = () => {
       }
       ...posts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ]);
     setNewTitle("");
     setNewBody("");
@@ -193,6 +207,8 @@ export const CommunityDiscussion: React.FC = () => {
   }
 <<<<<<< HEAD
   return (
+<<<<<<< HEAD
+=======
 =======
 
     id: 1,
@@ -389,6 +405,7 @@ export const CommunityDiscussion:React.FC = () => {;
   }
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4">;
         <MessageCircle size={28} className="text-zion-cyan" />;
@@ -437,6 +454,8 @@ export const CommunityDiscussion:React.FC = () => {;
       {showNew && (;
         <Card className="mb-6 animate-scale-in">;
           <CardContent className="py-5">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             <Input
@@ -524,6 +543,7 @@ export const CommunityDiscussion: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
@@ -560,17 +580,22 @@ export const CommunityDiscussion: React.FC = () => {
 disabled={!newTitle.trim() |!newBody.trim()}
                 disabled={!newTitle.trim() |!newBody.trim()}
                 disabled={!newTitle.trim() || !newBody.trim()}
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
                 disabled={!newTitle.trim() |!newBody.trim()}
                 disabled={!newTitle.trim() || !newBody.trim()}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               >
                 Post
               </Button>
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -621,6 +646,7 @@ disabled={!newTitle.trim() |!newBody.trim()}
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
             <div className="flex gap - 3 justify - end">;
               <Button;
@@ -713,6 +739,10 @@ disabled={!newTitle.trim() |!newBody.trim()}
     </div>;
   );
 <<<<<<< HEAD
+  );
+};
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </Card>)}
@@ -778,3 +808,4 @@ disabled={!newTitle.trim() |!newBody.trim()}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

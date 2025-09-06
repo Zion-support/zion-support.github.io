@@ -50,6 +50,8 @@ import React from 'react';
 <<<<<<< HEAD
 import MainLayout from '../../components/layout/MainLayout';
 
+<<<<<<< HEAD
+=======
 const Page = () => {
   return (
     <MainLayout
@@ -70,6 +72,7 @@ export default Page;
 =======
 import Link from 'next/link';
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }

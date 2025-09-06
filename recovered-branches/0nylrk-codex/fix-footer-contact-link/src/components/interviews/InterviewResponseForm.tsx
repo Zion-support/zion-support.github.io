@@ -1,15 +1,21 @@
 <<<<<<< HEAD
+  interview: Interview;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 =======
   interview: Interview;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Interview } from "@/types/interview",
 import { format, parseISO } from "date-fns",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -53,6 +59,7 @@ import { Interview } from "@/types/interview";
 import { format, parseISO } from "date-fns";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 interface InterviewResponseFormProps {
   interview: Interview,
@@ -61,6 +68,8 @@ interface InterviewResponseFormProps {
   isLoading: boolean
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -78,6 +87,7 @@ export function InterviewResponseForm({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
   // Format interview date and time
   const interviewDate = parseISO(interview.scheduled_date),
@@ -105,6 +115,8 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
   const formattedTime = format(interviewDate, 'h: mm a'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
+=======
 
 
   // Calculate when interview ends;
@@ -132,6 +144,7 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
@@ -139,6 +152,8 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           </div>
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -257,17 +272,23 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
             <div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const endTime = new Date(interviewDate);
   endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
   const formattedEndTime = format(endTime, "h: mm a");
 
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {formattedTime} - {formattedEndTime}
             </div>;
           </div>;
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Duration:</div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             <div>{interview && interview.duration_minutes} minutes</div>;
           </div>;
@@ -296,6 +317,7 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
             <div className="w-24 text-sm text-zion-slate-light">Duration:</div>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div>{interview.duration_minutes} minutes</div>;
           </div>;
           {interview.meeting_platform && (;
@@ -309,6 +331,8 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
               <div className="w-24 text-sm text-zion-slate-light">Notes:</div>;
             </div>;
           )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         </div>;
       </div>;
@@ -324,11 +348,14 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {isLoading ? "Confirming..." : "Confirm Interview"}
         </Button>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -336,6 +363,7 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   on_confirm: () => Promise < void>;
   on_close: () => void;
   is_loading: boolean;
@@ -403,6 +431,8 @@ function InterviewResponseForm() {
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
+=======
 =======
 }
 ;
@@ -461,3 +491,4 @@ return (<div className="space-y-4" > <div className="p-4 bg-zion-blue-light/20 r
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

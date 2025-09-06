@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+import {render, screen} from '@testing-library/react';
+import {MemoryRouter} from 'react-router-dom';
+import {CategoryCard} from '@/components/CategoryCard';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {render, screen} from '@testing-library/react',;
@@ -55,12 +60,15 @@ import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components/CategoryCard';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
       <CategoryCard title="Test Category" description="desc" icon="*" />
     </MemoryRouter>
   ),
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -121,6 +129,7 @@ it ('treats underscores as spaces in slug', () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 it('renders category card with link to slug', () => {;
   render(;
@@ -142,6 +151,8 @@ it ('renders category card with link to slug', () => {
   const link = screen.getByRole ('link', { name: /test category / i });
   expect (link).toHaveAttribute ('href / category / test - category');
 });
+<<<<<<< HEAD
+=======
 it ('normalizes slug with special characters', () => {
       <CategoryCard title='R & D Tools!' description='desc' icon='*' />;
   const link = screen.getByRole ('link', { name: /r & d tools!/i });
@@ -260,6 +271,7 @@ it ('treats underscores as spaces in slug', () => {
   const link = screen.getByRole('link', { name: /test category/i });
   expect(link).toHaveAttribute('href/category/test-category');
 });
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 it('normalizes slug with special characters', () => {
       <CategoryCard title='R&D Tools!' description='desc' icon='*' />
   const link = screen.getByRole('link', { name: /r&d tools!/i });
@@ -273,7 +285,10 @@ it('treats underscores as spaces in slug', () => {
   const link = screen.getByRole('link', { name: /ai_tools/i });
   expect(link).toHaveAttribute('href/category/ai-tools');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

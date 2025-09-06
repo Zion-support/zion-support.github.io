@@ -55,6 +55,20 @@ const observer = new IntersectionObserver ( ([entry]) => {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+  return () => observer.disconnect ();
+}, [lazy, priority, isInView]);
+//Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
+  //If it's already optimized or external,  return as - is if (|| original_src.includes ('/ next / image') ) {) {
+  $2
+}
+  //For internal images, Next.js will handle optimization return original_src;
+}';
+<defs> <linear_gradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop - color:#f3f4f6, stop - opacity:1" /> <stop offset="100%" style="stop - color:#e5e7eb, stop - opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .to_string ('base64');
+}`;
+}
+  const img_ref = useRef < HTMLDivElement>(null);
+=======
 ;
 export function OptimizedImage({;
   src,;
@@ -77,6 +91,7 @@ export function OptimizedImage({;
   const [hasError, setHasError] = useState(false),;
   const [isInView, setIsInView] = useState(!lazy || priority),;
   const imgRef = useRef<HTMLDivElement>(null),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Intersection Observer for lazy loading;
 
     return () => observer.disconnect ();
@@ -126,8 +141,8 @@ if (||) {
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />
+            <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />
           </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
@@ -181,37 +196,38 @@ if (||) {
 
     // For internal images, Next && Next.js will handle optimization;
     return originalSrc;
-  },;
+  };
+
   const handleLoad = () => {;
-    setIsLoading(false),;
+    setIsLoading(false);
     onLoad?.();
-  },;
+  };
+
   const handleError = () => {;
-    setHasError(true),;
-    setIsLoading(false),;
+    setHasError(true);
+    setIsLoading(false);
     onError?.();
-  },;
+  };
+
   // Generate blur placeholder;
   const generateBlurDataURL = () => {;
-    if (blurDataURL) return blurDataURL,;
+    if (blurDataURL) return blurDataURL;
+
     // Generate a simple gray blur placeholder;
-    return `data: image/svg+xml,base64,${Buffer.from(;
-      `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">;
+    return `data:image/svg+xml;base64,${Buffer && Buffer.from(;
+      `<svg width="${width || 400}" height="${height || 300}" xmlns="http://www && www.w3.org/2000/svg">;
         <defs>;
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">;
-            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />;
-            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />;
+            <stopoffset="0%" style="stop-color:#f3f4f6stop-opacity:1" />;
+            <stopoffset="100%" style="stop-color:#e5e7ebstop-opacity:1" />;
           </linearGradient>;
         </defs>;
         <rect width="100%" height="100%" fill="url(#grad)" />;
       </svg>`;
     ).toString('base64')}`;
-  },;
-  return (;
-    <div;
-      ref={imgRef}
-      className={cn('relative overflow-hidden', className)}
-      style={{ width, height }}
+  };
+
+
     >;
       {isInView && !hasError && (;
 
@@ -276,9 +292,15 @@ if (return blurDataURL) {
 
       )}
       {/* Error fallback */}
+<<<<<<< HEAD
+      {hasError && (;
+        <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
+          {fallbackSrc ? (;
+=======
       {hasError && (
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
           {fallbackSrc ? (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <img
               src={fallbackSrc}
               alt={alt}

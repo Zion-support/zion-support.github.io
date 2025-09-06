@@ -166,6 +166,154 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className="font-mono text-sm"
 
 
+<<<<<<< HEAD
+          )}
+        </div>;
+      </CardContent>;
+      <CardFooter className='border-t bg-muted/50 p-4'>;
+        <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>;
+          <p className='text-sm text-muted-foreground'>;
+            Share on social media:;
+          </p>;
+          <div className='flex space-x-2'>;
+            <Button
+              variant='outline'
+              size='sm'
+              className='flex items-center gap-2'
+              onClick={() => onShare('twitter')}            <Button
+
           )}
         </div>
       </CardContent>
+
+
+          {copied && (
+          
+          {copied && (
+
+            <p className="text-sm text-green-600 dark:text-green-500">
+              Copied to clipboard!
+            </p>
+          )}
+        </div>
+      </CardContent>
+
+      <CardFooter className="border-t bg-muted/50 p-4">
+        <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
+          <p className="text-sm text-muted-foreground">Share on social media:</p>
+          <div className="flex space-x-2">
+            <Button 
+
+              variant="outline" 
+
+              size="sm"
+              className="flex items-center gap-2"
+
+
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="flex items-center gap-2"
+
+
+            >
+              <Facebook className="h-4 w-4" />
+              Facebook
+            </Button>
+
+
+
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="flex items-center gap-2"
+              onClick={() => onShare('linkedin')}
+            >
+              <Share className="h-4 w-4" />
+
+
+
+              LinkedIn
+            </Button>
+          </div>
+        </div>
+
+              onClick={() => onShare('linkedin')}            >;
+              <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />;
+        <div className="flex flex - col space - y-3">;
+          <div className="flex space - x-2">;
+            <Input;
+              value={referral_link}
+              read_only;
+              className="font - mono text - sm";
+            />;
+            <Button variant="outline" size="icon" on_click={handle_copy} aria - label="Copy referral link">;
+              <Copy className="h - 4 w - 4" />;
+              <span className="sr - only">Copy</span>;
+            </Button>;
+          </div>;
+          {copied && (
+            <p className="text - sm text - green - 600 dark:text - green - 500">;
+              Copied to clipboard!;
+            </p>)}
+        </div>;
+      </CardContent>;
+      <CardFooter className='border - t bg - muted / 50 p - 4'>;
+        <div className='flex flex - col sm:flex - row w - full justify - between items - center gap - 4'>;
+          <p className='text - sm text - muted - foreground'>;
+            Share on social media:;
+          </p>;
+          <div className='flex space - x-2'>;
+            <Button;
+              variant='outline';
+              size='sm';
+              className='flex items - center gap - 2';
+              on_click={() => on_share ('twitter')}            <Button;
+              variant="outline";
+              size="sm";
+              className="flex items - center gap - 2";
+              on_click = {() => on_share ('twitter'), }
+            >;
+              <Twitter className='h - 4 w - 4' />;
+              Twitter;
+            </Button>;
+            <Button;
+              variant='outline';
+              size='sm';
+              className='flex items - center gap - 2'              on_click={() => on_share ('facebook')}
+            <Button;
+              variant="outline";
+              size="sm";
+              className="flex items - center gap - 2";
+              on_click = {() => on_share ('facebook'), }
+            >;
+              <Facebook className='h - 4 w - 4' />;
+              Facebook;
+            </Button>;
+            <Button;
+              variant='outline';
+              size='sm';
+              className='flex items - center gap - 2';
+              on_click={() => on_share ('linkedin')}            >;
+              <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;
+
+              LinkedIn;
+            </Button>;
+          </div>;
+        </div>;
+      </CardFooter>;
+
+
+  );
+}
+    </Card>);
+}
+
+      </CardFooter>
+    </Card>
+  )
+=======
+          )}
+        </div>
+      </CardContent>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

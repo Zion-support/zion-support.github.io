@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -32,10 +34,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     { label: 'Monthly Recurring Revenue (MRR)', value: '$220,450', trend: 8.2 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     { label: 'GMV', value: '$4.8M', trend: 5.1 }
     { label: 'Active users (monthly)', value: 18452, trend: 3.9 }
     { label: 'Active users (TTM)', value: 162340, trend: 12.4 }
     { label: 'Churn rate', value: '2.4%', trend: -0.3 }
+<<<<<<< HEAD
+    { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }];
+=======
 <<<<<<< HEAD
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }
   ];
@@ -96,6 +102,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 }
 
@@ -107,4 +114,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     { label: 'CAC / LTV ratio', value: '1:5.6', trend: 0.4 }];
   res.status (200).json (data);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

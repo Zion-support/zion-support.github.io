@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -253,6 +255,7 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Zimbabwe', pricePerIncident: 60.5 },];  { country: "Afghanistan", pricePerIncident: 131.04 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   { country: "Albania", pricePerIncident: 110.41 }
   { country: "Algeria", pricePerIncident: 92.26 }
   { country: "American Samoa", pricePerIncident: 193.60 }
@@ -720,6 +723,8 @@ export interface CountryPricing {;
   pricePerIncident: number;
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export const onsiteServicePricing: CountryPricing[] = [
   { country: "Afghanistan", pricePerIncident: 131.04 },
@@ -1200,3 +1205,4 @@ export interface CountryPricing {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

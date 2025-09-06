@@ -1,5 +1,7 @@
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
+<<<<<<< HEAD
+=======
     ok: true
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
@@ -14,6 +16,7 @@ export default /**
  */
 function handler() {
   res.status (200).json ({
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ok: true
     message:;
       "OAuth mock callback successful. Use /api / integrations / connect to finalize connection."
@@ -73,4 +76,7 @@ function handler() {
 }
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

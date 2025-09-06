@@ -117,6 +117,8 @@ if ( {) {
 }
       return;
     }
+<<<<<<< HEAD
+=======
     set_saving (true);
     try {
       // Check condition
@@ -164,16 +166,20 @@ if ( {) {
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
 
+<<<<<<< HEAD
+=======
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder='Enter template name' />
@@ -215,6 +221,8 @@ if ( {) {
                   aria-label='Default template'
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}                />;
+<<<<<<< HEAD
+=======
 
   };
   return (;
@@ -228,10 +236,13 @@ if ( {) {
               <FormLabel>Template Name</FormLabel>;
               <FormControl>;
                 <Input {...field} placeholder="Enter template name" />;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
+=======
         />;
         <FormField;
           control={form.control}
@@ -261,10 +272,15 @@ if ( {) {
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
             Cancel
           </Button>
+<<<<<<< HEAD
+          <Button type="submit" disabled={saving}>
+            {saving ? (
+=======
           <Button type='submit' disabled={saving}>
             field: ControllerRenderProps < FormValues, 'is_default'>;
           }) => (
@@ -302,23 +318,32 @@ if ( {) {
               </>;
             ) : (;
               `${editTemplate ? 'Update' : 'Save'} Template`;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
 
               `${editTemplate ? "Update" : "Save"} Template`
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             )}
           </Button>;
         </div>;
       </form>;
+<<<<<<< HEAD
+=======
     </Form>;
   );
 
@@ -340,3 +365,4 @@ if ( {) {
 }"}
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

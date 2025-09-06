@@ -16,6 +16,8 @@ import { cn } from "@/lib/utils",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -45,6 +47,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ChatMessageProps {
   role: 'user' | 'assistant',
   message: string,
@@ -143,6 +146,8 @@ export function ChatMessage({ role, message, timestamp } ChatMessageProps) {;
         "max-w-[80%] px-4 py-2 rounded-lg",
         isUser 
           ? "bg-zion-purple/20 text-white rounded-tr-none" 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -189,6 +194,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         isUser 
           ? "bg-zion-purple/20 text-white rounded-tr-none" 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           : "bg-zion-cyan/10 text-white rounded-tl-none"
       )}>
         <div className="whitespace-pre-wrap">{message}</div>
@@ -199,6 +205,8 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
 
 };
 
+<<<<<<< HEAD
+=======
 =======
 =======
 };
@@ -216,6 +224,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
 };
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { cn } from "@/lib/utils",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 interface ChatMessageProps {;
@@ -249,6 +258,9 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
       <div className={cn(;
         "max-w-[80%] px-4 py-2 rounded-lg";
 <<<<<<< HEAD
+          : "bg-zion-cyan/10 text-white rounded-tl-none"
+=======
+<<<<<<< HEAD
         isUser;
           ? "bg-zion-purple/20 text-white rounded-tr-none";
           : "bg-zion-cyan/10 text-white rounded-tl-none";
@@ -266,10 +278,13 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
 =======
           : "bg-zion-cyan/10 text-white rounded-tl-none"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       )}>;
         <div className="whitespace-pre-wrap">{message}</div>;
         {timestamp && (;
           <div className="text-xs text-zion-slate mt-1 text-right">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             {timestamp && timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
@@ -279,10 +294,13 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -290,6 +308,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   ),; interface ChatMessageProps {
   role: 'user' | 'assistant';
@@ -355,6 +374,9 @@ function ChatMessage() {
       </div>;
     </div>);
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -393,3 +415,4 @@ isUser ? "border-zion-purple/20" : "border-zion-cyan/20")
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

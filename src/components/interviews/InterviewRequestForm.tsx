@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -35,10 +37,13 @@ import { toast } from '@/components/ui/use-toast';
 import { useInterviews } from '@/hooks/useInterviews';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface InterviewRequestFormProps {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   talent: TalentProfile;
   onClose: () => void;
   userDetails?: UserProfile
 
+<<<<<<< HEAD
+=======
 
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -132,6 +137,7 @@ if ( {) {
       // Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration);
       await request_interview ({
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -466,6 +472,10 @@ export function InterviewRequestForm(): any ({;
                           format(field.value, 'PPP')
                         ) : (
                           <span>Pick a date</span>
+<<<<<<< HEAD
+
+
+=======
               field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'date'>;
             }) => (;
               <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>;
@@ -499,6 +509,7 @@ export function InterviewRequestForm(): any ({;
                       className="p-3 pointer-events-auto"
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     />
                   </PopoverContent>
                 </Popover>
@@ -749,7 +760,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="duration"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <FormField
             control={form.control}
             name='duration'
@@ -757,6 +771,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               field,
             }: {
               field: ControllerRenderProps<
+<<<<<<< HEAD
+                <FormLabel>Duration</FormLabel>
+=======
                 z.infer<typeof formSchema>,
                 'duration'
               >
@@ -774,6 +791,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               >;
             }) => (              <FormItem>;
                 <FormLabel>Duration</FormLabel>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
@@ -812,6 +830,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField;
             control={form.control}
             name='platform';
+<<<<<<< HEAD
+=======
             render={({
               field
             }: {
@@ -823,6 +843,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="platform"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
               <FormItem>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
                 <FormLabel>Platform</FormLabel>
@@ -875,6 +896,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField;
             control={form.control}
             name='meeting_link';
+<<<<<<< HEAD
+          />
+        </div>
+        {form.watch('platform') !== 'in-app' && (
+          <FormField
+            control={form.control}
+            name='meetingLink'
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             render={({
               field
             }: {
@@ -929,6 +959,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
         <FormField
+<<<<<<< HEAD
+          control={form.control}
+          name='notes'
+=======
           control={form && form.control}
           name='notes'
               </FormItem>)}
@@ -936,6 +970,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         <FormField;
           control={form.control}
           name='notes';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           render={({
             field
           }: {
@@ -948,7 +983,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Textarea
                   placeholder="Share what you'd like to discuss in this interview"
                   className='h-20'
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
         <FormField;
           control={form.control}
@@ -970,11 +1008,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             </FormItem>
           )}
         />
+<<<<<<< HEAD
+=======
 
 
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Cancel
           </Button>
           <Button type='submit' disabled={isSubmitting}>
@@ -1028,6 +1069,8 @@ toast ({;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
 }/> </Button> </div> </form> </Form>)
 }'"}
+<<<<<<< HEAD
+=======
 
 
 
@@ -1091,3 +1134,4 @@ toast ({
 }'"}
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

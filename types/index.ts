@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // Type definitions index
 
 export interface ContactInfo {
@@ -58,6 +60,7 @@ export interface ContactInfo {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   phone: string;
   email: string;
   address: string;
@@ -102,11 +105,14 @@ export interface Service {
   image?: string;
   popular?: boolean;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ServiceCategory {
   title: string;
   description: string;
@@ -115,6 +121,64 @@ export interface ServiceCategory {
   href: string;
   color: string;
 }
+<<<<<<< HEAD
+
+export interface LoadingState {
+  is_loading: boolean;
+  error?: string;
+export interface FormData {
+  name: string;
+  email: string;
+  company?: string;
+  phone?: string;
+  service?: string;
+  message: string;
+export interface ContactForm {
+  name: string;
+  email: string;
+  company?: string;
+  phone?: string;
+  service: string;
+  budget?: string;
+  message: string;
+  name: string;
+  price: number;
+  period: string;
+  features: string[];
+  popular?: boolean;
+  cta: string;
+}
+  href: string;
+}
+;
+}
+}
+export interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
+export interface AccessibilitySettings {
+  high_contrast: boolean;
+  font_size: number;
+  reduced_motion: boolean;
+  screen_reader: boolean;
+}
+export interface UserPreferences {
+  theme: 'light' | 'dark' | 'system';
+  language: string;
+  accessibility: AccessibilitySettings;
+  notifications: {
+    email: boolean;
+    browser: boolean;
+    marketing: boolean;
+  }
+}
+export interface CompanyInfo {
+  name: string;
+=======
 
 <<<<<<< HEAD
 export interface SEOProps {
@@ -869,6 +933,7 @@ export interface HeroSection {;
 export interface CompanyInfo {
   name: string;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   tagline: string;
   description: string;
   address: {
@@ -882,6 +947,11 @@ export interface CompanyInfo {
     phone: string;
     email: string;
     website: string;
+<<<<<<< HEAD
+  }
+  certifications: string[];
+}
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
@@ -1288,27 +1358,39 @@ export interface SuccessResponse<T> {
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ErrorInfo {
   message: string;
   code?: string;
   details?: any;
   timestamp: string;
+<<<<<<< HEAD
+  user_agent?: string;
+  url?: string;
+}
+=======
   userAgent?: string;
   url?: string;
 }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface FormField {
   name: string;
   label: string;
   type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
   required: boolean;
   placeholder?: string;
+<<<<<<< HEAD
+=======
   options?: { value: string; label: string }[];
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   validation?: {
     min?: number;
     max?: number;
     pattern?: string;
     message?: string;
+<<<<<<< HEAD
+=======
   }
 }
 =======
@@ -1384,6 +1466,7 @@ export interface Environment {
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Partner {
   name: string;
   logo: string;
@@ -1391,6 +1474,8 @@ export interface Partner {
   description: string;
   tier: 'platinum' | 'gold' | 'silver' | 'bronze';
 }
+<<<<<<< HEAD
+=======
 export interface Award {
   title: string;
   organization: string;
@@ -1401,6 +1486,7 @@ export interface Award {
 export interface Certification {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   name: string;
   issuer: string;
   date: string;
@@ -1477,6 +1563,8 @@ export interface ErrorResponse {
   message?: string;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -1531,3 +1619,4 @@ export interface Service { id: string; name: string; description: string; catego
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

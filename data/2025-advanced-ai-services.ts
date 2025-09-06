@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const advancedAIServices2025 = [
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
       'Natural language query processing'
@@ -32,10 +35,13 @@ export const advancedAIServices2025 = [;
       'Custom AI model training',
       'Advanced security and compliance',
     ],
+<<<<<<< HEAD
+=======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     pricing: {
       starter: {
         price: 199
@@ -43,6 +49,8 @@ export const advancedAIServices2025 = [;
         features: ['Up to 10 users', 'Basic AI insights', 'Standard reports']
       }
       professional: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -74,11 +82,15 @@ export const advancedAIServices2025 = [;
     website: 'https://ziontechgroup.com / business - intelligence - ai - pro',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience:
       'Business analysts, data scientists, executives, enterprise businesses'
     competitiveAdvantage:
@@ -98,6 +110,8 @@ export const advancedAIServices2025 = [;
       'Integration with CRM systems'
       'Advanced reporting and dashboards'
       'Custom AI model training'
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -160,10 +174,13 @@ export const advancedAIServices2025 = [;
     website: 'https://ziontechgroup.com / customer - analytics - ai',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -684,6 +701,7 @@ export const advancedAIServices2025 = [;
     website: 'https://ziontechgroup.com / cybersecurity - ai',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -722,6 +740,8 @@ export const advancedAIServices2025 = [;
     competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
 ];
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -732,6 +752,7 @@ export const advancedAIServices2025 = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     market_size: '$173.5B',
     target_audience:;
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies',

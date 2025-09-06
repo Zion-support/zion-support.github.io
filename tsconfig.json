@@ -21,6 +21,10 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
+<<<<<<< HEAD
+    "esModuleInterop": true
+  }
+=======
     "esModuleInterop": true,
 <<<<<<< HEAD
     "module": "ESNext",
@@ -64,4 +68,5 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+import OpenAI from 'openai',;
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 import OpenAI from 'openai',;
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY })
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -23,6 +30,8 @@ Title: ${slide.title}\nContent:\n${slide.content}`
         model: 'gpt-4o-mini'
         messages: [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           { role: 'system', content: 'You rewrite concise investor content and return JSON only.' },
           { role: 'user', content: prompt }],
         temperature: 0.6,
@@ -40,6 +49,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`
       title = parsed.title || title
 >>>>>>> main
       content = parsed.content || content
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (err) {
       // keep original if AI fails;
     }
@@ -47,5 +57,15 @@ Title: ${slide.title}\nContent:\n${slide.content}`
     res.status(200).json({ title, content })
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Rewrite failed' })
+<<<<<<< HEAD
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+  }
+}
+=======
   }
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

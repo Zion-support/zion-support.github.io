@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/main
 import { render, screen } from '@testing-library/react';
@@ -21,11 +23,17 @@ import { describe, it, expect } from 'vitest';
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import AIChatAssistant from './AIChatAssistant'
 describe('AIChatAssistant'
   it('renders without crashing'
+<<<<<<< HEAD
+    expect(screen.getByRole('main'
+  it('displays correct content'
+  it('handles user interactions'
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +60,7 @@ import { render,screen } from '@testing-library/react'; import { describe,it,exp
   it('handles user interactions'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 <<<<<<< HEAD
@@ -91,6 +100,8 @@ import { render,screen } from '@testing-library/react'; import { describe,it,exp
 });
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)});,});
     // Add interaction tests based on component functionality})});
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,3 +144,4 @@ import { render,screen } from '@testing-library/react'; import { describe,it,exp
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

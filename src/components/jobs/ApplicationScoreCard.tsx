@@ -1,9 +1,35 @@
+<<<<<<< HEAD
+interface ApplicationScoreCardProps {
+  application: JobApplication,
+  onScoreUpdated?: (updatedApplication: JobApplication) => void
+}
+
+  application: JobApplication
+  onScoreUpdated?: (updatedApplication: JobApplication,) => void
+
+}
+export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
+  const [isScoring, setIsScoring] = useState(false),
+
+  // Determine if application has been scored
+  const hasScore = typeof application.match_score === 'number',
+  
+  // Format the date when the application was scored
+  const scoredDate = application.scored_at 
+    ? new Date(application.scored_at).toLocaleDateString() 
+    : null,
+
+  // Get suggestion color
+  const getSuggestionColor = (suggestion: string | undefined,) => {
+    switch (suggestion) {
+=======
 // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
 
       case "Strongly Recommended": return "bg-green-100 text-green-800",
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800"
       case "Low Match":
@@ -12,6 +38,8 @@
         return "bg-gray-100 text-gray-800"
 
 
+<<<<<<< HEAD
+=======
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -45,6 +73,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-gray-100 text-gray-800";
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   // Trigger the scoring process
@@ -262,12 +291,15 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
+<<<<<<< HEAD
+=======
 
 
                       </div>;
                       </div>;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     )}
                     
                     {application.match_breakdown.experience_match && (
@@ -276,6 +308,8 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
+<<<<<<< HEAD
+=======
 import { useState  } from './react';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
@@ -438,18 +472,24 @@ if ( {) {
                         <p className="font - medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>;
                         <p>{application.match_breakdown.experience_match.analysis}</p>;
                       </div>)}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     {application.match_breakdown.certifications_match && (
                       <div>;
                         <p className="font - medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>;
                         {application.match_breakdown.certifications_match.matching && (
                           <p > Matching certs: {application.match_breakdown.certifications_match.matching.join (", ")}</p>)}
                         {application.match_breakdown.certifications_match.missing && (
+<<<<<<< HEAD
+                          <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
+                        )}
+=======
 
 
                       </div>;
                       </div>;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     )}
                     
                     {application.match_breakdown.education_match && (
@@ -457,6 +497,11 @@ if ( {) {
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
+<<<<<<< HEAD
+                  </div>
+                </details>
+              </div>
+=======
                       </div>;
                     )}
 
@@ -488,6 +533,7 @@ if ( {) {
                   </div>;
                 </details>;
               </div>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             )}
 
           </div>;
@@ -508,16 +554,22 @@ if ( {) {
                 </>;
               ) : (;
                 "Score Resume";
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
 
+<<<<<<< HEAD
+=======
             <Button 
 
               onClick={handleScore} 
               disabled={isScoring}
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="w-full"
             >
               {isScoring ? (
@@ -527,11 +579,14 @@ if ( {) {
                 </>
               ) : (
                 "Score Resume"
+<<<<<<< HEAD
+=======
               )}
             </Button>;
           </div>;
         )}
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </CardContent>;
     </Card>;
   );
@@ -568,5 +623,8 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
 
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

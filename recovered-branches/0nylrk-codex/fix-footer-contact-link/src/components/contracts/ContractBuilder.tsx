@@ -25,8 +25,11 @@ import {ContractPreview} from "./components/ContractPreview";
 import {TemplateManager} from "./templates/TemplateManager";
 import {SmartContractBuilder} from "./SmartContractBuilder";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -77,7 +80,10 @@ interface ContractBuilderProps {
 
   onContractGenerated?: (contractContent: string) => void
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -88,6 +94,9 @@ interface ContractBuilderProps {;
 
 export function ContractBuilder(): any ({;
 
+<<<<<<< HEAD
+export function ContractBuilder({;
+=======
 <<<<<<< HEAD
 =======
 import { useState } from "react",
@@ -117,19 +126,26 @@ export function ContractBuilder({;
 =======
 export function ContractBuilder({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   isOpen;
   onClose;
   talent;
   clientName;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ContractBuilder({
   isOpen,
   onClose,
   talent,
   clientName,
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onContractGenerated;
 }: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
@@ -307,6 +323,8 @@ export function ContractBuilder({
     undefined
   ),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -317,6 +335,7 @@ export function ContractBuilder({
       <SmartContractBuilder;
         isOpen={isOpen}
         onClose={() => {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
 
@@ -356,6 +375,8 @@ export function ContractBuilder({
     setActiveTab("preview"),
     if (onContractGenerated) {
       onContractGenerated(contract)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -432,6 +453,7 @@ export function ContractBuilder({
           onClose()
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { Dialog, DialogContent } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -486,6 +508,8 @@ export function ContractBuilder({;
         client_name={client_name}
         onContractGenerated={onContractGenerated}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       />
     )
   }
@@ -512,10 +536,13 @@ export function ContractBuilder({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Button
                 variant="secondary"
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -580,11 +607,14 @@ export function ContractBuilder({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
             />;
@@ -620,11 +650,14 @@ export function ContractBuilder({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <ContractPreview
                 contractContent={generatedContract}
                 talent={talent}
                 onClose={onClose}
                 status="ready"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               />;
@@ -656,11 +689,14 @@ export function ContractBuilder({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -677,6 +713,7 @@ export function ContractBuilder({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -732,6 +769,8 @@ const handleContractGenerated = (contract: string) => {
   onContractGenerated (contract) 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 
 };
@@ -773,3 +812,4 @@ return (<SmartContractBuilder isOpen= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

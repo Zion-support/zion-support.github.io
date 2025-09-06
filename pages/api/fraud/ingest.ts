@@ -204,6 +204,15 @@ if ( {) {
       }
     }
     res.status (200).json ({
+<<<<<<< HEAD
+      id: saved.id,
+      flagged: combined_label !== "SAFE",
+      label: combined_label,
+      heuristic,
+      gpt,
+      auto_hidden: saved.auto_hidden,
+      created_at: saved.created_at,
+=======
       id: saved.id
       flagged: combined_label !== "SAFE"
       label: combined_label
@@ -211,6 +220,7 @@ if ( {) {
       gpt
       auto_hidden: saved.auto_hidden
       created_at: saved.created_at
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
 
   } catch (e: any) {

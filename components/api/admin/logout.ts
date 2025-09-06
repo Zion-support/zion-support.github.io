@@ -9,6 +9,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
 <<<<<<< HEAD
+  res.status(200).json({ ok: true })
+}
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -25,6 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ ok: true })
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { clearSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -38,6 +43,8 @@ function handler() {
   clearSessionCookie (res);
   res.status (200).json ({ ok: true });
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -62,3 +69,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

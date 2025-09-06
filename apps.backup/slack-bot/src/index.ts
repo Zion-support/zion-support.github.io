@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -22,6 +24,7 @@ function help_text (): string {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 app.command ('/zion', async ({ command, ack, respond }) => {
   await ack (),
@@ -232,6 +235,10 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   }
 })
 (async () => {
+<<<<<<< HEAD
+import { App } from '@slack / bolt';
+import dotenv from 'dotenv';
+=======
   const port = Number(process.env.SLACK_PORT |3001)
   await app.start(port)
   // eslint-disable-next-line no-console
@@ -435,3 +442,4 @@ import dotenv from 'dotenv';
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

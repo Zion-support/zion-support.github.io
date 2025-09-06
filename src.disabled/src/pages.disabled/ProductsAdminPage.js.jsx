@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React,{ useState } from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; import {} Table,; TableHead,; TableHeader,; TableRow,; TableBody,'; TableCell} from '@/components/ui/table';'; import { Input } from '@/components/ui/input';'; import { Switch } from '@/components/ui/switch';'; const initialProducts = [''; { "id": '1',"name": 'Alpha',"category": 'Software',"status": 'pending' },'; { "id": '2',"name": 'Beta',"category": 'Hardware',"status": 'approved' },'; { "id": '3',"name": 'Gamma',"category": 'Service',"status": 'rejected' } ]; export {}; return null} '; ''; '''; const [search,setSearch] = useState(''); const [products,setProducts] = useState(initialProducts); const filtered = products.filter(p => p.name.toLowerCase().includes(search.toLowerCase()); ); const toggleApproval = id => {} setProducts(prev => prev.map(p => p.id === id; ? {} ...p,'; "status": p.status === 'approved' ? 'rejected' : 'approved'} : p; ); );}; return(); <AdminLayout> <div className="space-y-4"> <div className="flex items-center justify-between"> <h1 className="text-2xl font-bold">Products</h1>"; <div>Broken JSX</div> onChange={e => setSearch(e.target.value)}; className="max-w-xs"; />"; </div> <div className="rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>ID></div> <TableHead>Name></div> <TableHead>Category</TableHead>"; <TableHead>Status</TableHead> <TableHead className="text-center">Approve></div> ></div> ></div> <TableBody> {}; <TableRow key={p.id}> <TableCell>{p.id}></div> <TableCell>{p.name}></div> <TableCell>{p.category}</TableCell>"; <TableCell>{p.status}</TableCell> <TableCell className="text-center">'; <div>Broken JSX</div> onCheckedChange={() => toggleApproval(p.id)} /> ></div> ></div> ))} ></div> ></div> ></div> ></div> </AdminLayout>)} ; export { ProductsAdminPage }; export { ProductsAdminPage }; export { ProductsAdminPage }; export { ProductsAdminPage }; export { ProductsAdminPage };
@@ -38,3 +40,4 @@ import _React,{ useState } from 'react';'''; import AdminLayout from '@/componen
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

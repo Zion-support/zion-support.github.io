@@ -37,10 +37,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName
     businessRegistrationNumber
   } = req.body as {
+<<<<<<< HEAD
+    role,
+    fullLegalName,
+    business_name,
+    businessRegistrationNumber,
+=======
     role
     fullLegalName
     business_name
     businessRegistrationNumber
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     userId?: string;
   } = req.body as {
     user_id?: string;

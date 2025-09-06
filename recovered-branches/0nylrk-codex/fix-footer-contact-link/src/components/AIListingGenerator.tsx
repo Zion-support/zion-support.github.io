@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,6 +11,7 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -19,6 +22,8 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
 import {Badge} from "@/components/ui/badge";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface GeneratedContent {;
@@ -53,6 +58,7 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
   const { toast } = useToast();
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -102,7 +108,10 @@ import { Badge } from "@/components/ui/badge",
 
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -111,6 +120,8 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -137,6 +148,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -208,6 +220,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     switch(field) {
       case 'title':
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         setTitle(e.target.value);
 <<<<<<< HEAD
 =======
@@ -257,12 +271,17 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
+<<<<<<< HEAD
+      });
+        break;
+=======
 
 <<<<<<< HEAD
 =======
@@ -297,6 +316,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       case 'title':;
         setTitle(e.target.value),;
         break,;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'category':;
         setCategory(e.target.value),;
         break,;
@@ -306,6 +326,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       case 'targetAudience':;
         setTargetAudience(e.target.value),;
         break;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     }
@@ -325,6 +347,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         variant: "destructive";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
       return;
     }
@@ -488,6 +511,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
       if (data.error) {;
         throw new Error(data.error),;
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
       setGeneratedContent(data.generated),;
@@ -704,10 +729,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -841,6 +869,7 @@ if ( {) {
           </div>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Button
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
@@ -1155,6 +1184,8 @@ if ( {) {
               {[...Array(5)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1221,6 +1252,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               ))}
             </div>;
             <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
@@ -1234,6 +1266,8 @@ if ( {) {
       )}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1243,6 +1277,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
           <CardHeader>
@@ -1271,6 +1306,8 @@ if ( {) {
                 {generatedContent.keyPoints.map((point, index) => (
                   <li key={index}>{point}</li>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1279,6 +1316,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {generatedContent && !isLoading && (;
         <Card className="border border-zion-blue-light bg-zion-blue-dark">;
           <CardHeader>;
@@ -1479,6 +1517,8 @@ if ( {) {
           </CardContent>;
           <CardFooter>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <Button;
@@ -1564,4 +1604,5 @@ toast ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

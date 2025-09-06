@@ -7,8 +7,13 @@ import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
 
 
+<<<<<<< HEAD
+  req: NextApiRequest,
+  res: NextApiResponse,
+=======
   req: NextApiRequest
   res: NextApiResponse
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ) {;
 
   const user = parseUserFromRequest(req);
@@ -60,6 +65,22 @@ export default async function handler(
 
     }
     const id = generateCaseId();
+<<<<<<< HEAD
+      id,
+      projectId: String(projectId),
+      entityType,
+      entityId,
+      clientUserId: String(clientUserId),
+      talentUserId: String(talentUserId),
+      createdAt: now,
+      updatedAt: now,
+      status: "Open",
+      reason: reason as DisputeReason,
+      reasonDetails,
+      description,
+      attachments: [],
+      messages: [],
+=======
       id
       projectId: String(projectId)
       entityType
@@ -74,6 +95,7 @@ export default async function handler(
       description
       attachments: []
       messages: []
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
 
 

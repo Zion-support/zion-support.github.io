@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {; alt={project.title}"; className="w-full h-full object-cover"; /> ) : ("; <div className="w-full h-full flex items-center justify-center bg-muted">"; <FileText className="h-12 w-12 text-muted-foreground/50" /> ></div> )} ></div> "; <CardContent className="flex-grow pt-6">"; <div className="space-y-2">"; <h3 className="font-semibold text-lg">{project.title}></div> {}; {project.description} ></div> )} {project.technologies && project.technologies.length > 0 && ("; <div className="flex flex-wrap gap-1 mt-2"> {project.technologies.map((tech,index) => ("; <Badge key={index} variant="secondary" className="text-xs"> {tech} ></div> ))} ></div> )} ></div> ></div> "; <CardFooter className="flex justify-between border-t bg-muted/40 p-4">"; <div className="flex gap-2"> {}; )} {project.demo_url && (; <a; href={project.demo_url}"; target="_blank"; rel="noopener noreferrer"; title="Live demo">"; <Button variant="ghost" size="icon">"; <Link className="h-4 w-4" /> ></div> ></div> )} ></div> "; <div className="flex gap-2"> <div>Broken JSX</div> onClick={() => onEdit(project)}">"; <Edit className="h-4 w-4" /> ></div> <div>Broken JSX</div> onClick={() => setDeleteDialogOpen(true)}">"; <Trash2 className="h-4 w-4" /> ></div> ></div> ></div> <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project></div> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot; be undone.></div> ></div> <AlertDialogFooter> <AlertDialogCancel>Cancel></div> <div>Broken JSX</div> className="bg-destructive text-destructive-foreground"> Delete; ></div> ></div> ></div> ></div> ></div> );} '"
@@ -61,3 +63,4 @@ import _React,{ useState } from 'react'; import { useState } from 'react'; expor
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

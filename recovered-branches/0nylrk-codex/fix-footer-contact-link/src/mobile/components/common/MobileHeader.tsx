@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,11 +11,14 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface MobileHeaderProps {;
@@ -21,6 +26,7 @@ interface MobileHeaderProps {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { useNavigate } from "react-router-dom",
 import { ChevronLeft, Bell, Settings } from "lucide-react",
@@ -30,9 +36,12 @@ interface MobileHeaderProps {
 
   title: string
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   showBack?: boolean;
   showNotifications?: boolean;
@@ -43,6 +52,8 @@ interface MobileHeaderProps {
 <<<<<<< HEAD
   onSettingsClick?: () => void;
 }
+<<<<<<< HEAD
+=======
 
 
 export function MobileHeader(): any ({;
@@ -54,6 +65,7 @@ export function MobileHeader(): any ({;
   onSettingsClick?: () => void;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title;
 
   showBack = false;
@@ -65,6 +77,8 @@ export function MobileHeader(): any ({;
   const navigate = useNavigate();
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -75,6 +89,7 @@ import { Button } from "@/components/ui/button",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -82,6 +97,8 @@ interface MobileHeaderProps {
   showSettings?: boolean,
   className?: string,
   onNotificationsClick?: () => void,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -92,6 +109,7 @@ interface MobileHeaderProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onSettingsClick?: () => void
 }
 
@@ -124,11 +142,14 @@ export function MobileHeader({
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -139,6 +160,8 @@ export function MobileHeader({
               size="icon"
               className="mr-2"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <headerclassName={cn(
@@ -152,6 +175,7 @@ export function MobileHeader({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               onClick={() => navigate(-1)}
             >
               <ChevronLeft className="h-5 w-5" />
@@ -183,6 +207,11 @@ export function MobileHeader({
               <span className="sr-only">Settings</span>
             </Button>
 <<<<<<< HEAD
+}
+
+
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -200,6 +229,7 @@ export function MobileHeader({
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
@@ -247,11 +277,14 @@ export function MobileHeader({;
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
       className;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onSettingsClick} MobileHeaderProps) {;
   const navigate = useNavigate(),;
 ;
@@ -260,13 +293,18 @@ export function MobileHeader({;
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;
       className;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     )}>;
       <div className="flex items-center justify-between h-14 px-4">;
         <div className="flex items-center">;
           {showBack && (;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             <Button
@@ -286,6 +324,7 @@ export function MobileHeader({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               onClick={() => navigate(-1)}
             >;
               <ChevronLeft className="h-5 w-5" />;
@@ -294,6 +333,8 @@ export function MobileHeader({;
           )}
           <h1 className="text-lg font-medium leading-none truncate">;
             {title}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -312,6 +353,7 @@ export function MobileHeader({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               size="icon"
               onClick={onNotificationsClick}>;
             <Button ;
@@ -325,13 +367,18 @@ export function MobileHeader({;
               onClick={onNotificationsClick}
             >;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Bell className="h-5 w-5" />;
               <span className="sr-only">Notifications</span>;
             </Button>;
           )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -345,6 +392,7 @@ export function MobileHeader({;
           {showSettings && (;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               size="icon"
               onClick={onSettingsClick}>;
             <Button ;
@@ -359,18 +407,24 @@ export function MobileHeader({;
               onClick={onSettingsClick}
             >;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
             </Button>;
           )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
       </div>;
     </header>;
@@ -396,6 +450,8 @@ export /**
 function MobileHeader() {
   const navigate = use_navigate ();
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
         </div>;
@@ -491,3 +547,4 @@ className)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

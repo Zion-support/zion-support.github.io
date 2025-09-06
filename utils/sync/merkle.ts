@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 import crypto from "crypto";
 
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Merkle tree utilities;
 export const merkle = {
   // Add merkle tree functionality here;
@@ -9,6 +12,8 @@ export const merkle = {
   get_proof: (tree: any, leaf: string) => [],
   verify_proof: (proof: any[], leaf: string, root: string) => false;
 }
+<<<<<<< HEAD
+=======
 
 export class MerkleTree {
   private root: MerkleNode | null = null;
@@ -131,3 +136,4 @@ export function verifyMerkleProof(
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

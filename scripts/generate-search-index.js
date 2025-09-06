@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+
+
+
+
+
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -26,25 +34,32 @@
 
 #!/usr/bin/env node;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**;
  * Generate Search Index;
  * Creates a search index for the website content;
  */;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const fs = require('fs');
 const path = require('path');
 const PAGES_DIR = path.join(__dirname, '..pages');
 const OUTPUT_DIR = path.join(__dirname, '..public', 'search');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 const fs = require('fs'),;
 const path = require('path'),;
@@ -57,6 +72,8 @@ const CONTENT_TYPES = {'pages':{;
     path:PAGES_DIR;
     extensions:['.tsx.ts', '.jsx.js'];
     exclude:['_app_document', 'api'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 const fs = require('fs'),;
@@ -120,6 +137,7 @@ const CONTENT_TYPES = {
   }
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     exclude:[];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
@@ -127,9 +145,12 @@ const CONTENT_TYPES = {
     extensions:['.tsx.ts', '.jsx.js'];
     exclude:[];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const fs = require('fs'),;
 const path = require('path'),;
 const PAGES_DIR = path.join(__dirname, '..pages'),;
@@ -146,6 +167,8 @@ const CONTENT_TYPES = {;
     extensions: ['.tsx.ts.jsx.js'],;
     exclude: [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -160,14 +183,18 @@ const CONTENT_TYPES = {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 },
   }
 },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   }
 }
@@ -180,6 +207,8 @@ function extractTextFromJSX(content) {
     .replace(/[{}()]/g, ' ') // Remove brackets
     .replace(/\s+/g, ' ') // Normalize whitespace
     .trim()
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -204,6 +233,7 @@ function extractTextFromJSX(content) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 function generateSearchIndex() {
   const searchIndex = {
@@ -216,6 +246,10 @@ function generateSearchIndex() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+            // Skip excluded files
+            if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
+=======
   Object && Object.entries(CONTENT_TYPES).forEach(([type, config]) => {
     if (!fs && fs.existsSync(config && config.path)) return,
 
@@ -284,10 +318,13 @@ function generateSearchIndex() {
             // Skip excluded files
             if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               return
             }
             try {
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               const content = fs && fs.readFileSync(filePath, 'utf8'),
@@ -307,6 +344,7 @@ function generateSearchIndex() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               const content = fs.readFileSync(filePath, 'utf8')
               const text = extractTextFromJSX(content)
 
@@ -320,6 +358,8 @@ function generateSearchIndex() {
               }
               searchIndex[type].push(entry)
             } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               console && console.warn(`⚠️  Could not process ${filePath}:`, error && error.message)
@@ -459,10 +499,13 @@ function generateSearchIndex() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             }
           }
         }
       }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -482,10 +525,13 @@ function generateSearchIndex() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   })
 
   // Ensure output directory exists
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   if (!fs && fs.existsSync(OUTPUT_DIR)) {
     fs && fs.mkdirSync(OUTPUT_DIR, { recursive: true })
@@ -529,6 +575,7 @@ module && module.exports = { generateSearchIndex },
 
   // Ensure output directory exists
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // // // console.log(`✅ Search index generated at: ${indexPath}`),
   // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)
 ;
@@ -548,6 +595,8 @@ module && module.exports = { generateSearchIndex },
 if (require.main === module) {
   generateSearchIndex()
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 module.exports = { generateSearchIndex }
 #!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) ,"}),"}) function walk(dir,filelist = []) {,"}),"}) const files = fs.readdirSync(dir,{ withFileTypes: true }),"}),"}) for (const entry of files) {,"}),"}) const full = path.join(dir,entry.name),"}),"}) if (entry.isDirectory()) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) filelist = walk(full,filelist),"}),"}) } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {,"}),"}) filelist.push(full),"}),"}) }"}),"}) }"}),"}) return filelist,"}),"}) }"}),"}) ,"}),"}) function main() {,"}),"}) const repoRoot = process.cwd(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const index = [],"}),"}) for (const dir of srcDirs) {,"}),"}) if (!fs.existsSync(dir)) continue,"}),"}) for (const file of walk(dir)) {,"}),"}) try {,"}),"}) const rel = path.relative(repoRoot,file),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) index.push({ file: rel,title }),"}),"}) } catch {}"}),"}) }"}),"}) }"}),"}) const outDir = path.join(repoRoot,,"}),"}) 'public'),"}),"}) if (!fs.existsSync(outDir)) fs.mkdirSync(outDir,{ recursive: true }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) `),"}),"}) }"}),"}) ,"}),"}) main(),"}),"}) ,"}),"}) filelist.push(full)} } return filelist} function main() {const repoRoot = process.cwd(); const srcDirs = [ path.join(repoRoot,'pages') path.join(repoRoot,'src') path.join(repoRoot,'components') ]; const index = []; for (const dir of srcDirs) { if (!fs.existsSync(dir)) continue; for (const file of walk(dir)) {; try {; const rel = path.relative(repoRoot,file); const content = fs.readFileSync(file,'utf8'); const titleMatch = content.match( /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/ ); const title = titleMatch ? titleMatch[1] |titleMatch[2] : path.basename(file); index.push({ file: rel,title })} catch {} } } const outDir = path.join(repoRoot,';public'); if (!fs.existsSync(outDir)) fs.mkdirSync(outDir,{ recursive: true }); const outPath = path.join(outDir,'search-index.json'); fs.writeFileSync( outPath JSON.stringify( { generatedAt: new Date().toISOString(),items: index } null 2 ) ); `)} main();
@@ -625,12 +674,24 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }"}),"})
 ,"}),"})
 main(),"}),"})
 ,"}),"})
 <<<<<<< HEAD
+  return filelist}
+function main() {const repoRoot = process.cwd();
+  return filelist};
+function main() {;
+  const repoRoot = process.cwd();
+  const srcDirs = [path.join(repoRoot, 'pages')
+    path.join(repoRoot, 'src')
+    path.join(repoRoot, 'components')
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -641,6 +702,8 @@ main(),"}),"})
     path && path.join(repoRoot, 'components')
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ];
@@ -695,6 +758,7 @@ function main() {;
     path && path.join(repoRoot, 'src')
     path && path.join(repoRoot, 'components')
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const srcDirs = [path.join(repoRoot, 'pages')
     path.join(repoRoot, 'src')
     path.join(repoRoot, 'components')
@@ -722,14 +786,19 @@ function main() {;
     outPath
     JSON.stringify(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       { "generatedAt": new Date().toISOString(), "items": index }
       null
       2
     )
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`)}
@@ -746,6 +815,7 @@ module && module.exports = { generateSearchIndex },
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 module.exports = { generateSearchIndex },
   // // // console.log(`✅ Search index generated at: ${indexPath}`),
   // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)
@@ -776,6 +846,8 @@ if ( {) {
   generateSearchIndex ();
 }
 module.exports = { generateSearchIndex },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 #!/usr / bin / env node, "}), "}) import fs from, "}), "}) 'fs', "}), "}) import path from, "}), "}) 'path', "}), "}) , "}), "}) /**
  * walk - Function description
@@ -921,10 +993,13 @@ module.exports = { generateSearchIndex },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
   
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -962,6 +1037,7 @@ module.exports = { generateSearchIndex },
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Write search index;
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),;
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),;
@@ -975,6 +1051,9 @@ if (require.main === module) {;
 ;
 module.exports = { generateSearchIndex },;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

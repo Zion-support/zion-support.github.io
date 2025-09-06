@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
@@ -34,6 +36,7 @@ import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -51,6 +54,8 @@ import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
@@ -61,6 +66,7 @@ const corsHeaders = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -71,6 +77,8 @@ serve(async (req) => {
     Deno && Deno.env.get("SUPABASE_URL") ?? "";
     Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     const authHeader = req && req.headers.get("Authorization")!;
@@ -131,10 +139,13 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Get request data
     const {
       transactionId
       action, // 'releaserefundcancel'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -231,6 +242,7 @@ serve(async (req) => {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (!transactionId) {
       throw new Error("Transaction ID is required")
     }
@@ -239,6 +251,8 @@ serve(async (req) => {;
       .from("transactions")
       .select("*")
       .eq("id", transactionId)
+<<<<<<< HEAD
+=======
 
     const isClient = transaction && transaction.user_id === user && user.id;
     const isProvider = transaction && transaction.provider_id === user && user.id;
@@ -283,10 +297,13 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
     }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -380,6 +397,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 
@@ -392,6 +410,8 @@ if ( {) {
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"}),
 
+<<<<<<< HEAD
+=======
     let result,
     
 <<<<<<< HEAD
@@ -404,6 +424,7 @@ if ( {) {
       apiVersion: "2023-10-16"}),
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     switch (action) {
       case 'release':;
         // Only providers or admins can release escrow funds;
@@ -413,6 +434,8 @@ if ( {) {
 }
           throw new Error ("Only service providers can release funds from escrow");
         }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -451,6 +474,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'refund':
         // Check if transaction can be refunded
         if (transaction && transaction.status !== "completed" && transaction && transaction.status !== "pending") {
@@ -459,6 +483,8 @@ if ( {) {
         // Process refund via Stripe
         if (transaction && transaction.stripe_session_id) {
           // Retrieve payment intent from session
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -501,6 +527,7 @@ if ( {) {
             const refund = await stripe.refunds.create({
               payment_intent: session.payment_intent.toString()
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             }),
             
             // Update transaction status
@@ -598,6 +625,10 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
         }
+<<<<<<< HEAD
+        result = { message: "Refund processed successfully" }
+        break;
+=======
 
 <<<<<<< HEAD
 
@@ -623,6 +654,7 @@ if ( {) {
 <<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'cancel':
         // Only allow cancellation for pending transactions
         if (transaction && transaction.status !== "pending") {
@@ -645,6 +677,8 @@ if ( {) {
             status: "cancelled"
             cancelled_at: new Date().toISOString()
           })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -672,10 +706,13 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       status: 200})
   } catch (error) {
     console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -693,6 +730,7 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       status: 500})
   }
 });
@@ -707,6 +745,8 @@ serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -734,6 +774,7 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
       case 'cancel':;
         // Only allow cancellation for pending transactions;
@@ -781,6 +822,8 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
+<<<<<<< HEAD
+=======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -930,3 +973,4 @@ if ( {) {
   }
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

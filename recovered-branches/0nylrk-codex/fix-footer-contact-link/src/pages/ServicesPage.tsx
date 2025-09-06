@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -13,6 +15,7 @@ import {Link} from "react-router-dom";
 import {Globe} from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
@@ -34,9 +37,12 @@ const SERVICE_LISTINGS: ProductListing[] = [
 import { Link } from "react-router-dom",
 import { Globe } from "lucide-react",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -48,6 +54,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -55,6 +63,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     author: {
       name: "TechSolutions Inc."
       id: "tech-solutions"
@@ -65,6 +74,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 124}
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -92,6 +103,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     author: {
       name: "CloudPro Experts"
       id: "cloud-pro"}
@@ -101,6 +113,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.7
     reviewCount: 92}
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -128,6 +142,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     author: {
       name: "DataMind Solutions"
       id: "datamind"
@@ -138,6 +153,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.8
     reviewCount: 78}
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -165,6 +182,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     author: {
       name: "SecureNet Team"
       id: "secure-net"}
@@ -174,6 +192,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 103}
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -201,6 +221,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     author: {
       name: "ModernizeIT Consulting"
       id: "modernize-it"}
@@ -210,6 +231,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.6
     reviewCount: 67}
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -237,6 +260,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     author: {
       name: "AI Future Consulting"
       id: "ai-future"
@@ -254,6 +278,8 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' }
   { label: 'Consulting', value: 'consulting' }
   { label: 'Strategy', value: 'strategy' }]
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -305,6 +331,7 @@ export default function ServicesPage() {
         categorySlug="services"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         listings={SERVICE_LISTINGS}
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 3000, max: 10000 }}
@@ -322,8 +349,11 @@ import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { Globe } from "lucide-react",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import {AppLayout} from "@/layout/AppLayout";
@@ -341,6 +371,8 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     category: "Development",;
     price: 5000,;
     currency: "$",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
@@ -365,10 +397,13 @@ const SERVICE_LISTINGS: ProductListing[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviewCount: 124},;
   {;
     id: "service-2",;
     title: "Cloud Infrastructure Management",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
@@ -399,6 +434,7 @@ const SERVICE_LISTINGS: ProductListing[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviewCount: 92},;
   {;
     id: "service-3",;
@@ -407,6 +443,8 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     category: "Analytics",;
     price: 4500,;
     currency: "$",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     tags: ["Big Data", "Analytics", "Business Intelligence"];
@@ -431,6 +469,7 @@ const SERVICE_LISTINGS: ProductListing[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviewCount: 78},;
   {;
     id: "service-4",;
@@ -439,6 +478,8 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     category: "Security",;
     price: 6000,;
     currency: "$",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
@@ -461,10 +502,13 @@ const SERVICE_LISTINGS: ProductListing[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviewCount: 103},;
   {;
     id: "service-5",;
     title: "IT Infrastructure Modernization",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -549,12 +593,17 @@ const SERVICE_LISTINGS: ProductListing[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
     category: "Consulting",;
     price: 8500,;
     currency: "$",;
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
 
+<<<<<<< HEAD
+export default function ServicesPage() {;
+  return (
+=======
 <<<<<<< HEAD
 =======
 
@@ -793,12 +842,15 @@ function ServicesPage() {
 export default function ServicesPage() {;
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 Request a Quote;
               </Button>;
             </Link>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -813,6 +865,7 @@ export default function ServicesPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <DynamicListingPage;
         title="IT & AI Services";
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
@@ -864,6 +917,8 @@ reviewCount: 85
         categorySlug="services"
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -885,3 +940,4 @@ reviewCount: 85
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

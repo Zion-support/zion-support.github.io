@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+"import { ;\" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from \'@/components/ui/tooltip\';\"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\"; return (); <div className=\"text-center py-16\">\" <div className=\"bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\">\" <MessageSquare className=\"h-10 w-10 text-zion-purple\" />\" </div>\" <h2 className=\"text-xl font-medium mb-2\">{title}</h2>\" <p className=\"text-muted-foreground mb-6\">{subtitle}</p>\" <TooltipProvider>\" <Tooltip> \";\"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 "import { ;" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from "@/components/ui/tooltip";"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {"; return (); <div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple" />" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> ";"'"'"
@@ -27,6 +30,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 "import { ;\" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from \'@/components/ui/tooltip\';\"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\"; return (); <div className=\"text-center py-16\">\" <div className=\"bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\">\" <MessageSquare className=\"h-10 w-10 text-zion-purple\" />\" </div>\" <h2 className=\"text-xl font-medium mb-2\">{title}</h2>\" <p className=\"text-muted-foreground mb-6\">{subtitle}</p>\" <TooltipProvider>\" <Tooltip> \";\"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "import { ;" Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from "@/components/ui/tooltip";"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {"; return (); <div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple" />" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> ";"'"'"
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

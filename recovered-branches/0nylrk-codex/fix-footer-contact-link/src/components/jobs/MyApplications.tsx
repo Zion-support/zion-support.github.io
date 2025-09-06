@@ -10,6 +10,8 @@ import {ApplicationStatus} from "@/types/jobs";
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const getStatusBadge = (status: ApplicationStatus) => {;
@@ -62,6 +64,7 @@ function MyApplications() {
     switch (status) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -147,6 +150,8 @@ export function MyApplications() {
       </Card>
     )
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   return (
     <div className="grid gap-4 md:grid-cols-2">
@@ -237,6 +242,7 @@ export function MyApplications() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -301,6 +307,8 @@ export function MyApplications() {;
             <p className="text-sm text-muted-foreground">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             </p>;
           </CardHeader>;
           <CardContent>;
@@ -315,10 +323,13 @@ export function MyApplications() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {application.cover_letter}
                 </p>
               )}
               
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -327,6 +338,7 @@ export function MyApplications() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
@@ -481,12 +493,15 @@ export function MyApplications() {;
                   variant="default" 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   size="sm"
                   className="text-xs"
                   asChild>;
@@ -552,6 +567,8 @@ export function MyApplications() {;
     }
   }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -693,3 +710,4 @@ default: return <Badge variant="outline"> {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

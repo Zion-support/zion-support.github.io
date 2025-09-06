@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 export interface UserDetails {
   id?: string;
   name?: string;
@@ -21,6 +23,7 @@ export interface UserDetails {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface UserDetails {
 export interface UserDetails {;
   id?: string;
@@ -62,6 +65,8 @@ export interface UserDetails {;
   avatar_url?: string;
   headline?: string;
   role?: string;
+<<<<<<< HEAD
+=======
   permissions?: string[];
   companyId?: string;
 }
@@ -116,6 +121,7 @@ export interface AuthContextType {;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface UserDetails {;
   id?: string,;
@@ -201,6 +207,11 @@ export interface AuthContextType {
     userData?: Partial<UserDetails>,
   ) => Promise<{ error: any }>;
 }
+<<<<<<< HEAD
+}
+;
+}
+=======
 =======
 
 export interface UserDetails {;
@@ -277,3 +288,4 @@ export interface AuthContextType {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+    { cmd:"npm run test: smoke", desc: "Smoke tests" }
+  ];
+; for (const test of build_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.builds[test.desc] = result}}
+; async runPerformanceTests () { this.log (" = = = RUNNING PERFORMANCE TESTS = = = ");
+; const perf_tests = [;
+    ; { cmd:"npm run build: analyze", desc: "Bundle analysis" },
+    { cmd:"npm run perf: audit", desc: "Performance audit" }
+  ];
+; for (const test of perf_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.performance[test.desc] = result}}
+; async runSecurityTests () { this.log (" = = = RUNNING SECURITY TESTS = = = ");
+; const security_tests = [;
+    ; { cmd:"npm audit", desc: "Security audit" },
+    { cmd:"npm run security: audit", desc: "Enhanced security audit" }
+  ];
+; for (const test of security_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.security[test.desc] = result}}
+; async runQualityTests () { this.log (" = = = RUNNING QUALITY TESTS = = = ");
+; const quality_tests = [;
+    ; { cmd:"npm run lint: check", desc: "Lint check" } { cmd:"npm run format: check", desc: "Format check" },
+    { cmd:"npm run test: coverage", desc: "Test coverage" }
+;
+    } catch (error) {,;
+      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),;
+      throw error;
+    }
+  }
+},;
+,;
+// Main execution,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
+  const runner = new ComprehensiveAutomationRunner(),;
+=======
 #!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
@@ -229,6 +261,7 @@ class ComprehensiveAutomationRunner {;
 // Main execution;
 if (import.meta.url === `file: //${process.argv[1]}`) {;
   const runner = new ComprehensiveAutomationRunner();
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   runner.runAll().catch(console.error);
 };
 ;
@@ -468,3 +501,58 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 };
 ,
 export default ComprehensiveAutomationRunner,
+<<<<<<< HEAD
+
+    }),;
+,;
+    return recommendations;
+  },;
+,;
+  async saveResults() {,;
+    this.results.recommendations = this.generateRecommendations(),;
+    this.results.overall.score = this.calculateOverallScore(),;
+,;
+    fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)),;
+    this.log(`Results saved: to: ${this.resultsFile}`);
+  },;
+,;
+  async runAll() {,;
+    this.log("🚀 Starting Comprehensive Automation Runner"),;
+    this.log("=" * 50),;
+,;
+    try {,;
+      await this.runBuildTests(),;
+      await this.runPerformanceTests(),;
+      await this.runSecurityTests(),;
+      await this.runQualityTests(),;
+,;
+      const score = this.calculateOverallScore(),;
+      await this.saveResults(),;
+,;
+      this.log("=" * 50),;
+      this.log(`🎯 Overall: Score: ${score}/100 (${this.results.overall.status})`),;
+      this.log("📊 Detailed results saved to reports/comprehensive-results.json"),;
+,;
+      if (score < 80) {,;
+        this.log("⚠️  Some improvements needed. Check recommendations.", "WARN");
+      } else {,;
+        this.log("✅ All systems performing well!", "SUCCESS");
+      }
+;
+    } catch (error) {,;
+      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),;
+      throw error;
+    }
+  }
+},;
+,;
+// Main execution,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
+  const runner = new ComprehensiveAutomationRunner(),;
+  runner.runAll().catch(console.error);
+},;
+,;
+export default ComprehensiveAutomationRunner;
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

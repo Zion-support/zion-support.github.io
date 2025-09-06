@@ -17,6 +17,8 @@ export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics 
 :src && src.disabled/components/EnterpriseDashboard && EnterpriseDashboard.js.jsx
 
 export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
+<<<<<<< HEAD
+=======
 :src.disabled/components/EnterpriseDashboard.js.jsx
 export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
 <<<<<<< HEAD
@@ -43,6 +45,7 @@ export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics 
 =======
 "export": const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [activeTab,setActiveTab] = useState ('overview') const [refreshInterval,setRefreshInterval] = useState (30000) ';"";""
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 :src.disabled/components/EnterpriseDashboard.js.jsx
 export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
 "export": const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [activeTab,setActiveTab] = useState ('overview') const [refreshInterval,setRefreshInterval] = useState (30000) ';"";""

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -27,8 +28,7 @@ export function Button({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';';
 export function Button({ children, variant = 'default', size = 'md', asChild = false, className="", onClick,  type = 'button', disabled = false }) {';
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
@@ -57,6 +57,8 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -67,6 +69,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
     default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -84,6 +87,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   if (asChild) {
   }
   return (
+<<<<<<< HEAD
+
+'
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -124,7 +131,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 '
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -134,5 +140,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -15,10 +15,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (!id |typeof id !== 'string') {
     return res.status(400).json({ error: 'Missing id' })
+<<<<<<< HEAD
+    id,
+
+    note: 'This is a stub export. Connect to persistence to return real deployment state.'},
+  res.setHeader('Content-Typeapplication/json'),
+=======
     id
 
     note: 'This is a stub export. Connect to persistence to return real deployment state.'}
   res.setHeader('Content-Typeapplication/json')
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return res.status(200).json(fake);
 };
 
@@ -58,6 +65,8 @@ export default function handler(req, res) {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -80,3 +89,4 @@ export default function handler(req, res) {
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -3,6 +3,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 {/* Honeypot field */}
@@ -129,6 +131,7 @@ export function FooterNewsletter(): React.ReactElement {
 
     setIsSubmitting(true),
     const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     try {
       const res = await fetch('/api/newsletter', {
@@ -228,6 +231,7 @@ export function FooterNewsletter(): React.ReactElement {;
       {/* Honeypot field */}
       <input
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -249,14 +253,12 @@ export function FooterNewsletter(): React.ReactElement {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
         onChange={e => setHoneypot(e && e.target.value)}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
       />;
-<<<<<<< HEAD
 <<<<<<< HEAD
       <Button
         type="submit"
@@ -287,11 +289,6 @@ export function FooterNewsletter(): React.ReactElement {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
-=======
-      <Button
-        type="submit"
-        disabled={isSubmitting}
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
@@ -300,6 +297,8 @@ export function FooterNewsletter(): React.ReactElement {;
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -350,6 +349,7 @@ export function FooterNewsletter(): React.ReactElement {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -361,6 +361,9 @@ export function FooterNewsletter(): React.ReactElement {;
       >;
         {isSubmitting ? (;
           <>;
+<<<<<<< HEAD
+            <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -492,6 +495,7 @@ export function FooterNewsletter():React.ReactElement {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Subscribing...;
           </>;
         ) : (;
@@ -651,6 +655,9 @@ if ( {) {
 }
 }
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -675,7 +682,6 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -685,5 +691,4 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

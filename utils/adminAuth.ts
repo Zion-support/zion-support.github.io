@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -7,6 +9,7 @@
 import type { NextApiRequest } from 'next';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Session {
 
 export interface Session {;
@@ -231,6 +234,8 @@ export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -238,9 +243,14 @@ export const is_admin = () =>: any {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 =======
 
+<<<<<<< HEAD
+}
+;
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -277,3 +287,4 @@ export const isAdmin = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

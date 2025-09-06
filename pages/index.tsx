@@ -1,16 +1,54 @@
 <<<<<<< HEAD
+import React from 'react';
+origin/main
+import Link from 'next/link';
+import Head from 'next/head';
+
+
+        {/* Features Section */}
+        <section className="py-20 bg-slate-900/50">
+import Link from 'next/link',
+import Head from 'next/head';
+import { useState, useEffect, Suspense  } from 'react';
+import { ContactInfo, AnimationState  } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary',
+import LoadingSpinner from '../components/LoadingSpinner';
+// import PerformanceMonitor from '../components/PerformanceMonitor';
+
+
+
+
+import Link from 'next/link';
+import Head from 'next/head';
+import {useState, useEffect, Suspense} from 'react';
+import {ContactInfo, AnimationState} from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import React, { useState, useEffect, Suspense } from 'react';
+import Head from 'next/head';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
+<<<<<<< HEAD
+export default function Home() {
+  const [animationState, setAnimationState] = useState<AnimationState>({
+    isLoaded: false,
+    hasError: false;
+=======
 // import PerformanceMonitor from '../components/PerformanceMonitor';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   });
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,6 +69,8 @@ export default function Home() {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
     );
   }
 =======
@@ -270,6 +310,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h1
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ),
   };
   return (;
@@ -1293,6 +1334,8 @@ origin/automation-improvements-final
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
             </motion.div>
@@ -1302,6 +1345,7 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -1342,8 +1386,11 @@ origin/automation-improvements-final
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   <p className="text-gray-600">{item.description}</p>
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -1472,6 +1519,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 <Link
                   href="tel:+13024640950"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -1485,6 +1534,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </Link>
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="max-w-4xl mx-auto text-center">
@@ -1510,7 +1560,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 <Button variant="outline" size="lg">
                   Schedule Consultation
                 </Button>
+<<<<<<< HEAD
+=======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Transform Your Business?</h2>
@@ -1527,6 +1580,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             </div>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 </Link>
     );
@@ -1892,7 +1948,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 </div>
               </div>
             </section>
+<<<<<<< HEAD
+=======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>
         </section>
           </div>
@@ -1903,10 +1962,13 @@ origin/automation-improvements-final
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </main>
     </>
 
@@ -2092,6 +2154,9 @@ We deliver exceptional results through innovation, expertise, and dedication;
 }
 </main>;
     </>;
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

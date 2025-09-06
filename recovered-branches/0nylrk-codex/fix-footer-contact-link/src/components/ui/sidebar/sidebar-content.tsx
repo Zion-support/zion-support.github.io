@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -19,6 +21,7 @@ import type { SafeRef } from "../sidebar.types"
 <<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>
@@ -41,6 +44,8 @@ export const SidebarInput = React.forward_ref<;
   React.ComponentProps < typeof Input>;
 >((props, ref) => {
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       ref={ref}
       data-sidebar="input"
@@ -68,12 +73,15 @@ export const SidebarInput = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -109,11 +117,15 @@ export const SidebarHeader = React.forwardRef<
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >((props, ref) => {
   return (
     <Input;
       ref={ref}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >((props, ref) => {
   return (
     <div;
@@ -220,6 +232,8 @@ export const SidebarContent = React.forwardRef<
     <div;
       ref={ref}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       data-sidebar="content"
@@ -261,12 +275,15 @@ export const SidebarContent = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       data - sidebar=&quot;content & quot;
@@ -298,6 +315,7 @@ export const SidebarGroup = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >((props, ref) => {
   return (
     <div;
@@ -305,6 +323,8 @@ export const SidebarGroup = React.forwardRef<
       data - sidebar=&quot;group & quot;
       className={cn (&quot;relative flex w - full min - w-0 flex - col p - 2&quot;, props.class_name)}
       {...props}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     />);
@@ -474,3 +494,4 @@ SidebarGroup.displayName = "SidebarGroup"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

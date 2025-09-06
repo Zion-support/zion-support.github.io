@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 };
 
 
+<<<<<<< HEAD
+=======
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Menu, X } from 'lucide-react'
@@ -25,6 +27,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
       size="icon"
 import React from "react",;
 import { Button } from "@/components/ui/button",;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Menu, X } from 'lucide-react';
 import { useSidebar } from './sidebar-context';
 import { cn } from '@/lib/utils';
@@ -38,6 +41,8 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
       <span className='sr-only'>Toggle Sidebar</span>;
     </Button>;
   );
+<<<<<<< HEAD
+=======
 };
 };
 
@@ -45,3 +50,4 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
 
 
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

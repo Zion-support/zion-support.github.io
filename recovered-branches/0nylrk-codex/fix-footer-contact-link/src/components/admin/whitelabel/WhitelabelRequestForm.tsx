@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -55,20 +57,26 @@ export function WhitelabelRequestForm() {
         landing_page_copy: {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           headline: values.headline
           subtitle: values.subtitle
           cta: values.cta}
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           headline: values.headline,
           subtitle: values.subtitle,
           cta: values.cta};
       };
       
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -76,6 +84,7 @@ export function WhitelabelRequestForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -93,6 +102,10 @@ export function WhitelabelRequestForm() {
         variant: 'destructive'
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
+<<<<<<< HEAD
+  };
+
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -125,6 +138,7 @@ import {supabase} from '@/integrations/supabase/client';
   };
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { z } from 'zod',;
@@ -137,6 +151,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
 import { toast } from '@/hooks/use-toast',;
 import { supabase } from '@/integrations/supabase/client',;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -174,6 +190,7 @@ type FormValues = z.infer<typeof formSchema>,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function WhitelabelRequestForm() {;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
@@ -191,6 +208,8 @@ export function WhitelabelRequestForm() {;
     try {;
       // Prepare the data;
       const tenantData = {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         brand_name: values && values.brand_name,;
@@ -276,11 +295,14 @@ export function WhitelabelRequestForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Submit to Supabase;
       const { data, error } = await supabase;
         .from('whitelabel_tenants');
         .insert(tenantData);
         .select();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         .single();
@@ -301,6 +323,7 @@ export function WhitelabelRequestForm() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
   },
@@ -500,6 +523,8 @@ if (throw error) {
                     </FormControl>;
                     <FormMessage />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               />;
@@ -529,6 +554,7 @@ if (throw error) {
                     <FormMessage />;
                   </FormItem>;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <FormField
                 control={form.control}
                 name="brand_name"
@@ -630,6 +656,8 @@ if (throw error) {
 <<<<<<< HEAD
                   </FormItem>;
                 )}
+<<<<<<< HEAD
+=======
 
               />;
 
@@ -641,10 +669,13 @@ if (throw error) {
                   </FormItem>;
                 )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <FormField
                 control={form && form.control}
                 name="theme_preset"
                 render={({ field }) => (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   <FormItem>;
                     <FormLabel > Subdomain</FormLabel>;
@@ -707,6 +738,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <FormControl>;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select a theme" />;
@@ -722,6 +754,8 @@ if (throw error) {
                     </Select>;
                     <FormMessage />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               />;
@@ -734,6 +768,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <FormField
                   control={form && form.control}
                   name="headline"
@@ -742,6 +777,8 @@ if (throw error) {
                       </FormControl>;
                       <FormMessage />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -752,6 +789,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <FormField
                   control={form && form.control}
                   name="subtitle"
@@ -760,6 +798,8 @@ if (throw error) {
                       </FormControl>;
                       <FormMessage />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -770,10 +810,13 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <FormField
                   control={form.control}
                   name="cta";
                   render={({ field }) => (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                     <FormItem>;
                       <FormLabel > CTA Button Text</FormLabel>;
@@ -822,10 +865,13 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <FormControl>;
                         <Input placeholder="Get Started" {...field} />;
                       </FormControl>;
                       <FormMessage />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -855,10 +901,13 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -869,11 +918,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <p>;
           After creating the tenant, you must upload a logo via the tenant management dashboard.;
           DNS verification for custom domains must be completed before they can be used.;
         </p>;
       </CardFooter>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -933,3 +985,4 @@ return (<Card className="w-full max-w-2xl" > <CardHeader> <CardTitle>Create Whit
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

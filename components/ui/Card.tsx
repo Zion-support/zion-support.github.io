@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 
 interface CardProps {
@@ -90,6 +92,7 @@ const CardFooter = React && React.forwardRef<;
 
   <div
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   />));
 CardDescription.display_name = "CardDescription";
 ;
@@ -165,4 +168,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
+<<<<<<< HEAD
+=======
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

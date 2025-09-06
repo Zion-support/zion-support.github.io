@@ -23,6 +23,8 @@ class ErrorBoundary extends React.Component {
 }
 import React from \'react\' export default OpenAppRedirect\';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -48,6 +50,7 @@ import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import _React from 'react' export default OpenAppRedirect';
 ursor/add-new-services-and-deploy-updates-0462
 :src.pages.disabled/OpenAppRedirect.jsx
@@ -66,7 +69,10 @@ import _React from 'react' export default OpenAppRedirect';
 
 :src.pages.disabled/OpenAppRedirect.jsx
 import _React from 'react' export default OpenAppRedirect';
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';

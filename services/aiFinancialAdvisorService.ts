@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface InvestmentPortfolio {
 export interface InvestmentPortfolio {;
   id: string;
@@ -16,13 +19,20 @@ export interface InvestmentPortfolio {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
+  riskTolerance: 'conservative' | 'moderate' | 'aggressive'
+=======
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years;
   target_return: number;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
+<<<<<<< HEAD
+}
+=======
 
   created_at: Date,
   updated_at: Date;
@@ -68,11 +78,14 @@ export interface PortfolioAsset {;
 }
 export interface PortfolioAsset {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   symbol: string;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,11 +112,14 @@ export interface PortfolioPerformance {
   annualized_return: number;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   volatility: number;
   sharpe_ratio: number;
   max_drawdown: number;
   beta: number;
   alpha: number;
+<<<<<<< HEAD
+=======
   id: string;
   user_id: string;
 <<<<<<< HEAD
@@ -144,6 +160,7 @@ export interface PortfolioPerformance {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export interface InvestmentRecommendation {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   user_id: string;
 <<<<<<< HEAD
@@ -194,6 +211,8 @@ export interface InvestmentRecommendation {;
   asset: {
     symbol: string;
     name: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -327,6 +346,7 @@ export interface MarketAnalysis {;
   created_at: Date,
   expires_at: Date;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface FinancialGoal {
   id: string;
@@ -337,6 +357,11 @@ export interface FinancialGoal {
   target_date: Date;
   priority: 'low' | 'medium' | 'high';
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
+<<<<<<< HEAD
+export interface MarketAnalysis {
+  id: string;
+  market: string;
+=======
 
   monthly_contribution: number;
   expected_return: number;
@@ -356,11 +381,14 @@ export interface MarketAnalysis {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   trends: string[];
   risks: string[];
   opportunities: string[];
   recommendations: string[];
   confidence: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -374,6 +402,7 @@ export interface MarketAnalysis {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface FinancialPlan {
   id: string;
@@ -391,6 +420,8 @@ export interface FinancialPlan {
     rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
     risk_management: string[];
   }
+<<<<<<< HEAD
+=======
   cash_flow: {
     monthly_income: number;
     monthly_expenses: number;
@@ -454,10 +485,13 @@ export interface FinancialPlan {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   insurance: {
     life: boolean;
     health: boolean;
     disability: boolean;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -485,6 +519,7 @@ export interface FinancialPlan {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     property: boolean,
     recommendations: string[];
   }
@@ -526,6 +561,8 @@ export interface FinancialRequest {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 }
 export interface FinancialResponse {
 =======
@@ -537,22 +574,28 @@ export interface FinancialResponse {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
 
   preferences?: Record<string, any>
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 }
 export interface FinancialResponse {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -576,6 +619,7 @@ export interface FinancialResponse {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export class AIFinancialAdvisorService {
 
   private apiKey: string;
@@ -585,6 +629,8 @@ export class AIFinancialAdvisorService {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
@@ -593,11 +639,14 @@ export class AIFinancialAdvisorService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -614,6 +663,7 @@ export class AIFinancialAdvisorService {
       return data && data.portfolio
 
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error analyzing portfolio:', error);
 =======
@@ -651,6 +701,8 @@ export class AIFinancialAdvisorService {
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -675,6 +727,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json();
       return data && data.recommendations || []
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error getting investment recommendations:', error);
 =======
@@ -717,6 +770,8 @@ export class AIFinancialAdvisorService {
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -737,6 +792,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json();
       return data && data.plan
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error creating financial plan:', error);
 =======
@@ -828,6 +884,8 @@ export class AIFinancialAdvisorService {
   }
   async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
     try {
+<<<<<<< HEAD
+=======
       const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         headers: {
@@ -841,6 +899,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json();
       return data && data.analysis
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
 <<<<<<< HEAD
       console && console.error('Error getting market analysis:', error);
@@ -875,6 +934,8 @@ export class AIFinancialAdvisorService {
   }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
     try {
+<<<<<<< HEAD
+=======
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
 
@@ -887,6 +948,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json();
       return data && data.analysis
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error getting market analysis:', error);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -906,6 +968,8 @@ export class AIFinancialAdvisorService {
     expectedImpact: string
   }> {
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -934,6 +998,7 @@ export class AIFinancialAdvisorService {
       return data && data.rebalancing
 
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error rebalancing portfolio:', error);
 =======
@@ -978,6 +1043,8 @@ export class AIFinancialAdvisorService {
   }> {
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1005,6 +1072,7 @@ export class AIFinancialAdvisorService {
       return data && data.calculation
 
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error calculating retirement needs:', error);
 =======
@@ -1042,6 +1110,8 @@ export class AIFinancialAdvisorService {
   }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1065,6 +1135,7 @@ export class AIFinancialAdvisorService {
   async analyze_portfolio (portfolio_id: string): Promise < InvestmentPortfolio> {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/analyze`, {
         headers: {
@@ -1171,6 +1242,8 @@ if ( {) {
     estimated_savings: number;
     implementation: string[];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1196,6 +1269,7 @@ if ( {) {
       return data && data.optimization
 
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error getting tax optimization strategies:', error);
 =======
@@ -1248,6 +1322,8 @@ if ( {) {
   }> {
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1275,6 +1351,7 @@ if ( {) {
       return data && data.report
 
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error generating financial report:', error);
 =======
@@ -1314,6 +1391,8 @@ if ( {) {
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1324,6 +1403,7 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process &
 export interface InvestmentPortfolio {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string,;
   userId: string,;
   name: string,;
@@ -1338,6 +1418,8 @@ export interface InvestmentPortfolio {;
   createdAt: Date,;
   updatedAt: Date;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 
@@ -1351,6 +1433,7 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process &
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     risks: string[],
     deadlines: Record < string, Date>;
   }> {
@@ -1416,6 +1499,8 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.
 export interface InvestmentPortfolio {;
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+<<<<<<< HEAD
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1961,3 +2046,4 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

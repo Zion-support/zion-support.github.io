@@ -6,8 +6,13 @@
   }
     });
     return res && res.status(200).json({
+<<<<<<< HEAD
+      ok: true,
+      override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
+=======
       ok: true
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId)
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {

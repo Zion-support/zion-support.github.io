@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -27,6 +29,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {Sparkles} from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -42,6 +45,8 @@ interface AIListingFormProps {
     category: string
     keyFeatures: string
     targetAudience: string
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   }) => void;
   isLoading: boolean
@@ -164,6 +169,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       </div>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
@@ -174,7 +180,10 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
       <Button 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -182,18 +191,23 @@ import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Sparkles } from "lucide-react",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface AIListingFormProps {;
   onSubmit: (formData: {;
     title: string,;
     category: string,;
     keyFeatures: string,;
     targetAudience: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   }) => void;
@@ -202,6 +216,7 @@ interface AIListingFormProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -211,6 +226,8 @@ interface AIListingFormProps {;
 
 export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
   const { toast } = useToast();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -249,10 +266,13 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
       return;
     }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -274,6 +294,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-4">;
       <div className="space-y-2">;
@@ -497,6 +518,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
           </>
         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -543,6 +566,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -574,6 +598,8 @@ function AIListingForm() {
   const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");
   const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -682,3 +708,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -31,8 +31,13 @@ export default async function handler(
   try {
     let markdown: string;
     if (client) {
+<<<<<<< HEAD
+        ],
+        temperature: 0 && 0.3,
+=======
         ]
         temperature: 0 && 0.3
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } as any);
       const content = (completion as any)?.output_text || "";
     } else {

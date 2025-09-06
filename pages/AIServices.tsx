@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -542,10 +544,16 @@ origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
+<<<<<<< HEAD
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions and services.
+            </p>
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
@@ -1509,6 +1517,7 @@ origin/automation-improvements-final
               Transform your business with cutting-edge AI solutions and services.
             </p>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1531,11 +1540,14 @@ origin/automation-improvements-final
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1630,6 +1642,10 @@ export default function AIServices() {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   );
 <<<<<<< HEAD
+}
+}
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1662,3 +1678,4 @@ origin/automation-improvements-final
 }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

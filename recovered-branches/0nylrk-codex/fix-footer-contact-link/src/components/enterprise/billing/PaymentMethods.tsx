@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 import {;
@@ -24,6 +26,7 @@ import React from "react";
 import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Card
   CardContent
   CardDescription
@@ -31,15 +34,20 @@ import {
   CardHeader
   CardTitle
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -59,6 +67,7 @@ import { CreditCard, Plus, Trash } from "lucide-react";
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -82,9 +91,12 @@ import { CreditCard, Plus, Trash } from "lucide-react";
     }
   ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -94,6 +106,8 @@ import { CreditCard, Plus, Trash } from "lucide-react";
       isDefault: true,
     },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -101,6 +115,7 @@ import { CreditCard, Plus, Trash } from "lucide-react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -108,6 +123,8 @@ import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -116,6 +133,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "pm-2",
       type: "credit_card",
@@ -123,6 +141,8 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
       isDefault: false}
@@ -137,6 +157,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       isDefault: false}
   ],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -191,6 +212,8 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       </CardFooter>
     </Card>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -203,11 +226,14 @@ import { CreditCard, Plus, Trash } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -216,6 +242,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function PaymentMethods() {;
   // Mock payment methods;
   const paymentMethods = [;
@@ -311,12 +338,15 @@ function PaymentMethods() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   );
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <CardContent className="space - y-4">;
         {payment_methods.map ((method) => (
           <div;
@@ -359,6 +389,10 @@ function PaymentMethods() {
           Add Payment Method;
         </Button>;
       </CardFooter>;
+<<<<<<< HEAD
+}
+}
+=======
 <<<<<<< HEAD
     </Card>);
 <<<<<<< HEAD
@@ -449,3 +483,4 @@ function PaymentMethods() {
 }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

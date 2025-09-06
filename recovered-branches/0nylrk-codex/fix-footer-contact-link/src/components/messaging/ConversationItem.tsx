@@ -1,7 +1,10 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -12,6 +15,8 @@
   isActive: boolean,
   onClick: () => void
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -29,6 +34,7 @@ interface ConversationItemProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -38,6 +44,9 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -56,6 +65,7 @@ interface ConversationItemProps {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   conversation: Conversation
   isActive: boolean
@@ -80,12 +90,15 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -106,6 +119,9 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
+<<<<<<< HEAD
+import React from 'react';
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -150,6 +166,7 @@ function ConversationItem() {
 =======
 import React from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {conversation.context_data?.title && (
           <div className="text - xs mt - 1 text - zion - cyan truncate">;
             Re: {conversation.context_data.title}
@@ -249,6 +266,8 @@ export function ConversationItem({ conversation, isActive, onClick } Conversatio
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         </div>)}
@@ -321,3 +340,4 @@ export function ConversationItem({ conversation, isActive, onClick } Conversatio
     </div>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

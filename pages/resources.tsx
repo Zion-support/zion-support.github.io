@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -15,6 +17,7 @@ export default function ResourcesPage() {
   );
 }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React from 'react';
 import SEO from '../components/SEO';
@@ -462,4 +465,7 @@ export default function ResourcesPage() {
         </div>;
       </section>;
       <EnhancedFooter />;
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

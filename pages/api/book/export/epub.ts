@@ -9,8 +9,13 @@ import { Epub } from "epub-gen";
 export const config = {
   api: {
     bodyParser: {
+<<<<<<< HEAD
+      sizeLimit: "10mb",
+    },
+=======
       sizeLimit: "10mb"
     }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },;
 };
 
@@ -46,8 +51,13 @@ export default async function handler(
     } catch {}
   }
 }
+<<<<<<< HEAD
+    title: project.meta.title, author: project.meta.author,
+    publisher: project.meta.publisher || 'Zion',
+=======
     title: project.meta.title, author: project.meta.author
     publisher: project.meta.publisher || 'Zion'
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 
 import type { NextApiRequest, NextApiResponse } from 'next';

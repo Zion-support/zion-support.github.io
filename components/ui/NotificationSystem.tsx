@@ -3,11 +3,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
 export interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   id: string;
   type: "success" | "error" | "warning" | "info";
@@ -17,6 +20,8 @@ export interface Notification {
   duration?: number;
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 interface NotificationSystemProps {
   notifications: Notification[];
@@ -110,6 +115,7 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
       {visibleNotifications.map(notification => (
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -185,6 +191,9 @@ interface NotificationContextType {
   removeNotification: (id: string) => void;
 }
 
+<<<<<<< HEAD
+  if (notifications.length === 0) return null;
+=======
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
 interface NotificationProviderProps {
@@ -210,6 +219,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   const removeNotification = (id: string) => {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
@@ -285,6 +295,71 @@ export default NotificationSystem;
               )}
 }
 }
+<<<<<<< HEAD
+
+}
+}
+;
+export default function NotificationSystem ({
+  notifications,
+  on_dismiss,
+key={notification.id},
+          className={`max - w-sm w - full border rounded - lg p - 4 shadow - lg ${getNotificationStyles (notification.type)}`},
+        >,
+          <div className="flex items - start justify - between">,
+            <div className="flex - 1">,
+              {notification.title && (,
+                <h4 className="font - medium mb - 1">{notification.title}</h4>)},
+              <p className="text - sm">{notification.message}</p>,
+            </div>,
+            {on_dismiss && (,
+              <button,
+                on_click={() => on_dismiss (notification.id)},
+import React, { create_context, useContext, useState, useCallback, ReactNode } from 'react',
+import { AnimatePresence, motion } from 'framer-motion',
+;
+export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
+type NotificationContextValue = {
+  notify: (message: string, tone?: 'default' | 'success' | 'error') => void;
+},
+const NotificationContext = create_context < NotificationContextValue>({ notify: () => {} }),
+export /**
+ * use_toast - Function description
+ */
+function use_toast() {
+  return useContext (NotificationContext);
+}
+export /**
+ * NotificationProvider - Function description
+ */
+function NotificationProvider() {
+  const [toasts, set_toasts] = useState < Toast[]>([]),
+  const notify = useCallback ((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
+    const id = Math.random ().to_string (36).slice (2),
+    set_toasts ((prev) => [...prev, { id, message, tone }]),
+    set_timeout (() => {
+      set_toasts ((prev) => prev.filter ((t) => t.id !== id));
+    }, 3000);
+  }, []),
+}: NotificationSystemProps) {
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <div className="fixed top - 4 right - 4 z - 50 space - y-2">;
+      {notifications.map ((notification) => (
+        <div;
+          key={notification.id}
+          className={`max - w-sm w - full border rounded - lg p - 4 shadow - lg ${getNotificationStyles (notification.type)}`}
+        >;
+          <div className="flex items - start justify - between">;
+            <div className="flex - 1">;
+              {notification.title && (
+                <h4 className="font - medium mb - 1">{notification.title}</h4>)}
+              <p className="text - sm">{notification.message}</p>;
+            </div>;
+=======
 =======
 const NotificationItem: React.FC<{
   notification: Notification;
@@ -296,6 +371,7 @@ const NotificationItem: React.FC<{
     warning: AlertTriangle,
     info: Info,
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const colors = {
     success: 'bg-green-500',
@@ -327,6 +403,8 @@ const NotificationItem: React.FC<{
 };
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 =======
 export const useNotifications = () => {
@@ -337,3 +415,4 @@ export const useNotifications = () => {
   return context;
 };
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

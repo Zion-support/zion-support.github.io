@@ -46,6 +46,8 @@ export default async function handler(
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
       return res && res.status(400).json({ error: "Invalid status" });
     }
+<<<<<<< HEAD
+=======
     }
 
     dispute.status = status || 'Resolved';
@@ -147,6 +149,7 @@ req: NextApiRequest
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -290,4 +293,7 @@ if ( {) {
     return res.status(200).json({ dispute });
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

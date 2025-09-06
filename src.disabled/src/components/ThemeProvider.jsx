@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React,{ useState } from 'react';import * as _React from 'react'; const ThemeContext = _React.createContext({; "theme": 'dark',; "setTheme": () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = _React.useState('dark'); _React.useEffect(() => {; return () => {};},[]);,[]); const root = window.document.documentElement; root.classList.remove('light',dark'); root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext.Provider value={value}>{children}></div> );}; const value = {; theme,; setTheme,;}; return (<ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>) ;}; const context = _React.useContext(ThemeContext) ; if(context === null) {}} return context;};
@@ -38,3 +40,4 @@ import _React,{ useState } from 'react';import * as _React from 'react'; const T
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

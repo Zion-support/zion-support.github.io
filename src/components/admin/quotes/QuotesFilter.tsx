@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+=======
 interface QuotesFilterProps {;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -23,6 +26,8 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
+<<<<<<< HEAD
+=======
 
   onReset: () => void;
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
@@ -38,6 +43,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   onReset;
 },) => {;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
       <CardContent className='p-6'>;
@@ -47,6 +53,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               placeholder='Search quotes...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
+<<<<<<< HEAD
+=======
 
               onChange={e => setSearchQuery(e && e.target.value)}            />;
           </div>;
@@ -123,6 +131,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
                 <SelectValue placeholder='Status' />              </SelectTrigger>;
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <SelectItem value='all'>All Statuses</SelectItem>;
                 <SelectItem value='new'>New</SelectItem>;
                 <SelectItem value='in_review'>In Review</SelectItem>;
@@ -173,6 +182,9 @@ interface QuotesFilterProps {
   onReset: () => void
 }
 
+<<<<<<< HEAD
+}
+=======
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery;
   setSearchQuery;
@@ -269,6 +281,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   onReset: () => void
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 };
@@ -333,4 +346,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>;
     </Card>);
 }  );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

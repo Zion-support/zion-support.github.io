@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -18,6 +20,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 const { execSync, spawn } = // // require('child_process');
 const fs = // // require('fs');
@@ -87,6 +90,8 @@ class EnhancedAutomationOrchestrator {
       }
     ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     
@@ -113,6 +118,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runLinting() {
     this.log('🔧 Running Linting and Code Quality Checks');
@@ -125,6 +131,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "description": 'Prettier Format Check'
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -152,6 +160,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runBuildChecks() {
     this.log('🏗️ Running Build and Type Checks');
@@ -164,6 +173,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "description": 'Production Build'
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -191,6 +202,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runTestSuite() {
     this.log('🧪 Running Test Suite');
@@ -199,6 +211,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "description": 'Jest Test Suite'
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -226,6 +240,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runSecurityChecks() {
     this.log('🔒 Running Security Checks');
@@ -234,6 +249,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "description": 'NPM Security Audit'
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -261,6 +278,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runPerformanceChecks() {
     this.log('⚡ Running Performance Checks');
@@ -269,6 +287,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "description": 'Performance Monitoring'
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -296,6 +316,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runCustomAutomations() {
     this.log('🤖 Running Custom Automation Scripts');
@@ -316,6 +337,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "script": () => this.checkCodeQuality()
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -343,6 +366,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       try {
         const result = await customScript.script();
         this.results.details.push({
@@ -374,6 +398,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       for (const file of files.slice(0, 50)) { // Limit to first 50 files
         try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           const content = fs && fs.readFileSync(file, 'utf8');
           for (const pattern of errorPatterns) {
@@ -393,6 +419,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         } catch (error) {
           // Skip files that can't be read
@@ -437,6 +464,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     let files = [];
     try {
 <<<<<<< HEAD
+          files.push(fullPath)}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       const items = fs.readdirSync(dir);
@@ -462,6 +492,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
           files.push(fullPath)}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (error) {
       // Skip directories that can't be read
@@ -492,6 +523,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     let size = 0;
     try {
 <<<<<<< HEAD
+          size += stat.size}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       const items = fs.readdirSync(dir);
@@ -517,6 +551,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
           size += stat.size}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (error) {
       // Skip directories that can't be read
@@ -564,6 +599,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 if (require.main === module) {
   const orchestrator = new EnhancedAutomationOrchestrator();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node const { execSync,spawn } = const fs = const path = class EnhancedAutomationOrchestrator { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'enhanced-automation.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),summary: { total: 0,successful: 0,failed: 0 },details: [] }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🚀 Starting: ${description}`); this.results.summary.total++; try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 10 }); this.log(`✅ Completed: ${description}`); this.results.summary.successful++; this.results.details.push({ name: description,command,status: 'success',output: result.substring(0,1000) }); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); this.results.summary.failed++; this.results.details.push({ name: description,command,status: 'failed',error: error.message }); return { success: false,error: error.message }} } async runQuickChecks() { this.log('🔍 Running Quick System Checks'); const quickChecks = [ { command: 'node --version',description: 'Node.js Version Check' },{ command: 'npm --version',description: 'NPM Version Check' },{ command: 'ls -la package.json',description: 'Package.json Exists' } ];  } async runLinting() { this.log('🔧 Running Linting and Code Quality Checks'); const lintingTasks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Check (Quiet Mode)' },{ command: 'npx prettier --check .',description: 'Prettier Format Check' } ];  } async runBuildChecks() { this.log('🏗️ Running Build and Type Checks'); const buildTasks = [ { command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check (Skip Lib Check)' },{ command: 'npm run build --silent',description: 'Production Build' } ];  } async runTestSuite() { this.log('🧪 Running Test Suite'); const testTasks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Jest Test Suite' } ];  } async runSecurityChecks() { this.log('🔒 Running Security Checks'); const securityTasks = [ { command: 'npm audit --audit-level=moderate',description: 'NPM Security Audit' } ];  } async runPerformanceChecks() { this.log('⚡ Running Performance Checks'); const performanceTasks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } async runCustomAutomations() { this.log('🤖 Running Custom Automation Scripts'); const customScripts = [ { name: 'Error Detection',script: () => this.detectErrors() },{ name: 'Performance Analysis',script: () => this.analyzePerformance() },{ name: 'Security Audit',script: () => this.auditSecurity() },{ name: 'Code Quality Check',script: () => this.checkCodeQuality() } ]; `); try { const result = await customScript.script(); this.results.details.push({ name: customScript.name,status: 'success',result: result }); this.log(`✅ Completed: ${customScript.name}`)} catch (error) { this.results.details.push({ name: customScript.name,status: 'failed',error: error.message }); this.log(`❌ Failed: ${customScript.name} - ${error.message}`,'ERROR')} } } async detectErrors() { const errorPatterns = [ 'SyntaxError','TypeError','ReferenceError','Module not found','Cannot resolve','Unexpected token' ]; const errors = []; const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); for (const file of files.slice(0,50)) { try { const content = fs.readFileSync(file,'utf8'); )} } } catch (error) { } } } return { errors,count: errors.length }} async analyzePerformance() { const performanceMetrics = { bundleSize: this.getBundleSize(),dependencies: this.getDependencyCount(),fileCount: this.getFileCount() }; return performanceMetrics} async auditSecurity() { const securityIssues = { vulnerabilities: 0,outdatedPackages: 0,securityWarnings: [] }; try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); securityIssues.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { securityIssues.securityWarnings.push('Could not analyze package.json')} return securityIssues} async checkCodeQuality() { const qualityMetrics = { totalFiles: 0,testFiles: 0,documentationFiles: 0,complexityScore: 0 }; const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { const allFiles = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); qualityMetrics.totalFiles = allFiles.length; qualityMetrics.testFiles = allFiles.filter(f => f.includes('.test.') || f.includes('.spec.')).length} return qualityMetrics} getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } catch (error) { } return files} getBundleSize() { try { const nextDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(nextDir)) { return this.getDirectorySize(nextDir)} } catch (error) { return 0} return 0} getDependencyCount() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const deps = Object.keys(packageJson.dependencies || {}); const devDeps = Object.keys(packageJson.devDependencies || {}); return deps.length + devDeps.length} catch (error) { return 0} } getFileCount() { const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { return this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']).length} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} generateReport() { const reportPath = path.join(this.reportsDir,'enhanced-automation-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Report generated: ${reportPath}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Automation Orchestrator'); try { await this.runQuickChecks(); await this.runLinting(); await this.runBuildChecks(); await this.runTestSuite(); await this.runSecurityChecks(); await this.runPerformanceChecks(); await this.runCustomAutomations(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Automation Orchestrator Completed'); this.log(`📊 Summary: ${this.results.summary.successful}/${this.results.summary.total} successful`); return { success: true,reportPath,summary: this.results.summary }} catch (error) { this.log(`💥 Fatal error: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const orchestrator = new EnhancedAutomationOrchestrator(); orchestrator.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedAutomationOrchestrator;
 #!/usr/bin/env node const { execSync,spawn } = const fs = const path = class EnhancedAutomationOrchestrator { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'enhanced-automation.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),summary: { total: 0,successful: 0,failed: 0 },details: [] }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🚀 Starting: ${description}`); this.results.summary.total++; try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 10 }); this.log(`✅ Completed: ${description}`); this.results.summary.successful++; this.results.details.push({ name: description,command,status: 'success',output: result.substring(0,1000) }); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); this.results.summary.failed++; this.results.details.push({ name: description,command,status: 'failed',error: error.message }); return { success: false,error: error.message }} } async runQuickChecks() { this.log('🔍 Running Quick System Checks'); const quickChecks = [ { command: 'node --version',description: 'Node.js Version Check' },{ command: 'npm --version',description: 'NPM Version Check' },{ command: 'ls -la package.json',description: 'Package.json Exists' } ];  } async runLinting() { this.log('🔧 Running Linting and Code Quality Checks'); const lintingTasks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Check (Quiet Mode)' },{ command: 'npx prettier --check .',description: 'Prettier Format Check' } ];  } async runBuildChecks() { this.log('🏗️ Running Build and Type Checks'); const buildTasks = [ { command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check (Skip Lib Check)' },{ command: 'npm run build --silent',description: 'Production Build' } ];  } async runTestSuite() { this.log('🧪 Running Test Suite'); const testTasks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Jest Test Suite' } ];  } async runSecurityChecks() { this.log('🔒 Running Security Checks'); const securityTasks = [ { command: 'npm audit --audit-level=moderate',description: 'NPM Security Audit' } ];  } async runPerformanceChecks() { this.log('⚡ Running Performance Checks'); const performanceTasks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } async runCustomAutomations() { this.log('🤖 Running Custom Automation Scripts'); const customScripts = [ { name: 'Error Detection',script: () => this.detectErrors() },{ name: 'Performance Analysis',script: () => this.analyzePerformance() },{ name: 'Security Audit',script: () => this.auditSecurity() },{ name: 'Code Quality Check',script: () => this.checkCodeQuality() } ]; `); try { const result = await customScript.script(); this.results.details.push({ name: customScript.name,status: 'success',result: result }); this.log(`✅ Completed: ${customScript.name}`)} catch (error) { this.results.details.push({ name: customScript.name,status: 'failed',error: error.message }); this.log(`❌ Failed: ${customScript.name} - ${error.message}`,'ERROR')} } } async detectErrors() { const errorPatterns = [ 'SyntaxError','TypeError','ReferenceError','Module not found','Cannot resolve','Unexpected token' ]; const errors = []; const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); for (const file of files.slice(0,50)) { try { const content = fs.readFileSync(file,'utf8'); )} } } catch (error) { } } } return { errors,count: errors.length }} async analyzePerformance() { const performanceMetrics = { bundleSize: this.getBundleSize(),dependencies: this.getDependencyCount(),fileCount: this.getFileCount() }; return performanceMetrics} async auditSecurity() { const securityIssues = { vulnerabilities: 0,outdatedPackages: 0,securityWarnings: [] }; try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); securityIssues.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { securityIssues.securityWarnings.push('Could not analyze package.json')} return securityIssues} async checkCodeQuality() { const qualityMetrics = { totalFiles: 0,testFiles: 0,documentationFiles: 0,complexityScore: 0 }; const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { const allFiles = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); qualityMetrics.totalFiles = allFiles.length; qualityMetrics.testFiles = allFiles.filter(f => f.includes('.test.') || f.includes('.spec.')).length} return qualityMetrics} getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } catch (error) { } return files} getBundleSize() { try { const nextDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(nextDir)) { return this.getDirectorySize(nextDir)} } catch (error) { return 0} return 0} getDependencyCount() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const deps = Object.keys(packageJson.dependencies || {}); const devDeps = Object.keys(packageJson.devDependencies || {}); return deps.length + devDeps.length} catch (error) { return 0} } getFileCount() { const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { return this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']).length} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} generateReport() { const reportPath = path.join(this.reportsDir,'enhanced-automation-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Report generated: ${reportPath}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Automation Orchestrator'); try { await this.runQuickChecks(); await this.runLinting(); await this.runBuildChecks(); await this.runTestSuite(); await this.runSecurityChecks(); await this.runPerformanceChecks(); await this.runCustomAutomations(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Automation Orchestrator Completed'); this.log(`📊 Summary: ${this.results.summary.successful}/${this.results.summary.total} successful`); return { success: true,reportPath,summary: this.results.summary }} catch (error) { this.log(`💥 Fatal error: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const orchestrator = new EnhancedAutomationOrchestrator(); orchestrator.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedAutomationOrchestrator;
@@ -575,11 +612,14 @@ if (require.main === module) {
 if (require.main === module) {
   const orchestrator = new EnhancedAutomationOrchestrator();
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   orchestrator.run().then(result => {
     process.exit(result.success ? 0 : 1)})}
 module.exports = EnhancedAutomationOrchestrator;
 #!/usr/bin/env node const { execSync,spawn } = const fs = const path = class EnhancedAutomationOrchestrator { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'enhanced-automation.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),summary: { total: 0,successful: 0,failed: 0 },details: [] }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🚀 Starting: ${description}`); this.results.summary.total++; try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 10 }); this.log(`✅ Completed: ${description}`); this.results.summary.successful++; this.results.details.push({ name: description,command,status: 'success',output: result.substring(0,1000) }); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); this.results.summary.failed++; this.results.details.push({ name: description,command,status: 'failed',error: error.message }); return { success: false,error: error.message }} } async runQuickChecks() { this.log('🔍 Running Quick System Checks'); const quickChecks = [ { command: 'node --version',description: 'Node.js Version Check' },{ command: 'npm --version',description: 'NPM Version Check' },{ command: 'ls -la package.json',description: 'Package.json Exists' } ];  } async runLinting() { this.log('🔧 Running Linting and Code Quality Checks'); const lintingTasks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Check (Quiet Mode)' },{ command: 'npx prettier --check .',description: 'Prettier Format Check' } ];  } async runBuildChecks() { this.log('🏗️ Running Build and Type Checks'); const buildTasks = [ { command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check (Skip Lib Check)' },{ command: 'npm run build --silent',description: 'Production Build' } ];  } async runTestSuite() { this.log('🧪 Running Test Suite'); const testTasks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Jest Test Suite' } ];  } async runSecurityChecks() { this.log('🔒 Running Security Checks'); const securityTasks = [ { command: 'npm audit --audit-level=moderate',description: 'NPM Security Audit' } ];  } async runPerformanceChecks() { this.log('⚡ Running Performance Checks'); const performanceTasks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } async runCustomAutomations() { this.log('🤖 Running Custom Automation Scripts'); const customScripts = [ { name: 'Error Detection',script: () => this.detectErrors() },{ name: 'Performance Analysis',script: () => this.analyzePerformance() },{ name: 'Security Audit',script: () => this.auditSecurity() },{ name: 'Code Quality Check',script: () => this.checkCodeQuality() } ]; `); try { const result = await customScript.script(); this.results.details.push({ name: customScript.name,status: 'success',result: result }); this.log(`✅ Completed: ${customScript.name}`)} catch (error) { this.results.details.push({ name: customScript.name,status: 'failed',error: error.message }); this.log(`❌ Failed: ${customScript.name} - ${error.message}`,'ERROR')} } } async detectErrors() { const errorPatterns = [ 'SyntaxError','TypeError','ReferenceError','Module not found','Cannot resolve','Unexpected token' ]; const errors = []; const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); for (const file of files.slice(0,50)) { try { const content = fs.readFileSync(file,'utf8'); )} } } catch (error) { } } } return { errors,count: errors.length }} async analyzePerformance() { const performanceMetrics = { bundleSize: this.getBundleSize(),dependencies: this.getDependencyCount(),fileCount: this.getFileCount() }; return performanceMetrics} async auditSecurity() { const securityIssues = { vulnerabilities: 0,outdatedPackages: 0,securityWarnings: [] }; try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); securityIssues.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { securityIssues.securityWarnings.push('Could not analyze package.json')} return securityIssues} async checkCodeQuality() { const qualityMetrics = { totalFiles: 0,testFiles: 0,documentationFiles: 0,complexityScore: 0 }; const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { const allFiles = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); qualityMetrics.totalFiles = allFiles.length; qualityMetrics.testFiles = allFiles.filter(f => f.includes('.test.') || f.includes('.spec.')).length} return qualityMetrics} getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } catch (error) { } return files} getBundleSize() { try { const nextDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(nextDir)) { return this.getDirectorySize(nextDir)} } catch (error) { return 0} return 0} getDependencyCount() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const deps = Object.keys(packageJson.dependencies || {}); const devDeps = Object.keys(packageJson.devDependencies || {}); return deps.length + devDeps.length} catch (error) { return 0} } getFileCount() { const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { return this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']).length} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} generateReport() { const reportPath = path.join(this.reportsDir,'enhanced-automation-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Report generated: ${reportPath}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Automation Orchestrator'); try { await this.runQuickChecks(); await this.runLinting(); await this.runBuildChecks(); await this.runTestSuite(); await this.runSecurityChecks(); await this.runPerformanceChecks(); await this.runCustomAutomations(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Automation Orchestrator Completed'); this.log(`📊 Summary: ${this.results.summary.successful}/${this.results.summary.total} successful`); return { success: true,reportPath,summary: this.results.summary }} catch (error) { this.log(`💥 Fatal error: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const orchestrator = new EnhancedAutomationOrchestrator(); orchestrator.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedAutomationOrchestrator;
 #!/usr/bin/env node const { execSync,spawn } = const fs = const path = class EnhancedAutomationOrchestrator { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'enhanced-automation.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),summary: { total: 0,successful: 0,failed: 0 },details: [] }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🚀 Starting: ${description}`); this.results.summary.total++; try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 10 }); this.log(`✅ Completed: ${description}`); this.results.summary.successful++; this.results.details.push({ name: description,command,status: 'success',output: result.substring(0,1000) }); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); this.results.summary.failed++; this.results.details.push({ name: description,command,status: 'failed',error: error.message }); return { success: false,error: error.message }} } async runQuickChecks() { this.log('🔍 Running Quick System Checks'); const quickChecks = [ { command: 'node --version',description: 'Node.js Version Check' },{ command: 'npm --version',description: 'NPM Version Check' },{ command: 'ls -la package.json',description: 'Package.json Exists' } ];  } async runLinting() { this.log('🔧 Running Linting and Code Quality Checks'); const lintingTasks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Check (Quiet Mode)' },{ command: 'npx prettier --check .',description: 'Prettier Format Check' } ];  } async runBuildChecks() { this.log('🏗️ Running Build and Type Checks'); const buildTasks = [ { command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check (Skip Lib Check)' },{ command: 'npm run build --silent',description: 'Production Build' } ];  } async runTestSuite() { this.log('🧪 Running Test Suite'); const testTasks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Jest Test Suite' } ];  } async runSecurityChecks() { this.log('🔒 Running Security Checks'); const securityTasks = [ { command: 'npm audit --audit-level=moderate',description: 'NPM Security Audit' } ];  } async runPerformanceChecks() { this.log('⚡ Running Performance Checks'); const performanceTasks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } async runCustomAutomations() { this.log('🤖 Running Custom Automation Scripts'); const customScripts = [ { name: 'Error Detection',script: () => this.detectErrors() },{ name: 'Performance Analysis',script: () => this.analyzePerformance() },{ name: 'Security Audit',script: () => this.auditSecurity() },{ name: 'Code Quality Check',script: () => this.checkCodeQuality() } ]; `); try { const result = await customScript.script(); this.results.details.push({ name: customScript.name,status: 'success',result: result }); this.log(`✅ Completed: ${customScript.name}`)} catch (error) { this.results.details.push({ name: customScript.name,status: 'failed',error: error.message }); this.log(`❌ Failed: ${customScript.name} - ${error.message}`,'ERROR')} } } async detectErrors() { const errorPatterns = [ 'SyntaxError','TypeError','ReferenceError','Module not found','Cannot resolve','Unexpected token' ]; const errors = []; const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); for (const file of files.slice(0,50)) { try { const content = fs.readFileSync(file,'utf8'); )} } } catch (error) { } } } return { errors,count: errors.length }} async analyzePerformance() { const performanceMetrics = { bundleSize: this.getBundleSize(),dependencies: this.getDependencyCount(),fileCount: this.getFileCount() }; return performanceMetrics} async auditSecurity() { const securityIssues = { vulnerabilities: 0,outdatedPackages: 0,securityWarnings: [] }; try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); securityIssues.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { securityIssues.securityWarnings.push('Could not analyze package.json')} return securityIssues} async checkCodeQuality() { const qualityMetrics = { totalFiles: 0,testFiles: 0,documentationFiles: 0,complexityScore: 0 }; const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { const allFiles = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); qualityMetrics.totalFiles = allFiles.length; qualityMetrics.testFiles = allFiles.filter(f => f.includes('.test.') || f.includes('.spec.')).length} return qualityMetrics} getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } catch (error) { } return files} getBundleSize() { try { const nextDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(nextDir)) { return this.getDirectorySize(nextDir)} } catch (error) { return 0} return 0} getDependencyCount() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const deps = Object.keys(packageJson.dependencies || {}); const devDeps = Object.keys(packageJson.devDependencies || {}); return deps.length + devDeps.length} catch (error) { return 0} } getFileCount() { const srcDir = path.join(this.projectRoot,'src'); if (fs.existsSync(srcDir)) { return this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']).length} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} generateReport() { const reportPath = path.join(this.reportsDir,'enhanced-automation-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Report generated: ${reportPath}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Automation Orchestrator'); try { await this.runQuickChecks(); await this.runLinting(); await this.runBuildChecks(); await this.runTestSuite(); await this.runSecurityChecks(); await this.runPerformanceChecks(); await this.runCustomAutomations(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Automation Orchestrator Completed'); this.log(`📊 Summary: ${this.results.summary.successful}/${this.results.summary.total} successful`); return { success: true,reportPath,summary: this.results.summary }} catch (error) { this.log(`💥 Fatal error: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const orchestrator = new EnhancedAutomationOrchestrator(); orchestrator.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedAutomationOrchestrator;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   orchestrator && orchestrator.run().then(result => {
@@ -600,3 +640,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

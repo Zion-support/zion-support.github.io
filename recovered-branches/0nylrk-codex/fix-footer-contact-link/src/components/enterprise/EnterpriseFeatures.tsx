@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -52,6 +54,7 @@ import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const features = [
   {
     title: "Private Hiring Portal"
@@ -59,12 +62,15 @@ const features = [
     icon: Shield}
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     title: "Dedicated Talent Pool"
     description: "Access to a curated pool of pre-vetted talent matched to your industry and needs."
     icon: Users}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     title: "Custom SLA"
     description: "Get guaranteed response times and dedicated support with our custom SLAs."
@@ -79,6 +85,8 @@ const features = [
     icon: Settings}
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -91,6 +99,7 @@ const features = [
 export function EnterpriseFeatures() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <section className="py-20 px-4 md:px-6 bg-muted/50">
       <div className="container mx-auto max-w-6xl">
@@ -105,6 +114,8 @@ export function EnterpriseFeatures() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               key={feature.title}
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
@@ -125,6 +136,7 @@ export function EnterpriseFeatures() {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 };
 
@@ -177,6 +189,8 @@ const features = [;
   {;
     title: "Global Access",;
     description: "Connect with talent across multiple regions with localized interfaces.",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     icon: Globe}],;
@@ -249,6 +263,7 @@ export function EnterpriseFeatures() {;
           {features.map((feature) => (;
           {features && features.map((feature) => (;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function EnterpriseFeatures() {;
   return (
@@ -281,6 +296,8 @@ function EnterpriseFeatures() {
             Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       </div>;
     </section>;
@@ -329,3 +346,4 @@ icon: Settings
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

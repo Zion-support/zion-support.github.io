@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -19,6 +21,7 @@ interface DnDLocation {
   index: number
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -49,9 +52,12 @@ interface DnDLocation {;
   droppableId: string,;
   index: number;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 interface DropResult {;
@@ -59,12 +65,15 @@ interface DropResult {;
   source: DnDLocation,;
   destination?: DnDLocation | null;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -228,6 +237,8 @@ interface KanbanBoardProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
@@ -297,10 +308,13 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Initialize columns with applications based on their status;
   useEffect(() => {;
     if (applications) {;
       // Group applications by status;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       const groupedApplications = COLUMNS && COLUMNS.reduce((acc, column) => {;
@@ -324,6 +338,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
     }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -379,6 +394,8 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
         variant: "destructive"})
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },
@@ -390,10 +407,13 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
   },
   
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (isLoading) {
@@ -415,11 +435,14 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Get the application that was dragged;
     const application = applications && applications.find(app => app && app.id === draggableId);
     if (!application) return;
 
     // Update the application status in the database;
+<<<<<<< HEAD
+=======
     const newStatus = destination && destination.droppableId as ApplicationStatus;
 
     // Optimistically update the UI;
@@ -485,6 +508,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
     if (!application) return,;
     ;
     // Update the application status in the database;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const newStatus = destination.droppableId as ApplicationStatus,;
     ;
 ;
@@ -521,9 +545,12 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Card key={i} className="h-[500px]">;
             <CardHeader>;
               <Skeleton className="h-8 w-24" />;
@@ -533,6 +560,8 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
             </CardContent>;
           </Card>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -540,6 +569,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         ))}
       </div>;
     );
@@ -578,6 +608,8 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
           </p>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     );
@@ -773,10 +805,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             key={column.id}
             id={column.id}
             title={column.title}
             description={column.description}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -821,11 +856,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
           />))}
       </div>;
     </DragDropContext>);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -933,3 +971,4 @@ if (isLoading) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

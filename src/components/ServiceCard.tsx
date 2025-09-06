@@ -4,6 +4,25 @@ import { motion } from 'framer-motion';
 interface ServiceCardProps {
   title: string;
   description: string;
+<<<<<<< HEAD
+  icon: string;
+  features: string[];
+  className?: string;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ 
+  title, 
+  description, 
+  icon, 
+  features,
+  className = ''
+}) => {
+  return (
+    <div className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${className}`}>
+      <div className="text-center mb-6">
+        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span className="text-3xl">{icon}</span>
+=======
   icon?: string;
   features?: string[];
   className?: string;
@@ -27,6 +46,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       {icon && (
         <div className="text-4xl mb-4 text-center">
           {icon}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
 <<<<<<< HEAD
         <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>

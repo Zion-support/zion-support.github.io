@@ -14,6 +14,8 @@ declare module 'vitest / config' {
   export { define_config } from 'vite';
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 declare module '@vitejs/plugin-react - swc' {
   import { Plugin } from 'vite',
   export default function reactSWC (): Plugin;
@@ -105,6 +107,7 @@ declare module '@vitejs/plugin-react-swc' {;
   import { Plugin } from 'vite',;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   export default function reactSWC(): Plugin;
 }
 ;
@@ -113,6 +116,8 @@ declare module 'path' {;
   export function join(...paths: string[]): string,;
   export function dirname(path: string): string;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 declare module 'lovable-tagger' {;
@@ -137,6 +142,7 @@ declare module 'lovable-tagger' {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 declare let __dirname: string,
 declare let process: {
   env: {
@@ -151,6 +157,10 @@ declare let process: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
+<<<<<<< HEAD
+  }
+};
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -171,3 +181,4 @@ declare let process: {;
   }
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

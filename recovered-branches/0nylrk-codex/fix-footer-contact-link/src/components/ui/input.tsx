@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -18,6 +20,7 @@ import { cn } from "@/lib/utils"
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(
   ({ className, type, ...props }, ref) => {
     return (
@@ -38,13 +41,18 @@ const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(;
           className;
         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import * as React from &quot;react & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
 )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -52,11 +60,14 @@ import { cn } from &quot;@/lib / utils & quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         ref={ref}
         {...props}
       />);
   }
 export { Input }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -75,6 +86,7 @@ export { Input }
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export { Input };
 
@@ -83,6 +95,8 @@ Input.displayName = "Input"
 export { Input }
 ;
 export { Input }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export { Input };
 Input.displayName = "Input"
@@ -93,3 +107,4 @@ export { Input }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

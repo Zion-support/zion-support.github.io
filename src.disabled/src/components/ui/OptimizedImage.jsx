@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React,{ useState,useRef,useEffect } from 'react';'; import { cn } from '@/lib/utils';'; import { motion,AnimatePresence } from 'framer-motion';'; export function OptimizedImage({ src,alt,width,height,className,placeholder = '/images/placeholder.svg',fallback = '/images/fallback.svg',priority = false,sizes = '100vw',loading = 'lazy',onLoad,onError,aspectRatio = 'auto',objectFit = 'cover',blur = false,quality = 75 }) {}; const [isLoaded,setIsLoaded] = useState(false); const [hasError,setHasError] = useState(false); const [isInView,setIsInView] = useState(priority); const imgRef = useRef(null); const observerRef = useRef(null); return null}
@@ -38,3 +40,4 @@ import _React,{ useState,useRef,useEffect } from 'react';'; import { cn } from '
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

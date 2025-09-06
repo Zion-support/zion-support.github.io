@@ -1,14 +1,24 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface SearchResult {
   title: string;
   description: string;
   url: string;
   type: 'service' | 'page' | 'category';
 }
+<<<<<<< HEAD
+const SearchBar: React.FC = () => {
+interface SearchResult {;
+  title: string, description: string,;
+  url: string, type: 'service' | 'page' | 'category',;
+}
+=======
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -38,6 +48,7 @@ const SearchBar: React.FC = () => {
       url: '/it-services',
       type: 'category',
     },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -231,6 +242,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+<<<<<<< HEAD
+=======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 =======
   };
@@ -269,3 +282,4 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
 export default SearchBar;
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

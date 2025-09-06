@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+import { cn } from "@/lib/utils"
+
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,6 +36,7 @@ import { cn } from "@/lib/utils"
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
@@ -45,6 +51,8 @@ const InputOTP = React && React.forwardRef<;
   <OTPInput
     ref={ref}
     containerClassName={cn(
+<<<<<<< HEAD
+=======
 
 =======
 import { cn } from "@/lib/utils"
@@ -94,6 +102,7 @@ const InputOTP = React.forwardRef<
   <OTPInput
     ref={ref}
     containerClassName={cn(
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'flex items-center gap-2 has-[:disabled]:opacity-50'
       containerClassName
     )}
@@ -157,13 +166,21 @@ const InputOTPSlot = React && React.forwardRef<;
 =======
   />;
 ));
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {char}
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
           <div className='h-4 w-px animate-caret-blink bg-foreground duration-1000' />;
         </div>;
       )}
+<<<<<<< HEAD
+    </div>;
+  );
+});
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -227,6 +244,7 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
   );
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 import {cn} from '@/lib / utils';
 ;
@@ -279,6 +297,8 @@ InputOTPSeparator.display_name = 'InputOTPSeparator';
 ;
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -372,3 +392,4 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

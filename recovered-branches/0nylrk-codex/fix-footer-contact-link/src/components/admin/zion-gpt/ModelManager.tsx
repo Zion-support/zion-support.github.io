@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+import { useState, useEffect } from 'react',
+=======
 
 import { useState, useEffect } from 'react',
 
@@ -17,10 +20,13 @@ import { useState, useEffect } from 'react',
 
 import { useState, useEffect } from 'react',
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -44,6 +50,7 @@ import { ModelConfig } from '@/utils/zion-gpt',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useEffect} from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -53,6 +60,8 @@ import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";
 import {supabase} from '@/integrations/supabase/client';
 import {ModelConfig} from '@/utils/zion-gpt';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -60,6 +69,7 @@ import {ModelConfig} from '@/utils/zion-gpt';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ModelVersionData extends ModelConfig {
 
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
@@ -164,6 +174,8 @@ if (throw error) {
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -205,12 +217,15 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console.error (`Error checking status for model ${model_id}:`, error);
     } finally {
       setActiveJobs (prev => ({ ...prev, [model_id]: false }));
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -314,6 +329,7 @@ export function ZionGPTModelManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -327,12 +343,15 @@ interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -370,11 +389,14 @@ export function ZionGPTModelManager() {;
         .select('*');
         .order('createdAt', { ascending: false }),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       if (error) throw error;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       // Map the data to our component state;
       setModels(data && data.map(model => ({;
@@ -392,6 +414,8 @@ export function ZionGPTModelManager() {;
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   };
 
@@ -525,10 +549,13 @@ export function ZionGPTModelManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Also update in the database;
       await supabase;
         .from('model_versions');
         .update({;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           training_status: data && data.status,;
@@ -576,6 +603,7 @@ export function ZionGPTModelManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
     try {;
       // If activating, deactivate all other models with the same purpose;
@@ -588,6 +616,8 @@ export function ZionGPTModelManager() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -640,6 +670,7 @@ export function ZionGPTModelManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
   },
@@ -907,6 +938,8 @@ export function ZionGPTModelManager() {;
                         size="sm"
                         className="text-red-500"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                         title={model && model.errorMessage || "Training failed"}>;
@@ -933,6 +966,7 @@ export function ZionGPTModelManager() {;
                 </TableRow>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     )}
 
                   </TableCell>;
@@ -942,6 +976,8 @@ export function ZionGPTModelManager() {;
             </TableBody>;
           </Table>;
         )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -959,6 +995,7 @@ export function ZionGPTModelManager() {;
       </CardContent>;
     </Card>;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1075,6 +1112,8 @@ if ( {) {
     </Card>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 };
 const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
   try {
@@ -1121,3 +1160,4 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

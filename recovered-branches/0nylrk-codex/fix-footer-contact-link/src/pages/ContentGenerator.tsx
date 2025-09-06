@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -28,6 +30,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -46,6 +49,8 @@ import {useAuth} from "@/hooks/useAuth";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {useNavigate} from "react-router-dom";
 export default function ContentGenerator() {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,6 +74,7 @@ export default function ContentGenerator() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -98,6 +104,8 @@ export default function ContentGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [previewContent, setPreviewContent] = useState<any>(null);
   const [testEmail, setTestEmail] = useState('');
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { useNavigate } from "react-router-dom",
@@ -148,6 +156,7 @@ export default function ContentGenerator() {
       setPreviewContent(data);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
@@ -157,7 +166,10 @@ export default function ContentGenerator() {
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -202,6 +214,8 @@ export default function ContentGenerator() {;
     }
   }, [user, isLoading, navigate]);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   const generateContent = async () => {;
     setIsGenerating(true);
@@ -243,6 +257,7 @@ export default function ContentGenerator() {;
       if (error) throw error;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           autoPublish;
           includeImage: contentType === 'blog' ? includeImage : false;
         }
@@ -256,6 +271,8 @@ export default function ContentGenerator() {;
     } finally {;
       setIsGenerating(false);
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -278,6 +295,7 @@ export default function ContentGenerator() {;
       }),
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       if (error) throw error,
       
@@ -302,6 +320,8 @@ export default function ContentGenerator() {;
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -332,6 +352,7 @@ export default function ContentGenerator() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }),;
       if (error) throw error,;
       setPreviewContent(data),;
@@ -342,6 +363,8 @@ export default function ContentGenerator() {;
     } finally {;
       setIsGenerating(false);
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   },;
 <<<<<<< HEAD
@@ -410,6 +433,7 @@ export default function ContentGenerator() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       if (error) throw error,
       
@@ -605,7 +629,10 @@ export default function ContentGenerator() {;
     );
   }
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Input
                       id="topic"
                       placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
@@ -638,6 +665,8 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -710,6 +739,7 @@ export default function ContentGenerator() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Input
                       id="topic"
                       placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
@@ -739,6 +769,8 @@ export default function ContentGenerator() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
                       onChange={(e) => setCustomPrompt(e && e.target.value)}
                     />;
                   </div>;
@@ -800,6 +832,7 @@ export default function ContentGenerator() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
@@ -1037,6 +1070,8 @@ export default function ContentGenerator() {;
 <<<<<<< HEAD
                                     </span>;
                                   ))}
+<<<<<<< HEAD
+=======
 
                                 </div>;
                               </div>;
@@ -1179,6 +1214,7 @@ export default function ContentGenerator() {;
                     <div className="flex flex-col items-center justify-center py-12 text-center">;
                       <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         <svg
                           xmlns="http://www && www.w3.org/2000/svg"
 =======
@@ -1374,6 +1410,8 @@ export default function ContentGenerator() {;
                           strokeLinecap="round"
                           strokeLinejoin="round"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                           className="h-8 w-8 text-zion-purple">;
                           <path d="M14 && M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7 && 2V7.5L14.5 2z" />;
@@ -1397,6 +1435,7 @@ export default function ContentGenerator() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           <polyline points="14 2 14 8 20 8" />;
                           <path d="M12 18v-6" />;
                           <path d="M8 15h8" />;
@@ -1406,6 +1445,8 @@ export default function ContentGenerator() {;
                       <p className="text-zion-slate-light max-w-md">;
                         Use the settings panel to configure your content and click "Generate" to create AI-powered content.;
                       </p>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                     </div>;
                   )}
@@ -1815,6 +1856,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </CardContent>;
               </Card>;
             </div>;
@@ -1822,6 +1864,8 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1930,3 +1974,4 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

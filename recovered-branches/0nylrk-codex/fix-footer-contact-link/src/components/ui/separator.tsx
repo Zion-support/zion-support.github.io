@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import {cn} from '@/lib/utils';
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -10,16 +13,20 @@ import {cn} from '@/lib/utils';
 =======
 import {cn} from '@/lib/utils';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import { cn } from "@/lib/utils"
 
@@ -28,6 +35,8 @@ const Separator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 ></typeof>(
   (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -41,10 +50,15 @@ import { cn } from "@/lib/utils"
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ref
   ) => (
     <SeparatorPrimitive.Root
 
+<<<<<<< HEAD
+import React from 'react';
+import * as React from 'react';
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 const Separator = React && React.forwardRef<;
@@ -61,10 +75,13 @@ const Separator = React && React.forwardRef<;
 import React from 'react';
 import * as React from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       ref={ref}
       decorative={decorative}
       orientation={orientation}
       className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -91,6 +108,7 @@ const Separator = React.forwardRef<;
         orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         className
 <<<<<<< HEAD
 =======
@@ -156,6 +174,8 @@ Separator.display_name = SeparatorPrimitive.Root.display_name;
 export { Separator }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -206,3 +226,4 @@ export { Separator }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

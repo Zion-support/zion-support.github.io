@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,6 +46,7 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class DependencyHealthChecker { constructor() { this.logFile = path.join( __dirname,'logs','dependency-health-checker.log' ); this.reportFile = path.join( __dirname,'reports','dependency-health.json' ); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); fs.appendFileSync(this.logFile,logMessage)} async checkDependencies() { this.log('Checking dependency health...'); const results = { timestamp: new Date().toISOString(),outdated: [],vulnerable: [],missing: [],healthScore: 100,}; try { const outdatedResult = execSync('yarn outdated --json',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); if (outdatedResult) { results.outdated = JSON.parse(outdatedResult); this.log(`Found ${results.outdated.length} outdated packages`)} } catch (error) { this.log('No outdated packages found or error checking','WARN')} try { const auditResult = execSync('yarn audit --json',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const auditLines = auditResult.split('\n').filter(line => line.trim()); results.vulnerable = auditLines .map(line => { try { return JSON.parse(line)} catch { return null} }) .filter(Boolean); this.log(`Security audit found ${results.vulnerable.length} issues`)} catch (error) { this.log('Security audit completed with warnings','WARN')} results.healthScore = this.calculateHealthScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Dependency health report generated: ${this.reportFile}`); return results} calculateHealthScore(results) { let score = 100; if (results.outdated.length > 0) { score -= Math.min(results.outdated.length * 2,30)} if (results.vulnerable.length > 0) { score -= Math.min(results.vulnerable.length * 5,50)} return Math.max(0,score)} async run() { this.log('Starting Dependency Health Checker...'); try { const results = await this.checkDependencies(); this.log( `Dependency health check completed. Health score: ${results.healthScore}/100` ); if (results.healthScore < 70) { this.log( 'Dependency health is below threshold. Consider maintenance.','WARN' )} } catch (error) { this.log( `Error in dependency health checker: ${error.message}`,'ERROR' )} } }; if (require.main === module) { const checker = new DependencyHealthChecker(); checker.run().catch(console.error)} module.exports = DependencyHealthChecker;
 #!/usr/bin/env node
 const fs = // // require('fs');
@@ -140,6 +144,8 @@ class DependencyHealthChecker {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<<< HEAD:automation/dependency-health-checker.js
@@ -179,6 +185,7 @@ class DependencyHealthChecker {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const fs = require('fs');
 const path = require('path');
 const {
@@ -294,6 +301,8 @@ if (require.main === module) {
   const checker = new DependencyHealthChecker();
   checker.run().catch(console.error);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -325,10 +334,13 @@ module.exports = DependencyHealthChecker;
 module.exports = DependencyHealthChecker;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class DependencyHealthChecker { constructor() { this.logFile = path.join( __dirname,'logs','dependency-health-checker.log' ); this.reportFile = path.join( __dirname,'reports','dependency-health.json' ); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async checkDependencies() { this.log('Checking dependency health...'); const results = { timestamp: new Date().toISOString(),outdated: [],vulnerable: [],missing: [],healthScore: 100,}; try { const outdatedResult = execSync('yarn outdated --json',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); if (outdatedResult) { results.outdated = JSON.parse(outdatedResult); this.log(`Found ${results.outdated.length} outdated packages`)} } catch (error) { this.log('No outdated packages found or error checking','WARN')} try { const auditResult = execSync('yarn audit --json',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const auditLines = auditResult.split('\n').filter(line => line.trim()); results.vulnerable = auditLines .map(line => { try { return JSON.parse(line)} catch { return null} }) .filter(Boolean); this.log(`Security audit found ${results.vulnerable.length} issues`)} catch (error) { this.log('Security audit completed with warnings','WARN')} results.healthScore = this.calculateHealthScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Dependency health report generated: ${this.reportFile}`); return results} calculateHealthScore(results) { let score = 100; if (results.outdated.length > 0) { score -= Math.min(results.outdated.length * 2,30)} if (results.vulnerable.length > 0) { score -= Math.min(results.vulnerable.length * 5,50)} return Math.max(0,score)} async run() { this.log('Starting Dependency Health Checker...'); try { const results = await this.checkDependencies(); this.log( `Dependency health check completed. Health score: ${results.healthScore}/100` ); if (results.healthScore < 70) { this.log( 'Dependency health is below threshold. Consider maintenance.','WARN' )} } catch (error) { this.log( `Error in dependency health checker: ${error.message}`,'ERROR' )} } }; if (require.main === module) { const checker = new DependencyHealthChecker(); checker.run().catch(console.error)} module.exports = DependencyHealthChecker;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 module.exports = DependencyHealthChecker;
 module.exports = DependencyHealthChecker;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class DependencyHealthChecker { constructor() { this.logFile = path.join( __dirname,'logs','dependency-health-checker.log' ); this.reportFile = path.join( __dirname,'reports','dependency-health.json' ); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async checkDependencies() { this.log('Checking dependency health...'); const results = { timestamp: new Date().toISOString(),outdated: [],vulnerable: [],missing: [],healthScore: 100,}; try { const outdatedResult = execSync('yarn outdated --json',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); if (outdatedResult) { results.outdated = JSON.parse(outdatedResult); this.log(`Found ${results.outdated.length} outdated packages`)} } catch (error) { this.log('No outdated packages found or error checking','WARN')} try { const auditResult = execSync('yarn audit --json',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const auditLines = auditResult.split('\n').filter(line => line.trim()); results.vulnerable = auditLines .map(line => { try { return JSON.parse(line)} catch { return null} }) .filter(Boolean); this.log(`Security audit found ${results.vulnerable.length} issues`)} catch (error) { this.log('Security audit completed with warnings','WARN')} results.healthScore = this.calculateHealthScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Dependency health report generated: ${this.reportFile}`); return results} calculateHealthScore(results) { let score = 100; if (results.outdated.length > 0) { score -= Math.min(results.outdated.length * 2,30)} if (results.vulnerable.length > 0) { score -= Math.min(results.vulnerable.length * 5,50)} return Math.max(0,score)} async run() { this.log('Starting Dependency Health Checker...'); try { const results = await this.checkDependencies(); this.log( `Dependency health check completed. Health score: ${results.healthScore}/100` ); if (results.healthScore < 70) { this.log( 'Dependency health is below threshold. Consider maintenance.','WARN' )} } catch (error) { this.log( `Error in dependency health checker: ${error.message}`,'ERROR' )} } }; if (require.main === module) { const checker = new DependencyHealthChecker(); checker.run().catch(console.error)} module.exports = DependencyHealthChecker;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -382,3 +394,4 @@ module.exports = DependencyHealthChecker;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

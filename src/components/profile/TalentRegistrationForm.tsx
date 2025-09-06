@@ -97,7 +97,7 @@ if ( {) {
       });
 
     } finally {
-      setIsGenerating(false)
+      setIsGenerating (false);
     }
   }
 
@@ -568,13 +568,13 @@ if ( {) {
 
 
           html: `
-          <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
-            <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>
             <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
             <p>You can review and edit these enhancements in your profile dashboard.</p>
-            <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">
-              <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+              <p style="color: #666; font-size: 12px;">© ${new Date().getFullYear()} Zion Marketplace</p>
             </div>
           </div>
 
@@ -582,7 +582,7 @@ if ( {) {
 
 
   // Handle form submission
-  const onSubmit = async (values: TalentFormValues) => {
+  const onSubmit = async (values: TalentFormValues,) => {
     if (skillTags.length === 0) {
       toast({
 
@@ -676,6 +676,31 @@ if ( {) {
                 location: values.location
   },;
   // Handle form submission;
+<<<<<<< HEAD
+  const onSubmit = async (values: TalentFormValues,) => {;
+    if (skillTags && skillTags.length === 0) {;
+      toast({;
+        title: 'Skills required',;
+        description: 'Please add at least one skill to your profile.',;
+        variant: 'destructive',;
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {;
+      // For actual implementation with Supabase;
+      if (!user?.id) {;
+        throw new Error('User not authenticated');
+      }
+
+      // Enhance profile if not already done;
+      let finalSummary = '';
+      let finalSkills = skillTags;
+
+      if (values && values.enhancedProfile && !generatedContent) {;
+=======
   const onSubmit = async (values: TalentFormValues) => {;
     if (skillTags.length === 0) {;
       toast({;
@@ -696,6 +721,7 @@ if ( {) {
       let finalSummary = "",;
       let finalSkills = skillTags,;
       if (values.enhancedProfile && !generatedContent) {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         try {;
           const { data: aiData } = await supabase && supabase.functions.invoke(;
             'talent-profile-enhancer',;
@@ -814,7 +840,7 @@ if ( {) {
 
       // Create the talent profile
       // In a real implementation, this would save to Supabase
-      setTimeout(() => {
+      setTimeout((,) => {
         toast({
 
 
@@ -1237,14 +1263,14 @@ if (throw error) {
 
 
                 {/* Upload Avatar */}
-                <div className='space-y-2'>
-                  <FormLabel className='text-zion-slate-light'>
-                    Profile Picture
-                  </FormLabel>
-                  <div className='flex items-center gap-6'>
-                    <div className='relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light'>
-                      {uploadedAvatar ? (
-                        <AspectRatio ratio={1 / 1}>
+                <div className='space-y-2'>;
+                  <FormLabel className='text-zion-slate-light'>;
+                    Profile Picture;
+                  </FormLabel>;
+                  <div className='flex items-center gap-6'>;
+                    <div className='relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light'>;
+                      {uploadedAvatar ? (;
+                        <AspectRatio ratio={1 / 1}>;
                           <img
                             src={uploadedAvatar}
                             alt='Avatar preview'
@@ -1616,6 +1642,15 @@ if (throw error) {
                   </div>
                 )}
                 {/* Generated Content Display */}
+<<<<<<< HEAD
+                {generatedContent && (;
+                  <div className='bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4'>;
+                    <div className='flex items-center justify-between mb-3'>;
+                      <h4 className='text-white font-medium flex items-center'>;
+                        <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />;
+                        AI-Generated Content;
+                      </h4>;
+=======
                 {generatedContent && (
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
                     <div className="flex items-center justify-between mb-3">
@@ -1623,6 +1658,7 @@ if (throw error) {
                         <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                         AI-Generated Content
                       </h4>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <Button
 
                         onClick={applyGeneratedContent}>;
@@ -1690,10 +1726,19 @@ if (throw error) {
               <Separator className='bg-zion-blue-light/50' />;
 
               {/* Skills and Availability */}
+<<<<<<< HEAD
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+                {/* Skills Section */}
+                <div className='space-y-4'>;
+                  <h3 className='text-lg font-medium text-white'>;
+                    Skills & Expertise;
+                  </h3>;
+=======
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 {/* Skills Section */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <FormField
 
                     control={form.control}
@@ -1706,12 +1751,18 @@ if (throw error) {
 
                           <FormControl>
                             <Input
-                              className="flex-1 bg-zion-blue border-zion-blue-light text-white"
-                              placeholder="Add a skill..."
+                              className='flex-1 bg-zion-blue border-zion-blue-light text-white'
+                              placeholder='Add a skill...'
                               {...field}
+<<<<<<< HEAD
+                              onKeyDown = {handleSkillKeyPress,}
+                            />;
+                          </FormControl>;
+=======
                               onKeyDown={handleSkillKeyPress}
                             />
                           </FormControl>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           <Button
 
                   />;
@@ -1942,7 +1993,62 @@ if (throw error) {
                   <h3 className="text-lg font-medium text-white">Availability</h3>
                   <FormField
                     control={form.control}
-                    name="availability"
+                    name='skills';
+                    render={({ field }: { field: any }) => (                      <FormItem>;
+                        <FormLabel className='text - zion - slate - light'>;
+                          Skills;
+                        </FormLabel>;
+                        <div className='flex gap - 2'>;
+                          <FormControl>;
+                            <Input;
+                              className='flex - 1 bg - zion - blue border - zion - blue - light text - white';
+                              placeholder='Add a skill...';
+                              {...field}
+                              onKeyDown = {handleSkillKeyPress, }
+                            />;
+                          </FormControl>;
+                          <Button;
+                            type='button';
+                            variant='outline';
+                            className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';
+                            on_click={handleAddSkill}                          >;
+                            Add;
+                          </Button>;
+                        </div>;
+                        <FormDescription className='text - zion - slate'>;
+                          Press Enter or click Add to include a skill;
+                        </FormDescription>;
+                        <FormMessage className='text - red - 400' />;
+                      </FormItem>)}
+                  />;
+                  <div className='flex flex - wrap gap - 2 mt - 2'>;
+                    {skill_tags.map (skill => (
+                      <Badge;
+                        key={skill}
+                        className='bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none pl - 2 pr - 1 py - 1.5 flex items - center gap - 1';
+                      >;
+                        {skill}
+                        <button;
+                          type='button';
+                          on_click={() => handleRemoveSkill (skill)}
+                          className='rounded - full hover:bg - zion - purple - dark / 20 p - 0.5'                        >;
+                          <X className='h - 3 w - 3' />;
+                        </button>;
+                      </Badge>))}
+                    {skill_tags.length === 0 && (
+                      <p className='text - zion - slate text - sm italic'>;
+                        No skills added yet;
+                      </p>)}
+                  </div>;
+                </div>;
+                {/* Availability Section */}
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - medium text - white'>;
+                    Availability;
+                  </h3>;
+                  <FormField;
+                    control={form.control}
+                    name='availability';
                     render={({ field }: { field: any }) => (
 
                       <FormItem className="space-y-4">
@@ -2097,6 +2203,14 @@ toast ({
 }finally {
   setIsGenerating (false);
 
+<<<<<<< HEAD
+}
+//Apply generated content to form const applyGeneratedContent = () =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+=======
 }
 //Apply generated content to form const applyGeneratedContent = () => {
   if (generatedContent) {
@@ -2107,6 +2221,7 @@ if (Array.isArray (categorySkills) ) {
   if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {
 })
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   new Date () .getFullYear () 
@@ -2141,7 +2256,11 @@ if ( {) {
   if (skillTags.length === 0) {
   toast ({
   return;
+<<<<<<< HEAD
+}setIsSubmitting (true);
+=======
 }setIsSubmitting (true)
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 try {
   //For actual implementation with Supabase if (!user?.id) {
   try {

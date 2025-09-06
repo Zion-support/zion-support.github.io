@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { slugify } from '@/lib / slugify';
@@ -34,6 +36,7 @@ import { unslugify } from '@/lib/slugify';
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 it('removes accents from strings', () => {
   expect(slugify('Crème Brûlée')).toBe('creme-brulee')
 });
@@ -47,6 +50,8 @@ it('converts slug back to title', () => {
   expect(unslugify('multi-word-title')).toBe('Multi Word Title')
 it('handles custom separator when unslugifying', () => {
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }),
 =======
@@ -75,3 +80,4 @@ it('handles custom separator when unslugifying', () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

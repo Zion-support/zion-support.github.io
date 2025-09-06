@@ -18,12 +18,15 @@ import {BrowseCards} from "../components/browse/BrowseCards";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -110,9 +113,12 @@ export function MobileBrowse() {
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: "1",
     title: "Senior React Developer",
     subtitle: "TechCorp Inc.",
@@ -184,6 +190,8 @@ const talentsData = [
 ],
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -192,6 +200,7 @@ const talentsData = [
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function MobileBrowse() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
@@ -213,12 +222,15 @@ export function MobileBrowse() {
   },
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -231,6 +243,8 @@ export function MobileBrowse() {
             variant={browseType === "jobs" ? "default" : "ghost"}
             className="rounded-full"
             onClick={() => setBrowseType("jobs")}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           >
             Jobs
@@ -392,6 +406,7 @@ export function MobileBrowse() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
@@ -577,6 +592,8 @@ export function MobileBrowse() {;
             className="rounded-full"
             onClick={() => setBrowseType("talents")}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 =======
@@ -707,11 +724,15 @@ function MobileBrowse() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           >;
             Talents;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+        <BrowseCards
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -721,6 +742,7 @@ function MobileBrowse() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}
@@ -753,6 +775,8 @@ function MobileBrowse() {
       <BottomNavigation />;
     </div>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -793,3 +817,4 @@ return (<div className="min-h-screen" > <MobileHeader title= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

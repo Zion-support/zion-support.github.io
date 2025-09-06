@@ -7,6 +7,8 @@ const ModernLayout = dynamic(() => import("./ModernLayout"),{"; loading: () => <
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const ModernLayout = dynamic(() => import("./ModernLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ModernLayout' ,'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,3 +95,4 @@ const ModernLayout = dynamic(() => import("./ModernLayout"),{'; "loading": () =>
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

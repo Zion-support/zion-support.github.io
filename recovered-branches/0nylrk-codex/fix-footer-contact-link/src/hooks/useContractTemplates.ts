@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {useState} from "react";
@@ -15,6 +17,7 @@ export function useContractTemplates() {;
   const [isLoading, setIsLoading] = useState(false);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -59,6 +62,8 @@ export function useContractTemplates() {
     error: templatesError
   } = useQuery({
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     queryKey: ['contractTemplates', user?.id];
     queryFn: async () => {
@@ -71,6 +76,7 @@ export function useContractTemplates() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
     queryKey: ['contractTemplates', user?.id],
@@ -83,9 +89,12 @@ export function useContractTemplates() {
     enabled: isAuthenticated && !!user
   });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -118,6 +127,8 @@ export function useContractTemplates() {;
       if (error) {;
         throw error;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -126,10 +137,13 @@ export function useContractTemplates() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       return data as ContractTemplate[]
     }
     enabled: isAuthenticated && !!user
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   }),
 
@@ -140,6 +154,7 @@ export function useContractTemplates() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Create a new template
   const createTemplate = useMutation({
     mutationFn: async ({
@@ -147,6 +162,8 @@ export function useContractTemplates() {;
       templateData
       isDefault = false
     }: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -174,12 +191,15 @@ export function useContractTemplates() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       try {
         // If this is set as default, unset any existing default
         if (isDefault) {
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             .eq('user_id', user && user.id)
@@ -219,6 +239,7 @@ if ( {) {
       }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const { data, error } = await supabase;
         .from ('contract_templates');
         .select ('*');
@@ -293,6 +314,8 @@ if ( {) {
       toast({
         title: "Template saved"
         description: "Contract template has been successfully saved."})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -464,6 +487,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       try {
         // If this is set as default, unset any existing default
         if (isDefault) {
@@ -471,10 +495,13 @@ if ( {) {
             .from('contract_templates')
             .update({ is_default: false })
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
             .eq('user_id', user && user.id)
             .eq('is_default', true)
             .neq('id', templateId)
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
     }: {
@@ -491,6 +518,8 @@ if ( {) {
   $2
 }
       setIsLoading (true);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -529,6 +558,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     },;
     onSuccess: () => {;
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),;
@@ -570,6 +600,8 @@ if ( {) {
             .neq('id', templateId);
         }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
@@ -608,6 +640,7 @@ if (throw error) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } finally {
         setIsLoading (false);
       }
@@ -628,6 +661,8 @@ if (throw error) {
       toast({
         title: "Template updated"
         description: "Contract template has been successfully updated."})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -675,12 +710,15 @@ if (throw error) {
         description: "There was an error updating your contract template."
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         variant: "destructive"})
     }
   });
   // Delete a template
   const deleteTemplate = useMutation({
     mutationFn: async (templateId: string) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       if (!user) throw new Error("User not authenticated");
       setIsLoading(true)
@@ -705,15 +743,20 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       try {
         const { error } = await supabase
           .from('contract_templates')
           .delete()
           .eq('id', templateId)
 <<<<<<< HEAD
+          .eq('user_id', user.id),
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           .eq('user_id', user && user.id);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         
 
 =======
@@ -848,6 +891,9 @@ if (throw error) {
       }
     }
 <<<<<<< HEAD
+        if (error) throw error
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -971,6 +1017,7 @@ if (throw error) {
 =======
         if (error) throw error
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     on_success: () => {
       query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
       toast ({
@@ -1016,6 +1063,8 @@ if (throw error) {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1197,6 +1246,7 @@ if (throw error) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 import { useState } from "react",;

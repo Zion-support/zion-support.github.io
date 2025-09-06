@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -29,11 +31,18 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         if (start && t < start) continue,
         if (end && t > end) continue,
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
+<<<<<<< HEAD
+
 type EventRow = {
+
+=======
+type EventRow = {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   name: string
   page?: string
   userType?: string
@@ -62,13 +71,22 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         rows.push(obj)
       } catch {}
     }
+<<<<<<< HEAD
+    return rows;
+
+
+=======
     return rows
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch {
     return []
   }
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
     .sort((a, b) => b.value - a.value)
@@ -76,15 +94,21 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     .sort((a, b) => b.value - a.value),
 
   const days = Object.keys(byDay).sort(),
   const line = days.map((d) => ({ date: d, value: byDay[d] })),
 
+<<<<<<< HEAD
+=======
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
 =======
     .sort((a, b) => b.value - a.value)
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const days = Object.keys(byDay).sort()
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
@@ -94,4 +118,78 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 >>>>>>> main
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
+<<<<<<< HEAD
+
+
+function featureFromPath (page?: string): string {
+// Check condition
+if (return 'other', ) {
+  $2
+}
+  const p = page.toLowerCase (),
+  if (|| p.includes ('ai')) return 'AI services', ) {
+  $2
+}
+  if (|| p.includes ('job')) return 'job board', ) {
+  $2
+}
+  if () return 'rentals', ) {
+  $2
+}
+  return 'other';
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { allowed } = await ensureAdminFromApi (req),
+  if (return res.status (403).json ({ error: 'Forbidden' }), ) {
+  $2
+}
+  const { start, end, user_type } = req.query as { start?: string, end?: string, user_type?: string },
+  const rows = parse_lines (start, end).filter ((r) => !user_type || user_type === 'all' || (r.user_type || 'guest') === user_type),
+  const by_feature: Record < string, number> = {},
+  const by_event: Record < string, number> = {},
+  const by_day: Record < string, number> = {},
+  for (const r of rows) {
+    const function = featureFromPath (r.page),
+    by_feature[f] = (by_feature[f] || 0) + 1,
+    by_event[r.name] = (by_event[r.name] || 0) + 1,
+    const day = r.at.slice (0, 10),
+    by_day[day] = (by_day[day] || 0) + 1;
+  }
+  const pagesMostUsed = Object.entries (by_feature);
+    .map (([label, value]) => ({ label, value }));
+.sort ((a, b) => b.value - a.value),
+  const events = Object.entries (by_event);
+    .map (([label, value]) => ({ label, value }));
+    .sort ((a, b) => b.value - a.value),
+  const days = Object.keys (by_day).sort (),
+  const line = days.map ((d) => ({ date: d, value: by_day[d] })),
+  const funnel_stages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
+  const funnel = funnel_stages.map ((stage) => ({ label: stage, value: by_event[stage] || 0 })),
+  res.status (200).json ({ pagesMostUsed, events, line, funnel });
+}
+;
 };
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    await ensureAdminFromApi(req);
+    
+    if (req.method !== 'GET') {
+      res.setHeader('Allow', 'GET');
+      return res.status(405).end('Method Not Allowed');
+    }
+
+    const { start, end } = req.query;
+    const events = parseLines(start as string, end as string);
+    
+    res.json({ events });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

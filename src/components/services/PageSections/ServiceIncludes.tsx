@@ -1,7 +1,10 @@
 </div>
             <div>
-              <h3 className="text-white font-medium">Transportation to Site</h3>
-              <p className="text-zion-slate-light">All travel costs to your location are included in the base price.</p>
+              <h3 className='text-white font-medium'>Transportation to Site</h3>
+              <p className='text-zion-slate-light'>
+                All travel costs to your location are included in the base
+                price.
+              </p>
             </div>
           </div>
 
@@ -14,8 +17,10 @@
 
             </div>
             <div>
-              <h3 className="text-white font-medium">First Hour of Service</h3>
-              <p className="text-zion-slate-light">The first hour of technical work at your site is included.</p>
+              <h3 className='text-white font-medium'>First Hour of Service</h3>
+              <p className='text-zion-slate-light'>
+                The first hour of technical work at your site is included.
+              </p>
             </div>
           </div>
 
@@ -28,8 +33,10 @@
 
             </div>
             <div>
-              <h3 className="text-white font-medium">Technical Assessment</h3>
-              <p className="text-zion-slate-light">Comprehensive evaluation of issues and required solutions.</p>
+              <h3 className='text-white font-medium'>Technical Assessment</h3>
+              <p className='text-zion-slate-light'>
+                Comprehensive evaluation of issues and required solutions.
+              </p>
             </div>
           </div>
         </div>
@@ -44,8 +51,12 @@
 
             </div>
             <div>
-              <h3 className="text-white font-medium">Basic Hardware Diagnostics</h3>
-              <p className="text-zion-slate-light">Component testing and hardware issue identification.</p>
+              <h3 className='text-white font-medium'>
+                Basic Hardware Diagnostics
+              </h3>
+              <p className='text-zion-slate-light'>
+                Component testing and hardware issue identification.
+              </p>
             </div>
           </div>
 
@@ -58,8 +69,10 @@
 
             </div>
             <div>
-              <h3 className="text-white font-medium">Network Connectivity</h3>
-              <p className="text-zion-slate-light">Troubleshooting of basic network connectivity problems.</p>
+              <h3 className='text-white font-medium'>Network Connectivity</h3>
+              <p className='text-zion-slate-light'>
+                Troubleshooting of basic network connectivity problems.
+              </p>
             </div>
           </div>
 

@@ -1,7 +1,26 @@
 <<<<<<< HEAD
+import { useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useReferrals  } from '@/hooks/useReferrals';
+import { ReferralStats  } from '@/components/referrals/ReferralStats';
+import { ReferralLink  } from '@/components/referrals/ReferralLink';
+import { ReferralTable  } from '@/components/referrals/ReferralTable';
+import { RewardsCard  } from '@/components/referrals/RewardsCard';
+import { ReferralGuide  } from '@/components/referrals/ReferralGuide';
+import { ReferralLeaderboard  } from '@/components/referrals/ReferralLeaderboard';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button  } from '@/components/ui/button';
+import { toast  } from '@/hooks/use-toast';
+import { Share, Users  } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+export default function ReferralsPage() {
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -18,8 +37,16 @@ import {Button} from '@/components / ui / button';
 import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
 
+<<<<<<< HEAD
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+  const {;
+    isLoading;
+    referralCode;
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {use_navigate} from 'react-router-dom';
 export default /**
  * ReferralsPage - Function description
@@ -30,6 +57,8 @@ function ReferralsPage() {
   const {
     is_loading;
     referral_code;
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -86,11 +115,14 @@ function ReferralsPage() {
     is_loading;
     referral_code;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     referrals;
     rewards;
     stats;
     getReferralLink;
     copyReferralLink;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -101,6 +133,7 @@ function ReferralsPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {useReferrals} from '@/hooks/useReferrals';
@@ -120,6 +153,8 @@ export default function ReferralsPage() {;
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -127,6 +162,7 @@ export default function ReferralsPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -146,12 +182,15 @@ export default function ReferralsPage() {
   const navigate = useNavigate(),
   const { isAuthenticated } = useAuth(),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const {
     isLoading,
     referralCode,
@@ -163,6 +202,8 @@ export default function ReferralsPage() {
     shareOnSocialMedia} = useReferrals(),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -170,6 +211,7 @@ export default function ReferralsPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
@@ -177,6 +219,8 @@ export default function ReferralsPage() {
         description: "Please login to access the referral program"
         variant: "destructive"})
       navigate("/login")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -247,6 +291,7 @@ export default function ReferralsPage() {
         variant: "destructive"}),;
       navigate("/login");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
 
@@ -254,6 +299,8 @@ export default function ReferralsPage() {
 
   const referralLink = getReferralLink(),
 
+<<<<<<< HEAD
+=======
 
 
   return (
@@ -279,6 +326,7 @@ export default function ReferralsPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -324,6 +372,8 @@ export default function ReferralsPage() {;
     }
   }, [isAuthenticated, navigate]);
   const referralLink = getReferralLink();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   return (;
 <<<<<<< HEAD
@@ -475,6 +525,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <ReferralGuide />;
           <ReferralLeaderboard />;
         </div>;
@@ -487,6 +538,11 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
+;
+    </div>);
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </div>);
@@ -539,3 +595,4 @@ return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex f
     </div>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

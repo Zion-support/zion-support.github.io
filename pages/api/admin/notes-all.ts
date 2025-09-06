@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+
+=======
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getAllNotes } from './notes',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -13,3 +20,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> main
   return res.status(200).json({ notes: getAllNotes() })
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

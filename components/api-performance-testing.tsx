@@ -22,14 +22,19 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
+<<<<<<< HEAD
+=======
 
 import React from './react';
 import SEO from "../components / SEO";
@@ -71,6 +76,7 @@ import { Check, ExternalLink } from "lucide-react";
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function ApiPerformanceTestingPage() {
 
   const features = [
@@ -87,9 +93,12 @@ export default function ApiPerformanceTestingPage() {
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -149,6 +158,8 @@ export default function ApiPerformanceTestingPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             </a>;
@@ -157,6 +168,7 @@ export default function ApiPerformanceTestingPage() {
       </main>;
 
     </>);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       <SEO;
@@ -246,6 +258,8 @@ return (
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -430,8 +444,12 @@ return (
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import {formatDate} from "@/utils/dateUtils";
 interface QuotesTableProps {;
@@ -53,6 +55,7 @@ import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
 
@@ -64,10 +67,13 @@ interface QuotesTableProps {
   deleteQuote: (id: string) => void
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {formatDate} from "@/utils/dateUtils";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import { 
@@ -89,6 +95,8 @@ import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -97,6 +105,7 @@ import { formatDate } from "@/utils/dateUtils",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -105,6 +114,8 @@ interface QuotesTableProps {
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   onViewDetails: (quote: QuoteRequest) => void
@@ -117,6 +128,7 @@ interface QuotesTableProps {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes;
   isArchived = false;
@@ -131,6 +143,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   updateStatus;
   toggleArchive;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   deleteQuote
   quotes,
   isArchived = false,
@@ -141,6 +155,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onViewDetails
 }) => {
   return (
@@ -183,12 +198,15 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                 </TableCell>
                 <TableCell className="text-white">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { Eye, MoreHorizontal, Archive, Trash2 } from './lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -258,6 +276,8 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                   <div className="font - medium">{quote.project_name}</div>;
                   <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
                     {quote.project_summary}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -475,6 +495,7 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           size="icon"
                           className="text-red-500"
                           onClick={() => {;
@@ -484,6 +505,8 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
 <<<<<<< HEAD
                             }
                           }}
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -803,6 +826,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                             }
                           }}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                               }
                             }}
                             className="text-red-500";
@@ -811,6 +835,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                             Delete;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                       </DropdownMenu>;
@@ -823,6 +849,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       </DropdownMenu>;                    )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     )}
                   </div>
                 </TableCell>
@@ -843,6 +870,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
             ));
           )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -851,6 +880,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </TableBody>;
       </Table>;
     </div>;
@@ -971,6 +1001,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1055,3 +1087,4 @@ onViewDetails
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

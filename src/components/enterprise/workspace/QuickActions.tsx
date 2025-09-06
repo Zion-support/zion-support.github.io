@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,6 +18,7 @@ import { Calendar } from 'lucide-react';
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
           {actions && actions.map(action => (;
             <Button
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       id: 'post - job',
       label: 'Post New Job',
@@ -219,5 +222,8 @@ export function QuickActions() {;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
 
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

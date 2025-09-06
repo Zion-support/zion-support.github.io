@@ -25,6 +25,30 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
+<<<<<<< HEAD
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { SortFilterProps } from "@/types/filters";
+export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
+  return (;
+    <div className="mb-6">;
+      <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
+        Sort by;
+      </label>;
+      <Select value={sortOption} onValueChange={setSortOption}>;
+        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
+          <SelectValue placeholder="Sort by" />;
+        </SelectTrigger>;
+        <SelectContent className="bg-zion-blue border-zion-blue-light text-white">;
+          <SelectItem value="relevance">Relevance</SelectItem>;
+          <SelectItem value="rating">Highest Rating</SelectItem>;
+          <SelectItem value="experience">Most Experienced</SelectItem>;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +104,9 @@ function SortFilter() {
 
   )
 
+<<<<<<< HEAD
+import {
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -114,3 +141,4 @@ function SortFilter() {
 
 import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

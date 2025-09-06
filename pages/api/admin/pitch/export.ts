@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+
+  const { allowed } = await ensureAdminFromApi(req)
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' })
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' })
+  const { slides, format, version } = req.body |{}
+  if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
+  if (format === 'gslides') {
+    // TODO: integrate Google Slides API and return created deck URL
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,6 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> main
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return res.status(200).json({ url })
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
@@ -20,14 +31,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Content-Typeapplication/octet-stream')
   res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version || 'draft'}.html"`)
   res.status(200).send(html)
+<<<<<<< HEAD
+.replace(/&/g, '&amp,')
+=======
 }
 
 }
 function escapeHtml(str: string) {
   return String(str)
     .replace(/&/g, '&amp,')
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
+<<<<<<< HEAD
+}
+
+    .replace(/'/g, '&#039,');
 };
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+=======
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

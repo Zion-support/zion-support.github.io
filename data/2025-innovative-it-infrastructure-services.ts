@@ -25,6 +25,8 @@ export const innovativeITInfrastructureServices2025 = [
       'Energy-efficient quantum processing'
     pricing: {
       starter: {
+<<<<<<< HEAD
+=======
 =======
     pricing: {
       starter: {
@@ -64,6 +66,7 @@ export const innovativeITInfrastructureServices2025 = [
     tags: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Zero Trust',
       'Quantum Security',
       'AI Security',
@@ -72,14 +75,19 @@ export const innovativeITInfrastructureServices2025 = [
     ],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     website: 'https://ziontechgroup.com / zero - trust - quantum - security - platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -106,6 +114,7 @@ export const innovativeITInfrastructureServices2025 = [
     compliance: ['SOC2', 'ISO 27001', 'NIST', 'FedRAMP', 'HIPAA', 'PCI DSS'],
   },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: 'autonomous-devops-intelligence-platform'
     name: 'Autonomous DevOps Intelligence Platform'
@@ -147,6 +156,8 @@ export const innovativeITInfrastructureServices2025 = [
       enterprise: {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
         price: 1199,
         period: 'month',
         features: [;
@@ -169,10 +180,13 @@ export const innovativeITInfrastructureServices2025 = [
       'https://ziontechgroup.com / autonomous - devops - intelligence - platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -199,6 +213,7 @@ export const innovativeITInfrastructureServices2025 = [
     compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry - specific regulations'],
   },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
@@ -240,6 +255,8 @@ export const innovativeITInfrastructureServices2025 = [
       enterprise: {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
         price: 2299,
         period: 'month',
         features: [;
@@ -254,6 +271,7 @@ export const innovativeITInfrastructureServices2025 = [
     tags: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum Computing',
       'Cloud Infrastructure',
       'Hybrid Computing',
@@ -262,14 +280,19 @@ export const innovativeITInfrastructureServices2025 = [
     ],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     website: 'https://ziontechgroup.com / quantum - cloud - infrastructure - platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -302,6 +325,7 @@ export const innovativeITInfrastructureServices2025 = [
     ],
   },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: 'ai-powered-data-center-automation'
     name: 'AI-Powered Data Center Automation'
@@ -343,6 +367,8 @@ export const innovativeITInfrastructureServices2025 = [
       enterprise: {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
         price: 2999,
         period: 'month',
         features: [;
@@ -357,6 +383,7 @@ export const innovativeITInfrastructureServices2025 = [
     tags: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI Automation',
       'Data Center',
       'Energy Optimization',
@@ -365,10 +392,13 @@ export const innovativeITInfrastructureServices2025 = [
     ],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     website: 'https://ziontechgroup.com / ai - powered - data - center - automation',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -396,8 +426,11 @@ export const innovativeITInfrastructureServices2025 = [
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
@@ -405,6 +438,9 @@ export const innovativeITInfrastructureServices2025 = [
       'Industry-specific regulations',
     ],;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'SOC2'
       'ISO 27001'
       'Uptime Institute'
@@ -413,6 +449,8 @@ export const innovativeITInfrastructureServices2025 = [
     ]
   },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },];
@@ -606,6 +644,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     market_size: '$31.2B',
     target_audience:;
       'Data center operators, cloud providers, enterprise businesses, colocation facilities',
@@ -638,6 +677,8 @@ export const innovativeITInfrastructureServices2025 = [
       'Energy Star',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -645,6 +686,7 @@ export const innovativeITInfrastructureServices2025 = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Industry-specific regulations',
     ],;
   },];
@@ -654,10 +696,13 @@ export const innovativeITInfrastructureServices2025 = [
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const innovativeITInfrastructureServices2025 = [;
   {;
     id: 'quantum-edge-computing-orchestrator',;
@@ -864,6 +909,9 @@ export const innovativeITInfrastructureServices2025 = [;
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],;
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations'];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 ];
       'Industry - specific regulations',
@@ -876,6 +924,8 @@ export const innovativeITInfrastructureServices2025 = [;
   }
 ];
 ;
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -885,3 +935,4 @@ export const innovativeITInfrastructureServices2025 = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

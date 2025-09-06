@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
+=======
+<<<<<<< HEAD
+export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
 =======
@@ -8,17 +11,23 @@ export interface EnterpriseIt2026ServiceV2 {;
 
 export interface EnterpriseIt2026ServiceV2 {
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 <<<<<<< HEAD
 =======
 export interface EnterpriseIt2026ServiceV2 {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
+export interface EnterpriseIt2026ServiceV2 {
+
+=======
 =======
 export interface EnterpriseIt2026ServiceV2 {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -51,6 +60,8 @@ export interface EnterpriseIt2026ServiceV2 {;
     address: string;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     website: string;
   }
 
@@ -58,6 +69,7 @@ export interface EnterpriseIt2026ServiceV2 {;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -75,18 +87,24 @@ export interface EnterpriseIT2026ServiceV2 {
   contactInfo: {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
       
     mobile: string, email: string,
     address: string,
     website: string
   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
     launchDate: '2026-05-01'
@@ -113,6 +131,8 @@ export interface EnterpriseIT2026ServiceV2 {
 
     reviews: 180
   }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
@@ -147,6 +167,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 180
       website: 'https://ziontechgroup.com';
@@ -160,11 +181,15 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 <<<<<<< HEAD
 ];
 =======
+<<<<<<< HEAD
+];
+=======
 
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;

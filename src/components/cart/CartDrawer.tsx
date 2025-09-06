@@ -1,9 +1,37 @@
+<<<<<<< HEAD
+=======
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 
+<<<<<<< HEAD
+    if (!isAuthenticated) {
+      e.preventDefault()
+      setLoginOpen(true)
+    }
+  }
+import React from 'react',;
+import { useSelector } from 'react-redux',;
+import Link from 'next/link',;
+import type { RootState } from '@/store',;
+import { ShoppingCart } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth',;
+import { LoginModal } from '@/components/auth/LoginModal',;
+export function CartDrawer() {;
+  const items = useSelector((s: RootState) => s.cart.items),;
+  const count = items.reduce((sum, i) => sum + i.quantity, 0),;
+  const { isAuthenticated } = useAuth(),;
+  const [loginOpen, setLoginOpen] = React.useState(false),;
+  const handleClick = (e: React.MouseEvent) => {;
+    if (!isAuthenticated) {;
+      e.preventDefault();
+      setLoginOpen(true);
+    }
+  },
+=======
 export function CartDrawer() {;
   const items = useSelector((s: RootState) => s && s.cart.items);  const count = items && items.reduce((sum, i) => sum + i && i.quantity, 0);  const items = useSelector((s: RootState) => s && s.cart.items),;
   const count = items && items.reduce((sum, i) => sum + i && i.quantity, 0);
@@ -31,6 +59,7 @@ export function CartDrawer() {
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <>
@@ -40,18 +69,26 @@ export function CartDrawer() {
 
 
 ;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
             {count}
 
           </span>
         )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </Link>;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
 }
+<<<<<<< HEAD
+=======
 
   );
 }
@@ -74,3 +111,4 @@ export function CartDrawer() {
     </>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-imports && imports.js');
@@ -29,6 +31,7 @@ const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {
     console && console.error(`Error executing script: ${error}`);
@@ -127,6 +130,8 @@ if ( {) {
   console.log ('Icon imports updated successfully!');
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -168,3 +173,4 @@ return
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

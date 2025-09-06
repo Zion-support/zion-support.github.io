@@ -1,8 +1,43 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
+<<<<<<< HEAD
+
+
+
+const dataPath = path.join(process.cwd(), 'datalearncourses.json')
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const dataPath = path.join(process.cwd(), 'datalearncourses.json'),;
+export default function handler(req, res) {
+  try {
+    const raw = fs.readFileSync(dataPath, 'utf-8');
+    const courses = JSON.parse(raw);
+    const { id } = req.query;
+    const course = courses.find((c: any) => c.id === id);
+  }
+}
+  }
+}
+}
+;
+
+
+=======
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs',;
@@ -45,3 +80,4 @@ function handler() {
 };
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

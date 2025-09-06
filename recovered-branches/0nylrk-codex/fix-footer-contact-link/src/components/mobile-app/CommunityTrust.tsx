@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+
+import React from "react",
+import { Star } from "lucide-react",
+
+
+import React from "react",
+import { Star } from "lucide-react",
+
+
+export const CommunityTrust: React.FC = () => {
+  // Stats display with social proof
+  const stats = [
+    { value: "4.8", label: "App Store Rating" }
+    { value: "50K+", label: "Downloads" }
+    { value: "96%", label: "User Satisfaction" }
+import {Star} from "lucide-react";
+import React from "react",
+import { Star } from "lucide-react",
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 import { Star } from "lucide-react";
 export const CommunityTrust: React.FC = () => {
@@ -6,8 +27,20 @@ export const CommunityTrust: React.FC = () => {
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
+<<<<<<< HEAD
+  ];
+    { value: "12M+", label: "Matches Made" }
+  ],
+
+
+    { value: "12M+", label: "Matches Made" }
+
+  ],
+
+=======
     { value: "12M+", label: "Matches Made" },
   ];
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <section className="py-16 bg-zion-blue">
@@ -37,7 +70,10 @@ export const CommunityTrust: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Rating display */}
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
           <div className="flex justify-center mb-4">
@@ -60,12 +96,26 @@ export const CommunityTrust: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
+};
+              </div>;
+              <div className="text - zion - slate - light">{stat.label}</div>;
+            </div>))}
+        </div>;
+        {/* Rating display */}
+        <div className="max - w-3xl mx - auto bg - zion - blue - dark border border - zion - purple / 30 rounded - lg p - 6">;
+          <div className="flex justify - center mb - 4">;
+            {[1, 2, 3, 4, 5].map ((star) => (
+              <Star;
+                key={star}
+=======
   );
 };
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 className="w - 6 h - 6 text - zion - cyan";
                 fill="current_color";
               />))}
@@ -84,6 +134,8 @@ export const CommunityTrust: React.FC = () => {
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -91,6 +143,7 @@ export const CommunityTrust: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   )
 

@@ -38,7 +38,11 @@ export function FilterSidebar(): any ({;
   clearFilters,;
   isMobileFilterOpen,}: FilterSidebarProps) {;
   return (
+<<<<<<< HEAD
+    <>;
+=======
     <>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Filter header */}
 
       <div className='flex items-center justify-between mb-6'>;
@@ -489,3 +493,25 @@ function FilterSidebar() {
       )}
     </>;
   );
+<<<<<<< HEAD
+}
+
+  );
+}
+        <Button;
+          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
+          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
+        >;
+          Apply Filters;
+        </Button>)}
+    </>);
+}
+
+
+    </>;
+  );
+
+}
+;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -13,6 +13,8 @@ export type Real2036InnovativeService = {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -22,6 +24,7 @@ export type Real2036InnovativeService = {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type Real2036InnovativeService = {
   id: string;
   name: string;
@@ -37,9 +40,12 @@ export type Real2036InnovativeService = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   features: string[];
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
@@ -90,6 +96,8 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -100,6 +108,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro',
     launch_date: '2036 - 01 - 20',
     rating: 4.8,
@@ -131,6 +140,8 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Enterprise - grade quantum - secure communication platform that leverages quantum key distribution (QKD) to provide unbreakable encryption for sensitive communications.',    category: 'Quantum Technology',
     price: '$1, 999',
     period: '/month',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     features: [;
 <<<<<<< HEAD
@@ -922,6 +933,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     rating: 4 && 4.7;
     marketSize: '$28 && 28.4B',
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useCases?: string[];};  useCases?: string[]
 }
 export const real2036InnovativeServices: Real2036InnovativeService[] = [
@@ -1535,15 +1547,20 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     ]
     useCases: [
 ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ];
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-supply-chain-optimization-platform';
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ];
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2036-03-30';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     ];
@@ -1614,6 +1631,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     rating: 4.7;
     marketSize: '$28.4B'
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';
@@ -1708,12 +1726,15 @@ export type Real2036InnovativeService = {;
   }
 ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export type Real2036InnovativeService = {;
   id: string,;
@@ -2052,6 +2073,8 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
   }
 ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -2063,3 +2086,4 @@ export type Real2036InnovativeService = {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

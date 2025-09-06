@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -8,6 +10,7 @@ import {
   Users, 
   CheckCircle, 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Calendar,
   Clock,
   Users,

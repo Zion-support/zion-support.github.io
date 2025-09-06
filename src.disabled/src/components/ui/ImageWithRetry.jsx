@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React,{ useState } from 'react';'; import { cn } from '@/lib/utils'; ''; export function ImageWithRetry({ src,fallbackSrc = '/images/image-placeholder.svg',className,retryClassName,...props }) {}; const [currentSrc,setCurrentSrc] = useState(src); const [failed,setFailed] = useState(false); const handleError = () => {}; setFailed(true); setCurrentSrc(fallbackSrc)}; const handleRetry = () => {}; setFailed(false); setCurrentSrc(src)}; return(<div className = {}; '; ''; '''; cn('relative inline-block',; className)}>; {}; <img loading="lazy" {...props} src={currentSrc} onError={handleError}/ / />";" {failed && (<button type="button" onClick={handleRetry} className = {}; '; ''; '''; cn('absolute bottom-1 right-1 text-xs underline',; retryClassName)}>; Retry; </button>)}; </div>)}; export { ImageWithRetry }; export default ImageWithRetry; export default ImageWithRetry; export default ImageWithRetry; export default ImageWithRetry; export default ImageWithRetry; export default ImageWithRetry;" export default ImageWithRetry;";" export default ImageWithRetry;'";" '"'";";
@@ -61,3 +63,4 @@ import _React,{ useState } from 'react';'; import { cn } from '@/lib/utils'; '';
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

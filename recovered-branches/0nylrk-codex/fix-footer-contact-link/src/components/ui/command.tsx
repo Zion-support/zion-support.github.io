@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,10 +25,13 @@ import * as React from "react"
 import { Command as CommandPrimitive } from "cmdk"
 import { Search } from "lucide-react"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import { cn } from "@/lib/utils"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -37,6 +42,7 @@ import { cn } from "@/lib/utils"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
@@ -233,6 +239,8 @@ const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -240,6 +248,7 @@ const CommandInput = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >(({ className, ...props }, ref) => (
   <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />
@@ -263,10 +272,13 @@ const CommandInput = React && React.forwardRef<;
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />;
     <CommandPrimitive&& CommandPrimitive.Input
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       ref={ref}
       className={cn(
         'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50'
@@ -326,6 +338,8 @@ const CommandList = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.List
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -344,6 +358,7 @@ const CommandList = React && React.forwardRef<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 import {cn} from '@/lib / utils';
 import {Dialog, DialogContent} from '@/components / ui / dialog';
@@ -574,8 +589,11 @@ const CommandSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Separator
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 =======
@@ -689,6 +707,10 @@ const CommandSeparator = React.forward_ref<;
     ref={ref}
     className={cn ('-mx - 1 h - px bg - border', class_name)}
     {...props}
+<<<<<<< HEAD
+      className
+    )}
+=======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -705,9 +727,12 @@ const CommandSeparator = React.forwardRef<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ref={ref}
     className={cn('-mx-1 h-px bg-border', className)}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {...props}
   />
 ));
+<<<<<<< HEAD
+=======
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
 
 
@@ -967,6 +992,7 @@ export {;
   />;
 ));
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   />));
 CommandSeparator.display_name = CommandPrimitive.Separator.display_name;
 ;
@@ -1007,6 +1033,8 @@ export {
   CommandGroup,
   CommandItem,
   CommandShortcut,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1094,13 +1122,17 @@ React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item> > ( ({
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   CommandSeparator,;
 };
   CommandSeparator}
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -1108,4 +1140,7 @@ React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item> > ( ({
   CommandSeparator,
 }
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

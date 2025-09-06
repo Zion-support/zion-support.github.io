@@ -41,6 +41,9 @@ import React from \'react\'; import SEO from \'../components/SEO\'; import { Foo
 const React from "react"; import SEO from "./components/SEO"; import { Footer } from "./components/Footer"; import { MobileFeatureShowcase } from "./components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from "./components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from "./components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from "./components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from "./components/mobile-app/QrCodeDownload ; import { CommunityTrust } from "./components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};""; """""""
 import _React from 'react'; import SEO from '../components/SEO'; import { Footer } from '../components/Footer'; import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from '../components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload ; import { CommunityTrust } from '../components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};'"; '"'"
 <<<<<<< HEAD
+import _React from 'react'; import SEO from '../components/SEO'; import { Footer } from '../components/Footer'; import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from '../components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload ; import { CommunityTrust } from '../components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};'"; '"'"
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,3 +65,4 @@ import _React from 'react'; import SEO from '../components/SEO'; import { Footer
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

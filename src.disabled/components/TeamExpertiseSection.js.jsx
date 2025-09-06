@@ -34,6 +34,9 @@ const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technolo
 const teamMembers = [{ \"id\": \'1\',\"name\": \'Dr. Sarah: Chen,\',\' \"role\": \'Chief: Technology Officer,\',\' \"expertise\": \'AI: & Machine Learning,\',\' \"experience\": \'15: + years,\',\' \"avatar\": \'/avatars: / sarah - chen && chen.jpg,\',\' \"bio\": \'Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,\',\' skills[\'Machine Learning\',\'Computer Vision\',\'Deep Learning\',\'Python\',\'TensorFlow\'],\' achievements[\'50 + AI Projects\',\'15 Research Papers\',\'AI Innovation Award 2023\'],\"rating\": \'4.\',9,\"projects\": \'4\',5,\' \"location\": \'San: Francisc,o,CA\',\' \"linkedin\": \'https:\''\";\",;
 const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen && chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
 <<<<<<< HEAD
+const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen && chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -59,3 +62,4 @@ const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technolo
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

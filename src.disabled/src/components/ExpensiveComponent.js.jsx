@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React from "react"; export default function ExpensiveComponent() { const [data,setData] = useState([]); const [loading,setLoading] = useState(true); useEffect(() => {} const [data,setData] = useState([]); const [loading,setLoading] = useState(true); useEffect(() => {}};},[]);,[]); const timer = setTimeout(() => {}; { "length": '10000' },; (_,i) => Math.sqrt(i) * Math.PI * Math.random(); ); setData(expensiveData); setLoading(false);},2000); return () => clearTimeout(timer);},[]); if(loading) {} return(); <div className="text-center p-8"> <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div> <p className="text-zion-slate-light">Computing expensive data...></div> ></div> </div>)} export { ExpensiveComponent }; export { ExpensiveComponent }; export { ExpensiveComponent }; export { ExpensiveComponent }; export { ExpensiveComponent }; const [data,setData] = useState();} const [loading,setLoading] = useState();} useEffect(() => {} const timer = setTimeout(() => {} const expensiveData = Array.from();} { "length": '10000' },(_,i) => Math.sqrt(i) * Math.PI * Math.random();} );} setData();} setLoading(false)},2000);} return () => clearTimeout(timer)},[]);} if(loading) {}"; return(); <div className="text-center p-8">"'; <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <div>Broken JSX</div> </div> </div>)} export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent }"; export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent } export { ExpensiveComponent };"; ";
@@ -61,3 +63,4 @@ import _React from "react"; export default function ExpensiveComponent() { const
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

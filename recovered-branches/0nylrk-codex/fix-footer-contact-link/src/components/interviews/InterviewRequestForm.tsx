@@ -30,8 +30,11 @@ import {CalendarIcon, Check, Clock} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {useInterviews} from "@/hooks/useInterviews";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -53,7 +56,10 @@ import { useInterviews } from "@/hooks/useInterviews";
 import { toast } from "@/components/ui/use-toast",
 import { useInterviews } from "@/hooks/useInterviews",
 interface InterviewRequestFormProps {
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface InterviewRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
@@ -132,6 +138,8 @@ const formSchema = z.object({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -166,6 +174,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -183,6 +192,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       return
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -190,11 +201,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     setIsSubmitting(true);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       // Combine date and time
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
       const scheduledDate = new Date(dateTimeString);
       // Calculate end time based on duration
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       const durationMinutes = parseInt(values.duration);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -216,6 +230,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
@@ -226,6 +241,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         meeting_link: values.meetingLink
         interview_type: "video"
         title: values.title
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -241,11 +258,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Interview requested"
         description: `Your interview request with ${talent.full_name} has been sent.`})
       onClose()
     } catch (error) {
+<<<<<<< HEAD
+      console.error("Failed to schedule interview:", error),
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Failed to schedule interview:", error);
@@ -255,10 +276,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
       console.error("Failed to schedule interview:", error),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Failed to schedule interview"
         description: "An error occurred while scheduling the interview. Please try again."
         variant: "destructive"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -268,6 +292,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components / ui / form';
@@ -370,6 +395,8 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -395,6 +422,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ]
   return (
@@ -414,12 +442,15 @@ if ( {) {
           </div>
         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     try {;
       // Combine date and time;
@@ -647,12 +678,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
               </FormControl>;
               <FormMessage />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <FormField
             control={form && form.control}
             name="date"
@@ -738,6 +772,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
 <<<<<<< HEAD
                     <Calendar
                       mode="single"
+<<<<<<< HEAD
+=======
 =======
         <FormField
           control={form.control}
@@ -1008,10 +1044,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     <Calendar
                       mode="single"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1021,6 +1060,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             )}
           />;
 
@@ -1315,6 +1355,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 </FormControl>;
                 <FormMessage />;
 <<<<<<< HEAD
+            )}
+          />
+        )}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1538,6 +1583,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         )}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
                   {...field}
@@ -1557,6 +1603,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -1638,3 +1686,4 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

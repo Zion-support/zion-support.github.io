@@ -214,9 +214,12 @@ class ContinuousAutomation {
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.log(`Report generated: ${this.reportFile}`);
     return report;
   }
@@ -242,6 +245,8 @@ class ContinuousAutomation {
 
     return { success: allPassed, report };
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -364,6 +369,7 @@ module.exports = ContinuousAutomation;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return report}
   async run() {
     this.log('🚀 Starting Continuous Automation Pipeline');
@@ -412,6 +418,8 @@ if ( {
     process.exit(1)})}
 module.exports = ContinuousAutomation;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -438,3 +446,4 @@ module.exports = ContinuousAutomation;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

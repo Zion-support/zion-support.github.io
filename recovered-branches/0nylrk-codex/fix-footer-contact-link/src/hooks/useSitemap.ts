@@ -1,19 +1,28 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useAuth} from './useAuth';
 import {getAccessibleRoutes} from '@/config/sitemap';
 
 import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
 
+<<<<<<< HEAD
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {
+export function useSitemap() {;
+=======
 
 export function useSitemap() {;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { user, isAuthenticated } = useAuth();
   // Get routes that the current user can access
   // Cast userType to UserType or pass undefined if not valid
@@ -21,6 +30,8 @@ export function useSitemap() {;
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
   // Helper function to find a route by path
   const findRouteByPath = (path: string): SitemapItem | undefined => {
+<<<<<<< HEAD
+=======
 
     return accessibleRoutes && accessibleRoutes.find(route => route && route.path === path)
   };
@@ -54,11 +65,14 @@ export function useSitemap() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Helper function to check if a user can access a specific path
   const canAccessRoute = (path: string): boolean => {
     const route = findRouteByPath(path);
     if (!route) return false;
     // If route requires authentication and user is not authenticated
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -109,6 +123,7 @@ export function useSitemap() {;
       const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType :undefined,;
       return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) :false;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return true
   }
@@ -137,6 +152,8 @@ export function useSitemap() {;
     accessibleRoutes;
     findRouteByPath;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     canAccessRoute
@@ -148,6 +165,7 @@ import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Define the allowed user types;
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
 ;
@@ -209,6 +227,8 @@ if (return false) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
@@ -216,6 +236,7 @@ if (return false) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
   ;

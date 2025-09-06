@@ -1,4 +1,23 @@
+<<<<<<< HEAD
+  {
+
+    id: "getting-hired"
+    name: "Getting Hired"
+    description: "Tips, strategies, and questions about getting hired on the platform."
+    adminOnly: false
+    icon: "Briefcase"
+  }
+import { ForumCategoryInfo } from "@/types/community",
+  {
+    id: "project-help"
+    name: "Project Help"
+    description: "Get help with your ongoing projects and collaboration."
+    adminOnly: false
+    icon: "MessageSquare"
+  {
+=======
 {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
@@ -6,15 +25,21 @@
     icon: "FileText"
 
 
+<<<<<<< HEAD
+=======
   },
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+<<<<<<< HEAD
+
+=======
 const categories: ForumCategoryInfo[] = [;
   {
     id: "getting - hired",
@@ -77,6 +102,7 @@ export const ForumCategories = () => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
               <CardHeader className="flex flex-row items-center gap-4">
@@ -105,16 +131,21 @@ const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
     name: "Getting Hired",;
+<<<<<<< HEAD
+=======
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,;
     icon: "Briefcase";
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
+<<<<<<< HEAD
+=======
   };
   {;
     id: "ai-tools",;
@@ -123,13 +154,17 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: false,;
     icon: "Code";
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
+<<<<<<< HEAD
+=======
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {;
     id: "announcements",;
     name: "Announcements",;
@@ -137,6 +172,8 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,;
     icon: "Megaphone";
   }
+<<<<<<< HEAD
+=======
 ];
 
 const iconMap = {;
@@ -161,14 +198,18 @@ export const ForumCategories = () => {;
         const Icon = iconMap[category && category.icon as keyof typeof iconMap];        return (
           <Link key={category && category.id} href={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <CardHeader className="flex flex-row items-center gap-4">;
                 <div className="p-2 bg-zion-purple/10 rounded-full">;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
+<<<<<<< HEAD
+=======
                 <CardTitle className="text-xl">{category && category.name}</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <CardDescription className="text-base">{category && category.description}</CardDescription>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </CardContent>;
             </Card>;
           </Link>;
@@ -177,8 +218,11 @@ export const ForumCategories = () => {;
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
 
 export default ForumCategories;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export default ForumCategories;
 
@@ -186,4 +230,8 @@ export default ForumCategories;
 export default ForumCategories;
 ";
   const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+<<<<<<< HEAD
 export default ForumCategories;
+=======
+export default ForumCategories;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

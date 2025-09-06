@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -50,6 +52,7 @@ export default function Button({
   );
 }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 
 interface ButtonProps {
@@ -145,4 +148,7 @@ if ( {) {
       on_click={on_click}
       disabled={disabled}
       type={type}
+<<<<<<< HEAD
+=======
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

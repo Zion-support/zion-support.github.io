@@ -12,6 +12,8 @@ import {
   Linkedin,
   Github,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   FileText,
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -32,6 +34,7 @@ import {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   HelpCircle} from 'lucide-react';
 export default function EnhancedFooter() {
   const scrollToTop = () => {
@@ -76,6 +79,8 @@ export default function EnhancedFooter() {
     <footer className="bg-gray-900 text-white">
       {' '}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -92,6 +97,7 @@ export default function EnhancedFooter() {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-12">
         {' '}
         <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-6 gap-8">
@@ -147,6 +153,8 @@ export default function EnhancedFooter() {
                   <a
                     href={link.href}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -163,6 +171,7 @@ export default function EnhancedFooter() {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -184,6 +193,8 @@ export default function EnhancedFooter() {
                   <a
                     href={link.href}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -200,6 +211,7 @@ export default function EnhancedFooter() {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -221,6 +233,8 @@ export default function EnhancedFooter() {
                   <a
                     href={link.href}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -237,6 +251,7 @@ export default function EnhancedFooter() {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -258,6 +273,8 @@ export default function EnhancedFooter() {
                   <a
                     href={link.href}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -274,6 +291,7 @@ export default function EnhancedFooter() {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -288,6 +306,8 @@ export default function EnhancedFooter() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           {' '}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -304,6 +324,7 @@ export default function EnhancedFooter() {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div className="flex flex-col "md": flex-row justify-between items-center">
             {' '}
             <div className="flex flex-col "md": flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
@@ -319,6 +340,8 @@ export default function EnhancedFooter() {
                     key={index}
                     href={link.href}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -335,6 +358,7 @@ export default function EnhancedFooter() {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     className="text-gray-400 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -345,6 +369,8 @@ export default function EnhancedFooter() {
             </div>{' '}
             {}{' '}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -361,6 +387,7 @@ export default function EnhancedFooter() {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div className="flex items-center space-x-4 mt-4 "md": mt-0">
               {' '}
               {socialLinks.map((social, index) => (
@@ -368,6 +395,8 @@ export default function EnhancedFooter() {
                   key={index}
                   href={social.href}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -384,6 +413,7 @@ export default function EnhancedFooter() {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="text-gray-400 "hover": text-white transition-colors duration-200"
                   aria-label={social.name}
                 >
@@ -400,6 +430,8 @@ export default function EnhancedFooter() {
           <button
             onClick={scrollToTop}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -416,6 +448,7 @@ export default function EnhancedFooter() {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             className="inline-flex items-center space-x-2 text-gray-400 "hover": text-white transition-colors duration-200"
           >
             {' '}
@@ -439,6 +472,8 @@ export default function EnhancedFooter() {
       </div>{' '}
     </footer>
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -468,3 +503,4 @@ import * as React from 'react'; import { Mail,Phone,MapPin,Facebook,Twitter,Link
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

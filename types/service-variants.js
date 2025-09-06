@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 module.exports = {};
 =======
 <<<<<<< HEAD
@@ -20,3 +22,4 @@ module.exports = {},;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

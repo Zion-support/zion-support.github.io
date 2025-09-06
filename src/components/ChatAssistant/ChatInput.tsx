@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+import { Send } from 'lucide-react'
+interface ChatInputProps {
+  onSend: (message: string) => void
+disabled?: boolean
+}export function ChatInput ({
+  onSend, disabled = false
+}: ChatInputProps) {'
+  const [message, setMessage] = useState ('')
+const inputRef = useRef<HTMLTextAreaElement> (null)
+//Focus input when component mounts
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+  const [ message, setMessage ] = useState('')
+  const inputRef = useRef<HTMLTextAreaElement>(null)
+  useEffect(() => {    // Focus input when component mounts
+    inputRef.current?.focus() }, [])
+    inputRef.current?.focus()
+interface ChatInputProps {
+
+  onSend: (message: string) => void,
+  disabled?: boolean
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Send } from 'lucide-react';
+=======
 import React, {;
   useState,;
   useRef,;
@@ -8,6 +33,7 @@ import React, {;
 import { Button } from '@/components/ui/button';
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
@@ -37,12 +63,18 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
   useEffect(() => {    // Focus input when component mounts;
     inputRef && inputRef.current?.focus();  }, []);
     inputRef && inputRef.current?.focus();
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ChatInputProps {;
   onSend: (message: string) => void,;
   disabled?: boolean;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState('');
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -102,6 +134,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         type='submit';
         className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center'        on_change={(e) => set_message (e.target.value)}
 
+<<<<<<< HEAD
+=======
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -109,6 +143,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 
         disabled={!message.trim() |disabled}
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
@@ -137,11 +172,14 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
         disabled={!message.trim() || disabled}
+<<<<<<< HEAD
+=======
 
       >
         <Send className="h-5 w-5" />
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </Button>
     </form>
   )
@@ -155,6 +193,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     </form>
   )
 }
+<<<<<<< HEAD
+=======
 
 
       <Button;
@@ -171,3 +211,4 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       </Button>;
     </form>);
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

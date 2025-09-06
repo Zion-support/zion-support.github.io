@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -31,6 +38,9 @@ export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
   const navigate = useNavigate(),
 <<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -41,6 +51,7 @@ export function MobileOnboarding() {;
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const goToNextStep = () => {
     if (currentStep === "language") {
       setCurrentStep("role");
@@ -49,11 +60,14 @@ export function MobileOnboarding() {;
     } else {
       navigate("/mobile");
     }
+<<<<<<< HEAD
+=======
   };
 
   const handleRoleSelect = () => {
     setCurrentStep("signup");
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -109,6 +123,8 @@ export function MobileOnboarding() {;
 
             <SignUpForm />
           </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -190,6 +206,7 @@ export function MobileOnboarding() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -198,6 +215,8 @@ import { RolePicker } from '../components / onboarding / RolePicker';
 import { SignUpForm } from '../components / onboarding / SignUpForm';
 type OnboardingStep = "language" | "role" | "signup";
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export /**
  * MobileOnboarding - Function description
@@ -373,3 +392,4 @@ const handleRoleSelect = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

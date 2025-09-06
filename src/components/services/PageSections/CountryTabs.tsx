@@ -1,6 +1,11 @@
 import { Search } from 'lucide-react';
+<<<<<<< HEAD
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+=======
 import { Input } from '@/components/ui/input',;
 import { Button } from '@/components/ui/button',;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {;
   Pagination,;
   PaginationContent,;
@@ -84,7 +89,7 @@ export function CountryTabs({
 
             Featured Service Locations
           </h2>
-          <p className="text-zion-slate-light text-center mt-2">
+          <p className='text-zion-slate-light text-center mt-2'>
             Browse our most popular service destinations
           </p>
         </div>
@@ -244,6 +249,30 @@ export function CountryTabs({
                     }}
                   />;
                 </PaginationItem>;
+<<<<<<< HEAD
+                {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
+                  page => (;
+                    <PaginationItem key={page}>;
+                      <PaginationButton
+                        page={page}
+                        isActive={page === currentPage}
+                        onClick={e => {;
+                          e && e.preventDefault();
+                          setCurrentPage(page);                        }}
+                      />;
+                    </PaginationItem>;
+                  );
+                )}
+                <PaginationItem>;
+                  <PaginationNext
+                    href={`?page=${currentPage + 1}`}
+                    onClick={e => {;
+                      e && e.preventDefault();
+                      setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
+                  />;
+                </PaginationItem>;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </PaginationContent>;
             </Pagination>;
           </div>;

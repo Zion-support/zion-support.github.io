@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react";
 const EquipmentPage = () => {
 =======
@@ -6,6 +8,7 @@ import React from 'react',
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const EquipmentPage = () => {
 const EquipmentPage = () => {;
 class ErrorBoundary extends React.Component {
@@ -50,6 +53,8 @@ const EquipmentPage = () => {;
       <h1 className="text-3xl font-bold mb-6">Equipment</h1>;
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
         {/* Equipment listing placeholder */}
+<<<<<<< HEAD
+=======
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-xl font-semibold mb-2">Coming Soon</h2>
           <p className="text-gray-600">
@@ -107,6 +112,7 @@ export default EquipmentPage;
 export default EquipmentPage;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export default EquipmentPage;
 
@@ -119,4 +125,7 @@ export default EquipmentPage,
 =======
 
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

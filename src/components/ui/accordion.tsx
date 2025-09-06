@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import * as React from "react"
 import { ElementRef, ComponentPropsWithoutRef } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
@@ -7,6 +9,7 @@ import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 const AccordionItem = React.forwardRef<
@@ -14,6 +17,8 @@ const AccordionItem = React.forwardRef<
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
+<<<<<<< HEAD
+=======
 import * as React from 'react';
 import {ElementRef, ComponentPropsWithoutRef} from 'react';
 import * as AccordionPrimitive from '@radix - ui / react - accordion';
@@ -30,12 +35,18 @@ const AccordionItem = React.forward_ref<;
     {...props}
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 AccordionItem.displayName = "AccordionItem"
 
 AccordionItem.displayName = "AccordionItem"
 
+<<<<<<< HEAD
+  />
+))
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const AccordionTrigger = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
@@ -44,6 +55,8 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
+<<<<<<< HEAD
+=======
 
 import React from 'react';
 import * as React from 'react';
@@ -79,6 +92,7 @@ const AccordionTrigger = React && React.forwardRef<;
         className;
 
       )}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </AccordionPrimitive>  {...props}
     >
       {children}
@@ -86,10 +100,14 @@ const AccordionTrigger = React && React.forwardRef<;
       {...props}
     >;
       {children}
+<<<<<<< HEAD
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+=======
 
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -97,6 +115,15 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 
 
+<<<<<<< HEAD
+
+
+
+
+
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -105,6 +132,15 @@ const AccordionContent = React.forwardRef<
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
+<<<<<<< HEAD
+  >
+    <div className={cn("pb-4 pt-0", className)}>{children}</div>
+  </AccordionPrimitive.Content>
+))
+
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
+
+=======
   />));
 AccordionItem.display_name = 'AccordionItem';
 const AccordionTrigger = React.forward_ref<;
@@ -166,3 +202,4 @@ AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

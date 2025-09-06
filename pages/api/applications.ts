@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> main
 import { v4 as uuidv4 } from 'uuid',;
@@ -66,7 +69,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       existing.status = action === 'apply' ? 'applied' : 'skipped'
       writeJsonFile<Application[]>(FILE, apps)
       res.status(200).json({ application: existing })
+<<<<<<< HEAD
+=======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return
     }
 
@@ -94,4 +100,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
+<<<<<<< HEAD
+}
+
+
+
+
+=======
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

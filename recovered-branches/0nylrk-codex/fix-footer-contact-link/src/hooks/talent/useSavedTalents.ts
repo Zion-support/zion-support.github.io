@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -25,6 +27,7 @@ export function useSavedTalents() {;
   const [isLoading, setIsLoading] = useState(true);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
@@ -59,9 +62,12 @@ export function useSavedTalents() {
     const fetchSavedTalents = async () => {
       if (!isAuthenticated |!userDetails.id) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         setIsLoading(false);
         return
       }
@@ -71,6 +77,8 @@ export function useSavedTalents() {
         const { data: savedData, error: savedError } = await supabase
           .from('saved_talents')
           .select('talent_id')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -82,10 +90,13 @@ export function useSavedTalents() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (savedError) throw savedError;
         if (savedData) {
           const talentIds = savedData && savedData.map(item => item && item.talent_id);
           setSavedTalentIds(talentIds);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -103,6 +114,7 @@ export function useSavedTalents() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             // Fetch full talent profiles for saved talents
             const { data: talentData, error: talentError } = await supabase
               .from('talent_profiles')
@@ -111,9 +123,12 @@ export function useSavedTalents() {
             if (talentError) throw talentError;
             setSavedTalents(talentData |[])
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (!isAuthenticated || !userDetails.id) {
         setIsLoading(false),
         return
@@ -223,6 +238,8 @@ if (throw talent_error) {
       } catch (error) {
       } finally {
         setIsLoading (false);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       }
 =======
@@ -375,6 +392,7 @@ export function useSavedTalents() {;
         return
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
           }
         }
@@ -403,6 +421,8 @@ export function useSavedTalents() {;
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -487,10 +507,13 @@ if ( {) {
         description: "Please log in to save talents to your favorites",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         variant: "destructive"
       }),
       return
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const isSaved = savedTalentIds.includes(talent.id);
     
@@ -499,12 +522,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       if (isSaved) {
         // Remove from saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .delete()
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -535,6 +561,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           .eq('user_id', userDetails && userDetails.id)
           .eq('talent_id', talent && talent.id);
         if (error) throw error;
@@ -543,6 +570,8 @@ if ( {) {
         toast({
           title: "Removed from favorites",
           description: `${talent && talent.full_name} has been removed from your favorites`})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -553,11 +582,16 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } else {
         // Add to saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .insert({
+<<<<<<< HEAD
+        if (error) throw error;
+        setSavedTalents(prev => [...prev, talent]);
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -606,6 +640,7 @@ if ( {) {
           title: "Added to favorites",
           description: `${talent && talent.full_name} has been added to your favorites`})
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (error) {
       console && console.error('Error toggling saved talent:', error);
@@ -635,8 +670,11 @@ if ( {) {
   // Check if talent is saved
   const isTalentSaved = (talentId: string) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return savedTalentIds && savedTalentIds.includes(talentId)
@@ -661,6 +699,8 @@ if ( {) {
 
     isTalentSaved
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         title: "Error",
@@ -669,6 +709,7 @@ if ( {) {
       })
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } catch (error) {;
         console.error('Error fetching saved talents:', error),;
         toast({;
@@ -693,12 +734,15 @@ if ( {) {
       return;
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 =======
     const is_saved = savedTalentIds.includes (talent.id);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     try {
       // Check condition
@@ -762,6 +806,10 @@ if (throw error) {
     is_loading;
     toggleSaveTalent;
     isTalentSaved;
+<<<<<<< HEAD
+  }
+}
+=======
 <<<<<<< HEAD
 
 
@@ -830,3 +878,4 @@ if (throw error) {
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

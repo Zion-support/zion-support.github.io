@@ -17,6 +17,8 @@ import _React,{ useState } from,react'; import Head from; 'next/head'; import { 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -36,6 +38,7 @@ import _React,{ useState } from,react'; import Head from; 'next/head'; import { 
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);

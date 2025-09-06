@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
@@ -33,6 +35,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -74,6 +77,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
+  const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
+  const totalsByToken: Record<string, number> = {},
+  const contributionsBySubject: Record<string, number> = {},
+  let globalVotes = 0,
+=======
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   const events = filterEventsByScope(state.events, state.config.scope)
@@ -82,6 +93,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   let globalVotes = 0
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -190,6 +202,8 @@ export default function handler(req, res) {
 
       const p = e.payload as any
 
+<<<<<<< HEAD
+=======
   const topContributors = Object.entries(contributionsBySubject)
     .map(([subjectId, score]) => ({ subjectId, score }))
     .sort((a, b) => b.score - a.score)
@@ -201,3 +215,4 @@ export default function handler(req, res) {
     totalVoteCount: globalVotes
     lastSyncedAt: state.lastSyncedAt})
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

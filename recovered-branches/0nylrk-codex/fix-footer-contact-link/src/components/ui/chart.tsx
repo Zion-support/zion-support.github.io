@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,11 +13,14 @@ import {cn} from "@/lib/utils"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = Record<;
   string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -24,6 +29,7 @@ export type ChartConfig = Record<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
@@ -32,6 +38,8 @@ import { cn } from "@/lib/utils"
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -89,6 +97,7 @@ export type ChartConfig = Record<;
   string;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     label?: React.ReactNode;
     icon?: React.ComponentType;
@@ -142,6 +151,8 @@ type ChartContextProps = {
     children: React && React.ComponentProps<;
       typeof RechartsPrimitive && RechartsPrimitive.ResponsiveContainer;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     >["children"];
   }
@@ -151,6 +162,7 @@ type ChartContextProps = {
   const chartId = `chart-${id || uniqueId && uniqueId.replace(/:/g, "")}`;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <ChartContext && ChartContext.Provider value={{ config }}>;
 =======
@@ -222,6 +234,8 @@ const ChartContainer = React.forwardRef<
         ref={ref}
         className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
           "flex aspect-video justify-center text-xs [&_ && _.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_ && _.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_ && _.recharts-curve && curve.recharts-tooltip-cursor]:stroke-border [&_ && _.recharts-dot[stroke='#fff']]:stroke-transparent [&_ && _.recharts-layer]:outline-none [&_ && _.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_ && _.recharts-radial-bar-background-sector]:fill-muted [&_ && _.recharts-rectangle && rectangle.recharts-tooltip-cursor]:fill-muted [&_ && _.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_ && _.recharts-sector[stroke='#fff']]:stroke-transparent [&_ && _.recharts-sector]:outline-none [&_ && _.recharts-surface]:outline-none"
           className
@@ -259,6 +273,7 @@ const ChartStyle = ({ id, config }: { id: string, config: ChartConfig }) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const ChartContext = React.create_context < ChartContextProps>({
   config: {}});
 function use_chart (): ChartContextProps {
@@ -312,6 +327,8 @@ if ( {) {
   return (
     <style;
       dangerouslySetInnerHTML={{
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -373,6 +390,7 @@ ${colorConfig;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   .join("\n")}
 }
 `;
@@ -439,6 +457,8 @@ const ChartTooltipContent = React.forward_ref<;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
+<<<<<<< HEAD
+=======
 
 >(
   (
@@ -538,6 +558,7 @@ const ChartTooltipContent = React.forwardRef<
 =======
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ref
   ) => {
     const { config } = useChart()
@@ -553,6 +574,8 @@ const ChartTooltipContent = React.forwardRef<
           ? config[label as keyof typeof config]?.label |label
           : itemConfig?.label
       if (labelFormatter) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -603,6 +626,7 @@ const ChartTooltipContent = React.forwardRef<
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return (
           <div className={cn("font-medium", labelClassName)}>;
             {labelFormatter(value, payload)}
@@ -1211,6 +1235,8 @@ const ChartLegendContent = React.forward_ref<;
 
 
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -1220,11 +1246,14 @@ const ChartLegendContent = React.forward_ref<;
 =======
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ref
   ) => {
     const { config } = useChart()
     if (!payload?.length) {
       return null
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1341,10 +1370,13 @@ const ChartLegendContent = React.forwardRef<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <div
         ref={ref}
         className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           "flex items-center justify-center gap-4"
@@ -1359,6 +1391,7 @@ const ChartLegendContent = React.forwardRef<;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           return (
             <div
               key={item && item.value}
@@ -1602,7 +1635,10 @@ export {;
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 
   return configLabelKey in config;
@@ -1613,6 +1649,9 @@ export {;
   ChartLegend;
   ChartLegendContent;
 
+<<<<<<< HEAD
+  ChartStyle}
+=======
 <<<<<<< HEAD
   ChartContainer,;
   ChartTooltip,;
@@ -1630,11 +1669,14 @@ export {
 =======
   ChartStyle}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
   ChartLegend;
   ChartLegendContent;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   ChartStyle}
 
@@ -1719,3 +1761,4 @@ export {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -24,6 +26,7 @@
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 
 <<<<<<< HEAD
@@ -140,6 +143,8 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -147,6 +152,7 @@ class PerformanceOptimizer {
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -236,7 +242,10 @@ function findFiles(dir, exts) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function optimizeImages(publicDir, report) {
   const images = findFiles(publicDir, ['.png', '.jpg', '.jpeg']);
   if (images.length === 0) {
@@ -361,8 +370,12 @@ const path = require('path');
 #!/usr/bin/env node
 =======
 <<<<<<< HEAD
+#!/usr/bin/env node
+=======
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 });
       log(`Found ${optimizations.length} optimization opportunities in next.config.js`, 'WARNING');
     } else {}
@@ -514,12 +527,15 @@ if (require.main === module) {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       if (updated !== original) {
         fs.writeFileSync(file, updated);
         report.modifiedFiles.push(file);
         report.actions.push(`${rel}: enabled experimental.optimizeCss`);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -793,6 +809,9 @@ function analyzeDependencies() {
           /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
         );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         execSync(optimization.command, { stdio: 'pipe' });
         console.log(`✅ ${optimization.name} completed successfully`);
         results.push({ 
@@ -814,12 +833,15 @@ function analyzeDependencies() {
       try {
         this.log(`🔧 Running ${optimization.name}...`);
         this.log(`📝 ${optimization.description}`);
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         
         this.results.imageOptimization = {
           success: true,
@@ -1063,10 +1085,15 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     } finally {
       this.generateReport();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
     }
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -1077,6 +1104,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const report = {
       timestamp: new Date().toISOString(),
       totalOptimizations: optimizations.length,
@@ -1110,8 +1138,11 @@ const optimizer = new PerformanceOptimizer();
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Run the performance optimizer
 if (require.main === module) {
     const optimizer = new PerformanceOptimizer(),
@@ -1121,6 +1152,9 @@ if (require.main === module) {
 
 module.exports = PerformanceOptimizer;
 
+<<<<<<< HEAD
+
+=======
 
 =======
 module.exports = PerformanceOptimizer;
@@ -1140,6 +1174,7 @@ module.exports = PerformanceOptimizer;
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function main() {
   const root = process.cwd();
   const timestamp = Date.now();
@@ -1171,6 +1206,8 @@ function main() {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1391,6 +1428,7 @@ function analyzeDependencies() {
 
 <<<<<<< HEAD
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function generateOptimizationRecommendations() {
     console.log('\n💡 Generating optimization recommendations...');
     
@@ -1643,6 +1681,8 @@ try {
 }
 }
 optimizer.optimizePerformance().catch(console.error);
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -1657,3 +1697,4 @@ module.exports = PerformanceOptimizer;
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

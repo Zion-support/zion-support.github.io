@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 import React from 'react'
 import Link from 'next/link'
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -14,6 +17,8 @@ import {
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 interface EmptyStateProps {
+<<<<<<< HEAD
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -62,10 +67,40 @@ import {
 } from '@/components / ui / tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface EmptyStateProps {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title: string;
   subtitle: string;
   cta: string;
   href: string;
+<<<<<<< HEAD
+  hasSession: boolean
+
+const EmptyState: React.FC<EmptyStateProps> = ({
+  title
+  subtitle
+  cta
+  href
+  hasSession
+}) => {  return (
+    <div className='text-center py-16'>
+      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>
+        <MessageSquare className='h-10 w-10 text-zion-purple' />
+      </div>
+      <h2 className='text-xl font-medium mb-2'>{title}</h2>
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
+import React from 'react';
+import Link from 'next/link';
+import { MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
+interface EmptyStateProps {;
+  title: string,;
+  subtitle: string,;
+  cta: string,;
+  href: string,;
+  hasSession: boolean;
+}
+=======
 
 import React from 'react';
 import Link from 'next/link';
@@ -106,6 +141,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
               </Button>;
             ) : (;
               <Button disabled>{cta}</Button>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
@@ -114,7 +150,10 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
         <MessageSquare className="h-10 w-10 text-zion-purple" />
       </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <p className="text-muted-foreground mb-6">{subtitle}</p>
       <TooltipProvider>
         <Tooltip>
@@ -126,16 +165,21 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             ) : (
               <Button disabled>{cta}</Button>
             )}
+<<<<<<< HEAD
+=======
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         </Tooltip>;
       </TooltipProvider>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 
 export default EmptyState;
 
@@ -176,3 +220,4 @@ const EmptyState: React.FC < EmptyStateProps> = ({
 export default EmptyState;
 },;
 export default EmptyState;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

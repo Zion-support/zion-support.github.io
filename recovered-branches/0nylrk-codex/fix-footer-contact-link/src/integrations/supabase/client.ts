@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+import {createClient} from '@supabase/supabase-js';
+export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+if (!supabaseUrl |!supabaseAnonKey) {
+  throw new Error('Missing Supabase environment variables')
+
+
+
+
+import {createClient} from '@supabase/supabase-js';
+
+
+import { createClient } from '@supabase/supabase-js',;
+export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
+export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
+if (!supabaseUrl || !supabaseAnonKey) {;
+  throw new Error('Missing Supabase environment variables');
+}
+// Utility to detect network connectivity. navigator.onLine is not reliable in
+=======
 <<<<<<< HEAD:corrupted_backup/performance-monitor.ts
 <<<<<<< HEAD:lib.disabled/lib/performance-monitor.ts
 interface PerformanceMetrics {
@@ -79,6 +100,7 @@ if (!supabaseUrl || !supabaseAnonKey) {
 }
 // Utility to detect network connectivity. navigator.onLine is not reliable in
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // all environments, so we also try a small request with a short timeout.
 export const checkOnline = async (): Promise<boolean> => {
   if (typeof navigator !== "undefined" && !navigator.onLine) {
@@ -96,11 +118,39 @@ export const checkOnline = async (): Promise<boolean> => {
       signal: controller.signal,
     });
     clearTimeout(id);
+<<<<<<< HEAD
+    return true
+  } catch {
+    return false
+  }
+}
+  throw new Error ('Missing Supabase environment variables');
+}
+// Utility to detect network connectivity. navigator.on_line is not reliable in;
+// all environments, so we also try a small request with a short timeout.;
+export const check_online = async (): Promise < boolean> => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return false;
+  }
+  try {
+
+;
+// Custom fetch wrapper to provide clearer errors when network requests fail;
+export const safe_fetch: typeof fetch = async (input, init) => {
+  if ()) {) {
+  $2
+}
+    throw new Error ('No internet connection');
+=======
     return true;
   } catch {
     return false;
   }
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 // Custom fetch wrapper to provide clearer errors when network requests fail
 export const safeFetch: typeof fetch = async (input, init) => {
@@ -108,12 +158,80 @@ export const safeFetch: typeof fetch = async (input, init) => {
     throw new Error("No internet connection");
   }
   try {
+<<<<<<< HEAD
+    return await fetch (input, init);
+  } catch (err) {
+
+import { createClient } from '@supabase/supabase-js',;
+export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
+export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
+if (!supabaseUrl || !supabaseAnonKey) {;
+  throw new Error('Missing Supabase environment variables');
+}
+;
+// Utility to detect network connectivity. navigator.onLine is not reliable in;
+// all environments, so we also try a small request with a short timeout.;
+export const checkOnline = async (): Promise<boolean> => {;
+  if (typeof navigator !== 'undefined' && !navigator.onLine) {;
+    return false;
+  }
+  try {;
+    const controller = new AbortController(),;
+    const id = setTimeout(() => controller.abort(), 3000),;
+    await fetch('https://clients3.google.com/generate_204', {;
+      mode: 'no-cors',;
+      signal: controller.signal}),;
+    clearTimeout(id),;
+    return true;
+  } catch {;
+    return false;
+  }
+},;
+// Custom fetch wrapper to provide clearer errors when network requests fail;
+export const safeFetch: typeof fetch = async (input, init) => {;
+  if (!(await checkOnline())) {;
+    throw new Error('No internet connection');
+  }
+  try {;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return await fetch(input, init);
   } catch (err) {
     // Log the original error for debugging
     console.error("Supabase fetch failed:", err);
     throw new Error("Failed to connect to Supabase");
   }
+<<<<<<< HEAD
+},;
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {;
+  global: { fetch: safeFetch }
+export const getFromProfiles = () => supabase.from('profiles');
+    // Log the original error for debugging;
+    console.error ('Supabase fetch failed:', err);
+    throw new Error ('Failed to connect to Supabase');
+  }
+},;
+;
+// Custom fetch wrapper to provide clearer errors when network requests fail;
+export const safeFetch:typeof fetch = async (input, init) => {;
+  if (!(await checkOnline())) {;
+    throw new Error('No internet connection'),;
+  }
+  try {;
+    return await fetch(input, init),;
+  } catch (err) {;
+    // Log the original error for debugging;
+    console.error('Supabase fetch failed:', err),;
+    throw new Error('Failed to connect to Supabase'),;
+  }
+},;
+;
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {;
+  global:{ fetch:safeFetch }
+}),;
+;
+// Helper function to get profiles table;
+=======
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
@@ -130,3 +248,4 @@ export const getFromProfiles = () => supabase.from('profiles');
 =======
 export const getFromProfiles = () => supabase.from("profiles");
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/integrations/supabase/client.ts
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

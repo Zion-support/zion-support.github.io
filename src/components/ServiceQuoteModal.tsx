@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 ...formData;            startDate: startDate?.toISOString(),
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
             endDate: endDate?.toISOString()}
         }
@@ -16,10 +19,13 @@
 }
 }
 
+<<<<<<< HEAD
+=======
 
 
 ;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -196,6 +202,8 @@ interface ServiceQuoteModalProps {;
   service: ProductListing | null;
 }
 ;
+<<<<<<< HEAD
+=======
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
   { label: "$5,000 - $10,000", value: "5000-10000" },;
@@ -498,3 +506,4 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

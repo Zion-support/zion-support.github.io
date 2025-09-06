@@ -1,5 +1,7 @@
 // Stub pricing analytics utility - placeholder for missing functionality;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 },
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const getPricingMetrics = async () => {
   // Placeholder implementation;
   return { metrics: {}, success: true }
@@ -31,6 +34,8 @@ export const getPricingMetrics = async () => {
 
 export const trackPricingRequest = async (data: any) => {;
   // Placeholder implementation;
+<<<<<<< HEAD
+=======
 
   return { success: true   } catch (error) {
     console.error("Error:", error);
@@ -52,6 +57,7 @@ export const getPricingMetrics = async () => {
 }
 export const trackPricingRequest = async (data: any) => {;
   // Placeholder implementation;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return { success: true }
 },;
 export const getPricingMetrics = async () => {;
@@ -77,6 +83,11 @@ export const getPricingMetrics = async () => {;
   }
 }
 <<<<<<< HEAD
+export const trackPricingRequest = async (data: any) => {;
+  // Placeholder implementation;
+};
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -96,3 +107,4 @@ export const trackPricingRequest = async (data: any) => {;
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
@@ -15,10 +18,13 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
 =======
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ServiceProfileData {
   name: string;
   title: string;
   bio: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -36,11 +42,14 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ServiceProfileData {
   name: string,
   title: string,
   bio: string,
   services?: string[],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -49,6 +58,7 @@ interface ServiceProfileData {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   location: string
 }
 serve(async (req) => {
@@ -56,6 +66,11 @@ serve(async (req) => {
     // CORS headers
 
     const headers = {
+<<<<<<< HEAD
+      return new Response(
+        JSON && JSON.stringify({
+  services?: string[],
+=======
 <<<<<<< HEAD
 
 
@@ -140,6 +155,7 @@ interface ServiceProfileData {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   location: string;
 }
 serve (async (req) => {
@@ -176,6 +192,8 @@ if ( {) {
     const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
     if (!apiKey) {
       return new Response(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -233,6 +251,7 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           error: "OpenAI API key not configured"}),
 ;
     // Get OpenAI API key from environment;
@@ -241,6 +260,8 @@ serve(async (req) => {;
       return new Response(;
         JSON.stringify({;
           error: "OpenAI API key not configured"}),;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -254,6 +275,7 @@ serve(async (req) => {;
       )
     }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         { headers, status: 500 }
       );
     }
@@ -283,6 +305,8 @@ serve(async (req) => {;
     ${providerData && providerData.services && providerData && providerData.services.length > 0 
       ? `Current Services: ${providerData && providerData.services.join(", ")}`
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
@@ -294,6 +318,7 @@ serve(async (req) => {;
     ${providerData.services && providerData.services.length > 0 
       ? `Current Services: ${providerData.services.join(", ")}`
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           error: "OpenAI API key not configured"});
         { headers, status: 500 }
       );
@@ -306,6 +331,8 @@ serve(async (req) => {;
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
     `;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     Only respond with JSON in this exact format:
@@ -349,6 +376,7 @@ serve(async (req) => {;
             role: "system"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         model: "gpt-4";
         messages: [
           {
@@ -383,6 +411,8 @@ serve(async (req) => {;
           {
             role: "system",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -403,10 +433,13 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             content: "You are an expert at creating professional service descriptions for marketplaces."}
           {
             role: "user"
             content: prompt}];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -442,6 +475,7 @@ serve(async (req) => {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (!response.ok) {
       console.error("OpenAI API error:", responseData),
       return new Response(
@@ -573,12 +607,15 @@ if ( {) {
     } catch (error) {
       console.error("Error parsing AI response:", error),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       return new Response(
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const content = responseData && responseData.choices[0].message && message.content;
       const parsedContent = JSON && JSON.parse(content);
@@ -614,6 +651,8 @@ if ( {) {
       );
     } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -627,10 +666,14 @@ if ( {) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       console.error ("Error parsing AI response:", error);
       return new Response (
         JSON.stringify ({
           error: "Failed to parse AI response",
+<<<<<<< HEAD
+          raw: response_data.choices[0]?.message?.content});
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -642,10 +685,13 @@ if ( {) {
 =======
           raw: response_data.choices[0]?.message?.content});
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         { headers, status: 500 }
       );
     }
   } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     console.error ("Function error:", error);
@@ -683,6 +729,7 @@ if ( {) {
         status: 500
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         error: "Internal server error"}),
       { 
         headers: {
@@ -700,6 +747,8 @@ if ( {) {
           "Access-Control-Allow-Origin": "*"},;
         status: 500;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         error: "Internal server error"}),
       { 
@@ -714,10 +763,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     );
   }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -930,3 +982,4 @@ raw: responseData.choices[0]?.message?.content
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

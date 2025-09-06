@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+
+
+const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
+  <nav
+    {...props}
+  />
+)
+>(({ className, ...props }, ref) => (
+  <ul
+    ref={ref}
+    {...props}
+/>
+))
+>(({ className, ...props }, ref) => (
+))
+=======
 import * as React from &quot;react & quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 import { cn } from &quot;@/lib / utils & quot;
@@ -67,6 +84,7 @@ type PaginationLinkProps = {
   isActive?: boolean
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface PaginationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
@@ -75,10 +93,13 @@ interface PaginationButtonProps
 const PaginationLink = ({
 
 
+<<<<<<< HEAD
+=======
   className,
   isActive,
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ...props
 }: PaginationLinkProps) => (
   <a
@@ -96,12 +117,15 @@ const PaginationLink = ({
     {...props}
   />
 )
+<<<<<<< HEAD
+=======
 
 
 PaginationLink.displayName = "PaginationLink"
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page, isActive, className, ...props }, ref) => (
     <button
@@ -112,10 +136,13 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       className={cn(;
 
 
+<<<<<<< HEAD
+=======
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         className;
       )}
       {...props}
@@ -139,12 +166,15 @@ const PaginationPrevious = ({
     <span>Previous</span>
   </PaginationLink>
 )
+<<<<<<< HEAD
+=======
 
 
 PaginationPrevious.displayName = "PaginationPrevious"
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const PaginationNext = ({
   className
   ...props
@@ -159,12 +189,15 @@ const PaginationNext = ({
     <ChevronRight className="h-4 w-4" />
   </PaginationLink>
 )
+<<<<<<< HEAD
+=======
 
 
 PaginationNext.displayName = "PaginationNext"
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const PaginationEllipsis = ({
   className
   ...props
@@ -178,6 +211,8 @@ const PaginationEllipsis = ({
     <span className="sr-only">More pages</span>
   </span>
 )
+<<<<<<< HEAD
+=======
 
 />));
 PaginationContent.display_name = &quot;PaginationContent & quot;
@@ -285,3 +320,4 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationButton,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -33,6 +36,8 @@ let transactions: TokenTransaction[] = [];
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 
 export function issueTokens(
@@ -45,6 +50,7 @@ export function issueTokens(
 =======
 =======
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -52,12 +58,15 @@ export function issueTokens(
     reason
     timestamp: Date.now()
   }
+<<<<<<< HEAD
+=======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -74,11 +83,14 @@ export function issueTokens(
   
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   transactions.push(transaction);
   return transaction;
 }
@@ -92,6 +104,8 @@ export function redeemTokens(
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     type: "redeem",
     reason,
@@ -134,6 +148,7 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     type: 'redeem',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     reason,
@@ -161,6 +176,9 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
     reason,
     timestamp: Date && Date.now()
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     timestamp: Date.now();
   };
 // Token service utilities
@@ -273,6 +291,8 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
+<<<<<<< HEAD
+=======
 =======
   };
   
@@ -287,6 +307,7 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
@@ -298,6 +319,10 @@ export function set_config (
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
